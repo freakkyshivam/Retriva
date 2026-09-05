@@ -1,5 +1,6 @@
-const API_BASE = import.meta.env.VITE_API_URL
-  ? `${import.meta.env.VITE_API_URL.replace(/\/$/, '')}/api`
+const rawApiUrl = (import.meta as unknown as { env?: { VITE_API_URL?: string } })?.env?.VITE_API_URL;
+const API_BASE = rawApiUrl
+  ? `${rawApiUrl.replace(/\/$/, '')}/api`
   : '/api';
 
 const TOKEN_KEY = 'dsa_access_passcode';

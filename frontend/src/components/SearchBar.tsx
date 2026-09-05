@@ -13,7 +13,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearch, isLoading, place
   const [showDropdown, setShowDropdown] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const containerRef = useRef<HTMLDivElement>(null);
-  const debounceRef = useRef<ReturnType<typeof setTimeout>>(null);
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Debounced autocomplete
   useEffect(() => {

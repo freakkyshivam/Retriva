@@ -139,6 +139,14 @@ function App() {
     }
   };
 
+  if (!isAuthCheckDone) {
+    return (
+      <div className="min-h-screen bg-[#09090f] flex items-center justify-center">
+        <div className="w-8 h-8 border-2 border-indigo-500/30 border-t-indigo-500 rounded-full animate-spin" />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-[#09090f] text-gray-200 flex flex-col selection:bg-indigo-600 selection:text-white">
       {/* Error Toast */}
