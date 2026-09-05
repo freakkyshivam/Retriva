@@ -67,6 +67,18 @@ export interface AskResponse {
   sources: Source[];
 }
 
+async function safeJson<T>(res: Response, fallbackMessage: string): Promise<T> {
+  const contentType = res.headers.get('content-type') || '';
+  if (!contentType.includes('application/json')) {
+    throw new Error('Backend API is not connected. If deployed on Netlify, please configure VITE_API_URL in your Netlify site settings.');
+  }
+  try {
+    return await res.json() as T;
+  } catch {
+    throw new Error(fallbackMessage);
+  }
+}
+
 export async function searchCourse(query: string): Promise<SearchResponse> {
   const res = await fetch(`${API_BASE}/search?q=${encodeURIComponent(query)}`, {
     headers: getRequestHeaders(),
@@ -76,7 +88,7 @@ export async function searchCourse(query: string): Promise<SearchResponse> {
     throw new Error('UNAUTHORIZED');
   }
   if (!res.ok) throw new Error('Search failed');
-  return res.json();
+  return safeJson<SearchResponse>(res, 'Failed to parse search results');
 }
 
 export async function askQuestion(question: string): Promise<AskResponse> {
@@ -90,7 +102,7 @@ export async function askQuestion(question: string): Promise<AskResponse> {
     throw new Error('UNAUTHORIZED');
   }
   if (!res.ok) throw new Error('Ask failed');
-  return res.json();
+  return safeJson<AskResponse>(res, 'Failed to parse AI response');
 }
 
 export interface AutocompleteSuggestion {
@@ -108,7 +120,7 @@ export async function getAutocomplete(query: string): Promise<AutocompleteSugges
       headers: getRequestHeaders(),
     });
     if (!res.ok) return [];
-    const data = await res.json();
+    const data = await safeJson<{ suggestions?: AutocompleteSuggestion[] }>(res, '');
     return data.suggestions || [];
   } catch {
     return [];
@@ -120,7 +132,7 @@ export async function checkAuthStatus(): Promise<{ isProtected: boolean }> {
   try {
     const res = await fetch(`${API_BASE}/auth/status`);
     if (!res.ok) return { isProtected: false };
-    return res.json();
+    return await safeJson<{ isProtected: boolean }>(res, '');
   } catch {
     return { isProtected: false };
   }
@@ -133,13 +145,15 @@ export async function verifyPasscode(password: string): Promise<{ valid: boolean
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ password }),
     });
-    const data = await res.json();
+    const data = await safeJson<{ valid?: boolean; error?: string }>(res, '');
     if (data.valid) {
       setAuthToken(password);
       return { valid: true };
     }
     return { valid: false, error: data.error || 'Incorrect passcode' };
-  } catch {
-    return { valid: false, error: 'Could not connect to authentication service' };
+  } catch (err: unknown) {
+    const msg = err instanceof Error ? err.message : 'Could not connect to authentication service';
+    return { valid: false, error: msg };
   }
 }
+
