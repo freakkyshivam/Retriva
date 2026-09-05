@@ -1,4 +1,4 @@
-﻿# Environment variables (NEVER COMMIT SECRETS)
+# Environment variables (NEVER COMMIT SECRETS)
 .env
 .env.*
 !.env.example
@@ -27,3 +27,6 @@ Thumbs.db
 
 # Embeddings cache
 backend/data/embeddings.json
+
+# Local Python data extraction scripts & raw data
+playlist data extractor (python)/
