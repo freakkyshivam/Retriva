@@ -35,6 +35,17 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(true);
   const [isProtectedInstance, setIsProtectedInstance] = useState<boolean>(false);
   const [isAuthCheckDone, setIsAuthCheckDone] = useState<boolean>(false);
+  const [copiedLink, setCopiedLink] = useState(false);
+
+  const handleCopyMagicLink = () => {
+    const token = getAuthToken();
+    if (token) {
+      const magicUrl = `${window.location.origin}${window.location.pathname}?key=${encodeURIComponent(token)}`;
+      navigator.clipboard.writeText(magicUrl);
+      setCopiedLink(true);
+      setTimeout(() => setCopiedLink(false), 2500);
+    }
+  };
 
   useEffect(() => {
     const initAuth = async () => {
@@ -42,6 +53,22 @@ function App() {
         const { isProtected } = await checkAuthStatus();
         setIsProtectedInstance(isProtected);
         if (isProtected) {
+          // Check for URL parameter (e.g. ?key=your_passcode or ?passcode=... or ?token=...)
+          const params = new URLSearchParams(window.location.search);
+          const urlKey = params.get('key') || params.get('passcode') || params.get('token') || params.get('p');
+
+          if (urlKey && urlKey.trim()) {
+            const { valid } = await verifyPasscode(urlKey.trim());
+            if (valid) {
+              setIsAuthenticated(true);
+              // Clean URL to hide passcode from browser history and address bar
+              const cleanUrl = window.location.pathname;
+              window.history.replaceState({}, document.title, cleanUrl);
+              return;
+            }
+          }
+
+          // Check stored token in localStorage
           const storedToken = getAuthToken();
           if (!storedToken) {
             setIsAuthenticated(false);
@@ -170,6 +197,18 @@ function App() {
               <span>⚖️</span>
               <span className="hidden sm:inline">About & Disclaimer</span>
             </button>
+
+            {/* Magic Link Button (if protected instance and authenticated) */}
+            {isProtectedInstance && isAuthenticated && (
+              <button
+                onClick={handleCopyMagicLink}
+                className="px-3 py-2 rounded-xl text-xs font-medium bg-white/5 hover:bg-white/10 text-indigo-300 hover:text-white border border-white/10 transition-colors flex items-center gap-1.5"
+                title="Copy instant access URL with your passcode embedded"
+              >
+                <span>{copiedLink ? '✓' : '🔗'}</span>
+                <span className="hidden sm:inline">{copiedLink ? 'Link Copied!' : 'Magic Link'}</span>
+              </button>
+            )}
 
             {/* Lock Button (if protected instance) */}
             {isProtectedInstance && (
