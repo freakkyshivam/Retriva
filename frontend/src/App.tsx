@@ -1,11 +1,21 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { SearchBar } from './components/SearchBar';
 import { AskSection } from './components/AskSection';
 import { AnswerDisplay } from './components/AnswerDisplay';
 import { VideoPlayerPanel } from './components/VideoPlayerPanel';
 import { TopicFilter } from './components/TopicFilter';
 import { DisclaimerModal } from './components/DisclaimerModal';
-import { searchCourse, askQuestion, VideoResult, AskResponse } from './api';
+import { LoginModal } from './components/LoginModal';
+import { 
+  searchCourse, 
+  askQuestion, 
+  checkAuthStatus, 
+  verifyPasscode, 
+  clearAuthToken, 
+  getAuthToken, 
+  VideoResult, 
+  AskResponse 
+} from './api';
 
 type Mode = 'search' | 'ask';
 
@@ -20,6 +30,36 @@ function App() {
   const [askResponse, setAskResponse] = useState<AskResponse | null>(null);
   const [hasSearched, setHasSearched] = useState(false);
   const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
+
+  // Authentication states
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(true);
+  const [isProtectedInstance, setIsProtectedInstance] = useState<boolean>(false);
+  const [isAuthCheckDone, setIsAuthCheckDone] = useState<boolean>(false);
+
+  useEffect(() => {
+    const initAuth = async () => {
+      try {
+        const { isProtected } = await checkAuthStatus();
+        setIsProtectedInstance(isProtected);
+        if (isProtected) {
+          const storedToken = getAuthToken();
+          if (!storedToken) {
+            setIsAuthenticated(false);
+          } else {
+            const { valid } = await verifyPasscode(storedToken);
+            setIsAuthenticated(valid);
+          }
+        } else {
+          setIsAuthenticated(true);
+        }
+      } catch (err) {
+        console.warn('Auth status check failed:', err);
+      } finally {
+        setIsAuthCheckDone(true);
+      }
+    };
+    initAuth();
+  }, []);
 
   // Unified executor: loads BOTH the AI explanation (left) and matching videos (right)
   const executeQuery = async (query: string) => {
@@ -38,7 +78,12 @@ function App() {
         setSearchResults(res.results);
       })
       .catch(err => {
-        console.error("Video search error:", err);
+        if (err?.message === 'UNAUTHORIZED') {
+          setIsAuthenticated(false);
+          setError('Access passcode expired or invalid. Please re-enter.');
+        } else {
+          console.error("Video search error:", err);
+        }
       })
       .finally(() => {
         setIsSearching(false);
@@ -49,7 +94,12 @@ function App() {
         setAskResponse(res);
       })
       .catch(err => {
-        console.error("AI answer error:", err);
+        if (err?.message === 'UNAUTHORIZED') {
+          setIsAuthenticated(false);
+          setError('Access passcode expired or invalid. Please re-enter.');
+        } else {
+          console.error("AI answer error:", err);
+        }
       })
       .finally(() => {
         setIsAiLoading(false);
@@ -120,6 +170,20 @@ function App() {
               <span>⚖️</span>
               <span className="hidden sm:inline">About & Disclaimer</span>
             </button>
+
+            {/* Lock Button (if protected instance) */}
+            {isProtectedInstance && (
+              <button
+                onClick={() => {
+                  clearAuthToken();
+                  setIsAuthenticated(false);
+                }}
+                className="p-2 rounded-xl text-xs bg-white/5 hover:bg-red-500/20 text-gray-400 hover:text-red-300 border border-white/10 transition-colors flex items-center justify-center"
+                title="Lock Application"
+              >
+                <span>🔒</span>
+              </button>
+            )}
           </div>
         </div>
       </header>
@@ -297,6 +361,11 @@ function App() {
         isOpen={isDisclaimerOpen}
         onClose={() => setIsDisclaimerOpen(false)}
       />
+
+      {/* Login / Passcode Gate */}
+      {isProtectedInstance && !isAuthenticated && (
+        <LoginModal onSuccess={() => setIsAuthenticated(true)} />
+      )}
     </div>
   );
 }

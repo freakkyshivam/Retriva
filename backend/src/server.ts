@@ -1,4 +1,5 @@
 import 'dotenv/config';
+// Server entry point
 import app from './app.js';
 import { initEmbeddingModel } from './services/embedding.service.js';
 
