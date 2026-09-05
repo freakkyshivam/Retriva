@@ -1,0 +1,141 @@
+{
+  "video_id": "BPlrALf1LDU",
+  "position": 136,
+  "title": "G-11. Detect a Cycle in an Undirected Graph using BFS | C++ | Java",
+  "url": "https://www.youtube.com/watch?v=BPlrALf1LDU",
+  "chunk_count": 12,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "BPlrALf1LDU",
+      "position": 136,
+      "title": "G-11. Detect a Cycle in an Undirected Graph using BFS | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=BPlrALf1LDU",
+      "start": 3.28,
+      "end": 115.759,
+      "text": "hey everyone welcome back to the channel i hope you guys are doing extremely well so in this video we are going to learn about detecting a cycle yes cycle in an undirected very very important in an undirected graph so in this video we will be learning how to solve this using bfs in the next we will be learning how to solve this using dfs now since now like till now you have seen how to use bfs in order to solve matrix related problems or how to traverse in a graph but how do you detect a cycle so if you remember the definition of a cycle you start from a node and you go and you go and you go and you go you go and you come back to the same node so if you're able to come back to the same node then only we say that the graph has a particular cycle so how do you detect a cycle but before that let's do one thing for this particular graph create the adjacency list if you don't know what is an adjacency list lecture two or lecture three so what is bfs so this is how the adjacency list will look like so we're gonna detect this using bfs what is bfs it is nothing but a traversal technique where you start from a note and you visit all the nodes in that graph so if you are starting from this node one yes what do you visit in the next step you visit two three because they are at a distance of one or level one at the next step you visit five six four why because they are at a distance of two if you see they are at a distance of two at the next time you visit this seven so this is what the bfs traversal is it goes in level wise like level one level two level three so basically it visits simultaneously these two nodes then these three nodes then this node",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "BPlrALf1LDU",
+      "position": 136,
+      "title": "G-11. Detect a Cycle in an Undirected Graph using BFS | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=BPlrALf1LDU",
+      "start": 110.64,
+      "end": 223.12,
+      "text": "then these three nodes then this node this is what we call as bfs traversal whereas dfs is different where you just go go go go so you go basically okay what is the intuition of the algorithm let's understand so we know bfs is nothing but a traversal technique right so imagine the first thing is one where you started from where from one where do you go you go to two you go to three at the same junction remember this from one you go to two and three at the same junction because they are at level one so you went to two and three but remember this you came from one you came from one to two and three separately but you went into two and three because they are at the same distance or the level one now from two where can you grow so if you carefully see from two you can go to one and you can go to five but will you go to one dude you just came back from this you just came from one only so why will you go back to the guy from whom you came you need to do a traversal so apparently from two you can go to five right so from two you can go to five so from one you came to two from two you can go to five now there is something as three if you remember we had two and three from two we went to five but now where will you go from three from three you can go to six you can go to four you can go to one but why will you go to one you just came from one right so you'll go to six and you'll go to four so apparently the two and three went to five six four twenty five six and four and remember this from two you got twenty five okay and from three you went to six and four correct so if you carefully see from",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "BPlrALf1LDU",
+      "position": 136,
+      "title": "G-11. Detect a Cycle in an Undirected Graph using BFS | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=BPlrALf1LDU",
+      "start": 219.44,
+      "end": 327.52,
+      "text": "correct so if you carefully see from five where can you go you can go to seven you can go to two but from five five will you go to two because it is nothing but where you came from so you will try to go to seven and when you try to go from six you'll never go to three because you came from three and you again go to seven so there are two guys who are actually going to the same place but if you remember when you started you went in different directions now how did you arrive at the same position that is only because it is cycle and it is connecting this is how the bfs will work so i hope you have got the intuition the intuition is very simple you started in two different parts and now if you are colliding in some portion that will only be because there is something as a cycle so what does the bfs algorithm state if you remember well enough the bfs algorithm the first step of the bfs algorithm is define a queue and insert the first node so this is the first node or the source node with the parrot you need to remember where it came from very very important so i can say it came from 0 or -1 that is your choice it came from -1 at the same time you need to create a visited array do you remember yes you have to it's like one two three four five six so it's like one two three four five six seven and all of these will be marked as zero apart from the gaia one so this is how the visited array will look like okay which one is your source node the source node is one correct so one is visited so what you'll do at the first step is you'll take this one out so you'll take this one out and you say this came from nowhere that is minus one it did come",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "BPlrALf1LDU",
+      "position": 136,
+      "title": "G-11. Detect a Cycle in an Undirected Graph using BFS | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=BPlrALf1LDU",
+      "start": 323.12,
+      "end": 428.16,
+      "text": "nowhere that is minus one it did come from nowhere that is y minus one let's remove this so you have one where can this one go it can go to two and it can go to three how how will you know this you will go to the adjacency list and you will see what it is stored and you see two and three are stored so you can go to two and you can go to three so you go to two and you say it came from one you go to three and you say it came from one so one can go to two the market has visited and put that into the queue then you can go to three mark it as visited and put that into the queue once this is done we can just omit this perfect now again get the next guy get the two comma one so we got the two comma one perfect so can i say two came from one it did so from two where can you go again go to the adjacency list and it says you can go to one but dude i just came back from one why will i go back to one i will not so i'll just go back to five so i'll go to five and say visited and i'll insert five came from two perfect so five came from two and five is visited let's omit this the next guy will be three comma one so three came from one see this observe this three came from one from three where can you go you can go to one but you came from one you can go to four yes you can go to six yes so apparently you can go to four and six so you can go to four and you can go to six from three you can go to four market as visited and four came from three you can go to six mark it as visited and six came from three perfect",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "BPlrALf1LDU",
+      "position": 136,
+      "title": "G-11. Detect a Cycle in an Undirected Graph using BFS | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=BPlrALf1LDU",
+      "start": 422.8,
+      "end": 541.5999999999999,
+      "text": "visited and six came from three perfect this is also done what is the next step next step is to get the five comma two so there is five which came from two from five where can you go you can go to two as well as seven but you just now came from two so you'll not go you'll try to go to seven so you will go to seven so seven came from five so you went to seven perfect and now omit this at the next step you get four comma three so you get four and it came from three so four has just three as the neighboring node so it came from three so it will not do anything and it will omit this next there are six and it came from three important part important part very very important where can six go six can go to three but it came from three six can go to seven but if we go and see in the visited it says hey we have already visited seven but bfs tells me but bfs tells me but but we travels always in equal direction how can someone visit seven it can only happen if someone touched it right before me and now if i go and touch it it means it's a cycle someone at a level two and now i'm at a level two someone right before me at level two touched the seven and now i'm at level two and i'm touching it thereby there is a cycle if someone has visited it because we took two different paths and if someone has already touched seven it means it has a cycle so we will say yes it has a particular cycle that is how easy we can do this so i hope you've understood this particular bfs algorithm so we will now go back and try to write this bfs algorithm which detects a cycle so let's code this up so i'll be coding the c plus plus solution and the java solution",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "BPlrALf1LDU",
+      "position": 136,
+      "title": "G-11. Detect a Cycle in an Undirected Graph using BFS | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=BPlrALf1LDU",
+      "start": 537.92,
+      "end": 662.24,
+      "text": "plus plus solution and the java solution as usual is on the left you can follow it so we're given the number of vertices or the number of nodes and the adjacency list so what i'll do is i'll just have private function i just want to write for a graph okay where we know that this is the source or something like this so we have the source why am i writing like this i'll tell you as we move forward okay adjacency so this is what i'm trying to write and i'll write visited we need a visited array as well so please carry a visited array with it as well we will write something like visited of this source is equal to one we will declare a queue and it will have a pair of in command y pair because you need to store where it came from if you remember and initially it was source and it came from minus one always so we write something as uh not q dot empty which means let's travel still the q is not empty we can say the node that we are currently standing is front dot first we can say the parent is nothing but q dot front dot second and once you have got uh both of these you can always say q dot form right super simple now what's the next step you need to go to all its adjacent notes so please go to all its adjacent notes if the adjacent node has yet not been touched no one has visited it then i say hey listen if it is not let's visit this guy let's put the uh put this in into the queue saying it came from node perfect but what if it is visited this is where we need to understand so whenever we were at 5 we knew 5 came from 2 5 came from 2 we know and 5 had something as 2 as the first adjacent note remember whenever you run the for loop the first adjacent node",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "BPlrALf1LDU",
+      "position": 136,
+      "title": "G-11. Detect a Cycle in an Undirected Graph using BFS | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=BPlrALf1LDU",
+      "start": 657.44,
+      "end": 770.72,
+      "text": "the for loop the first adjacent node will be 2 but will you say this 2 forms a cycle no no way because you came from 2 to 5 so but this 2 would have been visited because it has previously been touched but not not in something like this just because you came by that part that is where this two was touched that is why it was marked as visited right but let's go to the other keys when you go to seven from five to seven seven was unvisited thereby you went to seven thereby you had something like seven comma five because seven was unvisited right so if it is unvisited you go and just put it in but what if it is visited let's come to this at six it came from three so six has adjacent node has three but this guy is visited because it came from three but why is this guy visited why is this guy visited it did not come from seven why is this guy visited if someone is visited remember this if someone is visited and it did not come from it if someone is visited that means it will come to else and it did not come from it which means it's not the parent which means it is a cycle if this guy is visited it will come here and it's not the parent how did it visit himself that's because it's a cycle someone else touched it and if it is a cycle you say cycle or else if you just go across and you traverse everything something like i'll give you an example if you traverse everything in sense imagine you have something like zero one node two node three node and over here at four you had five you had six imagine a graph like this what will happen is you'll start from the zero node then you'll go one four then you'll go to five then you'll go three six over so if your queue at the end you traverse everything and",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "BPlrALf1LDU",
+      "position": 136,
+      "title": "G-11. Detect a Cycle in an Undirected Graph using BFS | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=BPlrALf1LDU",
+      "start": 766.0,
+      "end": 886.24,
+      "text": "the end you traverse everything and there is no guy who's previously visited and it's not the parent then you say there is no cycle so this is how you can always do from a source from a source because over here the source was zero over here the source was one what if the graph is broken into multiple components please go back and watch the lecture connected components please go back in one selector connected components what if the graph is broken into multiple components so something like this imagine one two three this is a graph five six seven eight nine so what will happen is for the first time when you call it from one it will go and visit this this then this but you will not find a cycle here then you have to again call it for two but will you there's no point there's no point again calling for two because if one went ahead and did a traversal of the entire thing and they did not find a cycle calling for two calling for three calling for four will never be able to find it recycle will it be obviously not right the next step is like okay fine we greater than five a five six no psych then we call it for seven now seven says i got a cycle yes with the same method so you need to call for this one once you to call for this one once you need to call it for this one once so apparently you need to write like in terms of whenever there is a problem of multiple components like if you see over here in the example two we have something like a multiple component thing so what you need to do is you need to always write something like this for i equal to the start link if the nodes are one base you start from one equal to n and you go like i plus plus okay and over here what you do is you say if",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "BPlrALf1LDU",
+      "position": 136,
+      "title": "G-11. Detect a Cycle in an Undirected Graph using BFS | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=BPlrALf1LDU",
+      "start": 881.36,
+      "end": 997.36,
+      "text": "and over here what you do is you say if not visited i please call the detect cycle but whatever is your detect cycle and start the source with i and if this is true i will say hey listen this came down as a true so can you say that there is a cycle and if you have visited all the components and you never got a cycle you say false this is the standard procedure to do for components so what will happen is let's analyze what will happen for the first time it is one so it will go for one and find that it is not visited because you will have a single visited array remember this you'll have a single visited array with all marked as zeros so it will whenever it goes to one and it finds zero it goes and calls the detect cycle and the detect cycle will go and mark visit visit visit and visit so all of these guys will be visited correct and it will not return a cycle so apparently next time it will be two so two will be already visited we've already visited the component that has two next will be three already visited four already visited five not visited go for five so you again call for five so five goes visit visit so five goes and visits it no cycle again so then i will increase to six six is visited then it will increase to seven the moment it increases to seven and calls it for seven it gives him a cycle it says hey it's true we have a cycle if we start from seven and it says true this is how you check for components so always remember by the way let's check out okay so they have clearly used something like zero over here and it's a zero based indexing so what we can do is we can declare something like visited of v and we can mark it as z okay means all",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "BPlrALf1LDU",
+      "position": 136,
+      "title": "G-11. Detect a Cycle in an Undirected Graph using BFS | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=BPlrALf1LDU",
+      "start": 991.92,
+      "end": 1112.559,
+      "text": "and we can mark it as z okay means all of them are non-visited and we can say we can since it's a zero base indexing graph something like this if not visited of i that means not visited if let's call the detect that we wrote and now please go and detect from the source this adjacency this visited this and if this is true tell them that this is a cycle and if none of them is true trend them there is no cycle we say a graph to have a cycle if any of the component has a cycle remember this we say a graph to have a cycle if any of the components of a cycle so let's quickly run this and see if it is running fine perfect as you see it is giving us correct answer so if i discuss the time complexity now can you help me analyze that what with the time complexity how many nodes will we visit at the worst case i can say this detect will be like n into all the adjacent n into because it's going to visit all the adjacent notes one by one so for every node for for the first time if i go back here but the first thread will go here then here then here then here then here then here so can i say it's a summation of degrees remember the bfs algorithm you should remember the bfs algorithm i taught you so whatever time the bfs algorithm takes it's going to take the same time which is first it will be n thinks twice of edge y twice of edge because for every node you're traversing for all its adjacent nodes and the adjacent nodes is nothing but the degree so the summation of all adjacent nodes is equal to the summation of degrees summation of adjacent nodes is what you're doing which is equal to the summation of degree which is equal to 2e in directed undirected graph rather if you remember the first lecture so n plus do",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "BPlrALf1LDU",
+      "position": 136,
+      "title": "G-11. Detect a Cycle in an Undirected Graph using BFS | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=BPlrALf1LDU",
+      "start": 1107.28,
+      "end": 1205.039,
+      "text": "remember the first lecture so n plus do we are we using any extra space if you carefully see uh we're using a q data structure so somewhere around we go of n and then our visited we go often so yeah we can just wrap it up to something that's b off and now you might argue but trevor we are running a for loop and for every for loop we are calling it no no you're not calling it for every fall loop you can just do a big o of n because for the first time when you called for this component it went in for one only it went and it went like four times it never went for two never for three never for four once you called for five it went for five and it touched six similarly when you call for seven it will touch this it'll be like calls will go but in total the moment you touch everyone there will be no more calls so in summation it's it's not like every time you're going like and and and and it's not like that okay so that's why you don't need to complicate stuff so you can just keep it simple and say that the complexity is near about n plus two e and if you wanna include the component thing we go off n because in overall i'm gonna touch everyone which is going to take this and then there's a for loop that is running not into because overall i'll make sure i take this right so that will be the time complexity and the space complexity for this one so guys i hope i was able to explain you how to detect a cycle in an undirected graph using bfs just in case i was please make sure you like this video and if you're new to our channel what are you waiting for still now hit that subscribe button because that is the only thing that keeps me motivated to make these kind of videos and yeah",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "BPlrALf1LDU",
+      "position": 136,
+      "title": "G-11. Detect a Cycle in an Undirected Graph using BFS | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=BPlrALf1LDU",
+      "start": 1202.0,
+      "end": 1220.6499999999999,
+      "text": "to make these kind of videos and yeah with this i'll be wrapping up this video let's meet in some other video till then wait check out the dpc the sd sheet till then goodbye take care whenever your heart is [Music]",
+      "word_count": 42
+    }
+  ]
+}

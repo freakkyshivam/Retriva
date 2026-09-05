@@ -1,0 +1,119 @@
+{
+  "video_id": "WszrfSwMz58",
+  "position": 89,
+  "title": "L17. Maximum Path Sum in Binary Tree | C++ | Java",
+  "url": "https://www.youtube.com/watch?v=WszrfSwMz58",
+  "chunk_count": 10,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "WszrfSwMz58",
+      "position": 89,
+      "title": "L17. Maximum Path Sum in Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=WszrfSwMz58",
+      "start": 0.0,
+      "end": 124.32000000000001,
+      "text": "Everyone welcome back to the channel. I hope you guys are doing extremely well. So today we will be solving the problem finding the maximum path sum in any given binary tree. Now what is a path? So if you have seen the previous video, a path is nothing but any path like you start from any node A and you go to the node B. That is what we call as a path. Okay. And in a path a single node will only appear once. So I can say if I'm taking the node 15 and 17 then the path will be this. Okay. Now you cannot say that I'll go like this and then I'll come back like this. That's the path. No a path means any node like over here the path is 15 27. So every node is appearing once. For an example, I say the path from 15 to 9 9. So it'll be 15 20 minus 10 9. So there will be multiple paths like if I consider every node combination there will be multiple paths right. So out of all these multiple paths you have to figure out which path gives you the maximum summation. Like for an example if I decide to take this yellow path I'll get 15 + 20 that is 35 + 7 42. And this is the maximum sum that I can get if I consider every like every node to every other node. So this is the maximum sum I can get. And I want you to write a program that basically returns this 42 which is the maximum path sum. So what will be the brute force uh like what is the first solution that comes to your mind? The first solution that comes to my mind is possibly uh trying out every possible pair of node A and B where A can be anything, B can be uh any other thing. So if I try out every possible uh uh combination of a and b and out of every possible combination whichever",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "WszrfSwMz58",
+      "position": 89,
+      "title": "L17. Maximum Path Sum in Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=WszrfSwMz58",
+      "start": 119.04,
+      "end": 242.08,
+      "text": "every possible combination whichever path is giving me the maximum sum I can say that is my answer but again if I think of that root for solution it's complicated and if there are nodes I'm going to try out n² combinations so I should not go across that path because I'm already seeing that we have an n square and again we have to figure out the distance between two nodes it's going to take a bit more time. So we will not go across that path. Instead of that we'll go across something that we learned in the previous videos that is finding the maximum height of a binary tree. So if you haven't seen this video I'll highly recommend that you should definitely check out this video finding the maximum height of a binary tree and as well as finding the width of a binary tree. So these two videos are the prerequisites uh in order to understand the maximum part sum. So please pause this video if you haven't seen this go and watch that out and after that come back so that you can understand this in a smooth manner. So can I say if I am standing at any node then if I figure out what is the maximum like path at the left maximum path sum at the left and if I can figure out what is the maximum path sum at the right. So can I say for this particular node the answer will be the node value assuming the node is having a value on the left the max left on the right the max r. So can I say this is the formula that I can get for any given node if I know if I know the maximum maximum sum on the left and maximum sum on the right then the formula will definitely be val plus max l + max r. So if for a particular node I can figure out a formula. Can I say if I can apply this formula to this node to this node",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "WszrfSwMz58",
+      "position": 89,
+      "title": "L17. Maximum Path Sum in Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=WszrfSwMz58",
+      "start": 235.84,
+      "end": 352.639,
+      "text": "this formula to this node to this node to this node to this node to this node then I can actually figure out which is the maximum path across any given node. Like for this node the maximum path will be this one. Right? I can easily figure that out via this formula. For this node the maximum path will be this. I can again easily figure out via the formula. Now you might ask what if driver there is a path which which goes across 20 but this is the path that is the maximum then minus 10 will cover that case. Now anyway you having for minus 10 minus 10 will cover that case. Now you don't have to worry. So basically what I'll do is for every node I will try to have this curved path. Yes I'll try to have this curved path for every node. And can I say can I say if I try out every node if I try out every node and I apply this formula to every node then the maximum along every node like whichever is the maximum among all the nodes will be my maximum path sum you'll be like yes that makes sense something similar to what we did in finding the maximum width of a binary tree right so this is what this is what my uh thinking will be now I'll just move across with the solution and I'll do a Ryan so that you can uh understand in deep the algorithm. So if you remember the code from finding the maximum height or finding the maximum width it appeared something like this where at the end we were returning something like 1 + max of LH comma RH and this was done uh in order to find the maximum height of a binary tree if you remember. So over here what I've done is I've tried to figure out a function max path which if I'm standing in this node it figures out the maximum yes it's figured out the maximum path",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "WszrfSwMz58",
+      "position": 89,
+      "title": "L17. Maximum Path Sum in Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=WszrfSwMz58",
+      "start": 347.12,
+      "end": 466.8,
+      "text": "yes it's figured out the maximum path either on the left or either on the right like whichever is the maximum path that is what I'm returning. So it's very simple what I'm doing is node val and if the left is max then this left will be the path and if right is max then this right will be the path standing at a node I'm saying does the left path gives you the maximum sum or does the right path give you the maximum sum that is what I am basically returning over here now you might ask me but how is this going to help now if you remember if you remember the formula that I discussed was very simple the formula was to Find the formula was for every node you have to figure out the left sum the right sum and then you can get for this node the answer to be node val plus the summation of right sum plus left sum. So ideally ideally if I can figure out the left sum via this formula and the right sum via this formula then I will be eligible to apply this formula on this particular node. Makes sense? did not understand not an issue let's do a dry run things will become much more clear let's do that so guys just make sure while backtracking so this is this is the step which will go in so while backtracking just maintain a variable maximum and you can just have it via reference in C++ and over here just do maxi equal to max of maxi comma again uh sim uh similar to what we did in maximum width that's left sum plus right sum plus notes val just do this okay and how will this work I'll tell you so it's basically an extension of the problem that we did in maximum width if you have seen that video this this looks uh much easy to you right so let's start so initially I am at this",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "WszrfSwMz58",
+      "position": 89,
+      "title": "L17. Maximum Path Sum in Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=WszrfSwMz58",
+      "start": 460.24,
+      "end": 570.88,
+      "text": "let's start so initially I am at this node okay and let's assume my maxi is as of now defined as zero that's the initial value that I pass and I start at the root of the node So over here this will not be executed and I'll move to the left sum. So let's move to the left sum. Now the moment I move to the left sum. What will happen is again this will say hey come over here node is not null. Again move to the left. Now the moment I move to this left remember the moment I move to this left this will see that it is null. It is null. So it'll try to return a zero. Perfect. Again this right will say why don't you move to right? Because if you're standing at a node, if you're standing at a node, you always move to left, you always move to right. So you move to right and this is going to return a zero. So ultimately the left and right have got you zero. So what maximum we'll get is left sum plus right sum that's 0 plus 0 plus node.vall and node.val is nothing but 9. So 9 + 0 + 0. So I can say this is one of the paths via this node. This is the U path via this node. 9 and that's nothing but 9 + 0 + 0 9. So I update my maximum to 9. Perfect. Next I will come across and I'll return node. That's 9 plus max of left, right. So left is zero, right is zero. So I return only 9. Perfect. I'm going to return only 9. So this minus 10 when it was standing from the left. Yes, from the left it got a minus 9. So left sum is - 9. It's time to go to the right sum. This minus 10 got from left as 9. Remember this. So now it's time to go to the right. The moment I go to right, I have a 20.",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "WszrfSwMz58",
+      "position": 89,
+      "title": "L17. Maximum Path Sum in Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=WszrfSwMz58",
+      "start": 566.0,
+      "end": 678.9590000000001,
+      "text": "moment I go to right, I have a 20. Correct? So on 20 again I'll go to the left and on to the right. But before that we'll go to the left. On 15 on the left I get a null. So this returns a zero. On right I get a null. So this returns a zero. So ultimately via this 15 I have zero on the left zero on the right that is left sum and right sum. So again apply the formula left sum plus right sum that's 0 + 0 plus note dov val 15. So maximum gets updated to 15. Perfect. So this guy returns a 15. Why? Because node doval is 15 plus max of left max of right as zero. It returns a 15. Now it goes to the right. The moment it goes to right I have a seven. Correct? Again seven will do the same task. goes goes to the left goes to the right both as uh null. So this will return a zero. This will return a zero. Again left sum returns 0. Right sum returns zero. So this seven this seven will consider over here. So it will be 0 + 0 + 7. So this is 0 + 0 + 7 that is 7. So you have already got a maximum of 15. So this maximum will not be considered. Why the seven? Why the seven? It will not be considered. Hence hence this is going to return. And what will this return? Not val that is seven. Max of left right that's zero. This is going to return seven. This is going to return seven. Now understand for this node 20 when you are at the node 20 the left sum is 15 right the right sum is seven. So I know on the left the sum is 15. Again makes sense because the node is 15. On the right the node is seven. So that's why it says seven. So what I do is left sum. So what I do is left sum that's 15 plus",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "WszrfSwMz58",
+      "position": 89,
+      "title": "L17. Maximum Path Sum in Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=WszrfSwMz58",
+      "start": 671.12,
+      "end": 791.6,
+      "text": "So what I do is left sum that's 15 plus right sum that is 7. 15 + 7 22 plus the current node 20. If I consider this path if I consider this path so 15 + 7 is 22 + 20 is 42. So I'll update maximum to 42. So what I can say is this guy via this got a 42 perfect now which is the longest path like if you're coming across if you're trying to take it which path will you take if you're standing at minus 10 either you'll take this or you will take this path so which path will you take this decide this is decided by this current node which is maximum 15 or 7 15 is maximum so node doval that's 20 plus max of left right so 20 + 15 this returns returns a 40 a 35 rather. So did you understand what happened? Basically if you're returning 35 it means from 20 take this path not this. So you understood that right? So you have a 35. Now on minus 10 you know on the left you have a 9. So that's a 9 + - 10 plus a 35 which is apparently something 34. Again that's not greater than maximum. So again not to be returned. Again just imagine there was some other stuff. So we will again return note.val. Now which path will you take? Will you take this path if you if you're standing at minus 10 or will you take this path? Obviously 35 is what you'll take. So you return 35 + - 10 that's minus 25 is what you return from here. But but your answer is stored in maximum because you tried out every node and you figured out the umbrella kind of a thing. That's why this logic like you can see maximum height logic can actually help you to solve a lot of questions and this is what we call backtracking logic like over here you went you came back you went you came back and then you applied",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "WszrfSwMz58",
+      "position": 89,
+      "title": "L17. Maximum Path Sum in Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=WszrfSwMz58",
+      "start": 787.76,
+      "end": 904.6389999999999,
+      "text": "went you came back and then you applied the backtracking logic over here because once you have you have came back you have left's value right's value and that can be easily applied to any node. So you know the current left current right just apply to this node. Now a lot of you would be thinking of a test case like this. What would be the maximum path in this test case? Then this will be from here to here and the logic that I said will not cover this because because I I said from 15 take this left take this right and then like whatever is the left whatever is the right add that with 15 to get the maximum via 15 on the umbrella path. So you'll be like but that doesn't work over here that's going to work. It's very simple. If from the left over here on 20 on 20 if from the left you're getting a minus 30 do not consider a negative part sum. If there's a minus 30 you'll say I'll never consider this and instead I'll say I'll return a zero. Similarly if on the right I'm getting a minus5 never consider this. Instead say I'll take a zero because taking a negative path will never give me max path sum. Instead ignoring those negative parts will give me like the sum will be automatically maximized. So just make sure you ignore all the negative part sums that are coming from left and that are coming from right. Just ignore them. Once you understand the code it will be much more clear to you. So as always the C++ code is on the left and the Java code is on the right. So initially we have the root right we have the maximum as int mean in Java we have taken a array because we know that we cannot take a variable and we cannot pass it as reference. So I've taken an array and I've declared with size one and I've stored the answer at the zero index.",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "WszrfSwMz58",
+      "position": 89,
+      "title": "L17. Maximum Path Sum in Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=WszrfSwMz58",
+      "start": 900.959,
+      "end": 1006.56,
+      "text": "stored the answer at the zero index. Just some smartness nothing else. After that I have I've called this function and I pass the root and the maximum and once the maximum is computed I return the maximum. Now the code is very simple. I have the node, I have the maximum, I do the null check, return zero left. Over here you can see if this appears to be a negative number like from the left I get a negative sum. I'll not consider that and I'll return a zero. Similarly from the right if I get a negative sum I will return a zero and at the end I'll say left plus right plus node val. And that is how you get the maximum. And then you can easily return node.val val plus max of left right to be your maximum path sum from the given node. That is what you do. In short, why this worked was because if you're standing here, you actually knew which was the longest path. Like if this is the longest path, you knew about that because your sum was making sure that you are either taking this or you're either taking this, right? Because you'll always take the maximum. So imagine you always took this. After that you always took this and from here there are two options. You either take this or you either take this. So you'll end up taking this. So at the end this guy took this and after this this. So ultimately you got this path. So for guys who are still wondering why did we uh take the left sum and right sum very very simple guys. If you are standing at minus 10 you know this is what you will take definitely but over here you know till here you know but after that you don't know either you have to take the left path or right path. So that is why returning the max of left or right is very necessary so that you can easily",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "WszrfSwMz58",
+      "position": 89,
+      "title": "L17. Maximum Path Sum in Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=WszrfSwMz58",
+      "start": 1002.399,
+      "end": 1070.992,
+      "text": "very necessary so that you can easily know whether you take the left path or whether you take the right path. If the tree would have been elongated you would have understood whether you have to take left then you have to go right then you have to go left which path you have to take. If you're starting from via this minus 10 that's why that's why you always have to store node dot value which one is maximum left or right so that you when you're coming back when you're coming back you know which on which path is your maximum summation that is why we are storing the left sum as well as the right sum that is the whole intuition behind this approach so I hope you have understood the entire explanation as well as the code just in case you did please please please make sure you like this video because it took a lot of efforts to make this entire tree series. Also, if you wish, you can definitely drop in a comment that will keep motivating me to make such further series. Also, if you're new to this channel, please do consider subscribing because I'm going to bring in such more series in the upcoming future as well. With this, uh let's wrap up this video. Let's meet in the next lecture. Bye-bye. Take care. Get your golden. [music]",
+      "word_count": 236
+    }
+  ]
+}

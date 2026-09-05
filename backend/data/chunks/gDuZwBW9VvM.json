@@ -1,0 +1,97 @@
+{
+  "video_id": "gDuZwBW9VvM",
+  "position": 224,
+  "title": "DP 44. Largest Divisible Subset | Longest Increasing Subsequence",
+  "url": "https://www.youtube.com/watch?v=gDuZwBW9VvM",
+  "chunk_count": 8,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "gDuZwBW9VvM",
+      "position": 224,
+      "title": "DP 44. Largest Divisible Subset | Longest Increasing Subsequence",
+      "url": "https://www.youtube.com/watch?v=gDuZwBW9VvM",
+      "start": 0.24,
+      "end": 120.24,
+      "text": "hey everyone welcome back to take you forward so today we will be solving the problem largest divisible subset which is uh dp44 but before this dp41 dp42 which is based on longest increasing subsequence should have been done because we are following the pattern of longest increasing subsequence so if you know this then only solve this problem otherwise not so let's first understand the meaning of subset as of now we we're doing problems which are longest increasing subsequence subsequence i'm calling subset the definition of subsequences i can pick 1 16 8 and they have to be in the same order as in the array they have to be in the same order as in the array that is what we call generically as subsequence but the moment i attach the terms subset i can write them as 1 8 16 1 16 8 is also a subset 1 7 16 is a subset you generally don't need to follow an order you can pick up any element from the array and you can write so if you're not following the order and you're picking up any element from the array and you're writing it that is what we call as subset now what is the definition of divisible now if you have picked up a subset all the elements in itself if you pick up any two elements they should be dividing each other like if i pick up an element array of i and array of j so either array of i should be dividing array of j or either array of j should be dividing array of i it should satisfy either of these conditions for an example if i pick up a subset like 16 8 comma 4 this is a subset now what can be all like what all pairs can i have i can have 16 8 as a pair i can have 16 4 as a pair i can have 8 comma 4 as a pair like i can have",
+      "word_count": 340
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "gDuZwBW9VvM",
+      "position": 224,
+      "title": "DP 44. Largest Divisible Subset | Longest Increasing Subsequence",
+      "url": "https://www.youtube.com/watch?v=gDuZwBW9VvM",
+      "start": 113.759,
+      "end": 247.35999999999999,
+      "text": "have 8 comma 4 as a pair like i can have 16 8 i can have 16 4 and then i can have 8 and 4 right so these are the three pairs that i can have now if you carefully see 16 is divisible by 8 16 is divisible by 4 8 is divisible by 4 so every pair is divisible i'm not saying that 8 has i'm not saying that 8 has to be divisible by 16 it can be either way 16 is divisible by that's okay so that is the meaning of divisibility that's the meaning of divisibility so i need to find the largest so i can say if i just omit this which will be the largest divisibility pair then i'll be like i can pick 1 16 8 and 4. this is indeed the largest divisibility pair because if i write down the pairs 1 16 16 divides one for sure 1 eight one divides eight for sure one four it's still divisible 16 eight divisible 16 four divisible eight four divisible so i can say all the pairs are divisible okay so if all the pairs are divisible this can be a possible answer and if you add a 7 to it this will not why because if you add a 7 the 7 is not divisible by 4 8 16 so you need to be very sure that each of the pairs are divisible which are in the subset so divisible uh question divisible understood now about largest you have understood this is the largest this is of size 4 and you cannot have any greater size subset now the question states the array that you are given will have distinct numbers the array that you will have will have distinct numbers okay that is for sure stated and also another statement is given to you that you can print any answer since we're talking about subset you can print one sixteen eight four you can jumble it up and print like four eight",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "gDuZwBW9VvM",
+      "position": 224,
+      "title": "DP 44. Largest Divisible Subset | Longest Increasing Subsequence",
+      "url": "https://www.youtube.com/watch?v=gDuZwBW9VvM",
+      "start": 242.319,
+      "end": 374.8,
+      "text": "jumble it up and print like four eight one sixteen or you can also print it like one four eight sixteen in the sorted fashion you can print any of the answers and if they are dividing each other you will be getting a ac which is correct answer got it so that is what the problem is all about now since they're saying so print any answer here lies a possible think uh thought process since they're saying print any answer and we are looking for divisibility we need to we need to convert this problem into somewhere related to longest increasing subsequence because we know in dynamic programming it's generally the subsequence where we deal with indexes and then we decide whether to pick or not pick we generally know that so can we relate this to somewhere around longest increasing subsequence i'll be like how i'll tell you that what if i take this example and i try to sort it because since i can print any answer and the order does not matter even if i sort it and i try to find out an answer it is still okay as long as the divisibility as long as the divisibility is not compromised i'm still okay so i'll be like okay strive let's uh definitely sort it because it doesn't matter even if i sort it whatever answer i get like even if i get 1 4 8 16 that's still okay okay fine now how do you make sure that each of the pairs are divisible like how do you make sure that 1 divides like 16 1 divides 8 1 divides 4 and then 16 divides 8 16 divides 4 can we have a shortcut to it now since i have sorted it again please here to hear me out properly since i have sorted it okay if i'm picking one as my first guy if i'm picking one as my first guy and the next guy i pick up four and the next guy i pick up four okay and then i say",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "gDuZwBW9VvM",
+      "position": 224,
+      "title": "DP 44. Largest Divisible Subset | Longest Increasing Subsequence",
+      "url": "https://www.youtube.com/watch?v=gDuZwBW9VvM",
+      "start": 372.08,
+      "end": 514.159,
+      "text": "and then i say that hey listen four is divided by one right so if i'm picking up eight if i'm picking up eight the next guy because i cannot pick up seven because seven cannot be divided by four this is not possible but can i pick up eight can i pick up 8 why because 8 is divisible by 4 can i say this if 8 is divisible by 4 which eventually means that 8 is also divisible by 1 because 4 is divisible by one so eight has to be divisible by one understand the intuition if four is divisible by one and if eight is divisible by four so the rule also follows that eight will be divisible by 1 right okay next i come to 16. now can i say when i come to 16 and 16 is divisible by 8 which indirectly means 16 is divisible by 4 and 16 is divisible by 1 also due to the sorted because i've already checked for the divisibility of 4 by 8 and divisibility of 1 by 4 so i can easily say 16 if divisible by 8 means are divisible by all the elements in the array so i can say i can easily pick up 16. so did you find a pattern did you find a pattern you did whenever i'm picking up 16 since the array is sorted since the array is sorted i am definitely sure if 16 divides 8 like if 16 is divisible by 8 it will be divided by all the other picked up elements why because 8 is divisible by 4 which eventually means that 16 is divisible by 4 as well so the rule so you can try out another examples and you'll see so i got this so can i say now i'm looking out to figure like can i just think this question as once i've sorted the question am i looking out to figure longest subsequence and can i say divisible subsequence instead of increasing am i looking to figure out the longest divisible",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "gDuZwBW9VvM",
+      "position": 224,
+      "title": "DP 44. Largest Divisible Subset | Longest Increasing Subsequence",
+      "url": "https://www.youtube.com/watch?v=gDuZwBW9VvM",
+      "start": 509.12,
+      "end": 631.92,
+      "text": "figure out the longest divisible subsequence and answer to that is yes why because 4 divided by 1 true 8 divided by 4 true 16 divided by 8 true right prior to this prior to this we were solving the problem which was increasing like we were taking 1 3 something like 5 this was longest increasing subsequence can i relate this problem to longest divisible subsequence instead of increasing i'm making sure the next number that is being peaked the next number that is being picked has to be divisible has to be divisible so if you remember the code for lis if you remember the code for lis do you remember you do so if i just rewrite the code it was something like i equal to it started from 1 because 0 will be not there i lesser than n i plus plus and if you remember there was a j loop which was from 0 till i and you went until j plus plus and since it was increasing you said if array of if array of g is lesser than array of i because you're saying area 5 ls plain lias and at the same time you said if dp of i whatever it had whatever it had was lesser than if i take this element because if i take this element it will be plus 1 if it is then you went on and said dp of i will be dp of j plus 1 and you said in the hash of i you can keep j because that's where the dp would have been derived from this is the if statement this is the statement that you wrote and then the for loop executed so if you remember this was the lis if you remember well this was the lis code and in the lis code you checked for this you checked for this and that's how you uh stored the hash now i'm changing the question to divisible once the array is sorted i've changed the",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "gDuZwBW9VvM",
+      "position": 224,
+      "title": "DP 44. Largest Divisible Subset | Longest Increasing Subsequence",
+      "url": "https://www.youtube.com/watch?v=gDuZwBW9VvM",
+      "start": 628.24,
+      "end": 744.56,
+      "text": "the array is sorted i've changed the question to divisible i just need to check for divisibility so can i say in because i know the array is sorted i know the arrow is sorted so can i say what i just need to do is i need to cut this guy off and i know array of i is greater so if array of i is divisible by array of j then i can say it's divisible and then i just need to check for the length because i'm looking for the longest so this is how the length of dp will work slight shuttle change and i could convert an lis question to an lds which is the longest divisible subsequence makes sense guys so once you've done this you can definitely use the hash array to track back yes you can use the hash array to track back your longest increasing sorry longest a divisible subset and since you need to print any answer it works but the key point over here is you need to sort the array because if you don't sort the array the logic does not binds like 16 is divisible by 8 and that means 16 divisible by 4 by 1 binds because it is sorted got it so i hope you have understood it so without so without wasting any time let's check out the code so if you remember in the longest increasing subsequence in order to print it uh this is how we did we basically took up a vector uh dp and basically let's copy paste this it's the same code it's the same code so i'll just copy paste this over here in the divisible set question so just copy paste it so if you remember this is the dp and this is the hash and initially the maximum was one i've taken the exact same code exact same what i will do different is i will say i will sort the array okay i will sort that nothing different",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "gDuZwBW9VvM",
+      "position": 224,
+      "title": "DP 44. Largest Divisible Subset | Longest Increasing Subsequence",
+      "url": "https://www.youtube.com/watch?v=gDuZwBW9VvM",
+      "start": 739.68,
+      "end": 855.3599999999999,
+      "text": "okay i will sort that nothing different i'll just sort that way once i've sorted this instead of this i will say if array of i modulo array of previous is equal to zero if this is true and this is kind of true and this is what i write and in this way i can store it and this will make sure the subset is stored and i can reverse it and i can uh just make sure over here they want the subset to be returned so just return the subset so that's how you can do it just a shuttle change and if you try running this you will see that it is in indeed running fine my bad uh n was not declared in the scope because they did not give you n so probably you can just go across and declare it and the other thing will be hash include is something which is again missing hash include bits slash stdc plus h that's what again has been taken perfect uh now let's run the code so you see all of them are giving correct answer so easy isn't it so if you submit this it will give you correct answer so i'll be the time complexity guys it will be n square for these couple of loops so the time complexity is n square and then you are tracking back so at the worst case it might take you a big o of n in order to trace back the entire path because at max the largest subset will be the array itself so this might end up taking this might end up taking big o of n and so big of n square so n square plus n is the time complexity and they're using a big o of n space that's what you're using so this is this is how you can definitely solve this problem using the sim the simple concept of longest increasing subsequence so here with this i'll be wrapping up this video but before that",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "gDuZwBW9VvM",
+      "position": 224,
+      "title": "DP 44. Largest Divisible Subset | Longest Increasing Subsequence",
+      "url": "https://www.youtube.com/watch?v=gDuZwBW9VvM",
+      "start": 851.68,
+      "end": 880.6899999999999,
+      "text": "wrapping up this video but before that if you have understood it please please please make sure you like this video and if you're new to our channel please do consider subscribing to us that will be of immense help and yeah with this let's wrap up this video and meet in the next one where we will be solving the next problem from the longest increasing subsequence whenever your heart is [Music]",
+      "word_count": 73
+    }
+  ]
+}

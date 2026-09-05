@@ -1,0 +1,2246 @@
+{
+  "position": 224,
+  "video_id": "gDuZwBW9VvM",
+  "title": "DP 44. Largest Divisible Subset | Longest Increasing Subsequence",
+  "url": "https://www.youtube.com/watch?v=gDuZwBW9VvM",
+  "transcript": [
+    {
+      "start": 0.24,
+      "duration": 3.04,
+      "end": 3.2800000000000002,
+      "text": "hey everyone welcome back to take you"
+    },
+    {
+      "start": 1.52,
+      "duration": 4.0,
+      "end": 5.52,
+      "text": "forward so today we will be solving the"
+    },
+    {
+      "start": 3.28,
+      "duration": 4.479,
+      "end": 7.759,
+      "text": "problem largest divisible subset which"
+    },
+    {
+      "start": 5.52,
+      "duration": 4.24,
+      "end": 9.76,
+      "text": "is uh dp44"
+    },
+    {
+      "start": 7.759,
+      "duration": 5.521,
+      "end": 13.280000000000001,
+      "text": "but before this"
+    },
+    {
+      "start": 9.76,
+      "duration": 6.079,
+      "end": 15.838999999999999,
+      "text": "dp41 dp42 which is"
+    },
+    {
+      "start": 13.28,
+      "duration": 3.999,
+      "end": 17.279,
+      "text": "based on longest increasing subsequence"
+    },
+    {
+      "start": 15.839,
+      "duration": 2.801,
+      "end": 18.64,
+      "text": "should have been done because we are"
+    },
+    {
+      "start": 17.279,
+      "duration": 3.281,
+      "end": 20.56,
+      "text": "following the pattern of longest"
+    },
+    {
+      "start": 18.64,
+      "duration": 3.76,
+      "end": 22.4,
+      "text": "increasing subsequence so if you know"
+    },
+    {
+      "start": 20.56,
+      "duration": 4.0,
+      "end": 24.56,
+      "text": "this then only solve this problem"
+    },
+    {
+      "start": 22.4,
+      "duration": 3.84,
+      "end": 26.24,
+      "text": "otherwise not so let's first understand"
+    },
+    {
+      "start": 24.56,
+      "duration": 3.84,
+      "end": 28.4,
+      "text": "the meaning of subset"
+    },
+    {
+      "start": 26.24,
+      "duration": 4.72,
+      "end": 30.959999999999997,
+      "text": "as of now we we're doing problems which"
+    },
+    {
+      "start": 28.4,
+      "duration": 3.839,
+      "end": 32.239,
+      "text": "are longest increasing subsequence"
+    },
+    {
+      "start": 30.96,
+      "duration": 3.68,
+      "end": 34.64,
+      "text": "subsequence"
+    },
+    {
+      "start": 32.239,
+      "duration": 5.761,
+      "end": 38.0,
+      "text": "i'm calling subset the definition of"
+    },
+    {
+      "start": 34.64,
+      "duration": 5.84,
+      "end": 40.480000000000004,
+      "text": "subsequences i can pick 1 16 8 and they"
+    },
+    {
+      "start": 38.0,
+      "duration": 4.48,
+      "end": 42.480000000000004,
+      "text": "have to be in the same order as in the"
+    },
+    {
+      "start": 40.48,
+      "duration": 3.68,
+      "end": 44.16,
+      "text": "array they have to be in the same order"
+    },
+    {
+      "start": 42.48,
+      "duration": 4.16,
+      "end": 46.64,
+      "text": "as in the array that is what we call"
+    },
+    {
+      "start": 44.16,
+      "duration": 5.6,
+      "end": 49.76,
+      "text": "generically as subsequence but the"
+    },
+    {
+      "start": 46.64,
+      "duration": 5.439,
+      "end": 52.079,
+      "text": "moment i attach the terms subset i can"
+    },
+    {
+      "start": 49.76,
+      "duration": 5.119,
+      "end": 54.879,
+      "text": "write them as 1 8 16"
+    },
+    {
+      "start": 52.079,
+      "duration": 4.081,
+      "end": 56.160000000000004,
+      "text": "1 16 8 is also a subset"
+    },
+    {
+      "start": 54.879,
+      "duration": 2.32,
+      "end": 57.199,
+      "text": "1"
+    },
+    {
+      "start": 56.16,
+      "duration": 4.079,
+      "end": 60.239,
+      "text": "7"
+    },
+    {
+      "start": 57.199,
+      "duration": 5.2,
+      "end": 62.399,
+      "text": "16 is a subset you generally don't need"
+    },
+    {
+      "start": 60.239,
+      "duration": 3.761,
+      "end": 64.0,
+      "text": "to follow an order you can pick up any"
+    },
+    {
+      "start": 62.399,
+      "duration": 3.361,
+      "end": 65.76,
+      "text": "element from the array and you can write"
+    },
+    {
+      "start": 64.0,
+      "duration": 3.28,
+      "end": 67.28,
+      "text": "so if you're not following the order and"
+    },
+    {
+      "start": 65.76,
+      "duration": 3.359,
+      "end": 69.119,
+      "text": "you're picking up any element from the"
+    },
+    {
+      "start": 67.28,
+      "duration": 4.08,
+      "end": 71.36,
+      "text": "array and you're writing it that is what"
+    },
+    {
+      "start": 69.119,
+      "duration": 5.521,
+      "end": 74.64,
+      "text": "we call as subset now what is the"
+    },
+    {
+      "start": 71.36,
+      "duration": 5.759,
+      "end": 77.119,
+      "text": "definition of divisible now if you have"
+    },
+    {
+      "start": 74.64,
+      "duration": 5.2,
+      "end": 79.84,
+      "text": "picked up a subset all the elements in"
+    },
+    {
+      "start": 77.119,
+      "duration": 5.441,
+      "end": 82.56,
+      "text": "itself if you pick up any two elements"
+    },
+    {
+      "start": 79.84,
+      "duration": 5.919,
+      "end": 85.759,
+      "text": "they should be dividing each other like"
+    },
+    {
+      "start": 82.56,
+      "duration": 6.32,
+      "end": 88.88,
+      "text": "if i pick up an element array of i"
+    },
+    {
+      "start": 85.759,
+      "duration": 5.201,
+      "end": 90.96,
+      "text": "and array of j so either array of i"
+    },
+    {
+      "start": 88.88,
+      "duration": 4.16,
+      "end": 93.03999999999999,
+      "text": "should be dividing array of j"
+    },
+    {
+      "start": 90.96,
+      "duration": 5.28,
+      "end": 96.24,
+      "text": "or either array of j"
+    },
+    {
+      "start": 93.04,
+      "duration": 6.24,
+      "end": 99.28,
+      "text": "should be dividing array of i"
+    },
+    {
+      "start": 96.24,
+      "duration": 5.919,
+      "end": 102.15899999999999,
+      "text": "it should satisfy either of these"
+    },
+    {
+      "start": 99.28,
+      "duration": 6.08,
+      "end": 105.36,
+      "text": "conditions for an example if i pick up a"
+    },
+    {
+      "start": 102.159,
+      "duration": 6.24,
+      "end": 108.399,
+      "text": "subset like 16 8 comma 4 this is a"
+    },
+    {
+      "start": 105.36,
+      "duration": 5.119,
+      "end": 110.479,
+      "text": "subset now what can be all like what all"
+    },
+    {
+      "start": 108.399,
+      "duration": 5.36,
+      "end": 113.759,
+      "text": "pairs can i have i can have 16 8 as a"
+    },
+    {
+      "start": 110.479,
+      "duration": 5.68,
+      "end": 116.15899999999999,
+      "text": "pair i can have 16 4 as a pair i can"
+    },
+    {
+      "start": 113.759,
+      "duration": 6.481,
+      "end": 120.24,
+      "text": "have 8 comma 4 as a pair like i can have"
+    },
+    {
+      "start": 116.159,
+      "duration": 6.64,
+      "end": 122.799,
+      "text": "16 8 i can have 16 4 and then i can have"
+    },
+    {
+      "start": 120.24,
+      "duration": 5.12,
+      "end": 125.36,
+      "text": "8 and 4 right so these are the three"
+    },
+    {
+      "start": 122.799,
+      "duration": 3.841,
+      "end": 126.64,
+      "text": "pairs that i can have now if you"
+    },
+    {
+      "start": 125.36,
+      "duration": 3.759,
+      "end": 129.119,
+      "text": "carefully see"
+    },
+    {
+      "start": 126.64,
+      "duration": 6.239,
+      "end": 132.879,
+      "text": "16 is divisible by 8"
+    },
+    {
+      "start": 129.119,
+      "duration": 6.801,
+      "end": 135.92,
+      "text": "16 is divisible by 4 8 is divisible by 4"
+    },
+    {
+      "start": 132.879,
+      "duration": 5.36,
+      "end": 138.239,
+      "text": "so every pair is divisible i'm not"
+    },
+    {
+      "start": 135.92,
+      "duration": 3.92,
+      "end": 139.83999999999997,
+      "text": "saying that 8 has i'm not saying that 8"
+    },
+    {
+      "start": 138.239,
+      "duration": 4.08,
+      "end": 142.31900000000002,
+      "text": "has to be divisible by 16 it can be"
+    },
+    {
+      "start": 139.84,
+      "duration": 3.44,
+      "end": 143.28,
+      "text": "either way 16 is divisible by that's"
+    },
+    {
+      "start": 142.319,
+      "duration": 2.64,
+      "end": 144.95899999999997,
+      "text": "okay"
+    },
+    {
+      "start": 143.28,
+      "duration": 3.599,
+      "end": 146.879,
+      "text": "so that is the meaning of"
+    },
+    {
+      "start": 144.959,
+      "duration": 4.241,
+      "end": 149.2,
+      "text": "divisibility that's the meaning of"
+    },
+    {
+      "start": 146.879,
+      "duration": 5.681,
+      "end": 152.56,
+      "text": "divisibility so i need to find the"
+    },
+    {
+      "start": 149.2,
+      "duration": 5.44,
+      "end": 154.64,
+      "text": "largest so i can say if i just omit this"
+    },
+    {
+      "start": 152.56,
+      "duration": 6.0,
+      "end": 158.56,
+      "text": "which will be the largest divisibility"
+    },
+    {
+      "start": 154.64,
+      "duration": 6.48,
+      "end": 161.11999999999998,
+      "text": "pair then i'll be like i can pick 1 16"
+    },
+    {
+      "start": 158.56,
+      "duration": 4.0,
+      "end": 162.56,
+      "text": "8 and 4. this is indeed the largest"
+    },
+    {
+      "start": 161.12,
+      "duration": 2.88,
+      "end": 164.0,
+      "text": "divisibility pair because if i write"
+    },
+    {
+      "start": 162.56,
+      "duration": 6.0,
+      "end": 168.56,
+      "text": "down the pairs"
+    },
+    {
+      "start": 164.0,
+      "duration": 5.92,
+      "end": 169.92,
+      "text": "1 16 16 divides one for sure"
+    },
+    {
+      "start": 168.56,
+      "duration": 3.759,
+      "end": 172.319,
+      "text": "1 eight"
+    },
+    {
+      "start": 169.92,
+      "duration": 3.92,
+      "end": 173.83999999999997,
+      "text": "one divides eight for sure"
+    },
+    {
+      "start": 172.319,
+      "duration": 3.361,
+      "end": 175.67999999999998,
+      "text": "one four"
+    },
+    {
+      "start": 173.84,
+      "duration": 4.319,
+      "end": 178.159,
+      "text": "it's still divisible"
+    },
+    {
+      "start": 175.68,
+      "duration": 5.04,
+      "end": 180.72,
+      "text": "16 eight divisible"
+    },
+    {
+      "start": 178.159,
+      "duration": 5.921,
+      "end": 184.07999999999998,
+      "text": "16 four divisible"
+    },
+    {
+      "start": 180.72,
+      "duration": 6.159,
+      "end": 186.879,
+      "text": "eight four divisible so i can say all"
+    },
+    {
+      "start": 184.08,
+      "duration": 5.519,
+      "end": 189.59900000000002,
+      "text": "the pairs are divisible okay so if all"
+    },
+    {
+      "start": 186.879,
+      "duration": 7.041,
+      "end": 193.92,
+      "text": "the pairs are divisible this can be a"
+    },
+    {
+      "start": 189.599,
+      "duration": 7.201,
+      "end": 196.79999999999998,
+      "text": "possible answer and if you add a 7 to it"
+    },
+    {
+      "start": 193.92,
+      "duration": 5.84,
+      "end": 199.76,
+      "text": "this will not why because if you add a 7"
+    },
+    {
+      "start": 196.8,
+      "duration": 4.88,
+      "end": 201.68,
+      "text": "the 7 is not divisible by 4 8 16 so you"
+    },
+    {
+      "start": 199.76,
+      "duration": 4.08,
+      "end": 203.84,
+      "text": "need to be very sure that each of the"
+    },
+    {
+      "start": 201.68,
+      "duration": 4.88,
+      "end": 206.56,
+      "text": "pairs are divisible which are in the"
+    },
+    {
+      "start": 203.84,
+      "duration": 5.759,
+      "end": 209.599,
+      "text": "subset so divisible uh question"
+    },
+    {
+      "start": 206.56,
+      "duration": 4.64,
+      "end": 211.2,
+      "text": "divisible understood now about largest"
+    },
+    {
+      "start": 209.599,
+      "duration": 3.28,
+      "end": 212.879,
+      "text": "you have understood this is the largest"
+    },
+    {
+      "start": 211.2,
+      "duration": 5.84,
+      "end": 217.04,
+      "text": "this is of size"
+    },
+    {
+      "start": 212.879,
+      "duration": 7.36,
+      "end": 220.239,
+      "text": "4 and you cannot have any greater size"
+    },
+    {
+      "start": 217.04,
+      "duration": 5.6,
+      "end": 222.64,
+      "text": "subset now the question states the array"
+    },
+    {
+      "start": 220.239,
+      "duration": 4.241,
+      "end": 224.48000000000002,
+      "text": "that you are given will have"
+    },
+    {
+      "start": 222.64,
+      "duration": 4.4,
+      "end": 227.04,
+      "text": "distinct numbers"
+    },
+    {
+      "start": 224.48,
+      "duration": 6.08,
+      "end": 230.56,
+      "text": "the array that you will have will have"
+    },
+    {
+      "start": 227.04,
+      "duration": 6.32,
+      "end": 233.35999999999999,
+      "text": "distinct numbers okay that is for sure"
+    },
+    {
+      "start": 230.56,
+      "duration": 5.759,
+      "end": 236.31900000000002,
+      "text": "stated and also another statement is"
+    },
+    {
+      "start": 233.36,
+      "duration": 3.92,
+      "end": 237.28,
+      "text": "given to you that you can print any"
+    },
+    {
+      "start": 236.319,
+      "duration": 3.2,
+      "end": 239.51899999999998,
+      "text": "answer"
+    },
+    {
+      "start": 237.28,
+      "duration": 5.039,
+      "end": 242.319,
+      "text": "since we're talking about subset you can"
+    },
+    {
+      "start": 239.519,
+      "duration": 5.201,
+      "end": 244.72,
+      "text": "print one sixteen eight four you can"
+    },
+    {
+      "start": 242.319,
+      "duration": 5.041,
+      "end": 247.35999999999999,
+      "text": "jumble it up and print like four eight"
+    },
+    {
+      "start": 244.72,
+      "duration": 4.56,
+      "end": 249.28,
+      "text": "one sixteen or you can also print it"
+    },
+    {
+      "start": 247.36,
+      "duration": 4.32,
+      "end": 251.68,
+      "text": "like one four eight sixteen in the"
+    },
+    {
+      "start": 249.28,
+      "duration": 5.44,
+      "end": 254.72,
+      "text": "sorted fashion you can print any of the"
+    },
+    {
+      "start": 251.68,
+      "duration": 6.72,
+      "end": 258.40000000000003,
+      "text": "answers and if they are dividing each"
+    },
+    {
+      "start": 254.72,
+      "duration": 6.16,
+      "end": 260.88,
+      "text": "other you will be getting a ac which is"
+    },
+    {
+      "start": 258.4,
+      "duration": 4.64,
+      "end": 263.03999999999996,
+      "text": "correct answer got it so that is what"
+    },
+    {
+      "start": 260.88,
+      "duration": 5.759,
+      "end": 266.639,
+      "text": "the problem is all about"
+    },
+    {
+      "start": 263.04,
+      "duration": 3.599,
+      "end": 266.639,
+      "text": "now since they're saying so"
+    },
+    {
+      "start": 266.84,
+      "duration": 5.799,
+      "end": 272.63899999999995,
+      "text": "print any answer"
+    },
+    {
+      "start": 270.24,
+      "duration": 4.32,
+      "end": 274.56,
+      "text": "here lies a possible"
+    },
+    {
+      "start": 272.639,
+      "duration": 4.481,
+      "end": 277.12,
+      "text": "think uh thought process"
+    },
+    {
+      "start": 274.56,
+      "duration": 5.199,
+      "end": 279.759,
+      "text": "since they're saying print any answer"
+    },
+    {
+      "start": 277.12,
+      "duration": 4.24,
+      "end": 281.36,
+      "text": "and we are looking for divisibility"
+    },
+    {
+      "start": 279.759,
+      "duration": 3.361,
+      "end": 283.12,
+      "text": "we need to"
+    },
+    {
+      "start": 281.36,
+      "duration": 3.6,
+      "end": 284.96000000000004,
+      "text": "we need to convert this problem into"
+    },
+    {
+      "start": 283.12,
+      "duration": 4.48,
+      "end": 287.6,
+      "text": "somewhere related to longest increasing"
+    },
+    {
+      "start": 284.96,
+      "duration": 4.239,
+      "end": 289.19899999999996,
+      "text": "subsequence because we know in dynamic"
+    },
+    {
+      "start": 287.6,
+      "duration": 4.64,
+      "end": 292.24,
+      "text": "programming it's generally the"
+    },
+    {
+      "start": 289.199,
+      "duration": 4.961,
+      "end": 294.16,
+      "text": "subsequence where we deal with indexes"
+    },
+    {
+      "start": 292.24,
+      "duration": 4.48,
+      "end": 296.72,
+      "text": "and then we decide whether to pick or"
+    },
+    {
+      "start": 294.16,
+      "duration": 4.56,
+      "end": 298.72,
+      "text": "not pick we generally know that so can"
+    },
+    {
+      "start": 296.72,
+      "duration": 4.16,
+      "end": 300.88000000000005,
+      "text": "we relate this to somewhere around"
+    },
+    {
+      "start": 298.72,
+      "duration": 4.56,
+      "end": 303.28000000000003,
+      "text": "longest increasing subsequence i'll be"
+    },
+    {
+      "start": 300.88,
+      "duration": 5.52,
+      "end": 306.4,
+      "text": "like how i'll tell you that"
+    },
+    {
+      "start": 303.28,
+      "duration": 4.96,
+      "end": 308.23999999999995,
+      "text": "what if i take this example and i try to"
+    },
+    {
+      "start": 306.4,
+      "duration": 4.72,
+      "end": 311.12,
+      "text": "sort it because"
+    },
+    {
+      "start": 308.24,
+      "duration": 5.519,
+      "end": 313.759,
+      "text": "since i can print any answer and the"
+    },
+    {
+      "start": 311.12,
+      "duration": 4.639,
+      "end": 315.759,
+      "text": "order does not matter even if i sort it"
+    },
+    {
+      "start": 313.759,
+      "duration": 5.041,
+      "end": 318.8,
+      "text": "and i try to find out an answer it is"
+    },
+    {
+      "start": 315.759,
+      "duration": 5.761,
+      "end": 321.52000000000004,
+      "text": "still okay as long as the divisibility"
+    },
+    {
+      "start": 318.8,
+      "duration": 5.44,
+      "end": 324.24,
+      "text": "as long as the divisibility is not"
+    },
+    {
+      "start": 321.52,
+      "duration": 5.2,
+      "end": 326.71999999999997,
+      "text": "compromised i'm still okay so i'll be"
+    },
+    {
+      "start": 324.24,
+      "duration": 5.28,
+      "end": 329.52,
+      "text": "like okay strive let's uh definitely"
+    },
+    {
+      "start": 326.72,
+      "duration": 4.72,
+      "end": 331.44000000000005,
+      "text": "sort it because"
+    },
+    {
+      "start": 329.52,
+      "duration": 3.84,
+      "end": 333.35999999999996,
+      "text": "it doesn't matter even if i sort it"
+    },
+    {
+      "start": 331.44,
+      "duration": 5.199,
+      "end": 336.639,
+      "text": "whatever answer i get like even if i get"
+    },
+    {
+      "start": 333.36,
+      "duration": 5.119,
+      "end": 338.47900000000004,
+      "text": "1 4 8 16 that's still okay"
+    },
+    {
+      "start": 336.639,
+      "duration": 4.481,
+      "end": 341.12,
+      "text": "okay fine now"
+    },
+    {
+      "start": 338.479,
+      "duration": 4.881,
+      "end": 343.36,
+      "text": "how do you make sure that each of the"
+    },
+    {
+      "start": 341.12,
+      "duration": 5.919,
+      "end": 347.039,
+      "text": "pairs are divisible like how do you make"
+    },
+    {
+      "start": 343.36,
+      "duration": 6.96,
+      "end": 350.32,
+      "text": "sure that 1 divides like 16 1 divides 8"
+    },
+    {
+      "start": 347.039,
+      "duration": 6.72,
+      "end": 353.759,
+      "text": "1 divides 4 and then 16 divides 8 16"
+    },
+    {
+      "start": 350.32,
+      "duration": 5.52,
+      "end": 355.84,
+      "text": "divides 4 can we have a shortcut to it"
+    },
+    {
+      "start": 353.759,
+      "duration": 5.121,
+      "end": 358.88,
+      "text": "now since i have sorted it again please"
+    },
+    {
+      "start": 355.84,
+      "duration": 5.76,
+      "end": 361.59999999999997,
+      "text": "here to hear me out properly since i"
+    },
+    {
+      "start": 358.88,
+      "duration": 5.439,
+      "end": 364.319,
+      "text": "have sorted it okay"
+    },
+    {
+      "start": 361.6,
+      "duration": 5.92,
+      "end": 367.52000000000004,
+      "text": "if i'm picking one as my first"
+    },
+    {
+      "start": 364.319,
+      "duration": 5.44,
+      "end": 369.759,
+      "text": "guy if i'm picking one as my first guy"
+    },
+    {
+      "start": 367.52,
+      "duration": 4.56,
+      "end": 372.08,
+      "text": "and the next guy i pick up four and the"
+    },
+    {
+      "start": 369.759,
+      "duration": 3.761,
+      "end": 373.52000000000004,
+      "text": "next guy i pick up four okay"
+    },
+    {
+      "start": 372.08,
+      "duration": 2.72,
+      "end": 374.8,
+      "text": "and then i say"
+    },
+    {
+      "start": 373.52,
+      "duration": 5.28,
+      "end": 378.79999999999995,
+      "text": "that hey listen"
+    },
+    {
+      "start": 374.8,
+      "duration": 4.88,
+      "end": 379.68,
+      "text": "four is divided by one"
+    },
+    {
+      "start": 378.8,
+      "duration": 3.119,
+      "end": 381.91900000000004,
+      "text": "right"
+    },
+    {
+      "start": 379.68,
+      "duration": 5.359,
+      "end": 385.039,
+      "text": "so if i'm picking up eight"
+    },
+    {
+      "start": 381.919,
+      "duration": 4.881,
+      "end": 386.79999999999995,
+      "text": "if i'm picking up eight the next guy"
+    },
+    {
+      "start": 385.039,
+      "duration": 4.481,
+      "end": 389.52,
+      "text": "because i cannot pick up seven because"
+    },
+    {
+      "start": 386.8,
+      "duration": 5.839,
+      "end": 392.639,
+      "text": "seven cannot be divided by four this is"
+    },
+    {
+      "start": 389.52,
+      "duration": 5.679,
+      "end": 395.19899999999996,
+      "text": "not possible but can i pick up eight can"
+    },
+    {
+      "start": 392.639,
+      "duration": 3.921,
+      "end": 396.56,
+      "text": "i pick up 8 why because 8 is divisible"
+    },
+    {
+      "start": 395.199,
+      "duration": 2.881,
+      "end": 398.08,
+      "text": "by 4"
+    },
+    {
+      "start": 396.56,
+      "duration": 3.919,
+      "end": 400.479,
+      "text": "can i say this"
+    },
+    {
+      "start": 398.08,
+      "duration": 4.959,
+      "end": 403.039,
+      "text": "if 8 is divisible by 4"
+    },
+    {
+      "start": 400.479,
+      "duration": 4.0,
+      "end": 404.479,
+      "text": "which eventually means that 8 is also"
+    },
+    {
+      "start": 403.039,
+      "duration": 3.121,
+      "end": 406.15999999999997,
+      "text": "divisible by 1"
+    },
+    {
+      "start": 404.479,
+      "duration": 4.641,
+      "end": 409.12,
+      "text": "because 4"
+    },
+    {
+      "start": 406.16,
+      "duration": 5.2,
+      "end": 411.36,
+      "text": "is divisible by one so eight has to be"
+    },
+    {
+      "start": 409.12,
+      "duration": 4.56,
+      "end": 413.68,
+      "text": "divisible by one understand the"
+    },
+    {
+      "start": 411.36,
+      "duration": 4.72,
+      "end": 416.08000000000004,
+      "text": "intuition if four"
+    },
+    {
+      "start": 413.68,
+      "duration": 3.84,
+      "end": 417.52,
+      "text": "is divisible by one and if eight is"
+    },
+    {
+      "start": 416.08,
+      "duration": 4.8,
+      "end": 420.88,
+      "text": "divisible by four"
+    },
+    {
+      "start": 417.52,
+      "duration": 7.28,
+      "end": 424.79999999999995,
+      "text": "so the rule also follows that eight will"
+    },
+    {
+      "start": 420.88,
+      "duration": 5.12,
+      "end": 426.0,
+      "text": "be divisible by 1 right okay next i come"
+    },
+    {
+      "start": 424.8,
+      "duration": 2.56,
+      "end": 427.36,
+      "text": "to 16."
+    },
+    {
+      "start": 426.0,
+      "duration": 4.319,
+      "end": 430.319,
+      "text": "now can i say"
+    },
+    {
+      "start": 427.36,
+      "duration": 4.0,
+      "end": 431.36,
+      "text": "when i come to 16 and 16 is divisible by"
+    },
+    {
+      "start": 430.319,
+      "duration": 3.44,
+      "end": 433.759,
+      "text": "8"
+    },
+    {
+      "start": 431.36,
+      "duration": 5.6,
+      "end": 436.96000000000004,
+      "text": "which indirectly means"
+    },
+    {
+      "start": 433.759,
+      "duration": 4.72,
+      "end": 438.47900000000004,
+      "text": "16 is divisible by 4 and 16 is divisible"
+    },
+    {
+      "start": 436.96,
+      "duration": 3.12,
+      "end": 440.08,
+      "text": "by 1 also"
+    },
+    {
+      "start": 438.479,
+      "duration": 2.961,
+      "end": 441.44,
+      "text": "due to the sorted"
+    },
+    {
+      "start": 440.08,
+      "duration": 4.0,
+      "end": 444.08,
+      "text": "because i've already checked for the"
+    },
+    {
+      "start": 441.44,
+      "duration": 5.92,
+      "end": 447.36,
+      "text": "divisibility of 4 by 8 and divisibility"
+    },
+    {
+      "start": 444.08,
+      "duration": 5.839,
+      "end": 449.919,
+      "text": "of 1 by 4 so i can easily say 16 if"
+    },
+    {
+      "start": 447.36,
+      "duration": 5.2,
+      "end": 452.56,
+      "text": "divisible by 8 means are divisible by"
+    },
+    {
+      "start": 449.919,
+      "duration": 5.921,
+      "end": 455.84,
+      "text": "all the elements in the array so i can"
+    },
+    {
+      "start": 452.56,
+      "duration": 5.919,
+      "end": 458.479,
+      "text": "say i can easily pick up 16."
+    },
+    {
+      "start": 455.84,
+      "duration": 4.4,
+      "end": 460.23999999999995,
+      "text": "so did you find a pattern did you find a"
+    },
+    {
+      "start": 458.479,
+      "duration": 4.321,
+      "end": 462.8,
+      "text": "pattern you did"
+    },
+    {
+      "start": 460.24,
+      "duration": 6.32,
+      "end": 466.56,
+      "text": "whenever i'm picking up 16 since the"
+    },
+    {
+      "start": 462.8,
+      "duration": 6.959,
+      "end": 469.759,
+      "text": "array is sorted since the array is"
+    },
+    {
+      "start": 466.56,
+      "duration": 6.56,
+      "end": 473.12,
+      "text": "sorted i am definitely sure if 16"
+    },
+    {
+      "start": 469.759,
+      "duration": 5.201,
+      "end": 474.96000000000004,
+      "text": "divides 8 like if 16 is divisible by 8"
+    },
+    {
+      "start": 473.12,
+      "duration": 4.24,
+      "end": 477.36,
+      "text": "it will be divided by all the other"
+    },
+    {
+      "start": 474.96,
+      "duration": 4.639,
+      "end": 479.599,
+      "text": "picked up elements why because 8 is"
+    },
+    {
+      "start": 477.36,
+      "duration": 5.04,
+      "end": 482.40000000000003,
+      "text": "divisible by 4 which eventually means"
+    },
+    {
+      "start": 479.599,
+      "duration": 4.241,
+      "end": 483.84,
+      "text": "that 16 is divisible by 4 as well"
+    },
+    {
+      "start": 482.4,
+      "duration": 2.88,
+      "end": 485.28,
+      "text": "so the rule"
+    },
+    {
+      "start": 483.84,
+      "duration": 3.52,
+      "end": 487.35999999999996,
+      "text": "so you can try out another examples and"
+    },
+    {
+      "start": 485.28,
+      "duration": 3.199,
+      "end": 488.479,
+      "text": "you'll see so i got this"
+    },
+    {
+      "start": 487.36,
+      "duration": 2.48,
+      "end": 489.84000000000003,
+      "text": "so"
+    },
+    {
+      "start": 488.479,
+      "duration": 2.4,
+      "end": 490.87899999999996,
+      "text": "can i say"
+    },
+    {
+      "start": 489.84,
+      "duration": 3.12,
+      "end": 492.96,
+      "text": "now"
+    },
+    {
+      "start": 490.879,
+      "duration": 4.401,
+      "end": 495.28000000000003,
+      "text": "i'm looking out"
+    },
+    {
+      "start": 492.96,
+      "duration": 3.76,
+      "end": 496.71999999999997,
+      "text": "to figure like can i just think this"
+    },
+    {
+      "start": 495.28,
+      "duration": 3.68,
+      "end": 498.96,
+      "text": "question as"
+    },
+    {
+      "start": 496.72,
+      "duration": 3.919,
+      "end": 500.639,
+      "text": "once i've sorted the question am i"
+    },
+    {
+      "start": 498.96,
+      "duration": 3.44,
+      "end": 502.4,
+      "text": "looking out to figure"
+    },
+    {
+      "start": 500.639,
+      "duration": 4.0,
+      "end": 504.639,
+      "text": "longest"
+    },
+    {
+      "start": 502.4,
+      "duration": 4.32,
+      "end": 506.71999999999997,
+      "text": "subsequence"
+    },
+    {
+      "start": 504.639,
+      "duration": 4.481,
+      "end": 509.12,
+      "text": "and can i say divisible subsequence"
+    },
+    {
+      "start": 506.72,
+      "duration": 4.64,
+      "end": 511.36,
+      "text": "instead of increasing am i looking to"
+    },
+    {
+      "start": 509.12,
+      "duration": 5.039,
+      "end": 514.159,
+      "text": "figure out the longest divisible"
+    },
+    {
+      "start": 511.36,
+      "duration": 4.799,
+      "end": 516.159,
+      "text": "subsequence and answer to that is yes"
+    },
+    {
+      "start": 514.159,
+      "duration": 4.0,
+      "end": 518.159,
+      "text": "why because"
+    },
+    {
+      "start": 516.159,
+      "duration": 3.601,
+      "end": 519.76,
+      "text": "4 divided by 1 true"
+    },
+    {
+      "start": 518.159,
+      "duration": 5.36,
+      "end": 523.519,
+      "text": "8 divided by"
+    },
+    {
+      "start": 519.76,
+      "duration": 4.639,
+      "end": 524.399,
+      "text": "4 true 16 divided by 8 true"
+    },
+    {
+      "start": 523.519,
+      "duration": 3.44,
+      "end": 526.9590000000001,
+      "text": "right"
+    },
+    {
+      "start": 524.399,
+      "duration": 5.041,
+      "end": 529.44,
+      "text": "prior to this prior to this we were"
+    },
+    {
+      "start": 526.959,
+      "duration": 4.961,
+      "end": 531.92,
+      "text": "solving the problem which was increasing"
+    },
+    {
+      "start": 529.44,
+      "duration": 4.48,
+      "end": 533.9200000000001,
+      "text": "like we were taking 1 3"
+    },
+    {
+      "start": 531.92,
+      "duration": 3.68,
+      "end": 535.5999999999999,
+      "text": "something like 5 this was longest"
+    },
+    {
+      "start": 533.92,
+      "duration": 4.08,
+      "end": 538.0,
+      "text": "increasing subsequence"
+    },
+    {
+      "start": 535.6,
+      "duration": 4.16,
+      "end": 539.76,
+      "text": "can i relate this problem to longest"
+    },
+    {
+      "start": 538.0,
+      "duration": 4.32,
+      "end": 542.32,
+      "text": "divisible subsequence instead of"
+    },
+    {
+      "start": 539.76,
+      "duration": 4.4,
+      "end": 544.16,
+      "text": "increasing i'm making sure the next"
+    },
+    {
+      "start": 542.32,
+      "duration": 3.84,
+      "end": 546.1600000000001,
+      "text": "number that is being peaked the next"
+    },
+    {
+      "start": 544.16,
+      "duration": 4.32,
+      "end": 548.48,
+      "text": "number that is being picked has to be"
+    },
+    {
+      "start": 546.16,
+      "duration": 4.64,
+      "end": 550.8,
+      "text": "divisible has to be divisible so if you"
+    },
+    {
+      "start": 548.48,
+      "duration": 4.64,
+      "end": 553.12,
+      "text": "remember the code for lis if you"
+    },
+    {
+      "start": 550.8,
+      "duration": 4.56,
+      "end": 555.3599999999999,
+      "text": "remember the code for lis do you"
+    },
+    {
+      "start": 553.12,
+      "duration": 5.36,
+      "end": 558.48,
+      "text": "remember you do so if i just rewrite the"
+    },
+    {
+      "start": 555.36,
+      "duration": 5.2,
+      "end": 560.5600000000001,
+      "text": "code it was something like i equal to"
+    },
+    {
+      "start": 558.48,
+      "duration": 4.799,
+      "end": 563.279,
+      "text": "it started from 1 because"
+    },
+    {
+      "start": 560.56,
+      "duration": 4.719,
+      "end": 565.279,
+      "text": "0 will be not there i lesser than n i"
+    },
+    {
+      "start": 563.279,
+      "duration": 5.361,
+      "end": 568.64,
+      "text": "plus plus and if you remember there was"
+    },
+    {
+      "start": 565.279,
+      "duration": 4.56,
+      "end": 569.8389999999999,
+      "text": "a j loop which was from 0"
+    },
+    {
+      "start": 568.64,
+      "duration": 3.759,
+      "end": 572.399,
+      "text": "till i"
+    },
+    {
+      "start": 569.839,
+      "duration": 5.841,
+      "end": 575.6800000000001,
+      "text": "and you went until j plus plus and since"
+    },
+    {
+      "start": 572.399,
+      "duration": 5.601,
+      "end": 578.0,
+      "text": "it was increasing you said if array of"
+    },
+    {
+      "start": 575.68,
+      "duration": 3.12,
+      "end": 578.8,
+      "text": "if array of"
+    },
+    {
+      "start": 578.0,
+      "duration": 2.32,
+      "end": 580.32,
+      "text": "g"
+    },
+    {
+      "start": 578.8,
+      "duration": 5.28,
+      "end": 584.0799999999999,
+      "text": "is lesser than array of i because you're"
+    },
+    {
+      "start": 580.32,
+      "duration": 6.4,
+      "end": 586.72,
+      "text": "saying area 5 ls plain lias and at the"
+    },
+    {
+      "start": 584.08,
+      "duration": 3.68,
+      "end": 587.76,
+      "text": "same time you said if dp of i whatever"
+    },
+    {
+      "start": 586.72,
+      "duration": 2.48,
+      "end": 589.2,
+      "text": "it had"
+    },
+    {
+      "start": 587.76,
+      "duration": 4.24,
+      "end": 592.0,
+      "text": "whatever it had"
+    },
+    {
+      "start": 589.2,
+      "duration": 4.079,
+      "end": 593.279,
+      "text": "was lesser than if i take this element"
+    },
+    {
+      "start": 592.0,
+      "duration": 2.56,
+      "end": 594.56,
+      "text": "because if i take this element it will"
+    },
+    {
+      "start": 593.279,
+      "duration": 2.321,
+      "end": 595.6,
+      "text": "be plus 1"
+    },
+    {
+      "start": 594.56,
+      "duration": 3.52,
+      "end": 598.0799999999999,
+      "text": "if it is"
+    },
+    {
+      "start": 595.6,
+      "duration": 4.88,
+      "end": 600.48,
+      "text": "then you went on and said dp of i will"
+    },
+    {
+      "start": 598.08,
+      "duration": 5.6,
+      "end": 603.6800000000001,
+      "text": "be dp of j plus 1"
+    },
+    {
+      "start": 600.48,
+      "duration": 4.88,
+      "end": 605.36,
+      "text": "and you said in the hash of i"
+    },
+    {
+      "start": 603.68,
+      "duration": 4.08,
+      "end": 607.76,
+      "text": "you can keep j because that's where the"
+    },
+    {
+      "start": 605.36,
+      "duration": 3.36,
+      "end": 608.72,
+      "text": "dp would have been derived from"
+    },
+    {
+      "start": 607.76,
+      "duration": 3.28,
+      "end": 611.04,
+      "text": "this is"
+    },
+    {
+      "start": 608.72,
+      "duration": 4.239,
+      "end": 612.9590000000001,
+      "text": "the if statement this is the statement"
+    },
+    {
+      "start": 611.04,
+      "duration": 3.919,
+      "end": 614.959,
+      "text": "that you wrote and then the for loop"
+    },
+    {
+      "start": 612.959,
+      "duration": 4.32,
+      "end": 617.279,
+      "text": "executed so if you remember this was the"
+    },
+    {
+      "start": 614.959,
+      "duration": 5.681,
+      "end": 620.64,
+      "text": "lis if you remember well this was the"
+    },
+    {
+      "start": 617.279,
+      "duration": 5.361,
+      "end": 622.64,
+      "text": "lis code and in the lis code you checked"
+    },
+    {
+      "start": 620.64,
+      "duration": 4.56,
+      "end": 625.1999999999999,
+      "text": "for this you checked for this and that's"
+    },
+    {
+      "start": 622.64,
+      "duration": 5.6,
+      "end": 628.24,
+      "text": "how you uh stored the hash now i'm"
+    },
+    {
+      "start": 625.2,
+      "duration": 4.8,
+      "end": 630.0,
+      "text": "changing the question to divisible once"
+    },
+    {
+      "start": 628.24,
+      "duration": 3.68,
+      "end": 631.92,
+      "text": "the array is sorted i've changed the"
+    },
+    {
+      "start": 630.0,
+      "duration": 5.36,
+      "end": 635.36,
+      "text": "question to divisible i just need to"
+    },
+    {
+      "start": 631.92,
+      "duration": 5.52,
+      "end": 637.4399999999999,
+      "text": "check for divisibility so can i say"
+    },
+    {
+      "start": 635.36,
+      "duration": 4.4,
+      "end": 639.76,
+      "text": "in because i know the array is sorted i"
+    },
+    {
+      "start": 637.44,
+      "duration": 4.0,
+      "end": 641.44,
+      "text": "know the arrow is sorted so can i say"
+    },
+    {
+      "start": 639.76,
+      "duration": 2.8,
+      "end": 642.56,
+      "text": "what i just need to do is"
+    },
+    {
+      "start": 641.44,
+      "duration": 3.6,
+      "end": 645.0400000000001,
+      "text": "i need to"
+    },
+    {
+      "start": 642.56,
+      "duration": 5.44,
+      "end": 648.0,
+      "text": "cut this guy off and i know array of i"
+    },
+    {
+      "start": 645.04,
+      "duration": 6.96,
+      "end": 652.0,
+      "text": "is greater so if array of i"
+    },
+    {
+      "start": 648.0,
+      "duration": 6.64,
+      "end": 654.64,
+      "text": "is divisible by array of j"
+    },
+    {
+      "start": 652.0,
+      "duration": 4.32,
+      "end": 656.32,
+      "text": "then i can say it's divisible and then i"
+    },
+    {
+      "start": 654.64,
+      "duration": 3.28,
+      "end": 657.92,
+      "text": "just need to check for the length"
+    },
+    {
+      "start": 656.32,
+      "duration": 3.92,
+      "end": 660.24,
+      "text": "because i'm looking for the longest so"
+    },
+    {
+      "start": 657.92,
+      "duration": 3.52,
+      "end": 661.4399999999999,
+      "text": "this is how the length of dp will work"
+    },
+    {
+      "start": 660.24,
+      "duration": 3.68,
+      "end": 663.92,
+      "text": "slight"
+    },
+    {
+      "start": 661.44,
+      "duration": 5.36,
+      "end": 666.8000000000001,
+      "text": "shuttle change and i could convert an"
+    },
+    {
+      "start": 663.92,
+      "duration": 6.08,
+      "end": 670.0,
+      "text": "lis question to an lds which is the"
+    },
+    {
+      "start": 666.8,
+      "duration": 5.84,
+      "end": 672.64,
+      "text": "longest divisible subsequence makes"
+    },
+    {
+      "start": 670.0,
+      "duration": 4.72,
+      "end": 674.72,
+      "text": "sense guys so once you've done this you"
+    },
+    {
+      "start": 672.64,
+      "duration": 3.6,
+      "end": 676.24,
+      "text": "can definitely use the hash array to"
+    },
+    {
+      "start": 674.72,
+      "duration": 3.84,
+      "end": 678.5600000000001,
+      "text": "track back yes you can use the hash"
+    },
+    {
+      "start": 676.24,
+      "duration": 5.039,
+      "end": 681.279,
+      "text": "array to track back your longest"
+    },
+    {
+      "start": 678.56,
+      "duration": 4.719,
+      "end": 683.279,
+      "text": "increasing sorry longest a divisible"
+    },
+    {
+      "start": 681.279,
+      "duration": 4.641,
+      "end": 685.92,
+      "text": "subset and since you need to print any"
+    },
+    {
+      "start": 683.279,
+      "duration": 3.761,
+      "end": 687.04,
+      "text": "answer it works but the key point over"
+    },
+    {
+      "start": 685.92,
+      "duration": 3.2,
+      "end": 689.12,
+      "text": "here is"
+    },
+    {
+      "start": 687.04,
+      "duration": 4.479,
+      "end": 691.519,
+      "text": "you need to sort the array because if"
+    },
+    {
+      "start": 689.12,
+      "duration": 5.6,
+      "end": 694.72,
+      "text": "you don't sort the array the logic does"
+    },
+    {
+      "start": 691.519,
+      "duration": 6.641,
+      "end": 698.16,
+      "text": "not binds like 16 is divisible by 8 and"
+    },
+    {
+      "start": 694.72,
+      "duration": 5.76,
+      "end": 700.48,
+      "text": "that means 16 divisible by 4 by 1 binds"
+    },
+    {
+      "start": 698.16,
+      "duration": 5.6,
+      "end": 703.76,
+      "text": "because it is sorted"
+    },
+    {
+      "start": 700.48,
+      "duration": 4.56,
+      "end": 705.04,
+      "text": "got it so i hope you have understood it"
+    },
+    {
+      "start": 703.76,
+      "duration": 2.88,
+      "end": 706.64,
+      "text": "so without"
+    },
+    {
+      "start": 705.04,
+      "duration": 3.12,
+      "end": 708.16,
+      "text": "so without wasting any time let's check"
+    },
+    {
+      "start": 706.64,
+      "duration": 3.6,
+      "end": 710.24,
+      "text": "out the code so if you remember in the"
+    },
+    {
+      "start": 708.16,
+      "duration": 4.64,
+      "end": 712.8,
+      "text": "longest increasing subsequence in order"
+    },
+    {
+      "start": 710.24,
+      "duration": 5.68,
+      "end": 715.92,
+      "text": "to print it uh this is how we did we"
+    },
+    {
+      "start": 712.8,
+      "duration": 5.279,
+      "end": 718.079,
+      "text": "basically took up a vector uh dp and"
+    },
+    {
+      "start": 715.92,
+      "duration": 3.599,
+      "end": 719.519,
+      "text": "basically let's copy paste this it's the"
+    },
+    {
+      "start": 718.079,
+      "duration": 4.0,
+      "end": 722.079,
+      "text": "same code it's the same code so i'll"
+    },
+    {
+      "start": 719.519,
+      "duration": 5.44,
+      "end": 724.9590000000001,
+      "text": "just copy paste this over here in the"
+    },
+    {
+      "start": 722.079,
+      "duration": 4.801,
+      "end": 726.88,
+      "text": "divisible set question so just copy"
+    },
+    {
+      "start": 724.959,
+      "duration": 4.481,
+      "end": 729.4399999999999,
+      "text": "paste it so if you remember this is the"
+    },
+    {
+      "start": 726.88,
+      "duration": 6.0,
+      "end": 732.88,
+      "text": "dp and this is the hash and initially"
+    },
+    {
+      "start": 729.44,
+      "duration": 5.76,
+      "end": 735.2,
+      "text": "the maximum was one i've taken the exact"
+    },
+    {
+      "start": 732.88,
+      "duration": 5.04,
+      "end": 737.92,
+      "text": "same code exact same"
+    },
+    {
+      "start": 735.2,
+      "duration": 4.48,
+      "end": 739.6800000000001,
+      "text": "what i will do different is i will say i"
+    },
+    {
+      "start": 737.92,
+      "duration": 4.4,
+      "end": 742.3199999999999,
+      "text": "will sort the array"
+    },
+    {
+      "start": 739.68,
+      "duration": 4.88,
+      "end": 744.56,
+      "text": "okay i will sort that nothing different"
+    },
+    {
+      "start": 742.32,
+      "duration": 2.959,
+      "end": 745.279,
+      "text": "i'll just sort that way once i've sorted"
+    },
+    {
+      "start": 744.56,
+      "duration": 4.24,
+      "end": 748.8,
+      "text": "this"
+    },
+    {
+      "start": 745.279,
+      "duration": 5.761,
+      "end": 751.04,
+      "text": "instead of this i will say if array of i"
+    },
+    {
+      "start": 748.8,
+      "duration": 5.12,
+      "end": 753.92,
+      "text": "modulo array of"
+    },
+    {
+      "start": 751.04,
+      "duration": 6.72,
+      "end": 757.76,
+      "text": "previous is equal to zero"
+    },
+    {
+      "start": 753.92,
+      "duration": 5.68,
+      "end": 759.5999999999999,
+      "text": "if this is true and this is kind of true"
+    },
+    {
+      "start": 757.76,
+      "duration": 4.96,
+      "end": 762.72,
+      "text": "and this is what i write and in this way"
+    },
+    {
+      "start": 759.6,
+      "duration": 5.679,
+      "end": 765.279,
+      "text": "i can store it and this will make sure"
+    },
+    {
+      "start": 762.72,
+      "duration": 5.04,
+      "end": 767.76,
+      "text": "the subset is stored and i can reverse"
+    },
+    {
+      "start": 765.279,
+      "duration": 4.161,
+      "end": 769.4399999999999,
+      "text": "it and i can uh just make sure"
+    },
+    {
+      "start": 767.76,
+      "duration": 5.199,
+      "end": 772.959,
+      "text": "over here they want"
+    },
+    {
+      "start": 769.44,
+      "duration": 6.24,
+      "end": 775.6800000000001,
+      "text": "the subset to be returned so just"
+    },
+    {
+      "start": 772.959,
+      "duration": 5.12,
+      "end": 778.079,
+      "text": "return the subset so that's how you can"
+    },
+    {
+      "start": 775.68,
+      "duration": 4.24,
+      "end": 779.92,
+      "text": "do it just a shuttle change and if you"
+    },
+    {
+      "start": 778.079,
+      "duration": 4.481,
+      "end": 782.56,
+      "text": "try running this you will see that it is"
+    },
+    {
+      "start": 779.92,
+      "duration": 4.32,
+      "end": 784.24,
+      "text": "in indeed running fine"
+    },
+    {
+      "start": 782.56,
+      "duration": 3.44,
+      "end": 786.0,
+      "text": "my bad uh"
+    },
+    {
+      "start": 784.24,
+      "duration": 3.839,
+      "end": 788.0790000000001,
+      "text": "n was not declared in the scope because"
+    },
+    {
+      "start": 786.0,
+      "duration": 4.639,
+      "end": 790.639,
+      "text": "they did not give you n so probably you"
+    },
+    {
+      "start": 788.079,
+      "duration": 4.241,
+      "end": 792.3199999999999,
+      "text": "can just go across and declare it and"
+    },
+    {
+      "start": 790.639,
+      "duration": 4.961,
+      "end": 795.6,
+      "text": "the other thing will be hash include is"
+    },
+    {
+      "start": 792.32,
+      "duration": 7.199,
+      "end": 799.519,
+      "text": "something which is again missing"
+    },
+    {
+      "start": 795.6,
+      "duration": 7.359,
+      "end": 802.9590000000001,
+      "text": "hash include bits slash stdc plus h"
+    },
+    {
+      "start": 799.519,
+      "duration": 3.44,
+      "end": 802.9590000000001,
+      "text": "that's what again has been taken"
+    },
+    {
+      "start": 804.16,
+      "duration": 4.08,
+      "end": 808.24,
+      "text": "perfect uh now let's run the code"
+    },
+    {
+      "start": 806.56,
+      "duration": 4.079,
+      "end": 810.6389999999999,
+      "text": "so you see all of them are giving"
+    },
+    {
+      "start": 808.24,
+      "duration": 4.32,
+      "end": 812.5600000000001,
+      "text": "correct answer so easy isn't it so if"
+    },
+    {
+      "start": 810.639,
+      "duration": 3.601,
+      "end": 814.24,
+      "text": "you submit this it will give you correct"
+    },
+    {
+      "start": 812.56,
+      "duration": 3.92,
+      "end": 816.4799999999999,
+      "text": "answer so i'll be the time complexity"
+    },
+    {
+      "start": 814.24,
+      "duration": 3.92,
+      "end": 818.16,
+      "text": "guys it will be n square for these"
+    },
+    {
+      "start": 816.48,
+      "duration": 3.84,
+      "end": 820.32,
+      "text": "couple of loops so the time complexity"
+    },
+    {
+      "start": 818.16,
+      "duration": 4.479,
+      "end": 822.639,
+      "text": "is n square and then you are tracking"
+    },
+    {
+      "start": 820.32,
+      "duration": 4.879,
+      "end": 825.1990000000001,
+      "text": "back so at the worst case it might take"
+    },
+    {
+      "start": 822.639,
+      "duration": 5.281,
+      "end": 827.92,
+      "text": "you a big o of n in order to trace back"
+    },
+    {
+      "start": 825.199,
+      "duration": 5.281,
+      "end": 830.4799999999999,
+      "text": "the entire path because at max the"
+    },
+    {
+      "start": 827.92,
+      "duration": 4.96,
+      "end": 832.88,
+      "text": "largest subset will be the array itself"
+    },
+    {
+      "start": 830.48,
+      "duration": 4.88,
+      "end": 835.36,
+      "text": "so this might end up taking this might"
+    },
+    {
+      "start": 832.88,
+      "duration": 5.04,
+      "end": 837.92,
+      "text": "end up taking big o of n and so big of n"
+    },
+    {
+      "start": 835.36,
+      "duration": 5.2,
+      "end": 840.5600000000001,
+      "text": "square so n square plus n is the time"
+    },
+    {
+      "start": 837.92,
+      "duration": 5.68,
+      "end": 843.5999999999999,
+      "text": "complexity and they're using a big o of"
+    },
+    {
+      "start": 840.56,
+      "duration": 4.88,
+      "end": 845.4399999999999,
+      "text": "n space that's what you're using so this"
+    },
+    {
+      "start": 843.6,
+      "duration": 4.56,
+      "end": 848.16,
+      "text": "is this is how you can definitely solve"
+    },
+    {
+      "start": 845.44,
+      "duration": 4.639,
+      "end": 850.0790000000001,
+      "text": "this problem using the sim the"
+    },
+    {
+      "start": 848.16,
+      "duration": 3.52,
+      "end": 851.68,
+      "text": "simple concept of longest increasing"
+    },
+    {
+      "start": 850.079,
+      "duration": 3.281,
+      "end": 853.3599999999999,
+      "text": "subsequence so here with this i'll be"
+    },
+    {
+      "start": 851.68,
+      "duration": 3.68,
+      "end": 855.3599999999999,
+      "text": "wrapping up this video but before that"
+    },
+    {
+      "start": 853.36,
+      "duration": 3.76,
+      "end": 857.12,
+      "text": "if you have understood it please please"
+    },
+    {
+      "start": 855.36,
+      "duration": 3.039,
+      "end": 858.399,
+      "text": "please make sure you like this video and"
+    },
+    {
+      "start": 857.12,
+      "duration": 3.6,
+      "end": 860.72,
+      "text": "if you're new to our channel please do"
+    },
+    {
+      "start": 858.399,
+      "duration": 4.401,
+      "end": 862.8,
+      "text": "consider subscribing to us that will be"
+    },
+    {
+      "start": 860.72,
+      "duration": 3.679,
+      "end": 864.399,
+      "text": "of immense help and yeah with this let's"
+    },
+    {
+      "start": 862.8,
+      "duration": 3.36,
+      "end": 866.16,
+      "text": "wrap up this video and meet in the next"
+    },
+    {
+      "start": 864.399,
+      "duration": 3.12,
+      "end": 867.519,
+      "text": "one where we will be solving the next"
+    },
+    {
+      "start": 866.16,
+      "duration": 4.359,
+      "end": 870.519,
+      "text": "problem from the longest increasing"
+    },
+    {
+      "start": 867.519,
+      "duration": 3.0,
+      "end": 870.519,
+      "text": "subsequence"
+    },
+    {
+      "start": 870.72,
+      "duration": 9.97,
+      "end": 880.69,
+      "text": "whenever your heart is"
+    },
+    {
+      "start": 875.06,
+      "duration": 5.63,
+      "end": 880.6899999999999,
+      "text": "[Music]"
+    }
+  ]
+}

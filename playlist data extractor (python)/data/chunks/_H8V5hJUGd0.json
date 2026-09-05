@@ -1,0 +1,152 @@
+{
+  "video_id": "_H8V5hJUGd0",
+  "position": 233,
+  "title": "DP 53. Palindrome Partitioning - II | Front Partition 🔥",
+  "url": "https://www.youtube.com/watch?v=_H8V5hJUGd0",
+  "chunk_count": 13,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "_H8V5hJUGd0",
+      "position": 233,
+      "title": "DP 53. Palindrome Partitioning - II | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=_H8V5hJUGd0",
+      "start": 0.12,
+      "end": 135.39999999999998,
+      "text": "hey everyone welcome back to take you forward so today we will be solving this interesting problem palindrome partitioning now this will not be similar to MCM DP rather this will come under partition DP like I'll teach you a different form of partition over here okay now before starting this there is a palum partition one as well I've done that in the recursion series yes I've done that in the recursion Ser just in case you want to watch it you can but yeah let's uh like it's not a prerequisite for this problem palindrome partitioning two is there any prerequisite nothing let's get started so what does the question say you will be given a string like this let me uh first take a smaller string imagine you're given something uh like St string equal to double A B okay now I ask you cut them into cut them like make partitions so you can say okay I'll make a partition here I'll make a partition here I'll make a partition here I'll make a partition here so 1 2 3 and a string of length four a string of length four I am definitely sure if I can make n minus one partitions then every substring these are substrings every individual substring is will be a pindrop every individual substring will be a pindrop what is a pindrop a string that reads the same if you're reverse it as well so everyone is a pal drop so we definitely know a string can be partitioned such that every substring will always be a palr we definitely know that a string can be partition such that every substring will always be a pal androp and how many partitions do you require n minus one but over here they asking you find the minimum partitions find the minimum partitions that you will require in order to make the string as palindrome for an example in the string I can also go like I'll do a single partition then also this is palindrome",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "_H8V5hJUGd0",
+      "position": 233,
+      "title": "DP 53. Palindrome Partitioning - II | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=_H8V5hJUGd0",
+      "start": 130.64,
+      "end": 251.0,
+      "text": "partition then also this is palindrome and then also this is palindrome double a double b is palindrome correct so you can have a one partition and you can have it as palindrome now you might come and say St why do you need to partition because you cannot have a b like they cannot be same so what I see is okay this is a particular form of partition where I'm requiring one or you can say you can have a you can also have two partitions like this even if you do two partitions there still pal androp but the question States find the minimum number of partitions they don't want you to find maximum find the minimum number of partitions does an answer always exist yes because if I do n minus one partitions everyone will be a single character and everyone will be a palent in itself that is for sure so somewhere down the line we have figured out the questioner to figure out the minimum number of partitions right so like for this example like if I just go across and do a bab and then I do ab c d a then I keep D alone I keep C alone and I keep this so I'll be requiring four partitions over here four partitions bab is a palindrome abcb is a palindrome D is a palindrome C is a pal Ed is a palr so if I do four partitions if I do four partitions you're bound to say that all the strings all the substrings generated are palindrome so the answer to this will be four so this is the question given a string you need to tell me when do I have like how many minimum Cuts do I need to make in order to have all the substrings as palindrome so how do you approach such problems so such problems are generally solved using front partition okay now what do I mean by front partition you start off yes remember this you start",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "_H8V5hJUGd0",
+      "position": 233,
+      "title": "DP 53. Palindrome Partitioning - II | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=_H8V5hJUGd0",
+      "start": 244.599,
+      "end": 354.919,
+      "text": "start off yes remember this you start off from here okay and you say can I do a partition over here you simply say can this guy like can this be a partition and you'll be like yes why because the only string over here is B the only string over here is B and it is a pal draw so you will be like I can do one partition you you will be like I can do one partition and the left over string will be this guy and I will try to find the answer for this guy so it is known as front partition I start from front and I do a partition then I solve for this so I know one partition I have done so I have to find the number of parti required over here right so either you can do a partition here or you can go across and say Hey listen I am not going to do a partition over here I'll try to do a partition over here but the moment I try to do a partition over here ba is not a palindrome I repeat ba is not a palindrome thereby I cannot partition so I'll go across to the next and can I do a partition I can so I will go across and say okay let me do a partition on bab which will take me this then let me have this guys okay so I'll try to find the answer for this portion I don't try to find the answer for this portion after I have partitioned here similarly you go across here can you a partition here no can you do a partition here yes because this is a palindrome again you try to do a partition here which is again 1 plus then you'll be left out with CB a d c e d e similarly you'll move ahead can you do a partition here no you'll move here can you do a partition here no can you do a",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "_H8V5hJUGd0",
+      "position": 233,
+      "title": "DP 53. Palindrome Partitioning - II | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=_H8V5hJUGd0",
+      "start": 349.919,
+      "end": 452.759,
+      "text": "you do a partition here no can you do a partition here no can you do a partition here no can you do it here no can you do it here no can you do it here no can you do it here no so you will have three options of partitioning one is you do it here and you get one partition and then you still have this string in which you have to do partitions or you can say I'll do one partition here and I'll still have this string where I have to do some partition or you will say I'll do a partition here and I'll still have this string which has to be solved so imagine just imagine uh like these are three sub problems this is one this is one this is one so out of these whichever gives you the minimal Cuts because this string will give you some number this string will give you some number this string will give you some number out of these three whichever cut gives you the minimum number is which is the one that you will consider okay so imagine uh I just take up this partition okay imagine I take up this partition where you do bab and you have ABC so again this time this time remember you will keep a track on a you'll keep a track on a then can you do a partition here yes and when you do a partition here this time you don't check for this because B B has been taken so you just check for this a so you just check for this a so just check for this a so you will be able to do it so you'll be like okay I can do for one and then I'll be left off with b c b a d c e d e similarly can you do it here no can you do it here no can you do it here no can you do it here yes this is a pal Drome",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "_H8V5hJUGd0",
+      "position": 233,
+      "title": "DP 53. Palindrome Partitioning - II | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=_H8V5hJUGd0",
+      "start": 447.199,
+      "end": 580.079,
+      "text": "you do it here yes this is a pal Drome this is a palindrome so thereby you can do a partition here so you can also go on like I can do a partition one plus more and I'll still be left off a DC e to be solved so in this way you can do a front partition you start from the front you start from the front and you go on checking so if I if I ask you how do you start from the front now remember the rules of writing a recurence because this is nothing but the same logic it is nothing but the same recurrence logic where you're trying out all possible partitions you're trying out all possible partitions and the one that gives you the minimal answer is the one that you're taking right so you'll be like how do you write a rec question what is the rule express everything in terms of index so as I said it's a front partition problem so where will be your initial index you can probably place your initial index at I equal to Z because that is where is you're looking to start the partition from that is where you're looking to start the partition from so I can say okay I will have an index and that is where I'll start looking to make the partition from as simple as that perfect uh what's the next step next is uh Express all the ways that you can partition or rather Express all possibilities as the second step of writing recurrence express all possib I ities what is the third take the minimal because the question States minimal take the minimal of all possibilities and also write the base case for sure so can you tell me when is a paration possible if I ask you when is a paration possible so one thing we know for sure is we are expressing everything in terms of index so whenever I is zero I'm basically stating give me the minimum Cuts",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "_H8V5hJUGd0",
+      "position": 233,
+      "title": "DP 53. Palindrome Partitioning - II | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=_H8V5hJUGd0",
+      "start": 573.68,
+      "end": 695.279,
+      "text": "Cuts required to make it make all substrings pal andrum rather make all substrings pal andrum and can I say if I'm keeping I equal to Z that means in the string from 0 till n minus one is what I'm talking in the string 0 to n minus one and we have already decid like we have already uh proved that the minimum number of partitions in such case will always be n minus one which is the length of the string minus one so if I is zero that means I treating this as an entire string then what I do is I I try checking what are the possibilities can I do a partition here can I do a partition here can I do a partition here can I do a partition here can I do a partition here what am I doing I'm basically iterating from I to J this is J this is J whenever J is here this is b a b whenever J is here this is b a b a whenever J is here this is b a b a b whenever J is here this is b a b a BC whenever J is here b a b a b c b so you're basically taking a fall Loop right so if I try to write the recurence I know it will be I and when do I end when I don't have a string when I don't have a string I end can I say whenever I reach the end that is when I end for sure so whenever I end that is no partition if I'm not ending I know I will start the first first partition from J and I'll try on going on till n j++ front partition okay now whenever J is I first time I'll pick up B then J will go here it's ba then J will go here it's b a b so every time J is moving I'm just adding a new character in it like first",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "_H8V5hJUGd0",
+      "position": 233,
+      "title": "DP 53. Palindrome Partitioning - II | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=_H8V5hJUGd0",
+      "start": 689.8,
+      "end": 811.839,
+      "text": "adding a new character in it like first it was empty you added B then it become ba then it become b a b then it become bab then it become bab BB so can I say can I say probably I can keep a temporary string I can keep a temporary string and every time I move I can add s of J into it because from I because from I to J will always be stor in that temporary now when can I make a partition is the question I can definitely make a partition if that string is pal andrum if that string is palindrome like the temporary string is palindrome if that string is pal drop I can for an example let's go back and see can I make a partition at B yes why B is a pal drop can I make a partition at ba no can I make a partition at bab yes why bab is a pal drop so temp would have stored at first B then at a then at B so whenever it gets V A it tries to take one for the partition and then calls the string which string does it call C J was here so the next string starts from here so I should be here so it calls I for the next portion which is J + one which is J + one so I say okay remember the cost the cost encountered will be one for that partition and the next portion of the string starts from J + one is what you need to solve the next portion of the string starts from J + 1 and that is what you have to solve so that is the cost that you will get so for every J partition you're getting a cost and you need the minimum cost so probably you can keep the minimum cost as in something as Max and the minimum cost will be the Min of all of these so you can just keep the cost",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "_H8V5hJUGd0",
+      "position": 233,
+      "title": "DP 53. Palindrome Partitioning - II | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=_H8V5hJUGd0",
+      "start": 806.48,
+      "end": 930.5999999999999,
+      "text": "these so you can just keep the cost and this is how the partition will be done and you can easily return the Min cost yes you can easily return the Min cost and that is how simple it can be got it so that's how you can easily write the recursion whenever you end you end otherwise you try at every J right from the start till the end you try everything and every time you're trying it and among all you take the possibility so express everything in terms of index done explore all possibilities all partitions done take the minimum of all possibilities Done Right the base case done so you have successfully written the recurrence yes you have successfully written the recurence for for the forward partition or the front partition problem now once you have successfully return the recurence what will be the time complexity again you're trying out every possible paration so it will go exponential in nature and we have to see if there are overlapping sub problems and if they're overlapping sub problems you will see that there are you will apply memo iation into the recursion you'll apply memo iation into the recursion into the problem if you have if you don't know what is memo iation please go back and watch the entire DP playlist so how do you apply mation you go back to the function there is only one parameter that is changing so just write that one parameter what is its value starts from zero goes to n minus one so I can just keep a 1D array if I just keep a 1D array that does so what you do is go back and right over here you say DP of I is equal to minimum cost and right before having anything just keep if DP of I is not equal to minus1 then return just couple of lines shuttle change we'll make sure that this is working so if we come back to the code we have the string Str Str so what I'll",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "_H8V5hJUGd0",
+      "position": 233,
+      "title": "DP 53. Palindrome Partitioning - II | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=_H8V5hJUGd0",
+      "start": 924.92,
+      "end": 1049.08,
+      "text": "we have the string Str Str so what I'll do is I'll just keep Str Str size okay and let's do one thing okay so we have done this and straight away let's uh call the function with the first index with the n and the St Str and let's write the function as inti n and string please make sure call it by reference because there will be multiple recursion calls whenever you reach the end there will be no partitions required so you can return a zero after that you can go across saying J will be I till n j++ and what you can do is you can probably uh like just have a string temporary equal to this or do you actually need to uh store this temporary string ask yourself do you need to store it because you know one thing for sure the string will be from like whenever you're trying to do a partition at J the string will always be from I till J the string will be from I to J so do you actually need to store that temporary the answer to that is no you don't need so what I'll do is okay I'll keep it and I'll say if is palindrome if the string from I till J is pal drop if it is and the cost will be 1 plus function of J + 1 comma n comma St Str and this will be the cost and what I'll do is I'll just minimize it with Min cost yes and right after this I can just return the minimum cost perfect now I just need to write is palindrome and if I have written this I think we should be fine to go so let's write bullion is palindrome I can have I I I can have inj I can have the string s so we just need to make sure while I is lesser than J and if at any moment s of I is not equal",
+      "word_count": 341
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "_H8V5hJUGd0",
+      "position": 233,
+      "title": "DP 53. Palindrome Partitioning - II | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=_H8V5hJUGd0",
+      "start": 1042.6,
+      "end": 1153.96,
+      "text": "and if at any moment s of I is not equal to S of J we say return false or else do an i++ again I'm not going to teach how to do palum very obvious very obvious palum stuff so this is what you'll write and yeah if this if you try to run this you will again see some issues okay definitely you'll see because I have not declared so you're seeing that this is giving wrong answer and for that reason we took a very simple test case and you know the answer for this should have been a partition here a partition here and should have been two partition but what our code does is a code first does a partition here then calls for BC then in BC does a partition for B and then calls for C and then for C does a partition here then eventually calls for I equal equal to n got it so what happens is it does a partion right at the end so what you just need to make sure is whatever answer comes since it is doing a partition at the end you just need to subtract a one and if you try to subtract a one it should work the sole reason being because if you take a b c it does a partition here does a partition here then whenever the recursion is called for this much again it does a paration here so for that reason you have to take a minus one that is definite okay so once you've done this you just need to declare a vector of DP of n minus one and you can just pass on the DP over here make sure you carry the DP at all the places call it over here as well and whenever this is calling it make sure you have it and right before this also make sure if that DP of I is not equal to minus one you can return the DP of I perfect so if I try to run",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "_H8V5hJUGd0",
+      "position": 233,
+      "title": "DP 53. Palindrome Partitioning - II | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=_H8V5hJUGd0",
+      "start": 1148.32,
+      "end": 1265.12,
+      "text": "the DP of I perfect so if I try to run this you will see that this is running fine it is and try to submit this you will see that this is giving you an accepted answer it does 10 out of 10 T so if you now try to submit this you will see that this is running absolutely fine so this is how you solve all this using memorization but it's time to check out the tabulation code as well because in the memorization you'll always have auxilary stack space isn't it so let's go deep and check out the tabulation code now okay so if if we discuss the time complexity of that recursive solution it's definitely we have n States and there's a bigo of n Loop running inside it so it's n² and if I discuss the space complexity it's definitely be go of uh n for that DP and an auxiliary stack space of B go of n because if we're doing a partition partition partition you end up going right right at the end right so the space complexity will be B of n for the DP and B of n for the partition like you partition you partition so you exactly get into the depth so I'm not a big fan of as you know this auxiliary stack space so we write tabulation what are the rules write the base case so please please by the base case what is the base case at first it was if I is equal toal to n you return Zer so this means DP of n will always have a value zero just write it second write down the changing parameter over here there's only one so write it and in the recursion call you started from zero and you went all in 0 to n so in DP it will be opposite you start from n minus one and you go on until zero because n is the base case so you start from n minus one you go until",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "_H8V5hJUGd0",
+      "position": 233,
+      "title": "DP 53. Palindrome Partitioning - II | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=_H8V5hJUGd0",
+      "start": 1259.039,
+      "end": 1374.559,
+      "text": "you start from n minus one you go until zero third is very simple copy the recurrence without even thinking let's go across and copy the recurence don't think much so that is what I will do so we have a DP so we can assign everything to zero DP of n will be zero okay perfect uh what's the next thing we know I will be from n minus one till 0 and iusus and once you have done this I'll just take this portion to be something like this okay and amazing now instead of DP of this we'll write just DP of j+ one that's it and if I write this will it run perfect it will but is there any still issue there is there is we did not copy this so please copy this as well so please copy this as well and right over here just try to have this red used and this will be DP of 0 yes whatever value is stored at DP of 0 minus one so if I now try running this you will see that this is running fine it is but it did give you a runtime error uh why did it give you a runtime error let's quickly have a check because it uh I think you're having it of size n g is going from I till n and you're doing a g++ so DP of G + 1 is it at any time giving you rtime let's quickly have a check yes yes we we will we will have a runtime error because we assigning DP of n so please make sure you have a DP of n+ one so once that is done I think it should be fine it is now try to submit this and you will see that this is giving you a accepted answer that's how you can easily convert this into a tabulation code it is so simple once you write the memorization so guys I hope I was able to explain you the memorization",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "_H8V5hJUGd0",
+      "position": 233,
+      "title": "DP 53. Palindrome Partitioning - II | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=_H8V5hJUGd0",
+      "start": 1370.32,
+      "end": 1397.72,
+      "text": "was able to explain you the memorization and then the tabulation one just in case I was please please please make sure you like this video and if you're new to this Channel please do consider subscribing to us because that is the only thing that keeps me motivated to make these kind of content and yeah with this I'll be wrapping up this video let's meet in the next one till then bye-bye take care see you is broken golden I will",
+      "word_count": 83
+    }
+  ]
+}

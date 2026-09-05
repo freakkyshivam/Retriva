@@ -1,0 +1,119 @@
+{
+  "video_id": "Kmh3rhyEtB8",
+  "position": 185,
+  "title": "DP 4. Frog Jump with K Distance | Lecture 3 Follow Up Question",
+  "url": "https://www.youtube.com/watch?v=Kmh3rhyEtB8",
+  "chunk_count": 10,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "Kmh3rhyEtB8",
+      "position": 185,
+      "title": "DP 4. Frog Jump with K Distance | Lecture 3 Follow Up Question",
+      "url": "https://www.youtube.com/watch?v=Kmh3rhyEtB8",
+      "start": 0.08,
+      "end": 115.2,
+      "text": "hey and welcome back to the channel i hope you guys are doing extremely well so this is going to be a very very short video why because in this video i'll be talking about the lecture 3 follow-up question solution now in the lecture 3 i did give you a follow-up question where i asked you like the question that we solved was if the frog could jump from the ith index to i plus one and the frog could jump uh from i plus uh i to i plus two in this scenario what is the minimum energy that the frog will take in order to jump from zero index to n minus one index that was the question in lecture three but i did give you a follow-up where i said you that what if i give you k yes what if i give you k and i ask you that you're allowed to jump from i plus 1 to i plus 2 plus i plus 3 dot dot till i plus kth index you're allowed to jump to all these indexes so if instead of allowing couple of indexes i allow you to jump around k indexes so what is going to be the minimum energy required so most of you uh remember the recurrence and just make sure the lecture three like you you would have watched like lecture three in order to understand this so if you remember the recurrence it was something like f of index and if index is equal to equal to zero then you returned a zero remember this every problem has to be expressed in terms of indexes right so what i can say is if i'm doing a first step like first jump then i will be reaching index minus 1 and then the energy taken will be absolute of a of index minus absolute of index minus one and if i'm taking the second jump which is again only possible if index is greater than one then i can take the second step or second jump",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "Kmh3rhyEtB8",
+      "position": 185,
+      "title": "DP 4. Frog Jump with K Distance | Lecture 3 Follow Up Question",
+      "url": "https://www.youtube.com/watch?v=Kmh3rhyEtB8",
+      "start": 110.799,
+      "end": 224.08,
+      "text": "take the second step or second jump which is f of index minus 2 plus absolute of a of index minus absolute of a of index minus 2 now uh what did you return you returned the minimal of the first step or the second step that is how the recurrence was so i'll just tell you about the recurrence and probably uh you can then modify every other thing now tell me what if i would have told you like let's think it in a slightly bigger version what if i would have told you that i'm allowing you to jump from i plus 1 to i plus 2 to i plus 3. i'm allowing you three jumps then you would have written probably something like third jump like third step would have been there it would have been like f of index minus 3 plus absolute of a of index minus a of index minus 3 and then this would have been if index is greater than 2 and instead of minimum of 2 there will be three minimums that's that is what you would have done whatever change the question to i plus o then there will be a fourth guy if i change it to i plus five there'll be a fifth guy now if i give you k where k can vary yes if i give you k where k can vary from question to question will it not make sense because what are you doing ultimately you're taking the minimal of whatever jumps you're making so if i'm giving you k possible jumps so you can ask the index because what is the rule the rule is perform the recurrence on the index do all stuffs on the index now when i say there are k jumps so all stuffs will means you will do k jumps right another third step you have to return the minimal so you can easily return the minimal of all of these guys so can i write this as like if i'm doing",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "Kmh3rhyEtB8",
+      "position": 185,
+      "title": "DP 4. Frog Jump with K Distance | Lecture 3 Follow Up Question",
+      "url": "https://www.youtube.com/watch?v=Kmh3rhyEtB8",
+      "start": 217.28,
+      "end": 331.039,
+      "text": "so can i write this as like if i'm doing k jumps can i convert this into a for loop and do the jumps instead of writing one jump two jump three jump can i just write them in a for loop i can because if i categorize uh like if i observe it it is like index minus one index minus two index minus three so what is changing minus one minus two minus three so it will go until minus k yeah so you can just run a loop till then so can i say uh can i say like the recurrence will now be updated to something like this f of index where you can definitely write index equal to equal to zero then i have no issue you can return zero right now you need the minimum energy in like whatever whichever step did take the minimum you want that so can i say the minimum steps let's assume initial minimum steps to be in max i can definitely write that now i know there will be k jumps so i can probably uh give it like j where j is the jump j equal to 1 till j lesser than equal to k j plus plus i can definitely write that correct now can i say what is the jump energy can i say the jump energy will be i am going toward now this time instead of index minus one first time what's the value of j one so index minus one next time was the value of j two so index minus two next time what's the value of j three so index minus three so can i simply write them as index minus j i can definitely write it correct now what if what will be the absolute i can definitely say that the absolute will be a of current index minus a of index minus j because that is what the jump will be and if this is the jump energy s if this is the jump energy",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "Kmh3rhyEtB8",
+      "position": 185,
+      "title": "DP 4. Frog Jump with K Distance | Lecture 3 Follow Up Question",
+      "url": "https://www.youtube.com/watch?v=Kmh3rhyEtB8",
+      "start": 326.8,
+      "end": 442.15999999999997,
+      "text": "jump energy s if this is the jump energy can i say this that i can store the minimal of all the jumps i can store the minimal of all the jumps which is minimum steps and whatever the jump energy is and at the end of the day i can return whatever minimum steps or minimum energy that it took so instead of writing index minus 1 index minus 2 i changed it into a for loop even if it's 2 then it will be like index minus 1 then it will be like index minus 2 so both of these minimums will be taken so can i change the code to something like this i definitely can right but now still there is a problem if i am writing something as index minus j i need to take care of it right so if you remember over here we were taking care if index is greater than 1 we were taking care if index is greater than 2 so we need to make sure that whatever this value is yes whatever this value is index minus j like the the after after subtracting it should be greater than equal to 0 like it should not go to a negative index and if that's the case i can make sure that these couple of steps are performed if it is the case otherwise there will be no jumps and you can break out or you can do whatever you wish to like you can break out because if this is this is going to a negative index you can break out there will be no further jumps possible so that is how the recurrence relationship will be now just to understand one thing if i if i apply memo i action to it yes if i apply memo iation to it what will happen now if i'm applying memo i should do it obviously i will be applying a dp of n into this where i'll be saying dp of index equal to and over here i'll be",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "Kmh3rhyEtB8",
+      "position": 185,
+      "title": "DP 4. Frog Jump with K Distance | Lecture 3 Follow Up Question",
+      "url": "https://www.youtube.com/watch?v=Kmh3rhyEtB8",
+      "start": 436.96,
+      "end": 547.5189999999999,
+      "text": "index equal to and over here i'll be writing if a dp of something right those couple of lines i will have to write what will be the time complexity now in the previous question we have seen that the number of states where big of n but over here we have to observe one thing a state yes per index what is the loop that you are running per index the loop that you are running is around k times so if there are n states like f of 5 f of 4 f of 3 every time you're taking k steps it is no more like two steps it is like one two three four five then k steps for every junction for every junction their k steps so you can see that for if there are n states and there are k jumps i can say the time complexity to be this and the space complexity to be go of n of recursion stack space plus a big of n of memoration this is what the time complexity and the space complexity of the recursive solution will be now if you remember the tabulation how did i write the tabulation it was again very simple i declared a dp array of size n i said dp of 0 yes which means in order to reach the index 0 from 0 will be 0 that is what i definitely said and right after that what i did was i started from 1 and i went on till n i plus plus and what i wrote was basically i wrote first step second step and then i said dp of i is equal to minimum of first step and second step you remember the previous class so instead of first step second step i can say i can run a for loop over here and whatever will be the minimal i'll store it in the dp right make sense because in the previous lecture we did take the minimum of uh first step and second step now there are",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "Kmh3rhyEtB8",
+      "position": 185,
+      "title": "DP 4. Frog Jump with K Distance | Lecture 3 Follow Up Question",
+      "url": "https://www.youtube.com/watch?v=Kmh3rhyEtB8",
+      "start": 544.56,
+      "end": 653.279,
+      "text": "first step and second step now there are k steps so i have to take all the key steps that's very simple what you will do is you will again say minimum steps is equal to into max similar stuff you'll write and what you can write is for j equal to 1 j lesser than equal to k j plus plus that is something which you can definitely write and over here what you can write is if i minus j is greater than equal to zero that means if this jump can be possible like it should not be a negative index right then you can see uh the jump energy required is nothing but dp of i minus j you'll take it why this because in the recurrence that's what you have written over here right dp of i minus j that is what i have written over here so you have written dp of i minus j plus what is the absolute energy that you have taken a of index minus a of index minus j correct that's what you'll write and you can easily write minimum steps equal to minimum of either the previous minimum steps or the current jump that you took so this will be the for loop and once you have done this you can say dp of i to be minimum steps correct that's what you can easily do and now what i can say is once you have done this you can directly print your answer to be dp of n minus 1 right you can directly print your answer to be this and this is going to be your answer what will be the time complexity guys we go off n into k because that is what you're doing a recursion stack space will be eliminated there will just be a b go of n d p r space that you're using that's how you convert it into probably a multi-dimension dp like it's it's a basically nested loop dp so i hope you have understood the",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "Kmh3rhyEtB8",
+      "position": 185,
+      "title": "DP 4. Frog Jump with K Distance | Lecture 3 Follow Up Question",
+      "url": "https://www.youtube.com/watch?v=Kmh3rhyEtB8",
+      "start": 650.079,
+      "end": 753.4399999999999,
+      "text": "so i hope you have understood the follow-up question now the question arises can we space optimize this yes we can but can we space optimize like generally in the previous questions we have seen we have space optimized this from a big o of n to a b go of one now can we do this over here the answer to that will be no we can just optimize the space from big o of n to a big o of k so do you remember how did we optimize a b of n into b of 1 solution remember so if i just quickly give you a recap in order to find dp of i what you required was dp of i minus 1 and dp of i minus 2 so there were only two previous states which were required for computing any particular ith state like the value of dp of i we required couple of states that was dp of i minus 1 and the other one was dp of i minus 2 so there were only couple of steps that were required so what you can do is instead of carrying these guys you can carry the previous couple of step states in couple of variables which was previous to and previous and you can call this as car i so there will be no dpf i carried so whenever like assume this is the current i so the next step and i will move here what will happen in the next step and i will move here this guy tends to become the dp of i minus 1 because if you're standing here this is i the previous guy becomes dp of i minus 1 thereby you can say in the next step this guy will become previous thereby the next previous will be for the next i the previous will be car of i and this guy tends to become the previous two so in the next step the previous two will become previous correct and then you can easily uh do",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "Kmh3rhyEtB8",
+      "position": 185,
+      "title": "DP 4. Frog Jump with K Distance | Lecture 3 Follow Up Question",
+      "url": "https://www.youtube.com/watch?v=Kmh3rhyEtB8",
+      "start": 748.959,
+      "end": 854.8,
+      "text": "correct and then you can easily uh do whatever the karai is using this previous and this previous two instead of using dp of i minus 1 and dp of i minus 2 now over here what do we require let's quickly look at over here we require i minus j correct we require something else i minus j what is that what is that i minus j can i say it can go like i minus 1 i minus 2 i minus 3 i minus 4 i minus 5 so on till i minus k can i see this obviously i can see this because if if i'm giving a k s 2 then for dp of i i required dp of i minus 1 and i require dp of i minus 2 if i give k as 3 i require dp of i minus 1 i minus 2 and i minus 3 so like if i just give you an extension can i say this if these are the points yes if these are the points and just for a sake assume you are standing over here and this is the i and k is four okay and if k is four so can i say whenever you are standing over here and you're computing you're trying to compute this dp of i what you will require as states are very very simple what is that that is as simple as that you can say this is i minus 1 is what you'll require this i minus 2 is what you'll require this i minus 3 is what you'll require this i minus 4 is what you require so you'll just require the four last values or can i say you'll just require the k last values does that make sense because you just require those k last values because you'll be like dp of i minus 1 dp of i minus 2 dp of i minus 3 dp of i minus 4 nothing beyond that so you'll just be requiring",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "Kmh3rhyEtB8",
+      "position": 185,
+      "title": "DP 4. Frog Jump with K Distance | Lecture 3 Follow Up Question",
+      "url": "https://www.youtube.com/watch?v=Kmh3rhyEtB8",
+      "start": 850.16,
+      "end": 956.8000000000001,
+      "text": "requiring k last values now if i just uh change to the next dot and i say in the next iteration yes in the next iteration let's assume you have stored these four elements in some in some array okay let's assume you have stored these four elements in some array so can i say if you are going to the next i if you are going to the next i who are the new last four elements if this is the i can i say the new last four elements are this white circle and i said the new last four elements are these white circles and if i try to write the lines this will be i minus 1 this will be i minus 2 i minus 3 and i minus 4 does that make sense that absolutely makes sense so what you can do is probably you can carry a list and like you can carry like in in c plus plus you can carry a list even in i think java you can carry a list so what you can you just need to do is just need to make sure you omit the first element just like you can just erase it and you insert this i into the list that is how you can do like in the previous question we were swapping like this right over here what you will do is you will erase the first element and you'll insert the new i because in the next step that becomes the i minus one so in this way you just need to maintain you just need to take care of we go of k elements yes you just need to take care of big o of k elements but is the code necessary and the answer to that is no why because if i give you k equal to s if i give you k equal to n if i give you k equal to n then the worst case again becomes big of n elements so there is absolutely no need",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "Kmh3rhyEtB8",
+      "position": 185,
+      "title": "DP 4. Frog Jump with K Distance | Lecture 3 Follow Up Question",
+      "url": "https://www.youtube.com/watch?v=Kmh3rhyEtB8",
+      "start": 951.44,
+      "end": 1053.8400000000001,
+      "text": "elements so there is absolutely no need of a space optimizing it like i just gave you an concept how can you think but i'll not go into the code because it's not required because in the worst case if i give you n jumps you have to carry an element there is no other option so indirectly you're not optimizing space if i give you the worst case scenario i hope you have got that right so since you've got this uh that was the answer to the follow-up question and since so since it took me so much of time to explain the follow-up only that is the reason i did not add it in the lecture three and yesterday i could not upload the video because uh i was suffering from very very high fever and i have a lot of pain over here like what's other challenge i'm still recording this and i will be uploading this and right after this video there will be lecture four coming up don't worry about that uh this is this video is for the yesterday one so yeah in case you have understood the lecture three follow follow-up just a quick request please write understood in the previous video there was around eight thousand views and hardly a hundred people wrote understood so please write understood which goes by us and please please like this video if you have understood it and also do consider subscribing to us if you're new to this channel and if you haven't yet checked out check out our sd sheet please please make sure you check it out that's in the description like almost every college in india is following this particular sheet for placement preparation so make sure you check it out and yes with this let's start with this video let's read the next lecture whenever your heart is broken don't ever forget your golden",
+      "word_count": 324
+    }
+  ]
+}

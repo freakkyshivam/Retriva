@@ -1,0 +1,2474 @@
+{
+  "position": 278,
+  "video_id": "xtqN4qlgr8s",
+  "title": "L7. Number of Substrings Containing All Three Characters | 2 Pointers and Sliding Window Playlist",
+  "url": "https://www.youtube.com/watch?v=xtqN4qlgr8s",
+  "transcript": [
+    {
+      "start": 3.24,
+      "duration": 3.559,
+      "end": 6.799,
+      "text": "so let's continue with the two pointer"
+    },
+    {
+      "start": 5.0,
+      "duration": 4.2,
+      "end": 9.2,
+      "text": "and sliding window playlist on the ders"
+    },
+    {
+      "start": 6.799,
+      "duration": 3.88,
+      "end": 10.679,
+      "text": "a toz DSC course but we was starting off"
+    },
+    {
+      "start": 9.2,
+      "duration": 3.519,
+      "end": 12.719,
+      "text": "hey welcome back to the channel I hope"
+    },
+    {
+      "start": 10.679,
+      "duration": 4.96,
+      "end": 15.639,
+      "text": "you guys are doing extremely well so the"
+    },
+    {
+      "start": 12.719,
+      "duration": 5.32,
+      "end": 18.039,
+      "text": "problem that we will be solving today is"
+    },
+    {
+      "start": 15.639,
+      "duration": 4.841,
+      "end": 20.48,
+      "text": "number of substrings containing all the"
+    },
+    {
+      "start": 18.039,
+      "duration": 4.721,
+      "end": 22.76,
+      "text": "three characters so what is the problem"
+    },
+    {
+      "start": 20.48,
+      "duration": 4.52,
+      "end": 25.0,
+      "text": "stating it's stating that you'll be"
+    },
+    {
+      "start": 22.76,
+      "duration": 6.839,
+      "end": 29.599000000000004,
+      "text": "given a string and the string will be"
+    },
+    {
+      "start": 25.0,
+      "duration": 7.079,
+      "end": 32.079,
+      "text": "containing a b c nothing apart from it"
+    },
+    {
+      "start": 29.599,
+      "duration": 4.401,
+      "end": 34.0,
+      "text": "only these three characters now your"
+    },
+    {
+      "start": 32.079,
+      "duration": 4.201,
+      "end": 36.28,
+      "text": "task is to figure out the number of"
+    },
+    {
+      "start": 34.0,
+      "duration": 4.719,
+      "end": 38.719,
+      "text": "substrings now what is the substring any"
+    },
+    {
+      "start": 36.28,
+      "duration": 5.16,
+      "end": 41.44,
+      "text": "consecutive portion of the string which"
+    },
+    {
+      "start": 38.719,
+      "duration": 5.961,
+      "end": 44.68,
+      "text": "has all the three characters three"
+    },
+    {
+      "start": 41.44,
+      "duration": 4.92,
+      "end": 46.36,
+      "text": "characters means a b and c for an"
+    },
+    {
+      "start": 44.68,
+      "duration": 5.0,
+      "end": 49.68,
+      "text": "example if I pick up this particular"
+    },
+    {
+      "start": 46.36,
+      "duration": 5.6,
+      "end": 51.96,
+      "text": "substring BBA it has two characters b"
+    },
+    {
+      "start": 49.68,
+      "duration": 4.879,
+      "end": 54.559,
+      "text": "and a but it doesn't has the third which"
+    },
+    {
+      "start": 51.96,
+      "duration": 5.0,
+      "end": 56.96,
+      "text": "is the character C so this cannot be"
+    },
+    {
+      "start": 54.559,
+      "duration": 6.281,
+      "end": 60.839999999999996,
+      "text": "considered for an example if I pick up"
+    },
+    {
+      "start": 56.96,
+      "duration": 7.44,
+      "end": 64.4,
+      "text": "this substring which is b b a c this can"
+    },
+    {
+      "start": 60.84,
+      "duration": 5.68,
+      "end": 66.52000000000001,
+      "text": "be considered because it has a b c in it"
+    },
+    {
+      "start": 64.4,
+      "duration": 4.92,
+      "end": 69.32000000000001,
+      "text": "so you have to figure out the total"
+    },
+    {
+      "start": 66.52,
+      "duration": 8.0,
+      "end": 74.52,
+      "text": "number of substrings substring obviously"
+    },
+    {
+      "start": 69.32,
+      "duration": 9.04,
+      "end": 78.35999999999999,
+      "text": "not this is the second no no yes this is"
+    },
+    {
+      "start": 74.52,
+      "duration": 6.04,
+      "end": 80.56,
+      "text": "the first substring so I have one this"
+    },
+    {
+      "start": 78.36,
+      "duration": 4.68,
+      "end": 83.03999999999999,
+      "text": "is also possible and this is also"
+    },
+    {
+      "start": 80.56,
+      "duration": 7.239,
+      "end": 87.799,
+      "text": "possible so I have three substrings"
+    },
+    {
+      "start": 83.04,
+      "duration": 6.64,
+      "end": 89.68,
+      "text": "correct okay after that I have this one"
+    },
+    {
+      "start": 87.799,
+      "duration": 2.68,
+      "end": 90.47900000000001,
+      "text": "not possible this one not possible this"
+    },
+    {
+      "start": 89.68,
+      "duration": 3.96,
+      "end": 93.64,
+      "text": "one"
+    },
+    {
+      "start": 90.479,
+      "duration": 7.28,
+      "end": 97.759,
+      "text": "possible this one possible this one"
+    },
+    {
+      "start": 93.64,
+      "duration": 7.36,
+      "end": 101.0,
+      "text": "possible so again have three 3 + 3 6"
+    },
+    {
+      "start": 97.759,
+      "duration": 8.521,
+      "end": 106.28,
+      "text": "okay this one no this one no this one"
+    },
+    {
+      "start": 101.0,
+      "duration": 8.0,
+      "end": 109.0,
+      "text": "yes this one yes another two 6 + 2 8"
+    },
+    {
+      "start": 106.28,
+      "duration": 4.799,
+      "end": 111.07900000000001,
+      "text": "this one no this one no this one yes"
+    },
+    {
+      "start": 109.0,
+      "duration": 5.439,
+      "end": 114.439,
+      "text": "because it has all the three characters"
+    },
+    {
+      "start": 111.079,
+      "duration": 5.04,
+      "end": 116.119,
+      "text": "so one 8 + 1 9 so the answer will be"
+    },
+    {
+      "start": 114.439,
+      "duration": 4.521,
+      "end": 118.96,
+      "text": "nine and this is what you'll have to"
+    },
+    {
+      "start": 116.119,
+      "duration": 4.68,
+      "end": 120.799,
+      "text": "return so again what is the extreme name"
+    },
+    {
+      "start": 118.96,
+      "duration": 5.159,
+      "end": 124.119,
+      "text": "solution that you can think go I just"
+    },
+    {
+      "start": 120.799,
+      "duration": 7.361,
+      "end": 128.16,
+      "text": "did it try out all the substrings can I"
+    },
+    {
+      "start": 124.119,
+      "duration": 5.521,
+      "end": 129.64,
+      "text": "do it very simple I'll be standing at"
+    },
+    {
+      "start": 128.16,
+      "duration": 4.32,
+      "end": 132.48,
+      "text": "here and then I'll be expanding"
+    },
+    {
+      "start": 129.64,
+      "duration": 6.239,
+      "end": 135.879,
+      "text": "expanding expanding expanding I'll keep"
+    },
+    {
+      "start": 132.48,
+      "duration": 6.0,
+      "end": 138.48,
+      "text": "a count of the number of characters so"
+    },
+    {
+      "start": 135.879,
+      "duration": 5.281,
+      "end": 141.16,
+      "text": "what I can do is I can straight away"
+    },
+    {
+      "start": 138.48,
+      "duration": 5.32,
+      "end": 143.79999999999998,
+      "text": "start I equal to Zer and I can go ahead"
+    },
+    {
+      "start": 141.16,
+      "duration": 4.439,
+      "end": 145.599,
+      "text": "till end you know how to iterate on all"
+    },
+    {
+      "start": 143.8,
+      "duration": 5.64,
+      "end": 149.44,
+      "text": "the substrings we already have done it"
+    },
+    {
+      "start": 145.599,
+      "duration": 5.201,
+      "end": 150.79999999999998,
+      "text": "so many times J will be from I to n"
+    },
+    {
+      "start": 149.44,
+      "duration": 3.799,
+      "end": 153.239,
+      "text": "stand"
+    },
+    {
+      "start": 150.8,
+      "duration": 5.12,
+      "end": 155.92000000000002,
+      "text": "and we have to keep a track of all the"
+    },
+    {
+      "start": 153.239,
+      "duration": 4.481,
+      "end": 157.72,
+      "text": "seen characters maybe what I can do is I"
+    },
+    {
+      "start": 155.92,
+      "duration": 5.239,
+      "end": 161.159,
+      "text": "can keep a hash array of size three"
+    },
+    {
+      "start": 157.72,
+      "duration": 6.519,
+      "end": 164.239,
+      "text": "because we only have a b and c and I can"
+    },
+    {
+      "start": 161.159,
+      "duration": 8.681,
+      "end": 169.84,
+      "text": "assign it initially to be zero so what"
+    },
+    {
+      "start": 164.239,
+      "duration": 8.241,
+      "end": 172.48000000000002,
+      "text": "I'll do is Hash of s of J you can"
+    },
+    {
+      "start": 169.84,
+      "duration": 5.399,
+      "end": 175.239,
+      "text": "subtract the smaller a from it so that a"
+    },
+    {
+      "start": 172.48,
+      "duration": 5.28,
+      "end": 177.76,
+      "text": "resembles to zero B resembles to one C"
+    },
+    {
+      "start": 175.239,
+      "duration": 5.321,
+      "end": 180.56,
+      "text": "resembles to two right and what you can"
+    },
+    {
+      "start": 177.76,
+      "duration": 4.96,
+      "end": 182.72,
+      "text": "do is maybe you can just mark it as one"
+    },
+    {
+      "start": 180.56,
+      "duration": 4.48,
+      "end": 185.04,
+      "text": "quite simple that means you have seen"
+    },
+    {
+      "start": 182.72,
+      "duration": 8.04,
+      "end": 190.76,
+      "text": "that particular character once this is"
+    },
+    {
+      "start": 185.04,
+      "duration": 10.08,
+      "end": 195.12,
+      "text": "done can I write he listen if hash of"
+    },
+    {
+      "start": 190.76,
+      "duration": 8.119,
+      "end": 198.879,
+      "text": "0 plus hash of"
+    },
+    {
+      "start": 195.12,
+      "duration": 5.64,
+      "end": 200.76,
+      "text": "1+ hash of two if that's equivalent to"
+    },
+    {
+      "start": 198.879,
+      "duration": 3.64,
+      "end": 202.51899999999998,
+      "text": "three which means all the three"
+    },
+    {
+      "start": 200.76,
+      "duration": 4.36,
+      "end": 205.12,
+      "text": "characters are there and if that is the"
+    },
+    {
+      "start": 202.519,
+      "duration": 5.201,
+      "end": 207.72,
+      "text": "case this can be added to my answer"
+    },
+    {
+      "start": 205.12,
+      "duration": 4.44,
+      "end": 209.56,
+      "text": "because this is definitely a substring"
+    },
+    {
+      "start": 207.72,
+      "duration": 3.799,
+      "end": 211.519,
+      "text": "this is definitely a substring can I say"
+    },
+    {
+      "start": 209.56,
+      "duration": 5.239,
+      "end": 214.799,
+      "text": "this and eventually I can end the PA"
+    },
+    {
+      "start": 211.519,
+      "duration": 6.681,
+      "end": 218.20000000000002,
+      "text": "loop and the count will be zero can I"
+    },
+    {
+      "start": 214.799,
+      "duration": 5.601,
+      "end": 220.4,
+      "text": "return this yes I can return this or you"
+    },
+    {
+      "start": 218.2,
+      "duration": 3.959,
+      "end": 222.159,
+      "text": "can print it whatever you wish to what"
+    },
+    {
+      "start": 220.4,
+      "duration": 4.72,
+      "end": 225.12,
+      "text": "will be the time complexity can I say"
+    },
+    {
+      "start": 222.159,
+      "duration": 5.44,
+      "end": 227.599,
+      "text": "that the time complexity will be V go of"
+    },
+    {
+      "start": 225.12,
+      "duration": 5.52,
+      "end": 230.64000000000001,
+      "text": "n Square because like near about n"
+    },
+    {
+      "start": 227.599,
+      "duration": 5.121,
+      "end": 232.72,
+      "text": "square if not exact near about n square"
+    },
+    {
+      "start": 230.64,
+      "duration": 5.159,
+      "end": 235.79899999999998,
+      "text": "and what about the space complexity I'm"
+    },
+    {
+      "start": 232.72,
+      "duration": 5.879,
+      "end": 238.599,
+      "text": "using a hash map sorry hash aray but"
+    },
+    {
+      "start": 235.799,
+      "duration": 5.401,
+      "end": 241.20000000000002,
+      "text": "that is a size three that's as good as"
+    },
+    {
+      "start": 238.599,
+      "duration": 4.881,
+      "end": 243.48,
+      "text": "we go of one so this will be the time"
+    },
+    {
+      "start": 241.2,
+      "duration": 5.48,
+      "end": 246.67999999999998,
+      "text": "complexity can I optimize The Brute"
+    },
+    {
+      "start": 243.48,
+      "duration": 6.479,
+      "end": 249.959,
+      "text": "Force yes I can not by a significant"
+    },
+    {
+      "start": 246.68,
+      "duration": 5.32,
+      "end": 252.0,
+      "text": "margin I'll show you a simple trick and"
+    },
+    {
+      "start": 249.959,
+      "duration": 5.081,
+      "end": 255.04,
+      "text": "that trick is what we'll be using to"
+    },
+    {
+      "start": 252.0,
+      "duration": 6.72,
+      "end": 258.72,
+      "text": "derive the most optimal solution okay"
+    },
+    {
+      "start": 255.04,
+      "duration": 6.159,
+      "end": 261.199,
+      "text": "tell me one thing you started from here"
+    },
+    {
+      "start": 258.72,
+      "duration": 4.44,
+      "end": 263.16,
+      "text": "and you said that the B substring"
+    },
+    {
+      "start": 261.199,
+      "duration": 4.44,
+      "end": 265.639,
+      "text": "doesn't have three characters then you"
+    },
+    {
+      "start": 263.16,
+      "duration": 6.08,
+      "end": 269.24,
+      "text": "expanded and added the next B and you"
+    },
+    {
+      "start": 265.639,
+      "duration": 6.681,
+      "end": 272.32,
+      "text": "said BB is not then you expanded and"
+    },
+    {
+      "start": 269.24,
+      "duration": 7.679,
+      "end": 276.919,
+      "text": "added a a and you say no then you"
+    },
+    {
+      "start": 272.32,
+      "duration": 8.159,
+      "end": 280.479,
+      "text": "expanded and added C and you said yes"
+    },
+    {
+      "start": 276.919,
+      "duration": 6.56,
+      "end": 283.479,
+      "text": "this is the moment you said yes this is"
+    },
+    {
+      "start": 280.479,
+      "duration": 6.28,
+      "end": 286.75899999999996,
+      "text": "the moment the if will say yes now tell"
+    },
+    {
+      "start": 283.479,
+      "duration": 6.44,
+      "end": 289.919,
+      "text": "me one thing if I know that this"
+    },
+    {
+      "start": 286.759,
+      "duration": 6.121,
+      "end": 292.88,
+      "text": "possible substring has all the three"
+    },
+    {
+      "start": 289.919,
+      "duration": 5.641,
+      "end": 295.56,
+      "text": "characters do I need to Traverse any"
+    },
+    {
+      "start": 292.88,
+      "duration": 5.8,
+      "end": 298.68,
+      "text": "further no I don't need to because even"
+    },
+    {
+      "start": 295.56,
+      "duration": 4.84,
+      "end": 300.4,
+      "text": "if I add B even if I add a those"
+    },
+    {
+      "start": 298.68,
+      "duration": 5.44,
+      "end": 304.12,
+      "text": "substrings which will be formed in"
+    },
+    {
+      "start": 300.4,
+      "duration": 7.079,
+      "end": 307.479,
+      "text": "future by adding will also be a valid"
+    },
+    {
+      "start": 304.12,
+      "duration": 7.32,
+      "end": 311.44,
+      "text": "substring so can I say the moment I get"
+    },
+    {
+      "start": 307.479,
+      "duration": 7.121,
+      "end": 314.59999999999997,
+      "text": "a valid substring every substring Beyond"
+    },
+    {
+      "start": 311.44,
+      "duration": 6.0,
+      "end": 317.44,
+      "text": "this will also be valid I can so can I"
+    },
+    {
+      "start": 314.6,
+      "duration": 4.76,
+      "end": 319.36,
+      "text": "see if I if I get this here I can"
+    },
+    {
+      "start": 317.44,
+      "duration": 3.92,
+      "end": 321.36,
+      "text": "straight away add three to my answer and"
+    },
+    {
+      "start": 319.36,
+      "duration": 4.52,
+      "end": 323.88,
+      "text": "I don't need to go ahead I can straight"
+    },
+    {
+      "start": 321.36,
+      "duration": 5.32,
+      "end": 326.68,
+      "text": "away add three to my answer and how I"
+    },
+    {
+      "start": 323.88,
+      "duration": 5.8,
+      "end": 329.68,
+      "text": "can do it it's very simple if you write"
+    },
+    {
+      "start": 326.68,
+      "duration": 5.84,
+      "end": 332.52,
+      "text": "down the index number 0 1 2 3 4 5 this"
+    },
+    {
+      "start": 329.68,
+      "duration": 6.239,
+      "end": 335.919,
+      "text": "string length is six you figured it out"
+    },
+    {
+      "start": 332.52,
+      "duration": 6.28,
+      "end": 338.79999999999995,
+      "text": "at the third index that it is possible"
+    },
+    {
+      "start": 335.919,
+      "duration": 4.56,
+      "end": 340.479,
+      "text": "so you can say 6 minus third index and"
+    },
+    {
+      "start": 338.8,
+      "duration": 4.16,
+      "end": 342.96000000000004,
+      "text": "you can straight away add that to your"
+    },
+    {
+      "start": 340.479,
+      "duration": 5.401,
+      "end": 345.88,
+      "text": "answer so a simple optimization will be"
+    },
+    {
+      "start": 342.96,
+      "duration": 5.84,
+      "end": 348.79999999999995,
+      "text": "I can remove this count and I can write"
+    },
+    {
+      "start": 345.88,
+      "duration": 5.68,
+      "end": 351.56,
+      "text": "Hey listen hey count can you straight"
+    },
+    {
+      "start": 348.8,
+      "duration": 5.08,
+      "end": 353.88,
+      "text": "away add count plus whatever is the size"
+    },
+    {
+      "start": 351.56,
+      "duration": 5.12,
+      "end": 356.68,
+      "text": "of the string minus J you can figure out"
+    },
+    {
+      "start": 353.88,
+      "duration": 6.08,
+      "end": 359.96,
+      "text": "the size of the string and after that"
+    },
+    {
+      "start": 356.68,
+      "duration": 5.12,
+      "end": 361.8,
+      "text": "please break out please break out there"
+    },
+    {
+      "start": 359.96,
+      "duration": 4.92,
+      "end": 364.88,
+      "text": "is no need to add this B there's no need"
+    },
+    {
+      "start": 361.8,
+      "duration": 7.32,
+      "end": 369.12,
+      "text": "to add this a you can straight away now"
+    },
+    {
+      "start": 364.88,
+      "duration": 7.0,
+      "end": 371.88,
+      "text": "go ahead and start from this B this's ba"
+    },
+    {
+      "start": 369.12,
+      "duration": 4.68,
+      "end": 373.8,
+      "text": "a b a c and again it will be valid over"
+    },
+    {
+      "start": 371.88,
+      "duration": 4.719,
+      "end": 376.599,
+      "text": "here so you can again add some more"
+    },
+    {
+      "start": 373.8,
+      "duration": 4.88,
+      "end": 378.68,
+      "text": "answers got it so this is a slight"
+    },
+    {
+      "start": 376.599,
+      "duration": 4.801,
+      "end": 381.4,
+      "text": "optimization will that improve the time"
+    },
+    {
+      "start": 378.68,
+      "duration": 5.799,
+      "end": 384.479,
+      "text": "complexity yes for certain test cases"
+    },
+    {
+      "start": 381.4,
+      "duration": 6.84,
+      "end": 388.23999999999995,
+      "text": "but not for the worst imagine I give you"
+    },
+    {
+      "start": 384.479,
+      "duration": 5.641,
+      "end": 390.12,
+      "text": "a string like a a a a it still Travers"
+    },
+    {
+      "start": 388.24,
+      "duration": 4.72,
+      "end": 392.96000000000004,
+      "text": "till the end right because because you"
+    },
+    {
+      "start": 390.12,
+      "duration": 5.359,
+      "end": 395.479,
+      "text": "don't have any valid combination where"
+    },
+    {
+      "start": 392.96,
+      "duration": 4.84,
+      "end": 397.79999999999995,
+      "text": "the break will be executed this is a"
+    },
+    {
+      "start": 395.479,
+      "duration": 5.72,
+      "end": 401.199,
+      "text": "shuttle optimization I did it because I"
+    },
+    {
+      "start": 397.8,
+      "duration": 5.239,
+      "end": 403.039,
+      "text": "want to explain you the optimal solution"
+    },
+    {
+      "start": 401.199,
+      "duration": 3.56,
+      "end": 404.759,
+      "text": "so I'm looking to optimize my previous"
+    },
+    {
+      "start": 403.039,
+      "duration": 4.481,
+      "end": 407.52,
+      "text": "solution the previous solution was"
+    },
+    {
+      "start": 404.759,
+      "duration": 5.601,
+      "end": 410.36,
+      "text": "taking n square if I'm looking to"
+    },
+    {
+      "start": 407.52,
+      "duration": 5.519,
+      "end": 413.039,
+      "text": "optimize I'm definitely looking to go"
+    },
+    {
+      "start": 410.36,
+      "duration": 5.88,
+      "end": 416.24,
+      "text": "towards the direction of B go of n the"
+    },
+    {
+      "start": 413.039,
+      "duration": 5.641,
+      "end": 418.68,
+      "text": "problem has substrings like two pointer"
+    },
+    {
+      "start": 416.24,
+      "duration": 5.0,
+      "end": 421.24,
+      "text": "right so I'll start thinking of the two"
+    },
+    {
+      "start": 418.68,
+      "duration": 5.239,
+      "end": 423.919,
+      "text": "pointer algorithm but now the question"
+    },
+    {
+      "start": 421.24,
+      "duration": 5.72,
+      "end": 426.96000000000004,
+      "text": "arises I need to make sure I have all"
+    },
+    {
+      "start": 423.919,
+      "duration": 6.4,
+      "end": 430.31899999999996,
+      "text": "the three characters so I need to make"
+    },
+    {
+      "start": 426.96,
+      "duration": 6.32,
+      "end": 433.28,
+      "text": "sure that I get a window which has all"
+    },
+    {
+      "start": 430.319,
+      "duration": 6.44,
+      "end": 436.759,
+      "text": "the three characters right that's how I"
+    },
+    {
+      "start": 433.28,
+      "duration": 5.68,
+      "end": 438.96,
+      "text": "have to think for sliding window okay"
+    },
+    {
+      "start": 436.759,
+      "duration": 4.56,
+      "end": 441.319,
+      "text": "but I'll have to figure out number I'll"
+    },
+    {
+      "start": 438.96,
+      "duration": 5.72,
+      "end": 444.68,
+      "text": "have to count it's not longest that I'll"
+    },
+    {
+      "start": 441.319,
+      "duration": 5.841,
+      "end": 447.16,
+      "text": "expand or string I have to count so I'm"
+    },
+    {
+      "start": 444.68,
+      "duration": 5.359,
+      "end": 450.039,
+      "text": "looking to count and there are"
+    },
+    {
+      "start": 447.16,
+      "duration": 4.92,
+      "end": 452.08000000000004,
+      "text": "substrings I know one thing"
+    },
+    {
+      "start": 450.039,
+      "duration": 4.56,
+      "end": 454.599,
+      "text": "with every index there are a bunch of"
+    },
+    {
+      "start": 452.08,
+      "duration": 6.44,
+      "end": 458.52,
+      "text": "substrings that start with b this is a"
+    },
+    {
+      "start": 454.599,
+      "duration": 5.681,
+      "end": 460.28,
+      "text": "substring bb bb a BB a c BB this this"
+    },
+    {
+      "start": 458.52,
+      "duration": 5.239,
+      "end": 463.75899999999996,
+      "text": "and then with this B this one this one"
+    },
+    {
+      "start": 460.28,
+      "duration": 5.52,
+      "end": 465.79999999999995,
+      "text": "this one with every character there is a"
+    },
+    {
+      "start": 463.759,
+      "duration": 5.72,
+      "end": 469.47900000000004,
+      "text": "substring there are multiple substrings"
+    },
+    {
+      "start": 465.8,
+      "duration": 5.6,
+      "end": 471.40000000000003,
+      "text": "that start I'll do the reverse I'll do"
+    },
+    {
+      "start": 469.479,
+      "duration": 6.4,
+      "end": 475.87899999999996,
+      "text": "the reverse I'll"
+    },
+    {
+      "start": 471.4,
+      "duration": 4.479,
+      "end": 475.87899999999996,
+      "text": "say with every"
+    },
+    {
+      "start": 477.639,
+      "duration": 4.321,
+      "end": 481.96000000000004,
+      "text": "character there is"
+    },
+    {
+      "start": 480.199,
+      "duration": 5.041,
+      "end": 485.24,
+      "text": "a substring that"
+    },
+    {
+      "start": 481.96,
+      "duration": 6.639,
+      "end": 488.599,
+      "text": "ends with every character there is a"
+    },
+    {
+      "start": 485.24,
+      "duration": 6.48,
+      "end": 491.72,
+      "text": "substring that ends I can do it from the"
+    },
+    {
+      "start": 488.599,
+      "duration": 6.6,
+      "end": 495.199,
+      "text": "front as well but I will do for the end"
+    },
+    {
+      "start": 491.72,
+      "duration": 6.68,
+      "end": 498.40000000000003,
+      "text": "for a frontward implementation you'll"
+    },
+    {
+      "start": 495.199,
+      "duration": 5.72,
+      "end": 500.91900000000004,
+      "text": "understand at the end uh with every"
+    },
+    {
+      "start": 498.4,
+      "duration": 5.639,
+      "end": 504.039,
+      "text": "character there is a substring that ends"
+    },
+    {
+      "start": 500.919,
+      "duration": 6.361,
+      "end": 507.28,
+      "text": "what does that mean with the c I can say"
+    },
+    {
+      "start": 504.039,
+      "duration": 6.241,
+      "end": 510.28,
+      "text": "that this is a substring where this is"
+    },
+    {
+      "start": 507.28,
+      "duration": 5.04,
+      "end": 512.3199999999999,
+      "text": "the last character this is a substring"
+    },
+    {
+      "start": 510.28,
+      "duration": 4.119,
+      "end": 514.399,
+      "text": "where C is the last character this is a"
+    },
+    {
+      "start": 512.32,
+      "duration": 3.92,
+      "end": 516.24,
+      "text": "substring where C is the last character"
+    },
+    {
+      "start": 514.399,
+      "duration": 5.681,
+      "end": 520.08,
+      "text": "this is a substring where C is the last"
+    },
+    {
+      "start": 516.24,
+      "duration": 6.599,
+      "end": 522.839,
+      "text": "character okay so I know how to access"
+    },
+    {
+      "start": 520.08,
+      "duration": 6.6,
+      "end": 526.6800000000001,
+      "text": "uh every substring that ends at any"
+    },
+    {
+      "start": 522.839,
+      "duration": 6.921,
+      "end": 529.7600000000001,
+      "text": "given character okay so now I'll try to"
+    },
+    {
+      "start": 526.68,
+      "duration": 6.12,
+      "end": 532.8,
+      "text": "figure out okay listen just just for the"
+    },
+    {
+      "start": 529.76,
+      "duration": 7.96,
+      "end": 537.72,
+      "text": "sake of understanding if I'm standing at"
+    },
+    {
+      "start": 532.8,
+      "duration": 8.039,
+      "end": 540.8389999999999,
+      "text": "this B and I'm asking you hey what is"
+    },
+    {
+      "start": 537.72,
+      "duration": 6.2,
+      "end": 543.9200000000001,
+      "text": "the minimal length what is the minimal"
+    },
+    {
+      "start": 540.839,
+      "duration": 6.56,
+      "end": 547.399,
+      "text": "length of the substring that has all the"
+    },
+    {
+      "start": 543.92,
+      "duration": 7.24,
+      "end": 551.16,
+      "text": "three characters you will be like this"
+    },
+    {
+      "start": 547.399,
+      "duration": 6.921,
+      "end": 554.32,
+      "text": "one again please keep it in mind that"
+    },
+    {
+      "start": 551.16,
+      "duration": 5.16,
+      "end": 556.3199999999999,
+      "text": "you should be ending at the this B so"
+    },
+    {
+      "start": 554.32,
+      "duration": 4.639,
+      "end": 558.9590000000001,
+      "text": "you cannot take anything beyond this you"
+    },
+    {
+      "start": 556.32,
+      "duration": 4.959,
+      "end": 561.279,
+      "text": "have to look before it so I'm very sure"
+    },
+    {
+      "start": 558.959,
+      "duration": 3.801,
+      "end": 562.76,
+      "text": "that this particular substring has all"
+    },
+    {
+      "start": 561.279,
+      "duration": 3.921,
+      "end": 565.2,
+      "text": "the three characters and this is the"
+    },
+    {
+      "start": 562.76,
+      "duration": 4.88,
+      "end": 567.64,
+      "text": "minimum window we can have this is the"
+    },
+    {
+      "start": 565.2,
+      "duration": 5.04,
+      "end": 570.24,
+      "text": "minimum window we can have we can have"
+    },
+    {
+      "start": 567.64,
+      "duration": 5.8,
+      "end": 573.4399999999999,
+      "text": "this minimum window can I say this is"
+    },
+    {
+      "start": 570.24,
+      "duration": 5.839,
+      "end": 576.0790000000001,
+      "text": "one substring right how many more"
+    },
+    {
+      "start": 573.44,
+      "duration": 4.68,
+      "end": 578.12,
+      "text": "substrings can I have I cannot add in"
+    },
+    {
+      "start": 576.079,
+      "duration": 5.721,
+      "end": 581.8,
+      "text": "the front because I'm just looking for"
+    },
+    {
+      "start": 578.12,
+      "duration": 5.92,
+      "end": 584.04,
+      "text": "substrings that end at this B that end"
+    },
+    {
+      "start": 581.8,
+      "duration": 5.159,
+      "end": 586.959,
+      "text": "at this B so I cannot add it in the"
+    },
+    {
+      "start": 584.04,
+      "duration": 5.4,
+      "end": 589.4399999999999,
+      "text": "front but I can add in the back I"
+    },
+    {
+      "start": 586.959,
+      "duration": 5.281,
+      "end": 592.2399999999999,
+      "text": "already have one I can still expand it I"
+    },
+    {
+      "start": 589.44,
+      "duration": 4.0,
+      "end": 593.44,
+      "text": "can still expand it the same logic that"
+    },
+    {
+      "start": 592.24,
+      "duration": 4.32,
+      "end": 596.5600000000001,
+      "text": "we did in the Brute Force the"
+    },
+    {
+      "start": 593.44,
+      "duration": 6.399,
+      "end": 599.839,
+      "text": "optimization I can do an expansion so"
+    },
+    {
+      "start": 596.56,
+      "duration": 6.0,
+      "end": 602.56,
+      "text": "this is what I will try to do for every"
+    },
+    {
+      "start": 599.839,
+      "duration": 5.721,
+      "end": 605.5600000000001,
+      "text": "for every character I'll try to figure"
+    },
+    {
+      "start": 602.56,
+      "duration": 5.8,
+      "end": 608.3599999999999,
+      "text": "out the minimum window if I can figure"
+    },
+    {
+      "start": 605.56,
+      "duration": 4.24,
+      "end": 609.8,
+      "text": "out the minimum window I know one thing"
+    },
+    {
+      "start": 608.36,
+      "duration": 3.479,
+      "end": 611.839,
+      "text": "this is going to be one this is going to"
+    },
+    {
+      "start": 609.8,
+      "duration": 6.479,
+      "end": 616.279,
+      "text": "be two this is going to be three that's"
+    },
+    {
+      "start": 611.839,
+      "duration": 6.761,
+      "end": 618.6,
+      "text": "nothing but if I write down 0 1 2"
+    },
+    {
+      "start": 616.279,
+      "duration": 7.281,
+      "end": 623.56,
+      "text": "basically index numbers this is the"
+    },
+    {
+      "start": 618.6,
+      "duration": 8.239,
+      "end": 626.839,
+      "text": "second index and if this is the minimum"
+    },
+    {
+      "start": 623.56,
+      "duration": 5.44,
+      "end": 629.0,
+      "text": "minimum how many substrings can you get"
+    },
+    {
+      "start": 626.839,
+      "duration": 4.401,
+      "end": 631.24,
+      "text": "that has all the three characters where"
+    },
+    {
+      "start": 629.0,
+      "duration": 5.64,
+      "end": 634.64,
+      "text": "basically Bally it ends with this B so"
+    },
+    {
+      "start": 631.24,
+      "duration": 7.159,
+      "end": 638.399,
+      "text": "ACB is one this is another and this is"
+    },
+    {
+      "start": 634.64,
+      "duration": 8.12,
+      "end": 642.76,
+      "text": "another correct ACB this one and this"
+    },
+    {
+      "start": 638.399,
+      "duration": 9.641,
+      "end": 648.04,
+      "text": "one so I have three which is nothing but"
+    },
+    {
+      "start": 642.76,
+      "duration": 8.759,
+      "end": 651.519,
+      "text": "index + 1 2 + 1 three correct let's try"
+    },
+    {
+      "start": 648.04,
+      "duration": 7.32,
+      "end": 655.36,
+      "text": "to expand this logic and let's see how I"
+    },
+    {
+      "start": 651.519,
+      "duration": 6.721,
+      "end": 658.24,
+      "text": "can figure it out I'll tell you Way as"
+    },
+    {
+      "start": 655.36,
+      "duration": 6.2,
+      "end": 661.5600000000001,
+      "text": "of now just understand what's my thought"
+    },
+    {
+      "start": 658.24,
+      "duration": 5.839,
+      "end": 664.0790000000001,
+      "text": "process so what I will do is I'll"
+    },
+    {
+      "start": 661.56,
+      "duration": 8.839,
+      "end": 670.399,
+      "text": "straight away take a hashmap and I'll"
+    },
+    {
+      "start": 664.079,
+      "duration": 7.88,
+      "end": 671.959,
+      "text": "keep a c equal to minus1 -1 = to"
+    },
+    {
+      "start": 670.399,
+      "duration": 4.041,
+      "end": 674.44,
+      "text": "minus1"
+    },
+    {
+      "start": 671.959,
+      "duration": 4.601,
+      "end": 676.56,
+      "text": "okay and I'll start"
+    },
+    {
+      "start": 674.44,
+      "duration": 6.68,
+      "end": 681.12,
+      "text": "iterating I'll write down the indexes as"
+    },
+    {
+      "start": 676.56,
+      "duration": 7.6,
+      "end": 684.16,
+      "text": "well 0 1 2 3 4 5 you'll understand don't"
+    },
+    {
+      "start": 681.12,
+      "duration": 5.36,
+      "end": 686.48,
+      "text": "worry let's start it reading add the"
+    },
+    {
+      "start": 684.16,
+      "duration": 4.16,
+      "end": 688.3199999999999,
+      "text": "character B first thing you'll do is"
+    },
+    {
+      "start": 686.48,
+      "duration": 7.0,
+      "end": 693.48,
+      "text": "you'll update this and you'll say this"
+    },
+    {
+      "start": 688.32,
+      "duration": 8.6,
+      "end": 696.9200000000001,
+      "text": "is the at the B was last seen this is"
+    },
+    {
+      "start": 693.48,
+      "duration": 5.64,
+      "end": 699.12,
+      "text": "very important was last seen at the"
+    },
+    {
+      "start": 696.92,
+      "duration": 7.12,
+      "end": 704.04,
+      "text": "index zero"
+    },
+    {
+      "start": 699.12,
+      "duration": 7.12,
+      "end": 706.24,
+      "text": "okay tell me one thing for B if this is"
+    },
+    {
+      "start": 704.04,
+      "duration": 5.599,
+      "end": 709.639,
+      "text": "the last index I have to look on the"
+    },
+    {
+      "start": 706.24,
+      "duration": 7.88,
+      "end": 714.12,
+      "text": "left I'll have to look on the left right"
+    },
+    {
+      "start": 709.639,
+      "duration": 7.401,
+      "end": 717.04,
+      "text": "to get a valid window and I don't see it"
+    },
+    {
+      "start": 714.12,
+      "duration": 6.399,
+      "end": 720.519,
+      "text": "because I don't have a a I don't have a"
+    },
+    {
+      "start": 717.04,
+      "duration": 6.359,
+      "end": 723.399,
+      "text": "c I don't see it"
+    },
+    {
+      "start": 720.519,
+      "duration": 7.481,
+      "end": 728.0,
+      "text": "not an issue we will straightforward go"
+    },
+    {
+      "start": 723.399,
+      "duration": 6.88,
+      "end": 730.279,
+      "text": "to the next one I again have a b i don't"
+    },
+    {
+      "start": 728.0,
+      "duration": 4.639,
+      "end": 732.639,
+      "text": "I just do one thing I'll update this to"
+    },
+    {
+      "start": 730.279,
+      "duration": 6.401,
+      "end": 736.68,
+      "text": "index"
+    },
+    {
+      "start": 732.639,
+      "duration": 7.2,
+      "end": 739.839,
+      "text": "one but do I see a and see no it's still"
+    },
+    {
+      "start": 736.68,
+      "duration": 4.48,
+      "end": 741.16,
+      "text": "minus one so thereby three characters"
+    },
+    {
+      "start": 739.839,
+      "duration": 4.721,
+      "end": 744.5600000000001,
+      "text": "are not"
+    },
+    {
+      "start": 741.16,
+      "duration": 9.4,
+      "end": 750.56,
+      "text": "possible let's move ahead this that's an"
+    },
+    {
+      "start": 744.56,
+      "duration": 9.639,
+      "end": 754.199,
+      "text": "a update a to index 2"
+    },
+    {
+      "start": 750.56,
+      "duration": 6.88,
+      "end": 757.4399999999999,
+      "text": "perfect but still there is no C so I"
+    },
+    {
+      "start": 754.199,
+      "duration": 5.121,
+      "end": 759.3199999999999,
+      "text": "cannot have a window let's go to the C"
+    },
+    {
+      "start": 757.44,
+      "duration": 4.12,
+      "end": 761.5600000000001,
+      "text": "now this is the moment you start"
+    },
+    {
+      "start": 759.32,
+      "duration": 6.28,
+      "end": 765.6,
+      "text": "understanding you see a c and you update"
+    },
+    {
+      "start": 761.56,
+      "duration": 6.12,
+      "end": 767.68,
+      "text": "it to three now tell me one thing tell"
+    },
+    {
+      "start": 765.6,
+      "duration": 5.2,
+      "end": 770.8000000000001,
+      "text": "me one thing if you're standing at C and"
+    },
+    {
+      "start": 767.68,
+      "duration": 6.839,
+      "end": 774.519,
+      "text": "you have a you have B you have C how do"
+    },
+    {
+      "start": 770.8,
+      "duration": 6.36,
+      "end": 777.16,
+      "text": "you recognize that this is the minimal"
+    },
+    {
+      "start": 774.519,
+      "duration": 5.0,
+      "end": 779.519,
+      "text": "window how do you recognize that this is"
+    },
+    {
+      "start": 777.16,
+      "duration": 6.4,
+      "end": 783.56,
+      "text": "the minimal window which has all the"
+    },
+    {
+      "start": 779.519,
+      "duration": 6.841,
+      "end": 786.36,
+      "text": "three characters you basically look over"
+    },
+    {
+      "start": 783.56,
+      "duration": 7.0,
+      "end": 790.56,
+      "text": "all the last seen values and you see"
+    },
+    {
+      "start": 786.36,
+      "duration": 6.2,
+      "end": 792.5600000000001,
+      "text": "that b is at the index one thereby if"
+    },
+    {
+      "start": 790.56,
+      "duration": 4.8,
+      "end": 795.3599999999999,
+      "text": "you start from B and you know currently"
+    },
+    {
+      "start": 792.56,
+      "duration": 7.16,
+      "end": 799.7199999999999,
+      "text": "you are at C you'll have everything"
+    },
+    {
+      "start": 795.36,
+      "duration": 7.8,
+      "end": 803.16,
+      "text": "because the minimal value is at B A and"
+    },
+    {
+      "start": 799.72,
+      "duration": 5.64,
+      "end": 805.36,
+      "text": "C are after are after it so I'm very"
+    },
+    {
+      "start": 803.16,
+      "duration": 5.6,
+      "end": 808.76,
+      "text": "sure at index"
+    },
+    {
+      "start": 805.36,
+      "duration": 5.479,
+      "end": 810.839,
+      "text": "one till this it's a valid one which has"
+    },
+    {
+      "start": 808.76,
+      "duration": 4.199,
+      "end": 812.959,
+      "text": "all the three characters minimum"
+    },
+    {
+      "start": 810.839,
+      "duration": 3.841,
+      "end": 814.6800000000001,
+      "text": "possible window this is a valid"
+    },
+    {
+      "start": 812.959,
+      "duration": 4.68,
+      "end": 817.6389999999999,
+      "text": "substring and if this is a valid"
+    },
+    {
+      "start": 814.68,
+      "duration": 4.959,
+      "end": 819.6389999999999,
+      "text": "substring I can add on every character"
+    },
+    {
+      "start": 817.639,
+      "duration": 3.76,
+      "end": 821.399,
+      "text": "to the left I can add on every character"
+    },
+    {
+      "start": 819.639,
+      "duration": 4.64,
+      "end": 824.279,
+      "text": "to the left and I can generate more and"
+    },
+    {
+      "start": 821.399,
+      "duration": 4.88,
+      "end": 826.279,
+      "text": "more substrings which is ending at this"
+    },
+    {
+      "start": 824.279,
+      "duration": 4.961,
+      "end": 829.24,
+      "text": "particular character C which is ending"
+    },
+    {
+      "start": 826.279,
+      "duration": 8.201,
+      "end": 834.48,
+      "text": "at this particular character C okay fine"
+    },
+    {
+      "start": 829.24,
+      "duration": 10.0,
+      "end": 839.24,
+      "text": "how many do I get I get two very obvious"
+    },
+    {
+      "start": 834.48,
+      "duration": 10.44,
+      "end": 844.9200000000001,
+      "text": "one my bad I'll use the marker otherwise"
+    },
+    {
+      "start": 839.24,
+      "duration": 7.88,
+      "end": 847.12,
+      "text": "it be messy one and two we BAC and B A"
+    },
+    {
+      "start": 844.92,
+      "duration": 4.719,
+      "end": 849.639,
+      "text": "Perfect what is the next"
+    },
+    {
+      "start": 847.12,
+      "duration": 5.04,
+      "end": 852.16,
+      "text": "step I'll move the C to uh move the"
+    },
+    {
+      "start": 849.639,
+      "duration": 3.921,
+      "end": 853.5600000000001,
+      "text": "pointer to the B first thing you'll do"
+    },
+    {
+      "start": 852.16,
+      "duration": 5.239,
+      "end": 857.399,
+      "text": "is please update"
+    },
+    {
+      "start": 853.56,
+      "duration": 6.199,
+      "end": 859.7589999999999,
+      "text": "me now again you'll see that you have a"
+    },
+    {
+      "start": 857.399,
+      "duration": 4.921,
+      "end": 862.32,
+      "text": "you have B you have C and if you have"
+    },
+    {
+      "start": 859.759,
+      "duration": 4.88,
+      "end": 864.639,
+      "text": "them what you're looking at is what is"
+    },
+    {
+      "start": 862.32,
+      "duration": 4.959,
+      "end": 867.279,
+      "text": "the minimal window you look for the"
+    },
+    {
+      "start": 864.639,
+      "duration": 6.44,
+      "end": 871.0790000000001,
+      "text": "value of a b and c and you see that a is"
+    },
+    {
+      "start": 867.279,
+      "duration": 5.601,
+      "end": 872.88,
+      "text": "at the left most is at the left most so"
+    },
+    {
+      "start": 871.079,
+      "duration": 3.68,
+      "end": 874.7589999999999,
+      "text": "a is at two that means this is the"
+    },
+    {
+      "start": 872.88,
+      "duration": 4.56,
+      "end": 877.4399999999999,
+      "text": "minimal window and if this is the"
+    },
+    {
+      "start": 874.759,
+      "duration": 5.0,
+      "end": 879.759,
+      "text": "minimal window this is a possible"
+    },
+    {
+      "start": 877.44,
+      "duration": 5.72,
+      "end": 883.1600000000001,
+      "text": "substring you can add everything to the"
+    },
+    {
+      "start": 879.759,
+      "duration": 5.08,
+      "end": 884.839,
+      "text": "left thereby you can create this is the"
+    },
+    {
+      "start": 883.16,
+      "duration": 5.039,
+      "end": 888.199,
+      "text": "individual one and you can create two"
+    },
+    {
+      "start": 884.839,
+      "duration": 6.161,
+      "end": 891.0,
+      "text": "more three which is nothing but 2 +"
+    },
+    {
+      "start": 888.199,
+      "duration": 6.041,
+      "end": 894.24,
+      "text": "1 so you can just create three more"
+    },
+    {
+      "start": 891.0,
+      "duration": 6.36,
+      "end": 897.36,
+      "text": "perfect next you will do is you will"
+    },
+    {
+      "start": 894.24,
+      "duration": 5.12,
+      "end": 899.36,
+      "text": "take this and you'll move it to a first"
+    },
+    {
+      "start": 897.36,
+      "duration": 5.2,
+      "end": 902.5600000000001,
+      "text": "thing you'll do is you will straight"
+    },
+    {
+      "start": 899.36,
+      "duration": 5.56,
+      "end": 904.92,
+      "text": "away update a to5 and now you will ask"
+    },
+    {
+      "start": 902.56,
+      "duration": 6.32,
+      "end": 908.88,
+      "text": "okay ending at this what is the minimal"
+    },
+    {
+      "start": 904.92,
+      "duration": 8.44,
+      "end": 913.36,
+      "text": "window and you'll figure it out a b c c"
+    },
+    {
+      "start": 908.88,
+      "duration": 8.079,
+      "end": 916.959,
+      "text": "has the minimal value so thereby this is"
+    },
+    {
+      "start": 913.36,
+      "duration": 7.56,
+      "end": 920.92,
+      "text": "the minimal window and if this is the"
+    },
+    {
+      "start": 916.959,
+      "duration": 7.12,
+      "end": 924.079,
+      "text": "minimal window can I say this that along"
+    },
+    {
+      "start": 920.92,
+      "duration": 5.359,
+      "end": 926.279,
+      "text": "with this I can add this this this"
+    },
+    {
+      "start": 924.079,
+      "duration": 5.2,
+      "end": 929.279,
+      "text": "typically four additions typically four"
+    },
+    {
+      "start": 926.279,
+      "duration": 6.321,
+      "end": 932.6,
+      "text": "additions and it is at index three so 3"
+    },
+    {
+      "start": 929.279,
+      "duration": 5.8,
+      "end": 935.079,
+      "text": "+ 1 4 and after that what you can do is"
+    },
+    {
+      "start": 932.6,
+      "duration": 6.56,
+      "end": 939.16,
+      "text": "you can finish it off and that is"
+    },
+    {
+      "start": 935.079,
+      "duration": 6.801,
+      "end": 941.88,
+      "text": "over so if you add it up you'll get nine"
+    },
+    {
+      "start": 939.16,
+      "duration": 5.08,
+      "end": 944.24,
+      "text": "so what I did was I did the same root"
+    },
+    {
+      "start": 941.88,
+      "duration": 5.319,
+      "end": 947.199,
+      "text": "Force thing I tried to generate all the"
+    },
+    {
+      "start": 944.24,
+      "duration": 5.399,
+      "end": 949.639,
+      "text": "substrings in a smarter way in a smarter"
+    },
+    {
+      "start": 947.199,
+      "duration": 4.88,
+      "end": 952.079,
+      "text": "way standing at every index I tried to"
+    },
+    {
+      "start": 949.639,
+      "duration": 3.801,
+      "end": 953.44,
+      "text": "figure out what is the minimal you could"
+    },
+    {
+      "start": 952.079,
+      "duration": 4.0,
+      "end": 956.079,
+      "text": "you could have done it in the opposite"
+    },
+    {
+      "start": 953.44,
+      "duration": 5.079,
+      "end": 958.519,
+      "text": "way as well standing at the first figure"
+    },
+    {
+      "start": 956.079,
+      "duration": 3.56,
+      "end": 959.6389999999999,
+      "text": "out the minimal on the right for that"
+    },
+    {
+      "start": 958.519,
+      "duration": 3.8,
+      "end": 962.319,
+      "text": "you'll have to to Travers on the"
+    },
+    {
+      "start": 959.639,
+      "duration": 4.56,
+      "end": 964.199,
+      "text": "backward Direction that's why I took the"
+    },
+    {
+      "start": 962.319,
+      "duration": 3.681,
+      "end": 966.0,
+      "text": "opposite that's why I took the opposite"
+    },
+    {
+      "start": 964.199,
+      "duration": 5.681,
+      "end": 969.88,
+      "text": "you can do the opposite as"
+    },
+    {
+      "start": 966.0,
+      "duration": 6.639,
+      "end": 972.639,
+      "text": "well very simple very clean figure out"
+    },
+    {
+      "start": 969.88,
+      "duration": 5.079,
+      "end": 974.959,
+      "text": "every possible figure out for every"
+    },
+    {
+      "start": 972.639,
+      "duration": 4.161,
+      "end": 976.8,
+      "text": "character because I have taken every"
+    },
+    {
+      "start": 974.959,
+      "duration": 5.0,
+      "end": 979.959,
+      "text": "character into consideration so I'll not"
+    },
+    {
+      "start": 976.8,
+      "duration": 4.959,
+      "end": 981.7589999999999,
+      "text": "be missing out on any substrings taking"
+    },
+    {
+      "start": 979.959,
+      "duration": 4.721,
+      "end": 984.68,
+      "text": "every character remember that in your"
+    },
+    {
+      "start": 981.759,
+      "duration": 6.08,
+      "end": 987.839,
+      "text": "head can we quickly write down the code"
+    },
+    {
+      "start": 984.68,
+      "duration": 5.519,
+      "end": 990.199,
+      "text": "obviously right okay uh which color"
+    },
+    {
+      "start": 987.839,
+      "duration": 3.521,
+      "end": 991.36,
+      "text": "let's use yellow yeah that's my fa"
+    },
+    {
+      "start": 990.199,
+      "duration": 4.481,
+      "end": 994.68,
+      "text": "favorite"
+    },
+    {
+      "start": 991.36,
+      "duration": 5.8,
+      "end": 997.16,
+      "text": "color which color should I use um orange"
+    },
+    {
+      "start": 994.68,
+      "duration": 5.519,
+      "end": 1000.199,
+      "text": "that's my favorite"
+    },
+    {
+      "start": 997.16,
+      "duration": 5.28,
+      "end": 1002.4399999999999,
+      "text": "one yeah take your forward is also in"
+    },
+    {
+      "start": 1000.199,
+      "duration": 4.401,
+      "end": 1004.5999999999999,
+      "text": "the orange theme so it'll be given a"
+    },
+    {
+      "start": 1002.44,
+      "duration": 4.079,
+      "end": 1006.519,
+      "text": "string right so let's take a"
+    },
+    {
+      "start": 1004.6,
+      "duration": 6.84,
+      "end": 1011.44,
+      "text": "string what is the first thing that"
+    },
+    {
+      "start": 1006.519,
+      "duration": 4.921,
+      "end": 1011.44,
+      "text": "you'll do I need to have a last"
+    },
+    {
+      "start": 1012.24,
+      "duration": 5.44,
+      "end": 1017.6800000000001,
+      "text": "scene so maybe you can create a last"
+    },
+    {
+      "start": 1014.72,
+      "duration": 5.44,
+      "end": 1020.1600000000001,
+      "text": "scene a minus one minus one and a minus"
+    },
+    {
+      "start": 1017.68,
+      "duration": 5.88,
+      "end": 1023.56,
+      "text": "one where minus one signifies that you"
+    },
+    {
+      "start": 1020.16,
+      "duration": 6.399,
+      "end": 1026.559,
+      "text": "haven't seen it right and uh at the same"
+    },
+    {
+      "start": 1023.56,
+      "duration": 5.479,
+      "end": 1029.039,
+      "text": "time you can keep a count equal to zero"
+    },
+    {
+      "start": 1026.559,
+      "duration": 7.24,
+      "end": 1033.799,
+      "text": "after that what I can do is I can start"
+    },
+    {
+      "start": 1029.039,
+      "duration": 7.8,
+      "end": 1036.839,
+      "text": "iterating from at 0 to"
+    },
+    {
+      "start": 1033.799,
+      "duration": 5.88,
+      "end": 1039.679,
+      "text": "and and what I will do is first thing"
+    },
+    {
+      "start": 1036.839,
+      "duration": 5.521,
+      "end": 1042.36,
+      "text": "I'll do is last"
+    },
+    {
+      "start": 1039.679,
+      "duration": 3.961,
+      "end": 1043.64,
+      "text": "scene and whatever is the value again"
+    },
+    {
+      "start": 1042.36,
+      "duration": 4.479,
+      "end": 1046.839,
+      "text": "minus"
+    },
+    {
+      "start": 1043.64,
+      "duration": 6.2,
+      "end": 1049.8400000000001,
+      "text": "a equal to the current"
+    },
+    {
+      "start": 1046.839,
+      "duration": 5.761,
+      "end": 1052.6,
+      "text": "index and please make sure that that you"
+    },
+    {
+      "start": 1049.84,
+      "duration": 4.76,
+      "end": 1054.6,
+      "text": "have three of them so you can just write"
+    },
+    {
+      "start": 1052.6,
+      "duration": 5.319,
+      "end": 1057.9189999999999,
+      "text": "a simple"
+    },
+    {
+      "start": 1054.6,
+      "duration": 3.319,
+      "end": 1057.9189999999999,
+      "text": "condition if"
+    },
+    {
+      "start": 1058.559,
+      "duration": 7.601,
+      "end": 1066.16,
+      "text": "lasten what is it 0er is not equal to"
+    },
+    {
+      "start": 1062.679,
+      "duration": 6.081,
+      "end": 1068.76,
+      "text": "minus one and then for all the three"
+    },
+    {
+      "start": 1066.16,
+      "duration": 4.519,
+      "end": 1070.679,
+      "text": "that means you have three of them and if"
+    },
+    {
+      "start": 1068.76,
+      "duration": 6.24,
+      "end": 1075.0,
+      "text": "you have three of them what you do is"
+    },
+    {
+      "start": 1070.679,
+      "duration": 8.48,
+      "end": 1079.159,
+      "text": "you say count equal to count"
+    },
+    {
+      "start": 1075.0,
+      "duration": 6.12,
+      "end": 1081.12,
+      "text": "plus 1 plus is whatever is the index"
+    },
+    {
+      "start": 1079.159,
+      "duration": 3.601,
+      "end": 1082.7600000000002,
+      "text": "whatever is the index you do 1 plus to"
+    },
+    {
+      "start": 1081.12,
+      "duration": 4.36,
+      "end": 1085.4799999999998,
+      "text": "it"
+    },
+    {
+      "start": 1082.76,
+      "duration": 7.72,
+      "end": 1090.48,
+      "text": "right minimum"
+    },
+    {
+      "start": 1085.48,
+      "duration": 7.52,
+      "end": 1093.0,
+      "text": "of last scene of zero last scene of one"
+    },
+    {
+      "start": 1090.48,
+      "duration": 4.88,
+      "end": 1095.3600000000001,
+      "text": "last scene of two can just write it and"
+    },
+    {
+      "start": 1093.0,
+      "duration": 6.32,
+      "end": 1099.32,
+      "text": "once you've done this you can straight"
+    },
+    {
+      "start": 1095.36,
+      "duration": 8.52,
+      "end": 1103.8799999999999,
+      "text": "away return the value of count and that"
+    },
+    {
+      "start": 1099.32,
+      "duration": 6.8,
+      "end": 1106.12,
+      "text": "will be done so you can try omitting uh"
+    },
+    {
+      "start": 1103.88,
+      "duration": 5.44,
+      "end": 1109.3200000000002,
+      "text": "this check as well even if you do not"
+    },
+    {
+      "start": 1106.12,
+      "duration": 6.52,
+      "end": 1112.6399999999999,
+      "text": "check if three of them are what will"
+    },
+    {
+      "start": 1109.32,
+      "duration": 6.76,
+      "end": 1116.08,
+      "text": "happen is one of the minimums will come"
+    },
+    {
+      "start": 1112.64,
+      "duration": 7.64,
+      "end": 1120.2800000000002,
+      "text": "up as minus one if it is not there it"
+    },
+    {
+      "start": 1116.08,
+      "duration": 6.88,
+      "end": 1122.96,
+      "text": "will come up as minus1 and 1 + minus1"
+    },
+    {
+      "start": 1120.28,
+      "duration": 5.12,
+      "end": 1125.3999999999999,
+      "text": "will end up to be zero so you can"
+    },
+    {
+      "start": 1122.96,
+      "duration": 5.16,
+      "end": 1128.1200000000001,
+      "text": "actually omit the check as well I did"
+    },
+    {
+      "start": 1125.4,
+      "duration": 4.96,
+      "end": 1130.3600000000001,
+      "text": "write it because I wanted to explain you"
+    },
+    {
+      "start": 1128.12,
+      "duration": 4.72,
+      "end": 1132.84,
+      "text": "so what will be the time complexity can"
+    },
+    {
+      "start": 1130.36,
+      "duration": 4.16,
+      "end": 1134.52,
+      "text": "I say that the time complexity will be I"
+    },
+    {
+      "start": 1132.84,
+      "duration": 5.0,
+      "end": 1137.84,
+      "text": "don't have to even"
+    },
+    {
+      "start": 1134.52,
+      "duration": 5.0,
+      "end": 1139.52,
+      "text": "explain straightforward B of n what"
+    },
+    {
+      "start": 1137.84,
+      "duration": 4.6,
+      "end": 1142.4399999999998,
+      "text": "about the space complexity"
+    },
+    {
+      "start": 1139.52,
+      "duration": 6.2,
+      "end": 1145.72,
+      "text": "a beo of fun because I'm just using"
+    },
+    {
+      "start": 1142.44,
+      "duration": 6.64,
+      "end": 1149.0800000000002,
+      "text": "three variables like three space AR so"
+    },
+    {
+      "start": 1145.72,
+      "duration": 5.6,
+      "end": 1151.32,
+      "text": "it's as good as a constant time super"
+    },
+    {
+      "start": 1149.08,
+      "duration": 3.839,
+      "end": 1152.9189999999999,
+      "text": "simple super clean you just have to"
+    },
+    {
+      "start": 1151.32,
+      "duration": 4.76,
+      "end": 1156.08,
+      "text": "think of it that's it think of the"
+    },
+    {
+      "start": 1152.919,
+      "duration": 5.12,
+      "end": 1158.039,
+      "text": "windows Solutions again uh I hope you've"
+    },
+    {
+      "start": 1156.08,
+      "duration": 4.04,
+      "end": 1160.12,
+      "text": "understood it so this will be it for"
+    },
+    {
+      "start": 1158.039,
+      "duration": 3.88,
+      "end": 1161.919,
+      "text": "this one so if you're still now watching"
+    },
+    {
+      "start": 1160.12,
+      "duration": 3.559,
+      "end": 1163.6789999999999,
+      "text": "and if you've understood everything"
+    },
+    {
+      "start": 1161.919,
+      "duration": 3.441,
+      "end": 1165.3600000000001,
+      "text": "please please do consider giving us a"
+    },
+    {
+      "start": 1163.679,
+      "duration": 3.841,
+      "end": 1167.52,
+      "text": "like and if you're new to our channel do"
+    },
+    {
+      "start": 1165.36,
+      "duration": 3.4,
+      "end": 1168.76,
+      "text": "consider subscribing to us as well with"
+    },
+    {
+      "start": 1167.52,
+      "duration": 4.519,
+      "end": 1172.039,
+      "text": "this I'll be wrapping of this video"
+    },
+    {
+      "start": 1168.76,
+      "duration": 3.279,
+      "end": 1172.039,
+      "text": "let's me in some other video till then"
+    },
+    {
+      "start": 1172.32,
+      "duration": 4.839,
+      "end": 1177.1589999999999,
+      "text": "bye-bye"
+    },
+    {
+      "start": 1173.57,
+      "duration": 7.95,
+      "end": 1181.52,
+      "text": "[Music]"
+    },
+    {
+      "start": 1177.159,
+      "duration": 4.361,
+      "end": 1181.5200000000002,
+      "text": "Bren I"
+    }
+  ]
+}

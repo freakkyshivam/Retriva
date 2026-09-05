@@ -1,0 +1,108 @@
+{
+  "video_id": "nhEMDKMB44g",
+  "position": 50,
+  "title": "BS-6. Minimum in Rotated Sorted Array",
+  "url": "https://www.youtube.com/watch?v=nhEMDKMB44g",
+  "chunk_count": 9,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "nhEMDKMB44g",
+      "position": 50,
+      "title": "BS-6. Minimum in Rotated Sorted Array",
+      "url": "https://www.youtube.com/watch?v=nhEMDKMB44g",
+      "start": 2.94,
+      "end": 108.659,
+      "text": "hey everyone come back to the channel I hope you guys are doing extremely well so we will be continuing with our binary search playlist which is the part of the Strivers A to Z DSA course in case you haven't checked it out yet there's a link in the description please please make sure you check it out so uh till now I've covered up till this particular problem now in this video I will be covering up find the minimum in the rotated sorted array but please make sure that you should have seen these two videos beforehand I'll be leaving the video links in the description in case you haven't seen them please go back and watch it then you can uh resume with this particular video so what does the problem state so you're given a rotated sorted array and I've already explained you the definition of Rotator sorted array it's like ideally this should have been zero one two four five six seven so here's the pivot they have rotated it so this comes at the front so four five six seven and then this shifts so this is the rotated sorted array over here you have to tell me the minimum so the minimum is zero you have to return me the value of the minimum so if I take one more example over here the minimum value is one so you have to return this over here the minimum value is one so you have to again return this so how do you solve this problem so this problem comes up in an interview what is the brute force that you can think of find the minimum find the smallest number in an array yes that's a typical Vigo of n solution we basically do a single pass through the array obviously we go of n is something which the interview will not like and will ask you to optimize it and we see sorted we see filed and binary search comes to our head so we have to apply binary search",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "nhEMDKMB44g",
+      "position": 50,
+      "title": "BS-6. Minimum in Rotated Sorted Array",
+      "url": "https://www.youtube.com/watch?v=nhEMDKMB44g",
+      "start": 104.34,
+      "end": 235.08,
+      "text": "head so we have to apply binary search but how can we apply binary search what is the step one of binary search it always eliminates either the left or the right because in binary search we move from because in binary search we move from n to n by 2 size array 1 by 4 size array and so on we move on till 1 and then it ends and the element is not there so we have to somehow eliminate the left half or eliminate the right half how can we so if you remember in the rotated sorted array we actually cannot straight away eliminate we have to first figure out which is the sorted half identify the sorted half again I've already explained this in the previous video please go back and watch it if you haven't seen it so you have to identify the sorted half and why I have told you the reasons in the previous video so over here let's let's try to think we have a low here we have a high here and when we start we have a mid here and we know that the left half is sorted why do I say that because 4 is lesser than equal to 7 thereby the left half is sorted whereas the right half is not sorted why because seven ideally should have been less than 2 but that is wrong so thereby I know that the left half is sorted if I ask you hey why is the right half not sorted if I ask you this question what will be your answer your answer will be if the array was a straight like something like one two three four then even if you stand here the left and right are always sorted since you did a rotation on this point thereby the laptop was sorted and because of the rotation the right half is not sorted because of the rotation because the rotating point is on the right half because the rotating point is on the",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "nhEMDKMB44g",
+      "position": 50,
+      "title": "BS-6. Minimum in Rotated Sorted Array",
+      "url": "https://www.youtube.com/watch?v=nhEMDKMB44g",
+      "start": 229.799,
+      "end": 347.1,
+      "text": "because the rotating point is on the right half thereby it is not sorted and if the rotating point is on the right half can I say the rotating point will always have the minimum element will always have the minimum element so many about that yes hence the left sorted part will never have your answer and the right part might have your answer why do I say might let me give you some other examples let's take one more example and see if the statement that we made is correct or not so over here can I see that the right half is sorted and it doesn't contains the minimum it doesn't which is which does make sense and the minimum is here why is that because the point of rotation is this hence the left portion is not sorted hence the left portion is not sorted thereby the left portion contains the minimum but I can still prove my statement wrong let me give you one more example this one so over here can I say that if the mid is here the low is here the high is here the right half is actually sorted and it contains the element it contains the minimum I know the laptop is not sorted and this also contains the element so a bit of conflict the right half might have the element might just have the element so we have to be careful about these things we cannot straight away say that Hey listen because if I if I give you one more example one comma 2 in this case law will be a high will be a mid will be here again the left half is sorted and it does have the answer it does have the answer so we have to be careful we have to be careful because we know one thing for sure we can eliminate the right top and then probably look for it we can eliminate the write up and probably look for it we can probably eliminate the left half and",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "nhEMDKMB44g",
+      "position": 50,
+      "title": "BS-6. Minimum in Rotated Sorted Array",
+      "url": "https://www.youtube.com/watch?v=nhEMDKMB44g",
+      "start": 343.56,
+      "end": 473.819,
+      "text": "can probably eliminate the left half and probably look for it so we know one thing for sure the sorted half may or may not have the answer can I say this the sorted half may or may not have the answer so what I'll do is pick the minimum from that pick the min from the sorted half and eliminate and eliminate because I know if I eliminate this then I can look for this one because I can I know this is sorted I know this is sorted so I'll use the property of sorted here and how I'll tell you when I do the driver let's let's try to use the property of sorted so where am I I'm over here what do I know this left portion is sorted this left portion is sorted I'm looking for Minima let's keep an answer which will keep the minimum value so can you tell me if I take this which is the smallest element I know this is sorted please use please please take the advantage of this being sorted this is sorted which is the minimum element in this the low because if this entire thing is sorted the leftmost element will be the minimum so update it can I say in this entire sorted portion I have picked up the Minima I've picked up the Minima this is of no more use because I picked up the minimum is like yes thereby I will go ahead and I'll erase this so what I did was I picked up the minimum and I raised it because eliminate eliminate because there's no point in doing a search for five six seven eliminate next a medium is here because I eliminated the laptop now again the laptop is sorted and what is the minimum zero so just pick it up and eliminate the laptop saying hey I'm done with you I'm done with you the left half is sorted point to notice the right half is also sorted but it's okay",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "nhEMDKMB44g",
+      "position": 50,
+      "title": "BS-6. Minimum in Rotated Sorted Array",
+      "url": "https://www.youtube.com/watch?v=nhEMDKMB44g",
+      "start": 470.22,
+      "end": 600.42,
+      "text": "is also sorted but it's okay if I figure out the left half is sorted let's eliminate I just need to eliminate one half I'll eliminate the left half you can eliminate eliminate the write half as well that is your choice let's Summit we have a two and the mid will be here and the left half is this which you compare with answer don't need it and then obviously the binary search ends when you eliminate eventually the answer is stored as zero let's try to do more and more so let's try with one more example we have a low we have a mid we have a height let's keep answer as int Max what is the first thing that I'll do I'll try to eliminate which hop will I eliminate can I eliminate this software it is not sorted so I cannot be sure if we have the minimum there this half is sorted so I know if that half assorted become the smallest element and rest I don't need them I'm finding minimum pick up the smallest and get rid of them pick up the smallest and get rid of them which is basically getting rid of them thereby the high will come next medium is here let's see the laptop is sorted the laptop is sorted which is the minimum in the left half the low pick up that compare it to no need now I eliminate the laptop eliminate the left half and move the low to this portion so when you move the low to that portion the medium will be this now what is your left half this thereby pick up the minimum which is one itself update and then eliminate so it's over So eventually you got the answer as one Wow Let's do one more example and see if it is working fine on this one as well or not is here ice answer equal to in Max ice answer equal to into max I'm like okay the laptop is not sorted it's not sorted",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "nhEMDKMB44g",
+      "position": 50,
+      "title": "BS-6. Minimum in Rotated Sorted Array",
+      "url": "https://www.youtube.com/watch?v=nhEMDKMB44g",
+      "start": 594.3,
+      "end": 719.82,
+      "text": "the laptop is not sorted it's not sorted how did you know this because 4 is not lesser than one the left half is not sorted is the right half sorted is the right half sorted yes pick up the smallest and eliminate and eliminate how much you have four five write the medium which is the left of 4 which is the smallest in the left of four will it update no So eventually eliminate the left half so basically the low end go here and the medium will go here and again you can do it so the answer stores as one so yeah works so can I say if I have to write the pseudo code X and array X and n x a value of flow equal to zero takes a value of y equal to n minus 1 and takes an answer equal to 8 Max can I see this for sure I can let's write the standard binary search which is low lesser than equal to high standard what do we say a mid equal to low plus High by two we say that what's the next thing we say eliminate the left half on eliminate the right half so I know the laptop is sorted if array of flow is lesser than array of mid less than equal to rather why do I write equal to it might have one element what if what if you have an array which is like 2 1 the lower zero the higher zero the mid is also here so the left half is this so for single elements it's very important you keep this equal to same so this is the left half in case of left top which is the smallest if I talk about the left half okay this one here if you talk about the left half lower zero mid is here which is the smallest the low so you always pick up the low and you're like answer equal to answer sorry answer equal to minimum of answer comma array of flow",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "nhEMDKMB44g",
+      "position": 50,
+      "title": "BS-6. Minimum in Rotated Sorted Array",
+      "url": "https://www.youtube.com/watch?v=nhEMDKMB44g",
+      "start": 712.74,
+      "end": 831.6,
+      "text": "minimum of answer comma array of flow see updated and eliminate so low will be moving to bit plus one first update and then move mid okay or else eliminate the right half if that is sorted if the left half is not sorted the right half will be sorted that's how the property of rotated sorted array works if the right half is there then you're like answer equal to Min of answer comma array of mid why why why hey dude very obvious let us go back to this example four five one two three low here High here mid here the right portion gets eliminated which is the smallest whatever is at Mid so take it take it take in eliminate the right High equal to Mid minus one that's it that's your binary search and whatever is stored in your answer whatever is stored in your answer at the end will be your minimum got it so in case you want to try out the problem you can check it out from the link in the description what I've done is I've written the same code in C plus plus you can find out the Java python JavaScript code from the notes in the description so if I submit this this actually runs because eliminate the left half and take the smallest on the left half eliminate the right half and take the smallest and the right half and keep on updating your answer that's what you written and I optimize this I can actually optimize this so let me tell you how can I optimize this now this optimization is not needed if you want to do it that's your choice if you don't want to do it that's your choice again so when I have low here I here and the mid is pointing here what do you eliminate you basically eliminate the left half because it is sorted and you store answer equal to 4 right so you eliminate the left half and it's sorted and then you take the low to here",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "nhEMDKMB44g",
+      "position": 50,
+      "title": "BS-6. Minimum in Rotated Sorted Array",
+      "url": "https://www.youtube.com/watch?v=nhEMDKMB44g",
+      "start": 827.339,
+      "end": 949.019,
+      "text": "and then you take the low to here carefully observe one thing in this portion let's let's get rid of this in this portion the left half is also sorted and the right half is also sorted how do you recognize that a left half and the right half both are sorted and that only happens when you cross the point of rotation when you cross the point of rotation the entire array is sorted or when you are on the other side of it so can I say I can easily figure out that by saying if that's less than equal to Mid like array of mid an array of mid is less than equal to high can I say this if these two conditions are met left sorted and right sorted and this together can be written as array of low lesser than array of mid can I sorry array of file you get that can be written as this that means the low is lesser than equal to high which is this case that means the entire array is sorted and this case happens do you need to perform a binary search on this because the array is sorted and you know the smallest element will be the low you don't need to so we can actually do an optimization saying Hey listen if the search space is already sorted then array of flow will always be small in that search space in that case you just compare and you update answer and you break so this will stop the binary search because if a search space is already sorted if both the left and right are sorted you stop you don't do anything so if I submit this this will be running with a slightly better time complexity so what is the time complexity since uh we're doing with the unique elements it's going to be we go off logarithmic B is to n for duplicates I'll leave that as a homework if you have seen my I'll go back to the sheet",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "nhEMDKMB44g",
+      "position": 50,
+      "title": "BS-6. Minimum in Rotated Sorted Array",
+      "url": "https://www.youtube.com/watch?v=nhEMDKMB44g",
+      "start": 945.12,
+      "end": 1029.5,
+      "text": "have seen my I'll go back to the sheet with the sheet yeah if you have seen this particular video search in rotated sorted array part 2 you can actually do it for this one as well so leave that for you as a homework and I'll mark this as done I hope you have understood the entire concept uh in the discussion forum of a lot of websites you will see that people are using the concept of low lesser than high now I'm not a big fan of it I'll try to keep all the concepts in a similar code format where where am I yeah I try to keep all the concepts in this similar format and low equal to Mid plus one and high equal to Mid minus one I'll try to keep it in the same form so that you understand binary search in depth I'll not be doing low equal to Mid or high equal to Mid I'll not be doing that I'll try to keep every code in a same format as V2 right so in case you have understood everything and you're still watching please please please consider giving us that like and if you're new to our Channel what are you waiting for like please please do consider subscribing to us because it does highly motivate me and if you haven't followed me on Instagram Twitter LinkedIn all the profile links are in the description with this I'll be wrapping up this video let's fill in some other videos whenever your heart is broken don't ever forget your golden I I will find the light in",
+      "word_count": 275
+    }
+  ]
+}

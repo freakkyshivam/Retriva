@@ -1,0 +1,97 @@
+{
+  "video_id": "73sneFXuTEg",
+  "position": 147,
+  "title": "G-22. Kahn's Algorithm | Topological Sort Algorithm | BFS",
+  "url": "https://www.youtube.com/watch?v=73sneFXuTEg",
+  "chunk_count": 8,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "73sneFXuTEg",
+      "position": 147,
+      "title": "G-22. Kahn's Algorithm | Topological Sort Algorithm | BFS",
+      "url": "https://www.youtube.com/watch?v=73sneFXuTEg",
+      "start": 3.16,
+      "end": 141.92,
+      "text": "Hey everyone, welcome back to the channel. I hope you guys are doing extremely well. So in this video we are going to learn about topological sorting and we are going to use the BFS algorithm. We have done the DFS algorithm in the previous video and this algorithm is famously known as the Kahn's algorithm. Kahn, Kahn, whatever you can call it. So what is topological sorting? So it's basically a linear ordering of vertices such that if there is an edge between U and V, U always appears before V in that ordering. So let me give you an example. So if I write 5 4 then I can write something like 0 2 3 1. Okay. Now this is a valid linear ordering of the graph. What I can do is I can write down all the edges. So let's write down all the edges. So the first edge is 5 0 then 4 0 then 5 2 then 4 1 then 2 3 and then 3 1. So these are all the six edges of that given graph. Okay, so we have six edges. Let's check out 5 0. So if you see 5 0, 5 appears before 0. So this is perfect. 4 0, 4 appears before 0 and that is what the lining stated. 5 2, 5 appears before 2. 4 1, 4 appears before 1. 2 3, 2 appears before 3. 3 1, 3 appears before 1. Even I can have something like 4 5 2 3 1 0. This is also a valid linear ordering. Let's check it out. 5 0, 5 appears before 0. 4 0, 4 appears before 0. 5 2, 5 appears before 2. 4 1, 4 appears before 1. 2 3, 2 appears before 3. 3 1, 3 appears before one. So, there can be multiple such linear ordering of vertices as long as all the edges satisfy this particular condition, I can say any of that linear ordering to be a topological sort. Now, our task is to print any such topological sort. So,",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "73sneFXuTEg",
+      "position": 147,
+      "title": "G-22. Kahn's Algorithm | Topological Sort Algorithm | BFS",
+      "url": "https://www.youtube.com/watch?v=73sneFXuTEg",
+      "start": 134.6,
+      "end": 260.88,
+      "text": "print any such topological sort. So, remember one thing, topological sort or topo sort is only valid in DAGs. It is is only valid in DAGs. What is DAG? It is nothing but directed acyclic, which means does not have a cycle. Directed acyclic graph. Why a directed? Assume I'm saying you to take an undirected vertex, something like one to two. So, this is an undirected edge between a node one and between a node two. So, if you carefully see, this is from one to two and from two to one. So, in the linear ordering, you can't have such a linear ordering such that one appears before two, at the same time two appears before one because the edge is bidirectional if we call it a undirected graph. Thereby, it has to be a directed graph. What about acyclic? Let's understand. So, imagine I draw one, then I go to two, then I go to three, and then I go to one back again. So, there's an edge between one to two, there's an edge between two to three, there's an edge between three to one. So, what I'm saying is in the linear ordering, one should be before two. Two should be before three. Three should be before one. So, a cyclic dependency is there. So, thereby, you cannot have one at both the places. You cannot have one before three, or you cannot have one after three. You cannot satisfy it. Thereby, we have to have a graph which does not contain a cycle. So, directed acyclic graph is where a topological sort is valid. Now, previously we have solved a topological sorting using the DFS. Now, since we are using BFS over here, we know what we need. We need a queue data structure. This is nothing but the first-in-first-out data structure. This is the particular adjacency list. And this is a new thing that we will introduce because it is not exactly the BFS algorithm, a slightly modified version of it. So, we're going to use an",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "73sneFXuTEg",
+      "position": 147,
+      "title": "G-22. Kahn's Algorithm | Topological Sort Algorithm | BFS",
+      "url": "https://www.youtube.com/watch?v=73sneFXuTEg",
+      "start": 256.84,
+      "end": 374.72,
+      "text": "version of it. So, we're going to use an in-degree. What is the definition of an in-degree? Number of incoming edges to a node. Yes, very important. Number of incoming edges to a node. I have already taught you about this in the first video. So, if I ask you for zero, what is the number of incoming edges? Can I say it is two? So, I will say the number of incoming edges for zero is two. For one, how much is it? It is again two because there are two incoming edges to one as well. So, two. Now, if I ask you, what is for three? There's just one incoming edge. This is outgoing, so in-degree is just one. So, this is Sorry, for two it is actually one because there is one. For three also, there is one. And now, for four, are there any incoming edges? Do you see any incoming edges? No. So, you'll be like zero. And for five, are there any incoming edges? No. So, you'll be like zero. Now, what is What was the definition of topological sort? If there is an edge between U and V, U appears before V in the linear ordering. That was the definition of topological sort, right? So, can I say since five and four do not have any of the incoming edges, so you can place five or four at the starting. You can place either five or four at the starting of your linear ordering because there has to be no one before five because there is the in-degree is zero. There is no one before five or four. You can place them at the starting. So, what do you do is you say, \"Okay, initially, there will always be a node there will a minimum of one node whose in-degree is zero.\" So, the step one is very clear. Insert all nodes with in-degree zero. With in-degree zero. So, can I say I'll insert four and five? You can You can do five and four as well. So, I've inserted",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "73sneFXuTEg",
+      "position": 147,
+      "title": "G-22. Kahn's Algorithm | Topological Sort Algorithm | BFS",
+      "url": "https://www.youtube.com/watch?v=73sneFXuTEg",
+      "start": 369.24,
+      "end": 486.72,
+      "text": "five and four as well. So, I've inserted four and five. Okay. Now, the ordering can have four and five. Now, four and five would be having the incoming edge to someone. Right? So, they were getting into someone. So, what I'll do is I'll take four out at first. I took four out. Now, four was into someone. Let's see. Four was into zero and four was into one. So, I'll be like, let's take it off because I already have four before it. I already have four before it. So, I've placed in my ordering four. I've placed in my ordering four. So, I have four before it. So, from zero, take out four. So, the in-degree will reduce to one. And from one also take out four. So, the in-degree will reduce to one. So, what I did was I said, \"Let's take it out.\" Yes, let's take it out. So, kind of you can say I removed these edges. I kind of removed these edges. I'm saying, \"Take them out. Take them out because they're no more into consideration.\" Okay, perfect. So, I've taken them out, right? After taking four out, is the zero having any in-degree zero? No. There are still a lot of edges which are into it and are not yet in my direction or in my linear ordering. Okay, fine. So, I've done the work for four. Next, take out five. So, five will be in my linear ordering now. Who like five if you see is entering two and is entering zero. So, if I take it out from zero, the in-degree will become zero. So, the in-degree of zero now becomes zero. So, you can take that zero and put it into the queue. And from two also you'll take it out. So, the in-degree of two will also become zero. So, you can put that out as well. Perfect. Now, can I say since you took four and five out, since you took four and five out, four and five was already entering zero.",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "73sneFXuTEg",
+      "position": 147,
+      "title": "G-22. Kahn's Algorithm | Topological Sort Algorithm | BFS",
+      "url": "https://www.youtube.com/watch?v=73sneFXuTEg",
+      "start": 482.36,
+      "end": 596.8399999999999,
+      "text": "and five was already entering zero. Thereby, the in-degree becomes zero. So, you're very sure that you have placed four and five before. Right? Now, when you take the next element out of the queue, it is zero. And you can place that into the linear ordering. Because it is now an in-degree of zero because four and five have been taken out. Got it? Perfect. For zero, you will see does it have any in- like anywhere any adjacent nodes? No. So, nothing to be done. Next, you take out two. Where is two heading to? Two is heading to three. The adjacent node of two is three. So, you reduce the in-degree of three by one and become zero. So, now you can take three and put it into the queue. Perfect. Next, you take out three. Now, you have three. Now, three is saying, \"Who am I?\" Like you can take out three and three was getting into one. So, one will now reduce its in-degree to zero. So, now you can take out one. Perfect. Now, you can remove it. Suddenly, this in-degree will become zero and this will be done. So, apparently now you have one. So, you can take out one. And over here, you can place out one. So, does one have any adjacent node? No. So, I can say at the end of the day, we have 4 5 0 2 3 1 as a valid topological sort. So, what I did was super simple. I insert all the nodes with in-degree zero, take them out of the queue, take them out of the queue, and just remove the adjacent like just reduce the in-degree of the adjacent nodes. And if the adjacent nodes have the in degree zero, I say that you have your guys set before, so you can now go to the queue because you will be a part of the topo sort. Got it? So, quite simple uh Quick question, how do you figure out uh the in degree? How do you figure out the",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "73sneFXuTEg",
+      "position": 147,
+      "title": "G-22. Kahn's Algorithm | Topological Sort Algorithm | BFS",
+      "url": "https://www.youtube.com/watch?v=73sneFXuTEg",
+      "start": 591.92,
+      "end": 703.48,
+      "text": "the in degree? How do you figure out the in degree? Very simple. If I'm saying two is having an adjacent node to three, which means two is directed to three. So, can I say the in degree of three will increase by plus one? So, what I do is I traverse in the adjacent node and whatever is there, whatever is there, I say in degree of three can do a plus plus. If there is zero, I can say in degree of zero will do a plus plus. If there is one, I can say in degree of one will do a plus plus because if I'm saying three to one, it means there is an inner edge to one, there is an incoming edge to one. So, very simple, you traverse in the adjacent node and you can increase the in degree. So, we will now go back to the code editor. As usual, the C++ code is on the right and the Java code will be on the left. So, what's the first thing that you'll do? You'll obviously have an in degree. Yes. And since it's a zero-based indexing, you can keep it like this. Let's traverse in the adjacency node. In the adjacency matrix, my bad. So, it'll be like, you know, there are these many guys. So, let's traverse for all these guys. Auto of ID adjacency of I. Now, you know, on in degree, what you will do is these nodes will be plus plus. The in degree is ready. Right after this, you go to all the nodes and you say, \"Hey, listen. Who is the guy who is having an in degree of zero?\" In degree of zero. If you have an in degree of zero, I can say Q of int Q, can you just take it into the queue? Like, fine, I'll take it into the queue. You have the queue ready. Someone will always be there with an in-degree zero because it is an directed acyclic graph. So, you get the first node saying",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "73sneFXuTEg",
+      "position": 147,
+      "title": "G-22. Kahn's Algorithm | Topological Sort Algorithm | BFS",
+      "url": "https://www.youtube.com/watch?v=73sneFXuTEg",
+      "start": 699.4,
+      "end": 809.2,
+      "text": "So, you get the first node saying queue.front and you can always do a queue.pop. Perfect. And since you need to store the topo sort, probably you can do a vector of int or topo. And over here you can say topo.push_back of the node. So, to store the topo sort. And now you need to traverse for all its adjacent nodes, which is something like this. And you know one thing for sure, you have to take it off. So, in-degree of that node because node is done now. Node is removed or node is in your topo sort. So, something I can write, node is in your topo sort, so please remove it from the in-degree because the node is already there. So, if I have removed from the in-degree and if after removing the in-degree of ID of that node becomes zero, I can say I have one more element and I can put that into the topo sort. Once I've done this, I can simply return the topo and that will be my answer. Perfect. This is how easily I can write the topo sort. Now, let's quickly run this off and see if it is running fine. Okay, it is. Let's quickly submit this. Remember, any of the topological sort will be accepted if you see over here, you can find any of the topological sort. It is absolutely okay. So, this is how you can easily do it. Again, which of the What is the space complexity? We're using an in-degree of big O of N. We're using a queue again, which can take a big O of N. And then it's a simple BFS algorithm that we are doing, which is going to take a big O of It's a directed graph, so V plus E because every edge will only have like It's considered like once. So, V plus E is the time complexity. So, guys, I hope I was able to explain you this particular algorithm. So, just in case I was, please make sure you like",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "73sneFXuTEg",
+      "position": 147,
+      "title": "G-22. Kahn's Algorithm | Topological Sort Algorithm | BFS",
+      "url": "https://www.youtube.com/watch?v=73sneFXuTEg",
+      "start": 806.0,
+      "end": 830.88,
+      "text": "in case I was, please make sure you like this video. And if you're new to our channel, what are you waiting for? Hit that subscribe button right away. And if you haven't checked out our DP series and the SDC, the links are in the description. And yeah, with this I'll be wrapping up this video. Let's meet in some other video. Till then, bye-bye. Take care. Whenever your heart is broken, don't ever forget you're golden. I will find a light",
+      "word_count": 83
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "video_id": "3kMKYQ2wNIU",
+  "position": 244,
+  "title": "L8. Remove Nth Node from the end of the LinkedList | Multiple Approaches",
+  "url": "https://www.youtube.com/watch?v=3kMKYQ2wNIU",
+  "chunk_count": 8,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "3kMKYQ2wNIU",
+      "position": 244,
+      "title": "L8. Remove Nth Node from the end of the LinkedList | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=3kMKYQ2wNIU",
+      "start": 3.24,
+      "end": 116.24000000000001,
+      "text": "so I will be continuing with our playlist before that hey welcome back to the channel I hope you guys are doing extremely well so the problem that we will be solving today is removing the nth node from the end so what is the problem stating it is stating that it'll be given the head of the link list and it'll also be given a value n you'll have to count n from backwards so if I count it this is the second node you'll have to delete the second node from the end and once you've deleted Ed the three that was pointing to the second node from the end will be pointing to the last node or whatever n minus one node and once this is done you'll have to return me the head of this particular link list after modification after deletion so n can be anything what if I give you n as five in that case n will like the fifth note from the end will be the head of the link list right if you delete this this will be the new head of the link list so you'll have to return me this one so depending on the value of n you'll have to give me an algorithm that doesn't so if this problem comes up in an interview what is the extreme KN solution that you can think of like what I can think of is okay n is given as two I definitely cannot Travers backwards so the first step that I can do is maybe take a variable counter which will count the length of the link list right and let's take a temporary node or pointer pointing to the Head let's start counting counter one let's move temp counter two let's move temp counter three let's move 10 count of four let's move 10 count of five let's move 10 and it will reach here which is null stop so you stop and you know the value of counter is five so the value of count is",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "3kMKYQ2wNIU",
+      "position": 244,
+      "title": "L8. Remove Nth Node from the end of the LinkedList | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=3kMKYQ2wNIU",
+      "start": 110.92,
+      "end": 250.959,
+      "text": "counter is five so the value of count is five which is the length of the link list I've been asked to delete the second last note so do I need to reach this note just ask yourself the answer to that is no why because if I delete this deleting it is easy but the original task is to make sure this is pointing to this because I have to change the links otherwise it doesn't make sense I have to change the links so if I reach here if I reach here how can I change the link of the previous node so technically I need to reach here because if I reach here then I can straight away change the link and point it right so I need to reach the third node and what is this count minus n 5 - 2 I have reach the third node so so can I say I need to reach the third node which is Count minus n correct so result will be count minus n we will talk about the edge cases afterwards but as of now understand that the result is Count minus one okay so what I will do on the next step is I'll again start I treating okay let's start it treating so temporary is at the head and the first thing that I'll do is I'll reduce the resultant by one and I'll see if if I've reached that and the answer is no so I'll move temporary once once I've moved it again I'll reduce it have I reached the answer is no then I'll again move it reduce and the moment you reduce after that you will check is it zero it is it is and if that is zero this is your node where you want to stop at the previous node to the node that you want to delete stopped what is the job that I have to do the first job is please make sure you uh take any other variable and uh maybe delete",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "3kMKYQ2wNIU",
+      "position": 244,
+      "title": "L8. Remove Nth Node from the end of the LinkedList | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=3kMKYQ2wNIU",
+      "start": 243.36,
+      "end": 370.0,
+      "text": "uh maybe delete node delete node and say temporary. next just store it just store it so what I've done is I've stored the delete note to be here just store it why I'll explain you done what is your next job the next job is temporary your next can you point to can you point to Temporaries next next so this link will now go and point to this now once you have done this if it is C++ you say free node free this particular node D node if it is Java you don't have to free it you do not have to free it what will happen is the moment you do this this will get freed so so it's deleted and this will will be your modified link list once it is modified you can return the head of the link list now you might be thinking about an edge case what if n was five in that case the node would have been the head of the link list so there will be a new head you'll end up returning head. nextt end up returning head. next got it so this was The Brute Force if I have to write down the code it's going to be super simple so time to write down the pseudo code in case you want the C++ Java p and JavaScript code for this brute force it will be given in the description like the link there will be article link you can go over there and find it out so what do we need we need a counter variable so let's take a counter variable which is zero this will keep a count of the length of the link list let's take temporary which is pointing to the head of the link list done what is the next job travels and count the number of nodes so let's Traverse so I'll keep traversing till temporary is not equal to null and I'll do counter Plus+ at the same time I'll say temporary temporary next so it'll go",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "3kMKYQ2wNIU",
+      "position": 244,
+      "title": "L8. Remove Nth Node from the end of the LinkedList | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=3kMKYQ2wNIU",
+      "start": 363.12,
+      "end": 508.31899999999996,
+      "text": "say temporary temporary next so it'll go ahead and compute this comput it what is the next job we need to make sure hey if this count is equivalent to whatever like the N that I've been asked to delete that means it is the head it is the head that has been asked to delete so what I will do is I'll say the new head is head next this is my new head and I will be returning this I will be returning this new head if you're coding in C++ then please make sure to free the previous head that is very very important this is just for C++ because in Java there is a garbage collector which will delete it got it done you have freed that space and you have returned then new head what if this is not the case in that case you'll have to move so again Please assign something as resultant so what will be the value of resultant it'll be count minus n and please reassign temporary to head once this is done let's again start traversing so you can start traversing like temporary is not equal to null and what you can do is you can say rest minus minus because every time you are at a node you just reduce one and if you see the resultant is equivalent to zero in case you straight away break otherwise you say hey temporary can go to the next because I still it's not the element that I'm looking for done what is your next job first thing that you'll do is which node you want to delete please keep it delete node so you're standing at temporary at this point temporary would be standing here so just take the next just take the next so what I'll do is I'll take the next because this is the note that I want to delete after this I'll say temporary. next will be temporary dot next of next changed the link once youve changed",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "3kMKYQ2wNIU",
+      "position": 244,
+      "title": "L8. Remove Nth Node from the end of the LinkedList | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=3kMKYQ2wNIU",
+      "start": 501.08,
+      "end": 626.16,
+      "text": "next changed the link once youve changed the link return the head return the head and please make sure you free the node and this is again just for C++ because in Java the garbage collector will do it job so let's talk about the time complexity can I say that I'm taking a beo of length of the link list in order to compute the length yes in the first pass and then I'm traversing length minus n because that is what resulted was if you carefully look at this length minus n right so it's taking another length - n in order to reach the previous node then we are changing the links so this will be the time complexity what will be the space complexity that's a big off one because we not using any external space if I ask you about this one what is the worst case that's somewhere near about B of 2 into length Y imagine if n is given as 1 this will be somewhere near about B length hence the total time complexity is twice of length right and this is the reason the interviewer will ask you to optimize it so the optimal algorithm's intution is based on the Brute Force now what we did during the brute force was we tried reaching the previous node the node right before the node that was to be deleted this node was to be deleted we tried reaching right before that so this was the previous node correct and if you carefully observe it is like two steps to the end so can I say this if if I Traverse and if I Traverse two steps lesser so technically to Traverse the entire link list it will take five steps it will take five steps because it has five notes if I Travers two steps lesser that is if I Travers three steps I will end up reaching the previous note and that is what what I want to do I want to reach the previous note now you'll be asking",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "3kMKYQ2wNIU",
+      "position": 244,
+      "title": "L8. Remove Nth Node from the end of the LinkedList | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=3kMKYQ2wNIU",
+      "start": 621.519,
+      "end": 750.6800000000001,
+      "text": "the previous note now you'll be asking hey if I don't know five How Will I Know three because 5 - 2 is three without knowing five I cannot I can actually what I will do is I will take a pointer known as fast pointer and I'll move it two steps so one step two step so I have moved it two step yes I moved it two step stop there so I moved it two step okay the next point that I'll take is slow pointer this time I'll start moving them simultaneously slow slow and fast move them simultaneously by one one fast will go here slow will go here next again move them simultaneously fast will go here and slow will go here stop the moment you reach the last node stop stop and you will see that the slow is pointing to the previous slope yes you do why did that happen because initially you did move two steps and then you covered the next set of steps so you are technically standing at the previous note now if you're standing at the previous note what is your next job I think you know what to do now the same right so what I will do is I'll try to write down the pseudo code now so I'll be writing down the pseudo code in case you want the C++ Java Python and JavaScript codes there is an article Link in the description open it and you'll find all the codes what is the first thing we'll do we will take a fast pointer for sure and we will point it to the head and we'll move it and steps that is two steps over here so follow Loop of I equal to 0 till n and please move it fast equal to first of next done once you have done this what will happen fast will be standing here perfect after this take slow and point it to head and you know you'll stop when the first reaches the last this is when you",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "3kMKYQ2wNIU",
+      "position": 244,
+      "title": "L8. Remove Nth Node from the end of the LinkedList | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=3kMKYQ2wNIU",
+      "start": 744.839,
+      "end": 878.519,
+      "text": "first reaches the last this is when you stop because the slow will be here so let's do it you basically say hey while I reach the last node which is fast of next is not null otherwise I'll keep moving I'll be like hey can you move slow equal to slow. nextt and can you move fast equal to fast. next perfect once you have done this what is your next job the next job is to make sure that you take this is D node that you have to delete so D node just store it somewhere again just for C++ slow off next once you've done this free it or rather don't free it because so after the step Do Not Free it why because if you try to free it what will happen is this link will go off and you'll not be able to get this one so do not free it now what you'll do is you'll say slow next equal to slow dot next and next so what this will do is this will not point it once you have done this you are free to free it free delation of node this one is freed and then you can straight away return the head so you'll be returning this particular head now this will work for all the cases apart from whenever n is 5 imagine I give you ns5 let's try to do it it so if n is 5 let's see what happens if n is five I'll take the first pointer here one step two step three step four step five step so if it reaches null if it reaches null then you'll have to write something else so make sure you enter it over here if you reach null that means you've been asked to delete head so again repeat the same process that we have done in the root Force delete the head and return head. next so if this is the condition what you'll do is return the new head which",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "3kMKYQ2wNIU",
+      "position": 244,
+      "title": "L8. Remove Nth Node from the end of the LinkedList | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=3kMKYQ2wNIU",
+      "start": 873.32,
+      "end": 984.36,
+      "text": "you'll do is return the new head which is head. next so it basically goes as return head. next I'm not freeing the note you can free that yourself I assume you can do it now so please make sure you return head. next in case your FAS is reaching now this will be the edge case so let's quickly get back into the code editor what I've done is I've written the exact same code I'll hit the submit button and it will be submitted please make sure that you take the deletion like this delete node that you have to delete and delete it after the pointer step not before not before got it so let's get back to the iPad and discuss the time complexity what will be it can I say it is beo of length y we have two Loops one is the for the other one is the Y and both of them have the fast pointer which is moving if I have to analyze can I see that the fast pointer was here and then it moved till here here for the first fall Loop then it took some more steps and moved till the last So eventually if I can compute how much did the Fast Point move overall that will be my time complexity can I see it moved from here to here which is the length of the link list thereby the time complexity is beo of length what about the space complexity that is bego of one yes because we are not using any external space so if you're still watching I'm sure you have understood everything and if that is the case please do comment understood and please do consider giving us a like and if you're new to our Channel what are you waiting for hit that subscribe button right away and with this I'll be wrapping up this video Let's Wait in some other video till then bye-bye take care when your heart is broken don't forget your golden I will find light",
+      "word_count": 347
+    }
+  ]
+}

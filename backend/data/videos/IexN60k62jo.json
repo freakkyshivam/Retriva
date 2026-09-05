@@ -1,0 +1,3170 @@
+{
+  "position": 39,
+  "video_id": "IexN60k62jo",
+  "title": "Merge Overlapping Intervals | Brute, Optimal with Precise TC analysis",
+  "url": "https://www.youtube.com/watch?v=IexN60k62jo",
+  "transcript": [
+    {
+      "start": 3.319,
+      "duration": 3.641,
+      "end": 6.96,
+      "text": "the channel I hope you guys are doing"
+    },
+    {
+      "start": 5.22,
+      "duration": 3.9,
+      "end": 9.12,
+      "text": "extremely well so this is another"
+    },
+    {
+      "start": 6.96,
+      "duration": 3.599,
+      "end": 10.559000000000001,
+      "text": "lecture from the stripers A to Z DSA"
+    },
+    {
+      "start": 9.12,
+      "duration": 3.12,
+      "end": 12.239999999999998,
+      "text": "course just in case here for the first"
+    },
+    {
+      "start": 10.559,
+      "duration": 3.721,
+      "end": 14.28,
+      "text": "time here this is world's most in-depth"
+    },
+    {
+      "start": 12.24,
+      "duration": 5.16,
+      "end": 17.4,
+      "text": "course when we talk about DS algo why do"
+    },
+    {
+      "start": 14.28,
+      "duration": 4.38,
+      "end": 18.66,
+      "text": "I say that this cost us 455 modules by"
+    },
+    {
+      "start": 17.4,
+      "duration": 3.0,
+      "end": 20.4,
+      "text": "the end of the post it I've sold more"
+    },
+    {
+      "start": 18.66,
+      "duration": 3.72,
+      "end": 22.38,
+      "text": "than 400 plus problems when it comes to"
+    },
+    {
+      "start": 20.4,
+      "duration": 3.959,
+      "end": 24.358999999999998,
+      "text": "dslvo you can go for the entire internet"
+    },
+    {
+      "start": 22.38,
+      "duration": 3.239,
+      "end": 25.619,
+      "text": "you can buy any of the paid courses none"
+    },
+    {
+      "start": 24.359,
+      "duration": 2.881,
+      "end": 27.240000000000002,
+      "text": "of them will be teaching you this I'll"
+    },
+    {
+      "start": 25.619,
+      "duration": 3.361,
+      "end": 28.98,
+      "text": "go in such step something that I can"
+    },
+    {
+      "start": 27.24,
+      "duration": 3.06,
+      "end": 30.299999999999997,
+      "text": "give you is assurances once you cover up"
+    },
+    {
+      "start": 28.98,
+      "duration": 3.36,
+      "end": 32.34,
+      "text": "the entire post you'll be able to clear"
+    },
+    {
+      "start": 30.3,
+      "duration": 4.08,
+      "end": 34.38,
+      "text": "any of the DS algorithms in any of the"
+    },
+    {
+      "start": 32.34,
+      "duration": 3.6,
+      "end": 35.940000000000005,
+      "text": "companies in any part of the world so"
+    },
+    {
+      "start": 34.38,
+      "duration": 2.76,
+      "end": 37.14,
+      "text": "till now I have covered up till this"
+    },
+    {
+      "start": 35.94,
+      "duration": 3.299,
+      "end": 39.239,
+      "text": "particular problem now in this video"
+    },
+    {
+      "start": 37.14,
+      "duration": 5.22,
+      "end": 42.36,
+      "text": "I'll be covering up the problem merge"
+    },
+    {
+      "start": 39.239,
+      "duration": 6.061,
+      "end": 45.3,
+      "text": "overlapping sub intervals so what does"
+    },
+    {
+      "start": 42.36,
+      "duration": 6.96,
+      "end": 49.32,
+      "text": "the problem stay it states that you will"
+    },
+    {
+      "start": 45.3,
+      "duration": 6.54,
+      "end": 51.839999999999996,
+      "text": "be given an array of N Sub intervals now"
+    },
+    {
+      "start": 49.32,
+      "duration": 5.04,
+      "end": 54.36,
+      "text": "what is the definition of self interval"
+    },
+    {
+      "start": 51.84,
+      "duration": 6.539,
+      "end": 58.379000000000005,
+      "text": "if you're given one tree it means it"
+    },
+    {
+      "start": 54.36,
+      "duration": 7.08,
+      "end": 61.44,
+      "text": "starts at one it ends at three that is a"
+    },
+    {
+      "start": 58.379,
+      "duration": 5.581,
+      "end": 63.96,
+      "text": "particular sub interval now your task is"
+    },
+    {
+      "start": 61.44,
+      "duration": 6.42,
+      "end": 67.86,
+      "text": "to merge all the overlapping sub"
+    },
+    {
+      "start": 63.96,
+      "duration": 6.18,
+      "end": 70.14,
+      "text": "intervals into one and find me out how"
+    },
+    {
+      "start": 67.86,
+      "duration": 5.34,
+      "end": 73.2,
+      "text": "many minimum yes how many minimum"
+    },
+    {
+      "start": 70.14,
+      "duration": 5.7,
+      "end": 75.84,
+      "text": "intervals you can give me so if I have"
+    },
+    {
+      "start": 73.2,
+      "duration": 5.64,
+      "end": 78.84,
+      "text": "to understand overlapping let me give"
+    },
+    {
+      "start": 75.84,
+      "duration": 6.18,
+      "end": 82.02000000000001,
+      "text": "you an example so if I take this 1 3 and"
+    },
+    {
+      "start": 78.84,
+      "duration": 6.3,
+      "end": 85.14,
+      "text": "I can say this one starts at here and"
+    },
+    {
+      "start": 82.02,
+      "duration": 6.36,
+      "end": 88.38,
+      "text": "ghost in here if I take this 2 6 I can"
+    },
+    {
+      "start": 85.14,
+      "duration": 6.36,
+      "end": 91.5,
+      "text": "say it goes from 2 to 6 till here right"
+    },
+    {
+      "start": 88.38,
+      "duration": 5.7,
+      "end": 94.08,
+      "text": "if I take probably eight and nine"
+    },
+    {
+      "start": 91.5,
+      "duration": 5.1,
+      "end": 96.6,
+      "text": "I can say 8 and 9 is this much"
+    },
+    {
+      "start": 94.08,
+      "duration": 6.24,
+      "end": 100.32,
+      "text": "Ah that's a long word what so eight and"
+    },
+    {
+      "start": 96.6,
+      "duration": 4.68,
+      "end": 101.28,
+      "text": "nine is this much if I take 9 and 11 I"
+    },
+    {
+      "start": 100.32,
+      "duration": 3.18,
+      "end": 103.5,
+      "text": "can say"
+    },
+    {
+      "start": 101.28,
+      "duration": 5.46,
+      "end": 106.74,
+      "text": "9 is from here and 11 is still here"
+    },
+    {
+      "start": 103.5,
+      "duration": 6.6,
+      "end": 110.1,
+      "text": "perfect if I take 8 and 10 so it can be"
+    },
+    {
+      "start": 106.74,
+      "duration": 7.98,
+      "end": 114.72,
+      "text": "like 8 and 10 right if I take 2 and 4"
+    },
+    {
+      "start": 110.1,
+      "duration": 8.46,
+      "end": 118.56,
+      "text": "it'll be like 2 till here 4 correct if I"
+    },
+    {
+      "start": 114.72,
+      "duration": 7.859,
+      "end": 122.579,
+      "text": "take 15 and 18 it'll be 15 till 18"
+    },
+    {
+      "start": 118.56,
+      "duration": 6.599,
+      "end": 125.159,
+      "text": "if I take 16 and 17 16 and 17"
+    },
+    {
+      "start": 122.579,
+      "duration": 5.46,
+      "end": 128.039,
+      "text": "understood so I've drawn all the"
+    },
+    {
+      "start": 125.159,
+      "duration": 5.641,
+      "end": 130.8,
+      "text": "intervals if you see"
+    },
+    {
+      "start": 128.039,
+      "duration": 6.78,
+      "end": 134.819,
+      "text": "all the three intervals can actually be"
+    },
+    {
+      "start": 130.8,
+      "duration": 7.56,
+      "end": 138.36,
+      "text": "written as into one and can written as 1"
+    },
+    {
+      "start": 134.819,
+      "duration": 6.541,
+      "end": 141.35999999999999,
+      "text": "comma 6 because if you take 1 and 6 you"
+    },
+    {
+      "start": 138.36,
+      "duration": 5.94,
+      "end": 144.3,
+      "text": "will be able to have all the overlapping"
+    },
+    {
+      "start": 141.36,
+      "duration": 5.22,
+      "end": 146.58,
+      "text": "intervals into one right so that is why"
+    },
+    {
+      "start": 144.3,
+      "duration": 6.48,
+      "end": 150.78,
+      "text": "1 comma six if you look at over here"
+    },
+    {
+      "start": 146.58,
+      "duration": 6.36,
+      "end": 152.94000000000003,
+      "text": "that's like 8 to 11 and you get all of"
+    },
+    {
+      "start": 150.78,
+      "duration": 4.74,
+      "end": 155.52,
+      "text": "them into a single one if you look at"
+    },
+    {
+      "start": 152.94,
+      "duration": 5.159,
+      "end": 158.099,
+      "text": "over here it's 15 to 18 and if you take"
+    },
+    {
+      "start": 155.52,
+      "duration": 5.52,
+      "end": 161.04000000000002,
+      "text": "15 to 18 you get all of them into one"
+    },
+    {
+      "start": 158.099,
+      "duration": 5.461,
+      "end": 163.56,
+      "text": "now you might ask why not take 1 to 18"
+    },
+    {
+      "start": 161.04,
+      "duration": 5.04,
+      "end": 166.07999999999998,
+      "text": "and you will have everything in that"
+    },
+    {
+      "start": 163.56,
+      "duration": 5.52,
+      "end": 169.08,
+      "text": "case you will be having a lot of empty"
+    },
+    {
+      "start": 166.08,
+      "duration": 6.78,
+      "end": 172.86,
+      "text": "places so when you talk about one two"
+    },
+    {
+      "start": 169.08,
+      "duration": 6.36,
+      "end": 175.44000000000003,
+      "text": "six one two three four five six each of"
+    },
+    {
+      "start": 172.86,
+      "duration": 4.68,
+      "end": 177.54000000000002,
+      "text": "the coordinates is being touched by"
+    },
+    {
+      "start": 175.44,
+      "duration": 4.92,
+      "end": 180.35999999999999,
+      "text": "someone if you see is being touched by"
+    },
+    {
+      "start": 177.54,
+      "duration": 6.02,
+      "end": 183.56,
+      "text": "someone so one of the intervals has to"
+    },
+    {
+      "start": 180.36,
+      "duration": 6.42,
+      "end": 186.78,
+      "text": "touch it so that is why I have to find"
+    },
+    {
+      "start": 183.56,
+      "duration": 5.44,
+      "end": 189.0,
+      "text": "the minimum possible intervals that you"
+    },
+    {
+      "start": 186.78,
+      "duration": 4.26,
+      "end": 191.04,
+      "text": "can play up them into and and for this"
+    },
+    {
+      "start": 189.0,
+      "duration": 5.34,
+      "end": 194.34,
+      "text": "particular example this will be the"
+    },
+    {
+      "start": 191.04,
+      "duration": 6.119,
+      "end": 197.159,
+      "text": "answer so it'll be shrinked into three"
+    },
+    {
+      "start": 194.34,
+      "duration": 5.34,
+      "end": 199.68,
+      "text": "possible sub intervals after you have"
+    },
+    {
+      "start": 197.159,
+      "duration": 4.261,
+      "end": 201.42,
+      "text": "merged all the overlapping ones so this"
+    },
+    {
+      "start": 199.68,
+      "duration": 3.779,
+      "end": 203.459,
+      "text": "is what you have to return me"
+    },
+    {
+      "start": 201.42,
+      "duration": 3.899,
+      "end": 205.319,
+      "text": "yes merge them and return with the"
+    },
+    {
+      "start": 203.459,
+      "duration": 4.2,
+      "end": 207.659,
+      "text": "number of over like number of sub"
+    },
+    {
+      "start": 205.319,
+      "duration": 3.961,
+      "end": 209.28,
+      "text": "intervals that they can be merged into"
+    },
+    {
+      "start": 207.659,
+      "duration": 3.421,
+      "end": 211.07999999999998,
+      "text": "so this problem comes up in an interview"
+    },
+    {
+      "start": 209.28,
+      "duration": 3.48,
+      "end": 212.76,
+      "text": "what is the first Brute Force solution"
+    },
+    {
+      "start": 211.08,
+      "duration": 4.56,
+      "end": 215.64000000000001,
+      "text": "that comes to your mind if I can think"
+    },
+    {
+      "start": 212.76,
+      "duration": 5.28,
+      "end": 218.04,
+      "text": "of it will be like probably let's try to"
+    },
+    {
+      "start": 215.64,
+      "duration": 5.22,
+      "end": 220.85999999999999,
+      "text": "keep the intervals together like if you"
+    },
+    {
+      "start": 218.04,
+      "duration": 5.22,
+      "end": 223.26,
+      "text": "saw one three two six and two four if I"
+    },
+    {
+      "start": 220.86,
+      "duration": 5.28,
+      "end": 226.14000000000001,
+      "text": "can somewhere keep them together and"
+    },
+    {
+      "start": 223.26,
+      "duration": 7.259,
+      "end": 230.519,
+      "text": "clapping them into one interval will be"
+    },
+    {
+      "start": 226.14,
+      "duration": 6.78,
+      "end": 232.92,
+      "text": "easier so my first approach will be to"
+    },
+    {
+      "start": 230.519,
+      "duration": 5.881,
+      "end": 236.4,
+      "text": "Club them together right like to keep"
+    },
+    {
+      "start": 232.92,
+      "duration": 5.58,
+      "end": 238.5,
+      "text": "all the closer intervals together so for"
+    },
+    {
+      "start": 236.4,
+      "duration": 5.1,
+      "end": 241.5,
+      "text": "the Brute Force Hotel device"
+    },
+    {
+      "start": 238.5,
+      "duration": 4.62,
+      "end": 243.12,
+      "text": "First Step will be let us sort them up"
+    },
+    {
+      "start": 241.5,
+      "duration": 3.78,
+      "end": 245.28,
+      "text": "so if I sort them up what I'll get is"
+    },
+    {
+      "start": 243.12,
+      "duration": 4.619,
+      "end": 247.739,
+      "text": "probably first I'll get one three so"
+    },
+    {
+      "start": 245.28,
+      "duration": 5.7,
+      "end": 250.98,
+      "text": "when you sort pairs"
+    },
+    {
+      "start": 247.739,
+      "duration": 6.0,
+      "end": 253.739,
+      "text": "at first it gets sorted by the first"
+    },
+    {
+      "start": 250.98,
+      "duration": 6.18,
+      "end": 257.15999999999997,
+      "text": "element if at any moment the first"
+    },
+    {
+      "start": 253.739,
+      "duration": 6.361,
+      "end": 260.1,
+      "text": "element is equal like for this and this"
+    },
+    {
+      "start": 257.16,
+      "duration": 5.759,
+      "end": 262.91900000000004,
+      "text": "the first element is equal then it will"
+    },
+    {
+      "start": 260.1,
+      "duration": 5.64,
+      "end": 265.74,
+      "text": "get sorted by the second element got it"
+    },
+    {
+      "start": 262.919,
+      "duration": 7.981,
+      "end": 270.9,
+      "text": "so if I sort it then 2 comma 4 will come"
+    },
+    {
+      "start": 265.74,
+      "duration": 11.28,
+      "end": 277.02,
+      "text": "in then 2 comma 6 then 8 comma 9 then 8"
+    },
+    {
+      "start": 270.9,
+      "duration": 8.7,
+      "end": 279.59999999999997,
+      "text": "comma 10 then 9 11 then 15 comma 18 and"
+    },
+    {
+      "start": 277.02,
+      "duration": 3.42,
+      "end": 280.44,
+      "text": "then 16 comma 70. perfect I've written"
+    },
+    {
+      "start": 279.6,
+      "duration": 3.18,
+      "end": 282.78000000000003,
+      "text": "down"
+    },
+    {
+      "start": 280.44,
+      "duration": 4.92,
+      "end": 285.36,
+      "text": "each of the pairs in the sorted order"
+    },
+    {
+      "start": 282.78,
+      "duration": 5.1,
+      "end": 287.88,
+      "text": "next what you will do is"
+    },
+    {
+      "start": 285.36,
+      "duration": 6.6,
+      "end": 291.96000000000004,
+      "text": "you will basically start it trading over"
+    },
+    {
+      "start": 287.88,
+      "duration": 7.92,
+      "end": 295.8,
+      "text": "and you will be at 1 comma 3. let's"
+    },
+    {
+      "start": 291.96,
+      "duration": 6.239,
+      "end": 298.19899999999996,
+      "text": "stand at one comma 3 and say that is my"
+    },
+    {
+      "start": 295.8,
+      "duration": 5.28,
+      "end": 301.08,
+      "text": "possible interval just hypothetically"
+    },
+    {
+      "start": 298.199,
+      "duration": 5.94,
+      "end": 304.139,
+      "text": "say this is my possible enter I'm like"
+    },
+    {
+      "start": 301.08,
+      "duration": 5.339,
+      "end": 306.419,
+      "text": "okay and now I will do I will go to the"
+    },
+    {
+      "start": 304.139,
+      "duration": 4.56,
+      "end": 308.699,
+      "text": "next interval I'll be like 2 comma four"
+    },
+    {
+      "start": 306.419,
+      "duration": 4.261,
+      "end": 310.68,
+      "text": "here two comma four are you overlapping"
+    },
+    {
+      "start": 308.699,
+      "duration": 4.56,
+      "end": 313.259,
+      "text": "how will you know is is it is"
+    },
+    {
+      "start": 310.68,
+      "duration": 5.1,
+      "end": 315.78000000000003,
+      "text": "overlapping very simple if it is 2 comma"
+    },
+    {
+      "start": 313.259,
+      "duration": 5.461,
+      "end": 318.72,
+      "text": "4 and if you see the first element"
+    },
+    {
+      "start": 315.78,
+      "duration": 5.34,
+      "end": 321.11999999999995,
+      "text": "is before the last element and the first"
+    },
+    {
+      "start": 318.72,
+      "duration": 4.319,
+      "end": 323.03900000000004,
+      "text": "element as before the last element it is"
+    },
+    {
+      "start": 321.12,
+      "duration": 5.7,
+      "end": 326.82,
+      "text": "an overlapping so I can say the two"
+    },
+    {
+      "start": 323.039,
+      "duration": 8.461,
+      "end": 331.5,
+      "text": "comma 4 is overlapping so this one comma"
+    },
+    {
+      "start": 326.82,
+      "duration": 7.26,
+      "end": 334.08,
+      "text": "3 will expand will expand can I say in"
+    },
+    {
+      "start": 331.5,
+      "duration": 5.52,
+      "end": 337.02,
+      "text": "order to accumulate in order to"
+    },
+    {
+      "start": 334.08,
+      "duration": 5.16,
+      "end": 339.24,
+      "text": "accumulate 2 comma 4 this will become"
+    },
+    {
+      "start": 337.02,
+      "duration": 5.34,
+      "end": 342.35999999999996,
+      "text": "one comma four because if you take one"
+    },
+    {
+      "start": 339.24,
+      "duration": 6.239,
+      "end": 345.479,
+      "text": "comma 4 2 comma 4 gets accumulated"
+    },
+    {
+      "start": 342.36,
+      "duration": 7.22,
+      "end": 349.58000000000004,
+      "text": "perfect next I will try to move to 2"
+    },
+    {
+      "start": 345.479,
+      "duration": 6.72,
+      "end": 352.199,
+      "text": "comma six can I say 2 comma 6 is also"
+    },
+    {
+      "start": 349.58,
+      "duration": 5.74,
+      "end": 355.32,
+      "text": "overlapping why because the SEC the"
+    },
+    {
+      "start": 352.199,
+      "duration": 5.361,
+      "end": 357.56,
+      "text": "first is before the last so overlapping"
+    },
+    {
+      "start": 355.32,
+      "duration": 6.599,
+      "end": 361.919,
+      "text": "how will you accumulate it probably"
+    },
+    {
+      "start": 357.56,
+      "duration": 8.68,
+      "end": 366.24,
+      "text": "changing this to 6 if I change this to 6"
+    },
+    {
+      "start": 361.919,
+      "duration": 7.56,
+      "end": 369.479,
+      "text": "can I accumulate the 2 comma six I can I"
+    },
+    {
+      "start": 366.24,
+      "duration": 5.76,
+      "end": 372.0,
+      "text": "can definitely accumulate so five let's"
+    },
+    {
+      "start": 369.479,
+      "duration": 4.621,
+      "end": 374.09999999999997,
+      "text": "go to the next eight comma nine so we"
+    },
+    {
+      "start": 372.0,
+      "duration": 5.88,
+      "end": 377.88,
+      "text": "know one thing for sure eight comma 9 is"
+    },
+    {
+      "start": 374.1,
+      "duration": 6.18,
+      "end": 380.28000000000003,
+      "text": "not overlapping why eight is greater"
+    },
+    {
+      "start": 377.88,
+      "duration": 4.68,
+      "end": 382.56,
+      "text": "than six if it is greater how can it"
+    },
+    {
+      "start": 380.28,
+      "duration": 5.039,
+      "end": 385.31899999999996,
+      "text": "overlap so can I say"
+    },
+    {
+      "start": 382.56,
+      "duration": 5.22,
+      "end": 387.78000000000003,
+      "text": "I have I have got my overlapping things"
+    },
+    {
+      "start": 385.319,
+      "duration": 5.701,
+      "end": 391.02000000000004,
+      "text": "do I need to go ahead and check for this"
+    },
+    {
+      "start": 387.78,
+      "duration": 6.84,
+      "end": 394.61999999999995,
+      "text": "this this this no because if one is not"
+    },
+    {
+      "start": 391.02,
+      "duration": 7.5,
+      "end": 398.52,
+      "text": "it is sorted so anyone after it will"
+    },
+    {
+      "start": 394.62,
+      "duration": 7.32,
+      "end": 401.94,
+      "text": "never be stopped so you got 1 comma six"
+    },
+    {
+      "start": 398.52,
+      "duration": 4.799,
+      "end": 403.31899999999996,
+      "text": "okay next move to the next"
+    },
+    {
+      "start": 401.94,
+      "duration": 4.56,
+      "end": 406.5,
+      "text": "so when you move to the next what"
+    },
+    {
+      "start": 403.319,
+      "duration": 6.061,
+      "end": 409.38,
+      "text": "happens you have a 2 comma four and you"
+    },
+    {
+      "start": 406.5,
+      "duration": 4.979,
+      "end": 411.479,
+      "text": "see the two comma 4 is already there in"
+    },
+    {
+      "start": 409.38,
+      "duration": 3.18,
+      "end": 412.56,
+      "text": "the the previous like this was a"
+    },
+    {
+      "start": 411.479,
+      "duration": 3.241,
+      "end": 414.71999999999997,
+      "text": "previous"
+    },
+    {
+      "start": 412.56,
+      "duration": 5.579,
+      "end": 418.139,
+      "text": "one previous interval that you got it's"
+    },
+    {
+      "start": 414.72,
+      "duration": 4.919,
+      "end": 419.639,
+      "text": "already there so if two comma 4 is"
+    },
+    {
+      "start": 418.139,
+      "duration": 5.241,
+      "end": 423.38,
+      "text": "already there how do you know it's"
+    },
+    {
+      "start": 419.639,
+      "duration": 7.261,
+      "end": 426.90000000000003,
+      "text": "already there because the last element 4"
+    },
+    {
+      "start": 423.38,
+      "duration": 5.56,
+      "end": 428.94,
+      "text": "is before six switch already there you"
+    },
+    {
+      "start": 426.9,
+      "duration": 5.16,
+      "end": 432.06,
+      "text": "don't need to do anything go ahead"
+    },
+    {
+      "start": 428.94,
+      "duration": 6.06,
+      "end": 435.0,
+      "text": "2 comma six it's already there how do"
+    },
+    {
+      "start": 432.06,
+      "duration": 4.259,
+      "end": 436.319,
+      "text": "you know the last element is before so"
+    },
+    {
+      "start": 435.0,
+      "duration": 4.02,
+      "end": 439.02,
+      "text": "it's already there don't do anything"
+    },
+    {
+      "start": 436.319,
+      "duration": 5.88,
+      "end": 442.199,
+      "text": "move it eight comma nine"
+    },
+    {
+      "start": 439.02,
+      "duration": 5.64,
+      "end": 444.65999999999997,
+      "text": "8 comma 9 it's not here because the"
+    },
+    {
+      "start": 442.199,
+      "duration": 5.22,
+      "end": 447.41900000000004,
+      "text": "first element is out of this it's not"
+    },
+    {
+      "start": 444.66,
+      "duration": 5.28,
+      "end": 449.94,
+      "text": "here so you again consider this as one"
+    },
+    {
+      "start": 447.419,
+      "duration": 5.881,
+      "end": 453.29999999999995,
+      "text": "other interval and you start doing the"
+    },
+    {
+      "start": 449.94,
+      "duration": 5.759,
+      "end": 455.699,
+      "text": "same step you stand here and you look at"
+    },
+    {
+      "start": 453.3,
+      "duration": 3.119,
+      "end": 456.41900000000004,
+      "text": "the other intervals who can be a part of"
+    },
+    {
+      "start": 455.699,
+      "duration": 2.521,
+      "end": 458.22,
+      "text": "you"
+    },
+    {
+      "start": 456.419,
+      "duration": 4.201,
+      "end": 460.62,
+      "text": "you stand here and you look at the other"
+    },
+    {
+      "start": 458.22,
+      "duration": 4.74,
+      "end": 462.96000000000004,
+      "text": "intervals who can be a part of you it'll"
+    },
+    {
+      "start": 460.62,
+      "duration": 5.94,
+      "end": 466.56,
+      "text": "be like 8 comma ten can you be a part of"
+    },
+    {
+      "start": 462.96,
+      "duration": 7.62,
+      "end": 470.58,
+      "text": "me he says yes I can because this is"
+    },
+    {
+      "start": 466.56,
+      "duration": 7.079,
+      "end": 473.639,
+      "text": "before this so I will silently make it"
+    },
+    {
+      "start": 470.58,
+      "duration": 5.519,
+      "end": 476.099,
+      "text": "right then we'll move to 9 comma eleven"
+    },
+    {
+      "start": 473.639,
+      "duration": 4.981,
+      "end": 478.62,
+      "text": "can you be a part of me yes because 9 is"
+    },
+    {
+      "start": 476.099,
+      "duration": 5.281,
+      "end": 481.38,
+      "text": "before 10 I can so I'll just silently"
+    },
+    {
+      "start": 478.62,
+      "duration": 6.06,
+      "end": 484.68,
+      "text": "make it so that it is a pot next I'll"
+    },
+    {
+      "start": 481.38,
+      "duration": 6.06,
+      "end": 487.44,
+      "text": "move to 15 comma 18 which is out which"
+    },
+    {
+      "start": 484.68,
+      "duration": 6.18,
+      "end": 490.86,
+      "text": "is out I stop I stop"
+    },
+    {
+      "start": 487.44,
+      "duration": 6.3,
+      "end": 493.74,
+      "text": "I get this as eight comma eleven"
+    },
+    {
+      "start": 490.86,
+      "duration": 5.82,
+      "end": 496.68,
+      "text": "and next I'll move to eight chord"
+    },
+    {
+      "start": 493.74,
+      "duration": 6.959,
+      "end": 500.699,
+      "text": "eight commitments is I'm already in row"
+    },
+    {
+      "start": 496.68,
+      "duration": 7.5,
+      "end": 504.18,
+      "text": "let's hope 9 11 says I'm already in okay"
+    },
+    {
+      "start": 500.699,
+      "duration": 6.241,
+      "end": 506.94,
+      "text": "let's roll 15 comma 18 says I'm not in"
+    },
+    {
+      "start": 504.18,
+      "duration": 4.199,
+      "end": 508.379,
+      "text": "please create a new one for me he goes"
+    },
+    {
+      "start": 506.94,
+      "duration": 2.52,
+      "end": 509.46,
+      "text": "there and create it creates a new one"
+    },
+    {
+      "start": 508.379,
+      "duration": 3.481,
+      "end": 511.86,
+      "text": "for him"
+    },
+    {
+      "start": 509.46,
+      "duration": 4.68,
+      "end": 514.14,
+      "text": "15 committee perfect"
+    },
+    {
+      "start": 511.86,
+      "duration": 5.58,
+      "end": 517.44,
+      "text": "and he stands here he'll stand there and"
+    },
+    {
+      "start": 514.14,
+      "duration": 5.04,
+      "end": 519.18,
+      "text": "he'll look at the forwards 16 comma 17."
+    },
+    {
+      "start": 517.44,
+      "duration": 4.92,
+      "end": 522.36,
+      "text": "can you be"
+    },
+    {
+      "start": 519.18,
+      "duration": 6.06,
+      "end": 525.2399999999999,
+      "text": "a part of me he says yes because 16 is"
+    },
+    {
+      "start": 522.36,
+      "duration": 6.3,
+      "end": 528.66,
+      "text": "before 18 so I can overlap with you so"
+    },
+    {
+      "start": 525.24,
+      "duration": 4.68,
+      "end": 529.92,
+      "text": "if I overlap it is 17 but it's 18 it's"
+    },
+    {
+      "start": 528.66,
+      "duration": 3.239,
+      "end": 531.899,
+      "text": "already overlapping do you need to"
+    },
+    {
+      "start": 529.92,
+      "duration": 4.74,
+      "end": 534.66,
+      "text": "change 18 no"
+    },
+    {
+      "start": 531.899,
+      "duration": 5.521,
+      "end": 537.42,
+      "text": "please be careful do not change it if it"
+    },
+    {
+      "start": 534.66,
+      "duration": 5.88,
+      "end": 540.54,
+      "text": "is being accumulated so do not change it"
+    },
+    {
+      "start": 537.42,
+      "duration": 7.02,
+      "end": 544.4399999999999,
+      "text": "done can I say the iteration for this is"
+    },
+    {
+      "start": 540.54,
+      "duration": 6.12,
+      "end": 546.66,
+      "text": "over next move to 16 comma 70. it's"
+    },
+    {
+      "start": 544.44,
+      "duration": 5.519,
+      "end": 549.9590000000001,
+      "text": "already there"
+    },
+    {
+      "start": 546.66,
+      "duration": 5.58,
+      "end": 552.24,
+      "text": "over so I got my answer this is the"
+    },
+    {
+      "start": 549.959,
+      "duration": 5.581,
+      "end": 555.54,
+      "text": "extreme brute I can think of what I did"
+    },
+    {
+      "start": 552.24,
+      "duration": 5.46,
+      "end": 557.7,
+      "text": "first I took the one and I checked these"
+    },
+    {
+      "start": 555.54,
+      "duration": 4.38,
+      "end": 559.92,
+      "text": "two can be a part and they took the"
+    },
+    {
+      "start": 557.7,
+      "duration": 3.9,
+      "end": 561.6,
+      "text": "and then I moved moved move moved and"
+    },
+    {
+      "start": 559.92,
+      "duration": 3.419,
+      "end": 563.3389999999999,
+      "text": "again I checked I have a new and then"
+    },
+    {
+      "start": 561.6,
+      "duration": 4.44,
+      "end": 566.0400000000001,
+      "text": "these two can be a part so I took there"
+    },
+    {
+      "start": 563.339,
+      "duration": 6.0,
+      "end": 569.339,
+      "text": "then again I moved moved moved and I saw"
+    },
+    {
+      "start": 566.04,
+      "duration": 6.54,
+      "end": 572.5799999999999,
+      "text": "this is a new and again I took them so"
+    },
+    {
+      "start": 569.339,
+      "duration": 5.761,
+      "end": 575.1,
+      "text": "it's kind of standing at one and looking"
+    },
+    {
+      "start": 572.58,
+      "duration": 5.879,
+      "end": 578.4590000000001,
+      "text": "forward who can be a part of so I'm"
+    },
+    {
+      "start": 575.1,
+      "duration": 5.52,
+      "end": 580.62,
+      "text": "still looking forward so we can improve"
+    },
+    {
+      "start": 578.459,
+      "duration": 3.541,
+      "end": 582.0,
+      "text": "it but as of now let's try to write the"
+    },
+    {
+      "start": 580.62,
+      "duration": 3.36,
+      "end": 583.98,
+      "text": "code for this one and then we can try to"
+    },
+    {
+      "start": 582.0,
+      "duration": 3.12,
+      "end": 585.12,
+      "text": "improve it got it so let's quickly code"
+    },
+    {
+      "start": 583.98,
+      "duration": 3.539,
+      "end": 587.519,
+      "text": "this up again you can find the problem"
+    },
+    {
+      "start": 585.12,
+      "duration": 3.839,
+      "end": 588.9590000000001,
+      "text": "Link in the description where we will"
+    },
+    {
+      "start": 587.519,
+      "duration": 6.601,
+      "end": 594.12,
+      "text": "find the array dot size"
+    },
+    {
+      "start": 588.959,
+      "duration": 7.861,
+      "end": 596.8199999999999,
+      "text": "perfect next sort it quite simple"
+    },
+    {
+      "start": 594.12,
+      "duration": 5.339,
+      "end": 599.4590000000001,
+      "text": "so I'll go ahead and sort it once I've"
+    },
+    {
+      "start": 596.82,
+      "duration": 5.76,
+      "end": 602.58,
+      "text": "sorted it what is my next job I know one"
+    },
+    {
+      "start": 599.459,
+      "duration": 5.721,
+      "end": 605.18,
+      "text": "thing for sure that I need to have this"
+    },
+    {
+      "start": 602.58,
+      "duration": 2.6,
+      "end": 605.1800000000001,
+      "text": "particular answer"
+    },
+    {
+      "start": 605.279,
+      "duration": 4.5,
+      "end": 609.779,
+      "text": "so I'll have something"
+    },
+    {
+      "start": 607.32,
+      "duration": 6.48,
+      "end": 613.8000000000001,
+      "text": "which stores all the answers and I will"
+    },
+    {
+      "start": 609.779,
+      "duration": 6.06,
+      "end": 615.8389999999999,
+      "text": "return it and if you remember we started"
+    },
+    {
+      "start": 613.8,
+      "duration": 5.099,
+      "end": 618.899,
+      "text": "iterating from here and we went back to"
+    },
+    {
+      "start": 615.839,
+      "duration": 5.281,
+      "end": 621.12,
+      "text": "that last so we will go ahead and write"
+    },
+    {
+      "start": 618.899,
+      "duration": 4.5,
+      "end": 623.399,
+      "text": "a loop which starts from the first and"
+    },
+    {
+      "start": 621.12,
+      "duration": 4.56,
+      "end": 625.68,
+      "text": "goes till the last now what did we do"
+    },
+    {
+      "start": 623.399,
+      "duration": 4.801,
+      "end": 628.2,
+      "text": "when we stood here"
+    },
+    {
+      "start": 625.68,
+      "duration": 4.86,
+      "end": 630.54,
+      "text": "we probably considered this as the"
+    },
+    {
+      "start": 628.2,
+      "duration": 5.819,
+      "end": 634.019,
+      "text": "starting interval right that is what we"
+    },
+    {
+      "start": 630.54,
+      "duration": 7.26,
+      "end": 637.8,
+      "text": "did so maybe I can take the start as"
+    },
+    {
+      "start": 634.019,
+      "duration": 6.421,
+      "end": 640.44,
+      "text": "array of I of 0 because it is storing"
+    },
+    {
+      "start": 637.8,
+      "duration": 5.64,
+      "end": 643.4399999999999,
+      "text": "list of list I can take the end as array"
+    },
+    {
+      "start": 640.44,
+      "duration": 5.76,
+      "end": 646.2,
+      "text": "of I of one can you tell me one thing"
+    },
+    {
+      "start": 643.44,
+      "duration": 5.519,
+      "end": 648.9590000000001,
+      "text": "when you started you took one comma 3"
+    },
+    {
+      "start": 646.2,
+      "duration": 6.24,
+      "end": 652.44,
+      "text": "and that one three got replaced by four"
+    },
+    {
+      "start": 648.959,
+      "duration": 6.421,
+      "end": 655.38,
+      "text": "and then got replaced by six but what if"
+    },
+    {
+      "start": 652.44,
+      "duration": 6.18,
+      "end": 658.62,
+      "text": "you were at 2 comma four did you do"
+    },
+    {
+      "start": 655.38,
+      "duration": 5.82,
+      "end": 661.2,
+      "text": "anything for two no why because it was"
+    },
+    {
+      "start": 658.62,
+      "duration": 4.26,
+      "end": 662.88,
+      "text": "already a part of this when you moved"
+    },
+    {
+      "start": 661.2,
+      "duration": 3.78,
+      "end": 664.98,
+      "text": "this pointer to two comma four it is"
+    },
+    {
+      "start": 662.88,
+      "duration": 5.699,
+      "end": 668.579,
+      "text": "already a part of one comma six that was"
+    },
+    {
+      "start": 664.98,
+      "duration": 5.64,
+      "end": 670.62,
+      "text": "computed so you are like Hey listen if"
+    },
+    {
+      "start": 668.579,
+      "duration": 3.901,
+      "end": 672.4799999999999,
+      "text": "you have some like some previous"
+    },
+    {
+      "start": 670.62,
+      "duration": 3.959,
+      "end": 674.579,
+      "text": "interval if you have some previous"
+    },
+    {
+      "start": 672.48,
+      "duration": 5.4,
+      "end": 677.88,
+      "text": "intervals which means you are not empty"
+    },
+    {
+      "start": 674.579,
+      "duration": 7.26,
+      "end": 681.8389999999999,
+      "text": "you are not empty and and"
+    },
+    {
+      "start": 677.88,
+      "duration": 6.3,
+      "end": 684.18,
+      "text": "my end I'm lying in you I'm lying in you"
+    },
+    {
+      "start": 681.839,
+      "duration": 5.281,
+      "end": 687.12,
+      "text": "that means two comma four lies in this"
+    },
+    {
+      "start": 684.18,
+      "duration": 4.86,
+      "end": 689.04,
+      "text": "endeavor that means four is lesser than"
+    },
+    {
+      "start": 687.12,
+      "duration": 4.8,
+      "end": 691.92,
+      "text": "equal to the six"
+    },
+    {
+      "start": 689.04,
+      "duration": 5.82,
+      "end": 694.86,
+      "text": "right so answer of back if you do back"
+    },
+    {
+      "start": 691.92,
+      "duration": 4.859,
+      "end": 696.779,
+      "text": "what happens is you get this if you're"
+    },
+    {
+      "start": 694.86,
+      "duration": 4.44,
+      "end": 699.3000000000001,
+      "text": "standing here you get one comma six and"
+    },
+    {
+      "start": 696.779,
+      "duration": 4.8,
+      "end": 701.579,
+      "text": "this is at the first index the answer of"
+    },
+    {
+      "start": 699.3,
+      "duration": 5.039,
+      "end": 704.3389999999999,
+      "text": "back of one if you do this you'll"
+    },
+    {
+      "start": 701.579,
+      "duration": 5.041,
+      "end": 706.62,
+      "text": "basically get whatever is the end of the"
+    },
+    {
+      "start": 704.339,
+      "duration": 4.68,
+      "end": 709.019,
+      "text": "last interval and if this is the case"
+    },
+    {
+      "start": 706.62,
+      "duration": 3.6,
+      "end": 710.22,
+      "text": "you're already lying inside it don't do"
+    },
+    {
+      "start": 709.019,
+      "duration": 2.521,
+      "end": 711.54,
+      "text": "anything"
+    },
+    {
+      "start": 710.22,
+      "duration": 4.44,
+      "end": 714.6600000000001,
+      "text": "go ahead"
+    },
+    {
+      "start": 711.54,
+      "duration": 4.38,
+      "end": 715.92,
+      "text": "and if it is not if it is not then this"
+    },
+    {
+      "start": 714.66,
+      "duration": 3.72,
+      "end": 718.38,
+      "text": "will be"
+    },
+    {
+      "start": 715.92,
+      "duration": 4.08,
+      "end": 720.0,
+      "text": "a part of your new interval imagine"
+    },
+    {
+      "start": 718.38,
+      "duration": 3.72,
+      "end": 722.1,
+      "text": "you're starting at one comma three"
+    },
+    {
+      "start": 720.0,
+      "duration": 4.32,
+      "end": 724.32,
+      "text": "imagine you started at one comma three"
+    },
+    {
+      "start": 722.1,
+      "duration": 5.28,
+      "end": 727.38,
+      "text": "so you have considered the start to be"
+    },
+    {
+      "start": 724.32,
+      "duration": 5.04,
+      "end": 729.36,
+      "text": "one and N to V3 now what are you doing"
+    },
+    {
+      "start": 727.38,
+      "duration": 3.18,
+      "end": 730.56,
+      "text": "you're starting at two car four then"
+    },
+    {
+      "start": 729.36,
+      "duration": 3.36,
+      "end": 732.72,
+      "text": "you're going two comma six then you're"
+    },
+    {
+      "start": 730.56,
+      "duration": 3.959,
+      "end": 734.5189999999999,
+      "text": "checking eight comma 9 right so you have"
+    },
+    {
+      "start": 732.72,
+      "duration": 4.38,
+      "end": 737.1,
+      "text": "to go from the next you have to go from"
+    },
+    {
+      "start": 734.519,
+      "duration": 4.741,
+      "end": 739.26,
+      "text": "the next so you go from the next perfect"
+    },
+    {
+      "start": 737.1,
+      "duration": 5.22,
+      "end": 742.32,
+      "text": "and what do you do"
+    },
+    {
+      "start": 739.26,
+      "duration": 6.12,
+      "end": 745.38,
+      "text": "you basically say hey to comma four are"
+    },
+    {
+      "start": 742.32,
+      "duration": 4.199,
+      "end": 746.519,
+      "text": "you overlapping which means two are you"
+    },
+    {
+      "start": 745.38,
+      "duration": 5.22,
+      "end": 750.6,
+      "text": "lesser than three which means you're"
+    },
+    {
+      "start": 746.519,
+      "duration": 5.521,
+      "end": 752.04,
+      "text": "overlapping so just write it if array of"
+    },
+    {
+      "start": 750.6,
+      "duration": 3.06,
+      "end": 753.66,
+      "text": "J"
+    },
+    {
+      "start": 752.04,
+      "duration": 4.38,
+      "end": 756.42,
+      "text": "the starting"
+    },
+    {
+      "start": 753.66,
+      "duration": 4.5,
+      "end": 758.16,
+      "text": "a is lesser than whatever interval I"
+    },
+    {
+      "start": 756.42,
+      "duration": 4.979,
+      "end": 761.399,
+      "text": "have taken lesser than this that means"
+    },
+    {
+      "start": 758.16,
+      "duration": 6.119,
+      "end": 764.279,
+      "text": "it's line if it is lying the end will"
+    },
+    {
+      "start": 761.399,
+      "duration": 5.641,
+      "end": 767.04,
+      "text": "get updated to Max of end very important"
+    },
+    {
+      "start": 764.279,
+      "duration": 6.12,
+      "end": 770.399,
+      "text": "if you have taken one comma 3 the 4 gets"
+    },
+    {
+      "start": 767.04,
+      "duration": 6.419,
+      "end": 773.459,
+      "text": "updated the 6 gets updated but at this"
+    },
+    {
+      "start": 770.399,
+      "duration": 6.74,
+      "end": 777.139,
+      "text": "case when you're at 15 comma 18 even if"
+    },
+    {
+      "start": 773.459,
+      "duration": 7.5,
+      "end": 780.959,
+      "text": "the 16 comma 17 lies 17 will not update"
+    },
+    {
+      "start": 777.139,
+      "duration": 6.7,
+      "end": 783.839,
+      "text": "thereby please make sure you take the"
+    },
+    {
+      "start": 780.959,
+      "duration": 5.761,
+      "end": 786.7199999999999,
+      "text": "max if your greater fine I need to"
+    },
+    {
+      "start": 783.839,
+      "duration": 5.101,
+      "end": 788.94,
+      "text": "extend my range otherwise I will not and"
+    },
+    {
+      "start": 786.72,
+      "duration": 3.96,
+      "end": 790.6800000000001,
+      "text": "if this is not the case I can say"
+    },
+    {
+      "start": 788.94,
+      "duration": 3.66,
+      "end": 792.6,
+      "text": "breakout no need to check for any other"
+    },
+    {
+      "start": 790.68,
+      "duration": 4.44,
+      "end": 795.12,
+      "text": "if that's not the case breakout because"
+    },
+    {
+      "start": 792.6,
+      "duration": 4.5,
+      "end": 797.1,
+      "text": "if you are not lying a previous elements"
+    },
+    {
+      "start": 795.12,
+      "duration": 4.56,
+      "end": 799.68,
+      "text": "will no more overlap so just break out"
+    },
+    {
+      "start": 797.1,
+      "duration": 4.739,
+      "end": 801.839,
+      "text": "at the end can I say the start and end"
+    },
+    {
+      "start": 799.68,
+      "duration": 5.339,
+      "end": 805.019,
+      "text": "will be updated to the new intervals and"
+    },
+    {
+      "start": 801.839,
+      "duration": 5.761,
+      "end": 807.6,
+      "text": "that is what you can always store in"
+    },
+    {
+      "start": 805.019,
+      "duration": 5.101,
+      "end": 810.12,
+      "text": "your answers like start comma and"
+    },
+    {
+      "start": 807.6,
+      "duration": 4.56,
+      "end": 812.16,
+      "text": "perfect that is what you'll store and"
+    },
+    {
+      "start": 810.12,
+      "duration": 4.68,
+      "end": 814.8,
+      "text": "that is what you can easily return now"
+    },
+    {
+      "start": 812.16,
+      "duration": 4.919,
+      "end": 817.079,
+      "text": "I'll quickly go ahead and do run it off"
+    },
+    {
+      "start": 814.8,
+      "duration": 4.32,
+      "end": 819.12,
+      "text": "and see if it is running fine it is so"
+    },
+    {
+      "start": 817.079,
+      "duration": 4.861,
+      "end": 821.9399999999999,
+      "text": "what about the time complexity any login"
+    },
+    {
+      "start": 819.12,
+      "duration": 6.839,
+      "end": 825.9590000000001,
+      "text": "for sure so I can say n login for"
+    },
+    {
+      "start": 821.94,
+      "duration": 6.12,
+      "end": 828.0600000000001,
+      "text": "sorting plus how much is this might look"
+    },
+    {
+      "start": 825.959,
+      "duration": 4.38,
+      "end": 830.3389999999999,
+      "text": "like a big of n Square because you're"
+    },
+    {
+      "start": 828.06,
+      "duration": 4.14,
+      "end": 832.1999999999999,
+      "text": "running two Loops but it is not exactly"
+    },
+    {
+      "start": 830.339,
+      "duration": 3.901,
+      "end": 834.24,
+      "text": "we go of n Square y we're using"
+    },
+    {
+      "start": 832.2,
+      "duration": 4.139,
+      "end": 836.339,
+      "text": "something as break we're also using"
+    },
+    {
+      "start": 834.24,
+      "duration": 4.02,
+      "end": 838.26,
+      "text": "something as continue so you're actually"
+    },
+    {
+      "start": 836.339,
+      "duration": 4.021,
+      "end": 840.36,
+      "text": "saving a lot of things if I go back to"
+    },
+    {
+      "start": 838.26,
+      "duration": 3.06,
+      "end": 841.3199999999999,
+      "text": "the test case that I took if you"
+    },
+    {
+      "start": 840.36,
+      "duration": 3.36,
+      "end": 843.72,
+      "text": "remember"
+    },
+    {
+      "start": 841.32,
+      "duration": 4.139,
+      "end": 845.4590000000001,
+      "text": "when you stood here you just did for"
+    },
+    {
+      "start": 843.72,
+      "duration": 4.02,
+      "end": 847.74,
+      "text": "these two things and you expanded the"
+    },
+    {
+      "start": 845.459,
+      "duration": 5.041,
+      "end": 850.5,
+      "text": "interval to 1 6 and you never went ahead"
+    },
+    {
+      "start": 847.74,
+      "duration": 5.039,
+      "end": 852.779,
+      "text": "you just broke out after this you and"
+    },
+    {
+      "start": 850.5,
+      "duration": 4.2,
+      "end": 854.7,
+      "text": "then for this you said it's already a"
+    },
+    {
+      "start": 852.779,
+      "duration": 3.421,
+      "end": 856.2,
+      "text": "part of it so no need to check it's"
+    },
+    {
+      "start": 854.7,
+      "duration": 3.36,
+      "end": 858.0600000000001,
+      "text": "already a part of it no need to check"
+    },
+    {
+      "start": 856.2,
+      "duration": 4.079,
+      "end": 860.279,
+      "text": "then you went for eight nine then he"
+    },
+    {
+      "start": 858.06,
+      "duration": 4.26,
+      "end": 862.3199999999999,
+      "text": "checked for these things so you're never"
+    },
+    {
+      "start": 860.279,
+      "duration": 2.821,
+      "end": 863.1,
+      "text": "going till yet never going till the end"
+    },
+    {
+      "start": 862.32,
+      "duration": 4.56,
+      "end": 866.88,
+      "text": "so"
+    },
+    {
+      "start": 863.1,
+      "duration": 5.7,
+      "end": 868.8000000000001,
+      "text": "what I can say is what I can say is the"
+    },
+    {
+      "start": 866.88,
+      "duration": 3.959,
+      "end": 870.8389999999999,
+      "text": "time complexity if I have to analyze it"
+    },
+    {
+      "start": 868.8,
+      "duration": 5.7,
+      "end": 874.5,
+      "text": "perfectly let's analyze how many times"
+    },
+    {
+      "start": 870.839,
+      "duration": 5.881,
+      "end": 876.72,
+      "text": "do you do so you Traverse this one once"
+    },
+    {
+      "start": 874.5,
+      "duration": 5.76,
+      "end": 880.26,
+      "text": "you've Traverse this element"
+    },
+    {
+      "start": 876.72,
+      "duration": 6.6,
+      "end": 883.32,
+      "text": "then this then this correct because for"
+    },
+    {
+      "start": 880.26,
+      "duration": 5.28,
+      "end": 885.54,
+      "text": "this you went this this this then you"
+    },
+    {
+      "start": 883.32,
+      "duration": 5.459,
+      "end": 888.779,
+      "text": "stopped now what is the next thing you"
+    },
+    {
+      "start": 885.54,
+      "duration": 5.58,
+      "end": 891.12,
+      "text": "did this moved to here which means you"
+    },
+    {
+      "start": 888.779,
+      "duration": 5.041,
+      "end": 893.82,
+      "text": "Traverse this once more but this will"
+    },
+    {
+      "start": 891.12,
+      "duration": 4.98,
+      "end": 896.1,
+      "text": "say I'm a part size stop and this will"
+    },
+    {
+      "start": 893.82,
+      "duration": 4.68,
+      "end": 898.5,
+      "text": "say I'm a part send stopped then you"
+    },
+    {
+      "start": 896.1,
+      "duration": 4.2,
+      "end": 900.3000000000001,
+      "text": "moved here eight comma 9 and then you"
+    },
+    {
+      "start": 898.5,
+      "duration": 5.399,
+      "end": 903.899,
+      "text": "again went for checking"
+    },
+    {
+      "start": 900.3,
+      "duration": 6.18,
+      "end": 906.4799999999999,
+      "text": "checked checked checked and this is"
+    },
+    {
+      "start": 903.899,
+      "duration": 3.421,
+      "end": 907.32,
+      "text": "where you said no more apart and you"
+    },
+    {
+      "start": 906.48,
+      "duration": 4.08,
+      "end": 910.5600000000001,
+      "text": "broke"
+    },
+    {
+      "start": 907.32,
+      "duration": 4.86,
+      "end": 912.1800000000001,
+      "text": "correct and then you again came here and"
+    },
+    {
+      "start": 910.56,
+      "duration": 3.959,
+      "end": 914.5189999999999,
+      "text": "it is already a part you again came here"
+    },
+    {
+      "start": 912.18,
+      "duration": 5.7,
+      "end": 917.88,
+      "text": "it is already apart and you came here"
+    },
+    {
+      "start": 914.519,
+      "duration": 5.82,
+      "end": 920.339,
+      "text": "and this guy went on to make the new"
+    },
+    {
+      "start": 917.88,
+      "duration": 5.1,
+      "end": 922.98,
+      "text": "interval and it checked for this"
+    },
+    {
+      "start": 920.339,
+      "duration": 4.141,
+      "end": 924.48,
+      "text": "and according to it and then it moved"
+    },
+    {
+      "start": 922.98,
+      "duration": 3.359,
+      "end": 926.339,
+      "text": "ahead and checked for this if you"
+    },
+    {
+      "start": 924.48,
+      "duration": 5.64,
+      "end": 930.12,
+      "text": "carefully observe so we carefully"
+    },
+    {
+      "start": 926.339,
+      "duration": 7.021,
+      "end": 933.36,
+      "text": "observe every element is I treated twice"
+    },
+    {
+      "start": 930.12,
+      "duration": 5.219,
+      "end": 935.339,
+      "text": "when you stand here this this this and"
+    },
+    {
+      "start": 933.36,
+      "duration": 5.039,
+      "end": 938.399,
+      "text": "then this this this and then there's"
+    },
+    {
+      "start": 935.339,
+      "duration": 6.601,
+      "end": 941.94,
+      "text": "this there's this so kind of to when can"
+    },
+    {
+      "start": 938.399,
+      "duration": 5.94,
+      "end": 944.339,
+      "text": "I say the complexity is we go off to n"
+    },
+    {
+      "start": 941.94,
+      "duration": 5.639,
+      "end": 947.5790000000001,
+      "text": "again because touching every element"
+    },
+    {
+      "start": 944.339,
+      "duration": 6.421,
+      "end": 950.7600000000001,
+      "text": "kind of twice in order to kind of shrink"
+    },
+    {
+      "start": 947.579,
+      "duration": 5.581,
+      "end": 953.16,
+      "text": "or rather merge the overlapping sub"
+    },
+    {
+      "start": 950.76,
+      "duration": 4.92,
+      "end": 955.68,
+      "text": "intervals so the complexities we go up"
+    },
+    {
+      "start": 953.16,
+      "duration": 5.28,
+      "end": 958.4399999999999,
+      "text": "to n plus n log n what about the space"
+    },
+    {
+      "start": 955.68,
+      "duration": 4.26,
+      "end": 959.9399999999999,
+      "text": "complexity it is B go of n imagine a"
+    },
+    {
+      "start": 958.44,
+      "duration": 4.259,
+      "end": 962.6990000000001,
+      "text": "given an example like one comma two"
+    },
+    {
+      "start": 959.94,
+      "duration": 4.199,
+      "end": 964.139,
+      "text": "three comma four six comma seven none of"
+    },
+    {
+      "start": 962.699,
+      "duration": 3.241,
+      "end": 965.9399999999999,
+      "text": "them is overlapping so you end up"
+    },
+    {
+      "start": 964.139,
+      "duration": 4.38,
+      "end": 968.519,
+      "text": "storing everything in the answer array"
+    },
+    {
+      "start": 965.94,
+      "duration": 4.92,
+      "end": 970.86,
+      "text": "so this will be your time uh time and"
+    },
+    {
+      "start": 968.519,
+      "duration": 3.841,
+      "end": 972.36,
+      "text": "space complexity obviously this is where"
+    },
+    {
+      "start": 970.86,
+      "duration": 3.479,
+      "end": 974.339,
+      "text": "the interviewer will not be happy with"
+    },
+    {
+      "start": 972.36,
+      "duration": 4.26,
+      "end": 976.62,
+      "text": "two and he will not be happy with two n"
+    },
+    {
+      "start": 974.339,
+      "duration": 4.201,
+      "end": 978.5400000000001,
+      "text": "because you're still for this element"
+    },
+    {
+      "start": 976.62,
+      "duration": 3.24,
+      "end": 979.86,
+      "text": "you're still touching you're going and"
+    },
+    {
+      "start": 978.54,
+      "duration": 3.72,
+      "end": 982.26,
+      "text": "checking he's not happy why are you"
+    },
+    {
+      "start": 979.86,
+      "duration": 3.9,
+      "end": 983.76,
+      "text": "checking please reduce big often this is"
+    },
+    {
+      "start": 982.26,
+      "duration": 3.72,
+      "end": 985.98,
+      "text": "where we move to the object so what do"
+    },
+    {
+      "start": 983.76,
+      "duration": 4.199,
+      "end": 987.959,
+      "text": "we need to optimize what are we doing"
+    },
+    {
+      "start": 985.98,
+      "duration": 4.56,
+      "end": 990.54,
+      "text": "currently we're standing here and we're"
+    },
+    {
+      "start": 987.959,
+      "duration": 4.38,
+      "end": 992.3389999999999,
+      "text": "checking can you be a part of me and can"
+    },
+    {
+      "start": 990.54,
+      "duration": 3.9,
+      "end": 994.4399999999999,
+      "text": "you be a part of me and he says no so we"
+    },
+    {
+      "start": 992.339,
+      "duration": 4.62,
+      "end": 996.9590000000001,
+      "text": "stop so we're kind of standing and we're"
+    },
+    {
+      "start": 994.44,
+      "duration": 4.68,
+      "end": 999.12,
+      "text": "checking who can be a part of me that is"
+    },
+    {
+      "start": 996.959,
+      "duration": 4.62,
+      "end": 1001.579,
+      "text": "what I have to avoid so what I will do"
+    },
+    {
+      "start": 999.12,
+      "duration": 5.04,
+      "end": 1004.16,
+      "text": "is I'll try to do it in a single"
+    },
+    {
+      "start": 1001.579,
+      "duration": 6.301,
+      "end": 1007.88,
+      "text": "iteration let's see how so we start off"
+    },
+    {
+      "start": 1004.16,
+      "duration": 6.0,
+      "end": 1010.16,
+      "text": "with 1 comma 3 and in our answer we"
+    },
+    {
+      "start": 1007.88,
+      "duration": 4.98,
+      "end": 1012.86,
+      "text": "don't have anything so we say since we"
+    },
+    {
+      "start": 1010.16,
+      "duration": 4.619,
+      "end": 1014.779,
+      "text": "don't have anything let's take this one"
+    },
+    {
+      "start": 1012.86,
+      "duration": 4.919,
+      "end": 1017.779,
+      "text": "comma three and we will move"
+    },
+    {
+      "start": 1014.779,
+      "duration": 5.821,
+      "end": 1020.6,
+      "text": "and the moment we move we have 2 comma"
+    },
+    {
+      "start": 1017.779,
+      "duration": 6.241,
+      "end": 1024.02,
+      "text": "four so if we have two color four two"
+    },
+    {
+      "start": 1020.6,
+      "duration": 4.5,
+      "end": 1025.1,
+      "text": "comma four two is smaller than equal to"
+    },
+    {
+      "start": 1024.02,
+      "duration": 3.84,
+      "end": 1027.86,
+      "text": "3."
+    },
+    {
+      "start": 1025.1,
+      "duration": 4.14,
+      "end": 1029.24,
+      "text": "overlapping so I say you're overlapping"
+    },
+    {
+      "start": 1027.86,
+      "duration": 3.959,
+      "end": 1031.819,
+      "text": "please"
+    },
+    {
+      "start": 1029.24,
+      "duration": 6.66,
+      "end": 1035.9,
+      "text": "come to me and get attached and if it"
+    },
+    {
+      "start": 1031.819,
+      "duration": 6.081,
+      "end": 1037.8999999999999,
+      "text": "gets attached as it's 4 Celsius increase"
+    },
+    {
+      "start": 1035.9,
+      "duration": 5.939,
+      "end": 1041.8390000000002,
+      "text": "myself to four"
+    },
+    {
+      "start": 1037.9,
+      "duration": 5.38,
+      "end": 1043.2800000000002,
+      "text": "next I go to 2 comma six and two comma"
+    },
+    {
+      "start": 1041.839,
+      "duration": 4.441,
+      "end": 1046.28,
+      "text": "six says"
+    },
+    {
+      "start": 1043.28,
+      "duration": 5.82,
+      "end": 1049.1,
+      "text": "2 is lesser than equal to 4"
+    },
+    {
+      "start": 1046.28,
+      "duration": 6.5,
+      "end": 1052.78,
+      "text": "I am a part of you please increase your"
+    },
+    {
+      "start": 1049.1,
+      "duration": 3.68,
+      "end": 1052.78,
+      "text": "boundary to six reduce"
+    },
+    {
+      "start": 1053.24,
+      "duration": 5.52,
+      "end": 1058.76,
+      "text": "next I move to eight common a eight"
+    },
+    {
+      "start": 1055.82,
+      "duration": 4.02,
+      "end": 1059.84,
+      "text": "comma 9 says hey wait I'm not a part of"
+    },
+    {
+      "start": 1058.76,
+      "duration": 3.419,
+      "end": 1062.179,
+      "text": "you because"
+    },
+    {
+      "start": 1059.84,
+      "duration": 5.579,
+      "end": 1065.4189999999999,
+      "text": "8 is more than six I'm not a part of you"
+    },
+    {
+      "start": 1062.179,
+      "duration": 5.761,
+      "end": 1067.94,
+      "text": "I will form a new interval I'm like okay"
+    },
+    {
+      "start": 1065.419,
+      "duration": 4.681,
+      "end": 1070.1000000000001,
+      "text": "for many interval is coming"
+    },
+    {
+      "start": 1067.94,
+      "duration": 3.06,
+      "end": 1071.0,
+      "text": "I don't stop you please phone next move"
+    },
+    {
+      "start": 1070.1,
+      "duration": 5.04,
+      "end": 1075.1399999999999,
+      "text": "ahead"
+    },
+    {
+      "start": 1071.0,
+      "duration": 6.0,
+      "end": 1077.0,
+      "text": "8 comma 10 hit comma 10"
+    },
+    {
+      "start": 1075.14,
+      "duration": 3.36,
+      "end": 1078.5,
+      "text": "8"
+    },
+    {
+      "start": 1077.0,
+      "duration": 4.14,
+      "end": 1081.14,
+      "text": "it is nine"
+    },
+    {
+      "start": 1078.5,
+      "duration": 6.24,
+      "end": 1084.74,
+      "text": "yes you're a part of me please increase"
+    },
+    {
+      "start": 1081.14,
+      "duration": 6.48,
+      "end": 1087.6200000000001,
+      "text": "so go ahead and increase this to ten"
+    },
+    {
+      "start": 1084.74,
+      "duration": 4.679,
+      "end": 1089.419,
+      "text": "perfect move"
+    },
+    {
+      "start": 1087.62,
+      "duration": 4.38,
+      "end": 1092.0,
+      "text": "9 comma eleven"
+    },
+    {
+      "start": 1089.419,
+      "duration": 4.801,
+      "end": 1094.22,
+      "text": "nine comma elevens is nine lesser than"
+    },
+    {
+      "start": 1092.0,
+      "duration": 4.919,
+      "end": 1096.919,
+      "text": "equal to ten yes you're a part of me"
+    },
+    {
+      "start": 1094.22,
+      "duration": 4.44,
+      "end": 1098.66,
+      "text": "please take it and improve yourself"
+    },
+    {
+      "start": 1096.919,
+      "duration": 4.741,
+      "end": 1101.66,
+      "text": "perfect next"
+    },
+    {
+      "start": 1098.66,
+      "duration": 5.519,
+      "end": 1104.179,
+      "text": "15 comma 18 if you have if I have a 15"
+    },
+    {
+      "start": 1101.66,
+      "duration": 5.759,
+      "end": 1107.419,
+      "text": "comma 18 can I say"
+    },
+    {
+      "start": 1104.179,
+      "duration": 5.041,
+      "end": 1109.22,
+      "text": "it is not a part of this thereby a new"
+    },
+    {
+      "start": 1107.419,
+      "duration": 3.661,
+      "end": 1111.0800000000002,
+      "text": "thereby a new"
+    },
+    {
+      "start": 1109.22,
+      "duration": 4.8,
+      "end": 1114.02,
+      "text": "just take it and store it into your"
+    },
+    {
+      "start": 1111.08,
+      "duration": 7.26,
+      "end": 1118.34,
+      "text": "answer next move 16 comma seventy"
+    },
+    {
+      "start": 1114.02,
+      "duration": 5.64,
+      "end": 1119.66,
+      "text": "sixteen comma 76 I am I'm inside you but"
+    },
+    {
+      "start": 1118.34,
+      "duration": 3.719,
+      "end": 1122.059,
+      "text": "17 is"
+    },
+    {
+      "start": 1119.66,
+      "duration": 6.18,
+      "end": 1125.8400000000001,
+      "text": "not greater than 80 no need to expand I"
+    },
+    {
+      "start": 1122.059,
+      "duration": 7.141,
+      "end": 1129.2,
+      "text": "can stay with you and it's so so easy"
+    },
+    {
+      "start": 1125.84,
+      "duration": 5.1,
+      "end": 1130.9399999999998,
+      "text": "isn't it I just kept on checking with"
+    },
+    {
+      "start": 1129.2,
+      "duration": 4.32,
+      "end": 1133.52,
+      "text": "the previous interval height that's it"
+    },
+    {
+      "start": 1130.94,
+      "duration": 4.92,
+      "end": 1135.8600000000001,
+      "text": "that's how easy it was with a one pass"
+    },
+    {
+      "start": 1133.52,
+      "duration": 3.36,
+      "end": 1136.8799999999999,
+      "text": "iteration correct let's quickly code it"
+    },
+    {
+      "start": 1135.86,
+      "duration": 2.699,
+      "end": 1138.559,
+      "text": "up"
+    },
+    {
+      "start": 1136.88,
+      "duration": 3.179,
+      "end": 1140.0590000000002,
+      "text": "so you can find out the problem Link in"
+    },
+    {
+      "start": 1138.559,
+      "duration": 3.421,
+      "end": 1141.98,
+      "text": "the description please please make sure"
+    },
+    {
+      "start": 1140.059,
+      "duration": 4.141,
+      "end": 1144.2,
+      "text": "that you drive the problem from the link"
+    },
+    {
+      "start": 1141.98,
+      "duration": 4.92,
+      "end": 1146.9,
+      "text": "in the description itself so going back"
+    },
+    {
+      "start": 1144.2,
+      "duration": 4.38,
+      "end": 1148.5800000000002,
+      "text": "to the port editor we will sort it we"
+    },
+    {
+      "start": 1146.9,
+      "duration": 4.26,
+      "end": 1151.16,
+      "text": "will have an answer we will return the"
+    },
+    {
+      "start": 1148.58,
+      "duration": 5.88,
+      "end": 1154.46,
+      "text": "answer what in between something we saw"
+    },
+    {
+      "start": 1151.16,
+      "duration": 5.399,
+      "end": 1156.559,
+      "text": "was when we started yes when we started"
+    },
+    {
+      "start": 1154.46,
+      "duration": 4.02,
+      "end": 1158.48,
+      "text": "this was the first we started with one"
+    },
+    {
+      "start": 1156.559,
+      "duration": 4.441,
+      "end": 1161.0,
+      "text": "comma three so we know one thing for"
+    },
+    {
+      "start": 1158.48,
+      "duration": 4.98,
+      "end": 1163.46,
+      "text": "sure if we don't have any intervals till"
+    },
+    {
+      "start": 1161.0,
+      "duration": 4.559,
+      "end": 1165.559,
+      "text": "now I can't compare if I don't have"
+    },
+    {
+      "start": 1163.46,
+      "duration": 6.719,
+      "end": 1170.179,
+      "text": "anything I can't compare one comma 3"
+    },
+    {
+      "start": 1165.559,
+      "duration": 7.021,
+      "end": 1172.58,
+      "text": "with the previous if it is empty or"
+    },
+    {
+      "start": 1170.179,
+      "duration": 5.701,
+      "end": 1175.88,
+      "text": "imagine you have 8 comma 9 and you had"
+    },
+    {
+      "start": 1172.58,
+      "duration": 6.599,
+      "end": 1179.1789999999999,
+      "text": "one comma six so the eight was greater"
+    },
+    {
+      "start": 1175.88,
+      "duration": 4.919,
+      "end": 1180.7990000000002,
+      "text": "than 6 so it cannot be a part of it"
+    },
+    {
+      "start": 1179.179,
+      "duration": 3.841,
+      "end": 1183.02,
+      "text": "right then only you will form a new"
+    },
+    {
+      "start": 1180.799,
+      "duration": 4.441,
+      "end": 1185.24,
+      "text": "interval because if it's the first time"
+    },
+    {
+      "start": 1183.02,
+      "duration": 4.26,
+      "end": 1187.28,
+      "text": "you form or if"
+    },
+    {
+      "start": 1185.24,
+      "duration": 4.799,
+      "end": 1190.039,
+      "text": "it's not a part of it then you form a"
+    },
+    {
+      "start": 1187.28,
+      "duration": 5.34,
+      "end": 1192.62,
+      "text": "new inter correct so I'll be like what"
+    },
+    {
+      "start": 1190.039,
+      "duration": 4.201,
+      "end": 1194.24,
+      "text": "am I currently at array of I"
+    },
+    {
+      "start": 1192.62,
+      "duration": 4.02,
+      "end": 1196.6399999999999,
+      "text": "and is the starting"
+    },
+    {
+      "start": 1194.24,
+      "duration": 5.22,
+      "end": 1199.46,
+      "text": "if that is greater than because if it is"
+    },
+    {
+      "start": 1196.64,
+      "duration": 5.64,
+      "end": 1202.2800000000002,
+      "text": "not empty then it goes to this answer"
+    },
+    {
+      "start": 1199.46,
+      "duration": 5.16,
+      "end": 1204.6200000000001,
+      "text": "dot back which will be the last so"
+    },
+    {
+      "start": 1202.28,
+      "duration": 5.16,
+      "end": 1207.44,
+      "text": "basically if your array just has this"
+    },
+    {
+      "start": 1204.62,
+      "duration": 6.419,
+      "end": 1211.039,
+      "text": "back will give one comma 6."
+    },
+    {
+      "start": 1207.44,
+      "duration": 5.52,
+      "end": 1212.96,
+      "text": "and you do one it will give the six if"
+    },
+    {
+      "start": 1211.039,
+      "duration": 4.921,
+      "end": 1215.96,
+      "text": "it is data that means it's a new one"
+    },
+    {
+      "start": 1212.96,
+      "duration": 6.3,
+      "end": 1219.26,
+      "text": "it's a new one so you'll be like okay"
+    },
+    {
+      "start": 1215.96,
+      "duration": 5.4,
+      "end": 1221.3600000000001,
+      "text": "can I say then answer Dot pushback"
+    },
+    {
+      "start": 1219.26,
+      "duration": 5.82,
+      "end": 1225.08,
+      "text": "and the answer I'll have a new window"
+    },
+    {
+      "start": 1221.36,
+      "duration": 5.4,
+      "end": 1226.76,
+      "text": "and the new interval will be array of I"
+    },
+    {
+      "start": 1225.08,
+      "duration": 4.02,
+      "end": 1229.1,
+      "text": "or maybe I get this push in the array of"
+    },
+    {
+      "start": 1226.76,
+      "duration": 4.74,
+      "end": 1231.5,
+      "text": "I yeah perfect I'll I'll just go ahead"
+    },
+    {
+      "start": 1229.1,
+      "duration": 4.62,
+      "end": 1233.7199999999998,
+      "text": "and push in Array of I because that is"
+    },
+    {
+      "start": 1231.5,
+      "duration": 4.62,
+      "end": 1236.12,
+      "text": "what the current interval is so I will"
+    },
+    {
+      "start": 1233.72,
+      "duration": 5.16,
+      "end": 1238.88,
+      "text": "end up pushing 8 comma 9 or maybe one"
+    },
+    {
+      "start": 1236.12,
+      "duration": 6.439,
+      "end": 1242.559,
+      "text": "comma three if it's empty done"
+    },
+    {
+      "start": 1238.88,
+      "duration": 8.22,
+      "end": 1247.1000000000001,
+      "text": "what about the next what if it is"
+    },
+    {
+      "start": 1242.559,
+      "duration": 6.701,
+      "end": 1249.26,
+      "text": "not yes what if it is lying inside if it"
+    },
+    {
+      "start": 1247.1,
+      "duration": 4.86,
+      "end": 1251.9599999999998,
+      "text": "is lying inside let's go to this case 2"
+    },
+    {
+      "start": 1249.26,
+      "duration": 4.62,
+      "end": 1253.8799999999999,
+      "text": "comma four we add 1 comma three so I"
+    },
+    {
+      "start": 1251.96,
+      "duration": 4.2,
+      "end": 1256.16,
+      "text": "know this is lying inside this so I'll"
+    },
+    {
+      "start": 1253.88,
+      "duration": 4.679,
+      "end": 1258.5590000000002,
+      "text": "take this 4 and I'll try to replace this"
+    },
+    {
+      "start": 1256.16,
+      "duration": 5.84,
+      "end": 1262.0,
+      "text": "let's see that's what I'll do I will say"
+    },
+    {
+      "start": 1258.559,
+      "duration": 3.441,
+      "end": 1262.0,
+      "text": "answer dot back"
+    },
+    {
+      "start": 1262.64,
+      "duration": 5.7,
+      "end": 1268.3400000000001,
+      "text": "of your first basically the last guy"
+    },
+    {
+      "start": 1265.4,
+      "duration": 5.779,
+      "end": 1271.179,
+      "text": "will be Max of answer dot back whatever"
+    },
+    {
+      "start": 1268.34,
+      "duration": 2.839,
+      "end": 1271.1789999999999,
+      "text": "is your last element"
+    },
+    {
+      "start": 1271.66,
+      "duration": 6.04,
+      "end": 1277.7,
+      "text": "which is array of I last if I am more"
+    },
+    {
+      "start": 1275.419,
+      "duration": 5.101,
+      "end": 1280.5200000000002,
+      "text": "than I'll expand U if I'm not more I'll"
+    },
+    {
+      "start": 1277.7,
+      "duration": 5.28,
+      "end": 1282.98,
+      "text": "get into you simple once I've written"
+    },
+    {
+      "start": 1280.52,
+      "duration": 5.039,
+      "end": 1285.559,
+      "text": "this I will end up returning this and"
+    },
+    {
+      "start": 1282.98,
+      "duration": 5.04,
+      "end": 1288.02,
+      "text": "this will be running fine"
+    },
+    {
+      "start": 1285.559,
+      "duration": 4.441,
+      "end": 1290.0,
+      "text": "let's see if it runs it does and I'll"
+    },
+    {
+      "start": 1288.02,
+      "duration": 5.279,
+      "end": 1293.299,
+      "text": "quickly go ahead and try to separate it"
+    },
+    {
+      "start": 1290.0,
+      "duration": 5.7,
+      "end": 1295.7,
+      "text": "so as you can see hardly like three or"
+    },
+    {
+      "start": 1293.299,
+      "duration": 4.26,
+      "end": 1297.559,
+      "text": "four lines of code and it does it for me"
+    },
+    {
+      "start": 1295.7,
+      "duration": 4.32,
+      "end": 1300.02,
+      "text": "so will be the time complexity and space"
+    },
+    {
+      "start": 1297.559,
+      "duration": 5.36,
+      "end": 1302.9189999999999,
+      "text": "complexity can I say uh n login for"
+    },
+    {
+      "start": 1300.02,
+      "duration": 6.12,
+      "end": 1306.1399999999999,
+      "text": "sorting and a single pass because"
+    },
+    {
+      "start": 1302.919,
+      "duration": 5.861,
+      "end": 1308.7800000000002,
+      "text": "everything else is offense or with the"
+    },
+    {
+      "start": 1306.14,
+      "duration": 5.22,
+      "end": 1311.3600000000001,
+      "text": "space a big of n to store the answers"
+    },
+    {
+      "start": 1308.78,
+      "duration": 4.08,
+      "end": 1312.86,
+      "text": "imagine if all the intervals are unique"
+    },
+    {
+      "start": 1311.36,
+      "duration": 4.559,
+      "end": 1315.9189999999999,
+      "text": "and they don't overlap so you'll end up"
+    },
+    {
+      "start": 1312.86,
+      "duration": 4.92,
+      "end": 1317.78,
+      "text": "storing everyone as its answer so you've"
+    },
+    {
+      "start": 1315.919,
+      "duration": 3.841,
+      "end": 1319.76,
+      "text": "improved our time complexity and this is"
+    },
+    {
+      "start": 1317.78,
+      "duration": 5.22,
+      "end": 1323.0,
+      "text": "where the interview will be super"
+    },
+    {
+      "start": 1319.76,
+      "duration": 5.94,
+      "end": 1325.7,
+      "text": "satisfied so going back to the sheet I"
+    },
+    {
+      "start": 1323.0,
+      "duration": 4.32,
+      "end": 1327.32,
+      "text": "can say that this one is done as well I"
+    },
+    {
+      "start": 1325.7,
+      "duration": 3.719,
+      "end": 1329.419,
+      "text": "hope you've understood everything just"
+    },
+    {
+      "start": 1327.32,
+      "duration": 3.839,
+      "end": 1331.1589999999999,
+      "text": "in case you have please please please do"
+    },
+    {
+      "start": 1329.419,
+      "duration": 3.661,
+      "end": 1333.0800000000002,
+      "text": "consider giving us that like because it"
+    },
+    {
+      "start": 1331.159,
+      "duration": 3.541,
+      "end": 1334.7,
+      "text": "won't cost you anything but I highly"
+    },
+    {
+      "start": 1333.08,
+      "duration": 3.06,
+      "end": 1336.1399999999999,
+      "text": "motivate me to make such kind of content"
+    },
+    {
+      "start": 1334.7,
+      "duration": 3.18,
+      "end": 1337.88,
+      "text": "and if you need and if you're new to our"
+    },
+    {
+      "start": 1336.14,
+      "duration": 3.06,
+      "end": 1339.2,
+      "text": "Channel what are you waiting for hit"
+    },
+    {
+      "start": 1337.88,
+      "duration": 2.4,
+      "end": 1340.2800000000002,
+      "text": "that subscribe button and if you haven't"
+    },
+    {
+      "start": 1339.2,
+      "duration": 2.88,
+      "end": 1342.0800000000002,
+      "text": "followed me on Instagram Twitter"
+    },
+    {
+      "start": 1340.28,
+      "duration": 3.18,
+      "end": 1343.46,
+      "text": "LinkedIn all the links will be in the"
+    },
+    {
+      "start": 1342.08,
+      "duration": 2.579,
+      "end": 1344.6589999999999,
+      "text": "description with this I'll be wrapping"
+    },
+    {
+      "start": 1343.46,
+      "duration": 4.16,
+      "end": 1347.6200000000001,
+      "text": "up this video let's meet in some of the"
+    },
+    {
+      "start": 1344.659,
+      "duration": 2.961,
+      "end": 1347.6200000000001,
+      "text": "video till then why take"
+    },
+    {
+      "start": 1348.59,
+      "duration": 4.05,
+      "end": 1352.6399999999999,
+      "text": "[Music]"
+    },
+    {
+      "start": 1353.059,
+      "duration": 3.081,
+      "end": 1356.1399999999999,
+      "text": "I will finally"
+    }
+  ]
+}

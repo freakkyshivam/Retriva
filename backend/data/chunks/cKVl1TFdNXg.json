@@ -1,0 +1,130 @@
+{
+  "video_id": "cKVl1TFdNXg",
+  "position": 227,
+  "title": "DP 47. Number of Longest Increasing Subsequences",
+  "url": "https://www.youtube.com/watch?v=cKVl1TFdNXg",
+  "chunk_count": 11,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "cKVl1TFdNXg",
+      "position": 227,
+      "title": "DP 47. Number of Longest Increasing Subsequences",
+      "url": "https://www.youtube.com/watch?v=cKVl1TFdNXg",
+      "start": 0.16,
+      "end": 118.079,
+      "text": "hey everyone welcome back to take you forward so today we will be solving the problem uh number of longest increasing subsequences and this is the dp47 the 47 lecture of the dynamic programming playlist and yeah the prerequisites to this problem is dp41 and dp42 which is based on lis so if you don't know ls please go back and watch it and then you can just come back and watch this problem so number of longest increasing subsequence what does this mean now you must be knowing what is longest increasing subsequence till now now for this i can say uh the length of the longest is four and i can we have something like one three four seven as one of them or i can have one three five seven as another of them so i can say the longest is of length four and how many subsequences are there are there that's two subsequences so i'm not concerned about the length because i know how to find the length i'm more concerned about how many are there of length four and the answer to that is there are this is the first one and this is the second one there are two subsequences of length four so that's the simple question i will be giving you uh an array and you need to tell me the number of longest yes the number of longest increasing subsequence and over here it is two that's the question so how do you solve this particular problem so if you remember how did we solve this problem uh it we used uh in dp42 we used a simple dp array and we tried to fill that dp array using a couple of uh loops like this if you remember well enough i was going from 0 to n j was going from 0 to i and then you wrote this and then you just change this this dp was storing the length if you remember well enough but how do you have the count",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "cKVl1TFdNXg",
+      "position": 227,
+      "title": "DP 47. Number of Longest Increasing Subsequences",
+      "url": "https://www.youtube.com/watch?v=cKVl1TFdNXg",
+      "start": 114.479,
+      "end": 249.439,
+      "text": "the count that's my question so let's uh take an example and try to see so let's uh keep the dp over here let's maintain one more array which is the count array okay and now i'll teach you how to keep the count it's very simple so initially we are at one okay and it it is itself the length will be one because it is in this array it is itself the longest increasing subsequence thereby the length is one and how many of length one are there that's very obvious it's off there's only one guy of length one for sure so initially you start with one and one because everyone please hear me out properly every one itself is an lis and so the count will be one and the length will be one as well perfect now let's move to the next guy which is five now when you are at five when you add five standing at five initially you say hey we will be one and one because five itself remember this five itself is of length 1 and it's a count of 1 but for 5 for 5 you look back who's the previous 1 is the previous can this one attach to 5 and the answer to that is yes so if it can attach the length will be one plus one because five has attached to one so one was initially having the length one so that gets attached to five so the length will increase so the length will increase to 2 if the length increases to 2 i'm saying 1 gets attached to 5. so how many 1 did we have the count was 1 so the count still stays as 1 because if one there was five one came in and attached with five and one how many subsequences were there of length one once thereby the length will increase to two but the count still stays as one perfect next you go to four this is where the understanding will start so you go to four",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "cKVl1TFdNXg",
+      "position": 227,
+      "title": "DP 47. Number of Longest Increasing Subsequences",
+      "url": "https://www.youtube.com/watch?v=cKVl1TFdNXg",
+      "start": 245.04,
+      "end": 365.199,
+      "text": "four the moment you go to four you say four itself is of length one and four is having a count one because four itself is of length one and the count is one right for four in this array who can be attached one can be attached to four again so the count will increase to two and one is only having a count of one so it stays so you increase the length to two and the count still stays as one next you move to three you move to three the moment you move to three what do you observe you say three is initially of length one and a count one but three can attach with one itself because one can attach with three five cannot four cannot because it's a longest increasing subsequence so if one can the length will increase to two and the count is one so you just increase the length to two so i can just uh erase all of these and write two two two and the count still stays as one next you move to two this two in itself will have a one and one now this two will attach one and become a longest increasing of length two of length two so let's make it of length two but the count will still stay as one because it is of one so the count still stays as one next you move to six all your focus back okay now the moment you move to six you ask who can attach it so six initially will have a length one and a count one but that's for six itself now you look at the previous this is the previous this is the previous this is the previous this is the previous this is the previous every one is the previous can one go and attach to six the answer to that is yes yes yes yes thereby you say hey listen the length will be two the length will be two and i can attach one with six",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "cKVl1TFdNXg",
+      "position": 227,
+      "title": "DP 47. Number of Longest Increasing Subsequences",
+      "url": "https://www.youtube.com/watch?v=cKVl1TFdNXg",
+      "start": 360.88,
+      "end": 494.16,
+      "text": "one with six and the length will be two perfect next for six can you attach five the answer to that is yes but still the length will be two but but but you got see previously this one went into attach with six and made a length of two so there was one guy of length two now five came in attached with six and is again of length two so can i say the count will increase to two the count will increase to two because one and six was there now five and six games so the count will increase if you're getting similar dp values increase the count increase the count correct next there is four and four attached with six yes and if four attaches with six the length still stays as two and again you've got one more count too so the length again is two so the count increases i'm getting three guys of length two now i get very obvious because one six five six four six all of len two got it next can this three be a part of six yes i can still attach three with six another length two so another count increase perfect can this two attach with six yes so three got attached with six now two can attach with six as well another length two attached so another count increase the count becomes five so i can say listen what i can say i can say at six there can be max of length two lis which can be one six five six four six three six two six any one so there are five lis of length two there are five liars of length two that ends at six amazing amazing let's move to the next so i'll just erase this and i'll try to move to the next we move to seven initially seven is itself of length one and count one initially seven is itself of length one and count one now i ask you a very straightforward question",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "cKVl1TFdNXg",
+      "position": 227,
+      "title": "DP 47. Number of Longest Increasing Subsequences",
+      "url": "https://www.youtube.com/watch?v=cKVl1TFdNXg",
+      "start": 489.44,
+      "end": 631.8389999999999,
+      "text": "you a very straightforward question for the seven can this be a part yes one can attach with seven yes one can attach with seven so if one patches with seven i can say this becomes length two and there is only one so count is still one can five attach with seven yes yes if five gets attached with seven what will be the length five getting attachment length two which means one five and seven because length two means five is already having one so one five and seven so the length is three so the length comes out to be three now and how many does five have count one so one five seven goes next four so i can say four is again having a length two so four is four means one four that can attach with seven that can attach with seven so another length three another length three so this will go so i got one more length three prior to this i got one five seven now i got one four seven so the length so the count increases to two now i come to three can three be a part one three seven yes it can be a part so three is length two so one three seven is again three which means count will increase one three seven count will increase perfect next you have two and two be a part yes one two seven so one two means it had two so two plus one is three again lm3 so this increases to four so the count is increasing if you are getting similar dp values count keeps on increasing count keeps on increasing and what count will you increase you will just go on and add these values to this guy just keep on increasing the count perfect let's go on and see if i am seeing six i am seeing six okay so can i have now two is done can i have six seven i can very important point guys please",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "cKVl1TFdNXg",
+      "position": 227,
+      "title": "DP 47. Number of Longest Increasing Subsequences",
+      "url": "https://www.youtube.com/watch?v=cKVl1TFdNXg",
+      "start": 626.8,
+      "end": 754.56,
+      "text": "can very important point guys please please focus over here can i have six with seven i can six is saying i'm a flint two but there are count fives of length two like i can have one six seven i can have five six seven i can have four six seven i can have three six seven i can have two six seven so there are five guys that can attach with six and go to seven to make a length off i repeat to make a length of three to make a length of three there can be five guys so it can be one it can be five it can be four it can be three it can be two so there can be five guys so there are five guys that can go on to have a length of three so five added that can be now nine guys of length three you realize there can be nine guys of length three these are four and then there can be these five nine guys of length three perfect this becomes nine guys of length three understood guys very important very easy because six was saying i'm a length two which means one six five six four six three six two six five guys were there i have six attaches with seven those five guys will attach with seven as well so thereby this increases to nine perfect let's go to ten ten to whom 10 can be a part of let's let's ask can the 10 initial is 1 1 definitely before that let's erase this 10 initially is 1 1 can this be a one be a part of ten yes so length will be two and the count still stays can this five be a part of ten yes this is two so this will be three and the count still stays as one because it's one can this 4 be a part of 10 yes so 2 3 so this increases the count will increase similarly you can go on increasing go on",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "cKVl1TFdNXg",
+      "position": 227,
+      "title": "DP 47. Number of Longest Increasing Subsequences",
+      "url": "https://www.youtube.com/watch?v=cKVl1TFdNXg",
+      "start": 750.16,
+      "end": 868.88,
+      "text": "similarly you can go on increasing go on increasing and you will eventually get your answer so the basic stuff is very straightforward now if i go back to the code this was the code if you remember this was the code right so i'll try to say what are we specifically doing what am i doing ask the question like let's ask the question what what am i doing as of now i was just updating the dp right so whenever there is an increase whenever there is an increase i will say i will take the count for i from count of j because in the number of ways i can make j is the same ways in which i can make count i if this is greater this is greater so the number of ways in which i can make j is the number of ways because i just add i to it that's it but i'll just add one more condition to here else if very important else if if array of i greater than array of j and and dp of j plus 1 is equal to equal to d like what if it's equal then i'll say okay this will tp will still have the same value but it will take how many ways can count jb formed just take it just take it if you carefully see this was the case there's five ways you ended up adding it over here so in how many ways can it be you just take it and you add it over here and at the end of the day at the end of the day you can just figure out the maximal value of lis and you can just add up the count that will be indeed your answer so you have pretty much got the idea so what i'll do is i'll just take this smaller example uh to quickly uh show you how will you get the answer one three it was five four seven and we knew that one three",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "cKVl1TFdNXg",
+      "position": 227,
+      "title": "DP 47. Number of Longest Increasing Subsequences",
+      "url": "https://www.youtube.com/watch?v=cKVl1TFdNXg",
+      "start": 862.88,
+      "end": 1002.32,
+      "text": "four seven and we knew that one three four seven can be an answer as well as one three five and seven cans can be an answer as well so we definitely knew that so what i'll do is i will just keep the dp and i'll just keep the count so initially this is one and one now this uh everything will be initially filled with one and one perfect now let's uh come back so we are here that's done next we'll go here so three three we'll see this one is a potential and it's having a one so i'll just increase this to two and whatever is here i'll just copy paste so this is one perfect now i'll go to five when i go to five i say hey list hey listen this five is having one can this one be a part of this five yes so this one will go up and make it two and this one will be replicated perfect now this 3 can it be a part of 5 yes so the length will be 2 plus 1 equal to 3 and this one will be replicated because there is only one three five next you go here that's four can this one be a part of four yes so this one replicates it to two and this will be copied can those three be a part of four yes so i'll say okay if this is two this can be three and this will be this will be replicated can those five be a part of four no because longest increasing does not allows you next go to seven next go to seven the moment you go to seven you have one so you see one can you be a part of sir he says yes so i'll make it 2. there's only only one 7. can this 3 be a part of 7 i'll say yes so this 2 will go and make it 3. so this is as of now 3 and the 1 is copied",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "cKVl1TFdNXg",
+      "position": 227,
+      "title": "DP 47. Number of Longest Increasing Subsequences",
+      "url": "https://www.youtube.com/watch?v=cKVl1TFdNXg",
+      "start": 997.44,
+      "end": 1110.0,
+      "text": "and the 1 is copied on this 5 is when you understand this is a 3 so 1 3 5 and 7 can it be yes so this 3 will go and make it 4. so i'll make it 4 and i'll still copy paste this one now can this 4 be a part of 7 yes but this is 3 and if i add it it will still be 4. so you got another 4 so take this one and you're saying another so one plus one is two so you make it two at the end of the day where is your ls located the alas is located here is there any other four there can be any other four like assume there was a four here assume there was a four here then you would have taken this plus this to say there are three subsequences but since there is only one four and it says two so you say two subsequences i hope i was able to make you understand now it's time that i go back and try to code this up so it's time to check out the code so what i'll do is i'll just go across and uh copy paste the ls code because i'm not interested to write so much let's go base the lis code and i'll also copy paste the hash include okay perfect so what do i require i require a count so you can keep a count as n comma one that is something which we will do okay so we can ignore this maxi we can also ignore this maxi okay perfect uh now what have i told you if uh this is the case it's uh like it is definitely perfect and i will say i'll just uh inherit the count which the new guy gives you but if by chance the array of previous is smaller than array of i okay and the dp comes out to be equal that is very very important that the dp has to",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "cKVl1TFdNXg",
+      "position": 227,
+      "title": "DP 47. Number of Longest Increasing Subsequences",
+      "url": "https://www.youtube.com/watch?v=cKVl1TFdNXg",
+      "start": 1106.32,
+      "end": 1221.52,
+      "text": "very very important that the dp has to come out to be equal like one plus dp of previous like you got another guy who still gives you the same value you got another guy who sees you that hey listen i'm also the same subsequence so you say okay fine you're the same subsequence no there's no need to update the db so what i'll do is i'll just take you i'll just take you i'll just take you into myself this is this says is new so just inherit this means inherit don't add because it's new inherit but this this means okay i got someone with the same length so increase the count so increase the count that's how you increase once you've done with this probably you can figure out the lis length so over here you can say maxi equal to max of maxi comma dp of i figure out the alliance length once you have figured out the alliance length very important so just go across the the count array that will be answer like whoever is giving you the same length of alias whoever like if dp of i is equal equal to max c you say count or this will be probably numbers numbers something like this so you say numbers of allies will be count of ice so all the alliances will be added and once you have added all the alliances you can just return the nums and that will be your answer so that's the shuttle change in the ls code if you do you should be able to solve this problem okay so n is definitely not declared so let's declare the end i should be fine apart from this uh there will be previous over here again my bad let's keep it previous perfect now should be fine so yeah folks uh with this we will be wrapping up the lis pattern and yeah in the comment section as usual tell me now if you can solve all the problems",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "cKVl1TFdNXg",
+      "position": 227,
+      "title": "DP 47. Number of Longest Increasing Subsequences",
+      "url": "https://www.youtube.com/watch?v=cKVl1TFdNXg",
+      "start": 1218.24,
+      "end": 1247.679,
+      "text": "if you can solve all the problems related to lis pattern and if you have understood it or not because uh it it does give me a very good feeling when you tell me that okay this pattern has been completed now i'm very comfortable on this pattern so just make sure just take out your five seconds ten seconds to drop out a comment and like this video and if you're new to this channel please do consider subscribing to us so yeah with this i'll be wrapping up this video and the next video we will be starting off with the mcm pattern till then bye bye take care good night",
+      "word_count": 113
+    }
+  ]
+}

@@ -1,0 +1,1226 @@
+{
+  "position": 220,
+  "video_id": "k4eK-vEmnKg",
+  "title": "DP 40. Buy and Sell Stocks With Transaction Fee | Recursion to Space Optimisation",
+  "url": "https://www.youtube.com/watch?v=k4eK-vEmnKg",
+  "transcript": [
+    {
+      "start": 0.16,
+      "duration": 3.039,
+      "end": 3.1990000000000003,
+      "text": "so as you know i've been taking some"
+    },
+    {
+      "start": 1.52,
+      "duration": 2.88,
+      "end": 4.4,
+      "text": "free sessions on an academy so before"
+    },
+    {
+      "start": 3.199,
+      "duration": 3.2,
+      "end": 6.399,
+      "text": "starting off the video i'd love to tell"
+    },
+    {
+      "start": 4.4,
+      "duration": 3.28,
+      "end": 7.68,
+      "text": "you about the next couple of sessions"
+    },
+    {
+      "start": 6.399,
+      "duration": 3.841,
+      "end": 10.24,
+      "text": "that i'll be taking on the upcoming"
+    },
+    {
+      "start": 7.68,
+      "duration": 4.32,
+      "end": 12.0,
+      "text": "saturday and sunday also on sunday i'll"
+    },
+    {
+      "start": 10.24,
+      "duration": 3.439,
+      "end": 13.679,
+      "text": "be taking another session where i'll be"
+    },
+    {
+      "start": 12.0,
+      "duration": 4.0,
+      "end": 16.0,
+      "text": "discussing about how can you get a"
+    },
+    {
+      "start": 13.679,
+      "duration": 4.641,
+      "end": 18.32,
+      "text": "placement via gate and in the session"
+    },
+    {
+      "start": 16.0,
+      "duration": 4.16,
+      "end": 20.16,
+      "text": "again i'll be talking you about the"
+    },
+    {
+      "start": 18.32,
+      "duration": 4.16,
+      "end": 22.48,
+      "text": "plethora of opportunities that you'll be"
+    },
+    {
+      "start": 20.16,
+      "duration": 5.439,
+      "end": 25.599,
+      "text": "getting via gate so again book your"
+    },
+    {
+      "start": 22.48,
+      "duration": 4.959,
+      "end": 27.439,
+      "text": "calendar at 8pm 27th march you can"
+    },
+    {
+      "start": 25.599,
+      "duration": 3.68,
+      "end": 29.279,
+      "text": "interact with me one is to one the link"
+    },
+    {
+      "start": 27.439,
+      "duration": 4.321,
+      "end": 31.759999999999998,
+      "text": "is again in the description so guys make"
+    },
+    {
+      "start": 29.279,
+      "duration": 5.28,
+      "end": 34.559,
+      "text": "sure you join at 8pm hey everyone"
+    },
+    {
+      "start": 31.76,
+      "duration": 6.479,
+      "end": 38.239000000000004,
+      "text": "welcome back to take you forward so"
+    },
+    {
+      "start": 34.559,
+      "duration": 4.801,
+      "end": 39.36,
+      "text": "last problem the sixth problem on"
+    },
+    {
+      "start": 38.239,
+      "duration": 3.121,
+      "end": 41.36,
+      "text": "stocks"
+    },
+    {
+      "start": 39.36,
+      "duration": 4.0,
+      "end": 43.36,
+      "text": "and this is the last problem on dp on"
+    },
+    {
+      "start": 41.36,
+      "duration": 4.08,
+      "end": 45.44,
+      "text": "stocks and after that we will be"
+    },
+    {
+      "start": 43.36,
+      "duration": 3.12,
+      "end": 46.48,
+      "text": "completing dp on stocks and as i"
+    },
+    {
+      "start": 45.44,
+      "duration": 2.799,
+      "end": 48.239,
+      "text": "promised"
+    },
+    {
+      "start": 46.48,
+      "duration": 3.84,
+      "end": 50.31999999999999,
+      "text": "when i complete dp on stocks you'll be"
+    },
+    {
+      "start": 48.239,
+      "duration": 4.48,
+      "end": 52.718999999999994,
+      "text": "like you can do any problem on dp on"
+    },
+    {
+      "start": 50.32,
+      "duration": 3.919,
+      "end": 54.239,
+      "text": "stocks and uh let's do this problem and"
+    },
+    {
+      "start": 52.719,
+      "duration": 2.961,
+      "end": 55.68,
+      "text": "then then you can definitely tell me in"
+    },
+    {
+      "start": 54.239,
+      "duration": 4.241,
+      "end": 58.48,
+      "text": "the comment section"
+    },
+    {
+      "start": 55.68,
+      "duration": 4.48,
+      "end": 60.16,
+      "text": "best time to buy and sell stock"
+    },
+    {
+      "start": 58.48,
+      "duration": 3.68,
+      "end": 62.16,
+      "text": "like i'm asking you what is the best"
+    },
+    {
+      "start": 60.16,
+      "duration": 4.399,
+      "end": 64.559,
+      "text": "time to buy and sell stock we have been"
+    },
+    {
+      "start": 62.16,
+      "duration": 4.16,
+      "end": 66.32,
+      "text": "doing across like all problems but now"
+    },
+    {
+      "start": 64.559,
+      "duration": 3.521,
+      "end": 68.08,
+      "text": "i'm saying there is a transaction fee"
+    },
+    {
+      "start": 66.32,
+      "duration": 3.839,
+      "end": 70.15899999999999,
+      "text": "that i will add"
+    },
+    {
+      "start": 68.08,
+      "duration": 5.12,
+      "end": 73.2,
+      "text": "so the question is pretty much similar"
+    },
+    {
+      "start": 70.159,
+      "duration": 6.0,
+      "end": 76.159,
+      "text": "to the previous questions over here"
+    },
+    {
+      "start": 73.2,
+      "duration": 5.12,
+      "end": 78.32000000000001,
+      "text": "buy and sell can be done unlimited times"
+    },
+    {
+      "start": 76.159,
+      "duration": 4.561,
+      "end": 80.72,
+      "text": "but every time you complete a"
+    },
+    {
+      "start": 78.32,
+      "duration": 6.32,
+      "end": 84.63999999999999,
+      "text": "transaction that means every time you"
+    },
+    {
+      "start": 80.72,
+      "duration": 7.2,
+      "end": 87.92,
+      "text": "complete buy and sell a fee will be"
+    },
+    {
+      "start": 84.64,
+      "duration": 6.56,
+      "end": 91.2,
+      "text": "charged to you for an example if i give"
+    },
+    {
+      "start": 87.92,
+      "duration": 5.36,
+      "end": 93.28,
+      "text": "you the prices to builders apparently"
+    },
+    {
+      "start": 91.2,
+      "duration": 4.16,
+      "end": 95.36,
+      "text": "buy and sell this is what you can do"
+    },
+    {
+      "start": 93.28,
+      "duration": 4.159,
+      "end": 97.43900000000001,
+      "text": "making a profit of seven"
+    },
+    {
+      "start": 95.36,
+      "duration": 4.16,
+      "end": 99.52,
+      "text": "buy and sell this is what you can do"
+    },
+    {
+      "start": 97.439,
+      "duration": 4.481,
+      "end": 101.91999999999999,
+      "text": "making a profit of five"
+    },
+    {
+      "start": 99.52,
+      "duration": 3.52,
+      "end": 103.03999999999999,
+      "text": "but since a transactional fee of two was"
+    },
+    {
+      "start": 101.92,
+      "duration": 2.32,
+      "end": 104.24,
+      "text": "costed"
+    },
+    {
+      "start": 103.04,
+      "duration": 2.8,
+      "end": 105.84,
+      "text": "and you did"
+    },
+    {
+      "start": 104.24,
+      "duration": 4.64,
+      "end": 108.88,
+      "text": "two transactions"
+    },
+    {
+      "start": 105.84,
+      "duration": 5.52,
+      "end": 111.36,
+      "text": "so this will take two from it"
+    },
+    {
+      "start": 108.88,
+      "duration": 6.08,
+      "end": 114.96,
+      "text": "this will take two from it so a net"
+    },
+    {
+      "start": 111.36,
+      "duration": 6.24,
+      "end": 117.6,
+      "text": "profit of eight is what you will make so"
+    },
+    {
+      "start": 114.96,
+      "duration": 5.28,
+      "end": 120.24,
+      "text": "a net profit of eight is what you'll"
+    },
+    {
+      "start": 117.6,
+      "duration": 3.839,
+      "end": 121.439,
+      "text": "make it so basically if i write it again"
+    },
+    {
+      "start": 120.24,
+      "duration": 2.8,
+      "end": 123.03999999999999,
+      "text": "buy a cell"
+    },
+    {
+      "start": 121.439,
+      "duration": 2.801,
+      "end": 124.24,
+      "text": "gives it seven"
+    },
+    {
+      "start": 123.04,
+      "duration": 2.64,
+      "end": 125.68,
+      "text": "buy a cell"
+    },
+    {
+      "start": 124.24,
+      "duration": 4.719,
+      "end": 128.959,
+      "text": "gives it five"
+    },
+    {
+      "start": 125.68,
+      "duration": 5.84,
+      "end": 131.52,
+      "text": "but a transaction fee of 2 is charged so"
+    },
+    {
+      "start": 128.959,
+      "duration": 3.841,
+      "end": 132.8,
+      "text": "2 will be charged hence"
+    },
+    {
+      "start": 131.52,
+      "duration": 2.48,
+      "end": 134.0,
+      "text": "this will be"
+    },
+    {
+      "start": 132.8,
+      "duration": 2.48,
+      "end": 135.28,
+      "text": "the net"
+    },
+    {
+      "start": 134.0,
+      "duration": 3.36,
+      "end": 137.36,
+      "text": "profit"
+    },
+    {
+      "start": 135.28,
+      "duration": 5.679,
+      "end": 140.959,
+      "text": "and the question states"
+    },
+    {
+      "start": 137.36,
+      "duration": 5.84,
+      "end": 143.20000000000002,
+      "text": "i want you to maximize this net profit"
+    },
+    {
+      "start": 140.959,
+      "duration": 4.961,
+      "end": 145.92000000000002,
+      "text": "so it's pretty much similar to the"
+    },
+    {
+      "start": 143.2,
+      "duration": 5.039,
+      "end": 148.23899999999998,
+      "text": "previous problem we just uh have to"
+    },
+    {
+      "start": 145.92,
+      "duration": 4.959,
+      "end": 150.879,
+      "text": "figure out the transactional fee stuff"
+    },
+    {
+      "start": 148.239,
+      "duration": 4.161,
+      "end": 152.4,
+      "text": "so buy and sell unlimited times remember"
+    },
+    {
+      "start": 150.879,
+      "duration": 4.481,
+      "end": 155.35999999999999,
+      "text": "the second problem"
+    },
+    {
+      "start": 152.4,
+      "duration": 5.52,
+      "end": 157.92000000000002,
+      "text": "yes buy and sell part two"
+    },
+    {
+      "start": 155.36,
+      "duration": 4.879,
+      "end": 160.239,
+      "text": "over there uh unlimited time was there"
+    },
+    {
+      "start": 157.92,
+      "duration": 4.56,
+      "end": 162.48,
+      "text": "and if you remember the code it was"
+    },
+    {
+      "start": 160.239,
+      "duration": 3.041,
+      "end": 163.28,
+      "text": "something like we had an index we hadn't"
+    },
+    {
+      "start": 162.48,
+      "duration": 2.96,
+      "end": 165.44,
+      "text": "buy"
+    },
+    {
+      "start": 163.28,
+      "duration": 5.28,
+      "end": 168.56,
+      "text": "initially index was passed down at zero"
+    },
+    {
+      "start": 165.44,
+      "duration": 5.2,
+      "end": 170.64,
+      "text": "and buy was initially this and we went"
+    },
+    {
+      "start": 168.56,
+      "duration": 4.319,
+      "end": 172.879,
+      "text": "on to seeing the base keys to be equal"
+    },
+    {
+      "start": 170.64,
+      "duration": 4.48,
+      "end": 175.11999999999998,
+      "text": "to equal to zero and you can return"
+    },
+    {
+      "start": 172.879,
+      "duration": 4.321,
+      "end": 177.2,
+      "text": "whenever you have exhausted the days"
+    },
+    {
+      "start": 175.12,
+      "duration": 5.28,
+      "end": 180.4,
+      "text": "and you will be like if buy is"
+    },
+    {
+      "start": 177.2,
+      "duration": 5.759,
+      "end": 182.959,
+      "text": "one you can buy or else you can just get"
+    },
+    {
+      "start": 180.4,
+      "duration": 5.36,
+      "end": 185.76000000000002,
+      "text": "across and over here if you buy"
+    },
+    {
+      "start": 182.959,
+      "duration": 4.321,
+      "end": 187.28,
+      "text": "you end up giving to the market so"
+    },
+    {
+      "start": 185.76,
+      "duration": 3.36,
+      "end": 189.12,
+      "text": "thereby minus"
+    },
+    {
+      "start": 187.28,
+      "duration": 4.4,
+      "end": 191.68,
+      "text": "plus you go to the next day index plus"
+    },
+    {
+      "start": 189.12,
+      "duration": 4.0,
+      "end": 193.12,
+      "text": "one and now you're allowed to sell"
+    },
+    {
+      "start": 191.68,
+      "duration": 3.68,
+      "end": 195.36,
+      "text": "and if you don't buy"
+    },
+    {
+      "start": 193.12,
+      "duration": 4.0,
+      "end": 197.12,
+      "text": "you go to the next day and you say"
+    },
+    {
+      "start": 195.36,
+      "duration": 3.44,
+      "end": 198.8,
+      "text": "you're not allowed to"
+    },
+    {
+      "start": 197.12,
+      "duration": 4.16,
+      "end": 201.28,
+      "text": "is still allowed to buy"
+    },
+    {
+      "start": 198.8,
+      "duration": 4.159,
+      "end": 202.959,
+      "text": "and you return the max of it yes you"
+    },
+    {
+      "start": 201.28,
+      "duration": 2.72,
+      "end": 204.0,
+      "text": "return the max of it and if you're"
+    },
+    {
+      "start": 202.959,
+      "duration": 3.36,
+      "end": 206.31900000000002,
+      "text": "selling"
+    },
+    {
+      "start": 204.0,
+      "duration": 3.599,
+      "end": 207.599,
+      "text": "you get this from the market"
+    },
+    {
+      "start": 206.319,
+      "duration": 2.321,
+      "end": 208.64,
+      "text": "if you're selling you get this from the"
+    },
+    {
+      "start": 207.599,
+      "duration": 2.64,
+      "end": 210.23899999999998,
+      "text": "market"
+    },
+    {
+      "start": 208.64,
+      "duration": 3.04,
+      "end": 211.67999999999998,
+      "text": "and you go to the next day and you say"
+    },
+    {
+      "start": 210.239,
+      "duration": 3.441,
+      "end": 213.68,
+      "text": "you can now buy"
+    },
+    {
+      "start": 211.68,
+      "duration": 4.639,
+      "end": 216.31900000000002,
+      "text": "or if you're not selling you go to the"
+    },
+    {
+      "start": 213.68,
+      "duration": 4.96,
+      "end": 218.64000000000001,
+      "text": "next day and you say you can still sell"
+    },
+    {
+      "start": 216.319,
+      "duration": 5.681,
+      "end": 222.0,
+      "text": "and you return the max of it yes you"
+    },
+    {
+      "start": 218.64,
+      "duration": 5.599,
+      "end": 224.23899999999998,
+      "text": "return the max of it or this one that's"
+    },
+    {
+      "start": 222.0,
+      "duration": 4.879,
+      "end": 226.879,
+      "text": "what uh was the code for"
+    },
+    {
+      "start": 224.239,
+      "duration": 4.08,
+      "end": 228.31900000000002,
+      "text": "buy and sell"
+    },
+    {
+      "start": 226.879,
+      "duration": 4.481,
+      "end": 231.35999999999999,
+      "text": "stock to"
+    },
+    {
+      "start": 228.319,
+      "duration": 5.761,
+      "end": 234.07999999999998,
+      "text": "now what am i adding i am saying"
+    },
+    {
+      "start": 231.36,
+      "duration": 4.879,
+      "end": 236.239,
+      "text": "every time you complete a transaction a"
+    },
+    {
+      "start": 234.08,
+      "duration": 4.64,
+      "end": 238.72,
+      "text": "fee will be added so when are you"
+    },
+    {
+      "start": 236.239,
+      "duration": 4.801,
+      "end": 241.04,
+      "text": "completing a transaction can i say every"
+    },
+    {
+      "start": 238.72,
+      "duration": 4.079,
+      "end": 242.799,
+      "text": "time you perform a sell operation"
+    },
+    {
+      "start": 241.04,
+      "duration": 4.32,
+      "end": 245.35999999999999,
+      "text": "every time you perform a sell operation"
+    },
+    {
+      "start": 242.799,
+      "duration": 5.921,
+      "end": 248.72,
+      "text": "or buy together you are combining one"
+    },
+    {
+      "start": 245.36,
+      "duration": 5.599,
+      "end": 250.959,
+      "text": "transaction so you can do two steps you"
+    },
+    {
+      "start": 248.72,
+      "duration": 4.719,
+      "end": 253.439,
+      "text": "can be like okay this is when i will"
+    },
+    {
+      "start": 250.959,
+      "duration": 4.721,
+      "end": 255.68,
+      "text": "also have to give a transactional fee"
+    },
+    {
+      "start": 253.439,
+      "duration": 4.001,
+      "end": 257.44,
+      "text": "like you can pay off a like after the"
+    },
+    {
+      "start": 255.68,
+      "duration": 3.6,
+      "end": 259.28000000000003,
+      "text": "transaction that is after the sell is"
+    },
+    {
+      "start": 257.44,
+      "duration": 4.079,
+      "end": 261.519,
+      "text": "done this is when the seller will be"
+    },
+    {
+      "start": 259.28,
+      "duration": 4.08,
+      "end": 263.35999999999996,
+      "text": "completed you can pay the transaction so"
+    },
+    {
+      "start": 261.519,
+      "duration": 3.921,
+      "end": 265.44,
+      "text": "if you pay the transaction that money is"
+    },
+    {
+      "start": 263.36,
+      "duration": 5.04,
+      "end": 268.40000000000003,
+      "text": "gone the money is gone so you have to"
+    },
+    {
+      "start": 265.44,
+      "duration": 5.44,
+      "end": 270.88,
+      "text": "keep a minus fee or you can be like i"
+    },
+    {
+      "start": 268.4,
+      "duration": 5.68,
+      "end": 274.08,
+      "text": "i'm not interested to pay it up front"
+    },
+    {
+      "start": 270.88,
+      "duration": 4.4,
+      "end": 275.28,
+      "text": "uh sorry not paid after conducting sell"
+    },
+    {
+      "start": 274.08,
+      "duration": 2.24,
+      "end": 276.32,
+      "text": "i will"
+    },
+    {
+      "start": 275.28,
+      "duration": 2.24,
+      "end": 277.52,
+      "text": "pay it"
+    },
+    {
+      "start": 276.32,
+      "duration": 3.92,
+      "end": 280.24,
+      "text": "right"
+    },
+    {
+      "start": 277.52,
+      "duration": 5.2,
+      "end": 282.71999999999997,
+      "text": "when i buy because up front i'll be like"
+    },
+    {
+      "start": 280.24,
+      "duration": 4.16,
+      "end": 284.40000000000003,
+      "text": "whenever i start a transaction of bile"
+    },
+    {
+      "start": 282.72,
+      "duration": 3.919,
+      "end": 286.639,
+      "text": "paint right up front i don't want to"
+    },
+    {
+      "start": 284.4,
+      "duration": 4.64,
+      "end": 289.03999999999996,
+      "text": "keep attention you can either pay it"
+    },
+    {
+      "start": 286.639,
+      "duration": 4.56,
+      "end": 291.199,
+      "text": "upfront or you can pay it"
+    },
+    {
+      "start": 289.04,
+      "duration": 4.48,
+      "end": 293.52000000000004,
+      "text": "after completing the transaction both"
+    },
+    {
+      "start": 291.199,
+      "duration": 5.201,
+      "end": 296.40000000000003,
+      "text": "are okay as long as you're paying it"
+    },
+    {
+      "start": 293.52,
+      "duration": 5.76,
+      "end": 299.28,
+      "text": "once on a buy and sell it should be"
+    },
+    {
+      "start": 296.4,
+      "duration": 4.0,
+      "end": 300.4,
+      "text": "absolutely okay so we have figured out"
+    },
+    {
+      "start": 299.28,
+      "duration": 4.08,
+      "end": 303.35999999999996,
+      "text": "that uh"
+    },
+    {
+      "start": 300.4,
+      "duration": 5.76,
+      "end": 306.15999999999997,
+      "text": "this is the slight change in the buy and"
+    },
+    {
+      "start": 303.36,
+      "duration": 4.559,
+      "end": 307.91900000000004,
+      "text": "sales uh code that we have to do prices"
+    },
+    {
+      "start": 306.16,
+      "duration": 4.64,
+      "end": 310.8,
+      "text": "of index minus v"
+    },
+    {
+      "start": 307.919,
+      "duration": 5.201,
+      "end": 313.12,
+      "text": "and we will be able to do this problem"
+    },
+    {
+      "start": 310.8,
+      "duration": 4.48,
+      "end": 315.28000000000003,
+      "text": "so if i go back to the code and selling"
+    },
+    {
+      "start": 313.12,
+      "duration": 5.44,
+      "end": 318.56,
+      "text": "like buy and sell stock 2 this was the"
+    },
+    {
+      "start": 315.28,
+      "duration": 5.44,
+      "end": 320.71999999999997,
+      "text": "code like the space optimized code now"
+    },
+    {
+      "start": 318.56,
+      "duration": 4.96,
+      "end": 323.52,
+      "text": "i'll come back over here and i'll say"
+    },
+    {
+      "start": 320.72,
+      "duration": 4.96,
+      "end": 325.68,
+      "text": "okay this is the stuff let's copy paste"
+    },
+    {
+      "start": 323.52,
+      "duration": 4.399,
+      "end": 327.919,
+      "text": "let's make it int so this is the normal"
+    },
+    {
+      "start": 325.68,
+      "duration": 5.519,
+      "end": 331.199,
+      "text": "code when i was buying and selling now"
+    },
+    {
+      "start": 327.919,
+      "duration": 6.481,
+      "end": 334.4,
+      "text": "this was cannot buy means sell"
+    },
+    {
+      "start": 331.199,
+      "duration": 5.44,
+      "end": 336.639,
+      "text": "right and this was buy stuff"
+    },
+    {
+      "start": 334.4,
+      "duration": 4.48,
+      "end": 338.88,
+      "text": "where we were saying if i'm buying this"
+    },
+    {
+      "start": 336.639,
+      "duration": 4.721,
+      "end": 341.36,
+      "text": "is what i get and then i go across to"
+    },
+    {
+      "start": 338.88,
+      "duration": 4.48,
+      "end": 343.36,
+      "text": "the other guy the simple space"
+    },
+    {
+      "start": 341.36,
+      "duration": 4.64,
+      "end": 346.0,
+      "text": "optimization technique"
+    },
+    {
+      "start": 343.36,
+      "duration": 5.44,
+      "end": 348.8,
+      "text": "now can i say if i'm buying i will incur"
+    },
+    {
+      "start": 346.0,
+      "duration": 4.479,
+      "end": 350.479,
+      "text": "a minus fee that's for sure"
+    },
+    {
+      "start": 348.8,
+      "duration": 3.52,
+      "end": 352.32,
+      "text": "and if i'm selling i'm not incurring"
+    },
+    {
+      "start": 350.479,
+      "duration": 3.521,
+      "end": 354.0,
+      "text": "anything now if i just run this by"
+    },
+    {
+      "start": 352.32,
+      "duration": 3.28,
+      "end": 355.59999999999997,
+      "text": "including a minus v into the space"
+    },
+    {
+      "start": 354.0,
+      "duration": 3.759,
+      "end": 357.759,
+      "text": "optimized code"
+    },
+    {
+      "start": 355.6,
+      "duration": 5.68,
+      "end": 361.28000000000003,
+      "text": "okay it does fail"
+    },
+    {
+      "start": 357.759,
+      "duration": 5.921,
+      "end": 363.68,
+      "text": "okay we just need to change it to values"
+    },
+    {
+      "start": 361.28,
+      "duration": 5.039,
+      "end": 366.31899999999996,
+      "text": "the name has been changed over here"
+    },
+    {
+      "start": 363.68,
+      "duration": 4.4,
+      "end": 368.08,
+      "text": "it does run and if i submit this code"
+    },
+    {
+      "start": 366.319,
+      "duration": 3.201,
+      "end": 369.52000000000004,
+      "text": "you will see that it does give me a"
+    },
+    {
+      "start": 368.08,
+      "duration": 3.679,
+      "end": 371.75899999999996,
+      "text": "correct answer"
+    },
+    {
+      "start": 369.52,
+      "duration": 4.799,
+      "end": 374.31899999999996,
+      "text": "so as i said you can either apply"
+    },
+    {
+      "start": 371.759,
+      "duration": 4.72,
+      "end": 376.47900000000004,
+      "text": "this fee while doing the cell"
+    },
+    {
+      "start": 374.319,
+      "duration": 4.16,
+      "end": 378.47900000000004,
+      "text": "so let's assume i don't apply it during"
+    },
+    {
+      "start": 376.479,
+      "duration": 5.041,
+      "end": 381.52,
+      "text": "the cell and i say i'll apply it right"
+    },
+    {
+      "start": 378.479,
+      "duration": 3.84,
+      "end": 382.31899999999996,
+      "text": "at the front went by is happening so you"
+    },
+    {
+      "start": 381.52,
+      "duration": 3.28,
+      "end": 384.79999999999995,
+      "text": "just"
+    },
+    {
+      "start": 382.319,
+      "duration": 5.121,
+      "end": 387.44,
+      "text": "attach that to buy and even if you"
+    },
+    {
+      "start": 384.8,
+      "duration": 4.32,
+      "end": 389.12,
+      "text": "attach that to the buy it will also give"
+    },
+    {
+      "start": 387.44,
+      "duration": 3.84,
+      "end": 391.28,
+      "text": "you the correct answer so you can either"
+    },
+    {
+      "start": 389.12,
+      "duration": 3.519,
+      "end": 392.639,
+      "text": "attach it after the transaction is done"
+    },
+    {
+      "start": 391.28,
+      "duration": 3.039,
+      "end": 394.31899999999996,
+      "text": "or right at the starting of the"
+    },
+    {
+      "start": 392.639,
+      "duration": 3.521,
+      "end": 396.16,
+      "text": "transaction that is absolutely your"
+    },
+    {
+      "start": 394.319,
+      "duration": 4.081,
+      "end": 398.40000000000003,
+      "text": "choice so"
+    },
+    {
+      "start": 396.16,
+      "duration": 4.72,
+      "end": 400.88000000000005,
+      "text": "as long as you're doing this it will be"
+    },
+    {
+      "start": 398.4,
+      "duration": 5.2,
+      "end": 403.59999999999997,
+      "text": "running fine so guys i hope you have"
+    },
+    {
+      "start": 400.88,
+      "duration": 5.2,
+      "end": 406.08,
+      "text": "understood all the six variants of dp on"
+    },
+    {
+      "start": 403.6,
+      "duration": 4.08,
+      "end": 407.68,
+      "text": "stock so just in case you did please"
+    },
+    {
+      "start": 406.08,
+      "duration": 2.32,
+      "end": 408.4,
+      "text": "please please make sure you like this"
+    },
+    {
+      "start": 407.68,
+      "duration": 2.56,
+      "end": 410.24,
+      "text": "video"
+    },
+    {
+      "start": 408.4,
+      "duration": 4.0,
+      "end": 412.4,
+      "text": "and since we are completing again a"
+    },
+    {
+      "start": 410.24,
+      "duration": 4.239,
+      "end": 414.479,
+      "text": "pattern on dp on stocks let me know in"
+    },
+    {
+      "start": 412.4,
+      "duration": 4.32,
+      "end": 416.71999999999997,
+      "text": "the comment section now can you solve"
+    },
+    {
+      "start": 414.479,
+      "duration": 3.601,
+      "end": 418.08,
+      "text": "any problem on dpn stocks if you can"
+    },
+    {
+      "start": 416.72,
+      "duration": 2.8,
+      "end": 419.52000000000004,
+      "text": "please please"
+    },
+    {
+      "start": 418.08,
+      "duration": 2.88,
+      "end": 420.96,
+      "text": "it's an honest request that tell me in"
+    },
+    {
+      "start": 419.52,
+      "duration": 3.04,
+      "end": 422.56,
+      "text": "the comment section can you or can you"
+    },
+    {
+      "start": 420.96,
+      "duration": 2.88,
+      "end": 423.84,
+      "text": "not and now with this i'll be wrapping"
+    },
+    {
+      "start": 422.56,
+      "duration": 2.8,
+      "end": 425.36,
+      "text": "up this video just make sure if you're"
+    },
+    {
+      "start": 423.84,
+      "duration": 3.359,
+      "end": 427.19899999999996,
+      "text": "new to this channel please do consider"
+    },
+    {
+      "start": 425.36,
+      "duration": 3.52,
+      "end": 428.88,
+      "text": "subscribing to us and do hit that like"
+    },
+    {
+      "start": 427.199,
+      "duration": 2.961,
+      "end": 430.16,
+      "text": "button and with this let's wrap up this"
+    },
+    {
+      "start": 428.88,
+      "duration": 2.8,
+      "end": 431.68,
+      "text": "video and meet in the next one till then"
+    },
+    {
+      "start": 430.16,
+      "duration": 4.8,
+      "end": 434.96000000000004,
+      "text": "bye take care"
+    },
+    {
+      "start": 431.68,
+      "duration": 3.28,
+      "end": 434.96,
+      "text": "whenever your heart"
+    },
+    {
+      "start": 435.199,
+      "duration": 4.361,
+      "end": 439.56,
+      "text": "ever is your golden"
+    }
+  ]
+}

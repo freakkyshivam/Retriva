@@ -1,0 +1,86 @@
+{
+  "video_id": "WAOfKpxYHR8",
+  "position": 149,
+  "title": "G-24. Course Schedule I and II | Pre-requisite Tasks | Topological Sort",
+  "url": "https://www.youtube.com/watch?v=WAOfKpxYHR8",
+  "chunk_count": 7,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "WAOfKpxYHR8",
+      "position": 149,
+      "title": "G-24. Course Schedule I and II | Pre-requisite Tasks | Topological Sort",
+      "url": "https://www.youtube.com/watch?v=WAOfKpxYHR8",
+      "start": 3.04,
+      "end": 119.6,
+      "text": "hey everyone welcome back to the channel i hope you guys are doing extremely well today we will be solving the problem co-schedule one and two both the problems are interlinked so we'll be solving both the problems in this particular video so what does the problem state a given total of n task leveled from zero to n minus one some tasks might have prerequisites for example to do uh task zero you have to first complete task one which is expressed as a pair 0 comma 1 given the total number of task n and a list of prerequisite task p find if it is possible to finish all tasks so let's analyze the question so it states if i'm stating one comma zero it means if you have to perform zero you should have performed one before that so i can probably stated something like this one should have been performed before zero that is what they demand okay so this is about the first task what is about the next task they're saying in order to perform task one you should have performed task two so in order to perform task one before that you should have performed the task two so i can definitely align it so this is done next what are they saying they're saying in order to perform task two you should have performed task three so in order to perform task two you should have performed task three which means i can definitely go and write three over here so again this task can also be performed so what i see is if at first i perform three i can actually perform task two which will mean this then if i perform task 2 i can actually perform task 1 which will mean this if i perform task 1 i can actually perform task 0 which means this so apparently i can actually perform all the given tasks that is given to us so thereby i can say yes it is possible to perform such a particular",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "WAOfKpxYHR8",
+      "position": 149,
+      "title": "G-24. Course Schedule I and II | Pre-requisite Tasks | Topological Sort",
+      "url": "https://www.youtube.com/watch?v=WAOfKpxYHR8",
+      "start": 115.119,
+      "end": 240.56,
+      "text": "is possible to perform such a particular task so that was about when we can perform a task let's take one more example and let's analyze when we cannot perform a task so if you carefully see this particular example i'm saying okay uh one in order to perform task two i should have performed task one so task two i should have performed task one which means this can only be performed at task one is performed before it okay let's so this is this can be done let's go to the next one which means we can only do three if four is performed we can only do three if four is performed so i can definitely say we can only do three if four is performed perfect now this could have been written over here i've written over here due to some reason let's go to the next thing i'm saying 4 can only be performed if task 2 is done and we see task 2 can be performed before four because we do not have any dependency thereby this can also be performed let's analyze the last one the last one says one can be performed if task four has been performed prior to that so one has to be after four one has to be after four but wait two has to be before four which states this and one has to be before two so is this possible no you see there is a cyclic dependency happening you see there is a cyclic dependency so if i analyze it properly one has to be performed before two two has to be performed before four and in order to perform one it has to be performed before four so first four then one so you see a cycle getting formed so there is a cyclic dependency forming like one has to be performed before two two before four and one four before one so it's not possible because you have a cyclic dependency you cannot perform the task",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "WAOfKpxYHR8",
+      "position": 149,
+      "title": "G-24. Course Schedule I and II | Pre-requisite Tasks | Topological Sort",
+      "url": "https://www.youtube.com/watch?v=WAOfKpxYHR8",
+      "start": 235.84,
+      "end": 353.44,
+      "text": "cannot perform the task got it so thereby i cannot perform this task because of the prior conditions hence we will say uh no to this right so this is what we have to figure out given a pair of tasks you have to tell me yes if you can perform you have to tell me no if you can perform so this is what the problem states you'll be given a pair of tasks and if you tell me yes if you can perform and you have to tell me no if you cannot perform the given pair of tasks which algorithm to use can i say that i can definitely use something as a topological sort which you have learned in the previous video can we yes we can why the reason is very simple if you remember the definition of topological sort it stated if there is an edge between you and v which we can treat it as the tasks you should have been done if you want to perform the task v i can define this as an edge then the linear ordering of vertices must have u before v then the linear ordering of vertices must have u before v and that is what we are doing we are saying okay in order to perform task 1 it it is something like this a directed edge from one to zero and one should appear before like one should have been done before zero right so can i relate this problem to something as topological sort yes so can i say i need to figure out possibility or not i need to figure out possible or not possible so when is a topological sort possible when can i write linear ordering of vertices only when it's a directed graph and we assume we are given we can express the pairs as directed graphs like if we are given something like task 2 to 4 we can actually see it as 2 2 4 so we can definitely express this as",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "WAOfKpxYHR8",
+      "position": 149,
+      "title": "G-24. Course Schedule I and II | Pre-requisite Tasks | Topological Sort",
+      "url": "https://www.youtube.com/watch?v=WAOfKpxYHR8",
+      "start": 348.88,
+      "end": 457.199,
+      "text": "2 4 so we can definitely express this as a directed graph what is the next thing it's stated as cyclic graph it's stated as i click graph the graph must not have any cycles the graph must not have any cycles thereby i can determine that topological sort is only valid for that and what does topological sort means i can order them in such a way that you appears always before v so over here if you see i cannot order these guys because you cannot make sure that four appears before one is not possible why because it's and it contains a cycle so thereby a two part will not be possible so can i say the question is very straightforward either you can solve it by saying i will detect if the graph has a cycle that's a very simple thing that you can do detect a graph has a cycle and you can use dfs to do that because it's a directed graph you can use the dfs way or you can use the bfs way which use says tupo sort yes we can use the bfs way which uses tuple sort now you can go the dfs way in order to just tell me a yes or no but in the next part of the question they'll ask us the ordering thereby i'll solve this problem using bfs or the tuple sort you can definitely do it using dfs i've already taught you how to detect a cycle in a directed draft so you can go back and definitely do it using dfs as well so guys i hope you have understood the explanation why topo sort of y cycle detection so as usual i'll be writing the c plus plus code on the right and you can figure out the java code on the left so you're given n you're given uh the pair of prerequisites so at first what i'll do is i'll try to create the graph because we need to create the directed",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "WAOfKpxYHR8",
+      "position": 149,
+      "title": "G-24. Course Schedule I and II | Pre-requisite Tasks | Topological Sort",
+      "url": "https://www.youtube.com/watch?v=WAOfKpxYHR8",
+      "start": 453.36,
+      "end": 562.16,
+      "text": "because we need to create the directed graph in order to check for a cycle or two sort or whatever so what i'll do is i'll at first create the adjacency list and you're given the pair so i can just walk through the pace let's walk through the pace and i can say adjacency of it dot first because i'm saying this guy should be performed before this so there's a edge between this to that right so id.first dot push back of id dot second so we're definitely sure that this is how we have to form the graph so i can say the graph is formed and it's a zero based indexing so it's fine we need to check for tuple sort we need the tuple sort to be checked now what is the next thing we need to check for topological sort so what i'll do is i'll go over here to the topological sort and i'll just copy paste the entire code that we wrote for topological sort and i'll bring that and i'll try to copy paste it here so this is the topological sort for any given graph i'll just uh remove the this one so i can say okay this is how we have stored the topological sort and if my ordering contains all of them yes if my ordering contains all the vertices then i can say that there was definitely not a cycle thereby all the partisans were there in the tupor sort so i can say yes or which means true or i can say if not then i can say a false so once you have done this let's quickly analyze if everything is fine okay this is n so probably we can just convert this into v because in topo sort we are using v and over here we can do it v perfect now let's compile and run compile and run uh and then i'll submit so you see that this is running absolutely fine okay so once we have solved this particular problem we'll go",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "WAOfKpxYHR8",
+      "position": 149,
+      "title": "G-24. Course Schedule I and II | Pre-requisite Tasks | Topological Sort",
+      "url": "https://www.youtube.com/watch?v=WAOfKpxYHR8",
+      "start": 558.959,
+      "end": 664.0,
+      "text": "solved this particular problem we'll go to the next problem which is course schedule this problem has slight modifications now over here if you have to do task zero you have to first finish task one so the ordering is like in the previous question it would have been given one comma zero over here they've just reversed it they're saying in order to perform zero you should have done one so there's an edge between one and zero so just uh the mention of the pair has been reversed cool now you have to find the ordering of tasks in order to finish all the tasks and there might be multiple correct answers you just need to return one of them if it is impossible to finish all tasks written an empty array is what they are saying so what i'll do is i'll go back over here and i'll just try to copy this and then i'll do the changes that i require so if you see uh we're given n we're given n so if you see we're given n and m so i'll just convert this to capital v i'll let this be m so we're given a vector so over here we know the pairs have been reversed so i t of 1 because it is a vector and it will form a directed edge to id of 0 because they're giving it in the opposite order this time so this is how we'll do once you do everything if this is possible then we return the ordering to po and if it is not then we return simply an empty array this is what i will do once i've done this i'll try to compile and run and see if it's running fine we see it is and now we'll try to submit this so we see that all the test cases are running absolutely fine so guys i hope you have understood how to implement tuposot in such problems whenever you see problems where they state something before something that is when the",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "WAOfKpxYHR8",
+      "position": 149,
+      "title": "G-24. Course Schedule I and II | Pre-requisite Tasks | Topological Sort",
+      "url": "https://www.youtube.com/watch?v=WAOfKpxYHR8",
+      "start": 660.16,
+      "end": 691.3199999999999,
+      "text": "before something that is when the intuition of topo sort should jump to your brain remember this always so i hope you've understood everything so just in case you did please please please make sure you like this video and if you're new to our channel what are you waiting for kill that subscribe button right away and yeah if you haven't checked out our dp series and the hd sheet the links will be in the description and with this i'll be wrapping up this video let's read in some other video till then bye take it whenever your heart ever is you're golden",
+      "word_count": 105
+    }
+  ]
+}

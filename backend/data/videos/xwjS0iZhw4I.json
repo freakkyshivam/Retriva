@@ -1,0 +1,1730 @@
+{
+  "position": 298,
+  "video_id": "xwjS0iZhw4I",
+  "title": "L2. Check for Balanced Parentheses | Stack and Queue",
+  "url": "https://www.youtube.com/watch?v=xwjS0iZhw4I",
+  "transcript": [
+    {
+      "start": 3.32,
+      "duration": 3.72,
+      "end": 7.04,
+      "text": "so we will be continuing with our stack"
+    },
+    {
+      "start": 4.839,
+      "duration": 3.481,
+      "end": 8.32,
+      "text": "and Q playlist we starting off hey we"
+    },
+    {
+      "start": 7.04,
+      "duration": 3.12,
+      "end": 10.16,
+      "text": "welcome back to the channel I hope you"
+    },
+    {
+      "start": 8.32,
+      "duration": 4.439,
+      "end": 12.759,
+      "text": "guys are doing extremely well so the"
+    },
+    {
+      "start": 10.16,
+      "duration": 5.24,
+      "end": 15.4,
+      "text": "problem that we will be solving today is"
+    },
+    {
+      "start": 12.759,
+      "duration": 5.041,
+      "end": 17.8,
+      "text": "balanced parenthesis so what is the"
+    },
+    {
+      "start": 15.4,
+      "duration": 4.52,
+      "end": 19.92,
+      "text": "problem statement is stating that you"
+    },
+    {
+      "start": 17.8,
+      "duration": 4.239,
+      "end": 22.039,
+      "text": "will be given a string and it will only"
+    },
+    {
+      "start": 19.92,
+      "duration": 4.16,
+      "end": 24.080000000000002,
+      "text": "be containing characters like the"
+    },
+    {
+      "start": 22.039,
+      "duration": 5.521,
+      "end": 27.560000000000002,
+      "text": "brackets now these are the possible"
+    },
+    {
+      "start": 24.08,
+      "duration": 6.4,
+      "end": 30.479999999999997,
+      "text": "brackets that it might contain now your"
+    },
+    {
+      "start": 27.56,
+      "duration": 5.839,
+      "end": 33.399,
+      "text": "task is to check if the given string is"
+    },
+    {
+      "start": 30.48,
+      "duration": 4.52,
+      "end": 35.0,
+      "text": "a balanced parenthesis string or not"
+    },
+    {
+      "start": 33.399,
+      "duration": 3.441,
+      "end": 36.84,
+      "text": "what are the conditions it should follow"
+    },
+    {
+      "start": 35.0,
+      "duration": 4.879,
+      "end": 39.879,
+      "text": "to be called a balanced parenthesis"
+    },
+    {
+      "start": 36.84,
+      "duration": 6.559,
+      "end": 43.399,
+      "text": "string first one is every opening"
+    },
+    {
+      "start": 39.879,
+      "duration": 7.121,
+      "end": 47.0,
+      "text": "bracket should have a same closing"
+    },
+    {
+      "start": 43.399,
+      "duration": 6.521,
+      "end": 49.92,
+      "text": "bracket got it every closing bracket"
+    },
+    {
+      "start": 47.0,
+      "duration": 4.559,
+      "end": 51.559,
+      "text": "should have a same opening bracket the"
+    },
+    {
+      "start": 49.92,
+      "duration": 4.36,
+      "end": 54.28,
+      "text": "other examples will be"
+    },
+    {
+      "start": 51.559,
+      "duration": 5.921,
+      "end": 57.48,
+      "text": "this and this"
+    },
+    {
+      "start": 54.28,
+      "duration": 6.48,
+      "end": 60.760000000000005,
+      "text": "one got it and the third one is it"
+    },
+    {
+      "start": 57.48,
+      "duration": 5.84,
+      "end": 63.31999999999999,
+      "text": "should follow the order as well"
+    },
+    {
+      "start": 60.76,
+      "duration": 5.0,
+      "end": 65.75999999999999,
+      "text": "let's understand the three conditions so"
+    },
+    {
+      "start": 63.32,
+      "duration": 5.0,
+      "end": 68.32,
+      "text": "if I look at this particular example"
+    },
+    {
+      "start": 65.76,
+      "duration": 4.679,
+      "end": 70.43900000000001,
+      "text": "let's check if this is balanced or not"
+    },
+    {
+      "start": 68.32,
+      "duration": 3.96,
+      "end": 72.27999999999999,
+      "text": "now first I'm I'm seeing an opening"
+    },
+    {
+      "start": 70.439,
+      "duration": 4.121,
+      "end": 74.55999999999999,
+      "text": "bracket and after that I'm seeing a"
+    },
+    {
+      "start": 72.28,
+      "duration": 5.64,
+      "end": 77.92,
+      "text": "closing bracket so they're following the"
+    },
+    {
+      "start": 74.56,
+      "duration": 6.44,
+      "end": 81.0,
+      "text": "order and they're of the same type so"
+    },
+    {
+      "start": 77.92,
+      "duration": 5.559,
+      "end": 83.479,
+      "text": "opening and then closing perfect after"
+    },
+    {
+      "start": 81.0,
+      "duration": 4.52,
+      "end": 85.52,
+      "text": "that there is an opening after that"
+    },
+    {
+      "start": 83.479,
+      "duration": 4.64,
+      "end": 88.119,
+      "text": "there is an opening after that there is"
+    },
+    {
+      "start": 85.52,
+      "duration": 5.72,
+      "end": 91.24,
+      "text": "a closing so for this closing for this"
+    },
+    {
+      "start": 88.119,
+      "duration": 5.081,
+      "end": 93.2,
+      "text": "closing I have a corresponding opening"
+    },
+    {
+      "start": 91.24,
+      "duration": 4.839,
+      "end": 96.079,
+      "text": "right before it so they're following the"
+    },
+    {
+      "start": 93.2,
+      "duration": 6.559,
+      "end": 99.759,
+      "text": "order as well and they're of the same"
+    },
+    {
+      "start": 96.079,
+      "duration": 6.161,
+      "end": 102.24,
+      "text": "type as well perfect after this I have"
+    },
+    {
+      "start": 99.759,
+      "duration": 4.64,
+      "end": 104.399,
+      "text": "this one and then there is a closing so"
+    },
+    {
+      "start": 102.24,
+      "duration": 4.559,
+      "end": 106.79899999999999,
+      "text": "for this closing I have a corresponding"
+    },
+    {
+      "start": 104.399,
+      "duration": 4.32,
+      "end": 108.719,
+      "text": "opening so they are following the order"
+    },
+    {
+      "start": 106.799,
+      "duration": 3.721,
+      "end": 110.52000000000001,
+      "text": "got it so they have followed the order"
+    },
+    {
+      "start": 108.719,
+      "duration": 4.881,
+      "end": 113.6,
+      "text": "and they have also followed the order"
+    },
+    {
+      "start": 110.52,
+      "duration": 5.68,
+      "end": 116.19999999999999,
+      "text": "now I have a closing for this I have a"
+    },
+    {
+      "start": 113.6,
+      "duration": 4.92,
+      "end": 118.52,
+      "text": "opening as well so they are also"
+    },
+    {
+      "start": 116.2,
+      "duration": 4.08,
+      "end": 120.28,
+      "text": "following the order so every bracket has"
+    },
+    {
+      "start": 118.52,
+      "duration": 3.76,
+      "end": 122.28,
+      "text": "a similar kind of bracket that is"
+    },
+    {
+      "start": 120.28,
+      "duration": 5.04,
+      "end": 125.32000000000001,
+      "text": "closing itself and they're following the"
+    },
+    {
+      "start": 122.28,
+      "duration": 6.199,
+      "end": 128.479,
+      "text": "order as well so this can be called as a"
+    },
+    {
+      "start": 125.32,
+      "duration": 5.919,
+      "end": 131.239,
+      "text": "balanced parenthesis got it whereas if I"
+    },
+    {
+      "start": 128.479,
+      "duration": 5.361,
+      "end": 133.84,
+      "text": "look at this particular example this is"
+    },
+    {
+      "start": 131.239,
+      "duration": 5.401,
+      "end": 136.64000000000001,
+      "text": "an opening this is a closing so they are"
+    },
+    {
+      "start": 133.84,
+      "duration": 5.44,
+      "end": 139.28,
+      "text": "following the Order Perfect this is a"
+    },
+    {
+      "start": 136.64,
+      "duration": 5.52,
+      "end": 142.16,
+      "text": "opening this is a opening this is a"
+    },
+    {
+      "start": 139.28,
+      "duration": 5.28,
+      "end": 144.56,
+      "text": "closing so they are following the order"
+    },
+    {
+      "start": 142.16,
+      "duration": 6.159,
+      "end": 148.319,
+      "text": "after that this is a opening but this is"
+    },
+    {
+      "start": 144.56,
+      "duration": 7.16,
+      "end": 151.72,
+      "text": "a closing and this is not following the"
+    },
+    {
+      "start": 148.319,
+      "duration": 5.881,
+      "end": 154.2,
+      "text": "order they are not following the order"
+    },
+    {
+      "start": 151.72,
+      "duration": 5.239,
+      "end": 156.959,
+      "text": "thereby this is not a balanced"
+    },
+    {
+      "start": 154.2,
+      "duration": 5.319,
+      "end": 159.51899999999998,
+      "text": "parenthesis let's look at other examples"
+    },
+    {
+      "start": 156.959,
+      "duration": 5.64,
+      "end": 162.599,
+      "text": "so if I take an example like this now"
+    },
+    {
+      "start": 159.519,
+      "duration": 5.64,
+      "end": 165.159,
+      "text": "this is also not a balanced parenthesis"
+    },
+    {
+      "start": 162.599,
+      "duration": 5.081,
+      "end": 167.67999999999998,
+      "text": "why now they are following the order for"
+    },
+    {
+      "start": 165.159,
+      "duration": 5.681,
+      "end": 170.84,
+      "text": "this opening there is a closing but for"
+    },
+    {
+      "start": 167.68,
+      "duration": 5.72,
+      "end": 173.4,
+      "text": "this opening there is no closing thereby"
+    },
+    {
+      "start": 170.84,
+      "duration": 5.039,
+      "end": 175.879,
+      "text": "I said for every opening there must be a"
+    },
+    {
+      "start": 173.4,
+      "duration": 5.199,
+      "end": 178.59900000000002,
+      "text": "closing and vice versa if I take a"
+    },
+    {
+      "start": 175.879,
+      "duration": 5.44,
+      "end": 181.319,
+      "text": "string like this this is also not"
+    },
+    {
+      "start": 178.599,
+      "duration": 5.72,
+      "end": 184.319,
+      "text": "balanced because for every closing there"
+    },
+    {
+      "start": 181.319,
+      "duration": 5.0,
+      "end": 186.319,
+      "text": "is not an opening got it and this"
+    },
+    {
+      "start": 184.319,
+      "duration": 3.521,
+      "end": 187.83999999999997,
+      "text": "describes the order so these are the"
+    },
+    {
+      "start": 186.319,
+      "duration": 4.601,
+      "end": 190.92,
+      "text": "three conditions that you have to keep"
+    },
+    {
+      "start": 187.84,
+      "duration": 8.0,
+      "end": 195.84,
+      "text": "in mind if calling someone as a balanced"
+    },
+    {
+      "start": 190.92,
+      "duration": 6.92,
+      "end": 197.83999999999997,
+      "text": "parenthesis if you carefully look what"
+    },
+    {
+      "start": 195.84,
+      "duration": 5.24,
+      "end": 201.08,
+      "text": "do we need to solve now there are two"
+    },
+    {
+      "start": 197.84,
+      "duration": 7.399,
+      "end": 205.239,
+      "text": "things whenever I'm getting a closing"
+    },
+    {
+      "start": 201.08,
+      "duration": 7.48,
+      "end": 208.56,
+      "text": "bracket I'm checking out if the last"
+    },
+    {
+      "start": 205.239,
+      "duration": 7.801,
+      "end": 213.04,
+      "text": "opening that I saw the last opening that"
+    },
+    {
+      "start": 208.56,
+      "duration": 7.319,
+      "end": 215.879,
+      "text": "I saw is a my type is of my type that's"
+    },
+    {
+      "start": 213.04,
+      "duration": 7.199,
+      "end": 220.239,
+      "text": "what I'm checking right so what am I"
+    },
+    {
+      "start": 215.879,
+      "duration": 6.321,
+      "end": 222.2,
+      "text": "looking for I'm looking for last"
+    },
+    {
+      "start": 220.239,
+      "duration": 4.28,
+      "end": 224.519,
+      "text": "opening"
+    },
+    {
+      "start": 222.2,
+      "duration": 5.64,
+      "end": 227.83999999999997,
+      "text": "encountered that's"
+    },
+    {
+      "start": 224.519,
+      "duration": 6.121,
+      "end": 230.64000000000001,
+      "text": "it whenever I encounter an closing"
+    },
+    {
+      "start": 227.84,
+      "duration": 6.759,
+      "end": 234.599,
+      "text": "bracket I look for the last opening that"
+    },
+    {
+      "start": 230.64,
+      "duration": 5.84,
+      "end": 236.48,
+      "text": "I encountered correct okay so it kind of"
+    },
+    {
+      "start": 234.599,
+      "duration": 4.681,
+      "end": 239.28,
+      "text": "gives me an idea I'm looking for the"
+    },
+    {
+      "start": 236.48,
+      "duration": 5.759,
+      "end": 242.23899999999998,
+      "text": "last opening encountered so I just need"
+    },
+    {
+      "start": 239.28,
+      "duration": 5.08,
+      "end": 244.36,
+      "text": "to preserve the opening brackets that is"
+    },
+    {
+      "start": 242.239,
+      "duration": 4.28,
+      "end": 246.519,
+      "text": "the first thing that should come to my"
+    },
+    {
+      "start": 244.36,
+      "duration": 5.32,
+      "end": 249.68,
+      "text": "mind that I will be preserving all the"
+    },
+    {
+      "start": 246.519,
+      "duration": 6.121,
+      "end": 252.64000000000001,
+      "text": "opening brackets and the other thing is"
+    },
+    {
+      "start": 249.68,
+      "duration": 6.64,
+      "end": 256.32,
+      "text": "I should be able to see the last one so"
+    },
+    {
+      "start": 252.64,
+      "duration": 5.76,
+      "end": 258.4,
+      "text": "which data structure yes stack because"
+    },
+    {
+      "start": 256.32,
+      "duration": 4.319,
+      "end": 260.639,
+      "text": "that is going to tell me the last one"
+    },
+    {
+      "start": 258.4,
+      "duration": 4.6,
+      "end": 263.0,
+      "text": "because it follows a last in first out"
+    },
+    {
+      "start": 260.639,
+      "duration": 4.321,
+      "end": 264.96000000000004,
+      "text": "mechanism if you keep something in the"
+    },
+    {
+      "start": 263.0,
+      "duration": 3.52,
+      "end": 266.52,
+      "text": "data structure and you want to check out"
+    },
+    {
+      "start": 264.96,
+      "duration": 5.04,
+      "end": 270.0,
+      "text": "which one was the last thing that you"
+    },
+    {
+      "start": 266.52,
+      "duration": 5.72,
+      "end": 272.24,
+      "text": "kept that's where stack comes in got it"
+    },
+    {
+      "start": 270.0,
+      "duration": 4.919,
+      "end": 274.919,
+      "text": "so what I will be doing is I'll be doing"
+    },
+    {
+      "start": 272.24,
+      "duration": 4.88,
+      "end": 277.12,
+      "text": "a dryon using the stack data structure"
+    },
+    {
+      "start": 274.919,
+      "duration": 5.601,
+      "end": 280.52,
+      "text": "so let's take the stack data structure"
+    },
+    {
+      "start": 277.12,
+      "duration": 5.6,
+      "end": 282.72,
+      "text": "so this is my stack data structure now"
+    },
+    {
+      "start": 280.52,
+      "duration": 4.399,
+      "end": 284.919,
+      "text": "at the opening bracket we need to"
+    },
+    {
+      "start": 282.72,
+      "duration": 4.84,
+      "end": 287.56,
+      "text": "preserve the openings so I'll just"
+    },
+    {
+      "start": 284.919,
+      "duration": 5.72,
+      "end": 290.639,
+      "text": "preserve this opening after this I'll go"
+    },
+    {
+      "start": 287.56,
+      "duration": 5.12,
+      "end": 292.68,
+      "text": "to the next one now this is a closing"
+    },
+    {
+      "start": 290.639,
+      "duration": 4.521,
+      "end": 295.16,
+      "text": "bracket whenever you get a closing"
+    },
+    {
+      "start": 292.68,
+      "duration": 4.44,
+      "end": 297.12,
+      "text": "bracket you take out the top element"
+    },
+    {
+      "start": 295.16,
+      "duration": 5.16,
+      "end": 300.32000000000005,
+      "text": "from the stack you take out the top"
+    },
+    {
+      "start": 297.12,
+      "duration": 5.16,
+      "end": 302.28000000000003,
+      "text": "element from the stack and you compare"
+    },
+    {
+      "start": 300.32,
+      "duration": 4.52,
+      "end": 304.84,
+      "text": "with the current closing are they of the"
+    },
+    {
+      "start": 302.28,
+      "duration": 4.919,
+      "end": 307.19899999999996,
+      "text": "similar types you say yes and you're"
+    },
+    {
+      "start": 304.84,
+      "duration": 5.04,
+      "end": 309.88,
+      "text": "fine you can move ahead again you get an"
+    },
+    {
+      "start": 307.199,
+      "duration": 4.801,
+      "end": 312.0,
+      "text": "opening you have to preserve them so you"
+    },
+    {
+      "start": 309.88,
+      "duration": 4.36,
+      "end": 314.24,
+      "text": "preserve it in your stack you preserve"
+    },
+    {
+      "start": 312.0,
+      "duration": 6.44,
+      "end": 318.44,
+      "text": "it in your stack after that you get"
+    },
+    {
+      "start": 314.24,
+      "duration": 7.48,
+      "end": 321.72,
+      "text": "another opening again you preserve"
+    },
+    {
+      "start": 318.44,
+      "duration": 5.599,
+      "end": 324.039,
+      "text": "it in your stack after that you again"
+    },
+    {
+      "start": 321.72,
+      "duration": 5.08,
+      "end": 326.8,
+      "text": "get a closing this time when you getting"
+    },
+    {
+      "start": 324.039,
+      "duration": 4.6,
+      "end": 328.639,
+      "text": "a closing what you will do is you will"
+    },
+    {
+      "start": 326.8,
+      "duration": 5.56,
+      "end": 332.36,
+      "text": "head over and get the"
+    },
+    {
+      "start": 328.639,
+      "duration": 6.921,
+      "end": 335.56,
+      "text": "last opening that you had and you see"
+    },
+    {
+      "start": 332.36,
+      "duration": 5.839,
+      "end": 338.199,
+      "text": "that they're matching fine after that"
+    },
+    {
+      "start": 335.56,
+      "duration": 5.44,
+      "end": 341.0,
+      "text": "you get again an opening so you take it"
+    },
+    {
+      "start": 338.199,
+      "duration": 4.681,
+      "end": 342.88,
+      "text": "after that you get a closing so you take"
+    },
+    {
+      "start": 341.0,
+      "duration": 4.68,
+      "end": 345.68,
+      "text": "that closing and you head over to the"
+    },
+    {
+      "start": 342.88,
+      "duration": 5.24,
+      "end": 348.12,
+      "text": "stack you take out from it and you see"
+    },
+    {
+      "start": 345.68,
+      "duration": 4.92,
+      "end": 350.6,
+      "text": "that they are matching and if they're"
+    },
+    {
+      "start": 348.12,
+      "duration": 5.6,
+      "end": 353.72,
+      "text": "matching it's fine after that you get to"
+    },
+    {
+      "start": 350.6,
+      "duration": 5.159,
+      "end": 355.759,
+      "text": "the last one it's a closing bracket and"
+    },
+    {
+      "start": 353.72,
+      "duration": 5.24,
+      "end": 358.96000000000004,
+      "text": "if it is a closing one again you go to"
+    },
+    {
+      "start": 355.759,
+      "duration": 5.401,
+      "end": 361.16,
+      "text": "the stack and you see hey stack what is"
+    },
+    {
+      "start": 358.96,
+      "duration": 4.239,
+      "end": 363.19899999999996,
+      "text": "the last one he says this one oh you're"
+    },
+    {
+      "start": 361.16,
+      "duration": 5.0,
+      "end": 366.16,
+      "text": "matching perfect and after that the"
+    },
+    {
+      "start": 363.199,
+      "duration": 6.0,
+      "end": 369.199,
+      "text": "iteration is over and you see that the"
+    },
+    {
+      "start": 366.16,
+      "duration": 5.84,
+      "end": 372.0,
+      "text": "stack is empty what does it mean for"
+    },
+    {
+      "start": 369.199,
+      "duration": 5.84,
+      "end": 375.039,
+      "text": "every opening for every opening that I"
+    },
+    {
+      "start": 372.0,
+      "duration": 5.479,
+      "end": 377.479,
+      "text": "preserved I got a corresponding closing"
+    },
+    {
+      "start": 375.039,
+      "duration": 5.481,
+      "end": 380.52,
+      "text": "so thereby I can say that this"
+    },
+    {
+      "start": 377.479,
+      "duration": 7.28,
+      "end": 384.75899999999996,
+      "text": "particular string is a Balan string got"
+    },
+    {
+      "start": 380.52,
+      "duration": 7.0,
+      "end": 387.52,
+      "text": "it perfect now what I will do is I'll"
+    },
+    {
+      "start": 384.759,
+      "duration": 4.921,
+      "end": 389.68,
+      "text": "now do the same iteration over the"
+    },
+    {
+      "start": 387.52,
+      "duration": 4.04,
+      "end": 391.56,
+      "text": "second string to understand how do we"
+    },
+    {
+      "start": 389.68,
+      "duration": 4.519,
+      "end": 394.199,
+      "text": "figure out that it is"
+    },
+    {
+      "start": 391.56,
+      "duration": 4.32,
+      "end": 395.88,
+      "text": "unbalanced again we can start from here"
+    },
+    {
+      "start": 394.199,
+      "duration": 3.881,
+      "end": 398.08,
+      "text": "maybe I can I can take a stack so that"
+    },
+    {
+      "start": 395.88,
+      "duration": 4.319,
+      "end": 400.199,
+      "text": "we understand it in a much better way"
+    },
+    {
+      "start": 398.08,
+      "duration": 4.72,
+      "end": 402.8,
+      "text": "perfect I've taken a stack first one is"
+    },
+    {
+      "start": 400.199,
+      "duration": 5.481,
+      "end": 405.68,
+      "text": "an opening one so I preserve it after"
+    },
+    {
+      "start": 402.8,
+      "duration": 4.92,
+      "end": 407.72,
+      "text": "that I go to the next one now this is a"
+    },
+    {
+      "start": 405.68,
+      "duration": 4.359,
+      "end": 410.039,
+      "text": "closing bracket so whenever it's a"
+    },
+    {
+      "start": 407.72,
+      "duration": 4.96,
+      "end": 412.68,
+      "text": "closing bracket I get the top of the"
+    },
+    {
+      "start": 410.039,
+      "duration": 4.6,
+      "end": 414.639,
+      "text": "stack I get the top of the stack and I"
+    },
+    {
+      "start": 412.68,
+      "duration": 4.0,
+      "end": 416.68,
+      "text": "see that they're matching I see that"
+    },
+    {
+      "start": 414.639,
+      "duration": 4.361,
+      "end": 419.0,
+      "text": "they're matching so it's fine again I go"
+    },
+    {
+      "start": 416.68,
+      "duration": 5.199,
+      "end": 421.879,
+      "text": "to this one it's an opening so I'll take"
+    },
+    {
+      "start": 419.0,
+      "duration": 6.0,
+      "end": 425.0,
+      "text": "it off after that again it's an opening"
+    },
+    {
+      "start": 421.879,
+      "duration": 6.081,
+      "end": 427.96000000000004,
+      "text": "so I'll take it off this time it's a"
+    },
+    {
+      "start": 425.0,
+      "duration": 5.039,
+      "end": 430.039,
+      "text": "closing whenever it's a closing I go"
+    },
+    {
+      "start": 427.96,
+      "duration": 5.359,
+      "end": 433.31899999999996,
+      "text": "back to the stack and I take out the"
+    },
+    {
+      "start": 430.039,
+      "duration": 5.72,
+      "end": 435.759,
+      "text": "closing and I match and it's a match"
+    },
+    {
+      "start": 433.319,
+      "duration": 5.481,
+      "end": 438.8,
+      "text": "again it's it's a opening so I take it"
+    },
+    {
+      "start": 435.759,
+      "duration": 4.44,
+      "end": 440.199,
+      "text": "off next time it's a closing so you go"
+    },
+    {
+      "start": 438.8,
+      "duration": 3.44,
+      "end": 442.24,
+      "text": "to the stack and say which is the last"
+    },
+    {
+      "start": 440.199,
+      "duration": 5.201,
+      "end": 445.40000000000003,
+      "text": "scene so it gives you this one and you"
+    },
+    {
+      "start": 442.24,
+      "duration": 5.6,
+      "end": 447.84000000000003,
+      "text": "say it's a m match and if it is a mess"
+    },
+    {
+      "start": 445.4,
+      "duration": 4.56,
+      "end": 449.96,
+      "text": "match you're done and dusted yes you're"
+    },
+    {
+      "start": 447.84,
+      "duration": 5.44,
+      "end": 453.28,
+      "text": "done and dusted so so it's very"
+    },
+    {
+      "start": 449.96,
+      "duration": 5.2,
+      "end": 455.15999999999997,
+      "text": "important to preserve the opening one to"
+    },
+    {
+      "start": 453.28,
+      "duration": 4.68,
+      "end": 457.96,
+      "text": "figure out which was the last one"
+    },
+    {
+      "start": 455.16,
+      "duration": 5.12,
+      "end": 460.28000000000003,
+      "text": "because every opening should have a"
+    },
+    {
+      "start": 457.96,
+      "duration": 4.16,
+      "end": 462.12,
+      "text": "corresponding closing and in the same"
+    },
+    {
+      "start": 460.28,
+      "duration": 4.96,
+      "end": 465.23999999999995,
+      "text": "order and the same order that is very"
+    },
+    {
+      "start": 462.12,
+      "duration": 5.56,
+      "end": 467.68,
+      "text": "very important understood uh some other"
+    },
+    {
+      "start": 465.24,
+      "duration": 5.679,
+      "end": 470.919,
+      "text": "cases if you want to do a super quick"
+    },
+    {
+      "start": 467.68,
+      "duration": 5.199,
+      "end": 472.879,
+      "text": "dry run some other cases would be let's"
+    },
+    {
+      "start": 470.919,
+      "duration": 4.84,
+      "end": 475.75899999999996,
+      "text": "say you take a string which is opening"
+    },
+    {
+      "start": 472.879,
+      "duration": 5.401,
+      "end": 478.28000000000003,
+      "text": "opening and closing and then I take a"
+    },
+    {
+      "start": 475.759,
+      "duration": 4.601,
+      "end": 480.36,
+      "text": "stack first one I have opening so you"
+    },
+    {
+      "start": 478.28,
+      "duration": 3.639,
+      "end": 481.919,
+      "text": "can put that in then I again have"
+    },
+    {
+      "start": 480.36,
+      "duration": 3.119,
+      "end": 483.47900000000004,
+      "text": "opening so you can put that in then"
+    },
+    {
+      "start": 481.919,
+      "duration": 4.041,
+      "end": 485.96,
+      "text": "again I have a closing so for this"
+    },
+    {
+      "start": 483.479,
+      "duration": 4.761,
+      "end": 488.24,
+      "text": "closing you'll get this one which is"
+    },
+    {
+      "start": 485.96,
+      "duration": 5.0,
+      "end": 490.96,
+      "text": "typically matching and after that the"
+    },
+    {
+      "start": 488.24,
+      "duration": 5.88,
+      "end": 494.12,
+      "text": "iteration is over but the stack still"
+    },
+    {
+      "start": 490.96,
+      "duration": 6.4,
+      "end": 497.35999999999996,
+      "text": "has an opening bracket which means every"
+    },
+    {
+      "start": 494.12,
+      "duration": 5.12,
+      "end": 499.24,
+      "text": "opening did not get a closing got it"
+    },
+    {
+      "start": 497.36,
+      "duration": 5.0,
+      "end": 502.36,
+      "text": "same might happen for something like"
+    },
+    {
+      "start": 499.24,
+      "duration": 4.519,
+      "end": 503.759,
+      "text": "this where you're just closing in that"
+    },
+    {
+      "start": 502.36,
+      "duration": 4.04,
+      "end": 506.40000000000003,
+      "text": "scenario"
+    },
+    {
+      "start": 503.759,
+      "duration": 5.241,
+      "end": 509.0,
+      "text": "whenever you have a stack and you"
+    },
+    {
+      "start": 506.4,
+      "duration": 5.479,
+      "end": 511.87899999999996,
+      "text": "encounter a closing bracket the stack"
+    },
+    {
+      "start": 509.0,
+      "duration": 5.479,
+      "end": 514.479,
+      "text": "will be M that means you don't have a"
+    },
+    {
+      "start": 511.879,
+      "duration": 6.761,
+      "end": 518.64,
+      "text": "corresponding opening for the closing so"
+    },
+    {
+      "start": 514.479,
+      "duration": 6.0,
+      "end": 520.479,
+      "text": "this is also unbalanced got it so time"
+    },
+    {
+      "start": 518.64,
+      "duration": 3.16,
+      "end": 521.8,
+      "text": "to write down the pseudo code again"
+    },
+    {
+      "start": 520.479,
+      "duration": 3.601,
+      "end": 524.08,
+      "text": "super simple we're going to write the"
+    },
+    {
+      "start": 521.8,
+      "duration": 4.68,
+      "end": 526.4799999999999,
+      "text": "function just going to return a bullion"
+    },
+    {
+      "start": 524.08,
+      "duration": 5.24,
+      "end": 529.32,
+      "text": "stating true or false if it is balanced"
+    },
+    {
+      "start": 526.48,
+      "duration": 4.68,
+      "end": 531.16,
+      "text": "or unbalanced respectively so I'll be"
+    },
+    {
+      "start": 529.32,
+      "duration": 5.32,
+      "end": 534.6400000000001,
+      "text": "getting a"
+    },
+    {
+      "start": 531.16,
+      "duration": 6.0,
+      "end": 537.16,
+      "text": "string first thing we need a stack so"
+    },
+    {
+      "start": 534.64,
+      "duration": 4.4,
+      "end": 539.04,
+      "text": "maybe I'll be defining a stack so we"
+    },
+    {
+      "start": 537.16,
+      "duration": 3.239,
+      "end": 540.399,
+      "text": "stack s again depending on the"
+    },
+    {
+      "start": 539.04,
+      "duration": 3.84,
+      "end": 542.88,
+      "text": "programming language you're using you"
+    },
+    {
+      "start": 540.399,
+      "duration": 5.201,
+      "end": 545.6,
+      "text": "can Define the stack stack will be"
+    },
+    {
+      "start": 542.88,
+      "duration": 4.84,
+      "end": 547.72,
+      "text": "storing characters so maybe I can"
+    },
+    {
+      "start": 545.6,
+      "duration": 4.2,
+      "end": 549.8000000000001,
+      "text": "iterate over the string so assuming the"
+    },
+    {
+      "start": 547.72,
+      "duration": 5.08,
+      "end": 552.8000000000001,
+      "text": "String's length is n we can iterate till"
+    },
+    {
+      "start": 549.8,
+      "duration": 5.24,
+      "end": 555.04,
+      "text": "n minus one at index we know one thing"
+    },
+    {
+      "start": 552.8,
+      "duration": 5.96,
+      "end": 558.76,
+      "text": "if it is an opening bracket and the"
+    },
+    {
+      "start": 555.04,
+      "duration": 6.039,
+      "end": 561.079,
+      "text": "opening bracket will only be S of I"
+    },
+    {
+      "start": 558.76,
+      "duration": 9.8,
+      "end": 568.56,
+      "text": "equal to equal to"
+    },
+    {
+      "start": 561.079,
+      "duration": 10.32,
+      "end": 571.399,
+      "text": "this or S of I equal to equal to this or"
+    },
+    {
+      "start": 568.56,
+      "duration": 6.56,
+      "end": 575.1199999999999,
+      "text": "S of I equal to equal"
+    },
+    {
+      "start": 571.399,
+      "duration": 6.521,
+      "end": 577.92,
+      "text": "to this so that's the case you ask the"
+    },
+    {
+      "start": 575.12,
+      "duration": 5.08,
+      "end": 580.2,
+      "text": "stack hey stack can you store this one"
+    },
+    {
+      "start": 577.92,
+      "duration": 5.2,
+      "end": 583.12,
+      "text": "and the stack is going to store it"
+    },
+    {
+      "start": 580.2,
+      "duration": 5.36,
+      "end": 585.5600000000001,
+      "text": "perfect now the logic comes up whenever"
+    },
+    {
+      "start": 583.12,
+      "duration": 4.8,
+      "end": 587.92,
+      "text": "it's a closing bracket if it's a closing"
+    },
+    {
+      "start": 585.56,
+      "duration": 6.68,
+      "end": 592.2399999999999,
+      "text": "bracket at at any moment the stack is"
+    },
+    {
+      "start": 587.92,
+      "duration": 7.0,
+      "end": 594.92,
+      "text": "empty that means it doesn't have a"
+    },
+    {
+      "start": 592.24,
+      "duration": 5.039,
+      "end": 597.279,
+      "text": "corresponding it doesn't have a"
+    },
+    {
+      "start": 594.92,
+      "duration": 4.039,
+      "end": 598.959,
+      "text": "corresponding opening bracket for itself"
+    },
+    {
+      "start": 597.279,
+      "duration": 3.161,
+      "end": 600.4399999999999,
+      "text": "so you can just break out and return"
+    },
+    {
+      "start": 598.959,
+      "duration": 3.681,
+      "end": 602.64,
+      "text": "false"
+    },
+    {
+      "start": 600.44,
+      "duration": 5.36,
+      "end": 605.8000000000001,
+      "text": "otherwise what we will be doing is"
+    },
+    {
+      "start": 602.64,
+      "duration": 5.04,
+      "end": 607.68,
+      "text": "inside the else we'll be like okay the"
+    },
+    {
+      "start": 605.8,
+      "duration": 5.56,
+      "end": 611.3599999999999,
+      "text": "stack has something maybe I can just get"
+    },
+    {
+      "start": 607.68,
+      "duration": 6.96,
+      "end": 614.64,
+      "text": "out that element we can say character CH"
+    },
+    {
+      "start": 611.36,
+      "duration": 5.32,
+      "end": 616.6800000000001,
+      "text": "equal to St do top so you get the top"
+    },
+    {
+      "start": 614.64,
+      "duration": 4.56,
+      "end": 619.1999999999999,
+      "text": "and then you can pop it out because this"
+    },
+    {
+      "start": 616.68,
+      "duration": 5.96,
+      "end": 622.64,
+      "text": "will be required for comparison we know"
+    },
+    {
+      "start": 619.2,
+      "duration": 7.24,
+      "end": 626.44,
+      "text": "one thing it has to meet three"
+    },
+    {
+      "start": 622.64,
+      "duration": 6.52,
+      "end": 629.16,
+      "text": "conditions if s of I is equal to equal"
+    },
+    {
+      "start": 626.44,
+      "duration": 5.839,
+      "end": 632.2790000000001,
+      "text": "to the my bad it's a closing one so if"
+    },
+    {
+      "start": 629.16,
+      "duration": 5.359,
+      "end": 634.519,
+      "text": "this this is the closing one then the"
+    },
+    {
+      "start": 632.279,
+      "duration": 4.401,
+      "end": 636.68,
+      "text": "character that I got from the stack has"
+    },
+    {
+      "start": 634.519,
+      "duration": 3.721,
+      "end": 638.24,
+      "text": "to be the corresponding opening one has"
+    },
+    {
+      "start": 636.68,
+      "duration": 3.68,
+      "end": 640.3599999999999,
+      "text": "to be the corresponding opening one"
+    },
+    {
+      "start": 638.24,
+      "duration": 6.8,
+      "end": 645.04,
+      "text": "perfect so either this condition should"
+    },
+    {
+      "start": 640.36,
+      "duration": 6.96,
+      "end": 647.32,
+      "text": "be met or or I should be like s of I is"
+    },
+    {
+      "start": 645.04,
+      "duration": 4.64,
+      "end": 649.68,
+      "text": "equal to equal to if it is this"
+    },
+    {
+      "start": 647.32,
+      "duration": 6.48,
+      "end": 653.8000000000001,
+      "text": "particular closing then the character"
+    },
+    {
+      "start": 649.68,
+      "duration": 7.52,
+      "end": 657.1999999999999,
+      "text": "should be this particular opening or or"
+    },
+    {
+      "start": 653.8,
+      "duration": 6.08,
+      "end": 659.88,
+      "text": "for the third bracket if it is not"
+    },
+    {
+      "start": 657.2,
+      "duration": 4.8,
+      "end": 662.0,
+      "text": "matching if it is not matching in that"
+    },
+    {
+      "start": 659.88,
+      "duration": 6.12,
+      "end": 666.0,
+      "text": "scenario you go to the this particular"
+    },
+    {
+      "start": 662.0,
+      "duration": 6.48,
+      "end": 668.48,
+      "text": "if else and you return a false if this"
+    },
+    {
+      "start": 666.0,
+      "duration": 4.24,
+      "end": 670.24,
+      "text": "particular if is matching well and good"
+    },
+    {
+      "start": 668.48,
+      "duration": 4.56,
+      "end": 673.04,
+      "text": "otherwise you return of false and the"
+    },
+    {
+      "start": 670.24,
+      "duration": 6.44,
+      "end": 676.6800000000001,
+      "text": "fall Loop ends and at the end of the day"
+    },
+    {
+      "start": 673.04,
+      "duration": 5.08,
+      "end": 678.12,
+      "text": "you say return stack. empty if the stack"
+    },
+    {
+      "start": 676.68,
+      "duration": 3.52,
+      "end": 680.1999999999999,
+      "text": "is empty that means everything is"
+    },
+    {
+      "start": 678.12,
+      "duration": 4.279,
+      "end": 682.399,
+      "text": "matched but the stack still has some"
+    },
+    {
+      "start": 680.2,
+      "duration": 4.8,
+      "end": 685.0,
+      "text": "opening brackets that means it didn't"
+    },
+    {
+      "start": 682.399,
+      "duration": 5.521,
+      "end": 687.92,
+      "text": "find it corresponding closing brackets"
+    },
+    {
+      "start": 685.0,
+      "duration": 5.72,
+      "end": 690.72,
+      "text": "that's it that will be it if I have to"
+    },
+    {
+      "start": 687.92,
+      "duration": 5.32,
+      "end": 693.24,
+      "text": "discuss the time complexity what will"
+    },
+    {
+      "start": 690.72,
+      "duration": 4.4,
+      "end": 695.12,
+      "text": "that be I'm just iterating over so"
+    },
+    {
+      "start": 693.24,
+      "duration": 5.92,
+      "end": 699.16,
+      "text": "that's a beo"
+    },
+    {
+      "start": 695.12,
+      "duration": 6.2,
+      "end": 701.32,
+      "text": "of N and what about the space complexity"
+    },
+    {
+      "start": 699.16,
+      "duration": 4.28,
+      "end": 703.4399999999999,
+      "text": "I'm using the stack data structure at"
+    },
+    {
+      "start": 701.32,
+      "duration": 3.6,
+      "end": 704.9200000000001,
+      "text": "the worst case if everything is an"
+    },
+    {
+      "start": 703.44,
+      "duration": 3.079,
+      "end": 706.519,
+      "text": "opening bracket I'm going to store"
+    },
+    {
+      "start": 704.92,
+      "duration": 3.64,
+      "end": 708.56,
+      "text": "everything out I'm going to store"
+    },
+    {
+      "start": 706.519,
+      "duration": 5.12,
+      "end": 711.639,
+      "text": "everything out this will be the time"
+    },
+    {
+      "start": 708.56,
+      "duration": 5.64,
+      "end": 714.1999999999999,
+      "text": "complexity and the space complexity can"
+    },
+    {
+      "start": 711.639,
+      "duration": 5.081,
+      "end": 716.72,
+      "text": "we make it better no because we'll have"
+    },
+    {
+      "start": 714.2,
+      "duration": 3.96,
+      "end": 718.1600000000001,
+      "text": "to match uh for every corresponding"
+    },
+    {
+      "start": 716.72,
+      "duration": 3.96,
+      "end": 720.6800000000001,
+      "text": "opening there should be a corresponding"
+    },
+    {
+      "start": 718.16,
+      "duration": 4.96,
+      "end": 723.12,
+      "text": "closing so we need to store it somewhere"
+    },
+    {
+      "start": 720.68,
+      "duration": 4.8,
+      "end": 725.4799999999999,
+      "text": "to have a match got it so the space"
+    },
+    {
+      "start": 723.12,
+      "duration": 4.08,
+      "end": 727.2,
+      "text": "complexity cannot be improved so this"
+    },
+    {
+      "start": 725.48,
+      "duration": 2.88,
+      "end": 728.36,
+      "text": "will wait for this one so if you're"
+    },
+    {
+      "start": 727.2,
+      "duration": 3.04,
+      "end": 730.24,
+      "text": "still now watching and if you've"
+    },
+    {
+      "start": 728.36,
+      "duration": 3.159,
+      "end": 731.519,
+      "text": "understood everything please please do"
+    },
+    {
+      "start": 730.24,
+      "duration": 2.839,
+      "end": 733.0790000000001,
+      "text": "consider giving us a like and if you're"
+    },
+    {
+      "start": 731.519,
+      "duration": 3.68,
+      "end": 735.199,
+      "text": "new to our channel do consider"
+    },
+    {
+      "start": 733.079,
+      "duration": 3.521,
+      "end": 736.5999999999999,
+      "text": "subscribing to us as well with this I'll"
+    },
+    {
+      "start": 735.199,
+      "duration": 4.76,
+      "end": 739.959,
+      "text": "be wrapping up this video let's meet in"
+    },
+    {
+      "start": 736.6,
+      "duration": 6.16,
+      "end": 742.76,
+      "text": "some other video till thenbye take"
+    },
+    {
+      "start": 739.959,
+      "duration": 4.801,
+      "end": 744.76,
+      "text": "care"
+    },
+    {
+      "start": 742.76,
+      "duration": 6.12,
+      "end": 748.88,
+      "text": "brenet your"
+    },
+    {
+      "start": 744.76,
+      "duration": 4.12,
+      "end": 748.88,
+      "text": "golden I will"
+    }
+  ]
+}

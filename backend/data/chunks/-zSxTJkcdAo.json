@@ -1,0 +1,141 @@
+{
+  "video_id": "-zSxTJkcdAo",
+  "position": 274,
+  "title": "L3. Longest Substring Without Repeating Characters | 2 Pointers and Sliding Window Playlist",
+  "url": "https://www.youtube.com/watch?v=-zSxTJkcdAo",
+  "chunk_count": 12,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "-zSxTJkcdAo",
+      "position": 274,
+      "title": "L3. Longest Substring Without Repeating Characters | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=-zSxTJkcdAo",
+      "start": 4.839,
+      "end": 147.79999999999998,
+      "text": "so we will be continuing with this ders A to Z DSA course and today we will be solving a problem which involves the concept of sliding window and two-p pointer but before doing that hey welcome back to the channel I hope you guys are doing extremely well so the problem that we will be solving today is longest substring without repeating characters so the problem States you will be given a string which might have any character lower case upper case special character any possible character out of the 256 characters that do exist on the planet can have any of them now your task is to figure out the longest substring what is the definition of a substring any portion of the string which is consecutive in nature b z e b is consecutive so this is a substring something like ca and C is not a substring because it is not consecuted now your task is to figure out the longest substring without repeating characters so if I take something like C A D this is a substring with a length three and every character is appearing once C appears once a appears once D appears once let's take c a d z c a d Zed is a possible oh sorry c a d b z c a d b z that is a possible substring which has a length five and each of the characters is appearing once only okay length five can I take this one C A DB z a no I cannot take this one why because a is appearing twice a is appearing twice so this cannot be a substring I cannot have repeating characters so thereby this could be a possible substring maybe this could be a possible substring because z a b c d doesn't have any repeating characters you can try out and you'll find out that the length five is the maximum that you can get and this is what you'll have to return not the subring just the length of the",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "-zSxTJkcdAo",
+      "position": 274,
+      "title": "L3. Longest Substring Without Repeating Characters | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=-zSxTJkcdAo",
+      "start": 143.2,
+      "end": 251.51899999999998,
+      "text": "subring just the length of the substring so if this problem comes up in an interview what is the extreme solution that you can think of probably generate all the substrings which is C is a possible substring C A is a possible substring c a d so basically c a c a d and then C A D B and then c a d b z so basically what I'm doing is I'm keeping on adding a character to character where C is my first character always so what I do is I start with C I keep on adding keep on adding keep on adding and eventually I'll cover all the sub strings that starts with C I can do the same with a I can start with a then I can add a d then a b then uh Zed and I can keep on adding and that will generate all the characters that starts with a similarly I can do it d d DB DB Z and I can keep on doing this very simple I can have a i pointer initially at C I can have a j and then I can move j then I can move j then I can move j and J will keep on adding to every substring that starts with C similarly for the next time I will move here and J will be here and then J will be here then J will be here and then eventually till the end similarly for the next time I will be here J will be here J will be here J will be here J will be here and J will go here so I can generate all the subrings by using I and J so maybe I can write the pseudo code then we'll be thinking about how to figure out that there are no repeating characters so I know that I equal to Z that's my first substring with C okay I can go ahead till n which is the size of the",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "-zSxTJkcdAo",
+      "position": 274,
+      "title": "L3. Longest Substring Without Repeating Characters | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=-zSxTJkcdAo",
+      "start": 245.64,
+      "end": 372.8,
+      "text": "till n which is the size of the string I know I can have a j I can have a j that starts with i because that is the first character that will be there in the substring and then I can go ahead till n and I can do a j++ very simple what is the next thing I know one thing if I have to generate all the substrings I can take a sub equal to m empty string and I can keep on adding sub equal to plus s of J will this generate all the sub strings yes because initially I'll add C then I'll add a to it then D to it and I'll keep on adding everything so for the first time when I is zero I will generate all the substrings when I is one I'll generate all the substrings that starts with eight this all Loop structure kind of generates all the substrings that starts with uh C and then a and then D and then B then Zed and so on so I know the Brute Force to generate all the substrings what do I need to add I need to make sure there are no repeating characters let's analyze I start with C okay I start with C sorry I then add a then a d then a b then uh Zed and then uh a can I say something that the moment I get a a this is repeating shall I go beyond no because I'm looking for no repeating characters if I go beyond it c a d b z A and D we could possibly go beyond but then a is already repeating so there's no point in going Beyond so I can break out the moment I get a repeating character because beyond that it will always have a repeating character we've already seen it so I know something I'll have to take a concept like hashing so that I can keep in my memory that hey this a was seen previously this a was seen",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "-zSxTJkcdAo",
+      "position": 274,
+      "title": "L3. Longest Substring Without Repeating Characters | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=-zSxTJkcdAo",
+      "start": 368.199,
+      "end": 501.67999999999995,
+      "text": "seen previously this a was seen previously now we know one thing that there are 255 characters so what we could do is we could probably use the hashing technique where we can start from 0 till 255 why can I do that because let's assume you write int value equal to character a you know what happens a is asky value which is 97 goes into the value so smaller a is 977 so each of these each of the characters that do exist on the planet starts from zero and ends set 255 when you convert them into integer the ask key format so I can probably do it so what I will do is I'll keep a hash array of 256 size initially with zero all of them are initialized with zero and then what I will do is whenever I'm getting a character which is basically the jth character basically the J character because I is standing here J is the one which is moving J is the one which is moving whenever I'm getting a character I will check was it seen previously was it seen previously I'm like okay let's maybe try to write down the go so be like hey if hash of s of J if you write this this possible thing gets converted into the integer format you don't have to do anything extraordinary and if this was seen previously you can break out because there's no point in going forward perfect and if this was not seen that means I'm okay I'm okay and if I'm okay can I compute the length imagine your your G is here and I is here what is the length this much is the length of the substring can I say the length is J minus I + 1 very yes and then I need to make sure I need the maximum maybe I can store the max length as zero and over here I can say max length equal to Max of length comma max length done and once I've done this I",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "-zSxTJkcdAo",
+      "position": 274,
+      "title": "L3. Longest Substring Without Repeating Characters | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=-zSxTJkcdAo",
+      "start": 495.28,
+      "end": 618.32,
+      "text": "length done and once I've done this I need to remember this I need to remember this J so maybe I can call the hash of G hash of s of G hey we have seen you so this a this a would this a will be marked I've seen you marked okay done finish Thea Loop finish Thea Loop and eventually you can go ahead and print out the max length so this will be exploring all the substrings and printing down the answer what will be the time complexity B go of n near about B of n so n into n is typically n squ what about the space complexity I'm using a hashing hash AR so that's we go of 256 because that is the size of the hash array I'm reinitializing it every that is perfectly okay this will be the time complexity and the space complexity and this is where the interviewer will not be happy with you and it'll ask you to optimize this so we need to optimize our previous solution how do I figure out what algorithm should I use first of all previous solution was taking n Square you've been asked to optimize it which means somewhere around n n login two and three somewhere around then right and over here there's something as substring so on any problem which involves finding the maximum substring or something like that you should straight away start thinking of a two pointer and a sliding window approach remember that okay so I'll be using a two pointer and sliding window it's not a specific algorithm it's rather a constructive algorithm which keeps on changing according to the problem statement the only that stays constant is the window you keep on moving the window how you move the window that depends on the problem statement and you'll have to do more and more problems you have to do a lot of dryon in order to understand two pointer and sliding window it's not a specific algorithm I repeat so first of all what",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "-zSxTJkcdAo",
+      "position": 274,
+      "title": "L3. Longest Substring Without Repeating Characters | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=-zSxTJkcdAo",
+      "start": 613.44,
+      "end": 737.199,
+      "text": "algorithm I repeat so first of all what I'll do is I'll take I'll note down the indexes that's the first thing I'll do so I've noted down all the indexes the next thing that I'll do is I'll take two pointers which is the left and the right okay and at the same time I'll take a hash why am I taking a hash I need to remember when did I see the character they'll understand as I move so I'll take a max length which is initially zero and in the hash I'll will be storing the character and the index where I've seen it previously so in sliding window whenever we consider L and R that means L2 R is the substring or the answer that I'm looking at so over here when I'm saying L is here R is here that means this is the substring that I'm considering got it first of all you're looking for no repeating characters so what I'll do is because this is my first character I'll go and look in the map have I seen C previously I haven't I haven't so what I'll do is I'll be like okay what is the length length is typically r- L + 1 how much is R 0 how much is L 0 + one that's one and that's greater than my max length it's fine so what I'll do is I'll take C put the index and put it into my map or whatever data Str I'm using the next thing I'll do is I'll take R and I'll move it to the next which is at e this time I'm considering this to be my substring and for this to be considered my substring or my answer this a shouldn't have appeared previously shouldn't have appeared previously I look and I don't see it so I can take it so what will be my length 1 - 0 + 1 which is 2 so I can update that to the max length because greater",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "-zSxTJkcdAo",
+      "position": 274,
+      "title": "L3. Longest Substring Without Repeating Characters | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=-zSxTJkcdAo",
+      "start": 732.92,
+      "end": 854.16,
+      "text": "that to the max length because greater than maxent and at the same time I can take a and put it into my hashmap saying that a was seen at the first index perfect what is my next thing I will take R and I'll move it to D again I'm considering this to be my answer and for that D shouldn't be in the hashmap and it is not so thereby this can be a possible subring and the length will be three which is greater than the maximum length so I'll be updating the max length amazing and I'll take D and I'll put it into the hashmap at the second index next I'll move out to B again for this to be considered my answer B should have been in the hashm but it is not sorry shouldn't be in the Ash and it is not and if it is not can I consider the length to be four I can that's greater than max length update it the same time take B and put it into the hash let's take R and move it forward this time R is at Z so if R is at Z again for this to be considered my hashmap Z is being added correctly SOC said are you in the hash says no I'm not in the hash so but it is not in the ash map I can say that this is the length which is pi which is greater than max length so max length can be updated perfect what is the next job a z and put it into your hashmap nice let's move on now what is r r is at a so I'm saying this is my possible substring but but but when I look for a I see a at the first index I see a at the first index so can I see this can I see this that this left pointer will be here can I see no because if I keep it here then there",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "-zSxTJkcdAo",
+      "position": 274,
+      "title": "L3. Longest Substring Without Repeating Characters | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=-zSxTJkcdAo",
+      "start": 848.16,
+      "end": 972.8,
+      "text": "because if I keep it here then there will still be repeating characters so L typically goes to wherever I have seen a wherever let's say this is map wherever I've seen this a + one that's where that's where it will go to correct or not and what is this a can I say this a to be nothing but this one this character which is s of R correct so left will go to one place ahead of that so I'll say okay maybe I can keep it here then I'll not find that then I'll not find that like okay then you'll not find that a for sure and if this happens the length turns out to be four which is not greater than Max Lin so I do not update it I do not update it but before moving the r the last a has been seen here so I'll go ahead and update this to Five I'll update the a to five so I can go ahead and update the E to five and again move on perfect this time I'm saying that this is my window and this is my answer I'm like okay have I seen B I have seen b at the third index I've seen b at the third index okay have seen b at the third index I'm like I can definitely not consider this but what can I consider one more this one L can move here because cannot consider B okay make sense so I'll take L and I'll move it you so what is the length now the length turns out to be three which is definitely not more than Max Lin perfect let's move R but before that before that before that please go ahead and update this to six and then you'll move on update B to six now what is the next one next one is this one and I'm saying C is to be added and I'm like can I add C can I add",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "-zSxTJkcdAo",
+      "position": 274,
+      "title": "L3. Longest Substring Without Repeating Characters | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=-zSxTJkcdAo",
+      "start": 964.56,
+      "end": 1087.559,
+      "text": "added and I'm like can I add C can I add C like yes yes this could be a possible sub this could be a possible subring because C is not in the substring but if you look properly if you look properly C is in the hashmap C is in the hashmap can I consider this I'm like on the naked eye yes but if you look look carefully see is there in the hashmap so you'll have to be careful you'll have to be careful when you're updating L please make sure please make sure the C that you're seeing that should be after L after not before because this is the portion you're considering this is the portion you're considering so whatever map you have seen whatever map what is basically map of s of R because s of R is C that should be greater than equal to l then only because this is the substring you're considering you shouldn't see beyond it before it no so C is not there C is not there there by the length is four and can I update no because I've got a better length perfect what will I do I'll update C to 7 I'll update C to 7 and I'll move out I'll move out to D this time when I look for D is there is there in the hash but but but but I'm only looking for this one and and L is at Fourth index whereas D is at second index so I do not update it and what is the length the length turns out to be five can I update no I already have five no need to update So eventually what happens is after this you update D to eight and then you move R and R goes out the moment it goes out you stop then and there got it so this is how the sliding window works you take initially an empty window and you start with the first and then you keep expanding keep expanding and the moment",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "-zSxTJkcdAo",
+      "position": 274,
+      "title": "L3. Longest Substring Without Repeating Characters | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=-zSxTJkcdAo",
+      "start": 1083.559,
+      "end": 1209.6789999999999,
+      "text": "expanding keep expanding and the moment you get something which violates your condition you move the left you move the left got it so time to write down the pseudo code again this won't be any language specific code I'll be keeping it as generic as possible if you want your language specific code you can find them below so I'll be writing down the function now the function gets a string right string s what is the first thing that we do first of all we need to have a map data structure I know that there are 256 characters let's not Define a map data structure because that will be taking something like a logarithmic time so what I'll do is I'll take a hash array of 256 and initially I'll run a loop from 0 to 255 and make sure that it is initialized with minus one everywhere minus one means I haven't seen the video what is the next thing I need the left point po I need the right pointer both of them can be kept at the zero index and I need the max length and the max length is initially zero I I'll keep on moving the right till it doesn't exceeds so quite simple I can take n equal to S do size and I can keep while R is lesser than n very simple R is lesser than n what the first thing that I do I know this is my substring I check I check if this character is in the map or not okay let's do it if the character is in the map which is like hash off S of R is my character is it in the map if it is in the map that's not going to be minus one that means it is in the map that means it's in the map right so we know that it is not in the map what after that what if your L is standing here and R is standing here so you're looking for this particular",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "-zSxTJkcdAo",
+      "position": 274,
+      "title": "L3. Longest Substring Without Repeating Characters | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=-zSxTJkcdAo",
+      "start": 1205.32,
+      "end": 1349.279,
+      "text": "so you're looking for this particular substrate and the C is here which doesn't make sense because you're just looking for this particular substrate you'll have to check it's within L to R okay let's see where it is if hash of s of R if that's greater than equal to L that means it's within the range and I'll have to update l so the L will be updated to updated to S of R plus one so I've updated l once I've updated L I can finish so I know that if I've seen it l would have been updated if needed and then I can figure out the length which is length equal to r - L + 1 and I can say max length equal to Max of length comma max length very obvious and what we do next is before moving ahead please make sure you do an hash of s of R to the current index which is r at the same time move r++ this is what you will do and that's it yes that is it and eventually you can return the max length and that will be it so that was about the code now it's time to analyze the time complexity we have a wind Loop correct and the Y Loop is being run by the r variable and the r is moving by one one place where do we start we always start L and R with this one and at every step R is moving one step ahead and eventually it reaches the end R always keeps moving by one step L is moving but that is not not contributing to my while loop correct only the r is so the r moves from here to here which is the length so thereby the time complexity is B go of n not more than that because I'm just moving R the while loop is dependent on R and this one hash that's V of one because I've taken an array and to access the array it's B of",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "-zSxTJkcdAo",
+      "position": 274,
+      "title": "L3. Longest Substring Without Repeating Characters | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=-zSxTJkcdAo",
+      "start": 1344.12,
+      "end": 1390.88,
+      "text": "array and to access the array it's B of one not B of login what about the space complexity the space complexity is beo of 256 which is pretty good so yes that will be it and that was TW pointer and sliding window algorithm not a specific algorithm you keep on taking it according to the problem statement so this will be it for this one and if you're still now watching and if you've understood everything please please do consider giving us a like and if you're new to our channel do consider subscribing to us as well with this I'll be wrapping up this video Let's SP some other the video till then byebye take care whenever your heart is broken don't ever forget your golden I",
+      "word_count": 130
+    }
+  ]
+}

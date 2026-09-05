@@ -1,0 +1,163 @@
+{
+  "video_id": "9XybHVqTHcQ",
+  "position": 163,
+  "title": "G-38. Cheapest Flights Within K Stops",
+  "url": "https://www.youtube.com/watch?v=9XybHVqTHcQ",
+  "chunk_count": 14,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "9XybHVqTHcQ",
+      "position": 163,
+      "title": "G-38. Cheapest Flights Within K Stops",
+      "url": "https://www.youtube.com/watch?v=9XybHVqTHcQ",
+      "start": 2.94,
+      "end": 120.36,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well so in this video we're going to solve cheapest flights within case tops now what does the problem State there are n cities and M edges connected by some number of flights you're given an array flights where flights I mean from to price which means you can fly from the city uh from to City uh to with a cost price of this you're also given three integers Source destination and K you have to return the cheapest price from source to destination with at most K stops if there is no such route return minus one now this is one of my most favorite algorithms why because this is the algorithm which is implemented on a large scale on a number of websites okay so cheapest flight within K stops so what does the problem State Imagine This is the flight paths I'm saying in order to fly uh fly from zero to the city one the cost is 100 in order to fly from the city 2 to City zero the cost is hundred one to C2 the cost is hundred uh one to ct3 the cost is 600 2 to 63 the cost is 200 okay now a customer comes up and says hey I want to fly from the city zero okay I don't reach the destination three so from here to here but I do not want to take a lot of stops but at Max yes at Max I can take one stop I can fly directly or at Max I can take one stop okay now are there any direct flights to this I don't see let's see if there are any flights which stop one so one and then one so if I take this route I have to stop at the city one and the cost will be 700 correct because 100 to fly from zero to City one and 600 to fly from City one to City three correct now",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "9XybHVqTHcQ",
+      "position": 163,
+      "title": "G-38. Cheapest Flights Within K Stops",
+      "url": "https://www.youtube.com/watch?v=9XybHVqTHcQ",
+      "start": 115.2,
+      "end": 224.099,
+      "text": "from City one to City three correct now the question comes can we have any other path with one stop and the answer to that is no any path we take will not end up at city 3. so there can be another path which is from here to here then to here which will cost me 100 plus 100 200 plus 200 which is 400 which is cheapest yes but the customer says no at Max I can fly one like I can stop at one stop not more than that if I take this path it ends up stopping at City one and City 2 and the customer does not have that much of time got it now you might be thinking what is a big deal in it let's apply a simple Textra and that should give our answer so what I'll do is I'll take a test case and try to apply a simple diagram and I will eventually explain you why a simple diagram will fail but let's take a test case and try to implement a simple diagram where we start from a given Source node we use a priority queue we use a distance array by the way if you do not know Dexter's algorithm I've already made a lot of videos on it go back in the series and watch it okay and then come back and watch this do not jump in between then you'll be like I don't understand I am assuming you have seen the previous video in the series then only I'm explaining this problem assuming that you already know what I have thought what I have taught in the previous videos okay okay so I'm assuming you know the extras algorithm so we will be taking this particular graph source is given as zero distance uh sorry destination is given as 2 and at maximum you're allowed two stops nothing more than two stops remember one thing if you're traveling something like this these two are considered stops the end point or the",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "9XybHVqTHcQ",
+      "position": 163,
+      "title": "G-38. Cheapest Flights Within K Stops",
+      "url": "https://www.youtube.com/watch?v=9XybHVqTHcQ",
+      "start": 218.159,
+      "end": 323.88,
+      "text": "considered stops the end point or the starting point is not considered as a stop keep that in your mind the middle points are the ones which are considered as stops okay so we're given the source we're given the destination and we are given the k equal to two so what will we be given as the input the input will be something like this will be given 0 1 5 and we're given 0 3 2 basically this Edge this Edge will be given all the edges so the step one is very simple I'll say step one is to create the graph from the edges and I've already taught you this in a lot of videos in the previous like in this series so please go back and watch it so first step is very simple create the graph with the given edges what is the next step the next step is whatever is the source go and Mark it as zero yes go ahead and Mark it as 0 and we will be assigning a priority queue which will be storing something that's the generic way which will be storing something like a distance a node and a stops I will try to apply it and see why will it fit okay very simple because that's the uh that's the first intuition that should come to my brain that practic you so I'll be like distance is zero the node is zero and initially I haven't taken any stops so zero comma zero comma zero right now what I'll do is I'll start iterating on the priority queue and that's the first thing so I'll be like okay distance till now zero note is zero and stop still now taken is zero right now can I see from 0 where can I move I can move to one or I can move to three these are the two possible places I can move so if I decide to move to one L Cost Plus 5 which will make me a total",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "9XybHVqTHcQ",
+      "position": 163,
+      "title": "G-38. Cheapest Flights Within K Stops",
+      "url": "https://www.youtube.com/watch?v=9XybHVqTHcQ",
+      "start": 316.919,
+      "end": 418.5,
+      "text": "L Cost Plus 5 which will make me a total cost of 5 and can I say the stops will be one because this is the stop where I am going to so the stops will increase by one and the distance will be added by the cost that it takes to fly from zero to one very simple now we look at one it is saying that previously I could reach one with infinity so I'll go to one and I'll say can I please update this so let's quickly update this and this will become cost five I'll be like okay five comma so let's quickly insert that into the priority queue 5 comma node one stop one insert it into the priority correct now what is the next thing I can also go to the node 3 with a cost of plus two so the total cost will be something like two now and the stops taken will be one so can I say the new costing will be 2 because in order to reach 3 I'm taking two cost so two comma three comma one step that's it do uh does 0 have any other adjacent cities to apply to no it just had couple of adjacent cities to apply to you can figure that out from the adjacency list so now I'll quickly erase this off let's erase the soft I've erased that off now priority key will say Hey listen I'm a minimum heat so which one will be at the top this one because that's the minimum I'm saying I'm gonna take a cost of two so I'm going to take a cost of 2 to reach the node 3 with a stop one stop okay and then I'll erase this from the priority queue let's quickly erase this from the priority queue now three will be like where can I go 3 is like I can go to one yes I can go to one three will be like let's go to one which",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "9XybHVqTHcQ",
+      "position": 163,
+      "title": "G-38. Cheapest Flights Within K Stops",
+      "url": "https://www.youtube.com/watch?v=9XybHVqTHcQ",
+      "start": 414.3,
+      "end": 516.599,
+      "text": "three will be like let's go to one which is the node one and I'll take a plus two so the total cost will become 4 y till now it was two now I'm taking plus two so the cost will become 4 and can I say I'll have one more stop so the stop will become two I'll definitely have one more stop the stop will become two so apparently as of now can I say I have again reached the node one with a cost of 2 so if the cost of 4 so Node 1 with a cost of 4 which stops two I'll just put that into the priority queue and I'll update the one with saying I can reach you at a cost of four perfect now what I'll do is I'll just omit this all let's quickly omit this one I vomited this off now again we'll go to the priority queue and we will see 4 is the minimum this time so I'll take out four so I'm like okay I can take a cost of four in order to reach a Node 1 and with a number of stops as two remember we were only allowed two stops we were only allowed two stops so after this it has to be the destination we cannot take any other thing it has to be the destination got it so what I'll do is I'll still go ahead we can check about the destination afterwards but we will still go ahead and see who are your adjacent notes it states one of my adjacent node is whole and it also States one of my adjacent node is too so imagine it tries to go to the node 2 and takes the cost of 5 which makes it a total cost of nine which stops us three remember three stops is still okay because this is the destination we can go ahead we can proceed okay so we see something that stops we have exceeded that's fine the",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "9XybHVqTHcQ",
+      "position": 163,
+      "title": "G-38. Cheapest Flights Within K Stops",
+      "url": "https://www.youtube.com/watch?v=9XybHVqTHcQ",
+      "start": 511.379,
+      "end": 610.4399999999999,
+      "text": "stops we have exceeded that's fine the cost taken is nine so I'll be like fine where did I reach that is the point of question I'll be like I reached node two with a cost of nine so cost of nine node two which top three is what I'll put into the priority queue correct and where else I can go I can go to the Note 4 I can and how much it will take plus one so the total cost this time will be 5 in order to reach 4. so again I can update this to something like five comma four with us top three because that is what I'll take now you might be saying this is not the destination you're taking a lot of Step a lot of stops okay just put that into the priority queue do not think perfect along with this so this step is done what's the next step It'll say who is the minimum in the priority queue and the priority queue says have a five four three other nine two three and I have a five one one so five one one is the minimum so I'll take it out five one one is the minimum so five sorry cost of five in order to reach one with a stop one because that's the straight path that it took correct now the point comes it's standing at one it says 2 is one of my adjacent and four is one of my adjacent so if I try to go to two the cost taken will be plus five and that will be a total cost of 10 right and if you see at 2 you have already reached 2 at a nine step so this will not be considered right and over here there's a four over here there's a four so I can try to go to four I can try to go to four but the cost then will be one more which will be a cost of six but the stops taken very",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "9XybHVqTHcQ",
+      "position": 163,
+      "title": "G-38. Cheapest Flights Within K Stops",
+      "url": "https://www.youtube.com/watch?v=9XybHVqTHcQ",
+      "start": 605.88,
+      "end": 727.98,
+      "text": "a cost of six but the stops taken very very important the stop sticking will be two because previously the stop was one I'm taking one more stop so the stops is two but but but if already reached 4 yes you have already reached 4 at a cost of five which is this path this is taking a larger cost so priority queue or the dextrose algorithm will say I will not consider it which is actually wrong which is actually wrong practically will say I'll not consider it because I already have reached till here at a costing of five I understand these are three stops but in case it was not three stops just imagine that scenario like if K was more than that it's like I'll not allow you because I have better but it cannot move ahead you need to understand this part which is storing five at four can this move ahead no because it already has three stops it cannot take the next Journey it cannot take the next Journey because three stops must include the destination as well but since I've taken this path which is costing two plus two plus one which is five which is the minimal it tends to say I have a better I have five I take five to reach five sorry four why will I take this distance which is costing me six so apparently I will not consider this which is a wrong which is a wrong direction why because this Direction cannot go here this is not possible because stops are you're done with stops but this is still possible five one and one which is seven this is still possible because just two stops that's allowed thereby if you store everything in terms of distance you store everything in terms of distance whenever you reach 2 that will be wrong so what you have to do is you have to store everything in terms of stops yes you have to store everything in terms of stops you'll be",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "9XybHVqTHcQ",
+      "position": 163,
+      "title": "G-38. Cheapest Flights Within K Stops",
+      "url": "https://www.youtube.com/watch?v=9XybHVqTHcQ",
+      "start": 723.36,
+      "end": 851.22,
+      "text": "everything in terms of stops you'll be like whenever I reach someone that's fine I will try to maintain this distance array but this will not be my first priority of judgment my first priority of judgment will be stops and then I can just keep on comparing all the distances I can keep on comparing and store it got it perfect so this is where we will not Implement something like a priority queue got it so what I'll do is I'll quickly erase this and try to implement the algorithm that will be required to solve this problem so I hope you have understood why I cannot re-implement the tax stress algorithm because it might happen you have taken this journey and you have got something like a very small distance but you cannot move ahead so this journey is of no use whereas someone else might take slightly more but he can go ahead that's why storing shortage distance will not work got it so what I'll do is I'll store stops node and distance so zero stops Source zero distance zero Source Mark does c so I'm at node 0 which has taken uh distance zero stop zero zero can go to 1 which will cost him five so one can be raised at a cost of five one can be reached at a cost of five with a stop one stop one one can be reached at a cost of five perfect I can also go to three which is very obvious I can go to three and I can go to one so if I go to three I'll cost plus two which will make me reach it into cost stop one node three at a cost of Two Perfect done omit this next Prodigy says which is the minimum radic is like I know which is the minimum stop this one do we require a practical we will talk about that as well so stop one Node 1 distance 5 where can one go one",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "9XybHVqTHcQ",
+      "position": 163,
+      "title": "G-38. Cheapest Flights Within K Stops",
+      "url": "https://www.youtube.com/watch?v=9XybHVqTHcQ",
+      "start": 844.98,
+      "end": 971.8199999999999,
+      "text": "Node 1 distance 5 where can one go one can go to four one can go to two one can go to four one can go to two Okay so what I'd be like is okay fine one can go to four right and if it goes to it will take another plus one which will make it a total distance of six four can be reached at a distance of six distance of six four and a stop two very very important because previously it is top one so plus one stop stop two nice next it can also go to something like two if it goes to two it will charge us another five which will make it a cost of ten so I can reach 2 at a cost of 10 and a stop of two stops perfect that'll be like stop two node 2 distance 10 amazing next I'll just go and eraser now radical says who is the shortest distance it says this stop sorry which the shot is stop stop one node three distance two perfect so I can go to 1 which will cost me another two so that will be yielding me a cost of five so I've already reached I've already reached one at a cost of five at a better at a better stops like taking consuming lesser number of stops will it make sense to consume more stops and reach at the same cost or more cost definitely not so not to be considered where can a tree go nowhere else three is done amazing next let's take it so this is done next 246 stops two I can say I'm at uh four and it has taken me six now four four can be like stops is two okay not not an issue four can only go to two and takes a one the cost will be updated to seven I got a better one seven okay but the stops taken is three fine that's the maximum we can allow because it might be the destination right so",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "9XybHVqTHcQ",
+      "position": 163,
+      "title": "G-38. Cheapest Flights Within K Stops",
+      "url": "https://www.youtube.com/watch?v=9XybHVqTHcQ",
+      "start": 965.459,
+      "end": 1090.679,
+      "text": "it might be the destination right so stop three node two cost of seven right and I can easily go and update two to seven and I've done this so this is done let's see the next cat what's the next guy next guy is very simple two comma two comma ten so I'll take the next guy and be like two comma two comma ten so stops two and I'm like which is the node oh that's the destination at least no need to go beyond we've reached so no need to go to its adjacent next three comma two comma seven again we've reached it's kind of over because this is again the destination no more going forward so ultimately I can say I have reached and if you look at this too it's storing 7 which is ultimately my minimum cost if I take at Max of K stops at Max of K stops and which is the path if I take somewhere out this path sorry my bad somewhere around this path rather which is this path which is taking seven somewhere on this this and this which is something like five one one and this one two stops why did we take one more stop because this is not a stop thereby inserting three is okay but do not go beyond three do not go beyond three if you're inserting three make sure it's a destination or do not go beyond at Max 3 and all the distances can be stored because that's what we are allowed to do not more than that got it now the question arises do you actually need a priority queue because what is the use of priority queue it always tells me the shortest stops or the minimum stops but do we require a practical because stops are increasing by plus one the distances are not something like plus four plus six plus seven it's like first you will always be at source at a stop zero and you take one step in all the direction",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "9XybHVqTHcQ",
+      "position": 163,
+      "title": "G-38. Cheapest Flights Within K Stops",
+      "url": "https://www.youtube.com/watch?v=9XybHVqTHcQ",
+      "start": 1086.539,
+      "end": 1199.76,
+      "text": "you take one step in all the direction to the adjacent cities so stop one stop one then you take add since it is another plus one plus one so if you carefully see it's like zero one one two three three it's increasing do you actually need a priority queue no because even if you take a queue data structure a topmost guy will always be the guy with the shortest number of stops I've already done a similar problem in the uh past in this series only right so I can say there's no need to take a practical because that adds an extra logarithmic thing I'll just take a cue and I know since the stops are increasing by plus one at every step it's constant the ins the increase is constant if the increase is constant I don't need a priority queue since the increase is constant the queue will make sure that it always gives me the shortest number of stops so so before moving on to the code is one thing to notice whenever we reach the destination do not stop because in future if you carefully see we reach the destination over here but going forward we reach the same destination at a better price do not stop do not stop and take the answer from here okay and if this is marked as Infinity you cannot then why mine okay so guys I hope you have understood the entire explanation so it's time to code it up as usual the C plus plus code is on the right and you can figure out the exact similar Java code on the left so we're given uh the number of notes or the number of uh airports and given the all the flight informations first thing create the graph so I need to store that just notes and the edge weights so we need a pair so just create it it's Auto of ID let's go across to all the flights information and I can say okay there's an edge from this",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "9XybHVqTHcQ",
+      "position": 163,
+      "title": "G-38. Cheapest Flights Within K Stops",
+      "url": "https://www.youtube.com/watch?v=9XybHVqTHcQ",
+      "start": 1194.78,
+      "end": 1321.98,
+      "text": "an edge from this remember it's a directed graph so I T of 1 and ID of 2 is the cost the graph duration is done next thing I can secure and in the queue I need to store three things so probably I can take a pair of end comma pair end comma n and this can be a Q and what do I need to store Q dot push so something like I need to store stops definitely I need to store The Source I need to store the distance which is the new one perfect next I need to declare a distance array so let's quickly declare a distance array of same size probably I can assign that to 1 E9 now I know the distance till the source is zero these things I definitely know at the end of the day if the distance to the destination is still 1 E9 that means we never reached and we can return a minus one else we can go ahead and return whatever distance it took and in between we can perform the foreign and at the same time I can secure.pop now can I write the stops as it dot first I can so go ahead and write it and can I write uh the node as it dot second DOT first because this is how I'm storing if you see properly I'm storing it something like a stops and then a pair of node comma the distance that's how I'm storing Okay so what will the distance or the cost will be i t dot second dot second perfect but if the stops has exceeded the minimum number of stops given to us no need to go to any further adjacent cities and I'll just drop it over here I can say Auto of either can be written as adjacent of node okay and then I can say what is the adjacent node and it will be like first right and I can also say what is the edge weight where I I did of",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "9XybHVqTHcQ",
+      "position": 163,
+      "title": "G-38. Cheapest Flights Within K Stops",
+      "url": "https://www.youtube.com/watch?v=9XybHVqTHcQ",
+      "start": 1317.419,
+      "end": 1415.8799999999999,
+      "text": "is the edge weight where I I did of second is the adjacent node because once you've got the edge weight can I say Cost Plus edw is what I'll take more to reach the adjacent node and if that is lesser than standard text one then this and the stops taken till now is just okay till now because I can take one more in order to reach the destination till now if this is the case can I say distance of adjacent node will update itself to Cost Plus e d w which is the edge weight and can I say the Q would be like okay fine I've taken one more stops that's what I did and at the same time can I see I'll I have reached the adjacent note yes at the same time can I see the cost is Cost Plus edw I can and this is how the iteration will be done and then you can return the answer so I've compiled this and it is compiling now I'll quickly submit this and see if this is working fine you see uh we have successfully submitted this particular problem we can figure out the space complexity very easily but what about the time complexity so if you remember the time complexity was e log V of dextrose algorithm but we are not using anything as a priority queue so can we remove log B log B yes I can so can I say e is the total number of edges that is that is what the definition was in the extra I've already proved this in the previous video go and watch it so what is the total number of edges how can I say it is nothing but this flights if I just take it applies dot size because that is what the number of edges is that's it that is the time complexity so guys so guys I hope I was able to explain you the entire algorithm and the explanation so just in case I was please",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 13,
+      "video_id": "9XybHVqTHcQ",
+      "position": 163,
+      "title": "G-38. Cheapest Flights Within K Stops",
+      "url": "https://www.youtube.com/watch?v=9XybHVqTHcQ",
+      "start": 1412.1,
+      "end": 1435.82,
+      "text": "explanation so just in case I was please please please make sure you like this video and if you are new to our Channel what are you waiting for hit that subscribe button right away and if you haven't checked out our DP series and the SDC the links are in the description experience about the video again whenever your heart is broken don't ever forget your golden I",
+      "word_count": 69
+    }
+  ]
+}

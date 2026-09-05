@@ -1,0 +1,163 @@
+{
+  "video_id": "WJaij9ffOIY",
+  "position": 283,
+  "title": "L12. Minimum Window Substring | 2 Pointers and Sliding Window Playlist",
+  "url": "https://www.youtube.com/watch?v=WJaij9ffOIY",
+  "chunk_count": 14,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "WJaij9ffOIY",
+      "position": 283,
+      "title": "L12. Minimum Window Substring | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=WJaij9ffOIY",
+      "start": 3.439,
+      "end": 139.08,
+      "text": "so let's continue with the two pointer and sliding window playlist from this driver A2Z DS course what we starting off hey every welcome back to the channel I hope you guys are doing extremely well so the problem that we will be solving today is minimum window subring now what is the problem exactly stating it is stating that it'll be given a string s it'll be given a string T it'll have to give me the minimum length the minimum length substring in the string s which has all the characters of t in it let's understand you know what is a substring right any contagious portion of the string any contagious portion of the string okay so what I'm trying to do is uh let's pick up this one which is dle a doesn't have all the elements of t in it or it doesn't it doesn't have a b it doesn't have a c so I cannot consider this substring perfect can I pick up this one double a double b c yes it has a it has B it has C it has more occurrences but I'm fine I'm fine with that okay but what do I need I need the minimum length so if you look at this string you'll figure out that the minimum length is this one because B CA again the order doesn't matter it has a it has B it has C so this can be a valid answer or rather this is the smallest substring and this is what you'll have to return you have to return b c a not the length you have to return the substring in s which contains all the characters of t a quick uh H case even if it has something like able BC in that scenario B C A will not be a possible substring why because in the character t a occurs once B occurs twice C occurs once so the substring that you consider this should be the minimum occurrences and over here",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "WJaij9ffOIY",
+      "position": 283,
+      "title": "L12. Minimum Window Substring | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=WJaij9ffOIY",
+      "start": 134.28,
+      "end": 258.959,
+      "text": "be the minimum occurrences and over here B is not appearing two times B can appear five times but minimal has to be satisfied all the characters all the characters should be there even if they're duplicates doesn't matter so for a double BC I can say that this is a possible one because it has be two times and that is what I want got it so keep that in mind uh what if uh this problem comes up in an interview the extreme KN solution that I can think of is generate all the substrings like that's the first solution that comes to my brain you know we stand at the first character and this is the first substring this is the second one this is the third one this is the fourth one this is the fifth one and so on we can generate all all the substrings got it or I can stand over here and I can again generate all the substrings that starts with this one and I can do that with every index correct okay but now the question arises imagine imagine you're standing over here and trying to generate all the substrings and you're standing over here now this is having d a a b c now we know for sure that it has all the elements of t in it a is there b is there C is there it has all the elements of t in it but how do you check it programmatically now one of the ways to check it programmatically is you basically say a occur once B occurs once C occurs once and you'll have to check okay D no a yes A A B yes B yes C yes so all of the three do appear like whatever minimum number of times I want they do appear that's one of the ways to do it but it'll still have to scan through the entire t scan through the entire te to make sure that everything appears in this is there a",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "WJaij9ffOIY",
+      "position": 283,
+      "title": "L12. Minimum Window Substring | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=WJaij9ffOIY",
+      "start": 252.68,
+      "end": 390.36,
+      "text": "everything appears in this is there a better way there is there is that is what I'll try to explain now let me erase this and let's assume uh we start with the first index which is d like the zero index and we have a j so what we will do is we will take a map data structure and we'll store all the characters of T along with its frequency in it that means a occur once B occurs once C occurs once so so basically I stored a character comma frequency in it what I'll do is I'll take a count as zero I'll start I'm standing at D so what you do is you get into the map and you do a D minus one because D doesn't appear and if it doesn't appear I don't care I don't care okay next I take the J and I move it to D and D counter goes to minus two okay next I take the J I move it to a now this is the moment you see that a already appears and it has a positive value why does it have a positive value because it was pre-inserted because it was pre-inserted and if it is pre-inserted it has a positive value that means you got one of the characters in one of the characters in agreed okay let's reduce the value you always reducing value when you enter reducing value when you enter okay let's take J and move it here now this time when you look for this a it is appearing zero times it's not positive it's not positive so you no more increment the count because it's gone you've got your One Ence you've got your One Ence none understood so you just head over and reduce its value always reduce insertion over here will mean reduction again gets reduced its value to minus two next you take the J and you end up at B so when you see B it's a positive why is it positive because it",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "WJaij9ffOIY",
+      "position": 283,
+      "title": "L12. Minimum Window Substring | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=WJaij9ffOIY",
+      "start": 384.88,
+      "end": 510.84,
+      "text": "positive why is it positive because it was pre inserted is as of now I'm just reducing why is it positive pre-inserted so you increase it and then you reduce it to zero perfect next you go to B and when you are at B you seeing it's zero so it's not positive so you can just make it minus next you can go to C the moment you go to C you see that it is positive why is it positive because it was pre inserted and if it is pre-inserted what you can do is you can increase the count reduce it and before moving you see one thing the value of count is three you got three pre-inserted numbers of pre-inserted characters in your map what does that mean this three is equalent to the size that means you got all the characters all the characters of T in this particular substring so thereby you can say that this is a valid substring do we need to add this one no it look looking for a minimum so you can stop over here you can stop over here and you can store its length and the starting index store its length and the starting index which will help you to generate the subst string afterwards got it perfect next what I'll do is I'll try to write down the Pudo code you can generate all the substrings and for all the valid ones you pick up the minimum you pick up the minimum got it so what do I require let's quickly try to think of the pseudo code I'll be requiring uh maybe I can just start writing I'll be requiring the length yes so I will be requiring the minimum length that can be initially stored as a big number something like a 10^ 9 or somewhere around that I'll be requiring the starting index so maybe I can write it as starting index where the answer starts and initially I can keep it as minus one I'll be heading over and I'll be",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "WJaij9ffOIY",
+      "position": 283,
+      "title": "L12. Minimum Window Substring | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=WJaij9ffOIY",
+      "start": 505.159,
+      "end": 641.04,
+      "text": "one I'll be heading over and I'll be like 0 to n because all the starting indexes I will be considering and I can simply do a hash of 256 because it's storing all the English alphabets and I can initially put it as zero let us pre-insert all the characters of the unit let us pre-insert all the characters of T init so what I'll do is I'll just start iterating from I equal to sorry have the J equal to 0 to M again considering n to be the size of the string s m to be the size of the string t hash of T of j++ pretty simple okay done what is the other thing that I require I require a variable count count can be zero I can write down the inner loop so the inner loop will be from J equal to 0 to n not M it will go till n because I'm still iterating over the string s now what is the next thing that I'll do I will straight over check yes very important I'll check if hash of s of J was pre-inserted was it pre-inserted was it if it is Count equal to count + one okay after that I'll be like hash of s of J minus minus you insert it into the map inserting into the map means taking the numbers down okay right after this what you can do is you'll be like okay done with the thing is the count equivalent to M and if that is the case is the length what is the length G minus I + 1 is a substring l is it smaller than whatever you have got previously and if that is the case can you update the minimum length to this count like why not done after this you can just store the starting index to be I and you can break out there's no need to go further you can finish the if you can finish the for and you can finish the out four once",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "WJaij9ffOIY",
+      "position": 283,
+      "title": "L12. Minimum Window Substring | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=WJaij9ffOIY",
+      "start": 635.56,
+      "end": 761.16,
+      "text": "for and you can finish the out four once this is done you know the substring will be from the starting index depending on the programming language you're using the second variable can differ C++ users can straight away write the length it will pick up till like minimum length number of elements off like from the starting index that's a uh that will be it this will be your substring now what will be the time complexity let's analyze again two for Loops that's a b go of n² because hashing will take B go of one and the space complexity is B of 256 because I'm using a simple array to store all the English alphabets that will be the time complexity and the space complexity obviously the interor will not be happy with the B of n² is quadratic in nature and it ask you to optimize so we need to optimize on N squ that definitely means you have to think of a solution which is around B go of N and the problem is involving substring and minimum and most importantly the term window which means you have to think of a solution which is around sliding window and if you're thinking of a sliding window what do you require two pointers L and R already done a lot of problems in the playlist isn't it super simple that's what I'll do okay the now I know one thing I will be using uh sliding window and for that what I need is a left pointer and a right pointer let's start thinking what all do I need imagine I'm at this particular window I need to check if it has all the elements of t in it we just now did it in the blute force I'll be using the map concept okay fine so if I have to use the map concept I need the map right I need the map to pre-ore all the values so what I'll do is I'll pre- store all",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "WJaij9ffOIY",
+      "position": 283,
+      "title": "L12. Minimum Window Substring | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=WJaij9ffOIY",
+      "start": 754.88,
+      "end": 888.4799999999999,
+      "text": "so what I'll do is I'll pre- store all the values a is once B is once C is once so basically character comma frequency is what you have to restore in the map perfect what else do I need I need to count how many uh characters did I see from charact uh from the string T so we can keep a counter equal to zero at the same time I also need a minimum length which can initially be 10 to the power 9 and I need to store the starting index because for this question I need the string I need the substrate okay so this is what I will be keep can I start the window maybe yes so we'll be standing at the zero index that is my first segment are we seeing D in the map no that means it is not a part of the strength T so my count will not increase here count is the number of characters that I figured out from T from T I haven't figured out any so I'll do is I'll go ahead and insert D into the map over here insertion means reducing the value by minus one okay fine next I'll take R and I'll move it to the next which is D I'll again reduce the value so that will end up becoming two next I'll again take R this is the moment you need to understand over here we're standing at e what is the value of a one which means it's a positive value what does the positive value signify it was inserted from T into it three three window right before starting the window thing it was inserted and if that is the case you will end up doing a plus one you did figure out one character amazing but is the count is the count equivalent to the number of characters you need in t no so this is not a valid window you move ahead and you move R to here before",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "WJaij9ffOIY",
+      "position": 283,
+      "title": "L12. Minimum Window Substring | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=WJaij9ffOIY",
+      "start": 882.56,
+      "end": 1008.0,
+      "text": "move ahead and you move R to here before moving ahead please make sure you reduce it to zero and then you move ahead the r next time we are standing at a but the value of a is zero and if it is zero no I've already counted one occurrence now it doesn't signify I just pre-inserted one a and that's count so let's not count for this one so what I'll do is I'll reduce it to minus one and I'll take R and I'll move ahead I'll again have a e again not to be counted reduce it and move ahead this time when R moves to B it is B right and this is occurring once reinserted positive means pre-inserted because all I'm doing is reducing so if there is a positive means it was pre-inserted it is pre-inserted I can increase the count to two and what I can do is I can reduce its value to zero and I can take R and move it to the next one I have again B I can reduce it to minus one and I can move R this time when I move R I have a C and C has a value of one which means it was preinserted if it was pre-inserted I can increase the value to three this is the moment you say okay you can increase the value to three please make sure you reduce uh count is three count is three which means it's equivalent to the size of the string T and if it is equivalent can I say that this particular subring has all the characters of t in it it does and what is the length 1 2 3 4 5 6 7 8 is the length so you can go ahead and update date minimum length to eight and the starting index to zero done I'm standing at a window but what am I looking for a minimum window can I get red can I shrink it because I know",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "WJaij9ffOIY",
+      "position": 283,
+      "title": "L12. Minimum Window Substring | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=WJaij9ffOIY",
+      "start": 1002.72,
+      "end": 1125.32,
+      "text": "get red can I shrink it because I know these D are of no use maybe I can shrink and try to make it as small as possible till the answer is possible okay let's try to do it first thing I'll do is I'll take off this D which means I'll reduce it to Min -1 doesn't matter I'll reduce it to minus one and I'll take L to the next T now this is the moment I say hey wait this is a new substring is it valid it is because the count is still three so this particular substring is a smaller window is a smaller window and the size of the window is this much which is seven yes so I can the minimum length to seven and I can say I can probably start at one as okay next I can just remove this D which will make this D to be zero and it will take this L to The Next Step which is a okay so I'm standing at a so when I'm standing at a this is when you need to start uh a a is having minus two okay so I'll take it out which means I'll make it minus one I'm reducing it okay fine so even if I take this out even if I take this out the count still stays as three the count still stays as three which means this segment is also valid which is of length six and starting at two perfect amazing so you can take this out and you can take the L and move to the next this time you have another a and this turns to be zero so you took it off and now you're saying is this valid it says yes because the count is still three it is still valid and if this is still valid what you can do is you can update it to length five and you can say we can started the index 3 as well okay let's take this a off and",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "WJaij9ffOIY",
+      "position": 283,
+      "title": "L12. Minimum Window Substring | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=WJaij9ffOIY",
+      "start": 1118.72,
+      "end": 1245.76,
+      "text": "well okay let's take this a off and let's move to the next L the moment you move to the next L what happens is when you try to take this a off it gets inserted back to T it gets to positive number and if it gets to a positive number means that okay the count can reduce the count can reduce agreed agreed so before before before taking this off because I haven't taken it off I haven't taken it off this window is also valid this window is valid yeah when I take it off it might not be valid but as of now this window is still valid still valid because the a is zero as of now we just go back one step yeah let's take L over here oh my bad L over here and I'm seeing that the value of a is zero doesn't okay fine the count is still three I haven't taken it off the count is still three which means this window is valid thereby the minimum length goes to four and I can still start the fourth Index this is the moment when you take it off when you take it off the a becomes one after taking it off the a becomes one and you can reduce the count to someone got reinserted someone got reinserted I haven't figured out yet this is when you say you'll move L and you'll be like hey is this window valid no it is not valid why the count is two and if that is the case you straight away start increasing straight away start increasing so R goes over here to a so again when it goes to a you're standing at a and you're like what's the value of a it's positive man and the count will increase count will increase and a will reduce to zero and if the count again increases to three and that's equivalent this segment is also valid and that is of length four which I already have which I already",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "WJaij9ffOIY",
+      "position": 283,
+      "title": "L12. Minimum Window Substring | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=WJaij9ffOIY",
+      "start": 1241.559,
+      "end": 1368.1200000000001,
+      "text": "which I already have which I already have and if there are multiple answers just have to return one perfect now what the count is three you have a big window you have to shrink you have to shrink let's try to shrink it so when I'll try to shrink it I'll take off this B so when I take off this B this turns out to be zero and I'll take the L to the next one is this a valid one yes because the count is still three the count is still three this is still valid hence the length comes down to be three and the starting point is 0 1 2 3 4 5 6 none this is still valid next try to shrink it more take off B so when you take off B it goes down to be one and the count again reduces to two so taken off the value of count has reduced now this time you try to increase R the moment you try to increase r n and done finish and eventually the minimum length is three starting index is six so if you need the substring you can easily figure it out quite simple maybe it's time to write down the pseudo code it's going to be very very simple one I'll take the function I'll take the string do I have anything else yeah string t okay what do I need I need a map so hash of 256 assuming you have given all the English alphabets L equal to 0 r equal to 0 and definitely minimum length equal to a big value and maybe a starting index as minus one I think that should do what will you do initially you will iterate from zero till M where m is the length of the the string T and it a t of i++ you pre-insert them into the hashmap and again uh maybe we can take a count equal to zero as well perfect and M will be T do",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "WJaij9ffOIY",
+      "position": 283,
+      "title": "L12. Minimum Window Substring | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=WJaij9ffOIY",
+      "start": 1362.88,
+      "end": 1507.039,
+      "text": "be T do size n will be S do SI super right by the way I'm writing the pseudo code you can find out the Lang like the language specific code given below okay uh so we'll be starting off with the while loop so while will be R lesser than uh s do size because that is how much we will go perfect I know one thing if I'm standing at R and that R is already a positive in the hashmap that means I have got one among the T perfect and then I can straight away increase it sorry decrease it does that's what I was doing perfect what is the next next if if if the counts value is equivalent to T do size or M if that is the case can I say this is a possible answer this is a possible answer I can I'll be like hey let's compare the length the length is r - L + 1 and the length is comparable to minimum length I can straight away update minimum length to this length which is r - L + 1 and I can say starting index is equal to l done but if this is equal I'll try to shrink it I'll try to shrink it so what I'll do is I will run a while loop and I'll try to shrink it as much as possible so what I'll do is okay F Loop is running so I'll be like let's remove this C let's remove the cell so I'll be like okay hash of s of L let's try to remove it so after removal after removal if this value turns out to be greater than zero that means I reinserted I reinserted it into the map which means I will be doing a counter equal to counter minus one perfect and the while loop will keep on going till I have a valid substring I'll keep on shrinking the window once that is done I can straight away do r equal to r + 1 I",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "WJaij9ffOIY",
+      "position": 283,
+      "title": "L12. Minimum Window Substring | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=WJaij9ffOIY",
+      "start": 1500.559,
+      "end": 1623.279,
+      "text": "can straight away do r equal to r + 1 I can just again start expanding I'll expand it here and then I'll put it over here and then I'll keep on to it and this is where the while loop ends at the end of the day I can go ahead and say hey return if the starting index has never been updated please return an empty string because I didn't find a sub strring which has the string p otherwise return ASU like substring starting from starting index till the length which is typically minimum length depending on your programming language this might vary and that will be it yeah that will be it what will be the dime complexity okay now I'm taking a b go of M in order to put everything into the map I'm taking a b go of n over here and again the while loop at the worst case oh overall might run till B go of n so can I say that the time complexity is 2 N plus b go of M which is for this one am I using anything else no and the space complexity will be beo of 256 assuming you have all the English characters given and yeah that will be the most optimal solution yeah that's the cleanest code that I could have written so that you understand cleanest readable code I can if you ask smart enough you can combine these two statements into one and also these two statements into one but again in interviews do not do it always try to write it in this possible way because it's more and more readable the interview can understand you much better so that's it yeah that will wait for this one so if you're still now watching and if you've understood everything please please do consider giving us a like and if you're new to our channel do consider subscribing to us as well with this I'll be wrapping up this video let's me some the video your heart is",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 13,
+      "video_id": "WJaij9ffOIY",
+      "position": 283,
+      "title": "L12. Minimum Window Substring | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=WJaij9ffOIY",
+      "start": 1617.24,
+      "end": 1627.679,
+      "text": "video your heart is broken don't ever forget your golden I will find the light",
+      "word_count": 15
+    }
+  ]
+}

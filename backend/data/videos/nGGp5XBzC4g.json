@@ -1,0 +1,2936 @@
+{
+  "position": 71,
+  "video_id": "nGGp5XBzC4g",
+  "title": "BS-26. Find Peak Element-II | Binary Search",
+  "url": "https://www.youtube.com/watch?v=nGGp5XBzC4g",
+  "transcript": [
+    {
+      "start": 2.94,
+      "duration": 3.18,
+      "end": 6.12,
+      "text": "okay so let's continue with our binary"
+    },
+    {
+      "start": 4.68,
+      "duration": 2.46,
+      "end": 7.14,
+      "text": "search playlist for before that heavy"
+    },
+    {
+      "start": 6.12,
+      "duration": 2.76,
+      "end": 8.879999999999999,
+      "text": "and welcome back to the channel I hope"
+    },
+    {
+      "start": 7.14,
+      "duration": 2.94,
+      "end": 10.08,
+      "text": "you guys are doing extremely well so the"
+    },
+    {
+      "start": 8.88,
+      "duration": 4.44,
+      "end": 13.32,
+      "text": "problem that you're going to solve today"
+    },
+    {
+      "start": 10.08,
+      "duration": 5.219,
+      "end": 15.299,
+      "text": "is finding a peak element the second now"
+    },
+    {
+      "start": 13.32,
+      "duration": 4.26,
+      "end": 17.58,
+      "text": "before watching this video please go"
+    },
+    {
+      "start": 15.299,
+      "duration": 4.56,
+      "end": 19.858999999999998,
+      "text": "back in the playlist and watch the part"
+    },
+    {
+      "start": 17.58,
+      "duration": 4.859,
+      "end": 22.439,
+      "text": "one where we have figured out the peak"
+    },
+    {
+      "start": 19.859,
+      "duration": 4.461,
+      "end": 24.32,
+      "text": "element in a 1D array so what does this"
+    },
+    {
+      "start": 22.439,
+      "duration": 4.801,
+      "end": 27.240000000000002,
+      "text": "particular problem state it states that"
+    },
+    {
+      "start": 24.32,
+      "duration": 5.26,
+      "end": 29.58,
+      "text": "instead of a 1D array it'll be given a"
+    },
+    {
+      "start": 27.24,
+      "duration": 5.159,
+      "end": 32.399,
+      "text": "2d array and it is clearly stated that"
+    },
+    {
+      "start": 29.58,
+      "duration": 5.639,
+      "end": 35.219,
+      "text": "none of the two adjacent cells will be"
+    },
+    {
+      "start": 32.399,
+      "duration": 5.16,
+      "end": 37.559,
+      "text": "similar what does that mean if it is 2"
+    },
+    {
+      "start": 35.219,
+      "duration": 4.561,
+      "end": 39.78,
+      "text": "it cannot be 2 it cannot be two it"
+    },
+    {
+      "start": 37.559,
+      "duration": 4.621,
+      "end": 42.18,
+      "text": "cannot be two it cannot be do so the"
+    },
+    {
+      "start": 39.78,
+      "duration": 4.68,
+      "end": 44.46,
+      "text": "problem is stating you're given a 2d"
+    },
+    {
+      "start": 42.18,
+      "duration": 5.039,
+      "end": 47.219,
+      "text": "Matrix when none of the two adjacent"
+    },
+    {
+      "start": 44.46,
+      "duration": 5.579,
+      "end": 50.039,
+      "text": "cells can be similar your task is to"
+    },
+    {
+      "start": 47.219,
+      "duration": 5.281,
+      "end": 52.5,
+      "text": "figure out the peak element and the part"
+    },
+    {
+      "start": 50.039,
+      "duration": 5.941,
+      "end": 55.980000000000004,
+      "text": "one of the problem we had a 1D array"
+    },
+    {
+      "start": 52.5,
+      "duration": 6.059,
+      "end": 58.559,
+      "text": "where the peak element was an element"
+    },
+    {
+      "start": 55.98,
+      "duration": 5.52,
+      "end": 61.5,
+      "text": "that is greater than its left"
+    },
+    {
+      "start": 58.559,
+      "duration": 5.521,
+      "end": 64.08,
+      "text": "counterpart and it is greater than its"
+    },
+    {
+      "start": 61.5,
+      "duration": 4.74,
+      "end": 66.24,
+      "text": "right counterpart so n any element that"
+    },
+    {
+      "start": 64.08,
+      "duration": 4.5,
+      "end": 68.58,
+      "text": "was greater than its left and greater"
+    },
+    {
+      "start": 66.24,
+      "duration": 4.14,
+      "end": 70.38,
+      "text": "than its right was called as a peak"
+    },
+    {
+      "start": 68.58,
+      "duration": 5.1,
+      "end": 73.67999999999999,
+      "text": "element now in this particular problem"
+    },
+    {
+      "start": 70.38,
+      "duration": 6.54,
+      "end": 76.92,
+      "text": "since a 2d Matrix is involved we will"
+    },
+    {
+      "start": 73.68,
+      "duration": 6.18,
+      "end": 79.86000000000001,
+      "text": "call an element a peak element only if"
+    },
+    {
+      "start": 76.92,
+      "duration": 5.1,
+      "end": 82.02,
+      "text": "it is greater than its left counterpart"
+    },
+    {
+      "start": 79.86,
+      "duration": 4.68,
+      "end": 84.53999999999999,
+      "text": "greater than its right counterpart"
+    },
+    {
+      "start": 82.02,
+      "duration": 5.04,
+      "end": 87.06,
+      "text": "greater than its top counterpart and"
+    },
+    {
+      "start": 84.54,
+      "duration": 5.579,
+      "end": 90.119,
+      "text": "greater than its bottom counterpart for"
+    },
+    {
+      "start": 87.06,
+      "duration": 5.76,
+      "end": 92.82000000000001,
+      "text": "an example I can say 9 as a peak element"
+    },
+    {
+      "start": 90.119,
+      "duration": 5.101,
+      "end": 95.22,
+      "text": "y because it's greater than its top"
+    },
+    {
+      "start": 92.82,
+      "duration": 5.28,
+      "end": 98.1,
+      "text": "counterpart greater than its right"
+    },
+    {
+      "start": 95.22,
+      "duration": 7.259,
+      "end": 102.479,
+      "text": "greater than its bottom greater than x"
+    },
+    {
+      "start": 98.1,
+      "duration": 7.199,
+      "end": 105.29899999999999,
+      "text": "left can I say 7 to be uh Peak element"
+    },
+    {
+      "start": 102.479,
+      "duration": 5.761,
+      "end": 108.24,
+      "text": "yes I can see 7 to be a peak element why"
+    },
+    {
+      "start": 105.299,
+      "duration": 6.121,
+      "end": 111.42,
+      "text": "because 7 is greater than 3 the left"
+    },
+    {
+      "start": 108.24,
+      "duration": 5.22,
+      "end": 113.46,
+      "text": "greater than 1 the top greater than 2"
+    },
+    {
+      "start": 111.42,
+      "duration": 4.199,
+      "end": 115.619,
+      "text": "the right but on the bottom we don't"
+    },
+    {
+      "start": 113.46,
+      "duration": 5.1,
+      "end": 118.55999999999999,
+      "text": "have anything if you do not have"
+    },
+    {
+      "start": 115.619,
+      "duration": 5.581,
+      "end": 121.2,
+      "text": "anything then it will be considered as"
+    },
+    {
+      "start": 118.56,
+      "duration": 5.76,
+      "end": 124.32000000000001,
+      "text": "-1 so the problem is clearly stating all"
+    },
+    {
+      "start": 121.2,
+      "duration": 5.76,
+      "end": 126.96000000000001,
+      "text": "the outer parts will be having minus one"
+    },
+    {
+      "start": 124.32,
+      "duration": 5.4,
+      "end": 129.72,
+      "text": "so thereby 7 can also be called as a"
+    },
+    {
+      "start": 126.96,
+      "duration": 4.44,
+      "end": 131.4,
+      "text": "peak element now in a 2d Matrix they can"
+    },
+    {
+      "start": 129.72,
+      "duration": 4.26,
+      "end": 133.98,
+      "text": "be simultaneous like there can be"
+    },
+    {
+      "start": 131.4,
+      "duration": 6.6,
+      "end": 138.0,
+      "text": "multiple Peak elements your task is to"
+    },
+    {
+      "start": 133.98,
+      "duration": 6.36,
+      "end": 140.34,
+      "text": "return the row and column of any one of"
+    },
+    {
+      "start": 138.0,
+      "duration": 4.56,
+      "end": 142.56,
+      "text": "them yes any one of them for an example"
+    },
+    {
+      "start": 140.34,
+      "duration": 5.22,
+      "end": 145.56,
+      "text": "you decide to return this peak element"
+    },
+    {
+      "start": 142.56,
+      "duration": 4.259,
+      "end": 146.81900000000002,
+      "text": "it is on the row one and it is at the"
+    },
+    {
+      "start": 145.56,
+      "duration": 3.78,
+      "end": 149.34,
+      "text": "column one so you will have to return"
+    },
+    {
+      "start": 146.819,
+      "duration": 5.041,
+      "end": 151.85999999999999,
+      "text": "one comma one in case you decide that"
+    },
+    {
+      "start": 149.34,
+      "duration": 5.82,
+      "end": 155.16,
+      "text": "you have to return for this one so it's"
+    },
+    {
+      "start": 151.86,
+      "duration": 5.4,
+      "end": 157.26000000000002,
+      "text": "on the third row and it's on the fourth"
+    },
+    {
+      "start": 155.16,
+      "duration": 3.84,
+      "end": 159.0,
+      "text": "column so after return three comma four"
+    },
+    {
+      "start": 157.26,
+      "duration": 4.02,
+      "end": 161.28,
+      "text": "so this is what the problem is stating"
+    },
+    {
+      "start": 159.0,
+      "duration": 4.26,
+      "end": 163.26,
+      "text": "now if this problem comes up in an"
+    },
+    {
+      "start": 161.28,
+      "duration": 3.48,
+      "end": 164.76,
+      "text": "interview what is the first solution the"
+    },
+    {
+      "start": 163.26,
+      "duration": 4.5,
+      "end": 167.76,
+      "text": "first solution that I can think of is"
+    },
+    {
+      "start": 164.76,
+      "duration": 4.979,
+      "end": 169.739,
+      "text": "like the extreme Brute Force I scan"
+    },
+    {
+      "start": 167.76,
+      "duration": 3.9,
+      "end": 171.66,
+      "text": "through every element yes I will be"
+    },
+    {
+      "start": 169.739,
+      "duration": 4.441,
+      "end": 174.18,
+      "text": "scanning through every element in a 2d"
+    },
+    {
+      "start": 171.66,
+      "duration": 5.159,
+      "end": 176.819,
+      "text": "Matrix and whenever I am standing at an"
+    },
+    {
+      "start": 174.18,
+      "duration": 5.52,
+      "end": 179.70000000000002,
+      "text": "element I check for its left counterpart"
+    },
+    {
+      "start": 176.819,
+      "duration": 5.401,
+      "end": 182.22,
+      "text": "check for its stop check for it's right"
+    },
+    {
+      "start": 179.7,
+      "duration": 5.039,
+      "end": 184.73899999999998,
+      "text": "check for its bottom if it is greater"
+    },
+    {
+      "start": 182.22,
+      "duration": 4.5,
+      "end": 186.72,
+      "text": "than all the four counterparts I will be"
+    },
+    {
+      "start": 184.739,
+      "duration": 3.78,
+      "end": 188.519,
+      "text": "calling that element as a peak element"
+    },
+    {
+      "start": 186.72,
+      "duration": 3.78,
+      "end": 190.5,
+      "text": "so if I am scanning through every"
+    },
+    {
+      "start": 188.519,
+      "duration": 4.261,
+      "end": 192.78,
+      "text": "element if I'm scanning through every"
+    },
+    {
+      "start": 190.5,
+      "duration": 5.04,
+      "end": 195.54,
+      "text": "element what can be the worst possible"
+    },
+    {
+      "start": 192.78,
+      "duration": 5.879,
+      "end": 198.659,
+      "text": "scenario I'll be scanning to everyone in"
+    },
+    {
+      "start": 195.54,
+      "duration": 5.22,
+      "end": 200.76,
+      "text": "the last element isn't it so it will be"
+    },
+    {
+      "start": 198.659,
+      "duration": 4.381,
+      "end": 203.04,
+      "text": "n cross n because that is the number of"
+    },
+    {
+      "start": 200.76,
+      "duration": 4.5,
+      "end": 205.26,
+      "text": "elements in the 2D Matrix and if I'm"
+    },
+    {
+      "start": 203.04,
+      "duration": 3.9,
+      "end": 206.94,
+      "text": "checking whenever I am standing on an"
+    },
+    {
+      "start": 205.26,
+      "duration": 4.259,
+      "end": 209.519,
+      "text": "element I am checking for four"
+    },
+    {
+      "start": 206.94,
+      "duration": 4.62,
+      "end": 211.56,
+      "text": "directions so for every element I'm"
+    },
+    {
+      "start": 209.519,
+      "duration": 4.621,
+      "end": 214.14000000000001,
+      "text": "checking in four directions so can I say"
+    },
+    {
+      "start": 211.56,
+      "duration": 5.22,
+      "end": 216.78,
+      "text": "that the overall time complexity the"
+    },
+    {
+      "start": 214.14,
+      "duration": 5.94,
+      "end": 220.07999999999998,
+      "text": "worst possible case will be n cross n"
+    },
+    {
+      "start": 216.78,
+      "duration": 7.56,
+      "end": 224.34,
+      "text": "cross 4 I can right can I optimize this"
+    },
+    {
+      "start": 220.08,
+      "duration": 6.06,
+      "end": 226.14000000000001,
+      "text": "I can but by a slight margin now for the"
+    },
+    {
+      "start": 224.34,
+      "duration": 3.36,
+      "end": 227.70000000000002,
+      "text": "best possible case it will be you just"
+    },
+    {
+      "start": 226.14,
+      "duration": 3.78,
+      "end": 229.92,
+      "text": "find out the first element to be the"
+    },
+    {
+      "start": 227.7,
+      "duration": 4.98,
+      "end": 232.67999999999998,
+      "text": "peak element on an average it'll be"
+    },
+    {
+      "start": 229.92,
+      "duration": 4.98,
+      "end": 234.89999999999998,
+      "text": "somewhere in between only in the worst"
+    },
+    {
+      "start": 232.68,
+      "duration": 4.26,
+      "end": 236.94,
+      "text": "case scenario the last possible element"
+    },
+    {
+      "start": 234.9,
+      "duration": 3.899,
+      "end": 238.799,
+      "text": "will be your Peak element and that is"
+    },
+    {
+      "start": 236.94,
+      "duration": 5.04,
+      "end": 241.98,
+      "text": "when this particular complexity will"
+    },
+    {
+      "start": 238.799,
+      "duration": 5.341,
+      "end": 244.14000000000001,
+      "text": "appear I can only optimize the worst"
+    },
+    {
+      "start": 241.98,
+      "duration": 4.92,
+      "end": 246.89999999999998,
+      "text": "case scenario I cannot optimize the best"
+    },
+    {
+      "start": 244.14,
+      "duration": 5.28,
+      "end": 249.42,
+      "text": "case I cannot optimize the average case"
+    },
+    {
+      "start": 246.9,
+      "duration": 5.22,
+      "end": 252.12,
+      "text": "I can definitely optimize the worst case"
+    },
+    {
+      "start": 249.42,
+      "duration": 6.239,
+      "end": 255.659,
+      "text": "scenario how can I see"
+    },
+    {
+      "start": 252.12,
+      "duration": 5.7,
+      "end": 257.82,
+      "text": "if I just return the largest element"
+    },
+    {
+      "start": 255.659,
+      "duration": 5.881,
+      "end": 261.53999999999996,
+      "text": "in The Matrix that will be my answer"
+    },
+    {
+      "start": 257.82,
+      "duration": 7.14,
+      "end": 264.96,
+      "text": "over here 9 yeah 9 is the largest but"
+    },
+    {
+      "start": 261.54,
+      "duration": 6.06,
+      "end": 267.6,
+      "text": "simply return 9 that will suffice so if"
+    },
+    {
+      "start": 264.96,
+      "duration": 5.28,
+      "end": 270.23999999999995,
+      "text": "I go by the approach of finding the"
+    },
+    {
+      "start": 267.6,
+      "duration": 4.56,
+      "end": 272.16,
+      "text": "largest element in a 2d Matrix even in"
+    },
+    {
+      "start": 270.24,
+      "duration": 3.959,
+      "end": 274.199,
+      "text": "the best case I'll have to scan through"
+    },
+    {
+      "start": 272.16,
+      "duration": 4.86,
+      "end": 277.02000000000004,
+      "text": "every element from the first to the last"
+    },
+    {
+      "start": 274.199,
+      "duration": 5.101,
+      "end": 279.3,
+      "text": "even in the average case we have to scan"
+    },
+    {
+      "start": 277.02,
+      "duration": 3.48,
+      "end": 280.5,
+      "text": "through every element even at the worst"
+    },
+    {
+      "start": 279.3,
+      "duration": 4.2,
+      "end": 283.5,
+      "text": "case I have to scan through every"
+    },
+    {
+      "start": 280.5,
+      "duration": 5.16,
+      "end": 285.66,
+      "text": "element so the complexity will boil down"
+    },
+    {
+      "start": 283.5,
+      "duration": 4.5,
+      "end": 288.0,
+      "text": "to n cross M but this will be a"
+    },
+    {
+      "start": 285.66,
+      "duration": 5.4,
+      "end": 291.06,
+      "text": "complexity for best average and the"
+    },
+    {
+      "start": 288.0,
+      "duration": 6.06,
+      "end": 294.06,
+      "text": "worst case complexity so not that much"
+    },
+    {
+      "start": 291.06,
+      "duration": 5.16,
+      "end": 296.22,
+      "text": "of optimizations now will this be"
+    },
+    {
+      "start": 294.06,
+      "duration": 4.199,
+      "end": 298.259,
+      "text": "accepted in an interview no they'll ask"
+    },
+    {
+      "start": 296.22,
+      "duration": 3.96,
+      "end": 300.18,
+      "text": "you to optimize this so I've been asked"
+    },
+    {
+      "start": 298.259,
+      "duration": 3.72,
+      "end": 301.97900000000004,
+      "text": "to optimize n cross M and this"
+    },
+    {
+      "start": 300.18,
+      "duration": 3.959,
+      "end": 304.139,
+      "text": "particular problem we have a 2d Matrix"
+    },
+    {
+      "start": 301.979,
+      "duration": 5.101,
+      "end": 307.08,
+      "text": "and the total number of elements in the"
+    },
+    {
+      "start": 304.139,
+      "duration": 5.461,
+      "end": 309.6,
+      "text": "2D Matrix is n cross n so the algorithm"
+    },
+    {
+      "start": 307.08,
+      "duration": 4.98,
+      "end": 312.06,
+      "text": "that we have figured out is equivalent"
+    },
+    {
+      "start": 309.6,
+      "duration": 4.26,
+      "end": 313.86,
+      "text": "to the search space right so we're"
+    },
+    {
+      "start": 312.06,
+      "duration": 4.199,
+      "end": 316.259,
+      "text": "searching for a peak element now they"
+    },
+    {
+      "start": 313.86,
+      "duration": 4.26,
+      "end": 318.12,
+      "text": "are asking us to optimize I cannot go"
+    },
+    {
+      "start": 316.259,
+      "duration": 4.201,
+      "end": 320.46000000000004,
+      "text": "through every element because if I've"
+    },
+    {
+      "start": 318.12,
+      "duration": 4.5,
+      "end": 322.62,
+      "text": "been asked to optimize n cross M that"
+    },
+    {
+      "start": 320.46,
+      "duration": 4.56,
+      "end": 325.02,
+      "text": "technically means I have to trim down in"
+    },
+    {
+      "start": 322.62,
+      "duration": 4.139,
+      "end": 326.759,
+      "text": "Cross M which means I cannot Vapor every"
+    },
+    {
+      "start": 325.02,
+      "duration": 4.92,
+      "end": 329.94,
+      "text": "element if I cannot go through every"
+    },
+    {
+      "start": 326.759,
+      "duration": 5.641,
+      "end": 332.40000000000003,
+      "text": "element which means I have to delete I"
+    },
+    {
+      "start": 329.94,
+      "duration": 4.5,
+      "end": 334.44,
+      "text": "have to skip some portion of the search"
+    },
+    {
+      "start": 332.4,
+      "duration": 4.139,
+      "end": 336.539,
+      "text": "space and that is when you start"
+    },
+    {
+      "start": 334.44,
+      "duration": 4.259,
+      "end": 338.699,
+      "text": "thinking of algorithms and that's when"
+    },
+    {
+      "start": 336.539,
+      "duration": 3.961,
+      "end": 340.5,
+      "text": "binary search comes in because searching"
+    },
+    {
+      "start": 338.699,
+      "duration": 5.22,
+      "end": 343.91900000000004,
+      "text": "algorithm cannot go through everyone"
+    },
+    {
+      "start": 340.5,
+      "duration": 5.16,
+      "end": 345.66,
+      "text": "have to skip I think man research is a"
+    },
+    {
+      "start": 343.919,
+      "duration": 3.661,
+      "end": 347.58,
+      "text": "potential candidate and I start thinking"
+    },
+    {
+      "start": 345.66,
+      "duration": 3.18,
+      "end": 348.84000000000003,
+      "text": "in the direction of binary search so"
+    },
+    {
+      "start": 347.58,
+      "duration": 3.6,
+      "end": 351.18,
+      "text": "before I move on to the binary search"
+    },
+    {
+      "start": 348.84,
+      "duration": 5.22,
+      "end": 354.06,
+      "text": "approach please please make sure that"
+    },
+    {
+      "start": 351.18,
+      "duration": 4.739,
+      "end": 355.919,
+      "text": "you should have seen the part one of"
+    },
+    {
+      "start": 354.06,
+      "duration": 3.66,
+      "end": 357.72,
+      "text": "this particular problem in case you"
+    },
+    {
+      "start": 355.919,
+      "duration": 3.901,
+      "end": 359.82,
+      "text": "haven't seen it or is in case it has"
+    },
+    {
+      "start": 357.72,
+      "duration": 4.08,
+      "end": 361.8,
+      "text": "been a very long time please pause this"
+    },
+    {
+      "start": 359.82,
+      "duration": 4.2,
+      "end": 364.02,
+      "text": "video right away find the link in the"
+    },
+    {
+      "start": 361.8,
+      "duration": 4.2,
+      "end": 366.0,
+      "text": "description go back and watch it get the"
+    },
+    {
+      "start": 364.02,
+      "duration": 3.72,
+      "end": 367.74,
+      "text": "intuition again back in your head and"
+    },
+    {
+      "start": 366.0,
+      "duration": 4.259,
+      "end": 370.259,
+      "text": "then start watching it because whatever"
+    },
+    {
+      "start": 367.74,
+      "duration": 4.86,
+      "end": 372.6,
+      "text": "intuition I've used in the part one I'll"
+    },
+    {
+      "start": 370.259,
+      "duration": 5.101,
+      "end": 375.36,
+      "text": "be using that over here so if you"
+    },
+    {
+      "start": 372.6,
+      "duration": 5.4,
+      "end": 378.0,
+      "text": "remember in part one I stated this thing"
+    },
+    {
+      "start": 375.36,
+      "duration": 5.88,
+      "end": 381.24,
+      "text": "that we're gonna use binary search and"
+    },
+    {
+      "start": 378.0,
+      "duration": 6.72,
+      "end": 384.72,
+      "text": "whenever we are standing on the mid that"
+    },
+    {
+      "start": 381.24,
+      "duration": 7.26,
+      "end": 388.5,
+      "text": "mid will be the peak element only if"
+    },
+    {
+      "start": 384.72,
+      "duration": 5.46,
+      "end": 390.18,
+      "text": "it's greater than both of its left and"
+    },
+    {
+      "start": 388.5,
+      "duration": 4.139,
+      "end": 392.639,
+      "text": "right counterpart and that is very"
+    },
+    {
+      "start": 390.18,
+      "duration": 4.799,
+      "end": 394.979,
+      "text": "obvious because if you're standing at a"
+    },
+    {
+      "start": 392.639,
+      "duration": 5.161,
+      "end": 397.8,
+      "text": "peak and it's greater than left and"
+    },
+    {
+      "start": 394.979,
+      "duration": 6.961,
+      "end": 401.94,
+      "text": "right that's a peak element you stop but"
+    },
+    {
+      "start": 397.8,
+      "duration": 6.48,
+      "end": 404.28000000000003,
+      "text": "in case this mid element was smaller"
+    },
+    {
+      "start": 401.94,
+      "duration": 4.62,
+      "end": 406.56,
+      "text": "than the right part was smaller than the"
+    },
+    {
+      "start": 404.28,
+      "duration": 4.8,
+      "end": 409.08,
+      "text": "right part which means imagine you're"
+    },
+    {
+      "start": 406.56,
+      "duration": 4.5,
+      "end": 411.06,
+      "text": "standing here and the right part this is"
+    },
+    {
+      "start": 409.08,
+      "duration": 3.54,
+      "end": 412.62,
+      "text": "the right part so it's smaller than the"
+    },
+    {
+      "start": 411.06,
+      "duration": 5.4,
+      "end": 416.46,
+      "text": "right part it's smaller than the right"
+    },
+    {
+      "start": 412.62,
+      "duration": 6.24,
+      "end": 418.86,
+      "text": "part which means there is definitely a"
+    },
+    {
+      "start": 416.46,
+      "duration": 4.92,
+      "end": 421.38,
+      "text": "peak there is definitely a peak on the"
+    },
+    {
+      "start": 418.86,
+      "duration": 4.679,
+      "end": 423.539,
+      "text": "right just think it as a mountain range"
+    },
+    {
+      "start": 421.38,
+      "duration": 4.92,
+      "end": 426.3,
+      "text": "think it as a mountain range if you're"
+    },
+    {
+      "start": 423.539,
+      "duration": 4.5,
+      "end": 428.039,
+      "text": "standing here the mountain has to go up"
+    },
+    {
+      "start": 426.3,
+      "duration": 4.26,
+      "end": 430.56,
+      "text": "has to go up before it goes down"
+    },
+    {
+      "start": 428.039,
+      "duration": 5.701,
+      "end": 433.74,
+      "text": "somewhere it will go down because it is"
+    },
+    {
+      "start": 430.56,
+      "duration": 6.72,
+      "end": 437.28000000000003,
+      "text": "clearly stated outside of VRA it is -1"
+    },
+    {
+      "start": 433.74,
+      "duration": 6.54,
+      "end": 440.28000000000003,
+      "text": "so even if even if"
+    },
+    {
+      "start": 437.28,
+      "duration": 4.8,
+      "end": 442.08,
+      "text": "it doesn't doesn't goes down I'm very"
+    },
+    {
+      "start": 440.28,
+      "duration": 3.359,
+      "end": 443.63899999999995,
+      "text": "sure there will be a minus one at the"
+    },
+    {
+      "start": 442.08,
+      "duration": 4.619,
+      "end": 446.69899999999996,
+      "text": "outer portion of the array because that"
+    },
+    {
+      "start": 443.639,
+      "duration": 5.4,
+      "end": 449.039,
+      "text": "is stated thereby whenever I am standing"
+    },
+    {
+      "start": 446.699,
+      "duration": 5.461,
+      "end": 452.16,
+      "text": "here and the right portion is actually"
+    },
+    {
+      "start": 449.039,
+      "duration": 6.6,
+      "end": 455.639,
+      "text": "greater I eliminate the left half right"
+    },
+    {
+      "start": 452.16,
+      "duration": 5.159,
+      "end": 457.319,
+      "text": "in the part one and similarly if the"
+    },
+    {
+      "start": 455.639,
+      "duration": 4.201,
+      "end": 459.84000000000003,
+      "text": "male is"
+    },
+    {
+      "start": 457.319,
+      "duration": 3.66,
+      "end": 460.97900000000004,
+      "text": "smaller than the left which means is"
+    },
+    {
+      "start": 459.84,
+      "duration": 3.06,
+      "end": 462.9,
+      "text": "standing here"
+    },
+    {
+      "start": 460.979,
+      "duration": 4.021,
+      "end": 465.0,
+      "text": "yes you're standing here and this is"
+    },
+    {
+      "start": 462.9,
+      "duration": 4.799,
+      "end": 467.69899999999996,
+      "text": "your left and it is smaller than the"
+    },
+    {
+      "start": 465.0,
+      "duration": 5.4,
+      "end": 470.4,
+      "text": "left thereby I'm very sure that this is"
+    },
+    {
+      "start": 467.699,
+      "duration": 5.581,
+      "end": 473.28000000000003,
+      "text": "the inclination of the mountain thereby"
+    },
+    {
+      "start": 470.4,
+      "duration": 4.56,
+      "end": 474.96,
+      "text": "you delete the right half this is the"
+    },
+    {
+      "start": 473.28,
+      "duration": 4.56,
+      "end": 477.84,
+      "text": "intuition that we followed in part one"
+    },
+    {
+      "start": 474.96,
+      "duration": 5.28,
+      "end": 480.23999999999995,
+      "text": "we follow the similar intuition in part"
+    },
+    {
+      "start": 477.84,
+      "duration": 6.479,
+      "end": 484.31899999999996,
+      "text": "two as well so let's try to solve it"
+    },
+    {
+      "start": 480.24,
+      "duration": 5.64,
+      "end": 485.88,
+      "text": "what I'll try to do is I have six rows"
+    },
+    {
+      "start": 484.319,
+      "duration": 4.5,
+      "end": 488.819,
+      "text": "I'll take"
+    },
+    {
+      "start": 485.88,
+      "duration": 5.219,
+      "end": 491.099,
+      "text": "load to be standing at"
+    },
+    {
+      "start": 488.819,
+      "duration": 5.901,
+      "end": 494.72,
+      "text": "the zeroth row and the high to be"
+    },
+    {
+      "start": 491.099,
+      "duration": 3.621,
+      "end": 494.71999999999997,
+      "text": "standing in the fifth row"
+    },
+    {
+      "start": 495.539,
+      "duration": 7.021,
+      "end": 502.56,
+      "text": "I'll try to have the algorithm"
+    },
+    {
+      "start": 499.44,
+      "duration": 5.099,
+      "end": 504.539,
+      "text": "what is mid for the first scenario"
+    },
+    {
+      "start": 502.56,
+      "duration": 4.259,
+      "end": 506.819,
+      "text": "the mid will be zero plus five by two"
+    },
+    {
+      "start": 504.539,
+      "duration": 4.081,
+      "end": 508.62,
+      "text": "that's the second row which is the"
+    },
+    {
+      "start": 506.819,
+      "duration": 5.34,
+      "end": 512.159,
+      "text": "second row can I say this is the second"
+    },
+    {
+      "start": 508.62,
+      "duration": 6.299,
+      "end": 514.919,
+      "text": "row tell me one day in the second row"
+    },
+    {
+      "start": 512.159,
+      "duration": 4.26,
+      "end": 516.419,
+      "text": "which element has the highest"
+    },
+    {
+      "start": 514.919,
+      "duration": 4.86,
+      "end": 519.779,
+      "text": "possibility of being the peak element"
+    },
+    {
+      "start": 516.419,
+      "duration": 6.24,
+      "end": 522.659,
+      "text": "just think can I say whoever is the"
+    },
+    {
+      "start": 519.779,
+      "duration": 5.821,
+      "end": 525.6,
+      "text": "largest has the highest probability yes"
+    },
+    {
+      "start": 522.659,
+      "duration": 6.021,
+      "end": 528.68,
+      "text": "someone else might have mind me but who"
+    },
+    {
+      "start": 525.6,
+      "duration": 5.1,
+      "end": 530.7,
+      "text": "has the highest probability can I say"
+    },
+    {
+      "start": 528.68,
+      "duration": 4.54,
+      "end": 533.2199999999999,
+      "text": "definitely has the highest probability"
+    },
+    {
+      "start": 530.7,
+      "duration": 5.819,
+      "end": 536.519,
+      "text": "because that's the largest element so"
+    },
+    {
+      "start": 533.22,
+      "duration": 6.54,
+      "end": 539.76,
+      "text": "I'll be like okay fine who's the max"
+    },
+    {
+      "start": 536.519,
+      "duration": 5.82,
+      "end": 542.339,
+      "text": "Max is six where is it here"
+    },
+    {
+      "start": 539.76,
+      "duration": 6.12,
+      "end": 545.88,
+      "text": "let's see if this can be a peak element"
+    },
+    {
+      "start": 542.339,
+      "duration": 6.961,
+      "end": 549.3000000000001,
+      "text": "I stand at six it's greater it's greater"
+    },
+    {
+      "start": 545.88,
+      "duration": 6.899,
+      "end": 552.779,
+      "text": "it's greater it's greater than all its"
+    },
+    {
+      "start": 549.3,
+      "duration": 7.26,
+      "end": 556.56,
+      "text": "three counterparts but it's not greater"
+    },
+    {
+      "start": 552.779,
+      "duration": 6.841,
+      "end": 559.62,
+      "text": "than its left counterpart thereby 6"
+    },
+    {
+      "start": 556.56,
+      "duration": 5.04,
+      "end": 561.5999999999999,
+      "text": "cannot be a peak element thereby 6"
+    },
+    {
+      "start": 559.62,
+      "duration": 5.1,
+      "end": 564.72,
+      "text": "cannot be a peak element"
+    },
+    {
+      "start": 561.6,
+      "duration": 5.1,
+      "end": 566.7,
+      "text": "hence you say that 6 cannot be a peak"
+    },
+    {
+      "start": 564.72,
+      "duration": 3.66,
+      "end": 568.38,
+      "text": "element now you need to Omit some"
+    },
+    {
+      "start": 566.7,
+      "duration": 3.84,
+      "end": 570.5400000000001,
+      "text": "portion because"
+    },
+    {
+      "start": 568.38,
+      "duration": 3.959,
+      "end": 572.3389999999999,
+      "text": "six can never be a peak element and if"
+    },
+    {
+      "start": 570.54,
+      "duration": 3.12,
+      "end": 573.66,
+      "text": "you go on checking every element you"
+    },
+    {
+      "start": 572.339,
+      "duration": 3.18,
+      "end": 575.519,
+      "text": "will not be able to optimize so you"
+    },
+    {
+      "start": 573.66,
+      "duration": 4.859,
+      "end": 578.519,
+      "text": "don't go and check every element you"
+    },
+    {
+      "start": 575.519,
+      "duration": 5.041,
+      "end": 580.5600000000001,
+      "text": "check for six and you say that this is"
+    },
+    {
+      "start": 578.519,
+      "duration": 3.721,
+      "end": 582.24,
+      "text": "not my Peak element now the question"
+    },
+    {
+      "start": 580.56,
+      "duration": 5.1,
+      "end": 585.66,
+      "text": "arises"
+    },
+    {
+      "start": 582.24,
+      "duration": 4.98,
+      "end": 587.22,
+      "text": "you took 0 and 5 to be low and high now"
+    },
+    {
+      "start": 585.66,
+      "duration": 3.359,
+      "end": 589.019,
+      "text": "you're standing at"
+    },
+    {
+      "start": 587.22,
+      "duration": 3.179,
+      "end": 590.399,
+      "text": "second column"
+    },
+    {
+      "start": 589.019,
+      "duration": 3.601,
+      "end": 592.62,
+      "text": "do you"
+    },
+    {
+      "start": 590.399,
+      "duration": 4.261,
+      "end": 594.66,
+      "text": "delete the left half or do you delete"
+    },
+    {
+      "start": 592.62,
+      "duration": 3.779,
+      "end": 596.399,
+      "text": "the write half is the question because"
+    },
+    {
+      "start": 594.66,
+      "duration": 2.58,
+      "end": 597.24,
+      "text": "that is how we have been doing binary"
+    },
+    {
+      "start": 596.399,
+      "duration": 2.701,
+      "end": 599.1,
+      "text": "search"
+    },
+    {
+      "start": 597.24,
+      "duration": 3.659,
+      "end": 600.899,
+      "text": "let's start going back to this"
+    },
+    {
+      "start": 599.1,
+      "duration": 2.94,
+      "end": 602.0400000000001,
+      "text": "particular intuition and I think Hey"
+    },
+    {
+      "start": 600.899,
+      "duration": 4.741,
+      "end": 605.64,
+      "text": "listen"
+    },
+    {
+      "start": 602.04,
+      "duration": 7.14,
+      "end": 609.18,
+      "text": "why is six not a peak element"
+    },
+    {
+      "start": 605.64,
+      "duration": 6.42,
+      "end": 612.06,
+      "text": "the only reason is there is someone on"
+    },
+    {
+      "start": 609.18,
+      "duration": 6.839,
+      "end": 616.019,
+      "text": "the left who is greater there's someone"
+    },
+    {
+      "start": 612.06,
+      "duration": 4.86,
+      "end": 616.92,
+      "text": "on the left who else greater right can I"
+    },
+    {
+      "start": 616.019,
+      "duration": 4.141,
+      "end": 620.16,
+      "text": "say"
+    },
+    {
+      "start": 616.92,
+      "duration": 6.359,
+      "end": 623.279,
+      "text": "if this is 6 and this is 7 is someone on"
+    },
+    {
+      "start": 620.16,
+      "duration": 5.88,
+      "end": 626.04,
+      "text": "the left is greater so maybe delete the"
+    },
+    {
+      "start": 623.279,
+      "duration": 5.881,
+      "end": 629.16,
+      "text": "right off yes I go ahead and I say"
+    },
+    {
+      "start": 626.04,
+      "duration": 5.46,
+      "end": 631.5,
+      "text": "delete the right half yes I delete the"
+    },
+    {
+      "start": 629.16,
+      "duration": 5.88,
+      "end": 635.04,
+      "text": "right half the moment I delete the high"
+    },
+    {
+      "start": 631.5,
+      "duration": 6.3,
+      "end": 637.8,
+      "text": "will my bad the high will come here"
+    },
+    {
+      "start": 635.04,
+      "duration": 5.22,
+      "end": 640.26,
+      "text": "yes so low will be at zero high will be"
+    },
+    {
+      "start": 637.8,
+      "duration": 5.039,
+      "end": 642.8389999999999,
+      "text": "at one let me quickly erase it"
+    },
+    {
+      "start": 640.26,
+      "duration": 5.579,
+      "end": 645.8389999999999,
+      "text": "so can I say low is at zero and high is"
+    },
+    {
+      "start": 642.839,
+      "duration": 6.481,
+      "end": 649.32,
+      "text": "at one thereby the mid will be zero plus"
+    },
+    {
+      "start": 645.839,
+      "duration": 6.841,
+      "end": 652.6800000000001,
+      "text": "one by two that's zero so if the mid is"
+    },
+    {
+      "start": 649.32,
+      "duration": 5.28,
+      "end": 654.6,
+      "text": "0 who has the highest probability again"
+    },
+    {
+      "start": 652.68,
+      "duration": 3.599,
+      "end": 656.279,
+      "text": "technically if I take the max element"
+    },
+    {
+      "start": 654.6,
+      "duration": 3.9,
+      "end": 658.5,
+      "text": "that will always have the highest"
+    },
+    {
+      "start": 656.279,
+      "duration": 3.481,
+      "end": 659.76,
+      "text": "probability and four"
+    },
+    {
+      "start": 658.5,
+      "duration": 6.0,
+      "end": 664.5,
+      "text": "yes"
+    },
+    {
+      "start": 659.76,
+      "duration": 7.079,
+      "end": 666.8389999999999,
+      "text": "now I see 4 is greater then it's left 4"
+    },
+    {
+      "start": 664.5,
+      "duration": 5.16,
+      "end": 669.66,
+      "text": "is greater than 2 4 is greater than its"
+    },
+    {
+      "start": 666.839,
+      "duration": 6.12,
+      "end": 672.9590000000001,
+      "text": "bottom and at the same time 4 is greater"
+    },
+    {
+      "start": 669.66,
+      "duration": 7.5,
+      "end": 677.16,
+      "text": "than its top thereby I say"
+    },
+    {
+      "start": 672.959,
+      "duration": 6.301,
+      "end": 679.26,
+      "text": "the max element 4 is my S is my Peak"
+    },
+    {
+      "start": 677.16,
+      "duration": 3.78,
+      "end": 680.9399999999999,
+      "text": "element and we stop yeah I know nine"
+    },
+    {
+      "start": 679.26,
+      "duration": 4.139,
+      "end": 683.399,
+      "text": "nine could have been an answer seven"
+    },
+    {
+      "start": 680.94,
+      "duration": 4.38,
+      "end": 685.32,
+      "text": "could have been an answer but we figured"
+    },
+    {
+      "start": 683.399,
+      "duration": 4.261,
+      "end": 687.66,
+      "text": "out an element and that is what we"
+    },
+    {
+      "start": 685.32,
+      "duration": 4.8,
+      "end": 690.12,
+      "text": "require just one and that is where we"
+    },
+    {
+      "start": 687.66,
+      "duration": 5.16,
+      "end": 692.8199999999999,
+      "text": "stop so part one was simple because it"
+    },
+    {
+      "start": 690.12,
+      "duration": 4.56,
+      "end": 694.68,
+      "text": "was a 1D array it was easy to visualize"
+    },
+    {
+      "start": 692.82,
+      "duration": 4.38,
+      "end": 697.2,
+      "text": "and the part two you might have couple"
+    },
+    {
+      "start": 694.68,
+      "duration": 5.399,
+      "end": 700.079,
+      "text": "of questions the first one is"
+    },
+    {
+      "start": 697.2,
+      "duration": 5.28,
+      "end": 702.48,
+      "text": "why are we taking the max element and"
+    },
+    {
+      "start": 700.079,
+      "duration": 4.141,
+      "end": 704.2199999999999,
+      "text": "the second one might be might be I'm not"
+    },
+    {
+      "start": 702.48,
+      "duration": 4.74,
+      "end": 707.22,
+      "text": "sure if you have this question"
+    },
+    {
+      "start": 704.22,
+      "duration": 4.799,
+      "end": 709.019,
+      "text": "you said 6 is not the peak element and"
+    },
+    {
+      "start": 707.22,
+      "duration": 5.52,
+      "end": 712.74,
+      "text": "you eliminated the right half and you"
+    },
+    {
+      "start": 709.019,
+      "duration": 5.521,
+      "end": 714.54,
+      "text": "moved left on the basis that 7 is"
+    },
+    {
+      "start": 712.74,
+      "duration": 4.08,
+      "end": 716.82,
+      "text": "greater than 6."
+    },
+    {
+      "start": 714.54,
+      "duration": 5.52,
+      "end": 720.06,
+      "text": "thinking that Federal mind me or Peak"
+    },
+    {
+      "start": 716.82,
+      "duration": 5.699,
+      "end": 722.519,
+      "text": "but wait wait someone nine might be my"
+    },
+    {
+      "start": 720.06,
+      "duration": 4.68,
+      "end": 724.7399999999999,
+      "text": "Peak Seven might not be because 7 is"
+    },
+    {
+      "start": 722.519,
+      "duration": 5.461,
+      "end": 727.98,
+      "text": "smaller than nine so how are you"
+    },
+    {
+      "start": 724.74,
+      "duration": 4.56,
+      "end": 729.3,
+      "text": "managing this vertical alignment not"
+    },
+    {
+      "start": 727.98,
+      "duration": 3.84,
+      "end": 731.82,
+      "text": "vertical how are you managing this"
+    },
+    {
+      "start": 729.3,
+      "duration": 4.86,
+      "end": 734.16,
+      "text": "alignment whatever it is so"
+    },
+    {
+      "start": 731.82,
+      "duration": 5.699,
+      "end": 737.519,
+      "text": "let me first answer this question why am"
+    },
+    {
+      "start": 734.16,
+      "duration": 4.679,
+      "end": 738.8389999999999,
+      "text": "I taking Max so whenever I'm taking an"
+    },
+    {
+      "start": 737.519,
+      "duration": 4.38,
+      "end": 741.899,
+      "text": "element"
+    },
+    {
+      "start": 738.839,
+      "duration": 5.761,
+      "end": 744.6,
+      "text": "when when do I call it a peak element if"
+    },
+    {
+      "start": 741.899,
+      "duration": 6.12,
+      "end": 748.019,
+      "text": "it's greater than its top greater than"
+    },
+    {
+      "start": 744.6,
+      "duration": 5.04,
+      "end": 749.64,
+      "text": "its bottom left and right now if I'm"
+    },
+    {
+      "start": 748.019,
+      "duration": 5.101,
+      "end": 753.12,
+      "text": "taking Max"
+    },
+    {
+      "start": 749.64,
+      "duration": 6.06,
+      "end": 755.6999999999999,
+      "text": "in this case 6 am I very sure that it'll"
+    },
+    {
+      "start": 753.12,
+      "duration": 4.98,
+      "end": 758.1,
+      "text": "be greater than its top and bottom I'm"
+    },
+    {
+      "start": 755.7,
+      "duration": 5.46,
+      "end": 761.1600000000001,
+      "text": "very much sure about it I'm left out"
+    },
+    {
+      "start": 758.1,
+      "duration": 5.4,
+      "end": 763.5,
+      "text": "with two cases which is the left and the"
+    },
+    {
+      "start": 761.16,
+      "duration": 5.04,
+      "end": 766.1999999999999,
+      "text": "right that's what I have to check the"
+    },
+    {
+      "start": 763.5,
+      "duration": 4.62,
+      "end": 768.12,
+      "text": "kind of kind of boils down to a 1D array"
+    },
+    {
+      "start": 766.2,
+      "duration": 4.379,
+      "end": 770.5790000000001,
+      "text": "case because I don't need to check for"
+    },
+    {
+      "start": 768.12,
+      "duration": 5.279,
+      "end": 773.399,
+      "text": "these cases kind of balls don't do 1D"
+    },
+    {
+      "start": 770.579,
+      "duration": 5.461,
+      "end": 776.04,
+      "text": "array scenario right that is why I'm"
+    },
+    {
+      "start": 773.399,
+      "duration": 5.521,
+      "end": 778.92,
+      "text": "taking Max because I'm trying to go in"
+    },
+    {
+      "start": 776.04,
+      "duration": 4.859,
+      "end": 780.899,
+      "text": "the direction of 1D got it are you now"
+    },
+    {
+      "start": 778.92,
+      "duration": 2.76,
+      "end": 781.68,
+      "text": "your second question comes in whatsoever"
+    },
+    {
+      "start": 780.899,
+      "duration": 4.021,
+      "end": 784.92,
+      "text": "then"
+    },
+    {
+      "start": 781.68,
+      "duration": 5.339,
+      "end": 787.019,
+      "text": "how do you manage seven because it has a"
+    },
+    {
+      "start": 784.92,
+      "duration": 5.039,
+      "end": 789.959,
+      "text": "vertical alignment as well this is what"
+    },
+    {
+      "start": 787.019,
+      "duration": 6.601,
+      "end": 793.62,
+      "text": "I'll now explain tell you one thing if 7"
+    },
+    {
+      "start": 789.959,
+      "duration": 6.0,
+      "end": 795.959,
+      "text": "is greater than 6. I'm saying 7 my DBI"
+    },
+    {
+      "start": 793.62,
+      "duration": 4.74,
+      "end": 798.36,
+      "text": "Peak according to the intuition thereby"
+    },
+    {
+      "start": 795.959,
+      "duration": 5.041,
+      "end": 801.0,
+      "text": "I am going left seven might be my Peak"
+    },
+    {
+      "start": 798.36,
+      "duration": 5.7,
+      "end": 804.0600000000001,
+      "text": "but 7 is not there's someone 9 which is"
+    },
+    {
+      "start": 801.0,
+      "duration": 5.399,
+      "end": 806.399,
+      "text": "greater tell me one thing"
+    },
+    {
+      "start": 804.06,
+      "duration": 4.68,
+      "end": 808.7399999999999,
+      "text": "if 7 is greater than 6"
+    },
+    {
+      "start": 806.399,
+      "duration": 4.5,
+      "end": 810.899,
+      "text": "which technically means I repeat which"
+    },
+    {
+      "start": 808.74,
+      "duration": 4.74,
+      "end": 813.48,
+      "text": "technically means 7 is greater than"
+    },
+    {
+      "start": 810.899,
+      "duration": 3.901,
+      "end": 814.8,
+      "text": "everyone here right"
+    },
+    {
+      "start": 813.48,
+      "duration": 3.72,
+      "end": 817.2,
+      "text": "hence"
+    },
+    {
+      "start": 814.8,
+      "duration": 4.74,
+      "end": 819.54,
+      "text": "nine is also greater than everyone here"
+    },
+    {
+      "start": 817.2,
+      "duration": 3.84,
+      "end": 821.0400000000001,
+      "text": "right hence 9 is also greater than"
+    },
+    {
+      "start": 819.54,
+      "duration": 3.539,
+      "end": 823.079,
+      "text": "everyone here"
+    },
+    {
+      "start": 821.04,
+      "duration": 4.56,
+      "end": 825.5999999999999,
+      "text": "indeed because if 7 is greater than 6"
+    },
+    {
+      "start": 823.079,
+      "duration": 4.921,
+      "end": 828.0,
+      "text": "any 1 greater than 7 will also be"
+    },
+    {
+      "start": 825.6,
+      "duration": 4.56,
+      "end": 830.16,
+      "text": "greater than this hence this alignment"
+    },
+    {
+      "start": 828.0,
+      "duration": 4.86,
+      "end": 832.86,
+      "text": "is maintained even if you cancel of"
+    },
+    {
+      "start": 830.16,
+      "duration": 4.619,
+      "end": 834.779,
+      "text": "every one you're considering I'm not"
+    },
+    {
+      "start": 832.86,
+      "duration": 4.14,
+      "end": 837.0,
+      "text": "saying 7 is definitely my Peak I'm"
+    },
+    {
+      "start": 834.779,
+      "duration": 5.521,
+      "end": 840.3,
+      "text": "considering it to be my P and if it is"
+    },
+    {
+      "start": 837.0,
+      "duration": 5.399,
+      "end": 842.399,
+      "text": "not someone else a is greater than 7"
+    },
+    {
+      "start": 840.3,
+      "duration": 4.8,
+      "end": 845.0999999999999,
+      "text": "will always be greater than its right"
+    },
+    {
+      "start": 842.399,
+      "duration": 4.44,
+      "end": 846.839,
+      "text": "part and the bottom part I just need to"
+    },
+    {
+      "start": 845.1,
+      "duration": 3.419,
+      "end": 848.519,
+      "text": "check out the other parts and eventually"
+    },
+    {
+      "start": 846.839,
+      "duration": 4.74,
+      "end": 851.5790000000001,
+      "text": "the algorithm will flow you can take a"
+    },
+    {
+      "start": 848.519,
+      "duration": 5.581,
+      "end": 854.1,
+      "text": "bigger Matrix but just think on it"
+    },
+    {
+      "start": 851.579,
+      "duration": 4.621,
+      "end": 856.1999999999999,
+      "text": "you'll still start understanding it"
+    },
+    {
+      "start": 854.1,
+      "duration": 4.62,
+      "end": 858.72,
+      "text": "the core is if the intuition for the"
+    },
+    {
+      "start": 856.2,
+      "duration": 5.22,
+      "end": 861.4200000000001,
+      "text": "part one is Crystal Clear you'll"
+    },
+    {
+      "start": 858.72,
+      "duration": 4.799,
+      "end": 863.519,
+      "text": "understand this as well so as usual I'll"
+    },
+    {
+      "start": 861.42,
+      "duration": 4.2,
+      "end": 865.62,
+      "text": "be writing code in pseudocode I'm not"
+    },
+    {
+      "start": 863.519,
+      "duration": 4.5,
+      "end": 868.019,
+      "text": "sure why people on Twitter on LinkedIn"
+    },
+    {
+      "start": 865.62,
+      "duration": 4.14,
+      "end": 869.76,
+      "text": "say that my courses in C plus plus I"
+    },
+    {
+      "start": 868.019,
+      "duration": 3.541,
+      "end": 871.5600000000001,
+      "text": "don't write code in C plus plus I write"
+    },
+    {
+      "start": 869.76,
+      "duration": 3.78,
+      "end": 873.54,
+      "text": "sudo code a to understand this is"
+    },
+    {
+      "start": 871.56,
+      "duration": 3.779,
+      "end": 875.3389999999999,
+      "text": "pseudocode this is not C plus plus Java"
+    },
+    {
+      "start": 873.54,
+      "duration": 3.9,
+      "end": 877.4399999999999,
+      "text": "please please if someone is saying I"
+    },
+    {
+      "start": 875.339,
+      "duration": 4.321,
+      "end": 879.6600000000001,
+      "text": "teach in C plus plus correct them tell"
+    },
+    {
+      "start": 877.44,
+      "duration": 4.199,
+      "end": 881.639,
+      "text": "them that Raj teaches in pseudocode"
+    },
+    {
+      "start": 879.66,
+      "duration": 4.02,
+      "end": 883.68,
+      "text": "version and then you can write any code"
+    },
+    {
+      "start": 881.639,
+      "duration": 3.961,
+      "end": 885.6,
+      "text": "in any language got it so we'll be"
+    },
+    {
+      "start": 883.68,
+      "duration": 4.5,
+      "end": 888.18,
+      "text": "writing the code"
+    },
+    {
+      "start": 885.6,
+      "duration": 5.82,
+      "end": 891.4200000000001,
+      "text": "so I have a function which is given a"
+    },
+    {
+      "start": 888.18,
+      "duration": 5.58,
+      "end": 893.76,
+      "text": "matrix and assume it's given an N M if"
+    },
+    {
+      "start": 891.42,
+      "duration": 5.279,
+      "end": 896.699,
+      "text": "not given you can find it out can I say"
+    },
+    {
+      "start": 893.76,
+      "duration": 5.519,
+      "end": 899.279,
+      "text": "the low will be 0 and the high will be"
+    },
+    {
+      "start": 896.699,
+      "duration": 4.38,
+      "end": 901.079,
+      "text": "the last column which is M minus 1 very"
+    },
+    {
+      "start": 899.279,
+      "duration": 3.36,
+      "end": 902.639,
+      "text": "much sure"
+    },
+    {
+      "start": 901.079,
+      "duration": 3.481,
+      "end": 904.56,
+      "text": "let's quickly write down the binary"
+    },
+    {
+      "start": 902.639,
+      "duration": 4.081,
+      "end": 906.72,
+      "text": "search the binary search will go from"
+    },
+    {
+      "start": 904.56,
+      "duration": 4.98,
+      "end": 909.54,
+      "text": "low lesser than High"
+    },
+    {
+      "start": 906.72,
+      "duration": 5.94,
+      "end": 912.6600000000001,
+      "text": "correct what will I do and the first"
+    },
+    {
+      "start": 909.54,
+      "duration": 4.02,
+      "end": 913.56,
+      "text": "time I'll do low plus High by 2 to get"
+    },
+    {
+      "start": 912.66,
+      "duration": 3.179,
+      "end": 915.8389999999999,
+      "text": "them"
+    },
+    {
+      "start": 913.56,
+      "duration": 5.16,
+      "end": 918.7199999999999,
+      "text": "mid column can I say this will be the"
+    },
+    {
+      "start": 915.839,
+      "duration": 6.18,
+      "end": 922.019,
+      "text": "mid column now what am I doing"
+    },
+    {
+      "start": 918.72,
+      "duration": 8.1,
+      "end": 926.82,
+      "text": "what am I doing I'm trying to figure out"
+    },
+    {
+      "start": 922.019,
+      "duration": 8.281,
+      "end": 930.3,
+      "text": "where like at which rho is my"
+    },
+    {
+      "start": 926.82,
+      "duration": 5.1,
+      "end": 931.9200000000001,
+      "text": "X element figure out that Rhona"
+    },
+    {
+      "start": 930.3,
+      "duration": 4.56,
+      "end": 934.8599999999999,
+      "text": "figure out the row where your max"
+    },
+    {
+      "start": 931.92,
+      "duration": 5.64,
+      "end": 937.56,
+      "text": "element is maybe write a function which"
+    },
+    {
+      "start": 934.86,
+      "duration": 6.12,
+      "end": 940.98,
+      "text": "gives you the max element send them the"
+    },
+    {
+      "start": 937.56,
+      "duration": 6.24,
+      "end": 943.8,
+      "text": "Matrix send send them the n m and the"
+    },
+    {
+      "start": 940.98,
+      "duration": 5.64,
+      "end": 946.62,
+      "text": "column number so I think you can write a"
+    },
+    {
+      "start": 943.8,
+      "duration": 6.36,
+      "end": 950.16,
+      "text": "function that Returns the row number"
+    },
+    {
+      "start": 946.62,
+      "duration": 4.92,
+      "end": 951.54,
+      "text": "that returns this row number two stating"
+    },
+    {
+      "start": 950.16,
+      "duration": 3.84,
+      "end": 954.0,
+      "text": "the row number two as the max element"
+    },
+    {
+      "start": 951.54,
+      "duration": 4.56,
+      "end": 956.0999999999999,
+      "text": "you can do that right"
+    },
+    {
+      "start": 954.0,
+      "duration": 4.079,
+      "end": 958.079,
+      "text": "so I'll write that I'll show you"
+    },
+    {
+      "start": 956.1,
+      "duration": 4.979,
+      "end": 961.0790000000001,
+      "text": "afterwards in case you cannot snap the"
+    },
+    {
+      "start": 958.079,
+      "duration": 5.581,
+      "end": 963.66,
+      "text": "row at the mid what is my next stop"
+    },
+    {
+      "start": 961.079,
+      "duration": 4.44,
+      "end": 965.519,
+      "text": "to check the left and the right that's"
+    },
+    {
+      "start": 963.66,
+      "duration": 4.56,
+      "end": 968.2199999999999,
+      "text": "what I have to check can I say on the"
+    },
+    {
+      "start": 965.519,
+      "duration": 4.141,
+      "end": 969.66,
+      "text": "left what will be left what will be left"
+    },
+    {
+      "start": 968.22,
+      "duration": 3.96,
+      "end": 972.1800000000001,
+      "text": "think think"
+    },
+    {
+      "start": 969.66,
+      "duration": 5.22,
+      "end": 974.88,
+      "text": "it's on the same row so if I'm standing"
+    },
+    {
+      "start": 972.18,
+      "duration": 5.159,
+      "end": 977.3389999999999,
+      "text": "at Mid the left will be made minus 1 and"
+    },
+    {
+      "start": 974.88,
+      "duration": 4.019,
+      "end": 978.899,
+      "text": "the right will be mid plus one value"
+    },
+    {
+      "start": 977.339,
+      "duration": 4.581,
+      "end": 981.9200000000001,
+      "text": "so I'll take the left"
+    },
+    {
+      "start": 978.899,
+      "duration": 3.021,
+      "end": 981.92,
+      "text": "and I'll take the right"
+    },
+    {
+      "start": 982.079,
+      "duration": 6.901,
+      "end": 988.9799999999999,
+      "text": "so I'll be left left can I say that if"
+    },
+    {
+      "start": 985.62,
+      "duration": 5.459,
+      "end": 991.079,
+      "text": "mid minus 1 is greater than zero in case"
+    },
+    {
+      "start": 988.98,
+      "duration": 6.299,
+      "end": 995.279,
+      "text": "I can easily take the left to be"
+    },
+    {
+      "start": 991.079,
+      "duration": 6.661,
+      "end": 997.7399999999999,
+      "text": "whatever row we are at and mid minus 1"
+    },
+    {
+      "start": 995.279,
+      "duration": 4.8,
+      "end": 1000.079,
+      "text": "or else we can simply say"
+    },
+    {
+      "start": 997.74,
+      "duration": 6.06,
+      "end": 1003.8,
+      "text": "-1 because that's a small number"
+    },
+    {
+      "start": 1000.079,
+      "duration": 6.301,
+      "end": 1006.38,
+      "text": "on the right if mid plus 1 is still"
+    },
+    {
+      "start": 1003.8,
+      "duration": 6.06,
+      "end": 1009.8599999999999,
+      "text": "lesser than the boundary in that case we"
+    },
+    {
+      "start": 1006.38,
+      "duration": 7.319,
+      "end": 1013.699,
+      "text": "can take Matrix of rho of"
+    },
+    {
+      "start": 1009.86,
+      "duration": 5.94,
+      "end": 1015.8000000000001,
+      "text": "mid plus 1 or else on the outer part we"
+    },
+    {
+      "start": 1013.699,
+      "duration": 6.421,
+      "end": 1020.12,
+      "text": "will always take minus one so can I say"
+    },
+    {
+      "start": 1015.8,
+      "duration": 7.8,
+      "end": 1023.5999999999999,
+      "text": "if if if my value at Matrix of"
+    },
+    {
+      "start": 1020.12,
+      "duration": 7.26,
+      "end": 1027.38,
+      "text": "mid sorry uh"
+    },
+    {
+      "start": 1023.6,
+      "duration": 6.9,
+      "end": 1030.5,
+      "text": "row and the mid column is greater than"
+    },
+    {
+      "start": 1027.38,
+      "duration": 5.459,
+      "end": 1032.8390000000002,
+      "text": "left and and greater than right"
+    },
+    {
+      "start": 1030.5,
+      "duration": 4.799,
+      "end": 1035.299,
+      "text": "can I say this is my Peak element yes I"
+    },
+    {
+      "start": 1032.839,
+      "duration": 4.921,
+      "end": 1037.76,
+      "text": "can and thereby you can always return"
+    },
+    {
+      "start": 1035.299,
+      "duration": 4.14,
+      "end": 1039.439,
+      "text": "the row and the mid as the column"
+    },
+    {
+      "start": 1037.76,
+      "duration": 3.84,
+      "end": 1041.6,
+      "text": "perfect"
+    },
+    {
+      "start": 1039.439,
+      "duration": 5.161,
+      "end": 1044.6000000000001,
+      "text": "else if"
+    },
+    {
+      "start": 1041.6,
+      "duration": 6.0,
+      "end": 1047.6,
+      "text": "The Matrix is smaller than the left"
+    },
+    {
+      "start": 1044.6,
+      "duration": 5.04,
+      "end": 1049.6399999999999,
+      "text": "which indicates the left one is greater"
+    },
+    {
+      "start": 1047.6,
+      "duration": 5.28,
+      "end": 1052.8799999999999,
+      "text": "there is a possibility that the peak is"
+    },
+    {
+      "start": 1049.64,
+      "duration": 5.159,
+      "end": 1054.7990000000002,
+      "text": "on the left I say high equal to Mid"
+    },
+    {
+      "start": 1052.88,
+      "duration": 5.52,
+      "end": 1058.4,
+      "text": "minus 1."
+    },
+    {
+      "start": 1054.799,
+      "duration": 6.541,
+      "end": 1061.34,
+      "text": "or else I will go the opposite saying"
+    },
+    {
+      "start": 1058.4,
+      "duration": 4.98,
+      "end": 1063.38,
+      "text": "low equal to Mid plus 1 that's how it is"
+    },
+    {
+      "start": 1061.34,
+      "duration": 4.74,
+      "end": 1066.08,
+      "text": "done because if"
+    },
+    {
+      "start": 1063.38,
+      "duration": 3.96,
+      "end": 1067.3400000000001,
+      "text": "these condition is false either this is"
+    },
+    {
+      "start": 1066.08,
+      "duration": 3.42,
+      "end": 1069.5,
+      "text": "false or this is"
+    },
+    {
+      "start": 1067.34,
+      "duration": 3.959,
+      "end": 1071.299,
+      "text": "that is how it is done if this if is"
+    },
+    {
+      "start": 1069.5,
+      "duration": 3.78,
+      "end": 1073.28,
+      "text": "false which means either this is false"
+    },
+    {
+      "start": 1071.299,
+      "duration": 3.841,
+      "end": 1075.1399999999999,
+      "text": "or this is false so we just check for"
+    },
+    {
+      "start": 1073.28,
+      "duration": 4.259,
+      "end": 1077.539,
+      "text": "else if and the next else will be"
+    },
+    {
+      "start": 1075.14,
+      "duration": 5.279,
+      "end": 1080.419,
+      "text": "following and at the end you can just"
+    },
+    {
+      "start": 1077.539,
+      "duration": 4.921,
+      "end": 1082.46,
+      "text": "give a dummy return of minus 1 minus 1"
+    },
+    {
+      "start": 1080.419,
+      "duration": 5.401,
+      "end": 1085.8200000000002,
+      "text": "why"
+    },
+    {
+      "start": 1082.46,
+      "duration": 4.92,
+      "end": 1087.38,
+      "text": "because it's a function it will be x uh"
+    },
+    {
+      "start": 1085.82,
+      "duration": 3.78,
+      "end": 1089.6,
+      "text": "it'll be expecting you to return"
+    },
+    {
+      "start": 1087.38,
+      "duration": 4.14,
+      "end": 1091.5200000000002,
+      "text": "something so just give a dummy one"
+    },
+    {
+      "start": 1089.6,
+      "duration": 3.3,
+      "end": 1092.8999999999999,
+      "text": "so in all the cases you will be finding"
+    },
+    {
+      "start": 1091.52,
+      "duration": 2.88,
+      "end": 1094.4,
+      "text": "a peak element that is what the question"
+    },
+    {
+      "start": 1092.9,
+      "duration": 4.019,
+      "end": 1096.919,
+      "text": "is stating so don't worry about this"
+    },
+    {
+      "start": 1094.4,
+      "duration": 3.6,
+      "end": 1098.0,
+      "text": "this is just a dummy line that you have"
+    },
+    {
+      "start": 1096.919,
+      "duration": 3.181,
+      "end": 1100.1000000000001,
+      "text": "to write in order to complete the"
+    },
+    {
+      "start": 1098.0,
+      "duration": 3.78,
+      "end": 1101.78,
+      "text": "execution of code so let's quickly jump"
+    },
+    {
+      "start": 1100.1,
+      "duration": 3.78,
+      "end": 1103.8799999999999,
+      "text": "into the code editor you can find the C"
+    },
+    {
+      "start": 1101.78,
+      "duration": 3.84,
+      "end": 1105.62,
+      "text": "plus plus code on the screen in case you"
+    },
+    {
+      "start": 1103.88,
+      "duration": 3.06,
+      "end": 1106.94,
+      "text": "want the Java Python and JavaScript code"
+    },
+    {
+      "start": 1105.62,
+      "duration": 2.7,
+      "end": 1108.32,
+      "text": "the article link will be in the"
+    },
+    {
+      "start": 1106.94,
+      "duration": 3.54,
+      "end": 1110.48,
+      "text": "description you can definitely check it"
+    },
+    {
+      "start": 1108.32,
+      "duration": 3.719,
+      "end": 1112.039,
+      "text": "out I am opening this because I wanted"
+    },
+    {
+      "start": 1110.48,
+      "duration": 4.92,
+      "end": 1115.4,
+      "text": "to show you how to find the max index"
+    },
+    {
+      "start": 1112.039,
+      "duration": 6.841,
+      "end": 1118.8799999999999,
+      "text": "it's very obvious just go through this"
+    },
+    {
+      "start": 1115.4,
+      "duration": 4.92,
+      "end": 1120.3200000000002,
+      "text": "entire column which is having n rows and"
+    },
+    {
+      "start": 1118.88,
+      "duration": 3.36,
+      "end": 1122.24,
+      "text": "then you figure out whatever is the max"
+    },
+    {
+      "start": 1120.32,
+      "duration": 4.56,
+      "end": 1124.8799999999999,
+      "text": "value you store it at the end you return"
+    },
+    {
+      "start": 1122.24,
+      "duration": 5.64,
+      "end": 1127.88,
+      "text": "the index pretty simple and apart from"
+    },
+    {
+      "start": 1124.88,
+      "duration": 5.22,
+      "end": 1130.1000000000001,
+      "text": "that everything is self-explanatory we"
+    },
+    {
+      "start": 1127.88,
+      "duration": 3.84,
+      "end": 1131.72,
+      "text": "have written the same on the iPad and"
+    },
+    {
+      "start": 1130.1,
+      "duration": 3.12,
+      "end": 1133.2199999999998,
+      "text": "we're returning the dummy what I'll do"
+    },
+    {
+      "start": 1131.72,
+      "duration": 4.14,
+      "end": 1135.8600000000001,
+      "text": "is I'll quickly go ahead and submit this"
+    },
+    {
+      "start": 1133.22,
+      "duration": 4.92,
+      "end": 1138.14,
+      "text": "what will be the time complexity of this"
+    },
+    {
+      "start": 1135.86,
+      "duration": 4.02,
+      "end": 1139.8799999999999,
+      "text": "I'm doing a binary search so can I say"
+    },
+    {
+      "start": 1138.14,
+      "duration": 5.64,
+      "end": 1143.7800000000002,
+      "text": "I'm doing a binary search"
+    },
+    {
+      "start": 1139.88,
+      "duration": 4.98,
+      "end": 1144.8600000000001,
+      "text": "on the number of columns I can so what"
+    },
+    {
+      "start": 1143.78,
+      "duration": 3.84,
+      "end": 1147.62,
+      "text": "will be it"
+    },
+    {
+      "start": 1144.86,
+      "duration": 5.16,
+      "end": 1150.02,
+      "text": "can be logarithmic base to M for sure"
+    },
+    {
+      "start": 1147.62,
+      "duration": 5.58,
+      "end": 1153.1999999999998,
+      "text": "for binary search and on every binary"
+    },
+    {
+      "start": 1150.02,
+      "duration": 5.88,
+      "end": 1155.9,
+      "text": "search I'm scanning through entire yes"
+    },
+    {
+      "start": 1153.2,
+      "duration": 7.26,
+      "end": 1160.46,
+      "text": "entire column to find out the max so the"
+    },
+    {
+      "start": 1155.9,
+      "duration": 8.159,
+      "end": 1164.0590000000002,
+      "text": "column length is n can I say Migo of"
+    },
+    {
+      "start": 1160.46,
+      "duration": 5.88,
+      "end": 1166.3400000000001,
+      "text": "n into logarithmic base to m is my time"
+    },
+    {
+      "start": 1164.059,
+      "duration": 5.521,
+      "end": 1169.58,
+      "text": "complexity what about the extra space"
+    },
+    {
+      "start": 1166.34,
+      "duration": 4.86,
+      "end": 1171.1999999999998,
+      "text": "I'm not using any extra space so Migo 1"
+    },
+    {
+      "start": 1169.58,
+      "duration": 3.66,
+      "end": 1173.24,
+      "text": "is my space complexity and this will be"
+    },
+    {
+      "start": 1171.2,
+      "duration": 3.719,
+      "end": 1174.919,
+      "text": "the most optimal solution so this will"
+    },
+    {
+      "start": 1173.24,
+      "duration": 3.12,
+      "end": 1176.36,
+      "text": "wait for this problem in case you've"
+    },
+    {
+      "start": 1174.919,
+      "duration": 3.301,
+      "end": 1178.22,
+      "text": "understood the entire intuition the"
+    },
+    {
+      "start": 1176.36,
+      "duration": 3.12,
+      "end": 1179.4799999999998,
+      "text": "solution please do consider giving us a"
+    },
+    {
+      "start": 1178.22,
+      "duration": 2.64,
+      "end": 1180.8600000000001,
+      "text": "like and if you haven't checked out our"
+    },
+    {
+      "start": 1179.48,
+      "duration": 3.42,
+      "end": 1182.9,
+      "text": "merchandise store the link will be in"
+    },
+    {
+      "start": 1180.86,
+      "duration": 3.6,
+      "end": 1184.4599999999998,
+      "text": "the description and yeah if you're new"
+    },
+    {
+      "start": 1182.9,
+      "duration": 3.06,
+      "end": 1185.96,
+      "text": "to our channel do consider subscribing"
+    },
+    {
+      "start": 1184.46,
+      "duration": 3.36,
+      "end": 1187.82,
+      "text": "to us if you haven't followed me on"
+    },
+    {
+      "start": 1185.96,
+      "duration": 3.12,
+      "end": 1189.08,
+      "text": "Twitter Instagram LinkedIn all the"
+    },
+    {
+      "start": 1187.82,
+      "duration": 2.76,
+      "end": 1190.58,
+      "text": "profile links will be in the description"
+    },
+    {
+      "start": 1189.08,
+      "duration": 2.64,
+      "end": 1191.72,
+      "text": "for this I'll be wrapping up this video"
+    },
+    {
+      "start": 1190.58,
+      "duration": 2.6,
+      "end": 1193.1799999999998,
+      "text": "let's read in some of the video till"
+    },
+    {
+      "start": 1191.72,
+      "duration": 6.06,
+      "end": 1197.78,
+      "text": "then bye-bye take care"
+    },
+    {
+      "start": 1193.18,
+      "duration": 9.48,
+      "end": 1202.66,
+      "text": "[Music]"
+    },
+    {
+      "start": 1197.78,
+      "duration": 4.88,
+      "end": 1202.66,
+      "text": "you're golden I will find"
+    }
+  ]
+}

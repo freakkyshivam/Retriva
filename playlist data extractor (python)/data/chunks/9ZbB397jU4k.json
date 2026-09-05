@@ -1,0 +1,97 @@
+{
+  "video_id": "9ZbB397jU4k",
+  "position": 70,
+  "title": "BS-25. Search in a 2D Matrix - II  |  Binary Search on 2D",
+  "url": "https://www.youtube.com/watch?v=9ZbB397jU4k",
+  "chunk_count": 8,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "9ZbB397jU4k",
+      "position": 70,
+      "title": "BS-25. Search in a 2D Matrix - II  |  Binary Search on 2D",
+      "url": "https://www.youtube.com/watch?v=9ZbB397jU4k",
+      "start": 2.94,
+      "end": 115.68,
+      "text": "so let's continue the band research playlist before that if you come back to the channel I hope you guys are doing extremely well so the problem that you're going to solve today is searching in a 2d metrics part two whereas the part one I've already solved this problem in this particular playlist you can go back and watch it so what is part two stating it's stating that you'll be given a matrix of integers which will be of size n cross M and you will have to tell me the coordinate when the target is lying in The Matrix now the target can be anything it can be there in The Matrix it cannot be there just in case the target is there you'll have to return me the row number and the column number in this particular case the target is 14 and it is over here so if I write down the row numbers that is it is at the third row and it is at the column this is what you have to return me so is it a normal Matrix no it is not so the question states that every row yes every individual row will be sorted from left to right from left to right and every individual column will be sorted from top to bottom that is what is stated but carefully notice this 15 is greater than 2 so it's not sorted in this way like it's not sorted The Matrix entirely is not sorted only the individual rows and the individual columns are sorted so this is the property of the Matrix that is given to you and your task is to tell me the coordinates of this particular Target so what will be the extreme Brute Force the extreme brute force is super simple what you basically do is you go through every element and you check where is the particular element and the moment you find the element you written the row number and the column number in case you",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "9ZbB397jU4k",
+      "position": 70,
+      "title": "BS-25. Search in a 2D Matrix - II  |  Binary Search on 2D",
+      "url": "https://www.youtube.com/watch?v=9ZbB397jU4k",
+      "start": 112.14,
+      "end": 232.08,
+      "text": "number and the column number in case you don't find the new return minus 1 and minus 1 or whatever the question is asking so I'll have to go through every element so will be the time complexity obviously it will be B go of n cross n and I'm not going to write the code because this is like extremely innate solution can I optimize this can I optimize enclosure probably I can why can I the entire row is sorted every individual row is sorted so can I say if I go to the first row and just look at this row as an array as in 1D array can I look for 14 over here I can and the row is sorted can I do a binary search on this individual 1D array I can so what I will do is I'll go to the first row and consider this as a 1D array and I'll do a binary search to find the target do I find no next I'll go to the next and I'll again do a binary search to find 14 I don't next I'll go to the next and again do a binary search to find the 14 I don't and eventually when I'm over here and I do a binary search for 14 I'll find it out at the column number two and we are at the row number three so three comma 2 is what we will be returning so what am I doing basically going from the row 0 till the last row which is n minus 1 and I know the array is Matrix of I because if I just write Matrix of I that's basically an individual 1D array something like if I write Matrix of 0 that's an individual 1D array so can I say we know how to do a binary search right maybe we can call the binary search function I'll say that hey the array is Matrix of I and we'll have to look for Target and probably I can just give index and",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "9ZbB397jU4k",
+      "position": 70,
+      "title": "BS-25. Search in a 2D Matrix - II  |  Binary Search on 2D",
+      "url": "https://www.youtube.com/watch?v=9ZbB397jU4k",
+      "start": 227.58,
+      "end": 338.88,
+      "text": "and probably I can just give index and in case because we know how to write this binary search on a 1D array I'm not going to teach you again so if this particular index is saying that here listen I am having a value apart from -1 assuming it it returns -1 if the element is not there if it is not returning minus 1 that means it is there hence you can straight away return the row number which is I and the column will be indexed because that is where it will be found in case after going through every row you did not find it then you will be going ahead and returning minus 1 comma minus that's it so what I did was I went through every row and I did a binary search on that 1D row and if I am finding it then I am returning the particular row and wherever I'm finding it that is what I'm doing would be the time complexity of this can I say I'm going through every row so that's a b go of n that is what I'm taking because I'm going through every row and doing a binary search what is this particular length that's a m length every 1D array is of length M right so can I say I'm doing a binary search on every particular row which will take logarithmic base to M time complexity hence this will be the time complexity but but this will just be the better solution can we optimize this yes we can let's look at that so I'll be writing the code for the better solution because I'm assuming that you guys can write it and in case you need any reference what you can do is you can go to the notes in the description and you can find out the better solution code in C plus plus Java Python and JavaScript so what is the next thing n into logarithmic base to m is something which is not working",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "9ZbB397jU4k",
+      "position": 70,
+      "title": "BS-25. Search in a 2D Matrix - II  |  Binary Search on 2D",
+      "url": "https://www.youtube.com/watch?v=9ZbB397jU4k",
+      "start": 334.74,
+      "end": 468.78,
+      "text": "something which is not working binary search did not work can we optimize this let's carefully look at something if I stand over here just hypothetically think on this if I am standing over here this is increasing this is increasing so I'm standing over here and someone is saying tell me where is eight can you for sure can you surely say that it will not be here you cannot because from this like on the right side it is increasing on the bottom also it is increasing so you cannot decide on like which side it is laying you cannot decide let's look at Alternatives can I stand here even if I stand here and I'm I'm looking for eight this side is decreasing right and this side is also decreasing so again cannot decide where to go that is impossible because both of them are decreasing so I cannot surely say let's look at the other alternators what if I stand here let's carefully observe over here this is decreasing and this is increasing so can I say overall this line and this line is increasing like it's like 1 4 7 11 15 19 22 24 30. it's increasing overall so can I surely say if I'm looking for a hypothetical scenario and if I'm standing here eight can never lie over here can I surely say that I can I can why because everything is greater than 15 so 8 cannot lie here but it can probably I'm not sure I'm not sure probably here or somewhere here can we but I'm very much sure that it will never be it'll never be here I'm very much sure and this is what we will try to use let's do it right and you'll understand it in a much better way Target is 14. let's stand at 15. Let's uh okay I'll probably change the color let's stand at 50 so it's standing at 50. I'm looking for 14. and I surely say this is not my target I can and can I surely say that",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "9ZbB397jU4k",
+      "position": 70,
+      "title": "BS-25. Search in a 2D Matrix - II  |  Binary Search on 2D",
+      "url": "https://www.youtube.com/watch?v=9ZbB397jU4k",
+      "start": 462.96,
+      "end": 594.24,
+      "text": "target I can and can I surely say that this is increasing this is increasing thereby 14 can never lie over here 14 can never lie over here so what I'll do is I'll start at rho equal to 0 and column be equal to how much is that 0 1 0 1 2 3 4 so column is four let me write down the row numbers so can I surely see that this particular 14 that I'm looking for will never be in the column 4 I can thereby I will simply move to 11. hence I'll say the column will reduce to three perfect I'm standing over here and again carefully observe this particular thing is sorted I'm looking for 14. now can I say it will never be yes I can I will eliminate this portion now just look at the elimination that's happening I'll eliminate one row and I'll move to the bottom that's to 12 that means I'll increase the row perfect so I'm standing at Row 1 and column three what am I looking for 14 can I definitely see I can never find 14 here I can thereby this will be omitted and I'll move one step down and I'll increase the row perfect I'm looking for 14 which is definitely not equivalent to this and can I see I can probably have 14 here but I can never have it here hence I will say eliminate this and move one place here which is reduce the color perfect I'm having an eye I'm looking for 40. that's definitely not it thereby I can say I'll never have it here because all of these numbers are lesser hence I'll eliminate this and I'll increase the row to three and I'll reach at 14. the moment I'm reaching at 14 in the next check that's equivalent to the Target hence it's at the row comma column and if you carefully see the row is 3 and the column is 2. what did I do I eliminate",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "9ZbB397jU4k",
+      "position": 70,
+      "title": "BS-25. Search in a 2D Matrix - II  |  Binary Search on 2D",
+      "url": "https://www.youtube.com/watch?v=9ZbB397jU4k",
+      "start": 588.66,
+      "end": 730.0790000000001,
+      "text": "column is 2. what did I do I eliminate it and at every time I was eliminating a row or a column so this does work what is the time complexity we'll be discussing that but before that let's quickly write down the code it's super simple I know one thing the rule is zero initially I'm standing at column M minus 1. now I will be moving observe one thing you either move this side or you either move downwards isn't it so basically while moving you might Cross or while moving down you might cross the rows so when I write while till I have rows like till has rows until I have columns that's it quite simple and in case if the Matrix is having the row and the column EQ are into the target I say I've got my value and you can return this value which will be your answer just go ahead and return it pretty much simple or else if The Matrix of rho column is lesser than Target can I surely Say it'll never be in that true so thereby you will say row plus plus or else there is only one condition which is column minus minus perfect if the while loop ends you can return something like minus one comma minus one stating the value was never found very simple now you might be thinking struggle does it only work if we stand here can I stand here yes you can even if you start your algorithm from here it will still work why is that because even if you look at this carefully this is also sorted so when you're standing at 18 you can say that this is smaller this is greater so you can eventually eliminate this part on this part so there are two possible starting points one is definitely this one while the other one is definitely this one but these cannot be the starting points why because if you carefully observe both of them are increasing both of them are decreasing",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "9ZbB397jU4k",
+      "position": 70,
+      "title": "BS-25. Search in a 2D Matrix - II  |  Binary Search on 2D",
+      "url": "https://www.youtube.com/watch?v=9ZbB397jU4k",
+      "start": 724.44,
+      "end": 843.54,
+      "text": "increasing both of them are decreasing so you cannot eliminate over here since this portion is sorry over here since this portion is sorted you can decide what to eliminate so the next thing the time complexity and what is the time complexity I think the worst case which is you start from 15 and you're looking for 80. what is the worst case it's basically going from one corner to the other corner so tell me one thing what possible movements are we doing we're either moving something like this and we're canceling the column or either we are moving down and we are canceling the row these are the movements we are doing isn't it something I know for sure is you have to go from here to here I cannot go I cannot go in uh like what do you say hypotenuse Direction because I cannot go in a diagonal Direction rather why because that direction is something which a logic doesn't do it just is going rho plus plus that is down a column minus 1 is which is left so I'm very much sure that from like to go from here to here I have to take these many vertical steps and what is these many steps that's the number of rows I'll have to go n rows and also have two Traverse the M horizontal steps right thereby in total the complexity will be n plus M because I'll have to take these steps what you can do is you can take this example and take this example and you will be seeing that first you go from here to here then you go from here to here then you go from here to here then you go from here to here then you go from uh sorry here to here yes then you go from here then you go from here then you go from here So eventually you would have taken one two three four four vertical and one two three four horizontal steps",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "9ZbB397jU4k",
+      "position": 70,
+      "title": "BS-25. Search in a 2D Matrix - II  |  Binary Search on 2D",
+      "url": "https://www.youtube.com/watch?v=9ZbB397jU4k",
+      "start": 837.66,
+      "end": 929.899,
+      "text": "three four horizontal steps so 4 plus 4 is 8 which is basically n plus Sim thereby you the thereby the time complexity is we go of n plus M what about the space complexity that's a big offer so this will be the complexity of the optimal algorithm so let's quickly get back into the code editor by the way in the problem statement they're asking you to return a Boolean value that is written true if you find the Target and you return false if you do not find the target so you don't need to return the coordinates so it's the exact same code and that is what I've written you might be thinking let's say where is binary search and the concept of binary search it's still here that is elimination we did not apply a straight away binary search the concept of elimination was applied because we kind of eliminated a part so the concepts will always be there it might not be a straightforward binary search question in that case you have to figure out elimination tactics got it so what I'll do is I'll quickly go ahead and submit it and this will be running fine just in case yes watching till here I have understood everything please please please do consider giving us that like and if you're new to our Channel what are you waiting for hit that subscribe button and and if you haven't followed me on Instagram Twitter and Linkedin all the profile links will be in the description where this I'll be wrapping up this video let's put in some other videos whenever your heart is broken don't ever forget your golden I I will find the light in",
+      "word_count": 291
+    }
+  ]
+}

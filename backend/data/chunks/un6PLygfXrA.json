@@ -1,0 +1,130 @@
+{
+  "video_id": "un6PLygfXrA",
+  "position": 9,
+  "title": "Re 2. Problems on Recursion | Strivers A2Z DSA Course",
+  "url": "https://www.youtube.com/watch?v=un6PLygfXrA",
+  "chunk_count": 11,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "un6PLygfXrA",
+      "position": 9,
+      "title": "Re 2. Problems on Recursion | Strivers A2Z DSA Course",
+      "url": "https://www.youtube.com/watch?v=un6PLygfXrA",
+      "start": 0.0,
+      "end": 113.119,
+      "text": "so before starting this video i'd love to thank the sponsor of this video which is code studio now if you are willing to practice uh interview problems topic wise this is the place where you should look for because core studio has over 2000 plus problems and has all the problem solution in c plus java as well as python if you're looking for a guided path then you can find for python for dbms for object oriented programming operating system computer networks system design web development any other thing that you're looking for you'll find guided paths for every other thing over here also also if you're looking for any top company questions let's say if you have an interview at amazon if you're looking for amazon questions you can get all the top amazon coding questions via tag and all the solutions in c plus java as well as python also if you have an interview schedule you can read their interview experiences where there are 600 plus interview experiences from companies like amazon microsoft adobe google etc so what are you waiting for code studio has a lot of free resources for interview preparation the link will be in the description make sure you check it out hey everyone welcome back to the channel i hope you guys are doing extremely well so today will be the lecture two of recursion playlist which is basic recursion problems now in the previous video we did learn about recursion in depth what is like so please make sure you watch out the previous video and after that only you start this video so in this video we are going to solve uh some problems the first one being a print name five times i'm assuming you can do that print uh linearly from one to n using recursion definitely print linearly from n to one then print linearly from one to n but in some backtracking over here i'll teach you how can you do stuffs uh using backtrack kind of backtrack",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "un6PLygfXrA",
+      "position": 9,
+      "title": "Re 2. Problems on Recursion | Strivers A2Z DSA Course",
+      "url": "https://www.youtube.com/watch?v=un6PLygfXrA",
+      "start": 107.6,
+      "end": 238.879,
+      "text": "uh using backtrack kind of backtrack and print from end to one again using back cracking okay so i'm assuming you can do the first three but still i'll recommend you to watch the entire video because the concepts gets more clear the more you watch the videos so let's uh take the first problem and do it that is uh print name n times let's keep it n times okay so the generic way is definitely uh to run a for loop and print the name n times but i want you to print your name n times using recursion yes that's that's a catch here using recursion so how can you do this you know there will definitely be a main which will uh be calling print okay so i'm saying n times so what you can do is you can take the n from the user yes you can take the n from the user so input as n in java it will be integer dot parsi and n and then you can say a function with uh probably 0 and n so over here i'm gonna teach you something which is very important uh one and then so this is the first time and i'm saying till new printed okay okay i'm gonna teach you something change of parameters which is very important so i'm writing a void f okay no global variables this time i'm taking an integer i and i'm taking an integer n okay over here i know the base cases if i start from yes if i start from 1 i have to go till n that's for sure like i have to print it n times so i know the base case is definitely going to be till i haven't printed n times so if at any moment i exceeds n i am going to say return because i'm going to just print it n times that's very simple uh coming from the previous class it's very very simple this is what we call it as the base case remember",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "un6PLygfXrA",
+      "position": 9,
+      "title": "Re 2. Problems on Recursion | Strivers A2Z DSA Course",
+      "url": "https://www.youtube.com/watch?v=un6PLygfXrA",
+      "start": 234.879,
+      "end": 375.039,
+      "text": "remember so base case is decided on the problem statement so this is the base case okay what after that after that i will be like okay let's print it so you will simply say print let's assume my name is raj so i'll print raj and then i'll call f i've printed it once i did came up as one so the next time i will call it as i plus one comma n okay so let's understand how does the flow works so that you get a better perspective so initially uh you will be taking integer n assume n is given as 3 assuming n is given as 3 and again i'll put the output screen over here assuming n is given as 3 so n becomes 3 function says 1 and n so this guy calls this particular guy with i's value as 1 n's value as 3 so the function call yes the first function call that you make is of f of 1 comma 3 that's the first function call you made is the base case true no because 1 is not greater than three one is not greater than three no thereby you say print raj so raj gets printed okay next you're saying function of i plus one so this guy calls a function with i plus 1 i was 1 over here i gets incremented by 1 and calls the function by 2 and n is still 3 and over here you write the same line of code i greater than n because it's the same function which is being called so in memory it's the same one print raj and then f of i plus one comma n okay this time let's understand if this base case is executed i is 2 n is 3 so this will not be executed print raj again you print raj right remember this function of 1 of 3 called this f 2 3 so in recursion tree it will be f of 2 comma 3 this is how you create the recursion",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "un6PLygfXrA",
+      "position": 9,
+      "title": "Re 2. Problems on Recursion | Strivers A2Z DSA Course",
+      "url": "https://www.youtube.com/watch?v=un6PLygfXrA",
+      "start": 369.84,
+      "end": 495.28000000000003,
+      "text": "this is how you create the recursion tree now f of 2 3 this is printed and now this portion so this guy goes and again calls f of i plus 1 so 3 comma 3 and again you write the same lines is i greater than n then you say return definitely uh this is false so thereby you again go and say print raj and is f of i plus 1 comma n so this is false so this gets executed so raj is again printed f of i plus 1 so this time f like f of 2 3 called f of 3 3 so i can just draw that f of 2 3 called f of 3 3. now f of 3 3 calls i plus 1 which is f of 4 comma 3 and this moment i can say if i greater than n then return becomes true why because because i is4 n is 3 and this guy comes out to be true thereby you are returning so the moment you're returning these lines will be of no use anymore these lines will be of no use anymore so you return now this is done now remember f of 3 3 called f of 4 3 so you can do it in the recursion tree as well f of 3 3 called f of 4 3 okay so this is done this is over so i can say this function is over thereby you can return this is done so this function is over there by this is over you can return thereby this is over you can definitely return back to where it was called and now the function the program terminates so this is how easily the recursion did work and we did it in the parameters and not using any global variables so i was able to print my name n number of times is i was able to print my name n number of times and at f of 4 3 i returned so this got",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "un6PLygfXrA",
+      "position": 9,
+      "title": "Re 2. Problems on Recursion | Strivers A2Z DSA Course",
+      "url": "https://www.youtube.com/watch?v=un6PLygfXrA",
+      "start": 490.72,
+      "end": 611.04,
+      "text": "at f of 4 3 i returned so this got completed this return so this got completed this return so during the course this guy printed one raj this guy printed one raj this guy printed one raj and this guy hit the base condition and returned so this is how you can easily uh do the first problem which is print the name n times using recursion right i hope you have understood this so if i talk about the time complexity uh space complexity it's very very simple i can say the time complexity uh to be big o of n because inside the functions yes inside the functions uh these lines are like we go off one like they don't take any time so apparently uh you're calling one function that guy calls one more function that guy calls one more function so you're calling n functions if you carefully observe one two three four so you're calling n functions like here about n functions so i can say the time complexity to be big o of n yes i can say the time complexity to be b co of n and what is the stack space so in space complexity we generally assume the stack space now this guy would have been in the stack when you called f of 1 comma 3 would have been in the stack then f of 2 comma 3 would have been in the stack then f of 3 comma three would have been in the stack so they were they were waiting in the stack till this base case returned they were waiting to be completed so thereby i can say the space complexity is also big o of n now this space complexity is hypothetical like you're not using an array internal the computer's internal memory uses the stack space so thereby making the time complexity and the space complexity to be big o of n and b go often i hope that makes sense so guys we have done the first problem",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "un6PLygfXrA",
+      "position": 9,
+      "title": "Re 2. Problems on Recursion | Strivers A2Z DSA Course",
+      "url": "https://www.youtube.com/watch?v=un6PLygfXrA",
+      "start": 606.88,
+      "end": 746.0,
+      "text": "so guys we have done the first problem which is print the name ten times or five times okay now let's do the next problem which is print linearly from one to n so basically if n is given as four i want you to print one two three four yes this is what i want as the output okay so how will you do this again very much similar to the previous problem if i write down the function it's going to be i comma n and it's going to be i greater than n and you are saying return and this time the print statement will be executing i and then you can call f of i plus 1 and is a similar one just in place of the name you can print i right so that in the main yes so that in the main when you call the function like you can take the input of n you can take the input of n and then when you call the function with one comma n first time prince i which is one next time goes i plus one so two similarly you can just go on printing till whatever your n is so it was quite similar to the previous one where i'm easily able to print one to n correct now it's a time to uh think it in the reverse order and do the next problem which is print in the opposite fashion print in uh terms of n to one so like if i give you n equal to 4 you're going to print me 4 3 2 1. now can you do this can you do this i think you can yes you can uh it's very simple as of now the code that we wrote started from i equal to 1 and then you did i plus 1 then you did again i plus 1 and you kept on calling so if i'm if i have to print from 4 i can understand that the first i has to be 4",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "un6PLygfXrA",
+      "position": 9,
+      "title": "Re 2. Problems on Recursion | Strivers A2Z DSA Course",
+      "url": "https://www.youtube.com/watch?v=un6PLygfXrA",
+      "start": 740.48,
+      "end": 875.4399999999999,
+      "text": "i has to be 4 and the last has to be a one after one before one you don't print so i can say i'll just write the function in the opposite order it's going to be same i comma n but this time it's going to be if i becomes lesser than 1 then i don't need to print and i can print the i and this time i can call it i minus 1 comma n and during the start yes i repeat during the start of main i can take the input of n definitely i can take the input of n and i can say f of n comma n to be called yes i can say f of n comma n to be called so that if if assume n is given as 4 the first time or assume the n is given as 3 to have a better understanding the first time you call it three comma three and this goes calls it like three comma three correct this line doesn't executes print three so the output screen will definitely have something like three and then you call it as f of two comma three and again then you will call it as f of one comma three and again at the end you'll call it f of zero comma three and this 0 comma 3 will be executed and you'll come back you'll come back and you'll come back so automatically you print 3 2 1 as simple as that so it's the main stuff is you just change it over here where do you say i'm going to do a i minus 1 this is the main step where you change that you say i'm going to do a i minus 1 correct so again we have also done the next problem which is print in terms of n is to one so three problems have been done now these were very basic i want to do i want you to change it and think it in the reverse order",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "un6PLygfXrA",
+      "position": 9,
+      "title": "Re 2. Problems on Recursion | Strivers A2Z DSA Course",
+      "url": "https://www.youtube.com/watch?v=un6PLygfXrA",
+      "start": 872.16,
+      "end": 1005.6,
+      "text": "the reverse order what if i want to print from 1 to 1 but i don't want to do i plus 1 instead i say that the recursion call starts from n comma and usually like uh to give a better brief let me just explain i am saying print from 1 to n print from 1 to n but i am not going to allow you to use plus 1 like generally from 1 to n was meaning f of i plus 1 comma n was the function call was the recursive function call that you are making i'm not allowing you to do that i'm not allowing you to do plus one so how will you do this so over here i'm going to teach you something as backtracking okay so let's understand backtracking since i'm not allowing you to use plus you have to use minus so what i'll do is i comma n okay as usual this time it'll be like if i at any time goes lesser than one uh you return f of i minus one comma n and right after that i'm writing print of i okay so over here i'm writing the main function over here i'm writing the main function and what i'm writing is okay mean let's take the input of n and let's call f of n comma n so basically what i did was i said that you cannot use this plus thereby you can use minus one why because i wanted to i wanted you i wanted me to teach you what if i write the print line after the recursion call what happens let's understand so again let's uh quickly give the output screen and uh assume n is given as three so the first call is 3 comma 3 thereby the first call goes as 3 comma 3 the first call goes as 3 comma 3 now let's understand this does this line execute i lesser than 1 no because i is 3 and it doesn't executes perfect next",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "un6PLygfXrA",
+      "position": 9,
+      "title": "Re 2. Problems on Recursion | Strivers A2Z DSA Course",
+      "url": "https://www.youtube.com/watch?v=un6PLygfXrA",
+      "start": 1001.519,
+      "end": 1152.24,
+      "text": "next i am saying f of i minus 1 so this function call will go remember this the print line will not be executed the function call will go perfect let's call the function call and i'm saying i minus 1 that's 2 comma 3 and again let's write if i is lesser than 1 then return let's say f of i minus 1 comma n and then let's write the print of i and then this okay so let's see if the first line executes again no because i is 2 this time again you call the function with i minus 1 which is 2 minus 1 1 1 comma 3 and this time you write if i is lesser than 1 you return and you say f of i minus 1 comma n print off i okay let's see what happens this time f of one comma three i is one doesn't executes f of i minus one goes and calls this with f of i minus one means zero comma three if i lesser than one return i'm not writing the remaining couple of lines i is zero so this line this time is indeed true is indeed true and if this line is true what happens you basically say return executes so you return so this function line has been executed correct now the print comes over here because after this the line of execution comes over here and it says print i what's the value of i one so the output will be one next the execution line comes over here which means the function has been executed correct go back went back this line has been executed thereby the function line comes to the next this print is i what's the value of i do print it next the line of execution goes here which means this function has been executed go back this line this has been executed you go to the next print i i's value is 3 thereby this line has been executed go here hence go back so even by",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "un6PLygfXrA",
+      "position": 9,
+      "title": "Re 2. Problems on Recursion | Strivers A2Z DSA Course",
+      "url": "https://www.youtube.com/watch?v=un6PLygfXrA",
+      "start": 1149.44,
+      "end": 1263.84,
+      "text": "even by starting from 3 even by starting from 3 i was able to output in the linearly increasing order so it's not necessary that you have to start from 1 in order to print from one two three you can start from the back and you can do the task after the function call so basically by doing this what you did was you made it mandatory that this line this print line is executed at the first because you kept it after the function call you kept it after the function call so unless until this function call is over this line would have never been executed so you made sure the last guy has been executed first why how did you make sure that the last guy because this was the last guy has been executed first how was this function completed first by making sure the print line is after the function call because this will only be executed if the base case is true thereby this gets executed this then then this gets executed then this that's the opposite way you made it by writing after the function got it so this is how you print from one is to n now i will be asking you to do the other one so this is what i've done but by backtrack this has been done i want you to do the other way i want you to print from end to end basically if i give you as n equal to 3 i want you to print 3 to 1 but i don't want you to use this i minus 1 comma n i don't want to do i don't want you to use this okay so i'm not solve this i want you people to answer in the comment section about this let's see if you have understood the entire concept you should be able to do it yes you should be able to do it so remember uh if i write this as a recursion tree it's",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "un6PLygfXrA",
+      "position": 9,
+      "title": "Re 2. Problems on Recursion | Strivers A2Z DSA Course",
+      "url": "https://www.youtube.com/watch?v=un6PLygfXrA",
+      "start": 1259.52,
+      "end": 1323.0,
+      "text": "if i write this as a recursion tree it's very simple you started with f of three comma three then you went to f of two comma three then you went to f of one comma three then you went to f of uh zero comma three which indirectly stated a mover then the print line executed of one then you said after this the print of two was executed and right at so this the print of three was executed so this is how the recursion tree will look like for this particular stuff so i hope guys you have understood all the problems and you have understood the recursion in depth for the basic kind of problems of one 1d recursion so just in case you did please please please make sure you like this video and if you're new to this channel please do consider subscribing and yeah if you haven't checked out our striver ssd sheet the link is in the description please make sure to check it out with this let's wrap up this video and meet in the next one where i'll be discussing some other interesting problems bye don't ever forget your golden",
+      "word_count": 200
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "video_id": "iTBaI90lpDQ",
+  "position": 148,
+  "title": "G-23. Detect a Cycle in Directed Graph | Topological Sort | Kahn's Algorithm | BFS",
+  "url": "https://www.youtube.com/watch?v=iTBaI90lpDQ",
+  "chunk_count": 4,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "iTBaI90lpDQ",
+      "position": 148,
+      "title": "G-23. Detect a Cycle in Directed Graph | Topological Sort | Kahn's Algorithm | BFS",
+      "url": "https://www.youtube.com/watch?v=iTBaI90lpDQ",
+      "start": 3.44,
+      "end": 126.03999999999999,
+      "text": "Everyone, welcome back to the channel. I hope you guys are doing extremely well. So, in this video we're going to learn about cycle detection in a directed graph using the BFS algorithm. Now, in the previous video we have done that using the DFS algorithm, but how to do that using the BFS algorithm? So, if you remember in the DFS we used something like a visited and then we used something like a path visited. Now, in the backtracking we reset the path visited, but in BFS there cannot be a backtracking. So, how do we implement a similar sort of algorithm into BFS? So, this is where something like the Kahn's algorithm comes in. So, if you haven't checked out my video on topological sort using BFS, please go back and learn this algorithm and then come back and watch this. Okay, it's just before this video in the playlist that you're watching right now. So, how do you solve this particular problem? So, what I'll do is this is a directed cyclic graph. Can I say this is a directed cyclic graph? So, if you've seen the previous video on topological sort using BFS, you know that topo sorts are only applicable on DAGs. You know this. Any of the topo sort is only applicable on a DAG which is directed acyclic graph. If it isn't a acyclic graph, it won't be applicable. But this graph has a cycle. If you carefully see, this graph has a cycle. And you need to tell me that yes, it has a cycle. So, how do you detect it? So, what I do is since I know a topo sort is not possible for a graph that has a cycle, I'll still try to apply topological sort to this. Yes, I'll I'll I'll still try to find the topo sort for this graph. Okay, let's try out. So, what What the Kahn's algorithm? It's very simple. Initially, find the in-degrees of all the nodes. So, I'll try to write the in-degrees over here itself. Zero because there is no",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "iTBaI90lpDQ",
+      "position": 148,
+      "title": "G-23. Detect a Cycle in Directed Graph | Topological Sort | Kahn's Algorithm | BFS",
+      "url": "https://www.youtube.com/watch?v=iTBaI90lpDQ",
+      "start": 121.6,
+      "end": 242.96,
+      "text": "itself. Zero because there is no incoming nodes. So, zero for this. How many incoming are there? One and two. So, two for this. How many incoming on this? So, I see there is only one guy incoming. So, one. How many incoming on five? Can I say it's zero? Sorry, it's one again. How many incoming on four? If I carefully see, uh incoming on four is one. So, I can just write it as one. Perfect. So, I've written the in-degrees of all of these nodes. Now, what was the algorithm stating? The algorithm always stated initially start with a queue data structure. So, let's start off with a queue data structure. And in this queue data structure, initially keep the node with the in-degree zero, which is the one. Okay? Now, let's start the algorithm. The algorithm states gets the first node, and you can put that into the topo sort array. So, let's put it. For node one, who are the adjacents? So, the adjacent is two. Go to two and reduce its in-degree by one. So, this will become one. So, we are done. Now, what happens is the moment you reduce its in-degree by one, the moment you reduce its in-degree by one, the in-degree is one, and the queue is empty. The queue is empty, and the topo sort just has one guy. The topo sort just has one guy. Why did it not work? Because this two was supposedly connected to one, and if you remove this, right? If you remove this, there is still a dependency on this because it's a cyclic dependency. So, there are still nodes which are dependent. So, you you're not able to create a topo sort because what is a topo sort? It is a linear ordering of n vertices. n vertices. So, if you do not produce a topo sort of n size, the topological sort that you produce is of size one. So, you cannot say that like you can definitely say there is a problem. And",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "iTBaI90lpDQ",
+      "position": 148,
+      "title": "G-23. Detect a Cycle in Directed Graph | Topological Sort | Kahn's Algorithm | BFS",
+      "url": "https://www.youtube.com/watch?v=iTBaI90lpDQ",
+      "start": 239.4,
+      "end": 349.52000000000004,
+      "text": "definitely say there is a problem. And the only problem that you can have is a cycle. If the topological sort comes out to be exactly having n elements, if the topological sort exactly has n elements, then you can say that it is a directed acyclic graph, does not have a cycle. But if the topological sort has anything lesser than n elements, then you can say that it contains a cycle. Very simple. If you're able to generate a topological sort, it means it does not have a cycle. If you're not able to generate a topological sort, it means it does have a cycle, which is causing an issue. So, in order to code, what we will go as we'll go to the topological sort code and we'll copy-paste it. Okay, let's copy-paste the code into the over here. Now, at the end when the topological sort has been produced, we say, \"Listen, if the topological sort size is equal to equal to n, then it does not have a cycle. Topological sort was produced. Otherwise, it does have a cycle.\" Otherwise, it does have a cycle. Now, do we need to store the topological sort? No, we don't need. We can just omit this. We can omit this and we can probably keep a counter variable, something like this, instead of having the topological sort stored because we just are concerned about the count. If the count is okay, I will just quickly have a compilation. Sorry, my bad. If you run this, it is fine. Let's quickly submit this and see if it is working fine. Wow, it does. So, guys, I hope you have understood this wonderful concept being applied on detection of cycle in directed graph. And what about this time complexity and the space complexity? It is similar to topological sort. We're using an extra space of a queue and a in-degree, which is big O of 2n. And then we are using the BFS algorithm, which is V plus E for directed graphs.",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "iTBaI90lpDQ",
+      "position": 148,
+      "title": "G-23. Detect a Cycle in Directed Graph | Topological Sort | Kahn's Algorithm | BFS",
+      "url": "https://www.youtube.com/watch?v=iTBaI90lpDQ",
+      "start": 345.48,
+      "end": 377.88,
+      "text": "which is V plus E for directed graphs. So, guys, I hope I was able to explain you this particular algorithm. So just in case I was, please make sure you like this video. And if you're new to our channel, what are you waiting for? I think it's it's high time that you hit that subscribe button. And if you haven't checked out our DP series and the HD sheet, the links are in the description. Please make sure you check it out. And yeah, with this I'll be wrapping up this video. Let's meet in some other video. Till then, bye-bye. Take care. Whenever your heart is broken, don't ever forget you're golden. I will find",
+      "word_count": 118
+    }
+  ]
+}

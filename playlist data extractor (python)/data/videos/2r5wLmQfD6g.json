@@ -1,0 +1,2942 @@
+{
+  "position": 103,
+  "video_id": "2r5wLmQfD6g",
+  "title": "L31. Minimum time taken to BURN the Binary Tree from a Node | C++ | Java",
+  "url": "https://www.youtube.com/watch?v=2r5wLmQfD6g",
+  "transcript": [
+    {
+      "start": 0.0,
+      "duration": 3.28,
+      "end": 3.28,
+      "text": "so before starting the video i would"
+    },
+    {
+      "start": 1.439,
+      "duration": 4.481,
+      "end": 5.92,
+      "text": "love to thank relevel for sponsoring"
+    },
+    {
+      "start": 3.28,
+      "duration": 4.16,
+      "end": 7.4399999999999995,
+      "text": "this entire tree series so if you're"
+    },
+    {
+      "start": 5.92,
+      "duration": 2.96,
+      "end": 8.879999999999999,
+      "text": "tired of waiting for companies to"
+    },
+    {
+      "start": 7.44,
+      "duration": 3.119,
+      "end": 10.559000000000001,
+      "text": "respond to your applications through"
+    },
+    {
+      "start": 8.88,
+      "duration": 3.759,
+      "end": 12.639000000000001,
+      "text": "different job portals the next few"
+    },
+    {
+      "start": 10.559,
+      "duration": 4.16,
+      "end": 14.719,
+      "text": "seconds are very very important for you"
+    },
+    {
+      "start": 12.639,
+      "duration": 3.841,
+      "end": 16.48,
+      "text": "because reliable by an academy is"
+    },
+    {
+      "start": 14.719,
+      "duration": 4.081,
+      "end": 18.8,
+      "text": "india's first hiring platform that can"
+    },
+    {
+      "start": 16.48,
+      "duration": 4.0,
+      "end": 20.48,
+      "text": "get you a job within a week itself yes"
+    },
+    {
+      "start": 18.8,
+      "duration": 4.16,
+      "end": 22.96,
+      "text": "all you have to do is to register for"
+    },
+    {
+      "start": 20.48,
+      "duration": 4.959,
+      "end": 25.439,
+      "text": "the relevant test and within a week your"
+    },
+    {
+      "start": 22.96,
+      "duration": 4.319,
+      "end": 27.279,
+      "text": "interview will be scheduled with india's"
+    },
+    {
+      "start": 25.439,
+      "duration": 4.0,
+      "end": 29.439,
+      "text": "top companies and the top budding"
+    },
+    {
+      "start": 27.279,
+      "duration": 3.76,
+      "end": 31.039,
+      "text": "unicorns so what are you waiting for"
+    },
+    {
+      "start": 29.439,
+      "duration": 3.28,
+      "end": 32.719,
+      "text": "make sure you check out the links in the"
+    },
+    {
+      "start": 31.039,
+      "duration": 4.001,
+      "end": 35.04,
+      "text": "description and apply for the relevant"
+    },
+    {
+      "start": 32.719,
+      "duration": 3.68,
+      "end": 36.399,
+      "text": "test because it is free hey everyone"
+    },
+    {
+      "start": 35.04,
+      "duration": 3.28,
+      "end": 38.32,
+      "text": "welcome back to the channel i hope you"
+    },
+    {
+      "start": 36.399,
+      "duration": 4.16,
+      "end": 40.559,
+      "text": "guys are doing extremely well so today"
+    },
+    {
+      "start": 38.32,
+      "duration": 5.6,
+      "end": 43.92,
+      "text": "we will be solving the problem find the"
+    },
+    {
+      "start": 40.559,
+      "duration": 6.641,
+      "end": 47.199999999999996,
+      "text": "minimum time that is required to burn a"
+    },
+    {
+      "start": 43.92,
+      "duration": 5.119,
+      "end": 49.039,
+      "text": "complete binary tree from any given node"
+    },
+    {
+      "start": 47.2,
+      "duration": 3.839,
+      "end": 51.039,
+      "text": "now this question can come up in a lot"
+    },
+    {
+      "start": 49.039,
+      "duration": 5.121,
+      "end": 54.160000000000004,
+      "text": "of fashion they might ask you from any"
+    },
+    {
+      "start": 51.039,
+      "duration": 4.881,
+      "end": 55.92,
+      "text": "given node from any given leaf node like"
+    },
+    {
+      "start": 54.16,
+      "duration": 4.0,
+      "end": 58.16,
+      "text": "they can give you the question as leaf"
+    },
+    {
+      "start": 55.92,
+      "duration": 4.639,
+      "end": 60.559000000000005,
+      "text": "node also so we will be solving the"
+    },
+    {
+      "start": 58.16,
+      "duration": 4.399,
+      "end": 62.559,
+      "text": "question for any given node and then you"
+    },
+    {
+      "start": 60.559,
+      "duration": 5.6,
+      "end": 66.15899999999999,
+      "text": "can definitely get the answer for leaf"
+    },
+    {
+      "start": 62.559,
+      "duration": 4.56,
+      "end": 67.119,
+      "text": "node as well so let's assume i take the"
+    },
+    {
+      "start": 66.159,
+      "duration": 1.921,
+      "end": 68.08000000000001,
+      "text": "node"
+    },
+    {
+      "start": 67.119,
+      "duration": 3.521,
+      "end": 70.64,
+      "text": "to be"
+    },
+    {
+      "start": 68.08,
+      "duration": 4.8,
+      "end": 72.88,
+      "text": "2 okay so that's the node i take"
+    },
+    {
+      "start": 70.64,
+      "duration": 4.64,
+      "end": 75.28,
+      "text": "so this is the note that i have taken so"
+    },
+    {
+      "start": 72.88,
+      "duration": 5.2,
+      "end": 78.08,
+      "text": "if i'm asking you the time to burn so"
+    },
+    {
+      "start": 75.28,
+      "duration": 3.92,
+      "end": 79.2,
+      "text": "basically this guy will take a time one"
+    },
+    {
+      "start": 78.08,
+      "duration": 2.96,
+      "end": 81.03999999999999,
+      "text": "to one"
+    },
+    {
+      "start": 79.2,
+      "duration": 3.919,
+      "end": 83.119,
+      "text": "this these two guys like it will take"
+    },
+    {
+      "start": 81.04,
+      "duration": 4.64,
+      "end": 85.68,
+      "text": "one second to burn these two guys"
+    },
+    {
+      "start": 83.119,
+      "duration": 4.161,
+      "end": 87.28,
+      "text": "after that it will take two seconds to"
+    },
+    {
+      "start": 85.68,
+      "duration": 4.399,
+      "end": 90.07900000000001,
+      "text": "burn these two guys"
+    },
+    {
+      "start": 87.28,
+      "duration": 5.92,
+      "end": 93.2,
+      "text": "after that it will take three seconds to"
+    },
+    {
+      "start": 90.079,
+      "duration": 5.921,
+      "end": 96.0,
+      "text": "burn these guys so the entire tree if"
+    },
+    {
+      "start": 93.2,
+      "duration": 4.559,
+      "end": 97.759,
+      "text": "you burn the node the entire tree in"
+    },
+    {
+      "start": 96.0,
+      "duration": 5.52,
+      "end": 101.52,
+      "text": "order to burn will take"
+    },
+    {
+      "start": 97.759,
+      "duration": 5.841,
+      "end": 103.6,
+      "text": "three seconds so that is what we want uh"
+    },
+    {
+      "start": 101.52,
+      "duration": 4.32,
+      "end": 105.84,
+      "text": "you to return basically you i want you"
+    },
+    {
+      "start": 103.6,
+      "duration": 4.96,
+      "end": 108.55999999999999,
+      "text": "to return the minimum time that is"
+    },
+    {
+      "start": 105.84,
+      "duration": 5.919,
+      "end": 111.759,
+      "text": "required in order to burn any given"
+    },
+    {
+      "start": 108.56,
+      "duration": 5.519,
+      "end": 114.07900000000001,
+      "text": "binary tree if you are given a node"
+    },
+    {
+      "start": 111.759,
+      "duration": 5.601,
+      "end": 117.36,
+      "text": "so i can say that this problem can be"
+    },
+    {
+      "start": 114.079,
+      "duration": 6.481,
+      "end": 120.55999999999999,
+      "text": "solved using bfs traversal what if i use"
+    },
+    {
+      "start": 117.36,
+      "duration": 4.64,
+      "end": 122.0,
+      "text": "a bfs and if this is the node given"
+    },
+    {
+      "start": 120.56,
+      "duration": 4.4,
+      "end": 124.96000000000001,
+      "text": "assume this is the node that is given to"
+    },
+    {
+      "start": 122.0,
+      "duration": 5.04,
+      "end": 127.04,
+      "text": "you that's the node 2. now"
+    },
+    {
+      "start": 124.96,
+      "duration": 3.439,
+      "end": 128.399,
+      "text": "the node can be directly given to you or"
+    },
+    {
+      "start": 127.04,
+      "duration": 3.199,
+      "end": 130.239,
+      "text": "the node can be like"
+    },
+    {
+      "start": 128.399,
+      "duration": 5.521,
+      "end": 133.92,
+      "text": "that address can be given to you doesn't"
+    },
+    {
+      "start": 130.239,
+      "duration": 6.321,
+      "end": 136.56,
+      "text": "matter so if this node is given to you"
+    },
+    {
+      "start": 133.92,
+      "duration": 4.72,
+      "end": 138.64,
+      "text": "what if i apply a bfs algorithm and i"
+    },
+    {
+      "start": 136.56,
+      "duration": 4.8,
+      "end": 141.36,
+      "text": "say on the first instance i'll color"
+    },
+    {
+      "start": 138.64,
+      "duration": 5.52,
+      "end": 144.16,
+      "text": "these two guys so a bfs i can work it"
+    },
+    {
+      "start": 141.36,
+      "duration": 5.36,
+      "end": 146.72000000000003,
+      "text": "right readily outwards i'll go like via"
+    },
+    {
+      "start": 144.16,
+      "duration": 4.719,
+      "end": 148.879,
+      "text": "one distance right after this i'll have"
+    },
+    {
+      "start": 146.72,
+      "duration": 4.879,
+      "end": 151.599,
+      "text": "these two notes so on these two notes"
+    },
+    {
+      "start": 148.879,
+      "duration": 3.521,
+      "end": 152.39999999999998,
+      "text": "i'll again go radially outwards i can go"
+    },
+    {
+      "start": 151.599,
+      "duration": 2.401,
+      "end": 154.0,
+      "text": "now"
+    },
+    {
+      "start": 152.4,
+      "duration": 3.76,
+      "end": 156.16,
+      "text": "and after this this will color these"
+    },
+    {
+      "start": 154.0,
+      "duration": 4.4,
+      "end": 158.4,
+      "text": "guys again the next node will be this"
+    },
+    {
+      "start": 156.16,
+      "duration": 5.04,
+      "end": 161.2,
+      "text": "this doesn't have any node and this guy"
+    },
+    {
+      "start": 158.4,
+      "duration": 6.08,
+      "end": 164.48000000000002,
+      "text": "will again go readily outwards so i can"
+    },
+    {
+      "start": 161.2,
+      "duration": 6.16,
+      "end": 167.35999999999999,
+      "text": "implement a bfs kind of algorithm in"
+    },
+    {
+      "start": 164.48,
+      "duration": 5.6,
+      "end": 170.07999999999998,
+      "text": "order to burn the entire tree"
+    },
+    {
+      "start": 167.36,
+      "duration": 5.04,
+      "end": 172.4,
+      "text": "but the problem that i will face is if"
+    },
+    {
+      "start": 170.08,
+      "duration": 3.76,
+      "end": 173.84,
+      "text": "the note 2 wants to go in the upper"
+    },
+    {
+      "start": 172.4,
+      "duration": 2.96,
+      "end": 175.36,
+      "text": "direction there will be a problem"
+    },
+    {
+      "start": 173.84,
+      "duration": 3.44,
+      "end": 177.28,
+      "text": "because"
+    },
+    {
+      "start": 175.36,
+      "duration": 3.84,
+      "end": 179.20000000000002,
+      "text": "we have the links that are pointed to"
+    },
+    {
+      "start": 177.28,
+      "duration": 4.48,
+      "end": 181.76,
+      "text": "downwards all the links are pointed to"
+    },
+    {
+      "start": 179.2,
+      "duration": 4.64,
+      "end": 183.83999999999997,
+      "text": "downwards so we can easily go downwards"
+    },
+    {
+      "start": 181.76,
+      "duration": 4.559,
+      "end": 186.319,
+      "text": "like when we are performing the bfs it"
+    },
+    {
+      "start": 183.84,
+      "duration": 4.479,
+      "end": 188.31900000000002,
+      "text": "can easily go downwards but in order to"
+    },
+    {
+      "start": 186.319,
+      "duration": 3.84,
+      "end": 190.159,
+      "text": "go upwards we are going to face problem"
+    },
+    {
+      "start": 188.319,
+      "duration": 4.0,
+      "end": 192.319,
+      "text": "and in order to have upward like in"
+    },
+    {
+      "start": 190.159,
+      "duration": 4.641,
+      "end": 194.79999999999998,
+      "text": "order to have an upward movement we have"
+    },
+    {
+      "start": 192.319,
+      "duration": 4.64,
+      "end": 196.95899999999997,
+      "text": "to assign parent pointers so the first"
+    },
+    {
+      "start": 194.8,
+      "duration": 5.359,
+      "end": 200.15900000000002,
+      "text": "step of the algorithm is to assign"
+    },
+    {
+      "start": 196.959,
+      "duration": 5.441,
+      "end": 202.4,
+      "text": "parent pointers to this binary tree"
+    },
+    {
+      "start": 200.159,
+      "duration": 4.8,
+      "end": 204.959,
+      "text": "so the first step"
+    },
+    {
+      "start": 202.4,
+      "duration": 5.28,
+      "end": 207.68,
+      "text": "will be to have parent pointers ready so"
+    },
+    {
+      "start": 204.959,
+      "duration": 4.64,
+      "end": 209.599,
+      "text": "what i'll do is i'll take a queue and"
+    },
+    {
+      "start": 207.68,
+      "duration": 3.6,
+      "end": 211.28,
+      "text": "i'll have the initial node that is the"
+    },
+    {
+      "start": 209.599,
+      "duration": 2.801,
+      "end": 212.39999999999998,
+      "text": "root node and we're going to do a level"
+    },
+    {
+      "start": 211.28,
+      "duration": 2.319,
+      "end": 213.599,
+      "text": "order traversal"
+    },
+    {
+      "start": 212.4,
+      "duration": 3.759,
+      "end": 216.159,
+      "text": "so this is the node that we are"
+    },
+    {
+      "start": 213.599,
+      "duration": 4.56,
+      "end": 218.159,
+      "text": "currently standing at so let's take this"
+    },
+    {
+      "start": 216.159,
+      "duration": 5.521,
+      "end": 221.67999999999998,
+      "text": "node out"
+    },
+    {
+      "start": 218.159,
+      "duration": 6.321,
+      "end": 224.48,
+      "text": "does this node have a left guy i can say"
+    },
+    {
+      "start": 221.68,
+      "duration": 5.36,
+      "end": 227.04000000000002,
+      "text": "yes it has so i can say 2"
+    },
+    {
+      "start": 224.48,
+      "duration": 4.72,
+      "end": 229.2,
+      "text": "your parent pointer will be one"
+    },
+    {
+      "start": 227.04,
+      "duration": 3.6,
+      "end": 230.64,
+      "text": "again you can have some hash map in"
+    },
+    {
+      "start": 229.2,
+      "duration": 3.84,
+      "end": 233.04,
+      "text": "order to have that"
+    },
+    {
+      "start": 230.64,
+      "duration": 4.799,
+      "end": 235.439,
+      "text": "ready like i will have a single hash map"
+    },
+    {
+      "start": 233.04,
+      "duration": 4.559,
+      "end": 237.599,
+      "text": "which says me that the"
+    },
+    {
+      "start": 235.439,
+      "duration": 4.321,
+      "end": 239.76,
+      "text": "parent of two is one similarly i'll"
+    },
+    {
+      "start": 237.599,
+      "duration": 4.081,
+      "end": 241.67999999999998,
+      "text": "check if one has a right pointer and i"
+    },
+    {
+      "start": 239.76,
+      "duration": 3.199,
+      "end": 242.959,
+      "text": "see that one has a right pointer so i"
+    },
+    {
+      "start": 241.68,
+      "duration": 4.4,
+      "end": 246.08,
+      "text": "can say three"
+    },
+    {
+      "start": 242.959,
+      "duration": 5.521,
+      "end": 248.48,
+      "text": "your parent is one so three is parent"
+    },
+    {
+      "start": 246.08,
+      "duration": 3.68,
+      "end": 249.76000000000002,
+      "text": "has become one now so i can easily mark"
+    },
+    {
+      "start": 248.48,
+      "duration": 3.36,
+      "end": 251.84,
+      "text": "them right"
+    },
+    {
+      "start": 249.76,
+      "duration": 4.0,
+      "end": 253.76,
+      "text": "next step"
+    },
+    {
+      "start": 251.84,
+      "duration": 3.679,
+      "end": 255.519,
+      "text": "whatever where your left and right just"
+    },
+    {
+      "start": 253.76,
+      "duration": 3.68,
+      "end": 257.44,
+      "text": "put them into the queue so please make"
+    },
+    {
+      "start": 255.519,
+      "duration": 4.24,
+      "end": 259.759,
+      "text": "sure you put them into the queue done so"
+    },
+    {
+      "start": 257.44,
+      "duration": 4.079,
+      "end": 261.519,
+      "text": "once that is done i can say the task for"
+    },
+    {
+      "start": 259.759,
+      "duration": 3.281,
+      "end": 263.04,
+      "text": "the node one is complete and i'll move"
+    },
+    {
+      "start": 261.519,
+      "duration": 3.761,
+      "end": 265.28000000000003,
+      "text": "the level order traversal to the next"
+    },
+    {
+      "start": 263.04,
+      "duration": 4.56,
+      "end": 267.6,
+      "text": "node that is node two again do the same"
+    },
+    {
+      "start": 265.28,
+      "duration": 4.56,
+      "end": 269.84,
+      "text": "step does to have a left does it have a"
+    },
+    {
+      "start": 267.6,
+      "duration": 4.159,
+      "end": 271.759,
+      "text": "right the two have a left the two has a"
+    },
+    {
+      "start": 269.84,
+      "duration": 4.16,
+      "end": 274.0,
+      "text": "left that's four so you'll say four your"
+    },
+    {
+      "start": 271.759,
+      "duration": 5.201,
+      "end": 276.96000000000004,
+      "text": "parent pointer is two so four your"
+    },
+    {
+      "start": 274.0,
+      "duration": 4.96,
+      "end": 278.96,
+      "text": "parent pointer is two right so"
+    },
+    {
+      "start": 276.96,
+      "duration": 3.84,
+      "end": 280.79999999999995,
+      "text": "two is done so you'll take just four and"
+    },
+    {
+      "start": 278.96,
+      "duration": 4.08,
+      "end": 283.03999999999996,
+      "text": "you'll enter it so two is also done"
+    },
+    {
+      "start": 280.8,
+      "duration": 5.2,
+      "end": 286.0,
+      "text": "because it doesn't have a right"
+    },
+    {
+      "start": 283.04,
+      "duration": 4.0,
+      "end": 287.04,
+      "text": "next node is three so kindly take three"
+    },
+    {
+      "start": 286.0,
+      "duration": 4.08,
+      "end": 290.08,
+      "text": "out"
+    },
+    {
+      "start": 287.04,
+      "duration": 4.879,
+      "end": 291.91900000000004,
+      "text": "does three have a left yes that's five"
+    },
+    {
+      "start": 290.08,
+      "duration": 4.24,
+      "end": 294.32,
+      "text": "so mark the five's parent pointed to"
+    },
+    {
+      "start": 291.919,
+      "duration": 5.921,
+      "end": 297.84,
+      "text": "three five's parent pointer will be"
+    },
+    {
+      "start": 294.32,
+      "duration": 6.319,
+      "end": 300.639,
+      "text": "three does three hour write yes six mark"
+    },
+    {
+      "start": 297.84,
+      "duration": 5.28,
+      "end": 303.11999999999995,
+      "text": "the parent pointer of six two three mark"
+    },
+    {
+      "start": 300.639,
+      "duration": 5.441,
+      "end": 306.08,
+      "text": "the parent pointer of six two three"
+    },
+    {
+      "start": 303.12,
+      "duration": 5.12,
+      "end": 308.24,
+      "text": "perfect so i can say three is done"
+    },
+    {
+      "start": 306.08,
+      "duration": 3.76,
+      "end": 309.84,
+      "text": "if three is done just make sure you in"
+    },
+    {
+      "start": 308.24,
+      "duration": 2.799,
+      "end": 311.039,
+      "text": "enter five and six into the queue data"
+    },
+    {
+      "start": 309.84,
+      "duration": 2.0,
+      "end": 311.84,
+      "text": "structure"
+    },
+    {
+      "start": 311.039,
+      "duration": 3.521,
+      "end": 314.56,
+      "text": "right"
+    },
+    {
+      "start": 311.84,
+      "duration": 4.639,
+      "end": 316.479,
+      "text": "right after that you get four so the"
+    },
+    {
+      "start": 314.56,
+      "duration": 5.359,
+      "end": 319.919,
+      "text": "moment you get four that's four have a"
+    },
+    {
+      "start": 316.479,
+      "duration": 5.201,
+      "end": 321.68,
+      "text": "left no does four have a right yes so"
+    },
+    {
+      "start": 319.919,
+      "duration": 4.0,
+      "end": 323.919,
+      "text": "whichever is the right guy there's a"
+    },
+    {
+      "start": 321.68,
+      "duration": 3.76,
+      "end": 325.44,
+      "text": "seventh parent pointer is"
+    },
+    {
+      "start": 323.919,
+      "duration": 3.28,
+      "end": 327.19899999999996,
+      "text": "four so please make sure you mark the"
+    },
+    {
+      "start": 325.44,
+      "duration": 3.759,
+      "end": 329.199,
+      "text": "parent pointer and at the same time"
+    },
+    {
+      "start": 327.199,
+      "duration": 5.84,
+      "end": 333.039,
+      "text": "insert that node into your q data"
+    },
+    {
+      "start": 329.199,
+      "duration": 5.601,
+      "end": 334.8,
+      "text": "structure four is done next get five"
+    },
+    {
+      "start": 333.039,
+      "duration": 3.201,
+      "end": 336.24,
+      "text": "there's five hour left no that's why i"
+    },
+    {
+      "start": 334.8,
+      "duration": 4.32,
+      "end": 339.12,
+      "text": "have a right no"
+    },
+    {
+      "start": 336.24,
+      "duration": 6.399,
+      "end": 342.639,
+      "text": "next get six there's six hour left and"
+    },
+    {
+      "start": 339.12,
+      "duration": 6.56,
+      "end": 345.68,
+      "text": "right no there's seven ever left"
+    },
+    {
+      "start": 342.639,
+      "duration": 6.081,
+      "end": 348.72,
+      "text": "no does it have a right now so i can see"
+    },
+    {
+      "start": 345.68,
+      "duration": 5.76,
+      "end": 351.44,
+      "text": "i have completed the entire yes i've"
+    },
+    {
+      "start": 348.72,
+      "duration": 4.96,
+      "end": 353.68,
+      "text": "completed the entire traversal"
+    },
+    {
+      "start": 351.44,
+      "duration": 4.96,
+      "end": 356.4,
+      "text": "and i made sure that the parent pointers"
+    },
+    {
+      "start": 353.68,
+      "duration": 4.72,
+      "end": 358.40000000000003,
+      "text": "are ready in some hash map now it's time"
+    },
+    {
+      "start": 356.4,
+      "duration": 3.919,
+      "end": 360.31899999999996,
+      "text": "to move ahead to the next step"
+    },
+    {
+      "start": 358.4,
+      "duration": 4.799,
+      "end": 363.19899999999996,
+      "text": "now once the parent pointers are marked"
+    },
+    {
+      "start": 360.319,
+      "duration": 5.361,
+      "end": 365.68,
+      "text": "it's time to start the bfs traversal now"
+    },
+    {
+      "start": 363.199,
+      "duration": 4.961,
+      "end": 368.16,
+      "text": "if the node is like if you're given a"
+    },
+    {
+      "start": 365.68,
+      "duration": 4.88,
+      "end": 370.56,
+      "text": "value 2 just figure out where is this"
+    },
+    {
+      "start": 368.16,
+      "duration": 4.479,
+      "end": 372.639,
+      "text": "node lying like you could have done that"
+    },
+    {
+      "start": 370.56,
+      "duration": 4.24,
+      "end": 374.8,
+      "text": "using the traversal like just figure out"
+    },
+    {
+      "start": 372.639,
+      "duration": 4.161,
+      "end": 376.8,
+      "text": "where is this node or else if you're"
+    },
+    {
+      "start": 374.8,
+      "duration": 4.16,
+      "end": 378.96000000000004,
+      "text": "given this node address it's absolutely"
+    },
+    {
+      "start": 376.8,
+      "duration": 3.92,
+      "end": 380.72,
+      "text": "fine if the node address is given it's"
+    },
+    {
+      "start": 378.96,
+      "duration": 3.6,
+      "end": 382.56,
+      "text": "okay if the address is not given just"
+    },
+    {
+      "start": 380.72,
+      "duration": 3.84,
+      "end": 384.56,
+      "text": "figure out where it lies that can be"
+    },
+    {
+      "start": 382.56,
+      "duration": 4.639,
+      "end": 387.199,
+      "text": "done using traversal i'll show you that"
+    },
+    {
+      "start": 384.56,
+      "duration": 5.919,
+      "end": 390.479,
+      "text": "in the code so as of now we have a note"
+    },
+    {
+      "start": 387.199,
+      "duration": 5.12,
+      "end": 392.319,
+      "text": "2. so let's again do a bfs traversal and"
+    },
+    {
+      "start": 390.479,
+      "duration": 4.56,
+      "end": 395.039,
+      "text": "this time we'll take again a q data"
+    },
+    {
+      "start": 392.319,
+      "duration": 4.561,
+      "end": 396.88,
+      "text": "structure and this time the node 2 will"
+    },
+    {
+      "start": 395.039,
+      "duration": 4.16,
+      "end": 399.199,
+      "text": "be inserted in this"
+    },
+    {
+      "start": 396.88,
+      "duration": 4.72,
+      "end": 401.6,
+      "text": "and at the same time we are going to"
+    },
+    {
+      "start": 399.199,
+      "duration": 4.161,
+      "end": 403.36,
+      "text": "have a visited map yes we are going to"
+    },
+    {
+      "start": 401.6,
+      "duration": 3.84,
+      "end": 405.44,
+      "text": "have a visited map so let's have a"
+    },
+    {
+      "start": 403.36,
+      "duration": 4.88,
+      "end": 408.24,
+      "text": "visited map why i will tell you that"
+    },
+    {
+      "start": 405.44,
+      "duration": 5.199,
+      "end": 410.639,
+      "text": "because they're performing bfs so just"
+    },
+    {
+      "start": 408.24,
+      "duration": 3.76,
+      "end": 412.0,
+      "text": "tell them that two is visited okay two"
+    },
+    {
+      "start": 410.639,
+      "duration": 4.0,
+      "end": 414.639,
+      "text": "has visited"
+    },
+    {
+      "start": 412.0,
+      "duration": 4.96,
+      "end": 416.96,
+      "text": "let's start the bfs traversal so as of"
+    },
+    {
+      "start": 414.639,
+      "duration": 4.481,
+      "end": 419.12,
+      "text": "now the time is definitely zero right so"
+    },
+    {
+      "start": 416.96,
+      "duration": 3.92,
+      "end": 420.88,
+      "text": "the time is zero so when i start the bfs"
+    },
+    {
+      "start": 419.12,
+      "duration": 4.0,
+      "end": 423.12,
+      "text": "traversal"
+    },
+    {
+      "start": 420.88,
+      "duration": 3.92,
+      "end": 424.8,
+      "text": "i have this note too so currently i have"
+    },
+    {
+      "start": 423.12,
+      "duration": 4.24,
+      "end": 427.36,
+      "text": "a note two"
+    },
+    {
+      "start": 424.8,
+      "duration": 4.16,
+      "end": 428.96000000000004,
+      "text": "now two where can it go"
+    },
+    {
+      "start": 427.36,
+      "duration": 3.76,
+      "end": 431.12,
+      "text": "which guys can it burn"
+    },
+    {
+      "start": 428.96,
+      "duration": 4.48,
+      "end": 433.44,
+      "text": "logically two can burn"
+    },
+    {
+      "start": 431.12,
+      "duration": 4.72,
+      "end": 435.84000000000003,
+      "text": "someone who's above that someone who's"
+    },
+    {
+      "start": 433.44,
+      "duration": 5.039,
+      "end": 438.479,
+      "text": "on its left someone who's on the right"
+    },
+    {
+      "start": 435.84,
+      "duration": 5.84,
+      "end": 441.67999999999995,
+      "text": "above left right that is what two can"
+    },
+    {
+      "start": 438.479,
+      "duration": 4.56,
+      "end": 443.039,
+      "text": "burn right so two will burn the above"
+    },
+    {
+      "start": 441.68,
+      "duration": 3.04,
+      "end": 444.72,
+      "text": "guy and that's nothing but the parent"
+    },
+    {
+      "start": 443.039,
+      "duration": 3.761,
+      "end": 446.8,
+      "text": "pointer the above guy is the parent"
+    },
+    {
+      "start": 444.72,
+      "duration": 3.36,
+      "end": 448.08000000000004,
+      "text": "pointer whose parent point is one so it"
+    },
+    {
+      "start": 446.8,
+      "duration": 3.6,
+      "end": 450.40000000000003,
+      "text": "can burn one"
+    },
+    {
+      "start": 448.08,
+      "duration": 4.959,
+      "end": 453.039,
+      "text": "so you have visited one"
+    },
+    {
+      "start": 450.4,
+      "duration": 5.76,
+      "end": 456.15999999999997,
+      "text": "it can burn left that's four"
+    },
+    {
+      "start": 453.039,
+      "duration": 3.121,
+      "end": 456.15999999999997,
+      "text": "so you have visited four"
+    },
+    {
+      "start": 456.56,
+      "duration": 5.44,
+      "end": 462.0,
+      "text": "perfect done now since two has"
+    },
+    {
+      "start": 459.759,
+      "duration": 4.801,
+      "end": 464.56,
+      "text": "successfully burnt someone so it will"
+    },
+    {
+      "start": 462.0,
+      "duration": 6.0,
+      "end": 468.0,
+      "text": "take a time of one so i have"
+    },
+    {
+      "start": 464.56,
+      "duration": 4.56,
+      "end": 469.12,
+      "text": "successfully burnt the adjacent notes so"
+    },
+    {
+      "start": 468.0,
+      "duration": 3.12,
+      "end": 471.12,
+      "text": "that"
+    },
+    {
+      "start": 469.12,
+      "duration": 3.04,
+      "end": 472.16,
+      "text": "task of two is completed i'll move to"
+    },
+    {
+      "start": 471.12,
+      "duration": 3.199,
+      "end": 474.319,
+      "text": "the next"
+    },
+    {
+      "start": 472.16,
+      "duration": 4.159,
+      "end": 476.319,
+      "text": "now in the next traversal it's very"
+    },
+    {
+      "start": 474.319,
+      "duration": 4.641,
+      "end": 478.96000000000004,
+      "text": "important that you pick up all these two"
+    },
+    {
+      "start": 476.319,
+      "duration": 5.041,
+      "end": 481.36,
+      "text": "notes you do not like because these"
+    },
+    {
+      "start": 478.96,
+      "duration": 4.0,
+      "end": 482.96,
+      "text": "notes are burnt at the time one so you"
+    },
+    {
+      "start": 481.36,
+      "duration": 4.16,
+      "end": 485.52000000000004,
+      "text": "pick up both the notes instead of"
+    },
+    {
+      "start": 482.96,
+      "duration": 5.359,
+      "end": 488.31899999999996,
+      "text": "picking only one pick up both the notes"
+    },
+    {
+      "start": 485.52,
+      "duration": 5.519,
+      "end": 491.039,
+      "text": "and have simultaneous tasks on that so"
+    },
+    {
+      "start": 488.319,
+      "duration": 4.801,
+      "end": 493.12,
+      "text": "on one one will burn left one will burn"
+    },
+    {
+      "start": 491.039,
+      "duration": 4.16,
+      "end": 495.199,
+      "text": "right and one will burn top"
+    },
+    {
+      "start": 493.12,
+      "duration": 3.519,
+      "end": 496.639,
+      "text": "so as of now does one have a top no"
+    },
+    {
+      "start": 495.199,
+      "duration": 3.761,
+      "end": 498.96000000000004,
+      "text": "because one doesn't have a parent"
+    },
+    {
+      "start": 496.639,
+      "duration": 5.441,
+      "end": 502.08,
+      "text": "pointer again proved by the parent map"
+    },
+    {
+      "start": 498.96,
+      "duration": 5.359,
+      "end": 504.31899999999996,
+      "text": "does one have a left uh yes it does have"
+    },
+    {
+      "start": 502.08,
+      "duration": 3.92,
+      "end": 506.0,
+      "text": "two but that's already burnt you can"
+    },
+    {
+      "start": 504.319,
+      "duration": 3.521,
+      "end": 507.84000000000003,
+      "text": "figure that out from the visited array"
+    },
+    {
+      "start": 506.0,
+      "duration": 4.319,
+      "end": 510.319,
+      "text": "so again this will not be burnt that's"
+    },
+    {
+      "start": 507.84,
+      "duration": 4.48,
+      "end": 512.3199999999999,
+      "text": "one hour right yes indeed and that's"
+    },
+    {
+      "start": 510.319,
+      "duration": 4.4,
+      "end": 514.719,
+      "text": "three so what you can do is you can"
+    },
+    {
+      "start": 512.32,
+      "duration": 4.639,
+      "end": 516.9590000000001,
+      "text": "definitely burn three you can definitely"
+    },
+    {
+      "start": 514.719,
+      "duration": 4.56,
+      "end": 519.279,
+      "text": "burn three and mark it as visited so i"
+    },
+    {
+      "start": 516.959,
+      "duration": 4.481,
+      "end": 521.4399999999999,
+      "text": "can say the task of one is completed"
+    },
+    {
+      "start": 519.279,
+      "duration": 4.24,
+      "end": 523.519,
+      "text": "hence i can just strike it off from the"
+    },
+    {
+      "start": 521.44,
+      "duration": 4.48,
+      "end": 525.9200000000001,
+      "text": "queue now in the next like in the same"
+    },
+    {
+      "start": 523.519,
+      "duration": 3.44,
+      "end": 526.9590000000001,
+      "text": "iteration i know we will have four so we"
+    },
+    {
+      "start": 525.92,
+      "duration": 3.28,
+      "end": 529.1999999999999,
+      "text": "have a four"
+    },
+    {
+      "start": 526.959,
+      "duration": 4.801,
+      "end": 531.76,
+      "text": "what i do is again the same thing"
+    },
+    {
+      "start": 529.2,
+      "duration": 4.4,
+      "end": 533.6,
+      "text": "does four have a top yes that's four"
+    },
+    {
+      "start": 531.76,
+      "duration": 3.759,
+      "end": 535.519,
+      "text": "hour left yes there's four over right a"
+    },
+    {
+      "start": 533.6,
+      "duration": 5.04,
+      "end": 538.64,
+      "text": "yes like it might have"
+    },
+    {
+      "start": 535.519,
+      "duration": 5.361,
+      "end": 540.88,
+      "text": "so on four stop we have two that's"
+    },
+    {
+      "start": 538.64,
+      "duration": 4.16,
+      "end": 542.8,
+      "text": "already burnt so no need to burn it"
+    },
+    {
+      "start": 540.88,
+      "duration": 4.24,
+      "end": 545.12,
+      "text": "that's four hour left no that's four"
+    },
+    {
+      "start": 542.8,
+      "duration": 4.56,
+      "end": 547.3599999999999,
+      "text": "have a right seven seven is not burnt"
+    },
+    {
+      "start": 545.12,
+      "duration": 4.56,
+      "end": 549.68,
+      "text": "yet so you will burn seven so put it"
+    },
+    {
+      "start": 547.36,
+      "duration": 4.88,
+      "end": 552.24,
+      "text": "into the queue mark it as visited so"
+    },
+    {
+      "start": 549.68,
+      "duration": 3.599,
+      "end": 553.279,
+      "text": "what i've done is all the guys that were"
+    },
+    {
+      "start": 552.24,
+      "duration": 4.32,
+      "end": 556.5600000000001,
+      "text": "burnt"
+    },
+    {
+      "start": 553.279,
+      "duration": 5.521,
+      "end": 558.8,
+      "text": "during time one have have burnt their"
+    },
+    {
+      "start": 556.56,
+      "duration": 4.56,
+      "end": 561.1199999999999,
+      "text": "adjacent notes have burnt their adjacent"
+    },
+    {
+      "start": 558.8,
+      "duration": 5.68,
+      "end": 564.4799999999999,
+      "text": "notes so one and four have been"
+    },
+    {
+      "start": 561.12,
+      "duration": 4.8,
+      "end": 565.92,
+      "text": "completed so can i say 1 4 at least"
+    },
+    {
+      "start": 564.48,
+      "duration": 4.56,
+      "end": 569.04,
+      "text": "burnt someone"
+    },
+    {
+      "start": 565.92,
+      "duration": 4.88,
+      "end": 570.8,
+      "text": "hence the time will increase to time 2"
+    },
+    {
+      "start": 569.04,
+      "duration": 3.84,
+      "end": 572.88,
+      "text": "seconds"
+    },
+    {
+      "start": 570.8,
+      "duration": 4.719,
+      "end": 575.519,
+      "text": "in the next iteration i'll take the next"
+    },
+    {
+      "start": 572.88,
+      "duration": 5.28,
+      "end": 578.16,
+      "text": "set of notes which were burnt at time 2"
+    },
+    {
+      "start": 575.519,
+      "duration": 4.561,
+      "end": 580.08,
+      "text": "that's the node 3 and node 7 and i'll"
+    },
+    {
+      "start": 578.16,
+      "duration": 5.359,
+      "end": 583.519,
+      "text": "again perform the same task"
+    },
+    {
+      "start": 580.08,
+      "duration": 6.0,
+      "end": 586.08,
+      "text": "3 can burn the top the left the right"
+    },
+    {
+      "start": 583.519,
+      "duration": 4.241,
+      "end": 587.76,
+      "text": "so does 3 have a top yes that's one but"
+    },
+    {
+      "start": 586.08,
+      "duration": 4.08,
+      "end": 590.1600000000001,
+      "text": "that is already burnt if you carefully"
+    },
+    {
+      "start": 587.76,
+      "duration": 4.88,
+      "end": 592.64,
+      "text": "observe that's already burnt so we will"
+    },
+    {
+      "start": 590.16,
+      "duration": 4.48,
+      "end": 594.64,
+      "text": "not burn it does three have a left yes"
+    },
+    {
+      "start": 592.64,
+      "duration": 4.4,
+      "end": 597.04,
+      "text": "it has a left that's five so let's burn"
+    },
+    {
+      "start": 594.64,
+      "duration": 6.08,
+      "end": 600.72,
+      "text": "the note 5 there's three have a right"
+    },
+    {
+      "start": 597.04,
+      "duration": 5.28,
+      "end": 602.3199999999999,
+      "text": "yes let's burn it so five will be burnt"
+    },
+    {
+      "start": 600.72,
+      "duration": 3.679,
+      "end": 604.399,
+      "text": "six will be burned so mark them as"
+    },
+    {
+      "start": 602.32,
+      "duration": 4.8,
+      "end": 607.12,
+      "text": "visited put them into the queue data"
+    },
+    {
+      "start": 604.399,
+      "duration": 4.961,
+      "end": 609.36,
+      "text": "structure seven does it have a top yes"
+    },
+    {
+      "start": 607.12,
+      "duration": 3.92,
+      "end": 611.04,
+      "text": "that's four but that's already burnt"
+    },
+    {
+      "start": 609.36,
+      "duration": 4.56,
+      "end": 613.92,
+      "text": "does it have a left no does it have a"
+    },
+    {
+      "start": 611.04,
+      "duration": 5.84,
+      "end": 616.88,
+      "text": "right no so can i say can i say the time"
+    },
+    {
+      "start": 613.92,
+      "duration": 5.12,
+      "end": 619.04,
+      "text": "two guys that were three and seven have"
+    },
+    {
+      "start": 616.88,
+      "duration": 3.68,
+      "end": 620.56,
+      "text": "burned their adjacent notes and this"
+    },
+    {
+      "start": 619.04,
+      "duration": 3.6,
+      "end": 622.64,
+      "text": "tree"
+    },
+    {
+      "start": 620.56,
+      "duration": 4.399,
+      "end": 624.959,
+      "text": "has burned someone like five and six so"
+    },
+    {
+      "start": 622.64,
+      "duration": 4.319,
+      "end": 626.959,
+      "text": "it they burnt some adjacents so if"
+    },
+    {
+      "start": 624.959,
+      "duration": 4.401,
+      "end": 629.3599999999999,
+      "text": "they're burning some adjacents can i say"
+    },
+    {
+      "start": 626.959,
+      "duration": 4.56,
+      "end": 631.5189999999999,
+      "text": "the time will increase to three indeed"
+    },
+    {
+      "start": 629.36,
+      "duration": 4.8,
+      "end": 634.16,
+      "text": "and so this is over i'll move to the"
+    },
+    {
+      "start": 631.519,
+      "duration": 4.88,
+      "end": 636.399,
+      "text": "next set of notes"
+    },
+    {
+      "start": 634.16,
+      "duration": 3.76,
+      "end": 637.92,
+      "text": "the next set of notes are six and five"
+    },
+    {
+      "start": 636.399,
+      "duration": 2.801,
+      "end": 639.2,
+      "text": "so i have a five"
+    },
+    {
+      "start": 637.92,
+      "duration": 3.599,
+      "end": 641.519,
+      "text": "i have a six"
+    },
+    {
+      "start": 639.2,
+      "duration": 3.36,
+      "end": 642.5600000000001,
+      "text": "so currently whenever five the topmost"
+    },
+    {
+      "start": 641.519,
+      "duration": 2.161,
+      "end": 643.68,
+      "text": "node is"
+    },
+    {
+      "start": 642.56,
+      "duration": 3.36,
+      "end": 645.92,
+      "text": "three"
+    },
+    {
+      "start": 643.68,
+      "duration": 4.64,
+      "end": 648.3199999999999,
+      "text": "right that's already burnt and you can"
+    },
+    {
+      "start": 645.92,
+      "duration": 4.0,
+      "end": 649.92,
+      "text": "just figure that out from here visit it"
+    },
+    {
+      "start": 648.32,
+      "duration": 4.8,
+      "end": 653.12,
+      "text": "five doesn't have a left doesn't have a"
+    },
+    {
+      "start": 649.92,
+      "duration": 4.32,
+      "end": 654.24,
+      "text": "right so five actually doesn't burns"
+    },
+    {
+      "start": 653.12,
+      "duration": 3.92,
+      "end": 657.04,
+      "text": "anyone"
+    },
+    {
+      "start": 654.24,
+      "duration": 5.36,
+      "end": 659.6,
+      "text": "correct six does it have a top yes three"
+    },
+    {
+      "start": 657.04,
+      "duration": 4.32,
+      "end": 661.36,
+      "text": "which is already burnt six has a left"
+    },
+    {
+      "start": 659.6,
+      "duration": 5.52,
+      "end": 665.12,
+      "text": "six has a right but it doesn't burns"
+    },
+    {
+      "start": 661.36,
+      "duration": 6.159,
+      "end": 667.519,
+      "text": "anyone so can i say this five this sex"
+    },
+    {
+      "start": 665.12,
+      "duration": 5.52,
+      "end": 670.64,
+      "text": "did not burn anyone"
+    },
+    {
+      "start": 667.519,
+      "duration": 5.121,
+      "end": 672.64,
+      "text": "hence hence the time will no more"
+    },
+    {
+      "start": 670.64,
+      "duration": 4.639,
+      "end": 675.279,
+      "text": "increase hence the time will no more"
+    },
+    {
+      "start": 672.64,
+      "duration": 3.92,
+      "end": 676.56,
+      "text": "increase because they could not burn"
+    },
+    {
+      "start": 675.279,
+      "duration": 3.041,
+      "end": 678.32,
+      "text": "anyone"
+    },
+    {
+      "start": 676.56,
+      "duration": 3.04,
+      "end": 679.5999999999999,
+      "text": "right"
+    },
+    {
+      "start": 678.32,
+      "duration": 3.199,
+      "end": 681.519,
+      "text": "next"
+    },
+    {
+      "start": 679.6,
+      "duration": 3.679,
+      "end": 683.279,
+      "text": "if i try to find anyone else in the"
+    },
+    {
+      "start": 681.519,
+      "duration": 4.721,
+      "end": 686.24,
+      "text": "queue i don't find it so the queue is"
+    },
+    {
+      "start": 683.279,
+      "duration": 5.361,
+      "end": 688.64,
+      "text": "empty once the queue is empty whatever"
+    },
+    {
+      "start": 686.24,
+      "duration": 5.52,
+      "end": 691.76,
+      "text": "time is stored in your time variable"
+    },
+    {
+      "start": 688.64,
+      "duration": 6.24,
+      "end": 694.88,
+      "text": "will be your minimal time that's"
+    },
+    {
+      "start": 691.76,
+      "duration": 4.96,
+      "end": 696.72,
+      "text": "required to burn a binary tree from any"
+    },
+    {
+      "start": 694.88,
+      "duration": 3.84,
+      "end": 698.72,
+      "text": "given node if i change the question to"
+    },
+    {
+      "start": 696.72,
+      "duration": 3.84,
+      "end": 700.5600000000001,
+      "text": "leaf node doesn't matter you're just"
+    },
+    {
+      "start": 698.72,
+      "duration": 4.559,
+      "end": 703.279,
+      "text": "going to take parent pointers left right"
+    },
+    {
+      "start": 700.56,
+      "duration": 4.56,
+      "end": 705.1199999999999,
+      "text": "every time because whether it be a node"
+    },
+    {
+      "start": 703.279,
+      "duration": 3.921,
+      "end": 707.2,
+      "text": "whether it be a leaf node"
+    },
+    {
+      "start": 705.12,
+      "duration": 5.519,
+      "end": 710.639,
+      "text": "the bfs will still stay the same because"
+    },
+    {
+      "start": 707.2,
+      "duration": 6.16,
+      "end": 713.36,
+      "text": "i have applied bfs from two i started"
+    },
+    {
+      "start": 710.639,
+      "duration": 5.361,
+      "end": 716.0,
+      "text": "and i moved radially outwards that's bfs"
+    },
+    {
+      "start": 713.36,
+      "duration": 7.36,
+      "end": 720.72,
+      "text": "that is what we generally apply now you"
+    },
+    {
+      "start": 716.0,
+      "duration": 6.56,
+      "end": 722.56,
+      "text": "might ask a question why not dfs"
+    },
+    {
+      "start": 720.72,
+      "duration": 3.679,
+      "end": 724.399,
+      "text": "the reason is"
+    },
+    {
+      "start": 722.56,
+      "duration": 4.64,
+      "end": 727.1999999999999,
+      "text": "the tree is burning"
+    },
+    {
+      "start": 724.399,
+      "duration": 4.721,
+      "end": 729.12,
+      "text": "at the same time like from node two it's"
+    },
+    {
+      "start": 727.2,
+      "duration": 4.639,
+      "end": 731.839,
+      "text": "burning on the same time so you have to"
+    },
+    {
+      "start": 729.12,
+      "duration": 5.04,
+      "end": 734.16,
+      "text": "move level wise like if you just think"
+    },
+    {
+      "start": 731.839,
+      "duration": 4.56,
+      "end": 736.399,
+      "text": "this this is level zero like time zero"
+    },
+    {
+      "start": 734.16,
+      "duration": 4.4,
+      "end": 738.56,
+      "text": "this is time one time one so you can"
+    },
+    {
+      "start": 736.399,
+      "duration": 4.801,
+      "end": 741.2,
+      "text": "just imagine this as a level and after"
+    },
+    {
+      "start": 738.56,
+      "duration": 4.24,
+      "end": 742.8,
+      "text": "that at time two these two are burnt"
+    },
+    {
+      "start": 741.2,
+      "duration": 3.439,
+      "end": 744.639,
+      "text": "there are time three these three uh"
+    },
+    {
+      "start": 742.8,
+      "duration": 4.08,
+      "end": 746.88,
+      "text": "these two are burned so it's kind of a"
+    },
+    {
+      "start": 744.639,
+      "duration": 4.0,
+      "end": 748.639,
+      "text": "level wise movement first the level zero"
+    },
+    {
+      "start": 746.88,
+      "duration": 4.32,
+      "end": 751.2,
+      "text": "then the level one"
+    },
+    {
+      "start": 748.639,
+      "duration": 4.961,
+      "end": 753.6,
+      "text": "then the level two"
+    },
+    {
+      "start": 751.2,
+      "duration": 4.56,
+      "end": 755.76,
+      "text": "and then the level threes"
+    },
+    {
+      "start": 753.6,
+      "duration": 4.88,
+      "end": 758.48,
+      "text": "so that is the reason we cannot use uh"
+    },
+    {
+      "start": 755.76,
+      "duration": 5.44,
+      "end": 761.2,
+      "text": "dfs"
+    },
+    {
+      "start": 758.48,
+      "duration": 4.24,
+      "end": 762.72,
+      "text": "so as usual we have the c plus plus code"
+    },
+    {
+      "start": 761.2,
+      "duration": 3.759,
+      "end": 764.9590000000001,
+      "text": "on the left and the java code on the"
+    },
+    {
+      "start": 762.72,
+      "duration": 4.08,
+      "end": 766.8000000000001,
+      "text": "right so we are given the root and as"
+    },
+    {
+      "start": 764.959,
+      "duration": 4.081,
+      "end": 769.04,
+      "text": "you can see we are given the"
+    },
+    {
+      "start": 766.8,
+      "duration": 4.0,
+      "end": 770.8,
+      "text": "integer value of the node uh the node"
+    },
+    {
+      "start": 769.04,
+      "duration": 3.359,
+      "end": 772.399,
+      "text": "that we are looking for not the address"
+    },
+    {
+      "start": 770.8,
+      "duration": 2.88,
+      "end": 773.68,
+      "text": "so what i've done is i've initially"
+    },
+    {
+      "start": 772.399,
+      "duration": 5.041,
+      "end": 777.44,
+      "text": "created a map"
+    },
+    {
+      "start": 773.68,
+      "duration": 6.959,
+      "end": 780.6389999999999,
+      "text": "of binary tree to binary and i have a"
+    },
+    {
+      "start": 777.44,
+      "duration": 6.079,
+      "end": 783.519,
+      "text": "bfs which basically maps these"
+    },
+    {
+      "start": 780.639,
+      "duration": 4.88,
+      "end": 785.519,
+      "text": "nodes to its parents so in this bfs i'll"
+    },
+    {
+      "start": 783.519,
+      "duration": 4.961,
+      "end": 788.48,
+      "text": "pass the route i'll pass this map and"
+    },
+    {
+      "start": 785.519,
+      "duration": 5.681,
+      "end": 791.2,
+      "text": "i'll pass this start and this back this"
+    },
+    {
+      "start": 788.48,
+      "duration": 5.039,
+      "end": 793.519,
+      "text": "bfs does couple of tasks one is parent"
+    },
+    {
+      "start": 791.2,
+      "duration": 6.079,
+      "end": 797.279,
+      "text": "mapping while the other one is it"
+    },
+    {
+      "start": 793.519,
+      "duration": 6.56,
+      "end": 800.079,
+      "text": "returns me the the node the node address"
+    },
+    {
+      "start": 797.279,
+      "duration": 4.721,
+      "end": 802.0,
+      "text": "where this target lies because while"
+    },
+    {
+      "start": 800.079,
+      "duration": 4.32,
+      "end": 804.399,
+      "text": "doing a parent mapping i was doing bfs"
+    },
+    {
+      "start": 802.0,
+      "duration": 4.56,
+      "end": 806.56,
+      "text": "traversals so while travis i'll find"
+    },
+    {
+      "start": 804.399,
+      "duration": 5.361,
+      "end": 809.76,
+      "text": "that address and store it in return so"
+    },
+    {
+      "start": 806.56,
+      "duration": 4.959,
+      "end": 811.5189999999999,
+      "text": "let's check out the bfs to apparent map"
+    },
+    {
+      "start": 809.76,
+      "duration": 3.759,
+      "end": 813.519,
+      "text": "function at first so what i've done is"
+    },
+    {
+      "start": 811.519,
+      "duration": 4.801,
+      "end": 816.32,
+      "text": "i've declared a queue and i push the"
+    },
+    {
+      "start": 813.519,
+      "duration": 5.281,
+      "end": 818.8,
+      "text": "root that's the starting point and at"
+    },
+    {
+      "start": 816.32,
+      "duration": 3.6,
+      "end": 819.9200000000001,
+      "text": "the same time i have kept a resultant"
+    },
+    {
+      "start": 818.8,
+      "duration": 3.12,
+      "end": 821.92,
+      "text": "node"
+    },
+    {
+      "start": 819.92,
+      "duration": 2.88,
+      "end": 822.8,
+      "text": "so that i can store the address of the"
+    },
+    {
+      "start": 821.92,
+      "duration": 3.359,
+      "end": 825.279,
+      "text": "start"
+    },
+    {
+      "start": 822.8,
+      "duration": 4.56,
+      "end": 827.3599999999999,
+      "text": "right after that i start iterating i do"
+    },
+    {
+      "start": 825.279,
+      "duration": 4.0,
+      "end": 829.279,
+      "text": "a level order traversal"
+    },
+    {
+      "start": 827.36,
+      "duration": 2.719,
+      "end": 830.0790000000001,
+      "text": "i get the node"
+    },
+    {
+      "start": 829.279,
+      "duration": 2.641,
+      "end": 831.92,
+      "text": "right"
+    },
+    {
+      "start": 830.079,
+      "duration": 4.401,
+      "end": 834.4799999999999,
+      "text": "and if this node is equivalent to the"
+    },
+    {
+      "start": 831.92,
+      "duration": 4.159,
+      "end": 836.079,
+      "text": "start like the node that i'm looking for"
+    },
+    {
+      "start": 834.48,
+      "duration": 4.719,
+      "end": 839.1990000000001,
+      "text": "so i store that node so during the"
+    },
+    {
+      "start": 836.079,
+      "duration": 4.721,
+      "end": 840.8,
+      "text": "traversal if any time i find that node"
+    },
+    {
+      "start": 839.199,
+      "duration": 3.44,
+      "end": 842.639,
+      "text": "which is containing the value start i"
+    },
+    {
+      "start": 840.8,
+      "duration": 4.24,
+      "end": 845.04,
+      "text": "just store its address"
+    },
+    {
+      "start": 842.639,
+      "duration": 5.2,
+      "end": 847.839,
+      "text": "and after that i pop and if there is a"
+    },
+    {
+      "start": 845.04,
+      "duration": 5.84,
+      "end": 850.88,
+      "text": "left if there is a right what i do is i"
+    },
+    {
+      "start": 847.839,
+      "duration": 4.961,
+      "end": 852.8000000000001,
+      "text": "map i say left your parent does not at"
+    },
+    {
+      "start": 850.88,
+      "duration": 4.24,
+      "end": 855.12,
+      "text": "the same time i push it to the queue"
+    },
+    {
+      "start": 852.8,
+      "duration": 4.08,
+      "end": 856.88,
+      "text": "right your parent does not push it into"
+    },
+    {
+      "start": 855.12,
+      "duration": 3.839,
+      "end": 858.9590000000001,
+      "text": "the queue this is how the level order"
+    },
+    {
+      "start": 856.88,
+      "duration": 5.92,
+      "end": 862.8,
+      "text": "traversal will complete so after this"
+    },
+    {
+      "start": 858.959,
+      "duration": 6.481,
+      "end": 865.4399999999999,
+      "text": "line the target node is what"
+    },
+    {
+      "start": 862.8,
+      "duration": 6.159,
+      "end": 868.959,
+      "text": "where the start node will be and the bfs"
+    },
+    {
+      "start": 865.44,
+      "duration": 6.639,
+      "end": 872.0790000000001,
+      "text": "will make sure that this map contains"
+    },
+    {
+      "start": 868.959,
+      "duration": 5.601,
+      "end": 874.56,
+      "text": "all the nodes parents right after that i"
+    },
+    {
+      "start": 872.079,
+      "duration": 4.081,
+      "end": 876.16,
+      "text": "have one function find max parent find"
+    },
+    {
+      "start": 874.56,
+      "duration": 4.24,
+      "end": 878.8,
+      "text": "max distance"
+    },
+    {
+      "start": 876.16,
+      "duration": 4.32,
+      "end": 880.48,
+      "text": "where i pass this parent map and i pass"
+    },
+    {
+      "start": 878.8,
+      "duration": 4.039,
+      "end": 882.8389999999999,
+      "text": "this target node so since i have the"
+    },
+    {
+      "start": 880.48,
+      "duration": 5.68,
+      "end": 886.16,
+      "text": "target node the address i pass"
+    },
+    {
+      "start": 882.839,
+      "duration": 6.201,
+      "end": 889.0400000000001,
+      "text": "it so as of now i have this find max"
+    },
+    {
+      "start": 886.16,
+      "duration": 4.239,
+      "end": 890.399,
+      "text": "distance correct so what do i have i"
+    },
+    {
+      "start": 889.04,
+      "duration": 2.96,
+      "end": 892.0,
+      "text": "have the parent map"
+    },
+    {
+      "start": 890.399,
+      "duration": 3.841,
+      "end": 894.24,
+      "text": "i have the target node"
+    },
+    {
+      "start": 892.0,
+      "duration": 4.48,
+      "end": 896.48,
+      "text": "now initially i have taken the q"
+    },
+    {
+      "start": 894.24,
+      "duration": 4.48,
+      "end": 898.72,
+      "text": "so i'll just push on the q like i just"
+    },
+    {
+      "start": 896.48,
+      "duration": 4.0,
+      "end": 900.48,
+      "text": "push on the target into that"
+    },
+    {
+      "start": 898.72,
+      "duration": 4.32,
+      "end": 903.0400000000001,
+      "text": "right after that i have this visited"
+    },
+    {
+      "start": 900.48,
+      "duration": 4.4,
+      "end": 904.88,
+      "text": "note correct and what i'm doing is i'm"
+    },
+    {
+      "start": 903.04,
+      "duration": 4.159,
+      "end": 907.199,
+      "text": "marking visited as"
+    },
+    {
+      "start": 904.88,
+      "duration": 3.199,
+      "end": 908.079,
+      "text": "one so marked visited as"
+    },
+    {
+      "start": 907.199,
+      "duration": 3.041,
+      "end": 910.24,
+      "text": "one"
+    },
+    {
+      "start": 908.079,
+      "duration": 4.481,
+      "end": 912.56,
+      "text": "after this i've kept the timer so"
+    },
+    {
+      "start": 910.24,
+      "duration": 4.64,
+      "end": 914.88,
+      "text": "initial timer is zero"
+    },
+    {
+      "start": 912.56,
+      "duration": 4.24,
+      "end": 916.8,
+      "text": "right after this i'll start iterating so"
+    },
+    {
+      "start": 914.88,
+      "duration": 3.199,
+      "end": 918.079,
+      "text": "if you remember whatever is the target"
+    },
+    {
+      "start": 916.8,
+      "duration": 2.64,
+      "end": 919.4399999999999,
+      "text": "node you have to keep that into the"
+    },
+    {
+      "start": 918.079,
+      "duration": 3.2,
+      "end": 921.279,
+      "text": "queue i have to mark that into the"
+    },
+    {
+      "start": 919.44,
+      "duration": 4.48,
+      "end": 923.9200000000001,
+      "text": "visited right after that i start"
+    },
+    {
+      "start": 921.279,
+      "duration": 4.081,
+      "end": 925.36,
+      "text": "iterating in the queue i take the size"
+    },
+    {
+      "start": 923.92,
+      "duration": 3.68,
+      "end": 927.5999999999999,
+      "text": "so if you remember"
+    },
+    {
+      "start": 925.36,
+      "duration": 5.36,
+      "end": 930.72,
+      "text": "first we had one then we like sorry"
+    },
+    {
+      "start": 927.6,
+      "duration": 4.96,
+      "end": 932.5600000000001,
+      "text": "first we had two then we had one and uh"
+    },
+    {
+      "start": 930.72,
+      "duration": 3.919,
+      "end": 934.639,
+      "text": "like if i remember well"
+    },
+    {
+      "start": 932.56,
+      "duration": 3.92,
+      "end": 936.4799999999999,
+      "text": "we had one and four so we will i trade"
+    },
+    {
+      "start": 934.639,
+      "duration": 3.921,
+      "end": 938.5600000000001,
+      "text": "for one and four and after that whatever"
+    },
+    {
+      "start": 936.48,
+      "duration": 4.32,
+      "end": 940.8000000000001,
+      "text": "set we had we iterated for it so that's"
+    },
+    {
+      "start": 938.56,
+      "duration": 3.92,
+      "end": 942.4799999999999,
+      "text": "why we are running directly on the size"
+    },
+    {
+      "start": 940.8,
+      "duration": 4.159,
+      "end": 944.959,
+      "text": "running directly on the size and if it's"
+    },
+    {
+      "start": 942.48,
+      "duration": 4.799,
+      "end": 947.279,
+      "text": "one and four we'll take one and four and"
+    },
+    {
+      "start": 944.959,
+      "duration": 3.921,
+      "end": 948.88,
+      "text": "do simultaneous works on that that's why"
+    },
+    {
+      "start": 947.279,
+      "duration": 3.92,
+      "end": 951.199,
+      "text": "you're running on the size so we'll take"
+    },
+    {
+      "start": 948.88,
+      "duration": 5.12,
+      "end": 954.0,
+      "text": "the node we'll pop it and what we check"
+    },
+    {
+      "start": 951.199,
+      "duration": 6.0,
+      "end": 957.199,
+      "text": "is does it have a left and is that not"
+    },
+    {
+      "start": 954.0,
+      "duration": 5.68,
+      "end": 959.68,
+      "text": "visited if it is i will burn it"
+    },
+    {
+      "start": 957.199,
+      "duration": 4.801,
+      "end": 962.0,
+      "text": "so kindly burn it that is marking"
+    },
+    {
+      "start": 959.68,
+      "duration": 4.48,
+      "end": 964.16,
+      "text": "visited and push it into the queue"
+    },
+    {
+      "start": 962.0,
+      "duration": 3.279,
+      "end": 965.279,
+      "text": "similar i'll do for right"
+    },
+    {
+      "start": 964.16,
+      "duration": 3.359,
+      "end": 967.519,
+      "text": "check it"
+    },
+    {
+      "start": 965.279,
+      "duration": 5.201,
+      "end": 970.48,
+      "text": "burn it and push it into the queue"
+    },
+    {
+      "start": 967.519,
+      "duration": 5.68,
+      "end": 973.199,
+      "text": "check it if it exists like map of node"
+    },
+    {
+      "start": 970.48,
+      "duration": 4.719,
+      "end": 975.1990000000001,
+      "text": "does it exist what does that mean does"
+    },
+    {
+      "start": 973.199,
+      "duration": 4.481,
+      "end": 977.68,
+      "text": "the parent pointer exist and if it"
+    },
+    {
+      "start": 975.199,
+      "duration": 4.801,
+      "end": 980.0,
+      "text": "exists does that parent pointer like is"
+    },
+    {
+      "start": 977.68,
+      "duration": 4.56,
+      "end": 982.2399999999999,
+      "text": "it already visited if it is not then"
+    },
+    {
+      "start": 980.0,
+      "duration": 5.68,
+      "end": 985.68,
+      "text": "burn it and push it into the queue so"
+    },
+    {
+      "start": 982.24,
+      "duration": 5.36,
+      "end": 987.6,
+      "text": "these are three left right and top"
+    },
+    {
+      "start": 985.68,
+      "duration": 4.88,
+      "end": 990.56,
+      "text": "i burn it and push it into the cube and"
+    },
+    {
+      "start": 987.6,
+      "duration": 6.32,
+      "end": 993.9200000000001,
+      "text": "if anyone if i'm burning any adjacent"
+    },
+    {
+      "start": 990.56,
+      "duration": 5.12,
+      "end": 995.68,
+      "text": "node i am marking a flag as one i am"
+    },
+    {
+      "start": 993.92,
+      "duration": 4.479,
+      "end": 998.399,
+      "text": "marking a flag as one like if i'm"
+    },
+    {
+      "start": 995.68,
+      "duration": 4.32,
+      "end": 1000.0,
+      "text": "burning any one and at the end at the"
+    },
+    {
+      "start": 998.399,
+      "duration": 5.201,
+      "end": 1003.6,
+      "text": "end if the flag is marked as one that"
+    },
+    {
+      "start": 1000.0,
+      "duration": 6.8,
+      "end": 1006.8,
+      "text": "means i burned someone who was adjacent"
+    },
+    {
+      "start": 1003.6,
+      "duration": 5.52,
+      "end": 1009.12,
+      "text": "to me hence i'll do a maxi plus plus"
+    },
+    {
+      "start": 1006.8,
+      "duration": 4.64,
+      "end": 1011.4399999999999,
+      "text": "that means i'll do a timer plus plus at"
+    },
+    {
+      "start": 1009.12,
+      "duration": 6.0,
+      "end": 1015.12,
+      "text": "the end i can return the timer which i"
+    },
+    {
+      "start": 1011.44,
+      "duration": 6.319,
+      "end": 1017.759,
+      "text": "can ultimately return as my answer"
+    },
+    {
+      "start": 1015.12,
+      "duration": 4.639,
+      "end": 1019.759,
+      "text": "time complexity of this method so what"
+    },
+    {
+      "start": 1017.759,
+      "duration": 4.481,
+      "end": 1022.24,
+      "text": "i'm doing is i'm using a bfs to map"
+    },
+    {
+      "start": 1019.759,
+      "duration": 5.521,
+      "end": 1025.28,
+      "text": "parent that's a level order traversal"
+    },
+    {
+      "start": 1022.24,
+      "duration": 6.24,
+      "end": 1028.48,
+      "text": "which is going to take a big off and"
+    },
+    {
+      "start": 1025.28,
+      "duration": 5.519,
+      "end": 1030.799,
+      "text": "plus i'm again using a pfs"
+    },
+    {
+      "start": 1028.48,
+      "duration": 5.12,
+      "end": 1033.6,
+      "text": "kind of a function which is burning the"
+    },
+    {
+      "start": 1030.799,
+      "duration": 5.28,
+      "end": 1036.079,
+      "text": "adjacent nodes so that's the big go of n"
+    },
+    {
+      "start": 1033.6,
+      "duration": 5.52,
+      "end": 1039.12,
+      "text": "so i can just summarize like i can"
+    },
+    {
+      "start": 1036.079,
+      "duration": 4.801,
+      "end": 1040.8799999999999,
+      "text": "write it as b o of n i'm assuming i'm"
+    },
+    {
+      "start": 1039.12,
+      "duration": 4.48,
+      "end": 1043.6,
+      "text": "assuming that the map"
+    },
+    {
+      "start": 1040.88,
+      "duration": 5.12,
+      "end": 1046.0,
+      "text": "works at big o of one like i'm assuming"
+    },
+    {
+      "start": 1043.6,
+      "duration": 3.12,
+      "end": 1046.7199999999998,
+      "text": "map is working at big of one depending"
+    },
+    {
+      "start": 1046.0,
+      "duration": 2.559,
+      "end": 1048.559,
+      "text": "on"
+    },
+    {
+      "start": 1046.72,
+      "duration": 4.24,
+      "end": 1050.96,
+      "text": "what time complexity you're assuming map"
+    },
+    {
+      "start": 1048.559,
+      "duration": 3.681,
+      "end": 1052.24,
+      "text": "to work at then you can just make it n"
+    },
+    {
+      "start": 1050.96,
+      "duration": 3.2,
+      "end": 1054.16,
+      "text": "log login or whatever you want to make"
+    },
+    {
+      "start": 1052.24,
+      "duration": 4.0,
+      "end": 1056.24,
+      "text": "it and the space complexity is again"
+    },
+    {
+      "start": 1054.16,
+      "duration": 4.48,
+      "end": 1058.64,
+      "text": "you're using an external map you're"
+    },
+    {
+      "start": 1056.24,
+      "duration": 4.48,
+      "end": 1060.72,
+      "text": "using an external queue and similar"
+    },
+    {
+      "start": 1058.64,
+      "duration": 4.32,
+      "end": 1062.96,
+      "text": "stuff so i can just uh summarize it to"
+    },
+    {
+      "start": 1060.72,
+      "duration": 4.12,
+      "end": 1064.84,
+      "text": "be big of n so that is what the time"
+    },
+    {
+      "start": 1062.96,
+      "duration": 4.88,
+      "end": 1067.8400000000001,
+      "text": "complexity and the space complexity will"
+    },
+    {
+      "start": 1064.84,
+      "duration": 4.76,
+      "end": 1069.6,
+      "text": "be in order to get the minimum required"
+    },
+    {
+      "start": 1067.84,
+      "duration": 3.52,
+      "end": 1071.36,
+      "text": "time to burn a binary tree from any"
+    },
+    {
+      "start": 1069.6,
+      "duration": 3.12,
+      "end": 1072.7199999999998,
+      "text": "given node so i hope you've understood"
+    },
+    {
+      "start": 1071.36,
+      "duration": 3.439,
+      "end": 1074.799,
+      "text": "the entire explanation as well as the"
+    },
+    {
+      "start": 1072.72,
+      "duration": 3.52,
+      "end": 1076.24,
+      "text": "code just in case you did please please"
+    },
+    {
+      "start": 1074.799,
+      "duration": 3.681,
+      "end": 1078.48,
+      "text": "please make sure you like this video"
+    },
+    {
+      "start": 1076.24,
+      "duration": 4.64,
+      "end": 1080.88,
+      "text": "because it took a lot of efforts to make"
+    },
+    {
+      "start": 1078.48,
+      "duration": 4.0,
+      "end": 1082.48,
+      "text": "this entire tree series also if you wish"
+    },
+    {
+      "start": 1080.88,
+      "duration": 3.36,
+      "end": 1084.24,
+      "text": "you can definitely drop in a comment"
+    },
+    {
+      "start": 1082.48,
+      "duration": 4.079,
+      "end": 1086.559,
+      "text": "that will keep motivating me to make"
+    },
+    {
+      "start": 1084.24,
+      "duration": 3.52,
+      "end": 1087.76,
+      "text": "such further series also if you're new"
+    },
+    {
+      "start": 1086.559,
+      "duration": 2.561,
+      "end": 1089.12,
+      "text": "to the channel please do consider"
+    },
+    {
+      "start": 1087.76,
+      "duration": 3.039,
+      "end": 1090.799,
+      "text": "subscribing because i'm going to bring"
+    },
+    {
+      "start": 1089.12,
+      "duration": 3.76,
+      "end": 1092.8799999999999,
+      "text": "in such more series in the upcoming"
+    },
+    {
+      "start": 1090.799,
+      "duration": 3.12,
+      "end": 1093.9189999999999,
+      "text": "future as well with this uh let's wrap"
+    },
+    {
+      "start": 1092.88,
+      "duration": 4.05,
+      "end": 1096.93,
+      "text": "up this video let's speed in the next"
+    },
+    {
+      "start": 1093.919,
+      "duration": 10.91,
+      "end": 1104.8290000000002,
+      "text": "lecture bye bye"
+    },
+    {
+      "start": 1096.93,
+      "duration": 7.899,
+      "end": 1104.829,
+      "text": "[Music]"
+    }
+  ]
+}

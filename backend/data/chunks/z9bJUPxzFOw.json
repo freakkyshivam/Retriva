@@ -1,0 +1,163 @@
+{
+  "video_id": "z9bJUPxzFOw",
+  "position": 314,
+  "title": "L18. Implement LRU Cache",
+  "url": "https://www.youtube.com/watch?v=z9bJUPxzFOw",
+  "chunk_count": 14,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "z9bJUPxzFOw",
+      "position": 314,
+      "title": "L18. Implement LRU Cache",
+      "url": "https://www.youtube.com/watch?v=z9bJUPxzFOw",
+      "start": 3.28,
+      "end": 129.51999999999998,
+      "text": "So let's continue with our playlist today for starting off. Avery, welcome back to the channel. I hope you guys are doing extremely well. So the problem that I will be solving today is LRU cache. So what is the problem statement? You'll have to design a data structure that follows the constraints of a least recently used cache. So what you have to do is you'll have to implement LRU cache class that implements the constructor where it is taking the capacity and initializing the LRU cache to that capacity. That means it cannot store more values than the particular capacity. After that you'll have to implement a get functionality which is taking the key and you'll have to return the value of the key which is stored in the cache and if it is not stored you end up returning minus one. After that you'll have to implement the void put functionality where you'll be given a key you'll be given a value. So imagine if your cache already has the key you just update the value to that key done. What if it doesn't have in that case you'll have to add the key value pair to the cache. What if the capacity is full and you cannot add it? In that case, you delete the least recently used key and then you add this particular key and value given to you. Everything like the get and put functionality has to run in a b of one average time complexity throughout. Okay, let's understand this with an example. So the first thing is you have a cache of a size four as to put 2A 6. So the cache is empty. You could end up adding 2A 6 where 2 is the key, six is the value. As to put 4A 7, you can again do it because the cache is still having a size. 8A 11 you can still add it. 7A 10 you can still add it. Remember you need to keep a track of the least recently used and I'm keeping a track by",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "z9bJUPxzFOw",
+      "position": 314,
+      "title": "L18. Implement LRU Cache",
+      "url": "https://www.youtube.com/watch?v=z9bJUPxzFOw",
+      "start": 123.439,
+      "end": 248.31900000000002,
+      "text": "recently used and I'm keeping a track by maintaining this particular order. The last one that was used was 2a 6. The the recent one was this one 7 10 because I just entered it. Okay. After that get two. So the value is six. You can you could easily figure out from here. But this one is used. So what you'll do is you'll take it and place it at the front because this is now used recently. Okay, get eight. So the value of 8 is 11. So you could return 11 and at the same time what you could do is you could take 8 11 and you could place it at the front because this is least recently used. Done. After that you have a put of 5a 6. Put of 5a 6. Can you put it into the cache? First of all, five is not there. So you cannot replace the value. Can you put it into the cache? No, you cannot because the cache already has four elements and that is the maximum capacity it can hold. So what you will be doing is you'll be like okay I need to delete. So you always delete the last one that is 4a 7 goes off just goes off. So you've deleted it. What next? You take 5a 6 and you put it over here. So this is my cache as of now. So I'm done with this. After that I'm asked to get seven. So what's the value of seven? 10. So can I say that this is somewhere here and it will go over here because this is least recently used. After that I will put 5a 7. Do I have a five in the cache? I do have. I do have. So what I'll do is first of all I'll take this five put it first and then I'll take off the six I'll say what's the new value seven replace it and done so this will maintain the order of least recently used but I'm done dusted so this is what",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "z9bJUPxzFOw",
+      "position": 314,
+      "title": "L18. Implement LRU Cache",
+      "url": "https://www.youtube.com/watch?v=z9bJUPxzFOw",
+      "start": 240.959,
+      "end": 369.84,
+      "text": "used but I'm done dusted so this is what we need to implement it's not something that you'll have to solve you'll have to have knowledge of doubly link list and map data structure So typically linkless and hashing is all you need to know. In case you don't know it, please stop the video as of now. Go back and watch my link list. Go back and watch my hashing playlist. You'll understand what a map does and how double link list like how addition in dlink list works, how deletion in dlink list works. All of these things are very very important because this is a extremely implementationheavy problem. So in order to solve this particular problem, I'll be using a doubly link list where every node will be storing the key and value. So key and value and the next pointer and the previous pointer. Again, I'm assuming you know what is a doubling. Under that assumption, I will be solving this particular problem. Along with this what I will be doing is I'll be typically defining a map data structure. Now this map data structure will be storing the key and the node position. Remember the node address. Why? You'll understand as we go across. So to start off what you will be doing is we'll be straight away taking a head. So this will be a dummy head. It stores minus1 minus one. So this is my dummy head. You'll be taking a dummy tail as well. It is also storing a minus one minus one. And the dummy head's previous is pointing to null. But the next is pointing to tail. Remember this the dummy tail. So the dummy tail's previous is pointing to head and the next is pointing to null. So this is how initially my configuration will look like with an empty map data structure. So we start off with the first thing which is the capacity for. So maybe I can just store the capacity to be four. Done. After that the first functionality",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "z9bJUPxzFOw",
+      "position": 314,
+      "title": "L18. Implement LRU Cache",
+      "url": "https://www.youtube.com/watch?v=z9bJUPxzFOw",
+      "start": 363.039,
+      "end": 476.56,
+      "text": "Done. After that the first functionality like the first operation is put of 2, 6. First thing you'll do is you'll be like okay can I put it across? Yeah I do. I can because the capacity is four. So I can definitely put it across. Does it have it already? Because if it has already do I have to replace it but it is not there. How do I know it? I can have a hashing kind of a thing which tells me if two is there or not. It tells me if two is there or not. So I definitely know two is not there. So I just need to put it across. So what you'll do is you'll say hey insert it. Insert it. So you'll go ahead and say insert it. So you'll be inserting right after head. Remember this. You'll be inserting right after head. So you will make something like this. What I'll do is just to you know ease out going forward. I'll just insert it right after head over here. So, insert 2, 6 over here. And I'll make sure because this is a doubly linked list. I'm asking it to be inserted right after head. So, I make sure that the next is pointing to tail and this continues. So, basically what happened is heads next is now pointing to this. I inserted it in between and imagine this is at some random address. So, I'll be storing two comma the address of it. the address of it the address is a reference to where this particular value is perfect after that when as to insert 4A 6 I'll again do the same thing I'll say okay can I go ahead and insert 4A 6 so I'll take 4 6 and I'll insert it so the next will be pointing here the previous will be pointing here the next and the previous again done and please make sure you insert 4 6 4 comma the node location after that 8 comma 11 again 8 is not",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "z9bJUPxzFOw",
+      "position": 314,
+      "title": "L18. Implement LRU Cache",
+      "url": "https://www.youtube.com/watch?v=z9bJUPxzFOw",
+      "start": 470.96,
+      "end": 580.8000000000001,
+      "text": "after that 8 comma 11 again 8 is not there that means I'll have to insert it so I go ahead and say 8 is not there can you please insert it so the value is 8A 11 so I take 8 11 and I insert it and the previous is here this is there this is there perfect after that there's a 7A 10 but for this please make sure 8 comma address is going into your hashing hashmap after that there is 7A 10 so what I will be doing is I'll be again checking in the hash dash up it's not there so I'll be inserting it. So I take that value and I say hey 7a 10 and the next this and this 7 comma address. Okay. After that I've been asked to get to I've been asked to get to. So when I've been asked to get to what I will do first of all is I'll go into the map and I'll say okay two where are you? He says hey I'm here. I'm like give me a value. So I have the node. So I could just do a node dot value. it'll give me the value. So the value is six. I'll easily get the value. But we need to keep a track of least recently used. So all I need to do is all I need to do is first of all I need to delete it. Keep it in mind. Delete. Delete. You know how to delete in a double link list to delete the given node. So I've deleted the given node. I'll have to insert it at the front. I'll have to insert it at the front. So what I can do is quickly just take it across just move it back and I could take the new one which is 2a 6 and I'll put it over here. So it's a deletion and an insertion. It's a deletion and an insertion at the front. Done. After that I've been asked to get eight. I'll again",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "z9bJUPxzFOw",
+      "position": 314,
+      "title": "L18. Implement LRU Cache",
+      "url": "https://www.youtube.com/watch?v=z9bJUPxzFOw",
+      "start": 576.72,
+      "end": 684.0,
+      "text": "I've been asked to get eight. I'll again go and check if eight is there. It says yes 8 is there. It points me where it is. So I get the value which is 8a 11. So 8a 11 I get the value 11. So once I've got the value what do I do? I basically do one thing which is I say hey listen this is no more here. There's no more here. Can you basically go ahead and put it at the front? I'm like why not? I'll put it at the front which is 8 11. So I put it at the front. Please make sure that you reuse the nodes. Don't create new nodes because if you create new nodes you'll have to update the map and that will add to extra time complexity. Try to reuse the nodes. Right? Perfect. So okay again done. After that I've been asked to put five, six. So I go ahead and check on the map. Do I have a five? I don't have a five. I don't have a five and I see that the map has four elements which is equal to the capacity. So I already have four elements. I need to take off the last one. I need to take off the last one. Can I take off the last one? Super simple. I get the last node. How do you get the last node? You have a tail. You have a tail. So you say, \"Hey, who's your last?\" So I say tail dot previous is the node that I need to delete. Tail. Is the node that I need to delete. Okay, please delete it. So first you delete from here. So the value is four. So go in the map and say where's four? So delete four as well. So I've deleted this. So now the double link list looks like this. Correct. So maybe I could just, you know, move it across just to make it easy. So I've moved it across. Now what do I need to do? I need",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "z9bJUPxzFOw",
+      "position": 314,
+      "title": "L18. Implement LRU Cache",
+      "url": "https://www.youtube.com/watch?v=z9bJUPxzFOw",
+      "start": 679.519,
+      "end": 785.76,
+      "text": "across. Now what do I need to do? I need to take the five, create a new node. So I've created a new node 5, 6. And make sure the next is pointing to the next one. And this is this. And this is as it is. So I have a five. And please make sure to store the reference to this five. No. Done. After that, I've been asked to, you know, get seven. Do I have a seven? Yeah, I do have a seven. Where is the seven here? I get the value at first which is 10. After that, what I do is I take this particular node itself. I take this particular node itself. I take it off. My bad. So 7, 10. So I'll take 7A 10. So if I take it off, uh this thing will go back and 7A 10 will come across here. 7A 10 and the next and the previous. I'm just taking it out and putting it at front. Okay, done. After that, there's a question of putting five, 7. So, what I do is I go ahead and check. Hey, is there a five? He says, yeah, yes, there is a five. Yes, there is a five. Like, okay, I just need to replace it. So, I get the reference. So, I just pick pick out the node. Please make sure you pick out the node. So, I'll just pick out uh her. I will just pick out the 5, 7 node. Make sure it's the same node. Make sure it is the same node. So, you pick out the 5, 7. So, once you've picked it out, it will look something like this. insert the same node. Take the same node and insert it over here. So the reference doesn't changes. You just change pointers. You just change pointers. Get the node, delete it. Get the node, delete it. And after that, insert. Insert. Done. Perfect. So time to write down the pseudo code. So please, please make sure you should be",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "z9bJUPxzFOw",
+      "position": 314,
+      "title": "L18. Implement LRU Cache",
+      "url": "https://www.youtube.com/watch?v=z9bJUPxzFOw",
+      "start": 780.959,
+      "end": 899.279,
+      "text": "please, please make sure you should be knowing what a doubly link list is. So if I get back to the dry run, what all do we need? We definitely need a map data structure so that we can have the key and the direct reference to the node. So if you observed you did observe one thing we were deleting nodes like we had a reference we deleted and what did deletion mean over here? We were just changing links we were just changing links but the node was as it is because we're reusing that node. We're not creating new nodes. Okay we could delete from here as well. So that is typically something like this. So deletion of a node is what we need. So what I could do is I could write a function deletion of a node of a given node a deletion of a node where you take a node and you end up deleting it. So you're given a node and you end up deleting it. That node can be anywhere. It can be here. It can be at the end. Can be anywhere. Okay. So that is something I definitely need from doubly link list. So assume we know it because I've already done this thing in the doubly link list lectures. Please go back and watch it. How to delete a node whenever the reference is given. What else do we need? Whenever we are deleting we're kind of using it and in order to mark it as the least recently used what we are doing is we putting it right after head right after head. So what I can do is I can say insert after head and again you'll be given a node. Again you'll be given a node. So you just have to insert after head. Now if if you're able to write these two functions I think my job is done. My job is done. And please make sure the doubly uh link list that you define it should be",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "z9bJUPxzFOw",
+      "position": 314,
+      "title": "L18. Implement LRU Cache",
+      "url": "https://www.youtube.com/watch?v=z9bJUPxzFOw",
+      "start": 894.16,
+      "end": 1016.639,
+      "text": "list that you define it should be storing a key a value a next pointer and a previous pointer. So the code is given below like you can find the code in any given language. It's it's given below. What I'll recommend you to do is open it on some other tab so that you could follow across whatever I am doing. So as of now just remember you have a function deletion of a node insert after head and the node is containing a key a value a next and a previous right. So let's get on to the code. I'll be writing down the pseudo code. So we have a class which is L ru cache. What all do we need? We definitely need a map data structure. So a map which is storing a integer and the node reference star for C++. For Java people you don't have to give a star and a map. We also need the capacity where we know how many like what's the size of the cache. Along with this we definitely need a head and a tail. Why do we need it? As I implement, you'll understand. So, we'll definitely need this head and the state, right? Okay. After this, we'll have to uh write across the constructor which is taking a capacity. So, what I can do is I can say the capacity this is underscore equal to capacity underscore. That is done. I could always say initially the map will have no elements. So you could just clear it across and I can always say initially the heads next will be pointing to tail and the tails previous will be pointing to head. So we have a small link list to start off with. Perfect. This is how my LRU cache will look like. That was the next function that I'll have to write. That's the get function. So let's write it. So I have to write in get where I've been given a key and and I need to find the",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "z9bJUPxzFOw",
+      "position": 314,
+      "title": "L18. Implement LRU Cache",
+      "url": "https://www.youtube.com/watch?v=z9bJUPxzFOw",
+      "start": 1010.88,
+      "end": 1126.32,
+      "text": "given a key and and I need to find the value if it does exist. So first of all if it doesn't exist which means if the map doesn't have it the map doesn't have it. So can I say if the map doesn't have it and depending on your language you can write it. If the map doesn't have it in that scenario I know the answer will be returned minus one because it's not there. But if it does have it I definitely have a value. So what I could do is I could do a node star and a node and I could go to the map. Hey map can you give me the value for the given key. So what this map will give is the map is storing if you remember reference it'll give you the entire node. It'll give you the entire node. So you have the node you definitely have the node. So at the end of the day you could return the node value because you have the reference node. We could straight away extract the value. But are we done? No, we're not done. We've touched someone. We've touched someone. Now we need to put it at front because this is least recently used. So what I'll do is first of all I'll say delete the node and I'll pass on the node. Remember the function that we wrote like we said that there's a hypothetical function that deletes the node. Okay. Once it is deleted, can I say insert after head? Remember it's a dummy head. It's a dummy head and we use the same node. Don't create one more node because it will be space complexity like you'll add up additional space complexity. Reuse the given node itself. So I've inserted it after head. I need to do anything else. Now we're done here. I just deleted it. Put it across to keep a track of the least recently used. Perfect. What's the next one? I need to write the put function as well. The put function will",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "z9bJUPxzFOw",
+      "position": 314,
+      "title": "L18. Implement LRU Cache",
+      "url": "https://www.youtube.com/watch?v=z9bJUPxzFOw",
+      "start": 1121.28,
+      "end": 1241.039,
+      "text": "function as well. The put function will be I'll be given a key and I'll be given a value. Okay, what are the cases? I know one thing for sure. If it is already existing, I just need to change it. So I'll be like, hey, does the map has it? If the map has the value key, again, depending on the language, the syntax will vary. If the map has this value key, what will I be doing? I'll be like okay maybe I can get the node nodes node and you could always say map hey map can you give me the value and the map will give you the reference to that node wherever you stored element perfect and you could straight away say node dot value can you just replace your value by the value given to us the new value perfect so we used it I've recently used it so what I do is delete node and this node would be deleted since I recently used it. I say insert after head or whatever is the function name and I insert it and we are done. Yeah, we're done. No need to change anything in the map because the map is storing a reference to the node. Pretty cool. What if it is not in the map? If it is not in the map, then there can be multiple conditions. What if my cache is already filled up? Okay, so it means if the number of elements that I store MP dot uh size equal to capacity. If this is the case, what I'll do is I have to delete. I'll have to get rid of this guy. Which guy? The least recently used. How do you figure that out? Go back to the dry. This is your dummy tail that you initially defined. The least recently element is this one, which is the previous of the dummy tail, which is the previous of the dummy tail. So what I do is I simply go over and I say hey I",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "z9bJUPxzFOw",
+      "position": 314,
+      "title": "L18. Implement LRU Cache",
+      "url": "https://www.youtube.com/watch?v=z9bJUPxzFOw",
+      "start": 1234.24,
+      "end": 1350.8799999999999,
+      "text": "I do is I simply go over and I say hey I know the node and the node is nothing but the tails previous. So I can easily get the node. Okay, if I have the node I can also easily get the MP like from the map I could easily erase it. I could say MP do delete or erase whatever you have from the map. I could always say node key because I if I have the node reference I have the key. I could delete it out of the map. Okay, it's gone from the map. I need to take it out from the cache as well. So I say delete node. Delete the node. And since I have the node, I'll delete it. So what I've done is even if the size was full, I ended up deleting one element from it. Perfect. Done. What after this? If it is deleted, I have someone new. Okay. If I have someone new, I'll say node star node new node or whatever is whatever you write key value. So I'll I'll create a new node. Okay, this is created. And I'll say MP of key. Can you store this new nodes reference? Done. And after that I'll say insert after head. Insert after head. And I'll pass on this node which can be inserted. And we are done. We're done here as well. Okay. What is the time complexity? Let's analyze. This is definitely p of fun. Okay. This is also B of one. Assuming the delete works in B of one, which it will because it's just a link change. Insert after head, it is also a link change. It will also work in B of one. This one is something that might take B of login depending on the language that we're using, the map that you're using. So I'll just leave it to you. The put am I doing something extra wagon? Am I running a loop? No. This is also big of one assuming that the map is taking B of",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "z9bJUPxzFOw",
+      "position": 314,
+      "title": "L18. Implement LRU Cache",
+      "url": "https://www.youtube.com/watch?v=z9bJUPxzFOw",
+      "start": 1346.799,
+      "end": 1471.6,
+      "text": "one assuming that the map is taking B of one. We're using a map that takes login. This will end up being login depending on the language, the map, etc. You can say BO of one or PO of login. So I was able to design it but then you should be able to delete the node. It's very simple. If you're given a node and if you want to delete it. So what you do is you get the previous node at first which is node.re because it is a doubly linked list. you get the after node the node after it which is node next. So once you've got it all you need to do is the previous nodes next should point to after node and the after nodes previous basic link list should point to the previous done. This is how you easily delete a node by cutting off links. Okay, insert after head. You have the dummy head with you, right? You have the dummy head. So all you need to do is okay, you need to figure out as of now what is head connected to? What is head connected to? So current after head. Current after head. So maybe you could write current after head. Now this is nothing but head.ext. So you have it. There's the current after head. All you need to do is head. Next could easily be written as node because this is the new node. So head would be pointing to it. Okay. Nodes next will always be pointing to the cur after head like the previous one that you had. So basically if you insert something it will be pointing to this and the previous will be pointing to this. So I made sure that the next is pointing to this and please make sure that the nodes previous is pointing to the head. done simple link changes and I'm good to go. You can find the entire code given below. This was more like a pseudo code but if you followed the entire pseudo code then",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 13,
+      "video_id": "z9bJUPxzFOw",
+      "position": 314,
+      "title": "L18. Implement LRU Cache",
+      "url": "https://www.youtube.com/watch?v=z9bJUPxzFOw",
+      "start": 1468.08,
+      "end": 1495.3200000000002,
+      "text": "followed the entire pseudo code then going through the code that I've given below should be a cakewalk. So yeah that will be it for this one. I hope you have understood it and if you're still now watching please please do consider giving us a like and if you're new to our channel do consider subscribing to us as well. With this I'll be wrapping up this video. Let's meet in some other video. Till then take care. Whenever your heart is broken, don't ever forget you're golden.",
+      "word_count": 89
+    }
+  ]
+}

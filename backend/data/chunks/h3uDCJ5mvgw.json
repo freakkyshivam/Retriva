@@ -1,0 +1,75 @@
+{
+  "video_id": "h3uDCJ5mvgw",
+  "position": 2,
+  "title": "How to setup VS code for DSA and CP | Input / Output split format",
+  "url": "https://www.youtube.com/watch?v=h3uDCJ5mvgw",
+  "chunk_count": 6,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "h3uDCJ5mvgw",
+      "position": 2,
+      "title": "How to setup VS code for DSA and CP | Input / Output split format",
+      "url": "https://www.youtube.com/watch?v=h3uDCJ5mvgw",
+      "start": 2.94,
+      "end": 103.55999999999999,
+      "text": "so in case you're looking for a setup which works something like this where the code is on the left the input is on the right and the output is on the right and they're splitted across screen and you input something and you write the code and then you click one button and then the output is visible if you want to set up something like this this video is going to be about setting up a similar kind of setup but for that in case for the first time here please make sure that you check out Strivers a to Zsa course now this is the world's most in-depth DS algo course why do I see that because the course has 455 modules yes we have solved over 455 problems and all the videos are free you get premium quality articles as well over there we have C plus plus Java JavaScript python codes covered as well so you get everything at one place and you don't need anything else you can straight away prepare for it and this is targeted for companies like Google Amazon Facebook and all the other product based companies in the market and that's one other thing that I want to clarify there's a lot of rumor that the this particular course is in C plus plus no that does not the truth so the first couple of videos are in C plus plus where I'm teaching for Loop while loop because they're pretty much similar in C plus plus and Java so I've just plot in C plus plus if you know Java you'll you can easily grasp it right but when I move to recursion when I move to arrays when I move to binary search or any other thing each of those lectures are recorded with logic and then pseudocode I do not write code in any language and after that in the description you'll find notes where you'll find C plus plus Java JavaScript python codes in those nodes so this course is not language",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "h3uDCJ5mvgw",
+      "position": 2,
+      "title": "How to setup VS code for DSA and CP | Input / Output split format",
+      "url": "https://www.youtube.com/watch?v=h3uDCJ5mvgw",
+      "start": 98.939,
+      "end": 204.959,
+      "text": "nodes so this course is not language dependent the first couple of videos might be but the entire course is not only the basics like the for Loop while you're printing stuff is in C plus plus after that everything a pseudo code yes pseudocode I focus on the logic so please remember this and the link is in the description make sure you check it out so let's get back to the vs code and try to set it up so first I will be setting it up for C plus plus after that I will be setting it up for Java and for any other language if you see these two setups you will be able to set it up so the first thing that you will do is you'll just open the vs code editor and right after that you open a folder so what I'll do is I'll go over here and I'll open C plus plus so I've opened C plus plus after that I go to the extensions and I install C plus plus extension so search and you'll find an extension from Microsoft I've already installed it so please make sure that you install it once you have installed it go back to this folder and try to create a file so maybe I'll just create demo.cpp so that's your file after that create another file with input dot txt after that create one more file with output.txt done once you created these three files go to view and go to editor layout and say split left once you splitting left you will find demo is on the left as input and output so just cross it out so you have input over here and output so you have input and output on the right you want to spread them across so go to view again edit a layout and say split down once you split them into down so you can just drag the output and that should be done so the input is on the top and the output is",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "h3uDCJ5mvgw",
+      "position": 2,
+      "title": "How to setup VS code for DSA and CP | Input / Output split format",
+      "url": "https://www.youtube.com/watch?v=h3uDCJ5mvgw",
+      "start": 201.18,
+      "end": 300.59999999999997,
+      "text": "input is on the top and the output is over here let's take a quick break before we move ahead so nowadays everyone is focusing on DS algo but people are ignoring all the other aspects something like projects is going to be of extreme importance when you're going in for placements so what I'll recommend you is to get a strong portfolio with projects and with Ds algo as well so what you can do is you can check out crowd.do's project Hub over there they have structured a lot of projects according to domains let's say we go to web dev and you can see a lot of project ideas and they are given in a structured manner so you can follow them and build some amazing projects and you can build a portfolio like pavitra Sharma over here you can see his portfolio is built some amazing projects so you can have a portfolio something like this when you're going in for your placement so let's talk about crowd or do as well so crowd or do is world's first experiential learning and upscaling platform over here you don't typically watch videos you basically learn by doing so they offer you program so you'll be working like a software engineer does at Amazon Netflix Google Etc you'll be building some amazing projects you can see on the screen and you'll be building under mentors who are working at Google Amazon Microsoft Walmart PayPal so talking about placement stats crack has already transformed thousand plus careers cry out graduates from various backgrounds have already been placed in 750 plus companies so they offer you fellowship program in software development what you can do is you can book a free trial session and test it out for yourself and at the same time make sure that you bookmark the projects Hub I'll be leaving the link in the description and you'll also find the free trial session Link in the description make sure you check them out now quickly try to run a",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "h3uDCJ5mvgw",
+      "position": 2,
+      "title": "How to setup VS code for DSA and CP | Input / Output split format",
+      "url": "https://www.youtube.com/watch?v=h3uDCJ5mvgw",
+      "start": 296.58,
+      "end": 420.11999999999995,
+      "text": "check them out now quickly try to run a code so what I've done is I've copy pasted a demo code now the next step is to run this but before that you have to go to terminal configure tasks there's something else create task click it others once you click on others you see there's a vs code folder and there's a task.json remove this configuration and go to the description I'll be pasting the configuration just paste it and remember one thing the compile and run should be together save it and close it and right after that I'll be pressing command plus shift plus b but for that let's give an input 13 command shift and B and you will see that there is an output quite simple isn't it so the configuration that you see over here that's for C plus plus for MacBook in the notes like in the description I'll be leaving some notes I will find for Windows as well in case you have any other operating system what you need to do is just copy paste the configuration that I've given in the notes take it to chat GPT and whatever is your system ask rgbt can you give me the equivalent for my system and it will give you this copy paste and it will start working so this is this is how you set it up remember the starts.json is under your C plus folder in case you are switching folders you'll have to again repeat the same thing got it so that was easy for C plus plus isn't it now it's time for Java it's very much similar I go to open I go to desktop and open one of my folders you can open from anywhere the next thing uh install an extension Java extension pack okay this one I've already installed it so I'll not be reinstalling it right after this what's the next job just uh add a Java file probably I can give demo.java after that add an input.txt which takes your input",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "h3uDCJ5mvgw",
+      "position": 2,
+      "title": "How to setup VS code for DSA and CP | Input / Output split format",
+      "url": "https://www.youtube.com/watch?v=h3uDCJ5mvgw",
+      "start": 416.34,
+      "end": 518.52,
+      "text": "your input add an output dot txt which takes your output go to view editor layout split left once you've done this this is how it looks like and go to view edit a layout and then say split down so once you do this you just drag it off and move this input so you have your input and your output ready now let's quickly paste a demo Java code so I've written a demo Java code now what is the next step to run it so I'll go to terminal and then something as configure task create task.g some others and over here you paste this configuration I'll be leaving uh this configuration in the links so this is what you will paste and this is this is basically the command which kind of takes the input so the file names have to be input and output and you can save it and close it so once you click save you can see that it is under a DOT vs code folder and this is under the folder that I opened initially so if you're changing folders it will not run you have to reconfigure the task got it so what I'll do is I'll give an input over here try to run it command shift plus b and you can see that it is running this is how easy it was to set it up so yeah this was a talk quite simple isn't it in case you're someone who uses python or JavaScript the blog links will be in the description and in case you run into any of the errors please do use chatgpt that will be helping you out if you're still watching please do consider giving us a like and if you are new to our channel do consider subscribing to us and make sure you check out striveless A2Z DSA course because that can be a One-Stop solution if you're preparing for placements if you haven't followed me on Instagram Twitter and Linkedin all the profile",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "h3uDCJ5mvgw",
+      "position": 2,
+      "title": "How to setup VS code for DSA and CP | Input / Output split format",
+      "url": "https://www.youtube.com/watch?v=h3uDCJ5mvgw",
+      "start": 515.459,
+      "end": 532.339,
+      "text": "Twitter and Linkedin all the profile links will be in the description with this I will be wrapping up this video let's finish out the video till number spoken again don't ever forget your golden I will find the lighting",
+      "word_count": 40
+    }
+  ]
+}

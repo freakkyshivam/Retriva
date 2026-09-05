@@ -1,0 +1,174 @@
+{
+  "video_id": "tRPda0rcf8E",
+  "position": 154,
+  "title": "G-29. Word Ladder - I | Shortest Paths",
+  "url": "https://www.youtube.com/watch?v=tRPda0rcf8E",
+  "chunk_count": 15,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "tRPda0rcf8E",
+      "position": 154,
+      "title": "G-29. Word Ladder - I | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=tRPda0rcf8E",
+      "start": 3.08,
+      "end": 124.24000000000001,
+      "text": "Everyone, welcome back to the channel. I hope you guys are doing extremely well. So, in this video we are going to solve this word ladder one problem which is an extremely hard problem. So, what does the problem state? The problem states you're given two distinct words, two distinct. So, a start word and a target word and a list denoting word list of unique words of equal lengths. Find the length of the shortest transformation sequence from start word to the target word. Now, you need to keep the following conditions in mind. A word can only consist of lowercase characters. Only one letter can be changed in each transformation, very very important. Each transformed word must exist in the word list including the target word. The start word may or may not be part of the word list. So, what does this particular problem define? So, it defines a given a begin word. So, over here it is hit. A given an end word, over here it is cog. And you're given a word list which will be containing certain number of words and if you see all of them are of length three. So, if I start with hit, so let's start with something like hit. Now, what you can do is you can change any one of the character. Like there are three characters in hit, you can change H, you can change I, you can change T. You can change any one of the characters of hit. So, assume I say that, hey, I'm going to change this I to O. So, what I'll get is hot. And if you carefully see, hot is there in the word list. So, you can have this transformation done. In the next step, I say, I'll change hot to dot, which means I'm going to change this H to D. And if you see, dot does exist over here. In the next I say, I'm going to change dot to dog. Basically, I'll change D to G, which is dot to dog. And",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "tRPda0rcf8E",
+      "position": 154,
+      "title": "G-29. Word Ladder - I | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=tRPda0rcf8E",
+      "start": 117.84,
+      "end": 242.72,
+      "text": "change D to G, which is dot to dog. And if you see, dog also exist in this particular word list. In the next, I'll say I'll change dog to I'll change the D and I'll make it C, and I'll have a cog, which is nothing but our end word. If you carefully see, this is nothing but our end word. So, if I ask you, how many transformations did you do? There was like 1 2 3 4. And what is the sequence length? That's five. So, thereby I can say that this is the shortest transformation sequence. If you want to start from hit and you want to end at something like a cog. So, if I show you one more example, over here we have the word list as DES, DER, DFR, DGT, DFS. So, DER can actually be changed to DFR, and DFR does exist, if you see. And then DFR can be changed to DFS, and DFS also does exist over here. So, over here the sequence is of length three, thereby the output is three. Now, it might Now, what if it is not possible to change a particular given word to any other word? In that case, you will just return zero, stating that it is not possible. The sequence length is zero. You must be thinking which algorithm to apply. But before going into that direction, let's analyze the problem. We are given hit, right? So, what can we do to this hit? So, hit is getting converted to something like hot, where the I is changed to O, right? So, the second alphabet in the word is changed. So, if I say hit, what can I change? You can be like, Striver, I can change the first H. Striver, I can change the second I. Striver, I can change the third T. Make sense. Now, let's go deep. If I ask you, if you change H in hit, what can you make H as? You'll be like, I can change H to AIT.",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "tRPda0rcf8E",
+      "position": 154,
+      "title": "G-29. Word Ladder - I | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=tRPda0rcf8E",
+      "start": 235.92,
+      "end": 364.24,
+      "text": "I can change H to AIT. Makes sense. I can change H to BIT. Makes sense. I can change H to CIT. Does make sense. I can change H to DIT. Makes sense. I can change H to RIT. Makes sense. I can change H to ZIT. Sorry, ZIT. Does make sense. So, apparently, in the hit, I can pick up the first character and I can change it to anything from A to Z. Do you agree? I You do agree, right? Similarly, can I say I can pick up I and I can change it to anything from A to Z. Do you agree in this? You have to. And when I change I to O, I get hot and that hot does exist over here. If you see, the hot does exist. So, apparently, you can try changing like HAT, HBT, HCT, HET, HFT, but the only one valid will be hot. Why? Because that exist in the word list. In the next step, you can be like, I can change T as well. T can be changed to A to Z. And the word has to be in the word list. Agreed? So, this is the brute force that we will follow. We will start with the particular word and we'll try changing it on character to character. And every character we will replace from A to Z. And we will see if it is in the word list or not. Got it? So, as of now, you know the brute force, right? So, if you know the brute force, the brute force is pretty simple. You have hit, you take H and you try to change it from A to Z. You take I, you try to change it from A to Z. You take T and you try to change it from A to Z. And you count the minimum length. Yes, you count the minimum length because the question states you have to find the shortest transformation sequence. So, you have to change it in such a way that you find",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "tRPda0rcf8E",
+      "position": 154,
+      "title": "G-29. Word Ladder - I | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=tRPda0rcf8E",
+      "start": 360.2,
+      "end": 502.56,
+      "text": "change it in such a way that you find the shortest transformation sequence. Now, which algorithm to apply if you are willing to find the shortest sequence? Let's analyze that. So, if I say I will keep the hit as the level one or right at the top. According to brute force, I'll try to do H to AIT, BIT, CIT, DIT, and so on till ZID. I'll try to do this, right? In order to transform hit to any of these, in order to transform hit to any of these, these words should exist in the word list and they do not. If you go and see in the word list, there is nothing like AIT, BIT, CIT. None of them. So, not possible. Next, I'll take I and I'll try to change it from A to Z. So, I'll get like HAT, HBT, HCT, dot dot dot, HOT, dot dot dot, HZT. So, these are all the words that I can change hit to. And apparently, only hot does exist. If you go and see, hot is the only one that exists over here. So, I can say from hit, I can go to hot. Now, I'll take T and I'll try to change it to HIE, HIB, HIC, so on to HIZ. Let's see if they exist in the word list. None of them. Yes, none of them do exist in the word list. So, that is not possible. So, only hot is possible. Can I say this is the second step because the length of the sequence will increase to two. Perfect. Now, I have a word as hot. I'll again perform the same thing. I will take H. I'll try to do it like AOT, BOT, COT, DOT, and so on until ZOT. And I'll see only DOT exist. Only DOT exist. If you go back and see, only DOT exist. And LOT also exists. And DOT and LOT also exist. So, if I change this to DOT and I can also change it to LOT. So, that's when I change H. Let's see",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "tRPda0rcf8E",
+      "position": 154,
+      "title": "G-29. Word Ladder - I | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=tRPda0rcf8E",
+      "start": 498.48,
+      "end": 639.0799999999999,
+      "text": "So, that's when I change H. Let's see for O. HAT, HBT, HCT, HDT, so on till HZT. Does anyone exist? Let's have a quick check. No one. Next, let's try to change T. That will be like HOT, HOB, HOC, HO dot dot dot, and so on. Does anyone exist? Have a check. Hot does exist. Hot does exist. Because if I change this T to T, hot does exist, but we will not take that into consideration. Why? It's the same word. It is the same word. So, you do not take that into consideration because there's no point in going to hot again, in going to hot again, or there's no point in getting to hit again. I can change this O to I as well, and I'll get HIT. But, if I come down from hit to hot, is there a point in going back to hit? Because that will only elongate the sequence. So, apparently, this is the step three. Similarly, I can take dot, and I can do the transformations. Similarly, I can take lot, and I can do the transformations. And this will be level four. Similarly, I can just go on doing the transformations, and this will be level five. Since we are going something like a level, something like a level, whenever whenever assume somewhere over here we reach the particular cog, we reach the particular cog, can I say the length taken will be five and that will definitely be my shortest sequence. Can I say this? I can. Why? Because beyond this, since I'm doing level wise, anyone that will be level six, the length will increase. So I'm definitely sure. I am definitely sure. Whatever I'm getting over here, that's the first instance of cog. It might come over here again, but length five is what matters. So the first time whenever we encounter the end word, that is when we end. Which traversal is this? Which traversal is this, guys? Yes. Yes. Yes. It is nothing but the BFS traversal. We go ahead and apply BFS",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "tRPda0rcf8E",
+      "position": 154,
+      "title": "G-29. Word Ladder - I | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=tRPda0rcf8E",
+      "start": 633.92,
+      "end": 746.84,
+      "text": "traversal. We go ahead and apply BFS traversal to this in order to solve this amazing tough problem. So you saw how I started the problem using simple brute force, then I analyzed the brute force and figured out that we can apply BFS algorithm. Now let's try to do a dry run on this particular example so that the algorithm gets into your head straight away. So you know that this is the beginning word and in a BFS algorithm we always start with a queue data structure. So what I'll do is I'll just take this word and say hit comma one because the length of the sequence as of now is one. So I've taken that and put that into the queue data structure. The next thing that I'll do is I'll take this out from the queue data structure and I will start working on it. So as of now we have a word hit and we have the sequence length as one, right? Now what I need to do is I need to take H and change it to A which will make it AIT and then I'll check does AIT exist in the word list? Now, this is an array. If I go and do a linear search and check, that is definitely going to take a lot of time. So, what I'll do is I'll take a set data structure and I'll make sure that the same thing, yes, the same word list does exist in the set data structure. So, that whenever I change this H to A and make it AIT, I can easily check in the set data structure if they exist or not in a very, very less time complexity. So, AIT doesn't exist, then I'll make it BIT, that doesn't exist, then I'll try CIT, DIT, EIT, so on till ZIT. None of them does exist. Next, I'll move to the next alphabet, I. And I'll be like HAT, does it exist? No. HBT, does it exist? No. HCT, does it exist? No. HDT, does it exist? No.",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "tRPda0rcf8E",
+      "position": 154,
+      "title": "G-29. Word Ladder - I | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=tRPda0rcf8E",
+      "start": 740.6,
+      "end": 864.2,
+      "text": "exist? No. HDT, does it exist? No. I'll keep on doing and at HOT, when I convert this I to O, when I convert this I to O, I see hot does exist. Yes, I see hot does exist over here. So, what I'll do is I'll simply take this and convert this to T, like O. And that will be sequence length of two. So, I'll put that into the queue data structure saying this is of a sequence length two, right? So, HIT got converted into a hot with a sequence length of two. Now, do you keep the hot in the set data structure? Do you? The answer to that is no. Because if you remember, in a BFS algorithm, whenever I visited the nodes, whenever I visited the nodes, I used to mark them as visited. But over here, we're not using anything such as visited. So, what I will do is I'll say, \"Okay, we got hot.\" So, we will remove it from the set data structure. Now, you might say, \"But Striver, what if we get this in the future?\" Let me come back and explain you with a very trivial example. Imagine in order to go from Odisha to Kerala there is only one particular way. Okay, there is the shortest way because from Odisha to Kerala there will be one shortest way. And that shortest way will have a length of three sequence. Right? So, tell me one thing. If from Kolkata you went to Odisha right? And from there you'll take a distance like a sequence of three to reach Kerala, right? So, if Odisha is on the level two right? Will you take Odisha again in some other levels? For an example, from Kolkata you went to Bangalore and then to Odisha. Does it make sense to take Odisha in this third step? Because you've already taken Odisha in the second step. And you know from the second step that is the minimum that it will take. And even if you start from Odisha from here, it's",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "tRPda0rcf8E",
+      "position": 154,
+      "title": "G-29. Word Ladder - I | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=tRPda0rcf8E",
+      "start": 860.6,
+      "end": 987.2,
+      "text": "you start from Odisha from here, it's again going to take three. So, if before you've got Odisha, if before you've got Odisha and you're taking three, after you're getting Odisha you're again taking three. So, it's better now once you've taken Odisha, there's no point in taking again afterwards because the lengths from Odisha to the last guy is three. So, if afterwards you take it's already a lengthier guy. So, it's better you do not execute Odisha in the future. So, similarly I can say something like hot, I'll not execute hot any where in the future because if I got that in the second step or second level, there's no point in encountering them in future levels because from here I can travel wherever I wish to. Going from further levels will actually increase the length, right? Done? Next I'll try to convert I to everything else till H, Z, T, but nothing will be there. Next I take T and I try to convert it. So, H I E, H I V, H I C, H I D, so on to H I Z. None of them is in the word list. So, we do not take So, we just got one and we have inserted that into the Q data structure. Time to over this up. Next, take the next guy from the Q data structure, that is hot with a sequence of two. So, as of now, I can say where can hot go? Let's analyze. So, we need to change H. It would be like A O, sorry, A O T, B O T, C O T, D O T, so on to Z O T. And you'll get dot and you'll get lot. If you carefully see, you get lot and you get dot. So, you can actually go to dot with a step three or you can also go to lot with a step three because both of them do exist. So, when you go to dot, you just erase it and you put them with",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "tRPda0rcf8E",
+      "position": 154,
+      "title": "G-29. Word Ladder - I | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=tRPda0rcf8E",
+      "start": 981.72,
+      "end": 1121.16,
+      "text": "you just erase it and you put them with three and when you go to lot, you erase it and you put them with a three. So, since we can go to dot and lot, we will remove them. Dot is removed and I'll put that into the Q. Next, I'll get lot. So, lot is removed and I'll try to put that into the Q data structure. So, can I do anything else? Let's try it out. We can change this O. So, H A T, H B T, H C T, H D T, H E T and so on to H Z T. None of them is there. So, next I'll change T. H O E, H O B, H O C, H O D, H O E and so on to H O H O Z. None of them is there. Next, nothing. So, what I can say is we got it. So, this traversal of the queue is complete. What is the next thing? Let's get dot of three. So, dot of three. Now, let's try to change again. So, we have D. Let's try to change D. So, it will be like AOT, BOT, COT. Like DOT until ZOT. None of them does exist in the word list. Next, I'll change O. So, I'll get like DAT, DBT, DCT, DDT, DET. None of it. Next, I'll try to change T. So, it will be like DOE, DOB, DOC. DOD. And so on, DOG. So, dog does exist. If you carefully see, dog does exist. So, what I will do is I'll take that. Yes, I'll take the dog. So, I'll take the dog with a step four, and I'll try to insert that into the queue data structure with a step four. What was the last word? It was log, not dog. So, done. Nothing else is possible. Next, take LOT three outside. Let's see. What can we make LOT three? Let's try to change L. AOT, BOT. Since they are ZOT, nothing possible. Let's try to change O. LAT, LBT, LCT, LDT.",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "tRPda0rcf8E",
+      "position": 154,
+      "title": "G-29. Word Ladder - I | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=tRPda0rcf8E",
+      "start": 1112.44,
+      "end": 1238.3600000000001,
+      "text": "change O. LAT, LBT, LCT, LDT. So, on to LZT. Nothing is possible. Next, T. LOA, LOB, LOC, LOG. LOG is there. LOG is there. So, you can take it to LOG with step four. Removed LOG with step four. Perfect. Next, dog of four. Dog of four. So, as of now, can I say if this is dog of four, thereby, when I try to change this B, it will be like A O G, B O G, C O G, and we see C O G is present here. So, we insert C O G with a five step. You can stop over here, but I generally do not. I just want to explain you. So, C O G five is there, done. C O G is removed. Now, this is the point you'll understand. Someone reached C O G with five. Someone reached C O G with five. But, the next time when the queue tries to get this up, L O G four, and tries to change it, it will actually get something like C O G. It will actually get C O G because of this L. When this L gets converted to C, it will get C O G. But, there is no C O G in the word list because you've already encountered C O G because you've already encountered C O G. This is what I was trying to explain. Once you've got someone, it will take its path. Why will you again visit that path? So, this is how the set helped you. If you erase it from the set, there will be no further occurrence of like C O G five. Otherwise, you'd have taken C O G five again, and it would have kept on going. So, that is how the set helps. So, L O G cannot be made into anything. Next time when you do an uh extraction from the queue, you get C O G with five. So, your end word was C O G. The word that you get from the queue is",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "tRPda0rcf8E",
+      "position": 154,
+      "title": "G-29. Word Ladder - I | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=tRPda0rcf8E",
+      "start": 1234.48,
+      "end": 1346.0,
+      "text": "The word that you get from the queue is C O G, and the steps that it took was five. So, your answer boils down to five. Yes, your answer boils down to five, and this is the answer that you will return. And imagine, if the queue becomes empty, you have tried out all possible changes, and you never ever reached the end word during the extraction from the queue, then you can, after the end of the queue, you can return zero, which will be your particular answer. So, you've figured out what is the algorithm that is required to solve this complex problem? So, I'll be coding the C++ in the right, and if you have any syntactical issues related to Java, you can watch it out on the left. So, we have a start word, we have a target word, and we know we need a queue, which is going to store a pair, and the pair will be having a string and an integer. So, this is the queue that will be defined, and we know we always start off with the start word, and the sequence length is one. And we know there will be a set, right? And this particular set will always have this particular target word. So, it's uh sorry, the word list. So, you can always write something like this in C++. It's a very simple thing. You can just write this. And that will take the entire vector and put it into this particular set data structure. You can use the unordered set. It takes amortized time complexity of uh one, big of one, but the worst case is still big of n, but the amortized is big of one. So, we'll be using unordered set. Now, you remember, whenever we pushed something into the queue, we marked it as visited. So, we can always use visited as deleting from the set. We can say that, \"Okay, can you please go and delete start word?\" So, if it exist, it will delete the start word from the set. This",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "tRPda0rcf8E",
+      "position": 154,
+      "title": "G-29. Word Ladder - I | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=tRPda0rcf8E",
+      "start": 1342.16,
+      "end": 1455.08,
+      "text": "delete the start word from the set. This is done. What's the next thing? The next thing is very simple. We say we will iterate till the queue is not empty. So, go and iterate till the queue is not empty. Done. What's the next thing that you do? You say, \"Okay, give me the word.\" So, can I see the word will be very simple, queue.front.first. And I can see the steps, or the length will be very simple again, queue.front.second. Once you've got it from the queue, can I say queue.pop is what you'll say, take it out of the queue. Now, every time you get a word, for every character you're doing a change. For every character. So, what you'll do is, \"Okay, for every character I'm doing a change, so can I actually traverse till all the characters?\" I can. So, let's traverse till all the character. We're just something like this. Right? Now, every character is nothing but can I say the character alphabet or original is nothing but word of I. This is the character that I'm looking to change. So, can I say what am I looking to change? I can change it from A to Z. So, can I say I'm looking to change it from A to Z? This to this to this. So, every character word I is what I'll replace. So, I'll say word I can you get replaced by CH. Every time it comes up, it gets replaced by a new character. First time, let's imagine the word as just imagine the word to be hat. Okay. So, what will happen is for the first time original will have something like H, right? So, this word I will be like instead of H, it'll be having for the first time A A T. Next time, B A T. Next time, C A T. This is what the internal for loop will do. Yes, this is what the internal for loop will do. So, you will be changing the values. You'll be changing the values. Now, what is",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "tRPda0rcf8E",
+      "position": 154,
+      "title": "G-29. Word Ladder - I | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=tRPda0rcf8E",
+      "start": 1452.0,
+      "end": 1571.04,
+      "text": "is does that value exist in your set? So, you'll be like, okay, set.find. Does this word exist? And if it does exist, then it'll never be equal to end. Because if it exists, it'll always like if it doesn't exist, it'll be pointing to end. This means it exists in the set. There is the count as well. Uh so, done. What's the next thing that you'll do? If it exists, what way are we doing? We are saying, okay, set market has visited, which means do this. Tell the queue this guy is there with an increase steps. Done. Once you have pushed back into the queue, make sure you replace it with the original. Why? Because over here, you're always changing. So, the last moment the word I what I will always have Z or Z. So, you need to make sure that it gets back its original value. So, this is what you'll do, right? And over here can I say every time you're getting a word can you just go and quickly check if that is the target word. If that is the target word, can I say these are the steps that I'll take? Again, you can write it over here as well. Over here also you can have a check, but I usually prefer keeping it over here. And then we can return a zero saying in case it did not find. In case it finds it will return the steps, otherwise a zero. So, this is how simple the code is. So, if you compile it it is working. Now, let's quickly try to submit this. So, when we submit it is running absolutely fine. So, this is how we can easily do this particular thing. And you might ask me what the time complexity. And something I know for sure is whatever the word length is word length into 26. These thing are running for word length into 26. Like whatever your word length is because they have already stated all the word lengths will be same. So, whatever",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 13,
+      "video_id": "tRPda0rcf8E",
+      "position": 154,
+      "title": "G-29. Word Ladder - I | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=tRPda0rcf8E",
+      "start": 1565.8,
+      "end": 1671.92,
+      "text": "word lengths will be same. So, whatever you is your word length into 26 is the internal loop. Now, how many transitions will you do? How many transitions will you do? At the worst case you can do a lot of transitions, but if you carefully think can I see the number of transitions? Can I see the number of transitions? If you carefully see, 1 2 3 4 5 6 1 2 3 4 5 6. Can I see the number of words over here will be the number of times it will go into the queue at the worst case? Because if it is not in the set of words, it never goes into the queue. So, can I say the queue will run for n times. The number of times the words are because that is only when it gets into the Q, otherwise it will not go. So, can I say the complexity is n into word length into 26 every time? Can I say this? I can definitely say that. Are you using any extra space? Yes, you are we are using an big O of n space to store all of these things into the set. And then by the way, there's a logarithmic factor if you want to include it for set. If you're assuming that your hash set works in big O of one, then you can use big O of one over here, otherwise you use a logarithmic if you're using something like a set. It'll add a logarithmic. So, depending on what is the time complexity of a set, this can vary. So, guys, this will be the time complexity and the space complexity for this particular problem. I hope I was able to explain you. And just in case I was, please please make sure you like this video. And if you're new to our channel, what are you waiting for? I think it's time that you hit that subscribe button. And if you haven't checked out our DP series and the SD sheet, then you're missing out on",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 14,
+      "video_id": "tRPda0rcf8E",
+      "position": 154,
+      "title": "G-29. Word Ladder - I | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=tRPda0rcf8E",
+      "start": 1668.72,
+      "end": 1687.8799999999999,
+      "text": "the SD sheet, then you're missing out on a lot of content. The links are in the description. Please please make sure you check it out. And yeah, with this I'll be wrapping up this video. Let's meet in some other video. Till then, bye-bye. Take care. Whenever your heart is broken, don't ever forget you're golden. I will find a light",
+      "word_count": 62
+    }
+  ]
+}

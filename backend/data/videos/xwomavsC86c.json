@@ -1,0 +1,5096 @@
+{
+  "position": 230,
+  "video_id": "xwomavsC86c",
+  "title": "DP 50. Minimum Cost to Cut the Stick",
+  "url": "https://www.youtube.com/watch?v=xwomavsC86c",
+  "transcript": [
+    {
+      "start": 0.24,
+      "duration": 3.199,
+      "end": 3.439,
+      "text": "hey everyone welcome back to take you"
+    },
+    {
+      "start": 1.52,
+      "duration": 3.759,
+      "end": 5.279,
+      "text": "forward today we will be solving an"
+    },
+    {
+      "start": 3.439,
+      "duration": 4.881,
+      "end": 8.32,
+      "text": "interesting problem in partition dp"
+    },
+    {
+      "start": 5.279,
+      "duration": 4.481,
+      "end": 9.76,
+      "text": "which is minimum cost to cut the stick"
+    },
+    {
+      "start": 8.32,
+      "duration": 3.12,
+      "end": 11.440000000000001,
+      "text": "now what does the problem state the"
+    },
+    {
+      "start": 9.76,
+      "duration": 3.759,
+      "end": 13.519,
+      "text": "problem state uh you will be given a"
+    },
+    {
+      "start": 11.44,
+      "duration": 3.92,
+      "end": 15.36,
+      "text": "cuts array and you'll be given a length"
+    },
+    {
+      "start": 13.519,
+      "duration": 3.201,
+      "end": 16.72,
+      "text": "of the stick now what do you mean by the"
+    },
+    {
+      "start": 15.36,
+      "duration": 4.48,
+      "end": 19.84,
+      "text": "length of the stick"
+    },
+    {
+      "start": 16.72,
+      "duration": 4.399,
+      "end": 21.119,
+      "text": "uh this is a stick of length seven"
+    },
+    {
+      "start": 19.84,
+      "duration": 3.279,
+      "end": 23.119,
+      "text": "now"
+    },
+    {
+      "start": 21.119,
+      "duration": 4.0,
+      "end": 25.119,
+      "text": "we just uh write them down"
+    },
+    {
+      "start": 23.119,
+      "duration": 3.441,
+      "end": 26.56,
+      "text": "this is how the stick looks like okay"
+    },
+    {
+      "start": 25.119,
+      "duration": 4.881,
+      "end": 30.0,
+      "text": "this is a stick"
+    },
+    {
+      "start": 26.56,
+      "duration": 6.48,
+      "end": 33.04,
+      "text": "of exactly length seven"
+    },
+    {
+      "start": 30.0,
+      "duration": 6.0,
+      "end": 36.0,
+      "text": "and this is first two three four five"
+    },
+    {
+      "start": 33.04,
+      "duration": 5.12,
+      "end": 38.16,
+      "text": "six seven so a length of six seven now"
+    },
+    {
+      "start": 36.0,
+      "duration": 4.239,
+      "end": 40.239,
+      "text": "they're asking you to uh cut these at"
+    },
+    {
+      "start": 38.16,
+      "duration": 3.52,
+      "end": 41.68,
+      "text": "these portions you can cut it at one you"
+    },
+    {
+      "start": 40.239,
+      "duration": 3.84,
+      "end": 44.07899999999999,
+      "text": "can cut it at three you can cut it at"
+    },
+    {
+      "start": 41.68,
+      "duration": 3.68,
+      "end": 45.36,
+      "text": "four you can cut it at five and cut it"
+    },
+    {
+      "start": 44.079,
+      "duration": 3.361,
+      "end": 47.44,
+      "text": "as you wish"
+    },
+    {
+      "start": 45.36,
+      "duration": 3.44,
+      "end": 48.8,
+      "text": "okay and find me the minimum cost very"
+    },
+    {
+      "start": 47.44,
+      "duration": 5.2,
+      "end": 52.64,
+      "text": "important you have to find me the"
+    },
+    {
+      "start": 48.8,
+      "duration": 5.599,
+      "end": 54.399,
+      "text": "minimal cost to cut the stick okay now"
+    },
+    {
+      "start": 52.64,
+      "duration": 3.28,
+      "end": 55.92,
+      "text": "you can follow any order"
+    },
+    {
+      "start": 54.399,
+      "duration": 3.361,
+      "end": 57.76,
+      "text": "so what is cost"
+    },
+    {
+      "start": 55.92,
+      "duration": 3.84,
+      "end": 59.760000000000005,
+      "text": "cost is the length"
+    },
+    {
+      "start": 57.76,
+      "duration": 6.32,
+      "end": 64.08,
+      "text": "of the stick you're cutting"
+    },
+    {
+      "start": 59.76,
+      "duration": 5.679,
+      "end": 65.439,
+      "text": "length of the stick you are cutting okay"
+    },
+    {
+      "start": 64.08,
+      "duration": 3.12,
+      "end": 67.2,
+      "text": "so"
+    },
+    {
+      "start": 65.439,
+      "duration": 3.68,
+      "end": 69.119,
+      "text": "if i start"
+    },
+    {
+      "start": 67.2,
+      "duration": 2.88,
+      "end": 70.08,
+      "text": "by cutting at one if i start by cutting"
+    },
+    {
+      "start": 69.119,
+      "duration": 3.04,
+      "end": 72.159,
+      "text": "at one"
+    },
+    {
+      "start": 70.08,
+      "duration": 4.16,
+      "end": 74.24,
+      "text": "what is the initial length of the stick"
+    },
+    {
+      "start": 72.159,
+      "duration": 4.32,
+      "end": 76.47900000000001,
+      "text": "if you just write down the length of the"
+    },
+    {
+      "start": 74.24,
+      "duration": 3.68,
+      "end": 77.92,
+      "text": "stick it's seven so if i decide to cut"
+    },
+    {
+      "start": 76.479,
+      "duration": 3.121,
+      "end": 79.6,
+      "text": "at one"
+    },
+    {
+      "start": 77.92,
+      "duration": 4.48,
+      "end": 82.4,
+      "text": "the initial length of the stick is seven"
+    },
+    {
+      "start": 79.6,
+      "duration": 4.24,
+      "end": 83.83999999999999,
+      "text": "so i do a cut at one so i'm doing a cut"
+    },
+    {
+      "start": 82.4,
+      "duration": 4.8,
+      "end": 87.2,
+      "text": "at one"
+    },
+    {
+      "start": 83.84,
+      "duration": 7.599,
+      "end": 91.43900000000001,
+      "text": "i will have a stick of length one"
+    },
+    {
+      "start": 87.2,
+      "duration": 4.239,
+      "end": 91.43900000000001,
+      "text": "and i also have a stick of length"
+    },
+    {
+      "start": 94.32,
+      "duration": 2.24,
+      "end": 96.55999999999999,
+      "text": "six"
+    },
+    {
+      "start": 95.439,
+      "duration": 2.801,
+      "end": 98.24,
+      "text": "okay"
+    },
+    {
+      "start": 96.56,
+      "duration": 2.8,
+      "end": 99.36,
+      "text": "this is one two three four five six"
+    },
+    {
+      "start": 98.24,
+      "duration": 2.559,
+      "end": 100.79899999999999,
+      "text": "seven"
+    },
+    {
+      "start": 99.36,
+      "duration": 3.039,
+      "end": 102.399,
+      "text": "ln six"
+    },
+    {
+      "start": 100.799,
+      "duration": 2.96,
+      "end": 103.759,
+      "text": "now if i decide to curtail length three"
+    },
+    {
+      "start": 102.399,
+      "duration": 2.161,
+      "end": 104.56,
+      "text": "where is length three where is length"
+    },
+    {
+      "start": 103.759,
+      "duration": 1.761,
+      "end": 105.52,
+      "text": "three"
+    },
+    {
+      "start": 104.56,
+      "duration": 2.879,
+      "end": 107.43900000000001,
+      "text": "length"
+    },
+    {
+      "start": 105.52,
+      "duration": 3.68,
+      "end": 109.2,
+      "text": "three is here which is saying this so"
+    },
+    {
+      "start": 107.439,
+      "duration": 3.521,
+      "end": 110.96,
+      "text": "what is the length of the stick because"
+    },
+    {
+      "start": 109.2,
+      "duration": 3.84,
+      "end": 113.04,
+      "text": "this stick is no more connected to this"
+    },
+    {
+      "start": 110.96,
+      "duration": 4.32,
+      "end": 115.28,
+      "text": "or the length of the stick six"
+    },
+    {
+      "start": 113.04,
+      "duration": 5.039,
+      "end": 118.07900000000001,
+      "text": "you'll require a cost of six now and we"
+    },
+    {
+      "start": 115.28,
+      "duration": 5.68,
+      "end": 120.96000000000001,
+      "text": "decide to cut it here at three so now"
+    },
+    {
+      "start": 118.079,
+      "duration": 5.201,
+      "end": 123.27999999999999,
+      "text": "you will have a stick of length one"
+    },
+    {
+      "start": 120.96,
+      "duration": 4.24,
+      "end": 125.19999999999999,
+      "text": "a stick of"
+    },
+    {
+      "start": 123.28,
+      "duration": 3.36,
+      "end": 126.64,
+      "text": "length"
+    },
+    {
+      "start": 125.2,
+      "duration": 3.759,
+      "end": 128.959,
+      "text": "two"
+    },
+    {
+      "start": 126.64,
+      "duration": 5.28,
+      "end": 131.92,
+      "text": "and a stick of length right starting"
+    },
+    {
+      "start": 128.959,
+      "duration": 5.36,
+      "end": 134.31900000000002,
+      "text": "from three four five six seven"
+    },
+    {
+      "start": 131.92,
+      "duration": 3.6,
+      "end": 135.51999999999998,
+      "text": "a length four stick"
+    },
+    {
+      "start": 134.319,
+      "duration": 3.201,
+      "end": 137.51999999999998,
+      "text": "so"
+    },
+    {
+      "start": 135.52,
+      "duration": 3.76,
+      "end": 139.28,
+      "text": "now i say cut it at length four where is"
+    },
+    {
+      "start": 137.52,
+      "duration": 3.52,
+      "end": 141.04000000000002,
+      "text": "length four"
+    },
+    {
+      "start": 139.28,
+      "duration": 3.12,
+      "end": 142.4,
+      "text": "this is four so what's the length of"
+    },
+    {
+      "start": 141.04,
+      "duration": 3.199,
+      "end": 144.239,
+      "text": "this particular stick"
+    },
+    {
+      "start": 142.4,
+      "duration": 4.559,
+      "end": 146.959,
+      "text": "four so the costing that they'll require"
+    },
+    {
+      "start": 144.239,
+      "duration": 4.881,
+      "end": 149.12,
+      "text": "is four now i decide that i'm gonna make"
+    },
+    {
+      "start": 146.959,
+      "duration": 4.481,
+      "end": 151.44,
+      "text": "a cut here so if i decide to make a cut"
+    },
+    {
+      "start": 149.12,
+      "duration": 6.0,
+      "end": 155.12,
+      "text": "here i will have zero one"
+    },
+    {
+      "start": 151.44,
+      "duration": 6.48,
+      "end": 157.92,
+      "text": "i will have one two three i will have"
+    },
+    {
+      "start": 155.12,
+      "duration": 2.8,
+      "end": 157.92000000000002,
+      "text": "a radho"
+    },
+    {
+      "start": 158.08,
+      "duration": 4.72,
+      "end": 162.8,
+      "text": "i will have"
+    },
+    {
+      "start": 159.44,
+      "duration": 6.879,
+      "end": 166.319,
+      "text": "3 4 which is length 1 and i will have 5"
+    },
+    {
+      "start": 162.8,
+      "duration": 4.32,
+      "end": 167.12,
+      "text": "6 7 which is somewhere around length"
+    },
+    {
+      "start": 166.319,
+      "duration": 4.481,
+      "end": 170.79999999999998,
+      "text": "3"
+    },
+    {
+      "start": 167.12,
+      "duration": 5.199,
+      "end": 172.31900000000002,
+      "text": "perfect so just write it properly my bad"
+    },
+    {
+      "start": 170.8,
+      "duration": 3.36,
+      "end": 174.16000000000003,
+      "text": "uh"
+    },
+    {
+      "start": 172.319,
+      "duration": 5.121,
+      "end": 177.44,
+      "text": "let me write this properly we will have"
+    },
+    {
+      "start": 174.16,
+      "duration": 5.76,
+      "end": 179.92,
+      "text": "four five six seven yeah"
+    },
+    {
+      "start": 177.44,
+      "duration": 4.48,
+      "end": 181.92,
+      "text": "so it'll be of length three"
+    },
+    {
+      "start": 179.92,
+      "duration": 3.84,
+      "end": 183.76,
+      "text": "next i say cut it at five so if i'm"
+    },
+    {
+      "start": 181.92,
+      "duration": 3.44,
+      "end": 185.35999999999999,
+      "text": "cutting at five which is this and this"
+    },
+    {
+      "start": 183.76,
+      "duration": 3.119,
+      "end": 186.879,
+      "text": "stick length is of three so i'll be"
+    },
+    {
+      "start": 185.36,
+      "duration": 3.84,
+      "end": 189.20000000000002,
+      "text": "requiring a cost of three and i'll cut"
+    },
+    {
+      "start": 186.879,
+      "duration": 5.761,
+      "end": 192.64,
+      "text": "it here and i will have a stick of"
+    },
+    {
+      "start": 189.2,
+      "duration": 6.08,
+      "end": 195.28,
+      "text": "length one i will have a stick of length"
+    },
+    {
+      "start": 192.64,
+      "duration": 4.8,
+      "end": 197.44,
+      "text": "three i'll have a stick of length one"
+    },
+    {
+      "start": 195.28,
+      "duration": 3.92,
+      "end": 199.2,
+      "text": "i'll have a stick of length one and i'll"
+    },
+    {
+      "start": 197.44,
+      "duration": 4.4,
+      "end": 201.84,
+      "text": "have a stick of length"
+    },
+    {
+      "start": 199.2,
+      "duration": 4.64,
+      "end": 203.83999999999997,
+      "text": "two so this when you cut it five was of"
+    },
+    {
+      "start": 201.84,
+      "duration": 4.08,
+      "end": 205.92000000000002,
+      "text": "length three so the total costing that"
+    },
+    {
+      "start": 203.84,
+      "duration": 3.52,
+      "end": 207.36,
+      "text": "you will require as seven plus six"
+    },
+    {
+      "start": 205.92,
+      "duration": 3.599,
+      "end": 209.51899999999998,
+      "text": "thirteen plus four seventeen plus three"
+    },
+    {
+      "start": 207.36,
+      "duration": 5.2,
+      "end": 212.56,
+      "text": "equal to twenty this is the costing you"
+    },
+    {
+      "start": 209.519,
+      "duration": 5.841,
+      "end": 215.36,
+      "text": "required if you went on by cutting it at"
+    },
+    {
+      "start": 212.56,
+      "duration": 4.88,
+      "end": 217.44,
+      "text": "one three four five the cost came out to"
+    },
+    {
+      "start": 215.36,
+      "duration": 4.48,
+      "end": 219.84,
+      "text": "be 20. the question states you have to"
+    },
+    {
+      "start": 217.44,
+      "duration": 4.48,
+      "end": 221.92,
+      "text": "minimize this 20 i don't want 20 because"
+    },
+    {
+      "start": 219.84,
+      "duration": 4.64,
+      "end": 224.48,
+      "text": "it's a lot i want to minimize it so the"
+    },
+    {
+      "start": 221.92,
+      "duration": 4.399,
+      "end": 226.319,
+      "text": "question states minimize the cost okay"
+    },
+    {
+      "start": 224.48,
+      "duration": 4.399,
+      "end": 228.879,
+      "text": "so what we will do is we will go across"
+    },
+    {
+      "start": 226.319,
+      "duration": 4.401,
+      "end": 230.72,
+      "text": "by minimizing it so you can follow the"
+    },
+    {
+      "start": 228.879,
+      "duration": 4.241,
+      "end": 233.12,
+      "text": "cuts in any order"
+    },
+    {
+      "start": 230.72,
+      "duration": 5.36,
+      "end": 236.08,
+      "text": "so in this case if i cut it like three"
+    },
+    {
+      "start": 233.12,
+      "duration": 4.96,
+      "end": 238.08,
+      "text": "five one four like it was given to us as"
+    },
+    {
+      "start": 236.08,
+      "duration": 4.159,
+      "end": 240.239,
+      "text": "one three four five but i rearranged the"
+    },
+    {
+      "start": 238.08,
+      "duration": 3.92,
+      "end": 242.0,
+      "text": "cuts to say i'll first do a cut on three"
+    },
+    {
+      "start": 240.239,
+      "duration": 4.321,
+      "end": 244.56,
+      "text": "then i'll do a cut on five then i'll do"
+    },
+    {
+      "start": 242.0,
+      "duration": 5.599,
+      "end": 247.599,
+      "text": "a cut on one then i'll do a cut on four"
+    },
+    {
+      "start": 244.56,
+      "duration": 4.72,
+      "end": 249.28,
+      "text": "okay so okay fine uh so that means"
+    },
+    {
+      "start": 247.599,
+      "duration": 3.121,
+      "end": 250.72,
+      "text": "initially we had something like let's"
+    },
+    {
+      "start": 249.28,
+      "duration": 4.0,
+      "end": 253.28,
+      "text": "quickly write this off"
+    },
+    {
+      "start": 250.72,
+      "duration": 4.64,
+      "end": 255.35999999999999,
+      "text": "initially we had a length so"
+    },
+    {
+      "start": 253.28,
+      "duration": 3.6,
+      "end": 256.88,
+      "text": "seven"
+    },
+    {
+      "start": 255.36,
+      "duration": 3.839,
+      "end": 259.199,
+      "text": "so just write this off we had a length"
+    },
+    {
+      "start": 256.88,
+      "duration": 2.319,
+      "end": 259.199,
+      "text": "seven"
+    },
+    {
+      "start": 259.359,
+      "duration": 3.041,
+      "end": 262.4,
+      "text": "perfect and the uh"
+    },
+    {
+      "start": 263.04,
+      "duration": 3.68,
+      "end": 266.72,
+      "text": "so if i'm making a cut at three which is"
+    },
+    {
+      "start": 265.12,
+      "duration": 3.76,
+      "end": 268.88,
+      "text": "this portion if i'm making a cut at"
+    },
+    {
+      "start": 266.72,
+      "duration": 4.72,
+      "end": 271.44000000000005,
+      "text": "three which is this portion is initially"
+    },
+    {
+      "start": 268.88,
+      "duration": 5.759,
+      "end": 274.639,
+      "text": "of length 7 so 7 will be added now we"
+    },
+    {
+      "start": 271.44,
+      "duration": 6.24,
+      "end": 277.68,
+      "text": "will have a length 3"
+    },
+    {
+      "start": 274.639,
+      "duration": 4.161,
+      "end": 278.8,
+      "text": "goes like 0 1 2 3 we will also have a"
+    },
+    {
+      "start": 277.68,
+      "duration": 5.2,
+      "end": 282.88,
+      "text": "length 4."
+    },
+    {
+      "start": 278.8,
+      "duration": 5.52,
+      "end": 284.32,
+      "text": "it goes like 3 4 5 6 seven"
+    },
+    {
+      "start": 282.88,
+      "duration": 2.56,
+      "end": 285.44,
+      "text": "perfect"
+    },
+    {
+      "start": 284.32,
+      "duration": 4.0,
+      "end": 288.32,
+      "text": "length four"
+    },
+    {
+      "start": 285.44,
+      "duration": 5.28,
+      "end": 290.71999999999997,
+      "text": "i'm saying cut at five which is i'm"
+    },
+    {
+      "start": 288.32,
+      "duration": 4.24,
+      "end": 292.56,
+      "text": "saying cut it over here so this stick is"
+    },
+    {
+      "start": 290.72,
+      "duration": 2.64,
+      "end": 293.36,
+      "text": "of length four"
+    },
+    {
+      "start": 292.56,
+      "duration": 2.8,
+      "end": 295.36,
+      "text": "so"
+    },
+    {
+      "start": 293.36,
+      "duration": 4.559,
+      "end": 297.91900000000004,
+      "text": "answer added will be the cost added will"
+    },
+    {
+      "start": 295.36,
+      "duration": 5.36,
+      "end": 300.72,
+      "text": "be four so after this we will again have"
+    },
+    {
+      "start": 297.919,
+      "duration": 6.081,
+      "end": 304.0,
+      "text": "this zero one two three"
+    },
+    {
+      "start": 300.72,
+      "duration": 6.64,
+      "end": 307.36,
+      "text": "right we will again have three four five"
+    },
+    {
+      "start": 304.0,
+      "duration": 4.56,
+      "end": 308.56,
+      "text": "we will again have five six seven"
+    },
+    {
+      "start": 307.36,
+      "duration": 2.0,
+      "end": 309.36,
+      "text": "perfect"
+    },
+    {
+      "start": 308.56,
+      "duration": 3.6,
+      "end": 312.16,
+      "text": "so"
+    },
+    {
+      "start": 309.36,
+      "duration": 5.119,
+      "end": 314.47900000000004,
+      "text": "we have made sure that we have done the"
+    },
+    {
+      "start": 312.16,
+      "duration": 4.8,
+      "end": 316.96000000000004,
+      "text": "cut at five i'm saying cut it at one so"
+    },
+    {
+      "start": 314.479,
+      "duration": 4.0,
+      "end": 318.479,
+      "text": "i'm cutting at one which is this this is"
+    },
+    {
+      "start": 316.96,
+      "duration": 3.2,
+      "end": 320.15999999999997,
+      "text": "a length three stick there's a length"
+    },
+    {
+      "start": 318.479,
+      "duration": 3.841,
+      "end": 322.32,
+      "text": "three stick which i'm cutting so the"
+    },
+    {
+      "start": 320.16,
+      "duration": 4.16,
+      "end": 324.32000000000005,
+      "text": "costing will be this so i'll be left"
+    },
+    {
+      "start": 322.32,
+      "duration": 4.0,
+      "end": 326.32,
+      "text": "with zero one i'll be left out with one"
+    },
+    {
+      "start": 324.32,
+      "duration": 3.36,
+      "end": 327.68,
+      "text": "two three which is of length two a way"
+    },
+    {
+      "start": 326.32,
+      "duration": 3.36,
+      "end": 329.68,
+      "text": "of three four five which is again a"
+    },
+    {
+      "start": 327.68,
+      "duration": 4.48,
+      "end": 332.16,
+      "text": "flint two i'll be a five six seven which"
+    },
+    {
+      "start": 329.68,
+      "duration": 4.64,
+      "end": 334.32,
+      "text": "is again a flint two so the costing is"
+    },
+    {
+      "start": 332.16,
+      "duration": 4.16,
+      "end": 336.32000000000005,
+      "text": "three next i'm saying cut it at four so"
+    },
+    {
+      "start": 334.32,
+      "duration": 3.599,
+      "end": 337.919,
+      "text": "if i'm cutting it four which is"
+    },
+    {
+      "start": 336.32,
+      "duration": 2.48,
+      "end": 338.8,
+      "text": "definitely this this is a length two"
+    },
+    {
+      "start": 337.919,
+      "duration": 3.041,
+      "end": 340.96,
+      "text": "stick"
+    },
+    {
+      "start": 338.8,
+      "duration": 3.839,
+      "end": 342.639,
+      "text": "it's length two stick so the total cost"
+    },
+    {
+      "start": 340.96,
+      "duration": 4.0,
+      "end": 344.96,
+      "text": "that comes up is seven plus four eleven"
+    },
+    {
+      "start": 342.639,
+      "duration": 4.481,
+      "end": 347.12,
+      "text": "plus three fourteen plus two sixteen so"
+    },
+    {
+      "start": 344.96,
+      "duration": 4.4,
+      "end": 349.35999999999996,
+      "text": "i got a lower cost"
+    },
+    {
+      "start": 347.12,
+      "duration": 3.84,
+      "end": 350.96,
+      "text": "i got a lower cost you can try out all"
+    },
+    {
+      "start": 349.36,
+      "duration": 3.92,
+      "end": 353.28000000000003,
+      "text": "orders and you see if you follow the"
+    },
+    {
+      "start": 350.96,
+      "duration": 4.16,
+      "end": 355.12,
+      "text": "order of three five one four this is the"
+    },
+    {
+      "start": 353.28,
+      "duration": 3.52,
+      "end": 356.79999999999995,
+      "text": "lowest cost that you'll get which is of"
+    },
+    {
+      "start": 355.12,
+      "duration": 5.76,
+      "end": 360.88,
+      "text": "16 yes this is the lowest that you'll"
+    },
+    {
+      "start": 356.8,
+      "duration": 6.08,
+      "end": 362.88,
+      "text": "get is of length 16 you can't go lower"
+    },
+    {
+      "start": 360.88,
+      "duration": 3.599,
+      "end": 364.479,
+      "text": "than this okay"
+    },
+    {
+      "start": 362.88,
+      "duration": 2.72,
+      "end": 365.6,
+      "text": "so before moving to the solution of this"
+    },
+    {
+      "start": 364.479,
+      "duration": 2.881,
+      "end": 367.35999999999996,
+      "text": "question let me tell you about the"
+    },
+    {
+      "start": 365.6,
+      "duration": 3.68,
+      "end": 369.28000000000003,
+      "text": "sponsor of this video which is"
+    },
+    {
+      "start": 367.36,
+      "duration": 3.119,
+      "end": 370.47900000000004,
+      "text": "now this is the time of the year where"
+    },
+    {
+      "start": 369.28,
+      "duration": 4.0,
+      "end": 373.28,
+      "text": "you expect"
+    },
+    {
+      "start": 370.479,
+      "duration": 4.961,
+      "end": 375.44,
+      "text": "appraisals right now is appraisals all"
+    },
+    {
+      "start": 373.28,
+      "duration": 3.199,
+      "end": 376.479,
+      "text": "about salary hikes definitely not now"
+    },
+    {
+      "start": 375.44,
+      "duration": 2.879,
+      "end": 378.319,
+      "text": "when you are looking out for an"
+    },
+    {
+      "start": 376.479,
+      "duration": 4.321,
+      "end": 380.8,
+      "text": "appraisal you mean that you are valued"
+    },
+    {
+      "start": 378.319,
+      "duration": 5.041,
+      "end": 383.36,
+      "text": "you are promoted you are given much more"
+    },
+    {
+      "start": 380.8,
+      "duration": 4.16,
+      "end": 384.96000000000004,
+      "text": "opportunities much more freedom to do a"
+    },
+    {
+      "start": 383.36,
+      "duration": 3.44,
+      "end": 386.8,
+      "text": "work but when all of these doesn't"
+    },
+    {
+      "start": 384.96,
+      "duration": 4.32,
+      "end": 389.28,
+      "text": "happen that is when you start looking"
+    },
+    {
+      "start": 386.8,
+      "duration": 4.48,
+      "end": 391.28000000000003,
+      "text": "for a job switch or carrier hiker keto"
+    },
+    {
+      "start": 389.28,
+      "duration": 4.08,
+      "end": 393.35999999999996,
+      "text": "deco so that is where something like"
+    },
+    {
+      "start": 391.28,
+      "duration": 4.0,
+      "end": 395.28,
+      "text": "startups come in because with startups"
+    },
+    {
+      "start": 393.36,
+      "duration": 4.0,
+      "end": 397.36,
+      "text": "you get a lot of liberty to work a lot"
+    },
+    {
+      "start": 395.28,
+      "duration": 4.0,
+      "end": 399.28,
+      "text": "of salary hikes and how do you find"
+    },
+    {
+      "start": 397.36,
+      "duration": 4.88,
+      "end": 402.24,
+      "text": "startups obviously in order to find"
+    },
+    {
+      "start": 399.28,
+      "duration": 5.52,
+      "end": 404.79999999999995,
+      "text": "startups you can download hydrect yes"
+    },
+    {
+      "start": 402.24,
+      "duration": 4.959,
+      "end": 407.199,
+      "text": "is india's first uh hiring app which"
+    },
+    {
+      "start": 404.8,
+      "duration": 4.959,
+      "end": 409.759,
+      "text": "allows you to directly consult with ceos"
+    },
+    {
+      "start": 407.199,
+      "duration": 5.12,
+      "end": 412.319,
+      "text": "and founders of the startups at hyrex we"
+    },
+    {
+      "start": 409.759,
+      "duration": 4.0,
+      "end": 413.759,
+      "text": "have over 1 lakh 20 000 plus startups"
+    },
+    {
+      "start": 412.319,
+      "duration": 3.361,
+      "end": 415.68,
+      "text": "which are hiring now what do you need to"
+    },
+    {
+      "start": 413.759,
+      "duration": 3.041,
+      "end": 416.8,
+      "text": "do you don't need to do anything special"
+    },
+    {
+      "start": 415.68,
+      "duration": 2.88,
+      "end": 418.56,
+      "text": "there's a link in the description you"
+    },
+    {
+      "start": 416.8,
+      "duration": 3.2,
+      "end": 420.0,
+      "text": "need to download the hired tab once"
+    },
+    {
+      "start": 418.56,
+      "duration": 4.079,
+      "end": 422.639,
+      "text": "you've downloaded the hike app you have"
+    },
+    {
+      "start": 420.0,
+      "duration": 4.479,
+      "end": 424.479,
+      "text": "to fill up all this relevant information"
+    },
+    {
+      "start": 422.639,
+      "duration": 3.521,
+      "end": 426.16,
+      "text": "about yourself and once you fill it up"
+    },
+    {
+      "start": 424.479,
+      "duration": 4.16,
+      "end": 428.639,
+      "text": "the hierarchy apps algorithm make sure"
+    },
+    {
+      "start": 426.16,
+      "duration": 4.479,
+      "end": 430.639,
+      "text": "that you're connected to relevant job"
+    },
+    {
+      "start": 428.639,
+      "duration": 3.921,
+      "end": 432.56,
+      "text": "profiles and and yes one more thing"
+    },
+    {
+      "start": 430.639,
+      "duration": 3.761,
+      "end": 434.40000000000003,
+      "text": "there is no consultancy involved in"
+    },
+    {
+      "start": 432.56,
+      "duration": 3.759,
+      "end": 436.319,
+      "text": "between you are directly chatting with"
+    },
+    {
+      "start": 434.4,
+      "duration": 3.519,
+      "end": 437.919,
+      "text": "the co-founders or the founders or the"
+    },
+    {
+      "start": 436.319,
+      "duration": 3.121,
+      "end": 439.44,
+      "text": "ceos of the startups and you can"
+    },
+    {
+      "start": 437.919,
+      "duration": 4.72,
+      "end": 442.639,
+      "text": "directly ask them whatever you have in"
+    },
+    {
+      "start": 439.44,
+      "duration": 4.72,
+      "end": 444.16,
+      "text": "mind and also your data will be staying"
+    },
+    {
+      "start": 442.639,
+      "duration": 3.28,
+      "end": 445.919,
+      "text": "private without your permission it will"
+    },
+    {
+      "start": 444.16,
+      "duration": 2.8,
+      "end": 446.96000000000004,
+      "text": "not be shared anywhere so what are you"
+    },
+    {
+      "start": 445.919,
+      "duration": 3.84,
+      "end": 449.75899999999996,
+      "text": "waiting for there's a link in the"
+    },
+    {
+      "start": 446.96,
+      "duration": 5.2,
+      "end": 452.15999999999997,
+      "text": "description go and download it and just"
+    },
+    {
+      "start": 449.759,
+      "duration": 4.0,
+      "end": 453.759,
+      "text": "look for a switch so how do you approach"
+    },
+    {
+      "start": 452.16,
+      "duration": 3.68,
+      "end": 455.84000000000003,
+      "text": "this problem because"
+    },
+    {
+      "start": 453.759,
+      "duration": 4.88,
+      "end": 458.639,
+      "text": "you will be given something like"
+    },
+    {
+      "start": 455.84,
+      "duration": 5.04,
+      "end": 460.88,
+      "text": "one three four five like this is in cuts"
+    },
+    {
+      "start": 458.639,
+      "duration": 4.641,
+      "end": 463.28000000000003,
+      "text": "will be given the length of the"
+    },
+    {
+      "start": 460.88,
+      "duration": 4.24,
+      "end": 465.12,
+      "text": "stick so how do you start approaching"
+    },
+    {
+      "start": 463.28,
+      "duration": 4.24,
+      "end": 467.52,
+      "text": "because"
+    },
+    {
+      "start": 465.12,
+      "duration": 4.4,
+      "end": 469.52,
+      "text": "you can either start with one"
+    },
+    {
+      "start": 467.52,
+      "duration": 3.28,
+      "end": 470.79999999999995,
+      "text": "as the cut you can either start with"
+    },
+    {
+      "start": 469.52,
+      "duration": 2.64,
+      "end": 472.15999999999997,
+      "text": "three as the cut"
+    },
+    {
+      "start": 470.8,
+      "duration": 3.36,
+      "end": 474.16,
+      "text": "you can either start with five as the"
+    },
+    {
+      "start": 472.16,
+      "duration": 3.599,
+      "end": 475.759,
+      "text": "cut so you have a lot of options to"
+    },
+    {
+      "start": 474.16,
+      "duration": 2.68,
+      "end": 476.84000000000003,
+      "text": "start with you have a lot of options to"
+    },
+    {
+      "start": 475.759,
+      "duration": 5.761,
+      "end": 481.52000000000004,
+      "text": "start with"
+    },
+    {
+      "start": 476.84,
+      "duration": 6.6,
+      "end": 483.44,
+      "text": "so can i treat this as a complete stuff"
+    },
+    {
+      "start": 481.52,
+      "duration": 4.399,
+      "end": 485.919,
+      "text": "can i treat the treat this as one three"
+    },
+    {
+      "start": 483.44,
+      "duration": 4.4,
+      "end": 487.84,
+      "text": "four five as a complete stuff"
+    },
+    {
+      "start": 485.919,
+      "duration": 3.28,
+      "end": 489.19899999999996,
+      "text": "i can"
+    },
+    {
+      "start": 487.84,
+      "duration": 3.6,
+      "end": 491.44,
+      "text": "and then can i say"
+    },
+    {
+      "start": 489.199,
+      "duration": 5.921,
+      "end": 495.12,
+      "text": "if i make a cut at four if i make a cut"
+    },
+    {
+      "start": 491.44,
+      "duration": 5.36,
+      "end": 496.8,
+      "text": "at four if i'm making a cut for sure"
+    },
+    {
+      "start": 495.12,
+      "duration": 2.88,
+      "end": 498.0,
+      "text": "i can also make i can also start with"
+    },
+    {
+      "start": 496.8,
+      "duration": 3.36,
+      "end": 500.16,
+      "text": "five"
+    },
+    {
+      "start": 498.0,
+      "duration": 4.96,
+      "end": 502.96,
+      "text": "or i can say i can also start with three"
+    },
+    {
+      "start": 500.16,
+      "duration": 5.039,
+      "end": 505.199,
+      "text": "so i know if i treat this as a partition"
+    },
+    {
+      "start": 502.96,
+      "duration": 4.88,
+      "end": 507.84,
+      "text": "like if i treat this as an i and j like"
+    },
+    {
+      "start": 505.199,
+      "duration": 3.921,
+      "end": 509.12,
+      "text": "an entire array i can say i can either"
+    },
+    {
+      "start": 507.84,
+      "duration": 3.12,
+      "end": 510.96,
+      "text": "start with one"
+    },
+    {
+      "start": 509.12,
+      "duration": 3.52,
+      "end": 512.64,
+      "text": "i can either start with three i can"
+    },
+    {
+      "start": 510.96,
+      "duration": 3.04,
+      "end": 514.0,
+      "text": "either start with four i can either"
+    },
+    {
+      "start": 512.64,
+      "duration": 4.24,
+      "end": 516.88,
+      "text": "start with five"
+    },
+    {
+      "start": 514.0,
+      "duration": 4.159,
+      "end": 518.159,
+      "text": "so what if i start with four what if i"
+    },
+    {
+      "start": 516.88,
+      "duration": 3.92,
+      "end": 520.8,
+      "text": "start with four"
+    },
+    {
+      "start": 518.159,
+      "duration": 4.081,
+      "end": 522.24,
+      "text": "i know the initial length of the stick i"
+    },
+    {
+      "start": 520.8,
+      "duration": 3.92,
+      "end": 524.7199999999999,
+      "text": "know the initial length of the stick is"
+    },
+    {
+      "start": 522.24,
+      "duration": 4.4,
+      "end": 526.64,
+      "text": "seven so i'll add up seven to the answer"
+    },
+    {
+      "start": 524.72,
+      "duration": 4.0,
+      "end": 528.72,
+      "text": "how we will find this we will get to"
+    },
+    {
+      "start": 526.64,
+      "duration": 4.319,
+      "end": 530.959,
+      "text": "know but if i start with four for an"
+    },
+    {
+      "start": 528.72,
+      "duration": 4.08,
+      "end": 532.8000000000001,
+      "text": "example i say i'll make the first cut at"
+    },
+    {
+      "start": 530.959,
+      "duration": 3.521,
+      "end": 534.4799999999999,
+      "text": "four"
+    },
+    {
+      "start": 532.8,
+      "duration": 2.479,
+      "end": 535.279,
+      "text": "can i say if i'm making the first cut at"
+    },
+    {
+      "start": 534.48,
+      "duration": 2.16,
+      "end": 536.64,
+      "text": "four"
+    },
+    {
+      "start": 535.279,
+      "duration": 2.961,
+      "end": 538.24,
+      "text": "the answer that i'll add is seven"
+    },
+    {
+      "start": 536.64,
+      "duration": 4.08,
+      "end": 540.72,
+      "text": "because that is the initial length of"
+    },
+    {
+      "start": 538.24,
+      "duration": 4.8,
+      "end": 543.04,
+      "text": "the stick at least at the first step the"
+    },
+    {
+      "start": 540.72,
+      "duration": 5.52,
+      "end": 546.24,
+      "text": "length will be the complete stick"
+    },
+    {
+      "start": 543.04,
+      "duration": 6.16,
+      "end": 549.1999999999999,
+      "text": "so can i say now i'm solving"
+    },
+    {
+      "start": 546.24,
+      "duration": 6.719,
+      "end": 552.9590000000001,
+      "text": "only these cuts and only these cuts i'm"
+    },
+    {
+      "start": 549.2,
+      "duration": 3.759,
+      "end": 552.9590000000001,
+      "text": "solving only these cuts"
+    },
+    {
+      "start": 553.2,
+      "duration": 1.6,
+      "end": 554.8000000000001,
+      "text": "right"
+    },
+    {
+      "start": 554.08,
+      "duration": 2.72,
+      "end": 556.8000000000001,
+      "text": "like"
+    },
+    {
+      "start": 554.8,
+      "duration": 4.32,
+      "end": 559.12,
+      "text": "a one three and a five i'm just solving"
+    },
+    {
+      "start": 556.8,
+      "duration": 4.719,
+      "end": 561.519,
+      "text": "these cuts"
+    },
+    {
+      "start": 559.12,
+      "duration": 6.56,
+      "end": 565.68,
+      "text": "if i solve them independently"
+    },
+    {
+      "start": 561.519,
+      "duration": 6.401,
+      "end": 567.92,
+      "text": "solve them independently will this work"
+    },
+    {
+      "start": 565.68,
+      "duration": 3.839,
+      "end": 569.519,
+      "text": "solve them independently with this work"
+    },
+    {
+      "start": 567.92,
+      "duration": 2.72,
+      "end": 570.64,
+      "text": "yes"
+    },
+    {
+      "start": 569.519,
+      "duration": 3.841,
+      "end": 573.36,
+      "text": "why"
+    },
+    {
+      "start": 570.64,
+      "duration": 4.639,
+      "end": 575.279,
+      "text": "because it is sorted because it is"
+    },
+    {
+      "start": 573.36,
+      "duration": 4.32,
+      "end": 577.6800000000001,
+      "text": "sorted"
+    },
+    {
+      "start": 575.279,
+      "duration": 5.12,
+      "end": 580.399,
+      "text": "let's understand what does this mean"
+    },
+    {
+      "start": 577.68,
+      "duration": 5.599,
+      "end": 583.279,
+      "text": "now if you have made a cut at 4 you have"
+    },
+    {
+      "start": 580.399,
+      "duration": 6.961,
+      "end": 587.36,
+      "text": "made a cut at 4 you know that you have"
+    },
+    {
+      "start": 583.279,
+      "duration": 4.081,
+      "end": 587.36,
+      "text": "something like 0 1 2 3 4 now"
+    },
+    {
+      "start": 588.16,
+      "duration": 3.04,
+      "end": 591.1999999999999,
+      "text": "and you also know you have something"
+    },
+    {
+      "start": 589.279,
+      "duration": 3.601,
+      "end": 592.88,
+      "text": "like four five six seven because they've"
+    },
+    {
+      "start": 591.2,
+      "duration": 4.0,
+      "end": 595.2,
+      "text": "made a cut at four"
+    },
+    {
+      "start": 592.88,
+      "duration": 4.72,
+      "end": 597.6,
+      "text": "so if segregated them"
+    },
+    {
+      "start": 595.2,
+      "duration": 3.84,
+      "end": 599.0400000000001,
+      "text": "no matter if you perform five at first"
+    },
+    {
+      "start": 597.6,
+      "duration": 3.04,
+      "end": 600.64,
+      "text": "or three at first they won't matter"
+    },
+    {
+      "start": 599.04,
+      "duration": 3.68,
+      "end": 602.7199999999999,
+      "text": "because even if you're performing five"
+    },
+    {
+      "start": 600.64,
+      "duration": 3.92,
+      "end": 604.56,
+      "text": "it's nowhere connected to the stick"
+    },
+    {
+      "start": 602.72,
+      "duration": 3.44,
+      "end": 606.1600000000001,
+      "text": "even if you're performing the cut at one"
+    },
+    {
+      "start": 604.56,
+      "duration": 3.839,
+      "end": 608.399,
+      "text": "and three it's nowhere connected to the"
+    },
+    {
+      "start": 606.16,
+      "duration": 4.4,
+      "end": 610.56,
+      "text": "stick the sticks have been separated the"
+    },
+    {
+      "start": 608.399,
+      "duration": 3.12,
+      "end": 611.519,
+      "text": "sticks have been separated"
+    },
+    {
+      "start": 610.56,
+      "duration": 3.519,
+      "end": 614.079,
+      "text": "and why"
+    },
+    {
+      "start": 611.519,
+      "duration": 4.401,
+      "end": 615.92,
+      "text": "are like why can you solve this sub"
+    },
+    {
+      "start": 614.079,
+      "duration": 3.361,
+      "end": 617.4399999999999,
+      "text": "problem independently and why can you"
+    },
+    {
+      "start": 615.92,
+      "duration": 4.56,
+      "end": 620.4799999999999,
+      "text": "solve this sub problem independently"
+    },
+    {
+      "start": 617.44,
+      "duration": 5.2,
+      "end": 622.6400000000001,
+      "text": "because they are not connected but if if"
+    },
+    {
+      "start": 620.48,
+      "duration": 4.64,
+      "end": 625.12,
+      "text": "i just do one thing i just do one"
+    },
+    {
+      "start": 622.64,
+      "duration": 4.48,
+      "end": 627.12,
+      "text": "shuttle change and i say"
+    },
+    {
+      "start": 625.12,
+      "duration": 3.44,
+      "end": 628.5600000000001,
+      "text": "i will i'll just uh change this test"
+    },
+    {
+      "start": 627.12,
+      "duration": 3.2,
+      "end": 630.32,
+      "text": "case to this"
+    },
+    {
+      "start": 628.56,
+      "duration": 2.719,
+      "end": 631.279,
+      "text": "and imagine i was having something like"
+    },
+    {
+      "start": 630.32,
+      "duration": 2.4,
+      "end": 632.72,
+      "text": "this"
+    },
+    {
+      "start": 631.279,
+      "duration": 4.481,
+      "end": 635.76,
+      "text": "and the writer sub problem would have"
+    },
+    {
+      "start": 632.72,
+      "duration": 4.239,
+      "end": 636.9590000000001,
+      "text": "been five comma two"
+    },
+    {
+      "start": 635.76,
+      "duration": 2.72,
+      "end": 638.48,
+      "text": "imagine"
+    },
+    {
+      "start": 636.959,
+      "duration": 3.681,
+      "end": 640.64,
+      "text": "this is the right sub problem and this"
+    },
+    {
+      "start": 638.48,
+      "duration": 4.08,
+      "end": 642.5600000000001,
+      "text": "is the left sub problem now you cannot"
+    },
+    {
+      "start": 640.64,
+      "duration": 2.879,
+      "end": 643.519,
+      "text": "solve them independently because"
+    },
+    {
+      "start": 642.56,
+      "duration": 3.68,
+      "end": 646.2399999999999,
+      "text": "this"
+    },
+    {
+      "start": 643.519,
+      "duration": 4.161,
+      "end": 647.68,
+      "text": "is dependent on this because this two"
+    },
+    {
+      "start": 646.24,
+      "duration": 3.279,
+      "end": 649.519,
+      "text": "this two"
+    },
+    {
+      "start": 647.68,
+      "duration": 4.96,
+      "end": 652.64,
+      "text": "the two on the right will be over here"
+    },
+    {
+      "start": 649.519,
+      "duration": 4.88,
+      "end": 654.399,
+      "text": "so you're dependent you're dependent"
+    },
+    {
+      "start": 652.64,
+      "duration": 5.199,
+      "end": 657.8389999999999,
+      "text": "on the left stick"
+    },
+    {
+      "start": 654.399,
+      "duration": 5.201,
+      "end": 659.6,
+      "text": "thereby it's very important to have it"
+    },
+    {
+      "start": 657.839,
+      "duration": 4.721,
+      "end": 662.5600000000001,
+      "text": "sorted"
+    },
+    {
+      "start": 659.6,
+      "duration": 5.919,
+      "end": 665.519,
+      "text": "so that whenever you solve a problem sub"
+    },
+    {
+      "start": 662.56,
+      "duration": 4.88,
+      "end": 667.4399999999999,
+      "text": "problem they will not be dependent they"
+    },
+    {
+      "start": 665.519,
+      "duration": 3.681,
+      "end": 669.2,
+      "text": "will not be dependent you can just go"
+    },
+    {
+      "start": 667.44,
+      "duration": 3.36,
+      "end": 670.8000000000001,
+      "text": "over and see whether you're gonna make a"
+    },
+    {
+      "start": 669.2,
+      "duration": 2.72,
+      "end": 671.9200000000001,
+      "text": "cut at four or five you won't be"
+    },
+    {
+      "start": 670.8,
+      "duration": 3.279,
+      "end": 674.079,
+      "text": "dependent on this you don't have to"
+    },
+    {
+      "start": 671.92,
+      "duration": 5.599,
+      "end": 677.519,
+      "text": "decide whether you want to make a cut at"
+    },
+    {
+      "start": 674.079,
+      "duration": 5.76,
+      "end": 679.8389999999999,
+      "text": "one three then two or at one two then"
+    },
+    {
+      "start": 677.519,
+      "duration": 4.481,
+      "end": 682.0,
+      "text": "three you will not be dependent so it's"
+    },
+    {
+      "start": 679.839,
+      "duration": 5.041,
+      "end": 684.8800000000001,
+      "text": "very important that you"
+    },
+    {
+      "start": 682.0,
+      "duration": 3.68,
+      "end": 685.68,
+      "text": "make sure that the array"
+    },
+    {
+      "start": 684.88,
+      "duration": 2.399,
+      "end": 687.279,
+      "text": "is"
+    },
+    {
+      "start": 685.68,
+      "duration": 3.44,
+      "end": 689.12,
+      "text": "sorted okay that is something which you"
+    },
+    {
+      "start": 687.279,
+      "duration": 3.361,
+      "end": 690.64,
+      "text": "have to do"
+    },
+    {
+      "start": 689.12,
+      "duration": 3.76,
+      "end": 692.88,
+      "text": "now how do you find the length of the"
+    },
+    {
+      "start": 690.64,
+      "duration": 4.0,
+      "end": 694.64,
+      "text": "sticks very important"
+    },
+    {
+      "start": 692.88,
+      "duration": 4.16,
+      "end": 697.04,
+      "text": "so"
+    },
+    {
+      "start": 694.64,
+      "duration": 5.439,
+      "end": 700.079,
+      "text": "let me let me just visualize it again"
+    },
+    {
+      "start": 697.04,
+      "duration": 4.4,
+      "end": 701.4399999999999,
+      "text": "i'm having one three four five okay"
+    },
+    {
+      "start": 700.079,
+      "duration": 2.401,
+      "end": 702.4799999999999,
+      "text": "i know this is a partition that i'm"
+    },
+    {
+      "start": 701.44,
+      "duration": 3.12,
+      "end": 704.5600000000001,
+      "text": "solving"
+    },
+    {
+      "start": 702.48,
+      "duration": 3.599,
+      "end": 706.0790000000001,
+      "text": "this is a partition that i'm solving"
+    },
+    {
+      "start": 704.56,
+      "duration": 3.839,
+      "end": 708.399,
+      "text": "okay this is an entire partition that"
+    },
+    {
+      "start": 706.079,
+      "duration": 3.841,
+      "end": 709.92,
+      "text": "i'm looking to solve i want to find uh"
+    },
+    {
+      "start": 708.399,
+      "duration": 3.201,
+      "end": 711.6,
+      "text": "how are these cuts going to give me the"
+    },
+    {
+      "start": 709.92,
+      "duration": 3.28,
+      "end": 713.1999999999999,
+      "text": "minimal cost"
+    },
+    {
+      "start": 711.6,
+      "duration": 3.2,
+      "end": 714.8000000000001,
+      "text": "i'll just put in a 0"
+    },
+    {
+      "start": 713.2,
+      "duration": 5.12,
+      "end": 718.32,
+      "text": "and the length of the stick"
+    },
+    {
+      "start": 714.8,
+      "duration": 3.52,
+      "end": 718.3199999999999,
+      "text": "right at the left and right at the"
+    },
+    {
+      "start": 718.56,
+      "duration": 3.279,
+      "end": 721.8389999999999,
+      "text": "i'll just put a zero on the left and"
+    },
+    {
+      "start": 720.32,
+      "duration": 4.24,
+      "end": 724.5600000000001,
+      "text": "i'll just put the length of the stick on"
+    },
+    {
+      "start": 721.839,
+      "duration": 4.0,
+      "end": 725.839,
+      "text": "the right why do i do this"
+    },
+    {
+      "start": 724.56,
+      "duration": 2.56,
+      "end": 727.1199999999999,
+      "text": "i'll understand"
+    },
+    {
+      "start": 725.839,
+      "duration": 3.12,
+      "end": 728.9590000000001,
+      "text": "imagine"
+    },
+    {
+      "start": 727.12,
+      "duration": 4.08,
+      "end": 731.2,
+      "text": "i'm making a cut at four i know i can"
+    },
+    {
+      "start": 728.959,
+      "duration": 5.921,
+      "end": 734.88,
+      "text": "make a cut at three or at five or at one"
+    },
+    {
+      "start": 731.2,
+      "duration": 6.079,
+      "end": 737.279,
+      "text": "anyway imagine i'm making a cut at four"
+    },
+    {
+      "start": 734.88,
+      "duration": 3.519,
+      "end": 738.399,
+      "text": "i'm making a cut at four but what is the"
+    },
+    {
+      "start": 737.279,
+      "duration": 2.8,
+      "end": 740.079,
+      "text": "cost"
+    },
+    {
+      "start": 738.399,
+      "duration": 3.841,
+      "end": 742.24,
+      "text": "the cost is the"
+    },
+    {
+      "start": 740.079,
+      "duration": 5.921,
+      "end": 746.0,
+      "text": "length of that stick"
+    },
+    {
+      "start": 742.24,
+      "duration": 4.88,
+      "end": 747.12,
+      "text": "length of that stick in which four is"
+    },
+    {
+      "start": 746.0,
+      "duration": 2.32,
+      "end": 748.32,
+      "text": "in which"
+    },
+    {
+      "start": 747.12,
+      "duration": 3.519,
+      "end": 750.639,
+      "text": "four is"
+    },
+    {
+      "start": 748.32,
+      "duration": 5.44,
+      "end": 753.7600000000001,
+      "text": "the cost is the length of that stick in"
+    },
+    {
+      "start": 750.639,
+      "duration": 5.2,
+      "end": 755.839,
+      "text": "which four is that is for sure"
+    },
+    {
+      "start": 753.76,
+      "duration": 4.96,
+      "end": 758.72,
+      "text": "how do i get the cost"
+    },
+    {
+      "start": 755.839,
+      "duration": 6.481,
+      "end": 762.32,
+      "text": "i minus one"
+    },
+    {
+      "start": 758.72,
+      "duration": 5.679,
+      "end": 764.399,
+      "text": "cuts off i am j plus 1 rather which is"
+    },
+    {
+      "start": 762.32,
+      "duration": 3.759,
+      "end": 766.0790000000001,
+      "text": "this j plus 1"
+    },
+    {
+      "start": 764.399,
+      "duration": 3.521,
+      "end": 767.92,
+      "text": "minus cuts off"
+    },
+    {
+      "start": 766.079,
+      "duration": 3.44,
+      "end": 769.519,
+      "text": "i minus 1 which is"
+    },
+    {
+      "start": 767.92,
+      "duration": 5.12,
+      "end": 773.04,
+      "text": "this"
+    },
+    {
+      "start": 769.519,
+      "duration": 4.961,
+      "end": 774.48,
+      "text": "7 minus 0 is 7. this is the"
+    },
+    {
+      "start": 773.04,
+      "duration": 6.0,
+      "end": 779.04,
+      "text": "length of the"
+    },
+    {
+      "start": 774.48,
+      "duration": 6.799,
+      "end": 781.279,
+      "text": "stick this is the length of the stick"
+    },
+    {
+      "start": 779.04,
+      "duration": 4.479,
+      "end": 783.519,
+      "text": "if i apply this formula it will give me"
+    },
+    {
+      "start": 781.279,
+      "duration": 4.081,
+      "end": 785.36,
+      "text": "the length of the stick i will show you"
+    },
+    {
+      "start": 783.519,
+      "duration": 3.281,
+      "end": 786.8,
+      "text": "why in future"
+    },
+    {
+      "start": 785.36,
+      "duration": 3.2,
+      "end": 788.5600000000001,
+      "text": "so we have understood that this is"
+    },
+    {
+      "start": 786.8,
+      "duration": 3.76,
+      "end": 790.56,
+      "text": "giving me the length of the stick now if"
+    },
+    {
+      "start": 788.56,
+      "duration": 3.92,
+      "end": 792.4799999999999,
+      "text": "i'm taking this guy"
+    },
+    {
+      "start": 790.56,
+      "duration": 3.2,
+      "end": 793.76,
+      "text": "as the first cut then i need to solve"
+    },
+    {
+      "start": 792.48,
+      "duration": 3.44,
+      "end": 795.9200000000001,
+      "text": "this guy"
+    },
+    {
+      "start": 793.76,
+      "duration": 4.16,
+      "end": 797.92,
+      "text": "so imagine this is that index"
+    },
+    {
+      "start": 795.92,
+      "duration": 4.56,
+      "end": 800.4799999999999,
+      "text": "i need to solve"
+    },
+    {
+      "start": 797.92,
+      "duration": 4.4,
+      "end": 802.3199999999999,
+      "text": "this portion this sub problem which is i"
+    },
+    {
+      "start": 800.48,
+      "duration": 3.84,
+      "end": 804.32,
+      "text": "to index minus 1"
+    },
+    {
+      "start": 802.32,
+      "duration": 4.4,
+      "end": 806.72,
+      "text": "i need to solve the writer sub problem"
+    },
+    {
+      "start": 804.32,
+      "duration": 6.24,
+      "end": 810.5600000000001,
+      "text": "which is"
+    },
+    {
+      "start": 806.72,
+      "duration": 6.559,
+      "end": 813.279,
+      "text": "index plus 1 from the right to the last"
+    },
+    {
+      "start": 810.56,
+      "duration": 5.6,
+      "end": 816.16,
+      "text": "because i did a partition on index"
+    },
+    {
+      "start": 813.279,
+      "duration": 5.36,
+      "end": 818.639,
+      "text": "i solve it from i to index minus 1"
+    },
+    {
+      "start": 816.16,
+      "duration": 5.28,
+      "end": 821.4399999999999,
+      "text": "this smaller partition and index plus 1"
+    },
+    {
+      "start": 818.639,
+      "duration": 4.721,
+      "end": 823.36,
+      "text": "to j this partition so"
+    },
+    {
+      "start": 821.44,
+      "duration": 4.0,
+      "end": 825.44,
+      "text": "i just you can"
+    },
+    {
+      "start": 823.36,
+      "duration": 4.479,
+      "end": 827.839,
+      "text": "cut and i'll be solving these couple and"
+    },
+    {
+      "start": 825.44,
+      "duration": 3.839,
+      "end": 829.2790000000001,
+      "text": "since they are sorted they independent"
+    },
+    {
+      "start": 827.839,
+      "duration": 3.44,
+      "end": 831.2790000000001,
+      "text": "and since they're independent i can just"
+    },
+    {
+      "start": 829.279,
+      "duration": 4.401,
+      "end": 833.68,
+      "text": "solve them independently and add up the"
+    },
+    {
+      "start": 831.279,
+      "duration": 3.521,
+      "end": 834.8,
+      "text": "answer with the current answer which is"
+    },
+    {
+      "start": 833.68,
+      "duration": 3.599,
+      "end": 837.279,
+      "text": "this"
+    },
+    {
+      "start": 834.8,
+      "duration": 4.56,
+      "end": 839.3599999999999,
+      "text": "now you might ask how is this working"
+    },
+    {
+      "start": 837.279,
+      "duration": 3.92,
+      "end": 841.199,
+      "text": "i'll show you after i after i write the"
+    },
+    {
+      "start": 839.36,
+      "duration": 4.08,
+      "end": 843.44,
+      "text": "code how is this exactly working you'll"
+    },
+    {
+      "start": 841.199,
+      "duration": 5.041,
+      "end": 846.24,
+      "text": "get a clear cut idea but before that"
+    },
+    {
+      "start": 843.44,
+      "duration": 4.079,
+      "end": 847.519,
+      "text": "let's start writing the code so"
+    },
+    {
+      "start": 846.24,
+      "duration": 5.12,
+      "end": 851.36,
+      "text": "you've understood that it's going to be"
+    },
+    {
+      "start": 847.519,
+      "duration": 5.76,
+      "end": 853.279,
+      "text": "a partition like uh 1 3 5 8 was"
+    },
+    {
+      "start": 851.36,
+      "duration": 5.68,
+      "end": 857.04,
+      "text": "initially given to you you will just"
+    },
+    {
+      "start": 853.279,
+      "duration": 5.761,
+      "end": 859.04,
+      "text": "sorry 1345 was given to you"
+    },
+    {
+      "start": 857.04,
+      "duration": 4.08,
+      "end": 861.12,
+      "text": "you will insert a 0 at the front you'll"
+    },
+    {
+      "start": 859.04,
+      "duration": 3.84,
+      "end": 862.88,
+      "text": "insert a length of the stick at the back"
+    },
+    {
+      "start": 861.12,
+      "duration": 4.88,
+      "end": 866.0,
+      "text": "and you'll if i write down the indexing"
+    },
+    {
+      "start": 862.88,
+      "duration": 6.639,
+      "end": 869.519,
+      "text": "it will be like 0 1 2 3 4 5 so i'll"
+    },
+    {
+      "start": 866.0,
+      "duration": 6.0,
+      "end": 872.0,
+      "text": "start off i from here and j from here"
+    },
+    {
+      "start": 869.519,
+      "duration": 5.521,
+      "end": 875.04,
+      "text": "which you can call it as f of one comma"
+    },
+    {
+      "start": 872.0,
+      "duration": 4.88,
+      "end": 876.88,
+      "text": "whatever it was the initial length like"
+    },
+    {
+      "start": 875.04,
+      "duration": 3.68,
+      "end": 878.7199999999999,
+      "text": "whatever is this initial length was four"
+    },
+    {
+      "start": 876.88,
+      "duration": 4.319,
+      "end": 881.199,
+      "text": "right initial length is four so can you"
+    },
+    {
+      "start": 878.72,
+      "duration": 4.0,
+      "end": 882.72,
+      "text": "start off with four"
+    },
+    {
+      "start": 881.199,
+      "duration": 3.44,
+      "end": 884.639,
+      "text": "so that's what the initial partition"
+    },
+    {
+      "start": 882.72,
+      "duration": 6.559,
+      "end": 889.279,
+      "text": "will start of it so"
+    },
+    {
+      "start": 884.639,
+      "duration": 6.241,
+      "end": 890.88,
+      "text": "f of 1 i comma j now i know i know"
+    },
+    {
+      "start": 889.279,
+      "duration": 3.841,
+      "end": 893.12,
+      "text": "i can start with this"
+    },
+    {
+      "start": 890.88,
+      "duration": 4.16,
+      "end": 895.04,
+      "text": "i can start with this i can start with"
+    },
+    {
+      "start": 893.12,
+      "duration": 3.519,
+      "end": 896.639,
+      "text": "this i can start with this which"
+    },
+    {
+      "start": 895.04,
+      "duration": 4.72,
+      "end": 899.76,
+      "text": "eventually means"
+    },
+    {
+      "start": 896.639,
+      "duration": 5.121,
+      "end": 901.76,
+      "text": "i can take any one as the first guy"
+    },
+    {
+      "start": 899.76,
+      "duration": 4.16,
+      "end": 903.92,
+      "text": "anyone has the first cut i can take any"
+    },
+    {
+      "start": 901.76,
+      "duration": 5.759,
+      "end": 907.519,
+      "text": "one as the first cut so thereby what i"
+    },
+    {
+      "start": 903.92,
+      "duration": 5.84,
+      "end": 909.76,
+      "text": "say is okay now in partition dp you know"
+    },
+    {
+      "start": 907.519,
+      "duration": 4.32,
+      "end": 911.839,
+      "text": "if because you are solving a portion if"
+    },
+    {
+      "start": 909.76,
+      "duration": 3.92,
+      "end": 913.68,
+      "text": "it if it crosses over there is nothing"
+    },
+    {
+      "start": 911.839,
+      "duration": 3.44,
+      "end": 915.2790000000001,
+      "text": "to solve so you can just return a zero"
+    },
+    {
+      "start": 913.68,
+      "duration": 4.0,
+      "end": 917.68,
+      "text": "the cost will be zero if there is no"
+    },
+    {
+      "start": 915.279,
+      "duration": 4.481,
+      "end": 919.76,
+      "text": "partition to be solved"
+    },
+    {
+      "start": 917.68,
+      "duration": 4.8,
+      "end": 922.4799999999999,
+      "text": "i know one thing for sure"
+    },
+    {
+      "start": 919.76,
+      "duration": 5.12,
+      "end": 924.88,
+      "text": "i can take any one from i to j"
+    },
+    {
+      "start": 922.48,
+      "duration": 4.64,
+      "end": 927.12,
+      "text": "and when i'm taking any one the costing"
+    },
+    {
+      "start": 924.88,
+      "duration": 4.639,
+      "end": 929.519,
+      "text": "that i'll incur is"
+    },
+    {
+      "start": 927.12,
+      "duration": 5.36,
+      "end": 932.48,
+      "text": "cuts of j plus one i've already showed"
+    },
+    {
+      "start": 929.519,
+      "duration": 3.921,
+      "end": 933.44,
+      "text": "you why and i'll proof it again"
+    },
+    {
+      "start": 932.48,
+      "duration": 3.2,
+      "end": 935.6800000000001,
+      "text": "this is the"
+    },
+    {
+      "start": 933.44,
+      "duration": 3.36,
+      "end": 936.8000000000001,
+      "text": "uh this is the cost if i cut it at that"
+    },
+    {
+      "start": 935.68,
+      "duration": 3.44,
+      "end": 939.12,
+      "text": "index"
+    },
+    {
+      "start": 936.8,
+      "duration": 4.479,
+      "end": 941.279,
+      "text": "and i have to solve the lefter guy"
+    },
+    {
+      "start": 939.12,
+      "duration": 4.159,
+      "end": 943.279,
+      "text": "which is i of index minus 1"
+    },
+    {
+      "start": 941.279,
+      "duration": 4.641,
+      "end": 945.92,
+      "text": "i have to solve the writer guy which is"
+    },
+    {
+      "start": 943.279,
+      "duration": 3.441,
+      "end": 946.72,
+      "text": "index plus 1 comma j for sure the left"
+    },
+    {
+      "start": 945.92,
+      "duration": 2.96,
+      "end": 948.88,
+      "text": "guy"
+    },
+    {
+      "start": 946.72,
+      "duration": 3.919,
+      "end": 950.639,
+      "text": "and the right guy is what i need to"
+    },
+    {
+      "start": 948.88,
+      "duration": 5.28,
+      "end": 954.16,
+      "text": "solve perfect"
+    },
+    {
+      "start": 950.639,
+      "duration": 7.281,
+      "end": 957.92,
+      "text": "and since i need the minimal cost"
+    },
+    {
+      "start": 954.16,
+      "duration": 3.76,
+      "end": 957.92,
+      "text": "probably i can keep it as int max"
+    },
+    {
+      "start": 958.0,
+      "duration": 4.72,
+      "end": 962.72,
+      "text": "and i can just say"
+    },
+    {
+      "start": 959.6,
+      "duration": 5.039,
+      "end": 964.639,
+      "text": "minimal equal to minimal of"
+    },
+    {
+      "start": 962.72,
+      "duration": 4.88,
+      "end": 967.6,
+      "text": "mini comma cost"
+    },
+    {
+      "start": 964.639,
+      "duration": 5.521,
+      "end": 970.16,
+      "text": "at the end of the day i can just return"
+    },
+    {
+      "start": 967.6,
+      "duration": 5.12,
+      "end": 972.72,
+      "text": "the meaning and i should be done this is"
+    },
+    {
+      "start": 970.16,
+      "duration": 5.359,
+      "end": 975.519,
+      "text": "how the simple enough code looks like"
+    },
+    {
+      "start": 972.72,
+      "duration": 4.4,
+      "end": 977.12,
+      "text": "what i do is i take the current cut at"
+    },
+    {
+      "start": 975.519,
+      "duration": 3.44,
+      "end": 978.9590000000001,
+      "text": "any of the index"
+    },
+    {
+      "start": 977.12,
+      "duration": 4.0,
+      "end": 981.12,
+      "text": "and then i go to the left sub problem to"
+    },
+    {
+      "start": 978.959,
+      "duration": 3.761,
+      "end": 982.7199999999999,
+      "text": "the right sub problem get it for every"
+    },
+    {
+      "start": 981.12,
+      "duration": 4.24,
+      "end": 985.36,
+      "text": "index i get the cost and take the"
+    },
+    {
+      "start": 982.72,
+      "duration": 3.76,
+      "end": 986.48,
+      "text": "minimal of all the indexes and that is"
+    },
+    {
+      "start": 985.36,
+      "duration": 3.279,
+      "end": 988.639,
+      "text": "what i return"
+    },
+    {
+      "start": 986.48,
+      "duration": 3.68,
+      "end": 990.16,
+      "text": "so i try all partitions and i return the"
+    },
+    {
+      "start": 988.639,
+      "duration": 2.64,
+      "end": 991.279,
+      "text": "partition that gives me the minimal"
+    },
+    {
+      "start": 990.16,
+      "duration": 3.359,
+      "end": 993.519,
+      "text": "answer"
+    },
+    {
+      "start": 991.279,
+      "duration": 4.081,
+      "end": 995.36,
+      "text": "okay now coming back to this portion"
+    },
+    {
+      "start": 993.519,
+      "duration": 2.88,
+      "end": 996.399,
+      "text": "which a lot of you probably did not"
+    },
+    {
+      "start": 995.36,
+      "duration": 2.8,
+      "end": 998.16,
+      "text": "understand"
+    },
+    {
+      "start": 996.399,
+      "duration": 3.521,
+      "end": 999.92,
+      "text": "so"
+    },
+    {
+      "start": 998.16,
+      "duration": 4.479,
+      "end": 1002.639,
+      "text": "let's uh take a bigger"
+    },
+    {
+      "start": 999.92,
+      "duration": 5.12,
+      "end": 1005.04,
+      "text": "example just to make it uh clear enough"
+    },
+    {
+      "start": 1002.639,
+      "duration": 4.64,
+      "end": 1007.279,
+      "text": "okay imagine this is the stick and the"
+    },
+    {
+      "start": 1005.04,
+      "duration": 4.0,
+      "end": 1009.04,
+      "text": "length is somewhere around 12. imagine"
+    },
+    {
+      "start": 1007.279,
+      "duration": 3.281,
+      "end": 1010.56,
+      "text": "the length is somewhere around 12 and"
+    },
+    {
+      "start": 1009.04,
+      "duration": 3.76,
+      "end": 1012.8,
+      "text": "you are starting off by solving this"
+    },
+    {
+      "start": 1010.56,
+      "duration": 3.04,
+      "end": 1013.5999999999999,
+      "text": "portion of partition okay"
+    },
+    {
+      "start": 1012.8,
+      "duration": 2.8,
+      "end": 1015.5999999999999,
+      "text": "so"
+    },
+    {
+      "start": 1013.6,
+      "duration": 4.239,
+      "end": 1017.839,
+      "text": "just for an example imagine the first"
+    },
+    {
+      "start": 1015.6,
+      "duration": 4.64,
+      "end": 1020.24,
+      "text": "cut that you made was at five the first"
+    },
+    {
+      "start": 1017.839,
+      "duration": 4.0,
+      "end": 1021.839,
+      "text": "cut that you made was at five or for"
+    },
+    {
+      "start": 1020.24,
+      "duration": 2.64,
+      "end": 1022.88,
+      "text": "that reason uh the first cut that you"
+    },
+    {
+      "start": 1021.839,
+      "duration": 2.72,
+      "end": 1024.559,
+      "text": "made was"
+    },
+    {
+      "start": 1022.88,
+      "duration": 3.84,
+      "end": 1026.72,
+      "text": "at 3"
+    },
+    {
+      "start": 1024.559,
+      "duration": 3.76,
+      "end": 1028.319,
+      "text": "so we're making a cut at 3"
+    },
+    {
+      "start": 1026.72,
+      "duration": 3.76,
+      "end": 1030.48,
+      "text": "you know the length is definitely"
+    },
+    {
+      "start": 1028.319,
+      "duration": 5.52,
+      "end": 1033.839,
+      "text": "because this is i and this is j the"
+    },
+    {
+      "start": 1030.48,
+      "duration": 4.88,
+      "end": 1035.3600000000001,
+      "text": "length is definitely 12 minus 0"
+    },
+    {
+      "start": 1033.839,
+      "duration": 3.6,
+      "end": 1037.4389999999999,
+      "text": "so j plus 1"
+    },
+    {
+      "start": 1035.36,
+      "duration": 4.0,
+      "end": 1039.36,
+      "text": "and i minus 1 for sure"
+    },
+    {
+      "start": 1037.439,
+      "duration": 4.0,
+      "end": 1041.439,
+      "text": "that is for sure but whenever you're"
+    },
+    {
+      "start": 1039.36,
+      "duration": 4.559,
+      "end": 1043.9189999999999,
+      "text": "making cut a tree you are having a sub"
+    },
+    {
+      "start": 1041.439,
+      "duration": 4.4,
+      "end": 1045.8390000000002,
+      "text": "problem as one two"
+    },
+    {
+      "start": 1043.919,
+      "duration": 3.201,
+      "end": 1047.1200000000001,
+      "text": "this is your sub problem and the right"
+    },
+    {
+      "start": 1045.839,
+      "duration": 3.041,
+      "end": 1048.8799999999999,
+      "text": "of it as"
+    },
+    {
+      "start": 1047.12,
+      "duration": 3.04,
+      "end": 1050.1599999999999,
+      "text": "uh the last cut was at three and this"
+    },
+    {
+      "start": 1048.88,
+      "duration": 3.919,
+      "end": 1052.7990000000002,
+      "text": "was you"
+    },
+    {
+      "start": 1050.16,
+      "duration": 5.84,
+      "end": 1056.0,
+      "text": "and this right sub problem will be 3"
+    },
+    {
+      "start": 1052.799,
+      "duration": 4.481,
+      "end": 1057.28,
+      "text": "5 7 8 and 12"
+    },
+    {
+      "start": 1056.0,
+      "duration": 3.52,
+      "end": 1059.52,
+      "text": "and this will be the partition that"
+    },
+    {
+      "start": 1057.28,
+      "duration": 4.56,
+      "end": 1061.84,
+      "text": "you'll be solving this will be the i j"
+    },
+    {
+      "start": 1059.52,
+      "duration": 4.0,
+      "end": 1063.52,
+      "text": "and this will be the i j over here okay"
+    },
+    {
+      "start": 1061.84,
+      "duration": 5.079,
+      "end": 1066.9189999999999,
+      "text": "now if you carefully observe yes if you"
+    },
+    {
+      "start": 1063.52,
+      "duration": 3.399,
+      "end": 1066.9189999999999,
+      "text": "carefully observe"
+    },
+    {
+      "start": 1067.12,
+      "duration": 3.28,
+      "end": 1070.3999999999999,
+      "text": "if you're making a cut at three if"
+    },
+    {
+      "start": 1069.12,
+      "duration": 4.559,
+      "end": 1073.6789999999999,
+      "text": "you're making a cut at three you'll be"
+    },
+    {
+      "start": 1070.4,
+      "duration": 3.279,
+      "end": 1073.679,
+      "text": "of zero one two three"
+    },
+    {
+      "start": 1073.919,
+      "duration": 3.441,
+      "end": 1077.3600000000001,
+      "text": "and the length will be three"
+    },
+    {
+      "start": 1075.44,
+      "duration": 3.68,
+      "end": 1079.1200000000001,
+      "text": "so again if you carefully see three"
+    },
+    {
+      "start": 1077.36,
+      "duration": 4.4,
+      "end": 1081.76,
+      "text": "because that was the last cut"
+    },
+    {
+      "start": 1079.12,
+      "duration": 4.88,
+      "end": 1084.0,
+      "text": "and the last cut on the left was zero so"
+    },
+    {
+      "start": 1081.76,
+      "duration": 4.64,
+      "end": 1086.4,
+      "text": "three minus zero again gave you"
+    },
+    {
+      "start": 1084.0,
+      "duration": 3.44,
+      "end": 1087.44,
+      "text": "the length of the stick"
+    },
+    {
+      "start": 1086.4,
+      "duration": 3.04,
+      "end": 1089.44,
+      "text": "similarly"
+    },
+    {
+      "start": 1087.44,
+      "duration": 3.84,
+      "end": 1091.28,
+      "text": "if you made a cut at three three four"
+    },
+    {
+      "start": 1089.44,
+      "duration": 4.8,
+      "end": 1094.24,
+      "text": "five six seven eight"
+    },
+    {
+      "start": 1091.28,
+      "duration": 4.72,
+      "end": 1096.0,
+      "text": "nine ten eleven twelve okay so we just"
+    },
+    {
+      "start": 1094.24,
+      "duration": 3.76,
+      "end": 1098.0,
+      "text": "write this"
+    },
+    {
+      "start": 1096.0,
+      "duration": 5.2,
+      "end": 1101.2,
+      "text": "four five six seven eight nine ten"
+    },
+    {
+      "start": 1098.0,
+      "duration": 5.679,
+      "end": 1103.679,
+      "text": "eleven one two three four five six seven"
+    },
+    {
+      "start": 1101.2,
+      "duration": 4.8,
+      "end": 1106.0,
+      "text": "eight nine nine is the length and if you"
+    },
+    {
+      "start": 1103.679,
+      "duration": 5.201,
+      "end": 1108.88,
+      "text": "again take twelve and three you get the"
+    },
+    {
+      "start": 1106.0,
+      "duration": 4.4,
+      "end": 1110.4,
+      "text": "length as 9 because this is the last"
+    },
+    {
+      "start": 1108.88,
+      "duration": 3.2,
+      "end": 1112.0800000000002,
+      "text": "portion where you made the cut and this"
+    },
+    {
+      "start": 1110.4,
+      "duration": 4.0,
+      "end": 1114.4,
+      "text": "is the right last portion where the cut"
+    },
+    {
+      "start": 1112.08,
+      "duration": 5.28,
+      "end": 1117.36,
+      "text": "was so 12 minus 3 will give you 9."
+    },
+    {
+      "start": 1114.4,
+      "duration": 3.76,
+      "end": 1118.16,
+      "text": "imagine imagine i take this 5 7 8 and i"
+    },
+    {
+      "start": 1117.36,
+      "duration": 3.36,
+      "end": 1120.7199999999998,
+      "text": "say"
+    },
+    {
+      "start": 1118.16,
+      "duration": 6.16,
+      "end": 1124.3200000000002,
+      "text": "i will do a cut at 7 i'll do a cut at 7."
+    },
+    {
+      "start": 1120.72,
+      "duration": 6.16,
+      "end": 1126.88,
+      "text": "so i will have a left guy as"
+    },
+    {
+      "start": 1124.32,
+      "duration": 4.32,
+      "end": 1128.6399999999999,
+      "text": "3 5 7 and this will just be the"
+    },
+    {
+      "start": 1126.88,
+      "duration": 4.799,
+      "end": 1131.679,
+      "text": "partition that i'll be solving i'll have"
+    },
+    {
+      "start": 1128.64,
+      "duration": 5.36,
+      "end": 1134.0,
+      "text": "the right guy as 7 8 12 and this is the"
+    },
+    {
+      "start": 1131.679,
+      "duration": 4.641,
+      "end": 1136.3200000000002,
+      "text": "partition that will be solving i and j i"
+    },
+    {
+      "start": 1134.0,
+      "duration": 4.559,
+      "end": 1138.559,
+      "text": "and j now if you are doing a cut at"
+    },
+    {
+      "start": 1136.32,
+      "duration": 3.76,
+      "end": 1140.08,
+      "text": "seven if you're doing a cut at seven you"
+    },
+    {
+      "start": 1138.559,
+      "duration": 3.521,
+      "end": 1142.08,
+      "text": "are hypothetically yes you're"
+    },
+    {
+      "start": 1140.08,
+      "duration": 4.64,
+      "end": 1144.72,
+      "text": "hypothetically left with"
+    },
+    {
+      "start": 1142.08,
+      "duration": 5.839,
+      "end": 1147.9189999999999,
+      "text": "three four five six seven"
+    },
+    {
+      "start": 1144.72,
+      "duration": 4.24,
+      "end": 1148.96,
+      "text": "which is a length of"
+    },
+    {
+      "start": 1147.919,
+      "duration": 4.88,
+      "end": 1152.7990000000002,
+      "text": "four"
+    },
+    {
+      "start": 1148.96,
+      "duration": 7.36,
+      "end": 1156.32,
+      "text": "and this is 7 8 9 10 11 12. so just"
+    },
+    {
+      "start": 1152.799,
+      "duration": 6.321,
+      "end": 1159.12,
+      "text": "write it across 7 8 9 10 11 12. one two"
+    },
+    {
+      "start": 1156.32,
+      "duration": 5.28,
+      "end": 1161.6,
+      "text": "three four five so again if you see"
+    },
+    {
+      "start": 1159.12,
+      "duration": 3.919,
+      "end": 1163.039,
+      "text": "12 minus seven gives you the length five"
+    },
+    {
+      "start": 1161.6,
+      "duration": 3.76,
+      "end": 1165.36,
+      "text": "seven minus three gives you the length"
+    },
+    {
+      "start": 1163.039,
+      "duration": 4.401,
+      "end": 1167.44,
+      "text": "4. so this is the reason j plus 1 and i"
+    },
+    {
+      "start": 1165.36,
+      "duration": 4.4,
+      "end": 1169.76,
+      "text": "minus 1 because if you know the left x"
+    },
+    {
+      "start": 1167.44,
+      "duration": 4.4,
+      "end": 1171.8400000000001,
+      "text": "last cut right last cut and if you just"
+    },
+    {
+      "start": 1169.76,
+      "duration": 4.4,
+      "end": 1174.16,
+      "text": "subtract it you get the length yes that"
+    },
+    {
+      "start": 1171.84,
+      "duration": 5.04,
+      "end": 1176.8799999999999,
+      "text": "is how you get easily the length so i"
+    },
+    {
+      "start": 1174.16,
+      "duration": 3.92,
+      "end": 1178.0800000000002,
+      "text": "hope i was able to explain you why this"
+    },
+    {
+      "start": 1176.88,
+      "duration": 2.32,
+      "end": 1179.2,
+      "text": "and why the left sub problem and the"
+    },
+    {
+      "start": 1178.08,
+      "duration": 2.719,
+      "end": 1180.799,
+      "text": "right support"
+    },
+    {
+      "start": 1179.2,
+      "duration": 3.92,
+      "end": 1183.1200000000001,
+      "text": "once you've understood this i think this"
+    },
+    {
+      "start": 1180.799,
+      "duration": 3.921,
+      "end": 1184.72,
+      "text": "becomes a very simple cake work"
+    },
+    {
+      "start": 1183.12,
+      "duration": 3.2,
+      "end": 1186.32,
+      "text": "partition dp"
+    },
+    {
+      "start": 1184.72,
+      "duration": 4.48,
+      "end": 1189.2,
+      "text": "so now what i'll do is"
+    },
+    {
+      "start": 1186.32,
+      "duration": 4.88,
+      "end": 1191.2,
+      "text": "i will just go back uh to the code okay"
+    },
+    {
+      "start": 1189.2,
+      "duration": 4.24,
+      "end": 1193.44,
+      "text": "a cost to cut a chocolate"
+    },
+    {
+      "start": 1191.2,
+      "duration": 3.68,
+      "end": 1194.88,
+      "text": "and what are we given we are basically"
+    },
+    {
+      "start": 1193.44,
+      "duration": 4.4,
+      "end": 1197.8400000000001,
+      "text": "given n"
+    },
+    {
+      "start": 1194.88,
+      "duration": 4.64,
+      "end": 1199.5200000000002,
+      "text": "the c which is basically"
+    },
+    {
+      "start": 1197.84,
+      "duration": 3.44,
+      "end": 1201.28,
+      "text": "uh cuts of size c"
+    },
+    {
+      "start": 1199.52,
+      "duration": 4.48,
+      "end": 1204.0,
+      "text": "given an array so this is the size c and"
+    },
+    {
+      "start": 1201.28,
+      "duration": 5.759,
+      "end": 1207.039,
+      "text": "this is n okay perfect so"
+    },
+    {
+      "start": 1204.0,
+      "duration": 5.2,
+      "end": 1209.2,
+      "text": "what's the first thing that we always do"
+    },
+    {
+      "start": 1207.039,
+      "duration": 4.0,
+      "end": 1211.039,
+      "text": "remember this c is the size of the c so"
+    },
+    {
+      "start": 1209.2,
+      "duration": 4.24,
+      "end": 1213.44,
+      "text": "we know the function that will be called"
+    },
+    {
+      "start": 1211.039,
+      "duration": 4.64,
+      "end": 1215.679,
+      "text": "will be for the partition of one to c"
+    },
+    {
+      "start": 1213.44,
+      "duration": 4.64,
+      "end": 1218.0800000000002,
+      "text": "and we'll have the cuts"
+    },
+    {
+      "start": 1215.679,
+      "duration": 5.12,
+      "end": 1220.799,
+      "text": "and this n is the length of the stick"
+    },
+    {
+      "start": 1218.08,
+      "duration": 3.76,
+      "end": 1221.84,
+      "text": "so cuts dot push back is the length of"
+    },
+    {
+      "start": 1220.799,
+      "duration": 2.801,
+      "end": 1223.6,
+      "text": "the stick"
+    },
+    {
+      "start": 1221.84,
+      "duration": 3.28,
+      "end": 1225.12,
+      "text": "cuts dot push"
+    },
+    {
+      "start": 1223.6,
+      "duration": 2.4,
+      "end": 1226.0,
+      "text": "or rather insert at the front which is"
+    },
+    {
+      "start": 1225.12,
+      "duration": 1.84,
+      "end": 1226.9599999999998,
+      "text": "cuts"
+    },
+    {
+      "start": 1226.0,
+      "duration": 2.72,
+      "end": 1228.72,
+      "text": "dot"
+    },
+    {
+      "start": 1226.96,
+      "duration": 3.839,
+      "end": 1230.799,
+      "text": "begin"
+    },
+    {
+      "start": 1228.72,
+      "duration": 4.24,
+      "end": 1232.96,
+      "text": "right please insert at the front"
+    },
+    {
+      "start": 1230.799,
+      "duration": 3.601,
+      "end": 1234.4,
+      "text": "which will be easy and you can just sort"
+    },
+    {
+      "start": 1232.96,
+      "duration": 3.839,
+      "end": 1236.799,
+      "text": "it"
+    },
+    {
+      "start": 1234.4,
+      "duration": 2.399,
+      "end": 1236.799,
+      "text": "cuts"
+    },
+    {
+      "start": 1238.799,
+      "duration": 4.161,
+      "end": 1242.96,
+      "text": "to avoid complications i have inserted"
+    },
+    {
+      "start": 1241.28,
+      "duration": 3.759,
+      "end": 1245.039,
+      "text": "these couple of guys so that we can"
+    },
+    {
+      "start": 1242.96,
+      "duration": 3.839,
+      "end": 1246.799,
+      "text": "easily get the length is because we know"
+    },
+    {
+      "start": 1245.039,
+      "duration": 3.12,
+      "end": 1248.1589999999999,
+      "text": "the first partition the left partition"
+    },
+    {
+      "start": 1246.799,
+      "duration": 3.521,
+      "end": 1250.32,
+      "text": "initially will be at zero and the right"
+    },
+    {
+      "start": 1248.159,
+      "duration": 4.88,
+      "end": 1253.0390000000002,
+      "text": "partition initially will be at n that's"
+    },
+    {
+      "start": 1250.32,
+      "duration": 4.8,
+      "end": 1255.12,
+      "text": "why i have just inserted it make sure it"
+    },
+    {
+      "start": 1253.039,
+      "duration": 4.081,
+      "end": 1257.12,
+      "text": "is uh sorted because that is something"
+    },
+    {
+      "start": 1255.12,
+      "duration": 3.84,
+      "end": 1258.9599999999998,
+      "text": "which you have proved in order to make"
+    },
+    {
+      "start": 1257.12,
+      "duration": 3.36,
+      "end": 1260.4799999999998,
+      "text": "two sub problems independent we have to"
+    },
+    {
+      "start": 1258.96,
+      "duration": 3.52,
+      "end": 1262.48,
+      "text": "sort it okay so please make sure you"
+    },
+    {
+      "start": 1260.48,
+      "duration": 4.16,
+      "end": 1264.64,
+      "text": "sort it and we're using sort we know we"
+    },
+    {
+      "start": 1262.48,
+      "duration": 4.88,
+      "end": 1267.3600000000001,
+      "text": "have to use hashing clothes please add"
+    },
+    {
+      "start": 1264.64,
+      "duration": 2.72,
+      "end": 1267.3600000000001,
+      "text": "hash include"
+    },
+    {
+      "start": 1267.52,
+      "duration": 4.639,
+      "end": 1272.1589999999999,
+      "text": "because that has to include that now"
+    },
+    {
+      "start": 1268.96,
+      "duration": 6.16,
+      "end": 1275.1200000000001,
+      "text": "let's write f int a i"
+    },
+    {
+      "start": 1272.159,
+      "duration": 4.481,
+      "end": 1276.64,
+      "text": "intj and you can write vector of end of"
+    },
+    {
+      "start": 1275.12,
+      "duration": 3.2,
+      "end": 1278.32,
+      "text": "and cuts"
+    },
+    {
+      "start": 1276.64,
+      "duration": 3.279,
+      "end": 1279.919,
+      "text": "perfect and now what you'll do is you"
+    },
+    {
+      "start": 1278.32,
+      "duration": 3.92,
+      "end": 1282.24,
+      "text": "know if this exceeds you're going to"
+    },
+    {
+      "start": 1279.919,
+      "duration": 6.161,
+      "end": 1286.0800000000002,
+      "text": "return a zero"
+    },
+    {
+      "start": 1282.24,
+      "duration": 6.48,
+      "end": 1288.72,
+      "text": "and mini you can keep it as into max"
+    },
+    {
+      "start": 1286.08,
+      "duration": 4.56,
+      "end": 1290.6399999999999,
+      "text": "perfect and you know any of the indexes"
+    },
+    {
+      "start": 1288.72,
+      "duration": 4.16,
+      "end": 1292.88,
+      "text": "can be from this"
+    },
+    {
+      "start": 1290.64,
+      "duration": 4.56,
+      "end": 1295.2,
+      "text": "till this and index plus plus"
+    },
+    {
+      "start": 1292.88,
+      "duration": 3.919,
+      "end": 1296.7990000000002,
+      "text": "and the costing okay let's see if the"
+    },
+    {
+      "start": 1295.2,
+      "duration": 3.359,
+      "end": 1298.559,
+      "text": "constraints will"
+    },
+    {
+      "start": 1296.799,
+      "duration": 3.681,
+      "end": 1300.48,
+      "text": "again remember five to the power three"
+    },
+    {
+      "start": 1298.559,
+      "duration": 3.36,
+      "end": 1301.9189999999999,
+      "text": "even if i add up all of them"
+    },
+    {
+      "start": 1300.48,
+      "duration": 2.36,
+      "end": 1302.84,
+      "text": "it still works"
+    },
+    {
+      "start": 1301.919,
+      "duration": 2.481,
+      "end": 1304.4,
+      "text": "cuts"
+    },
+    {
+      "start": 1302.84,
+      "duration": 2.52,
+      "end": 1305.36,
+      "text": "off"
+    },
+    {
+      "start": 1304.4,
+      "duration": 2.32,
+      "end": 1306.72,
+      "text": "this"
+    },
+    {
+      "start": 1305.36,
+      "duration": 3.76,
+      "end": 1309.12,
+      "text": "cuts of this"
+    },
+    {
+      "start": 1306.72,
+      "duration": 4.319,
+      "end": 1311.039,
+      "text": "perfect plus"
+    },
+    {
+      "start": 1309.12,
+      "duration": 3.2,
+      "end": 1312.32,
+      "text": "the left one which is i have index minus"
+    },
+    {
+      "start": 1311.039,
+      "duration": 3.12,
+      "end": 1314.1589999999999,
+      "text": "one cuts"
+    },
+    {
+      "start": 1312.32,
+      "duration": 4.239,
+      "end": 1316.559,
+      "text": "plus the right one which is index plus"
+    },
+    {
+      "start": 1314.159,
+      "duration": 4.64,
+      "end": 1318.7990000000002,
+      "text": "one comma j comma cuts"
+    },
+    {
+      "start": 1316.559,
+      "duration": 5.36,
+      "end": 1321.9189999999999,
+      "text": "perfect and you can say mini equal to"
+    },
+    {
+      "start": 1318.799,
+      "duration": 5.681,
+      "end": 1324.48,
+      "text": "minimal of mini comma cost"
+    },
+    {
+      "start": 1321.919,
+      "duration": 3.601,
+      "end": 1325.5200000000002,
+      "text": "and you can just return"
+    },
+    {
+      "start": 1324.48,
+      "duration": 4.559,
+      "end": 1329.039,
+      "text": "mini"
+    },
+    {
+      "start": 1325.52,
+      "duration": 4.96,
+      "end": 1330.48,
+      "text": "amazing so that is how you will be doing"
+    },
+    {
+      "start": 1329.039,
+      "duration": 3.361,
+      "end": 1332.4,
+      "text": "this let's quickly check if you have"
+    },
+    {
+      "start": 1330.48,
+      "duration": 3.36,
+      "end": 1333.84,
+      "text": "done any mistake i don't think so"
+    },
+    {
+      "start": 1332.4,
+      "duration": 3.36,
+      "end": 1335.76,
+      "text": "let's run this off and see if this is"
+    },
+    {
+      "start": 1333.84,
+      "duration": 4.319,
+      "end": 1338.1589999999999,
+      "text": "running fine"
+    },
+    {
+      "start": 1335.76,
+      "duration": 4.399,
+      "end": 1340.1589999999999,
+      "text": "it does give me some issue okay"
+    },
+    {
+      "start": 1338.159,
+      "duration": 4.0,
+      "end": 1342.159,
+      "text": "looks like we have okay over here we"
+    },
+    {
+      "start": 1340.159,
+      "duration": 3.841,
+      "end": 1344.0,
+      "text": "have an issue okay it is giving me"
+    },
+    {
+      "start": 1342.159,
+      "duration": 4.481,
+      "end": 1346.64,
+      "text": "correct answer and definitely this is"
+    },
+    {
+      "start": 1344.0,
+      "duration": 4.559,
+      "end": 1348.559,
+      "text": "recursion this is recursion so"
+    },
+    {
+      "start": 1346.64,
+      "duration": 3.279,
+      "end": 1349.919,
+      "text": "i have already taught you in all the"
+    },
+    {
+      "start": 1348.559,
+      "duration": 4.48,
+      "end": 1353.039,
+      "text": "previous lectures"
+    },
+    {
+      "start": 1349.919,
+      "duration": 5.681,
+      "end": 1355.6000000000001,
+      "text": "if you are doing something as recursion"
+    },
+    {
+      "start": 1353.039,
+      "duration": 4.481,
+      "end": 1357.52,
+      "text": "what is the time complexity it's going"
+    },
+    {
+      "start": 1355.6,
+      "duration": 3.84,
+      "end": 1359.4399999999998,
+      "text": "to be exponential because"
+    },
+    {
+      "start": 1357.52,
+      "duration": 3.68,
+      "end": 1361.2,
+      "text": "you're trying out all partitions and"
+    },
+    {
+      "start": 1359.44,
+      "duration": 3.2,
+      "end": 1362.64,
+      "text": "that's going to take a lot of time so"
+    },
+    {
+      "start": 1361.2,
+      "duration": 3.599,
+      "end": 1364.799,
+      "text": "you know"
+    },
+    {
+      "start": 1362.64,
+      "duration": 4.159,
+      "end": 1366.7990000000002,
+      "text": "in order to optimize this there's only"
+    },
+    {
+      "start": 1364.799,
+      "duration": 4.641,
+      "end": 1369.44,
+      "text": "one way recursions i've been teaching"
+    },
+    {
+      "start": 1366.799,
+      "duration": 5.441,
+      "end": 1372.24,
+      "text": "that throughout the entire db playlist"
+    },
+    {
+      "start": 1369.44,
+      "duration": 5.04,
+      "end": 1374.48,
+      "text": "memo iation and how do you do memoration"
+    },
+    {
+      "start": 1372.24,
+      "duration": 4.24,
+      "end": 1376.48,
+      "text": "you look at the changing parameters we"
+    },
+    {
+      "start": 1374.48,
+      "duration": 3.52,
+      "end": 1378.0,
+      "text": "have one parameter as i have another"
+    },
+    {
+      "start": 1376.48,
+      "duration": 4.079,
+      "end": 1380.559,
+      "text": "parameter as j"
+    },
+    {
+      "start": 1378.0,
+      "duration": 6.32,
+      "end": 1384.32,
+      "text": "so i can be from one to n"
+    },
+    {
+      "start": 1380.559,
+      "duration": 6.081,
+      "end": 1386.6399999999999,
+      "text": "or other one to the size of the cuts"
+    },
+    {
+      "start": 1384.32,
+      "duration": 5.599,
+      "end": 1389.9189999999999,
+      "text": "size of the cuts and j can also be from"
+    },
+    {
+      "start": 1386.64,
+      "duration": 5.44,
+      "end": 1392.0800000000002,
+      "text": "one to cuts so can i say uh the dp will"
+    },
+    {
+      "start": 1389.919,
+      "duration": 3.76,
+      "end": 1393.679,
+      "text": "be the size of the cuts like the size of"
+    },
+    {
+      "start": 1392.08,
+      "duration": 4.0,
+      "end": 1396.08,
+      "text": "the cuts array"
+    },
+    {
+      "start": 1393.679,
+      "duration": 4.48,
+      "end": 1398.159,
+      "text": "call it m"
+    },
+    {
+      "start": 1396.08,
+      "duration": 3.52,
+      "end": 1399.6,
+      "text": "that's it this will be the dp size just"
+    },
+    {
+      "start": 1398.159,
+      "duration": 2.64,
+      "end": 1400.7990000000002,
+      "text": "look at the changing parameter have it"
+    },
+    {
+      "start": 1399.6,
+      "duration": 4.0,
+      "end": 1403.6,
+      "text": "on the dp"
+    },
+    {
+      "start": 1400.799,
+      "duration": 4.88,
+      "end": 1405.679,
+      "text": "and right on the code over here you'll"
+    },
+    {
+      "start": 1403.6,
+      "duration": 4.559,
+      "end": 1408.1589999999999,
+      "text": "see dp of i j"
+    },
+    {
+      "start": 1405.679,
+      "duration": 5.521,
+      "end": 1411.2,
+      "text": "equal to whatever mini you make"
+    },
+    {
+      "start": 1408.159,
+      "duration": 5.52,
+      "end": 1413.679,
+      "text": "and right over here you insert a line if"
+    },
+    {
+      "start": 1411.2,
+      "duration": 4.08,
+      "end": 1415.28,
+      "text": "this state has been previously visited"
+    },
+    {
+      "start": 1413.679,
+      "duration": 2.801,
+      "end": 1416.48,
+      "text": "that's it so if you just write these"
+    },
+    {
+      "start": 1415.28,
+      "duration": 3.84,
+      "end": 1419.12,
+      "text": "couple of lines"
+    },
+    {
+      "start": 1416.48,
+      "duration": 4.4,
+      "end": 1420.88,
+      "text": "i think you should be able to"
+    },
+    {
+      "start": 1419.12,
+      "duration": 3.439,
+      "end": 1422.559,
+      "text": "solve this so what i'll do is i'll just"
+    },
+    {
+      "start": 1420.88,
+      "duration": 3.76,
+      "end": 1424.64,
+      "text": "keep a vector vector"
+    },
+    {
+      "start": 1422.559,
+      "duration": 3.761,
+      "end": 1426.32,
+      "text": "in"
+    },
+    {
+      "start": 1424.64,
+      "duration": 4.2,
+      "end": 1428.8400000000001,
+      "text": "dp off"
+    },
+    {
+      "start": 1426.32,
+      "duration": 6.32,
+      "end": 1432.6399999999999,
+      "text": "definitely c plus 1"
+    },
+    {
+      "start": 1428.84,
+      "duration": 3.8,
+      "end": 1432.6399999999999,
+      "text": "cuts vector in"
+    },
+    {
+      "start": 1434.24,
+      "duration": 4.559,
+      "end": 1438.799,
+      "text": "c plus one of minus one amazing now you"
+    },
+    {
+      "start": 1436.96,
+      "duration": 5.839,
+      "end": 1442.799,
+      "text": "can just take this dp"
+    },
+    {
+      "start": 1438.799,
+      "duration": 5.841,
+      "end": 1444.6399999999999,
+      "text": "and uh just copy paste this"
+    },
+    {
+      "start": 1442.799,
+      "duration": 4.0,
+      "end": 1446.799,
+      "text": "and you can say and of dp"
+    },
+    {
+      "start": 1444.64,
+      "duration": 4.159,
+      "end": 1448.7990000000002,
+      "text": "and over here you can say dp of i j"
+    },
+    {
+      "start": 1446.799,
+      "duration": 4.961,
+      "end": 1451.76,
+      "text": "equal to this and right away you can say"
+    },
+    {
+      "start": 1448.799,
+      "duration": 6.641,
+      "end": 1455.44,
+      "text": "db of i j is not equal to minus one you"
+    },
+    {
+      "start": 1451.76,
+      "duration": 5.84,
+      "end": 1457.6,
+      "text": "can return dp of i j amazing so over"
+    },
+    {
+      "start": 1455.44,
+      "duration": 4.0,
+      "end": 1459.44,
+      "text": "here just make sure you pass dp"
+    },
+    {
+      "start": 1457.6,
+      "duration": 3.28,
+      "end": 1460.8799999999999,
+      "text": "over here pass dp and now you can just"
+    },
+    {
+      "start": 1459.44,
+      "duration": 2.88,
+      "end": 1462.3200000000002,
+      "text": "run this"
+    },
+    {
+      "start": 1460.88,
+      "duration": 3.279,
+      "end": 1464.159,
+      "text": "so if you run this"
+    },
+    {
+      "start": 1462.32,
+      "duration": 3.28,
+      "end": 1465.6,
+      "text": "this should be running fine yeah this is"
+    },
+    {
+      "start": 1464.159,
+      "duration": 2.64,
+      "end": 1466.7990000000002,
+      "text": "and if i submit this you'll see this is"
+    },
+    {
+      "start": 1465.6,
+      "duration": 3.92,
+      "end": 1469.52,
+      "text": "giving you an"
+    },
+    {
+      "start": 1466.799,
+      "duration": 4.041,
+      "end": 1470.84,
+      "text": "accepted answer"
+    },
+    {
+      "start": 1469.52,
+      "duration": 3.759,
+      "end": 1473.279,
+      "text": "i hope it"
+    },
+    {
+      "start": 1470.84,
+      "duration": 3.24,
+      "end": 1474.08,
+      "text": "does it does it does"
+    },
+    {
+      "start": 1473.279,
+      "duration": 3.121,
+      "end": 1476.4,
+      "text": "so"
+    },
+    {
+      "start": 1474.08,
+      "duration": 5.28,
+      "end": 1479.36,
+      "text": "what is the time complexity"
+    },
+    {
+      "start": 1476.4,
+      "duration": 4.159,
+      "end": 1480.5590000000002,
+      "text": "two changing variables of c plus one and"
+    },
+    {
+      "start": 1479.36,
+      "duration": 2.72,
+      "end": 1482.08,
+      "text": "c plus one"
+    },
+    {
+      "start": 1480.559,
+      "duration": 3.841,
+      "end": 1484.3999999999999,
+      "text": "c square"
+    },
+    {
+      "start": 1482.08,
+      "duration": 4.88,
+      "end": 1486.96,
+      "text": "and a for loop c cube"
+    },
+    {
+      "start": 1484.4,
+      "duration": 5.12,
+      "end": 1489.52,
+      "text": "two changing parameters will yield to n"
+    },
+    {
+      "start": 1486.96,
+      "duration": 4.16,
+      "end": 1491.1200000000001,
+      "text": "square number of states"
+    },
+    {
+      "start": 1489.52,
+      "duration": 4.8,
+      "end": 1494.32,
+      "text": "actually changing like if i discuss the"
+    },
+    {
+      "start": 1491.12,
+      "duration": 3.2,
+      "end": 1494.32,
+      "text": "time complexity"
+    },
+    {
+      "start": 1494.88,
+      "duration": 2.399,
+      "end": 1497.279,
+      "text": "let me just quickly write the time"
+    },
+    {
+      "start": 1496.0,
+      "duration": 3.039,
+      "end": 1499.039,
+      "text": "complexity"
+    },
+    {
+      "start": 1497.279,
+      "duration": 4.4,
+      "end": 1501.679,
+      "text": "true changing parameters i and j will"
+    },
+    {
+      "start": 1499.039,
+      "duration": 4.64,
+      "end": 1503.679,
+      "text": "give you n square or cut square"
+    },
+    {
+      "start": 1501.679,
+      "duration": 3.841,
+      "end": 1505.52,
+      "text": "m square into"
+    },
+    {
+      "start": 1503.679,
+      "duration": 3.681,
+      "end": 1507.3600000000001,
+      "text": "another looping variable which is near"
+    },
+    {
+      "start": 1505.52,
+      "duration": 3.519,
+      "end": 1509.039,
+      "text": "about m cube"
+    },
+    {
+      "start": 1507.36,
+      "duration": 3.919,
+      "end": 1511.279,
+      "text": "space complexity"
+    },
+    {
+      "start": 1509.039,
+      "duration": 5.681,
+      "end": 1514.72,
+      "text": "big o of m square for the"
+    },
+    {
+      "start": 1511.279,
+      "duration": 5.28,
+      "end": 1516.559,
+      "text": "array and auxiliary stack space"
+    },
+    {
+      "start": 1514.72,
+      "duration": 2.72,
+      "end": 1517.44,
+      "text": "and i'm not interested in this stack"
+    },
+    {
+      "start": 1516.559,
+      "duration": 1.6,
+      "end": 1518.1589999999999,
+      "text": "space"
+    },
+    {
+      "start": 1517.44,
+      "duration": 2.4,
+      "end": 1519.8400000000001,
+      "text": "so"
+    },
+    {
+      "start": 1518.159,
+      "duration": 3.041,
+      "end": 1521.2,
+      "text": "how do you optimize this"
+    },
+    {
+      "start": 1519.84,
+      "duration": 3.36,
+      "end": 1523.1999999999998,
+      "text": "tabulation"
+    },
+    {
+      "start": 1521.2,
+      "duration": 4.079,
+      "end": 1525.279,
+      "text": "tabulation is the way to optimize this"
+    },
+    {
+      "start": 1523.2,
+      "duration": 3.92,
+      "end": 1527.1200000000001,
+      "text": "establishing is the way and how i talk"
+    },
+    {
+      "start": 1525.279,
+      "duration": 3.52,
+      "end": 1528.799,
+      "text": "to your tabulation"
+    },
+    {
+      "start": 1527.12,
+      "duration": 3.039,
+      "end": 1530.1589999999999,
+      "text": "copy the base case"
+    },
+    {
+      "start": 1528.799,
+      "duration": 3.76,
+      "end": 1532.559,
+      "text": "step one"
+    },
+    {
+      "start": 1530.159,
+      "duration": 5.441,
+      "end": 1535.6000000000001,
+      "text": "copy the base case"
+    },
+    {
+      "start": 1532.559,
+      "duration": 4.48,
+      "end": 1537.039,
+      "text": "write down the changing parameters"
+    },
+    {
+      "start": 1535.6,
+      "duration": 4.64,
+      "end": 1540.24,
+      "text": "in opposite"
+    },
+    {
+      "start": 1537.039,
+      "duration": 3.201,
+      "end": 1540.24,
+      "text": "copy the recurrence"
+    },
+    {
+      "start": 1541.36,
+      "duration": 4.799,
+      "end": 1546.1589999999999,
+      "text": "so if i go and copy the base case do i"
+    },
+    {
+      "start": 1544.159,
+      "duration": 3.441,
+      "end": 1547.6000000000001,
+      "text": "have a base case i do have what is the"
+    },
+    {
+      "start": 1546.159,
+      "duration": 3.921,
+      "end": 1550.0800000000002,
+      "text": "base case let's go back"
+    },
+    {
+      "start": 1547.6,
+      "duration": 5.76,
+      "end": 1553.36,
+      "text": "it's i greater than zero it's i greater"
+    },
+    {
+      "start": 1550.08,
+      "duration": 4.56,
+      "end": 1554.6399999999999,
+      "text": "than zero it's zero only so"
+    },
+    {
+      "start": 1553.36,
+      "duration": 2.319,
+      "end": 1555.6789999999999,
+      "text": "instead of doing anything what you can"
+    },
+    {
+      "start": 1554.64,
+      "duration": 3.519,
+      "end": 1558.159,
+      "text": "do is"
+    },
+    {
+      "start": 1555.679,
+      "duration": 6.88,
+      "end": 1562.5590000000002,
+      "text": "you can just declare a dp of c plus one"
+    },
+    {
+      "start": 1558.159,
+      "duration": 4.4,
+      "end": 1562.5590000000002,
+      "text": "and c plus one and make it entirely zero"
+    },
+    {
+      "start": 1563.279,
+      "duration": 4.321,
+      "end": 1567.6,
+      "text": "two changing variables"
+    },
+    {
+      "start": 1565.279,
+      "duration": 6.0,
+      "end": 1571.279,
+      "text": "where is i being called just go and look"
+    },
+    {
+      "start": 1567.6,
+      "duration": 5.92,
+      "end": 1573.52,
+      "text": "you're calling it from one comma n this"
+    },
+    {
+      "start": 1571.279,
+      "duration": 4.0,
+      "end": 1575.279,
+      "text": "is your i this is your j you're calling"
+    },
+    {
+      "start": 1573.52,
+      "duration": 4.399,
+      "end": 1577.9189999999999,
+      "text": "i from one"
+    },
+    {
+      "start": 1575.279,
+      "duration": 4.4,
+      "end": 1579.679,
+      "text": "this is this happens to go like this"
+    },
+    {
+      "start": 1577.919,
+      "duration": 4.0,
+      "end": 1581.919,
+      "text": "so i will go from"
+    },
+    {
+      "start": 1579.679,
+      "duration": 4.721,
+      "end": 1584.4,
+      "text": "one to n in recursion"
+    },
+    {
+      "start": 1581.919,
+      "duration": 4.24,
+      "end": 1586.159,
+      "text": "i will go from one to n in recursion"
+    },
+    {
+      "start": 1584.4,
+      "duration": 4.48,
+      "end": 1588.88,
+      "text": "so in tabulation it will be opposite"
+    },
+    {
+      "start": 1586.159,
+      "duration": 5.681,
+      "end": 1591.8400000000001,
+      "text": "because tabulation is bottom up you take"
+    },
+    {
+      "start": 1588.88,
+      "duration": 3.919,
+      "end": 1592.7990000000002,
+      "text": "those bottom answers and you compute it"
+    },
+    {
+      "start": 1591.84,
+      "duration": 4.88,
+      "end": 1596.72,
+      "text": "so"
+    },
+    {
+      "start": 1592.799,
+      "duration": 6.401,
+      "end": 1599.2,
+      "text": "n to 1 what will be j j is going from n"
+    },
+    {
+      "start": 1596.72,
+      "duration": 3.76,
+      "end": 1600.48,
+      "text": "shrink j is end to one so i'll take it"
+    },
+    {
+      "start": 1599.2,
+      "duration": 3.359,
+      "end": 1602.559,
+      "text": "from opposite"
+    },
+    {
+      "start": 1600.48,
+      "duration": 5.12,
+      "end": 1605.6,
+      "text": "just you have to write it in opposite"
+    },
+    {
+      "start": 1602.559,
+      "duration": 5.441,
+      "end": 1608.0,
+      "text": "make sure tabulation is writing in"
+    },
+    {
+      "start": 1605.6,
+      "duration": 4.319,
+      "end": 1609.9189999999999,
+      "text": "opposite so take it from one to n and"
+    },
+    {
+      "start": 1608.0,
+      "duration": 4.0,
+      "end": 1612.0,
+      "text": "then copy the recurrence as the last"
+    },
+    {
+      "start": 1609.919,
+      "duration": 4.481,
+      "end": 1614.4,
+      "text": "thing that you will do so if you have"
+    },
+    {
+      "start": 1612.0,
+      "duration": 4.96,
+      "end": 1616.96,
+      "text": "followed the dp series entirely you know"
+    },
+    {
+      "start": 1614.4,
+      "duration": 4.32,
+      "end": 1618.72,
+      "text": "this pattern i've taught you how to make"
+    },
+    {
+      "start": 1616.96,
+      "duration": 3.28,
+      "end": 1620.24,
+      "text": "tabulation easy so if you know this"
+    },
+    {
+      "start": 1618.72,
+      "duration": 3.36,
+      "end": 1622.08,
+      "text": "pattern it is it's going to be a"
+    },
+    {
+      "start": 1620.24,
+      "duration": 3.76,
+      "end": 1624.0,
+      "text": "cakewalk stuff don't worry about that so"
+    },
+    {
+      "start": 1622.08,
+      "duration": 3.92,
+      "end": 1626.0,
+      "text": "what i'll do is i'll get back here i'll"
+    },
+    {
+      "start": 1624.0,
+      "duration": 3.44,
+      "end": 1627.44,
+      "text": "get back to the code and we'll keep"
+    },
+    {
+      "start": 1626.0,
+      "duration": 3.279,
+      "end": 1629.279,
+      "text": "everything the same this will make this"
+    },
+    {
+      "start": 1627.44,
+      "duration": 3.359,
+      "end": 1630.799,
+      "text": "as zero yeah"
+    },
+    {
+      "start": 1629.279,
+      "duration": 4.161,
+      "end": 1633.44,
+      "text": "the dp will be zero"
+    },
+    {
+      "start": 1630.799,
+      "duration": 5.041,
+      "end": 1635.84,
+      "text": "and let's write the same thing so no"
+    },
+    {
+      "start": 1633.44,
+      "duration": 3.68,
+      "end": 1637.1200000000001,
+      "text": "base case so the changing parameters"
+    },
+    {
+      "start": 1635.84,
+      "duration": 3.36,
+      "end": 1639.1999999999998,
+      "text": "will be written in opposite so please"
+    },
+    {
+      "start": 1637.12,
+      "duration": 3.84,
+      "end": 1640.9599999999998,
+      "text": "make sure you write it in opposite"
+    },
+    {
+      "start": 1639.2,
+      "duration": 4.64,
+      "end": 1643.8400000000001,
+      "text": "which is this"
+    },
+    {
+      "start": 1640.96,
+      "duration": 4.8,
+      "end": 1645.76,
+      "text": "and then you write intj intj in opposite"
+    },
+    {
+      "start": 1643.84,
+      "duration": 4.079,
+      "end": 1647.9189999999999,
+      "text": "again j less than equal to n and j plus"
+    },
+    {
+      "start": 1645.76,
+      "duration": 5.279,
+      "end": 1651.039,
+      "text": "plus perfect you know the base case is"
+    },
+    {
+      "start": 1647.919,
+      "duration": 4.321,
+      "end": 1652.24,
+      "text": "this which will be zero always so"
+    },
+    {
+      "start": 1651.039,
+      "duration": 2.88,
+      "end": 1653.919,
+      "text": "you can say this we don't need to"
+    },
+    {
+      "start": 1652.24,
+      "duration": 3.28,
+      "end": 1655.52,
+      "text": "perform because already everything is"
+    },
+    {
+      "start": 1653.919,
+      "duration": 2.561,
+      "end": 1656.48,
+      "text": "assigned to zero"
+    },
+    {
+      "start": 1655.52,
+      "duration": 4.879,
+      "end": 1660.399,
+      "text": "copy"
+    },
+    {
+      "start": 1656.48,
+      "duration": 6.64,
+      "end": 1663.1200000000001,
+      "text": "every stuff over here copy the reference"
+    },
+    {
+      "start": 1660.399,
+      "duration": 5.041,
+      "end": 1665.4399999999998,
+      "text": "so just copy paste the reference see how"
+    },
+    {
+      "start": 1663.12,
+      "duration": 4.24,
+      "end": 1667.36,
+      "text": "sorry see how easy it is let's copy"
+    },
+    {
+      "start": 1665.44,
+      "duration": 3.119,
+      "end": 1668.559,
+      "text": "paste it the reference i removed the"
+    },
+    {
+      "start": 1667.36,
+      "duration": 2.319,
+      "end": 1669.6789999999999,
+      "text": "written"
+    },
+    {
+      "start": 1668.559,
+      "duration": 4.401,
+      "end": 1672.96,
+      "text": "over here"
+    },
+    {
+      "start": 1669.679,
+      "duration": 5.12,
+      "end": 1674.799,
+      "text": "dp of index plus 1"
+    },
+    {
+      "start": 1672.96,
+      "duration": 3.28,
+      "end": 1676.24,
+      "text": "j"
+    },
+    {
+      "start": 1674.799,
+      "duration": 2.161,
+      "end": 1676.96,
+      "text": "so yeah that's what the first thing i'll"
+    },
+    {
+      "start": 1676.24,
+      "duration": 3.28,
+      "end": 1679.52,
+      "text": "do"
+    },
+    {
+      "start": 1676.96,
+      "duration": 4.319,
+      "end": 1681.279,
+      "text": "over here dp of if index minus 1"
+    },
+    {
+      "start": 1679.52,
+      "duration": 4.0,
+      "end": 1683.52,
+      "text": "dp of i of"
+    },
+    {
+      "start": 1681.279,
+      "duration": 4.0,
+      "end": 1685.279,
+      "text": "index minus 1 is what i will do okay"
+    },
+    {
+      "start": 1683.52,
+      "duration": 3.68,
+      "end": 1687.2,
+      "text": "perfect so what i've done is i've taken"
+    },
+    {
+      "start": 1685.279,
+      "duration": 3.681,
+      "end": 1688.96,
+      "text": "the left and the right"
+    },
+    {
+      "start": 1687.2,
+      "duration": 3.12,
+      "end": 1690.32,
+      "text": "and i've taken this and this will be dp"
+    },
+    {
+      "start": 1688.96,
+      "duration": 3.92,
+      "end": 1692.88,
+      "text": "of 1c"
+    },
+    {
+      "start": 1690.32,
+      "duration": 3.92,
+      "end": 1694.24,
+      "text": "dp of 1 c now something very important"
+    },
+    {
+      "start": 1692.88,
+      "duration": 2.64,
+      "end": 1695.5200000000002,
+      "text": "to understand"
+    },
+    {
+      "start": 1694.24,
+      "duration": 4.4,
+      "end": 1698.64,
+      "text": "over here"
+    },
+    {
+      "start": 1695.52,
+      "duration": 5.6,
+      "end": 1701.12,
+      "text": "if j is j is at a moment taking index"
+    },
+    {
+      "start": 1698.64,
+      "duration": 4.56,
+      "end": 1703.2,
+      "text": "minus one and if i is n"
+    },
+    {
+      "start": 1701.12,
+      "duration": 2.799,
+      "end": 1703.9189999999999,
+      "text": "it's still taking i plus one index plus"
+    },
+    {
+      "start": 1703.2,
+      "duration": 3.359,
+      "end": 1706.559,
+      "text": "one"
+    },
+    {
+      "start": 1703.919,
+      "duration": 4.801,
+      "end": 1708.72,
+      "text": "okay so n plus one might go n plus one"
+    },
+    {
+      "start": 1706.559,
+      "duration": 4.0,
+      "end": 1710.559,
+      "text": "as index so this will be c plus two just"
+    },
+    {
+      "start": 1708.72,
+      "duration": 4.0,
+      "end": 1712.72,
+      "text": "make sure for safety take it c plus 2"
+    },
+    {
+      "start": 1710.559,
+      "duration": 4.72,
+      "end": 1715.279,
+      "text": "because index plus 1"
+    },
+    {
+      "start": 1712.72,
+      "duration": 4.0,
+      "end": 1716.72,
+      "text": "when i is n will tend to"
+    },
+    {
+      "start": 1715.279,
+      "duration": 4.081,
+      "end": 1719.36,
+      "text": "give you a runtime error so if you have"
+    },
+    {
+      "start": 1716.72,
+      "duration": 4.319,
+      "end": 1721.039,
+      "text": "done this try running this and you will"
+    },
+    {
+      "start": 1719.36,
+      "duration": 3.6,
+      "end": 1722.9599999999998,
+      "text": "see that this is indeed giving you the"
+    },
+    {
+      "start": 1721.039,
+      "duration": 3.36,
+      "end": 1724.399,
+      "text": "correct answer oh it did not"
+    },
+    {
+      "start": 1722.96,
+      "duration": 3.839,
+      "end": 1726.799,
+      "text": "why it did not let's quickly check why"
+    },
+    {
+      "start": 1724.399,
+      "duration": 5.041,
+      "end": 1729.4399999999998,
+      "text": "it is giving you a runtime error"
+    },
+    {
+      "start": 1726.799,
+      "duration": 4.24,
+      "end": 1731.039,
+      "text": "because they've taken the cause uh cuts"
+    },
+    {
+      "start": 1729.44,
+      "duration": 4.0,
+      "end": 1733.44,
+      "text": "okay by the way it will not be n my bad"
+    },
+    {
+      "start": 1731.039,
+      "duration": 3.601,
+      "end": 1734.64,
+      "text": "it'll be from c and it'll be from c"
+    },
+    {
+      "start": 1733.44,
+      "duration": 3.44,
+      "end": 1736.88,
+      "text": "because"
+    },
+    {
+      "start": 1734.64,
+      "duration": 4.32,
+      "end": 1738.96,
+      "text": "n is basically uh"
+    },
+    {
+      "start": 1736.88,
+      "duration": 3.36,
+      "end": 1740.24,
+      "text": "the size of the cuts array the size of"
+    },
+    {
+      "start": 1738.96,
+      "duration": 3.68,
+      "end": 1742.64,
+      "text": "the cuts array so it will be very"
+    },
+    {
+      "start": 1740.24,
+      "duration": 5.76,
+      "end": 1746.0,
+      "text": "important that you take it lc okay cool"
+    },
+    {
+      "start": 1742.64,
+      "duration": 3.36,
+      "end": 1746.0,
+      "text": "uh now it should be fine"
+    },
+    {
+      "start": 1746.24,
+      "duration": 3.84,
+      "end": 1750.08,
+      "text": "yeah it is fine now and if you submit"
+    },
+    {
+      "start": 1748.159,
+      "duration": 4.321,
+      "end": 1752.48,
+      "text": "this it will give you the correct answer"
+    },
+    {
+      "start": 1750.08,
+      "duration": 4.479,
+      "end": 1754.559,
+      "text": "time complexity definitely n cube space"
+    },
+    {
+      "start": 1752.48,
+      "duration": 3.84,
+      "end": 1756.32,
+      "text": "complexity is definitely n square"
+    },
+    {
+      "start": 1754.559,
+      "duration": 4.0,
+      "end": 1758.559,
+      "text": "where n is basically the cut size array"
+    },
+    {
+      "start": 1756.32,
+      "duration": 4.64,
+      "end": 1760.96,
+      "text": "and there's no auxiliary stack space"
+    },
+    {
+      "start": 1758.559,
+      "duration": 5.201,
+      "end": 1763.76,
+      "text": "so guys i hope i was able to explain you"
+    },
+    {
+      "start": 1760.96,
+      "duration": 4.56,
+      "end": 1765.52,
+      "text": "this a hard problem so thank you guys"
+    },
+    {
+      "start": 1763.76,
+      "duration": 3.36,
+      "end": 1767.12,
+      "text": "for watching this video till the end so"
+    },
+    {
+      "start": 1765.52,
+      "duration": 3.2,
+      "end": 1768.72,
+      "text": "just in case you have liked this video"
+    },
+    {
+      "start": 1767.12,
+      "duration": 2.799,
+      "end": 1769.9189999999999,
+      "text": "please make sure you give a like to this"
+    },
+    {
+      "start": 1768.72,
+      "duration": 3.36,
+      "end": 1772.08,
+      "text": "and if you're new to the channel please"
+    },
+    {
+      "start": 1769.919,
+      "duration": 3.921,
+      "end": 1773.8400000000001,
+      "text": "please do consider subscribing to us and"
+    },
+    {
+      "start": 1772.08,
+      "duration": 3.599,
+      "end": 1775.6789999999999,
+      "text": "yeah it is the season of appraisal so"
+    },
+    {
+      "start": 1773.84,
+      "duration": 3.04,
+      "end": 1776.8799999999999,
+      "text": "what are you waiting for download the"
+    },
+    {
+      "start": 1775.679,
+      "duration": 4.321,
+      "end": 1780.0,
+      "text": "hi-rec tab from the link in the"
+    },
+    {
+      "start": 1776.88,
+      "duration": 4.96,
+      "end": 1781.8400000000001,
+      "text": "description and yes one more thing you"
+    },
+    {
+      "start": 1780.0,
+      "duration": 3.84,
+      "end": 1783.84,
+      "text": "get one lakh twenty thousand plus"
+    },
+    {
+      "start": 1781.84,
+      "duration": 3.92,
+      "end": 1785.76,
+      "text": "startups in the hierarch app and there"
+    },
+    {
+      "start": 1783.84,
+      "duration": 2.88,
+      "end": 1786.72,
+      "text": "is no consultancies so what are you"
+    },
+    {
+      "start": 1785.76,
+      "duration": 2.74,
+      "end": 1788.5,
+      "text": "waiting for there's a link in the"
+    },
+    {
+      "start": 1786.72,
+      "duration": 4.839,
+      "end": 1791.559,
+      "text": "description make sure you"
+    },
+    {
+      "start": 1788.5,
+      "duration": 3.059,
+      "end": 1791.559,
+      "text": "[Music]"
+    },
+    {
+      "start": 1792.96,
+      "duration": 9.93,
+      "end": 1802.89,
+      "text": "whenever your download is broken"
+    },
+    {
+      "start": 1797.26,
+      "duration": 5.63,
+      "end": 1802.89,
+      "text": "[Music]"
+    }
+  ]
+}

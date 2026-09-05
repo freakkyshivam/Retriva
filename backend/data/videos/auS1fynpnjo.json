@@ -1,0 +1,2540 @@
+{
+  "position": 236,
+  "video_id": "auS1fynpnjo",
+  "title": "DP 56. Count Square Submatrices with All Ones | DP on Rectangles 🔥",
+  "url": "https://www.youtube.com/watch?v=auS1fynpnjo",
+  "transcript": [
+    {
+      "start": 0.0,
+      "duration": 2.879,
+      "end": 2.879,
+      "text": "hey everyone welcome back to take you"
+    },
+    {
+      "start": 1.199,
+      "duration": 3.841,
+      "end": 5.04,
+      "text": "forward so today we will be solving the"
+    },
+    {
+      "start": 2.879,
+      "duration": 4.641,
+      "end": 7.52,
+      "text": "problem count number of square sub"
+    },
+    {
+      "start": 5.04,
+      "duration": 4.96,
+      "end": 10.0,
+      "text": "matrices yes what does the question"
+    },
+    {
+      "start": 7.52,
+      "duration": 6.159,
+      "end": 13.678999999999998,
+      "text": "state you will be given an n cross m"
+    },
+    {
+      "start": 10.0,
+      "duration": 6.0,
+      "end": 16.0,
+      "text": "matrix filled up with one and zeros okay"
+    },
+    {
+      "start": 13.679,
+      "duration": 5.201,
+      "end": 18.88,
+      "text": "i have to figure out how many square sub"
+    },
+    {
+      "start": 16.0,
+      "duration": 5.52,
+      "end": 21.52,
+      "text": "matrixes are there what is square whose"
+    },
+    {
+      "start": 18.88,
+      "duration": 6.239,
+      "end": 25.119,
+      "text": "length is equal to the breadth right so"
+    },
+    {
+      "start": 21.52,
+      "duration": 6.16,
+      "end": 27.68,
+      "text": "for an example i can say we have"
+    },
+    {
+      "start": 25.119,
+      "duration": 3.92,
+      "end": 29.039,
+      "text": "a size 1 square here a size 1 square"
+    },
+    {
+      "start": 27.68,
+      "duration": 3.839,
+      "end": 31.519,
+      "text": "here"
+    },
+    {
+      "start": 29.039,
+      "duration": 5.36,
+      "end": 34.399,
+      "text": "so i can say there are six"
+    },
+    {
+      "start": 31.519,
+      "duration": 6.801,
+      "end": 38.32,
+      "text": "size one squares can i say that i"
+    },
+    {
+      "start": 34.399,
+      "duration": 3.921,
+      "end": 38.32,
+      "text": "definitely can how many uh"
+    },
+    {
+      "start": 38.399,
+      "duration": 6.0,
+      "end": 44.399,
+      "text": "two size squares are there"
+    },
+    {
+      "start": 40.64,
+      "duration": 5.12,
+      "end": 45.76,
+      "text": "then uh that can be this only like i can"
+    },
+    {
+      "start": 44.399,
+      "duration": 2.241,
+      "end": 46.64,
+      "text": "see just"
+    },
+    {
+      "start": 45.76,
+      "duration": 2.479,
+      "end": 48.239,
+      "text": "one"
+    },
+    {
+      "start": 46.64,
+      "duration": 3.759,
+      "end": 50.399,
+      "text": "size 2 square"
+    },
+    {
+      "start": 48.239,
+      "duration": 5.681,
+      "end": 53.919999999999995,
+      "text": "do i have a size 3 square the answer to"
+    },
+    {
+      "start": 50.399,
+      "duration": 5.361,
+      "end": 55.76,
+      "text": "that is no so in total i have"
+    },
+    {
+      "start": 53.92,
+      "duration": 5.04,
+      "end": 58.96,
+      "text": "7 squares"
+    },
+    {
+      "start": 55.76,
+      "duration": 8.88,
+      "end": 64.64,
+      "text": "in total i have seven squares in this"
+    },
+    {
+      "start": 58.96,
+      "duration": 8.24,
+      "end": 67.2,
+      "text": "particular n cross m mattress okay uh"
+    },
+    {
+      "start": 64.64,
+      "duration": 5.44,
+      "end": 70.08,
+      "text": "so in total i have seven square in this"
+    },
+    {
+      "start": 67.2,
+      "duration": 5.12,
+      "end": 72.32000000000001,
+      "text": "particular matrix now let's uh check out"
+    },
+    {
+      "start": 70.08,
+      "duration": 4.56,
+      "end": 74.64,
+      "text": "for this how many do you think i know"
+    },
+    {
+      "start": 72.32,
+      "duration": 6.24,
+      "end": 78.55999999999999,
+      "text": "one thing for sure we have"
+    },
+    {
+      "start": 74.64,
+      "duration": 8.08,
+      "end": 82.72,
+      "text": "one two three four five six"
+    },
+    {
+      "start": 78.56,
+      "duration": 7.84,
+      "end": 86.4,
+      "text": "seven eight nine ten we know"
+    },
+    {
+      "start": 82.72,
+      "duration": 5.36,
+      "end": 88.08,
+      "text": "ten size one squares are definitely"
+    },
+    {
+      "start": 86.4,
+      "duration": 3.359,
+      "end": 89.759,
+      "text": "there how many"
+    },
+    {
+      "start": 88.08,
+      "duration": 4.24,
+      "end": 92.32,
+      "text": "two sides are there let's quickly check"
+    },
+    {
+      "start": 89.759,
+      "duration": 5.121,
+      "end": 94.88,
+      "text": "that out as well we know one is here for"
+    },
+    {
+      "start": 92.32,
+      "duration": 4.32,
+      "end": 96.63999999999999,
+      "text": "sure we know one is here for sure we"
+    },
+    {
+      "start": 94.88,
+      "duration": 3.84,
+      "end": 98.72,
+      "text": "know one is here for sure we know one is"
+    },
+    {
+      "start": 96.64,
+      "duration": 4.159,
+      "end": 100.799,
+      "text": "here for sure so there is"
+    },
+    {
+      "start": 98.72,
+      "duration": 4.88,
+      "end": 103.6,
+      "text": "four size"
+    },
+    {
+      "start": 100.799,
+      "duration": 6.161,
+      "end": 106.96000000000001,
+      "text": "two squares that's something for sure"
+    },
+    {
+      "start": 103.6,
+      "duration": 4.479,
+      "end": 108.079,
+      "text": "how many uh do we have as three i can"
+    },
+    {
+      "start": 106.96,
+      "duration": 3.92,
+      "end": 110.88,
+      "text": "see uh"
+    },
+    {
+      "start": 108.079,
+      "duration": 5.121,
+      "end": 113.19999999999999,
+      "text": "do we have a three size square yes this"
+    },
+    {
+      "start": 110.88,
+      "duration": 4.239,
+      "end": 115.119,
+      "text": "is the three size square that we only"
+    },
+    {
+      "start": 113.2,
+      "duration": 3.519,
+      "end": 116.71900000000001,
+      "text": "have so we have a"
+    },
+    {
+      "start": 115.119,
+      "duration": 2.881,
+      "end": 118.0,
+      "text": "one"
+    },
+    {
+      "start": 116.719,
+      "duration": 2.961,
+      "end": 119.67999999999999,
+      "text": "size"
+    },
+    {
+      "start": 118.0,
+      "duration": 3.92,
+      "end": 121.92,
+      "text": "three squares"
+    },
+    {
+      "start": 119.68,
+      "duration": 5.68,
+      "end": 125.36000000000001,
+      "text": "so in short i have"
+    },
+    {
+      "start": 121.92,
+      "duration": 6.88,
+      "end": 128.8,
+      "text": "15 total squares that is the question i"
+    },
+    {
+      "start": 125.36,
+      "duration": 5.76,
+      "end": 131.12,
+      "text": "will be giving you an n cross m matrix"
+    },
+    {
+      "start": 128.8,
+      "duration": 5.12,
+      "end": 133.92000000000002,
+      "text": "you have to tell me the total number of"
+    },
+    {
+      "start": 131.12,
+      "duration": 6.4,
+      "end": 137.52,
+      "text": "sub matrices which are squares it can be"
+    },
+    {
+      "start": 133.92,
+      "duration": 6.88,
+      "end": 140.79999999999998,
+      "text": "of size 1 size 2 size 3 can be of any"
+    },
+    {
+      "start": 137.52,
+      "duration": 5.92,
+      "end": 143.44,
+      "text": "particular size so how do you approach"
+    },
+    {
+      "start": 140.8,
+      "duration": 4.56,
+      "end": 145.36,
+      "text": "this problem but definitely uh like if"
+    },
+    {
+      "start": 143.44,
+      "duration": 3.439,
+      "end": 146.879,
+      "text": "this question comes up in an interview"
+    },
+    {
+      "start": 145.36,
+      "duration": 3.519,
+      "end": 148.87900000000002,
+      "text": "you say that you're gonna try out the"
+    },
+    {
+      "start": 146.879,
+      "duration": 5.041,
+      "end": 151.92,
+      "text": "brute force solution and it's very"
+    },
+    {
+      "start": 148.879,
+      "duration": 5.841,
+      "end": 154.72,
+      "text": "simple you basically stand here and you"
+    },
+    {
+      "start": 151.92,
+      "duration": 5.92,
+      "end": 157.83999999999997,
+      "text": "say okay uh this guy can be"
+    },
+    {
+      "start": 154.72,
+      "duration": 5.519,
+      "end": 160.239,
+      "text": "one square this guy can be 2 squared"
+    },
+    {
+      "start": 157.84,
+      "duration": 4.16,
+      "end": 162.0,
+      "text": "this guy can be 3 square so there can be"
+    },
+    {
+      "start": 160.239,
+      "duration": 4.161,
+      "end": 164.4,
+      "text": "3 squares then you stand here you say"
+    },
+    {
+      "start": 162.0,
+      "duration": 4.16,
+      "end": 166.16,
+      "text": "this guy can be 1 square this guy can be"
+    },
+    {
+      "start": 164.4,
+      "duration": 3.839,
+      "end": 168.239,
+      "text": "2 square similarly you stand here you"
+    },
+    {
+      "start": 166.16,
+      "duration": 4.48,
+      "end": 170.64,
+      "text": "say this guy can only be 1 square stand"
+    },
+    {
+      "start": 168.239,
+      "duration": 6.0,
+      "end": 174.239,
+      "text": "here one square"
+    },
+    {
+      "start": 170.64,
+      "duration": 5.92,
+      "end": 176.55999999999997,
+      "text": "only two square stand here one square"
+    },
+    {
+      "start": 174.239,
+      "duration": 4.961,
+      "end": 179.20000000000002,
+      "text": "two square so probably you can just"
+    },
+    {
+      "start": 176.56,
+      "duration": 4.64,
+      "end": 181.2,
+      "text": "run across some for loops and that will"
+    },
+    {
+      "start": 179.2,
+      "duration": 3.92,
+      "end": 183.11999999999998,
+      "text": "be your brute force where you just keep"
+    },
+    {
+      "start": 181.2,
+      "duration": 4.64,
+      "end": 185.83999999999997,
+      "text": "on expanding like you basically stand"
+    },
+    {
+      "start": 183.12,
+      "duration": 5.119,
+      "end": 188.239,
+      "text": "here and you try expanding to this then"
+    },
+    {
+      "start": 185.84,
+      "duration": 4.56,
+      "end": 190.4,
+      "text": "you from here try expanding to this"
+    },
+    {
+      "start": 188.239,
+      "duration": 4.321,
+      "end": 192.56,
+      "text": "and that is only possible if these guys"
+    },
+    {
+      "start": 190.4,
+      "duration": 4.0,
+      "end": 194.4,
+      "text": "are one this expansion is only possible"
+    },
+    {
+      "start": 192.56,
+      "duration": 4.319,
+      "end": 196.879,
+      "text": "if these guys are one so you need to"
+    },
+    {
+      "start": 194.4,
+      "duration": 3.36,
+      "end": 197.76000000000002,
+      "text": "have a proper check which is again going"
+    },
+    {
+      "start": 196.879,
+      "duration": 4.0,
+      "end": 200.879,
+      "text": "to be"
+    },
+    {
+      "start": 197.76,
+      "duration": 4.64,
+      "end": 202.39999999999998,
+      "text": "slightly complicated so like this in"
+    },
+    {
+      "start": 200.879,
+      "duration": 3.36,
+      "end": 204.239,
+      "text": "shorter you don't have to code it in an"
+    },
+    {
+      "start": 202.4,
+      "duration": 3.44,
+      "end": 205.84,
+      "text": "interview you just have to say that this"
+    },
+    {
+      "start": 204.239,
+      "duration": 3.28,
+      "end": 207.519,
+      "text": "is what i'm thinking they'll not ask you"
+    },
+    {
+      "start": 205.84,
+      "duration": 3.6,
+      "end": 209.44,
+      "text": "to code it because the code will be very"
+    },
+    {
+      "start": 207.519,
+      "duration": 3.681,
+      "end": 211.20000000000002,
+      "text": "very complex that's a brute force"
+    },
+    {
+      "start": 209.44,
+      "duration": 3.68,
+      "end": 213.12,
+      "text": "solution where you stand at a particular"
+    },
+    {
+      "start": 211.2,
+      "duration": 4.88,
+      "end": 216.07999999999998,
+      "text": "stuff and you try to expand it"
+    },
+    {
+      "start": 213.12,
+      "duration": 5.759,
+      "end": 218.87900000000002,
+      "text": "but can we do better uh yes we can do"
+    },
+    {
+      "start": 216.08,
+      "duration": 5.68,
+      "end": 221.76000000000002,
+      "text": "better and that is where something like"
+    },
+    {
+      "start": 218.879,
+      "duration": 4.561,
+      "end": 223.44,
+      "text": "dynamic programming will come in yes"
+    },
+    {
+      "start": 221.76,
+      "duration": 4.399,
+      "end": 226.159,
+      "text": "till now all the dynamic programming"
+    },
+    {
+      "start": 223.44,
+      "duration": 5.439,
+      "end": 228.879,
+      "text": "solutions that we have done was based on"
+    },
+    {
+      "start": 226.159,
+      "duration": 5.041,
+      "end": 231.2,
+      "text": "recursion okay was based on recursion"
+    },
+    {
+      "start": 228.879,
+      "duration": 4.72,
+      "end": 233.599,
+      "text": "over here we can apply recursion but"
+    },
+    {
+      "start": 231.2,
+      "duration": 4.8,
+      "end": 236.0,
+      "text": "that is not intuitive"
+    },
+    {
+      "start": 233.599,
+      "duration": 4.961,
+      "end": 238.56,
+      "text": "generically in all square problems we"
+    },
+    {
+      "start": 236.0,
+      "duration": 4.64,
+      "end": 240.64,
+      "text": "tend to write the tabulation"
+    },
+    {
+      "start": 238.56,
+      "duration": 3.679,
+      "end": 242.239,
+      "text": "we tend to write the tabulation that is"
+    },
+    {
+      "start": 240.64,
+      "duration": 3.2,
+      "end": 243.83999999999997,
+      "text": "much more intuitive and you'll"
+    },
+    {
+      "start": 242.239,
+      "duration": 3.601,
+      "end": 245.84,
+      "text": "understand why is that much more"
+    },
+    {
+      "start": 243.84,
+      "duration": 4.479,
+      "end": 248.31900000000002,
+      "text": "intuitive we will try to write the"
+    },
+    {
+      "start": 245.84,
+      "duration": 4.24,
+      "end": 250.08,
+      "text": "tabulation format so what we do is"
+    },
+    {
+      "start": 248.319,
+      "duration": 3.441,
+      "end": 251.76,
+      "text": "generally in all the square problems"
+    },
+    {
+      "start": 250.08,
+      "duration": 4.719,
+      "end": 254.799,
+      "text": "there are not many like there are only"
+    },
+    {
+      "start": 251.76,
+      "duration": 4.96,
+      "end": 256.71999999999997,
+      "text": "couple or three square problems"
+    },
+    {
+      "start": 254.799,
+      "duration": 3.68,
+      "end": 258.479,
+      "text": "so what you do is you create the similar"
+    },
+    {
+      "start": 256.72,
+      "duration": 4.4,
+      "end": 261.12,
+      "text": "size dp array okay"
+    },
+    {
+      "start": 258.479,
+      "duration": 3.6,
+      "end": 262.079,
+      "text": "try to create the similar size dp array"
+    },
+    {
+      "start": 261.12,
+      "duration": 2.639,
+      "end": 263.759,
+      "text": "and"
+    },
+    {
+      "start": 262.079,
+      "duration": 5.761,
+      "end": 267.84000000000003,
+      "text": "what you state is"
+    },
+    {
+      "start": 263.759,
+      "duration": 6.401,
+      "end": 270.16,
+      "text": "dp of i j like 0 1 2 0 1 2 okay now"
+    },
+    {
+      "start": 267.84,
+      "duration": 4.16,
+      "end": 272.0,
+      "text": "whatever value is here that basically"
+    },
+    {
+      "start": 270.16,
+      "duration": 4.88,
+      "end": 275.04,
+      "text": "states"
+    },
+    {
+      "start": 272.0,
+      "duration": 3.04,
+      "end": 275.04,
+      "text": "how many squares"
+    },
+    {
+      "start": 275.36,
+      "duration": 3.279,
+      "end": 278.639,
+      "text": "how many squares"
+    },
+    {
+      "start": 280.16,
+      "duration": 6.8,
+      "end": 286.96000000000004,
+      "text": "end at i comma j like the right bottom"
+    },
+    {
+      "start": 283.84,
+      "duration": 6.079,
+      "end": 289.919,
+      "text": "the right bottom is at i j"
+    },
+    {
+      "start": 286.96,
+      "duration": 5.44,
+      "end": 292.4,
+      "text": "the right bottom is at i j how many are"
+    },
+    {
+      "start": 289.919,
+      "duration": 5.601,
+      "end": 295.52,
+      "text": "there whose right bottom is at i j"
+    },
+    {
+      "start": 292.4,
+      "duration": 5.2,
+      "end": 297.59999999999997,
+      "text": "for an example if i ask for this guy how"
+    },
+    {
+      "start": 295.52,
+      "duration": 3.36,
+      "end": 298.88,
+      "text": "many guys are there like how many"
+    },
+    {
+      "start": 297.6,
+      "duration": 2.4,
+      "end": 300.0,
+      "text": "squares will"
+    },
+    {
+      "start": 298.88,
+      "duration": 2.96,
+      "end": 301.84,
+      "text": "end at"
+    },
+    {
+      "start": 300.0,
+      "duration": 4.08,
+      "end": 304.08,
+      "text": "this guy being the right bottle i can"
+    },
+    {
+      "start": 301.84,
+      "duration": 4.639,
+      "end": 306.479,
+      "text": "say only he himself so there'll be only"
+    },
+    {
+      "start": 304.08,
+      "duration": 4.399,
+      "end": 308.479,
+      "text": "one guy who will say that i will be the"
+    },
+    {
+      "start": 306.479,
+      "duration": 3.201,
+      "end": 309.68,
+      "text": "right bottom which is this guy"
+    },
+    {
+      "start": 308.479,
+      "duration": 2.801,
+      "end": 311.28,
+      "text": "for this guy"
+    },
+    {
+      "start": 309.68,
+      "duration": 2.88,
+      "end": 312.56,
+      "text": "this cannot be a square because this is"
+    },
+    {
+      "start": 311.28,
+      "duration": 3.04,
+      "end": 314.32,
+      "text": "a rectangle"
+    },
+    {
+      "start": 312.56,
+      "duration": 3.76,
+      "end": 316.32,
+      "text": "only this guy is the right bottom of"
+    },
+    {
+      "start": 314.32,
+      "duration": 3.36,
+      "end": 317.68,
+      "text": "himself so again one"
+    },
+    {
+      "start": 316.32,
+      "duration": 2.8,
+      "end": 319.12,
+      "text": "for this guy"
+    },
+    {
+      "start": 317.68,
+      "duration": 3.68,
+      "end": 321.36,
+      "text": "this guy himself will be the right"
+    },
+    {
+      "start": 319.12,
+      "duration": 4.88,
+      "end": 324.0,
+      "text": "bottom because this is a rectangle this"
+    },
+    {
+      "start": 321.36,
+      "duration": 4.88,
+      "end": 326.24,
+      "text": "is a rectangle so this guy will be the"
+    },
+    {
+      "start": 324.0,
+      "duration": 4.32,
+      "end": 328.32,
+      "text": "bottom guy so that's one again"
+    },
+    {
+      "start": 326.24,
+      "duration": 4.399,
+      "end": 330.639,
+      "text": "similarly for this guy this will be a"
+    },
+    {
+      "start": 328.32,
+      "duration": 4.0,
+      "end": 332.32,
+      "text": "rectangle so he himself will be the"
+    },
+    {
+      "start": 330.639,
+      "duration": 4.241,
+      "end": 334.88,
+      "text": "right bottom"
+    },
+    {
+      "start": 332.32,
+      "duration": 4.24,
+      "end": 336.56,
+      "text": "one for himself again for this guy he"
+    },
+    {
+      "start": 334.88,
+      "duration": 3.92,
+      "end": 338.8,
+      "text": "himself will be the right bottom so one"
+    },
+    {
+      "start": 336.56,
+      "duration": 5.84,
+      "end": 342.4,
+      "text": "for himself so i'm definitely sure that"
+    },
+    {
+      "start": 338.8,
+      "duration": 4.56,
+      "end": 343.36,
+      "text": "this row and this column gets copied"
+    },
+    {
+      "start": 342.4,
+      "duration": 2.72,
+      "end": 345.12,
+      "text": "because"
+    },
+    {
+      "start": 343.36,
+      "duration": 4.399,
+      "end": 347.759,
+      "text": "there is the single elements that are"
+    },
+    {
+      "start": 345.12,
+      "duration": 4.24,
+      "end": 349.36,
+      "text": "single elements who will be the square"
+    },
+    {
+      "start": 347.759,
+      "duration": 3.44,
+      "end": 351.199,
+      "text": "so if i ask you"
+    },
+    {
+      "start": 349.36,
+      "duration": 3.679,
+      "end": 353.039,
+      "text": "this guy will be the right bottom for"
+    },
+    {
+      "start": 351.199,
+      "duration": 3.44,
+      "end": 354.639,
+      "text": "how many squares"
+    },
+    {
+      "start": 353.039,
+      "duration": 4.081,
+      "end": 357.12,
+      "text": "one square is"
+    },
+    {
+      "start": 354.639,
+      "duration": 4.641,
+      "end": 359.28000000000003,
+      "text": "one square is he himself"
+    },
+    {
+      "start": 357.12,
+      "duration": 3.28,
+      "end": 360.4,
+      "text": "one square is he himself where he's the"
+    },
+    {
+      "start": 359.28,
+      "duration": 3.44,
+      "end": 362.71999999999997,
+      "text": "right bottom"
+    },
+    {
+      "start": 360.4,
+      "duration": 4.799,
+      "end": 365.19899999999996,
+      "text": "the other one is this where he is the"
+    },
+    {
+      "start": 362.72,
+      "duration": 4.4,
+      "end": 367.12,
+      "text": "right most bottom guy"
+    },
+    {
+      "start": 365.199,
+      "duration": 4.641,
+      "end": 369.84000000000003,
+      "text": "one is he himself and he's the right"
+    },
+    {
+      "start": 367.12,
+      "duration": 5.04,
+      "end": 372.16,
+      "text": "most bottom guy the other square is he"
+    },
+    {
+      "start": 369.84,
+      "duration": 4.4,
+      "end": 374.23999999999995,
+      "text": "where he's the right bottom guy so i can"
+    },
+    {
+      "start": 372.16,
+      "duration": 4.0,
+      "end": 376.16,
+      "text": "probably put in a two over here"
+    },
+    {
+      "start": 374.24,
+      "duration": 4.56,
+      "end": 378.8,
+      "text": "if i ask for this"
+    },
+    {
+      "start": 376.16,
+      "duration": 4.96,
+      "end": 381.12,
+      "text": "one he is himself where he is the right"
+    },
+    {
+      "start": 378.8,
+      "duration": 4.72,
+      "end": 383.52000000000004,
+      "text": "bottom guy the other is"
+    },
+    {
+      "start": 381.12,
+      "duration": 4.24,
+      "end": 385.36,
+      "text": "this portion where"
+    },
+    {
+      "start": 383.52,
+      "duration": 4.08,
+      "end": 387.59999999999997,
+      "text": "this is the right bottom again so again"
+    },
+    {
+      "start": 385.36,
+      "duration": 2.24,
+      "end": 387.6,
+      "text": "two"
+    },
+    {
+      "start": 388.0,
+      "duration": 3.12,
+      "end": 391.12,
+      "text": "for this"
+    },
+    {
+      "start": 389.36,
+      "duration": 3.36,
+      "end": 392.72,
+      "text": "he himself"
+    },
+    {
+      "start": 391.12,
+      "duration": 3.359,
+      "end": 394.479,
+      "text": "and this is the other one"
+    },
+    {
+      "start": 392.72,
+      "duration": 4.0,
+      "end": 396.72,
+      "text": "now beyond this this cannot be because"
+    },
+    {
+      "start": 394.479,
+      "duration": 3.361,
+      "end": 397.84,
+      "text": "this rectangle i'm looking for square he"
+    },
+    {
+      "start": 396.72,
+      "duration": 3.12,
+      "end": 399.84000000000003,
+      "text": "himself"
+    },
+    {
+      "start": 397.84,
+      "duration": 4.799,
+      "end": 402.63899999999995,
+      "text": "and in this he"
+    },
+    {
+      "start": 399.84,
+      "duration": 2.799,
+      "end": 402.63899999999995,
+      "text": "so again too"
+    },
+    {
+      "start": 402.88,
+      "duration": 4.56,
+      "end": 407.44,
+      "text": "now for this"
+    },
+    {
+      "start": 404.16,
+      "duration": 5.2,
+      "end": 409.36,
+      "text": "i can say he himself"
+    },
+    {
+      "start": 407.44,
+      "duration": 3.44,
+      "end": 410.88,
+      "text": "this here"
+    },
+    {
+      "start": 409.36,
+      "duration": 3.92,
+      "end": 413.28000000000003,
+      "text": "and the entire"
+    },
+    {
+      "start": 410.88,
+      "duration": 3.28,
+      "end": 414.15999999999997,
+      "text": "again himself so there are three one is"
+    },
+    {
+      "start": 413.28,
+      "duration": 2.16,
+      "end": 415.44,
+      "text": "this"
+    },
+    {
+      "start": 414.16,
+      "duration": 3.36,
+      "end": 417.52000000000004,
+      "text": "one is this"
+    },
+    {
+      "start": 415.44,
+      "duration": 4.4,
+      "end": 419.84,
+      "text": "one is this in which this guy is the"
+    },
+    {
+      "start": 417.52,
+      "duration": 3.28,
+      "end": 420.79999999999995,
+      "text": "right bottom so there are three"
+    },
+    {
+      "start": 419.84,
+      "duration": 2.639,
+      "end": 422.479,
+      "text": "so"
+    },
+    {
+      "start": 420.8,
+      "duration": 4.56,
+      "end": 425.36,
+      "text": "i know"
+    },
+    {
+      "start": 422.479,
+      "duration": 5.681,
+      "end": 428.15999999999997,
+      "text": "at every junction i have one square"
+    },
+    {
+      "start": 425.36,
+      "duration": 4.559,
+      "end": 429.91900000000004,
+      "text": "i have one i have one i have one this"
+    },
+    {
+      "start": 428.16,
+      "duration": 3.84,
+      "end": 432.0,
+      "text": "can be a part of two this can be a part"
+    },
+    {
+      "start": 429.919,
+      "duration": 4.081,
+      "end": 434.0,
+      "text": "of two this can be a part of one so how"
+    },
+    {
+      "start": 432.0,
+      "duration": 4.8,
+      "end": 436.8,
+      "text": "do i fill up this dp table is my"
+    },
+    {
+      "start": 434.0,
+      "duration": 4.639,
+      "end": 438.639,
+      "text": "question because i know for every guy"
+    },
+    {
+      "start": 436.8,
+      "duration": 4.399,
+      "end": 441.199,
+      "text": "how many squares are there and i need"
+    },
+    {
+      "start": 438.639,
+      "duration": 6.0,
+      "end": 444.639,
+      "text": "the total so i can probably do 1 plus 1"
+    },
+    {
+      "start": 441.199,
+      "duration": 6.641,
+      "end": 447.84000000000003,
+      "text": "plus 1 plus 2 plus 2 plus 1 plus 2 plus"
+    },
+    {
+      "start": 444.639,
+      "duration": 5.84,
+      "end": 450.479,
+      "text": "3 if i sum sum it up all i'll get all"
+    },
+    {
+      "start": 447.84,
+      "duration": 4.32,
+      "end": 452.15999999999997,
+      "text": "the squares that we can form because we"
+    },
+    {
+      "start": 450.479,
+      "duration": 4.0,
+      "end": 454.479,
+      "text": "are assuming every guy to be the square"
+    },
+    {
+      "start": 452.16,
+      "duration": 4.56,
+      "end": 456.72,
+      "text": "bot like the right bottom so but how do"
+    },
+    {
+      "start": 454.479,
+      "duration": 4.321,
+      "end": 458.8,
+      "text": "we fill up this dp table because"
+    },
+    {
+      "start": 456.72,
+      "duration": 4.8,
+      "end": 461.52000000000004,
+      "text": "manually looking we understand that okay"
+    },
+    {
+      "start": 458.8,
+      "duration": 5.28,
+      "end": 464.08,
+      "text": "this guy is a portion of he himself"
+    },
+    {
+      "start": 461.52,
+      "duration": 4.799,
+      "end": 466.31899999999996,
+      "text": "again for this again for this but how do"
+    },
+    {
+      "start": 464.08,
+      "duration": 5.28,
+      "end": 469.35999999999996,
+      "text": "you actually fill this up that is that"
+    },
+    {
+      "start": 466.319,
+      "duration": 4.481,
+      "end": 470.8,
+      "text": "is a point to be raised"
+    },
+    {
+      "start": 469.36,
+      "duration": 3.76,
+      "end": 473.12,
+      "text": "so for that what i'll do is i'll take"
+    },
+    {
+      "start": 470.8,
+      "duration": 3.519,
+      "end": 474.319,
+      "text": "the next square okay and try to fill"
+    },
+    {
+      "start": 473.12,
+      "duration": 5.359,
+      "end": 478.479,
+      "text": "this up"
+    },
+    {
+      "start": 474.319,
+      "duration": 7.841,
+      "end": 482.16,
+      "text": "and see if we are able to fill this"
+    },
+    {
+      "start": 478.479,
+      "duration": 5.761,
+      "end": 484.24,
+      "text": "okay now as i said the first row will be"
+    },
+    {
+      "start": 482.16,
+      "duration": 4.0,
+      "end": 486.16,
+      "text": "they themselves the first column will be"
+    },
+    {
+      "start": 484.24,
+      "duration": 4.16,
+      "end": 488.40000000000003,
+      "text": "they themselves so you don't need to do"
+    },
+    {
+      "start": 486.16,
+      "duration": 5.12,
+      "end": 491.28000000000003,
+      "text": "anything you just replicate them"
+    },
+    {
+      "start": 488.4,
+      "duration": 4.0,
+      "end": 492.4,
+      "text": "just go across and replicate them now"
+    },
+    {
+      "start": 491.28,
+      "duration": 2.479,
+      "end": 493.75899999999996,
+      "text": "over here"
+    },
+    {
+      "start": 492.4,
+      "duration": 4.88,
+      "end": 497.28,
+      "text": "can i see"
+    },
+    {
+      "start": 493.759,
+      "duration": 6.0,
+      "end": 499.759,
+      "text": "if this guy is forming one square"
+    },
+    {
+      "start": 497.28,
+      "duration": 5.52,
+      "end": 502.79999999999995,
+      "text": "this guy is forming one square this guy"
+    },
+    {
+      "start": 499.759,
+      "duration": 5.041,
+      "end": 504.8,
+      "text": "is forming one square if i add a one"
+    },
+    {
+      "start": 502.8,
+      "duration": 4.32,
+      "end": 507.12,
+      "text": "that's bound to form one more square"
+    },
+    {
+      "start": 504.8,
+      "duration": 3.119,
+      "end": 507.91900000000004,
+      "text": "it's bound for one more square"
+    },
+    {
+      "start": 507.12,
+      "duration": 3.28,
+      "end": 510.4,
+      "text": "okay"
+    },
+    {
+      "start": 507.919,
+      "duration": 4.321,
+      "end": 512.24,
+      "text": "so that's two"
+    },
+    {
+      "start": 510.4,
+      "duration": 3.439,
+      "end": 513.8389999999999,
+      "text": "over here"
+    },
+    {
+      "start": 512.24,
+      "duration": 3.279,
+      "end": 515.519,
+      "text": "this guy is forming"
+    },
+    {
+      "start": 513.839,
+      "duration": 3.841,
+      "end": 517.6800000000001,
+      "text": "a single square"
+    },
+    {
+      "start": 515.519,
+      "duration": 3.281,
+      "end": 518.8,
+      "text": "this guy is forming"
+    },
+    {
+      "start": 517.68,
+      "duration": 3.2,
+      "end": 520.88,
+      "text": "two square"
+    },
+    {
+      "start": 518.8,
+      "duration": 3.359,
+      "end": 522.159,
+      "text": "but if it attaches this this will be a"
+    },
+    {
+      "start": 520.88,
+      "duration": 5.519,
+      "end": 526.399,
+      "text": "rectangle"
+    },
+    {
+      "start": 522.159,
+      "duration": 6.8,
+      "end": 528.959,
+      "text": "and this guy is forming a single square"
+    },
+    {
+      "start": 526.399,
+      "duration": 4.0,
+      "end": 530.399,
+      "text": "so can i say i don't need to take this"
+    },
+    {
+      "start": 528.959,
+      "duration": 3.921,
+      "end": 532.88,
+      "text": "tool i don't need to take this too"
+    },
+    {
+      "start": 530.399,
+      "duration": 5.281,
+      "end": 535.68,
+      "text": "because this on attaching will be a"
+    },
+    {
+      "start": 532.88,
+      "duration": 4.639,
+      "end": 537.519,
+      "text": "rectangle but what i can do is since"
+    },
+    {
+      "start": 535.68,
+      "duration": 4.0,
+      "end": 539.68,
+      "text": "this is a single square"
+    },
+    {
+      "start": 537.519,
+      "duration": 5.121,
+      "end": 542.64,
+      "text": "this is a single square and i'm very"
+    },
+    {
+      "start": 539.68,
+      "duration": 5.279,
+      "end": 544.959,
+      "text": "much sure if this is forming a 2 square"
+    },
+    {
+      "start": 542.64,
+      "duration": 4.639,
+      "end": 547.279,
+      "text": "this will also form a single square"
+    },
+    {
+      "start": 544.959,
+      "duration": 3.921,
+      "end": 548.88,
+      "text": "thereby can i say i'll take the minimal"
+    },
+    {
+      "start": 547.279,
+      "duration": 5.041,
+      "end": 552.32,
+      "text": "of this"
+    },
+    {
+      "start": 548.88,
+      "duration": 5.76,
+      "end": 554.64,
+      "text": "this this and do a plus one for him he"
+    },
+    {
+      "start": 552.32,
+      "duration": 4.72,
+      "end": 557.0400000000001,
+      "text": "himself so that will be a two i hope you"
+    },
+    {
+      "start": 554.64,
+      "duration": 3.36,
+      "end": 558.0,
+      "text": "understood because because again let's"
+    },
+    {
+      "start": 557.04,
+      "duration": 3.04,
+      "end": 560.0799999999999,
+      "text": "repeat"
+    },
+    {
+      "start": 558.0,
+      "duration": 4.48,
+      "end": 562.48,
+      "text": "we had a two which means we were having"
+    },
+    {
+      "start": 560.08,
+      "duration": 4.96,
+      "end": 565.0400000000001,
+      "text": "two squares which were ending here and"
+    },
+    {
+      "start": 562.48,
+      "duration": 4.0,
+      "end": 566.48,
+      "text": "if i expand this we cannot have because"
+    },
+    {
+      "start": 565.04,
+      "duration": 3.44,
+      "end": 568.48,
+      "text": "it's a rectangle"
+    },
+    {
+      "start": 566.48,
+      "duration": 4.24,
+      "end": 570.72,
+      "text": "thereby it's very important we take the"
+    },
+    {
+      "start": 568.48,
+      "duration": 4.32,
+      "end": 572.8000000000001,
+      "text": "minimal of all of these because the"
+    },
+    {
+      "start": 570.72,
+      "duration": 3.84,
+      "end": 574.5600000000001,
+      "text": "minimal is important over here if this"
+    },
+    {
+      "start": 572.8,
+      "duration": 3.92,
+      "end": 576.7199999999999,
+      "text": "is forming one square this is forming"
+    },
+    {
+      "start": 574.56,
+      "duration": 4.48,
+      "end": 579.04,
+      "text": "one square and this is forming two"
+    },
+    {
+      "start": 576.72,
+      "duration": 4.239,
+      "end": 580.9590000000001,
+      "text": "square then it's bound that we take this"
+    },
+    {
+      "start": 579.04,
+      "duration": 4.239,
+      "end": 583.279,
+      "text": "because this two will also form one"
+    },
+    {
+      "start": 580.959,
+      "duration": 4.481,
+      "end": 585.4399999999999,
+      "text": "that's why a two comes in over here okay"
+    },
+    {
+      "start": 583.279,
+      "duration": 5.601,
+      "end": 588.88,
+      "text": "now again we are coming over here"
+    },
+    {
+      "start": 585.44,
+      "duration": 5.68,
+      "end": 591.12,
+      "text": "same logic a one is here a one is here"
+    },
+    {
+      "start": 588.88,
+      "duration": 5.28,
+      "end": 594.16,
+      "text": "and then there is two which means i can"
+    },
+    {
+      "start": 591.12,
+      "duration": 5.52,
+      "end": 596.64,
+      "text": "form two squares one is this the other"
+    },
+    {
+      "start": 594.16,
+      "duration": 4.72,
+      "end": 598.88,
+      "text": "one is this but if i expand this this"
+    },
+    {
+      "start": 596.64,
+      "duration": 5.04,
+      "end": 601.68,
+      "text": "cannot be three squares because this can"
+    },
+    {
+      "start": 598.88,
+      "duration": 5.28,
+      "end": 604.16,
+      "text": "just be one and this can be two so"
+    },
+    {
+      "start": 601.68,
+      "duration": 4.159,
+      "end": 605.8389999999999,
+      "text": "thereby again the minimal and i'll fill"
+    },
+    {
+      "start": 604.16,
+      "duration": 3.679,
+      "end": 607.8389999999999,
+      "text": "in with two perfect"
+    },
+    {
+      "start": 605.839,
+      "duration": 5.041,
+      "end": 610.8800000000001,
+      "text": "similarly over here we have a two which"
+    },
+    {
+      "start": 607.839,
+      "duration": 5.041,
+      "end": 612.8800000000001,
+      "text": "means there is one square he"
+    },
+    {
+      "start": 610.88,
+      "duration": 3.6,
+      "end": 614.48,
+      "text": "and the other square he that's y two and"
+    },
+    {
+      "start": 612.88,
+      "duration": 3.68,
+      "end": 616.56,
+      "text": "there is again one which means one"
+    },
+    {
+      "start": 614.48,
+      "duration": 4.16,
+      "end": 618.64,
+      "text": "himself again one which means one"
+    },
+    {
+      "start": 616.56,
+      "duration": 5.2,
+      "end": 621.76,
+      "text": "himself so can i say again the minimal"
+    },
+    {
+      "start": 618.64,
+      "duration": 3.92,
+      "end": 622.56,
+      "text": "of all and i'll just fill up"
+    },
+    {
+      "start": 621.76,
+      "duration": 3.199,
+      "end": 624.959,
+      "text": "two"
+    },
+    {
+      "start": 622.56,
+      "duration": 3.68,
+      "end": 626.2399999999999,
+      "text": "and over here"
+    },
+    {
+      "start": 624.959,
+      "duration": 4.641,
+      "end": 629.5999999999999,
+      "text": "a point to be"
+    },
+    {
+      "start": 626.24,
+      "duration": 6.88,
+      "end": 633.12,
+      "text": "seen over here we see that okay"
+    },
+    {
+      "start": 629.6,
+      "duration": 6.0,
+      "end": 635.6,
+      "text": "this guy this guy says this guy can form"
+    },
+    {
+      "start": 633.12,
+      "duration": 4.08,
+      "end": 637.2,
+      "text": "two which means one for himself"
+    },
+    {
+      "start": 635.6,
+      "duration": 3.28,
+      "end": 638.88,
+      "text": "and the other for himself"
+    },
+    {
+      "start": 637.2,
+      "duration": 4.24,
+      "end": 641.44,
+      "text": "this guy also says i can form two which"
+    },
+    {
+      "start": 638.88,
+      "duration": 4.48,
+      "end": 643.36,
+      "text": "means one for himself one for himself"
+    },
+    {
+      "start": 641.44,
+      "duration": 3.839,
+      "end": 645.2790000000001,
+      "text": "which means all of these guys are filled"
+    },
+    {
+      "start": 643.36,
+      "duration": 3.36,
+      "end": 646.72,
+      "text": "with once all of these guys are filled"
+    },
+    {
+      "start": 645.279,
+      "duration": 3.041,
+      "end": 648.32,
+      "text": "with ones that is the reason there is a"
+    },
+    {
+      "start": 646.72,
+      "duration": 3.119,
+      "end": 649.839,
+      "text": "two over here because all of these are"
+    },
+    {
+      "start": 648.32,
+      "duration": 2.72,
+      "end": 651.0400000000001,
+      "text": "filled with ones that is the reason"
+    },
+    {
+      "start": 649.839,
+      "duration": 2.481,
+      "end": 652.32,
+      "text": "there is a two over here which means all"
+    },
+    {
+      "start": 651.04,
+      "duration": 2.799,
+      "end": 653.8389999999999,
+      "text": "of these are filled with ones and"
+    },
+    {
+      "start": 652.32,
+      "duration": 3.44,
+      "end": 655.7600000000001,
+      "text": "there's a two over here which means all"
+    },
+    {
+      "start": 653.839,
+      "duration": 3.041,
+      "end": 656.8800000000001,
+      "text": "of these are also filled with ones"
+    },
+    {
+      "start": 655.76,
+      "duration": 3.6,
+      "end": 659.36,
+      "text": "this one"
+    },
+    {
+      "start": 656.88,
+      "duration": 4.079,
+      "end": 660.959,
+      "text": "and this one so i can assume we see all"
+    },
+    {
+      "start": 659.36,
+      "duration": 3.2,
+      "end": 662.5600000000001,
+      "text": "of these are filled with ones so if i"
+    },
+    {
+      "start": 660.959,
+      "duration": 4.161,
+      "end": 665.1199999999999,
+      "text": "attach one more one"
+    },
+    {
+      "start": 662.56,
+      "duration": 4.08,
+      "end": 666.64,
+      "text": "i know i'll form a square of size three"
+    },
+    {
+      "start": 665.12,
+      "duration": 2.8,
+      "end": 667.92,
+      "text": "one himself"
+    },
+    {
+      "start": 666.64,
+      "duration": 2.72,
+      "end": 669.36,
+      "text": "the other here"
+    },
+    {
+      "start": 667.92,
+      "duration": 4.159,
+      "end": 672.079,
+      "text": "and the other full"
+    },
+    {
+      "start": 669.36,
+      "duration": 4.08,
+      "end": 673.44,
+      "text": "that is how you do it okay let's do it"
+    },
+    {
+      "start": 672.079,
+      "duration": 3.121,
+      "end": 675.1999999999999,
+      "text": "for the last one"
+    },
+    {
+      "start": 673.44,
+      "duration": 3.76,
+      "end": 677.2,
+      "text": "for the last one i see"
+    },
+    {
+      "start": 675.2,
+      "duration": 4.24,
+      "end": 679.44,
+      "text": "i can just have two guys"
+    },
+    {
+      "start": 677.2,
+      "duration": 4.8,
+      "end": 682.0,
+      "text": "which means this portion i can again"
+    },
+    {
+      "start": 679.44,
+      "duration": 4.399,
+      "end": 683.839,
+      "text": "have two guys which means this portion i"
+    },
+    {
+      "start": 682.0,
+      "duration": 4.16,
+      "end": 686.16,
+      "text": "can again have three guys which means"
+    },
+    {
+      "start": 683.839,
+      "duration": 4.801,
+      "end": 688.6400000000001,
+      "text": "this portion but this guy"
+    },
+    {
+      "start": 686.16,
+      "duration": 5.119,
+      "end": 691.279,
+      "text": "can actually form this and actually form"
+    },
+    {
+      "start": 688.64,
+      "duration": 5.199,
+      "end": 693.8389999999999,
+      "text": "this and at max can actually form this"
+    },
+    {
+      "start": 691.279,
+      "duration": 5.12,
+      "end": 696.399,
+      "text": "it cannot go this portion it cannot go"
+    },
+    {
+      "start": 693.839,
+      "duration": 4.401,
+      "end": 698.24,
+      "text": "this portion and this portion comes"
+    },
+    {
+      "start": 696.399,
+      "duration": 4.961,
+      "end": 701.36,
+      "text": "under this three so i can just go till"
+    },
+    {
+      "start": 698.24,
+      "duration": 5.2,
+      "end": 703.44,
+      "text": "this two at max till this two i can go"
+    },
+    {
+      "start": 701.36,
+      "duration": 4.64,
+      "end": 706.0,
+      "text": "that is what i can do so i can take this"
+    },
+    {
+      "start": 703.44,
+      "duration": 5.2,
+      "end": 708.6400000000001,
+      "text": "2 and i can say hey listen i can do for"
+    },
+    {
+      "start": 706.0,
+      "duration": 5.36,
+      "end": 711.36,
+      "text": "myself i can do for yourself i can do"
+    },
+    {
+      "start": 708.64,
+      "duration": 4.879,
+      "end": 713.519,
+      "text": "for the 3 so that means there is 2 and"
+    },
+    {
+      "start": 711.36,
+      "duration": 3.919,
+      "end": 715.279,
+      "text": "i'm adding 1 so that's 3 again"
+    },
+    {
+      "start": 713.519,
+      "duration": 3.921,
+      "end": 717.44,
+      "text": "thereby the total rectangles will be 1"
+    },
+    {
+      "start": 715.279,
+      "duration": 5.281,
+      "end": 720.56,
+      "text": "plus 1 plus 1 plus 1 plus 2 plus 2 plus"
+    },
+    {
+      "start": 717.44,
+      "duration": 6.079,
+      "end": 723.519,
+      "text": "2 and you sum it up i hope that makes"
+    },
+    {
+      "start": 720.56,
+      "duration": 5.68,
+      "end": 726.2399999999999,
+      "text": "pretty much sense so the formula is"
+    },
+    {
+      "start": 723.519,
+      "duration": 6.601,
+      "end": 730.12,
+      "text": "very straight forward if you are let me"
+    },
+    {
+      "start": 726.24,
+      "duration": 3.88,
+      "end": 730.12,
+      "text": "just quickly fill this up"
+    },
+    {
+      "start": 731.12,
+      "duration": 5.36,
+      "end": 736.48,
+      "text": "you just fill up the first row as it is"
+    },
+    {
+      "start": 734.16,
+      "duration": 4.799,
+      "end": 738.959,
+      "text": "in order to fill this in order to fill"
+    },
+    {
+      "start": 736.48,
+      "duration": 4.88,
+      "end": 741.36,
+      "text": "this you take this guy you take this guy"
+    },
+    {
+      "start": 738.959,
+      "duration": 4.801,
+      "end": 743.76,
+      "text": "you take this guy and the minimal if"
+    },
+    {
+      "start": 741.36,
+      "duration": 4.56,
+      "end": 745.92,
+      "text": "it's a one you add one to it the minimum"
+    },
+    {
+      "start": 743.76,
+      "duration": 3.759,
+      "end": 747.519,
+      "text": "is one there's one so you add"
+    },
+    {
+      "start": 745.92,
+      "duration": 3.599,
+      "end": 749.519,
+      "text": "now you go over here"
+    },
+    {
+      "start": 747.519,
+      "duration": 3.281,
+      "end": 750.8,
+      "text": "that's a one you go to this that's a"
+    },
+    {
+      "start": 749.519,
+      "duration": 2.801,
+      "end": 752.32,
+      "text": "zero"
+    },
+    {
+      "start": 750.8,
+      "duration": 3.76,
+      "end": 754.56,
+      "text": "you go to this list of one there's a two"
+    },
+    {
+      "start": 752.32,
+      "duration": 4.959,
+      "end": 757.279,
+      "text": "so the minimum is zero so you take zero"
+    },
+    {
+      "start": 754.56,
+      "duration": 5.6,
+      "end": 760.16,
+      "text": "plus one one because he will"
+    },
+    {
+      "start": 757.279,
+      "duration": 4.8,
+      "end": 762.079,
+      "text": "be himself only this cannot expand he'll"
+    },
+    {
+      "start": 760.16,
+      "duration": 5.04,
+      "end": 765.1999999999999,
+      "text": "be himself only there by one"
+    },
+    {
+      "start": 762.079,
+      "duration": 4.161,
+      "end": 766.2399999999999,
+      "text": "next you go here and you say okay listen"
+    },
+    {
+      "start": 765.2,
+      "duration": 2.8,
+      "end": 768.0,
+      "text": "there's a one"
+    },
+    {
+      "start": 766.24,
+      "duration": 3.68,
+      "end": 769.92,
+      "text": "so there's a two over here there's a one"
+    },
+    {
+      "start": 768.0,
+      "duration": 3.92,
+      "end": 771.92,
+      "text": "here there's one here so the minimal one"
+    },
+    {
+      "start": 769.92,
+      "duration": 4.08,
+      "end": 774.0,
+      "text": "so one plus one two again makes sense"
+    },
+    {
+      "start": 771.92,
+      "duration": 4.4,
+      "end": 776.3199999999999,
+      "text": "because one himself one times of the"
+    },
+    {
+      "start": 774.0,
+      "duration": 3.92,
+      "end": 777.92,
+      "text": "zero so zero that's how you fill it so i"
+    },
+    {
+      "start": 776.32,
+      "duration": 4.0,
+      "end": 780.32,
+      "text": "can say"
+    },
+    {
+      "start": 777.92,
+      "duration": 3.44,
+      "end": 781.36,
+      "text": "any dp of ij"
+    },
+    {
+      "start": 780.32,
+      "duration": 3.28,
+      "end": 783.6,
+      "text": "will be"
+    },
+    {
+      "start": 781.36,
+      "duration": 3.599,
+      "end": 784.9590000000001,
+      "text": "minimal of dp of"
+    },
+    {
+      "start": 783.6,
+      "duration": 3.84,
+      "end": 787.44,
+      "text": "the upper"
+    },
+    {
+      "start": 784.959,
+      "duration": 5.361,
+      "end": 790.3199999999999,
+      "text": "row"
+    },
+    {
+      "start": 787.44,
+      "duration": 2.88,
+      "end": 790.32,
+      "text": "the diagonal"
+    },
+    {
+      "start": 790.48,
+      "duration": 3.039,
+      "end": 793.519,
+      "text": "and the previous column"
+    },
+    {
+      "start": 797.44,
+      "duration": 4.959,
+      "end": 802.399,
+      "text": "perfect"
+    },
+    {
+      "start": 798.399,
+      "duration": 6.081,
+      "end": 804.48,
+      "text": "plus one and this will only be valid if"
+    },
+    {
+      "start": 802.399,
+      "duration": 4.321,
+      "end": 806.72,
+      "text": "it is a one if it is a one otherwise you"
+    },
+    {
+      "start": 804.48,
+      "duration": 4.72,
+      "end": 809.2,
+      "text": "just fill in a zero that is"
+    },
+    {
+      "start": 806.72,
+      "duration": 5.44,
+      "end": 812.1600000000001,
+      "text": "as simple as it can get now if you just"
+    },
+    {
+      "start": 809.2,
+      "duration": 6.16,
+      "end": 815.36,
+      "text": "write this you should be able to"
+    },
+    {
+      "start": 812.16,
+      "duration": 4.96,
+      "end": 817.12,
+      "text": "get the total number of answers"
+    },
+    {
+      "start": 815.36,
+      "duration": 4.56,
+      "end": 819.92,
+      "text": "let's quickly uh check out the code so"
+    },
+    {
+      "start": 817.12,
+      "duration": 4.48,
+      "end": 821.6,
+      "text": "we will declare the dp of size n cross m"
+    },
+    {
+      "start": 819.92,
+      "duration": 3.68,
+      "end": 823.5999999999999,
+      "text": "now you know the first row gets copied"
+    },
+    {
+      "start": 821.6,
+      "duration": 3.84,
+      "end": 825.44,
+      "text": "so please please copy the first row"
+    },
+    {
+      "start": 823.6,
+      "duration": 3.919,
+      "end": 827.519,
+      "text": "that's as simple as that what you can do"
+    },
+    {
+      "start": 825.44,
+      "duration": 4.0,
+      "end": 829.44,
+      "text": "is uh you can go for the first row which"
+    },
+    {
+      "start": 827.519,
+      "duration": 4.56,
+      "end": 832.079,
+      "text": "is j equal to zero j less than m and j"
+    },
+    {
+      "start": 829.44,
+      "duration": 5.519,
+      "end": 834.9590000000001,
+      "text": "plus plus and please copy the first"
+    },
+    {
+      "start": 832.079,
+      "duration": 3.601,
+      "end": 835.68,
+      "text": "which is dp of zero or j equal to array"
+    },
+    {
+      "start": 834.959,
+      "duration": 2.401,
+      "end": 837.3599999999999,
+      "text": "of"
+    },
+    {
+      "start": 835.68,
+      "duration": 4.32,
+      "end": 840.0,
+      "text": "zero and"
+    },
+    {
+      "start": 837.36,
+      "duration": 5.2,
+      "end": 842.5600000000001,
+      "text": "similarly uh please make sure you copy"
+    },
+    {
+      "start": 840.0,
+      "duration": 4.079,
+      "end": 844.079,
+      "text": "the next thing which is"
+    },
+    {
+      "start": 842.56,
+      "duration": 3.2,
+      "end": 845.76,
+      "text": "the first column"
+    },
+    {
+      "start": 844.079,
+      "duration": 5.76,
+      "end": 849.8389999999999,
+      "text": "again dp of"
+    },
+    {
+      "start": 845.76,
+      "duration": 5.84,
+      "end": 851.6,
+      "text": "i zero equal to array of i zero okay"
+    },
+    {
+      "start": 849.839,
+      "duration": 4.161,
+      "end": 854.0,
+      "text": "once you've done this it is pretty"
+    },
+    {
+      "start": 851.6,
+      "duration": 5.359,
+      "end": 856.9590000000001,
+      "text": "straightforward just go across this this"
+    },
+    {
+      "start": 854.0,
+      "duration": 5.44,
+      "end": 859.44,
+      "text": "this this"
+    },
+    {
+      "start": 856.959,
+      "duration": 4.161,
+      "end": 861.1199999999999,
+      "text": "go across"
+    },
+    {
+      "start": 859.44,
+      "duration": 4.16,
+      "end": 863.6,
+      "text": "just make sure you don't uh"
+    },
+    {
+      "start": 861.12,
+      "duration": 4.719,
+      "end": 865.839,
+      "text": "do the first row and the first column"
+    },
+    {
+      "start": 863.6,
+      "duration": 4.32,
+      "end": 867.9200000000001,
+      "text": "again"
+    },
+    {
+      "start": 865.839,
+      "duration": 4.161,
+      "end": 870.0,
+      "text": "this can be very simple if array of i j"
+    },
+    {
+      "start": 867.92,
+      "duration": 6.08,
+      "end": 874.0,
+      "text": "is equal to equal to zero you say db of"
+    },
+    {
+      "start": 870.0,
+      "duration": 6.88,
+      "end": 876.88,
+      "text": "i j is equal to zero or else you say dp"
+    },
+    {
+      "start": 874.0,
+      "duration": 6.399,
+      "end": 880.399,
+      "text": "of i j is equal to one plus minimum of"
+    },
+    {
+      "start": 876.88,
+      "duration": 6.959,
+      "end": 883.8389999999999,
+      "text": "dp of the previous row okay"
+    },
+    {
+      "start": 880.399,
+      "duration": 6.0,
+      "end": 886.399,
+      "text": "comma minimal of dp of the diagonal"
+    },
+    {
+      "start": 883.839,
+      "duration": 5.521,
+      "end": 889.36,
+      "text": "which is i minus 1 j minus 1"
+    },
+    {
+      "start": 886.399,
+      "duration": 5.041,
+      "end": 891.44,
+      "text": "comma dp of the previous row which is"
+    },
+    {
+      "start": 889.36,
+      "duration": 4.159,
+      "end": 893.519,
+      "text": "previous column rather which is this"
+    },
+    {
+      "start": 891.44,
+      "duration": 4.24,
+      "end": 895.6800000000001,
+      "text": "definitely once you have done all these"
+    },
+    {
+      "start": 893.519,
+      "duration": 5.361,
+      "end": 898.88,
+      "text": "you need the summation of everyone you"
+    },
+    {
+      "start": 895.68,
+      "duration": 4.88,
+      "end": 900.56,
+      "text": "can either submit uh"
+    },
+    {
+      "start": 898.88,
+      "duration": 6.16,
+      "end": 905.04,
+      "text": "you can either submit while calculating"
+    },
+    {
+      "start": 900.56,
+      "duration": 7.04,
+      "end": 907.5999999999999,
+      "text": "or you can just do it across here"
+    },
+    {
+      "start": 905.04,
+      "duration": 4.88,
+      "end": 909.92,
+      "text": "whatever you wish to that is your choice"
+    },
+    {
+      "start": 907.6,
+      "duration": 4.4,
+      "end": 912.0,
+      "text": "i'll leave that to you"
+    },
+    {
+      "start": 909.92,
+      "duration": 4.719,
+      "end": 914.639,
+      "text": "dp of i j that is something which you"
+    },
+    {
+      "start": 912.0,
+      "duration": 4.8,
+      "end": 916.8,
+      "text": "can do once you've done you can return"
+    },
+    {
+      "start": 914.639,
+      "duration": 4.0,
+      "end": 918.639,
+      "text": "the summation this is"
+    },
+    {
+      "start": 916.8,
+      "duration": 3.68,
+      "end": 920.4799999999999,
+      "text": "very simple all of them are giving"
+    },
+    {
+      "start": 918.639,
+      "duration": 3.601,
+      "end": 922.24,
+      "text": "correct answer now if you submit this"
+    },
+    {
+      "start": 920.48,
+      "duration": 4.24,
+      "end": 924.72,
+      "text": "you will indeed get correct answer so"
+    },
+    {
+      "start": 922.24,
+      "duration": 4.88,
+      "end": 927.12,
+      "text": "the time complexity guys we're using we"
+    },
+    {
+      "start": 924.72,
+      "duration": 4.96,
+      "end": 929.6800000000001,
+      "text": "go of n into m that is what we're using"
+    },
+    {
+      "start": 927.12,
+      "duration": 5.519,
+      "end": 932.639,
+      "text": "and the space complexity is an n into m"
+    },
+    {
+      "start": 929.68,
+      "duration": 4.399,
+      "end": 934.079,
+      "text": "db matrix is what we are using so so i"
+    },
+    {
+      "start": 932.639,
+      "duration": 3.76,
+      "end": 936.399,
+      "text": "hope i was able to explain you this"
+    },
+    {
+      "start": 934.079,
+      "duration": 3.68,
+      "end": 937.7589999999999,
+      "text": "problem on the matrix just in case i was"
+    },
+    {
+      "start": 936.399,
+      "duration": 2.481,
+      "end": 938.88,
+      "text": "please please please make sure you like"
+    },
+    {
+      "start": 937.759,
+      "duration": 2.801,
+      "end": 940.5600000000001,
+      "text": "this video and if you're new to this"
+    },
+    {
+      "start": 938.88,
+      "duration": 2.879,
+      "end": 941.759,
+      "text": "channel please please please do consider"
+    },
+    {
+      "start": 940.56,
+      "duration": 3.92,
+      "end": 944.4799999999999,
+      "text": "subscribing to us because that is the"
+    },
+    {
+      "start": 941.759,
+      "duration": 4.0,
+      "end": 945.759,
+      "text": "only thing that keeps me motivated every"
+    },
+    {
+      "start": 944.48,
+      "duration": 2.719,
+      "end": 947.1990000000001,
+      "text": "now and then to make these kind of"
+    },
+    {
+      "start": 945.759,
+      "duration": 2.721,
+      "end": 948.48,
+      "text": "content so yeah with this i'll be"
+    },
+    {
+      "start": 947.199,
+      "duration": 3.281,
+      "end": 950.4799999999999,
+      "text": "wrapping up this video let's meet in the"
+    },
+    {
+      "start": 948.48,
+      "duration": 5.12,
+      "end": 953.6,
+      "text": "next one till then bye take care"
+    },
+    {
+      "start": 950.48,
+      "duration": 7.88,
+      "end": 958.36,
+      "text": "whenever your heart is broken"
+    },
+    {
+      "start": 953.6,
+      "duration": 4.76,
+      "end": 958.36,
+      "text": "don't ever forget your golden"
+    }
+  ]
+}

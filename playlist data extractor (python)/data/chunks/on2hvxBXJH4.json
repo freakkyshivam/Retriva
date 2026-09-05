@@ -1,0 +1,108 @@
+{
+  "video_id": "on2hvxBXJH4",
+  "position": 223,
+  "title": "DP 43. Longest Increasing Subsequence | Binary Search | Intuition",
+  "url": "https://www.youtube.com/watch?v=on2hvxBXJH4",
+  "chunk_count": 9,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "on2hvxBXJH4",
+      "position": 223,
+      "title": "DP 43. Longest Increasing Subsequence | Binary Search | Intuition",
+      "url": "https://www.youtube.com/watch?v=on2hvxBXJH4",
+      "start": 0.24,
+      "end": 123.6,
+      "text": "hey everyone welcome back to take you forward so today we will be solving uh the problem longest increasing subsequence using binary search in the previous two videos we have solved using recursion memorization space optimization uh tabulation and an algorithmic approach these approach has been covered in the previous couple of videos but we did see that the constraint was n equal to 10 to the power 5 and the best we could do was uh time complexity of big o of n square and a space complexity of big o of n this was the best that we had done till now but if n is 10 to the power 5 n square is 10 to the power 5 square is 10 to the power 10 operations which is definitely giving you rtle so we we definitely cannot do this right so that's where something like binary search comes in can we find lis using binary search now you will find a lot of videos where the intuition is missing like i i went through a lot of videos but the intuition was missing so in this video my main focus will be to give you the thought process because once you get the thought process the algorithm is very very simple so prerequisites are you should be knowing binary search and there is a lower bound and there's an upper bound video in my channel i'll be putting the link in the description go back and watch it and after that come back and watch this video okay uh if you know lower bound it's uh well and good so let's let's get started what is first of all what is lis you know what is longest increasing subsequence like uh you can call a subsequence like one eight four six this is a subsequence not increasing you can call something like one eight nine as an increasing subsequence increasing okay uh similarly you can call something like one four five six nine as the longest increasing subsequence of length five subsequence you know",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "on2hvxBXJH4",
+      "position": 223,
+      "title": "DP 43. Longest Increasing Subsequence | Binary Search | Intuition",
+      "url": "https://www.youtube.com/watch?v=on2hvxBXJH4",
+      "start": 119.6,
+      "end": 251.76000000000002,
+      "text": "subsequence you know a contiguous or a non-contagious part but it should follow the order like you can't be like one 8 7 6 this is not a subsequence because 8 is before 7 but actually 7 is before 8 so this is not a subsequence okay so we saw that the longest increasing subsequence over here was one four five six and nine okay so how do you actually uh solve this particular problem that's that's a big so how do you approach this problem so what i will say is okay let's let's try to go across every element and try to form subsequences that's that's my thinking so i'll be like okay initially when i'm at one okay let's form a subsequence with one make sense next let's go to seven do i need to form a new sub sequence with sir or can i just attach over like attach it over here the answer to that is uh straight let's attach it over here why because if you form a new it will be of length one but if i attach it it is still increasing it is still increasing and it is having a length two perfect let's move to eight now if you're having eight can you attach it over here or will you prefer this you can because eight is still greater than seven perfect it's still greater than seven so i've attached next i go to four so i see there is four i see there is 4 but if i attach it over here it will not be increasing because 8 is greater than 4 it will not be increasing so i can either start with 4 but my brain says whats favor there is one which you can take and you can attach with four so okay make sense next i go to five the moment i go to five can i attach it here the answer to that is no strava you cannot can i attach it over here yes trevor you can perfect next i go to six",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "on2hvxBXJH4",
+      "position": 223,
+      "title": "DP 43. Longest Increasing Subsequence | Binary Search | Intuition",
+      "url": "https://www.youtube.com/watch?v=on2hvxBXJH4",
+      "start": 248.08,
+      "end": 382.639,
+      "text": "next i go to six i have a six can i attach it over here no can i attach it over here yes perfect next i go to minus one where can i attach it now my brain says we can't attach it we cannot attach a minus one here we cannot attach a minus one here but we can start fresh will minus one have anything before no it's the smallest so i will have minus 1 right before this perfect next i go to 9 so when i go to 9 when i go to 9 i can attach 9 here i can attach 9 here i can attach 9 here so [Music] assuming attached to everyone assuming it's over so once you end it you see this is a length four you see this is a length five you see this is a length two and eventually the length five is the longest one and that is the length of the lis but will you actually uh go across and uh generate all these subsequences because it's it's going to be very hectic and it's going to be taking a lot of time because if you make new subsequences at every junction it's going to take up a lot of space because if you're aiming to uh make a new subsequence at every step it's gonna take up a lot of space so we will definitely not move this way but this is an intuition which helps us to think of binary search so tell me one thing like i don't need i don't need to print lcs i just need five i just need five so can i do something like this when i was carrying one seven eight and this was done when four came in can i say one seven eight let's rewrite four over here can i do something like this rewrite rewrite the same subsequence can i do something like this and the answer to that is yeah striper we can do it and let me show you what",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "on2hvxBXJH4",
+      "position": 223,
+      "title": "DP 43. Longest Increasing Subsequence | Binary Search | Intuition",
+      "url": "https://www.youtube.com/watch?v=on2hvxBXJH4",
+      "start": 376.88,
+      "end": 502.8,
+      "text": "we can do it and let me show you what i'm actually talking about because we're just concerned about the length we're just concerned about the length we are at one let's have one we are at seven let's have seven we are at eight let's have eight we are at four instead of making one four instead of making one four since we are actually not concerned about the lis and we're concerned about the length we will say where can 4 fit in in the existing subsequence i say 4 can fit in here so what you do is remember what you do is you take the seven out you take the seven out and you say four can fit in here remember this that it does not means one four eight is a subsequence no i'm just making sure instead of storing one four separately i stored 1 4 right over there to save space even if someone like 9 comes in and because i know if 8 is there why is 8 here because previously 7 was there because previously 7 was there that's the reason 8 is here that is something which we definitely know so we are sure that before 8 there is something smaller which is 7. yeah we have over written it but we are not concerned about the subsequence that's why what i did is instead of creating a new i overwrote the seven i over the seven to four because it's okay to overwrite because we're not we're not concerned about the lis we're concerned about the length so i over it at that place itself perfect let's move across to the next which is five okay where can five be i either go and create like one four five or i either say let's not create and instead of that let's omit eight and write five because either you're carrying one seven eight or either you're carrying one for five it still makes the same sense right perfect let's go to six",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "on2hvxBXJH4",
+      "position": 223,
+      "title": "DP 43. Longest Increasing Subsequence | Binary Search | Intuition",
+      "url": "https://www.youtube.com/watch?v=on2hvxBXJH4",
+      "start": 498.639,
+      "end": 631.839,
+      "text": "perfect let's go to six the moment i go to six i'm like okay fine where can i have six right after this amazing the moment i have minus 1 where can i have it i can definitely have it right over here replace it so i replace it over here saying not 1 it's gonna be minus one perfect where can i have nine i say right after this so this is not the subsequence this is definitely not the subsequence but this gives you the length the length of the final array will be your answer which is 5 because you replicate it by putting those values you replicated the same space by putting those values that's how you can easily do it now why binary search again very straight forward if you uh like if i again just omit this off yeah i'll be just formatting this why binary search again a very simple one because initially you had one then you had seven then you add eight the moment you got four you wanna insert four if there was a four you inserted at that place or you say hey listen there is no four so please go across and insert it right after four right at the first element after four at the first element after four can you please do it for me right at the first element after four so you since you know this is sorted since you know this is sorted in order to insert four here you can simply do a binary search and binary search will say four will go here next you go to five binary search will say first element after five that's eight binary search we'll say i'll go here six first element after six no one so goes here first element after minus one that's this first element after nine that's this that's how you get the length that's how you replicate that's the thought process simple thought process behind the binary search solution so in c plus there exists a function like lower bound",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "on2hvxBXJH4",
+      "position": 223,
+      "title": "DP 43. Longest Increasing Subsequence | Binary Search | Intuition",
+      "url": "https://www.youtube.com/watch?v=on2hvxBXJH4",
+      "start": 627.36,
+      "end": 753.839,
+      "text": "there exists a function like lower bound like you might argue okay let me just give you one more example uh okay so let me give you one more example if array is given something like one four uh five then a four then a two then a eight so what will happen in this case because you see repeated developments so initially you are at one so you don't have anything so you put it across here perfect next you have a four yes next you have a four so you again right after four so that's where you put next you have a five you put here now when you look for four again if there exists a four you just rewrite it over there because that's what you do you don't put it across anywhere else next you give a 2 so this is where it goes next you get a 8 this is where it goes so this is the length length is going to be 4 again is it practical enough yes because 1 4 5 8 can be the subsequence can you regenerate the subsequence via binary search the answer is no then you have to store a lot more things but you can easily get the length by accessing the length because you optimize space instead of carrying different subsequences you reuse that space and you created it so it's time to actually now go back and code it so in order to find remove this our main intention of binary searches if there is an element as array of i find array of i like in this case if you see when i inserted 4 i inserted at the place of 4 i inserted at the place of 4 right so either find array of i and if this is not found find first greater again the first element that's greater than array of i that's it and in c plus plus this can easily be done using a function a lower bound the lower bound if you are doing a lower",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "on2hvxBXJH4",
+      "position": 223,
+      "title": "DP 43. Longest Increasing Subsequence | Binary Search | Intuition",
+      "url": "https://www.youtube.com/watch?v=on2hvxBXJH4",
+      "start": 749.36,
+      "end": 860.2399999999999,
+      "text": "lower bound if you are doing a lower bound on any array it gives you the first index it gives you the index of array of i if exist or gives you the first index which is greater than array of i in order to understand it in depth you can watch the video link in the description okay so guys it's time to check out the code now so in the in the ipad if you see uh there is one initially right so what i'll do is i'll put this one into some temporary okay temporary so as i can know that what i'll do is i'll just declare a temporary that's the initial stuff that i'll do and let's put the first guy into the temporary because i know that's where i start off so area of zero will go in and now i can initially start from int i equal to one and i can just go until i plus plus okay now whenever in the next step i get seven what do i do i just take seven added next time whenever i get eight i add it why because seven was greater than one eight was greater than seven so just make sure if this guy is greater than the last guy if this guy is greater than the last guy don't do anything just go across and say hey listen uh can you just go across the sky that's perfect if it is not then you need to put a binary search on the index so in the index you can easily do a binary search like lower bound and the temporary space is this so just do a begin comma temporary dot end and you're looking for array of i that's what you'll do a binary search and you can just subtract them that's how easy the binary search will be looking perfect once you've got the index just go to temporary index and say this is where this guy will replace once you have done",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "on2hvxBXJH4",
+      "position": 223,
+      "title": "DP 43. Longest Increasing Subsequence | Binary Search | Intuition",
+      "url": "https://www.youtube.com/watch?v=on2hvxBXJH4",
+      "start": 856.079,
+      "end": 963.44,
+      "text": "this guy will replace once you have done this you can directly return the temp dot size perfect and in this way if you run this code it should be i think it should give you the correct answer uh my bad m dot begin this will be temp dot begin now it should give you the correct answer so we did a mistake this will be array of i and yeah it should be fine now and you see all the test cases are running absolutely fine like this will take some more space so what you can do is you you know every time you're pushing or this is like the initial length is one and every time you're inserting one the length will always increase so yeah that's that's how you can also maintain the length of the alias and you can just run this like i don't want to do a 10 dot size right at the end because it might end up taking a bit more space so bit more time rather so now if i submit this you will see that this is indeed running absolutely fine yeah this is how you get the 100 solution so as well as the time complexity that we did use it was big o of n into a binary search login what is the space b of n now a lot of people will say that trevor why don't you uh use the same array to rewrite but in interviews is generally not perfect not preferred to use the same array instead of that try to create a new temp but please please keep in mind the temporary array at the end of the day is not the lis is not the las okay we're just using it to store uh like instead of creating one seven eight one four we're just using this four to be stored here that's it we are not generating the alias we're just generating the length of the alas over here so guys i hope you have understood uh the",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "on2hvxBXJH4",
+      "position": 223,
+      "title": "DP 43. Longest Increasing Subsequence | Binary Search | Intuition",
+      "url": "https://www.youtube.com/watch?v=on2hvxBXJH4",
+      "start": 960.32,
+      "end": 985.8,
+      "text": "uh the longest increasing subsequence using binary search and just in case you did please please please make sure you like this video and if you're new to this channel please do consider subscribing and to continue our tradition please make sure you write it in the comment section if you understood this or not i never this let's wrap up this video let's read in the next one till then bye [Music] don't ever bye you're golden",
+      "word_count": 78
+    }
+  ]
+}

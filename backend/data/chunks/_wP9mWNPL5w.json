@@ -1,0 +1,97 @@
+{
+  "video_id": "_wP9mWNPL5w",
+  "position": 208,
+  "title": "DP 27. Longest Common Substring | DP on Strings 🔥",
+  "url": "https://www.youtube.com/watch?v=_wP9mWNPL5w",
+  "chunk_count": 8,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "_wP9mWNPL5w",
+      "position": 208,
+      "title": "DP 27. Longest Common Substring | DP on Strings 🔥",
+      "url": "https://www.youtube.com/watch?v=_wP9mWNPL5w",
+      "start": 0.0,
+      "end": 143.04,
+      "text": "hey everyone welcome back to take you forward so in this video we will be solving a bit different problem and the problem is longest common sub string substring not subsequence okay so what is actually a sub string in the previous video we did learn about subsequence the definition of subsequence was it can be something like a j p that is a subsequence when you say it's not consecutive a subsequence cannot be consecutive but a sub string whenever i say substring it has to be consecutive remember this it has to be consecutive that means either abc either bc either cjk either jkl it has to be consecutive it cannot have any characters left in between so the definition of a substring is any portion any consecutive portion of a string taken out is known as a substring now given a string s1 given a string s2 the question is different longest common is same but it is not subsequence it is sub string because if i was talking about longest common subsequence you would have said a c j k a c j k and p as well this is longest common subsequence of a length five i'm talking about sub string so if i'm talking about substring the longest common substring will be cjk and cjk cjk it can be the entire string as well but over here we are seeing a length three yes over here we are seeing a length three so the question arises is how do you solve this particular problem can you solve this using the previous formula you can but you have to do certain modifications yes you can but you have to do a certain modification so let's let's actually uh look back at what did we do in lcs the longest common subsequence how did we solve this problem let's actually write the dp so what did you write you wrote dp of i j is equal to 1 plus dp of i minus 1 and j minus 1 that does make sense if they're",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "_wP9mWNPL5w",
+      "position": 208,
+      "title": "DP 27. Longest Common Substring | DP on Strings 🔥",
+      "url": "https://www.youtube.com/watch?v=_wP9mWNPL5w",
+      "start": 138.319,
+      "end": 281.36,
+      "text": "minus 1 that does make sense if they're matching yes if they're matching that is what you wrote and they're not matching then you wrote something like dp of i j is equal to max of dp of i minus 1 j and dp of i comma j minus 1 now why does this not work why does this longest why does this not matching uh not work let's analyze by taking a very very shorter version of the example so if i take a c d and c let's say a c d and probably something as a x d okay so in the longest common subsequence what will happen is initially it will have dd common and it will end up doing one and then it will say let's shrink the string to ac and ax now when it does not find c and x what it says is let's omit one portion let's omit one portion then still compare a and ax that is what it says let's omit one portion let's compare a and ax and let's try to see if we can figure out something all it says hey let's omit x let's compare ac and e and over here it is like okay x a so let's omit a and try to compare which gets it if you're omitting a you're getting ax and other way it says let's omit x and compare a and a and eventually it compares a and a and gives a plus one this is the problem this is the problem and why does this happen because because of the omitting that you're doing you're committing this and you're still comparing with the entire thing so you're doing a disruption you are breaking the consecutive rule now if there's a comparison between a and a and this dnd was compared you know there is someone in between who was who was there that's why you omitted this you shrinked one portion of the string not the both not both the portions thereby in else in the longest common",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "_wP9mWNPL5w",
+      "position": 208,
+      "title": "DP 27. Longest Common Substring | DP on Strings 🔥",
+      "url": "https://www.youtube.com/watch?v=_wP9mWNPL5w",
+      "start": 277.12,
+      "end": 396.639,
+      "text": "in else in the longest common subsequence this works because you're allowed to have not consecutive but over here there is a line which says you have to have consecutive thereby this line does not works because you cannot omit it you cannot commit it you need to be consecutive in nature okay so how do you uh can solve this particular problem so can we write a recursion we can but then we have to use one more third variable thereby there will be three states which i will not recommend thereby what we will do is we will try to write the tabulation format but in order to write the tabulation format you have to understand how does actual the longest common subsequence tabulation works so please watch out two videos one is the dp25 where i've taught the tabulation the other is the dp26 what i've taught what does the tabulation like what was the tab what was the table rather table exactly mean i've taught that in dp26 where i printed the lcs so let's take an example of a b c d and a b z d okay so over here the longest common subsequence is abd and abd but the longest common substring is a b let's see how will you find the sound so as usual uh we will be following one based indexing so 0 1 2 3 4 and 0 1 2 3 4 so this is what we have written and this is our dbt okay this is our db table so abzd will be on the column and i will be over here which is a b c d okay so how do you usually fill up you usually fill up on the column wise because this is means this portion and this means this portion so this is the db table that we will fill up so whenever i'm at here let's see what string do you have a and d are they matching are they matching so you can definitely put up a one over here",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "_wP9mWNPL5w",
+      "position": 208,
+      "title": "DP 27. Longest Common Substring | DP on Strings 🔥",
+      "url": "https://www.youtube.com/watch?v=_wP9mWNPL5w",
+      "start": 393.44,
+      "end": 514.959,
+      "text": "here how did you put up a one over here remember this if they are matching what you did was you said one plus the previous guys the previous guys will be zeros these are uh non-usable rows and columns or zeros okay okay so does this a match with this b no so thereby zero next you go to z let me say a does this a match with z no so 0 next you go to a and d does this match no so 0 perfect let's come to the next question you're over here and you're over here which is a a and b for here so does this b match with this a no ideally ideally since it's this is consecutive since this is consecutive you are not dependent on the previous guys since this is consecutive you're not dependent on the previous guys remember this because you don't want any interruption because if they do not match i don't want any interruptions to be carried forward in the previous else longest common subsequence you would have taken the maximum of this or this y because because this a was matching over here so you were like okay in this a b and this a the longest common subsequence is of length one because that is the longest but in substring you don't carry anything because we don't have a sub string we don't have a substring thereby a zero so you'll put a zero whatever this will put a zero perfect next you'll come over here and there is b and there is b right but they are matching they're matching say like okay they're matching let's see in the previous guy did the match they did there's a one if they matched and they had a length of one why can't i take that one one for himself and previous one so i'll be like okay i can put it too so whenever they are matching i can actually take the previous guy because i don't need any break there is no",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "_wP9mWNPL5w",
+      "position": 208,
+      "title": "DP 27. Longest Common Substring | DP on Strings 🔥",
+      "url": "https://www.youtube.com/watch?v=_wP9mWNPL5w",
+      "start": 511.44,
+      "end": 625.8389999999999,
+      "text": "don't need any break there is no breaking i can directly go to the previous guy and ask did you guys match and if you match you must have some value so why don't i take this perfect next you come over here this is z this is b let not match it just put a zero next you come across here b and d not matching just put a zero next c and a not magic just put a zero next c and b not matching put a zero next c and z not matching what is zero next c and d not matching put a zero no one is matching next d and are not matching d and b not matching d and z not matching zero zero zero d and d matching so one why one because because d and d was matching so you went to the previous guy you went to the previous guy c and z since they did not match they had a zero value they buy there's no one there's no one from the previous consecutive you only had a one if if this c like over here we had a c over here we had a c then what would have happened this c would have matched this c and i've said okay i'm having a match so go to the previous go to the previous and see so they're saying they have a two match they have a too much so if they have a too much you take those two and you see two plus one over here thereby you would have said three then again you come over d and d they're matching so like okay they're matching so one go to the previous go to the previous and see how many are they matching they're saying we have a three match three consecutive match so take this three and a four so this becomes four so what i analyzed was since it is for consecutive thereby this guy can be said we do not",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "_wP9mWNPL5w",
+      "position": 208,
+      "title": "DP 27. Longest Common Substring | DP on Strings 🔥",
+      "url": "https://www.youtube.com/watch?v=_wP9mWNPL5w",
+      "start": 620.079,
+      "end": 729.36,
+      "text": "thereby this guy can be said we do not need to do any breakings like we did a breaking like we did a breaking here and we moved to ax we did a breaking here we moved to acx there is no need to do any breaking yes thereby you can directly put a zero this is the slide change that you have to do in the previous code and you will be able to code this okay so coming back to the table coming back to the table so let's actually come back to the original stuff which was actually abcd and this was uh something like z or something like this okay so if i again re do the table what the what is the value that it will have it will have a value like 0 and it will have a 1. what is the longest common substring can i say the maximum value in the entire matrix the maximum value in the entire dp because this 2 signifies a b is equivalent to b can i say the maximum value in the matrix is indeed the answer i can i can and that is the answer the max value so without waiting let's get started the code so we are in the longest common substring so what i'll do is i'll just copy paste uh the code for longest common subsequence let's copy paste that and what we'll do is we'll just put a zero over here and this is str let's keep it s and d okay what's the other thing what is the answer the answer is the maximum value you can reiterate and find the maximum value or what you can do is you know dp of i j is just getting filled over here this is the value whenever it is getting a value otherwise it's zero every time so what you can do is you can be like okay i can keep the answer equal to zero and i can be like okay answer equal to",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "_wP9mWNPL5w",
+      "position": 208,
+      "title": "DP 27. Longest Common Substring | DP on Strings 🔥",
+      "url": "https://www.youtube.com/watch?v=_wP9mWNPL5w",
+      "start": 723.44,
+      "end": 831.5999999999999,
+      "text": "and i can be like okay answer equal to max of answer comma dp of i j right and i'll be like fine let's return the answer and i can be like fine let's now run this off and see if this is running it is it is you know let's quickly submit this so you understood this this is just a minor change if you do this minor change i think you will be able to solve any particular problem so this is n into m again there is something like i minus 1 and whenever there is something like i minus 1 what do you do you have space optimization there is no need to carry 2 rows just do space optimization again i've been teaching space optimization from lecture one please go back and watch it if you have not n plus one comma zero is something which you can and curl m plus one comma zero is again something which you can over here it will be previous this is dp of i so this will become curve this will be again curve and this will be curve again and away what you can simply do is you can replace previous equal to car and you can simply run this so okay sorry my bad you have to also replace over here you can actually omit this because you're actually initializing everything with zero so there's no need of these guys you know i met this i think this should be fine yeah it is so if you submit this we actually solve this using uh two like two one dimension arrays and an n into m cross space the longest common substring gets solved so guys i hope you have understood uh the longest common substring there's a variation of the longest common subsequence so just in case you did please please please please please make sure you like this video and if you're new to the channel please do consider subscribing to us and yeah with this i'll be wrapping up this video",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "_wP9mWNPL5w",
+      "position": 208,
+      "title": "DP 27. Longest Common Substring | DP on Strings 🔥",
+      "url": "https://www.youtube.com/watch?v=_wP9mWNPL5w",
+      "start": 828.8,
+      "end": 842.78,
+      "text": "this i'll be wrapping up this video let's be in the next one till then bye take care whenever your heart is [Music]",
+      "word_count": 23
+    }
+  ]
+}

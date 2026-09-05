@@ -1,0 +1,97 @@
+{
+  "video_id": "KV4mRzTjlAk",
+  "position": 96,
+  "title": "L24. Right/Left View of Binary Tree | C++ | Java",
+  "url": "https://www.youtube.com/watch?v=KV4mRzTjlAk",
+  "chunk_count": 8,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "KV4mRzTjlAk",
+      "position": 96,
+      "title": "L24. Right/Left View of Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=KV4mRzTjlAk",
+      "start": 0.04,
+      "end": 112.83999999999999,
+      "text": "before starting this video I'd love to thank reeval for sponsoring this entire tree series the placement season is here I know a lot of you are planning to sit for companies which come on campus in case you are disappointed that the top startups like cred upgrad razor pay are not hiring directly from your campus there is an easier way to work here just register for the relev test conducted by reeval by an academy and you'll get a chance to apply for frontend backend and Business Development roles at India's top startups and unicorn companies reeval has th000 plus openings byy 50 plus companies and the best thing is it's absolutely free so please make sure to check out all the links in the description and give the relable test as soon as possible hey everyone welcome back to the channel I hope you guys are doing extremely well so today we will be solving the problem finding the right side view or the left side view of a binary tree so I'll be teaching you how to find a right side view of a binary tree and after that you can definitely do it by yourself how to find the left side view of the binary Tre because both of them are almost identical Solutions so right side view what do I mean by that so you're looking at this binary right so you're looking from uh this direction like from the front you're looking right what if I start looking from this direction like I I have an I placed which like I'm bad at drawing but yeah okay I'm I'm watching it out from the right side which portion of the the tree will be visible to me over here I'll see the node one over here I'll see the node three over here I'll just see the node 7 because this four and five will be like hidden by seven because I'm looking from this direction I'm looking from this direction and from the down I'll see the",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "KV4mRzTjlAk",
+      "position": 96,
+      "title": "L24. Right/Left View of Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=KV4mRzTjlAk",
+      "start": 106.88,
+      "end": 237.23899999999998,
+      "text": "direction and from the down I'll see the node six so can I say if I have a right view of this binary tree I'll have one I'll have three because two will be covered up by three I'll have seven and then I'll have six I hope you understand the meaning of right side view so I want you to write a program that prints this right view of Any Given binary tree so ideally what should be the logic that I should think of I know traversals right I have to Traverse in such a way in such a way that I can say the last node of every level can I say the last node of every level will be my rights view makes sense because uh one is the last node of the first level three is the last node of the second level seven is the last node of this third level six is the last node of this fourth level so I can say the last node of every level is indeed my right side view okay can I just reverse this logic and can I say if I Traverse the level in this direction like I travel it like this I travel it like this I travel the level in this direction then can I say the first node yes if I'm traveling like if I'm having a traversal technique which traverses like this can I say the first node at every level that's one 376 the first node at every level will be my right view makes sense now what kind of traversals uh can I apply obviously I can apply a traversal which is a recursive traval recursive traversal so one is the recursive traversal that I can apply right while the other one is the iterative traversal that I can apply and what are the traversal techniques that you know for recursive you know in order pre-order post order correct and for iterative you know a traversal which is level order so let's understand why",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "KV4mRzTjlAk",
+      "position": 96,
+      "title": "L24. Right/Left View of Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=KV4mRzTjlAk",
+      "start": 230.599,
+      "end": 360.59999999999997,
+      "text": "is level order so let's understand why am I not going with the level order traversal what is the worst case of level order traversal I know the level order traversal is definitely going to take a Time complexity of B of N and the space complexity at the worst case I repeat at the worst case uh if I take a comple full binary tree then the level order the Q at the worst case will be storing four notes which is almost the half of the notes like which is almost a lot so the time the space complexity will be a lot if I consider level order traversing and in a recursive in a recursive solution since I recursively Travers for the bin tree I know the time complexity will definitely be big of and but the space complexity will be big of height of the tree now you might argue stver what if we have given a tree which is a skew skew type Tree in that case we'll end up taking beo of n space complexity because the recursive solution is going to go from here to here to here here to here the auxiliary stack space that will be required will be B Goen so you can argue on both these Solutions so I'll I'll be teaching you the recursive Solutions you can definitely try the iterative solution at the end because at the end the idea is important the idea is very much simple if I Travers uh Travers on the uh level wise the last node of the first note depending on which direction are you traveling will be your right view now why am I going to discuss the recursive solution the only reason is the code is very short and crisp while in iterative the code is a bit lenier and in interview the more clean the more short the more crisp code you write that is what the interview will definitely uh give you an advantage on so which recursive traversal will I prefer I'll prefer the reverse pre-order",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "KV4mRzTjlAk",
+      "position": 96,
+      "title": "L24. Right/Left View of Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=KV4mRzTjlAk",
+      "start": 355.479,
+      "end": 477.4,
+      "text": "prefer I'll prefer the reverse pre-order traversal reverse pre-order so if you remember the pre-order was root left and then a right that was the pre-ordered traversal I'll have the reverse basically I'll do a root then I'll do a right and then I'll do a left instead of moving left to right I'll do a right to left because because of the same reason we're going to move in this direction and the first note that we get in every right will be my part of the Right View that's that's why I'm going to do a root right left so in order to solve this problem I'll be using a function recursive function where I'll be initially passing the node and I'll initially be passing the level so what is the node initially that's the starting point or the root of the tree and the level initially will be passed as zero so these are the things that I'll be passing on to this recursive function and how the recursive function work since it's a pre-order kind of a thing like root right left you know the traversals works like this like we're keep on doing the traversal till we uh like if we encounter a null we are going to return and or else uh the root is over here like whatever is the root and then we going to move uh to the right so very simple we moving down that's to the right so the level is going to increase by one or I'll move to the left right so I'll move to the left then also the level will increase so that's how my traverses will look like but you might ask but St where are you storing this right view the answer to that will be very simple I'll be using a very smart technique I'll have a data structure ready with me okay let's have a data structure ready which will initially be empty and what I do is if if every time I come to a level for the",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "KV4mRzTjlAk",
+      "position": 96,
+      "title": "L24. Right/Left View of Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=KV4mRzTjlAk",
+      "start": 470.919,
+      "end": 588.76,
+      "text": "if every time I come to a level for the first time so I'll compare is the value of level is equ valent to ds. size if that's the case I can say this is the first time I came across to this level and if I came across to this level for the first time I'll say DS why don't you add this node guy and this will be a part of my right view now you might think how will this work very simple let's do a dry run in order to understand it in a much better way so initially we are at the node right so initial call will be uh on this node one with a level zero that's the initial call right so we go across if node is null no then level is zero the data structure size is zero so this is the first time you're coming to level zero so you insert this note so you insert a node one perfect next you're doing a node right so I'll go to a node right which means I'm going to this node three with a increase in level so I increase in level and I go to the right perfect when I go to this right I have a note three correct so level is one is it null no is the level one equivalent to DS do size ds. size is also one so it is the first time you're coming to level one so I'll take this three and it'll insert it perfect again there's a node do right where you'll move so when you move to this node it's a node s with a level bummed up so the level will be two so you're moving to level two again you come across and the level two is equivalent to ds. size indeed so you'll take this seven and you'll insert it next I again come to node right so when you come to node right you reach a null and whenever you reach a null you are",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "KV4mRzTjlAk",
+      "position": 96,
+      "title": "L24. Right/Left View of Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=KV4mRzTjlAk",
+      "start": 583.16,
+      "end": 688.4399999999999,
+      "text": "and whenever you reach a null you are set to return returned next you went to right and you returned so there will be a left so you'll go to the left you'll again reach null and you'll return so the moment these two conditions are done you will start going back again for three you went to the right you'll go to the left and it's a null so that's done you will return so the moment you return the one guy has to go to the left so you move to the left now you come across 2 comma level one very important from one you move to three from one now you'll move to two so when you're moving the level is one but the DS size is already three so this means you have filled up three levels that's level zero level one level two the moment you'll get the next level three then only you'll fill something so you'll move here next obviously uh you'll move to the right that's 5 comma 2 again nothing to be filled then you'll move right then again you'll move left the moment you move left you'll come across 6 comma 3 right like you move here then you move to right but you find a null you go back then you come to the left that's 6 comma 3 so 6 comma 3 will say okay the size is three that's a new node so you take this six and you insert it and then you again go back again go back again come here that's the node four so the node four will make sure 4 comma 2 again not to be inserted because now we have four size so I'll go back this will go back so this is how the traversal will look like I just play it very smart because I know since I'm moving in the rightward direction at first whichever level I come across like I come across level three level two level one level zero",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "KV4mRzTjlAk",
+      "position": 96,
+      "title": "L24. Right/Left View of Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=KV4mRzTjlAk",
+      "start": 683.279,
+      "end": 786.6,
+      "text": "three level two level one level zero whenever I will come across that will always be the the first node from the right side it'll always be the first node from the right side and that's how you can easily get the right view of a binary tree if I ask you a question how to get a left side view of a binary tree can you tell me in the comment section like you can pause and write the comment what would be the answer very simple instead of right left you will move left right in order to get the left side view of of the binary tree simple enough so we have ended up solving the right side left side view in a Time complexity of beo of N and a space complexity of beo of H again I'm not considering the data structure space complexity because you know whenever we are returning an answer that's generally not considered into your algorithm we consider the time complexity required in the algorithm but yes you can just mention this to the interviewer he'll be okay with it so that's the time complexity again height can be at the wor case we go in but generally we do not get such binary trees the SK binary trees are very very less so we have the C++ code on the left and the Java code on the right so the C++ code will take the root and we will have a vector and then we will call the root the level is zero and the vector will be passed rout is null return if the size is level added or go to the right and go to the left with level upgraded to plus one that's how the code will look like simple enough so I hope youve understood the entire explanation as well as the code just in case you did please please please make sure you like this video because it took a lot of efforts to make this entire tree series",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "KV4mRzTjlAk",
+      "position": 96,
+      "title": "L24. Right/Left View of Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=KV4mRzTjlAk",
+      "start": 782.12,
+      "end": 809.399,
+      "text": "efforts to make this entire tree series also if you wish you can definitely drop in a comment that will keep motivating me to make such further series also if you're new to this Channel please do consider subscribing because I'm going to bring in such more series in the upcoming future as well with this uh let's wrap up this video let's meet in the next lecture bye-bye take care Bren don't never forget your golden I will",
+      "word_count": 79
+    }
+  ]
+}

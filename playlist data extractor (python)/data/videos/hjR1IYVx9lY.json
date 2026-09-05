@@ -1,0 +1,3668 @@
+{
+  "position": 47,
+  "video_id": "hjR1IYVx9lY",
+  "title": "BS-3. First and Last Occurrences in Array | Count occurrences in Array",
+  "url": "https://www.youtube.com/watch?v=hjR1IYVx9lY",
+  "transcript": [
+    {
+      "start": 2.94,
+      "duration": 3.0,
+      "end": 5.9399999999999995,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 4.44,
+      "duration": 3.419,
+      "end": 7.859,
+      "text": "I hope you guys are doing extremely well"
+    },
+    {
+      "start": 5.94,
+      "duration": 3.48,
+      "end": 9.42,
+      "text": "so we will be continuing with our buying"
+    },
+    {
+      "start": 7.859,
+      "duration": 4.141,
+      "end": 12.0,
+      "text": "research playlist which is the part of"
+    },
+    {
+      "start": 9.42,
+      "duration": 5.7,
+      "end": 15.120000000000001,
+      "text": "the Strivers A to Z DSA course just in"
+    },
+    {
+      "start": 12.0,
+      "duration": 4.139,
+      "end": 16.139,
+      "text": "case you haven't checked out our A2Z DSA"
+    },
+    {
+      "start": 15.12,
+      "duration": 2.579,
+      "end": 17.698999999999998,
+      "text": "course there's a link in the description"
+    },
+    {
+      "start": 16.139,
+      "duration": 4.201,
+      "end": 20.34,
+      "text": "please please make sure you check it out"
+    },
+    {
+      "start": 17.699,
+      "duration": 4.621,
+      "end": 22.32,
+      "text": "so uh in the previous video I think I've"
+    },
+    {
+      "start": 20.34,
+      "duration": 3.72,
+      "end": 24.06,
+      "text": "covered up till this particular like all"
+    },
+    {
+      "start": 22.32,
+      "duration": 3.9,
+      "end": 26.22,
+      "text": "of these problems in this video I'll be"
+    },
+    {
+      "start": 24.06,
+      "duration": 4.32,
+      "end": 28.38,
+      "text": "covering up these two problems so"
+    },
+    {
+      "start": 26.22,
+      "duration": 4.02,
+      "end": 30.24,
+      "text": "without waiting let's get started so the"
+    },
+    {
+      "start": 28.38,
+      "duration": 4.199,
+      "end": 32.579,
+      "text": "problem is asking you to find the first"
+    },
+    {
+      "start": 30.24,
+      "duration": 5.1,
+      "end": 35.339999999999996,
+      "text": "and the last occurrence of a given"
+    },
+    {
+      "start": 32.579,
+      "duration": 5.281,
+      "end": 37.86,
+      "text": "number X so you will be given an array"
+    },
+    {
+      "start": 35.34,
+      "duration": 4.68,
+      "end": 40.02,
+      "text": "obviously it will be sorted so you have"
+    },
+    {
+      "start": 37.86,
+      "duration": 5.699,
+      "end": 43.559,
+      "text": "to find me the first and the last"
+    },
+    {
+      "start": 40.02,
+      "duration": 5.94,
+      "end": 45.96,
+      "text": "occurring index of X let me give you an"
+    },
+    {
+      "start": 43.559,
+      "duration": 4.98,
+      "end": 48.539,
+      "text": "example so if I give you X as eight"
+    },
+    {
+      "start": 45.96,
+      "duration": 5.04,
+      "end": 51.0,
+      "text": "which is the first occurring index over"
+    },
+    {
+      "start": 48.539,
+      "duration": 4.561,
+      "end": 53.1,
+      "text": "here which is index 3 which is the last"
+    },
+    {
+      "start": 51.0,
+      "duration": 4.32,
+      "end": 55.32,
+      "text": "occurring index over here which is index"
+    },
+    {
+      "start": 53.1,
+      "duration": 5.52,
+      "end": 58.620000000000005,
+      "text": "five so you have to return me a pair of"
+    },
+    {
+      "start": 55.32,
+      "duration": 5.7,
+      "end": 61.02,
+      "text": "the first and the last occurring index"
+    },
+    {
+      "start": 58.62,
+      "duration": 6.78,
+      "end": 65.39999999999999,
+      "text": "imagine I give you the X as"
+    },
+    {
+      "start": 61.02,
+      "duration": 7.02,
+      "end": 68.04,
+      "text": "then in that case do I have 10 no so you"
+    },
+    {
+      "start": 65.4,
+      "duration": 6.3,
+      "end": 71.7,
+      "text": "will have to return me minus 1 and -1"
+    },
+    {
+      "start": 68.04,
+      "duration": 6.48,
+      "end": 74.52000000000001,
+      "text": "imagine I give you X as 11 do I have 11"
+    },
+    {
+      "start": 71.7,
+      "duration": 4.26,
+      "end": 75.96000000000001,
+      "text": "yes but there is only one occurrence so"
+    },
+    {
+      "start": 74.52,
+      "duration": 4.919,
+      "end": 79.439,
+      "text": "that one occurrence will be the first"
+    },
+    {
+      "start": 75.96,
+      "duration": 5.159,
+      "end": 81.119,
+      "text": "occurrence and that one element uh that"
+    },
+    {
+      "start": 79.439,
+      "duration": 3.961,
+      "end": 83.39999999999999,
+      "text": "one index will be the last occurring"
+    },
+    {
+      "start": 81.119,
+      "duration": 4.86,
+      "end": 85.979,
+      "text": "index as well so I'll be returning index"
+    },
+    {
+      "start": 83.4,
+      "duration": 4.62,
+      "end": 88.02000000000001,
+      "text": "6 and index 6. so I've given you three"
+    },
+    {
+      "start": 85.979,
+      "duration": 3.541,
+      "end": 89.52,
+      "text": "different uh examples so this problem"
+    },
+    {
+      "start": 88.02,
+      "duration": 3.54,
+      "end": 91.56,
+      "text": "comes up in an interview it is the first"
+    },
+    {
+      "start": 89.52,
+      "duration": 3.72,
+      "end": 93.24,
+      "text": "solution that comes to your brain the"
+    },
+    {
+      "start": 91.56,
+      "duration": 4.019,
+      "end": 95.57900000000001,
+      "text": "extreme name solution that I can think"
+    },
+    {
+      "start": 93.24,
+      "duration": 5.339,
+      "end": 98.579,
+      "text": "of as doing a linear iteration on the"
+    },
+    {
+      "start": 95.579,
+      "duration": 6.781,
+      "end": 102.36,
+      "text": "array basically I go via every element"
+    },
+    {
+      "start": 98.579,
+      "duration": 6.841,
+      "end": 105.41999999999999,
+      "text": "imagine I give you X as eight so what"
+    },
+    {
+      "start": 102.36,
+      "duration": 6.06,
+      "end": 108.42,
+      "text": "I'll do is I'll keep first as minus one"
+    },
+    {
+      "start": 105.42,
+      "duration": 8.519,
+      "end": 113.93900000000001,
+      "text": "I'll keep last as minus one and then"
+    },
+    {
+      "start": 108.42,
+      "duration": 7.8,
+      "end": 116.22,
+      "text": "I'll Travis no no no yes this is"
+    },
+    {
+      "start": 113.939,
+      "duration": 6.241,
+      "end": 120.17999999999999,
+      "text": "the first occurring like first time I"
+    },
+    {
+      "start": 116.22,
+      "duration": 7.079,
+      "end": 123.29899999999999,
+      "text": "found out eight so if I get it equal to"
+    },
+    {
+      "start": 120.18,
+      "duration": 6.24,
+      "end": 126.42,
+      "text": "x what other check is is first minus 1"
+    },
+    {
+      "start": 123.299,
+      "duration": 5.641,
+      "end": 128.94,
+      "text": "it is I'll replace it with the index and"
+    },
+    {
+      "start": 126.42,
+      "duration": 4.559,
+      "end": 130.979,
+      "text": "I'll not check anything for the last and"
+    },
+    {
+      "start": 128.94,
+      "duration": 4.74,
+      "end": 133.68,
+      "text": "I'll replace it with the index then I'll"
+    },
+    {
+      "start": 130.979,
+      "duration": 6.421,
+      "end": 137.4,
+      "text": "go to 8 and I'll see this is equivalent"
+    },
+    {
+      "start": 133.68,
+      "duration": 5.16,
+      "end": 138.84,
+      "text": "to X so I'll see it is at index 4 and"
+    },
+    {
+      "start": 137.4,
+      "duration": 4.68,
+      "end": 142.08,
+      "text": "I'll see what is the value of first"
+    },
+    {
+      "start": 138.84,
+      "duration": 5.82,
+      "end": 144.66,
+      "text": "first is no more minus one no need to"
+    },
+    {
+      "start": 142.08,
+      "duration": 4.44,
+      "end": 146.52,
+      "text": "change it just change the last again"
+    },
+    {
+      "start": 144.66,
+      "duration": 4.439,
+      "end": 149.099,
+      "text": "I'll move to the next and this mlc this"
+    },
+    {
+      "start": 146.52,
+      "duration": 4.32,
+      "end": 150.84,
+      "text": "8 is equivalent to this 8. thereby I'll"
+    },
+    {
+      "start": 149.099,
+      "duration": 4.5,
+      "end": 153.599,
+      "text": "take this index 5 and compare it with"
+    },
+    {
+      "start": 150.84,
+      "duration": 5.28,
+      "end": 156.12,
+      "text": "first first is not minus one no need to"
+    },
+    {
+      "start": 153.599,
+      "duration": 5.461,
+      "end": 159.06,
+      "text": "change change last and then move to here"
+    },
+    {
+      "start": 156.12,
+      "duration": 5.699,
+      "end": 161.81900000000002,
+      "text": "and then this 11 is not equal to then"
+    },
+    {
+      "start": 159.06,
+      "duration": 4.56,
+      "end": 163.62,
+      "text": "move to here and it ends so at the end"
+    },
+    {
+      "start": 161.819,
+      "duration": 4.741,
+      "end": 166.56,
+      "text": "you'll see that the first is stored as"
+    },
+    {
+      "start": 163.62,
+      "duration": 4.979,
+      "end": 168.59900000000002,
+      "text": "three and the last is stored as five so"
+    },
+    {
+      "start": 166.56,
+      "duration": 4.44,
+      "end": 171.0,
+      "text": "if I have to code this up it's gonna be"
+    },
+    {
+      "start": 168.599,
+      "duration": 5.521,
+      "end": 174.11999999999998,
+      "text": "super simple I'll say first as minus one"
+    },
+    {
+      "start": 171.0,
+      "duration": 5.4,
+      "end": 176.4,
+      "text": "I'll say last as minus one I'll start"
+    },
+    {
+      "start": 174.12,
+      "duration": 4.68,
+      "end": 178.8,
+      "text": "the iteration from zero I'll go until"
+    },
+    {
+      "start": 176.4,
+      "duration": 5.339,
+      "end": 181.739,
+      "text": "the last index n minus 1 and I'll be"
+    },
+    {
+      "start": 178.8,
+      "duration": 6.36,
+      "end": 185.16000000000003,
+      "text": "like is array of I"
+    },
+    {
+      "start": 181.739,
+      "duration": 5.881,
+      "end": 187.62,
+      "text": "equivalent to X if that's the case if"
+    },
+    {
+      "start": 185.16,
+      "duration": 4.68,
+      "end": 189.84,
+      "text": "first is like this is the first time it"
+    },
+    {
+      "start": 187.62,
+      "duration": 4.56,
+      "end": 192.18,
+      "text": "it is appearing if this is the first"
+    },
+    {
+      "start": 189.84,
+      "duration": 5.16,
+      "end": 195.0,
+      "text": "time it is appearing please make sure"
+    },
+    {
+      "start": 192.18,
+      "duration": 4.44,
+      "end": 196.62,
+      "text": "that you store that index I and every"
+    },
+    {
+      "start": 195.0,
+      "duration": 4.92,
+      "end": 199.92,
+      "text": "time you find that element you just"
+    },
+    {
+      "start": 196.62,
+      "duration": 4.979,
+      "end": 201.59900000000002,
+      "text": "update the index quite simple anytime"
+    },
+    {
+      "start": 199.92,
+      "duration": 4.02,
+      "end": 203.94,
+      "text": "you find first equal to minus one you"
+    },
+    {
+      "start": 201.599,
+      "duration": 5.28,
+      "end": 206.879,
+      "text": "update and the last keeps on updating"
+    },
+    {
+      "start": 203.94,
+      "duration": 4.98,
+      "end": 208.92,
+      "text": "every time it's equivalent to X since"
+    },
+    {
+      "start": 206.879,
+      "duration": 4.08,
+      "end": 210.959,
+      "text": "the array is sorted we're very sure that"
+    },
+    {
+      "start": 208.92,
+      "duration": 4.5,
+      "end": 213.42,
+      "text": "we will get the first and the last"
+    },
+    {
+      "start": 210.959,
+      "duration": 4.56,
+      "end": 215.519,
+      "text": "occurring Index right"
+    },
+    {
+      "start": 213.42,
+      "duration": 6.539,
+      "end": 219.95899999999997,
+      "text": "so what is the time complexity"
+    },
+    {
+      "start": 215.519,
+      "duration": 6.181,
+      "end": 221.70000000000002,
+      "text": "B go of n yes we are taking a big of n"
+    },
+    {
+      "start": 219.959,
+      "duration": 3.42,
+      "end": 223.379,
+      "text": "time complexity so obviously the"
+    },
+    {
+      "start": 221.7,
+      "duration": 3.66,
+      "end": 225.35999999999999,
+      "text": "interviewer will not be happy and he'll"
+    },
+    {
+      "start": 223.379,
+      "duration": 4.621,
+      "end": 228.0,
+      "text": "ask you to optimize so we have to"
+    },
+    {
+      "start": 225.36,
+      "duration": 4.459,
+      "end": 229.81900000000002,
+      "text": "improve B go of n how can we improve"
+    },
+    {
+      "start": 228.0,
+      "duration": 4.62,
+      "end": 232.62,
+      "text": "like what is better than b go often"
+    },
+    {
+      "start": 229.819,
+      "duration": 5.56,
+      "end": 235.379,
+      "text": "logarithmic of it right so how can I"
+    },
+    {
+      "start": 232.62,
+      "duration": 6.479,
+      "end": 239.09900000000002,
+      "text": "think of a logarithmic of a solution we"
+    },
+    {
+      "start": 235.379,
+      "duration": 5.761,
+      "end": 241.14,
+      "text": "know that this given array is sorted we"
+    },
+    {
+      "start": 239.099,
+      "duration": 4.56,
+      "end": 243.659,
+      "text": "know that we have to find that means we"
+    },
+    {
+      "start": 241.14,
+      "duration": 5.28,
+      "end": 246.42,
+      "text": "have to perform a search so whenever you"
+    },
+    {
+      "start": 243.659,
+      "duration": 6.121,
+      "end": 249.78,
+      "text": "perform a search in a sorted section"
+    },
+    {
+      "start": 246.42,
+      "duration": 4.92,
+      "end": 251.33999999999997,
+      "text": "which algorithm binary research yes so"
+    },
+    {
+      "start": 249.78,
+      "duration": 4.2,
+      "end": 253.98,
+      "text": "we will be applying binary search on"
+    },
+    {
+      "start": 251.34,
+      "duration": 4.619,
+      "end": 255.959,
+      "text": "this array to figure out the first and"
+    },
+    {
+      "start": 253.98,
+      "duration": 4.2,
+      "end": 258.18,
+      "text": "the last occurrence so we can either"
+    },
+    {
+      "start": 255.959,
+      "duration": 3.84,
+      "end": 259.799,
+      "text": "write the raw binary search which means"
+    },
+    {
+      "start": 258.18,
+      "duration": 3.899,
+      "end": 262.079,
+      "text": "we will write the code from the scratch"
+    },
+    {
+      "start": 259.799,
+      "duration": 3.601,
+      "end": 263.4,
+      "text": "or we can use the functionalities that"
+    },
+    {
+      "start": 262.079,
+      "duration": 3.601,
+      "end": 265.68,
+      "text": "we have learned in the previous lectures"
+    },
+    {
+      "start": 263.4,
+      "duration": 4.2,
+      "end": 267.59999999999997,
+      "text": "in the previous lectures I've taught you"
+    },
+    {
+      "start": 265.68,
+      "duration": 4.019,
+      "end": 269.699,
+      "text": "something as low bound and I've also"
+    },
+    {
+      "start": 267.6,
+      "duration": 4.92,
+      "end": 272.52000000000004,
+      "text": "taught you something as upper bound do"
+    },
+    {
+      "start": 269.699,
+      "duration": 5.101,
+      "end": 274.8,
+      "text": "you remember yes you do right so we will"
+    },
+    {
+      "start": 272.52,
+      "duration": 4.56,
+      "end": 277.08,
+      "text": "try to implement low bound and upper"
+    },
+    {
+      "start": 274.8,
+      "duration": 4.38,
+      "end": 279.18,
+      "text": "bound to find us solution for the first"
+    },
+    {
+      "start": 277.08,
+      "duration": 4.44,
+      "end": 281.52,
+      "text": "and the last occurrence so if you"
+    },
+    {
+      "start": 279.18,
+      "duration": 5.22,
+      "end": 284.40000000000003,
+      "text": "remember one thing what was lower bound"
+    },
+    {
+      "start": 281.52,
+      "duration": 6.48,
+      "end": 288.0,
+      "text": "come on guys remember it was the"
+    },
+    {
+      "start": 284.4,
+      "duration": 6.12,
+      "end": 290.52,
+      "text": "smallest index where the element at that"
+    },
+    {
+      "start": 288.0,
+      "duration": 4.8,
+      "end": 292.8,
+      "text": "index was greater than equal to very"
+    },
+    {
+      "start": 290.52,
+      "duration": 5.94,
+      "end": 296.46,
+      "text": "very important greater than equal to x"
+    },
+    {
+      "start": 292.8,
+      "duration": 7.5,
+      "end": 300.3,
+      "text": "correct what was up above upper bound"
+    },
+    {
+      "start": 296.46,
+      "duration": 6.239,
+      "end": 302.69899999999996,
+      "text": "was the smallest index where array of"
+    },
+    {
+      "start": 300.3,
+      "duration": 7.14,
+      "end": 307.44,
+      "text": "index was greater than x not equal to"
+    },
+    {
+      "start": 302.699,
+      "duration": 8.101,
+      "end": 310.8,
+      "text": "greater than x so can I say if x is 8"
+    },
+    {
+      "start": 307.44,
+      "duration": 6.6,
+      "end": 314.04,
+      "text": "and if I say give me the lower bound of"
+    },
+    {
+      "start": 310.8,
+      "duration": 5.459,
+      "end": 316.259,
+      "text": "8 give me the lower bound of 8 where"
+    },
+    {
+      "start": 314.04,
+      "duration": 5.219,
+      "end": 319.259,
+      "text": "will that point to that will point to"
+    },
+    {
+      "start": 316.259,
+      "duration": 5.341,
+      "end": 321.6,
+      "text": "here that is for sure which is index 0 1"
+    },
+    {
+      "start": 319.259,
+      "duration": 6.72,
+      "end": 325.97900000000004,
+      "text": "2 3 and that's definitely going to point"
+    },
+    {
+      "start": 321.6,
+      "duration": 7.62,
+      "end": 329.22,
+      "text": "to index 3 because if I'm finding the"
+    },
+    {
+      "start": 325.979,
+      "duration": 5.16,
+      "end": 331.139,
+      "text": "low bound of 8 this 8 is greater than"
+    },
+    {
+      "start": 329.22,
+      "duration": 4.68,
+      "end": 333.90000000000003,
+      "text": "equal to 8 so I am getting the low"
+    },
+    {
+      "start": 331.139,
+      "duration": 4.981,
+      "end": 336.12,
+      "text": "amount but how do I figure out this one"
+    },
+    {
+      "start": 333.9,
+      "duration": 6.12,
+      "end": 340.02,
+      "text": "this is when I will be using the upper"
+    },
+    {
+      "start": 336.12,
+      "duration": 6.48,
+      "end": 342.6,
+      "text": "bound so if I say upper bound of 8 what"
+    },
+    {
+      "start": 340.02,
+      "duration": 4.98,
+      "end": 345.0,
+      "text": "is upper bound of 8 it says first"
+    },
+    {
+      "start": 342.6,
+      "duration": 5.34,
+      "end": 347.94,
+      "text": "element that is greater than 8 that is"
+    },
+    {
+      "start": 345.0,
+      "duration": 5.4,
+      "end": 350.4,
+      "text": "greater than 8 thereby it will somewhere"
+    },
+    {
+      "start": 347.94,
+      "duration": 5.28,
+      "end": 353.21999999999997,
+      "text": "Point here it will sum their point here"
+    },
+    {
+      "start": 350.4,
+      "duration": 6.0,
+      "end": 356.4,
+      "text": "correct so can I say one thing for sure"
+    },
+    {
+      "start": 353.22,
+      "duration": 6.419,
+      "end": 359.639,
+      "text": "if I do a minus one Whatever index it"
+    },
+    {
+      "start": 356.4,
+      "duration": 4.739,
+      "end": 361.13899999999995,
+      "text": "gives if I do a minus 1 then it will be"
+    },
+    {
+      "start": 359.639,
+      "duration": 4.081,
+      "end": 363.72,
+      "text": "pointing here"
+    },
+    {
+      "start": 361.139,
+      "duration": 5.041,
+      "end": 366.18,
+      "text": "so the lower bound points here and this"
+    },
+    {
+      "start": 363.72,
+      "duration": 6.12,
+      "end": 369.84000000000003,
+      "text": "one will be pointing here"
+    },
+    {
+      "start": 366.18,
+      "duration": 5.64,
+      "end": 371.82,
+      "text": "is that correct that is correct but is"
+    },
+    {
+      "start": 369.84,
+      "duration": 4.74,
+      "end": 374.58,
+      "text": "that the answer are we covering up all"
+    },
+    {
+      "start": 371.82,
+      "duration": 5.099,
+      "end": 376.919,
+      "text": "the cases I don't think so I don't think"
+    },
+    {
+      "start": 374.58,
+      "duration": 6.42,
+      "end": 381.0,
+      "text": "so let me give you an example"
+    },
+    {
+      "start": 376.919,
+      "duration": 6.421,
+      "end": 383.34,
+      "text": "so for eight it works because 8 is in"
+    },
+    {
+      "start": 381.0,
+      "duration": 3.66,
+      "end": 384.66,
+      "text": "the array that is why it worked but"
+    },
+    {
+      "start": 383.34,
+      "duration": 3.299,
+      "end": 386.63899999999995,
+      "text": "there are some cases that you have to"
+    },
+    {
+      "start": 384.66,
+      "duration": 3.78,
+      "end": 388.44,
+      "text": "cover by the way if you don't know about"
+    },
+    {
+      "start": 386.639,
+      "duration": 3.541,
+      "end": 390.18,
+      "text": "low bound please go back and watch my"
+    },
+    {
+      "start": 388.44,
+      "duration": 3.539,
+      "end": 391.979,
+      "text": "previous video I've already implemented"
+    },
+    {
+      "start": 390.18,
+      "duration": 3.18,
+      "end": 393.36,
+      "text": "low bounce I'll just be reusing that"
+    },
+    {
+      "start": 391.979,
+      "duration": 4.381,
+      "end": 396.36,
+      "text": "code"
+    },
+    {
+      "start": 393.36,
+      "duration": 7.02,
+      "end": 400.38,
+      "text": "now let's come back what if I give you"
+    },
+    {
+      "start": 396.36,
+      "duration": 5.839,
+      "end": 402.199,
+      "text": "something as 10 in this case when you"
+    },
+    {
+      "start": 400.38,
+      "duration": 4.74,
+      "end": 405.12,
+      "text": "try to figure out the lower bound of 10"
+    },
+    {
+      "start": 402.199,
+      "duration": 5.201,
+      "end": 407.40000000000003,
+      "text": "that will be pointing to this portion"
+    },
+    {
+      "start": 405.12,
+      "duration": 5.76,
+      "end": 410.88,
+      "text": "that will be pointing to this portion"
+    },
+    {
+      "start": 407.4,
+      "duration": 6.72,
+      "end": 414.12,
+      "text": "because since there is no 10 since there"
+    },
+    {
+      "start": 410.88,
+      "duration": 6.18,
+      "end": 417.06,
+      "text": "is no 10 you got 11 as your lower bound"
+    },
+    {
+      "start": 414.12,
+      "duration": 5.579,
+      "end": 419.699,
+      "text": "so it's very very important that at the"
+    },
+    {
+      "start": 417.06,
+      "duration": 5.4,
+      "end": 422.46,
+      "text": "first step you check whatever Index this"
+    },
+    {
+      "start": 419.699,
+      "duration": 5.581,
+      "end": 425.28000000000003,
+      "text": "is returning is that containing this"
+    },
+    {
+      "start": 422.46,
+      "duration": 7.2,
+      "end": 429.65999999999997,
+      "text": "number or not there can be other cases"
+    },
+    {
+      "start": 425.28,
+      "duration": 6.18,
+      "end": 431.46,
+      "text": "as well let's think if I give you X as"
+    },
+    {
+      "start": 429.66,
+      "duration": 4.5,
+      "end": 434.16,
+      "text": "let's say 14"
+    },
+    {
+      "start": 431.46,
+      "duration": 5.16,
+      "end": 436.62,
+      "text": "in that case the moment you try to find"
+    },
+    {
+      "start": 434.16,
+      "duration": 3.68,
+      "end": 437.84000000000003,
+      "text": "out the low bound of 14 it will try to"
+    },
+    {
+      "start": 436.62,
+      "duration": 6.0,
+      "end": 442.62,
+      "text": "point to a"
+    },
+    {
+      "start": 437.84,
+      "duration": 6.579,
+      "end": 444.419,
+      "text": "hypothetical index of 8 right"
+    },
+    {
+      "start": 442.62,
+      "duration": 4.38,
+      "end": 447.0,
+      "text": "so if I'm pointing to the hypothetical"
+    },
+    {
+      "start": 444.419,
+      "duration": 6.541,
+      "end": 450.96,
+      "text": "index of 8 I cannot check for any value"
+    },
+    {
+      "start": 447.0,
+      "duration": 7.199,
+      "end": 454.199,
+      "text": "of 8 so even if the lower bound points"
+    },
+    {
+      "start": 450.96,
+      "duration": 7.32,
+      "end": 458.28,
+      "text": "to n that's what if the low bound of X"
+    },
+    {
+      "start": 454.199,
+      "duration": 7.56,
+      "end": 461.759,
+      "text": "points to n or all the array of lower"
+    },
+    {
+      "start": 458.28,
+      "duration": 6.66,
+      "end": 464.94,
+      "text": "bound is not equal to X which is this"
+    },
+    {
+      "start": 461.759,
+      "duration": 5.581,
+      "end": 467.34000000000003,
+      "text": "condition when X is 10 I did a low"
+    },
+    {
+      "start": 464.94,
+      "duration": 5.819,
+      "end": 470.759,
+      "text": "amount of 10 and it pointed to index 6"
+    },
+    {
+      "start": 467.34,
+      "duration": 6.359,
+      "end": 473.69899999999996,
+      "text": "which was 11 so that is not equal to X"
+    },
+    {
+      "start": 470.759,
+      "duration": 5.16,
+      "end": 475.91900000000004,
+      "text": "so either this case when it points to"
+    },
+    {
+      "start": 473.699,
+      "duration": 5.28,
+      "end": 478.979,
+      "text": "the hypothetical index that means this"
+    },
+    {
+      "start": 475.919,
+      "duration": 5.641,
+      "end": 481.56,
+      "text": "number is not there or whatever index it"
+    },
+    {
+      "start": 478.979,
+      "duration": 6.0,
+      "end": 484.979,
+      "text": "is pointing me if that's not equivalent"
+    },
+    {
+      "start": 481.56,
+      "duration": 6.359,
+      "end": 487.919,
+      "text": "then the number is not there if they are"
+    },
+    {
+      "start": 484.979,
+      "duration": 5.16,
+      "end": 490.139,
+      "text": "okay like for 8 both of the cases will"
+    },
+    {
+      "start": 487.919,
+      "duration": 4.5,
+      "end": 492.419,
+      "text": "be false if that's the case I'll always"
+    },
+    {
+      "start": 490.139,
+      "duration": 4.081,
+      "end": 494.22,
+      "text": "find the first and last occurrence by"
+    },
+    {
+      "start": 492.419,
+      "duration": 5.161,
+      "end": 497.58,
+      "text": "finding the"
+    },
+    {
+      "start": 494.22,
+      "duration": 4.68,
+      "end": 498.90000000000003,
+      "text": "lower bound and upper bound minus 1 will"
+    },
+    {
+      "start": 497.58,
+      "duration": 3.42,
+      "end": 501.0,
+      "text": "be my"
+    },
+    {
+      "start": 498.9,
+      "duration": 4.38,
+      "end": 503.28,
+      "text": "first and the last occurrence got this"
+    },
+    {
+      "start": 501.0,
+      "duration": 3.72,
+      "end": 504.72,
+      "text": "so let's quickly quote this up and we"
+    },
+    {
+      "start": 503.28,
+      "duration": 3.66,
+      "end": 506.94,
+      "text": "need the low bound and the upper Bond so"
+    },
+    {
+      "start": 504.72,
+      "duration": 4.62,
+      "end": 509.34000000000003,
+      "text": "what I'll do is I'll go and copy the low"
+    },
+    {
+      "start": 506.94,
+      "duration": 4.199,
+      "end": 511.139,
+      "text": "bound from the previous code that we"
+    },
+    {
+      "start": 509.34,
+      "duration": 4.02,
+      "end": 513.36,
+      "text": "have written and I'll go and copy the"
+    },
+    {
+      "start": 511.139,
+      "duration": 3.9,
+      "end": 515.039,
+      "text": "upper bound from the previous code that"
+    },
+    {
+      "start": 513.36,
+      "duration": 4.2,
+      "end": 517.5600000000001,
+      "text": "I've written perfect"
+    },
+    {
+      "start": 515.039,
+      "duration": 5.461,
+      "end": 520.5,
+      "text": "I've copy pasted both of them please be"
+    },
+    {
+      "start": 517.56,
+      "duration": 5.88,
+      "end": 523.4399999999999,
+      "text": "careful that the upper bound first is"
+    },
+    {
+      "start": 520.5,
+      "duration": 5.279,
+      "end": 525.779,
+      "text": "taking X so I'll just replace this yeah"
+    },
+    {
+      "start": 523.44,
+      "duration": 4.56,
+      "end": 528.0,
+      "text": "perfect so what is the first thing I"
+    },
+    {
+      "start": 525.779,
+      "duration": 4.321,
+      "end": 530.1,
+      "text": "know I need to find out the logo so I'll"
+    },
+    {
+      "start": 528.0,
+      "duration": 5.76,
+      "end": 533.76,
+      "text": "call this function for sure let's call"
+    },
+    {
+      "start": 530.1,
+      "duration": 6.359,
+      "end": 536.4590000000001,
+      "text": "this function and pass on array pass on"
+    },
+    {
+      "start": 533.76,
+      "duration": 6.24,
+      "end": 540.0,
+      "text": "array pass on N pass on kill"
+    },
+    {
+      "start": 536.459,
+      "duration": 5.88,
+      "end": 542.3389999999999,
+      "text": "what do I know if the low bound"
+    },
+    {
+      "start": 540.0,
+      "duration": 5.88,
+      "end": 545.88,
+      "text": "that will be end what do I know if the"
+    },
+    {
+      "start": 542.339,
+      "duration": 6.481,
+      "end": 548.82,
+      "text": "low bound points to n or all the array"
+    },
+    {
+      "start": 545.88,
+      "duration": 5.34,
+      "end": 551.22,
+      "text": "of low bound is not equal to this"
+    },
+    {
+      "start": 548.82,
+      "duration": 5.82,
+      "end": 554.6400000000001,
+      "text": "element that means element is dot form"
+    },
+    {
+      "start": 551.22,
+      "duration": 4.44,
+      "end": 555.6600000000001,
+      "text": "perfect otherwise I'll return the lower"
+    },
+    {
+      "start": 554.64,
+      "duration": 3.78,
+      "end": 558.42,
+      "text": "bound"
+    },
+    {
+      "start": 555.66,
+      "duration": 5.34,
+      "end": 561.0,
+      "text": "and I'll call the upper bound"
+    },
+    {
+      "start": 558.42,
+      "duration": 6.72,
+      "end": 565.14,
+      "text": "and I'll give me a value for short array"
+    },
+    {
+      "start": 561.0,
+      "duration": 5.58,
+      "end": 566.58,
+      "text": "n and K and whatever it gives I'll just"
+    },
+    {
+      "start": 565.14,
+      "duration": 3.0,
+      "end": 568.14,
+      "text": "do a minus one because I know the"
+    },
+    {
+      "start": 566.58,
+      "duration": 3.12,
+      "end": 569.7,
+      "text": "previous one will be the last documents"
+    },
+    {
+      "start": 568.14,
+      "duration": 3.96,
+      "end": 572.1,
+      "text": "and that is something which I'll return"
+    },
+    {
+      "start": 569.7,
+      "duration": 4.5,
+      "end": 574.2,
+      "text": "super simple you just have to take care"
+    },
+    {
+      "start": 572.1,
+      "duration": 4.2,
+      "end": 576.3000000000001,
+      "text": "of this particular Edge case my battery"
+    },
+    {
+      "start": 574.2,
+      "duration": 4.139,
+      "end": 578.339,
+      "text": "will be K you just have to take care of"
+    },
+    {
+      "start": 576.3,
+      "duration": 5.099,
+      "end": 581.399,
+      "text": "this particular Edge case and a pretty"
+    },
+    {
+      "start": 578.339,
+      "duration": 4.68,
+      "end": 583.019,
+      "text": "much stop and yeah that's it so if you"
+    },
+    {
+      "start": 581.399,
+      "duration": 3.721,
+      "end": 585.12,
+      "text": "know low bound and upper bound that"
+    },
+    {
+      "start": 583.019,
+      "duration": 4.5,
+      "end": 587.519,
+      "text": "actually will help you to solve so many"
+    },
+    {
+      "start": 585.12,
+      "duration": 4.38,
+      "end": 589.5,
+      "text": "number of problems so what is the time"
+    },
+    {
+      "start": 587.519,
+      "duration": 3.781,
+      "end": 591.3,
+      "text": "complexity of this one"
+    },
+    {
+      "start": 589.5,
+      "duration": 3.48,
+      "end": 592.98,
+      "text": "so what will be the time complexity of"
+    },
+    {
+      "start": 591.3,
+      "duration": 3.18,
+      "end": 594.4799999999999,
+      "text": "this particular solution we are trying"
+    },
+    {
+      "start": 592.98,
+      "duration": 3.78,
+      "end": 596.76,
+      "text": "to find out the low bound which will"
+    },
+    {
+      "start": 594.48,
+      "duration": 3.84,
+      "end": 598.32,
+      "text": "take me logarithmic base 2 and we're"
+    },
+    {
+      "start": 596.76,
+      "duration": 3.12,
+      "end": 599.88,
+      "text": "trying to find out the upper bound which"
+    },
+    {
+      "start": 598.32,
+      "duration": 3.48,
+      "end": 601.8000000000001,
+      "text": "is going to take another logarithmic"
+    },
+    {
+      "start": 599.88,
+      "duration": 4.019,
+      "end": 603.899,
+      "text": "base to end so 2 into B go of"
+    },
+    {
+      "start": 601.8,
+      "duration": 4.5,
+      "end": 606.3,
+      "text": "logarithmic base to n what about the"
+    },
+    {
+      "start": 603.899,
+      "duration": 5.701,
+      "end": 609.6,
+      "text": "space complexity that's a big O of one"
+    },
+    {
+      "start": 606.3,
+      "duration": 5.219,
+      "end": 611.519,
+      "text": "now this will be a great solution"
+    },
+    {
+      "start": 609.6,
+      "duration": 4.859,
+      "end": 614.4590000000001,
+      "text": "but a lot of times the interviewers"
+    },
+    {
+      "start": 611.519,
+      "duration": 6.301,
+      "end": 617.82,
+      "text": "might ask you hey uh I don't want you to"
+    },
+    {
+      "start": 614.459,
+      "duration": 5.82,
+      "end": 620.279,
+      "text": "use some blow Bond concept please try to"
+    },
+    {
+      "start": 617.82,
+      "duration": 4.74,
+      "end": 622.5600000000001,
+      "text": "write a simple binary search that does"
+    },
+    {
+      "start": 620.279,
+      "duration": 4.141,
+      "end": 624.42,
+      "text": "it for me I don't want you to go through"
+    },
+    {
+      "start": 622.56,
+      "duration": 3.42,
+      "end": 625.9799999999999,
+      "text": "the low bound and upper bound a lot of"
+    },
+    {
+      "start": 624.42,
+      "duration": 3.419,
+      "end": 627.8389999999999,
+      "text": "interviews will accept it because they"
+    },
+    {
+      "start": 625.98,
+      "duration": 3.96,
+      "end": 629.94,
+      "text": "know about low Bond but interviewers who"
+    },
+    {
+      "start": 627.839,
+      "duration": 4.021,
+      "end": 631.86,
+      "text": "do not know they might ask you to go one"
+    },
+    {
+      "start": 629.94,
+      "duration": 3.54,
+      "end": 633.48,
+      "text": "step further so you should be careful"
+    },
+    {
+      "start": 631.86,
+      "duration": 3.3,
+      "end": 635.16,
+      "text": "about this and you should be able to"
+    },
+    {
+      "start": 633.48,
+      "duration": 3.84,
+      "end": 637.32,
+      "text": "write a binary search code for this as"
+    },
+    {
+      "start": 635.16,
+      "duration": 3.84,
+      "end": 639.0,
+      "text": "well so now we'll be discussing the"
+    },
+    {
+      "start": 637.32,
+      "duration": 4.56,
+      "end": 641.88,
+      "text": "plain binary research where I will not"
+    },
+    {
+      "start": 639.0,
+      "duration": 4.56,
+      "end": 643.56,
+      "text": "be using any pre-written code okay so we"
+    },
+    {
+      "start": 641.88,
+      "duration": 4.38,
+      "end": 646.26,
+      "text": "have to write a binary search from"
+    },
+    {
+      "start": 643.56,
+      "duration": 4.8,
+      "end": 648.3599999999999,
+      "text": "scratch obviously in a single binary"
+    },
+    {
+      "start": 646.26,
+      "duration": 4.98,
+      "end": 651.24,
+      "text": "search you cannot find first and last"
+    },
+    {
+      "start": 648.36,
+      "duration": 4.26,
+      "end": 652.62,
+      "text": "together so what I'll be doing is first"
+    },
+    {
+      "start": 651.24,
+      "duration": 3.36,
+      "end": 654.6,
+      "text": "I'll be writing a binary search to find"
+    },
+    {
+      "start": 652.62,
+      "duration": 3.54,
+      "end": 656.16,
+      "text": "out the first occurrence then we'll be"
+    },
+    {
+      "start": 654.6,
+      "duration": 4.44,
+      "end": 659.0400000000001,
+      "text": "writing a binary search to find out the"
+    },
+    {
+      "start": 656.16,
+      "duration": 5.16,
+      "end": 661.3199999999999,
+      "text": "last occurrence so let's first start the"
+    },
+    {
+      "start": 659.04,
+      "duration": 6.6,
+      "end": 665.64,
+      "text": "first occurrence thing now let's assume"
+    },
+    {
+      "start": 661.32,
+      "duration": 6.84,
+      "end": 668.1600000000001,
+      "text": "that first is stored as -1 and what is"
+    },
+    {
+      "start": 665.64,
+      "duration": 4.92,
+      "end": 670.56,
+      "text": "the standard protocol of binary search"
+    },
+    {
+      "start": 668.16,
+      "duration": 4.859,
+      "end": 673.019,
+      "text": "low will be pointing to the zeroth index"
+    },
+    {
+      "start": 670.56,
+      "duration": 4.62,
+      "end": 675.18,
+      "text": "and high will be pointing to the last"
+    },
+    {
+      "start": 673.019,
+      "duration": 4.741,
+      "end": 677.76,
+      "text": "index which is the seventh over here so"
+    },
+    {
+      "start": 675.18,
+      "duration": 4.68,
+      "end": 679.8599999999999,
+      "text": "the standard protocol says we will have"
+    },
+    {
+      "start": 677.76,
+      "duration": 4.319,
+      "end": 682.079,
+      "text": "to find out the middle and the middle is"
+    },
+    {
+      "start": 679.86,
+      "duration": 5.94,
+      "end": 685.8000000000001,
+      "text": "nothing but low plus I that is 0 plus 7"
+    },
+    {
+      "start": 682.079,
+      "duration": 6.781,
+      "end": 688.8599999999999,
+      "text": "by 2 so 0 plus 7 by 2 will be 3.5 which"
+    },
+    {
+      "start": 685.8,
+      "duration": 5.58,
+      "end": 691.38,
+      "text": "will be taken as 3 so mid will be"
+    },
+    {
+      "start": 688.86,
+      "duration": 4.919,
+      "end": 693.779,
+      "text": "pointing to 8. so can I say one thing"
+    },
+    {
+      "start": 691.38,
+      "duration": 5.699,
+      "end": 697.079,
+      "text": "for sure that I have figured out a 8"
+    },
+    {
+      "start": 693.779,
+      "duration": 5.521,
+      "end": 699.3,
+      "text": "because X was eight so can I say one"
+    },
+    {
+      "start": 697.079,
+      "duration": 4.561,
+      "end": 701.64,
+      "text": "thing for short I have figured out a 8"
+    },
+    {
+      "start": 699.3,
+      "duration": 4.979,
+      "end": 704.279,
+      "text": "for shot I've got a neat so I'll be like"
+    },
+    {
+      "start": 701.64,
+      "duration": 4.98,
+      "end": 706.62,
+      "text": "hey I got eight okay fine I got eight"
+    },
+    {
+      "start": 704.279,
+      "duration": 5.401,
+      "end": 709.68,
+      "text": "let's replace this"
+    },
+    {
+      "start": 706.62,
+      "duration": 6.06,
+      "end": 712.68,
+      "text": "I got a 8 at the third index I got eight"
+    },
+    {
+      "start": 709.68,
+      "duration": 5.339,
+      "end": 715.019,
+      "text": "at the third index what am I looking for"
+    },
+    {
+      "start": 712.68,
+      "duration": 5.04,
+      "end": 717.7199999999999,
+      "text": "first index now what is the definition"
+    },
+    {
+      "start": 715.019,
+      "duration": 4.801,
+      "end": 719.82,
+      "text": "of the first index will you look for"
+    },
+    {
+      "start": 717.72,
+      "duration": 4.5,
+      "end": 722.22,
+      "text": "this side or will you now look for this"
+    },
+    {
+      "start": 719.82,
+      "duration": 4.68,
+      "end": 724.5,
+      "text": "side ask yourself you'll be like hey"
+    },
+    {
+      "start": 722.22,
+      "duration": 4.02,
+      "end": 726.24,
+      "text": "striver it's better to look for on the"
+    },
+    {
+      "start": 724.5,
+      "duration": 3.54,
+      "end": 728.04,
+      "text": "left it's better to look for on the left"
+    },
+    {
+      "start": 726.24,
+      "duration": 3.96,
+      "end": 730.2,
+      "text": "because the"
+    },
+    {
+      "start": 728.04,
+      "duration": 4.14,
+      "end": 732.18,
+      "text": "the more we go on the left the index"
+    },
+    {
+      "start": 730.2,
+      "duration": 3.6,
+      "end": 733.8000000000001,
+      "text": "will reduce the index will reduce and"
+    },
+    {
+      "start": 732.18,
+      "duration": 3.899,
+      "end": 736.079,
+      "text": "that is what I want I want the first"
+    },
+    {
+      "start": 733.8,
+      "duration": 4.26,
+      "end": 738.06,
+      "text": "documents if I go on the right I'll get"
+    },
+    {
+      "start": 736.079,
+      "duration": 4.2,
+      "end": 740.279,
+      "text": "the later occurrences but I want the"
+    },
+    {
+      "start": 738.06,
+      "duration": 5.219,
+      "end": 743.279,
+      "text": "preoccurrences so I'll have to go to the"
+    },
+    {
+      "start": 740.279,
+      "duration": 6.24,
+      "end": 746.519,
+      "text": "left this is the reason the right search"
+    },
+    {
+      "start": 743.279,
+      "duration": 5.401,
+      "end": 748.68,
+      "text": "space will be eliminated will be"
+    },
+    {
+      "start": 746.519,
+      "duration": 4.981,
+      "end": 751.5,
+      "text": "eliminated got it"
+    },
+    {
+      "start": 748.68,
+      "duration": 6.659,
+      "end": 755.3389999999999,
+      "text": "so what I'll do is I'll simply go away"
+    },
+    {
+      "start": 751.5,
+      "duration": 6.42,
+      "end": 757.92,
+      "text": "take this eye and I'll put it over here"
+    },
+    {
+      "start": 755.339,
+      "duration": 5.581,
+      "end": 760.9200000000001,
+      "text": "perfect amazing"
+    },
+    {
+      "start": 757.92,
+      "duration": 5.88,
+      "end": 763.8,
+      "text": "so I put it over here next time"
+    },
+    {
+      "start": 760.92,
+      "duration": 5.7,
+      "end": 766.62,
+      "text": "I have made a wire for short that is"
+    },
+    {
+      "start": 763.8,
+      "duration": 6.539,
+      "end": 770.3389999999999,
+      "text": "where the mid will go 0 plus 2 by 2"
+    },
+    {
+      "start": 766.62,
+      "duration": 5.7,
+      "end": 772.32,
+      "text": "what do I have again eight which is same"
+    },
+    {
+      "start": 770.339,
+      "duration": 4.5,
+      "end": 774.839,
+      "text": "I'm like where are you you have the"
+    },
+    {
+      "start": 772.32,
+      "duration": 4.92,
+      "end": 777.24,
+      "text": "index one so I'm I'm sure since I'm"
+    },
+    {
+      "start": 774.839,
+      "duration": 5.581,
+      "end": 780.4200000000001,
+      "text": "going left whatever index I'll get will"
+    },
+    {
+      "start": 777.24,
+      "duration": 5.94,
+      "end": 783.1800000000001,
+      "text": "be small so I'll replace it means"
+    },
+    {
+      "start": 780.42,
+      "duration": 6.0,
+      "end": 786.42,
+      "text": "so I'll again have to go left because I"
+    },
+    {
+      "start": 783.18,
+      "duration": 6.719,
+      "end": 789.899,
+      "text": "need I need a lower occurrence so the"
+    },
+    {
+      "start": 786.42,
+      "duration": 6.24,
+      "end": 792.66,
+      "text": "right one will get eliminated thereby"
+    },
+    {
+      "start": 789.899,
+      "duration": 5.581,
+      "end": 795.48,
+      "text": "this High which was here will end up"
+    },
+    {
+      "start": 792.66,
+      "duration": 5.04,
+      "end": 797.6999999999999,
+      "text": "pointing to this portion"
+    },
+    {
+      "start": 795.48,
+      "duration": 3.24,
+      "end": 798.72,
+      "text": "again the mid will come up over here"
+    },
+    {
+      "start": 797.7,
+      "duration": 3.54,
+      "end": 801.24,
+      "text": "itself"
+    },
+    {
+      "start": 798.72,
+      "duration": 6.419,
+      "end": 805.139,
+      "text": "can I say one thing for sure this"
+    },
+    {
+      "start": 801.24,
+      "duration": 6.779,
+      "end": 808.019,
+      "text": "element this element 2 is not equivalent"
+    },
+    {
+      "start": 805.139,
+      "duration": 4.2,
+      "end": 809.339,
+      "text": "to X so I'm like it's not it's not you"
+    },
+    {
+      "start": 808.019,
+      "duration": 4.62,
+      "end": 812.639,
+      "text": "will have to go on the right and find"
+    },
+    {
+      "start": 809.339,
+      "duration": 5.401,
+      "end": 814.74,
+      "text": "where why because this 2 is lesser than"
+    },
+    {
+      "start": 812.639,
+      "duration": 3.601,
+      "end": 816.24,
+      "text": "eight so I'm sure on the left you'll not"
+    },
+    {
+      "start": 814.74,
+      "duration": 3.48,
+      "end": 818.22,
+      "text": "find eight you'll have to go to the"
+    },
+    {
+      "start": 816.24,
+      "duration": 4.26,
+      "end": 820.5,
+      "text": "right you'll have to go to the right to"
+    },
+    {
+      "start": 818.22,
+      "duration": 4.08,
+      "end": 822.3000000000001,
+      "text": "the search eight to search eight so be"
+    },
+    {
+      "start": 820.5,
+      "duration": 5.22,
+      "end": 825.72,
+      "text": "like okay I have to go to the right cell"
+    },
+    {
+      "start": 822.3,
+      "duration": 5.4,
+      "end": 827.6999999999999,
+      "text": "move low to mid plus once it goes the"
+    },
+    {
+      "start": 825.72,
+      "duration": 4.559,
+      "end": 830.279,
+      "text": "moment you move low"
+    },
+    {
+      "start": 827.7,
+      "duration": 5.819,
+      "end": 833.519,
+      "text": "do you see what happens Low cross is"
+    },
+    {
+      "start": 830.279,
+      "duration": 5.701,
+      "end": 835.98,
+      "text": "high low crosses high and apparently as"
+    },
+    {
+      "start": 833.519,
+      "duration": 5.161,
+      "end": 838.68,
+      "text": "of now you have got the first occurrence"
+    },
+    {
+      "start": 835.98,
+      "duration": 6.24,
+      "end": 842.22,
+      "text": "as one as of now you've got the first"
+    },
+    {
+      "start": 838.68,
+      "duration": 5.52,
+      "end": 844.1999999999999,
+      "text": "occurrence as one so this is how you can"
+    },
+    {
+      "start": 842.22,
+      "duration": 4.26,
+      "end": 846.48,
+      "text": "easily get the first occurrence I'll"
+    },
+    {
+      "start": 844.2,
+      "duration": 4.92,
+      "end": 849.12,
+      "text": "take another example to explain you what"
+    },
+    {
+      "start": 846.48,
+      "duration": 4.44,
+      "end": 850.9200000000001,
+      "text": "if the mid was not eight and something"
+    },
+    {
+      "start": 849.12,
+      "duration": 4.26,
+      "end": 853.38,
+      "text": "else I'll also take that example don't"
+    },
+    {
+      "start": 850.92,
+      "duration": 4.859,
+      "end": 855.779,
+      "text": "worry about that let me now try to find"
+    },
+    {
+      "start": 853.38,
+      "duration": 5.16,
+      "end": 858.54,
+      "text": "out the last stalkers again you'll keep"
+    },
+    {
+      "start": 855.779,
+      "duration": 4.381,
+      "end": 860.16,
+      "text": "the last as minus one and we will do the"
+    },
+    {
+      "start": 858.54,
+      "duration": 3.84,
+      "end": 862.38,
+      "text": "standard protocol of binary search of"
+    },
+    {
+      "start": 860.16,
+      "duration": 3.9,
+      "end": 864.06,
+      "text": "keeping low and high where it is and"
+    },
+    {
+      "start": 862.38,
+      "duration": 4.38,
+      "end": 866.76,
+      "text": "initially emit will be pointing to this"
+    },
+    {
+      "start": 864.06,
+      "duration": 6.06,
+      "end": 870.1199999999999,
+      "text": "what do we get we get 8 which is"
+    },
+    {
+      "start": 866.76,
+      "duration": 6.72,
+      "end": 873.48,
+      "text": "equivalent to eight so I can say okay"
+    },
+    {
+      "start": 870.12,
+      "duration": 5.459,
+      "end": 875.579,
+      "text": "I'm getting it at third index perfect"
+    },
+    {
+      "start": 873.48,
+      "duration": 4.68,
+      "end": 878.16,
+      "text": "if I'm looking for the last stop twins"
+    },
+    {
+      "start": 875.579,
+      "duration": 5.281,
+      "end": 880.8599999999999,
+      "text": "will I go on the left or will I go on"
+    },
+    {
+      "start": 878.16,
+      "duration": 6.119,
+      "end": 884.279,
+      "text": "the right think yourself I will go on"
+    },
+    {
+      "start": 880.86,
+      "duration": 7.14,
+      "end": 888.0,
+      "text": "the right I'll go on the right thereby"
+    },
+    {
+      "start": 884.279,
+      "duration": 6.06,
+      "end": 890.3389999999999,
+      "text": "I will simply move low here because"
+    },
+    {
+      "start": 888.0,
+      "duration": 4.5,
+      "end": 892.5,
+      "text": "there's no point in searching here"
+    },
+    {
+      "start": 890.339,
+      "duration": 3.781,
+      "end": 894.12,
+      "text": "because I've already got here now for"
+    },
+    {
+      "start": 892.5,
+      "duration": 3.72,
+      "end": 896.22,
+      "text": "the later occurrence I have to go to the"
+    },
+    {
+      "start": 894.12,
+      "duration": 4.62,
+      "end": 898.74,
+      "text": "right let's move"
+    },
+    {
+      "start": 896.22,
+      "duration": 6.119,
+      "end": 902.339,
+      "text": "perfect this time where will the"
+    },
+    {
+      "start": 898.74,
+      "duration": 6.44,
+      "end": 905.1800000000001,
+      "text": "midpoint midwell point to 4 plus 7 by 2"
+    },
+    {
+      "start": 902.339,
+      "duration": 5.281,
+      "end": 907.62,
+      "text": "which is 5.5 which is five"
+    },
+    {
+      "start": 905.18,
+      "duration": 8.339,
+      "end": 913.519,
+      "text": "midpoints yeah"
+    },
+    {
+      "start": 907.62,
+      "duration": 8.64,
+      "end": 916.26,
+      "text": "what is this eight which index 5 replace"
+    },
+    {
+      "start": 913.519,
+      "duration": 5.5,
+      "end": 919.019,
+      "text": "perfect now can I say"
+    },
+    {
+      "start": 916.26,
+      "duration": 4.74,
+      "end": 921.0,
+      "text": "if 8 is you're getting it here you have"
+    },
+    {
+      "start": 919.019,
+      "duration": 4.141,
+      "end": 923.16,
+      "text": "to do a search on the right half the"
+    },
+    {
+      "start": 921.0,
+      "duration": 4.38,
+      "end": 925.38,
+      "text": "left half will be eliminated because"
+    },
+    {
+      "start": 923.16,
+      "duration": 6.299,
+      "end": 929.459,
+      "text": "you're looking for the last occurrence I"
+    },
+    {
+      "start": 925.38,
+      "duration": 7.74,
+      "end": 933.12,
+      "text": "can thereby this slow will end up moving"
+    },
+    {
+      "start": 929.459,
+      "duration": 5.701,
+      "end": 935.16,
+      "text": "here amazing what's the next we'll try"
+    },
+    {
+      "start": 933.12,
+      "duration": 5.64,
+      "end": 938.76,
+      "text": "to find out the mid they stand the mid"
+    },
+    {
+      "start": 935.16,
+      "duration": 6.06,
+      "end": 941.2199999999999,
+      "text": "will Point here and it is 11 which is"
+    },
+    {
+      "start": 938.76,
+      "duration": 3.68,
+      "end": 942.4399999999999,
+      "text": "actually greater than 8 like I'm greater"
+    },
+    {
+      "start": 941.22,
+      "duration": 4.2,
+      "end": 945.4200000000001,
+      "text": "than eight I'm greater than eight"
+    },
+    {
+      "start": 942.44,
+      "duration": 5.38,
+      "end": 947.82,
+      "text": "thereby I can never"
+    },
+    {
+      "start": 945.42,
+      "duration": 5.82,
+      "end": 951.24,
+      "text": "find eight on my right I can never find"
+    },
+    {
+      "start": 947.82,
+      "duration": 5.22,
+      "end": 953.0400000000001,
+      "text": "eight on my right please ask hi to Via"
+    },
+    {
+      "start": 951.24,
+      "duration": 5.099,
+      "end": 956.339,
+      "text": "because I have to eliminate the search"
+    },
+    {
+      "start": 953.04,
+      "duration": 5.22,
+      "end": 958.26,
+      "text": "space thereby I'll take this high and"
+    },
+    {
+      "start": 956.339,
+      "duration": 4.141,
+      "end": 960.48,
+      "text": "I'll move here which is one before the"
+    },
+    {
+      "start": 958.26,
+      "duration": 4.98,
+      "end": 963.24,
+      "text": "mid which is one before the mid"
+    },
+    {
+      "start": 960.48,
+      "duration": 7.2,
+      "end": 967.6800000000001,
+      "text": "and I'll eliminate"
+    },
+    {
+      "start": 963.24,
+      "duration": 6.3,
+      "end": 969.54,
+      "text": "next the high crosses low so we stop the"
+    },
+    {
+      "start": 967.68,
+      "duration": 4.38,
+      "end": 972.06,
+      "text": "moment we stopped do you see something"
+    },
+    {
+      "start": 969.54,
+      "duration": 4.26,
+      "end": 973.8,
+      "text": "you have got your first and you have got"
+    },
+    {
+      "start": 972.06,
+      "duration": 4.019,
+      "end": 976.079,
+      "text": "your last because this is where the"
+    },
+    {
+      "start": 973.8,
+      "duration": 5.159,
+      "end": 978.959,
+      "text": "first was and this is where the last was"
+    },
+    {
+      "start": 976.079,
+      "duration": 4.081,
+      "end": 980.16,
+      "text": "so you have got our occurrences now this"
+    },
+    {
+      "start": 978.959,
+      "duration": 4.081,
+      "end": 983.04,
+      "text": "was when"
+    },
+    {
+      "start": 980.16,
+      "duration": 4.739,
+      "end": 984.899,
+      "text": "we got the element right at the start of"
+    },
+    {
+      "start": 983.04,
+      "duration": 4.08,
+      "end": 987.12,
+      "text": "the mid what if"
+    },
+    {
+      "start": 984.899,
+      "duration": 5.041,
+      "end": 989.94,
+      "text": "I change the X"
+    },
+    {
+      "start": 987.12,
+      "duration": 5.7,
+      "end": 992.82,
+      "text": "to something as let's say 11 which is X"
+    },
+    {
+      "start": 989.94,
+      "duration": 5.459,
+      "end": 995.399,
+      "text": "to something as 11. let's try to find"
+    },
+    {
+      "start": 992.82,
+      "duration": 4.62,
+      "end": 997.44,
+      "text": "out the first and the last awkwards so"
+    },
+    {
+      "start": 995.399,
+      "duration": 3.601,
+      "end": 999.0,
+      "text": "let's keep the first as minus one now"
+    },
+    {
+      "start": 997.44,
+      "duration": 3.959,
+      "end": 1001.399,
+      "text": "let's start"
+    },
+    {
+      "start": 999.0,
+      "duration": 4.98,
+      "end": 1003.98,
+      "text": "the standard"
+    },
+    {
+      "start": 1001.399,
+      "duration": 4.921,
+      "end": 1006.32,
+      "text": "binary search and the mid is pointing"
+    },
+    {
+      "start": 1003.98,
+      "duration": 7.38,
+      "end": 1011.36,
+      "text": "here the standard binary search what is"
+    },
+    {
+      "start": 1006.32,
+      "duration": 7.98,
+      "end": 1014.3000000000001,
+      "text": "this eight what is this 11 not equal but"
+    },
+    {
+      "start": 1011.36,
+      "duration": 4.979,
+      "end": 1016.339,
+      "text": "8 is smaller than 11 where will you find"
+    },
+    {
+      "start": 1014.3,
+      "duration": 3.719,
+      "end": 1018.019,
+      "text": "eleven where will you find 11 you will"
+    },
+    {
+      "start": 1016.339,
+      "duration": 5.161,
+      "end": 1021.5,
+      "text": "never find 11 here you'll never find 11"
+    },
+    {
+      "start": 1018.019,
+      "duration": 5.581,
+      "end": 1023.6,
+      "text": "here you'll find 11 on this portion so"
+    },
+    {
+      "start": 1021.5,
+      "duration": 4.439,
+      "end": 1025.939,
+      "text": "what will you do you try to go on the"
+    },
+    {
+      "start": 1023.6,
+      "duration": 4.319,
+      "end": 1027.919,
+      "text": "right there by the left space will be"
+    },
+    {
+      "start": 1025.939,
+      "duration": 3.48,
+      "end": 1029.419,
+      "text": "eliminated and if that is eliminated"
+    },
+    {
+      "start": 1027.919,
+      "duration": 3.9,
+      "end": 1031.8190000000002,
+      "text": "what will happen"
+    },
+    {
+      "start": 1029.419,
+      "duration": 6.481,
+      "end": 1035.9,
+      "text": "the low value"
+    },
+    {
+      "start": 1031.819,
+      "duration": 5.221,
+      "end": 1037.04,
+      "text": "perfect amazing what's the next step"
+    },
+    {
+      "start": 1035.9,
+      "duration": 4.019,
+      "end": 1039.919,
+      "text": "I'm here"
+    },
+    {
+      "start": 1037.04,
+      "duration": 5.7,
+      "end": 1042.74,
+      "text": "where will my midpoint to my mid will"
+    },
+    {
+      "start": 1039.919,
+      "duration": 7.38,
+      "end": 1047.2990000000002,
+      "text": "point to this portion which is 4 plus 7"
+    },
+    {
+      "start": 1042.74,
+      "duration": 8.04,
+      "end": 1050.78,
+      "text": "by 2 that's 5.5 which is the fifth index"
+    },
+    {
+      "start": 1047.299,
+      "duration": 6.241,
+      "end": 1053.54,
+      "text": "this is eight again I'll say a lesson 5"
+    },
+    {
+      "start": 1050.78,
+      "duration": 5.899,
+      "end": 1056.6789999999999,
+      "text": "is sorry 8 is lesser than 11 no no no no"
+    },
+    {
+      "start": 1053.54,
+      "duration": 5.879,
+      "end": 1059.4189999999999,
+      "text": "no no no so I'll be like"
+    },
+    {
+      "start": 1056.679,
+      "duration": 4.901,
+      "end": 1061.5800000000002,
+      "text": "I can't find it there thereby please"
+    },
+    {
+      "start": 1059.419,
+      "duration": 4.861,
+      "end": 1064.2800000000002,
+      "text": "move your low take your low and move"
+    },
+    {
+      "start": 1061.58,
+      "duration": 4.44,
+      "end": 1066.02,
+      "text": "ahead so he moves ahead you see when I"
+    },
+    {
+      "start": 1064.28,
+      "duration": 3.18,
+      "end": 1067.46,
+      "text": "don't find what happens I either move on"
+    },
+    {
+      "start": 1066.02,
+      "duration": 3.659,
+      "end": 1069.679,
+      "text": "left and right and I try to find it"
+    },
+    {
+      "start": 1067.46,
+      "duration": 5.52,
+      "end": 1072.98,
+      "text": "perfect where will the midpoint now"
+    },
+    {
+      "start": 1069.679,
+      "duration": 6.481,
+      "end": 1076.16,
+      "text": "midwell Point here this time I see"
+    },
+    {
+      "start": 1072.98,
+      "duration": 6.18,
+      "end": 1079.16,
+      "text": "eleven icy 11. so when I say 11 I'm like"
+    },
+    {
+      "start": 1076.16,
+      "duration": 6.36,
+      "end": 1082.52,
+      "text": "perfect you can replace yourself to this"
+    },
+    {
+      "start": 1079.16,
+      "duration": 5.46,
+      "end": 1084.6200000000001,
+      "text": "and if I'm getting here and I'm trying"
+    },
+    {
+      "start": 1082.52,
+      "duration": 4.5,
+      "end": 1087.02,
+      "text": "to find the first I'll try to go on left"
+    },
+    {
+      "start": 1084.62,
+      "duration": 3.84,
+      "end": 1088.4599999999998,
+      "text": "I'll try to go on left so the high will"
+    },
+    {
+      "start": 1087.02,
+      "duration": 3.36,
+      "end": 1090.3799999999999,
+      "text": "try to go"
+    },
+    {
+      "start": 1088.46,
+      "duration": 4.92,
+      "end": 1093.38,
+      "text": "over here because the right search space"
+    },
+    {
+      "start": 1090.38,
+      "duration": 5.46,
+      "end": 1095.8400000000001,
+      "text": "is eliminated High crosses slow and we"
+    },
+    {
+      "start": 1093.38,
+      "duration": 4.14,
+      "end": 1097.5200000000002,
+      "text": "stop so I've got the first tokens so"
+    },
+    {
+      "start": 1095.84,
+      "duration": 3.0,
+      "end": 1098.84,
+      "text": "it's pretty simple binary search you"
+    },
+    {
+      "start": 1097.52,
+      "duration": 3.42,
+      "end": 1100.94,
+      "text": "don't have to do anything out of the box"
+    },
+    {
+      "start": 1098.84,
+      "duration": 4.079,
+      "end": 1102.9189999999999,
+      "text": "it's time to write the pseudo code for"
+    },
+    {
+      "start": 1100.94,
+      "duration": 3.96,
+      "end": 1104.9,
+      "text": "this one again you can find the C plus"
+    },
+    {
+      "start": 1102.919,
+      "duration": 4.26,
+      "end": 1107.179,
+      "text": "plus Java python JavaScript whichever"
+    },
+    {
+      "start": 1104.9,
+      "duration": 3.54,
+      "end": 1108.44,
+      "text": "language you follow a code links in the"
+    },
+    {
+      "start": 1107.179,
+      "duration": 3.061,
+      "end": 1110.24,
+      "text": "description make sure you check it out"
+    },
+    {
+      "start": 1108.44,
+      "duration": 3.42,
+      "end": 1111.8600000000001,
+      "text": "from there and you can keep it in"
+    },
+    {
+      "start": 1110.24,
+      "duration": 3.36,
+      "end": 1113.6,
+      "text": "parallel in case you want to figure out"
+    },
+    {
+      "start": 1111.86,
+      "duration": 3.12,
+      "end": 1114.9799999999998,
+      "text": "your language code"
+    },
+    {
+      "start": 1113.6,
+      "duration": 3.42,
+      "end": 1117.02,
+      "text": "so I'll have to write the pseudo code"
+    },
+    {
+      "start": 1114.98,
+      "duration": 4.92,
+      "end": 1119.9,
+      "text": "now right so let's write the pseudo code"
+    },
+    {
+      "start": 1117.02,
+      "duration": 5.22,
+      "end": 1122.24,
+      "text": "for first at first so I'll write"
+    },
+    {
+      "start": 1119.9,
+      "duration": 6.0,
+      "end": 1125.9,
+      "text": "probably a function I'll take an array"
+    },
+    {
+      "start": 1122.24,
+      "duration": 6.36,
+      "end": 1128.6,
+      "text": "and I will say Okay n and I'll take X"
+    },
+    {
+      "start": 1125.9,
+      "duration": 5.58,
+      "end": 1131.48,
+      "text": "I'll keep the low as 0 I'll keep the"
+    },
+    {
+      "start": 1128.6,
+      "duration": 4.38,
+      "end": 1132.98,
+      "text": "high as n minus 1 and I'll keep the"
+    },
+    {
+      "start": 1131.48,
+      "duration": 3.9,
+      "end": 1135.38,
+      "text": "first it's very important to keep the"
+    },
+    {
+      "start": 1132.98,
+      "duration": 3.12,
+      "end": 1136.1,
+      "text": "first as minus one so I'll keep it like"
+    },
+    {
+      "start": 1135.38,
+      "duration": 3.84,
+      "end": 1139.22,
+      "text": "this"
+    },
+    {
+      "start": 1136.1,
+      "duration": 6.48,
+      "end": 1142.58,
+      "text": "what's the next step I'll do as a while"
+    },
+    {
+      "start": 1139.22,
+      "duration": 6.06,
+      "end": 1145.28,
+      "text": "low lesser than equal to high that's one"
+    },
+    {
+      "start": 1142.58,
+      "duration": 4.08,
+      "end": 1146.6599999999999,
+      "text": "thing for sure now what do I do I know"
+    },
+    {
+      "start": 1145.28,
+      "duration": 5.279,
+      "end": 1150.559,
+      "text": "one thing for sure"
+    },
+    {
+      "start": 1146.66,
+      "duration": 5.7,
+      "end": 1152.3600000000001,
+      "text": "if okay I need to find out mid according"
+    },
+    {
+      "start": 1150.559,
+      "duration": 6.421,
+      "end": 1156.98,
+      "text": "to the standard protocol of binary"
+    },
+    {
+      "start": 1152.36,
+      "duration": 6.36,
+      "end": 1158.7199999999998,
+      "text": "search low plus I by 2 we do that what's"
+    },
+    {
+      "start": 1156.98,
+      "duration": 5.88,
+      "end": 1162.8600000000001,
+      "text": "the next thing we will do the next thing"
+    },
+    {
+      "start": 1158.72,
+      "duration": 7.02,
+      "end": 1165.74,
+      "text": "we'll do is if array of mid is equal to"
+    },
+    {
+      "start": 1162.86,
+      "duration": 5.939,
+      "end": 1168.799,
+      "text": "equal to X I know I've figured it out I"
+    },
+    {
+      "start": 1165.74,
+      "duration": 4.799,
+      "end": 1170.539,
+      "text": "know I figured it out so my first will"
+    },
+    {
+      "start": 1168.799,
+      "duration": 3.24,
+      "end": 1172.039,
+      "text": "say I got"
+    },
+    {
+      "start": 1170.539,
+      "duration": 4.621,
+      "end": 1175.16,
+      "text": "it at Mid"
+    },
+    {
+      "start": 1172.039,
+      "duration": 5.101,
+      "end": 1177.14,
+      "text": "and now I need a lower index I need my"
+    },
+    {
+      "start": 1175.16,
+      "duration": 5.46,
+      "end": 1180.6200000000001,
+      "text": "first talkers maybe I'll go on the left"
+    },
+    {
+      "start": 1177.14,
+      "duration": 4.8,
+      "end": 1181.94,
+      "text": "and see if he is there so I'll say hey"
+    },
+    {
+      "start": 1180.62,
+      "duration": 4.08,
+      "end": 1184.6999999999998,
+      "text": "hi"
+    },
+    {
+      "start": 1181.94,
+      "duration": 5.82,
+      "end": 1187.76,
+      "text": "please go on the left so"
+    },
+    {
+      "start": 1184.7,
+      "duration": 5.4,
+      "end": 1190.1000000000001,
+      "text": "in binary search we usually did not do"
+    },
+    {
+      "start": 1187.76,
+      "duration": 4.919,
+      "end": 1192.679,
+      "text": "this while we did a equal to equal to"
+    },
+    {
+      "start": 1190.1,
+      "duration": 4.199,
+      "end": 1194.299,
+      "text": "but we will do it amazing perfect what's"
+    },
+    {
+      "start": 1192.679,
+      "duration": 4.681,
+      "end": 1197.3600000000001,
+      "text": "the next job"
+    },
+    {
+      "start": 1194.299,
+      "duration": 5.88,
+      "end": 1200.179,
+      "text": "else report can happen LCB will be like"
+    },
+    {
+      "start": 1197.36,
+      "duration": 5.819,
+      "end": 1203.1789999999999,
+      "text": "whatever you are standing at that's"
+    },
+    {
+      "start": 1200.179,
+      "duration": 4.141,
+      "end": 1204.3200000000002,
+      "text": "actually smaller than x ah so right you"
+    },
+    {
+      "start": 1203.179,
+      "duration": 3.181,
+      "end": 1206.3600000000001,
+      "text": "have to go to the right to find it"
+    },
+    {
+      "start": 1204.32,
+      "duration": 4.32,
+      "end": 1208.6399999999999,
+      "text": "because I'm smaller dude I'm smaller"
+    },
+    {
+      "start": 1206.36,
+      "duration": 5.819,
+      "end": 1212.1789999999999,
+      "text": "left can be more smaller go on the right"
+    },
+    {
+      "start": 1208.64,
+      "duration": 6.48,
+      "end": 1215.1200000000001,
+      "text": "okay I'll go on the right"
+    },
+    {
+      "start": 1212.179,
+      "duration": 5.341,
+      "end": 1217.52,
+      "text": "and the else part will only be one thing"
+    },
+    {
+      "start": 1215.12,
+      "duration": 5.22,
+      "end": 1220.34,
+      "text": "which will be high equal to Mid minus 1"
+    },
+    {
+      "start": 1217.52,
+      "duration": 5.399,
+      "end": 1222.9189999999999,
+      "text": "because the else will be nothing but"
+    },
+    {
+      "start": 1220.34,
+      "duration": 5.28,
+      "end": 1225.62,
+      "text": "when the mid is greater than x because"
+    },
+    {
+      "start": 1222.919,
+      "duration": 5.341,
+      "end": 1228.26,
+      "text": "these conditions are dark so this is"
+    },
+    {
+      "start": 1225.62,
+      "duration": 5.88,
+      "end": 1231.5,
+      "text": "what the function will look like pretty"
+    },
+    {
+      "start": 1228.26,
+      "duration": 6.419,
+      "end": 1234.679,
+      "text": "simple if this part never gets executed"
+    },
+    {
+      "start": 1231.5,
+      "duration": 5.039,
+      "end": 1236.539,
+      "text": "the first will stay as minus one so this"
+    },
+    {
+      "start": 1234.679,
+      "duration": 4.081,
+      "end": 1238.76,
+      "text": "is how I can find the first documents"
+    },
+    {
+      "start": 1236.539,
+      "duration": 3.841,
+      "end": 1240.3799999999999,
+      "text": "what about the last documents let's try"
+    },
+    {
+      "start": 1238.76,
+      "duration": 4.68,
+      "end": 1243.44,
+      "text": "to write it I'll write array I'll write"
+    },
+    {
+      "start": 1240.38,
+      "duration": 5.88,
+      "end": 1246.2600000000002,
+      "text": "n I'll write X perfect again I'll take"
+    },
+    {
+      "start": 1243.44,
+      "duration": 5.34,
+      "end": 1248.78,
+      "text": "the low as 0 again I'll take the high as"
+    },
+    {
+      "start": 1246.26,
+      "duration": 5.22,
+      "end": 1251.48,
+      "text": "n minus 1. the same what I will do is"
+    },
+    {
+      "start": 1248.78,
+      "duration": 5.82,
+      "end": 1254.6,
+      "text": "I'll try to basically figure out"
+    },
+    {
+      "start": 1251.48,
+      "duration": 6.12,
+      "end": 1257.6,
+      "text": "uh the last so the last will be minus"
+    },
+    {
+      "start": 1254.6,
+      "duration": 5.76,
+      "end": 1260.36,
+      "text": "one and I'll start with while"
+    },
+    {
+      "start": 1257.6,
+      "duration": 5.28,
+      "end": 1262.8799999999999,
+      "text": "low lesser than equal to high same"
+    },
+    {
+      "start": 1260.36,
+      "duration": 4.559,
+      "end": 1264.9189999999999,
+      "text": "concept I'll figure out the same"
+    },
+    {
+      "start": 1262.88,
+      "duration": 4.2,
+      "end": 1267.0800000000002,
+      "text": "standard protocol of binary search like"
+    },
+    {
+      "start": 1264.919,
+      "duration": 4.861,
+      "end": 1269.7800000000002,
+      "text": "the mid"
+    },
+    {
+      "start": 1267.08,
+      "duration": 3.86,
+      "end": 1270.9399999999998,
+      "text": "and what's the next thing if array of"
+    },
+    {
+      "start": 1269.78,
+      "duration": 3.5,
+      "end": 1273.28,
+      "text": "mid"
+    },
+    {
+      "start": 1270.94,
+      "duration": 5.8,
+      "end": 1276.74,
+      "text": "comes out to be"
+    },
+    {
+      "start": 1273.28,
+      "duration": 5.019,
+      "end": 1278.299,
+      "text": "x what will I do I'll be like okay this"
+    },
+    {
+      "start": 1276.74,
+      "duration": 4.5,
+      "end": 1281.24,
+      "text": "can be my answer"
+    },
+    {
+      "start": 1278.299,
+      "duration": 5.101,
+      "end": 1283.4,
+      "text": "this mid can be my answer and maybe I"
+    },
+    {
+      "start": 1281.24,
+      "duration": 4.98,
+      "end": 1286.22,
+      "text": "have to find it I'm looking for the last"
+    },
+    {
+      "start": 1283.4,
+      "duration": 5.519,
+      "end": 1288.919,
+      "text": "so no I'll not go on the left I try to"
+    },
+    {
+      "start": 1286.22,
+      "duration": 5.339,
+      "end": 1291.559,
+      "text": "go on the right so eliminate the left"
+    },
+    {
+      "start": 1288.919,
+      "duration": 5.401,
+      "end": 1294.3200000000002,
+      "text": "third space or maybe"
+    },
+    {
+      "start": 1291.559,
+      "duration": 5.161,
+      "end": 1296.72,
+      "text": "lesser space so low equal to Mid plus"
+    },
+    {
+      "start": 1294.32,
+      "duration": 3.18,
+      "end": 1297.5,
+      "text": "one that is what you will do pretty"
+    },
+    {
+      "start": 1296.72,
+      "duration": 2.28,
+      "end": 1299.0,
+      "text": "simple"
+    },
+    {
+      "start": 1297.5,
+      "duration": 3.419,
+      "end": 1300.919,
+      "text": "what's the next thing"
+    },
+    {
+      "start": 1299.0,
+      "duration": 4.5,
+      "end": 1303.5,
+      "text": "what if"
+    },
+    {
+      "start": 1300.919,
+      "duration": 5.101,
+      "end": 1306.0200000000002,
+      "text": "I am"
+    },
+    {
+      "start": 1303.5,
+      "duration": 4.62,
+      "end": 1308.12,
+      "text": "smaller than x you're not finding a you"
+    },
+    {
+      "start": 1306.02,
+      "duration": 5.519,
+      "end": 1311.539,
+      "text": "have to go to the right and find you"
+    },
+    {
+      "start": 1308.12,
+      "duration": 5.16,
+      "end": 1313.28,
+      "text": "haven't found it out yet okay or else"
+    },
+    {
+      "start": 1311.539,
+      "duration": 6.12,
+      "end": 1317.6589999999999,
+      "text": "high will be like"
+    },
+    {
+      "start": 1313.28,
+      "duration": 7.139,
+      "end": 1320.4189999999999,
+      "text": "mid minus 1. perfect and at the end you"
+    },
+    {
+      "start": 1317.659,
+      "duration": 5.76,
+      "end": 1323.419,
+      "text": "can return this particular last and if"
+    },
+    {
+      "start": 1320.419,
+      "duration": 4.38,
+      "end": 1324.7990000000002,
+      "text": "this never happens the last will stay as"
+    },
+    {
+      "start": 1323.419,
+      "duration": 3.0,
+      "end": 1326.419,
+      "text": "minus one so these are the couple of"
+    },
+    {
+      "start": 1324.799,
+      "duration": 2.641,
+      "end": 1327.44,
+      "text": "functions and the pseudo code for this"
+    },
+    {
+      "start": 1326.419,
+      "duration": 2.581,
+      "end": 1329.0,
+      "text": "one"
+    },
+    {
+      "start": 1327.44,
+      "duration": 3.9,
+      "end": 1331.3400000000001,
+      "text": "so as you can see I've written both of"
+    },
+    {
+      "start": 1329.0,
+      "duration": 4.32,
+      "end": 1333.32,
+      "text": "the functions over here please make sure"
+    },
+    {
+      "start": 1331.34,
+      "duration": 5.339,
+      "end": 1336.6789999999999,
+      "text": "that at first you call for the first"
+    },
+    {
+      "start": 1333.32,
+      "duration": 6.18,
+      "end": 1339.5,
+      "text": "arguments don't don't just call for the"
+    },
+    {
+      "start": 1336.679,
+      "duration": 7.201,
+      "end": 1343.88,
+      "text": "last occurrence blindly call for the"
+    },
+    {
+      "start": 1339.5,
+      "duration": 6.96,
+      "end": 1346.46,
+      "text": "first tokens and array of N and K and in"
+    },
+    {
+      "start": 1343.88,
+      "duration": 4.5,
+      "end": 1348.38,
+      "text": "case you don't find it in case it"
+    },
+    {
+      "start": 1346.46,
+      "duration": 4.68,
+      "end": 1351.14,
+      "text": "returns as minus one straight away"
+    },
+    {
+      "start": 1348.38,
+      "duration": 4.98,
+      "end": 1353.3600000000001,
+      "text": "return minus one do not waste another"
+    },
+    {
+      "start": 1351.14,
+      "duration": 3.84,
+      "end": 1354.98,
+      "text": "logarithmic of n to find the last"
+    },
+    {
+      "start": 1353.36,
+      "duration": 3.48,
+      "end": 1356.84,
+      "text": "occurrence because"
+    },
+    {
+      "start": 1354.98,
+      "duration": 4.199,
+      "end": 1359.179,
+      "text": "if the first occurrence is not there"
+    },
+    {
+      "start": 1356.84,
+      "duration": 4.5,
+      "end": 1361.34,
+      "text": "there will never be a last documents so"
+    },
+    {
+      "start": 1359.179,
+      "duration": 4.321,
+      "end": 1363.5,
+      "text": "be careful about this these minor things"
+    },
+    {
+      "start": 1361.34,
+      "duration": 3.66,
+      "end": 1365.0,
+      "text": "might help you in interview because a"
+    },
+    {
+      "start": 1363.5,
+      "duration": 3.84,
+      "end": 1367.34,
+      "text": "lot of times people are like uh I'll"
+    },
+    {
+      "start": 1365.0,
+      "duration": 6.12,
+      "end": 1371.12,
+      "text": "just call this and I'll return this one"
+    },
+    {
+      "start": 1367.34,
+      "duration": 6.36,
+      "end": 1373.6999999999998,
+      "text": "line can save like logarithmic base to"
+    },
+    {
+      "start": 1371.12,
+      "duration": 4.62,
+      "end": 1375.7399999999998,
+      "text": "end time complexity okay uh looks like"
+    },
+    {
+      "start": 1373.7,
+      "duration": 4.14,
+      "end": 1377.8400000000001,
+      "text": "we did a mistake let's see where line"
+    },
+    {
+      "start": 1375.74,
+      "duration": 6.559,
+      "end": 1382.299,
+      "text": "number 28"
+    },
+    {
+      "start": 1377.84,
+      "duration": 4.459,
+      "end": 1382.299,
+      "text": "28 oh my bad should be lost"
+    },
+    {
+      "start": 1384.14,
+      "duration": 4.68,
+      "end": 1388.8200000000002,
+      "text": "okay it runs let's quickly submit it and"
+    },
+    {
+      "start": 1386.059,
+      "duration": 6.061,
+      "end": 1392.12,
+      "text": "see if it is running fine should be it"
+    },
+    {
+      "start": 1388.82,
+      "duration": 6.12,
+      "end": 1394.9399999999998,
+      "text": "does so going back to the course uh I"
+    },
+    {
+      "start": 1392.12,
+      "duration": 5.52,
+      "end": 1397.6399999999999,
+      "text": "can say that this one is done what is"
+    },
+    {
+      "start": 1394.94,
+      "duration": 4.979,
+      "end": 1399.919,
+      "text": "the next problem count occurrences of a"
+    },
+    {
+      "start": 1397.64,
+      "duration": 4.26,
+      "end": 1401.9,
+      "text": "number in a sorted array with duplicates"
+    },
+    {
+      "start": 1399.919,
+      "duration": 4.38,
+      "end": 1404.2990000000002,
+      "text": "so if I look at the problem it states"
+    },
+    {
+      "start": 1401.9,
+      "duration": 4.68,
+      "end": 1406.5800000000002,
+      "text": "you have been given an array of it"
+    },
+    {
+      "start": 1404.299,
+      "duration": 4.021,
+      "end": 1408.32,
+      "text": "teaches this and an integer X you have"
+    },
+    {
+      "start": 1406.58,
+      "duration": 5.16,
+      "end": 1411.74,
+      "text": "to find the total number of occurrences"
+    },
+    {
+      "start": 1408.32,
+      "duration": 5.099,
+      "end": 1413.4189999999999,
+      "text": "of X in the array I think it's easy if"
+    },
+    {
+      "start": 1411.74,
+      "duration": 4.02,
+      "end": 1415.76,
+      "text": "you are given X has three there's one"
+    },
+    {
+      "start": 1413.419,
+      "duration": 4.441,
+      "end": 1417.8600000000001,
+      "text": "there's two occurrences since the array"
+    },
+    {
+      "start": 1415.76,
+      "duration": 4.02,
+      "end": 1419.78,
+      "text": "is sorted you did the previous problem"
+    },
+    {
+      "start": 1417.86,
+      "duration": 3.42,
+      "end": 1421.28,
+      "text": "right"
+    },
+    {
+      "start": 1419.78,
+      "duration": 4.2,
+      "end": 1423.98,
+      "text": "what will be the answer"
+    },
+    {
+      "start": 1421.28,
+      "duration": 7.94,
+      "end": 1429.22,
+      "text": "last occurrence minus first occurrence"
+    },
+    {
+      "start": 1423.98,
+      "duration": 7.92,
+      "end": 1431.9,
+      "text": "plus one isn't it isn't it yes yes yes"
+    },
+    {
+      "start": 1429.22,
+      "duration": 4.54,
+      "end": 1433.76,
+      "text": "so just make sure you copy paste the"
+    },
+    {
+      "start": 1431.9,
+      "duration": 3.18,
+      "end": 1435.0800000000002,
+      "text": "same thing come on here I'm not going to"
+    },
+    {
+      "start": 1433.76,
+      "duration": 5.58,
+      "end": 1439.34,
+      "text": "explain this it's like super simple"
+    },
+    {
+      "start": 1435.08,
+      "duration": 6.78,
+      "end": 1441.86,
+      "text": "super super super simple so can I see I"
+    },
+    {
+      "start": 1439.34,
+      "duration": 6.78,
+      "end": 1446.12,
+      "text": "will probably call like probably I'll"
+    },
+    {
+      "start": 1441.86,
+      "duration": 7.08,
+      "end": 1448.9399999999998,
+      "text": "take like pairs integer integer and"
+    },
+    {
+      "start": 1446.12,
+      "duration": 6.9,
+      "end": 1453.02,
+      "text": "answer equal to this"
+    },
+    {
+      "start": 1448.94,
+      "duration": 6.06,
+      "end": 1455.0,
+      "text": "and as the array of n comma X and I will"
+    },
+    {
+      "start": 1453.02,
+      "duration": 5.22,
+      "end": 1458.24,
+      "text": "be like if answer DOT first equal to"
+    },
+    {
+      "start": 1455.0,
+      "duration": 6.9,
+      "end": 1461.9,
+      "text": "minus 1 it doesn't exist return 0 or"
+    },
+    {
+      "start": 1458.24,
+      "duration": 6.12,
+      "end": 1464.36,
+      "text": "else I will return answer dot second"
+    },
+    {
+      "start": 1461.9,
+      "duration": 6.12,
+      "end": 1468.02,
+      "text": "last occurrence minus first occurrence"
+    },
+    {
+      "start": 1464.36,
+      "duration": 6.059,
+      "end": 1470.4189999999999,
+      "text": "plus one pretty simple pretty simple"
+    },
+    {
+      "start": 1468.02,
+      "duration": 4.32,
+      "end": 1472.34,
+      "text": "I'll run this and it runs fine let's"
+    },
+    {
+      "start": 1470.419,
+      "duration": 4.021,
+      "end": 1474.44,
+      "text": "quickly submit this this will be"
+    },
+    {
+      "start": 1472.34,
+      "duration": 4.5,
+      "end": 1476.84,
+      "text": "submitted as well so going back to the"
+    },
+    {
+      "start": 1474.44,
+      "duration": 4.619,
+      "end": 1479.059,
+      "text": "sheet I can say that both of these are"
+    },
+    {
+      "start": 1476.84,
+      "duration": 4.02,
+      "end": 1480.86,
+      "text": "done I hope you've understood all the"
+    },
+    {
+      "start": 1479.059,
+      "duration": 3.721,
+      "end": 1482.78,
+      "text": "approaches that I discussed I just did"
+    },
+    {
+      "start": 1480.86,
+      "duration": 3.72,
+      "end": 1484.58,
+      "text": "not write the binary search code because"
+    },
+    {
+      "start": 1482.78,
+      "duration": 3.72,
+      "end": 1486.5,
+      "text": "I wanted you to think out of the box I"
+    },
+    {
+      "start": 1484.58,
+      "duration": 4.02,
+      "end": 1488.6,
+      "text": "wanted you to think the low bound and"
+    },
+    {
+      "start": 1486.5,
+      "duration": 5.7,
+      "end": 1492.2,
+      "text": "the upper bound why because in a coding"
+    },
+    {
+      "start": 1488.6,
+      "duration": 5.1,
+      "end": 1493.6999999999998,
+      "text": "round if problems come up which has"
+    },
+    {
+      "start": 1492.2,
+      "duration": 3.18,
+      "end": 1495.38,
+      "text": "implementation of low Bond and upper"
+    },
+    {
+      "start": 1493.7,
+      "duration": 3.479,
+      "end": 1497.179,
+      "text": "bound you can simply copy paste the"
+    },
+    {
+      "start": 1495.38,
+      "duration": 3.779,
+      "end": 1499.159,
+      "text": "function without thinking of anything so"
+    },
+    {
+      "start": 1497.179,
+      "duration": 3.541,
+      "end": 1500.72,
+      "text": "that is why I wanted you to connect with"
+    },
+    {
+      "start": 1499.159,
+      "duration": 3.961,
+      "end": 1503.1200000000001,
+      "text": "the logic of low bound and upper bound"
+    },
+    {
+      "start": 1500.72,
+      "duration": 4.319,
+      "end": 1505.039,
+      "text": "as well I hope you got it right so in"
+    },
+    {
+      "start": 1503.12,
+      "duration": 3.72,
+      "end": 1506.84,
+      "text": "case you've understood everything please"
+    },
+    {
+      "start": 1505.039,
+      "duration": 3.301,
+      "end": 1508.34,
+      "text": "please consider giving us a like and if"
+    },
+    {
+      "start": 1506.84,
+      "duration": 3.42,
+      "end": 1510.26,
+      "text": "you are new to our Channel what are you"
+    },
+    {
+      "start": 1508.34,
+      "duration": 3.24,
+      "end": 1511.58,
+      "text": "waiting for kill that subscribe button"
+    },
+    {
+      "start": 1510.26,
+      "duration": 3.12,
+      "end": 1513.3799999999999,
+      "text": "and yes if you haven't followed me on"
+    },
+    {
+      "start": 1511.58,
+      "duration": 2.94,
+      "end": 1514.52,
+      "text": "Instagram Twitter and Linkedin all the"
+    },
+    {
+      "start": 1513.38,
+      "duration": 2.22,
+      "end": 1515.6000000000001,
+      "text": "links will be in the description with"
+    },
+    {
+      "start": 1514.52,
+      "duration": 2.7,
+      "end": 1517.22,
+      "text": "this I'll be wrapping up this video"
+    },
+    {
+      "start": 1515.6,
+      "duration": 3.439,
+      "end": 1519.039,
+      "text": "that's really the next video of this"
+    },
+    {
+      "start": 1517.22,
+      "duration": 6.06,
+      "end": 1523.28,
+      "text": "playlist till then bye bye take care"
+    },
+    {
+      "start": 1519.039,
+      "duration": 7.781,
+      "end": 1526.82,
+      "text": "whenever your heart is broken don't ever"
+    },
+    {
+      "start": 1523.28,
+      "duration": 5.66,
+      "end": 1528.94,
+      "text": "forget you're golden I I will find the"
+    },
+    {
+      "start": 1526.82,
+      "duration": 2.12,
+      "end": 1528.9399999999998,
+      "text": "light"
+    }
+  ]
+}

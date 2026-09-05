@@ -1,0 +1,2540 @@
+{
+  "position": 127,
+  "video_id": "3oI-34aPMWM",
+  "title": "G-2. Graph Representation in C++ | Two Ways to Represent",
+  "url": "https://www.youtube.com/watch?v=3oI-34aPMWM",
+  "transcript": [
+    {
+      "start": 3.199,
+      "duration": 3.521,
+      "end": 6.72,
+      "text": "so the previous video you did learn"
+    },
+    {
+      "start": 4.72,
+      "duration": 3.76,
+      "end": 8.48,
+      "text": "about graph and its types you must be"
+    },
+    {
+      "start": 6.72,
+      "duration": 3.68,
+      "end": 10.4,
+      "text": "thinking which is the complex data"
+    },
+    {
+      "start": 8.48,
+      "duration": 2.8,
+      "end": 11.280000000000001,
+      "text": "structure that we will be using to store"
+    },
+    {
+      "start": 10.4,
+      "duration": 3.68,
+      "end": 14.08,
+      "text": "graph"
+    },
+    {
+      "start": 11.28,
+      "duration": 4.399,
+      "end": 15.678999999999998,
+      "text": "in our programs now in this video we"
+    },
+    {
+      "start": 14.08,
+      "duration": 4.16,
+      "end": 18.240000000000002,
+      "text": "will be learning about how to represent"
+    },
+    {
+      "start": 15.679,
+      "duration": 4.961,
+      "end": 20.64,
+      "text": "a graph in c plus the next it's going to"
+    },
+    {
+      "start": 18.24,
+      "duration": 4.32,
+      "end": 22.56,
+      "text": "be java okay so imagine this is the"
+    },
+    {
+      "start": 20.64,
+      "duration": 4.479,
+      "end": 25.119,
+      "text": "particular graph that is given to you"
+    },
+    {
+      "start": 22.56,
+      "duration": 6.4,
+      "end": 28.96,
+      "text": "now there will be two portions obviously"
+    },
+    {
+      "start": 25.119,
+      "duration": 6.96,
+      "end": 32.079,
+      "text": "someone will give you the input so"
+    },
+    {
+      "start": 28.96,
+      "duration": 5.119,
+      "end": 34.079,
+      "text": "first portion is the input and next"
+    },
+    {
+      "start": 32.079,
+      "duration": 3.761,
+      "end": 35.84,
+      "text": "will be how do you store it okay so"
+    },
+    {
+      "start": 34.079,
+      "duration": 4.0,
+      "end": 38.079,
+      "text": "first let's understand"
+    },
+    {
+      "start": 35.84,
+      "duration": 3.68,
+      "end": 39.52,
+      "text": "the input of a graph and then we can"
+    },
+    {
+      "start": 38.079,
+      "duration": 3.761,
+      "end": 41.84,
+      "text": "think about how to store in a data"
+    },
+    {
+      "start": 39.52,
+      "duration": 3.92,
+      "end": 43.440000000000005,
+      "text": "structure so in all the questions what"
+    },
+    {
+      "start": 41.84,
+      "duration": 4.239,
+      "end": 46.079,
+      "text": "they will tell you is"
+    },
+    {
+      "start": 43.44,
+      "duration": 4.639,
+      "end": 48.079,
+      "text": "given n m okay they'll always tell you"
+    },
+    {
+      "start": 46.079,
+      "duration": 3.841,
+      "end": 49.92,
+      "text": "given n m and the starting of the"
+    },
+    {
+      "start": 48.079,
+      "duration": 3.761,
+      "end": 51.84,
+      "text": "question they'll tell you if the graph"
+    },
+    {
+      "start": 49.92,
+      "duration": 4.4,
+      "end": 54.32,
+      "text": "is a directed one or if the graph is an"
+    },
+    {
+      "start": 51.84,
+      "duration": 4.559,
+      "end": 56.399,
+      "text": "undirected one if the line states"
+    },
+    {
+      "start": 54.32,
+      "duration": 4.719,
+      "end": 59.039,
+      "text": "given a graph given an undirected graph"
+    },
+    {
+      "start": 56.399,
+      "duration": 5.68,
+      "end": 62.079,
+      "text": "which contains endnotes"
+    },
+    {
+      "start": 59.039,
+      "duration": 6.321,
+      "end": 65.36,
+      "text": "and m edges so n will be given to you so"
+    },
+    {
+      "start": 62.079,
+      "duration": 4.241,
+      "end": 66.32,
+      "text": "n nodes and images"
+    },
+    {
+      "start": 65.36,
+      "duration": 3.439,
+      "end": 68.799,
+      "text": "so the first thing that you will"
+    },
+    {
+      "start": 66.32,
+      "duration": 4.64,
+      "end": 70.96,
+      "text": "definitely do is you take the input of n"
+    },
+    {
+      "start": 68.799,
+      "duration": 4.081,
+      "end": 72.88000000000001,
+      "text": "and m right so over here what is the"
+    },
+    {
+      "start": 70.96,
+      "duration": 4.799,
+      "end": 75.759,
+      "text": "number of nodes the number of nodes over"
+    },
+    {
+      "start": 72.88,
+      "duration": 5.279,
+      "end": 78.15899999999999,
+      "text": "here is five the number of edges is six"
+    },
+    {
+      "start": 75.759,
+      "duration": 4.881,
+      "end": 80.64,
+      "text": "one edge two edge three h four edge five"
+    },
+    {
+      "start": 78.159,
+      "duration": 4.881,
+      "end": 83.04,
+      "text": "is six edge the number of edges is six"
+    },
+    {
+      "start": 80.64,
+      "duration": 3.519,
+      "end": 84.159,
+      "text": "the number of edges is five so in the"
+    },
+    {
+      "start": 83.04,
+      "duration": 3.759,
+      "end": 86.799,
+      "text": "input"
+    },
+    {
+      "start": 84.159,
+      "duration": 4.481,
+      "end": 88.64,
+      "text": "five and six will be given to you just"
+    },
+    {
+      "start": 86.799,
+      "duration": 3.841,
+      "end": 90.64,
+      "text": "five and six you have to assume the"
+    },
+    {
+      "start": 88.64,
+      "duration": 4.4,
+      "end": 93.04,
+      "text": "first one is node and the next one is"
+    },
+    {
+      "start": 90.64,
+      "duration": 4.56,
+      "end": 95.2,
+      "text": "the number of edges now"
+    },
+    {
+      "start": 93.04,
+      "duration": 4.24,
+      "end": 97.28,
+      "text": "if they're saying you edges in order to"
+    },
+    {
+      "start": 95.2,
+      "duration": 4.64,
+      "end": 99.84,
+      "text": "represent a graph you have to understand"
+    },
+    {
+      "start": 97.28,
+      "duration": 5.36,
+      "end": 102.64,
+      "text": "the edges are between which nodes now in"
+    },
+    {
+      "start": 99.84,
+      "duration": 4.559,
+      "end": 104.399,
+      "text": "the next line they will be giving you m"
+    },
+    {
+      "start": 102.64,
+      "duration": 3.04,
+      "end": 105.68,
+      "text": "lines remember this"
+    },
+    {
+      "start": 104.399,
+      "duration": 3.841,
+      "end": 108.24,
+      "text": "m lines"
+    },
+    {
+      "start": 105.68,
+      "duration": 4.0,
+      "end": 109.68,
+      "text": "that will represent edges"
+    },
+    {
+      "start": 108.24,
+      "duration": 4.48,
+      "end": 112.72,
+      "text": "m lines"
+    },
+    {
+      "start": 109.68,
+      "duration": 4.079,
+      "end": 113.759,
+      "text": "that is going to represent edges so for"
+    },
+    {
+      "start": 112.72,
+      "duration": 3.439,
+      "end": 116.15899999999999,
+      "text": "example"
+    },
+    {
+      "start": 113.759,
+      "duration": 4.881,
+      "end": 118.64,
+      "text": "if there is an edge between one and two"
+    },
+    {
+      "start": 116.159,
+      "duration": 5.201,
+      "end": 121.36,
+      "text": "the input might tell you"
+    },
+    {
+      "start": 118.64,
+      "duration": 4.64,
+      "end": 123.28,
+      "text": "one two or the input might tell you to"
+    },
+    {
+      "start": 121.36,
+      "duration": 3.759,
+      "end": 125.119,
+      "text": "one it can be either way"
+    },
+    {
+      "start": 123.28,
+      "duration": 3.439,
+      "end": 126.719,
+      "text": "if they tell you one two"
+    },
+    {
+      "start": 125.119,
+      "duration": 3.92,
+      "end": 129.039,
+      "text": "we assume that there is an edge between"
+    },
+    {
+      "start": 126.719,
+      "duration": 5.201,
+      "end": 131.92,
+      "text": "one and two and there is also"
+    },
+    {
+      "start": 129.039,
+      "duration": 5.041,
+      "end": 134.07999999999998,
+      "text": "also an edge between two and one right"
+    },
+    {
+      "start": 131.92,
+      "duration": 4.399,
+      "end": 136.319,
+      "text": "so obviously two one means one two and"
+    },
+    {
+      "start": 134.08,
+      "duration": 3.6,
+      "end": 137.68,
+      "text": "one two means two one vice versa i can"
+    },
+    {
+      "start": 136.319,
+      "duration": 2.961,
+      "end": 139.28,
+      "text": "say that there is an edge between one"
+    },
+    {
+      "start": 137.68,
+      "duration": 3.44,
+      "end": 141.12,
+      "text": "and three i can say there's an edge"
+    },
+    {
+      "start": 139.28,
+      "duration": 4.959,
+      "end": 144.239,
+      "text": "between two and four i can say there's"
+    },
+    {
+      "start": 141.12,
+      "duration": 6.24,
+      "end": 147.36,
+      "text": "an edge between 3 and 4 2 and 5 and 4"
+    },
+    {
+      "start": 144.239,
+      "duration": 4.241,
+      "end": 148.48000000000002,
+      "text": "and 5. so i have written all the six"
+    },
+    {
+      "start": 147.36,
+      "duration": 3.76,
+      "end": 151.12,
+      "text": "edges"
+    },
+    {
+      "start": 148.48,
+      "duration": 5.36,
+      "end": 153.84,
+      "text": "do they follow a specific order no they"
+    },
+    {
+      "start": 151.12,
+      "duration": 4.96,
+      "end": 156.08,
+      "text": "can be given in any order so this is the"
+    },
+    {
+      "start": 153.84,
+      "duration": 5.679,
+      "end": 159.519,
+      "text": "next set of input so the input will be"
+    },
+    {
+      "start": 156.08,
+      "duration": 4.56,
+      "end": 160.64000000000001,
+      "text": "containing like this 2 1 1 3"
+    },
+    {
+      "start": 159.519,
+      "duration": 2.241,
+      "end": 161.76000000000002,
+      "text": "2 4"
+    },
+    {
+      "start": 160.64,
+      "duration": 4.56,
+      "end": 165.2,
+      "text": "3 4"
+    },
+    {
+      "start": 161.76,
+      "duration": 5.6,
+      "end": 167.35999999999999,
+      "text": "2 5 4 5 right"
+    },
+    {
+      "start": 165.2,
+      "duration": 5.36,
+      "end": 170.56,
+      "text": "so this is how the input will be so you"
+    },
+    {
+      "start": 167.36,
+      "duration": 4.48,
+      "end": 171.84,
+      "text": "have to assume the first line this is n"
+    },
+    {
+      "start": 170.56,
+      "duration": 4.0,
+      "end": 174.56,
+      "text": "this is m"
+    },
+    {
+      "start": 171.84,
+      "duration": 6.8,
+      "end": 178.64000000000001,
+      "text": "the next set of lines m lines are the"
+    },
+    {
+      "start": 174.56,
+      "duration": 6.08,
+      "end": 180.64000000000001,
+      "text": "number of edges is there any specific"
+    },
+    {
+      "start": 178.64,
+      "duration": 3.04,
+      "end": 181.67999999999998,
+      "text": "boundary on the number of edges is it"
+    },
+    {
+      "start": 180.64,
+      "duration": 3.679,
+      "end": 184.319,
+      "text": "somewhere"
+    },
+    {
+      "start": 181.68,
+      "duration": 5.44,
+      "end": 187.12,
+      "text": "related to the number of nodes no if i"
+    },
+    {
+      "start": 184.319,
+      "duration": 5.28,
+      "end": 189.599,
+      "text": "draw one more edge it becomes seven if i"
+    },
+    {
+      "start": 187.12,
+      "duration": 4.479,
+      "end": 191.59900000000002,
+      "text": "draw one more edge it becomes small if i"
+    },
+    {
+      "start": 189.599,
+      "duration": 4.241,
+      "end": 193.83999999999997,
+      "text": "draw one more edge becomes more if i"
+    },
+    {
+      "start": 191.599,
+      "duration": 3.041,
+      "end": 194.64,
+      "text": "draw one more edge becomes more they can"
+    },
+    {
+      "start": 193.84,
+      "duration": 3.36,
+      "end": 197.20000000000002,
+      "text": "be"
+    },
+    {
+      "start": 194.64,
+      "duration": 5.12,
+      "end": 199.76,
+      "text": "like m can be anything n will be"
+    },
+    {
+      "start": 197.2,
+      "duration": 5.119,
+      "end": 202.319,
+      "text": "constant but m can be anything okay so"
+    },
+    {
+      "start": 199.76,
+      "duration": 4.24,
+      "end": 204.0,
+      "text": "this is how we take uh input like this"
+    },
+    {
+      "start": 202.319,
+      "duration": 4.48,
+      "end": 206.79899999999998,
+      "text": "is how the input will be given now the"
+    },
+    {
+      "start": 204.0,
+      "duration": 5.28,
+      "end": 209.28,
+      "text": "question comes how do we store so there"
+    },
+    {
+      "start": 206.799,
+      "duration": 4.08,
+      "end": 210.87900000000002,
+      "text": "are two ways to store one is the matrix"
+    },
+    {
+      "start": 209.28,
+      "duration": 4.64,
+      "end": 213.92,
+      "text": "way"
+    },
+    {
+      "start": 210.879,
+      "duration": 4.72,
+      "end": 215.599,
+      "text": "and the second one is the last way okay"
+    },
+    {
+      "start": 213.92,
+      "duration": 2.399,
+      "end": 216.319,
+      "text": "so first let's learn about the matrix"
+    },
+    {
+      "start": 215.599,
+      "duration": 4.0,
+      "end": 219.599,
+      "text": "way"
+    },
+    {
+      "start": 216.319,
+      "duration": 5.56,
+      "end": 221.879,
+      "text": "so the first way is to use a matrix and"
+    },
+    {
+      "start": 219.599,
+      "duration": 4.56,
+      "end": 224.159,
+      "text": "we generally uh call that as an"
+    },
+    {
+      "start": 221.879,
+      "duration": 5.561,
+      "end": 227.44,
+      "text": "adjacency matrix"
+    },
+    {
+      "start": 224.159,
+      "duration": 5.601,
+      "end": 229.76,
+      "text": "the way that we use so assume that this"
+    },
+    {
+      "start": 227.44,
+      "duration": 4.159,
+      "end": 231.599,
+      "text": "is the graph okay and these are the"
+    },
+    {
+      "start": 229.76,
+      "duration": 4.16,
+      "end": 233.92,
+      "text": "edges that are given to you you need to"
+    },
+    {
+      "start": 231.599,
+      "duration": 4.64,
+      "end": 236.23899999999998,
+      "text": "store these edges somewhere either you"
+    },
+    {
+      "start": 233.92,
+      "duration": 3.92,
+      "end": 237.83999999999997,
+      "text": "can store these edges but this edges has"
+    },
+    {
+      "start": 236.239,
+      "duration": 3.841,
+      "end": 240.08,
+      "text": "to be stored somewhere so that the"
+    },
+    {
+      "start": 237.84,
+      "duration": 4.319,
+      "end": 242.159,
+      "text": "future algorithms can be performed so"
+    },
+    {
+      "start": 240.08,
+      "duration": 4.079,
+      "end": 244.15900000000002,
+      "text": "where will you store this edges"
+    },
+    {
+      "start": 242.159,
+      "duration": 3.36,
+      "end": 245.519,
+      "text": "this is where something like a matrix"
+    },
+    {
+      "start": 244.159,
+      "duration": 3.041,
+      "end": 247.2,
+      "text": "comes in okay"
+    },
+    {
+      "start": 245.519,
+      "duration": 4.08,
+      "end": 249.59900000000002,
+      "text": "first thing that you'll observe is the"
+    },
+    {
+      "start": 247.2,
+      "duration": 4.8,
+      "end": 252.0,
+      "text": "number of nodes where five"
+    },
+    {
+      "start": 249.599,
+      "duration": 4.64,
+      "end": 254.23899999999998,
+      "text": "are the nodes zero based or one based"
+    },
+    {
+      "start": 252.0,
+      "duration": 3.519,
+      "end": 255.519,
+      "text": "and we see the nodes are one based if"
+    },
+    {
+      "start": 254.239,
+      "duration": 3.68,
+      "end": 257.919,
+      "text": "the"
+    },
+    {
+      "start": 255.519,
+      "duration": 6.0,
+      "end": 261.519,
+      "text": "number of nodes are five the last node"
+    },
+    {
+      "start": 257.919,
+      "duration": 6.321,
+      "end": 264.24,
+      "text": "is n equal to five so it is one based"
+    },
+    {
+      "start": 261.519,
+      "duration": 5.441,
+      "end": 266.96,
+      "text": "indexing nodes okay so what you will do"
+    },
+    {
+      "start": 264.24,
+      "duration": 6.72,
+      "end": 270.96000000000004,
+      "text": "is you will define an adjacency matrix"
+    },
+    {
+      "start": 266.96,
+      "duration": 6.64,
+      "end": 273.59999999999997,
+      "text": "of n plus one and n plus one size which"
+    },
+    {
+      "start": 270.96,
+      "duration": 4.48,
+      "end": 275.44,
+      "text": "is this and it will have the indexes"
+    },
+    {
+      "start": 273.6,
+      "duration": 6.319,
+      "end": 279.91900000000004,
+      "text": "zero one two three four five"
+    },
+    {
+      "start": 275.44,
+      "duration": 6.0,
+      "end": 281.44,
+      "text": "zero one two three four five okay now if"
+    },
+    {
+      "start": 279.919,
+      "duration": 3.761,
+      "end": 283.68,
+      "text": "they tell you that there is an edge"
+    },
+    {
+      "start": 281.44,
+      "duration": 4.8,
+      "end": 286.24,
+      "text": "between one and two"
+    },
+    {
+      "start": 283.68,
+      "duration": 3.44,
+      "end": 287.12,
+      "text": "what you do is you go to one and you go"
+    },
+    {
+      "start": 286.24,
+      "duration": 3.76,
+      "end": 290.0,
+      "text": "to two"
+    },
+    {
+      "start": 287.12,
+      "duration": 6.079,
+      "end": 293.199,
+      "text": "and you take the intersection yes"
+    },
+    {
+      "start": 290.0,
+      "duration": 5.12,
+      "end": 295.12,
+      "text": "and you mark it as one"
+    },
+    {
+      "start": 293.199,
+      "duration": 3.921,
+      "end": 297.12,
+      "text": "and did i tell you if there is an edge"
+    },
+    {
+      "start": 295.12,
+      "duration": 3.92,
+      "end": 299.04,
+      "text": "between one and two it means there is an"
+    },
+    {
+      "start": 297.12,
+      "duration": 3.28,
+      "end": 300.4,
+      "text": "edge between two and one so you go to"
+    },
+    {
+      "start": 299.04,
+      "duration": 3.52,
+      "end": 302.56,
+      "text": "two"
+    },
+    {
+      "start": 300.4,
+      "duration": 3.519,
+      "end": 303.919,
+      "text": "you go to one and the intersection as"
+    },
+    {
+      "start": 302.56,
+      "duration": 3.76,
+      "end": 306.32,
+      "text": "one"
+    },
+    {
+      "start": 303.919,
+      "duration": 4.321,
+      "end": 308.24,
+      "text": "perfect next there's an edge between one"
+    },
+    {
+      "start": 306.32,
+      "duration": 2.719,
+      "end": 309.039,
+      "text": "and three so one and three is marked as"
+    },
+    {
+      "start": 308.24,
+      "duration": 3.04,
+      "end": 311.28000000000003,
+      "text": "one"
+    },
+    {
+      "start": 309.039,
+      "duration": 4.0,
+      "end": 313.039,
+      "text": "and three and one is marked as one"
+    },
+    {
+      "start": 311.28,
+      "duration": 3.84,
+      "end": 315.11999999999995,
+      "text": "next you go to two and four"
+    },
+    {
+      "start": 313.039,
+      "duration": 3.921,
+      "end": 316.96,
+      "text": "two and four is marked as one four and"
+    },
+    {
+      "start": 315.12,
+      "duration": 3.76,
+      "end": 318.88,
+      "text": "two is marked as one next you go to"
+    },
+    {
+      "start": 316.96,
+      "duration": 4.16,
+      "end": 321.12,
+      "text": "three and four three and four is marked"
+    },
+    {
+      "start": 318.88,
+      "duration": 4.319,
+      "end": 323.199,
+      "text": "as one four and three is marked as one"
+    },
+    {
+      "start": 321.12,
+      "duration": 4.24,
+      "end": 325.36,
+      "text": "so in this way you can mark all these"
+    },
+    {
+      "start": 323.199,
+      "duration": 3.521,
+      "end": 326.72,
+      "text": "edges like three and five"
+    },
+    {
+      "start": 325.36,
+      "duration": 3.04,
+      "end": 328.40000000000003,
+      "text": "five and three"
+    },
+    {
+      "start": 326.72,
+      "duration": 4.08,
+      "end": 330.8,
+      "text": "next four and five"
+    },
+    {
+      "start": 328.4,
+      "duration": 4.0,
+      "end": 332.4,
+      "text": "five and four so all these edges are"
+    },
+    {
+      "start": 330.8,
+      "duration": 3.76,
+      "end": 334.56,
+      "text": "marked as"
+    },
+    {
+      "start": 332.4,
+      "duration": 4.48,
+      "end": 336.88,
+      "text": "in the adjacency matrix now all the"
+    },
+    {
+      "start": 334.56,
+      "duration": 5.04,
+      "end": 339.6,
+      "text": "remaining guys will be filled on with"
+    },
+    {
+      "start": 336.88,
+      "duration": 4.24,
+      "end": 341.12,
+      "text": "zeros you can or you can just leave them"
+    },
+    {
+      "start": 339.6,
+      "duration": 4.48,
+      "end": 344.08000000000004,
+      "text": "all the remaining guys will be filled on"
+    },
+    {
+      "start": 341.12,
+      "duration": 4.48,
+      "end": 345.6,
+      "text": "with zeros so this matrix will tell you"
+    },
+    {
+      "start": 344.08,
+      "duration": 3.92,
+      "end": 348.0,
+      "text": "if you want to check if there's an edge"
+    },
+    {
+      "start": 345.6,
+      "duration": 4.159,
+      "end": 349.759,
+      "text": "between three and four yes there is if"
+    },
+    {
+      "start": 348.0,
+      "duration": 4.16,
+      "end": 352.16,
+      "text": "there's an edge between four and two yes"
+    },
+    {
+      "start": 349.759,
+      "duration": 4.72,
+      "end": 354.47900000000004,
+      "text": "there is is there's an edge between five"
+    },
+    {
+      "start": 352.16,
+      "duration": 4.4,
+      "end": 356.56,
+      "text": "and two no there is no edge so this"
+    },
+    {
+      "start": 354.479,
+      "duration": 3.521,
+      "end": 358.0,
+      "text": "matrix is going to tell you if there is"
+    },
+    {
+      "start": 356.56,
+      "duration": 2.88,
+      "end": 359.44,
+      "text": "an edge between"
+    },
+    {
+      "start": 358.0,
+      "duration": 4.319,
+      "end": 362.319,
+      "text": "a particular"
+    },
+    {
+      "start": 359.44,
+      "duration": 5.199,
+      "end": 364.639,
+      "text": "node to another node and"
+    },
+    {
+      "start": 362.319,
+      "duration": 4.32,
+      "end": 366.639,
+      "text": "how much space are you using"
+    },
+    {
+      "start": 364.639,
+      "duration": 4.481,
+      "end": 369.12,
+      "text": "remember this the space that you will be"
+    },
+    {
+      "start": 366.639,
+      "duration": 3.441,
+      "end": 370.08,
+      "text": "using will be n cross set n"
+    },
+    {
+      "start": 369.12,
+      "duration": 3.199,
+      "end": 372.319,
+      "text": "because"
+    },
+    {
+      "start": 370.08,
+      "duration": 4.48,
+      "end": 374.56,
+      "text": "you're using almost like n plus 1 into n"
+    },
+    {
+      "start": 372.319,
+      "duration": 5.6,
+      "end": 377.91900000000004,
+      "text": "plus 1 which is equivalent to n into n"
+    },
+    {
+      "start": 374.56,
+      "duration": 6.4,
+      "end": 380.96,
+      "text": "space is what you will be using and this"
+    },
+    {
+      "start": 377.919,
+      "duration": 5.041,
+      "end": 382.96,
+      "text": "is a costly thing yes this is a costly"
+    },
+    {
+      "start": 380.96,
+      "duration": 4.079,
+      "end": 385.039,
+      "text": "thing but if we're moving on to the next"
+    },
+    {
+      "start": 382.96,
+      "duration": 5.28,
+      "end": 388.23999999999995,
+      "text": "thing which is cheaper let's check out"
+    },
+    {
+      "start": 385.039,
+      "duration": 3.201,
+      "end": 388.24,
+      "text": "the code super quick"
+    },
+    {
+      "start": 388.88,
+      "duration": 4.879,
+      "end": 393.759,
+      "text": "so what did i see the first line will"
+    },
+    {
+      "start": 390.319,
+      "duration": 6.641,
+      "end": 396.96000000000004,
+      "text": "contain n m so define n m and"
+    },
+    {
+      "start": 393.759,
+      "duration": 4.641,
+      "end": 398.40000000000003,
+      "text": "take it as input done now if it is uh"
+    },
+    {
+      "start": 396.96,
+      "duration": 4.239,
+      "end": 401.19899999999996,
+      "text": "something like"
+    },
+    {
+      "start": 398.4,
+      "duration": 4.96,
+      "end": 403.35999999999996,
+      "text": "uh z one based indexing graph you take"
+    },
+    {
+      "start": 401.199,
+      "duration": 4.72,
+      "end": 405.91900000000004,
+      "text": "like this if the zero base then you take"
+    },
+    {
+      "start": 403.36,
+      "duration": 4.559,
+      "end": 407.91900000000004,
+      "text": "a n cross m and that will work now what"
+    },
+    {
+      "start": 405.919,
+      "duration": 3.68,
+      "end": 409.599,
+      "text": "is the next lines containing it was"
+    },
+    {
+      "start": 407.919,
+      "duration": 4.56,
+      "end": 412.479,
+      "text": "containing m lines"
+    },
+    {
+      "start": 409.599,
+      "duration": 4.961,
+      "end": 414.56,
+      "text": "so you just run a loop for m lines and"
+    },
+    {
+      "start": 412.479,
+      "duration": 4.401,
+      "end": 416.88,
+      "text": "you know for every line they will be"
+    },
+    {
+      "start": 414.56,
+      "duration": 4.88,
+      "end": 419.44,
+      "text": "giving you that there's an edge between"
+    },
+    {
+      "start": 416.88,
+      "duration": 4.08,
+      "end": 420.96,
+      "text": "u and v so you take them as input what"
+    },
+    {
+      "start": 419.44,
+      "duration": 3.44,
+      "end": 422.88,
+      "text": "did i say"
+    },
+    {
+      "start": 420.96,
+      "duration": 3.6,
+      "end": 424.56,
+      "text": "have the intersection marked as one and"
+    },
+    {
+      "start": 422.88,
+      "duration": 4.08,
+      "end": 426.96,
+      "text": "have the reverse intersection marked as"
+    },
+    {
+      "start": 424.56,
+      "duration": 5.359,
+      "end": 429.919,
+      "text": "one as well so both the"
+    },
+    {
+      "start": 426.96,
+      "duration": 6.079,
+      "end": 433.039,
+      "text": "so in this way i can say the entire"
+    },
+    {
+      "start": 429.919,
+      "duration": 3.921,
+      "end": 433.84,
+      "text": "graph has been stored here"
+    },
+    {
+      "start": 433.039,
+      "duration": 2.641,
+      "end": 435.68,
+      "text": "right"
+    },
+    {
+      "start": 433.84,
+      "duration": 4.72,
+      "end": 438.56,
+      "text": "and what will be the time complexity"
+    },
+    {
+      "start": 435.68,
+      "duration": 4.72,
+      "end": 440.40000000000003,
+      "text": "this is b go of n that you took to store"
+    },
+    {
+      "start": 438.56,
+      "duration": 3.6,
+      "end": 442.16,
+      "text": "the graph after that we can perform the"
+    },
+    {
+      "start": 440.4,
+      "duration": 3.44,
+      "end": 443.84,
+      "text": "algorithms but at first it's very"
+    },
+    {
+      "start": 442.16,
+      "duration": 3.599,
+      "end": 445.759,
+      "text": "important to understand how to store a"
+    },
+    {
+      "start": 443.84,
+      "duration": 4.24,
+      "end": 448.08,
+      "text": "graph so in the previous method we saw"
+    },
+    {
+      "start": 445.759,
+      "duration": 4.56,
+      "end": 450.319,
+      "text": "that it was taking n square space this"
+    },
+    {
+      "start": 448.08,
+      "duration": 5.679,
+      "end": 453.75899999999996,
+      "text": "is where something like adjacency list"
+    },
+    {
+      "start": 450.319,
+      "duration": 5.681,
+      "end": 456.0,
+      "text": "comes in and it takes very very less"
+    },
+    {
+      "start": 453.759,
+      "duration": 5.44,
+      "end": 459.199,
+      "text": "amount of space now what is an adjacency"
+    },
+    {
+      "start": 456.0,
+      "duration": 3.919,
+      "end": 459.919,
+      "text": "list we use an array yes we use an array"
+    },
+    {
+      "start": 459.199,
+      "duration": 2.72,
+      "end": 461.91900000000004,
+      "text": "but"
+    },
+    {
+      "start": 459.919,
+      "duration": 6.081,
+      "end": 466.0,
+      "text": "the area that we will be using like over"
+    },
+    {
+      "start": 461.919,
+      "duration": 5.12,
+      "end": 467.039,
+      "text": "here we see that the size is five right"
+    },
+    {
+      "start": 466.0,
+      "duration": 4.08,
+      "end": 470.08,
+      "text": "and"
+    },
+    {
+      "start": 467.039,
+      "duration": 5.521,
+      "end": 472.56,
+      "text": "we're using an one based graph one based"
+    },
+    {
+      "start": 470.08,
+      "duration": 6.16,
+      "end": 476.24,
+      "text": "indexing graph so what we will do is we"
+    },
+    {
+      "start": 472.56,
+      "duration": 7.44,
+      "end": 480.0,
+      "text": "will create an array of n plus one size"
+    },
+    {
+      "start": 476.24,
+      "duration": 5.92,
+      "end": 482.16,
+      "text": "which is six size and it'll be like zero"
+    },
+    {
+      "start": 480.0,
+      "duration": 5.12,
+      "end": 485.12,
+      "text": "one two three four"
+    },
+    {
+      "start": 482.16,
+      "duration": 6.08,
+      "end": 488.24,
+      "text": "and five so you have created an array of"
+    },
+    {
+      "start": 485.12,
+      "duration": 5.519,
+      "end": 490.639,
+      "text": "six size now this array will contain"
+    },
+    {
+      "start": 488.24,
+      "duration": 4.88,
+      "end": 493.12,
+      "text": "list and in c plus plus the list is"
+    },
+    {
+      "start": 490.639,
+      "duration": 4.96,
+      "end": 495.599,
+      "text": "nothing but vector"
+    },
+    {
+      "start": 493.12,
+      "duration": 3.44,
+      "end": 496.56,
+      "text": "of int yes in c plus plus it is nothing"
+    },
+    {
+      "start": 495.599,
+      "duration": 2.401,
+      "end": 498.0,
+      "text": "but"
+    },
+    {
+      "start": 496.56,
+      "duration": 3.759,
+      "end": 500.319,
+      "text": "vector of"
+    },
+    {
+      "start": 498.0,
+      "duration": 5.919,
+      "end": 503.919,
+      "text": "int so we can call this array as"
+    },
+    {
+      "start": 500.319,
+      "duration": 5.44,
+      "end": 505.759,
+      "text": "adjacency list so a list of adjacency"
+    },
+    {
+      "start": 503.919,
+      "duration": 4.801,
+      "end": 508.71999999999997,
+      "text": "containing this so apparently what"
+    },
+    {
+      "start": 505.759,
+      "duration": 5.44,
+      "end": 511.199,
+      "text": "happens is every index is containing an"
+    },
+    {
+      "start": 508.72,
+      "duration": 4.559,
+      "end": 513.279,
+      "text": "empty vector every index is containing"
+    },
+    {
+      "start": 511.199,
+      "duration": 4.64,
+      "end": 515.839,
+      "text": "an empty vector you could have defined"
+    },
+    {
+      "start": 513.279,
+      "duration": 4.56,
+      "end": 517.8389999999999,
+      "text": "integer then it would have contained an"
+    },
+    {
+      "start": 515.839,
+      "duration": 3.76,
+      "end": 519.599,
+      "text": "integer you could have defined double as"
+    },
+    {
+      "start": 517.839,
+      "duration": 4.08,
+      "end": 521.9190000000001,
+      "text": "well the moment you define something as"
+    },
+    {
+      "start": 519.599,
+      "duration": 5.121,
+      "end": 524.72,
+      "text": "vector it means it contains an empty"
+    },
+    {
+      "start": 521.919,
+      "duration": 4.961,
+      "end": 526.88,
+      "text": "list or an empty vector done"
+    },
+    {
+      "start": 524.72,
+      "duration": 4.799,
+      "end": 529.519,
+      "text": "so as of now we have"
+    },
+    {
+      "start": 526.88,
+      "duration": 4.48,
+      "end": 531.36,
+      "text": "six indexes with empty vectors"
+    },
+    {
+      "start": 529.519,
+      "duration": 5.76,
+      "end": 535.279,
+      "text": "so you need to remember one thing"
+    },
+    {
+      "start": 531.36,
+      "duration": 4.72,
+      "end": 536.08,
+      "text": "what is the motif of the list"
+    },
+    {
+      "start": 535.279,
+      "duration": 2.56,
+      "end": 537.8389999999999,
+      "text": "so"
+    },
+    {
+      "start": 536.08,
+      "duration": 2.879,
+      "end": 538.9590000000001,
+      "text": "if you see 4"
+    },
+    {
+      "start": 537.839,
+      "duration": 2.241,
+      "end": 540.08,
+      "text": "4 has"
+    },
+    {
+      "start": 538.959,
+      "duration": 2.161,
+      "end": 541.1199999999999,
+      "text": "2"
+    },
+    {
+      "start": 540.08,
+      "duration": 1.84,
+      "end": 541.9200000000001,
+      "text": "5"
+    },
+    {
+      "start": 541.12,
+      "duration": 3.6,
+      "end": 544.72,
+      "text": "3"
+    },
+    {
+      "start": 541.92,
+      "duration": 5.52,
+      "end": 547.4399999999999,
+      "text": "as its neighbor so the motif of the"
+    },
+    {
+      "start": 544.72,
+      "duration": 6.16,
+      "end": 550.88,
+      "text": "adjacency list is on 4"
+    },
+    {
+      "start": 547.44,
+      "duration": 5.839,
+      "end": 553.2790000000001,
+      "text": "i just want to store 2 5 3 in any order"
+    },
+    {
+      "start": 550.88,
+      "duration": 5.36,
+      "end": 556.24,
+      "text": "so that if someone tells me"
+    },
+    {
+      "start": 553.279,
+      "duration": 5.12,
+      "end": 558.399,
+      "text": "who are the adjacent neighbors of 4 i"
+    },
+    {
+      "start": 556.24,
+      "duration": 4.719,
+      "end": 560.9590000000001,
+      "text": "can say 4 is connected to 2 4 is"
+    },
+    {
+      "start": 558.399,
+      "duration": 5.361,
+      "end": 563.76,
+      "text": "connected to 5 4 is connected to 3. that"
+    },
+    {
+      "start": 560.959,
+      "duration": 4.961,
+      "end": 565.92,
+      "text": "is my motive okay so on the first step"
+    },
+    {
+      "start": 563.76,
+      "duration": 4.4,
+      "end": 568.16,
+      "text": "we have something like one and two so"
+    },
+    {
+      "start": 565.92,
+      "duration": 3.76,
+      "end": 569.68,
+      "text": "what we will do is we will go to one and"
+    },
+    {
+      "start": 568.16,
+      "duration": 3.92,
+      "end": 572.0799999999999,
+      "text": "we will say"
+    },
+    {
+      "start": 569.68,
+      "duration": 4.24,
+      "end": 573.92,
+      "text": "the list can you take two because"
+    },
+    {
+      "start": 572.08,
+      "duration": 3.84,
+      "end": 575.9200000000001,
+      "text": "if one and two are connected"
+    },
+    {
+      "start": 573.92,
+      "duration": 3.76,
+      "end": 577.68,
+      "text": "two is definitely a neighbor of one and"
+    },
+    {
+      "start": 575.92,
+      "duration": 4.64,
+      "end": 580.56,
+      "text": "similarly can i say two"
+    },
+    {
+      "start": 577.68,
+      "duration": 5.12,
+      "end": 582.8,
+      "text": "please to one perfect because"
+    },
+    {
+      "start": 580.56,
+      "duration": 4.399,
+      "end": 584.959,
+      "text": "for two one is also a neighbor for one"
+    },
+    {
+      "start": 582.8,
+      "duration": 4.159,
+      "end": 586.959,
+      "text": "and three can i say one can you store"
+    },
+    {
+      "start": 584.959,
+      "duration": 3.921,
+      "end": 588.88,
+      "text": "three and for three can i say can you"
+    },
+    {
+      "start": 586.959,
+      "duration": 3.921,
+      "end": 590.88,
+      "text": "store one yes"
+    },
+    {
+      "start": 588.88,
+      "duration": 4.0,
+      "end": 592.88,
+      "text": "for three and four can i say three can"
+    },
+    {
+      "start": 590.88,
+      "duration": 3.6,
+      "end": 594.48,
+      "text": "you store four and can i say four can"
+    },
+    {
+      "start": 592.88,
+      "duration": 3.84,
+      "end": 596.72,
+      "text": "you store three yes"
+    },
+    {
+      "start": 594.48,
+      "duration": 4.32,
+      "end": 598.8000000000001,
+      "text": "for two and four can i say two can you"
+    },
+    {
+      "start": 596.72,
+      "duration": 4.96,
+      "end": 601.6800000000001,
+      "text": "store four and can i say four can you"
+    },
+    {
+      "start": 598.8,
+      "duration": 4.8,
+      "end": 603.5999999999999,
+      "text": "store two yes for two and five can i say"
+    },
+    {
+      "start": 601.68,
+      "duration": 4.159,
+      "end": 605.8389999999999,
+      "text": "two can you store five five can you"
+    },
+    {
+      "start": 603.6,
+      "duration": 5.04,
+      "end": 608.64,
+      "text": "store two for four and five can i say"
+    },
+    {
+      "start": 605.839,
+      "duration": 6.161,
+      "end": 612.0,
+      "text": "four can you stop five five can you stop"
+    },
+    {
+      "start": 608.64,
+      "duration": 5.92,
+      "end": 614.56,
+      "text": "four i can so this will be the"
+    },
+    {
+      "start": 612.0,
+      "duration": 3.519,
+      "end": 615.519,
+      "text": "end of the day list and if you carefully"
+    },
+    {
+      "start": 614.56,
+      "duration": 4.56,
+      "end": 619.1199999999999,
+      "text": "observe"
+    },
+    {
+      "start": 615.519,
+      "duration": 7.361,
+      "end": 622.88,
+      "text": "one has its neighbor as two and three"
+    },
+    {
+      "start": 619.12,
+      "duration": 3.76,
+      "end": 622.88,
+      "text": "five has its neighbor as two and four"
+    },
+    {
+      "start": 622.959,
+      "duration": 5.201,
+      "end": 628.16,
+      "text": "three has its neighbor as one and four"
+    },
+    {
+      "start": 625.68,
+      "duration": 6.48,
+      "end": 632.16,
+      "text": "so you stored all the neighbors in"
+    },
+    {
+      "start": 628.16,
+      "duration": 6.72,
+      "end": 634.88,
+      "text": "particular indexes this is how the list"
+    },
+    {
+      "start": 632.16,
+      "duration": 5.359,
+      "end": 637.519,
+      "text": "works right and if you carefully observe"
+    },
+    {
+      "start": 634.88,
+      "duration": 4.32,
+      "end": 639.2,
+      "text": "the number of edges where one two three"
+    },
+    {
+      "start": 637.519,
+      "duration": 3.841,
+      "end": 641.36,
+      "text": "four five six"
+    },
+    {
+      "start": 639.2,
+      "duration": 4.879,
+      "end": 644.0790000000001,
+      "text": "how much space did you take"
+    },
+    {
+      "start": 641.36,
+      "duration": 5.599,
+      "end": 646.9590000000001,
+      "text": "one two three four five six seven eight"
+    },
+    {
+      "start": 644.079,
+      "duration": 5.841,
+      "end": 649.92,
+      "text": "nine ten eleven 12 because"
+    },
+    {
+      "start": 646.959,
+      "duration": 4.56,
+      "end": 651.5189999999999,
+      "text": "because the space that you take is twice"
+    },
+    {
+      "start": 649.92,
+      "duration": 5.359,
+      "end": 655.279,
+      "text": "of edges"
+    },
+    {
+      "start": 651.519,
+      "duration": 6.0,
+      "end": 657.519,
+      "text": "why because every edge has two notes so"
+    },
+    {
+      "start": 655.279,
+      "duration": 6.881,
+      "end": 662.16,
+      "text": "for every edge you're storing twice so"
+    },
+    {
+      "start": 657.519,
+      "duration": 7.361,
+      "end": 664.88,
+      "text": "it'll take b go off to a 2e is the space"
+    },
+    {
+      "start": 662.16,
+      "duration": 5.04,
+      "end": 667.1999999999999,
+      "text": "that you will take in storing this"
+    },
+    {
+      "start": 664.88,
+      "duration": 5.28,
+      "end": 670.16,
+      "text": "particular adjacency"
+    },
+    {
+      "start": 667.2,
+      "duration": 5.68,
+      "end": 672.88,
+      "text": "list which is much much better than your"
+    },
+    {
+      "start": 670.16,
+      "duration": 5.6,
+      "end": 675.76,
+      "text": "n square because in n square a lot of"
+    },
+    {
+      "start": 672.88,
+      "duration": 7.04,
+      "end": 679.92,
+      "text": "places were unused over here we are"
+    },
+    {
+      "start": 675.76,
+      "duration": 6.88,
+      "end": 682.64,
+      "text": "storing who matters no one else"
+    },
+    {
+      "start": 679.92,
+      "duration": 5.2,
+      "end": 685.12,
+      "text": "so the input of n m will be same what we"
+    },
+    {
+      "start": 682.64,
+      "duration": 4.319,
+      "end": 686.959,
+      "text": "do is we declare an adjacency list and"
+    },
+    {
+      "start": 685.12,
+      "duration": 5.76,
+      "end": 690.88,
+      "text": "we say n plus one if it's a zero based"
+    },
+    {
+      "start": 686.959,
+      "duration": 6.161,
+      "end": 693.1199999999999,
+      "text": "you take n and now we take this and all"
+    },
+    {
+      "start": 690.88,
+      "duration": 2.24,
+      "end": 693.12,
+      "text": "the"
+    },
+    {
+      "start": 693.519,
+      "duration": 4.241,
+      "end": 697.76,
+      "text": "id uv"
+    },
+    {
+      "start": 695.2,
+      "duration": 4.72,
+      "end": 699.9200000000001,
+      "text": "it's like cn of pu and v once you've"
+    },
+    {
+      "start": 697.76,
+      "duration": 3.68,
+      "end": 701.4399999999999,
+      "text": "done this it's like adjacency of u dot"
+    },
+    {
+      "start": 699.92,
+      "duration": 3.68,
+      "end": 703.5999999999999,
+      "text": "push back"
+    },
+    {
+      "start": 701.44,
+      "duration": 5.04,
+      "end": 706.48,
+      "text": "because in that vector you need to store"
+    },
+    {
+      "start": 703.6,
+      "duration": 5.679,
+      "end": 709.279,
+      "text": "this now this is your v dot push back of"
+    },
+    {
+      "start": 706.48,
+      "duration": 4.88,
+      "end": 711.36,
+      "text": "you so what it means is"
+    },
+    {
+      "start": 709.279,
+      "duration": 4.401,
+      "end": 713.68,
+      "text": "on the uh index can you please store v"
+    },
+    {
+      "start": 711.36,
+      "duration": 4.96,
+      "end": 716.32,
+      "text": "because v is a neighbor on the v index"
+    },
+    {
+      "start": 713.68,
+      "duration": 4.8,
+      "end": 718.4799999999999,
+      "text": "can you please store u because you is a"
+    },
+    {
+      "start": 716.32,
+      "duration": 5.28,
+      "end": 721.6,
+      "text": "neighbor this is how you can easily"
+    },
+    {
+      "start": 718.48,
+      "duration": 5.919,
+      "end": 724.399,
+      "text": "store in a list and the space complexity"
+    },
+    {
+      "start": 721.6,
+      "duration": 6.4,
+      "end": 728.0,
+      "text": "will be much much lesser now let's come"
+    },
+    {
+      "start": 724.399,
+      "duration": 5.361,
+      "end": 729.76,
+      "text": "back to uh what if it's a directed graph"
+    },
+    {
+      "start": 728.0,
+      "duration": 4.8,
+      "end": 732.8,
+      "text": "if you remember if it's a directed graph"
+    },
+    {
+      "start": 729.76,
+      "duration": 5.36,
+      "end": 735.12,
+      "text": "we mean there's an edge between u and v"
+    },
+    {
+      "start": 732.8,
+      "duration": 3.36,
+      "end": 736.16,
+      "text": "only so if there is an edge between u"
+    },
+    {
+      "start": 735.12,
+      "duration": 3.36,
+      "end": 738.48,
+      "text": "and v"
+    },
+    {
+      "start": 736.16,
+      "duration": 4.56,
+      "end": 740.7199999999999,
+      "text": "will we require this line obviously not"
+    },
+    {
+      "start": 738.48,
+      "duration": 4.08,
+      "end": 742.5600000000001,
+      "text": "this line will not be required if there"
+    },
+    {
+      "start": 740.72,
+      "duration": 5.04,
+      "end": 745.76,
+      "text": "is an edge between u and v"
+    },
+    {
+      "start": 742.56,
+      "duration": 5.12,
+      "end": 747.68,
+      "text": "the edge only goes from u and v so v"
+    },
+    {
+      "start": 745.76,
+      "duration": 3.84,
+      "end": 749.6,
+      "text": "will only be the neighbor of u it won't"
+    },
+    {
+      "start": 747.68,
+      "duration": 4.24,
+      "end": 751.92,
+      "text": "be the neighbor of the other one right"
+    },
+    {
+      "start": 749.6,
+      "duration": 5.2,
+      "end": 754.8000000000001,
+      "text": "so that is what we do and in case of"
+    },
+    {
+      "start": 751.92,
+      "duration": 5.039,
+      "end": 756.959,
+      "text": "directed graphs the space complexity"
+    },
+    {
+      "start": 754.8,
+      "duration": 5.12,
+      "end": 759.92,
+      "text": "used will be big of e"
+    },
+    {
+      "start": 756.959,
+      "duration": 5.921,
+      "end": 762.88,
+      "text": "why because we are not consuming"
+    },
+    {
+      "start": 759.92,
+      "duration": 5.2,
+      "end": 765.12,
+      "text": "two edges it is consuming one edge so"
+    },
+    {
+      "start": 762.88,
+      "duration": 5.04,
+      "end": 767.92,
+      "text": "thereby we can easily say the number of"
+    },
+    {
+      "start": 765.12,
+      "duration": 5.36,
+      "end": 770.48,
+      "text": "edges will be the space complexity used"
+    },
+    {
+      "start": 767.92,
+      "duration": 5.359,
+      "end": 773.279,
+      "text": "in our directed graph and going forward"
+    },
+    {
+      "start": 770.48,
+      "duration": 4.88,
+      "end": 775.36,
+      "text": "we will be using adjacency list in every"
+    },
+    {
+      "start": 773.279,
+      "duration": 4.721,
+      "end": 778.0,
+      "text": "problem not adjacency matrix because of"
+    },
+    {
+      "start": 775.36,
+      "duration": 3.919,
+      "end": 779.279,
+      "text": "the space complexity issues so as of now"
+    },
+    {
+      "start": 778.0,
+      "duration": 3.839,
+      "end": 781.839,
+      "text": "you've understood how to store an"
+    },
+    {
+      "start": 779.279,
+      "duration": 4.321,
+      "end": 783.6,
+      "text": "undirected graph a directed graph what"
+    },
+    {
+      "start": 781.839,
+      "duration": 4.0,
+      "end": 785.839,
+      "text": "if i ask you how do you store a weighted"
+    },
+    {
+      "start": 783.6,
+      "duration": 3.84,
+      "end": 787.44,
+      "text": "class what does a weighted graph means"
+    },
+    {
+      "start": 785.839,
+      "duration": 3.281,
+      "end": 789.12,
+      "text": "now what if the graph comes up uh"
+    },
+    {
+      "start": 787.44,
+      "duration": 3.199,
+      "end": 790.639,
+      "text": "something like okay there's an edge"
+    },
+    {
+      "start": 789.12,
+      "duration": 2.88,
+      "end": 792.0,
+      "text": "between one and two and the weight is"
+    },
+    {
+      "start": 790.639,
+      "duration": 3.121,
+      "end": 793.76,
+      "text": "two there's an edge between one and"
+    },
+    {
+      "start": 792.0,
+      "duration": 3.279,
+      "end": 795.279,
+      "text": "three the weight is three edge between"
+    },
+    {
+      "start": 793.76,
+      "duration": 3.84,
+      "end": 797.6,
+      "text": "three and four the weight is four"
+    },
+    {
+      "start": 795.279,
+      "duration": 4.0,
+      "end": 799.279,
+      "text": "between two for the weight is one edge"
+    },
+    {
+      "start": 797.6,
+      "duration": 3.52,
+      "end": 801.12,
+      "text": "between this has six"
+    },
+    {
+      "start": 799.279,
+      "duration": 4.0,
+      "end": 803.279,
+      "text": "and then edge between this has three"
+    },
+    {
+      "start": 801.12,
+      "duration": 3.839,
+      "end": 804.9590000000001,
+      "text": "what if they start assigning something"
+    },
+    {
+      "start": 803.279,
+      "duration": 4.401,
+      "end": 807.68,
+      "text": "like weights to it yes what if this"
+    },
+    {
+      "start": 804.959,
+      "duration": 5.041,
+      "end": 810.0,
+      "text": "start assigning edge weights that's when"
+    },
+    {
+      "start": 807.68,
+      "duration": 3.92,
+      "end": 811.5999999999999,
+      "text": "you call that as weighted craft the"
+    },
+    {
+      "start": 810.0,
+      "duration": 3.2,
+      "end": 813.2,
+      "text": "first technique that we learned was"
+    },
+    {
+      "start": 811.6,
+      "duration": 4.16,
+      "end": 815.76,
+      "text": "matrix right"
+    },
+    {
+      "start": 813.2,
+      "duration": 5.6,
+      "end": 818.8000000000001,
+      "text": "and if there is an edge between one and"
+    },
+    {
+      "start": 815.76,
+      "duration": 4.72,
+      "end": 820.48,
+      "text": "two you basically went to one basically"
+    },
+    {
+      "start": 818.8,
+      "duration": 4.08,
+      "end": 822.88,
+      "text": "one went to two and you"
+    },
+    {
+      "start": 820.48,
+      "duration": 4.96,
+      "end": 825.44,
+      "text": "wrote one in it so instead of writing"
+    },
+    {
+      "start": 822.88,
+      "duration": 3.92,
+      "end": 826.8,
+      "text": "one you take the edge weight two"
+    },
+    {
+      "start": 825.44,
+      "duration": 4.16,
+      "end": 829.6,
+      "text": "and you write"
+    },
+    {
+      "start": 826.8,
+      "duration": 4.24,
+      "end": 831.04,
+      "text": "in both the places so that's a slight"
+    },
+    {
+      "start": 829.6,
+      "duration": 3.28,
+      "end": 832.88,
+      "text": "change that you have to do you have to"
+    },
+    {
+      "start": 831.04,
+      "duration": 3.84,
+      "end": 834.88,
+      "text": "go back to the code and instead of"
+    },
+    {
+      "start": 832.88,
+      "duration": 3.28,
+      "end": 836.16,
+      "text": "saying equal to one you say equal to"
+    },
+    {
+      "start": 834.88,
+      "duration": 4.24,
+      "end": 839.12,
+      "text": "weight"
+    },
+    {
+      "start": 836.16,
+      "duration": 6.88,
+      "end": 843.04,
+      "text": "so it's going to be like adjacency of u"
+    },
+    {
+      "start": 839.12,
+      "duration": 6.48,
+      "end": 845.6,
+      "text": "v equal to weight right but that was of"
+    },
+    {
+      "start": 843.04,
+      "duration": 4.4,
+      "end": 847.4399999999999,
+      "text": "matrix but if i ask you how do you store"
+    },
+    {
+      "start": 845.6,
+      "duration": 3.84,
+      "end": 849.44,
+      "text": "it in a list"
+    },
+    {
+      "start": 847.44,
+      "duration": 5.839,
+      "end": 853.2790000000001,
+      "text": "so remember in the list we were doing"
+    },
+    {
+      "start": 849.44,
+      "duration": 5.44,
+      "end": 854.8800000000001,
+      "text": "something like 0 1 2 3 4 5"
+    },
+    {
+      "start": 853.279,
+      "duration": 3.761,
+      "end": 857.04,
+      "text": "and for 4"
+    },
+    {
+      "start": 854.88,
+      "duration": 4.959,
+      "end": 859.8389999999999,
+      "text": "the neighbors where"
+    },
+    {
+      "start": 857.04,
+      "duration": 5.919,
+      "end": 862.959,
+      "text": "two three five if you carefully observe"
+    },
+    {
+      "start": 859.839,
+      "duration": 5.36,
+      "end": 865.1990000000001,
+      "text": "before the neighbors were two three five"
+    },
+    {
+      "start": 862.959,
+      "duration": 4.721,
+      "end": 867.68,
+      "text": "so how do you store the weights so as of"
+    },
+    {
+      "start": 865.199,
+      "duration": 5.521,
+      "end": 870.7199999999999,
+      "text": "now you're just storing two three five"
+    },
+    {
+      "start": 867.68,
+      "duration": 5.519,
+      "end": 873.199,
+      "text": "so instead of that yes instead of that"
+    },
+    {
+      "start": 870.72,
+      "duration": 4.72,
+      "end": 875.44,
+      "text": "what you'll do is you'll stop pairs in"
+    },
+    {
+      "start": 873.199,
+      "duration": 3.601,
+      "end": 876.8,
+      "text": "it let's do pairs in it"
+    },
+    {
+      "start": 875.44,
+      "duration": 3.759,
+      "end": 879.1990000000001,
+      "text": "and you'll see"
+    },
+    {
+      "start": 876.8,
+      "duration": 4.24,
+      "end": 881.04,
+      "text": "four can be like okay"
+    },
+    {
+      "start": 879.199,
+      "duration": 3.76,
+      "end": 882.959,
+      "text": "i know it has two"
+    },
+    {
+      "start": 881.04,
+      "duration": 3.44,
+      "end": 884.48,
+      "text": "but it has two comma one because the"
+    },
+    {
+      "start": 882.959,
+      "duration": 3.361,
+      "end": 886.3199999999999,
+      "text": "edge weight is one"
+    },
+    {
+      "start": 884.48,
+      "duration": 3.28,
+      "end": 887.76,
+      "text": "i know it has three but it has three"
+    },
+    {
+      "start": 886.32,
+      "duration": 4.16,
+      "end": 890.48,
+      "text": "comma four because the edge weight is"
+    },
+    {
+      "start": 887.76,
+      "duration": 5.519,
+      "end": 893.279,
+      "text": "four i knot is five but the edge weight"
+    },
+    {
+      "start": 890.48,
+      "duration": 6.32,
+      "end": 896.8000000000001,
+      "text": "is three so instead of storing something"
+    },
+    {
+      "start": 893.279,
+      "duration": 6.321,
+      "end": 899.6,
+      "text": "like two three five as single guys you"
+    },
+    {
+      "start": 896.8,
+      "duration": 4.159,
+      "end": 900.959,
+      "text": "will just tweak the data structure to"
+    },
+    {
+      "start": 899.6,
+      "duration": 4.64,
+      "end": 904.24,
+      "text": "store pairs"
+    },
+    {
+      "start": 900.959,
+      "duration": 5.601,
+      "end": 906.56,
+      "text": "to store pairs and those pairs will be"
+    },
+    {
+      "start": 904.24,
+      "duration": 4.0,
+      "end": 908.24,
+      "text": "like the first guy will be the four to"
+    },
+    {
+      "start": 906.56,
+      "duration": 3.44,
+      "end": 910.0,
+      "text": "two and the second guy will be the edge"
+    },
+    {
+      "start": 908.24,
+      "duration": 3.039,
+      "end": 911.279,
+      "text": "weight the first guy will be four to"
+    },
+    {
+      "start": 910.0,
+      "duration": 3.279,
+      "end": 913.279,
+      "text": "three and the second guy will be the"
+    },
+    {
+      "start": 911.279,
+      "duration": 3.92,
+      "end": 915.199,
+      "text": "edge weight so"
+    },
+    {
+      "start": 913.279,
+      "duration": 4.721,
+      "end": 918.0,
+      "text": "while defining the list"
+    },
+    {
+      "start": 915.199,
+      "duration": 6.32,
+      "end": 921.519,
+      "text": "instead of integer you have to define a"
+    },
+    {
+      "start": 918.0,
+      "duration": 6.72,
+      "end": 924.72,
+      "text": "pair class of integer and integer and"
+    },
+    {
+      "start": 921.519,
+      "duration": 5.201,
+      "end": 926.72,
+      "text": "you can easily yes you can easily store"
+    },
+    {
+      "start": 924.72,
+      "duration": 4.32,
+      "end": 929.0400000000001,
+      "text": "the weights as well i'll be showing you"
+    },
+    {
+      "start": 926.72,
+      "duration": 3.84,
+      "end": 930.5600000000001,
+      "text": "the implementation probably in some"
+    },
+    {
+      "start": 929.04,
+      "duration": 3.919,
+      "end": 932.959,
+      "text": "video where we will be solving the"
+    },
+    {
+      "start": 930.56,
+      "duration": 4.8,
+      "end": 935.3599999999999,
+      "text": "problem in weighted graphs and as of now"
+    },
+    {
+      "start": 932.959,
+      "duration": 3.921,
+      "end": 936.88,
+      "text": "just keep this in mind"
+    },
+    {
+      "start": 935.36,
+      "duration": 3.279,
+      "end": 938.639,
+      "text": "so i hope you've understood the entire"
+    },
+    {
+      "start": 936.88,
+      "duration": 3.68,
+      "end": 940.56,
+      "text": "implementation of graph just in case you"
+    },
+    {
+      "start": 938.639,
+      "duration": 3.521,
+      "end": 942.16,
+      "text": "did please make sure you like this video"
+    },
+    {
+      "start": 940.56,
+      "duration": 3.6,
+      "end": 944.16,
+      "text": "and if you're new to our channel what"
+    },
+    {
+      "start": 942.16,
+      "duration": 3.44,
+      "end": 945.6,
+      "text": "are you waiting for kill that subscribe"
+    },
+    {
+      "start": 944.16,
+      "duration": 3.44,
+      "end": 947.6,
+      "text": "button right away and if you haven't"
+    },
+    {
+      "start": 945.6,
+      "duration": 3.919,
+      "end": 949.519,
+      "text": "checked out our dp series and the hd"
+    },
+    {
+      "start": 947.6,
+      "duration": 3.359,
+      "end": 950.9590000000001,
+      "text": "sheet man the link is in the description"
+    },
+    {
+      "start": 949.519,
+      "duration": 2.641,
+      "end": 952.16,
+      "text": "make sure you check it out when this"
+    },
+    {
+      "start": 950.959,
+      "duration": 4.161,
+      "end": 955.1199999999999,
+      "text": "i'll be wrapping up this video let's"
+    },
+    {
+      "start": 952.16,
+      "duration": 6.009,
+      "end": 958.169,
+      "text": "speed in some other video"
+    },
+    {
+      "start": 955.12,
+      "duration": 3.049,
+      "end": 958.169,
+      "text": "[Music]"
+    },
+    {
+      "start": 958.399,
+      "duration": 3.56,
+      "end": 961.959,
+      "text": "don't ever forget"
+    }
+  ]
+}

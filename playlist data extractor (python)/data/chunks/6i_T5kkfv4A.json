@@ -1,0 +1,64 @@
+{
+  "video_id": "6i_T5kkfv4A",
+  "position": 209,
+  "title": "DP 28. Longest Palindromic Subsequence",
+  "url": "https://www.youtube.com/watch?v=6i_T5kkfv4A",
+  "chunk_count": 5,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "6i_T5kkfv4A",
+      "position": 209,
+      "title": "DP 28. Longest Palindromic Subsequence",
+      "url": "https://www.youtube.com/watch?v=6i_T5kkfv4A",
+      "start": 0.24,
+      "end": 116.0,
+      "text": "hey everyone welcome back to take you forward today we will be solving the problem longest palindromic subsequence so let's understand what does the problem state the problem states assume you're given a string okay so let's take the string b b a b so in the string if i ask you what are subsequences you know the definition of subsequences i have already taught uh taught you that in the lecture lcs so remember the predicate for this one is this lecture please watch out the lcs lecture before coming across and solving this problem because if you don't know how to solve lcs uh this you cannot because this is nothing but an extension of that problem so what are subsequences so if i write something as a b that's a subsequence if i write something as bb it's a subsequence and if i write something as bbb that's a subsequence if i write something as bb bb so that's a subsequence if i write something as a b b which is b a b that's a subsequence so there can be a lot of subsequences right and you know it is it is it can be contagious it cannot be contagious but the important part about this is it should maintain the order like b a b b a b it should maintain the order now among all of these subsequences if you if you try to write down all of these subsequences you have to tell me which is which are parent drops so basket you'll say this is palindrome this is palindrome this is palindrome this is palindrome you know what is palindrome right a palindrome is nothing but if you write a string in the reverse like if you write vab in the reverse order it'll still be bab so that's that is the definition of pile and drop so i can see these strings are palindrome now the next thing comes as longest which one is the longest among these i see uh this being the longest one so for us",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "6i_T5kkfv4A",
+      "position": 209,
+      "title": "DP 28. Longest Palindromic Subsequence",
+      "url": "https://www.youtube.com/watch?v=6i_T5kkfv4A",
+      "start": 109.2,
+      "end": 250.159,
+      "text": "this being the longest one so for us this is the answer and what is the length of this 4 so this is the question give me the length of the longest palindromic subsequence so i'll tell you how to print it but as of now give me the length of the longest palindromic subsequence is the question now to start off with you might think okay schreiber how are we going to solve this uh the first method that comes to my mind is definitely a generic way that's you will say generate all the subsequence again how can you generate all the subsequences by using two methods one is the recursive method while the other one is the power set method that i've already discussed in another videos generate all the subsequences check for palindrome and pick up the longest one that's uh and pick the longest and pick the longest i think this is what the like generic brute forces and if you try to optimize those brute force then you have to write a recursive solution you have to think of something but can i solve this using something that i've learned that is lcs because i will try to try to take this problem into that arena so how will i try to like i know that this can be solved using lcs but if you don't know how will you so try to see what does the problem actually mean so for that example let's take a bigger string b b a b c b c a b okay so if i ask you which is the longest palindromic among this you'll find b b i think not not b you will find the b a b c b a b basically b a b c p a b so this is a palindrome now something to observe this v is equivalent to this b this a is equivalent to the same this b is equivalent to this b and there is someone in between so it matches from the front",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "6i_T5kkfv4A",
+      "position": 209,
+      "title": "DP 28. Longest Palindromic Subsequence",
+      "url": "https://www.youtube.com/watch?v=6i_T5kkfv4A",
+      "start": 246.4,
+      "end": 375.28,
+      "text": "so it matches from the front and from the back it matches from the front and from the back so can i say this can i say this if i try to write the string yes if i try to write the string in the reverse order let's assume this is string one and i'm saying i'm gonna write the string in the reverse order and reverses b a c b c b a b b i wrote the string in the reverse order so if i try to write down the string in the reverse order can i say this b a b c b a b b a oh sorry b a b c b a b or it can be the other one as well this is somewhere similar to b a b c b a b right so can i say this if you have got this string in the straight fashion and in the opposite fashion then you know one thing for sure if i just try to mark it b a b c b a b so this is what it looks like and over here it's like okay b e b c b a b right so can i see can you try to connect this to lcs can you you can you'll be like strive if i take the string one and if i take the string two and if i try to find the lcs of both the strings yes if i try to find the lcs of both the strings because since i've written the string in the reverse order you will find these exact same string over here as well you'll find the exact same string over here as well because you've written that in the reverse order that's what palindrome is so what i can say is instead of thinking of any other way to solve it i'll be very plain and simple i'd be like okay let's let's take the string one and since i can intuitively see that what is palindrome it's the reverse",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "6i_T5kkfv4A",
+      "position": 209,
+      "title": "DP 28. Longest Palindromic Subsequence",
+      "url": "https://www.youtube.com/watch?v=6i_T5kkfv4A",
+      "start": 370.0,
+      "end": 499.84000000000003,
+      "text": "that what is palindrome it's the reverse the reverse is same so why don't i write reverse and if the reverse is same so some portion which is same and when you write them reverse should also be same i hope you're getting this right i hope you're getting this it's exactly the same and if there is a portion of string which is present in s1 as well and is present in s2 as well what do we call that we call that as common subsequence if there is a portion of string which is present in both the strings we call that as the common subsequence right and what do we require we require the longest common subsequence so can i say i know one thing for sure if i just attach the longest term to these couple of guys then the longest is bound to be the longest palindromic sub sequence because this string is written in the reverse order it's not in the same order it's in the reverse order so whichever string will match it's since it's the reverse hereby you can call them as palindromes because a string which is in a normal way and string which is in the reverse way if they are matching you know what is that called as palindrome so basically if you get the lcs of both the strings which is longest common subsequence it is bound to be a palindrome because s2 is nothing but the reverse of s1 so the common string that you'll get will be the reverse thereby you can say it's a palindrome so you don't need to do anything you know how to find lcs you just call the lcs function using the string s1 and you pass the reverse of s1 so if you just call the lcs function using this you will get your answer and i've already taught you how to print the lcs so you can again use the print function to get the longest palindromic subsequence as well so here's the question uh what we will",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "6i_T5kkfv4A",
+      "position": 209,
+      "title": "DP 28. Longest Palindromic Subsequence",
+      "url": "https://www.youtube.com/watch?v=6i_T5kkfv4A",
+      "start": 496.16,
+      "end": 579.399,
+      "text": "so here's the question uh what we will do is we'll go to longest common subsequence let's copy paste the code which was used in lcs let's copy them and probably print it over here i printed it let's do one thing let's keep string t equal to s and we can say reverse of t dot begin and t dot n yeah so just make sure you reverse it and once you have reversed it it shows the return of lcs s comma t i think this should be fine okay we got some wrong answers because we are printing over here so let's erase this we need to print the dp array here it comes the correct answer now if i just give it a submit you will see that this is running absolutely fine yeah it is so we have done this problem very easily using a concept that we have learned so guys uh i hope uh just make sure you can space optimize this as well i've already taught that in lcs so you can just go across and space optimize this as well so guys i hope you have understood uh this problem just an extension of the lcs just in case you did please please please make sure you like this video and if you're new to this channel please do consider subscribing to us now with this let's wrap up this video and meet in the next one then whenever your heart is broken don't ever forget your golden i will",
+      "word_count": 259
+    }
+  ]
+}

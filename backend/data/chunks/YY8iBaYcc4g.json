@@ -1,0 +1,108 @@
+{
+  "video_id": "YY8iBaYcc4g",
+  "position": 225,
+  "title": "DP 45. Longest String Chain | Longest Increasing Subsequence | LIS",
+  "url": "https://www.youtube.com/watch?v=YY8iBaYcc4g",
+  "chunk_count": 9,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "YY8iBaYcc4g",
+      "position": 225,
+      "title": "DP 45. Longest String Chain | Longest Increasing Subsequence | LIS",
+      "url": "https://www.youtube.com/watch?v=YY8iBaYcc4g",
+      "start": 0.08,
+      "end": 138.72,
+      "text": "hey everyone welcome back to take you forward so today we will be solving the problem longest string chain and this is uh the dp 45 again the prerequisites are very simple you should have seen lis if you have not go and watch out 41 and 42 db 41 and 42 are the prerequisites for this if you have not you'll not understand this and after that don't tell me that you did not so what is the problem longest string chain so i'll be given an array of words i'll be given an array of strings which will be words so this is this is it now you have to figure out the chain string chain what does that mean i can say a ba and then bda this is a chain i can say a va bca this is a chain i can say b b a b c a is a chain what do you mean by chain this can be anything the first guy can be anything it is not a compulsion that it has to be a single character guy it can be any word after that if you insert one character you get the next word so if you insert b you get ba after that if i insert d i get b d a and the insertion can be done anyway like if i insert d in between i get b d a similarly if i insert b i get ba similarly if i'm insert c i get bca i insert a i get ba i insert c i get bca so that is string chain if you are talking about this the previous guy should be one deletion if you're talking about this the previous guy should be one deletion so that is what string chain is you can call this in the chain if you have just added one character or if i just added one character in that word any at any given place then you can call this a chain now whenever i attach longest it means you",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "YY8iBaYcc4g",
+      "position": 225,
+      "title": "DP 45. Longest String Chain | Longest Increasing Subsequence | LIS",
+      "url": "https://www.youtube.com/watch?v=YY8iBaYcc4g",
+      "start": 133.76,
+      "end": 289.28000000000003,
+      "text": "whenever i attach longest it means you have to find the longest among all the chains possible okay so which will be the longest chain can i see uh if i pick something like a ba bca and after that bdca do i see yes because i can just add a b and i'll get ba i'll just add a c i'll get bca i'll just add a d and i'll get bdca so can i say the longest is a ba bca bdca and the length is 4 so the question states you to print the length 4 even you can print the sequence if you wish to once we will be doing this you can easily do it so i want you to print the length the longest length so how do you solve this particular problem that's the point so can you relate this problem uh to somewhere related to longest increasing subsequence let's relate so what was a longest increasing subsequence this was saying it is subsequence now does it match this is a longest string chain or i can say string subsequence which is again a good word so subsequence and subsequence does match longest and longest does match only problem is string and increasing in lis in lis if you remember it was like 1 4 3 7 10 then i was like okay this this this this why because this is greater this is greater this is greater we were saying greater over here over here strings are part of it because instead of greater can i say the difference is one character the difference between them is one character the difference between them is one character so can i say instead of increasing if i can check the difference to be one character then the question is pretty much similar indeed so if you remember the lis code it was uh pretty straightforward you started from somewhere like zero like one you went until n and uh the j or the previous loop started from zero till i",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "YY8iBaYcc4g",
+      "position": 225,
+      "title": "DP 45. Longest String Chain | Longest Increasing Subsequence | LIS",
+      "url": "https://www.youtube.com/watch?v=YY8iBaYcc4g",
+      "start": 285.36,
+      "end": 408.08,
+      "text": "till i and you went like j plus plus and if you remember the code was quite straightforward if array of i was greater than array of j and and dp of j plus 1 because that was the sequence was greater than dp of i you ended up saying dp of i will be dp of j plus 1 and that's how you changed so this was the code for this was the code for lis now i'm looking for a similar structure i'm looking for a similar structure of subsequence but the problem is when i have two strings prior to this we had two guys like four and seven and we compared if seven is greater than four over here if we have two strings assumes array of i is a string array of j is a string can i say i just need to compare if they are differentiating by one character can i say i need to compare them if they are differentiating by one character if they are can i say it it's going to be the same problem instead of increasing i just need to make sure if i'm taking bca and the previous guy's ba then it should be just an addition of character which makes bca that's it that is what i need to compare so if by if i can write the compare i think my problem will be solved and i can get the maximum like i can just get the maxi equal to max of max c comma all the dp of i's and i can say that's my answer and i can return the answer to be maximum so this shuttle changes over here if you can compare array of i and array of j and you see that they're differentiating by one character like you can form array of i you can form array of i which is the word by inserting one character on array of j that's it that's what you need to check and it's pretty similar",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "YY8iBaYcc4g",
+      "position": 225,
+      "title": "DP 45. Longest String Chain | Longest Increasing Subsequence | LIS",
+      "url": "https://www.youtube.com/watch?v=YY8iBaYcc4g",
+      "start": 402.96,
+      "end": 535.519,
+      "text": "need to check and it's pretty similar very easy it's it's not that tough so if you can do this portion you can just do this portion i think our job will be done now assuming i take uh bda and bdca assume uh the array of j is b d a and the array of i is b d c e this is definitely possible this is definitely possible why because if you insert a c you get b d but how do you write that function to check it's very very very simple what you do is you write b d c okay you keep a pointer i over here and you write b d a and you keep a point at j y quite straightforward instead of i angel let's just mark it as pointless are they matching they are just move the pointer are they matching they are just move the pointers are they matching no just move the pointer remember this the c did not match with a so you just moved a you just moved this pointer and not this are the magic yes just move the pointer so at the end of the day at the end of the day you see if this guy reached the end and if this guy reached the end if both of them reach the end simultaneously it's very important simultaneously then we can say they're matching but do we have any other cases let's let's see for a case where it's not an insertion at the end assume array of j like the previous guy to be bc and array of i or rather vcd to be bcda this is possible because if you insert a this is possible so instead of checking this you're checking is it possible or not now what you do is you say b c d a let's keep a pointer bcd let's keep a pointer bb matches let's move cc matches let's move dd matches let's move over here we are at e",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "YY8iBaYcc4g",
+      "position": 225,
+      "title": "DP 45. Longest String Chain | Longest Increasing Subsequence | LIS",
+      "url": "https://www.youtube.com/watch?v=YY8iBaYcc4g",
+      "start": 530.72,
+      "end": 644.64,
+      "text": "at e a does not match so let's move so if if at the end of the day again you have simultaneous like you have reached the end for both the strings it is indeed sure it is indeed possible so if it is possible that's how you can do it you just need to match it so and one more thing is uh if this is of length 3 this has to be of length 4 that's for sure otherwise it's definitely not possible so first check for length then you can check for character matching because the characters has to be same right so you just need to write this compare function and if you are able to write this compare function it's pretty obvious that you should be able to solve this so what i will do is i will go back to the code so here's the code so let's go back to the longest increasing subsequence and pick up the code from there so this is the longest increasing subsequence which will pick up the code from so i've just picked up the code and now we don't need to uh print the subset so we can definitely omit the hash stuff we can just omit the hash stuff and we can keep the maxi stuff so let's omit the hash and let's keep the maxi stuff that's how easy it is okay so we have declared the dp then we have this portion of lis correct now if you remember this is what i need to change this is what i need to change if i'm able to change this i should be able to figure out the answer okay so how do i change this i just need to make sure is a check is it possible check for possibility of array of i and array of j just check for possibility and that should be fine so just need to write the possibility code so let's check for possibilities boolean check possible boolean check possible you take string",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "YY8iBaYcc4g",
+      "position": 225,
+      "title": "DP 45. Longest String Chain | Longest Increasing Subsequence | LIS",
+      "url": "https://www.youtube.com/watch?v=YY8iBaYcc4g",
+      "start": 639.279,
+      "end": 762.5600000000001,
+      "text": "boolean check possible you take string of s make sure you take by reference string again as to make sure take my reference now the first thing that you will check is if s1 dot remember this s1 is the greater guy s1 is the greater guy s2 has to be the smaller guy because you're moving in the subsequent spot so this has to be equal to s2 like if this is by sure like if this is falling at the first stage then you say hey listen it's it's definitely not possible if this is not possible it's false it's not possible or else you go for a check let's keep couple of pointers okay so probably you can keep the first point at zero you can also keep the second pointer at zero amazing just keep on moving because you know for sure you know one thing for sure first is pointing to s1 first is pointing to s1 okay so if i try to write it uh in like if i keep uh this as b c d a and the other one has bcd so make sure the first points here and make sure the second points here and now keep on comparing keep on comparing till both of them exhaust because you know one thing for sure s1 is the greater one because you have checked for this so s1 is definitely greater because if this is this is true then s1 has to be greater in length cool so we will keep on doing this till this is smaller like the it does not exceeds the bigger string it does not exceeds the bigger string so we will definitely keep on doing this so i can say s1 dot first if is equal to s2 dot second if that's the case can you just move both of them that's the first case or else if it is not it is not if it's not then this guy at the first this guy like assumed there was b c d e",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "YY8iBaYcc4g",
+      "position": 225,
+      "title": "DP 45. Longest String Chain | Longest Increasing Subsequence | LIS",
+      "url": "https://www.youtube.com/watch?v=YY8iBaYcc4g",
+      "start": 756.48,
+      "end": 872.32,
+      "text": "this guy like assumed there was b c d e okay and assume there was something like bda so you need to insert c so whenever this is like at the first case b will match with b so you will end up at here now c does not matches so you move this guy only you don't move this guy this still stays as d so what you'll do is you'll see let's move the first guy only because that's where the insertion will be done once you have done this at the end of the day if first also reaches s1 dot size that's the end and the second also reaches this then you can say please return that it's possible or else it's not possible that's how you can compare so in this way you can have a comparison code right pretty simple so on running so on running this you will see that you're getting wrong answers on three cases why does that happen because we solve this question thinking of subsequence but if i give you an example like this our thought process was okay this can be the first guy this can be the second guy and this can be the third guy so we were saying that the longest length will be three right but over here they see that hey listen i don't care about subsequence i can pick up from anywhere because if you read it says sequence not subsequence it you can pick up from anywhere for an example i'll say this will be my first game okay xb then i'll say this will be my second guy xbc this will be cxvc this will be pc xbc and this will be perfect and i get a length of 5 and that's the answer for this particular test case so if i do this we are getting our answer so it is a subset instead of subsequence and if it's a subset we have done this in the previous problem what do you do you can just sort them because",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "YY8iBaYcc4g",
+      "position": 225,
+      "title": "DP 45. Longest String Chain | Longest Increasing Subsequence | LIS",
+      "url": "https://www.youtube.com/watch?v=YY8iBaYcc4g",
+      "start": 868.0,
+      "end": 982.4799999999999,
+      "text": "you can just sort them because somewhere down the line if xb is the first guy if the array had xb right here sorry uh yeah xb then xbc then xbcf so if you have if you would have sorted it then it would have automatically taken care of the length it would have automatically taken care of the length correct so can i say i will sort it according to the length again very important i will sort it according to the length so let's have a sort but according to the length so i will say sort array.begin array.end and i'll give a comparator so that it sorts it according to the length if you don't know to write competitor you can watch out my stl video i have taught you over there how to write comparators so please go and watch that out so i will say return s1 dot size because i am more concerned about sorting them according to the length so this is how if it's a smaller length it's fine it'll return a true otherwise it will return a false so i've sorted them according to the length of the strings once i've sorted that i'll run the test cases and you see all of them are running i'll try to submit this this will be giving you correct answer what will be the time complexity if i ask you the time complexity is n into n n square and there's a check possible where you are iterating across the string lengths so can i say this uh time complexity is n square into the length of the strings like whatever is the maximum length of the string you can go across to that that is the time complexity and the space complexity before this you are also sorting it so it's an n login and then there's a big of n space being used so that's what the time complexity and the space complexity will be for this particular solution so guys i hope you have understood the entire solution so",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "YY8iBaYcc4g",
+      "position": 225,
+      "title": "DP 45. Longest String Chain | Longest Increasing Subsequence | LIS",
+      "url": "https://www.youtube.com/watch?v=YY8iBaYcc4g",
+      "start": 978.959,
+      "end": 1017.9200000000001,
+      "text": "have understood the entire solution so just in case you did please please please make sure you like this video and if you're new to the channel please do consider subscribing to us because that is the only thing that keeps me going and yeah with this i'll be wrapping up this [Music] you're video you",
+      "word_count": 56
+    }
+  ]
+}

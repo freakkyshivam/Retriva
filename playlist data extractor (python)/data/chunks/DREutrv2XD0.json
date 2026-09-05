@@ -1,0 +1,163 @@
+{
+  "video_id": "DREutrv2XD0",
+  "position": 155,
+  "title": "G-30. Word Ladder - 2 | Shortest Paths",
+  "url": "https://www.youtube.com/watch?v=DREutrv2XD0",
+  "chunk_count": 14,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "DREutrv2XD0",
+      "position": 155,
+      "title": "G-30. Word Ladder - 2 | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=DREutrv2XD0",
+      "start": 3.12,
+      "end": 107.92,
+      "text": "hey everyone welcome back to the channel i hope you guys are doing extremely well so in the previous video we did learn about word ladder one where we had to convert the starting work to the target word using the given word list and you to do it in a minimum number of transformations so what will add to is an extension of the previous problem so just in case you haven't checked out the previous problem the link is in the description please make sure you check it out because there's a pattern in which i have taught this particular quote i'll be using that pattern only to solve this problem what ladder too so before starting this i just want to give you a disclaimer that this is one of the toughest problems of the bfs so the end of the video just in case you have this vibe that how will i think about such solutions do not worry do not worry these problems are something which you have to practice so that if something similar comes up in an interview you can answer okay this will never come by yourself anyways so what is what ladder to all about so it's the same problem you will be given a start mode and you'll be given a target board and you need to convert the start mode to the target world and the transformations are only allowed in this particular word list but over here instead of printing like in the word ladder one you have to print the sequence the length of the sequence over here you have to print all the possible shortest sequences so if i go back to the ipad imagine the beginning word is backed and the end word is cause okay so and these are the word list separately uh these are the couple of these bat can be transformed to pat pat to pot pot to pause and then because and similarly bat can be transferred to what what to what what to cause was to cause",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "DREutrv2XD0",
+      "position": 155,
+      "title": "G-30. Word Ladder - 2 | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=DREutrv2XD0",
+      "start": 104.24,
+      "end": 225.28,
+      "text": "cause was to cause this portion is similar but if you see the first transformation is different the first transformation is different so this is also taking like five sequence length this is also taking like five sequence length since both of these are taking five sequence length and that is the shortest we can do so you need to return me this and then you need to return me this one as well and also you can return the list in any possible order like this can be at first or this can be it first doesn't matter what i what matters is you need to return both of them any order doesn't matter so how do you do this because if you go back to the previous uh award ladder one problem it was very straightforward you started with the word you kept this length and you kept on trying to change from a to z to every alphabet and you ended up at will that method work over here no that method is not going to work why because you need to tell me the sequence so this time the algorithm will be slightly different yes it won't be a straightforward bfs instead of a straightforward bfs we have to do some observations yes we have to do some observations and while doing the dryer i'll be telling you about the observation so before doing the observation first observation that i want you to uh have a look is first level second level third level both fifth flip so the level always increases in this order in the bfs traversal if you know if you're doing steps you always go level one then you go to level two probably two level twos and probably level threes then level fours that is what the beef is traversal is all about and that is where the gist of the solution lies okay let's get started so what did we usually do in order to run a bfs travel so the first thing we did was we always took a",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "DREutrv2XD0",
+      "position": 155,
+      "title": "G-30. Word Ladder - 2 | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=DREutrv2XD0",
+      "start": 220.879,
+      "end": 349.6,
+      "text": "first thing we did was we always took a q data structure so please please take a q data structure but this time the queue data structure will not be this big it'll be a bigger one yes why i'll tell you because we're going to store the sequence we're going to store the sequence so the sequence starts with bat for sure so do one thing just store back do not do anything just store back in a list and put that into the queue so your queue will be storing list okay so let's start the beef score so when the beef is called starts you get the list with bat so can i see if the sequence is back can i say the word is bad itself because if you are having a sequence the last word of that sequence is the word that you want to convert into so from that where can you go from bad you can change this b and you can make something as part you can change this b and you can make something as bad for sure do you erase pack now over here very very important you do not erase anything right now you do not raise anything right now why i'll tell you when we move forward do not it is bad for me keep it next can you change it to something else i think i can change it to bot as well if you carefully see if i change a to o that will be what what is here that is here so what i did was i took bat and i changed it to pat and bought so that can be changed to pat so if a bat is changed to pad can i say the new sequence will be bat comma pat for this one and if i'm changing bad to bot the new sequence will be bad comma bot can i see this because bad is transformed to pat so pad gets attached so you get back and back",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "DREutrv2XD0",
+      "position": 155,
+      "title": "G-30. Word Ladder - 2 | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=DREutrv2XD0",
+      "start": 345.12,
+      "end": 487.28,
+      "text": "so you get back and back that gets transferred to what so bot gets attached so you get backed and bought yeah so the sequences are done off length too now comes the trick so you use something like a pat you used something like a box once you have done everything in that level once you have taken all the possible transformations in that level take the pattern back and delete then only delete why not when you meet i'll tell you do not worry about that done so this is one other level stuff next take backpack out now remember one thing when i say level level one only consists of this when i say level two level two consisted of these three two things level two consisted of these two things there are two guys at the level two there are two guys in the level two so you're gonna deal with both of these two guys and then you're going to delete and now you'll understand why so can i see if the sequence is this the last guy is packed for sure so i get the last cap and this is where we'll start the transformation problem so pat can actually be converted to something like port why because if you carefully see that can be converted to port because spot is there can i convert back to something else i don't think that you can try converting pack to something else maybe something like that could have been converted to bat but it's actually going back it's actually going back which i do not want and it is not in the world list as well so pad can only be converted to port will you erase pot you could have released what because this level is done this is level three level three is done because you got bat bat pot you got bat bat pot you could raise it but i said the entire level has to be completed the entire level two has to be completed you just completed backpack there is",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "DREutrv2XD0",
+      "position": 155,
+      "title": "G-30. Word Ladder - 2 | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=DREutrv2XD0",
+      "start": 483.28,
+      "end": 605.08,
+      "text": "you just completed backpack there is someone else of level two all already waiting so do not any spot from here do not erase spot from here why you'll understand now so batman is done perfect get the next guy back what bat bot so which is the last word bought to take the bot now in what if you do a transformation you can actually get bought again can actually get pot again and imagine while forming this if you have deleted port you would have never got port back again so the same level what can happen multiple times so if you look at the answer what happens here what happens here so once you form this you get what and similarly from what also when you get you get caught so do not delete yes beyond this do not take part do not take because of the reason that the length will you need the shortest length so if you get a pot at a level take it as many times as you are getting after this do not take because the length will be not the shortest one then thereby again you get a pot so the same what you do is you say bat bought pot and now since i can say all the level two guys are completed all the level two guys are completed now i can clearly state that hey listen all my level two guys are completed so what i will do is i will simply yes i'll simply now erase the pot because what has been used in this particular level as many times as i wanted perfect guess next next this is level three so there are two guys in the queue so you can hydrate for two times pick once this pick one says so i did for two times pick up the next two elements because you know the next two elements are level three because you know the next three elements are level three so just go ahead and do that first thing is that",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "DREutrv2XD0",
+      "position": 155,
+      "title": "G-30. Word Ladder - 2 | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=DREutrv2XD0",
+      "start": 602.08,
+      "end": 745.079,
+      "text": "that pot so can i say your water spot i can you can again try uh transforming pot into all of these like aot b or t then you can go for o like p b d pbt pct then you can go for t which will make it p o a p o b p o c and so on so if you try to convert pot you'll actually get p o sec it'll actually get posed because p can be converted to set and you'll get positive so the moment you get posit you see positive but do not delay it might be used in some same level again do not delete just attach this uh z to here and say okay this is something which i'll take into the queue that pat bat pat bot and so level four this is level four starting okay so now what i can say is cool this is done but do not delete do not delete level three is yet not completed because this is done the next guy is bat bot and pot so who is the last guy part again support can again be converted into poc so you get bad bot bot and puz so this time across you can see the level 3 has been completed the level 3 has been completed once that level has been completed i can go across and delete all the guys remember this i can go and delete all the guys those who have used so i can probably store which are the last guys use which is po z and i can delete those poc from here got it perfect next these are level fours and two guys in the level four take those two guys again so bat bat pot poc right which is the last guy using what can poc be converted into poc can definitely be converted into something like coc if you change p to c b c o z and c o z is already there so you get something like that",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "DREutrv2XD0",
+      "position": 155,
+      "title": "G-30. Word Ladder - 2 | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=DREutrv2XD0",
+      "start": 742.079,
+      "end": 884.6389999999999,
+      "text": "that z and cuz as the answer perfect so one done let's take the next level guy which is backpack pot bat fat port and poc so again the last guy is poc which needs to be transformed this can be transformed to coc they'll get again bat bot poc and coc perfect so apparently once the entire level has been completed because level three now level four has been completed so once the level 4 has been completed look at the last guy cuz and delete it delete it done next time take up the last sequence that you generated but [Music] and if you pick up the last word it is coc so if you pick up the last unit it is cuz and you see this particular word is your ending word which is coc is your ending word which is you see you can say okay i got my sequence and you know since the levels are increasing like this this is the shortest sequence so the sequence length is i store it in your answer store it in your answer of list of list so this is the answer array just put that into it next no need to do any transformations you get this the moment you get this you say okay this is also a length five let's put that in the list you keep on taking from the queue all the length five guys the moment you get someone greater than length five you say i don't need to do any four let's break out let's break up just simply break out but this is what we will do the moment we get an answer we take all of these guys which are of equivalent length and after that we can simply go out as how easy as it gets the only trick over here is do not delete the moment you are using it for a single guy do not delete because it might be used by the similar guys on the same level do you see it",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "DREutrv2XD0",
+      "position": 155,
+      "title": "G-30. Word Ladder - 2 | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=DREutrv2XD0",
+      "start": 879.68,
+      "end": 1000.0,
+      "text": "guys on the same level do you see it being used on the similar levels by the same guys so do not do not delete it the moment you got it so you must have understood the driver now you must be thinking how do we code this not an issue i'll go step by step i'll be writing the c plus plus code you can follow the exact similar java code on the left in case you feel what will be the equivalent in java okay so we have a begin word now the first thing that i'll do is yes i notice it put these words into an unordered set so [Music] done once you've done this what is the next thing you need a queue and the queue has to store a list of strings so that is something which you'll take and in that queue the first thing that you will insert is the first sequence which is this one okay what after that do we need anything else yes what you can do is you can say for every level yes for every level i will keep how many strings are being used so used so when you start off if you remember well enough when you start you just have a bat that you have inserted into the queue data structure and this is the guy who was used so used on level you can call it so that we understand the naming better used on level dot push back off what will you push back the begin what is the code that has been used and we'll keep the initial level is level zero i am considering this as the first zeroth like initially we are starting with nothing in the queue this is level one this is level two this is level three so initially before starting we are at level zero why i'll tell you this as well so we know one thing we need to learn the answers in a list of lists so this will be all so",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "DREutrv2XD0",
+      "position": 155,
+      "title": "G-30. Word Ladder - 2 | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=DREutrv2XD0",
+      "start": 994.839,
+      "end": 1116.0800000000002,
+      "text": "a list of lists so this will be all so these are the initial things that we will declare okay next we will go across to the queue and iterate on it so let's go across and i trade till it has 90 right done let's take the vector out so vector equal to q dot front at the same time do a q dot now you know these this is a sequence so remember one thing this is the level one sequence and before this you are at level zero right level zero so you are at level one so this is being used already has been used so what do you see is okay if i am on a newer level if i'm on a newer level which is very simple if the size exceeds level which is in this case initially the level was zero so the first time when you'll start off you'll get this guy which is increase in size because this is of size one right so what do you say is if it increases then i increase my level and i see whatever has been used yes whatever has been used i will simply tell the set hey can you please erase this so the first step yes at the first step this bat will be erased if it was on the word list this is very simple it is all words that has been used in the previous levels to transform simple done what is the next thing that you will do you need the word do you know what is the word what is very simple you just say the last guy in that sequence will be your word done next what will you do you will say okay fine i know one thing at a trap goes through the entire world and change every character so the first loop for that every character will be changed from this to this which is a to z and can i see character original",
+      "word_count": 341
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "DREutrv2XD0",
+      "position": 155,
+      "title": "G-30. Word Ladder - 2 | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=DREutrv2XD0",
+      "start": 1111.2,
+      "end": 1229.1999999999998,
+      "text": "character original equal to word dot i can i say this yes and can i at the same time say okay what if i equal to original so that anything that i have taken i just replace it back why because every time we are going to replace the ith guy with the c now what do i need to check does this transformed word exists on the set or not so i can just give a count and i can say do you exist and if you the count has to be greater than zero definitely not zero and if you do exist the first thing that i'll do is okay this is a sequence this is a sequence so i'll say a sequence can you just take it if you're like why not i'll just take it so let's take it into the sequence so you'll be like okay the word goes into the sequence and remember this you're trying every possible word every possible word so if i go back to the first time if you remember you had a bat and bat could be converted into bat and a bot as well so you got two sequins so first time you include pat you put that into the queue so the vector that he took out was bad you included pat in it you need to take it out as well because for the next occurrence you need it right so just take it out as well and in the meantime what you can do is you can say okay q can you take this new sequence because this is a new sequence which happened due to a transformation of a character so please take this new sequence at the same time tell the level tell the level that this guy was used this word was used in this level tell the guy so this is in terms of erasing from mark as visited on the level and whenever you reach the new levels this will make sure it deletes it so why pop",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "DREutrv2XD0",
+      "position": 155,
+      "title": "G-30. Word Ladder - 2 | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=DREutrv2XD0",
+      "start": 1224.08,
+      "end": 1335.679,
+      "text": "will make sure it deletes it so why pop back if you did not understand let me go back and again tell you because i'm sure you have a bit of confusion here so when you started with bat you convert it into pact right so the new sequence was formed [Music] and you inserted that over here so now the next time when you say okay let me replace something like what so battle is done to pat they're saying replace o a and get bought so if your sequence since you included pad if you do not remove it now when you add water the sequence will be of three lengths so that's why you add the pack but you add only to insert it into the cube then you remove it because for the next time and that gets converted to what you again can have a tool so whenever you add something to the sequence it's only for this particular transformation you need to take it out as well so this is the minor change that you'll do and at the end you can return the answer we haven't stored anything in the answer anything that is absolutely correct so what i can say is okay as of now we haven't stored anything to the answer so i'll be like okay fine if answer dot size is equal to equal to zero that means is the first time that means it is the first time all what you can say is okay let me do one thing you can keep it uh super simple like this is this might get complicated let's give it some simple if the word that we get is equal to the last word which is the end word okay if that is equal to the end over what i see hey listen this is equal to the end i'm like okay fine but if the answer to size is equal equal to zero it means first sequence is the first sequence where we reach to end where we",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "DREutrv2XD0",
+      "position": 155,
+      "title": "G-30. Word Ladder - 2 | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=DREutrv2XD0",
+      "start": 1330.48,
+      "end": 1439.76,
+      "text": "sequence where we reach to end where we reach the end if it is the case good enough we don't need to do anything we just take it and we say fine we just take it in into vector and if it is not if it's not the first time then i say okay not an issue if it is not the first time i have one of the sequence in the answer i get that sequence then and i see is that equal to the sequence that i've got if it is my answer will be more than happy to store the same guy because we need multiple sequences and if it is not the case we just keep on doing just keep on doing just keep on doing that's how you can easily store the answers that's how you so once you've written the entire code we can just click on a submit button and see if it's working fine so you will see that all the test cases will be running and this is how easily you can do it you just need to make sure that instead of deleting on every level you delete when you reach the next level right you keep on doing like for an example you're treating the second level guys second level guys then when you reach the newer level you got a bigger level they delete whatever has been used previously and a slight change in order to increase the time complexity once you've deleted everything on the level just make sure you clear it so that it can save a lot of time otherwise the next time again you'll go through them and delete it and they do not exist so new level new guys store so this is what you can easily do okay so let's analyze the time complexity now this is definitely one length into 26 but you cannot predict the time complexity of this because depending on examples two examples there might be multiple sequences so predicting a time complexity for this",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "DREutrv2XD0",
+      "position": 155,
+      "title": "G-30. Word Ladder - 2 | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=DREutrv2XD0",
+      "start": 1435.6,
+      "end": 1531.1999999999998,
+      "text": "predicting a time complexity for this one is next to impossible it will vary from example to example so this is what you can always tell to the interviewer okay so before ending up this video i would like to mention one thing because if i do not then my comment section will be filled up with that one so this particular solution will be giving you tle if you try on lead code why because over the time limit i'm not sure what they have done but recently they have updated their test cases and the time limit is super strict if you go to the discussion forum you'll find people discussing about it that the previous solutions are not working and i checked i checked out the solutions which are currently working those are only cp oriented solutions not interview oriented you have to optimize in a very very large manner as you usually do in competitive programming and since we are talking about interviews in interviews this particular solution is gonna work absolutely fine so i'll recommend you to submit this problem on practice platform and if it is working fine it is absolutely fine no need to panic if it doesn't works only could okay guys so i think that should be it i hope you do not mess up my comment section that not working on lead code not working on lead code because i've already stated why if you are into cp you can try optimizing it and you can read the discussion forum and this will definitely work so guys i hope you have understood the entire algorithm and the complex code so just in case you did please please make sure you like this video and if you're new to our channel hit that subscribe button right away and if you haven't checked out our dp series and the hd sheet the links are in the description make sure you check them out because that is something you're missing out on with this let's wrap up this",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 13,
+      "video_id": "DREutrv2XD0",
+      "position": 155,
+      "title": "G-30. Word Ladder - 2 | Shortest Paths",
+      "url": "https://www.youtube.com/watch?v=DREutrv2XD0",
+      "start": 1528.08,
+      "end": 1543.23,
+      "text": "out on with this let's wrap up this video and meet in some of the video till then bye take care whenever your heart is [Music]",
+      "word_count": 26
+    }
+  ]
+}

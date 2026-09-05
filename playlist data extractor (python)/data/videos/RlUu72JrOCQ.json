@@ -1,0 +1,1124 @@
+{
+  "position": 77,
+  "video_id": "RlUu72JrOCQ",
+  "title": "L5. Preorder Traversal of Binary Tree | C++ | Java | Code Explanation",
+  "url": "https://www.youtube.com/watch?v=RlUu72JrOCQ",
+  "transcript": [
+    {
+      "start": 0.0,
+      "duration": 3.36,
+      "end": 3.36,
+      "text": "so before starting this video i'd love"
+    },
+    {
+      "start": 1.52,
+      "duration": 4.08,
+      "end": 5.6,
+      "text": "to thank relevel for sponsoring this"
+    },
+    {
+      "start": 3.36,
+      "duration": 4.399,
+      "end": 7.759,
+      "text": "entire video a hiring platform with no"
+    },
+    {
+      "start": 5.6,
+      "duration": 4.079,
+      "end": 9.678999999999998,
+      "text": "degree required no experience required"
+    },
+    {
+      "start": 7.759,
+      "duration": 4.081,
+      "end": 11.84,
+      "text": "mentoring sessions available feels like"
+    },
+    {
+      "start": 9.679,
+      "duration": 4.08,
+      "end": 13.759,
+      "text": "a dream isn't it what if i say all of"
+    },
+    {
+      "start": 11.84,
+      "duration": 3.52,
+      "end": 15.36,
+      "text": "this is for free well reliable by an"
+    },
+    {
+      "start": 13.759,
+      "duration": 3.36,
+      "end": 17.119,
+      "text": "academy is here to make your dream come"
+    },
+    {
+      "start": 15.36,
+      "duration": 3.28,
+      "end": 18.64,
+      "text": "true but job opportunities in front and"
+    },
+    {
+      "start": 17.119,
+      "duration": 3.441,
+      "end": 20.56,
+      "text": "back end and business development from"
+    },
+    {
+      "start": 18.64,
+      "duration": 3.92,
+      "end": 22.560000000000002,
+      "text": "india's top companies for freshers and"
+    },
+    {
+      "start": 20.56,
+      "duration": 4.16,
+      "end": 24.72,
+      "text": "people in the early career reliable is"
+    },
+    {
+      "start": 22.56,
+      "duration": 4.24,
+      "end": 26.799999999999997,
+      "text": "here to make the entire hiring process"
+    },
+    {
+      "start": 24.72,
+      "duration": 4.0,
+      "end": 28.72,
+      "text": "super simple and super quick all you"
+    },
+    {
+      "start": 26.8,
+      "duration": 3.6,
+      "end": 30.400000000000002,
+      "text": "have to do is to give the relevant test"
+    },
+    {
+      "start": 28.72,
+      "duration": 3.519,
+      "end": 32.239,
+      "text": "and based on your score interviews will"
+    },
+    {
+      "start": 30.4,
+      "duration": 3.12,
+      "end": 33.519999999999996,
+      "text": "be scheduled and you will be hard so"
+    },
+    {
+      "start": 32.239,
+      "duration": 2.32,
+      "end": 34.559,
+      "text": "what are you waiting for make sure you"
+    },
+    {
+      "start": 33.52,
+      "duration": 2.719,
+      "end": 36.239000000000004,
+      "text": "check out all the links in the"
+    },
+    {
+      "start": 34.559,
+      "duration": 5.121,
+      "end": 39.68,
+      "text": "description and apply for the relevant"
+    },
+    {
+      "start": 36.239,
+      "duration": 3.441,
+      "end": 39.68,
+      "text": "tests as soon as possible"
+    },
+    {
+      "start": 43.04,
+      "duration": 3.839,
+      "end": 46.879,
+      "text": "hey everyone welcome to another lecture"
+    },
+    {
+      "start": 44.559,
+      "duration": 4.16,
+      "end": 48.718999999999994,
+      "text": "of the free cut tree series now in the"
+    },
+    {
+      "start": 46.879,
+      "duration": 4.32,
+      "end": 51.199,
+      "text": "previous videos i have explained about"
+    },
+    {
+      "start": 48.719,
+      "duration": 4.16,
+      "end": 52.879000000000005,
+      "text": "the dfs traversal technique which is the"
+    },
+    {
+      "start": 51.199,
+      "duration": 3.441,
+      "end": 54.64,
+      "text": "pre-order traversal so we're going to"
+    },
+    {
+      "start": 52.879,
+      "duration": 4.081,
+      "end": 56.96,
+      "text": "see the coding implementation of this"
+    },
+    {
+      "start": 54.64,
+      "duration": 4.0,
+      "end": 58.64,
+      "text": "pre-order traversal so again"
+    },
+    {
+      "start": 56.96,
+      "duration": 3.919,
+      "end": 60.879,
+      "text": "if you have seen the inorder traversal"
+    },
+    {
+      "start": 58.64,
+      "duration": 5.599,
+      "end": 64.239,
+      "text": "video we will not complicate things and"
+    },
+    {
+      "start": 60.879,
+      "duration": 5.761,
+      "end": 66.64,
+      "text": "we'll keep it simple root left right is"
+    },
+    {
+      "start": 64.239,
+      "duration": 4.24,
+      "end": 68.479,
+      "text": "what the pre-order traversal is so again"
+    },
+    {
+      "start": 66.64,
+      "duration": 4.799,
+      "end": 71.43900000000001,
+      "text": "we'll write the pre-order the c plus"
+    },
+    {
+      "start": 68.479,
+      "duration": 4.32,
+      "end": 72.799,
+      "text": "plus the java code are almost similar so"
+    },
+    {
+      "start": 71.439,
+      "duration": 3.761,
+      "end": 75.19999999999999,
+      "text": "i'll take the node"
+    },
+    {
+      "start": 72.799,
+      "duration": 4.881,
+      "end": 77.68,
+      "text": "and if that's null we're going to return"
+    },
+    {
+      "start": 75.2,
+      "duration": 4.4,
+      "end": 79.60000000000001,
+      "text": "otherwise we are doing a print"
+    },
+    {
+      "start": 77.68,
+      "duration": 4.56,
+      "end": 82.24000000000001,
+      "text": "and after doing the print we'll move to"
+    },
+    {
+      "start": 79.6,
+      "duration": 4.72,
+      "end": 84.32,
+      "text": "the left and after we come back from the"
+    },
+    {
+      "start": 82.24,
+      "duration": 4.559,
+      "end": 86.79899999999999,
+      "text": "left we'll move to the right so that's a"
+    },
+    {
+      "start": 84.32,
+      "duration": 6.32,
+      "end": 90.63999999999999,
+      "text": "simple code but if you do the dryer then"
+    },
+    {
+      "start": 86.799,
+      "duration": 6.241,
+      "end": 93.04,
+      "text": "you'll understand why this code works so"
+    },
+    {
+      "start": 90.64,
+      "duration": 5.2,
+      "end": 95.84,
+      "text": "as you know initially we start from the"
+    },
+    {
+      "start": 93.04,
+      "duration": 5.119,
+      "end": 98.159,
+      "text": "root like initially the call comes"
+    },
+    {
+      "start": 95.84,
+      "duration": 4.319,
+      "end": 100.159,
+      "text": "for the root of the tree okay so we"
+    },
+    {
+      "start": 98.159,
+      "duration": 4.32,
+      "end": 102.47900000000001,
+      "text": "start for the root of the tree so"
+    },
+    {
+      "start": 100.159,
+      "duration": 5.041,
+      "end": 105.2,
+      "text": "starting with the root comes to the"
+    },
+    {
+      "start": 102.479,
+      "duration": 5.361,
+      "end": 107.84,
+      "text": "first line print so you'll print one so"
+    },
+    {
+      "start": 105.2,
+      "duration": 6.8,
+      "end": 112.0,
+      "text": "one can be printed okay so one is"
+    },
+    {
+      "start": 107.84,
+      "duration": 6.959,
+      "end": 114.799,
+      "text": "printed next says node slept so we will"
+    },
+    {
+      "start": 112.0,
+      "duration": 4.0,
+      "end": 116.0,
+      "text": "come to nodes left and we will stand"
+    },
+    {
+      "start": 114.799,
+      "duration": 2.32,
+      "end": 117.119,
+      "text": "over here"
+    },
+    {
+      "start": 116.0,
+      "duration": 3.04,
+      "end": 119.04,
+      "text": "next"
+    },
+    {
+      "start": 117.119,
+      "duration": 4.64,
+      "end": 121.759,
+      "text": "for two it will come across"
+    },
+    {
+      "start": 119.04,
+      "duration": 5.52,
+      "end": 124.56,
+      "text": "print correct so two will be"
+    },
+    {
+      "start": 121.759,
+      "duration": 5.601,
+      "end": 127.36,
+      "text": "printed two is printed next is again"
+    },
+    {
+      "start": 124.56,
+      "duration": 5.36,
+      "end": 129.92000000000002,
+      "text": "left so we will come to left will stand"
+    },
+    {
+      "start": 127.36,
+      "duration": 5.84,
+      "end": 133.2,
+      "text": "over here again 4 comes so the pre-order"
+    },
+    {
+      "start": 129.92,
+      "duration": 7.12,
+      "end": 137.04,
+      "text": "of 4 is called print so 4 will be"
+    },
+    {
+      "start": 133.2,
+      "duration": 5.119,
+      "end": 138.319,
+      "text": "printed once 4 is printed next"
+    },
+    {
+      "start": 137.04,
+      "duration": 3.6,
+      "end": 140.64,
+      "text": "you call for"
+    },
+    {
+      "start": 138.319,
+      "duration": 4.881,
+      "end": 143.2,
+      "text": "the left of 4 so when you call for the"
+    },
+    {
+      "start": 140.64,
+      "duration": 5.76,
+      "end": 146.39999999999998,
+      "text": "left of 4 it's a null it's a null that"
+    },
+    {
+      "start": 143.2,
+      "duration": 6.32,
+      "end": 149.51999999999998,
+      "text": "you call so if node is null it returns"
+    },
+    {
+      "start": 146.4,
+      "duration": 6.64,
+      "end": 153.04,
+      "text": "so we go back so print is done print is"
+    },
+    {
+      "start": 149.52,
+      "duration": 6.56,
+      "end": 156.08,
+      "text": "done left call is done next is right so"
+    },
+    {
+      "start": 153.04,
+      "duration": 5.199,
+      "end": 158.239,
+      "text": "we call for right and right also we find"
+    },
+    {
+      "start": 156.08,
+      "duration": 5.2,
+      "end": 161.28,
+      "text": "null so we will return"
+    },
+    {
+      "start": 158.239,
+      "duration": 6.401,
+      "end": 164.64000000000001,
+      "text": "so as i can see for the four node the"
+    },
+    {
+      "start": 161.28,
+      "duration": 5.039,
+      "end": 166.319,
+      "text": "pre-order traversal print left right is"
+    },
+    {
+      "start": 164.64,
+      "duration": 3.76,
+      "end": 168.39999999999998,
+      "text": "completed so the entire stock is"
+    },
+    {
+      "start": 166.319,
+      "duration": 4.64,
+      "end": 170.95899999999997,
+      "text": "completed so can i say the recursion is"
+    },
+    {
+      "start": 168.4,
+      "duration": 4.24,
+      "end": 172.64000000000001,
+      "text": "over if the recursion is over i will get"
+    },
+    {
+      "start": 170.959,
+      "duration": 4.401,
+      "end": 175.36,
+      "text": "back so for two"
+    },
+    {
+      "start": 172.64,
+      "duration": 4.72,
+      "end": 177.35999999999999,
+      "text": "print is done left is done time to go to"
+    },
+    {
+      "start": 175.36,
+      "duration": 3.84,
+      "end": 179.20000000000002,
+      "text": "the right let's go to the right so if"
+    },
+    {
+      "start": 177.36,
+      "duration": 5.04,
+      "end": 182.4,
+      "text": "you go to the right you will stand at"
+    },
+    {
+      "start": 179.2,
+      "duration": 5.679,
+      "end": 184.879,
+      "text": "five correct so you come to a new note 5"
+    },
+    {
+      "start": 182.4,
+      "duration": 5.04,
+      "end": 187.44,
+      "text": "again print so you print"
+    },
+    {
+      "start": 184.879,
+      "duration": 6.08,
+      "end": 190.959,
+      "text": "five once you've printed five what"
+    },
+    {
+      "start": 187.44,
+      "duration": 5.92,
+      "end": 193.35999999999999,
+      "text": "you'll do is you will go to the left so"
+    },
+    {
+      "start": 190.959,
+      "duration": 5.681,
+      "end": 196.64000000000001,
+      "text": "currently you are at node six"
+    },
+    {
+      "start": 193.36,
+      "duration": 6.56,
+      "end": 199.92000000000002,
+      "text": "again no dot data print so print"
+    },
+    {
+      "start": 196.64,
+      "duration": 5.04,
+      "end": 201.67999999999998,
+      "text": "six so i made sure that i printed six"
+    },
+    {
+      "start": 199.92,
+      "duration": 4.72,
+      "end": 204.64,
+      "text": "once you have printed six what you'll do"
+    },
+    {
+      "start": 201.68,
+      "duration": 5.68,
+      "end": 207.36,
+      "text": "is you will go to the left of six"
+    },
+    {
+      "start": 204.64,
+      "duration": 4.72,
+      "end": 209.35999999999999,
+      "text": "because after print it's the left once"
+    },
+    {
+      "start": 207.36,
+      "duration": 4.56,
+      "end": 211.92000000000002,
+      "text": "you go to the left you'll find null the"
+    },
+    {
+      "start": 209.36,
+      "duration": 4.799,
+      "end": 214.15900000000002,
+      "text": "moment you find null it will return so"
+    },
+    {
+      "start": 211.92,
+      "duration": 5.039,
+      "end": 216.95899999999997,
+      "text": "make sure you return it so for six"
+    },
+    {
+      "start": 214.159,
+      "duration": 5.841,
+      "end": 220.0,
+      "text": "printing is done left is done time to go"
+    },
+    {
+      "start": 216.959,
+      "duration": 4.881,
+      "end": 221.84,
+      "text": "to the right right says it's a null so"
+    },
+    {
+      "start": 220.0,
+      "duration": 5.04,
+      "end": 225.04,
+      "text": "again return"
+    },
+    {
+      "start": 221.84,
+      "duration": 5.84,
+      "end": 227.68,
+      "text": "so for six print is done left is done"
+    },
+    {
+      "start": 225.04,
+      "duration": 5.839,
+      "end": 230.879,
+      "text": "right is done so what i can say is"
+    },
+    {
+      "start": 227.68,
+      "duration": 6.16,
+      "end": 233.84,
+      "text": "six is over so i'll go back so for five"
+    },
+    {
+      "start": 230.879,
+      "duration": 5.761,
+      "end": 236.64,
+      "text": "print is done left is done right it will"
+    },
+    {
+      "start": 233.84,
+      "duration": 6.24,
+      "end": 240.08,
+      "text": "go and it will find it as null the"
+    },
+    {
+      "start": 236.64,
+      "duration": 6.48,
+      "end": 243.11999999999998,
+      "text": "moment it finds its as null it goes back"
+    },
+    {
+      "start": 240.08,
+      "duration": 5.84,
+      "end": 245.92000000000002,
+      "text": "so five goes back correct so five print"
+    },
+    {
+      "start": 243.12,
+      "duration": 3.6,
+      "end": 246.72,
+      "text": "left right everything is completed goes"
+    },
+    {
+      "start": 245.92,
+      "duration": 1.92,
+      "end": 247.83999999999997,
+      "text": "back"
+    },
+    {
+      "start": 246.72,
+      "duration": 4.0,
+      "end": 250.72,
+      "text": "for two"
+    },
+    {
+      "start": 247.84,
+      "duration": 5.36,
+      "end": 253.20000000000002,
+      "text": "print is done left is done right is done"
+    },
+    {
+      "start": 250.72,
+      "duration": 3.68,
+      "end": 254.4,
+      "text": "goes back for one"
+    },
+    {
+      "start": 253.2,
+      "duration": 4.24,
+      "end": 257.44,
+      "text": "print is done"
+    },
+    {
+      "start": 254.4,
+      "duration": 4.64,
+      "end": 259.04,
+      "text": "left is done time to go to the right"
+    },
+    {
+      "start": 257.44,
+      "duration": 2.4,
+      "end": 259.84,
+      "text": "goes to the right recursion goes to the"
+    },
+    {
+      "start": 259.04,
+      "duration": 3.28,
+      "end": 262.32,
+      "text": "right"
+    },
+    {
+      "start": 259.84,
+      "duration": 5.76,
+      "end": 265.59999999999997,
+      "text": "so as of now i'm at three"
+    },
+    {
+      "start": 262.32,
+      "duration": 5.04,
+      "end": 267.36,
+      "text": "three says print so i'll print three"
+    },
+    {
+      "start": 265.6,
+      "duration": 2.879,
+      "end": 268.47900000000004,
+      "text": "once you're printed it says go to the"
+    },
+    {
+      "start": 267.36,
+      "duration": 2.48,
+      "end": 269.84000000000003,
+      "text": "left"
+    },
+    {
+      "start": 268.479,
+      "duration": 3.041,
+      "end": 271.52,
+      "text": "goes to the left"
+    },
+    {
+      "start": 269.84,
+      "duration": 4.16,
+      "end": 274.0,
+      "text": "stands at seven"
+    },
+    {
+      "start": 271.52,
+      "duration": 4.32,
+      "end": 275.84,
+      "text": "when you come to seven again says print"
+    },
+    {
+      "start": 274.0,
+      "duration": 3.28,
+      "end": 277.28,
+      "text": "so please make sure you print it so i"
+    },
+    {
+      "start": 275.84,
+      "duration": 3.68,
+      "end": 279.52,
+      "text": "made sure i printed"
+    },
+    {
+      "start": 277.28,
+      "duration": 6.0,
+      "end": 283.28,
+      "text": "seven says go to the left"
+    },
+    {
+      "start": 279.52,
+      "duration": 6.959,
+      "end": 286.479,
+      "text": "comes to the left find snug goes back"
+    },
+    {
+      "start": 283.28,
+      "duration": 5.199,
+      "end": 288.479,
+      "text": "for seven print and left is done so you"
+    },
+    {
+      "start": 286.479,
+      "duration": 4.881,
+      "end": 291.36,
+      "text": "go to the right and the moment it goes"
+    },
+    {
+      "start": 288.479,
+      "duration": 6.801,
+      "end": 295.28,
+      "text": "to the right it finds null comes back so"
+    },
+    {
+      "start": 291.36,
+      "duration": 7.2,
+      "end": 298.56,
+      "text": "for seven print left right is completed"
+    },
+    {
+      "start": 295.28,
+      "duration": 6.24,
+      "end": 301.52,
+      "text": "so the recursion is over goes back"
+    },
+    {
+      "start": 298.56,
+      "duration": 5.359,
+      "end": 303.919,
+      "text": "three is printed left is completed comes"
+    },
+    {
+      "start": 301.52,
+      "duration": 5.679,
+      "end": 307.19899999999996,
+      "text": "to the right when it comes to the right"
+    },
+    {
+      "start": 303.919,
+      "duration": 5.12,
+      "end": 309.039,
+      "text": "it sees eight the moment it sees eight"
+    },
+    {
+      "start": 307.199,
+      "duration": 4.961,
+      "end": 312.16,
+      "text": "it prints it"
+    },
+    {
+      "start": 309.039,
+      "duration": 5.44,
+      "end": 314.479,
+      "text": "once printing is done goes to the left"
+    },
+    {
+      "start": 312.16,
+      "duration": 5.2,
+      "end": 317.36,
+      "text": "now once goes to the left says key this"
+    },
+    {
+      "start": 314.479,
+      "duration": 5.041,
+      "end": 319.52,
+      "text": "is a nine so why don't you print it okay"
+    },
+    {
+      "start": 317.36,
+      "duration": 4.72,
+      "end": 322.08000000000004,
+      "text": "next goes to the left"
+    },
+    {
+      "start": 319.52,
+      "duration": 5.44,
+      "end": 324.96,
+      "text": "nothing comes back goes to the right"
+    },
+    {
+      "start": 322.08,
+      "duration": 6.08,
+      "end": 328.15999999999997,
+      "text": "nothing comes back for nine print left"
+    },
+    {
+      "start": 324.96,
+      "duration": 5.84,
+      "end": 330.79999999999995,
+      "text": "right is over comes back for eight print"
+    },
+    {
+      "start": 328.16,
+      "duration": 5.28,
+      "end": 333.44,
+      "text": "left right is there so goes"
+    },
+    {
+      "start": 330.8,
+      "duration": 5.04,
+      "end": 335.84000000000003,
+      "text": "prints ten goes to the left nothing goes"
+    },
+    {
+      "start": 333.44,
+      "duration": 4.16,
+      "end": 337.6,
+      "text": "to the right nothing goes back it is"
+    },
+    {
+      "start": 335.84,
+      "duration": 4.96,
+      "end": 340.79999999999995,
+      "text": "completed goes back three is completed"
+    },
+    {
+      "start": 337.6,
+      "duration": 6.319,
+      "end": 343.91900000000004,
+      "text": "goes back completed goes back so that's"
+    },
+    {
+      "start": 340.8,
+      "duration": 4.8,
+      "end": 345.6,
+      "text": "how you can easily get the pre-order"
+    },
+    {
+      "start": 343.919,
+      "duration": 4.881,
+      "end": 348.79999999999995,
+      "text": "traversal again one"
+    },
+    {
+      "start": 345.6,
+      "duration": 8.159,
+      "end": 353.759,
+      "text": "then the left three so that's two four"
+    },
+    {
+      "start": 348.8,
+      "duration": 7.839,
+      "end": 356.639,
+      "text": "five six for it should be 3 7 8 9 10"
+    },
+    {
+      "start": 353.759,
+      "duration": 4.641,
+      "end": 358.40000000000003,
+      "text": "root left right so"
+    },
+    {
+      "start": 356.639,
+      "duration": 4.0,
+      "end": 360.639,
+      "text": "basically three lines again"
+    },
+    {
+      "start": 358.4,
+      "duration": 5.28,
+      "end": 363.67999999999995,
+      "text": "no need to complicate don't complicate"
+    },
+    {
+      "start": 360.639,
+      "duration": 5.28,
+      "end": 365.919,
+      "text": "keep it simple just write whatever you"
+    },
+    {
+      "start": 363.68,
+      "duration": 3.84,
+      "end": 367.52,
+      "text": "want to write if you want to first visit"
+    },
+    {
+      "start": 365.919,
+      "duration": 4.56,
+      "end": 370.479,
+      "text": "root just write it you're going to first"
+    },
+    {
+      "start": 367.52,
+      "duration": 5.119,
+      "end": 372.639,
+      "text": "visit left write it keep it as simple as"
+    },
+    {
+      "start": 370.479,
+      "duration": 4.16,
+      "end": 374.639,
+      "text": "possible that is how binary trees are"
+    },
+    {
+      "start": 372.639,
+      "duration": 3.68,
+      "end": 376.319,
+      "text": "solved don't complicate keep it as"
+    },
+    {
+      "start": 374.639,
+      "duration": 3.601,
+      "end": 378.24,
+      "text": "simple as possible so this will be the"
+    },
+    {
+      "start": 376.319,
+      "duration": 4.481,
+      "end": 380.8,
+      "text": "preorder traversal technique if i talk"
+    },
+    {
+      "start": 378.24,
+      "duration": 5.6,
+      "end": 383.84000000000003,
+      "text": "about the time complexity that's a big o"
+    },
+    {
+      "start": 380.8,
+      "duration": 5.839,
+      "end": 386.639,
+      "text": "of n where n is the number of nodes why"
+    },
+    {
+      "start": 383.84,
+      "duration": 4.72,
+      "end": 388.56,
+      "text": "because at max one two three"
+    },
+    {
+      "start": 386.639,
+      "duration": 3.521,
+      "end": 390.16,
+      "text": "how many nodes are there that many times"
+    },
+    {
+      "start": 388.56,
+      "duration": 4.079,
+      "end": 392.639,
+      "text": "you're going correct so that is why the"
+    },
+    {
+      "start": 390.16,
+      "duration": 5.28,
+      "end": 395.44,
+      "text": "time complexity is big o of one and the"
+    },
+    {
+      "start": 392.639,
+      "duration": 4.481,
+      "end": 397.12,
+      "text": "space complexity is auxiliary space of"
+    },
+    {
+      "start": 395.44,
+      "duration": 3.36,
+      "end": 398.8,
+      "text": "the height of the tree of the height of"
+    },
+    {
+      "start": 397.12,
+      "duration": 4.079,
+      "end": 401.199,
+      "text": "the tree and the worst case the height"
+    },
+    {
+      "start": 398.8,
+      "duration": 5.2,
+      "end": 404.0,
+      "text": "of the tree can be a skew when a tree"
+    },
+    {
+      "start": 401.199,
+      "duration": 2.801,
+      "end": 404.0,
+      "text": "like this is given"
+    },
+    {
+      "start": 404.639,
+      "duration": 5.28,
+      "end": 409.919,
+      "text": "so at max the auxiliary space which is"
+    },
+    {
+      "start": 407.44,
+      "duration": 4.8,
+      "end": 412.24,
+      "text": "used in recursion can be big offend so i"
+    },
+    {
+      "start": 409.919,
+      "duration": 4.801,
+      "end": 414.71999999999997,
+      "text": "can say this is the time complexity and"
+    },
+    {
+      "start": 412.24,
+      "duration": 4.799,
+      "end": 417.039,
+      "text": "space complexity in order to do the"
+    },
+    {
+      "start": 414.72,
+      "duration": 4.64,
+      "end": 419.36,
+      "text": "pre-order traversal so guys i hope you"
+    },
+    {
+      "start": 417.039,
+      "duration": 4.72,
+      "end": 421.759,
+      "text": "have understood this entire code as well"
+    },
+    {
+      "start": 419.36,
+      "duration": 3.92,
+      "end": 423.28000000000003,
+      "text": "as this wonderful recursive diagram just"
+    },
+    {
+      "start": 421.759,
+      "duration": 3.601,
+      "end": 425.36,
+      "text": "in case you did please make sure you"
+    },
+    {
+      "start": 423.28,
+      "duration": 3.84,
+      "end": 427.11999999999995,
+      "text": "give a like to this video and i'll be"
+    },
+    {
+      "start": 425.36,
+      "duration": 4.0,
+      "end": 429.36,
+      "text": "leaving the c plus plus and the java"
+    },
+    {
+      "start": 427.12,
+      "duration": 3.68,
+      "end": 430.8,
+      "text": "code links in the description below with"
+    },
+    {
+      "start": 429.36,
+      "duration": 2.64,
+      "end": 432.0,
+      "text": "this let's wrap up this video and if"
+    },
+    {
+      "start": 430.8,
+      "duration": 3.28,
+      "end": 434.08,
+      "text": "you're new to our channel yeah do"
+    },
+    {
+      "start": 432.0,
+      "duration": 4.4,
+      "end": 436.4,
+      "text": "consider subscribing because i'm gonna"
+    },
+    {
+      "start": 434.08,
+      "duration": 4.08,
+      "end": 438.15999999999997,
+      "text": "bring much more videos like this so yeah"
+    },
+    {
+      "start": 436.4,
+      "duration": 4.0,
+      "end": 440.4,
+      "text": "let's wrap up this video now and with"
+    },
+    {
+      "start": 438.16,
+      "duration": 6.58,
+      "end": 444.74,
+      "text": "this bye take care"
+    },
+    {
+      "start": 440.4,
+      "duration": 9.95,
+      "end": 450.34999999999997,
+      "text": "whenever your heart is broken"
+    },
+    {
+      "start": 444.74,
+      "duration": 5.61,
+      "end": 450.35,
+      "text": "[Music]"
+    }
+  ]
+}

@@ -1,0 +1,2870 @@
+{
+  "position": 108,
+  "video_id": "-YbXySKJsX8",
+  "title": "L36. Serialize and De-serialize Binary Tree | C++ | Java",
+  "url": "https://www.youtube.com/watch?v=-YbXySKJsX8",
+  "transcript": [
+    {
+      "start": 0.0,
+      "duration": 3.6,
+      "end": 3.6,
+      "text": "before starting this video i'd love to"
+    },
+    {
+      "start": 1.439,
+      "duration": 4.081,
+      "end": 5.5200000000000005,
+      "text": "thank relevel for sponsoring this entire"
+    },
+    {
+      "start": 3.6,
+      "duration": 3.36,
+      "end": 6.96,
+      "text": "tree series the placement season is here"
+    },
+    {
+      "start": 5.52,
+      "duration": 3.68,
+      "end": 9.2,
+      "text": "i know a lot of you are planning to sit"
+    },
+    {
+      "start": 6.96,
+      "duration": 4.0,
+      "end": 10.96,
+      "text": "for companies which come on campus in"
+    },
+    {
+      "start": 9.2,
+      "duration": 4.16,
+      "end": 13.36,
+      "text": "case you are disappointed that the top"
+    },
+    {
+      "start": 10.96,
+      "duration": 4.32,
+      "end": 15.280000000000001,
+      "text": "startups like tread upgrad razor pay are"
+    },
+    {
+      "start": 13.36,
+      "duration": 3.759,
+      "end": 17.119,
+      "text": "not hiring directly from your campus"
+    },
+    {
+      "start": 15.28,
+      "duration": 3.6,
+      "end": 18.88,
+      "text": "there is an easier way to work here just"
+    },
+    {
+      "start": 17.119,
+      "duration": 3.681,
+      "end": 20.8,
+      "text": "register for the relevant test conducted"
+    },
+    {
+      "start": 18.88,
+      "duration": 3.52,
+      "end": 22.4,
+      "text": "by reliable by an academy and you'll get"
+    },
+    {
+      "start": 20.8,
+      "duration": 3.12,
+      "end": 23.92,
+      "text": "a chance to apply for front-end backend"
+    },
+    {
+      "start": 22.4,
+      "duration": 3.36,
+      "end": 25.759999999999998,
+      "text": "and business development roles at"
+    },
+    {
+      "start": 23.92,
+      "duration": 4.08,
+      "end": 28.0,
+      "text": "india's top startups and unicorn"
+    },
+    {
+      "start": 25.76,
+      "duration": 5.519,
+      "end": 31.279000000000003,
+      "text": "companies reliable has thousand plus"
+    },
+    {
+      "start": 28.0,
+      "duration": 5.76,
+      "end": 33.76,
+      "text": "openings by 50 plus companies and the"
+    },
+    {
+      "start": 31.279,
+      "duration": 3.601,
+      "end": 34.88,
+      "text": "best thing is it's absolutely free so"
+    },
+    {
+      "start": 33.76,
+      "duration": 2.4,
+      "end": 36.16,
+      "text": "please make sure you check out all the"
+    },
+    {
+      "start": 34.88,
+      "duration": 5.359,
+      "end": 40.239000000000004,
+      "text": "links in the description and give the"
+    },
+    {
+      "start": 36.16,
+      "duration": 4.079,
+      "end": 40.239,
+      "text": "relevant test as soon as possible"
+    },
+    {
+      "start": 43.36,
+      "duration": 3.359,
+      "end": 46.719,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 44.8,
+      "duration": 4.64,
+      "end": 49.44,
+      "text": "i hope you guys are doing extremely well"
+    },
+    {
+      "start": 46.719,
+      "duration": 5.761,
+      "end": 52.480000000000004,
+      "text": "so today we will be discussing serialize"
+    },
+    {
+      "start": 49.44,
+      "duration": 5.84,
+      "end": 55.28,
+      "text": "and deserialize a binary tree what does"
+    },
+    {
+      "start": 52.48,
+      "duration": 5.04,
+      "end": 57.519999999999996,
+      "text": "this signify so basically you need to"
+    },
+    {
+      "start": 55.28,
+      "duration": 4.0,
+      "end": 59.28,
+      "text": "write couple of functions okay the first"
+    },
+    {
+      "start": 57.52,
+      "duration": 3.519,
+      "end": 61.039,
+      "text": "one is the serialized function that you"
+    },
+    {
+      "start": 59.28,
+      "duration": 3.68,
+      "end": 62.96,
+      "text": "have to write so let's call this a"
+    },
+    {
+      "start": 61.039,
+      "duration": 4.321,
+      "end": 65.36,
+      "text": "serialize"
+    },
+    {
+      "start": 62.96,
+      "duration": 4.479,
+      "end": 67.43900000000001,
+      "text": "and the next one uh is again a function"
+    },
+    {
+      "start": 65.36,
+      "duration": 4.88,
+      "end": 70.24,
+      "text": "that you you have to write and let's"
+    },
+    {
+      "start": 67.439,
+      "duration": 6.401,
+      "end": 73.83999999999999,
+      "text": "call this as d serialize"
+    },
+    {
+      "start": 70.24,
+      "duration": 4.559,
+      "end": 74.79899999999999,
+      "text": "so basically what uh the compiler will"
+    },
+    {
+      "start": 73.84,
+      "duration": 3.36,
+      "end": 77.2,
+      "text": "do"
+    },
+    {
+      "start": 74.799,
+      "duration": 4.721,
+      "end": 79.52000000000001,
+      "text": "he will give you a root of a binary tree"
+    },
+    {
+      "start": 77.2,
+      "duration": 4.88,
+      "end": 82.08,
+      "text": "okay he will give you a root of a binary"
+    },
+    {
+      "start": 79.52,
+      "duration": 4.4,
+      "end": 83.92,
+      "text": "tree so assuming this is the binary tree"
+    },
+    {
+      "start": 82.08,
+      "duration": 3.92,
+      "end": 86.0,
+      "text": "he'll give you this root okay"
+    },
+    {
+      "start": 83.92,
+      "duration": 4.559,
+      "end": 88.479,
+      "text": "so your serialized function like you can"
+    },
+    {
+      "start": 86.0,
+      "duration": 4.56,
+      "end": 90.56,
+      "text": "write it on your wish like how you write"
+    },
+    {
+      "start": 88.479,
+      "duration": 4.401,
+      "end": 92.88,
+      "text": "that is none of my concern you have to"
+    },
+    {
+      "start": 90.56,
+      "duration": 5.68,
+      "end": 96.24000000000001,
+      "text": "write such a serialized function that it"
+    },
+    {
+      "start": 92.88,
+      "duration": 4.879,
+      "end": 97.759,
+      "text": "returns a string in return okay now how"
+    },
+    {
+      "start": 96.24,
+      "duration": 3.919,
+      "end": 100.15899999999999,
+      "text": "do you write how"
+    },
+    {
+      "start": 97.759,
+      "duration": 5.36,
+      "end": 103.119,
+      "text": "what logic you implement that is on you"
+    },
+    {
+      "start": 100.159,
+      "duration": 5.28,
+      "end": 105.43900000000001,
+      "text": "i want a string okay and the moment"
+    },
+    {
+      "start": 103.119,
+      "duration": 4.64,
+      "end": 107.759,
+      "text": "i give the string to d serialize"
+    },
+    {
+      "start": 105.439,
+      "duration": 4.72,
+      "end": 110.15899999999999,
+      "text": "i'll take the same string that you gave"
+    },
+    {
+      "start": 107.759,
+      "duration": 4.561,
+      "end": 112.32,
+      "text": "me and i'll give this to d serialize and"
+    },
+    {
+      "start": 110.159,
+      "duration": 4.0,
+      "end": 114.159,
+      "text": "this d serialized code should also be"
+    },
+    {
+      "start": 112.32,
+      "duration": 4.32,
+      "end": 116.63999999999999,
+      "text": "written by you okay like you have"
+    },
+    {
+      "start": 114.159,
+      "duration": 4.481,
+      "end": 118.64,
+      "text": "written both the quotes so the code that"
+    },
+    {
+      "start": 116.64,
+      "duration": 3.839,
+      "end": 120.479,
+      "text": "you have written you have to again apply"
+    },
+    {
+      "start": 118.64,
+      "duration": 3.6,
+      "end": 122.24,
+      "text": "the reverse logic"
+    },
+    {
+      "start": 120.479,
+      "duration": 3.92,
+      "end": 124.399,
+      "text": "you have applied some logic to convert"
+    },
+    {
+      "start": 122.24,
+      "duration": 3.6,
+      "end": 125.83999999999999,
+      "text": "the root to the string now you have to"
+    },
+    {
+      "start": 124.399,
+      "duration": 4.161,
+      "end": 128.56,
+      "text": "apply the reverse logic in the d"
+    },
+    {
+      "start": 125.84,
+      "duration": 4.72,
+      "end": 130.56,
+      "text": "serialize and get the same root of the"
+    },
+    {
+      "start": 128.56,
+      "duration": 4.88,
+      "end": 133.44,
+      "text": "binary tree not just the root basically"
+    },
+    {
+      "start": 130.56,
+      "duration": 4.72,
+      "end": 135.28,
+      "text": "the entire banana tree again i want this"
+    },
+    {
+      "start": 133.44,
+      "duration": 4.24,
+      "end": 137.68,
+      "text": "root of this banana tree again"
+    },
+    {
+      "start": 135.28,
+      "duration": 5.44,
+      "end": 140.72,
+      "text": "constructed so"
+    },
+    {
+      "start": 137.68,
+      "duration": 5.52,
+      "end": 143.20000000000002,
+      "text": "whatever logic you're using over here in"
+    },
+    {
+      "start": 140.72,
+      "duration": 5.44,
+      "end": 146.16,
+      "text": "order to convert the root to a string"
+    },
+    {
+      "start": 143.2,
+      "duration": 4.64,
+      "end": 147.83999999999997,
+      "text": "you have to use the reverse logic over"
+    },
+    {
+      "start": 146.16,
+      "duration": 3.68,
+      "end": 149.84,
+      "text": "here okay you have to use a reverse"
+    },
+    {
+      "start": 147.84,
+      "duration": 4.96,
+      "end": 152.8,
+      "text": "logic over here this problem can be"
+    },
+    {
+      "start": 149.84,
+      "duration": 5.679,
+      "end": 155.519,
+      "text": "solved by a multiple multiple ways like"
+    },
+    {
+      "start": 152.8,
+      "duration": 5.76,
+      "end": 158.56,
+      "text": "you can you can use any logic in order"
+    },
+    {
+      "start": 155.519,
+      "duration": 5.44,
+      "end": 160.959,
+      "text": "pre-order post order level order that's"
+    },
+    {
+      "start": 158.56,
+      "duration": 4.16,
+      "end": 162.72,
+      "text": "on you what logic you want to use i'll"
+    },
+    {
+      "start": 160.959,
+      "duration": 4.56,
+      "end": 165.519,
+      "text": "be solving this problem using the level"
+    },
+    {
+      "start": 162.72,
+      "duration": 4.48,
+      "end": 167.2,
+      "text": "order you can try this out using the in"
+    },
+    {
+      "start": 165.519,
+      "duration": 3.201,
+      "end": 168.72,
+      "text": "order post order pre-order whatever you"
+    },
+    {
+      "start": 167.2,
+      "duration": 3.84,
+      "end": 171.04,
+      "text": "want to do you can definitely do that"
+    },
+    {
+      "start": 168.72,
+      "duration": 4.4,
+      "end": 173.12,
+      "text": "out the c plus plus and the java code"
+    },
+    {
+      "start": 171.04,
+      "duration": 4.16,
+      "end": 175.2,
+      "text": "both will be uh different so i'll be"
+    },
+    {
+      "start": 173.12,
+      "duration": 4.16,
+      "end": 177.28,
+      "text": "explaining both the codes separately so"
+    },
+    {
+      "start": 175.2,
+      "duration": 3.92,
+      "end": 179.11999999999998,
+      "text": "let's check this out so since you're"
+    },
+    {
+      "start": 177.28,
+      "duration": 4.48,
+      "end": 181.76,
+      "text": "following level order traversal to"
+    },
+    {
+      "start": 179.12,
+      "duration": 4.16,
+      "end": 183.28,
+      "text": "serialize it's very simple now you know"
+    },
+    {
+      "start": 181.76,
+      "duration": 3.04,
+      "end": 184.79999999999998,
+      "text": "the level order traversal again i'm not"
+    },
+    {
+      "start": 183.28,
+      "duration": 3.2,
+      "end": 186.48,
+      "text": "doing a level order traversal you know"
+    },
+    {
+      "start": 184.8,
+      "duration": 3.12,
+      "end": 187.92000000000002,
+      "text": "that right if you don't know level order"
+    },
+    {
+      "start": 186.48,
+      "duration": 2.88,
+      "end": 189.35999999999999,
+      "text": "traversal please watch my previous"
+    },
+    {
+      "start": 187.92,
+      "duration": 3.2,
+      "end": 191.11999999999998,
+      "text": "videos i've already talked about level"
+    },
+    {
+      "start": 189.36,
+      "duration": 3.599,
+      "end": 192.959,
+      "text": "order traversal the first note that you"
+    },
+    {
+      "start": 191.12,
+      "duration": 3.68,
+      "end": 194.8,
+      "text": "traverse is one okay the moment you have"
+    },
+    {
+      "start": 192.959,
+      "duration": 5.041,
+      "end": 198.0,
+      "text": "one you attach comma"
+    },
+    {
+      "start": 194.8,
+      "duration": 5.6,
+      "end": 200.4,
+      "text": "next uh the node next the next node that"
+    },
+    {
+      "start": 198.0,
+      "duration": 5.2,
+      "end": 203.2,
+      "text": "you traverse is 2 2"
+    },
+    {
+      "start": 200.4,
+      "duration": 4.64,
+      "end": 205.04,
+      "text": "the next node that you traverse is 13"
+    },
+    {
+      "start": 203.2,
+      "duration": 4.319,
+      "end": 207.51899999999998,
+      "text": "13 comma"
+    },
+    {
+      "start": 205.04,
+      "duration": 4.96,
+      "end": 210.0,
+      "text": "ideally 2 should have"
+    },
+    {
+      "start": 207.519,
+      "duration": 5.921,
+      "end": 213.44,
+      "text": "had a left right ideally 2 should have"
+    },
+    {
+      "start": 210.0,
+      "duration": 6.0,
+      "end": 216.0,
+      "text": "had a left so there is no left of two so"
+    },
+    {
+      "start": 213.44,
+      "duration": 4.56,
+      "end": 218.0,
+      "text": "this guy will be null the left will be"
+    },
+    {
+      "start": 216.0,
+      "duration": 4.72,
+      "end": 220.72,
+      "text": "null so whenever there is a null you can"
+    },
+    {
+      "start": 218.0,
+      "duration": 4.72,
+      "end": 222.72,
+      "text": "have a hash or you can have it any like"
+    },
+    {
+      "start": 220.72,
+      "duration": 2.96,
+      "end": 223.68,
+      "text": "you can have any character apart from a"
+    },
+    {
+      "start": 222.72,
+      "duration": 4.239,
+      "end": 226.959,
+      "text": "number"
+    },
+    {
+      "start": 223.68,
+      "duration": 5.76,
+      "end": 229.44,
+      "text": "and ideally you should have had a right"
+    },
+    {
+      "start": 226.959,
+      "duration": 6.961,
+      "end": 233.92000000000002,
+      "text": "right but i don't have so what this will"
+    },
+    {
+      "start": 229.44,
+      "duration": 6.64,
+      "end": 236.07999999999998,
+      "text": "have is again a hash okay now four so"
+    },
+    {
+      "start": 233.92,
+      "duration": 4.16,
+      "end": 238.07999999999998,
+      "text": "because this left is null this right is"
+    },
+    {
+      "start": 236.08,
+      "duration": 3.6,
+      "end": 239.68,
+      "text": "null and after that we have a four so we"
+    },
+    {
+      "start": 238.08,
+      "duration": 3.359,
+      "end": 241.43900000000002,
+      "text": "will have four comma"
+    },
+    {
+      "start": 239.68,
+      "duration": 4.479,
+      "end": 244.15900000000002,
+      "text": "after that 5"
+    },
+    {
+      "start": 241.439,
+      "duration": 4.88,
+      "end": 246.319,
+      "text": "5 comma now remember"
+    },
+    {
+      "start": 244.159,
+      "duration": 5.601,
+      "end": 249.76,
+      "text": "these nulls cannot have left and right"
+    },
+    {
+      "start": 246.319,
+      "duration": 6.241,
+      "end": 252.56,
+      "text": "but this 4 can have a null this 4 can"
+    },
+    {
+      "start": 249.76,
+      "duration": 4.88,
+      "end": 254.64,
+      "text": "have a right null this 5 can have a null"
+    },
+    {
+      "start": 252.56,
+      "duration": 4.32,
+      "end": 256.88,
+      "text": "this 5 can have a right null so just"
+    },
+    {
+      "start": 254.64,
+      "duration": 3.2,
+      "end": 257.84,
+      "text": "make sure there are a null for the left"
+    },
+    {
+      "start": 256.88,
+      "duration": 3.28,
+      "end": 260.15999999999997,
+      "text": "of four"
+    },
+    {
+      "start": 257.84,
+      "duration": 4.96,
+      "end": 262.79999999999995,
+      "text": "hash for the right of four"
+    },
+    {
+      "start": 260.16,
+      "duration": 4.479,
+      "end": 264.639,
+      "text": "hash for the left of five"
+    },
+    {
+      "start": 262.8,
+      "duration": 5.2,
+      "end": 268.0,
+      "text": "a hash for the right of five and then a"
+    },
+    {
+      "start": 264.639,
+      "duration": 4.321,
+      "end": 268.96000000000004,
+      "text": "comma so this is the string that i will"
+    },
+    {
+      "start": 268.0,
+      "duration": 4.24,
+      "end": 272.24,
+      "text": "send"
+    },
+    {
+      "start": 268.96,
+      "duration": 5.76,
+      "end": 274.71999999999997,
+      "text": "while serializing okay while serializing"
+    },
+    {
+      "start": 272.24,
+      "duration": 4.399,
+      "end": 276.639,
+      "text": "this is the string which i will return"
+    },
+    {
+      "start": 274.72,
+      "duration": 4.88,
+      "end": 279.6,
+      "text": "now since i've serialized"
+    },
+    {
+      "start": 276.639,
+      "duration": 5.361,
+      "end": 282.0,
+      "text": "it's time that i deserialize now how do"
+    },
+    {
+      "start": 279.6,
+      "duration": 4.8,
+      "end": 284.40000000000003,
+      "text": "dc relays this is very very interesting"
+    },
+    {
+      "start": 282.0,
+      "duration": 4.8,
+      "end": 286.8,
+      "text": "let's see so basically what you'll do is"
+    },
+    {
+      "start": 284.4,
+      "duration": 4.079,
+      "end": 288.479,
+      "text": "you will initially like if the string is"
+    },
+    {
+      "start": 286.8,
+      "duration": 4.0,
+      "end": 290.8,
+      "text": "null then you can say that there is no"
+    },
+    {
+      "start": 288.479,
+      "duration": 4.401,
+      "end": 292.88,
+      "text": "tree but if the string is not null you"
+    },
+    {
+      "start": 290.8,
+      "duration": 4.08,
+      "end": 294.88,
+      "text": "will uh you can like i'll show you in"
+    },
+    {
+      "start": 292.88,
+      "duration": 4.319,
+      "end": 297.199,
+      "text": "the code basically before the comma pick"
+    },
+    {
+      "start": 294.88,
+      "duration": 4.0,
+      "end": 298.88,
+      "text": "up the first guy that's one okay i'll"
+    },
+    {
+      "start": 297.199,
+      "duration": 4.321,
+      "end": 301.52000000000004,
+      "text": "show you in the code how to do that in c"
+    },
+    {
+      "start": 298.88,
+      "duration": 4.48,
+      "end": 303.36,
+      "text": "plus and java pick up the first guy"
+    },
+    {
+      "start": 301.52,
+      "duration": 3.2,
+      "end": 304.71999999999997,
+      "text": "put that into a queue data structure"
+    },
+    {
+      "start": 303.36,
+      "duration": 3.76,
+      "end": 307.12,
+      "text": "okay put that into a queue data"
+    },
+    {
+      "start": 304.72,
+      "duration": 5.84,
+      "end": 310.56,
+      "text": "structure at the same time make sure you"
+    },
+    {
+      "start": 307.12,
+      "duration": 4.24,
+      "end": 311.36,
+      "text": "create a root node with a value one okay"
+    },
+    {
+      "start": 310.56,
+      "duration": 1.84,
+      "end": 312.4,
+      "text": "done"
+    },
+    {
+      "start": 311.36,
+      "duration": 3.92,
+      "end": 315.28000000000003,
+      "text": "next"
+    },
+    {
+      "start": 312.4,
+      "duration": 5.28,
+      "end": 317.67999999999995,
+      "text": "who's the next start iterating on the"
+    },
+    {
+      "start": 315.28,
+      "duration": 3.52,
+      "end": 318.79999999999995,
+      "text": "queue so you get one okay the moment you"
+    },
+    {
+      "start": 317.68,
+      "duration": 3.92,
+      "end": 321.6,
+      "text": "get one"
+    },
+    {
+      "start": 318.8,
+      "duration": 5.2,
+      "end": 324.0,
+      "text": "you say okay once left will be the next"
+    },
+    {
+      "start": 321.6,
+      "duration": 4.48,
+      "end": 326.08000000000004,
+      "text": "guy that's true so once left is the next"
+    },
+    {
+      "start": 324.0,
+      "duration": 5.36,
+      "end": 329.36,
+      "text": "guy so you create another note 2 and you"
+    },
+    {
+      "start": 326.08,
+      "duration": 5.119,
+      "end": 331.19899999999996,
+      "text": "say once left is 2 and you insert that"
+    },
+    {
+      "start": 329.36,
+      "duration": 4.72,
+      "end": 334.08000000000004,
+      "text": "and you say once right is the next guy"
+    },
+    {
+      "start": 331.199,
+      "duration": 5.84,
+      "end": 337.039,
+      "text": "that's 13. so i say 13 is"
+    },
+    {
+      "start": 334.08,
+      "duration": 6.72,
+      "end": 340.8,
+      "text": "once right and you insert 13."
+    },
+    {
+      "start": 337.039,
+      "duration": 5.44,
+      "end": 342.479,
+      "text": "so one is done and you've taken 13 also"
+    },
+    {
+      "start": 340.8,
+      "duration": 4.399,
+      "end": 345.199,
+      "text": "next when you come across"
+    },
+    {
+      "start": 342.479,
+      "duration": 5.041,
+      "end": 347.52,
+      "text": "you have two right you have two so you"
+    },
+    {
+      "start": 345.199,
+      "duration": 5.201,
+      "end": 350.40000000000003,
+      "text": "take a cross two and it's a two"
+    },
+    {
+      "start": 347.52,
+      "duration": 5.2,
+      "end": 352.71999999999997,
+      "text": "your left guy is the next guy that's"
+    },
+    {
+      "start": 350.4,
+      "duration": 2.32,
+      "end": 352.71999999999997,
+      "text": "hash"
+    },
+    {
+      "start": 352.88,
+      "duration": 4.56,
+      "end": 357.44,
+      "text": "your right guy is the next guy that's"
+    },
+    {
+      "start": 355.199,
+      "duration": 4.0,
+      "end": 359.199,
+      "text": "hash so that's a null"
+    },
+    {
+      "start": 357.44,
+      "duration": 3.759,
+      "end": 361.199,
+      "text": "perfect so 2 is done"
+    },
+    {
+      "start": 359.199,
+      "duration": 5.041,
+      "end": 364.24,
+      "text": "next you'll take 13"
+    },
+    {
+      "start": 361.199,
+      "duration": 4.241,
+      "end": 365.44,
+      "text": "13 will say my left is the next guy"
+    },
+    {
+      "start": 364.24,
+      "duration": 3.2,
+      "end": 367.44,
+      "text": "that's 4"
+    },
+    {
+      "start": 365.44,
+      "duration": 3.36,
+      "end": 368.8,
+      "text": "and 13 will and the moment you take this"
+    },
+    {
+      "start": 367.44,
+      "duration": 2.879,
+      "end": 370.319,
+      "text": "you create a node"
+    },
+    {
+      "start": 368.8,
+      "duration": 3.44,
+      "end": 372.24,
+      "text": "and you insert that whenever you create"
+    },
+    {
+      "start": 370.319,
+      "duration": 5.361,
+      "end": 375.68,
+      "text": "a node make sure you insert that into"
+    },
+    {
+      "start": 372.24,
+      "duration": 4.959,
+      "end": 377.199,
+      "text": "the queue data structure okay next 13"
+    },
+    {
+      "start": 375.68,
+      "duration": 3.28,
+      "end": 378.96,
+      "text": "says"
+    },
+    {
+      "start": 377.199,
+      "duration": 3.12,
+      "end": 380.319,
+      "text": "my right will be the next guy that's"
+    },
+    {
+      "start": 378.96,
+      "duration": 3.76,
+      "end": 382.71999999999997,
+      "text": "five"
+    },
+    {
+      "start": 380.319,
+      "duration": 3.521,
+      "end": 383.84000000000003,
+      "text": "so again you create a node and you"
+    },
+    {
+      "start": 382.72,
+      "duration": 2.4,
+      "end": 385.12,
+      "text": "insert"
+    },
+    {
+      "start": 383.84,
+      "duration": 3.199,
+      "end": 387.039,
+      "text": "five"
+    },
+    {
+      "start": 385.12,
+      "duration": 4.48,
+      "end": 389.6,
+      "text": "next time when you come across you will"
+    },
+    {
+      "start": 387.039,
+      "duration": 4.72,
+      "end": 391.759,
+      "text": "take this guy four remember q is first"
+    },
+    {
+      "start": 389.6,
+      "duration": 4.56,
+      "end": 394.16,
+      "text": "in first out so it will take four so if"
+    },
+    {
+      "start": 391.759,
+      "duration": 5.361,
+      "end": 397.12,
+      "text": "you take four four will say my left guy"
+    },
+    {
+      "start": 394.16,
+      "duration": 4.319,
+      "end": 398.47900000000004,
+      "text": "will be the next guy that's hash"
+    },
+    {
+      "start": 397.12,
+      "duration": 2.799,
+      "end": 399.919,
+      "text": "that's null"
+    },
+    {
+      "start": 398.479,
+      "duration": 4.321,
+      "end": 402.8,
+      "text": "four will say my right guy will be the"
+    },
+    {
+      "start": 399.919,
+      "duration": 5.921,
+      "end": 405.84,
+      "text": "next guy that's again null"
+    },
+    {
+      "start": 402.8,
+      "duration": 5.839,
+      "end": 408.639,
+      "text": "four is done next it'll take out five"
+    },
+    {
+      "start": 405.84,
+      "duration": 4.639,
+      "end": 410.479,
+      "text": "five will say the next guy is"
+    },
+    {
+      "start": 408.639,
+      "duration": 4.161,
+      "end": 412.8,
+      "text": "hash that's null"
+    },
+    {
+      "start": 410.479,
+      "duration": 3.201,
+      "end": 413.68,
+      "text": "and the right guy is again hash that's"
+    },
+    {
+      "start": 412.8,
+      "duration": 2.56,
+      "end": 415.36,
+      "text": "null"
+    },
+    {
+      "start": 413.68,
+      "duration": 4.0,
+      "end": 417.68,
+      "text": "so ultimately if you see you have"
+    },
+    {
+      "start": 415.36,
+      "duration": 4.559,
+      "end": 419.91900000000004,
+      "text": "completed the traversal in the string"
+    },
+    {
+      "start": 417.68,
+      "duration": 4.16,
+      "end": 421.84000000000003,
+      "text": "and you have your queue is ultimately"
+    },
+    {
+      "start": 419.919,
+      "duration": 4.161,
+      "end": 424.08,
+      "text": "empty so once you have created the"
+    },
+    {
+      "start": 421.84,
+      "duration": 4.88,
+      "end": 426.71999999999997,
+      "text": "entire thing the root is what you will"
+    },
+    {
+      "start": 424.08,
+      "duration": 5.44,
+      "end": 429.52,
+      "text": "return so you saw that"
+    },
+    {
+      "start": 426.72,
+      "duration": 7.12,
+      "end": 433.84000000000003,
+      "text": "using this tree i created the string and"
+    },
+    {
+      "start": 429.52,
+      "duration": 6.56,
+      "end": 436.08,
+      "text": "using this string i created back the"
+    },
+    {
+      "start": 433.84,
+      "duration": 4.0,
+      "end": 437.84,
+      "text": "binary tree that's as simple as that"
+    },
+    {
+      "start": 436.08,
+      "duration": 3.6,
+      "end": 439.68,
+      "text": "just keep on picking everything after"
+    },
+    {
+      "start": 437.84,
+      "duration": 3.6,
+      "end": 441.44,
+      "text": "string and keep on attaching it to the"
+    },
+    {
+      "start": 439.68,
+      "duration": 3.84,
+      "end": 443.52,
+      "text": "left to the right to the left to the"
+    },
+    {
+      "start": 441.44,
+      "duration": 4.24,
+      "end": 445.68,
+      "text": "right to the left to the right of"
+    },
+    {
+      "start": 443.52,
+      "duration": 4.32,
+      "end": 447.84,
+      "text": "whatever you are taking out of the queue"
+    },
+    {
+      "start": 445.68,
+      "duration": 4.4,
+      "end": 450.08,
+      "text": "that's as simple as that okay so now"
+    },
+    {
+      "start": 447.84,
+      "duration": 3.52,
+      "end": 451.35999999999996,
+      "text": "i'll be showing you the code and the c"
+    },
+    {
+      "start": 450.08,
+      "duration": 3.04,
+      "end": 453.12,
+      "text": "plus and the java code i'll this time"
+    },
+    {
+      "start": 451.36,
+      "duration": 3.839,
+      "end": 455.199,
+      "text": "i'll tell you differently because both"
+    },
+    {
+      "start": 453.12,
+      "duration": 3.76,
+      "end": 456.88,
+      "text": "both are absolutely different so let's"
+    },
+    {
+      "start": 455.199,
+      "duration": 3.041,
+      "end": 458.24,
+      "text": "first discuss the c plus plus code and"
+    },
+    {
+      "start": 456.88,
+      "duration": 3.52,
+      "end": 460.4,
+      "text": "after that i'll be discussing the java"
+    },
+    {
+      "start": 458.24,
+      "duration": 4.239,
+      "end": 462.479,
+      "text": "code so the time stamp you can check out"
+    },
+    {
+      "start": 460.4,
+      "duration": 4.32,
+      "end": 464.71999999999997,
+      "text": "over here and you can jump to the java"
+    },
+    {
+      "start": 462.479,
+      "duration": 4.641,
+      "end": 467.12,
+      "text": "code so let's first talk about the"
+    },
+    {
+      "start": 464.72,
+      "duration": 4.72,
+      "end": 469.44000000000005,
+      "text": "serialized so in a serialize you're"
+    },
+    {
+      "start": 467.12,
+      "duration": 4.0,
+      "end": 471.12,
+      "text": "given the root okay so what i've done is"
+    },
+    {
+      "start": 469.44,
+      "duration": 3.759,
+      "end": 473.199,
+      "text": "if the root is"
+    },
+    {
+      "start": 471.12,
+      "duration": 4.479,
+      "end": 475.599,
+      "text": "null then i'll return an empty string"
+    },
+    {
+      "start": 473.199,
+      "duration": 4.241,
+      "end": 477.44,
+      "text": "that's very very straightforward"
+    },
+    {
+      "start": 475.599,
+      "duration": 4.16,
+      "end": 479.759,
+      "text": "after that i have declared an empty"
+    },
+    {
+      "start": 477.44,
+      "duration": 4.8,
+      "end": 482.24,
+      "text": "string and as usual i've started doing"
+    },
+    {
+      "start": 479.759,
+      "duration": 4.321,
+      "end": 484.08000000000004,
+      "text": "the level order traversal taken a cue"
+    },
+    {
+      "start": 482.24,
+      "duration": 4.639,
+      "end": 486.879,
+      "text": "inserted the root and then started"
+    },
+    {
+      "start": 484.08,
+      "duration": 5.36,
+      "end": 489.44,
+      "text": "iterating on the q till it is not empty"
+    },
+    {
+      "start": 486.879,
+      "duration": 4.401,
+      "end": 491.28000000000003,
+      "text": "took out the first node from the queue"
+    },
+    {
+      "start": 489.44,
+      "duration": 4.56,
+      "end": 494.0,
+      "text": "after that if the node is"
+    },
+    {
+      "start": 491.28,
+      "duration": 4.72,
+      "end": 496.0,
+      "text": "null then have appended as you know if"
+    },
+    {
+      "start": 494.0,
+      "duration": 3.44,
+      "end": 497.44,
+      "text": "the node is null then i've appended"
+    },
+    {
+      "start": 496.0,
+      "duration": 3.52,
+      "end": 499.52,
+      "text": "nothing else"
+    },
+    {
+      "start": 497.44,
+      "duration": 3.92,
+      "end": 501.36,
+      "text": "hash is something which i've appended"
+    },
+    {
+      "start": 499.52,
+      "duration": 3.92,
+      "end": 503.44,
+      "text": "and what i've done is"
+    },
+    {
+      "start": 501.36,
+      "duration": 4.399,
+      "end": 505.759,
+      "text": "if it is not null then i've appended the"
+    },
+    {
+      "start": 503.44,
+      "duration": 5.199,
+      "end": 508.639,
+      "text": "value i'll convert it to a string and"
+    },
+    {
+      "start": 505.759,
+      "duration": 4.88,
+      "end": 510.639,
+      "text": "then a comma so either hash or comma and"
+    },
+    {
+      "start": 508.639,
+      "duration": 3.601,
+      "end": 512.24,
+      "text": "then the only thing that i've slightly"
+    },
+    {
+      "start": 510.639,
+      "duration": 4.561,
+      "end": 515.2,
+      "text": "done different in level order traversal"
+    },
+    {
+      "start": 512.24,
+      "duration": 4.64,
+      "end": 516.88,
+      "text": "is instead of checking left and right"
+    },
+    {
+      "start": 515.2,
+      "duration": 4.959,
+      "end": 520.159,
+      "text": "okay instead of checking left and right"
+    },
+    {
+      "start": 516.88,
+      "duration": 5.44,
+      "end": 522.32,
+      "text": "to be null i have inserted the left and"
+    },
+    {
+      "start": 520.159,
+      "duration": 4.481,
+      "end": 524.64,
+      "text": "right even if it's null it will go"
+    },
+    {
+      "start": 522.32,
+      "duration": 4.48,
+      "end": 526.8000000000001,
+      "text": "inside because if it's coming out as"
+    },
+    {
+      "start": 524.64,
+      "duration": 3.44,
+      "end": 528.08,
+      "text": "null i'm appending as hash so that is"
+    },
+    {
+      "start": 526.8,
+      "duration": 3.76,
+      "end": 530.56,
+      "text": "the only difference that i've done in"
+    },
+    {
+      "start": 528.08,
+      "duration": 4.08,
+      "end": 532.1600000000001,
+      "text": "level order once everything is done what"
+    },
+    {
+      "start": 530.56,
+      "duration": 4.0,
+      "end": 534.56,
+      "text": "i've done is i've returned this this you"
+    },
+    {
+      "start": 532.16,
+      "duration": 4.0,
+      "end": 536.16,
+      "text": "can ignore i was just debugging so i've"
+    },
+    {
+      "start": 534.56,
+      "duration": 4.08,
+      "end": 538.64,
+      "text": "returned the s"
+    },
+    {
+      "start": 536.16,
+      "duration": 4.4,
+      "end": 540.56,
+      "text": "okay so this is how the serialize will"
+    },
+    {
+      "start": 538.64,
+      "duration": 4.879,
+      "end": 543.519,
+      "text": "look like so this serialized function"
+    },
+    {
+      "start": 540.56,
+      "duration": 5.36,
+      "end": 545.92,
+      "text": "will give me like i'll give him a root"
+    },
+    {
+      "start": 543.519,
+      "duration": 4.88,
+      "end": 548.399,
+      "text": "he will give me a string"
+    },
+    {
+      "start": 545.92,
+      "duration": 5.28,
+      "end": 551.1999999999999,
+      "text": "now this string will be passed on to"
+    },
+    {
+      "start": 548.399,
+      "duration": 4.961,
+      "end": 553.36,
+      "text": "this d serialized okay the string is"
+    },
+    {
+      "start": 551.2,
+      "duration": 3.759,
+      "end": 554.9590000000001,
+      "text": "passed on to this dc device and i have"
+    },
+    {
+      "start": 553.36,
+      "duration": 2.8,
+      "end": 556.16,
+      "text": "to return the"
+    },
+    {
+      "start": 554.959,
+      "duration": 3.681,
+      "end": 558.64,
+      "text": "i have to return like this will be"
+    },
+    {
+      "start": 556.16,
+      "duration": 5.2,
+      "end": 561.36,
+      "text": "passed and i have to return the root so"
+    },
+    {
+      "start": 558.64,
+      "duration": 4.16,
+      "end": 562.8,
+      "text": "let's check out the dc relays"
+    },
+    {
+      "start": 561.36,
+      "duration": 3.599,
+      "end": 564.9590000000001,
+      "text": "so in order to understand uh"
+    },
+    {
+      "start": 562.8,
+      "duration": 5.2,
+      "end": 568.0,
+      "text": "decentralized you have to know string"
+    },
+    {
+      "start": 564.959,
+      "duration": 5.681,
+      "end": 570.64,
+      "text": "stream and get line okay so what i've"
+    },
+    {
+      "start": 568.0,
+      "duration": 5.12,
+      "end": 573.12,
+      "text": "done is if the string that is data that"
+    },
+    {
+      "start": 570.64,
+      "duration": 4.96,
+      "end": 575.6,
+      "text": "is given to you if that data like is"
+    },
+    {
+      "start": 573.12,
+      "duration": 4.08,
+      "end": 577.2,
+      "text": "empty that means the"
+    },
+    {
+      "start": 575.6,
+      "duration": 4.239,
+      "end": 579.839,
+      "text": "there is no binary tree so i'll return a"
+    },
+    {
+      "start": 577.2,
+      "duration": 5.12,
+      "end": 582.32,
+      "text": "null okay or else what i'll do is i'll"
+    },
+    {
+      "start": 579.839,
+      "duration": 4.801,
+      "end": 584.6400000000001,
+      "text": "do a string stream it basically allows"
+    },
+    {
+      "start": 582.32,
+      "duration": 4.88,
+      "end": 587.2,
+      "text": "the string to be i treated over as"
+    },
+    {
+      "start": 584.64,
+      "duration": 4.56,
+      "end": 589.1999999999999,
+      "text": "objects so you can read about it so what"
+    },
+    {
+      "start": 587.2,
+      "duration": 5.68,
+      "end": 592.88,
+      "text": "i've done is assuming it to be like 1"
+    },
+    {
+      "start": 589.2,
+      "duration": 6.0,
+      "end": 595.2,
+      "text": "comma 2 comma 13 comma hash comma"
+    },
+    {
+      "start": 592.88,
+      "duration": 4.16,
+      "end": 597.04,
+      "text": "something like 4"
+    },
+    {
+      "start": 595.2,
+      "duration": 4.4,
+      "end": 599.6,
+      "text": "dot so basically after that the moment i"
+    },
+    {
+      "start": 597.04,
+      "duration": 4.56,
+      "end": 601.5999999999999,
+      "text": "do a get line okay that's that's a"
+    },
+    {
+      "start": 599.6,
+      "duration": 3.04,
+      "end": 602.64,
+      "text": "format the moment i do a get line on the"
+    },
+    {
+      "start": 601.6,
+      "duration": 2.88,
+      "end": 604.48,
+      "text": "stream"
+    },
+    {
+      "start": 602.64,
+      "duration": 3.759,
+      "end": 606.399,
+      "text": "and with the string str"
+    },
+    {
+      "start": 604.48,
+      "duration": 4.16,
+      "end": 608.64,
+      "text": "and i'm saying the delimiter the"
+    },
+    {
+      "start": 606.399,
+      "duration": 3.281,
+      "end": 609.68,
+      "text": "separation is comma first it will go"
+    },
+    {
+      "start": 608.64,
+      "duration": 2.879,
+      "end": 611.519,
+      "text": "over here"
+    },
+    {
+      "start": 609.68,
+      "duration": 3.68,
+      "end": 613.3599999999999,
+      "text": "again if i do a get line next time it"
+    },
+    {
+      "start": 611.519,
+      "duration": 3.361,
+      "end": 614.88,
+      "text": "will automatically go over 2 again if i"
+    },
+    {
+      "start": 613.36,
+      "duration": 3.76,
+      "end": 617.12,
+      "text": "do a get line it will automatically go"
+    },
+    {
+      "start": 614.88,
+      "duration": 4.079,
+      "end": 618.959,
+      "text": "over 13 so you have to just check out"
+    },
+    {
+      "start": 617.12,
+      "duration": 3.52,
+      "end": 620.64,
+      "text": "like you have to do a stream and after"
+    },
+    {
+      "start": 618.959,
+      "duration": 4.0,
+      "end": 622.959,
+      "text": "that if you do keep on doing get line"
+    },
+    {
+      "start": 620.64,
+      "duration": 3.84,
+      "end": 624.48,
+      "text": "using the separator and it will"
+    },
+    {
+      "start": 622.959,
+      "duration": 4.0,
+      "end": 626.959,
+      "text": "automatically just iterate over the"
+    },
+    {
+      "start": 624.48,
+      "duration": 4.16,
+      "end": 628.64,
+      "text": "strings using the separator okay that's"
+    },
+    {
+      "start": 626.959,
+      "duration": 2.721,
+      "end": 629.68,
+      "text": "that's what i've done over here"
+    },
+    {
+      "start": 628.64,
+      "duration": 3.68,
+      "end": 632.3199999999999,
+      "text": "after that what i've done is i've"
+    },
+    {
+      "start": 629.68,
+      "duration": 4.88,
+      "end": 634.56,
+      "text": "created the root with stoi str because"
+    },
+    {
+      "start": 632.32,
+      "duration": 4.24,
+      "end": 636.5600000000001,
+      "text": "first time the str will be pointing here"
+    },
+    {
+      "start": 634.56,
+      "duration": 4.16,
+      "end": 638.7199999999999,
+      "text": "right one so i've just made sure that"
+    },
+    {
+      "start": 636.56,
+      "duration": 4.719,
+      "end": 641.279,
+      "text": "the root is created after that simple"
+    },
+    {
+      "start": 638.72,
+      "duration": 5.44,
+      "end": 644.1600000000001,
+      "text": "whatever i've done uh in the dry run"
+    },
+    {
+      "start": 641.279,
+      "duration": 6.321,
+      "end": 647.6,
+      "text": "took a queue started with root and after"
+    },
+    {
+      "start": 644.16,
+      "duration": 5.119,
+      "end": 649.279,
+      "text": "that took out that value correct and got"
+    },
+    {
+      "start": 647.6,
+      "duration": 3.919,
+      "end": 651.519,
+      "text": "whatever is on the left like whatever is"
+    },
+    {
+      "start": 649.279,
+      "duration": 5.041,
+      "end": 654.32,
+      "text": "the next guy and made sure it is"
+    },
+    {
+      "start": 651.519,
+      "duration": 5.601,
+      "end": 657.12,
+      "text": "attached like if it is a number if it is"
+    },
+    {
+      "start": 654.32,
+      "duration": 5.04,
+      "end": 659.36,
+      "text": "a number okay then i have created a new"
+    },
+    {
+      "start": 657.12,
+      "duration": 5.12,
+      "end": 662.24,
+      "text": "node on the left i have attached it to"
+    },
+    {
+      "start": 659.36,
+      "duration": 4.88,
+      "end": 664.24,
+      "text": "the notes left"
+    },
+    {
+      "start": 662.24,
+      "duration": 5.12,
+      "end": 667.36,
+      "text": "and i've pushed it into the queue very"
+    },
+    {
+      "start": 664.24,
+      "duration": 4.8,
+      "end": 669.04,
+      "text": "very simple okay similarly the next time"
+    },
+    {
+      "start": 667.36,
+      "duration": 3.44,
+      "end": 670.8000000000001,
+      "text": "i'll take this 13"
+    },
+    {
+      "start": 669.04,
+      "duration": 4.239,
+      "end": 673.279,
+      "text": "and now again i'll create the new node"
+    },
+    {
+      "start": 670.8,
+      "duration": 5.039,
+      "end": 675.8389999999999,
+      "text": "as 13 that's what i've done over here"
+    },
+    {
+      "start": 673.279,
+      "duration": 5.201,
+      "end": 678.48,
+      "text": "and again i pushed that just in case it"
+    },
+    {
+      "start": 675.839,
+      "duration": 3.521,
+      "end": 679.36,
+      "text": "was a null then i have assigned"
+    },
+    {
+      "start": 678.48,
+      "duration": 2.88,
+      "end": 681.36,
+      "text": "null"
+    },
+    {
+      "start": 679.36,
+      "duration": 4.24,
+      "end": 683.6,
+      "text": "or right to the null if it was not how"
+    },
+    {
+      "start": 681.36,
+      "duration": 4.64,
+      "end": 686.0,
+      "text": "do you know it's a null if it's a hash"
+    },
+    {
+      "start": 683.6,
+      "duration": 4.0,
+      "end": 687.6,
+      "text": "or if it's a hash okay in that case it's"
+    },
+    {
+      "start": 686.0,
+      "duration": 3.44,
+      "end": 689.44,
+      "text": "a null once you have done this"
+    },
+    {
+      "start": 687.6,
+      "duration": 4.479,
+      "end": 692.0790000000001,
+      "text": "throughout the queue you can easily"
+    },
+    {
+      "start": 689.44,
+      "duration": 5.2,
+      "end": 694.6400000000001,
+      "text": "return the root of the binary tree which"
+    },
+    {
+      "start": 692.079,
+      "duration": 4.641,
+      "end": 696.7199999999999,
+      "text": "is going to be your root after d"
+    },
+    {
+      "start": 694.64,
+      "duration": 3.92,
+      "end": 698.56,
+      "text": "serializing so that's how the c plus"
+    },
+    {
+      "start": 696.72,
+      "duration": 4.0,
+      "end": 700.72,
+      "text": "plus code will look like if i discuss"
+    },
+    {
+      "start": 698.56,
+      "duration": 4.56,
+      "end": 703.1199999999999,
+      "text": "the time complexity of c plus plus code"
+    },
+    {
+      "start": 700.72,
+      "duration": 3.92,
+      "end": 704.64,
+      "text": "can i say in serializing it's a level"
+    },
+    {
+      "start": 703.12,
+      "duration": 4.0,
+      "end": 707.12,
+      "text": "order traversal that i'm doing so it's a"
+    },
+    {
+      "start": 704.64,
+      "duration": 4.48,
+      "end": 709.12,
+      "text": "big of n and the space that i'm using is"
+    },
+    {
+      "start": 707.12,
+      "duration": 4.0,
+      "end": 711.12,
+      "text": "definitely big off n for a q and a"
+    },
+    {
+      "start": 709.12,
+      "duration": 3.76,
+      "end": 712.88,
+      "text": "string so i can say level order b"
+    },
+    {
+      "start": 711.12,
+      "duration": 4.399,
+      "end": 715.519,
+      "text": "serialize everything is a level order so"
+    },
+    {
+      "start": 712.88,
+      "duration": 5.04,
+      "end": 717.92,
+      "text": "this can be overall the time complexity"
+    },
+    {
+      "start": 715.519,
+      "duration": 3.44,
+      "end": 718.9590000000001,
+      "text": "yeah like i'm just"
+    },
+    {
+      "start": 717.92,
+      "duration": 3.12,
+      "end": 721.04,
+      "text": "i'm just"
+    },
+    {
+      "start": 718.959,
+      "duration": 4.32,
+      "end": 723.279,
+      "text": "taking it together like not to n and all"
+    },
+    {
+      "start": 721.04,
+      "duration": 4.64,
+      "end": 725.68,
+      "text": "i'm just writing it all over as we go"
+    },
+    {
+      "start": 723.279,
+      "duration": 4.0,
+      "end": 727.279,
+      "text": "off n so that that was about the c plus"
+    },
+    {
+      "start": 725.68,
+      "duration": 3.2,
+      "end": 728.88,
+      "text": "plus so now it's time to check out the"
+    },
+    {
+      "start": 727.279,
+      "duration": 4.56,
+      "end": 731.8389999999999,
+      "text": "java code so"
+    },
+    {
+      "start": 728.88,
+      "duration": 5.68,
+      "end": 734.56,
+      "text": "as you know you'll be given a root"
+    },
+    {
+      "start": 731.839,
+      "duration": 5.281,
+      "end": 737.12,
+      "text": "and you need to return a string okay and"
+    },
+    {
+      "start": 734.56,
+      "duration": 3.92,
+      "end": 738.4799999999999,
+      "text": "that string again someone will pass you"
+    },
+    {
+      "start": 737.12,
+      "duration": 3.279,
+      "end": 740.399,
+      "text": "and then you have to return a root"
+    },
+    {
+      "start": 738.48,
+      "duration": 3.84,
+      "end": 742.32,
+      "text": "that's what if you do so this part is"
+    },
+    {
+      "start": 740.399,
+      "duration": 4.321,
+      "end": 744.72,
+      "text": "which is called serialization so let's"
+    },
+    {
+      "start": 742.32,
+      "duration": 4.72,
+      "end": 747.0400000000001,
+      "text": "talk about the serialization so root is"
+    },
+    {
+      "start": 744.72,
+      "duration": 5.52,
+      "end": 750.24,
+      "text": "given to you okay so what i've done is"
+    },
+    {
+      "start": 747.04,
+      "duration": 4.0,
+      "end": 751.04,
+      "text": "i've take if the root is null i can say"
+    },
+    {
+      "start": 750.24,
+      "duration": 2.719,
+      "end": 752.9590000000001,
+      "text": "that"
+    },
+    {
+      "start": 751.04,
+      "duration": 3.52,
+      "end": 754.56,
+      "text": "i'll i'll just return an empty string"
+    },
+    {
+      "start": 752.959,
+      "duration": 2.801,
+      "end": 755.76,
+      "text": "very straight forward"
+    },
+    {
+      "start": 754.56,
+      "duration": 3.2,
+      "end": 757.76,
+      "text": "if if"
+    },
+    {
+      "start": 755.76,
+      "duration": 4.8,
+      "end": 760.56,
+      "text": "after that root is not none i'll go up"
+    },
+    {
+      "start": 757.76,
+      "duration": 4.319,
+      "end": 762.079,
+      "text": "i'll just declare a queue at first okay"
+    },
+    {
+      "start": 760.56,
+      "duration": 3.12,
+      "end": 763.68,
+      "text": "so i've declared a queue"
+    },
+    {
+      "start": 762.079,
+      "duration": 3.2,
+      "end": 765.279,
+      "text": "a string"
+    },
+    {
+      "start": 763.68,
+      "duration": 5.279,
+      "end": 768.959,
+      "text": "that's string builder rest has been"
+    },
+    {
+      "start": 765.279,
+      "duration": 5.041,
+      "end": 770.32,
+      "text": "taken in the queue i add root after that"
+    },
+    {
+      "start": 768.959,
+      "duration": 2.88,
+      "end": 771.8389999999999,
+      "text": "i'll keep on iterating till the queue is"
+    },
+    {
+      "start": 770.32,
+      "duration": 3.6,
+      "end": 773.9200000000001,
+      "text": "not empty basically i'll start doing the"
+    },
+    {
+      "start": 771.839,
+      "duration": 4.081,
+      "end": 775.9200000000001,
+      "text": "level order traversal okay"
+    },
+    {
+      "start": 773.92,
+      "duration": 4.4,
+      "end": 778.3199999999999,
+      "text": "this time the difference that i will do"
+    },
+    {
+      "start": 775.92,
+      "duration": 4.56,
+      "end": 780.4799999999999,
+      "text": "is i'll take the top most of the queue"
+    },
+    {
+      "start": 778.32,
+      "duration": 4.079,
+      "end": 782.399,
+      "text": "generally in level order if the left is"
+    },
+    {
+      "start": 780.48,
+      "duration": 4.08,
+      "end": 784.5600000000001,
+      "text": "not null then only you add and the right"
+    },
+    {
+      "start": 782.399,
+      "duration": 4.321,
+      "end": 786.72,
+      "text": "is not null then only you'll add since"
+    },
+    {
+      "start": 784.56,
+      "duration": 4.56,
+      "end": 789.1199999999999,
+      "text": "i'm adding null i'm adding nulls to it"
+    },
+    {
+      "start": 786.72,
+      "duration": 4.559,
+      "end": 791.279,
+      "text": "like i'm adding hash if it is a null so"
+    },
+    {
+      "start": 789.12,
+      "duration": 4.32,
+      "end": 793.44,
+      "text": "always add left and right even if it's a"
+    },
+    {
+      "start": 791.279,
+      "duration": 4.24,
+      "end": 795.519,
+      "text": "null always add left and right and if"
+    },
+    {
+      "start": 793.44,
+      "duration": 5.04,
+      "end": 798.48,
+      "text": "the node comes out to be null"
+    },
+    {
+      "start": 795.519,
+      "duration": 5.12,
+      "end": 800.639,
+      "text": "i will append an n like this can be any"
+    },
+    {
+      "start": 798.48,
+      "duration": 4.24,
+      "end": 802.72,
+      "text": "any delimiter as i said again it can be"
+    },
+    {
+      "start": 800.639,
+      "duration": 3.76,
+      "end": 804.399,
+      "text": "any delimited it can be hash it can be n"
+    },
+    {
+      "start": 802.72,
+      "duration": 3.28,
+      "end": 806.0,
+      "text": "it can be anything"
+    },
+    {
+      "start": 804.399,
+      "duration": 3.201,
+      "end": 807.6,
+      "text": "okay so i've taken n over here you can"
+    },
+    {
+      "start": 806.0,
+      "duration": 4.0,
+      "end": 810.0,
+      "text": "take hash you can take and you can take"
+    },
+    {
+      "start": 807.6,
+      "duration": 5.12,
+      "end": 812.72,
+      "text": "anything and if it is not like if it is"
+    },
+    {
+      "start": 810.0,
+      "duration": 4.48,
+      "end": 814.48,
+      "text": "i'll continue by adding n and hash i can"
+    },
+    {
+      "start": 812.72,
+      "duration": 2.72,
+      "end": 815.44,
+      "text": "even keep a comma over here that's your"
+    },
+    {
+      "start": 814.48,
+      "duration": 3.359,
+      "end": 817.839,
+      "text": "choice"
+    },
+    {
+      "start": 815.44,
+      "duration": 4.639,
+      "end": 820.0790000000001,
+      "text": "depend like you have to just keep a"
+    },
+    {
+      "start": 817.839,
+      "duration": 3.44,
+      "end": 821.2790000000001,
+      "text": "separate either it can be comma it can"
+    },
+    {
+      "start": 820.079,
+      "duration": 3.521,
+      "end": 823.5999999999999,
+      "text": "be space"
+    },
+    {
+      "start": 821.279,
+      "duration": 4.961,
+      "end": 826.24,
+      "text": "anything and for null i've assigned it n"
+    },
+    {
+      "start": 823.6,
+      "duration": 5.12,
+      "end": 828.72,
+      "text": "you can keep it as a hash also"
+    },
+    {
+      "start": 826.24,
+      "duration": 3.92,
+      "end": 830.16,
+      "text": "so if it is not null then i'll add the"
+    },
+    {
+      "start": 828.72,
+      "duration": 3.2,
+      "end": 831.9200000000001,
+      "text": "node dot val"
+    },
+    {
+      "start": 830.16,
+      "duration": 3.919,
+      "end": 834.079,
+      "text": "okay into the string and then i'll just"
+    },
+    {
+      "start": 831.92,
+      "duration": 3.279,
+      "end": 835.199,
+      "text": "move across perfect in a string builder"
+    },
+    {
+      "start": 834.079,
+      "duration": 2.641,
+      "end": 836.7199999999999,
+      "text": "i'm adding"
+    },
+    {
+      "start": 835.199,
+      "duration": 3.681,
+      "end": 838.88,
+      "text": "right so that's about the civilization"
+    },
+    {
+      "start": 836.72,
+      "duration": 4.88,
+      "end": 841.6,
+      "text": "once this entire thing is done i can"
+    },
+    {
+      "start": 838.88,
+      "duration": 4.88,
+      "end": 843.76,
+      "text": "return to string like i'll just convert"
+    },
+    {
+      "start": 841.6,
+      "duration": 3.52,
+      "end": 845.12,
+      "text": "the string builder to string a little"
+    },
+    {
+      "start": 843.76,
+      "duration": 3.68,
+      "end": 847.4399999999999,
+      "text": "easily return so this is how the"
+    },
+    {
+      "start": 845.12,
+      "duration": 5.04,
+      "end": 850.16,
+      "text": "serialization will work what about the"
+    },
+    {
+      "start": 847.44,
+      "duration": 4.72,
+      "end": 852.1600000000001,
+      "text": "deceleration you're getting data right"
+    },
+    {
+      "start": 850.16,
+      "duration": 4.4,
+      "end": 854.56,
+      "text": "how's the detail looking so as of now it"
+    },
+    {
+      "start": 852.16,
+      "duration": 6.799,
+      "end": 858.959,
+      "text": "should be looking like one space"
+    },
+    {
+      "start": 854.56,
+      "duration": 5.76,
+      "end": 860.3199999999999,
+      "text": "two space 13 space null space null"
+    },
+    {
+      "start": 858.959,
+      "duration": 3.601,
+      "end": 862.56,
+      "text": "something like this"
+    },
+    {
+      "start": 860.32,
+      "duration": 4.16,
+      "end": 864.48,
+      "text": "ideally that's how i have serialized"
+    },
+    {
+      "start": 862.56,
+      "duration": 4.079,
+      "end": 866.6389999999999,
+      "text": "again that can you can just realize it"
+    },
+    {
+      "start": 864.48,
+      "duration": 4.4,
+      "end": 868.88,
+      "text": "as you wish so if i serialize it like"
+    },
+    {
+      "start": 866.639,
+      "duration": 3.921,
+      "end": 870.5600000000001,
+      "text": "like that if if the string is empty"
+    },
+    {
+      "start": 868.88,
+      "duration": 3.44,
+      "end": 872.32,
+      "text": "that's the first thing then i can say"
+    },
+    {
+      "start": 870.56,
+      "duration": 4.719,
+      "end": 875.279,
+      "text": "that there is no binary tree so i can"
+    },
+    {
+      "start": 872.32,
+      "duration": 4.8,
+      "end": 877.12,
+      "text": "return a null that's perfect if it's not"
+    },
+    {
+      "start": 875.279,
+      "duration": 4.24,
+      "end": 879.519,
+      "text": "then i'll declare a queue just to do the"
+    },
+    {
+      "start": 877.12,
+      "duration": 4.48,
+      "end": 881.6,
+      "text": "level order travis i'll take a string of"
+    },
+    {
+      "start": 879.519,
+      "duration": 4.88,
+      "end": 884.399,
+      "text": "values basically a values array is what"
+    },
+    {
+      "start": 881.6,
+      "duration": 4.72,
+      "end": 886.32,
+      "text": "i'm taking i'm saying data dot split on"
+    },
+    {
+      "start": 884.399,
+      "duration": 4.961,
+      "end": 889.36,
+      "text": "space so basically i'll have an array"
+    },
+    {
+      "start": 886.32,
+      "duration": 4.639,
+      "end": 890.9590000000001,
+      "text": "with 1 2 13 n so i'll have an array like"
+    },
+    {
+      "start": 889.36,
+      "duration": 3.279,
+      "end": 892.639,
+      "text": "this perfect"
+    },
+    {
+      "start": 890.959,
+      "duration": 3.12,
+      "end": 894.079,
+      "text": "now i can easily access these values"
+    },
+    {
+      "start": 892.639,
+      "duration": 3.601,
+      "end": 896.24,
+      "text": "right right"
+    },
+    {
+      "start": 894.079,
+      "duration": 4.32,
+      "end": 898.399,
+      "text": "so after that what i'll do is you can"
+    },
+    {
+      "start": 896.24,
+      "duration": 4.8,
+      "end": 901.04,
+      "text": "either traverse till the queue is not"
+    },
+    {
+      "start": 898.399,
+      "duration": 4.721,
+      "end": 903.12,
+      "text": "empty or you can traverse since this is"
+    },
+    {
+      "start": 901.04,
+      "duration": 4.479,
+      "end": 905.519,
+      "text": "the first guy that you will take and you"
+    },
+    {
+      "start": 903.12,
+      "duration": 4.64,
+      "end": 907.76,
+      "text": "will create the route right that's the"
+    },
+    {
+      "start": 905.519,
+      "duration": 3.921,
+      "end": 909.44,
+      "text": "first guy then the remaining guys has to"
+    },
+    {
+      "start": 907.76,
+      "duration": 3.84,
+      "end": 911.6,
+      "text": "be travis so you can either traverse on"
+    },
+    {
+      "start": 909.44,
+      "duration": 3.759,
+      "end": 913.1990000000001,
+      "text": "this stuff or you can either travel till"
+    },
+    {
+      "start": 911.6,
+      "duration": 3.2,
+      "end": 914.8000000000001,
+      "text": "the queue is not empty that's your"
+    },
+    {
+      "start": 913.199,
+      "duration": 4.08,
+      "end": 917.279,
+      "text": "choice okay"
+    },
+    {
+      "start": 914.8,
+      "duration": 4.24,
+      "end": 919.04,
+      "text": "after that i get the parent that's q dot"
+    },
+    {
+      "start": 917.279,
+      "duration": 4.881,
+      "end": 922.16,
+      "text": "pull i'll get the one"
+    },
+    {
+      "start": 919.04,
+      "duration": 5.919,
+      "end": 924.959,
+      "text": "so i've got the one now on its left i'll"
+    },
+    {
+      "start": 922.16,
+      "duration": 5.679,
+      "end": 927.8389999999999,
+      "text": "add this too so what i've done is on its"
+    },
+    {
+      "start": 924.959,
+      "duration": 4.961,
+      "end": 929.92,
+      "text": "left if it's not null if it's not null"
+    },
+    {
+      "start": 927.839,
+      "duration": 4.321,
+      "end": 932.1600000000001,
+      "text": "what i've done is i've created a new"
+    },
+    {
+      "start": 929.92,
+      "duration": 4.0,
+      "end": 933.92,
+      "text": "node with the next value i basically"
+    },
+    {
+      "start": 932.16,
+      "duration": 3.599,
+      "end": 935.759,
+      "text": "with the two so i've created a new node"
+    },
+    {
+      "start": 933.92,
+      "duration": 4.8,
+      "end": 938.7199999999999,
+      "text": "with the value two and after that i've"
+    },
+    {
+      "start": 935.759,
+      "duration": 4.64,
+      "end": 940.399,
+      "text": "said parent dot left your left is two"
+    },
+    {
+      "start": 938.72,
+      "duration": 2.4,
+      "end": 941.12,
+      "text": "and after that i've added this 2 to the"
+    },
+    {
+      "start": 940.399,
+      "duration": 3.521,
+      "end": 943.92,
+      "text": "q"
+    },
+    {
+      "start": 941.12,
+      "duration": 4.8,
+      "end": 945.92,
+      "text": "similarly i'll take the next guy 13 and"
+    },
+    {
+      "start": 943.92,
+      "duration": 3.359,
+      "end": 947.279,
+      "text": "create a new node and then point the"
+    },
+    {
+      "start": 945.92,
+      "duration": 3.68,
+      "end": 949.5999999999999,
+      "text": "right pointer"
+    },
+    {
+      "start": 947.279,
+      "duration": 4.161,
+      "end": 951.4399999999999,
+      "text": "create a new node right point the right"
+    },
+    {
+      "start": 949.6,
+      "duration": 4.08,
+      "end": 953.6800000000001,
+      "text": "pointer to the right and after that add"
+    },
+    {
+      "start": 951.44,
+      "duration": 4.24,
+      "end": 955.6800000000001,
+      "text": "it to the queue if if both the cases are"
+    },
+    {
+      "start": 953.68,
+      "duration": 3.519,
+      "end": 957.199,
+      "text": "not maintained then automatically the"
+    },
+    {
+      "start": 955.68,
+      "duration": 3.839,
+      "end": 959.519,
+      "text": "left is pointing to the null and the"
+    },
+    {
+      "start": 957.199,
+      "duration": 4.481,
+      "end": 961.68,
+      "text": "right is pointing to the null if it is"
+    },
+    {
+      "start": 959.519,
+      "duration": 4.56,
+      "end": 964.079,
+      "text": "if it is n like if it is n then we will"
+    },
+    {
+      "start": 961.68,
+      "duration": 4.88,
+      "end": 966.56,
+      "text": "not do that and once we have completed"
+    },
+    {
+      "start": 964.079,
+      "duration": 5.041,
+      "end": 969.12,
+      "text": "the entire level order traversal i can"
+    },
+    {
+      "start": 966.56,
+      "duration": 5.519,
+      "end": 972.079,
+      "text": "return the root which will ultimately be"
+    },
+    {
+      "start": 969.12,
+      "duration": 4.719,
+      "end": 973.839,
+      "text": "the root of my binary tree for the given"
+    },
+    {
+      "start": 972.079,
+      "duration": 4.161,
+      "end": 976.2399999999999,
+      "text": "string this is how the dc relation will"
+    },
+    {
+      "start": 973.839,
+      "duration": 4.0,
+      "end": 977.839,
+      "text": "look like the time complexity overall"
+    },
+    {
+      "start": 976.24,
+      "duration": 3.36,
+      "end": 979.6,
+      "text": "can be big off and liking i can"
+    },
+    {
+      "start": 977.839,
+      "duration": 4.24,
+      "end": 982.0790000000001,
+      "text": "summarize it to big off and in the space"
+    },
+    {
+      "start": 979.6,
+      "duration": 4.799,
+      "end": 984.399,
+      "text": "complexity i can summarize that too we"
+    },
+    {
+      "start": 982.079,
+      "duration": 5.281,
+      "end": 987.3599999999999,
+      "text": "go off and as usual because i'm just"
+    },
+    {
+      "start": 984.399,
+      "duration": 5.041,
+      "end": 989.44,
+      "text": "doing a level order traversal so guys uh"
+    },
+    {
+      "start": 987.36,
+      "duration": 4.159,
+      "end": 991.519,
+      "text": "you can solve this using level order you"
+    },
+    {
+      "start": 989.44,
+      "duration": 4.0,
+      "end": 993.44,
+      "text": "can also use in order post order"
+    },
+    {
+      "start": 991.519,
+      "duration": 4.481,
+      "end": 996.0,
+      "text": "pre-order whichever order whichever"
+    },
+    {
+      "start": 993.44,
+      "duration": 4.72,
+      "end": 998.1600000000001,
+      "text": "traversal you want to use you can use it"
+    },
+    {
+      "start": 996.0,
+      "duration": 4.399,
+      "end": 1000.399,
+      "text": "the logic just make sure whatever logic"
+    },
+    {
+      "start": 998.16,
+      "duration": 4.08,
+      "end": 1002.24,
+      "text": "you're using the reverse logic should be"
+    },
+    {
+      "start": 1000.399,
+      "duration": 4.961,
+      "end": 1005.36,
+      "text": "implementing the same like same reverse"
+    },
+    {
+      "start": 1002.24,
+      "duration": 4.48,
+      "end": 1006.72,
+      "text": "logic not some once else okay so i hope"
+    },
+    {
+      "start": 1005.36,
+      "duration": 3.44,
+      "end": 1008.8000000000001,
+      "text": "you've understood the entire explanation"
+    },
+    {
+      "start": 1006.72,
+      "duration": 3.6,
+      "end": 1010.32,
+      "text": "as well as the code just in case you did"
+    },
+    {
+      "start": 1008.8,
+      "duration": 2.959,
+      "end": 1011.7589999999999,
+      "text": "please please please make sure you like"
+    },
+    {
+      "start": 1010.32,
+      "duration": 4.24,
+      "end": 1014.5600000000001,
+      "text": "this video because it took a lot of"
+    },
+    {
+      "start": 1011.759,
+      "duration": 4.561,
+      "end": 1016.32,
+      "text": "efforts to make this entire tree series"
+    },
+    {
+      "start": 1014.56,
+      "duration": 3.519,
+      "end": 1018.079,
+      "text": "also if you wish you can definitely drop"
+    },
+    {
+      "start": 1016.32,
+      "duration": 4.56,
+      "end": 1020.88,
+      "text": "in a comment that will keep motivating"
+    },
+    {
+      "start": 1018.079,
+      "duration": 3.921,
+      "end": 1022.0,
+      "text": "me to make such further series also if"
+    },
+    {
+      "start": 1020.88,
+      "duration": 2.48,
+      "end": 1023.36,
+      "text": "you're new to the channel please do"
+    },
+    {
+      "start": 1022.0,
+      "duration": 2.959,
+      "end": 1024.959,
+      "text": "consider subscribing because i'm going"
+    },
+    {
+      "start": 1023.36,
+      "duration": 3.679,
+      "end": 1027.039,
+      "text": "to bring in such more series in the"
+    },
+    {
+      "start": 1024.959,
+      "duration": 3.281,
+      "end": 1028.24,
+      "text": "upcoming future as well with this uh"
+    },
+    {
+      "start": 1027.039,
+      "duration": 4.431,
+      "end": 1031.47,
+      "text": "let's wrap up this video let's read in"
+    },
+    {
+      "start": 1028.24,
+      "duration": 11.15,
+      "end": 1039.39,
+      "text": "the next lecture bye"
+    },
+    {
+      "start": 1031.47,
+      "duration": 7.92,
+      "end": 1039.39,
+      "text": "[Music]"
+    }
+  ]
+}

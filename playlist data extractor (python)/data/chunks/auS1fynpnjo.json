@@ -1,0 +1,108 @@
+{
+  "video_id": "auS1fynpnjo",
+  "position": 236,
+  "title": "DP 56. Count Square Submatrices with All Ones | DP on Rectangles 🔥",
+  "url": "https://www.youtube.com/watch?v=auS1fynpnjo",
+  "chunk_count": 9,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "auS1fynpnjo",
+      "position": 236,
+      "title": "DP 56. Count Square Submatrices with All Ones | DP on Rectangles 🔥",
+      "url": "https://www.youtube.com/watch?v=auS1fynpnjo",
+      "start": 0.0,
+      "end": 137.52,
+      "text": "hey everyone welcome back to take you forward so today we will be solving the problem count number of square sub matrices yes what does the question state you will be given an n cross m matrix filled up with one and zeros okay i have to figure out how many square sub matrixes are there what is square whose length is equal to the breadth right so for an example i can say we have a size 1 square here a size 1 square here so i can say there are six size one squares can i say that i definitely can how many uh two size squares are there then uh that can be this only like i can see just one size 2 square do i have a size 3 square the answer to that is no so in total i have 7 squares in total i have seven squares in this particular n cross m mattress okay uh so in total i have seven square in this particular matrix now let's uh check out for this how many do you think i know one thing for sure we have one two three four five six seven eight nine ten we know ten size one squares are definitely there how many two sides are there let's quickly check that out as well we know one is here for sure we know one is here for sure we know one is here for sure we know one is here for sure so there is four size two squares that's something for sure how many uh do we have as three i can see uh do we have a three size square yes this is the three size square that we only have so we have a one size three squares so in short i have 15 total squares that is the question i will be giving you an n cross m matrix you have to tell me the total number of sub matrices which are squares it can be",
+      "word_count": 341
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "auS1fynpnjo",
+      "position": 236,
+      "title": "DP 56. Count Square Submatrices with All Ones | DP on Rectangles 🔥",
+      "url": "https://www.youtube.com/watch?v=auS1fynpnjo",
+      "start": 131.12,
+      "end": 243.83999999999997,
+      "text": "sub matrices which are squares it can be of size 1 size 2 size 3 can be of any particular size so how do you approach this problem but definitely uh like if this question comes up in an interview you say that you're gonna try out the brute force solution and it's very simple you basically stand here and you say okay uh this guy can be one square this guy can be 2 squared this guy can be 3 square so there can be 3 squares then you stand here you say this guy can be 1 square this guy can be 2 square similarly you stand here you say this guy can only be 1 square stand here one square only two square stand here one square two square so probably you can just run across some for loops and that will be your brute force where you just keep on expanding like you basically stand here and you try expanding to this then you from here try expanding to this and that is only possible if these guys are one this expansion is only possible if these guys are one so you need to have a proper check which is again going to be slightly complicated so like this in shorter you don't have to code it in an interview you just have to say that this is what i'm thinking they'll not ask you to code it because the code will be very very complex that's a brute force solution where you stand at a particular stuff and you try to expand it but can we do better uh yes we can do better and that is where something like dynamic programming will come in yes till now all the dynamic programming solutions that we have done was based on recursion okay was based on recursion over here we can apply recursion but that is not intuitive generically in all square problems we tend to write the tabulation we tend to write the tabulation that is much more intuitive and you'll",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "auS1fynpnjo",
+      "position": 236,
+      "title": "DP 56. Count Square Submatrices with All Ones | DP on Rectangles 🔥",
+      "url": "https://www.youtube.com/watch?v=auS1fynpnjo",
+      "start": 240.64,
+      "end": 367.12,
+      "text": "much more intuitive and you'll understand why is that much more intuitive we will try to write the tabulation format so what we do is generally in all the square problems there are not many like there are only couple or three square problems so what you do is you create the similar size dp array okay try to create the similar size dp array and what you state is dp of i j like 0 1 2 0 1 2 okay now whatever value is here that basically states how many squares how many squares end at i comma j like the right bottom the right bottom is at i j the right bottom is at i j how many are there whose right bottom is at i j for an example if i ask for this guy how many guys are there like how many squares will end at this guy being the right bottle i can say only he himself so there'll be only one guy who will say that i will be the right bottom which is this guy for this guy this cannot be a square because this is a rectangle only this guy is the right bottom of himself so again one for this guy this guy himself will be the right bottom because this is a rectangle this is a rectangle so this guy will be the bottom guy so that's one again similarly for this guy this will be a rectangle so he himself will be the right bottom one for himself again for this guy he himself will be the right bottom so one for himself so i'm definitely sure that this row and this column gets copied because there is the single elements that are single elements who will be the square so if i ask you this guy will be the right bottom for how many squares one square is one square is he himself one square is he himself where he's the right bottom the other one is this where he is the right most bottom guy",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "auS1fynpnjo",
+      "position": 236,
+      "title": "DP 56. Count Square Submatrices with All Ones | DP on Rectangles 🔥",
+      "url": "https://www.youtube.com/watch?v=auS1fynpnjo",
+      "start": 362.72,
+      "end": 484.24,
+      "text": "right most bottom guy one is he himself and he's the right most bottom guy the other square is he where he's the right bottom guy so i can probably put in a two over here if i ask for this one he is himself where he is the right bottom guy the other is this portion where this is the right bottom again so again two for this he himself and this is the other one now beyond this this cannot be because this rectangle i'm looking for square he himself and in this he so again too now for this i can say he himself this here and the entire again himself so there are three one is this one is this one is this in which this guy is the right bottom so there are three so i know at every junction i have one square i have one i have one i have one this can be a part of two this can be a part of two this can be a part of one so how do i fill up this dp table is my question because i know for every guy how many squares are there and i need the total so i can probably do 1 plus 1 plus 1 plus 2 plus 2 plus 1 plus 2 plus 3 if i sum sum it up all i'll get all the squares that we can form because we are assuming every guy to be the square bot like the right bottom so but how do we fill up this dp table because manually looking we understand that okay this guy is a portion of he himself again for this again for this but how do you actually fill this up that is that is a point to be raised so for that what i'll do is i'll take the next square okay and try to fill this up and see if we are able to fill this okay now as i said the first row will be",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "auS1fynpnjo",
+      "position": 236,
+      "title": "DP 56. Count Square Submatrices with All Ones | DP on Rectangles 🔥",
+      "url": "https://www.youtube.com/watch?v=auS1fynpnjo",
+      "start": 478.479,
+      "end": 601.68,
+      "text": "okay now as i said the first row will be they themselves the first column will be they themselves so you don't need to do anything you just replicate them just go across and replicate them now over here can i see if this guy is forming one square this guy is forming one square this guy is forming one square if i add a one that's bound to form one more square it's bound for one more square okay so that's two over here this guy is forming a single square this guy is forming two square but if it attaches this this will be a rectangle and this guy is forming a single square so can i say i don't need to take this tool i don't need to take this too because this on attaching will be a rectangle but what i can do is since this is a single square this is a single square and i'm very much sure if this is forming a 2 square this will also form a single square thereby can i say i'll take the minimal of this this this and do a plus one for him he himself so that will be a two i hope you understood because because again let's repeat we had a two which means we were having two squares which were ending here and if i expand this we cannot have because it's a rectangle thereby it's very important we take the minimal of all of these because the minimal is important over here if this is forming one square this is forming one square and this is forming two square then it's bound that we take this because this two will also form one that's why a two comes in over here okay now again we are coming over here same logic a one is here a one is here and then there is two which means i can form two squares one is this the other one is this but if i expand this this cannot be three squares because this can",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "auS1fynpnjo",
+      "position": 236,
+      "title": "DP 56. Count Square Submatrices with All Ones | DP on Rectangles 🔥",
+      "url": "https://www.youtube.com/watch?v=auS1fynpnjo",
+      "start": 596.64,
+      "end": 703.44,
+      "text": "cannot be three squares because this can just be one and this can be two so thereby again the minimal and i'll fill in with two perfect similarly over here we have a two which means there is one square he and the other square he that's y two and there is again one which means one himself again one which means one himself so can i say again the minimal of all and i'll just fill up two and over here a point to be seen over here we see that okay this guy this guy says this guy can form two which means one for himself and the other for himself this guy also says i can form two which means one for himself one for himself which means all of these guys are filled with once all of these guys are filled with ones that is the reason there is a two over here because all of these are filled with ones that is the reason there is a two over here which means all of these are filled with ones and there's a two over here which means all of these are also filled with ones this one and this one so i can assume we see all of these are filled with ones so if i attach one more one i know i'll form a square of size three one himself the other here and the other full that is how you do it okay let's do it for the last one for the last one i see i can just have two guys which means this portion i can again have two guys which means this portion i can again have three guys which means this portion but this guy can actually form this and actually form this and at max can actually form this it cannot go this portion it cannot go this portion and this portion comes under this three so i can just go till this two at max till this two i can go",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "auS1fynpnjo",
+      "position": 236,
+      "title": "DP 56. Count Square Submatrices with All Ones | DP on Rectangles 🔥",
+      "url": "https://www.youtube.com/watch?v=auS1fynpnjo",
+      "start": 698.24,
+      "end": 819.92,
+      "text": "this two at max till this two i can go that is what i can do so i can take this 2 and i can say hey listen i can do for myself i can do for yourself i can do for the 3 so that means there is 2 and i'm adding 1 so that's 3 again thereby the total rectangles will be 1 plus 1 plus 1 plus 1 plus 2 plus 2 plus 2 and you sum it up i hope that makes pretty much sense so the formula is very straight forward if you are let me just quickly fill this up you just fill up the first row as it is in order to fill this in order to fill this you take this guy you take this guy you take this guy and the minimal if it's a one you add one to it the minimum is one there's one so you add now you go over here that's a one you go to this that's a zero you go to this list of one there's a two so the minimum is zero so you take zero plus one one because he will be himself only this cannot expand he'll be himself only there by one next you go here and you say okay listen there's a one so there's a two over here there's a one here there's one here so the minimal one so one plus one two again makes sense because one himself one times of the zero so zero that's how you fill it so i can say any dp of ij will be minimal of dp of the upper row the diagonal and the previous column perfect plus one and this will only be valid if it is a one if it is a one otherwise you just fill in a zero that is as simple as it can get now if you just write this you should be able to get the total number of answers let's quickly uh check out the code so",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "auS1fynpnjo",
+      "position": 236,
+      "title": "DP 56. Count Square Submatrices with All Ones | DP on Rectangles 🔥",
+      "url": "https://www.youtube.com/watch?v=auS1fynpnjo",
+      "start": 815.36,
+      "end": 936.399,
+      "text": "let's quickly uh check out the code so we will declare the dp of size n cross m now you know the first row gets copied so please please copy the first row that's as simple as that what you can do is uh you can go for the first row which is j equal to zero j less than m and j plus plus and please copy the first which is dp of zero or j equal to array of zero and similarly uh please make sure you copy the next thing which is the first column again dp of i zero equal to array of i zero okay once you've done this it is pretty straightforward just go across this this this this go across just make sure you don't uh do the first row and the first column again this can be very simple if array of i j is equal to equal to zero you say db of i j is equal to zero or else you say dp of i j is equal to one plus minimum of dp of the previous row okay comma minimal of dp of the diagonal which is i minus 1 j minus 1 comma dp of the previous row which is previous column rather which is this definitely once you have done all these you need the summation of everyone you can either submit uh you can either submit while calculating or you can just do it across here whatever you wish to that is your choice i'll leave that to you dp of i j that is something which you can do once you've done you can return the summation this is very simple all of them are giving correct answer now if you submit this you will indeed get correct answer so the time complexity guys we're using we go of n into m that is what we're using and the space complexity is an n into m db matrix is what we are using so so i hope i was able to explain you this",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "auS1fynpnjo",
+      "position": 236,
+      "title": "DP 56. Count Square Submatrices with All Ones | DP on Rectangles 🔥",
+      "url": "https://www.youtube.com/watch?v=auS1fynpnjo",
+      "start": 932.639,
+      "end": 958.36,
+      "text": "hope i was able to explain you this problem on the matrix just in case i was please please please make sure you like this video and if you're new to this channel please please please do consider subscribing to us because that is the only thing that keeps me motivated every now and then to make these kind of content so yeah with this i'll be wrapping up this video let's meet in the next one till then bye take care whenever your heart is broken don't ever forget your golden",
+      "word_count": 92
+    }
+  ]
+}

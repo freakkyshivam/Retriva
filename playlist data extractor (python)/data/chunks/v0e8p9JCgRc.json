@@ -1,0 +1,141 @@
+{
+  "video_id": "v0e8p9JCgRc",
+  "position": 305,
+  "title": "L9. Sum of Subarray Minimum | Stack and Queue Playlist",
+  "url": "https://www.youtube.com/watch?v=v0e8p9JCgRc",
+  "chunk_count": 12,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "v0e8p9JCgRc",
+      "position": 305,
+      "title": "L9. Sum of Subarray Minimum | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=v0e8p9JCgRc",
+      "start": 3.76,
+      "end": 119.399,
+      "text": "so let's continue with the stack and Q playlist we starting off everyone welcome back to the channel I hope you guys are doing extremely well so the problem that we will be solving today is sum of subar minimums so what is the problem stating it's stating that you will be given an array of numbers now your task is to tell me sum of sub array minimums let's understand so given an array if I ENT end up writing all the sub arrays possible so maybe I'll start off with the first one which is three three is an individual element sub aray and then maybe 3 comma 1 then maybe 3 comma 1 comma 2 then maybe 3 comma 1 comma 2 comma 4 so these are the four sub arrays that start with three after that maybe I can write one and then a 1 2 and then a 1 2 4 so these are the three sub arrays that start with one after that two and two four these are the two sub arrays that start with two and after that four so what I've done is I've written down all the sub arrays possible from this particular array now your task is to figure out the minimum if you see properly the minimum of all the subarrays can I say the minimum of this is three the minimum of this is one the minimum of this is one the minimum of this is one quite simple three 312 4 the minimum is one of the entire subarray give me the minimum the minimum of this is one the minimum of this is one and the minimum of this is one the minimum of this is two the minimum of this is two and the minimum of this is four so you take all the minimums from all the sub arrays and you sum it up so once you have summed it up the value that you get is 17 and that is what you will have to return the",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "v0e8p9JCgRc",
+      "position": 305,
+      "title": "L9. Sum of Subarray Minimum | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=v0e8p9JCgRc",
+      "start": 114.799,
+      "end": 229.599,
+      "text": "is what you will have to return the value might be very large so the question is stating that you given a module uh mod value which is 10^ 9 + 7 if the value is very large you mod mod the value with this particular value and then return so usually whenever you get larger answers because you cannot store it so what they end up doing is they do a mod so that they can trim up the value perfect so how do we solve this obviously the brute force is clearly visible on the screen right the brute force is generating all the sub arays and figuring out the minimums and summing it up yeah we will generate all the sub arays so if you carefully observe the first subarray is this much the next one is this much the next one is this much and the next one is this much which is all the four sub ARS starting with three so maybe I can keep a ey pointer here and then I can keep adding elements and I can keep updating my minimums yes after that I can keep my eye here first one is this then this then this and as I go through I keep keep updating my minimum and I can keep on adding and then I here this is this this is this and then I here this will be this so can I say like if I have to maybe I'll just quickly erase this so that we can write down the code so we'll take a sum which is 0 and can I say I = to 0 till n minus 1 because from every index we can have sub arrays generated after that maybe can do a minimum which is array of I yes I can do that and after that I know the first subarray starts from it's this much so J equal to y That's the first subarray okay and it goes on till n minus one so what I can",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "v0e8p9JCgRc",
+      "position": 305,
+      "title": "L9. Sum of Subarray Minimum | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=v0e8p9JCgRc",
+      "start": 224.48,
+      "end": 343.12,
+      "text": "goes on till n minus one so what I can do is every time I could update my minimum so which is min of minimum comma array of J not I array of J so my minimum is updated so what I'm very sure is I to J is my subarray then J goes I to J is my subarray then J goes is my subarray I to J is my subarray so every time minimum is going to be my minimum of that subarray because every time I add an element I keep on updating my minimum so what I could do is I could straight away say sum equal to sum plus minimum and remember in all the mod cases you could do a mod over here and you could probably store the mod value equal to I int and then you can write 1 E9 + 7 so that's it so that will be it and you could end up returning whatever is your sum now what is the time complexity that you're taking over here I'm ending up taking a beo of n Square over here because I'm running couple of Loops what about the space complexity I'm not using an external space I'm using constant space obviously this is the moment the interviewer will be not Happ I'll ask you to optimize the B of n Square so let's uh check out the optimal solution so we need to optimize B go of n sare time complexity which means we're looking something around B offen right okay so how do I optimize so what I'll do is I'll go to the initial drawing table and what we did was we generated all the subarrays and among all subarrays we picked up the minimums and then we added it up so if I ask you what is the like how many times this particular element contributed to my answer you'll be like over here once and I don't see so it contributed once to my answer like it was minimum for once so I",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "v0e8p9JCgRc",
+      "position": 305,
+      "title": "L9. Sum of Subarray Minimum | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=v0e8p9JCgRc",
+      "start": 338.199,
+      "end": 463.75899999999996,
+      "text": "answer like it was minimum for once so I can maybe write it in green color it is minimum for once okay how many time did one like contribute to your answer it be like once twice Thrice four times five times six times so it is like six times into the answer how many times is two there in your answer once twice two times how many times is four once so if three has contributed once so I just add three to my answer so I will add three to my answer if one is contributed six times I will end up adding 6 into 1 that is a plus 6 if two has contributed twice I'll add 2 into two 4 if four has contributed once I'll add 4 into one four and eventually I'll get 17 as my answer so what I did was I broke down the problem from generating all the sub arrays to finding out individual contributions and adding them up to get my answer okay is it an optimization we still need to figure out how to find the individual contributions so for that we will move on to this particular example let's uh so before we move on to this one please please make sure you know about next greater element and previous smaller element and if You' have done this you should be able to do the next smaller element and you should be able to do everything which is like next smaller next greater you know previous greater previous smaller you should be able to do all the varieties if you are you're not able to do this please pause this video right now go back and watch the video on next greater element and try to figure out previous smaller element next smaller element try to do it on your own and then come back to this one okay that's the prerequisite otherwise you'll not understand anything fine I tell you one thing if I ask you what is the contribution of this",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "v0e8p9JCgRc",
+      "position": 305,
+      "title": "L9. Sum of Subarray Minimum | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=v0e8p9JCgRc",
+      "start": 459.479,
+      "end": 583.519,
+      "text": "what is the contribution of this particular three and how many subarrays will it be the minimum you'll be like hey uh this can be individual SAR this can be 37 this can be 378 correct but either of these three subarrays in all of them three will be the minimum agreed but if I take 3781 will three be the minimum no in that scenario one will be the minimum so the subar that I can take is 3 37 378 so there are three contributions over here that I see but I'll not count it as of now maybe I can also take 37 maybe I can also take 376 maybe I can also take 3764 but I cannot take Beyond it maybe some subar is on the left side as well or maybe something combining them something combining them you never know maybe something combining like this so you can combine them as well okay so I know one thing for a fact on the left I can take all of these four elements as a subar on the right I can take three elements of a subar not this one not this one so if I can take four on the left three on the right what will be the total number of subar that you can generate simple maths simple maths if this is four this is three the total number of sub arrays combining them will be 4 cross 3 which is 12 I'm not going to explain how this 12 came up it's mathematics which has been taught in high school so you can go back and watch it or you can just write it using pen and people you understand how this is generated so 12 subar is what I could possibly generate so if I could generate 12 sub arays that means three is minimum for 12 sub arrays which means the contribution is 12 cross 3 36 I could straight away add 36 to the answer but now the question arises hey striver how did you figure out that",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "v0e8p9JCgRc",
+      "position": 305,
+      "title": "L9. Sum of Subarray Minimum | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=v0e8p9JCgRc",
+      "start": 578.64,
+      "end": 705.0400000000001,
+      "text": "striver how did you figure out that you'll have like the right has three elements it was super simple what I'll do is I'll end up writing down the indexes the index is 0 1 2 3 4 5 6 7 I ask you a very simple question for this three which is the next smallest element so if you look at this seven is not smaller eight is not smaller one is smaller so the moment you add one to your subarray three never Remains the minimum anymore so you cannot add one so what do you know is for this fourth index the next smaller index will be 7 so 7 minus 4 will give you three elements on the right okay and if I look at the previous smaller element if you look at the previous smaller element this is the previous smaller element so you end up taking this one so if I ask you what is the previous smallest smaller element index that is zero so you're currently at the fourth index so fourth index minus previous smaller index gives you four elements and then you can multiply that you'll get 12 so all you need to know is where is the next smaller index and where is the previous smaller index able to do this I think we we we're done here okay I hope you understood this it's pretty simple because if these elements are greater they can easily form the sub arrays so again I'm assuming you know how to write a next smaller element stuff I'm assuming you also know how to write a previous small element in case you don't know the code will be given below please go back and watch my next greater element video okay so think I got the just if I can do that for three I think I can do that for each and every element I can do that for each and every element right so just make sure if let's say if this was 10 in that case you couldn't",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "v0e8p9JCgRc",
+      "position": 305,
+      "title": "L9. Sum of Subarray Minimum | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=v0e8p9JCgRc",
+      "start": 699.6,
+      "end": 821.6,
+      "text": "this was 10 in that case you couldn't take all the elements just make sure if there is no next small element if you see for this three there is no next small element in such scenarios Please assign next small element to be n like the nth index so that the subtraction holds and the previous smaller element to be minus one in case in case you don't find a previous smaller element okay time to probably write down the code so I'll write down the code and then we can discuss some edge cases so what do I need I need the count like the sum so integer I need to figure out the sum so I'll be given an array perfect so what do I need uh I definitely need uh couple of stacks one as next small element so maybe I can say find next small element and I can write a function for that I'll write it afterwards and that will give me maybe I can say previous small element and I'll say find previous smaller element and I'll pass on the array and maybe that will give me it after that I can take a total which is zero and I can take a mod value which is typically integer and then a 189 + 7 perfect I'm to write down the code so what I'll do is I'll start iterating like I equal to Z I'll go through each and every element and I need to figure out how many elements are there on the left which is typically I can say whatever index I'm currently at I'll do a previous smaller element index that's it I'll ask how many are there on the right which is typically going to be previous sorry next smaller because that is the greater one next small element minus the current that'll give me the number of elements on the right so can I say the contribution will be added to the total so maybe I can say total equal to Total",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "v0e8p9JCgRc",
+      "position": 305,
+      "title": "L9. Sum of Subarray Minimum | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=v0e8p9JCgRc",
+      "start": 817.519,
+      "end": 949.56,
+      "text": "total equal to Total plus right multiplied with left make sure you do a one LL because in case it's a long multiplied with uh the value which is array of I CU that is the contribution and you can do a modu so basically what you do is you do a modulo here and after adding you again do a modulo so that's how you do the modulo after every operation you typically do modulos so that's start and eventually you could end up returning what uh you'll end up returning I think yeah the total that is it so all we need to do is we need to write the find NSC and find PSC so we have some H cases that you will have to consider so I'll tell you the edge cases now time to tell you the edge cases imagine I give you an array like 1 comma 1 so what happens is uh you come across this one so first of all let's do one thing let's uh write down the indexes so the indexes goes as 0o and one and after that let's take some time out and write the nsse so the next smaller element for the first one will be uh they don't have one so you could write the last Index this also doesn't have one so you could write the last IND and the previous smaller element would be minus1 and minus one because they don't have one okay fine now let's do the contribution part imagine you come up to the first element which is the zeroth index element so when you at this element you say how many do I have at left he says I don't uh like typically zero minus of minus one which is I have one element I have one element okay which is he himself okay on left I have one so write that one how many do I have write that's typically uh the zeroth index and zeroth index and the second index so 2 minus 0 I have two elements",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "v0e8p9JCgRc",
+      "position": 305,
+      "title": "L9. Sum of Subarray Minimum | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=v0e8p9JCgRc",
+      "start": 945.399,
+      "end": 1081.799,
+      "text": "index so 2 minus 0 I have two elements which is correct I have two elements on the right so right has two elements what is the contribution twice into one so I'll add twice contribution and typically those sub arrays are itself and one comma 1 like one itself and one comma 1 perfect done after that I move to the next now the moment I move to the next I will get some different numbers and that will be left will be two elements and right will be one element you could do that yourself and the contribution comes out to be this this time the subarrays that are considered is this which is one and then there is this which is 1 comma 1 I will be like hey wait wait wait you already considered one comma one you already considered one comma one why are you again considering one comma one so you'll have to be very sure you have to be very sure if you're considering from here don't consider from the back so you could do either way either you consider from the back and then you don't consider from the front so you can only consider it once you can only consider it once so what you could do is you could probably consider it in the front which is typically saying the next smaller element is correct and you don't consider it on the back now what this means is when you looking for previous smaller element over here when you looked for previous small element you didn't find one and you wrote minus1 instead of it instead of it you end up writing 0 index what you're saying is what you're saying for this one is this is my previous smaller element so it boils down to not previous small element this time previous smaller or equal element so when you do this the left comes out to be just one because the previous smaller element will be updated and that update ated",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "v0e8p9JCgRc",
+      "position": 305,
+      "title": "L9. Sum of Subarray Minimum | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=v0e8p9JCgRc",
+      "start": 1076.76,
+      "end": 1213.48,
+      "text": "will be updated and that update ated value will be zero so this time when you take the index one and you say previous small element zero so you'll get the left to be zero so you'll end up just taking this one sorry you'll just end up taking this one got it previous smaller equal so that you don't consider one you don't consider the equals perfect so now we know how to handle the edge case so you have to figure out how to write a code for nsse I'll have to figure out how to write a code for previous smaller equal element PS w got it remember previous smaller or equal element okay first I'll try to write find NSC so we have to return a list so list of integer is what is returned and I'm writing find NSE e remember I need the next smaller element so I'll take the array what do I need I need a nsse of size like a list NS or an array n whatever you can take of size n and I need a stack St post it what we can do is because we are looking for next smaller element so I can Traverse from i = n minus one till the zeroth index perfect with this one what after this we will check the straightforward the next great element stuff we'll check if the stack is non empty okay and and we will be like we'll be storing indexes in the stack because we need indexes why do we need indexes because we are subtracting indexes we don't need element we need indexes to be stored so I'll be like okay if indexes is stored I will compare that with the array so array is stack dot top I'm looking for next smaller so anything that is greater or equal is what will be taken off will be taken off which is pop okay done I've taken it off what after this I'll say nsse now either if the stack is",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "v0e8p9JCgRc",
+      "position": 305,
+      "title": "L9. Sum of Subarray Minimum | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=v0e8p9JCgRc",
+      "start": 1205.48,
+      "end": 1360.4,
+      "text": "nsse now either if the stack is empty if the stack is empty Please assign n because I'm looking to assign in so that the subtraction is done otherwise assign whatever is at the stack. top at the same time please make sure you add a stack. push the index not the AR element and the follow Loop is done please make sure to return NSE and that will be the find nsse stuff done okay perfect I go down and I try to write the PSW list again find or compute whatever you want to write NS or rather PS double e again I'll end up taking an array this time I require PS of size N I will require a stack St and I'll start traversing from the front because I'm looking for previous n minus one what I write is while the stack is non empty at the same time please make sure array of Stack do top I'm looking for smaller so anything which is greater I'll not remove equals element because I'm looking for smaller or equal I'll just remove the Great once array of I please make sure you pop them out and once that is done you say PS dou of I if the stack is Mt please store minus one or else whatever is at the top and once that is done please end up pushing I to the stack and the fall Loop ends and you could my bad you could end up returning Pou e and that will be end with the list function so yeah that is what it is time to compute the time complexity so this com this computation you know next Creator element Works in beo of 2N with a space complexity of B go of Stack which is bego of n uh I need anything else yeah they're using a stack inside so beo of 2 n same for this one where you compute PS and then this one is straightforward we go of n so I can say that the time complexity is",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "v0e8p9JCgRc",
+      "position": 305,
+      "title": "L9. Sum of Subarray Minimum | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=v0e8p9JCgRc",
+      "start": 1355.72,
+      "end": 1416.12,
+      "text": "say that the time complexity is somewhere around big of 5n and the space complexity is somewhere around big of 5n yes why 5 in because I'm using NSE a psse a couple of stacks one here the other one here but this is all modularized code you could probably do better you could make 5n 4N or maybe 3n but we'll not focus on it because writing clean code is very important and if you're going in an interview try to write code like this this is where the interviewer gets super impressed and yeah this will be the most optimal solution unless until you decide to optimize this to 4N so yeah that will be it for this one so if you're still now watching and if you've understood everything please please do consider giving us a like and if you're new to our channel do consider subscribing to us as well with this I'll be wrapping up this video Let's fin in some other video till then by bye take care when your heart is broken don't forget your golden I will find",
+      "word_count": 186
+    }
+  ]
+}

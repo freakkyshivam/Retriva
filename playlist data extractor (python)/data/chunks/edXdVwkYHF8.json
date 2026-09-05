@@ -1,0 +1,119 @@
+{
+  "video_id": "edXdVwkYHF8",
+  "position": 138,
+  "title": "G-13. Distance of nearest cell having 1 | 0/1 Matrix | C++ | Java",
+  "url": "https://www.youtube.com/watch?v=edXdVwkYHF8",
+  "chunk_count": 10,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "edXdVwkYHF8",
+      "position": 138,
+      "title": "G-13. Distance of nearest cell having 1 | 0/1 Matrix | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=edXdVwkYHF8",
+      "start": 3.12,
+      "end": 110.479,
+      "text": "hey everyone welcome back to the channel i hope you guys are doing extremely well so in this video we will be solving the problem uh distance of nearest cell having one now this problem is on gfg if you want to find the similar problem on lead code the problem name goes by zero one matrix it's a slightly different variation where they will ask you to find distance of the nearest cell having zero so this is a problem where you have to find the nearest cell which is having one so let's read the problem given a binary grade of n cross m binary means containing zero and once find the distance of the nearest one in the grid for each cell now the distance is calculated uh they are basically subtracting the row numbers and the column numbers and adding it so let's understand the question so imagine uh this is the particular grid that is given to you like one zero one one one zero one double zero this is the particular grid that is given to you now over here i will ask you for this one who is the nearest one the answer to that will be he himself he himself is the nearest one to himself so i can say the answer to this is zero perfect for the zero if i ask you who is the nearest one the answer will be this guy this guy this guy so if you compute the distance to any of them you'll actually find the distance is one so you can pick up one and you can say the nearest one is at a distance of one now if i pick up this one he himself is the nearest one so i can write zero if i pick up this one this is the nearest one this is the nearest one this is the nearest one but he himself is the nearest one so again zero if i again pick up the next one it is again zero because he himself is the",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "edXdVwkYHF8",
+      "position": 138,
+      "title": "G-13. Distance of nearest cell having 1 | 0/1 Matrix | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=edXdVwkYHF8",
+      "start": 105.759,
+      "end": 223.04,
+      "text": "is again zero because he himself is the nearest one if i pick up the zero the nearest one is this the nearest one is this again at a distance of one so if i pick up this one he himself is the nearest one so zero if i pick up the zero who is the nearest one this guy and this guy at a distance of one now comes the main star if i pick up this zero you find the nearest one to be this or this now you might say this is at a distance of one no there are no diagonal distance calculated the distance is calculated by row number subtraction and column number subtraction that is how the distance is calculated so you have to go like this to get the column difference then like this to get the row difference row difference column difference thereby till to go here the distance is two to go here the distance is two to go here the distance is two so i can say all of these three are at a distance of two so thereby the nearest one to this particular zero is at a distance two so the resultant distance matrix is this one which you'll get and this is what you need to return as an answer okay so which is the algorithm that comes to your brain that you should start with that algorithm now we know we are solving this is again something similar to graph and you have to find the minimum steps or minimum distance so we know this is a graph problem but which algorithm now i will say the algorithm that comes to my mind is bfs why because assume i want to find for this one i know for this one the nearest one is this i need to figure out for these zeros which is the nearest one i have to figure out for these zeros which is the nearest ones so can i say if i pick up these three ones",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "edXdVwkYHF8",
+      "position": 138,
+      "title": "G-13. Distance of nearest cell having 1 | 0/1 Matrix | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=edXdVwkYHF8",
+      "start": 218.319,
+      "end": 349.44,
+      "text": "these three ones if i pick up these three ones and i ask hey listen take one step in all the four direction take one step in all the four direction so this one will take a step in this and this this one will take step here here here here this one will take a step here here here and here so apparently if you see if you take one step from these ones you will reach this zero this zero this zero and this zero probably this zero this zero this zero this zero will be covered if you take one steps from like combining all these once so can i say i'm definitely sure if i took one step to reach this zero the nearest one to the zero is at one step the nearest one to this uh zero is at one step the nearest one to the zero is also at one step i am definitely clear about that perfect so imagine i say okay i got it i got to them in one steps maybe next can i say from here from here from here from here which is the next level i can take one more step which is two steps and i'll reach these couple of guys because this guy will reach here here and you'll reach the next set of zeros in the next step which is step two so i'll take two steps and if i'm reaching in two steps can i say the nearest one was that two step i can so thereby for these zeroes it was at a distance too if all all the initial ones you can definitely put up something like a zero because that will take zero steps so why did it work again very obvious bfs when you start with these ones and you say them to take one step they will reach all zeroes they will reach all zeroes that are at a distance of one or apparently i can say the nearest ones to these zeros are at a distance",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "edXdVwkYHF8",
+      "position": 138,
+      "title": "G-13. Distance of nearest cell having 1 | 0/1 Matrix | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=edXdVwkYHF8",
+      "start": 345.6,
+      "end": 465.039,
+      "text": "ones to these zeros are at a distance one and you mark them then again if you take one step you'll reach the next set of zeros and you can say for these zeros i repeat for these zeros plus one is at a distance of two so that is why i will always apply bfs because bfs is an algorithm that moves step by step it does not travels in depth imagine you would have taken this one and you have started traveling in dfs one step two step three step that would have been wrong that is why you have to apply bfs because you want all of them to traverse a single step together so that you can always have the minimum count with you that's why we will be using the bfs algorithm okay so how to apply bfs we know it's very simple if you're given a matrix so just number them by the way this is the numbering of matrix which is 0 1 2 0 1 2 and i never ever touch the matrix because it is the data that is given to you so you'll always create a separate yes you'll always create a separate visited array and you'll mark every one as 0 over there yes you'll mark every one as zero over there and this is your visited matrix now you need to store a distance to the nearest one so you can always have one more stuff which stores the distance okay now okay so in order to apply bfs let's assume we have this matrix okay where we have a one here we have a one here we have a one here so these three are the starting points where you'll start your bfs from or i can call this as a multi-source bfs because there are three sources from where you are starting the bfs now this is the visited array we know that we will never hamper the data that is given to us never ever hamper the data that is",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "edXdVwkYHF8",
+      "position": 138,
+      "title": "G-13. Distance of nearest cell having 1 | 0/1 Matrix | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=edXdVwkYHF8",
+      "start": 460.56,
+      "end": 587.36,
+      "text": "to us never ever hamper the data that is given to us because that is not a good practice so we will create a visited matrix and we will create a distance array or distance matrix which will store the distance to the nearest ones from every particular cell now in order to start with q we know these are the three source so i define a queue data structure and i say okay first source at one comma one at a step because if it's a one and it is the starting the nearest to this guy will take a step zero or a distance zero next two comma zero with this zero and next two comma two with a zero so basically one comma one two comma zero two comma two all at a step or distance zero and at the same time just make sure they are marked as visited done so this is the initial configuration you have this particular visited area you have this particular queue to start off with now what you will do is you'll pick up the first guy so you'll pick up the first guy may be like okay i'm at one comma one and the step that it took was zero so that means at one comma one the nearest one is at zero step so you go over here and say okay one comma one can you please put zero because the nearest one to you is zero again obvious because we have a one here thereby zero will be the distance perfect for this one comma one you know you can go in this direction this this and this for this one if you go here it's a zero right so can i support the zero the nearest one is this yes which is at a step one you actually took a step one to reach the zero so the vice versa is also true that for the zero the nearest one is at a step one right so can i say this that",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "edXdVwkYHF8",
+      "position": 138,
+      "title": "G-13. Distance of nearest cell having 1 | 0/1 Matrix | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=edXdVwkYHF8",
+      "start": 583.519,
+      "end": 723.8389999999999,
+      "text": "that zero comma one which is this guy is at a step one perfect and 0 1 is visited and inserted into the queue now for this one there is this guy which is at a right which is 1 comma 2 at a step 1 again i can say and i can mark it as visited for this particular zero it is the bottom right which is two comma one again at a step one mark it as visited over here one comma zero at a step one again mark it as visited perfect for this one i traveled all the four directions and that means all of them are at step one and i marked everyone as visited done with this let's get the next one two comma zero again says step zero please go back and mark it step zero obvious because this from here the nearest one is this two comma zero which is this guy sorry uh which is two comma zero is this guy does it have a top yes but that is already visited does it have a right already visited no no so apparently this guy has no neighbors which are yet to be visited so perfect next two comma two and took a step zero so go and store that come back to comma two where is it here visited visit it invalid invalid no more it is next zero comma one at a step one at a step one where's zero comma one here this one has a right yes zero comma two it will take one more step because if this took one step you are taking one more step which means from here to here you went and from there to there you went i hope that is clear and that is into your head so i can say this guy took two steps perfect market has visited for the zero there is also on this guy zero comma zero which took two steps marked as visited for this guy there is no bottom because",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "edXdVwkYHF8",
+      "position": 138,
+      "title": "G-13. Distance of nearest cell having 1 | 0/1 Matrix | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=edXdVwkYHF8",
+      "start": 720.16,
+      "end": 882.5600000000001,
+      "text": "for this guy there is no bottom because it's already visited there's no top invalid so i can say done let's take the next one out one comma two with one step one comma two with one step perfect does it have uh one comma two is this does it at the top visit it does it have this no visit it visit it next comma one comma one two comma one comma one two comma one comma one up visited right visited invalid visited no more one comma zero comma one one comma zero comma one perfect one comma zero up visited right visited down visited invalid next zero comma two comma two why is zero comma two two going right two up visited up invalid right invalid down visited left visited done next zero comma zero comma two zero comma zero comma two up invalid right visited down visited left invalid queue empty you visited everyone and at the end of the day this is your distance re is it correct it is correct it is indeed correct so this is how you solve this particular problem now let's quickly dive back and check out the c plus plus as well as the java code c plus plus code is what i'll write you can find the java code on the left okay so in the n equal to great dot size perfect and m equal to grid 0.6 right and then you can say okay let's traverse in the matrix find all the ones at first what do we require we require a couple of things one is uh this thing we require which is the visited so you can probably create a visitor to the matrix of marking everyone a 0 or you can probably uh create vector of int in distance where n comma vector of end comma m comma zero perfect so i've created a visited and a distance array now something i know for sure is if the grid contains uh i j equal equal to one then",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "edXdVwkYHF8",
+      "position": 138,
+      "title": "G-13. Distance of nearest cell having 1 | 0/1 Matrix | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=edXdVwkYHF8",
+      "start": 876.72,
+      "end": 994.88,
+      "text": "contains uh i j equal equal to one then this is where i'll start my bfs from else i want so can i see i need a queue which stores three things one is the coordinates of the row and column third is the step so probably i can keep something like these are the coordinates that i'll keep and i will keep something as uh the steps here and then what i can do is i can just say this is the queue so i can say okay i got my first attach j so i can keep like i j and then i can say zero steps right and then what i can say is this guy is also visited and if it is not then i can say it is unvisited which is already done over here perfect this is how i store all the initial ones in the queue and i mark them as visited perfect now i know i am going to traverse till the queue is not empty so please do that travel is still the queue is non-empty now let's get this row number which will be q dot front dot first because it's on the first pair and not first very basic stuff i'm not going to teach this the column is q dot front dot first dot second and then the steps are q dot front dot second shot and you can say please go out of the queue and can i see this is the distance that i took the steps is the distance that i took in order to reach this so i can show that in the answer as well but i've stored that in the answer now what's the next thing travel upwards travel right what's travel bottom and travel uh left so if i go back to the ipad so if i'm standing somewhere here i have to travel here imagine this is row column this will be row minus one and column this will be row comma column plus one this will be row",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "edXdVwkYHF8",
+      "position": 138,
+      "title": "G-13. Distance of nearest cell having 1 | 0/1 Matrix | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=edXdVwkYHF8",
+      "start": 989.04,
+      "end": 1119.28,
+      "text": "this will be row plus one column this will be row comma column minus 1 right this is what it will be correct so what i'll say is okay let's store uh so if you carefully see there's a minus one there's a plus zero plus one zero so what i'll do is i'll say minus 1 0 plus 1 and 0. if a column there's a plus 0 plus 1 plus 0 plus 1 plus 0 minus 1. so this is going to be the change in row delta rho and delta column so if i add minus 1 to the row i get the up one if i add 0 i'll get the upwards if i have 0 and plus 1 i'll get the right if i had 1 0 i'll get the bottom if i add 0 minus 1 i'll get the left so that's a shortcut to do so i'll say del row is going to be minus 1 0 plus 1 0 and i can say the del column is going to be 0 plus 1 zero minus one i means now what i'll do is i'll say okay for ind i equal to zero i lesser than four i plus plus and i can say the neighbor row will be the current row plus del row of i right and the neighbor column will be column plus del column of i i hope that's clear right now first you need to check if they're valid so in order to have a validity please please check it like this and then you can say n column you can write a separate function because that will be more readable and you can say n column has to be lesser than m uh apart from that what do you need to check is it already visited so if it is sorry android column is it already visited if not if not then only yes then only you go and say i have visited you at the same time you say q can you please take these",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "edXdVwkYHF8",
+      "position": 138,
+      "title": "G-13. Distance of nearest cell having 1 | 0/1 Matrix | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=edXdVwkYHF8",
+      "start": 1116.32,
+      "end": 1222.6799999999998,
+      "text": "please take these new guys and keep them with you and steps plus 1 so whether this will be n column my bad yeah and once you've done these things you can simply over here return the distance matrix right and this is how your entire code will look like so let's quickly uh analyze the uh time complexity so if analyze the time complexity how like n cross m over here and then i'm traversing all these columns which is in total of n cross m columns right so this this while loop is going to run for n cross m and then there is you're running four times so cross four so n cross m cross 4 over here and an n cross m which is approximately n crossing space yeah i'm using like n cross m and cross m then a q with store so near about n cross m people might argue that we don't need this visit distance we can do it using the grid you can but i'm someone who does not changes the data or does not alters something which is given to me because i'm solving a problem i don't need to hamper the data so i hope guys you have understood this entire problem the code and the explanation so just in case you did please please make sure you like this video and if you're new to our channel what are you waiting for hit that subscribe button right away man and yeah with this i'll be wrapping up this video but do not forget to check out our hd sheet and the dp series the links are in the description with this uh let's wrap up this video let's fit in some other video till then bye bye take care whenever your heart is broken [Music]",
+      "word_count": 307
+    }
+  ]
+}

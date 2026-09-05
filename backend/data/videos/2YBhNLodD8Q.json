@@ -1,0 +1,1004 @@
+{
+  "position": 83,
+  "video_id": "2YBhNLodD8Q",
+  "title": "L11. Iterative Postorder Traversal using 2 Stack | C++ | Java | Binary Tree",
+  "url": "https://www.youtube.com/watch?v=2YBhNLodD8Q",
+  "transcript": [
+    {
+      "start": 0.0,
+      "duration": 3.36,
+      "end": 3.36,
+      "text": "so before starting this video i'd love"
+    },
+    {
+      "start": 1.52,
+      "duration": 4.08,
+      "end": 5.6,
+      "text": "to thank relevel for sponsoring this"
+    },
+    {
+      "start": 3.36,
+      "duration": 4.399,
+      "end": 7.759,
+      "text": "entire video a hiring platform with no"
+    },
+    {
+      "start": 5.6,
+      "duration": 4.079,
+      "end": 9.678999999999998,
+      "text": "degree required no experience required"
+    },
+    {
+      "start": 7.759,
+      "duration": 4.081,
+      "end": 11.84,
+      "text": "mentoring sessions available feels like"
+    },
+    {
+      "start": 9.679,
+      "duration": 4.08,
+      "end": 13.759,
+      "text": "a dream isn't it what if i say all of"
+    },
+    {
+      "start": 11.84,
+      "duration": 3.52,
+      "end": 15.36,
+      "text": "this is for free well reliable by an"
+    },
+    {
+      "start": 13.759,
+      "duration": 3.36,
+      "end": 17.119,
+      "text": "academy is here to make your dream come"
+    },
+    {
+      "start": 15.36,
+      "duration": 3.28,
+      "end": 18.64,
+      "text": "true but job opportunities in front and"
+    },
+    {
+      "start": 17.119,
+      "duration": 3.441,
+      "end": 20.56,
+      "text": "back end and business development from"
+    },
+    {
+      "start": 18.64,
+      "duration": 3.92,
+      "end": 22.560000000000002,
+      "text": "india's top companies for freshers and"
+    },
+    {
+      "start": 20.56,
+      "duration": 4.16,
+      "end": 24.72,
+      "text": "people in the early career reliable is"
+    },
+    {
+      "start": 22.56,
+      "duration": 4.24,
+      "end": 26.799999999999997,
+      "text": "here to make the entire hiring process"
+    },
+    {
+      "start": 24.72,
+      "duration": 4.0,
+      "end": 28.72,
+      "text": "super simple and super quick all you"
+    },
+    {
+      "start": 26.8,
+      "duration": 3.6,
+      "end": 30.400000000000002,
+      "text": "have to do is to give the relevant test"
+    },
+    {
+      "start": 28.72,
+      "duration": 3.519,
+      "end": 32.239,
+      "text": "and based on your score interviews will"
+    },
+    {
+      "start": 30.4,
+      "duration": 3.12,
+      "end": 33.519999999999996,
+      "text": "be scheduled and you will be hard so"
+    },
+    {
+      "start": 32.239,
+      "duration": 2.32,
+      "end": 34.559,
+      "text": "what are you waiting for make sure you"
+    },
+    {
+      "start": 33.52,
+      "duration": 2.719,
+      "end": 36.239000000000004,
+      "text": "check out all the links in the"
+    },
+    {
+      "start": 34.559,
+      "duration": 5.121,
+      "end": 39.68,
+      "text": "description and apply for the relevant"
+    },
+    {
+      "start": 36.239,
+      "duration": 3.441,
+      "end": 39.68,
+      "text": "tests as soon as possible"
+    },
+    {
+      "start": 42.8,
+      "duration": 1.52,
+      "end": 44.32,
+      "text": "if want to come back to the channel i"
+    },
+    {
+      "start": 43.6,
+      "duration": 1.68,
+      "end": 45.28,
+      "text": "hope you guys are getting extremely"
+    },
+    {
+      "start": 44.32,
+      "duration": 2.079,
+      "end": 46.399,
+      "text": "weight lifting we will be solving the"
+    },
+    {
+      "start": 45.28,
+      "duration": 2.48,
+      "end": 47.76,
+      "text": "problem finding the positive traversal"
+    },
+    {
+      "start": 46.399,
+      "duration": 2.881,
+      "end": 49.28,
+      "text": "not using the question rather by using"
+    },
+    {
+      "start": 47.76,
+      "duration": 2.88,
+      "end": 50.64,
+      "text": "iteration and in this video i'm going to"
+    },
+    {
+      "start": 49.28,
+      "duration": 2.4,
+      "end": 51.68,
+      "text": "solve this using two stacks in the next"
+    },
+    {
+      "start": 50.64,
+      "duration": 2.64,
+      "end": 53.28,
+      "text": "video and solve this using a single"
+    },
+    {
+      "start": 51.68,
+      "duration": 3.44,
+      "end": 55.12,
+      "text": "stack so what is a post-order traversal"
+    },
+    {
+      "start": 53.28,
+      "duration": 3.04,
+      "end": 56.32,
+      "text": "it's nothing but left first and then"
+    },
+    {
+      "start": 55.12,
+      "duration": 2.48,
+      "end": 57.599999999999994,
+      "text": "you'll go on right and then you will go"
+    },
+    {
+      "start": 56.32,
+      "duration": 3.28,
+      "end": 59.6,
+      "text": "to the node or root of the three okay"
+    },
+    {
+      "start": 57.6,
+      "duration": 3.04,
+      "end": 60.64,
+      "text": "this is for every tree so i'll say this"
+    },
+    {
+      "start": 59.6,
+      "duration": 1.92,
+      "end": 61.52,
+      "text": "is the battery i've asked you to write"
+    },
+    {
+      "start": 60.64,
+      "duration": 2.32,
+      "end": 62.96,
+      "text": "the post order transfers out of this"
+    },
+    {
+      "start": 61.52,
+      "duration": 3.44,
+      "end": 64.96000000000001,
+      "text": "planet so when i say first i'll go to"
+    },
+    {
+      "start": 62.96,
+      "duration": 3.839,
+      "end": 66.799,
+      "text": "the left so that's four and then i'll go"
+    },
+    {
+      "start": 64.96,
+      "duration": 3.519,
+      "end": 68.479,
+      "text": "to the right that's five then i will go"
+    },
+    {
+      "start": 66.799,
+      "duration": 3.281,
+      "end": 70.08000000000001,
+      "text": "to the root that's two so this three is"
+    },
+    {
+      "start": 68.479,
+      "duration": 3.441,
+      "end": 71.92,
+      "text": "done on the screen left is done so i'll"
+    },
+    {
+      "start": 70.08,
+      "duration": 3.2,
+      "end": 73.28,
+      "text": "have to go to the right so right i'll go"
+    },
+    {
+      "start": 71.92,
+      "duration": 3.199,
+      "end": 75.119,
+      "text": "now if i'm on the right i have to go to"
+    },
+    {
+      "start": 73.28,
+      "duration": 3.12,
+      "end": 76.4,
+      "text": "the uh left right then i have to go to"
+    },
+    {
+      "start": 75.119,
+      "duration": 2.721,
+      "end": 77.84,
+      "text": "the right then on the section right so"
+    },
+    {
+      "start": 76.4,
+      "duration": 3.6,
+      "end": 80.0,
+      "text": "it's gonna be eight"
+    },
+    {
+      "start": 77.84,
+      "duration": 3.84,
+      "end": 81.68,
+      "text": "then seven there's six there are three"
+    },
+    {
+      "start": 80.0,
+      "duration": 3.2,
+      "end": 83.2,
+      "text": "there are one that is what the post"
+    },
+    {
+      "start": 81.68,
+      "duration": 3.119,
+      "end": 84.799,
+      "text": "order traversal for this given binary"
+    },
+    {
+      "start": 83.2,
+      "duration": 2.88,
+      "end": 86.08,
+      "text": "will be what people do is we initially"
+    },
+    {
+      "start": 84.799,
+      "duration": 2.64,
+      "end": 87.43900000000001,
+      "text": "take two stacks this is the first stack"
+    },
+    {
+      "start": 86.08,
+      "duration": 2.48,
+      "end": 88.56,
+      "text": "stack one that i take then i'll take"
+    },
+    {
+      "start": 87.439,
+      "duration": 2.561,
+      "end": 90.0,
+      "text": "then i'll be taking stack two okay so"
+    },
+    {
+      "start": 88.56,
+      "duration": 2.96,
+      "end": 91.52,
+      "text": "let's take stack two now what you will"
+    },
+    {
+      "start": 90.0,
+      "duration": 2.64,
+      "end": 92.64,
+      "text": "do is you'll take the tree and you'll"
+    },
+    {
+      "start": 91.52,
+      "duration": 2.08,
+      "end": 93.6,
+      "text": "enter that into the stack one that's the"
+    },
+    {
+      "start": 92.64,
+      "duration": 1.92,
+      "end": 94.56,
+      "text": "initial configuration now that is what"
+    },
+    {
+      "start": 93.6,
+      "duration": 2.24,
+      "end": 95.83999999999999,
+      "text": "your initial configuration will be when"
+    },
+    {
+      "start": 94.56,
+      "duration": 2.8,
+      "end": 97.36,
+      "text": "you start off now let's get started so"
+    },
+    {
+      "start": 95.84,
+      "duration": 2.88,
+      "end": 98.72,
+      "text": "when you start the program you take the"
+    },
+    {
+      "start": 97.36,
+      "duration": 2.64,
+      "end": 100.0,
+      "text": "first guy out and then you take this out"
+    },
+    {
+      "start": 98.72,
+      "duration": 2.88,
+      "end": 101.6,
+      "text": "you put that into your stack okay after"
+    },
+    {
+      "start": 100.0,
+      "duration": 2.72,
+      "end": 102.72,
+      "text": "that if this guy has a left that it has"
+    },
+    {
+      "start": 101.6,
+      "duration": 2.32,
+      "end": 103.91999999999999,
+      "text": "you'll take that if this guy's right"
+    },
+    {
+      "start": 102.72,
+      "duration": 2.56,
+      "end": 105.28,
+      "text": "you'll take that so you're taking the"
+    },
+    {
+      "start": 103.92,
+      "duration": 2.32,
+      "end": 106.24,
+      "text": "left as well as right now at the next"
+    },
+    {
+      "start": 105.28,
+      "duration": 2.879,
+      "end": 108.159,
+      "text": "step at the next direction when you come"
+    },
+    {
+      "start": 106.24,
+      "duration": 3.28,
+      "end": 109.52,
+      "text": "across stack dot the top limit is three"
+    },
+    {
+      "start": 108.159,
+      "duration": 2.721,
+      "end": 110.88000000000001,
+      "text": "so take this tree put this into your"
+    },
+    {
+      "start": 109.52,
+      "duration": 2.959,
+      "end": 112.479,
+      "text": "stack okay and again same thing stacks"
+    },
+    {
+      "start": 110.88,
+      "duration": 3.04,
+      "end": 113.92,
+      "text": "left that is six stacks right that is"
+    },
+    {
+      "start": 112.479,
+      "duration": 2.801,
+      "end": 115.28,
+      "text": "empty so if there's something but put"
+    },
+    {
+      "start": 113.92,
+      "duration": 2.64,
+      "end": 116.56,
+      "text": "the left left foot right now again come"
+    },
+    {
+      "start": 115.28,
+      "duration": 2.96,
+      "end": 118.24,
+      "text": "back by the next iteration equations at"
+    },
+    {
+      "start": 116.56,
+      "duration": 3.04,
+      "end": 119.60000000000001,
+      "text": "the top put it onto your stack okay so"
+    },
+    {
+      "start": 118.24,
+      "duration": 2.559,
+      "end": 120.79899999999999,
+      "text": "put that into your other stack next what"
+    },
+    {
+      "start": 119.6,
+      "duration": 2.72,
+      "end": 122.32,
+      "text": "do we have taken if there is a left of"
+    },
+    {
+      "start": 120.799,
+      "duration": 2.721,
+      "end": 123.52000000000001,
+      "text": "six take it into the right of six take"
+    },
+    {
+      "start": 122.32,
+      "duration": 2.24,
+      "end": 124.55999999999999,
+      "text": "it and put it into your stack all right"
+    },
+    {
+      "start": 123.52,
+      "duration": 2.08,
+      "end": 125.6,
+      "text": "i want this in the next generation when"
+    },
+    {
+      "start": 124.56,
+      "duration": 2.4,
+      "end": 126.96000000000001,
+      "text": "you come across you get seven so you"
+    },
+    {
+      "start": 125.6,
+      "duration": 2.48,
+      "end": 128.07999999999998,
+      "text": "take seven you put that into your stack"
+    },
+    {
+      "start": 126.96,
+      "duration": 2.4,
+      "end": 129.35999999999999,
+      "text": "two once you put that into your stack"
+    },
+    {
+      "start": 128.08,
+      "duration": 2.48,
+      "end": 130.56,
+      "text": "two for seven does that exist left now"
+    },
+    {
+      "start": 129.36,
+      "duration": 2.4,
+      "end": 131.76000000000002,
+      "text": "other existing right yes take it and put"
+    },
+    {
+      "start": 130.56,
+      "duration": 2.48,
+      "end": 133.04,
+      "text": "that in your start in the next situation"
+    },
+    {
+      "start": 131.76,
+      "duration": 2.72,
+      "end": 134.48,
+      "text": "when you come across take this eight put"
+    },
+    {
+      "start": 133.04,
+      "duration": 2.32,
+      "end": 135.35999999999999,
+      "text": "back into your stack two add it again"
+    },
+    {
+      "start": 134.48,
+      "duration": 2.24,
+      "end": 136.72,
+      "text": "that's eight on the left now does it"
+    },
+    {
+      "start": 135.36,
+      "duration": 2.4,
+      "end": 137.76000000000002,
+      "text": "have a right no so you'll not do"
+    },
+    {
+      "start": 136.72,
+      "duration": 2.159,
+      "end": 138.879,
+      "text": "anything in the next direction when you"
+    },
+    {
+      "start": 137.76,
+      "duration": 1.92,
+      "end": 139.67999999999998,
+      "text": "come back you'll get a two so take this"
+    },
+    {
+      "start": 138.879,
+      "duration": 2.161,
+      "end": 141.04,
+      "text": "two"
+    },
+    {
+      "start": 139.68,
+      "duration": 2.48,
+      "end": 142.16,
+      "text": "and put that into your stack two now"
+    },
+    {
+      "start": 141.04,
+      "duration": 2.24,
+      "end": 143.28,
+      "text": "what you'll do is you'll again look"
+    },
+    {
+      "start": 142.16,
+      "duration": 2.56,
+      "end": 144.72,
+      "text": "there's the two left yes that's the top"
+    },
+    {
+      "start": 143.28,
+      "duration": 2.8,
+      "end": 146.08,
+      "text": "right case put them in next you'll again"
+    },
+    {
+      "start": 144.72,
+      "duration": 2.4,
+      "end": 147.12,
+      "text": "come back stack the top you can put it"
+    },
+    {
+      "start": 146.08,
+      "duration": 2.799,
+      "end": 148.87900000000002,
+      "text": "in your stack two that's right for the"
+    },
+    {
+      "start": 147.12,
+      "duration": 2.64,
+      "end": 149.76,
+      "text": "left right now next again come back"
+    },
+    {
+      "start": 148.879,
+      "duration": 2.08,
+      "end": 150.959,
+      "text": "you're gonna fall that's four on the"
+    },
+    {
+      "start": 149.76,
+      "duration": 2.88,
+      "end": 152.64,
+      "text": "left no that's what i'm right now so"
+    },
+    {
+      "start": 150.959,
+      "duration": 3.28,
+      "end": 154.239,
+      "text": "this will be the last one so once once"
+    },
+    {
+      "start": 152.64,
+      "duration": 3.04,
+      "end": 155.67999999999998,
+      "text": "your stack one becomes empty you can"
+    },
+    {
+      "start": 154.239,
+      "duration": 2.961,
+      "end": 157.20000000000002,
+      "text": "stop at the moment you stop take these"
+    },
+    {
+      "start": 155.68,
+      "duration": 2.72,
+      "end": 158.4,
+      "text": "elements out from the stack in the last"
+    },
+    {
+      "start": 157.2,
+      "duration": 2.24,
+      "end": 159.44,
+      "text": "first fashion the first four will be up"
+    },
+    {
+      "start": 158.4,
+      "duration": 2.16,
+      "end": 160.56,
+      "text": "so you'll get four then five will be"
+    },
+    {
+      "start": 159.44,
+      "duration": 2.56,
+      "end": 162.0,
+      "text": "absolutely five then two will be"
+    },
+    {
+      "start": 160.56,
+      "duration": 2.8,
+      "end": 163.36,
+      "text": "absolutely two"
+    },
+    {
+      "start": 162.0,
+      "duration": 2.4,
+      "end": 164.4,
+      "text": "then eight will be absolutely eight then"
+    },
+    {
+      "start": 163.36,
+      "duration": 2.159,
+      "end": 165.519,
+      "text": "seven will be up so you'll get seven"
+    },
+    {
+      "start": 164.4,
+      "duration": 2.16,
+      "end": 166.56,
+      "text": "then six will be up they'll get six then"
+    },
+    {
+      "start": 165.519,
+      "duration": 2.08,
+      "end": 167.59900000000002,
+      "text": "three will be up so you'll get three"
+    },
+    {
+      "start": 166.56,
+      "duration": 2.8,
+      "end": 169.36,
+      "text": "then one will be upgraded one so"
+    },
+    {
+      "start": 167.599,
+      "duration": 3.521,
+      "end": 171.11999999999998,
+      "text": "ultimately you will get the entire post"
+    },
+    {
+      "start": 169.36,
+      "duration": 2.879,
+      "end": 172.239,
+      "text": "order traversal using a couple of stacks"
+    },
+    {
+      "start": 171.12,
+      "duration": 2.24,
+      "end": 173.36,
+      "text": "so let's check out the code for this so"
+    },
+    {
+      "start": 172.239,
+      "duration": 2.08,
+      "end": 174.31900000000002,
+      "text": "as usual you know the customer code is"
+    },
+    {
+      "start": 173.36,
+      "duration": 2.08,
+      "end": 175.44000000000003,
+      "text": "on the app and the java code is"
+    },
+    {
+      "start": 174.319,
+      "duration": 2.241,
+      "end": 176.56,
+      "text": "definitely on the right so easily what"
+    },
+    {
+      "start": 175.44,
+      "duration": 2.48,
+      "end": 177.92,
+      "text": "i've done is i've taken the route and"
+    },
+    {
+      "start": 176.56,
+      "duration": 2.399,
+      "end": 178.959,
+      "text": "i've defined the post order list of two"
+    },
+    {
+      "start": 177.92,
+      "duration": 2.239,
+      "end": 180.159,
+      "text": "and if there's none with the bank i'll"
+    },
+    {
+      "start": 178.959,
+      "duration": 2.801,
+      "end": 181.76,
+      "text": "return an empty post order one as i'll"
+    },
+    {
+      "start": 180.159,
+      "duration": 3.201,
+      "end": 183.35999999999999,
+      "text": "deliver a stack and i'll be entering the"
+    },
+    {
+      "start": 181.76,
+      "duration": 3.119,
+      "end": 184.879,
+      "text": "root initially into the stack so i've"
+    },
+    {
+      "start": 183.36,
+      "duration": 2.72,
+      "end": 186.08,
+      "text": "done this i've taken the element and"
+    },
+    {
+      "start": 184.879,
+      "duration": 2.561,
+      "end": 187.44,
+      "text": "i've pushed it into the other stack"
+    },
+    {
+      "start": 186.08,
+      "duration": 2.56,
+      "end": 188.64000000000001,
+      "text": "after that if there exits the left put"
+    },
+    {
+      "start": 187.44,
+      "duration": 2.799,
+      "end": 190.239,
+      "text": "it onto the stack one if there exists a"
+    },
+    {
+      "start": 188.64,
+      "duration": 3.519,
+      "end": 192.159,
+      "text": "right put it on your stack one once your"
+    },
+    {
+      "start": 190.239,
+      "duration": 3.28,
+      "end": 193.519,
+      "text": "stack one becomes empty just pop out"
+    },
+    {
+      "start": 192.159,
+      "duration": 2.481,
+      "end": 194.64,
+      "text": "every element from step two and put it"
+    },
+    {
+      "start": 193.519,
+      "duration": 2.881,
+      "end": 196.4,
+      "text": "into your post order and return that"
+    },
+    {
+      "start": 194.64,
+      "duration": 3.2,
+      "end": 197.83999999999997,
+      "text": "post so what are the time complexity of"
+    },
+    {
+      "start": 196.4,
+      "duration": 2.8,
+      "end": 199.20000000000002,
+      "text": "the solution definitely often because"
+    },
+    {
+      "start": 197.84,
+      "duration": 2.88,
+      "end": 200.72,
+      "text": "you are ultimately traversing for every"
+    },
+    {
+      "start": 199.2,
+      "duration": 2.8,
+      "end": 202.0,
+      "text": "node what are the space complexity i can"
+    },
+    {
+      "start": 200.72,
+      "duration": 2.799,
+      "end": 203.519,
+      "text": "say that the space complexity is"
+    },
+    {
+      "start": 202.0,
+      "duration": 2.239,
+      "end": 204.239,
+      "text": "actually two stacks that is two and you"
+    },
+    {
+      "start": 203.519,
+      "duration": 2.72,
+      "end": 206.239,
+      "text": "might say what's right are you also"
+    },
+    {
+      "start": 204.239,
+      "duration": 3.601,
+      "end": 207.84,
+      "text": "using a post order generally uh the the"
+    },
+    {
+      "start": 206.239,
+      "duration": 2.72,
+      "end": 208.959,
+      "text": "data structure where we store the value"
+    },
+    {
+      "start": 207.84,
+      "duration": 2.0,
+      "end": 209.84,
+      "text": "we do not consider that while computer"
+    },
+    {
+      "start": 208.959,
+      "duration": 2.321,
+      "end": 211.28,
+      "text": "but you can still consider that if you"
+    },
+    {
+      "start": 209.84,
+      "duration": 2.399,
+      "end": 212.239,
+      "text": "want another difference"
+    },
+    {
+      "start": 211.28,
+      "duration": 2.08,
+      "end": 213.36,
+      "text": "the main problem that you're seeing is"
+    },
+    {
+      "start": 212.239,
+      "duration": 2.321,
+      "end": 214.56,
+      "text": "we're using a couple of stacks okay so"
+    },
+    {
+      "start": 213.36,
+      "duration": 2.64,
+      "end": 216.0,
+      "text": "the next video i'll be telling you how"
+    },
+    {
+      "start": 214.56,
+      "duration": 2.72,
+      "end": 217.28,
+      "text": "can we solve this using a single stack"
+    },
+    {
+      "start": 216.0,
+      "duration": 3.12,
+      "end": 219.12,
+      "text": "so i hope you've understood the entire"
+    },
+    {
+      "start": 217.28,
+      "duration": 3.599,
+      "end": 220.879,
+      "text": "explanation as well as the code just in"
+    },
+    {
+      "start": 219.12,
+      "duration": 3.36,
+      "end": 222.48000000000002,
+      "text": "case you did please please please make"
+    },
+    {
+      "start": 220.879,
+      "duration": 3.92,
+      "end": 224.79899999999998,
+      "text": "sure you like this video because it took"
+    },
+    {
+      "start": 222.48,
+      "duration": 4.319,
+      "end": 226.79899999999998,
+      "text": "a lot of efforts to make this entire"
+    },
+    {
+      "start": 224.799,
+      "duration": 3.681,
+      "end": 228.48000000000002,
+      "text": "tree series also if you wish you can"
+    },
+    {
+      "start": 226.799,
+      "duration": 3.921,
+      "end": 230.72,
+      "text": "definitely drop in a comment that will"
+    },
+    {
+      "start": 228.48,
+      "duration": 4.24,
+      "end": 232.72,
+      "text": "keep motivating me to make such further"
+    },
+    {
+      "start": 230.72,
+      "duration": 3.36,
+      "end": 234.08,
+      "text": "series also if you're new to the channel"
+    },
+    {
+      "start": 232.72,
+      "duration": 3.12,
+      "end": 235.84,
+      "text": "please do consider subscribing because"
+    },
+    {
+      "start": 234.08,
+      "duration": 3.84,
+      "end": 237.92000000000002,
+      "text": "i'm going to bring in such more series"
+    },
+    {
+      "start": 235.84,
+      "duration": 3.44,
+      "end": 239.28,
+      "text": "in the upcoming future as well with this"
+    },
+    {
+      "start": 237.92,
+      "duration": 4.63,
+      "end": 242.54999999999998,
+      "text": "uh let's wrap up this video let's speed"
+    },
+    {
+      "start": 239.28,
+      "duration": 11.18,
+      "end": 250.46,
+      "text": "in the next lecture bye"
+    },
+    {
+      "start": 242.55,
+      "duration": 7.91,
+      "end": 250.46,
+      "text": "[Music]"
+    }
+  ]
+}

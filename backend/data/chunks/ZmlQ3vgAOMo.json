@@ -1,0 +1,229 @@
+{
+  "video_id": "ZmlQ3vgAOMo",
+  "position": 215,
+  "title": "DP 34. Wildcard Matching | Recursive to 1D Array Optimisation 🔥",
+  "url": "https://www.youtube.com/watch?v=ZmlQ3vgAOMo",
+  "chunk_count": 20,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "ZmlQ3vgAOMo",
+      "position": 215,
+      "title": "DP 34. Wildcard Matching | Recursive to 1D Array Optimisation 🔥",
+      "url": "https://www.youtube.com/watch?v=ZmlQ3vgAOMo",
+      "start": 0.0,
+      "end": 157.35999999999999,
+      "text": "hey everyone welcome back to take you forward so today we will be doing the last problem on dp on strings and it's a wonderful problem wildcard matching so what does this problem state the problem states you'll be given couple of strings as usual and in those strings yes in those strings you will be having a star link you will have characters but you can have a question mark or you could have a star okay now question mark means matches with single character remember this it means matches with single character star means matches with sequence of length zero or more okay so what does this mean let me give you a couple of examples assume the string one to be question mark e y okay and remember one thing this question mark of the star will only be in the string s1 it will not be in the string s2 so the string s2 is re okay now let's see if they match y y matches a a matches this r is with question mark and it states question mark means it matches with single character it can match with any single character so i can say question mark matches with r so all of these three guys are matching thereby this s1 is matching with the text s2 thereby you need to return or true since they're matching you need to return a true let me take one more example in order to explain the start portion so assume the string s1 to be a b star cd okay and assume the s2 to be a b d e f c d okay now i need to figure out are they matching okay star means it can match any yes it can match any sequence so let's take it d matches with d c matches with c a matches with a b matches with b so i can see this star matches with the entire sequence d e f because it states matches with the sequence of length 0 or more so this",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "ZmlQ3vgAOMo",
+      "position": 215,
+      "title": "DP 34. Wildcard Matching | Recursive to 1D Array Optimisation 🔥",
+      "url": "https://www.youtube.com/watch?v=ZmlQ3vgAOMo",
+      "start": 150.319,
+      "end": 280.96,
+      "text": "sequence of length 0 or more so this star matches with this d e f what if so this is this is definitely true what if i change uh the strings and i say what if the string would have been star star and something like abcd okay and the string s2 is something like ebcd are they matching and the answer to that is yes they are matching why because d matches with d c matches with c b matches with b a matches with a now these star i can say a single star is a length zero so this is matching with a length zero this star is also matching with length zero so hypothetically a b c d is equal to a b c d star means it can match with someone or it cannot match with someone the string can be of any length it can be of a length zero it can be of length one it can be of length 2 it can be of length 3 and so on so let me take one more example which is false string s1 is eb question mark d string s2 is abcc okay let's see if they are matching a matches with a b matches with b question mark can only match with one so question mark matches with c but this d is not matching with c thereby this is false you'll say they do not match so this is the question given a string s1 which will definitely which can or cannot have like it will have lowercase letters for sure it can have a question mark and it can have a star as well given a string s2 which will just have lowercase letters you need to tell me if the string s1 matches with the string s2 or not you just need to return me either are true or you just need to return me either uh false you just need me you just need to make sure you return either of these so",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "ZmlQ3vgAOMo",
+      "position": 215,
+      "title": "DP 34. Wildcard Matching | Recursive to 1D Array Optimisation 🔥",
+      "url": "https://www.youtube.com/watch?v=ZmlQ3vgAOMo",
+      "start": 276.88,
+      "end": 404.639,
+      "text": "these so how do you actually proceed with this problem so in order to think i can say uh the first uh thinking that will come to my brain is hey striver y y a a string matching simple string matching question mark is bound to match without so the first thing that comes to my brain is simple string matching and we have already done simple string matching in the previous dp problems so fine where is the main problem the main problem arises yes the main problem arises if it is a star because for question mark it's very straightforward they will match but for star is when the problem arises so let us take an example and understand assume you had a b star c d you had a b d e f c d so when you're matching you'll be like d matches with d c matches with c but for the star you exactly don't know how many will match because you know b matches with b but for the star you have to be very critical whether you take this f whether you'll take ef whether you'll take def whether you'll take bdf or whether you'll take a so for a star you can be like i will not take any one and i'll start matching b with f or you can be like for a star i'll take f and then i'll start matching with b and e or you can be like for the star i'll take e f and i'll match b with d or you can be like for the star i will take d e f and then i'll match b b and then a and comes out to be true so you you without trying you cannot say that you have you will be taking 3 you have to try by taking 0 by taking 1 by taking 2 by taking 3 by taking 4 you have to try always like for start you don't take then you're taking 1 then",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "ZmlQ3vgAOMo",
+      "position": 215,
+      "title": "DP 34. Wildcard Matching | Recursive to 1D Array Optimisation 🔥",
+      "url": "https://www.youtube.com/watch?v=ZmlQ3vgAOMo",
+      "start": 400.56,
+      "end": 545.04,
+      "text": "you don't take then you're taking 1 then you're taking 2 then 3 and then 3 it matched so you moved across you have to try all possible ways and whenever a question comes across all possible ways what comes to your brain definitely recursion i will try recursion string matching by recursion is what i will try i will try out every possible portion perfect so rules to write the recursion come on it's very simple now what are the rules if there are two strings you express them in terms of i and j in order to compare try comparing like explore comparisons third out of all comparisons it's it is asking you can you or can you not so out of all comparisons out of all comparisons if anyone can or if any way can you return true because that is what that is how you solve true and false if you remember the lecture six of the recursion series i have told you whenever there is a problem which has to return a true or false the standard pattern is very straightforward you write an f and this in the base case you either return a true or you either return a false if there are multiple states if this returns true and if this returns false you will return true if you are looking for one true if both of them return false you return false that's what you do in true and false recurrences you try out always this is one way this is one way and you basically say okay what are you returning and on that basis you do something right so out of all comparisons if anyone can you return true correct so how do you actually solve this problem so let's analyze f of i j but we need to figure out what is f of i j let's see i'll be like what if i write n minus 1 and m minus 1 what does this signify this signifies nothing but if the string is a b star",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "ZmlQ3vgAOMo",
+      "position": 215,
+      "title": "DP 34. Wildcard Matching | Recursive to 1D Array Optimisation 🔥",
+      "url": "https://www.youtube.com/watch?v=ZmlQ3vgAOMo",
+      "start": 542.48,
+      "end": 686.72,
+      "text": "star c d and the length is nothing but 0 1 2 3 4 so f 4 comma a b d e f c d 0 1 2 3 4 5 6 this means in the string from 0 to four in the string zero to six are they matching are these two strings matching is the string one from zero to four matching with string two 0 to 6 this is what this function signifies and it's going to return yes or no i hope that makes sense so going across we will be writing the base case afterwards so assume your i initially stands over here and the j initially stands over here so what are you thinking what can be the case you are like okay they are matching so if they're matching it's very straightforward the string gets reduced to this and this or what if there was a question mark then the question mark would have matched with d either both the characters match either both the characters match because it's very straightforward either both of them will match or you will be like hey listen if it's a question mark then also they will match so i can say whenever we did string matching problems what conditions we had one was the match condition one was the not match condition so for the match condition we have two conditions over here what are these two conditions you can be like if s of one of i matches with s of two of j that's definitely one of the conditions and the other condition is if this is equal to equal to question mark then also i can say question mark does match with anything on s2 of j which is this is not and this will be or or if either of these cases are true they are matching and if they are matching can i say i will be very very humble to return f i minus 1 because they are matching so i shrink the string and i shrink the",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "ZmlQ3vgAOMo",
+      "position": 215,
+      "title": "DP 34. Wildcard Matching | Recursive to 1D Array Optimisation 🔥",
+      "url": "https://www.youtube.com/watch?v=ZmlQ3vgAOMo",
+      "start": 682.64,
+      "end": 811.92,
+      "text": "i shrink the string and i shrink the other string as well very straight forward we have been doing the match condition right from the beginning of all the strings like right from the beginning of dp on strings so very very simple we say these two are matching let's reduce our i let's reduce our j and look for the smaller strings if they can be matched or not we solved this was the bigger problem we solved a portion of it and we are asking the smaller portion to be solved by the recursion okay so that's what this will be doing return okay what can be the other condition let's analyze the other condition that i can think of is what if my i let's erase this i over here let's erase this j over here okay what if my i stands here what if my j stands here so what i see is we have a star yes we have a star and i clearly said a star means you can say this did not match with anything like you can say for star means empty so one of the cases that i can think of is you will say star means empty and you'll be like let's just shrink this a b let's have the string i'll say star means nothing now star means nothing or i can say this f matches with this star star means one character let's reduce this to a b d e which means j will go here and this gets reduced i'm still standing at i okay that can be one of the cases or i can say let's match ef it's still standardized so i can actually match zero i can actually match one i can actually match two i can actually match three i can actually match four i can match any number of characters for the star yes any number of characters for this type so i can either go that way probably i'll try to write a recursion so that that way is also",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "ZmlQ3vgAOMo",
+      "position": 215,
+      "title": "DP 34. Wildcard Matching | Recursive to 1D Array Optimisation 🔥",
+      "url": "https://www.youtube.com/watch?v=ZmlQ3vgAOMo",
+      "start": 806.24,
+      "end": 948.959,
+      "text": "so that that way is also taken care of easily can i write let's see if i can write so one thing is for sure i will always take the case where i'll say hey listen the star means nothing nothing so i'll reduce this and this will be a b and this will still be abdf that's one of the cases for sure where i say star means nothing star means nothing so i will like okay if s of 1 of i is equal to equal to star i be like let's assume it means nothing which means ice will go and j will still be there because i said the star is equal to nothing because zero length was allowed thereby this gets omitted and i am with a b and i'm still matching with this perfect okay what can be the other thing i need to check for a length of one i need to check for a length of two i also need to check for a length of three and so on how will i manage that either i write a for loop either i write a for loop where i say i'll take f then i'll take fe then i'll take fed then i'll take fedv for the star that means otherwise can i do this in this straightforward recursion i can let me show you how assume let me write this recursion over here assume you are at a b start okay and this was a b no what was it i forgot abdf yeah a b d e f perfect so i'm saying this star hill is in the star you are no one so i'm calling a branch where i'm saying okay go to this and go to and now start comparing so which automatically mean i meant nothing nothing so start comparing with bf i did it the other thing that i can say is hey listen a b star b at star and move the string to here which means i said i compared f i compared f",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "ZmlQ3vgAOMo",
+      "position": 215,
+      "title": "DP 34. Wildcard Matching | Recursive to 1D Array Optimisation 🔥",
+      "url": "https://www.youtube.com/watch?v=ZmlQ3vgAOMo",
+      "start": 944.16,
+      "end": 1085.44,
+      "text": "i said i compared f i compared f so means i took one comparison so i came over to here again this is a string and i'll again do the same thing i'll say hey listen the star means nothing the star means nothing so it will come to a b a b d e i said star means nothing so it automatically came to a b abd which means you stated start to be just f you stated start to be just f how did you do that you first said okay star means one f let's reduce let's reduce then you said star means nothing one f and nothing equal to one f equal to one f right now i needed d e f how will i do that i'll again do the same thing i'll say this start let's match it with this e so i'll go to another case where i'll be like okay i'll still stand at star i'll move to abd now this means first you match with f then you matched with e so a b d e so e f got matched thereby you are with abd now if you say star means nothing then you'll come across to a b and abd and you'll eventually start matching with bd which means you ended up eliminating f and e via this path how delete f delete e then take start to be null so you eventually came up to here or you can be like hey listen i'm for the star i'm going to delete d fine so if you delete d you'll be like a b star let's delete d so a b perfect so what you did now was you deleted f you deleted e and you deleted d so eventually you deleted three characters for a start after deleting three characters you are saying hey listen hey listen there is no one there is no one for the start so standing with a b and a b and eventually they will match so you'll be like okay",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "ZmlQ3vgAOMo",
+      "position": 215,
+      "title": "DP 34. Wildcard Matching | Recursive to 1D Array Optimisation 🔥",
+      "url": "https://www.youtube.com/watch?v=ZmlQ3vgAOMo",
+      "start": 1080.96,
+      "end": 1220.88,
+      "text": "they will match so you'll be like okay a and a eventually they will match so you'll be like empty and empty so you tried out all patterns see you said 0 you said single f which is this single f deleted you said delete ef it went up and deleted f and e so this was e f deleted and he said delete d f so this was d f we did it using a single recursion and how did we do it let's analyze every step when we started we said just delete this so this is nothing but i can say i minus one and let's stay at j isn't it we are saying let's delete star which is i minus one let's stay at f that's the one stuff that you're doing that is the one step that you're doing what are you doing over here you're still standing here but you're deleting f which means you're still standing at i but you're deleting f so these are the two functions that you're doing these are the two functions that you're doing yes perfect that's how we can easily do this so i'll be like okay either this or i am going to delete the other one either the empty i will delete i'll take it as empty or i'll just delete one character and the next step it will again delete one character and the next step will again delete one character so eventually one one one all set of characters like 0 1 2 3 4 will be taken care in case of deletions perfect what if what if this the string did not match or it is not a star what if you are standing at a case where you are somewhere like assume a b c a e c so the c and the c will match then you are at b e this is neither a star this is not a star nor a question mark so this is not matching you cannot match them so at the",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "ZmlQ3vgAOMo",
+      "position": 215,
+      "title": "DP 34. Wildcard Matching | Recursive to 1D Array Optimisation 🔥",
+      "url": "https://www.youtube.com/watch?v=ZmlQ3vgAOMo",
+      "start": 1215.2,
+      "end": 1372.559,
+      "text": "matching you cannot match them so at the end of the day if either the strings have to be matching it has to be question mark or it has to be a start otherwise you cannot match and if you cannot match let's return a true perfect or true amazing so that's how i have explored comparisons expressed as well out of all comparison if any one of is true which is this case if anyone if them is true you return them otherwise you return i'm extremely sorry this will be false perfect what's the last step that you have to do you have to write the base case let's analyze the base case what will be the base case we have to actually think we have to think out of the box over here what will be the base case we are we have to think there is no other way so i know base case has to return true or false and i know one thing for sure i return true if comparisons have been done so whenever you're doing string comparisons in the previous class i told you there are two methods what are the true methods either the string one gets exhausted either the string one gets exhausted or the string two gets exhausted so let's think if the string s1 gets exhausted what will happen so this basically means uh my i pointer will go beyond zero this means string gets exhausted right if this gets beyond zero which means the s1 has no more characters left and in order to match with s2 this also has to have no more characters so can i say if i is lesser than 0 then the other string would have to be exhausted as well for the comparison to be true make sense make sense both of them have to be exhausted in order to the comparison to be successful perfect what about if this gets exhausted when you're comparing yes when you're comparing what if your s2 gets exhausted you need to think about that",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "ZmlQ3vgAOMo",
+      "position": 215,
+      "title": "DP 34. Wildcard Matching | Recursive to 1D Array Optimisation 🔥",
+      "url": "https://www.youtube.com/watch?v=ZmlQ3vgAOMo",
+      "start": 1369.039,
+      "end": 1522.08,
+      "text": "you need to think about that so before going to string2 gets exhausted if this is the case it's fine or if just the string got exhausted if just the string got exhausted and the other string did not get exhausted which means the j is still greater than equal to zero so there are some comparisons still left so return false but there can be the other way where i say hey listen hey listen the j is lesser than zero which means the second string got exhausted it got exhausted but on string s1 you still have something you still have something what will be this case you'll be like extremely straight and false no what does this mean the string two is nothing it is an empty string now what about this the string one still has something it might have something when can it match with an empty string when can a string s1 which has something match with an empty string think out of your box if this has all stars if this guy has all stars because stars can only be represented by mp if it has anything as a character it cannot be so i can say if s1 is left it has to be all stars it has to be all asterix otherwise it's not possible so i can say for you just need to loop from zero uh or whatever it is 0 to i and if anyone yes if anyone is not star rather you return false otherwise at the end of the day you have to return true right so that's what the base cases will be let's uh go back and try to write the base cases very straightforward i said if both of them got exhausted then the comparison has been successful i said hey listen if if this is exhausted and and j is still remaining that means there are still comparisons from the string s2 remaining but you don't have anything to compare so you're like okay return false",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "ZmlQ3vgAOMo",
+      "position": 215,
+      "title": "DP 34. Wildcard Matching | Recursive to 1D Array Optimisation 🔥",
+      "url": "https://www.youtube.com/watch?v=ZmlQ3vgAOMo",
+      "start": 1516.48,
+      "end": 1655.039,
+      "text": "like okay return false and the other case is definitely when this string got exhausted but there is still i left but there is still i left so i can in a better way i can write it as and and there is still i left these are the cases both gets exhausted one gets exhausted one does not the one gets exhausted and the one does not so in this case you need to run a for loop and you need to check i'll show you that in the code so that's how you can definitely write the recursion correct i'll write that in the code but before that let me just quickly walk you through the time complexity obviously it's recursion so you're going to try out all matchings and it is definitely going to be exponential again you're doing with asterisk so there can be 0 1 2 so the time complexity will be exponential that is what i can say space complexity will be the stack auxiliary stack space which is again somewhere around n plus a n plus m if you are doing the matching so we have to figure out if there are overlapping sub problems if there are overlapping sub problems then you end up doing memoize and how do you do my mesh very simple what are the changing parameters i j what is the maximum possible value of i n minus 1 so an n cross m d p is what you require and you can memoize and the time complexity after memoration will reduce to b go of n into m because those many will be the number of different states and the space complexity will be n into m plus plus we go of n plus m which is the auxiliary stack space so without actually wasting any time let's get back into coding this and try let's try submitting this so we are given a string pattern and a text right so n will be pattern.txt m will be our text.size",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "ZmlQ3vgAOMo",
+      "position": 215,
+      "title": "DP 34. Wildcard Matching | Recursive to 1D Array Optimisation 🔥",
+      "url": "https://www.youtube.com/watch?v=ZmlQ3vgAOMo",
+      "start": 1648.559,
+      "end": 1780.48,
+      "text": "m will be our text.size and we can return f of n minus one m minus one we can pass on the pattern and the text perfect and right here we can quickly write intf and the i into j string pattern string text and i know if both of them have exhausted we can definitely return are true i know if this string exhausted and there are still some matchings to be left this is definitely never possible and i know if the other string exhausted which is s2 there is still some portion of the pattern left there is still some portion of the pattern left then all of those pattern yes what i can say is probably you can just run a loop from zero till i all of those guys have to be yes in the pattern have to be equal to equal to asterisk if they're not equal to asterisk you can directly return a false and if all of these are equal to aesthetic you can just return a true that's how you do or the other cases you can say the pattern of i matches with the text of j or or if the pattern of i is equal to equal to question mark then it's fine and you can directly return an f of i minus one because they are matching and a pattern and a text perfect what can be the other case if the pattern of i is an asterisk if it's an asterisk you know there can be two ways either i say i'm gonna go empty which is i minus one and j and the pattern and text or you can say okay listen i will not be going empty yes i will not be going empty and i'll just take away one guy but i'll still stay at the same place in the next step i'll go empty but i'll still stay at the same so i'll still stay at the same for i but i'll delete one guy that's perfect",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 13,
+      "video_id": "ZmlQ3vgAOMo",
+      "position": 215,
+      "title": "DP 34. Wildcard Matching | Recursive to 1D Array Optimisation 🔥",
+      "url": "https://www.youtube.com/watch?v=ZmlQ3vgAOMo",
+      "start": 1775.679,
+      "end": 1906.96,
+      "text": "i'll delete one guy that's perfect and that's how you can easily do perfect and this is what you'll return and if none of these cases exist i know you're going to return a false because they are not going to match amazing i think this should be perfect so that's how you can easily do it and now if i try to run this this should be running fine it does run fine uh we have to actually convert this into a dynamic programming so let's quickly do this into dynamic programming which is dp of n cross vector of int again you can definitely write m cross minus 1 that's what you have written okay looks like we just need to declare this right above this and please make sure you pass on the dp and over here just make sure you carry on the dp as well and right before returning every time you just before calling other functions if this state has been previously called kindly return the values stored over there over here rightly stored the value over here again rightly store the value before returning over here again rightly so the value before returning so if you just do this it should be fine okay we need to make sure db is passed every time we call it please make sure you do that so the vector has not been declared so please make sure you declare hash include bits slash std plus c plus plus dot h we are getting 100 score that is indeed amazing but you know i'm not a big fan of my action because because because it has auxiliary stack space isn't it so no i am i don't want this so we need to convert this into tabulation right let's let's go across and super quickly write this for the rules of tabulation i think i think now after so many lectures this should be in your head rule number one write the base cases rule number two write the changing parameters rule number three copy the recurrence",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 14,
+      "video_id": "ZmlQ3vgAOMo",
+      "position": 215,
+      "title": "DP 34. Wildcard Matching | Recursive to 1D Array Optimisation 🔥",
+      "url": "https://www.youtube.com/watch?v=ZmlQ3vgAOMo",
+      "start": 1903.279,
+      "end": 2016.08,
+      "text": "copy the recurrence rule number four is return whatever call you made that's it base case is something once you've done this these are just plain okay what is the base case let's go back into the code so if you see in the code you're doing i lesser than 0 lesser than 0 again so do you remember in all the previous matching of strings like if you haven't seen them please go back and watch it in all the previous lectures what did we do in order to in order to make sure that it does not goes into negative yes we converted this into one based indexing so kindly do this into a one based indexing which is plus one guys uh this dp series is an extension of all the problems like if i'm teaching now i'm assuming you have seen all the previous videos so if you have not seen the previous videos you will not be able to catch it what i'm doing over here so this is what you'll do and again you know this is the case again you know this will be the case again you know this will be the case and this will be simply greater than zero because you have done one base indexing over here it will be equal to equal to zero and instead of greater than equal to it will be just this and what about here you are traversing yes that's a one base indexing so you have to traverse from one creator you said to traverse from one crater and you have to just go across doing till i correct you are doing for one based indexing so you will be traversing for one greater correct now whenever you are at i i what will you do you you're looking for one lesson so just make sure you look for one lesson and if you do this you are done and what about here look for one lesson what about here therefore one let's say what about here you look for one lesser",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 15,
+      "video_id": "ZmlQ3vgAOMo",
+      "position": 215,
+      "title": "DP 34. Wildcard Matching | Recursive to 1D Array Optimisation 🔥",
+      "url": "https://www.youtube.com/watch?v=ZmlQ3vgAOMo",
+      "start": 2012.96,
+      "end": 2120.079,
+      "text": "about here you look for one lesser because one base indexing guys and right over here again one lesson i think this should be fine so you see it is giving correct answers but i'll not submit this and make sure you do it n plus one n plus one perfect so that's how you convert this into a one base indexing now what am i seeing i equal to zero j equal to 0 right and that has to be returned true so let's convert this case into tabulation so i'll just go over here and i'll say okay this will be 0 this will be false or you can be like boolean perfect and what i'll be like is okay i know dp of 0 0 is true that's what we have written i equal to 0 j equal to 0 has to be true and now for every i equal to 0 and whenever j is greater than 0 for every i equal to 0 whenever j is greater than 0 very important whenever the j is greater than 0 so whenever j is greater than 0 which means 1 lesser than equal to m and j plus plus and dp of i is 0 and for this you have to write a false perfect is that what you write because for every i equal to 0 whenever j is greater than 0 you just make sure it's a false so i just made sure i write it what is the next case for any j equal to equal to 0 let's read this for any j equal to equal to 0 for any i greater than 0 you have to actually check this figure out so for any i greater than 0 for any i greater than 0 let's write this for any i greater than 0 which means this definitely and what is j j is 0 you will have to check for this there is no other way you will have to check for this so just go",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 16,
+      "video_id": "ZmlQ3vgAOMo",
+      "position": 215,
+      "title": "DP 34. Wildcard Matching | Recursive to 1D Array Optimisation 🔥",
+      "url": "https://www.youtube.com/watch?v=ZmlQ3vgAOMo",
+      "start": 2116.32,
+      "end": 2249.2000000000003,
+      "text": "will have to check for this so just go across and you say i am going to check for this and if this is the case yes and if this is the case we are straight away yes we where straight away we will do nothing but he will say hey listen dp of what was i i was zero if you remember i was sorry j was zero so go across and say dp of this particular i and this particular j which is 0 is going to be false right if you have this particular i and this particular j is going to be false and if this is happening as well so probably you can just keep your flag as true in order to have a better one and you can just keep the flag as false and then you can just break out and right over here you come across you know dp of j was zero and for any i and for any i which was greater than you can say whatever value of flag you get if you get any time false you store it and this false never appears you just store the true that's what i've done for every j equal to zero i greater than zero for every j equal to zero i greater than zero you have done this now what about the changing parameters very simple what are the changing parameters definitely this can you do it in the opposite fashion i've been doing this from ages now do this next go across and copy paste everything in the regrets amazing the same be very careful about one thing guys you're writing if so please make sure because now return will not be there so the following statements will be executed or else okay just make sure you have something like elsif because the following statements will be executed so over here what will be dp of i minus 1 j minus 1 perfect so i write it dp of i minus 1 and j minus 1",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 17,
+      "video_id": "ZmlQ3vgAOMo",
+      "position": 215,
+      "title": "DP 34. Wildcard Matching | Recursive to 1D Array Optimisation 🔥",
+      "url": "https://www.youtube.com/watch?v=ZmlQ3vgAOMo",
+      "start": 2242.88,
+      "end": 2369.599,
+      "text": "i write it dp of i minus 1 and j minus 1 amazing over here dp of i minus 1 and j db of i minus 1 and j all dp of i and j minus 1 perfect that's what you write and you can just omit this portion that's why you'll convert this line easily and this will be normally false and right over here you can easily return dp of nm and i think this should be fine let's quickly run this off okay we got no matching call for the function are we still calling the function let's see okay so we did a mistake this will be boolean my bad flag was not declared in the scope let's quickly check this off okay boolean flag was declared here then flag was false then you did a break okay line number 16 not declared in the scope okay this was fl sorry even bad again fine runs fine let's quickly submit this it does run wow amazing now can we space optimize this we can we definitely can space optimize this why because again you're dependent on i minus 1 which is the previous guy and you're dependent on i minus 1 again the previous and the current guys so you can definitely space optimize this but what are the problems that you'll face first problem that you'll face is uh you know you have to declare the base cases so it will become a bit tricky so if you have solved the problem till here i'll recommend you to try the space optimization by yourself and if you do like i'll explain the space optimization now but if you don't understand there's nothing to worry with time probably try it out by yourself you'll understand but the key to using space optimization is if you're using the previous rows previous rows then you definitely can space optimize so let's come back and uh try to do the space optimization so i know one thing for sure is i know one thing for sure",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 18,
+      "video_id": "ZmlQ3vgAOMo",
+      "position": 215,
+      "title": "DP 34. Wildcard Matching | Recursive to 1D Array Optimisation 🔥",
+      "url": "https://www.youtube.com/watch?v=ZmlQ3vgAOMo",
+      "start": 2365.92,
+      "end": 2529.6800000000003,
+      "text": "one thing for sure that instead of this i will now be requiring one previous of m plus one false and one car of m plus one false okay so i know this previous is nothing but the zeroth let's understand it is the zero up row and this is the first row so on the zeroth row which means the previous without any doubt the zero through means the previous okay amazing 0 previous i equal to 1 so what are you doing is you are doing this for every row for every row you are saying for every row see for every row you are assigning the first column or the zeroth column its value for every row you are assigning the zero at columns value so can i say every time you go across to i equal to zero the curve is the current rows column and that curse zero throw has to be assigned every time do you agree because over here you ended up assigning every row like whatever row you had whatever you had you assigned you assigned you assigned you assigned by this but this time you're starting with only two so you will have every time you are at cur you have to take care of this in the next time whenever you go to the car you again have to assign this next time again you have to assign this so at every junction you have to assign so i know this is the row so this row is already running just to make sure before entering before starting off assign it before starting off assign the car every time for every row just make sure you assign the car every time and then you can easily start off by saying okay this is what the previous will be this is what the previous will be this is the curve over here and this is definitely going to be the curve this is definitely going to be the curve right and this is going to be the curve and",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 19,
+      "video_id": "ZmlQ3vgAOMo",
+      "position": 215,
+      "title": "DP 34. Wildcard Matching | Recursive to 1D Array Optimisation 🔥",
+      "url": "https://www.youtube.com/watch?v=ZmlQ3vgAOMo",
+      "start": 2525.599,
+      "end": 2633.13,
+      "text": "and this is going to be the curve and right at the end you can say previous will be equal to curve and over here you can say previous occur whatever you wish to and now you can run wow wow that is amazing the space optimization i i'm definitely sure you enjoyed this piece optimization wow we are getting hundred percent so guys go step by step and you do space optimization i know it's a bit tricky it's a bit tough but i'll always recommend try to do on pen and paper try to see what these cases you're writing i went step by step and i converted it i did not do a lot of things i just went step by step and i converted it so i'm using couple of 1d arrays and again an n cross m loop so guys uh i hope you understood the recursion which we started off the memoration you understood if you understood these two things you're pretty much comfortable and then uh we wrote the tabulation then we did the space optimization so just in case you understood the whole package and and the entire dp on strings because this is where we wrap up on dp on strings and i hope i was able to explain you all the dp on string problems um not sure how but let me know in the comment section if you're not comfortable enough with dp on strings and you can solve all the problems so guys just in case you loved this video please give it a thumbs up and if you're new to this channel please please please do consider subscribing to us and yeah with this i'll be wrapping up this video let's meet in the next one till then bye bye take care whenever your heart is [Music]",
+      "word_count": 310
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "video_id": "SrP-PiLSYC0",
+  "position": 192,
+  "title": "DP 11. Triangle | Fixed Starting Point and Variable Ending Point | DP on GRIDS",
+  "url": "https://www.youtube.com/watch?v=SrP-PiLSYC0",
+  "chunk_count": 19,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "SrP-PiLSYC0",
+      "position": 192,
+      "title": "DP 11. Triangle | Fixed Starting Point and Variable Ending Point | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=SrP-PiLSYC0",
+      "start": 0.399,
+      "end": 117.6,
+      "text": "hey everyone welcome back to the channel i hope you guys are doing extremely well so this is the 11th lecture of the dynamic programming playlist yes till now we have done uh dp on grids like we have done three problems on the dp on grids where there was a shuttle pattern where we always stated that the starting point is 0 0 and the ending point is n minus 1 and m minus 1 this was the pattern of questions that we have done now going forward i will be solving three problems yes three problems where we will be having variable starting points yes might be there like there might be a variable or a fixed starting point and the ending point will also be variable when we will see the questions you will understand what does variable mean but yeah the variable it will be variable that's that's going to be the next set of three questions so in order to start off we will be taking the first question which is triangle so yeah without without wasting any time let's get started it states that you're given a triangular array that's basically a triangle your task is to return the minimum path sum to reach from the top until the bottom row the triangle array will have n rows and the ith row will have i plus one element so let's understand this so basically there will be n roots and the ith row will be having i plus one elements now you can move only to adjacent number of row below each step for example if you are at an index j in a row i then you can move to i or i plus one index in the row j plus one and it's each step i'll explain you this so this is the example so let me just quickly write this down over in the ipad so if you see over here what the question stated was this is the zeroth row it will have",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "SrP-PiLSYC0",
+      "position": 192,
+      "title": "DP 11. Triangle | Fixed Starting Point and Variable Ending Point | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=SrP-PiLSYC0",
+      "start": 112.88,
+      "end": 228.959,
+      "text": "this is the zeroth row it will have one element this is the first row it will have two elements second row will have three elements so that's why it's right angle triangle got this now it states that if you are over here yes if you're over here on a given row you can move right to the bottom of the next row or you can move diagonally to the next row so basically assume you are standing over here you can move either to here or you can move either to six but you can't move to ten and either you can move to eight so either you can move uh diagonally diagonally or right straight bottom so they have said that there is a starting point okay so over here we need to understand that the starting point is fixed okay so the starting point is fixed what about the ending point they're saying that the ending point might vary is the ending point might vary because what they are concerned is as long as you are reaching the last row you can either reach here you can either reach here or you can either reach here or you can either reach out as long as you're reaching the start ending ending row we are satisfied and in order to reach from the first row till the last row there might be a path uh how many different paths can be there you might go from here to here then from here to here then from here to here there can be some path like one two three three two seven seven to ten there can be something like one two three eight right bottom there can be a lot of parts okay and in these parts whichever path takes the minimum path sum you have to tell me that so for an example i can say i can go from 1 to 2 to 3 and to 8 and this is like 8 plus 2 is 10 13 14 so 14 is the",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "SrP-PiLSYC0",
+      "position": 192,
+      "title": "DP 11. Triangle | Fixed Starting Point and Variable Ending Point | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=SrP-PiLSYC0",
+      "start": 223.28,
+      "end": 339.28,
+      "text": "like 8 plus 2 is 10 13 14 so 14 is the minimum path sum you can try out all the paths and the minimum that you will get is indeed 14. so going across how do you identify that a greedy solution is will fail again uniformity concept that i have explained you in the previous videos if you have seen it's not uniform because it might happen over here greedily you choose to and again greedily you choose three and uh like greedily you're choosing right and might happen somewhere down the line there is a very smaller value you miss out just because you're choosing something which is very very small on the upper half so uniformity is not there because the values might be bigger might be lesser so whenever there is no uniformity in the increa increment of values or decrement of values then we can see that something like a greedy cannot be applied something like a greedy cannot be applied so what do we tend to apply over there yes we try out all the parts we try out all the parts right and um how do you do that again very simple we know we just have one way to try out all the parts that is we travel through all the paths and that can be done using recursion and by using recursion what you need to do is you need to find the path which gives you the minimum sum and once you've done this you are done so in the great grid problems what have i told you i've told you represent everything in terms of indexes and what are the indexes over here intj because in a grid we will always have the row number and the column number what is the next thing that i have told you explore all the parts so if you remember over here yes over here the paths what kind of paths are there either you can go here or either you can go diagonally right",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "SrP-PiLSYC0",
+      "position": 192,
+      "title": "DP 11. Triangle | Fixed Starting Point and Variable Ending Point | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=SrP-PiLSYC0",
+      "start": 333.28,
+      "end": 459.52000000000004,
+      "text": "or either you can go diagonally right and after that you take the minimal of all the paths and if you write these three steps down you can easily write any recurrence can you write any recurrence right you can but now the question arises striver in all the previous videos we did know that the ending point was something like n minus one and m minus one so striver we started from the back like f of n minus one m minus one and we did write the recursion but over here there is not a fixed ending point that is very obvious because we can either end here we can either end here we can either end here we can either end here so there is no fixed ending point so logically it will not make sense if i write the recurrence because i might be ending here i might be ending here so there can be four different recurrence one that starts from here the other that starts from here the other that starts from here the other that starts from here there'll be four different kind of recurrence in the previous video there was only one recurrence that you called and you got the answer but over here you have to call four different recurrence one is from here one is from here one is from here one is from here and in all the four recurrence whichever recurrence gives you the minimum path that will be your answer right but whenever you see that there is a single fixed point like i can see that there is a single fixed point logically it is preferable that you start from right the top and you try to go down that's the preferable logic so we will try to implement that preferable logic instead of starting from the back which we have usually done in all the problems we will not do because over here we have to start from four different columns basically the number of columns is what i have to start",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "SrP-PiLSYC0",
+      "position": 192,
+      "title": "DP 11. Triangle | Fixed Starting Point and Variable Ending Point | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=SrP-PiLSYC0",
+      "start": 455.759,
+      "end": 575.4399999999999,
+      "text": "of columns is what i have to start that's not preferable that's why what we do is we start the recursion from f of 0 0 and what we say is hey listen over here f of 0 0 signifies the minimum pass minimum path sum from 0 0 to last true and in last row it can be any column i don't i don't care it can start from 0 0 and go till the last row so we have figured out that the recurrence has to start from instead of f of n minus 1 m minus 1 we know the recurrence will start from 0 0 that is something which we have figured out and i've told you the reason right it's time to write the recurrence so we know the recurrence is something like i comma j correct so what do we initially write if i'm writing this represent i j then you have to write the base case what is the base case what am i doing try to think in that direction what am i doing i know that i'm starting from here i know that i'm starting from here and i am going down i will go down and when do i end from this row can i go further down where is your destination generally the destination is your base case i know the destination is the n minus one through so i know whenever i reach n minus one at row whichever value is there that will simply get added to the answer so what i can do is okay if i reach n minus 1 through by any chance if i reach n minus 1 through i can say that please please return whatever is there on that jth column like if i'm reaching any of the columns yes if i'm reaching this guy i'll return 8 to be added to the answer i'll write a 9 i'll written 6 i'll written 10 whichever column i ended i'll be returning that so that is how we will be",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "SrP-PiLSYC0",
+      "position": 192,
+      "title": "DP 11. Triangle | Fixed Starting Point and Variable Ending Point | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=SrP-PiLSYC0",
+      "start": 571.279,
+      "end": 682.079,
+      "text": "returning that so that is how we will be doing this correct so we have figured out the first base case what can be the other base case can you try to think yes you probably can try to think so if i talk about where am i moving i'm moving till bottom and to the right will we ever uh go out of boundary try to think for this guy this is the extremist guy on the zeroth row does it have a diagonal yes does this guy have a diagonal yes does this guy have a diagonal yes we've reached the last row so i know no matter how you move because we can only move down and diagonal we will never never go outside this boundary so we know that there will be no out outside boundary condition so there is only one base case so step one complete it now step two explore all the parts and we know we are looking for minimum parts of what kind of path is there one is this i know this is nothing but i plus 1 j we go to the next row and the same column and we know this is i plus 1 next row but the right column right column will mean i plus 1 j plus 1 everyone knows that right what's the next step the next step is very simple explore all the paths so what paths do you have you have one down path which states the current you will take and you will ask like basically you took the current and you said go down and figure out the answer for the rest of matrix you took the current and you said go down and figure out the answer for the rest of the matrix so you're saying okay go down and figure out the answer for the rest of the matrix or you're saying go diagonal and figure out the answer for the rest of the matrix from that step so that's what you've done",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "SrP-PiLSYC0",
+      "position": 192,
+      "title": "DP 11. Triangle | Fixed Starting Point and Variable Ending Point | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=SrP-PiLSYC0",
+      "start": 678.88,
+      "end": 806.8,
+      "text": "that's what you've done so basically what does this condition mean you're basically saying okay listen take one and go to this guy so this guy states i have to figure out the answer that i'll take from here to reach here right or if you would have gone diagonally would have been going here so yes you have taken one and you're saying you're here now you're asking in this triangle from here in order to reach you figure out the minimal cost path sum so you have written one down and one diagonal and you've taken the paths up the current and the remaining that it will give so what we have done the next step is also done explore all the paths what is the third step minimal of all the paths yes so can i say i will return the minimal of di d and dg which is down and diagonal so i can just complete the function this is how the recurrence will be pretty straightforward right so we have written down the recurrence now if i ask you the time complexity what will be the time complexity of this recursion now how many uh like if i if i ask you how many rows and columns are there then the first row has one column so basically one column then the next row has two column next row has three column and so on we have n plus one columns at the last nth row that's i think n n column rather we have exactly n column at the last row so what we know is these are the number of rows and for every column we have couple of options either to go down or to go bottom so we can say twice into twice across every one right so 2 to the power the summation of this 2 to the power summation of this which is exponential in nature because you're going twice for every one right recursion and the space complexity there'll be a stack space involved one",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "SrP-PiLSYC0",
+      "position": 192,
+      "title": "DP 11. Triangle | Fixed Starting Point and Variable Ending Point | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=SrP-PiLSYC0",
+      "start": 803.12,
+      "end": 913.199,
+      "text": "there'll be a stack space involved one with the stack space you're going from the zeroth row to the bottom so the length of the rows which is b go of n so i can say the recursion is this and you know how to convert a recursion like how to optimize this the best way is to figure out are there overlapping sub problems and i will not be doing any more recursion tree because this is the 11th lecture of the dp series and i am of the assumption that you have been seeing the dp series from the first lecture so you all know what is overlapping sub problems if you want to figure out are there overlapping sub problems what you just need to do is you need to start from f of 0 0 go across to f of 1 comma 0 go across to f of 1 comma 1 keep on going this will be f of the next one will be two comma zero the next one will be f of two comma one this will be like f of two comma one this will be f of uh something like one sorry two comma two so you see the first step this is the first step where you get overlapping sub problems so we are saying there will always be overlapping sub problems if you draw the tree i said i'll not draw but still i did draw so if you draw this you will see that there are overlapping sub problems and you know whenever there are overlapping sub problems what can you apply yes you can apply something as memoration yes you can apply something as memoization now what's the next step can i say this can i say this but if i can apply memory action i had to figure out what can be the maximum value of i what can be the maximum value of j i know we can at max have n rows and n columns so",
+      "word_count": 341
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "SrP-PiLSYC0",
+      "position": 192,
+      "title": "DP 11. Triangle | Fixed Starting Point and Variable Ending Point | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=SrP-PiLSYC0",
+      "start": 905.279,
+      "end": 1029.6000000000001,
+      "text": "can at max have n rows and n columns so we will be requiring an n cross n dp so what's the next step very simple guys you just take dp of i j done next if dp of i j is not equal to minus 1 you can return dp of i j that's what all that's that's that's what you just need to do and if you're able to do this it should be absolutely fine with the memorization solution so once you convert it into a memorization solution what is the time complexity can i say the time complexity will be the number of states which is n into n and the space complexity like it will not be exactly n into n because so it's a triangle right uh like if you if you think it properly it's a triangle so one state two states so these will be the number of states which is one plus two plus three plus this portion of the dp will not be required but i'm not going into depth you will you can understand if you just do a dry iron on yourself i'm not going into the depth so the time complexity like you can just generally see this is the time complexity and the space complexity will be this which is recursion stack space and i've already told you about what is recursion stack space so this is the time complexity and the recursion stack space perfect guys okay so how do you remove the stack space because you know in a lot of platforms you will get dla time limit exceeded so in order to do that you just need to write the tabulation method so first this is going to be slightly different from the previous ones in the previous problems we did recursion from n minus 1 till 0 and over here we did the recursion from 0 to rather the last row so it isn't like now we will be calling just because we wrote the recursion from zero to uh",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "SrP-PiLSYC0",
+      "position": 192,
+      "title": "DP 11. Triangle | Fixed Starting Point and Variable Ending Point | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=SrP-PiLSYC0",
+      "start": 1023.839,
+      "end": 1153.44,
+      "text": "we wrote the recursion from zero to uh and last row it doesn't mean it's bottom up right recursion always is top down is always top down because this is where you start you go down you go down then you compute the base case then you re-accommodate to get the final answer top down then you go so never ever right so over here the recursion that you wrote was from 0 to n minus 1 so the base case will be like the tabulation will be the opposite it's a thumb rule whatever you write for recursion the opposite is the tabulation right so that's something which is a thumb rule now let's look at the base case let's go across so by the way uh the first thing in tabulation everyone knows is declare a dp of size n cross n is something which you have to declare correct now going across what do i see in the recursion this is the base case how many base cases can we have if i'm saying i is n minus 1 what will the possible values of j the possible values of j if i just go to the example 0 1 2 3. there can be four different rows there can be four sorry four different columns because once you might reach here this might be a base case you might reach here this is a base case you might reach here this is a base case you might reach here this is a beast case so there can be four different base cases agreed so if i'm saying that there can be four different base cases i just need to write it so i know for sure that j there can be j equal to zero till j lesser than n all the columns and i know n minus 1 will stay common but this column number will always change because it might be the first column and every time i just need to make sure i take the value from the matrix because",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "SrP-PiLSYC0",
+      "position": 192,
+      "title": "DP 11. Triangle | Fixed Starting Point and Variable Ending Point | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=SrP-PiLSYC0",
+      "start": 1149.52,
+      "end": 1266.96,
+      "text": "i take the value from the matrix because this is what i have been doing in the recursion right we have been writing this only right return this what can be dj j can be 0 1 2 and 3 which is up till n minus 1 that's what i wrote in the base case so something different from the previous ones we have written the base case ourselves so you have written this particular base case what is the next step the next step is definitely writing the for loop so we need to understand if we write the recurrence from 0 to n minus 1 the tabulation will be opposite why because you know the base cases and at n minus 1 so you fill the table from n minus 1 then to n minus 2 then to n minus 3 and so on you go until 0 0 so you go opposite right so what i know is there will be the row number i will definitely start from n minus 2 there's no need to do for n minus 1 because you've already done for it we go till 0 and i minus minus now remember whenever you you write tabulation you go and see what are the recurrences there is the i and there's a j so for an i what can be the particular js you think in your brain so if i see if i is zero what can be the possible j maybe like for zeroth row there will be zero columns i'd be like yes if i is one how many j's can be there zero and one if i is two how many j's can be there zero one two if i is three how many j's can be there zero one two three it's a triangle it's a triangle so can i say whatever is the value of i that's equivalent to the number of columns it can have so i figured out how many possible columns will i have for a particular i",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "SrP-PiLSYC0",
+      "position": 192,
+      "title": "DP 11. Triangle | Fixed Starting Point and Variable Ending Point | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=SrP-PiLSYC0",
+      "start": 1261.2,
+      "end": 1387.8400000000001,
+      "text": "columns will i have for a particular i so first variable you will write and then you will create a nested loop that's a tabulation concept for j so create the nested loop for the tabulation concept so i create a nested loop for the tabulation concept and what did i tell you the nested now you might ask okay strive now how will the nested loop run now the nested loop will also run in the similar fashion how did j move j move like plus plus right plus one something you run the nested loop in the opposite direction which is j equal to i g greater than equal to zero j minus minus if you're moving both of them in the plus plus the tabulation will be the opposite that's it that's the simple tabulation nested for every i you write the particular j that's it and after that copy p is the recurrence what is the recurrence a of ig plus f of i plus 1 j that's the recurrence relationship right so you write dp of i plus 1 j was the other one you wrote dg equal to a of ij is a of ij plus dp of i plus 1 and j plus 1 perfect and then you wrote dp of i j equal to minimum of d comma d g what will be answer what is the recursion that you call to get the answer the recursion that you called to get the answer was f of 0 comma 0. so over here the answer will be print of dp of 0 and 0 that's it that is the answer yes that is the answer perfect so what is the time complexity now again we go of n into n because that's that's the kind of like near about n into n because over here it's not exactly n loop it's the number of rows so you can say that it's slightly less than that by a near about what with the space complexity normal recursion",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "SrP-PiLSYC0",
+      "position": 192,
+      "title": "DP 11. Triangle | Fixed Starting Point and Variable Ending Point | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=SrP-PiLSYC0",
+      "start": 1382.88,
+      "end": 1505.279,
+      "text": "the space complexity normal recursion stack space by the way i think in the memoration part oh we just wrote a recursion text piece we did not write the uh tabulation that was used so the recursion stack space has been omitted and i just left off with this n cross it n matrix that you're using for this particular dp table so we have made sure that the space complexity of the recursion of the stack space has been removed can we optimize this yes why i did tell you if there is something like i plus 1 if there is something like i plus 1 you can always do it so why don't you do it i was the rule just store the previous keep exchanging remember so what is the next thing space optimization and there's a speciality about this series isn't it what have i told you whenever you see something like i minus one like till now it was i minus 1 because it was a previous over here we are seeing something as what are we seeing i plus 1 so how how will this dp table fill up so i'll always recommend in order to understand space complexity better like our space optimization better try to do a dry run of this table format that the guy tushar roy does like we have seen his videos you will understand how he like he just comes up and writes the formula and fills up the dp table so now you know how to how to derive this particular formula now you can just fill up the dp table so if you try to fill up the dp table what happens is the last row is the base case which is automatically like i'm just filling up like random numbers it's not zero it's some dots and then you start from this guy and then you are like fill up this fill up this fill up this then you go to this guy and you like fill up this fill up this then you",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 13,
+      "video_id": "SrP-PiLSYC0",
+      "position": 192,
+      "title": "DP 11. Triangle | Fixed Starting Point and Variable Ending Point | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=SrP-PiLSYC0",
+      "start": 1501.279,
+      "end": 1619.2,
+      "text": "like fill up this fill up this then you go to this guy and you say fill up this and whatever is here you say this is my answer so how did the dp table fill up first the base case and in order to get this what you did was you took this guy plus this or this guy plus this right in order to fill up this guy what you did was you took this plus this or this plus this that is what this line is doing f i j plus d p like the next guy f i j plus d p that's what it is doing if you try to do a dragon in order to fill up this it's taking this plus this or this plus this similarly in order to fill up this it's taking this plus this on this plus this so can i say in order for like in order to solve any row i'm just requiring this particular row in order to solve this row i'm just requiring this particular row in order to solve this row i'm just requiring this particular row so can i say once this is the base case i compute this particular row and i'm not requiring this i'll just delete it then i compute this row i'll not require this deleted then i'll compute this row i'll not require it delete it so can i say instead of storing the entire triangle i just need to store two rows two rows one is the previous or like the front row and one is the current row that you are traversing and once this current row is computed and you move to this guy this current row becomes the front row can i see this i can that's what you have to just do in the code just make sure you store this particular guy like what you can do is always remember always always uh try to create a like over here you can say the front row so you can write",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 14,
+      "video_id": "SrP-PiLSYC0",
+      "position": 192,
+      "title": "DP 11. Triangle | Fixed Starting Point and Variable Ending Point | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=SrP-PiLSYC0",
+      "start": 1615.039,
+      "end": 1730.559,
+      "text": "can say the front row so you can write something as front row of size n and over here instead of this you can write front of j and the front row is computed so the front is computed by this next this is front i plus 1 is front the entire i plus 1 is front so right front correct now instead of carrying dp of ij because dp of ij means understand dp of ig means this guy this guy this guy so instead of dp of ij what you say is you just create this particular row just create one more row so what you basically do is you say okay what i'm going to do is i'm not going to do anything i'll be like let's create the current row like you can trade off a lesser size but i'll just take it and instead of dp of i j you'll be like car of j and once the entire row has been created by this particular for loop you know this particular current for the next i will become the front so you will say front who's the front the current will be the front for the next i because i will go minus minus that's the space optimization and once you do the space optimization you can be like okay i've done the space optimization so now the time complexity is still the same but the space complexity has boiled down to big o of n like it's twice of n but yeah it's near about b of n we're not using an n cross and matrix so we're just using couple of rows and we're able to compute the entire answer and can i say can i say at the end of the day whenever you're doing i minus minus in the first loop you're doing i minus minus over here what is the ending point of i when this loop ends i will be minus 1 and the current will be stored in front so the answer will be stored in",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 15,
+      "video_id": "SrP-PiLSYC0",
+      "position": 192,
+      "title": "DP 11. Triangle | Fixed Starting Point and Variable Ending Point | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=SrP-PiLSYC0",
+      "start": 1725.039,
+      "end": 1848.3990000000001,
+      "text": "so the answer will be stored in front of zero right very obvious that's how you can space optimize this particular stuff so i've already written the pseudo codes in the ipad but i'll still write the code so that you have a quick revision kind of a thing so basically given the triangle and n which recommends the number of rows so what you can do is you can definitely write a function so let's quickly write a function where we will we know that we will have couple of changing parameters which is rtij we will be requiring this vector triangle and the n so let's quickly take this off i know that if we reach the last row that's over right so we can definitely return triangle n minus 1 j so that's the base case that we have covered and there will be a d which will be a triangle i j plus f of i plus 1 j which is basically the down path there will be a dg which will be triangle i j plus f of i plus 1 and j plus 1 correct and uh don't forget to uh pass on the extra parameters that's important at the end of the day you know you have to return the minimal of down and the diagonal path so can you return that over here you can return the function zero comma zero the triangle and the size and you can quickly run it off it does run but it will give you a tle uh because it's a recursive solution and it will be exponential so what you need to do is you definitely need to create a dp's array so please create a dp array of size n cross n initialize with minus 1 pass it as the next parameter so you can just copy paste this and this will be dp so just make sure it's a dp over here make sure you pass one more dp so first step is done by just declaring and passing the parameter what's the",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 16,
+      "video_id": "SrP-PiLSYC0",
+      "position": 192,
+      "title": "DP 11. Triangle | Fixed Starting Point and Variable Ending Point | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=SrP-PiLSYC0",
+      "start": 1844.159,
+      "end": 1954.72,
+      "text": "and passing the parameter what's the next step initialize the answer so please initialize the answer what is the next step if dp of i j is not equal to minus 1 you can return dp of i j and that should be perfect now you can run this code running fine and if i try to submit this say partially accepted uh because it's getting time limit exceeded as i said a lot of times it will happen that the recursive memoration will give you time limit exceeded that is when you need to do is you just need to convert that into a tabulation format so over here what i can do is you can just put in an n of zero and i know there is a last row that has to be filled so kindly fill up the last row that's very simple dp of the last row and the column will be nothing but the triangle of the last row and the column that's how you can easily fill that up and apart from that there will be a couple of nested loops right starting from the back so you can just run it off there'll also be a for intj equal to starting from the back and it can go on something like this and i know there will be a couple of parts which is intrd so basically uh you just need to make sure you copy this stuff that's it nothing special just make sure you copy this stuff and instead of f you need to create a dp of i plus 1 and j that's the shuttle change that you need to do instead of f i will always be dp of the recurrence that you're calling so just carry it on dp of i plus 1 r2 j plus 1 that's how you'll do it and at the end of the day you can say dp of i j will be minimal of d comma d g so once you've done this you know what will",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 17,
+      "video_id": "SrP-PiLSYC0",
+      "position": 192,
+      "title": "DP 11. Triangle | Fixed Starting Point and Variable Ending Point | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=SrP-PiLSYC0",
+      "start": 1949.679,
+      "end": 2057.2799999999997,
+      "text": "once you've done this you know what will you return you will always return dp of zero zero because that's sorry dp of is it zero zero that's zero zero so zero zero is what you're going to return let's quickly run this off should be running fine yeah that's run let's quickly submit this off let's see if this is getting your tle oh this is not giving okay so this uh appears to be the correct answer and you're getting your 100 score so now what are the changes that i require what's the next step space optimization let me quickly raise this off to get some space it's peace optimization right so we need to delete this and we just need to store the last row so what we can do is we can say vector of end front row we can call it as front rather of n comma zero okay and instead of dp of n minus one we call it as front and make sure you also have a current row initialized as n cross 0 now what i know is triangle of i j plus dp of i plus 1 so instead of i plus 1 i'll say front instead of again i plus 1 i'll say front very obvious instead of dp of i i'll always say car and over here i'll make sure the front is reinitialized with that's what i just need to do and over here instead of dp of zero i'll say front because that is where it will be stored you can also do it that is fine so we just run it it is running fine and if i submit this it's going to be working fine if you see is it is indeed working right you're getting a correct answer uh that is how you can easily space optimize this particular stuff so guys i hope you have understood all the threes so guys i hope you have understood the recursion the memoration the tabulation and the space optimization so just in case you did",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 18,
+      "video_id": "SrP-PiLSYC0",
+      "position": 192,
+      "title": "DP 11. Triangle | Fixed Starting Point and Variable Ending Point | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=SrP-PiLSYC0",
+      "start": 2053.919,
+      "end": 2080.599,
+      "text": "optimization so just in case you did please please please make sure you like this video and to follow our tradition please make sure you comment understood under the comment section that does give me a lot of motivation to keep making such kind of videos and yeah with this i'll be wrapping up this video let's meet in the next one bye take care [Music] ever forget [Music]",
+      "word_count": 69
+    }
+  ]
+}

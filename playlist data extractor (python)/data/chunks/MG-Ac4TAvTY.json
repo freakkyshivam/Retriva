@@ -1,0 +1,130 @@
+{
+  "video_id": "MG-Ac4TAvTY",
+  "position": 59,
+  "title": "BS-15. Capacity to Ship Packages within D Days",
+  "url": "https://www.youtube.com/watch?v=MG-Ac4TAvTY",
+  "chunk_count": 11,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "MG-Ac4TAvTY",
+      "position": 59,
+      "title": "BS-15. Capacity to Ship Packages within D Days",
+      "url": "https://www.youtube.com/watch?v=MG-Ac4TAvTY",
+      "start": 2.879,
+      "end": 125.88,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well so we will be continuing with our binary search playlist which is the part of the strain boost A to Z DSA course in case you haven't checked it out yet there's a link in the description make sure you check it out because it is something extremely special so the problem that you're going to solve is uh finding the least capacity in order to ship packages within given D Days very important to note list and D this will help us to solve this problem what is the problem State you have one ship okay and you have n items or products with you each of these product has a certain weight okay and you're given five days remember one thing you have one ship and the ship will run once per day this uh ship will run once per day got it and you have to make sure that all of these products are shipped within five days and in order to do so you have to find out what is the least least weight of products that will load into the ship such that you can do it in five days let's understand if I say I'll take the capacity of the ship to be 100. can I say if I take the capacity of the ship to be 100 I'll take the one I'll load it to the ship I'll take the item in the way to load it into the ship item with the weight 3 loaded into the ship item with the weight for load it into the ship and everything and load it into the ship if I load everything into the ship what will be the total weight that I will load 55 because if you sum it up the weight will be 55 if you just sum all of these up the weight will be 55 and the ship can have a capacity of 100 so apparently if",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "MG-Ac4TAvTY",
+      "position": 59,
+      "title": "BS-15. Capacity to Ship Packages within D Days",
+      "url": "https://www.youtube.com/watch?v=MG-Ac4TAvTY",
+      "start": 119.399,
+      "end": 237.36,
+      "text": "have a capacity of 100 so apparently if I take a capacity of 100 I will be able to ship everything in one day because I just put everything and it will take me one day and I'll ship everything and it was giving me I can take five days but I'll be able to do in one day so if I take a capacity of 100 I'll be able to do it in one day but the question is strictly asking me find the least capacity so if you take 100 the that is not sensible because you have to find the minimal let's probably try out with the capacity of 10 and let's see if it is possible so if I take 10 what will happen first I'll put one then I'll put 2 then I'll put three then I'll put 4. the moment I have put these four products the capacity of this ship is 10 which I have taken so I cannot put anything beyond these four products so on the first day I can say on the first day I'll ship the products one two three four like with the weights one two three four that is what I'll ship so these products are done in the next day what will I ship can I say I'll just be able to put 5 why because if I put 6 5 plus 6 will be 11 which is exceeding the capacity of this ship thereby on the second day I'll be able to just put the product with weight five perfect what about the third day can I say on the third day I'll just be able to put up the product with weight six because I cannot take seven on the fourth day I'll be able to put the product with seven on the fifth day I'll be able to uh put the product with the wheat wheat eat on the sixth the product with weight 9 and on the seventh the product with weight 10 do you see something",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "MG-Ac4TAvTY",
+      "position": 59,
+      "title": "BS-15. Capacity to Ship Packages within D Days",
+      "url": "https://www.youtube.com/watch?v=MG-Ac4TAvTY",
+      "start": 232.5,
+      "end": 361.44,
+      "text": "do you see something the given number of days where five I ended up taking seven days so for taking the capacity of 10 it's not going to be possible thereby what I'll do is I'll probably try with a better capacity and I'll take 15. let's take 15 in this case so if I take 50 let's see what will happen can I uh okay let's quickly raise this husband so on the first day I can go ahead and say I'll put one two three four and five yes because if you add it up it's still 15 which fits the limit and I can say on the second day I will like this is done on the second day I can go six and seven because even if I add six and seven that's 13 on the third day I can go eight I cannot go eight nine because that will exceed on the fourth day I can go nine and on the fifth day I can go 10 So eventually on five days if I take a capacity of 15 I was able to do every like ship all the packages hence 15 is possible you can try with 40 in 13 12 and you have to tell me the least and if you travel with 14 it's not possible with 13 not possible with 12 not possible anything lesser than that is not possible 15 is the least capacity with which it is possible thereby the answer will be 15. got the question how do we solve this problem first of all we have to figure out the capacity that can be our answer and then we will think about the least can I say one thing for sure if I take any capacity lesser than the maximum weight of any product imaginating the capacity is eight and not be able to ship 9 and 10 because the question was to ship all the packages so if I take a capacity of 8 I'll not be able to ship",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "MG-Ac4TAvTY",
+      "position": 59,
+      "title": "BS-15. Capacity to Ship Packages within D Days",
+      "url": "https://www.youtube.com/watch?v=MG-Ac4TAvTY",
+      "start": 356.58,
+      "end": 480.05999999999995,
+      "text": "capacity of 8 I'll not be able to ship nine and ten so one thing I'm sure is whatever is the maximum weight whatever is the maximum weight minimum the ship has to be of that capacity otherwise I'll not be able to ship each and every product something we are sure so I know the answer will start with the Max and limit now we have to think about the least but before that what is the maximum it can go to if I ask you can I say one thing if I sum it up everything if I sum it up over here the summation is 55. if the ship is having a weight of 50 like capacity of 55 then at one day or rather in one day I can put everything in you don't need a capacity of 100 because even if you take 55 you'll be able to put everything in so one thing I'm sure is the answer will be between the max element and the summation of the array the answer will always be between the max element and the summation of the array so we have figured out uh the possible range of answers now what is the next step how do I solve this problem because I have analyzed that the answer can be between the max element in the array and the sum now the question is asking me to figure out the least so max to sum maybe we can go let's go so maybe we can say capacity equal to from Max to some this is what we will do a traversal let's quickly run a for Loop uh from so we have figured out our range in this case the range is from 10 to 55 what do we need least maybe you can start looking from 10 so what I'll do is I'll be like okay let's start looking from 10 I'll say capacity can you run a loop from Max till sum in an increasing order he says yes I can",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "MG-Ac4TAvTY",
+      "position": 59,
+      "title": "BS-15. Capacity to Ship Packages within D Days",
+      "url": "https://www.youtube.com/watch?v=MG-Ac4TAvTY",
+      "start": 476.28,
+      "end": 618.72,
+      "text": "says yes I can and now let's probably write a function write a function and ask him to find out the days required and pass in the weight pass him this capacity and ask him to give the days okay so he will tell you that these many days are required if you go with this particular capacity and if you see the days required fits in my days fits in my days then this is my answer and this is what I will return quite simple linear search quite simple linear search but the thing is to write a function which figures you out the number of days required maybe we can write that let's quickly write that that's going to be super easy you will say int or rather int days required or you can just write a function where you take the weight and you take the capacity so you're saying please find me on the number of days required can I say uh initially on the first day which is basically saying day equal to 1 as of now the ship hasn't loaded anything so the load capacity will be 0 as of top let's start from the first item which is from 0 till n minus 1 let's go and I'll be like Hey listen let's load it into the ship but wait while loading into the ship this particular item while loading into the ship if this particular item is crossing my capacity of the ship is crossing my capacity of the ship in that case I will go to the next day I'll go to the next day and I'll load it to the next day I load it to the next day so I'll be like load will be equal to weight I got it if it is not going if the capacity is not exceeded then whatever day I am in load it into the same day load it into the same day and once you have done you can simply go ahead and return the",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "MG-Ac4TAvTY",
+      "position": 59,
+      "title": "BS-15. Capacity to Ship Packages within D Days",
+      "url": "https://www.youtube.com/watch?v=MG-Ac4TAvTY",
+      "start": 614.22,
+      "end": 737.7,
+      "text": "can simply go ahead and return the number of days that you took the number of days maybe you can just write days that will be a better thing yeah the number of days that I took if I have to do a dry run I can show you as well it is like one two three four five six seven and so on let me take a capacity of 10 if I take a capacity of 10 what will happen let's see initially the days are one so let's keep the days as one and the load is zero what do we do we start with one this is like load is 0 plus 1 exceeding the capacity no goes here and puts it into the day one load hence the load will be one next to what's the load as of now ship is containing one one plus one exceeding no goes over here puts it into the load summation will be three let's go to the next 3 plus 3 is 6 so 3 plus 3 6 exceeding no so put it into the current day load the 3 plus 3 will be 6 let's go to the next what is it four six plus four exceeding the capacity no because it is still ten let's put it into the current day load goes in let's go to the next fifth the momentum move to the fifth currently on day one currently on day one the load is ten ten plus five exceeds the capacity so what do you say let's move to the day two this is what it does and then let's update the load to five new day new load and again start iterating from the next this is how this will work got this this will give you the number of days and once you have the number of days required if that fits in your agenda you said this is my answer and you return what will be the time complexity of such a solution I'm gonna going from Max to sum",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "MG-Ac4TAvTY",
+      "position": 59,
+      "title": "BS-15. Capacity to Ship Packages within D Days",
+      "url": "https://www.youtube.com/watch?v=MG-Ac4TAvTY",
+      "start": 730.5,
+      "end": 864.5999999999999,
+      "text": "I'm gonna going from Max to sum so that's sum minus Max that's the length plus one definitely definitely plus one is the length into you're kind of going B go of n so B go of n this is the time complexity so we are having something like linear into linear near about a quadratic time complexity because assuming this to be a big value and this is also big of it it's a quadratic time complexity obviously the interview will not be happy and it'll ask you to optimize this so let's quickly look at the optimization so we have to optimize the quadratic time complexity how can we the first hint is this one if you remember in all the problems which is asking you to find minimum answer what do you apply binary search on answers and it is only possible when you know the range do you know the range yes the answer is always going to be between Max and sum and the max is 10 so the answer will always be between 10 and the sum and the days are given as 5 you know like at 55 you will be able to do it in one day so can I see for this particular example this is not possible not possible not possible not possible not possible possible possible possible and possible so we know the section where it is not possible and we know the section where it is possible and we have already written a function which tells me like whenever we give him the capacity it tells me what is the number of days what is the number of days it takes since we have a function can we use it to figure out possible and known possibility we can hence we do the binary search by saying low and high so we are again having low and high would be the first mid 10 plus 55 is 65 65 by 2 will be um 32.5 which is 32. whenever you pass the capacity as 32 it",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "MG-Ac4TAvTY",
+      "position": 59,
+      "title": "BS-15. Capacity to Ship Packages within D Days",
+      "url": "https://www.youtube.com/watch?v=MG-Ac4TAvTY",
+      "start": 859.56,
+      "end": 992.459,
+      "text": "whenever you pass the capacity as 32 it will come as possible so if it is possible assuming it is somewhere here this assumption I cannot write down all the numbers I'm saying it is possible if this is possible this can be a possible answer maybe you can use a variable to store it in case you need and then you say I'm looking for least if I'm looking for least by any such is all about elimination so you eliminate everything but I need smaller ER I need smaller so what will I do I will come back one place before the mid and now I'm having 10 and 23 I'd like 10 plus 23 by 2 that's 33 by 2 that's 16.5 that's 16 so my mid will be pointing to 16. and at this time 16 says I am also possible thereby I'll say the answer to update Itself by 16 and I can say all the right elements can be canceled because I'm looking for a minimum so what will I do by taking 17 18 thereby the high will not come across to this value 15 let's take the height to 15 this time when I try to find 10 plus 15 by 2 that gives me 12.5 which is 12. so when I take 12 it tells me not possible I say OK not possible thereby 10 is not possible 11 is not possible 12 is not possible everything on the left is not possible hence the low will be here let's quickly erase this getting undiding okay perfect I've released it where am I 3950 where will the mid be the mid will be pointing to 14. so when the mid points to 14 it again says not possible thereby the left element will be left side will be eliminated and the low will go here I'm at 15 and the mid will also be pointing to 15. if the midday is pointing to 15 it says possible possible hence the answer will be updated to 15",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "MG-Ac4TAvTY",
+      "position": 59,
+      "title": "BS-15. Capacity to Ship Packages within D Days",
+      "url": "https://www.youtube.com/watch?v=MG-Ac4TAvTY",
+      "start": 987.56,
+      "end": 1114.38,
+      "text": "hence the answer will be updated to 15 again you know how to find the possibility so I'm not explaining that if it is possible I need a smaller answer eliminate the right half and move the high to one place before the mid one place before the mid this is where you stop because the high has crossed the low and we stop and if we carefully observe low has stopped us at 15 and the high has stopped at 14. again the opposite polarity concept the low stock Trend at possibly not possible and the high started at possible and if you carefully observe I ended up at a not possible place and the low ended up at a possible place thereby your answer will always be low like you don't need to take another answer variable if you just return low that will be your answer time to write the pseudo code we will have a function which takes the weights and which takes the days was the first thing we know the low will always be the max element because you need at least that much capacity to carry everyone so maybe you can find out the maximum element you know how to find it will be the high the summation the summation of the entire array so yeah both of them you can find it out yourself you write while low lesser than equal to Y again carefully observe I'm making sure every problem we are doing with lesser than equal to and mid minus 1 and mid plus one so that to maintain like I've seen a lot of solutions where they do low less than high somewhere they do mid somewhere they do mid plus ones it's quite confusing but we are making sure that we have the same concept across if you're conceptually clear trust me you can write anything you will understand everything what to eliminate it's just over understanding what to eliminate and what not to so if taken the mid what's the next thing find",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "MG-Ac4TAvTY",
+      "position": 59,
+      "title": "BS-15. Capacity to Ship Packages within D Days",
+      "url": "https://www.youtube.com/watch?v=MG-Ac4TAvTY",
+      "start": 1109.46,
+      "end": 1216.6789999999999,
+      "text": "taken the mid what's the next thing find out the number of days hence you can call the function that you're doing and you can pass on the weight and the mint which will be your capacity and if the number of days is under the given number of days again equal to equal to in that case what will happen you're saying it's possible if it's possible maybe we should find a smaller answer simple or else maybe we should find a bigger number if it is not possible let's increase the capacity and at the end of the day you can return the low which will be your answer now understand this is how the binary search code will look like if I ask you the time complexity what will be it we just replace the linear search thereby it had been logarithmic of because the range is from Max to sorry from sum to Max so it'll be like logarithmic of some minus Max plus one that is the length of the range into a big O of n because still using this function to compute the number of days you cannot eliminate that so this will be the time complexity am I using any space no so the Big O of 1 is the space complexity so let's quickly go back into the code editor by the way you can find out the problem Link in the description and I'm showing you the C plus plus code you can find out the Java python JavaScript code from the notes uh the link will be in the description okay so I figured out the Low by using the STL I've also figured out the sum by using the accumulate function in the C plus plus STL and then it's pretty same like the same thing that we wrote as the pseudo code and if you go across and submit this this will be running fine so in case you are still watching till here please please do consider giving us that",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "MG-Ac4TAvTY",
+      "position": 59,
+      "title": "BS-15. Capacity to Ship Packages within D Days",
+      "url": "https://www.youtube.com/watch?v=MG-Ac4TAvTY",
+      "start": 1213.559,
+      "end": 1237.67,
+      "text": "please please do consider giving us that like and if you're new to our Channel what are you waiting for hit that subscribe button and if you haven't followed me on Instagram Twitter and Linkedin all the profile links will be in the description where this I'll be wrapping up this video that's me in some other video till then bye take care [Music]",
+      "word_count": 64
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "video_id": "X0oXMdtUDwo",
+  "position": 125,
+  "title": "L53. Largest BST in Binary Tree",
+  "url": "https://www.youtube.com/watch?v=X0oXMdtUDwo",
+  "chunk_count": 10,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "X0oXMdtUDwo",
+      "position": 125,
+      "title": "L53. Largest BST in Binary Tree",
+      "url": "https://www.youtube.com/watch?v=X0oXMdtUDwo",
+      "start": 0.0,
+      "end": 125.759,
+      "text": "hey everyone welcome back to the channel i hope you guys are doing extremely well so today we will be solving the problem finding the largest pst in a given binary tree so you will be given the root of a binary tree and you have to find the largest bst among that now when i say bst what does that mean if you have given node everything everything to the left of that node is smaller and everything to the right of that node is greater than the that node that is what we refer to the definition of bs e now if you're given this binary tree is this a bst the answer to that is no why because if you see this 10 there is something on the right which is 7 like 7 is smaller than 10 and that's not allowed everything to the right of 10 should have been greater correct so which is the largest vst is this a largest vst uh i don't think so because this is 50 and everything to the right of 15 should have been greater is this a largest pst this is because 7 itself is a bst so i can say i got someone of size 1 which is a bst is this a bst again yes because 5 to the right is greater to the left is smaller so the largest bst that you got was of size three so what they want you is to return the size to them so yeah how will you solve this now if you are asked this question in an interview the first solution that should come to your brain is definitely the brute force approach what is the brute force approach now i hope you have seen my previous video of this playlist which is validate a bst like i give you a root of the tree and you tell me if that's a valid bst or not if you've seen that video this is a cakewalk for brute",
+      "word_count": 341
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "X0oXMdtUDwo",
+      "position": 125,
+      "title": "L53. Largest BST in Binary Tree",
+      "url": "https://www.youtube.com/watch?v=X0oXMdtUDwo",
+      "start": 119.28,
+      "end": 241.51899999999998,
+      "text": "that video this is a cakewalk for brute for brute for brute it is like you go to first 10 and you pass on the 10 to the validate bst the validate of bst says hey listen it's not a valid bst so i'm like okay next i go to five i pass i pass on five to violated bst and it says me yes it's a valid bst the moment it says me that hey it's a valid bst i then again pass this five to someone who finds me the number of notes again you can do any traversal to figure out the number of notes what i'm saying is 5 will be my root of the tree so it will give me the number of notes so i can say i can just go across to every node and pass that to validated bst and that will tell me now validate a bst takes big of n if you've seen my video and going to every node will take b often so it is technically a big o of n square or a quadratic solution which is the brute so you can give this to the interviewer the interviewer would be happy but he will ask you to optimize this and this is where the better approach comes in so let's quickly discuss the better approach intuition and the thought process now what is the intuition and thought process behind getting to the algorithm of the better process something that i did observe was if i have a node on the left no matter how many nodes i have if i can figure out among them which is the largest and if if if the node will just rewrite it over here if the node is greater than the largest then then i can surely say all the notes on the left are smaller than this no make sense similarly if on the right i can get the smallest again largest of all notes smallest of all notes on the right if i",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "X0oXMdtUDwo",
+      "position": 125,
+      "title": "L53. Largest BST in Binary Tree",
+      "url": "https://www.youtube.com/watch?v=X0oXMdtUDwo",
+      "start": 236.879,
+      "end": 357.75899999999996,
+      "text": "smallest of all notes on the right if i can get the smallest of all nodes and i can say the node is smaller than the smallest i guess smallest is greater if the smallest is greater everyone on the right will be greater so i mean that makes sense if i can just carry the largest as well as the smallest i think i think i can i can now what's the other thing that's that's coming into my mind how do i check for size again that's uh pretty simple uh if i say the left guy is having x elements and the right guy is having y elements the number of elements this this bst will have because this is having x this is having y so the number of elements this entire stuff is very simple one for itself and x from left and y that's how you can do this now the question might arise but trevor how do you make sure that uh these guys are bst so can i say if you do a traversal and you start from the bottom if the bottom guy is bst and then if it connects to this and it satisfies the condition this is a bst then if it connects to this then this is a bst and then if it connects to this and satisfies the condition then this is the bst you just go on if you just built it from the bottom and then you can you can do it right so make sense makes quite a lot of sense so what i will do is i'll take a bigger binary tree and try to have this intuition in thought process into an algorithm now what i require is largest and smallest so i will create a container or a class or a struct or a pair of pair whatever you wish to and i'll store the largest the smallest because you need both the smallest and the largest and the size okay these are the uh these are the things",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "X0oXMdtUDwo",
+      "position": 125,
+      "title": "L53. Largest BST in Binary Tree",
+      "url": "https://www.youtube.com/watch?v=X0oXMdtUDwo",
+      "start": 353.28,
+      "end": 469.199,
+      "text": "these are the uh these are the things that i will always carry okay now let's let's quickly check out for this particular example now what what i know is if you're standing at a node in order to check for a bsd the left has to be computed because i need the largest on the left and i d and i need the smallest on the right so the left has to be computed and the right has to be computed now which traversal will you follow so that the left and the right both are computed the answer to that is yeah very obvious uh that's supposed to order traversal because in post order you go to left then you go to right and then you do the business with the node like then you visit the node that's what you do so yeah you're gonna follow the post started travis post order says left left this guy does not have a left so no left no left this guy has a right and this guy is a leaf node now for a leaf node if it's a single node can i always say that hey it's a single node so this is definitely a bst i can so if it is a bst i repeat if it is a bst you say size one and the guy itself will be the largest and the guy itself will be the smallest perfect now for 14 for 14 the left was no one and the right has been completed so for left for left where i see that there is no one what you can do is you can probably pass a dummy node like if if it's null on the left or right what you do is you pass a dummy node with size 0 because queen there's no one on the left and what you do is for the largest since there is no one for the largest keep an extreme small value for the largest you can keep it as into mean",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "X0oXMdtUDwo",
+      "position": 125,
+      "title": "L53. Largest BST in Binary Tree",
+      "url": "https://www.youtube.com/watch?v=X0oXMdtUDwo",
+      "start": 465.199,
+      "end": 584.0,
+      "text": "mean in between and for the smallest keep a very uh larger value so that you can easily compare that as into max okay so i'm saying for 14 for 14 on the left i got 0 and i got the largest as in to mean and i got the smallest as into max and from the right i got as 1 17 and 17 so for 14 to be a valid bst like for the this 14 subtree to be a valid bst so for 14 to be a bst it has to be greater than the largest and the largest is a very minimal number and from here the 17 so it's a valid one so can i say this guy forms a size 2 because size 0 size 1 will form a size 2 and this time the minimal will be he himself the larger will be 17 and the minimum will be 14. so i've said the larger is 17 and the minimum is 14 again makes absolute sense so what i'll do is i'll take this and i'll move across to the next now for 15 the left is computed it's time for the right so let's go to the right you go to 18 and then you go to 16 so 16 we'll say 1 16 and 16 19 will say 1 19 and 90 so the moment you come to 18 18 says on the left who is it it's 16 on the right who is it it's 19. so i say that okay that's that's that's pretty much correct so i can say this is also correct so size will be three because size was one size was one so size will be three and it'll be minimal will be 16 and the maximum will be 19 again makes ups makes absolute sense because that is what it will be the minimum will be 16 and the maximum will be 19. now comes out to be 15 when i am at 15 i look at the left i look at the left",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "X0oXMdtUDwo",
+      "position": 125,
+      "title": "L53. Largest BST in Binary Tree",
+      "url": "https://www.youtube.com/watch?v=X0oXMdtUDwo",
+      "start": 580.56,
+      "end": 702.399,
+      "text": "i look at the left i look at the left which is the minimum which is the largest on the left that's 17 that's 17 on the left hmm problem problem and on the right who is the smallest that's 16 right is okay but the left is not okay so i can say this sub tree this subtree cannot be a bst so what you will do is just to make sure this can never be a pst you will pass the size three because you got a size three over here so let's carry size three no harm in carrying size three but make sure you pass into max as such a big number so that in future no one can can be compared with that so into max will be passed now in largest and intervene on the minimum just make sure you pass on very large numbers and very small numbers so that comparisons can not like these comparisons cannot be done because if you're passing you need the largest so we are passing the largest extreme large this comparison will never be true correct so make sure you pass it perfect so i passed it let's go to the right now so go to the right 40 we'll go to the left this is 1 30 and 30 similarly this will be 1 50 and 50. so this 60 says that's correct so 60 will be like i can be like 2 and the largest will be 60 and the minimal will be 50. whenever you come to 40 40 says on the left i have 30 on the right i have 50 which is again correct so this guy will say okay 2 plus 1 3 so it's a 4 and the minimum will be sorry the maximum will be 60 and the minimum will be 40 quite simple now you have got a size 4 again you have got a size 4 next whenever you come to 20 20 says from the left what's the what's the biggest number from the left into",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "X0oXMdtUDwo",
+      "position": 125,
+      "title": "L53. Largest BST in Binary Tree",
+      "url": "https://www.youtube.com/watch?v=X0oXMdtUDwo",
+      "start": 698.8,
+      "end": 818.24,
+      "text": "biggest number from the left into max and you pass that into max you remember because this was not satisfying on the right it says give me the smallest 40 again this is satisfying but this tends out to be not satisfying so i'm like oh it isn't satisfying so if it is not satisfying you'll be like okay it's not it's okay if it is not satisfying i will not be doing anything what i will say is i need the largest pst okay i need the largest pst so logically what should i do shall i take three or should i take four which one will i take what's the larger one that's four four and then again into max and into mean past so ultimately when you you are ending up the traversal over here when you're ending up the traversal over here you got the size 4 which is ultimately this bst so i started from the bottom and i started building it up right and what i did was very very simple i just made sure that i was carrying largest smallest and the size was very simple to add it was nothing but one plus x plus y and if it's not matching if if if not bst then what i did was on size i carried max of left size comma right size and made sure the max was assigned to very max and the min was assigned to very min that is what i made sure whenever it was not a bst so that at the end of the day i would be having whatever i got at the bottom either at the left of the right whatever i got like over here i got the four over here that was easily found out even i was carrying three so it will always be found out and it will always make sure he himself is no more involved because i'm passing into max and into so this is how you can do it and since we are doing",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "X0oXMdtUDwo",
+      "position": 125,
+      "title": "L53. Largest BST in Binary Tree",
+      "url": "https://www.youtube.com/watch?v=X0oXMdtUDwo",
+      "start": 813.839,
+      "end": 917.6,
+      "text": "how you can do it and since we are doing a post order traversal the complexity is straight away big often and the space complexity if you avoid the recursion will be we go off one and that's that's what you require yes you are using uh three variables but yeah that's not a big concern this is what the space complexity will be so guys i hope you've understood the explanation it's time to check out the code so as usual the c plus plus code is on the left and the java code on the right and they're extremely identical so just follow the c plus code or the java code and then you can check out the other language code and the code links are in the description so what i've done is i've created a class node value and as i said we will be carrying size which is the maximum size possible of bst minimal value and a max value they've also created a constructor so that we can easily assign them okay and we're given a root that's what we're given to us earlier writing is okay so initially this is what is given to us that's root and we're calling this subtree helper that i've written i'm passing on the root i'm saying giving the max size okay and over here largest bst subtree help i'm calling the root i'm doing the post order traversal i'll be like if it's a null if it's a null that means it's a null and if you remember we passed on the size as zero and we said into mean to be very very very large number and into max to be a very small number because it's there is null there is nothing so i pass that off and then we simply go to the left and we simply go to the right nothing special we simply go to the left and simply go to the right once the post order is done this is where the business is done",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "X0oXMdtUDwo",
+      "position": 125,
+      "title": "L53. Largest BST in Binary Tree",
+      "url": "https://www.youtube.com/watch?v=X0oXMdtUDwo",
+      "start": 913.519,
+      "end": 1010.88,
+      "text": "where the business is done now the business is very simple if i'm standing at the root i say what's the left's greatest what's the left's greatest if it is greater than it's okay and also rights minimal if it's smaller it's okay so that means it's a valid pst and if it's a valid bst pass on the new minimum because the new minimal there was a previous minimal right from the left and you know if you are doing a bst whatever is coming out from the left yes whatever is coming out from the left it will always be the minimum correct and you just need to compare it with the current root just in case that there was a null over there that's why you have to compare it with the root and whatever is the minimum you take it correct and you take the max of the right or the root value why of the right and why not of the left because right will always be greater than left that's why of the right and for minimal of the left and the size will be left plus right plus one now this is what you pass on if it's a valid one what if it's not a valid one because if this if is not executed so this return statement will not be executed in that case you'll come to this return i'll say okay that means it's not a valid size will be either the left smacks or right smacks but i will say i'll give you such a range so that the next time whenever you do a comparison that will never be satisfied so i give them a range of extreme extreme max so they can never be compared and once you're done with this i think it's very straightforward you can just return the max size of that call and this is how it can easily be done and this code was taken from the solution in the lead code as extremely",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "X0oXMdtUDwo",
+      "position": 125,
+      "title": "L53. Largest BST in Binary Tree",
+      "url": "https://www.youtube.com/watch?v=X0oXMdtUDwo",
+      "start": 1006.88,
+      "end": 1048.41,
+      "text": "solution in the lead code as extremely well written that is why i did not put in my code so you can definitely check out the solution tab of fleet code discussion forum it's extremely well written so i hope you have understood the entire explanation as well as the code so guys just in case uh you did understand please please make sure you like this video and if you're new to this channel please please do consider subscribing because i do put a lot of content related to this channel algorithms so yeah with this i'll be wrapping up this video let's meet in the next one where i'll be probably solving something else nobody cares whenever your heart is [Music]",
+      "word_count": 123
+    }
+  ]
+}

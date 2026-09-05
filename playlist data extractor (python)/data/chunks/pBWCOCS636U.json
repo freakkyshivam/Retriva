@@ -1,0 +1,75 @@
+{
+  "video_id": "pBWCOCS636U",
+  "position": 273,
+  "title": "L2. Maximum Points You Can Obtain from Cards | 2 Pointers and Sliding Window Playlist",
+  "url": "https://www.youtube.com/watch?v=pBWCOCS636U",
+  "chunk_count": 6,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "pBWCOCS636U",
+      "position": 273,
+      "title": "L2. Maximum Points You Can Obtain from Cards | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=pBWCOCS636U",
+      "start": 3.56,
+      "end": 120.36,
+      "text": "So, this time to continue with the uh two-pointer and sliding window playlist on the Strivers A-Z DSA course. Before starting off, hey everyone, welcome back to the channel. I hope you guys are doing extremely well. So, the problem that we will be solving today is maximum points you can obtain from N cards. So, what is the problem stating? It's stating that you'll be given an array which contains the point of N different cards. For an example, the first card will give you a point six. Second card will give you a point two. And this card, the last card, will give you a point one. Now, you're also given an integer K. Now, what does K signifies? You have to pick like there's a task given to you. You have to pick up K cards from these lot of N cards. But, there is a slight condition that is kept. The condition is you can either pick up from the front, you can either pick up from the back. You cannot go into the middle and pick up something. You'll have to pick up either from the back or either from the front, right? For an example, I can decide that I'm going to pick up four cards like six, two, three, four. That is allowed. Or I can decide that I'm going to pick up one, seven, one, two. This is also allowed. Or I can say I'm going to pick up one, I'm going to pick up six, I'm going to pick up two, I'm going to pick up three. This is also allowed. But, the trick is either from the front or either from the back and consecutively. Consecutively, you cannot skip any cards. Okay. Now, you'll have to pick up four cards in any possible way. But, you have to keep the condition in mind. And your task is to maximize the number of points you can pick. Uh one of the ways that I can pick up is I'll pick up these three and this one.",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "pBWCOCS636U",
+      "position": 273,
+      "title": "L2. Maximum Points You Can Obtain from Cards | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=pBWCOCS636U",
+      "start": 115.24,
+      "end": 233.32,
+      "text": "I'll pick up these three and this one. So, what will be the summation? I'll get 11 from here, 6 + 2 8 + 3 yeah 11. I'll get one from here. So, the total sum will boil down to be 12. I can try out different ways. I'll say I'll pick up four elements from the front itself. The summation will be 15, which is better than the previous pick. Or I can say the pick of the first two elements and the last two elements and the summation will be eight and eight, which is going to be 16. This is the maximum amount that you can get. Got it? And this is what you'll have to return. Now, the extreme naive solution that I can think of is going to be something like okay uh first pick up four elements, right? And after that, pick up three from here, one from here. After that, pick up two from here, two from here. After that, pick up one from here, pick up three from here. After that, pick up zero from the front, pick up all the four from the back. And out of all these configurations, whichever gives you the maximum point will be your answer. Now, this is the basic thing that will come to my brain, right? So, can I convert that into logic? Maybe yes, right? We will be picking up something from the left. So, let's assume I keep a left sum. We'll be picking up something from the right. So, let's assume I'll keep it as zero. So, the number of elements on the left and the number of elements on the right, right? And that will eventually, if you sum it up, will be your total summation. Understood? So, what I can do is I'll say, \"Okay, let's start off with one thing. Let's pick up this window of four elements. Pick up this K elements at first. So, if I pick up these K elements, the left sum will be 15. The left sum will be 15.",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "pBWCOCS636U",
+      "position": 273,
+      "title": "L2. Maximum Points You Can Obtain from Cards | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=pBWCOCS636U",
+      "start": 229.12,
+      "end": 348.0,
+      "text": "15. The left sum will be 15. So, I'm picking four elements on the left and uh zero elements on the back. So, overall the summation will be 15. Okay. Let's uh What is the next thing that will come to your brain? Take out one element, dude. Just take out one element. I'll be like, \"Why not? Let's take out one element.\" So, if I take out one element, take out one element, I'll be left out with three elements. And the left sum will be What is the logical thinking? Will you sum up the three elements or will you just remove the last element? Yeah? Just remove the last element. That is how your brain should work. I just remove the last element. So, the left sum will be 11. And what will be the right sum? You'll be like, \"I'll just add up one element. I'll just add up one element from the back, okay?\" So, can I say overall the summation of K elements will be 12? We can. We can. Now, what is the next step? The next step will be just remove the remove one element from the left and at the same time increase one element from the back. So, if I do that, can I again say left sum? Again, will you add up the two elements or will you just remove three from the sum? I'll just remove three from the sum 11. So, thereby the left sum will be eight. And what will be the right sum? You'll add up one element that is seven. The right sum boils down to be eight. And the overall sum is 16, okay? After that, what I can do is I'll go ahead and say I'll remove two as well. And what I'll do on the right is I'll add up one. Perfect. That is amazing. So, if I do this the left sum will be nothing but six and the right sum will be you added one, so that will be nine. And the overall summation will be 15. Now,",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "pBWCOCS636U",
+      "position": 273,
+      "title": "L2. Maximum Points You Can Obtain from Cards | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=pBWCOCS636U",
+      "start": 343.52,
+      "end": 456.71999999999997,
+      "text": "the overall summation will be 15. Now, what is the next job? You'll say, I'll not pick up anything from the left. I'll remove that. So, left sum will boil down to be zero, and the right sum will say, \"I'm going to add two to it. I'm going to add two to it.\" So, if I add two to it, it'll be 11, and the overall sum will be 11. After this, do you need to do anything? No, I don't need to do anything. So, overall, what is the maximum sum that you get? That is 16. So, you can just keep comparing and probably put it into some max sum variable, and this is what you will be returning as your answer. I think you got the logic pretty much, and it's a very, very simple sliding window problem. So, let's now quickly uh try to write down the code. So, again, I'll be writing down the pseudo code. In case you want your language-specific code, you can find them below. So, you'll be given a function, right? Where you'll be given a nums array and the integer K. How do I write uh the code for it? First thing I know is uh the window is of size K. That is something I know for sure. The window is of size K. So, why can't I say, \"Okay, left sum is equivalent uh to zero, and then I can just loop from zero till K minus one at the index, and I can say left sum is left sum plus nums of I.\" So, what this will do is this will give me the sum of first K elements. And at the same time, I'm not picking up anything from the right, so I can keep it as zero, and I can also keep a max sum as zero. So, can you tell me what will be the initial maximum value? So, can I say the initial max sum's value can be set as left sum? Because I'm assuming I've picked up all",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "pBWCOCS636U",
+      "position": 273,
+      "title": "L2. Maximum Points You Can Obtain from Cards | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=pBWCOCS636U",
+      "start": 452.76,
+      "end": 575.68,
+      "text": "Because I'm assuming I've picked up all the four elements. I'm assuming I've picked up all the four elements. Okay, perfect. After this, what will happen? I know one thing, I have to shrink down the window, take out this element. And this element is at K minus one at index, K minus one at index. After that, I'll have to take out K minus two at index. After that, I'll have to take out K minus three at index. And after that, K minus four at index, which is technically zero, which is technically zero. So, I know one thing, I'll have to go on from K minus zero till the zero at index, and every time I take out one element. That is something I know for sure. Let's try to write down that stuff. So, I'll be like, okay, I equal to K minus one, I greater than equal to zero, I minus minus. So, every time what I do is left sum equal to left sum minus nums of I. So, what this does is every time takes out four, takes out three, takes out two, and then takes out six. Perfect. But, when you're taking out something, at the same moment, if you're taking out four for the first time, you'll have to add something from the back. So, what I will do is I'll keep a right index, and I can call it as N minus one. Why can I call it as N minus one? Because the first element that I'll pick up is at N minus one. And what I can do is I can say right sum is equal to right sum plus nums of right index, because that is what I'll pick up. Once I've picked it up, once I've picked it up. Because first time this will go off, and this will be picked up, right? And after that, what will happen? This will go off, and this will be picked up. So, the right index from here has to move here. So, please make sure the right index",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "pBWCOCS636U",
+      "position": 273,
+      "title": "L2. Maximum Points You Can Obtain from Cards | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=pBWCOCS636U",
+      "start": 569.92,
+      "end": 674.16,
+      "text": "So, please make sure the right index also keeps moving by one place to back, because for the next time it has to go down as well. It has to go down. Perfect. I have a left sum. I have a right sum. So, can I say max sum will be max of max sum {comma} left sum plus right sum. Can I say this? I can. And eventually, can I go ahead and return max sum? I can. And that will be it. Super simple. What is the time complexity? This one is taking a big O of K. This one is taking another big O of K. Am I using any extra space? I'm not. So, can I say that the overall time complexity will be big O of 2 into K? And the overall space complexity will be big O of one. Yes. And this will be the most optimal solution. You'll find a lot of solutions where people are using prefix sum and other things. Don't get into that. If you can easily solve it by using variables prefer that. Prefer that because it's a clean solution. It's a easy solution to explain as well. So, this will be it for this one. So, if you're still now watching and if you've understood everything, please please do consider giving us a like. And if you're new to our channel, do consider subscribing to us as well. With this, I'll be wrapping up this video. Let's meet in some other video. Till then, bye-bye. Take care. When all your highest broken, don't ever forget you're golden. I will find the light in",
+      "word_count": 275
+    }
+  ]
+}

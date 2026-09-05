@@ -1,0 +1,920 @@
+{
+  "position": 285,
+  "video_id": "3-QbX1iDbXs",
+  "title": "L3. Shortest Job First (or SJF) CPU Scheduling",
+  "url": "https://www.youtube.com/watch?v=3-QbX1iDbXs",
+  "transcript": [
+    {
+      "start": 3.12,
+      "duration": 3.48,
+      "end": 6.6,
+      "text": "so let's continue with our gry"
+    },
+    {
+      "start": 4.48,
+      "duration": 3.279,
+      "end": 7.759,
+      "text": "algorithms playlist for starting off hey"
+    },
+    {
+      "start": 6.6,
+      "duration": 3.039,
+      "end": 9.639,
+      "text": "everyone welcome back to the channel I"
+    },
+    {
+      "start": 7.759,
+      "duration": 3.641,
+      "end": 11.4,
+      "text": "hope you guys are doing extremely well"
+    },
+    {
+      "start": 9.639,
+      "duration": 5.88,
+      "end": 15.518999999999998,
+      "text": "so the problem that we will be solving"
+    },
+    {
+      "start": 11.4,
+      "duration": 5.799,
+      "end": 17.199,
+      "text": "today is shortest job first problem now"
+    },
+    {
+      "start": 15.519,
+      "duration": 4.76,
+      "end": 20.279,
+      "text": "what is the problem stating the problem"
+    },
+    {
+      "start": 17.199,
+      "duration": 6.601,
+      "end": 23.8,
+      "text": "is stating that you will be given n"
+    },
+    {
+      "start": 20.279,
+      "duration": 6.08,
+      "end": 26.359,
+      "text": "processes and every process with uh"
+    },
+    {
+      "start": 23.8,
+      "duration": 5.12,
+      "end": 28.92,
+      "text": "execution time is known to you the first"
+    },
+    {
+      "start": 26.359,
+      "duration": 5.441,
+      "end": 31.8,
+      "text": "process takes four units of time to"
+    },
+    {
+      "start": 28.92,
+      "duration": 5.44,
+      "end": 34.36,
+      "text": "execute the thir third process takes"
+    },
+    {
+      "start": 31.8,
+      "duration": 5.24,
+      "end": 37.04,
+      "text": "seven units of time to execute now your"
+    },
+    {
+      "start": 34.36,
+      "duration": 6.12,
+      "end": 40.48,
+      "text": "task is to compute the average waiting"
+    },
+    {
+      "start": 37.04,
+      "duration": 7.199,
+      "end": 44.239,
+      "text": "time for all the processes following the"
+    },
+    {
+      "start": 40.48,
+      "duration": 6.32,
+      "end": 46.8,
+      "text": "shortest job first algorithm now what is"
+    },
+    {
+      "start": 44.239,
+      "duration": 4.601,
+      "end": 48.839999999999996,
+      "text": "the shortest job first algorithm I've"
+    },
+    {
+      "start": 46.8,
+      "duration": 6.12,
+      "end": 52.919999999999995,
+      "text": "written it down over here let's quickly"
+    },
+    {
+      "start": 48.84,
+      "duration": 6.84,
+      "end": 55.68000000000001,
+      "text": "go through it scheduling policy that"
+    },
+    {
+      "start": 52.92,
+      "duration": 5.24,
+      "end": 58.160000000000004,
+      "text": "selects the waiting process with the"
+    },
+    {
+      "start": 55.68,
+      "duration": 6.08,
+      "end": 61.76,
+      "text": "smallest with the smallest execution"
+    },
+    {
+      "start": 58.16,
+      "duration": 7.039,
+      "end": 65.199,
+      "text": "time to execute next this is important a"
+    },
+    {
+      "start": 61.76,
+      "duration": 6.999,
+      "end": 68.759,
+      "text": "scheduling policy which always executes"
+    },
+    {
+      "start": 65.199,
+      "duration": 5.641,
+      "end": 70.84,
+      "text": "the smallest execution time first so if"
+    },
+    {
+      "start": 68.759,
+      "duration": 4.68,
+      "end": 73.439,
+      "text": "I have to write down the process numbers"
+    },
+    {
+      "start": 70.84,
+      "duration": 6.639,
+      "end": 77.479,
+      "text": "this is P1 this is P2 this is P3 this is"
+    },
+    {
+      "start": 73.439,
+      "duration": 7.561,
+      "end": 81.0,
+      "text": "P4 this is P5 and each of them is"
+    },
+    {
+      "start": 77.479,
+      "duration": 7.28,
+      "end": 84.759,
+      "text": "arriving at time zero so if I'm if I"
+    },
+    {
+      "start": 81.0,
+      "duration": 6.28,
+      "end": 87.28,
+      "text": "have to follow the sjf algorithm it is"
+    },
+    {
+      "start": 84.759,
+      "duration": 5.641,
+      "end": 90.4,
+      "text": "stating that the one with the least"
+    },
+    {
+      "start": 87.28,
+      "duration": 8.08,
+      "end": 95.36,
+      "text": "execution time will be executed first so"
+    },
+    {
+      "start": 90.4,
+      "duration": 6.92,
+      "end": 97.32000000000001,
+      "text": "can I say that P4 is the one that will"
+    },
+    {
+      "start": 95.36,
+      "duration": 4.52,
+      "end": 99.88,
+      "text": "be executed first because it has the"
+    },
+    {
+      "start": 97.32,
+      "duration": 6.52,
+      "end": 103.83999999999999,
+      "text": "least execution time so it will occupy"
+    },
+    {
+      "start": 99.88,
+      "duration": 7.559,
+      "end": 107.439,
+      "text": "the time from 0 to 1 so it is starting"
+    },
+    {
+      "start": 103.84,
+      "duration": 6.48,
+      "end": 110.32000000000001,
+      "text": "at time zero so can I say for P4 the"
+    },
+    {
+      "start": 107.439,
+      "duration": 6.32,
+      "end": 113.75899999999999,
+      "text": "waiting time was Zero because it started"
+    },
+    {
+      "start": 110.32,
+      "duration": 7.839,
+      "end": 118.15899999999999,
+      "text": "at Time Zero agreed agreed which one"
+    },
+    {
+      "start": 113.759,
+      "duration": 7.68,
+      "end": 121.439,
+      "text": "will be after this P5 P5 because it has"
+    },
+    {
+      "start": 118.159,
+      "duration": 6.92,
+      "end": 125.07900000000001,
+      "text": "the least execution time which is two"
+    },
+    {
+      "start": 121.439,
+      "duration": 5.761,
+      "end": 127.19999999999999,
+      "text": "but when does P5 start can I say that P5"
+    },
+    {
+      "start": 125.079,
+      "duration": 4.841,
+      "end": 129.92,
+      "text": "is starting at time one because that is"
+    },
+    {
+      "start": 127.2,
+      "duration": 5.08,
+      "end": 132.28,
+      "text": "when it starts and when will it end it"
+    },
+    {
+      "start": 129.92,
+      "duration": 5.76,
+      "end": 135.67999999999998,
+      "text": "is having an execution time of two so"
+    },
+    {
+      "start": 132.28,
+      "duration": 6.12,
+      "end": 138.4,
+      "text": "it's going to end at three perfect which"
+    },
+    {
+      "start": 135.68,
+      "duration": 6.559,
+      "end": 142.239,
+      "text": "one is going to be the next one"
+    },
+    {
+      "start": 138.4,
+      "duration": 6.64,
+      "end": 145.04,
+      "text": "P2 so can I say P2 is starting at 3 I"
+    },
+    {
+      "start": 142.239,
+      "duration": 5.681,
+      "end": 147.92000000000002,
+      "text": "can so the waiting time for P2 is 3"
+    },
+    {
+      "start": 145.04,
+      "duration": 5.199,
+      "end": 150.239,
+      "text": "seconds perfect how much is P2 taking"
+    },
+    {
+      "start": 147.92,
+      "duration": 5.88,
+      "end": 153.79999999999998,
+      "text": "three it's going to end up taking till"
+    },
+    {
+      "start": 150.239,
+      "duration": 7.801,
+      "end": 158.04,
+      "text": "the time six which one after that P2 is"
+    },
+    {
+      "start": 153.8,
+      "duration": 7.799,
+      "end": 161.59900000000002,
+      "text": "done which one after that P1 so can I"
+    },
+    {
+      "start": 158.04,
+      "duration": 6.88,
+      "end": 164.92,
+      "text": "say P1 starts at 6 so the wait waiting"
+    },
+    {
+      "start": 161.599,
+      "duration": 6.881,
+      "end": 168.48,
+      "text": "time is 6 it is taking 4 seconds so it's"
+    },
+    {
+      "start": 164.92,
+      "duration": 7.16,
+      "end": 172.07999999999998,
+      "text": "going to go ahead till 10 so that's for"
+    },
+    {
+      "start": 168.48,
+      "duration": 6.92,
+      "end": 175.39999999999998,
+      "text": "P1 which one after that P3 because that"
+    },
+    {
+      "start": 172.08,
+      "duration": 7.159,
+      "end": 179.239,
+      "text": "is the only one left so maybe P3 starts"
+    },
+    {
+      "start": 175.4,
+      "duration": 5.0,
+      "end": 180.4,
+      "text": "not maybe P3 starts at uh 10 and it will"
+    },
+    {
+      "start": 179.239,
+      "duration": 4.841,
+      "end": 184.08,
+      "text": "go on until"
+    },
+    {
+      "start": 180.4,
+      "duration": 6.399,
+      "end": 186.799,
+      "text": "17 done and dusted everyone's waiting"
+    },
+    {
+      "start": 184.08,
+      "duration": 4.36,
+      "end": 188.44000000000003,
+      "text": "time is known to me so what I can do is"
+    },
+    {
+      "start": 186.799,
+      "duration": 4.041,
+      "end": 190.84,
+      "text": "I can sum up the waiting time because I"
+    },
+    {
+      "start": 188.44,
+      "duration": 4.799,
+      "end": 193.239,
+      "text": "need the average waiting time for all"
+    },
+    {
+      "start": 190.84,
+      "duration": 4.8,
+      "end": 195.64000000000001,
+      "text": "the processes so if I sum it up the"
+    },
+    {
+      "start": 193.239,
+      "duration": 5.28,
+      "end": 198.519,
+      "text": "total waiting time will be 20 how many"
+    },
+    {
+      "start": 195.64,
+      "duration": 6.92,
+      "end": 202.55999999999997,
+      "text": "processor did we have n equal to 5 so"
+    },
+    {
+      "start": 198.519,
+      "duration": 5.921,
+      "end": 204.44,
+      "text": "the average will be 20 by 5 that's four"
+    },
+    {
+      "start": 202.56,
+      "duration": 4.48,
+      "end": 207.04,
+      "text": "this is what you'll have to return if it"
+    },
+    {
+      "start": 204.44,
+      "duration": 5.92,
+      "end": 210.35999999999999,
+      "text": "was 4.2 you still return four if it is"
+    },
+    {
+      "start": 207.04,
+      "duration": 6.279,
+      "end": 213.319,
+      "text": "4.7 you still return four the near"
+    },
+    {
+      "start": 210.36,
+      "duration": 5.799,
+      "end": 216.15900000000002,
+      "text": "smallest integer is what you return for"
+    },
+    {
+      "start": 213.319,
+      "duration": 6.84,
+      "end": 220.159,
+      "text": "the average okay got it how do I solve"
+    },
+    {
+      "start": 216.159,
+      "duration": 6.401,
+      "end": 222.56,
+      "text": "this it's straightforward you execute"
+    },
+    {
+      "start": 220.159,
+      "duration": 5.16,
+      "end": 225.319,
+      "text": "the smallest ones at first the first"
+    },
+    {
+      "start": 222.56,
+      "duration": 8.2,
+      "end": 230.76,
+      "text": "thing you do is you sort this up simply"
+    },
+    {
+      "start": 225.319,
+      "duration": 8.441,
+      "end": 233.76,
+      "text": "sort this up so that will be 1 2 3 4 7"
+    },
+    {
+      "start": 230.76,
+      "duration": 5.759,
+      "end": 236.519,
+      "text": "so the execution times are sorted and"
+    },
+    {
+      "start": 233.76,
+      "duration": 4.8,
+      "end": 238.56,
+      "text": "then you can take a smaller timer and"
+    },
+    {
+      "start": 236.519,
+      "duration": 5.241,
+      "end": 241.76,
+      "text": "you can do the computations so what I'll"
+    },
+    {
+      "start": 238.56,
+      "duration": 5.239,
+      "end": 243.799,
+      "text": "do is the first step is is sorting it up"
+    },
+    {
+      "start": 241.76,
+      "duration": 4.679,
+      "end": 246.439,
+      "text": "I'll sort"
+    },
+    {
+      "start": 243.799,
+      "duration": 5.44,
+      "end": 249.239,
+      "text": "it greedy because that's what the"
+    },
+    {
+      "start": 246.439,
+      "duration": 6.0,
+      "end": 252.439,
+      "text": "algorithm is stating smallest execution"
+    },
+    {
+      "start": 249.239,
+      "duration": 6.601,
+      "end": 255.84,
+      "text": "first time okay so let's take a timer"
+    },
+    {
+      "start": 252.439,
+      "duration": 5.001,
+      "end": 257.44,
+      "text": "equal to zero and let's take a waiting"
+    },
+    {
+      "start": 255.84,
+      "duration": 5.44,
+      "end": 261.28000000000003,
+      "text": "time so let's compute the waiting time"
+    },
+    {
+      "start": 257.44,
+      "duration": 5.96,
+      "end": 263.4,
+      "text": "to be initially zero we'll do the Trav"
+    },
+    {
+      "start": 261.28,
+      "duration": 5.44,
+      "end": 266.71999999999997,
+      "text": "first we are at the one and the time is"
+    },
+    {
+      "start": 263.4,
+      "duration": 7.4,
+      "end": 270.79999999999995,
+      "text": "zero and the waiting time will be 0 + 0"
+    },
+    {
+      "start": 266.72,
+      "duration": 7.16,
+      "end": 273.88000000000005,
+      "text": "that's 0er so when we perform this one"
+    },
+    {
+      "start": 270.8,
+      "duration": 5.72,
+      "end": 276.52000000000004,
+      "text": "where will the time stand 0 + 1 goes to"
+    },
+    {
+      "start": 273.88,
+      "duration": 4.96,
+      "end": 278.84,
+      "text": "one and then we go to the next one when"
+    },
+    {
+      "start": 276.52,
+      "duration": 5.72,
+      "end": 282.24,
+      "text": "I go to the next one it's taking time"
+    },
+    {
+      "start": 278.84,
+      "duration": 6.68,
+      "end": 285.52,
+      "text": "two it starts at time one so the waiting"
+    },
+    {
+      "start": 282.24,
+      "duration": 6.16,
+      "end": 288.40000000000003,
+      "text": "time 0 + one because this guy is taking"
+    },
+    {
+      "start": 285.52,
+      "duration": 8.519,
+      "end": 294.039,
+      "text": "one so I just add up one to it perfect"
+    },
+    {
+      "start": 288.4,
+      "duration": 9.239,
+      "end": 297.63899999999995,
+      "text": "it's going to complete at 1+ 2 3 1+ 2 3"
+    },
+    {
+      "start": 294.039,
+      "duration": 6.201,
+      "end": 300.24,
+      "text": "done we go to the next one next one is"
+    },
+    {
+      "start": 297.639,
+      "duration": 4.961,
+      "end": 302.6,
+      "text": "starting at three is starting at three"
+    },
+    {
+      "start": 300.24,
+      "duration": 5.56,
+      "end": 305.8,
+      "text": "so can I say the waiting time will be 3"
+    },
+    {
+      "start": 302.6,
+      "duration": 6.92,
+      "end": 309.52000000000004,
+      "text": "+ 1 the total waiting time will be four"
+    },
+    {
+      "start": 305.8,
+      "duration": 6.839,
+      "end": 312.639,
+      "text": "perfect when does it end 6 so this is"
+    },
+    {
+      "start": 309.52,
+      "duration": 6.679,
+      "end": 316.19899999999996,
+      "text": "done I go to the next when does it start"
+    },
+    {
+      "start": 312.639,
+      "duration": 7.481,
+      "end": 320.12,
+      "text": "6 so the waiting time will be 10 when"
+    },
+    {
+      "start": 316.199,
+      "duration": 7.28,
+      "end": 323.479,
+      "text": "does it end it ends at 10 because it'll"
+    },
+    {
+      "start": 320.12,
+      "duration": 5.32,
+      "end": 325.44,
+      "text": "take another four what after this seven"
+    },
+    {
+      "start": 323.479,
+      "duration": 5.041,
+      "end": 328.52,
+      "text": "I starting at 10 so I add 10 so the"
+    },
+    {
+      "start": 325.44,
+      "duration": 5.96,
+      "end": 331.4,
+      "text": "waiting time will be 20 and this ends up"
+    },
+    {
+      "start": 328.52,
+      "duration": 4.959,
+      "end": 333.479,
+      "text": "at 17 so I can go to the next and that"
+    },
+    {
+      "start": 331.4,
+      "duration": 4.079,
+      "end": 335.479,
+      "text": "is how I'll do it at the end of the day"
+    },
+    {
+      "start": 333.479,
+      "duration": 3.681,
+      "end": 337.15999999999997,
+      "text": "I have the waiting time as 20 so what I"
+    },
+    {
+      "start": 335.479,
+      "duration": 4.321,
+      "end": 339.8,
+      "text": "can return is 20 by the size of the"
+    },
+    {
+      "start": 337.16,
+      "duration": 4.68,
+      "end": 341.84000000000003,
+      "text": "array that is five it is four point I"
+    },
+    {
+      "start": 339.8,
+      "duration": 5.2,
+      "end": 345.0,
+      "text": "just return four truncated it and return"
+    },
+    {
+      "start": 341.84,
+      "duration": 5.799,
+      "end": 347.63899999999995,
+      "text": "the integer part then and dusted super"
+    },
+    {
+      "start": 345.0,
+      "duration": 5.36,
+      "end": 350.36,
+      "text": "simple let's quickly write down the code"
+    },
+    {
+      "start": 347.639,
+      "duration": 5.361,
+      "end": 353.0,
+      "text": "so it will be"
+    },
+    {
+      "start": 350.36,
+      "duration": 4.16,
+      "end": 354.52000000000004,
+      "text": "function that we given an array you can"
+    },
+    {
+      "start": 353.0,
+      "duration": 2.8,
+      "end": 355.8,
+      "text": "take the array first thing you'll do is"
+    },
+    {
+      "start": 354.52,
+      "duration": 3.799,
+      "end": 358.31899999999996,
+      "text": "sort the"
+    },
+    {
+      "start": 355.8,
+      "duration": 4.119,
+      "end": 359.919,
+      "text": "array very straightforward you can keep"
+    },
+    {
+      "start": 358.319,
+      "duration": 4.44,
+      "end": 362.759,
+      "text": "the timer as zero you can you can keep"
+    },
+    {
+      "start": 359.919,
+      "duration": 5.761,
+      "end": 365.68,
+      "text": "the weight timer as zero itself and then"
+    },
+    {
+      "start": 362.759,
+      "duration": 5.361,
+      "end": 368.12,
+      "text": "you can start iterating from 0 till n"
+    },
+    {
+      "start": 365.68,
+      "duration": 5.0,
+      "end": 370.68,
+      "text": "minus one and you can say okay the"
+    },
+    {
+      "start": 368.12,
+      "duration": 4.88,
+      "end": 373.0,
+      "text": "weight timer initially is going to be"
+    },
+    {
+      "start": 370.68,
+      "duration": 4.48,
+      "end": 375.16,
+      "text": "when this current process is starting"
+    },
+    {
+      "start": 373.0,
+      "duration": 5.919,
+      "end": 378.919,
+      "text": "and when does it end t plus equal to"
+    },
+    {
+      "start": 375.16,
+      "duration": 8.4,
+      "end": 383.56,
+      "text": "array of I so this is it yeah that's it"
+    },
+    {
+      "start": 378.919,
+      "duration": 7.201,
+      "end": 386.12,
+      "text": "and eventually you could go ahead and"
+    },
+    {
+      "start": 383.56,
+      "duration": 6.359,
+      "end": 389.919,
+      "text": "return the total time which is weight"
+    },
+    {
+      "start": 386.12,
+      "duration": 6.639,
+      "end": 392.759,
+      "text": "time divided by n and if it has has a"
+    },
+    {
+      "start": 389.919,
+      "duration": 5.081,
+      "end": 395.0,
+      "text": "inter long return type it's"
+    },
+    {
+      "start": 392.759,
+      "duration": 4.361,
+      "end": 397.12,
+      "text": "automatically it will automatically get"
+    },
+    {
+      "start": 395.0,
+      "duration": 4.639,
+      "end": 399.639,
+      "text": "truncated to the smallest integer"
+    },
+    {
+      "start": 397.12,
+      "duration": 6.84,
+      "end": 403.96,
+      "text": "leaving out the decimal part what about"
+    },
+    {
+      "start": 399.639,
+      "duration": 8.56,
+      "end": 408.199,
+      "text": "the time complexity that's a b go of n"
+    },
+    {
+      "start": 403.96,
+      "duration": 6.88,
+      "end": 410.84,
+      "text": "is it no B go of n + n log n because I'm"
+    },
+    {
+      "start": 408.199,
+      "duration": 4.241,
+      "end": 412.44,
+      "text": "sorting and then I'm iterating what"
+    },
+    {
+      "start": 410.84,
+      "duration": 4.4,
+      "end": 415.23999999999995,
+      "text": "about the space complexity that's a big"
+    },
+    {
+      "start": 412.44,
+      "duration": 5.319,
+      "end": 417.759,
+      "text": "of one we tampering the data yes we are"
+    },
+    {
+      "start": 415.24,
+      "duration": 4.679,
+      "end": 419.919,
+      "text": "tampering the data so this will be the"
+    },
+    {
+      "start": 417.759,
+      "duration": 3.84,
+      "end": 421.599,
+      "text": "most optimal solution I hope you have OD"
+    },
+    {
+      "start": 419.919,
+      "duration": 3.641,
+      "end": 423.56,
+      "text": "it so if you're still now watching and"
+    },
+    {
+      "start": 421.599,
+      "duration": 3.481,
+      "end": 425.08,
+      "text": "if you've understood this one please"
+    },
+    {
+      "start": 423.56,
+      "duration": 3.0,
+      "end": 426.56,
+      "text": "please do consider giving us a like and"
+    },
+    {
+      "start": 425.08,
+      "duration": 3.559,
+      "end": 428.639,
+      "text": "if you're new to our channel do consider"
+    },
+    {
+      "start": 426.56,
+      "duration": 3.319,
+      "end": 429.879,
+      "text": "subscribing to us as well with this I'll"
+    },
+    {
+      "start": 428.639,
+      "duration": 4.641,
+      "end": 433.28000000000003,
+      "text": "be wrapping up this video Let's be in"
+    },
+    {
+      "start": 429.879,
+      "duration": 3.401,
+      "end": 433.28000000000003,
+      "text": "some other video till then bye-bye take"
+    },
+    {
+      "start": 434.56,
+      "duration": 6.759,
+      "end": 441.319,
+      "text": "careen forget your"
+    },
+    {
+      "start": 437.199,
+      "duration": 4.12,
+      "end": 441.319,
+      "text": "golden I will"
+    }
+  ]
+}

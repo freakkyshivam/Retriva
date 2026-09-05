@@ -1,0 +1,75 @@
+{
+  "video_id": "gIrMptNPf5M",
+  "position": 306,
+  "title": "L10. Sum of subarray ranges | Stack and Queue Playlist",
+  "url": "https://www.youtube.com/watch?v=gIrMptNPf5M",
+  "chunk_count": 6,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "gIrMptNPf5M",
+      "position": 306,
+      "title": "L10. Sum of subarray ranges | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=gIrMptNPf5M",
+      "start": 3.24,
+      "end": 126.2,
+      "text": "so we will be continuing with our stack and Q playlist was starting off every welcome back to the channel I hope you guys are doing extremely well so the problem that we will be solving today is sum of subar ranges let's understand the problem statement you're given an array of numbers you'll have to generate all the sub arrays once you have done that you'll have to return the sum of subarray ranges what is a subarray a contigous part of an array what is a subarray range it is the difference between the largest and the smallest element in a particular subarray let's understand so I have to write down all the subarrays can I start with the first one which is one that's a subarray can I write the next one which is 14 yes can I write the next one which is 143 can I write the next one which is 14 32 I can what about the other subar can I see the other one is four 4 three 4 3 2 can I say the other one is 3 3 2 can I say that the other one is two I can if I have to write down the subarray range for every subarray can I say for this the greatest element like the largest is one and the smallest is one so 1 minus 1 will be zero for this it will be four is the largest one is the smallest three for this four is the largest one is the smallest three for this four is the largest one is the smallest thereby again three for this zero for this one for this two for this zero for this one and for this zero if I sum it up the value will be 9 10 12 and 13 so the summation boils down to be 13 and this is what you have to return the sum of sub array ranges so how do I solve this particular problem I think have written down the brot force you'll have to generate all",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "gIrMptNPf5M",
+      "position": 306,
+      "title": "L10. Sum of subarray ranges | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=gIrMptNPf5M",
+      "start": 120.64,
+      "end": 245.0,
+      "text": "brot force you'll have to generate all the subarrays and you know how to do it you basically keep a loop at I then you take a j so the first subar is this then you move j the second is this then you move j there's a third then you move j this is the fourth so in this way you can generate all the subarrays starting at the first element after that you move I again you can keep a j then you can move j then you can move j again you end up generating all of them and while traversing in that AR you keep a track of the largest and the smallest so it's a mixture of subar generation and finding the largest and the smallest and limit so if I have to write down the Brute Force I'll start with sum equal to zero and then I'll start traversing from 0 till n minus one so we start generating the subarray from every element and what I can do is I can keep the largest element to be array of I initially and I can keep the smallest element to the array of I now if you carefully observe the element itself is not contributing to the answer the element itself is not contributing to the answer like this subarray is of no use this subarray is of no use so what I could do is I could just start off from j = i + 1 and I could head over till n minus one and over here I could update the largest to be Max of the previous largest which is largest and the current element which is array of I similarly I can update the smallest to be smallest minimum of smallest comma array of sorry array of J my my bad array of J yes once that is done because this is a subarray like I to J is a subar so what I could do is I could say sum equal to sum plus you",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "gIrMptNPf5M",
+      "position": 306,
+      "title": "L10. Sum of subarray ranges | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=gIrMptNPf5M",
+      "start": 236.519,
+      "end": 370.28,
+      "text": "sum equal to sum plus you definitely can do a largest minus smallest and then you could end up the first for Loop and then the next follow Loop once that is done you can return the sum but what about the time complexity can I say that the time complexity for this one will be beo of n² and the space complexity will be beo of one now this is where the interviewer will not be happy because we are using two nest we're using nested Loop and it'll ask you to optimize it so we have to optimize n squ now this is a clear indication that we are looking somewhere around B go of and or near about that okay so how do I solve this particular problem now in order to solve this particular problem you should have solved the problem which is sum of subarray minimum now this is a problem which I've already done in this particular playlist please go back and watch it now that particular problem was from every subar from every subar you pick up the minimum you don't do a largest minus smallest you just pick up the smallest and you add all of these smallest got it so if you can solve some of subar minimums you can also solve sum of sub array maximums can you also solve the subarray maximum not do this for you I think you can do this I think you can do this so I've already done this the minimum one so you can also do the subarray maximum one okay so I know both of both of these problems I can solve both of the individual summations I can do that I think we have solved the problem you know you know it right yes so can I say can I say this that uh what I'm writing over here is like maybe I'll just erase it I'll erase this as well since you know how to solve sum of subar maximum sum of subar minimum this problem",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "gIrMptNPf5M",
+      "position": 306,
+      "title": "L10. Sum of subarray ranges | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=gIrMptNPf5M",
+      "start": 365.0,
+      "end": 516.44,
+      "text": "sum of subar minimum this problem becomes a c work let's understand how now this is nothing but 1 minus 1 which is largest minus smallest now this becomes 4 - 1 this becomes 4 - 1 this becomes 4 - 1 this becomes 4 - 4 4 - 3 4 - 2 3 - 3 3 - 2 and 2 - 2 So eventually when you sum it up you end up writing 1 - 1 + 4 - 1 + 4 - 1 plus so on till 2 - 2 which is nothing but summation of the largest can I say this can I say this this is nothing but summation of all largest like all the subar largest minus summation of all sub arrays smallest and if I can do that I think I've solved the problem this is nothing but the problem sum of subarray maximums which you can solve because it already done an addition of su of subarrays minimums so whatever answer you get from this one and from this one you basically subtract and this is what you will be returning simple the problem like if you solve this addition you can figure out the maximums and then you could just subtract both of their summations and you should be done so if I have to write down the code I'm assuming you have done some of subar uh maximum and minimum so we'll be doing this one let's try to do this one so we have a function and you will be given an array so all you need to do is you need to write those functions assume you write a sum Max so you pass on the array to it again you'll find the complete code I repeat you'll find the complete code given Below in case still having problem refer to the complete code given below and after this you could write the sum of minimum you would have solved that as well given an array and then you return this and if you remember the individual",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "gIrMptNPf5M",
+      "position": 306,
+      "title": "L10. Sum of subarray ranges | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=gIrMptNPf5M",
+      "start": 510.36,
+      "end": 622.399,
+      "text": "and if you remember the individual complexities this was taking how much let's go back and check it out so I've already solved this problem I think yes over here there taking a b of five and time complexity somewhere around that and a beo of 5n space complexity which is as good as B off and I can say like near about that so I can again come back to this one where where is it here so this is going to take B I'm writing an estimate which is near about b n and the space complexity I know it's 5n I'm trying to you know write the nearest one because 5n is much much better than n square and this is also going to take the similar amount so even if I add it up it's going to be somewhere equ like somewhere near about B of 10n which is as good as B of n because this will take 5n as well this will take 5n as well like if you just add it up it will be 10n which is okay like much much better than b of n Square you to understand this and the space complexity will also be somewhere around B of 10n again if you write super clean code if you don't uh you know reuse stuffs it'll be 10n and then there'll be B off and nearabout so this is what we have optimized n squ it's important to understand Concepts because sometimes in interviews people might tweak the question like this was a very simple question has just tweak like just found it tough if you just think it combining both of them you'll be like how do I figure this out how there's no other way instead of generating all the Saar so it's very important to keep all the concepts intact I hope you understood everything so if you're still now watching and if you've understood everything please please do consider giving us a like and if you're new to our channel do consider subscribing to",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "gIrMptNPf5M",
+      "position": 306,
+      "title": "L10. Sum of subarray ranges | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=gIrMptNPf5M",
+      "start": 618.16,
+      "end": 635.4799999999999,
+      "text": "our channel do consider subscribing to us as well with this I'll be wrapping up this video Let's SP some the video Turn is broken don't forget your golden I will find the light",
+      "word_count": 34
+    }
+  ]
+}

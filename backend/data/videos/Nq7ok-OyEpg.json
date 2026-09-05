@@ -1,0 +1,6194 @@
+{
+  "position": 237,
+  "video_id": "Nq7ok-OyEpg",
+  "title": "L1. Introduction to LinkedList | Traversal | Length | Search an Element",
+  "url": "https://www.youtube.com/watch?v=Nq7ok-OyEpg",
+  "transcript": [
+    {
+      "start": 3.0,
+      "duration": 2.799,
+      "end": 5.7989999999999995,
+      "text": "so I'll be starting off with one more"
+    },
+    {
+      "start": 4.279,
+      "duration": 3.08,
+      "end": 7.359,
+      "text": "playlist and that is the linklist"
+    },
+    {
+      "start": 5.799,
+      "duration": 2.641,
+      "end": 8.440000000000001,
+      "text": "playlist but before that hey welcome"
+    },
+    {
+      "start": 7.359,
+      "duration": 2.921,
+      "end": 10.28,
+      "text": "back to the channel I hope you guys are"
+    },
+    {
+      "start": 8.44,
+      "duration": 3.72,
+      "end": 12.16,
+      "text": "doing extremely well so just a"
+    },
+    {
+      "start": 10.28,
+      "duration": 3.64,
+      "end": 13.92,
+      "text": "disclaimer that this lecture will be"
+    },
+    {
+      "start": 12.16,
+      "duration": 6.039,
+      "end": 18.198999999999998,
+      "text": "super long why because I'm going to"
+    },
+    {
+      "start": 13.92,
+      "duration": 6.56,
+      "end": 20.48,
+      "text": "teach you a bunch of things yes and one"
+    },
+    {
+      "start": 18.199,
+      "duration": 5.121,
+      "end": 23.32,
+      "text": "more thing I'll not be writing code in"
+    },
+    {
+      "start": 20.48,
+      "duration": 5.52,
+      "end": 26.0,
+      "text": "C++ nor will I be writing code in Java"
+    },
+    {
+      "start": 23.32,
+      "duration": 5.08,
+      "end": 28.4,
+      "text": "I'll try to give you the thought process"
+    },
+    {
+      "start": 26.0,
+      "duration": 4.96,
+      "end": 30.96,
+      "text": "the logic the pseudo code and you will"
+    },
+    {
+      "start": 28.4,
+      "duration": 5.64,
+      "end": 34.04,
+      "text": "see while I write the code even if I'm"
+    },
+    {
+      "start": 30.96,
+      "duration": 5.119,
+      "end": 36.079,
+      "text": "writing on C++ I just make two changes"
+    },
+    {
+      "start": 34.04,
+      "duration": 5.76,
+      "end": 39.8,
+      "text": "yes I'll just make two changes and the"
+    },
+    {
+      "start": 36.079,
+      "duration": 5.32,
+      "end": 41.399,
+      "text": "C++ code will be running in Java as well"
+    },
+    {
+      "start": 39.8,
+      "duration": 3.88,
+      "end": 43.68,
+      "text": "and similarly if you are someone who is"
+    },
+    {
+      "start": 41.399,
+      "duration": 4.361,
+      "end": 45.76,
+      "text": "using python or JavaScript you can also"
+    },
+    {
+      "start": 43.68,
+      "duration": 4.519,
+      "end": 48.199,
+      "text": "do similar kind of changes like one or"
+    },
+    {
+      "start": 45.76,
+      "duration": 4.479,
+      "end": 50.239,
+      "text": "two lines of changes and the code will"
+    },
+    {
+      "start": 48.199,
+      "duration": 4.36,
+      "end": 52.559,
+      "text": "start running in Python and JavaScript"
+    },
+    {
+      "start": 50.239,
+      "duration": 4.12,
+      "end": 54.358999999999995,
+      "text": "so it doesn't matter which language"
+    },
+    {
+      "start": 52.559,
+      "duration": 4.041,
+      "end": 56.599999999999994,
+      "text": "you're coding in you can definitely"
+    },
+    {
+      "start": 54.359,
+      "duration": 4.241,
+      "end": 58.6,
+      "text": "watch this entire playlist so without"
+    },
+    {
+      "start": 56.6,
+      "duration": 4.72,
+      "end": 61.32,
+      "text": "waiting let's get started with the first"
+    },
+    {
+      "start": 58.6,
+      "duration": 4.52,
+      "end": 63.120000000000005,
+      "text": "thing what is a link link list now you"
+    },
+    {
+      "start": 61.32,
+      "duration": 3.72,
+      "end": 65.04,
+      "text": "know data structures which store"
+    },
+    {
+      "start": 63.12,
+      "duration": 4.16,
+      "end": 67.28,
+      "text": "elements one of the data structures you"
+    },
+    {
+      "start": 65.04,
+      "duration": 4.399,
+      "end": 69.43900000000001,
+      "text": "know is array so imagine I Define an"
+    },
+    {
+      "start": 67.28,
+      "duration": 5.96,
+      "end": 73.24,
+      "text": "array of size 4 it'll be storing"
+    },
+    {
+      "start": 69.439,
+      "duration": 6.161,
+      "end": 75.6,
+      "text": "something like 1 3 2 5 it stores four"
+    },
+    {
+      "start": 73.24,
+      "duration": 4.44,
+      "end": 77.67999999999999,
+      "text": "integers why does it store four integer"
+    },
+    {
+      "start": 75.6,
+      "duration": 4.8,
+      "end": 80.39999999999999,
+      "text": "because the data type is defined as"
+    },
+    {
+      "start": 77.68,
+      "duration": 4.96,
+      "end": 82.64,
+      "text": "integer now if in the future I come"
+    },
+    {
+      "start": 80.4,
+      "duration": 4.359,
+      "end": 84.759,
+      "text": "across and say hey can you please add"
+    },
+    {
+      "start": 82.64,
+      "duration": 4.839,
+      "end": 87.479,
+      "text": "one more element to this array like can"
+    },
+    {
+      "start": 84.759,
+      "duration": 5.481,
+      "end": 90.24,
+      "text": "you please add eight to this particular"
+    },
+    {
+      "start": 87.479,
+      "duration": 5.841,
+      "end": 93.32,
+      "text": "array can you add no you cannot add why"
+    },
+    {
+      "start": 90.24,
+      "duration": 6.159,
+      "end": 96.399,
+      "text": "because the array is of fixed size four"
+    },
+    {
+      "start": 93.32,
+      "duration": 6.96,
+      "end": 100.27999999999999,
+      "text": "so the size is fixed four you cannot add"
+    },
+    {
+      "start": 96.399,
+      "duration": 6.321,
+      "end": 102.72,
+      "text": "one more element so arrays are of fixed"
+    },
+    {
+      "start": 100.28,
+      "duration": 4.36,
+      "end": 104.64,
+      "text": "size where is the array stored so there"
+    },
+    {
+      "start": 102.72,
+      "duration": 4.6,
+      "end": 107.32,
+      "text": "is something as Heap memory in the"
+    },
+    {
+      "start": 104.64,
+      "duration": 4.839,
+      "end": 109.479,
+      "text": "computer and the array is stored in a"
+    },
+    {
+      "start": 107.32,
+      "duration": 3.799,
+      "end": 111.119,
+      "text": "contagious location what do I mean by"
+    },
+    {
+      "start": 109.479,
+      "duration": 3.401,
+      "end": 112.88,
+      "text": "contagious location and this is the"
+    },
+    {
+      "start": 111.119,
+      "duration": 4.32,
+      "end": 115.439,
+      "text": "index zero this is the index one index"
+    },
+    {
+      "start": 112.88,
+      "duration": 6.159,
+      "end": 119.039,
+      "text": "two index 3 so the index zero is"
+    },
+    {
+      "start": 115.439,
+      "duration": 6.36,
+      "end": 121.79899999999999,
+      "text": "followed by index one followed by index"
+    },
+    {
+      "start": 119.039,
+      "duration": 5.521,
+      "end": 124.56,
+      "text": "2 followed by index 3 and they are in"
+    },
+    {
+      "start": 121.799,
+      "duration": 5.121,
+      "end": 126.92,
+      "text": "the contigous location so imagine if"
+    },
+    {
+      "start": 124.56,
+      "duration": 7.24,
+      "end": 131.8,
+      "text": "this zero index is at some memory"
+    },
+    {
+      "start": 126.92,
+      "duration": 9.92,
+      "end": 136.84,
+      "text": "address 7878 95 something like this then"
+    },
+    {
+      "start": 131.8,
+      "duration": 8.519,
+      "end": 140.31900000000002,
+      "text": "this one will be at 7878 96 right one"
+    },
+    {
+      "start": 136.84,
+      "duration": 5.92,
+      "end": 142.76,
+      "text": "after this one will at be 97 this one"
+    },
+    {
+      "start": 140.319,
+      "duration": 5.321,
+      "end": 145.64,
+      "text": "will be at 98 so they're at the"
+    },
+    {
+      "start": 142.76,
+      "duration": 6.32,
+      "end": 149.07999999999998,
+      "text": "contagious location so that is why an"
+    },
+    {
+      "start": 145.64,
+      "duration": 4.679,
+      "end": 150.319,
+      "text": "array is easy to travel index wise so"
+    },
+    {
+      "start": 149.08,
+      "duration": 2.92,
+      "end": 152.0,
+      "text": "you cannot"
+    },
+    {
+      "start": 150.319,
+      "duration": 3.801,
+      "end": 154.11999999999998,
+      "text": "increase the size of the array at the"
+    },
+    {
+      "start": 152.0,
+      "duration": 4.64,
+      "end": 156.64,
+      "text": "same time you cannot decrease the size"
+    },
+    {
+      "start": 154.12,
+      "duration": 5.56,
+      "end": 159.68,
+      "text": "of the array so this is where something"
+    },
+    {
+      "start": 156.64,
+      "duration": 5.319,
+      "end": 161.95899999999997,
+      "text": "like linkless comes in it's a data"
+    },
+    {
+      "start": 159.68,
+      "duration": 5.12,
+      "end": 164.8,
+      "text": "structure which helps you to increase"
+    },
+    {
+      "start": 161.959,
+      "duration": 5.041,
+      "end": 167.0,
+      "text": "the size as well as decrease the size so"
+    },
+    {
+      "start": 164.8,
+      "duration": 4.96,
+      "end": 169.76000000000002,
+      "text": "how does this data structure look like"
+    },
+    {
+      "start": 167.0,
+      "duration": 4.64,
+      "end": 171.64,
+      "text": "now array will be like over here if I'm"
+    },
+    {
+      "start": 169.76,
+      "duration": 4.72,
+      "end": 174.48,
+      "text": "defining array as integer it'll be"
+    },
+    {
+      "start": 171.64,
+      "duration": 4.8,
+      "end": 176.44,
+      "text": "storing integer what if I Define it as"
+    },
+    {
+      "start": 174.48,
+      "duration": 4.399,
+      "end": 178.879,
+      "text": "double in that case the AR will be"
+    },
+    {
+      "start": 176.44,
+      "duration": 5.48,
+      "end": 181.92,
+      "text": "storing double what if I Define it as a"
+    },
+    {
+      "start": 178.879,
+      "duration": 5.761,
+      "end": 184.64,
+      "text": "list in C++ the list is Vector INT in"
+    },
+    {
+      "start": 181.92,
+      "duration": 6.28,
+      "end": 188.2,
+      "text": "Java it is list of in if I Define it as"
+    },
+    {
+      "start": 184.64,
+      "duration": 6.12,
+      "end": 190.76,
+      "text": "vector or List what will be like what"
+    },
+    {
+      "start": 188.2,
+      "duration": 5.0,
+      "end": 193.2,
+      "text": "will every index store it'll technically"
+    },
+    {
+      "start": 190.76,
+      "duration": 5.88,
+      "end": 196.64,
+      "text": "store a list at every index yes it'll"
+    },
+    {
+      "start": 193.2,
+      "duration": 6.48,
+      "end": 199.67999999999998,
+      "text": "technically store a list at every Index"
+    },
+    {
+      "start": 196.64,
+      "duration": 5.239,
+      "end": 201.879,
+      "text": "right so what is a link list link list"
+    },
+    {
+      "start": 199.68,
+      "duration": 4.919,
+      "end": 204.59900000000002,
+      "text": "is a similar data structure but the"
+    },
+    {
+      "start": 201.879,
+      "duration": 4.881,
+      "end": 206.76,
+      "text": "difference is they're not in contigous"
+    },
+    {
+      "start": 204.599,
+      "duration": 4.84,
+      "end": 209.439,
+      "text": "location yes they're not in contigous"
+    },
+    {
+      "start": 206.76,
+      "duration": 5.08,
+      "end": 211.84,
+      "text": "location so imagine I ask you to store"
+    },
+    {
+      "start": 209.439,
+      "duration": 3.681,
+      "end": 213.12,
+      "text": "these four elements in a link list so"
+    },
+    {
+      "start": 211.84,
+      "duration": 5.28,
+      "end": 217.12,
+      "text": "what happens"
+    },
+    {
+      "start": 213.12,
+      "duration": 7.199,
+      "end": 220.31900000000002,
+      "text": "is you store one you store three you"
+    },
+    {
+      "start": 217.12,
+      "duration": 6.839,
+      "end": 223.959,
+      "text": "store two you store five but they stored"
+    },
+    {
+      "start": 220.319,
+      "duration": 5.12,
+      "end": 225.439,
+      "text": "in the Heap memory in like it's not a"
+    },
+    {
+      "start": 223.959,
+      "duration": 5.681,
+      "end": 229.64000000000001,
+      "text": "continuious location so if I have to"
+    },
+    {
+      "start": 225.439,
+      "duration": 8.121,
+      "end": 233.56,
+      "text": "draw you imagine uh this is the Heap"
+    },
+    {
+      "start": 229.64,
+      "duration": 7.56,
+      "end": 237.2,
+      "text": "memory one might be here three might be"
+    },
+    {
+      "start": 233.56,
+      "duration": 7.28,
+      "end": 240.84,
+      "text": "here maybe two is here and maybe five is"
+    },
+    {
+      "start": 237.2,
+      "duration": 6.08,
+      "end": 243.28,
+      "text": "here so there is no certainity that one"
+    },
+    {
+      "start": 240.84,
+      "duration": 4.0,
+      "end": 244.84,
+      "text": "will be here one can also be somewhere"
+    },
+    {
+      "start": 243.28,
+      "duration": 3.44,
+      "end": 246.72,
+      "text": "on the right of two or somewhere like"
+    },
+    {
+      "start": 244.84,
+      "duration": 5.319,
+      "end": 250.159,
+      "text": "this if the memory location of this is"
+    },
+    {
+      "start": 246.72,
+      "duration": 6.32,
+      "end": 253.04,
+      "text": "9856 97 something this can be anything"
+    },
+    {
+      "start": 250.159,
+      "duration": 4.92,
+      "end": 255.07899999999998,
+      "text": "anything so they are not in contagious"
+    },
+    {
+      "start": 253.04,
+      "duration": 2.879,
+      "end": 255.91899999999998,
+      "text": "memory location so that is the first"
+    },
+    {
+      "start": 255.079,
+      "duration": 5.081,
+      "end": 260.16,
+      "text": "thing"
+    },
+    {
+      "start": 255.919,
+      "duration": 6.881,
+      "end": 262.8,
+      "text": "about not in about link list that the"
+    },
+    {
+      "start": 260.16,
+      "duration": 5.56,
+      "end": 265.72,
+      "text": "not in contagious location there can be"
+    },
+    {
+      "start": 262.8,
+      "duration": 5.24,
+      "end": 268.04,
+      "text": "anywhere so if they can be anywhere you"
+    },
+    {
+      "start": 265.72,
+      "duration": 5.0,
+      "end": 270.72,
+      "text": "definitely cannot go like index zero"
+    },
+    {
+      "start": 268.04,
+      "duration": 4.92,
+      "end": 272.96000000000004,
+      "text": "index one index 2 index three and how do"
+    },
+    {
+      "start": 270.72,
+      "duration": 4.52,
+      "end": 275.24,
+      "text": "you store these elements remember one"
+    },
+    {
+      "start": 272.96,
+      "duration": 7.079,
+      "end": 280.039,
+      "text": "thing in link list also you can store"
+    },
+    {
+      "start": 275.24,
+      "duration": 6.12,
+      "end": 281.36,
+      "text": "integer double list strings characters"
+    },
+    {
+      "start": 280.039,
+      "duration": 3.561,
+      "end": 283.59999999999997,
+      "text": "whatever data structure you want to"
+    },
+    {
+      "start": 281.36,
+      "duration": 4.92,
+      "end": 286.28000000000003,
+      "text": "store similar to array the only"
+    },
+    {
+      "start": 283.6,
+      "duration": 5.159,
+      "end": 288.759,
+      "text": "difference is they're not in contigous"
+    },
+    {
+      "start": 286.28,
+      "duration": 4.4,
+      "end": 290.67999999999995,
+      "text": "location and their size can be increased"
+    },
+    {
+      "start": 288.759,
+      "duration": 4.88,
+      "end": 293.639,
+      "text": "at any moment their size can be"
+    },
+    {
+      "start": 290.68,
+      "duration": 5.04,
+      "end": 295.72,
+      "text": "increased at any moment why because"
+    },
+    {
+      "start": 293.639,
+      "duration": 4.56,
+      "end": 298.199,
+      "text": "array was in contagious like memory"
+    },
+    {
+      "start": 295.72,
+      "duration": 4.88,
+      "end": 300.6,
+      "text": "location so you're not sure if the next"
+    },
+    {
+      "start": 298.199,
+      "duration": 4.28,
+      "end": 302.479,
+      "text": "like wherever this was if the next"
+    },
+    {
+      "start": 300.6,
+      "duration": 4.159,
+      "end": 304.759,
+      "text": "location is free or not but when it"
+    },
+    {
+      "start": 302.479,
+      "duration": 4.321,
+      "end": 306.8,
+      "text": "comes to link list there is no next"
+    },
+    {
+      "start": 304.759,
+      "duration": 3.961,
+      "end": 308.72,
+      "text": "location it can just if you add one more"
+    },
+    {
+      "start": 306.8,
+      "duration": 3.76,
+      "end": 310.56,
+      "text": "six it just find a place in the Heap"
+    },
+    {
+      "start": 308.72,
+      "duration": 4.319,
+      "end": 313.03900000000004,
+      "text": "memory and store it this is the"
+    },
+    {
+      "start": 310.56,
+      "duration": 4.0,
+      "end": 314.56,
+      "text": "advantage of Link list over arrays you"
+    },
+    {
+      "start": 313.039,
+      "duration": 4.16,
+      "end": 317.199,
+      "text": "can increase the size you can decrease"
+    },
+    {
+      "start": 314.56,
+      "duration": 7.4,
+      "end": 321.96,
+      "text": "the size other question comes up how do"
+    },
+    {
+      "start": 317.199,
+      "duration": 7.321,
+      "end": 324.52000000000004,
+      "text": "we store it so what happens is over here"
+    },
+    {
+      "start": 321.96,
+      "duration": 5.6,
+      "end": 327.56,
+      "text": "in an array it was index zero index one"
+    },
+    {
+      "start": 324.52,
+      "duration": 6.519,
+      "end": 331.039,
+      "text": "index 2 index 3 and we could easily"
+    },
+    {
+      "start": 327.56,
+      "duration": 7.639,
+      "end": 335.199,
+      "text": "Traverse right but how do we Travers in"
+    },
+    {
+      "start": 331.039,
+      "duration": 6.521,
+      "end": 337.56,
+      "text": "link list we do something different we"
+    },
+    {
+      "start": 335.199,
+      "duration": 5.0,
+      "end": 340.199,
+      "text": "we're storing element that's basically"
+    },
+    {
+      "start": 337.56,
+      "duration": 5.6,
+      "end": 343.16,
+      "text": "the data at the same time we store"
+    },
+    {
+      "start": 340.199,
+      "duration": 4.881,
+      "end": 345.08000000000004,
+      "text": "something as next at the same time we"
+    },
+    {
+      "start": 343.16,
+      "duration": 6.52,
+      "end": 349.68,
+      "text": "store something as"
+    },
+    {
+      "start": 345.08,
+      "duration": 6.8,
+      "end": 351.88,
+      "text": "next with every data now what is next"
+    },
+    {
+      "start": 349.68,
+      "duration": 3.959,
+      "end": 353.639,
+      "text": "you need to know if this is at zero"
+    },
+    {
+      "start": 351.88,
+      "duration": 4.4,
+      "end": 356.28,
+      "text": "index how do you know this is at the"
+    },
+    {
+      "start": 353.639,
+      "duration": 6.0,
+      "end": 359.639,
+      "text": "first index because it is exactly the"
+    },
+    {
+      "start": 356.28,
+      "duration": 5.359,
+      "end": 361.63899999999995,
+      "text": "next memory location so in link list if"
+    },
+    {
+      "start": 359.639,
+      "duration": 4.361,
+      "end": 364.0,
+      "text": "you know the starting point if you know"
+    },
+    {
+      "start": 361.639,
+      "duration": 6.801,
+      "end": 368.44,
+      "text": "this is the starting point how do you NE"
+    },
+    {
+      "start": 364.0,
+      "duration": 7.96,
+      "end": 371.96,
+      "text": "know the next only if you can somehow"
+    },
+    {
+      "start": 368.44,
+      "duration": 6.12,
+      "end": 374.56,
+      "text": "remember where is the next guy in the"
+    },
+    {
+      "start": 371.96,
+      "duration": 5.0,
+      "end": 376.96,
+      "text": "entire Heap memory if someone can tell"
+    },
+    {
+      "start": 374.56,
+      "duration": 4.919,
+      "end": 379.479,
+      "text": "you where is this three in the Heap"
+    },
+    {
+      "start": 376.96,
+      "duration": 4.359,
+      "end": 381.31899999999996,
+      "text": "memory and it's easy to locate it so"
+    },
+    {
+      "start": 379.479,
+      "duration": 5.761,
+      "end": 385.24,
+      "text": "this is how you'll Traverse how will you"
+    },
+    {
+      "start": 381.319,
+      "duration": 6.241,
+      "end": 387.56,
+      "text": "Travers very simple so for example let's"
+    },
+    {
+      "start": 385.24,
+      "duration": 5.16,
+      "end": 390.40000000000003,
+      "text": "call it as memory location one memory"
+    },
+    {
+      "start": 387.56,
+      "duration": 6.32,
+      "end": 393.88,
+      "text": "location uh sorry memory"
+    },
+    {
+      "start": 390.4,
+      "duration": 5.239,
+      "end": 395.63899999999995,
+      "text": "location 2 memory location 3 memory"
+    },
+    {
+      "start": 393.88,
+      "duration": 4.8,
+      "end": 398.68,
+      "text": "location four so basically the first"
+    },
+    {
+      "start": 395.639,
+      "duration": 5.0,
+      "end": 400.639,
+      "text": "element is at memory location M1 M1 can"
+    },
+    {
+      "start": 398.68,
+      "duration": 4.2,
+      "end": 402.88,
+      "text": "be anything in the Heap memory second"
+    },
+    {
+      "start": 400.639,
+      "duration": 6.28,
+      "end": 406.919,
+      "text": "one is at M2 this one is at M3 this one"
+    },
+    {
+      "start": 402.88,
+      "duration": 6.319,
+      "end": 409.199,
+      "text": "is at M4 so what we do is we remember we"
+    },
+    {
+      "start": 406.919,
+      "duration": 3.641,
+      "end": 410.56,
+      "text": "remember the starting point usually the"
+    },
+    {
+      "start": 409.199,
+      "duration": 3.28,
+      "end": 412.479,
+      "text": "starting point of the link list is"
+    },
+    {
+      "start": 410.56,
+      "duration": 3.32,
+      "end": 413.88,
+      "text": "called Head of the link list remember"
+    },
+    {
+      "start": 412.479,
+      "duration": 3.16,
+      "end": 415.639,
+      "text": "this usually the starting part of the"
+    },
+    {
+      "start": 413.88,
+      "duration": 4.36,
+      "end": 418.24,
+      "text": "link list is called Head of the link"
+    },
+    {
+      "start": 415.639,
+      "duration": 5.201,
+      "end": 420.84000000000003,
+      "text": "list and the head of the link list is"
+    },
+    {
+      "start": 418.24,
+      "duration": 4.959,
+      "end": 423.199,
+      "text": "stored at the the M1 location remember"
+    },
+    {
+      "start": 420.84,
+      "duration": 5.68,
+      "end": 426.52,
+      "text": "this head of the link list is stored at"
+    },
+    {
+      "start": 423.199,
+      "duration": 7.56,
+      "end": 430.759,
+      "text": "the M1 location where is the next the"
+    },
+    {
+      "start": 426.52,
+      "duration": 7.079,
+      "end": 433.599,
+      "text": "next is stored at M2 so this starting"
+    },
+    {
+      "start": 430.759,
+      "duration": 6.72,
+      "end": 437.47900000000004,
+      "text": "element is storing the next so what you"
+    },
+    {
+      "start": 433.599,
+      "duration": 5.32,
+      "end": 438.919,
+      "text": "do is you basically say next is at M2 so"
+    },
+    {
+      "start": 437.479,
+      "duration": 4.12,
+      "end": 441.599,
+      "text": "whenever you are starting from head"
+    },
+    {
+      "start": 438.919,
+      "duration": 5.68,
+      "end": 444.599,
+      "text": "because you know the head is at M1 so in"
+    },
+    {
+      "start": 441.599,
+      "duration": 4.72,
+      "end": 446.319,
+      "text": "order to go to the next one you go to"
+    },
+    {
+      "start": 444.599,
+      "duration": 4.801,
+      "end": 449.4,
+      "text": "this element and you say where is the"
+    },
+    {
+      "start": 446.319,
+      "duration": 5.16,
+      "end": 451.47900000000004,
+      "text": "next he says at M2 so you straight away"
+    },
+    {
+      "start": 449.4,
+      "duration": 4.479,
+      "end": 453.87899999999996,
+      "text": "go to M2 straight away go to that memory"
+    },
+    {
+      "start": 451.479,
+      "duration": 5.361,
+      "end": 456.84,
+      "text": "location and access that element so what"
+    },
+    {
+      "start": 453.879,
+      "duration": 5.921,
+      "end": 459.8,
+      "text": "you're doing is you're invincibly like"
+    },
+    {
+      "start": 456.84,
+      "duration": 5.16,
+      "end": 462.0,
+      "text": "sorry uh you're invisibly creating a"
+    },
+    {
+      "start": 459.8,
+      "duration": 5.56,
+      "end": 465.36,
+      "text": "link how are you creating a link you're"
+    },
+    {
+      "start": 462.0,
+      "duration": 5.599,
+      "end": 467.599,
+      "text": "saying hey one your next element is this"
+    },
+    {
+      "start": 465.36,
+      "duration": 5.519,
+      "end": 470.879,
+      "text": "one then over here you're storing your"
+    },
+    {
+      "start": 467.599,
+      "duration": 5.6,
+      "end": 473.199,
+      "text": "next is at M3 so again kind of creating"
+    },
+    {
+      "start": 470.879,
+      "duration": 6.641,
+      "end": 477.52000000000004,
+      "text": "a link over here you're seeing the next"
+    },
+    {
+      "start": 473.199,
+      "duration": 7.081,
+      "end": 480.28000000000003,
+      "text": "is at M4 so you're creating a link"
+    },
+    {
+      "start": 477.52,
+      "duration": 4.959,
+      "end": 482.479,
+      "text": "correct where will this point two does"
+    },
+    {
+      "start": 480.28,
+      "duration": 4.639,
+      "end": 484.919,
+      "text": "it have any new element I repeat does it"
+    },
+    {
+      "start": 482.479,
+      "duration": 4.921,
+      "end": 487.4,
+      "text": "have any new Element no so there is"
+    },
+    {
+      "start": 484.919,
+      "duration": 5.4,
+      "end": 490.31899999999996,
+      "text": "nothing Beyond M4 if there is nothing"
+    },
+    {
+      "start": 487.4,
+      "duration": 5.44,
+      "end": 492.84,
+      "text": "Beyond M4 what you will do is you'll"
+    },
+    {
+      "start": 490.319,
+      "duration": 7.32,
+      "end": 497.639,
+      "text": "straight away see null in Java it is"
+    },
+    {
+      "start": 492.84,
+      "duration": 7.88,
+      "end": 500.71999999999997,
+      "text": "null in C++ it will be null pointer null"
+    },
+    {
+      "start": 497.639,
+      "duration": 5.921,
+      "end": 503.56,
+      "text": "pointer that's it so what you did was"
+    },
+    {
+      "start": 500.72,
+      "duration": 4.28,
+      "end": 505.0,
+      "text": "you stored M2 which is basically this"
+    },
+    {
+      "start": 503.56,
+      "duration": 3.68,
+      "end": 507.24,
+      "text": "link will not be created in the Heap"
+    },
+    {
+      "start": 505.0,
+      "duration": 4.84,
+      "end": 509.84,
+      "text": "memory just to explain that you know"
+    },
+    {
+      "start": 507.24,
+      "duration": 4.239,
+      "end": 511.479,
+      "text": "from one here the link created then"
+    },
+    {
+      "start": 509.84,
+      "duration": 3.48,
+      "end": 513.3199999999999,
+      "text": "there's the link created and how is the"
+    },
+    {
+      "start": 511.479,
+      "duration": 3.761,
+      "end": 515.24,
+      "text": "link stored you just remember where is"
+    },
+    {
+      "start": 513.32,
+      "duration": 4.12,
+      "end": 517.44,
+      "text": "my next if you remember it is at M2 you"
+    },
+    {
+      "start": 515.24,
+      "duration": 3.599,
+      "end": 518.839,
+      "text": "can straight away jump to M2 and then"
+    },
+    {
+      "start": 517.44,
+      "duration": 3.36,
+      "end": 520.8000000000001,
+      "text": "you know the next is at M3 you can"
+    },
+    {
+      "start": 518.839,
+      "duration": 3.921,
+      "end": 522.7600000000001,
+      "text": "straight away jump to M3 then you know"
+    },
+    {
+      "start": 520.8,
+      "duration": 3.92,
+      "end": 524.7199999999999,
+      "text": "the next is at M4 you can straight away"
+    },
+    {
+      "start": 522.76,
+      "duration": 4.199,
+      "end": 526.959,
+      "text": "Jump Then you know the next is null"
+    },
+    {
+      "start": 524.72,
+      "duration": 5.52,
+      "end": 530.24,
+      "text": "which means this is the tail of the link"
+    },
+    {
+      "start": 526.959,
+      "duration": 6.641,
+      "end": 533.5999999999999,
+      "text": "list what is it called the tail of the"
+    },
+    {
+      "start": 530.24,
+      "duration": 7.159,
+      "end": 537.399,
+      "text": "link list tail remember this word it's"
+    },
+    {
+      "start": 533.6,
+      "duration": 6.56,
+      "end": 540.16,
+      "text": "called tail of the link list okay so we"
+    },
+    {
+      "start": 537.399,
+      "duration": 4.761,
+      "end": 542.16,
+      "text": "have understood uh what what is a link"
+    },
+    {
+      "start": 540.16,
+      "duration": 4.239,
+      "end": 544.399,
+      "text": "list I'll not go into the implementation"
+    },
+    {
+      "start": 542.16,
+      "duration": 5.359,
+      "end": 547.519,
+      "text": "details as of now I just wanted to give"
+    },
+    {
+      "start": 544.399,
+      "duration": 5.601,
+      "end": 550.0,
+      "text": "you a context how to store it so just"
+    },
+    {
+      "start": 547.519,
+      "duration": 6.641,
+      "end": 554.16,
+      "text": "imagine someone tells you increase the"
+    },
+    {
+      "start": 550.0,
+      "duration": 6.959,
+      "end": 556.959,
+      "text": "size I want to add eight how do you add"
+    },
+    {
+      "start": 554.16,
+      "duration": 5.679,
+      "end": 559.8389999999999,
+      "text": "eight you basically say put that into"
+    },
+    {
+      "start": 556.959,
+      "duration": 5.681,
+      "end": 562.64,
+      "text": "the Heap memory at some random location"
+    },
+    {
+      "start": 559.839,
+      "duration": 5.68,
+      "end": 565.519,
+      "text": "M5 put that into the Heap memory at some"
+    },
+    {
+      "start": 562.64,
+      "duration": 5.4,
+      "end": 568.04,
+      "text": "random location M5 once you have done"
+    },
+    {
+      "start": 565.519,
+      "duration": 6.841,
+      "end": 572.36,
+      "text": "this I knew that the tail of the link"
+    },
+    {
+      "start": 568.04,
+      "duration": 6.84,
+      "end": 574.88,
+      "text": "list was at this portion which is at M4"
+    },
+    {
+      "start": 572.36,
+      "duration": 6.599,
+      "end": 578.9590000000001,
+      "text": "I knew that the tail was"
+    },
+    {
+      "start": 574.88,
+      "duration": 7.72,
+      "end": 582.6,
+      "text": "at M4 if I know the tail was at M4 what"
+    },
+    {
+      "start": 578.959,
+      "duration": 6.361,
+      "end": 585.3199999999999,
+      "text": "I'll do is very simple I just go and"
+    },
+    {
+      "start": 582.6,
+      "duration": 4.52,
+      "end": 587.12,
+      "text": "I'll say hey your next is now at M5"
+    },
+    {
+      "start": 585.32,
+      "duration": 5.959,
+      "end": 591.279,
+      "text": "which is basically you hypothetically"
+    },
+    {
+      "start": 587.12,
+      "duration": 6.24,
+      "end": 593.36,
+      "text": "create one more so just erase it you"
+    },
+    {
+      "start": 591.279,
+      "duration": 5.721,
+      "end": 597.0,
+      "text": "create one more and that one more will"
+    },
+    {
+      "start": 593.36,
+      "duration": 6.08,
+      "end": 599.44,
+      "text": "store eight and this next my pad use"
+    },
+    {
+      "start": 597.0,
+      "duration": 4.12,
+      "end": 601.12,
+      "text": "blue color yeah the next will be what"
+    },
+    {
+      "start": 599.44,
+      "duration": 3.04,
+      "end": 602.48,
+      "text": "will be the next for this null yes or"
+    },
+    {
+      "start": 601.12,
+      "duration": 5.04,
+      "end": 606.16,
+      "text": "null pointer for"
+    },
+    {
+      "start": 602.48,
+      "duration": 5.479,
+      "end": 607.9590000000001,
+      "text": "C++ that's it it is easy to add because"
+    },
+    {
+      "start": 606.16,
+      "duration": 4.44,
+      "end": 610.6,
+      "text": "you don't have to be dependent on the"
+    },
+    {
+      "start": 607.959,
+      "duration": 5.081,
+      "end": 613.04,
+      "text": "next memory location wherever you find a"
+    },
+    {
+      "start": 610.6,
+      "duration": 4.56,
+      "end": 615.16,
+      "text": "place just store it again this M5 can be"
+    },
+    {
+      "start": 613.04,
+      "duration": 5.88,
+      "end": 618.92,
+      "text": "anything this is how you can increase"
+    },
+    {
+      "start": 615.16,
+      "duration": 5.48,
+      "end": 620.64,
+      "text": "the size I know you can think how to"
+    },
+    {
+      "start": 618.92,
+      "duration": 5.359,
+      "end": 624.279,
+      "text": "decrease as well it's very simple to"
+    },
+    {
+      "start": 620.64,
+      "duration": 5.84,
+      "end": 626.48,
+      "text": "decrease as well just remove it yes so"
+    },
+    {
+      "start": 624.279,
+      "duration": 4.641,
+      "end": 628.92,
+      "text": "any I'll not go to the go to these"
+    },
+    {
+      "start": 626.48,
+      "duration": 4.0,
+      "end": 630.48,
+      "text": "things so we'll talk about that when we"
+    },
+    {
+      "start": 628.92,
+      "duration": 4.24,
+      "end": 633.16,
+      "text": "uh do these things we'll be talking"
+    },
+    {
+      "start": 630.48,
+      "duration": 4.76,
+      "end": 635.24,
+      "text": "about that okay what's the next so I've"
+    },
+    {
+      "start": 633.16,
+      "duration": 3.76,
+      "end": 636.92,
+      "text": "got the concept of Link list the next"
+    },
+    {
+      "start": 635.24,
+      "duration": 5.24,
+      "end": 640.48,
+      "text": "question that is that might be in your"
+    },
+    {
+      "start": 636.92,
+      "duration": 6.159,
+      "end": 643.079,
+      "text": "head is hey where is it used so if I"
+    },
+    {
+      "start": 640.48,
+      "duration": 6.359,
+      "end": 646.839,
+      "text": "talk about data structures it is used in"
+    },
+    {
+      "start": 643.079,
+      "duration": 5.56,
+      "end": 648.6389999999999,
+      "text": "stack Q uh this is the most common data"
+    },
+    {
+      "start": 646.839,
+      "duration": 4.601,
+      "end": 651.44,
+      "text": "structure that can come to your head why"
+    },
+    {
+      "start": 648.639,
+      "duration": 5.2,
+      "end": 653.839,
+      "text": "because what is link list no fix size"
+    },
+    {
+      "start": 651.44,
+      "duration": 4.76,
+      "end": 656.2,
+      "text": "and if you know stack stack has no fixed"
+    },
+    {
+      "start": 653.839,
+      "duration": 4.161,
+      "end": 658.0,
+      "text": "size you put on elements it keeps on"
+    },
+    {
+      "start": 656.2,
+      "duration": 5.079,
+      "end": 661.279,
+      "text": "increasing you take out elements it"
+    },
+    {
+      "start": 658.0,
+      "duration": 5.6,
+      "end": 663.6,
+      "text": "keeps on decreasing the stack and Q are"
+    },
+    {
+      "start": 661.279,
+      "duration": 4.0,
+      "end": 665.279,
+      "text": "primary examples where the link list"
+    },
+    {
+      "start": 663.6,
+      "duration": 3.84,
+      "end": 667.44,
+      "text": "data structure is used you cannot use an"
+    },
+    {
+      "start": 665.279,
+      "duration": 4.961,
+      "end": 670.24,
+      "text": "AR data structure because the flexible"
+    },
+    {
+      "start": 667.44,
+      "duration": 6.76,
+      "end": 674.2,
+      "text": "in size that is where it is used where"
+    },
+    {
+      "start": 670.24,
+      "duration": 7.48,
+      "end": 677.72,
+      "text": "in real life in real life we always use"
+    },
+    {
+      "start": 674.2,
+      "duration": 5.04,
+      "end": 679.24,
+      "text": "it in a browser yes we always use it in"
+    },
+    {
+      "start": 677.72,
+      "duration": 4.239,
+      "end": 681.9590000000001,
+      "text": "a"
+    },
+    {
+      "start": 679.24,
+      "duration": 5.88,
+      "end": 685.12,
+      "text": "browser so this link list that we did"
+    },
+    {
+      "start": 681.959,
+      "duration": 6.521,
+      "end": 688.4799999999999,
+      "text": "talk about was a 1D link list what do we"
+    },
+    {
+      "start": 685.12,
+      "duration": 5.839,
+      "end": 690.9590000000001,
+      "text": "mean by 1D you're just keeping a forward"
+    },
+    {
+      "start": 688.48,
+      "duration": 5.12,
+      "end": 693.6,
+      "text": "pointer I'm just remembering what is the"
+    },
+    {
+      "start": 690.959,
+      "duration": 5.721,
+      "end": 696.68,
+      "text": "next I'm not remembering what is the"
+    },
+    {
+      "start": 693.6,
+      "duration": 5.679,
+      "end": 699.279,
+      "text": "previous so it is in one D like it's in"
+    },
+    {
+      "start": 696.68,
+      "duration": 4.48,
+      "end": 701.16,
+      "text": "one direction got it so basically"
+    },
+    {
+      "start": 699.279,
+      "duration": 4.441,
+      "end": 703.72,
+      "text": "remember the next it's a direction in"
+    },
+    {
+      "start": 701.16,
+      "duration": 4.72,
+      "end": 705.88,
+      "text": "one I can go from one to three but I"
+    },
+    {
+      "start": 703.72,
+      "duration": 4.2,
+      "end": 707.9200000000001,
+      "text": "don't know at three I don't know what is"
+    },
+    {
+      "start": 705.88,
+      "duration": 3.56,
+      "end": 709.4399999999999,
+      "text": "my previous one from three I can go to"
+    },
+    {
+      "start": 707.92,
+      "duration": 4.359,
+      "end": 712.279,
+      "text": "this two but I don't know what is my"
+    },
+    {
+      "start": 709.44,
+      "duration": 4.28,
+      "end": 713.72,
+      "text": "previous one so it's a 1D link list"
+    },
+    {
+      "start": 712.279,
+      "duration": 3.841,
+      "end": 716.12,
+      "text": "since I'm talking about real life"
+    },
+    {
+      "start": 713.72,
+      "duration": 6.08,
+      "end": 719.8000000000001,
+      "text": "example one of the classical real life"
+    },
+    {
+      "start": 716.12,
+      "duration": 5.24,
+      "end": 721.36,
+      "text": "examples is uh browser yeah let's talk"
+    },
+    {
+      "start": 719.8,
+      "duration": 4.719,
+      "end": 724.519,
+      "text": "about a"
+    },
+    {
+      "start": 721.36,
+      "duration": 6.479,
+      "end": 727.839,
+      "text": "browser what happens in a browser you"
+    },
+    {
+      "start": 724.519,
+      "duration": 6.0,
+      "end": 730.519,
+      "text": "open a tab and let's say you search"
+    },
+    {
+      "start": 727.839,
+      "duration": 5.12,
+      "end": 732.9590000000001,
+      "text": "something first tab you like this is the"
+    },
+    {
+      "start": 730.519,
+      "duration": 5.76,
+      "end": 736.279,
+      "text": "first page you landed you search"
+    },
+    {
+      "start": 732.959,
+      "duration": 5.921,
+      "end": 738.88,
+      "text": "something it gives you some res results"
+    },
+    {
+      "start": 736.279,
+      "duration": 6.36,
+      "end": 742.639,
+      "text": "imagine you search TQ forward it gives"
+    },
+    {
+      "start": 738.88,
+      "duration": 6.92,
+      "end": 745.8,
+      "text": "you TQ forward.org you go to there from"
+    },
+    {
+      "start": 742.639,
+      "duration": 6.32,
+      "end": 748.9590000000001,
+      "text": "there you go to that A to Z course from"
+    },
+    {
+      "start": 745.8,
+      "duration": 7.68,
+      "end": 753.4799999999999,
+      "text": "there you go to our article and you do"
+    },
+    {
+      "start": 748.959,
+      "duration": 6.961,
+      "end": 755.92,
+      "text": "everything in one tab what are you doing"
+    },
+    {
+      "start": 753.48,
+      "duration": 5.159,
+      "end": 758.639,
+      "text": "initially it started with search after"
+    },
+    {
+      "start": 755.92,
+      "duration": 4.719,
+      "end": 760.639,
+      "text": "that you went one place ahead after that"
+    },
+    {
+      "start": 758.639,
+      "duration": 5.401,
+      "end": 764.04,
+      "text": "you went one place after that you went"
+    },
+    {
+      "start": 760.639,
+      "duration": 6.361,
+      "end": 767.0,
+      "text": "one place ahead but on the tab if you"
+    },
+    {
+      "start": 764.04,
+      "duration": 5.52,
+      "end": 769.56,
+      "text": "click the back button it actually takes"
+    },
+    {
+      "start": 767.0,
+      "duration": 4.32,
+      "end": 771.32,
+      "text": "you back it again takes you back it"
+    },
+    {
+      "start": 769.56,
+      "duration": 3.399,
+      "end": 772.959,
+      "text": "again takes you back and if you again"
+    },
+    {
+      "start": 771.32,
+      "duration": 3.879,
+      "end": 775.1990000000001,
+      "text": "click the forward button it takes you"
+    },
+    {
+      "start": 772.959,
+      "duration": 5.361,
+      "end": 778.3199999999999,
+      "text": "front takes you front and if you go"
+    },
+    {
+      "start": 775.199,
+      "duration": 4.801,
+      "end": 780.0,
+      "text": "beyond that something it again takes you"
+    },
+    {
+      "start": 778.32,
+      "duration": 3.36,
+      "end": 781.6800000000001,
+      "text": "right"
+    },
+    {
+      "start": 780.0,
+      "duration": 4.519,
+      "end": 784.519,
+      "text": "looks like a link list you don't know"
+    },
+    {
+      "start": 781.68,
+      "duration": 4.12,
+      "end": 785.8,
+      "text": "the size initially how how many things"
+    },
+    {
+      "start": 784.519,
+      "duration": 3.361,
+      "end": 787.88,
+      "text": "will you be searching how many things"
+    },
+    {
+      "start": 785.8,
+      "duration": 4.56,
+      "end": 790.3599999999999,
+      "text": "will you be going deep into and you can"
+    },
+    {
+      "start": 787.88,
+      "duration": 5.8,
+      "end": 793.68,
+      "text": "always come back as much as you want you"
+    },
+    {
+      "start": 790.36,
+      "duration": 6.479,
+      "end": 796.839,
+      "text": "can always go as much as you want so"
+    },
+    {
+      "start": 793.68,
+      "duration": 5.36,
+      "end": 799.04,
+      "text": "perfect example where link list is used"
+    },
+    {
+      "start": 796.839,
+      "duration": 4.041,
+      "end": 800.8800000000001,
+      "text": "all right so the next question what is"
+    },
+    {
+      "start": 799.04,
+      "duration": 3.12,
+      "end": 802.16,
+      "text": "the data structure that we will be using"
+    },
+    {
+      "start": 800.88,
+      "duration": 2.959,
+      "end": 803.8389999999999,
+      "text": "in order to understand the data"
+    },
+    {
+      "start": 802.16,
+      "duration": 4.76,
+      "end": 806.92,
+      "text": "structure we'll have to know about"
+    },
+    {
+      "start": 803.839,
+      "duration": 5.321,
+      "end": 809.1600000000001,
+      "text": "struct and class and C++ as well as in"
+    },
+    {
+      "start": 806.92,
+      "duration": 5.32,
+      "end": 812.24,
+      "text": "Java I'll be talk like I'll be telling"
+    },
+    {
+      "start": 809.16,
+      "duration": 5.479,
+      "end": 814.639,
+      "text": "you about the concept of self-defined"
+    },
+    {
+      "start": 812.24,
+      "duration": 4.36,
+      "end": 816.6,
+      "text": "objects so please hear it out properly"
+    },
+    {
+      "start": 814.639,
+      "duration": 4.921,
+      "end": 819.5600000000001,
+      "text": "doesn't matter if it is C++ or Java"
+    },
+    {
+      "start": 816.6,
+      "duration": 5.52,
+      "end": 822.12,
+      "text": "because both of them are identical so"
+    },
+    {
+      "start": 819.56,
+      "duration": 4.8,
+      "end": 824.3599999999999,
+      "text": "just hear me out in C++ after right"
+    },
+    {
+      "start": 822.12,
+      "duration": 4.48,
+      "end": 826.6,
+      "text": "after C++ I'll be telling you in Java"
+    },
+    {
+      "start": 824.36,
+      "duration": 5.2,
+      "end": 829.5600000000001,
+      "text": "don't skip to Java here the C++ part"
+    },
+    {
+      "start": 826.6,
+      "duration": 6.599,
+      "end": 833.1990000000001,
+      "text": "because it's super easy so before going"
+    },
+    {
+      "start": 829.56,
+      "duration": 7.68,
+      "end": 837.2399999999999,
+      "text": "into the struct and class concept I'll I"
+    },
+    {
+      "start": 833.199,
+      "duration": 6.2,
+      "end": 839.399,
+      "text": "write couple of lines int x equal to 2"
+    },
+    {
+      "start": 837.24,
+      "duration": 5.039,
+      "end": 842.279,
+      "text": "int star"
+    },
+    {
+      "start": 839.399,
+      "duration": 5.761,
+      "end": 845.16,
+      "text": "y = to and of"
+    },
+    {
+      "start": 842.279,
+      "duration": 7.601,
+      "end": 849.88,
+      "text": "X what are these couple of lines doing"
+    },
+    {
+      "start": 845.16,
+      "duration": 8.52,
+      "end": 853.68,
+      "text": "and if I write C out of Y so basically C"
+    },
+    {
+      "start": 849.88,
+      "duration": 4.84,
+      "end": 854.72,
+      "text": "Out means print of Y what happens I'll"
+    },
+    {
+      "start": 853.68,
+      "duration": 3.36,
+      "end": 857.04,
+      "text": "tell you what"
+    },
+    {
+      "start": 854.72,
+      "duration": 5.96,
+      "end": 860.6800000000001,
+      "text": "happens this"
+    },
+    {
+      "start": 857.04,
+      "duration": 7.239,
+      "end": 864.279,
+      "text": "line creates X this line basically"
+    },
+    {
+      "start": 860.68,
+      "duration": 6.48,
+      "end": 867.16,
+      "text": "creates X in the Heap memory somewhere"
+    },
+    {
+      "start": 864.279,
+      "duration": 5.8,
+      "end": 870.079,
+      "text": "in the Heap memory somewhere stores the"
+    },
+    {
+      "start": 867.16,
+      "duration": 8.239,
+      "end": 875.399,
+      "text": "value to"
+    },
+    {
+      "start": 870.079,
+      "duration": 8.801,
+      "end": 878.88,
+      "text": "this line when I say when I say and of X"
+    },
+    {
+      "start": 875.399,
+      "duration": 6.201,
+      "end": 881.6,
+      "text": "gives me this memory location imagine"
+    },
+    {
+      "start": 878.88,
+      "duration": 4.92,
+      "end": 883.8,
+      "text": "the memory location is M1 this x is"
+    },
+    {
+      "start": 881.6,
+      "duration": 6.359,
+      "end": 887.9590000000001,
+      "text": "located in the Heap memory at some"
+    },
+    {
+      "start": 883.8,
+      "duration": 6.599,
+      "end": 890.399,
+      "text": "memory location M1 so it will give me M1"
+    },
+    {
+      "start": 887.959,
+      "duration": 3.841,
+      "end": 891.8,
+      "text": "that M1 M1 can be anything it can be any"
+    },
+    {
+      "start": 890.399,
+      "duration": 5.081,
+      "end": 895.48,
+      "text": "random"
+    },
+    {
+      "start": 891.8,
+      "duration": 6.399,
+      "end": 898.199,
+      "text": "number and this is being stored here so"
+    },
+    {
+      "start": 895.48,
+      "duration": 5.12,
+      "end": 900.6,
+      "text": "you cannot store a memory location you"
+    },
+    {
+      "start": 898.199,
+      "duration": 4.961,
+      "end": 903.16,
+      "text": "cannot store store a memory location so"
+    },
+    {
+      "start": 900.6,
+      "duration": 5.52,
+      "end": 906.12,
+      "text": "in C++ what you do is you store a"
+    },
+    {
+      "start": 903.16,
+      "duration": 5.2,
+      "end": 908.36,
+      "text": "pointer to it you store a pointer to it"
+    },
+    {
+      "start": 906.12,
+      "duration": 4.12,
+      "end": 910.24,
+      "text": "so what I know is I have a pointer to"
+    },
+    {
+      "start": 908.36,
+      "duration": 4.24,
+      "end": 912.6,
+      "text": "this memory location I have a pointer to"
+    },
+    {
+      "start": 910.24,
+      "duration": 5.159,
+      "end": 915.399,
+      "text": "this memory location so if you try to"
+    },
+    {
+      "start": 912.6,
+      "duration": 5.08,
+      "end": 917.6800000000001,
+      "text": "print C out like if you try to print y"
+    },
+    {
+      "start": 915.399,
+      "duration": 4.601,
+      "end": 920.0,
+      "text": "you'll get the pointer to this memory"
+    },
+    {
+      "start": 917.68,
+      "duration": 5.519,
+      "end": 923.199,
+      "text": "location got it so this is very"
+    },
+    {
+      "start": 920.0,
+      "duration": 6.04,
+      "end": 926.04,
+      "text": "important and how do you this is the PO"
+    },
+    {
+      "start": 923.199,
+      "duration": 4.76,
+      "end": 927.959,
+      "text": "Stu yes this is the PO Stu in pointer so"
+    },
+    {
+      "start": 926.04,
+      "duration": 5.88,
+      "end": 931.92,
+      "text": "this is how you store it because this"
+    },
+    {
+      "start": 927.959,
+      "duration": 6.8,
+      "end": 934.7589999999999,
+      "text": "variable was to sorry this this thing"
+    },
+    {
+      "start": 931.92,
+      "duration": 5.039,
+      "end": 936.959,
+      "text": "was an integer that's why in order to"
+    },
+    {
+      "start": 934.759,
+      "duration": 4.601,
+      "end": 939.36,
+      "text": "store a pointer to its memory location"
+    },
+    {
+      "start": 936.959,
+      "duration": 5.761,
+      "end": 942.7199999999999,
+      "text": "you have to give in Star that's how it"
+    },
+    {
+      "start": 939.36,
+      "duration": 5.399,
+      "end": 944.759,
+      "text": "works in C++ in Java you just have to"
+    },
+    {
+      "start": 942.72,
+      "duration": 3.799,
+      "end": 946.519,
+      "text": "store the instance and it's very simple"
+    },
+    {
+      "start": 944.759,
+      "duration": 3.88,
+      "end": 948.639,
+      "text": "I'll be coming to that"
+    },
+    {
+      "start": 946.519,
+      "duration": 4.961,
+      "end": 951.48,
+      "text": "afterwards what are we"
+    },
+    {
+      "start": 948.639,
+      "duration": 6.401,
+      "end": 955.04,
+      "text": "storing if you're defining an array"
+    },
+    {
+      "start": 951.48,
+      "duration": 4.839,
+      "end": 956.3190000000001,
+      "text": "you're just storing int array of size 10"
+    },
+    {
+      "start": 955.04,
+      "duration": 6.0,
+      "end": 961.04,
+      "text": "and it always"
+    },
+    {
+      "start": 956.319,
+      "duration": 7.121,
+      "end": 963.4399999999999,
+      "text": "stores ints right integers in link list"
+    },
+    {
+      "start": 961.04,
+      "duration": 5.88,
+      "end": 966.92,
+      "text": "what are we storing let's scroll up we"
+    },
+    {
+      "start": 963.44,
+      "duration": 6.079,
+      "end": 969.519,
+      "text": "storing the data for sure at the same"
+    },
+    {
+      "start": 966.92,
+      "duration": 5.599,
+      "end": 972.519,
+      "text": "time is storing the pointer please"
+    },
+    {
+      "start": 969.519,
+      "duration": 5.601,
+      "end": 975.12,
+      "text": "carefully observe is storing the pointer"
+    },
+    {
+      "start": 972.519,
+      "duration": 5.361,
+      "end": 977.88,
+      "text": "to the next to the next which is"
+    },
+    {
+      "start": 975.12,
+      "duration": 5.959,
+      "end": 981.079,
+      "text": "basically M2 here storing the pointer to"
+    },
+    {
+      "start": 977.88,
+      "duration": 6.399,
+      "end": 984.279,
+      "text": "the next so we storing two things one is"
+    },
+    {
+      "start": 981.079,
+      "duration": 6.921,
+      "end": 988.0,
+      "text": "the data itself the next thing is the"
+    },
+    {
+      "start": 984.279,
+      "duration": 6.081,
+      "end": 990.36,
+      "text": "pointer to the next so I know one thing"
+    },
+    {
+      "start": 988.0,
+      "duration": 5.319,
+      "end": 993.319,
+      "text": "my box"
+    },
+    {
+      "start": 990.36,
+      "duration": 6.479,
+      "end": 996.839,
+      "text": "I box as of now is storing the data and"
+    },
+    {
+      "start": 993.319,
+      "duration": 6.801,
+      "end": 1000.12,
+      "text": "the pointer to the next so"
+    },
+    {
+      "start": 996.839,
+      "duration": 6.641,
+      "end": 1003.48,
+      "text": "this is together if you remember the"
+    },
+    {
+      "start": 1000.12,
+      "duration": 6.04,
+      "end": 1006.16,
+      "text": "example this just has an integer that's"
+    },
+    {
+      "start": 1003.48,
+      "duration": 4.799,
+      "end": 1008.279,
+      "text": "why I could get like I could get a"
+    },
+    {
+      "start": 1006.16,
+      "duration": 6.159,
+      "end": 1012.319,
+      "text": "pointer to its memory location by saying"
+    },
+    {
+      "start": 1008.279,
+      "duration": 6.841,
+      "end": 1015.12,
+      "text": "int star but if I have two things inside"
+    },
+    {
+      "start": 1012.319,
+      "duration": 6.0,
+      "end": 1018.319,
+      "text": "that box which is the data and the next"
+    },
+    {
+      "start": 1015.12,
+      "duration": 5.719,
+      "end": 1020.839,
+      "text": "pointer data and the pointer itself"
+    },
+    {
+      "start": 1018.319,
+      "duration": 4.601,
+      "end": 1022.92,
+      "text": "which which data which which data type"
+    },
+    {
+      "start": 1020.839,
+      "duration": 4.48,
+      "end": 1025.319,
+      "text": "is this there is no data type this is"
+    },
+    {
+      "start": 1022.92,
+      "duration": 3.999,
+      "end": 1026.9189999999999,
+      "text": "why you have to define a self-defined"
+    },
+    {
+      "start": 1025.319,
+      "duration": 4.321,
+      "end": 1029.6399999999999,
+      "text": "data type this is why you have to define"
+    },
+    {
+      "start": 1026.919,
+      "duration": 6.64,
+      "end": 1033.5590000000002,
+      "text": "a self-defined data type so what you do"
+    },
+    {
+      "start": 1029.64,
+      "duration": 3.919,
+      "end": 1033.5590000000002,
+      "text": "is you go ahead and say"
+    },
+    {
+      "start": 1034.72,
+      "duration": 10.119,
+      "end": 1044.839,
+      "text": "struct struck node star sorry not"
+    },
+    {
+      "start": 1040.4,
+      "duration": 9.2,
+      "end": 1049.6000000000001,
+      "text": "star open this up and then you say"
+    },
+    {
+      "start": 1044.839,
+      "duration": 7.401,
+      "end": 1052.24,
+      "text": "int not X data after that you're storing"
+    },
+    {
+      "start": 1049.6,
+      "duration": 5.68,
+      "end": 1055.28,
+      "text": "a pointer what is the self-defined data"
+    },
+    {
+      "start": 1052.24,
+      "duration": 5.08,
+      "end": 1057.32,
+      "text": "type node the self-defined data type"
+    },
+    {
+      "start": 1055.28,
+      "duration": 4.72,
+      "end": 1060.0,
+      "text": "that you're creating that's called as"
+    },
+    {
+      "start": 1057.32,
+      "duration": 6.56,
+      "end": 1063.8799999999999,
+      "text": "node so you are storing a pointer to the"
+    },
+    {
+      "start": 1060.0,
+      "duration": 5.64,
+      "end": 1065.64,
+      "text": "next so node star because to the next"
+    },
+    {
+      "start": 1063.88,
+      "duration": 4.36,
+      "end": 1068.24,
+      "text": "next which is basically the memory"
+    },
+    {
+      "start": 1065.64,
+      "duration": 5.32,
+      "end": 1070.96,
+      "text": "location next that's what you store and"
+    },
+    {
+      "start": 1068.24,
+      "duration": 4.319,
+      "end": 1072.559,
+      "text": "in order to uh initialize these values"
+    },
+    {
+      "start": 1070.96,
+      "duration": 3.56,
+      "end": 1074.52,
+      "text": "you need a Constructor I'll be"
+    },
+    {
+      "start": 1072.559,
+      "duration": 4.841,
+      "end": 1077.3999999999999,
+      "text": "explaining you what is a Constructor you"
+    },
+    {
+      "start": 1074.52,
+      "duration": 5.68,
+      "end": 1080.2,
+      "text": "write node and you take the"
+    },
+    {
+      "start": 1077.4,
+      "duration": 6.56,
+      "end": 1083.96,
+      "text": "data you can take data one you can take"
+    },
+    {
+      "start": 1080.2,
+      "duration": 7.92,
+      "end": 1088.1200000000001,
+      "text": "next one okay and then you say over here"
+    },
+    {
+      "start": 1083.96,
+      "duration": 8.599,
+      "end": 1092.559,
+      "text": "data's value will be data one over here"
+    },
+    {
+      "start": 1088.12,
+      "duration": 6.28,
+      "end": 1094.3999999999999,
+      "text": "you can say next value will be next one"
+    },
+    {
+      "start": 1092.559,
+      "duration": 4.561,
+      "end": 1097.12,
+      "text": "and then you can close this and then you"
+    },
+    {
+      "start": 1094.4,
+      "duration": 6.44,
+      "end": 1100.8400000000001,
+      "text": "can go ahead and close the struct as"
+    },
+    {
+      "start": 1097.12,
+      "duration": 6.24,
+      "end": 1103.36,
+      "text": "well this is how a self-defined data"
+    },
+    {
+      "start": 1100.84,
+      "duration": 5.839,
+      "end": 1106.6789999999999,
+      "text": "type looks like so what you have done is"
+    },
+    {
+      "start": 1103.36,
+      "duration": 5.92,
+      "end": 1109.28,
+      "text": "let's erase this off what you've done is"
+    },
+    {
+      "start": 1106.679,
+      "duration": 4.921,
+      "end": 1111.6000000000001,
+      "text": "you defined a self"
+    },
+    {
+      "start": 1109.28,
+      "duration": 3.68,
+      "end": 1112.96,
+      "text": "object where there's a data at the same"
+    },
+    {
+      "start": 1111.6,
+      "duration": 4.959,
+      "end": 1116.559,
+      "text": "time there's a"
+    },
+    {
+      "start": 1112.96,
+      "duration": 6.199,
+      "end": 1119.159,
+      "text": "next so this data is an integer next is"
+    },
+    {
+      "start": 1116.559,
+      "duration": 5.761,
+      "end": 1122.32,
+      "text": "the next pointer is the memory where the"
+    },
+    {
+      "start": 1119.159,
+      "duration": 6.52,
+      "end": 1125.679,
+      "text": "next exists this is self-defined data"
+    },
+    {
+      "start": 1122.32,
+      "duration": 7.0,
+      "end": 1129.32,
+      "text": "type got that now the question"
+    },
+    {
+      "start": 1125.679,
+      "duration": 7.281,
+      "end": 1132.96,
+      "text": "arises how can I just a second the"
+    },
+    {
+      "start": 1129.32,
+      "duration": 5.479,
+      "end": 1134.799,
+      "text": "question arises how can I initialize a"
+    },
+    {
+      "start": 1132.96,
+      "duration": 4.079,
+      "end": 1137.039,
+      "text": "value imagine I've been asked to add a"
+    },
+    {
+      "start": 1134.799,
+      "duration": 4.24,
+      "end": 1139.039,
+      "text": "value two how can I initialize that so"
+    },
+    {
+      "start": 1137.039,
+      "duration": 4.961,
+      "end": 1142.0,
+      "text": "there are multiple ways to do to it one"
+    },
+    {
+      "start": 1139.039,
+      "duration": 8.161,
+      "end": 1147.2,
+      "text": "of the ways is definitely you can say"
+    },
+    {
+      "start": 1142.0,
+      "duration": 9.88,
+      "end": 1151.88,
+      "text": "node X similar to how you do it in"
+    },
+    {
+      "start": 1147.2,
+      "duration": 7.719,
+      "end": 1154.919,
+      "text": "a integer declaration INX node x equal"
+    },
+    {
+      "start": 1151.88,
+      "duration": 4.88,
+      "end": 1156.7600000000002,
+      "text": "to you just call the Constructor node"
+    },
+    {
+      "start": 1154.919,
+      "duration": 4.401,
+      "end": 1159.3200000000002,
+      "text": "and you give the value two and you give"
+    },
+    {
+      "start": 1156.76,
+      "duration": 5.44,
+      "end": 1162.2,
+      "text": "null pointer very important null pointer"
+    },
+    {
+      "start": 1159.32,
+      "duration": 5.2,
+      "end": 1164.52,
+      "text": "so it's basically null PTR that's what"
+    },
+    {
+      "start": 1162.2,
+      "duration": 7.4,
+      "end": 1169.6000000000001,
+      "text": "you give so if you give this what"
+    },
+    {
+      "start": 1164.52,
+      "duration": 8.6,
+      "end": 1173.12,
+      "text": "happens is this is nothing but a two and"
+    },
+    {
+      "start": 1169.6,
+      "duration": 7.8,
+      "end": 1177.3999999999999,
+      "text": "this is null pointer the next so you"
+    },
+    {
+      "start": 1173.12,
+      "duration": 6.84,
+      "end": 1179.9599999999998,
+      "text": "created a variable of your type node"
+    },
+    {
+      "start": 1177.4,
+      "duration": 7.88,
+      "end": 1185.2800000000002,
+      "text": "your type node if you want a pointer to"
+    },
+    {
+      "start": 1179.96,
+      "duration": 7.28,
+      "end": 1187.24,
+      "text": "this you can say node of star Y and this"
+    },
+    {
+      "start": 1185.28,
+      "duration": 5.68,
+      "end": 1190.96,
+      "text": "quite simple this is how you can do it"
+    },
+    {
+      "start": 1187.24,
+      "duration": 5.76,
+      "end": 1193.0,
+      "text": "but if you just Define this this is just"
+    },
+    {
+      "start": 1190.96,
+      "duration": 4.719,
+      "end": 1195.679,
+      "text": "that variable this is not the memory"
+    },
+    {
+      "start": 1193.0,
+      "duration": 4.919,
+      "end": 1197.919,
+      "text": "location remember this is just an object"
+    },
+    {
+      "start": 1195.679,
+      "duration": 3.721,
+      "end": 1199.4,
+      "text": "not the pointer to the this one in order"
+    },
+    {
+      "start": 1197.919,
+      "duration": 4.76,
+      "end": 1202.679,
+      "text": "to get the the point you have to do node"
+    },
+    {
+      "start": 1199.4,
+      "duration": 3.279,
+      "end": 1202.679,
+      "text": "star y got"
+    },
+    {
+      "start": 1203.36,
+      "duration": 8.52,
+      "end": 1211.8799999999999,
+      "text": "it the easiest way don't go why this the"
+    },
+    {
+      "start": 1206.96,
+      "duration": 7.16,
+      "end": 1214.1200000000001,
+      "text": "easiest way is say node star whatever is"
+    },
+    {
+      "start": 1211.88,
+      "duration": 6.72,
+      "end": 1218.6000000000001,
+      "text": "your variable name if your variable name"
+    },
+    {
+      "start": 1214.12,
+      "duration": 7.439,
+      "end": 1221.559,
+      "text": "is let's say Y in this case y equal to"
+    },
+    {
+      "start": 1218.6,
+      "duration": 4.72,
+      "end": 1223.32,
+      "text": "just give this new variable sorry new"
+    },
+    {
+      "start": 1221.559,
+      "duration": 5.441,
+      "end": 1227.0,
+      "text": "just give this new keyword and then"
+    },
+    {
+      "start": 1223.32,
+      "duration": 6.44,
+      "end": 1229.76,
+      "text": "write new node to null pointer so what"
+    },
+    {
+      "start": 1227.0,
+      "duration": 5.52,
+      "end": 1232.52,
+      "text": "happens is whenever whenever you define"
+    },
+    {
+      "start": 1229.76,
+      "duration": 6.24,
+      "end": 1236.0,
+      "text": "something like this it automatically"
+    },
+    {
+      "start": 1232.52,
+      "duration": 5.399,
+      "end": 1237.9189999999999,
+      "text": "stores a pointer to the memory location"
+    },
+    {
+      "start": 1236.0,
+      "duration": 5.08,
+      "end": 1241.08,
+      "text": "pointed to the memory location so this"
+    },
+    {
+      "start": 1237.919,
+      "duration": 5.12,
+      "end": 1243.039,
+      "text": "is how you can do it got it so I jumped"
+    },
+    {
+      "start": 1241.08,
+      "duration": 3.68,
+      "end": 1244.76,
+      "text": "into the Cod editor straight away and"
+    },
+    {
+      "start": 1243.039,
+      "duration": 3.201,
+      "end": 1246.24,
+      "text": "I've written the same thing the only"
+    },
+    {
+      "start": 1244.76,
+      "duration": 3.36,
+      "end": 1248.12,
+      "text": "difference is I've have defined these"
+    },
+    {
+      "start": 1246.24,
+      "duration": 4.679,
+      "end": 1250.919,
+      "text": "things to be public and the Constructor"
+    },
+    {
+      "start": 1248.12,
+      "duration": 8.439,
+      "end": 1256.559,
+      "text": "to be public as well after this what I"
+    },
+    {
+      "start": 1250.919,
+      "duration": 7.601,
+      "end": 1258.5200000000002,
+      "text": "do is I say node star y equal to new"
+    },
+    {
+      "start": 1256.559,
+      "duration": 6.281,
+      "end": 1262.84,
+      "text": "node let's say I take this the array"
+    },
+    {
+      "start": 1258.52,
+      "duration": 8.159,
+      "end": 1266.679,
+      "text": "zero value comma null pointer I've taken"
+    },
+    {
+      "start": 1262.84,
+      "duration": 6.16,
+      "end": 1269.0,
+      "text": "this and now I go ahead and say see out"
+    },
+    {
+      "start": 1266.679,
+      "duration": 5.321,
+      "end": 1272.0,
+      "text": "of why see what will happen I'll just"
+    },
+    {
+      "start": 1269.0,
+      "duration": 4.799,
+      "end": 1273.799,
+      "text": "run this you see this memory location"
+    },
+    {
+      "start": 1272.0,
+      "duration": 4.6,
+      "end": 1276.6,
+      "text": "being like a pointer to this memory"
+    },
+    {
+      "start": 1273.799,
+      "duration": 4.48,
+      "end": 1278.279,
+      "text": "location being printed got it so you"
+    },
+    {
+      "start": 1276.6,
+      "duration": 4.079,
+      "end": 1280.6789999999999,
+      "text": "understood the new keyword right it"
+    },
+    {
+      "start": 1278.279,
+      "duration": 4.081,
+      "end": 1282.36,
+      "text": "directly gives you the memory like a"
+    },
+    {
+      "start": 1280.679,
+      "duration": 4.36,
+      "end": 1285.039,
+      "text": "pointer to the memory location and then"
+    },
+    {
+      "start": 1282.36,
+      "duration": 4.76,
+      "end": 1287.12,
+      "text": "you can store it but what if I Define it"
+    },
+    {
+      "start": 1285.039,
+      "duration": 4.281,
+      "end": 1289.32,
+      "text": "like I don't use the new keyword and I"
+    },
+    {
+      "start": 1287.12,
+      "duration": 4.039,
+      "end": 1291.1589999999999,
+      "text": "Define it like this so what technically"
+    },
+    {
+      "start": 1289.32,
+      "duration": 4.08,
+      "end": 1293.3999999999999,
+      "text": "over here you're doing is just creating"
+    },
+    {
+      "start": 1291.159,
+      "duration": 4.4,
+      "end": 1295.5590000000002,
+      "text": "an object where these two things are"
+    },
+    {
+      "start": 1293.4,
+      "duration": 4.56,
+      "end": 1297.96,
+      "text": "there array of zero which is technically"
+    },
+    {
+      "start": 1295.559,
+      "duration": 4.48,
+      "end": 1300.039,
+      "text": "two and null pointer these two things"
+    },
+    {
+      "start": 1297.96,
+      "duration": 5.079,
+      "end": 1303.039,
+      "text": "are there so if you now try to print C"
+    },
+    {
+      "start": 1300.039,
+      "duration": 6.441,
+      "end": 1306.48,
+      "text": "out it throws you an error because it's"
+    },
+    {
+      "start": 1303.039,
+      "duration": 5.961,
+      "end": 1309.0,
+      "text": "an object you can either take data from"
+    },
+    {
+      "start": 1306.48,
+      "duration": 4.76,
+      "end": 1311.24,
+      "text": "it and then print it so if you take data"
+    },
+    {
+      "start": 1309.0,
+      "duration": 3.559,
+      "end": 1312.559,
+      "text": "it'll print two or you can take the next"
+    },
+    {
+      "start": 1311.24,
+      "duration": 3.76,
+      "end": 1315.0,
+      "text": "and you can print it so if I print the"
+    },
+    {
+      "start": 1312.559,
+      "duration": 5.24,
+      "end": 1317.799,
+      "text": "next it's basically the null pointer"
+    },
+    {
+      "start": 1315.0,
+      "duration": 5.32,
+      "end": 1320.32,
+      "text": "that's how you do it got it in case I I"
+    },
+    {
+      "start": 1317.799,
+      "duration": 6.721,
+      "end": 1324.52,
+      "text": "would have defined it as this and a new"
+    },
+    {
+      "start": 1320.32,
+      "duration": 7.64,
+      "end": 1327.96,
+      "text": "keyword in that case I cannot print this"
+    },
+    {
+      "start": 1324.52,
+      "duration": 6.32,
+      "end": 1330.84,
+      "text": "y. data will be giving me an error I"
+    },
+    {
+      "start": 1327.96,
+      "duration": 5.199,
+      "end": 1333.159,
+      "text": "have to do something like this and it"
+    },
+    {
+      "start": 1330.84,
+      "duration": 6.4,
+      "end": 1337.24,
+      "text": "will be printing me the two value got"
+    },
+    {
+      "start": 1333.159,
+      "duration": 5.241,
+      "end": 1338.4,
+      "text": "this thing so technically use this I did"
+    },
+    {
+      "start": 1337.24,
+      "duration": 3.08,
+      "end": 1340.32,
+      "text": "tell you about the other thing because"
+    },
+    {
+      "start": 1338.4,
+      "duration": 4.68,
+      "end": 1343.0800000000002,
+      "text": "the concepts have to be clear but"
+    },
+    {
+      "start": 1340.32,
+      "duration": 4.839,
+      "end": 1345.1589999999999,
+      "text": "technically just use this a new keyword"
+    },
+    {
+      "start": 1343.08,
+      "duration": 4.12,
+      "end": 1347.1999999999998,
+      "text": "and you can straight away do this and in"
+    },
+    {
+      "start": 1345.159,
+      "duration": 4.161,
+      "end": 1349.3200000000002,
+      "text": "a lot of declarations you'll find that"
+    },
+    {
+      "start": 1347.2,
+      "duration": 4.079,
+      "end": 1351.279,
+      "text": "hey uh be writing something like this as"
+    },
+    {
+      "start": 1349.32,
+      "duration": 5.28,
+      "end": 1354.6,
+      "text": "well you have multiple Constructors"
+    },
+    {
+      "start": 1351.279,
+      "duration": 5.241,
+      "end": 1356.52,
+      "text": "where they just have the data one and"
+    },
+    {
+      "start": 1354.6,
+      "duration": 3.72,
+      "end": 1358.32,
+      "text": "there they might have multiple"
+    },
+    {
+      "start": 1356.52,
+      "duration": 3.92,
+      "end": 1360.44,
+      "text": "Constructors as well why multiple"
+    },
+    {
+      "start": 1358.32,
+      "duration": 4.599,
+      "end": 1362.9189999999999,
+      "text": "Constructors what if I just don't want"
+    },
+    {
+      "start": 1360.44,
+      "duration": 4.04,
+      "end": 1364.48,
+      "text": "to pass null pointer again again again"
+    },
+    {
+      "start": 1362.919,
+      "duration": 3.921,
+      "end": 1366.8400000000001,
+      "text": "so what they do is they say new node"
+    },
+    {
+      "start": 1364.48,
+      "duration": 4.36,
+      "end": 1368.84,
+      "text": "array of like the element and it"
+    },
+    {
+      "start": 1366.84,
+      "duration": 3.88,
+      "end": 1370.72,
+      "text": "automatically assumes it to be null"
+    },
+    {
+      "start": 1368.84,
+      "duration": 4.4,
+      "end": 1373.24,
+      "text": "pointer so you might have multiple"
+    },
+    {
+      "start": 1370.72,
+      "duration": 4.16,
+      "end": 1374.88,
+      "text": "Constructors so Constructor is nothing"
+    },
+    {
+      "start": 1373.24,
+      "duration": 3.96,
+      "end": 1377.2,
+      "text": "it's just a special type of member"
+    },
+    {
+      "start": 1374.88,
+      "duration": 3.44,
+      "end": 1378.3200000000002,
+      "text": "function which is used to initialize the"
+    },
+    {
+      "start": 1377.2,
+      "duration": 3.599,
+      "end": 1380.799,
+      "text": "objects if you see the these are the"
+    },
+    {
+      "start": 1378.32,
+      "duration": 4.719,
+      "end": 1383.039,
+      "text": "objects of the class of the class in the"
+    },
+    {
+      "start": 1380.799,
+      "duration": 4.601,
+      "end": 1385.4,
+      "text": "sense self-defined object okay so this"
+    },
+    {
+      "start": 1383.039,
+      "duration": 4.841,
+      "end": 1387.8799999999999,
+      "text": "is how you define a struct now with"
+    },
+    {
+      "start": 1385.4,
+      "duration": 5.159,
+      "end": 1390.5590000000002,
+      "text": "struct you don't get the object oriented"
+    },
+    {
+      "start": 1387.88,
+      "duration": 5.2,
+      "end": 1393.0800000000002,
+      "text": "programming Concepts like abstraction"
+    },
+    {
+      "start": 1390.559,
+      "duration": 5.281,
+      "end": 1395.84,
+      "text": "encapsulation inheritance you don't get"
+    },
+    {
+      "start": 1393.08,
+      "duration": 5.599,
+      "end": 1398.6789999999999,
+      "text": "these Concepts but if you have to use"
+    },
+    {
+      "start": 1395.84,
+      "duration": 4.16,
+      "end": 1400.0,
+      "text": "these kind of data structure in Industry"
+    },
+    {
+      "start": 1398.679,
+      "duration": 4.641,
+      "end": 1403.3200000000002,
+      "text": "you need to have objectoriented"
+    },
+    {
+      "start": 1400.0,
+      "duration": 5.52,
+      "end": 1405.52,
+      "text": "programming this is where what most of"
+    },
+    {
+      "start": 1403.32,
+      "duration": 5.12,
+      "end": 1408.4399999999998,
+      "text": "the people do is instead of struct use"
+    },
+    {
+      "start": 1405.52,
+      "duration": 5.039,
+      "end": 1410.559,
+      "text": "class even if I use class"
+    },
+    {
+      "start": 1408.44,
+      "duration": 5.119,
+      "end": 1413.559,
+      "text": "it's going to work in the exact same"
+    },
+    {
+      "start": 1410.559,
+      "duration": 6.081,
+      "end": 1416.6399999999999,
+      "text": "manner let me quickly run this off so if"
+    },
+    {
+      "start": 1413.559,
+      "duration": 5.881,
+      "end": 1419.44,
+      "text": "I still run it it still prints me too"
+    },
+    {
+      "start": 1416.64,
+      "duration": 5.88,
+      "end": 1422.5200000000002,
+      "text": "right why because it's the same thing"
+    },
+    {
+      "start": 1419.44,
+      "duration": 4.52,
+      "end": 1423.96,
+      "text": "struct only doesn't offers you uh these"
+    },
+    {
+      "start": 1422.52,
+      "duration": 3.6,
+      "end": 1426.12,
+      "text": "extra things like the objectoriented"
+    },
+    {
+      "start": 1423.96,
+      "duration": 5.0,
+      "end": 1428.96,
+      "text": "programming concepts with class you get"
+    },
+    {
+      "start": 1426.12,
+      "duration": 4.28,
+      "end": 1430.3999999999999,
+      "text": "this benefit that is why Always Define"
+    },
+    {
+      "start": 1428.96,
+      "duration": 3.4,
+      "end": 1432.3600000000001,
+      "text": "like whenever you're taking self-defined"
+    },
+    {
+      "start": 1430.4,
+      "duration": 3.92,
+      "end": 1434.3200000000002,
+      "text": "objects always take class and you will"
+    },
+    {
+      "start": 1432.36,
+      "duration": 5.24,
+      "end": 1437.6,
+      "text": "see that uh in the coming lectures in"
+    },
+    {
+      "start": 1434.32,
+      "duration": 5.52,
+      "end": 1439.84,
+      "text": "graph uh series we have something as"
+    },
+    {
+      "start": 1437.6,
+      "duration": 4.36,
+      "end": 1441.9599999999998,
+      "text": "this joints and data structure and we"
+    },
+    {
+      "start": 1439.84,
+      "duration": 3.68,
+      "end": 1443.52,
+      "text": "have used self-defined object over there"
+    },
+    {
+      "start": 1441.96,
+      "duration": 3.64,
+      "end": 1445.6000000000001,
+      "text": "we have defined it as class not as"
+    },
+    {
+      "start": 1443.52,
+      "duration": 4.96,
+      "end": 1448.48,
+      "text": "struct and it has helped us"
+    },
+    {
+      "start": 1445.6,
+      "duration": 6.439,
+      "end": 1452.039,
+      "text": "significantly so this is how you can do"
+    },
+    {
+      "start": 1448.48,
+      "duration": 5.52,
+      "end": 1454.0,
+      "text": "it in C++ so this is about C++ now you"
+    },
+    {
+      "start": 1452.039,
+      "duration": 4.76,
+      "end": 1456.799,
+      "text": "might be thinking hey but we are Java"
+    },
+    {
+      "start": 1454.0,
+      "duration": 4.72,
+      "end": 1458.72,
+      "text": "people how to do this in Java so in Java"
+    },
+    {
+      "start": 1456.799,
+      "duration": 4.24,
+      "end": 1461.039,
+      "text": "there is no concept of pointers there's"
+    },
+    {
+      "start": 1458.72,
+      "duration": 4.52,
+      "end": 1463.24,
+      "text": "no concept of pointers so what I'll do"
+    },
+    {
+      "start": 1461.039,
+      "duration": 4.161,
+      "end": 1465.2,
+      "text": "is I'll straight away take you to the"
+    },
+    {
+      "start": 1463.24,
+      "duration": 5.039,
+      "end": 1468.279,
+      "text": "Java code so let's quickly go to the"
+    },
+    {
+      "start": 1465.2,
+      "duration": 6.199,
+      "end": 1471.3990000000001,
+      "text": "Java code and over here I'll copy the"
+    },
+    {
+      "start": 1468.279,
+      "duration": 5.841,
+      "end": 1474.12,
+      "text": "same thing let's quickly copy this don't"
+    },
+    {
+      "start": 1471.399,
+      "duration": 4.88,
+      "end": 1476.279,
+      "text": "okay class note and over here the"
+    },
+    {
+      "start": 1474.12,
+      "duration": 4.279,
+      "end": 1478.399,
+      "text": "differences will be I'll remove the star"
+    },
+    {
+      "start": 1476.279,
+      "duration": 4.4,
+      "end": 1480.679,
+      "text": "yes I'll remove the star from everywhere"
+    },
+    {
+      "start": 1478.399,
+      "duration": 5.64,
+      "end": 1484.039,
+      "text": "and this will become this dot because in"
+    },
+    {
+      "start": 1480.679,
+      "duration": 6.36,
+      "end": 1487.039,
+      "text": "order to access the class uh class"
+    },
+    {
+      "start": 1484.039,
+      "duration": 5.52,
+      "end": 1489.559,
+      "text": "objects we have to do this dot so that"
+    },
+    {
+      "start": 1487.039,
+      "duration": 4.481,
+      "end": 1491.52,
+      "text": "for that object it can directly"
+    },
+    {
+      "start": 1489.559,
+      "duration": 4.161,
+      "end": 1493.72,
+      "text": "initialize and this one will be null"
+    },
+    {
+      "start": 1491.52,
+      "duration": 4.44,
+      "end": 1495.96,
+      "text": "instead of null pointer how many changes"
+    },
+    {
+      "start": 1493.72,
+      "duration": 4.199,
+      "end": 1497.919,
+      "text": "did I do so basically okay by the way"
+    },
+    {
+      "start": 1495.96,
+      "duration": 4.48,
+      "end": 1500.44,
+      "text": "you you cannot Define public because"
+    },
+    {
+      "start": 1497.919,
+      "duration": 4.921,
+      "end": 1502.8400000000001,
+      "text": "because it's already already by default"
+    },
+    {
+      "start": 1500.44,
+      "duration": 5.2,
+      "end": 1505.64,
+      "text": "public no need to Define it how many"
+    },
+    {
+      "start": 1502.84,
+      "duration": 6.88,
+      "end": 1509.72,
+      "text": "changes do I do I remove the pointer the"
+    },
+    {
+      "start": 1505.64,
+      "duration": 6.08,
+      "end": 1511.72,
+      "text": "null pointer becomes null has the same"
+    },
+    {
+      "start": 1509.72,
+      "duration": 4.199,
+      "end": 1513.919,
+      "text": "concept how do you define it over here"
+    },
+    {
+      "start": 1511.72,
+      "duration": 6.16,
+      "end": 1517.88,
+      "text": "you don't give pointers you say node of"
+    },
+    {
+      "start": 1513.919,
+      "duration": 5.521,
+      "end": 1519.44,
+      "text": "y equal to new node of let's say array"
+    },
+    {
+      "start": 1517.88,
+      "duration": 4.799,
+      "end": 1522.679,
+      "text": "of"
+    },
+    {
+      "start": 1519.44,
+      "duration": 5.359,
+      "end": 1524.799,
+      "text": "zero you can either give null or you can"
+    },
+    {
+      "start": 1522.679,
+      "duration": 4.841,
+      "end": 1527.52,
+      "text": "leave it because you have multiple"
+    },
+    {
+      "start": 1524.799,
+      "duration": 7.641,
+      "end": 1532.44,
+      "text": "Constructors so I'll just leave it and"
+    },
+    {
+      "start": 1527.52,
+      "duration": 8.279,
+      "end": 1535.799,
+      "text": "now now I can give system. out. print"
+    },
+    {
+      "start": 1532.44,
+      "duration": 7.239,
+      "end": 1539.679,
+      "text": "and I can straight away print why in C++"
+    },
+    {
+      "start": 1535.799,
+      "duration": 7.321,
+      "end": 1543.12,
+      "text": "we wrote this in Java it will be Dot and"
+    },
+    {
+      "start": 1539.679,
+      "duration": 5.921,
+      "end": 1545.6000000000001,
+      "text": "your data so if you write y do data and"
+    },
+    {
+      "start": 1543.12,
+      "duration": 5.679,
+      "end": 1548.799,
+      "text": "if I just run this maybe I'll take array"
+    },
+    {
+      "start": 1545.6,
+      "duration": 5.24,
+      "end": 1550.84,
+      "text": "of four so that okay no array of four is"
+    },
+    {
+      "start": 1548.799,
+      "duration": 4.081,
+      "end": 1552.8799999999999,
+      "text": "not the array of three let's take array"
+    },
+    {
+      "start": 1550.84,
+      "duration": 5.839,
+      "end": 1556.6789999999999,
+      "text": "of three you see it is coming across you"
+    },
+    {
+      "start": 1552.88,
+      "duration": 5.519,
+      "end": 1558.3990000000001,
+      "text": "see this right eight is coming so what"
+    },
+    {
+      "start": 1556.679,
+      "duration": 4.521,
+      "end": 1561.2,
+      "text": "are the differences there's no no"
+    },
+    {
+      "start": 1558.399,
+      "duration": 4.76,
+      "end": 1563.1589999999999,
+      "text": "pointer and in order to access it's dot"
+    },
+    {
+      "start": 1561.2,
+      "duration": 4.839,
+      "end": 1566.039,
+      "text": "that's the only difference in Java I"
+    },
+    {
+      "start": 1563.159,
+      "duration": 5.321,
+      "end": 1568.48,
+      "text": "copy pasted the exact same code so going"
+    },
+    {
+      "start": 1566.039,
+      "duration": 3.841,
+      "end": 1569.8799999999999,
+      "text": "forward trust me if I'm writing C++ code"
+    },
+    {
+      "start": 1568.48,
+      "duration": 3.72,
+      "end": 1572.2,
+      "text": "converting that into Java code is like"
+    },
+    {
+      "start": 1569.88,
+      "duration": 4.64,
+      "end": 1574.5200000000002,
+      "text": "just removing pointers and replacing"
+    },
+    {
+      "start": 1572.2,
+      "duration": 3.839,
+      "end": 1576.039,
+      "text": "this thing with DOT that's it that's the"
+    },
+    {
+      "start": 1574.52,
+      "duration": 3.24,
+      "end": 1577.76,
+      "text": "only change that you have to do I'll be"
+    },
+    {
+      "start": 1576.039,
+      "duration": 3.961,
+      "end": 1580.0,
+      "text": "showing you throughout the course how"
+    },
+    {
+      "start": 1577.76,
+      "duration": 5.279,
+      "end": 1583.039,
+      "text": "easy it is to convert a C++ to a Java"
+    },
+    {
+      "start": 1580.0,
+      "duration": 5.76,
+      "end": 1585.76,
+      "text": "and myc versa so C++ has struct and"
+    },
+    {
+      "start": 1583.039,
+      "duration": 5.161,
+      "end": 1588.2,
+      "text": "class but Java has only class remember"
+    },
+    {
+      "start": 1585.76,
+      "duration": 5.48,
+      "end": 1591.24,
+      "text": "this this one is done as well the"
+    },
+    {
+      "start": 1588.2,
+      "duration": 6.359,
+      "end": 1594.559,
+      "text": "question arises what about the memory"
+    },
+    {
+      "start": 1591.24,
+      "duration": 5.4,
+      "end": 1596.64,
+      "text": "space so let's talk about what things"
+    },
+    {
+      "start": 1594.559,
+      "duration": 5.641,
+      "end": 1600.2,
+      "text": "are you storing it depends on it so as"
+    },
+    {
+      "start": 1596.64,
+      "duration": 5.12,
+      "end": 1601.76,
+      "text": "of now we storing a data and a pointer"
+    },
+    {
+      "start": 1600.2,
+      "duration": 4.56,
+      "end": 1604.76,
+      "text": "that is what we are storing and the"
+    },
+    {
+      "start": 1601.76,
+      "duration": 5.96,
+      "end": 1607.72,
+      "text": "memory space will depend on the system"
+    },
+    {
+      "start": 1604.76,
+      "duration": 6.72,
+      "end": 1611.48,
+      "text": "imagine I'm operating on a 32bit system"
+    },
+    {
+      "start": 1607.72,
+      "duration": 7.52,
+      "end": 1615.24,
+      "text": "in that case the integer will take four"
+    },
+    {
+      "start": 1611.48,
+      "duration": 7.96,
+      "end": 1619.44,
+      "text": "bytes and the pointer will take four"
+    },
+    {
+      "start": 1615.24,
+      "duration": 7.52,
+      "end": 1622.76,
+      "text": "bytes and summarize to eight bytes"
+    },
+    {
+      "start": 1619.44,
+      "duration": 6.599,
+      "end": 1626.039,
+      "text": "whereas if it is a 64 bid system the"
+    },
+    {
+      "start": 1622.76,
+      "duration": 5.68,
+      "end": 1628.44,
+      "text": "integer will end up taking four bytes"
+    },
+    {
+      "start": 1626.039,
+      "duration": 5.841,
+      "end": 1631.8799999999999,
+      "text": "whereas the pointer will end up taking"
+    },
+    {
+      "start": 1628.44,
+      "duration": 5.8,
+      "end": 1634.24,
+      "text": "eight bytes so depending on the system"
+    },
+    {
+      "start": 1631.88,
+      "duration": 6.0,
+      "end": 1637.88,
+      "text": "the memory location might take more in"
+    },
+    {
+      "start": 1634.24,
+      "duration": 6.72,
+      "end": 1640.96,
+      "text": "that case it'll be 12 bytes that will be"
+    },
+    {
+      "start": 1637.88,
+      "duration": 5.56,
+      "end": 1643.44,
+      "text": "the memory space is it important no I'll"
+    },
+    {
+      "start": 1640.96,
+      "duration": 5.12,
+      "end": 1646.08,
+      "text": "just telling you just just know know"
+    },
+    {
+      "start": 1643.44,
+      "duration": 3.8,
+      "end": 1647.24,
+      "text": "about it done that's why I just ran"
+    },
+    {
+      "start": 1646.08,
+      "duration": 3.68,
+      "end": 1649.76,
+      "text": "through it quickly depending on the"
+    },
+    {
+      "start": 1647.24,
+      "duration": 5.159,
+      "end": 1652.3990000000001,
+      "text": "system the memory space used might be"
+    },
+    {
+      "start": 1649.76,
+      "duration": 5.44,
+      "end": 1655.2,
+      "text": "different as well as what if I'm storing"
+    },
+    {
+      "start": 1652.399,
+      "duration": 5.801,
+      "end": 1658.1999999999998,
+      "text": "one more thing in Age if I store one"
+    },
+    {
+      "start": 1655.2,
+      "duration": 4.8,
+      "end": 1660.0,
+      "text": "more data in it and I'm telling that hey"
+    },
+    {
+      "start": 1658.2,
+      "duration": 4.12,
+      "end": 1662.32,
+      "text": "hey object please store one more one"
+    },
+    {
+      "start": 1660.0,
+      "duration": 4.48,
+      "end": 1664.48,
+      "text": "more information with you in that case"
+    },
+    {
+      "start": 1662.32,
+      "duration": 6.079,
+      "end": 1668.399,
+      "text": "you have to add plus4 plus 4 and it'll"
+    },
+    {
+      "start": 1664.48,
+      "duration": 7.0,
+      "end": 1671.48,
+      "text": "become 12 and so on 16 so depending on"
+    },
+    {
+      "start": 1668.399,
+      "duration": 6.561,
+      "end": 1674.9599999999998,
+      "text": "what you are storing you have to analyze"
+    },
+    {
+      "start": 1671.48,
+      "duration": 5.28,
+      "end": 1676.76,
+      "text": "manually perfect uh this one is done as"
+    },
+    {
+      "start": 1674.96,
+      "duration": 4.64,
+      "end": 1679.6000000000001,
+      "text": "well I think I've explained the"
+    },
+    {
+      "start": 1676.76,
+      "duration": 4.84,
+      "end": 1681.6,
+      "text": "difference between node and node Star"
+    },
+    {
+      "start": 1679.6,
+      "duration": 4.76,
+      "end": 1684.36,
+      "text": "right pointer I'm explained this so this"
+    },
+    {
+      "start": 1681.6,
+      "duration": 5.4,
+      "end": 1687.0,
+      "text": "is also done now we come up to the main"
+    },
+    {
+      "start": 1684.36,
+      "duration": 6.72,
+      "end": 1691.08,
+      "text": "thing how do we convert an array to a"
+    },
+    {
+      "start": 1687.0,
+      "duration": 6.48,
+      "end": 1693.48,
+      "text": "link list in C++ or in Java it's a very"
+    },
+    {
+      "start": 1691.08,
+      "duration": 5.439,
+      "end": 1696.519,
+      "text": "simple thing it's a very very simple"
+    },
+    {
+      "start": 1693.48,
+      "duration": 4.439,
+      "end": 1697.919,
+      "text": "thing let's I'll just be talking about"
+    },
+    {
+      "start": 1696.519,
+      "duration": 3.841,
+      "end": 1700.36,
+      "text": "the logic here and then I'll be writing"
+    },
+    {
+      "start": 1697.919,
+      "duration": 4.201,
+      "end": 1702.1200000000001,
+      "text": "the C++ code I'll be copy pasting and"
+    },
+    {
+      "start": 1700.36,
+      "duration": 4.72,
+      "end": 1705.08,
+      "text": "making the changes I tool and it'll be"
+    },
+    {
+      "start": 1702.12,
+      "duration": 6.039,
+      "end": 1708.1589999999999,
+      "text": "running in Java as well so"
+    },
+    {
+      "start": 1705.08,
+      "duration": 7.599,
+      "end": 1712.6789999999999,
+      "text": "let's let's assume we given this aray"
+    },
+    {
+      "start": 1708.159,
+      "duration": 8.12,
+      "end": 1716.279,
+      "text": "which has 2 1 3 and 8 we given this"
+    },
+    {
+      "start": 1712.679,
+      "duration": 5.561,
+      "end": 1718.24,
+      "text": "array of size four what do we need I"
+    },
+    {
+      "start": 1716.279,
+      "duration": 5.921,
+      "end": 1722.2,
+      "text": "always told you that we need to remember"
+    },
+    {
+      "start": 1718.24,
+      "duration": 6.0,
+      "end": 1724.24,
+      "text": "where is our head we will have this node"
+    },
+    {
+      "start": 1722.2,
+      "duration": 4.719,
+      "end": 1726.919,
+      "text": "self-defined data type where we can"
+    },
+    {
+      "start": 1724.24,
+      "duration": 5.6,
+      "end": 1729.84,
+      "text": "store all the data initially we Define"
+    },
+    {
+      "start": 1726.919,
+      "duration": 6.64,
+      "end": 1733.5590000000002,
+      "text": "the head so what we do is we go to the"
+    },
+    {
+      "start": 1729.84,
+      "duration": 5.839,
+      "end": 1735.6789999999999,
+      "text": "Heap memory and use the new keyword and"
+    },
+    {
+      "start": 1733.559,
+      "duration": 5.041,
+      "end": 1738.6,
+      "text": "create this data type where we stored"
+    },
+    {
+      "start": 1735.679,
+      "duration": 6.041,
+      "end": 1741.72,
+      "text": "the two which is array of zero and at"
+    },
+    {
+      "start": 1738.6,
+      "duration": 4.76,
+      "end": 1743.36,
+      "text": "the same time we say the next pointer so"
+    },
+    {
+      "start": 1741.72,
+      "duration": 4.76,
+      "end": 1746.48,
+      "text": "what I'll do is I'll always point the"
+    },
+    {
+      "start": 1743.36,
+      "duration": 5.4,
+      "end": 1748.76,
+      "text": "next pointer like this it's pointing to"
+    },
+    {
+      "start": 1746.48,
+      "duration": 3.559,
+      "end": 1750.039,
+      "text": "null null is basically X as of now so"
+    },
+    {
+      "start": 1748.76,
+      "duration": 3.48,
+      "end": 1752.24,
+      "text": "this is something which you'll create"
+    },
+    {
+      "start": 1750.039,
+      "duration": 4.201,
+      "end": 1754.24,
+      "text": "for the first variable I'll do it for"
+    },
+    {
+      "start": 1752.24,
+      "duration": 4.279,
+      "end": 1756.519,
+      "text": "the first variable I've done it for the"
+    },
+    {
+      "start": 1754.24,
+      "duration": 5.6,
+      "end": 1759.84,
+      "text": "first variable so where is my head"
+    },
+    {
+      "start": 1756.519,
+      "duration": 5.961,
+      "end": 1762.48,
+      "text": "pointing head is always pointing to this"
+    },
+    {
+      "start": 1759.84,
+      "duration": 6.92,
+      "end": 1766.76,
+      "text": "remember this head is always pointing to"
+    },
+    {
+      "start": 1762.48,
+      "duration": 8.52,
+      "end": 1771.0,
+      "text": "this so what I can say is erase this my"
+    },
+    {
+      "start": 1766.76,
+      "duration": 7.56,
+      "end": 1774.32,
+      "text": "head will always be this always you will"
+    },
+    {
+      "start": 1771.0,
+      "duration": 5.12,
+      "end": 1776.12,
+      "text": "never ever like forget head because if"
+    },
+    {
+      "start": 1774.32,
+      "duration": 3.079,
+      "end": 1777.399,
+      "text": "you forget head you don't know where is"
+    },
+    {
+      "start": 1776.12,
+      "duration": 3.88,
+      "end": 1780.0,
+      "text": "your starting point so you have to keep"
+    },
+    {
+      "start": 1777.399,
+      "duration": 5.041,
+      "end": 1782.4399999999998,
+      "text": "a track of it keep a track of it and now"
+    },
+    {
+      "start": 1780.0,
+      "duration": 4.799,
+      "end": 1784.799,
+      "text": "what I'll do is I'll take a variable"
+    },
+    {
+      "start": 1782.44,
+      "duration": 3.68,
+      "end": 1786.1200000000001,
+      "text": "mover it'll understand why am I doing it"
+    },
+    {
+      "start": 1784.799,
+      "duration": 3.561,
+      "end": 1788.36,
+      "text": "it's very simple I'll take a variable"
+    },
+    {
+      "start": 1786.12,
+      "duration": 4.76,
+      "end": 1790.8799999999999,
+      "text": "mover I'll go to the next index which is"
+    },
+    {
+      "start": 1788.36,
+      "duration": 5.0,
+      "end": 1793.36,
+      "text": "index one and I'll start iterating for"
+    },
+    {
+      "start": 1790.88,
+      "duration": 5.0,
+      "end": 1795.88,
+      "text": "index one index two and index 3"
+    },
+    {
+      "start": 1793.36,
+      "duration": 4.199,
+      "end": 1797.559,
+      "text": "basically apart from the first element"
+    },
+    {
+      "start": 1795.88,
+      "duration": 4.159,
+      "end": 1800.0390000000002,
+      "text": "because first element will always be"
+    },
+    {
+      "start": 1797.559,
+      "duration": 5.281,
+      "end": 1802.84,
+      "text": "head I start I traing through every"
+    },
+    {
+      "start": 1800.039,
+      "duration": 5.64,
+      "end": 1805.679,
+      "text": "other element that is what I'll do so I"
+    },
+    {
+      "start": 1802.84,
+      "duration": 5.4,
+      "end": 1808.24,
+      "text": "trade through the this element so I need"
+    },
+    {
+      "start": 1805.679,
+      "duration": 6.48,
+      "end": 1812.159,
+      "text": "to store it in my data type so I'll"
+    },
+    {
+      "start": 1808.24,
+      "duration": 6.039,
+      "end": 1814.279,
+      "text": "again create node equal to new node and"
+    },
+    {
+      "start": 1812.159,
+      "duration": 4.0,
+      "end": 1816.159,
+      "text": "put this so what I'll do is I'll put"
+    },
+    {
+      "start": 1814.279,
+      "duration": 5.681,
+      "end": 1819.96,
+      "text": "this into some"
+    },
+    {
+      "start": 1816.159,
+      "duration": 6.64,
+      "end": 1822.7990000000002,
+      "text": "sorry I'll put this into some data type"
+    },
+    {
+      "start": 1819.96,
+      "duration": 5.16,
+      "end": 1825.1200000000001,
+      "text": "where the next is always null where is"
+    },
+    {
+      "start": 1822.799,
+      "duration": 5.72,
+      "end": 1828.519,
+      "text": "my mover as of now where is my mover as"
+    },
+    {
+      "start": 1825.12,
+      "duration": 5.799,
+      "end": 1830.9189999999999,
+      "text": "of now over here and imagine this is my"
+    },
+    {
+      "start": 1828.519,
+      "duration": 4.88,
+      "end": 1833.3990000000001,
+      "text": "temporary which is created the temporary"
+    },
+    {
+      "start": 1830.919,
+      "duration": 6.401,
+      "end": 1837.3200000000002,
+      "text": "I've created I've gone here I've created"
+    },
+    {
+      "start": 1833.399,
+      "duration": 6.52,
+      "end": 1839.9189999999999,
+      "text": "a temporary by calling new node of one"
+    },
+    {
+      "start": 1837.32,
+      "duration": 4.32,
+      "end": 1841.6399999999999,
+      "text": "null so this is created and this is not"
+    },
+    {
+      "start": 1839.919,
+      "duration": 4.841,
+      "end": 1844.76,
+      "text": "pointing to"
+    },
+    {
+      "start": 1841.64,
+      "duration": 5.96,
+      "end": 1847.6000000000001,
+      "text": "null in order to create the link list"
+    },
+    {
+      "start": 1844.76,
+      "duration": 5.159,
+      "end": 1849.919,
+      "text": "what should happen this previous element"
+    },
+    {
+      "start": 1847.6,
+      "duration": 5.319,
+      "end": 1852.9189999999999,
+      "text": "instead of pointing to null it should"
+    },
+    {
+      "start": 1849.919,
+      "duration": 4.921,
+      "end": 1854.8400000000001,
+      "text": "remember that it's next is this it"
+    },
+    {
+      "start": 1852.919,
+      "duration": 4.961,
+      "end": 1857.88,
+      "text": "should remember the pointer to this"
+    },
+    {
+      "start": 1854.84,
+      "duration": 7.079,
+      "end": 1861.9189999999999,
+      "text": "memory location correct this is"
+    },
+    {
+      "start": 1857.88,
+      "duration": 7.039,
+      "end": 1864.919,
+      "text": "basically mover so can I say"
+    },
+    {
+      "start": 1861.919,
+      "duration": 3.0,
+      "end": 1864.919,
+      "text": "mover"
+    },
+    {
+      "start": 1865.48,
+      "duration": 5.439,
+      "end": 1870.919,
+      "text": "your"
+    },
+    {
+      "start": 1867.0,
+      "duration": 6.2,
+      "end": 1873.2,
+      "text": "next will be temporary because if you"
+    },
+    {
+      "start": 1870.919,
+      "duration": 7.12,
+      "end": 1878.039,
+      "text": "remember how will we create temporary"
+    },
+    {
+      "start": 1873.2,
+      "duration": 7.24,
+      "end": 1880.44,
+      "text": "node star temporary new node and the"
+    },
+    {
+      "start": 1878.039,
+      "duration": 6.561,
+      "end": 1884.6,
+      "text": "variable one that's how we'll create the"
+    },
+    {
+      "start": 1880.44,
+      "duration": 6.959,
+      "end": 1887.3990000000001,
+      "text": "temporary is already a poed to this so"
+    },
+    {
+      "start": 1884.6,
+      "duration": 5.039,
+      "end": 1889.639,
+      "text": "This temporary can be assigned to this"
+    },
+    {
+      "start": 1887.399,
+      "duration": 5.0,
+      "end": 1892.399,
+      "text": "can be so if I write this what will"
+    },
+    {
+      "start": 1889.639,
+      "duration": 5.681,
+      "end": 1895.32,
+      "text": "happen instead of pointing here this"
+    },
+    {
+      "start": 1892.399,
+      "duration": 4.601,
+      "end": 1897.0,
+      "text": "will start pointing here perfect once"
+    },
+    {
+      "start": 1895.32,
+      "duration": 6.28,
+      "end": 1901.6,
+      "text": "you have done this don't move ahead"
+    },
+    {
+      "start": 1897.0,
+      "duration": 8.399,
+      "end": 1905.399,
+      "text": "don't move ahead move this mover to this"
+    },
+    {
+      "start": 1901.6,
+      "duration": 7.24,
+      "end": 1908.84,
+      "text": "portion and your temporary can be like"
+    },
+    {
+      "start": 1905.399,
+      "duration": 6.321,
+      "end": 1911.7199999999998,
+      "text": "just forget about temporary"
+    },
+    {
+      "start": 1908.84,
+      "duration": 5.92,
+      "end": 1914.76,
+      "text": "next this is done you move to this three"
+    },
+    {
+      "start": 1911.72,
+      "duration": 6.959,
+      "end": 1918.679,
+      "text": "let's do the same thing again I'll"
+    },
+    {
+      "start": 1914.76,
+      "duration": 6.32,
+      "end": 1921.08,
+      "text": "create three and this will point to null"
+    },
+    {
+      "start": 1918.679,
+      "duration": 4.761,
+      "end": 1923.44,
+      "text": "I'll create three and this will point to"
+    },
+    {
+      "start": 1921.08,
+      "duration": 5.16,
+      "end": 1926.24,
+      "text": "null correct and this will be my"
+    },
+    {
+      "start": 1923.44,
+      "duration": 4.32,
+      "end": 1927.76,
+      "text": "temporary but but but but this is"
+    },
+    {
+      "start": 1926.24,
+      "duration": 3.88,
+      "end": 1930.1200000000001,
+      "text": "connected to this this has to be"
+    },
+    {
+      "start": 1927.76,
+      "duration": 6.68,
+      "end": 1934.44,
+      "text": "connected to this what will I write the"
+    },
+    {
+      "start": 1930.12,
+      "duration": 6.36,
+      "end": 1936.4799999999998,
+      "text": "movers next will be temporary isn't it"
+    },
+    {
+      "start": 1934.44,
+      "duration": 4.52,
+      "end": 1938.96,
+      "text": "so what will happen this will no more be"
+    },
+    {
+      "start": 1936.48,
+      "duration": 5.76,
+      "end": 1942.24,
+      "text": "pointing to this and it will be pointing"
+    },
+    {
+      "start": 1938.96,
+      "duration": 6.16,
+      "end": 1945.1200000000001,
+      "text": "to this quite simple and once I've done"
+    },
+    {
+      "start": 1942.24,
+      "duration": 6.12,
+      "end": 1948.36,
+      "text": "this I'll take the Mover and I'll move"
+    },
+    {
+      "start": 1945.12,
+      "duration": 5.76,
+      "end": 1950.8799999999999,
+      "text": "it ahead"
+    },
+    {
+      "start": 1948.36,
+      "duration": 5.279,
+      "end": 1953.639,
+      "text": "afterwards I move ahead to this which is"
+    },
+    {
+      "start": 1950.88,
+      "duration": 5.36,
+      "end": 1956.24,
+      "text": "eight so let's again create eight in a"
+    },
+    {
+      "start": 1953.639,
+      "duration": 5.241,
+      "end": 1958.8799999999999,
+      "text": "temporary so temporary will now go to"
+    },
+    {
+      "start": 1956.24,
+      "duration": 5.319,
+      "end": 1961.559,
+      "text": "the next inclin again what thing will"
+    },
+    {
+      "start": 1958.88,
+      "duration": 4.759,
+      "end": 1963.6390000000001,
+      "text": "happen the movers the Mover instead of"
+    },
+    {
+      "start": 1961.559,
+      "duration": 3.84,
+      "end": 1965.399,
+      "text": "pointing to null will start pointing"
+    },
+    {
+      "start": 1963.639,
+      "duration": 4.481,
+      "end": 1968.12,
+      "text": "here and this is definitely pointing"
+    },
+    {
+      "start": 1965.399,
+      "duration": 4.921,
+      "end": 1970.32,
+      "text": "done after this the iteration is over"
+    },
+    {
+      "start": 1968.12,
+      "duration": 4.96,
+      "end": 1973.08,
+      "text": "what we have done is we have created a"
+    },
+    {
+      "start": 1970.32,
+      "duration": 5.239,
+      "end": 1975.559,
+      "text": "link to all the nodes I created I"
+    },
+    {
+      "start": 1973.08,
+      "duration": 5.52,
+      "end": 1978.6,
+      "text": "created all the nodes while traversing"
+    },
+    {
+      "start": 1975.559,
+      "duration": 5.161,
+      "end": 1980.72,
+      "text": "and I then attached them so at the end"
+    },
+    {
+      "start": 1978.6,
+      "duration": 5.919,
+      "end": 1984.519,
+      "text": "the Mover will be moved here and will"
+    },
+    {
+      "start": 1980.72,
+      "duration": 8.0,
+      "end": 1988.72,
+      "text": "stop here can I say since I stored the"
+    },
+    {
+      "start": 1984.519,
+      "duration": 5.801,
+      "end": 1990.32,
+      "text": "head I know my starting pointer to the"
+    },
+    {
+      "start": 1988.72,
+      "duration": 4.319,
+      "end": 1993.039,
+      "text": "memory location I know the pointer to"
+    },
+    {
+      "start": 1990.32,
+      "duration": 4.839,
+      "end": 1995.1589999999999,
+      "text": "this I know that this is there because"
+    },
+    {
+      "start": 1993.039,
+      "duration": 4.401,
+      "end": 1997.44,
+      "text": "head is storing this head is storing a"
+    },
+    {
+      "start": 1995.159,
+      "duration": 4.921,
+      "end": 2000.0800000000002,
+      "text": "pointer to this first node I know where"
+    },
+    {
+      "start": 1997.44,
+      "duration": 4.68,
+      "end": 2002.1200000000001,
+      "text": "it is so one thing that you need to"
+    },
+    {
+      "start": 2000.08,
+      "duration": 4.319,
+      "end": 2004.399,
+      "text": "remember in the questions related to"
+    },
+    {
+      "start": 2002.12,
+      "duration": 3.919,
+      "end": 2006.039,
+      "text": "arrays they're always asking to return"
+    },
+    {
+      "start": 2004.399,
+      "duration": 3.76,
+      "end": 2008.1589999999999,
+      "text": "array or something like that in"
+    },
+    {
+      "start": 2006.039,
+      "duration": 4.36,
+      "end": 2010.399,
+      "text": "questions related to link list you"
+    },
+    {
+      "start": 2008.159,
+      "duration": 4.441,
+      "end": 2012.6000000000001,
+      "text": "cannot return the entire link list so"
+    },
+    {
+      "start": 2010.399,
+      "duration": 4.28,
+      "end": 2014.6789999999999,
+      "text": "what they will ask you is to return the"
+    },
+    {
+      "start": 2012.6,
+      "duration": 4.039,
+      "end": 2016.639,
+      "text": "starting point then then they will be"
+    },
+    {
+      "start": 2014.679,
+      "duration": 5.521,
+      "end": 2020.2,
+      "text": "traving it on the backend but they will"
+    },
+    {
+      "start": 2016.639,
+      "duration": 5.04,
+      "end": 2021.6789999999999,
+      "text": "ask you to the starting point got this"
+    },
+    {
+      "start": 2020.2,
+      "duration": 3.04,
+      "end": 2023.24,
+      "text": "so let's quickly get back into the code"
+    },
+    {
+      "start": 2021.679,
+      "duration": 3.84,
+      "end": 2025.519,
+      "text": "editor and write the code I'll be"
+    },
+    {
+      "start": 2023.24,
+      "duration": 4.279,
+      "end": 2027.519,
+      "text": "writing the C++ code in case you're"
+    },
+    {
+      "start": 2025.519,
+      "duration": 4.361,
+      "end": 2029.88,
+      "text": "someone who is doing it in Java python"
+    },
+    {
+      "start": 2027.519,
+      "duration": 4.601,
+      "end": 2032.1200000000001,
+      "text": "JavaScript doesn't matter understand the"
+    },
+    {
+      "start": 2029.88,
+      "duration": 3.639,
+      "end": 2033.519,
+      "text": "C++ code because in the Java code"
+    },
+    {
+      "start": 2032.12,
+      "duration": 2.84,
+      "end": 2034.9599999999998,
+      "text": "there's a slight change in the python"
+    },
+    {
+      "start": 2033.519,
+      "duration": 2.921,
+      "end": 2036.44,
+      "text": "code there's a slight change and I'll be"
+    },
+    {
+      "start": 2034.96,
+      "duration": 4.0,
+      "end": 2038.96,
+      "text": "showing you that don't worry about that"
+    },
+    {
+      "start": 2036.44,
+      "duration": 4.52,
+      "end": 2040.96,
+      "text": "so watch this code after that I'll be"
+    },
+    {
+      "start": 2038.96,
+      "duration": 3.599,
+      "end": 2042.559,
+      "text": "writing the Java code don't not worry"
+    },
+    {
+      "start": 2040.96,
+      "duration": 4.559,
+      "end": 2045.519,
+      "text": "and in the links you'll be finding the"
+    },
+    {
+      "start": 2042.559,
+      "duration": 4.641,
+      "end": 2047.2,
+      "text": "python and JavaScript code as well so"
+    },
+    {
+      "start": 2045.519,
+      "duration": 4.16,
+      "end": 2049.679,
+      "text": "what do we need to do we need to convert"
+    },
+    {
+      "start": 2047.2,
+      "duration": 5.32,
+      "end": 2052.52,
+      "text": "an array to a link list that's what we"
+    },
+    {
+      "start": 2049.679,
+      "duration": 4.96,
+      "end": 2054.639,
+      "text": "need to do so we'll be taking a function"
+    },
+    {
+      "start": 2052.52,
+      "duration": 4.8,
+      "end": 2057.32,
+      "text": "which will be taking this array what do"
+    },
+    {
+      "start": 2054.639,
+      "duration": 4.321,
+      "end": 2058.96,
+      "text": "we need to return I told you we cannot"
+    },
+    {
+      "start": 2057.32,
+      "duration": 3.799,
+      "end": 2061.119,
+      "text": "return the entire link list so we"
+    },
+    {
+      "start": 2058.96,
+      "duration": 3.919,
+      "end": 2062.879,
+      "text": "technically return the head what is head"
+    },
+    {
+      "start": 2061.119,
+      "duration": 5.04,
+      "end": 2066.159,
+      "text": "we need a pointer to the head that is"
+    },
+    {
+      "start": 2062.879,
+      "duration": 6.361,
+      "end": 2069.24,
+      "text": "what we will be returning right so can I"
+    },
+    {
+      "start": 2066.159,
+      "duration": 5.72,
+      "end": 2071.879,
+      "text": "say the head will always be the first"
+    },
+    {
+      "start": 2069.24,
+      "duration": 4.56,
+      "end": 2073.7999999999997,
+      "text": "element which is array of zero since I"
+    },
+    {
+      "start": 2071.879,
+      "duration": 3.601,
+      "end": 2075.48,
+      "text": "have a multi Constructor I don't need to"
+    },
+    {
+      "start": 2073.8,
+      "duration": 4.48,
+      "end": 2078.28,
+      "text": "pass the null pointer it'll always be"
+    },
+    {
+      "start": 2075.48,
+      "duration": 5.84,
+      "end": 2081.32,
+      "text": "doing that for me what is the next step"
+    },
+    {
+      "start": 2078.28,
+      "duration": 5.359,
+      "end": 2083.639,
+      "text": "I need a mover which initially points to"
+    },
+    {
+      "start": 2081.32,
+      "duration": 4.92,
+      "end": 2086.2400000000002,
+      "text": "head so the Mover is standing at the"
+    },
+    {
+      "start": 2083.639,
+      "duration": 5.801,
+      "end": 2089.44,
+      "text": "first place perfect done what's the next"
+    },
+    {
+      "start": 2086.24,
+      "duration": 4.919,
+      "end": 2091.1589999999997,
+      "text": "thing let's iterate we we skip the first"
+    },
+    {
+      "start": 2089.44,
+      "duration": 5.08,
+      "end": 2094.52,
+      "text": "element which is the zeroth index and we"
+    },
+    {
+      "start": 2091.159,
+      "duration": 8.401,
+      "end": 2099.56,
+      "text": "go till the last so let's"
+    },
+    {
+      "start": 2094.52,
+      "duration": 8.12,
+      "end": 2102.64,
+      "text": "go what after this we be be creating a"
+    },
+    {
+      "start": 2099.56,
+      "duration": 7.6,
+      "end": 2107.16,
+      "text": "like we'll be storing this value stored"
+    },
+    {
+      "start": 2102.64,
+      "duration": 6.719,
+      "end": 2109.359,
+      "text": "in temporary what is the next job I need"
+    },
+    {
+      "start": 2107.16,
+      "duration": 5.48,
+      "end": 2112.64,
+      "text": "mover next because I need to create the"
+    },
+    {
+      "start": 2109.359,
+      "duration": 6.361,
+      "end": 2115.72,
+      "text": "link next to point to this temporary and"
+    },
+    {
+      "start": 2112.64,
+      "duration": 4.959,
+      "end": 2117.5989999999997,
+      "text": "after that I need to move because mover"
+    },
+    {
+      "start": 2115.72,
+      "duration": 5.84,
+      "end": 2121.56,
+      "text": "if I go back over"
+    },
+    {
+      "start": 2117.599,
+      "duration": 6.76,
+      "end": 2124.3590000000004,
+      "text": "here this temp was created I had mover"
+    },
+    {
+      "start": 2121.56,
+      "duration": 5.92,
+      "end": 2127.48,
+      "text": "here it pointed to this after this the"
+    },
+    {
+      "start": 2124.359,
+      "duration": 6.041,
+      "end": 2130.4,
+      "text": "Mover has to go ahead the Mover has to"
+    },
+    {
+      "start": 2127.48,
+      "duration": 6.28,
+      "end": 2133.76,
+      "text": "go to front to the next one so either"
+    },
+    {
+      "start": 2130.4,
+      "duration": 5.12,
+      "end": 2135.52,
+      "text": "you say mover go to your next or you say"
+    },
+    {
+      "start": 2133.76,
+      "duration": 3.599,
+      "end": 2137.3590000000004,
+      "text": "mover equal to Temp because it's the"
+    },
+    {
+      "start": 2135.52,
+      "duration": 4.28,
+      "end": 2139.8,
+      "text": "same thing because the same thing"
+    },
+    {
+      "start": 2137.359,
+      "duration": 4.961,
+      "end": 2142.3199999999997,
+      "text": "because temporary is it the same thing"
+    },
+    {
+      "start": 2139.8,
+      "duration": 4.6,
+      "end": 2144.4,
+      "text": "so either you say mover equal to Temp or"
+    },
+    {
+      "start": 2142.32,
+      "duration": 4.24,
+      "end": 2146.56,
+      "text": "you say mover equal to move. next same"
+    },
+    {
+      "start": 2144.4,
+      "duration": 3.76,
+      "end": 2148.1600000000003,
+      "text": "thing once you've done this can I say"
+    },
+    {
+      "start": 2146.56,
+      "duration": 4.88,
+      "end": 2151.44,
+      "text": "everything is done and you can straight"
+    },
+    {
+      "start": 2148.16,
+      "duration": 4.76,
+      "end": 2152.92,
+      "text": "away return the head so imagine I say"
+    },
+    {
+      "start": 2151.44,
+      "duration": 4.36,
+      "end": 2155.8,
+      "text": "node"
+    },
+    {
+      "start": 2152.92,
+      "duration": 4.679,
+      "end": 2157.599,
+      "text": "head equal to"
+    },
+    {
+      "start": 2155.8,
+      "duration": 4.12,
+      "end": 2159.92,
+      "text": "convert"
+    },
+    {
+      "start": 2157.599,
+      "duration": 5.0,
+      "end": 2162.599,
+      "text": "and I pass on this array and then I try"
+    },
+    {
+      "start": 2159.92,
+      "duration": 5.36,
+      "end": 2165.28,
+      "text": "to print the heads data you will see"
+    },
+    {
+      "start": 2162.599,
+      "duration": 4.681,
+      "end": 2167.28,
+      "text": "that it is converted I I'll also be uh"
+    },
+    {
+      "start": 2165.28,
+      "duration": 3.88,
+      "end": 2169.1600000000003,
+      "text": "telling you how to travels don't worry"
+    },
+    {
+      "start": 2167.28,
+      "duration": 4.12,
+      "end": 2171.4,
+      "text": "if I try to print this you see two is"
+    },
+    {
+      "start": 2169.16,
+      "duration": 3.8,
+      "end": 2172.96,
+      "text": "printed if I just change it make it 12"
+    },
+    {
+      "start": 2171.4,
+      "duration": 5.56,
+      "end": 2176.96,
+      "text": "you'll also be seeing"
+    },
+    {
+      "start": 2172.96,
+      "duration": 6.119,
+      "end": 2179.079,
+      "text": "12 right so very simple so let's quickly"
+    },
+    {
+      "start": 2176.96,
+      "duration": 4.48,
+      "end": 2181.44,
+      "text": "copy paste this and go back to the Java"
+    },
+    {
+      "start": 2179.079,
+      "duration": 4.321,
+      "end": 2183.4,
+      "text": "editor inside the class so you can paste"
+    },
+    {
+      "start": 2181.44,
+      "duration": 4.76,
+      "end": 2186.2000000000003,
+      "text": "it the first thing is remove all the"
+    },
+    {
+      "start": 2183.4,
+      "duration": 5.76,
+      "end": 2189.1600000000003,
+      "text": "pointers quickly remove all the pointers"
+    },
+    {
+      "start": 2186.2,
+      "duration": 6.24,
+      "end": 2192.4399999999996,
+      "text": "next thing remove this one to dot what"
+    },
+    {
+      "start": 2189.16,
+      "duration": 7.32,
+      "end": 2196.48,
+      "text": "is the next thing uh this will be length"
+    },
+    {
+      "start": 2192.44,
+      "duration": 7.04,
+      "end": 2199.48,
+      "text": "remove this this Vector will go as int"
+    },
+    {
+      "start": 2196.48,
+      "duration": 5.72,
+      "end": 2202.2,
+      "text": "array we need to have a private static"
+    },
+    {
+      "start": 2199.48,
+      "duration": 5.48,
+      "end": 2204.96,
+      "text": "otherwise we'll have to create an object"
+    },
+    {
+      "start": 2202.2,
+      "duration": 6.44,
+      "end": 2208.64,
+      "text": "okay looks like yeah everything is done"
+    },
+    {
+      "start": 2204.96,
+      "duration": 8.24,
+      "end": 2213.2,
+      "text": "what's the next thing node of"
+    },
+    {
+      "start": 2208.64,
+      "duration": 7.04,
+      "end": 2215.68,
+      "text": "head equal to convert pass on the array"
+    },
+    {
+      "start": 2213.2,
+      "duration": 5.48,
+      "end": 2218.68,
+      "text": "and then tros is"
+    },
+    {
+      "start": 2215.68,
+      "duration": 3.0,
+      "end": 2218.68,
+      "text": "printed"
+    },
+    {
+      "start": 2219.52,
+      "duration": 5.72,
+      "end": 2225.24,
+      "text": "so I'll print head of sorry head of data"
+    },
+    {
+      "start": 2222.359,
+      "duration": 6.281,
+      "end": 2228.64,
+      "text": "not head of zero okay let's try to print"
+    },
+    {
+      "start": 2225.24,
+      "duration": 5.4,
+      "end": 2230.64,
+      "text": "it 12 is printed wow same code same"
+    },
+    {
+      "start": 2228.64,
+      "duration": 3.8,
+      "end": 2232.44,
+      "text": "logic just remove couple of things"
+    },
+    {
+      "start": 2230.64,
+      "duration": 4.679,
+      "end": 2235.319,
+      "text": "starts working what is the time"
+    },
+    {
+      "start": 2232.44,
+      "duration": 4.96,
+      "end": 2237.4,
+      "text": "complexity simply traversing so bego of"
+    },
+    {
+      "start": 2235.319,
+      "duration": 3.481,
+      "end": 2238.8,
+      "text": "n yes you travel through every element"
+    },
+    {
+      "start": 2237.4,
+      "duration": 3.919,
+      "end": 2241.319,
+      "text": "and you store it that will be the time"
+    },
+    {
+      "start": 2238.8,
+      "duration": 4.799,
+      "end": 2243.599,
+      "text": "complexity so are to link list is done"
+    },
+    {
+      "start": 2241.319,
+      "duration": 4.0,
+      "end": 2245.319,
+      "text": "what is the next thing traversal in link"
+    },
+    {
+      "start": 2243.599,
+      "duration": 4.52,
+      "end": 2248.119,
+      "text": "list now this is very very important"
+    },
+    {
+      "start": 2245.319,
+      "duration": 4.52,
+      "end": 2249.839,
+      "text": "because if you understand how to Travers"
+    },
+    {
+      "start": 2248.119,
+      "duration": 3.881,
+      "end": 2252.0,
+      "text": "in a link list you can literally do"
+    },
+    {
+      "start": 2249.839,
+      "duration": 4.201,
+      "end": 2254.04,
+      "text": "everything so traversal is something"
+    },
+    {
+      "start": 2252.0,
+      "duration": 3.92,
+      "end": 2255.92,
+      "text": "that you will have to learn because even"
+    },
+    {
+      "start": 2254.04,
+      "duration": 3.96,
+      "end": 2258.0,
+      "text": "if you remember the array problems he"
+    },
+    {
+      "start": 2255.92,
+      "duration": 3.96,
+      "end": 2259.88,
+      "text": "always Travers in an array so similarly"
+    },
+    {
+      "start": 2258.0,
+      "duration": 3.72,
+      "end": 2261.72,
+      "text": "in link list in all the problems you'll"
+    },
+    {
+      "start": 2259.88,
+      "duration": 3.64,
+      "end": 2263.52,
+      "text": "have to Travers through the entire link"
+    },
+    {
+      "start": 2261.72,
+      "duration": 4.52,
+      "end": 2266.24,
+      "text": "list how do we"
+    },
+    {
+      "start": 2263.52,
+      "duration": 4.599,
+      "end": 2268.119,
+      "text": "Travers so once the array is converted"
+    },
+    {
+      "start": 2266.24,
+      "duration": 4.079,
+      "end": 2270.319,
+      "text": "to a link list a link list will look"
+    },
+    {
+      "start": 2268.119,
+      "duration": 6.2,
+      "end": 2274.319,
+      "text": "something like this again it will be"
+    },
+    {
+      "start": 2270.319,
+      "duration": 5.961,
+      "end": 2276.2799999999997,
+      "text": "somewhere in random random memory space"
+    },
+    {
+      "start": 2274.319,
+      "duration": 5.04,
+      "end": 2279.359,
+      "text": "we will always have the head and what is"
+    },
+    {
+      "start": 2276.28,
+      "duration": 4.6,
+      "end": 2280.88,
+      "text": "the head pointing to the starting the"
+    },
+    {
+      "start": 2279.359,
+      "duration": 4.681,
+      "end": 2284.04,
+      "text": "head of the link list the starting of"
+    },
+    {
+      "start": 2280.88,
+      "duration": 6.08,
+      "end": 2286.96,
+      "text": "the link list and as I said to you never"
+    },
+    {
+      "start": 2284.04,
+      "duration": 4.76,
+      "end": 2288.8,
+      "text": "ever tamper the head that's the first"
+    },
+    {
+      "start": 2286.96,
+      "duration": 3.879,
+      "end": 2290.839,
+      "text": "rule of Link list never ever tamper the"
+    },
+    {
+      "start": 2288.8,
+      "duration": 4.76,
+      "end": 2293.5600000000004,
+      "text": "head because if you move the head from"
+    },
+    {
+      "start": 2290.839,
+      "duration": 4.48,
+      "end": 2295.319,
+      "text": "here to here you forget which is the"
+    },
+    {
+      "start": 2293.56,
+      "duration": 3.799,
+      "end": 2297.359,
+      "text": "starting point who will remember it so"
+    },
+    {
+      "start": 2295.319,
+      "duration": 4.601,
+      "end": 2299.92,
+      "text": "never ever tamper the head the first"
+    },
+    {
+      "start": 2297.359,
+      "duration": 6.041,
+      "end": 2303.4,
+      "text": "thing I'll do is I will take a temporary"
+    },
+    {
+      "start": 2299.92,
+      "duration": 5.84,
+      "end": 2305.76,
+      "text": "variable which is also at head tell me"
+    },
+    {
+      "start": 2303.4,
+      "duration": 5.24,
+      "end": 2308.64,
+      "text": "what do I need to print two how can I"
+    },
+    {
+      "start": 2305.76,
+      "duration": 5.44,
+      "end": 2311.2000000000003,
+      "text": "print this that's basically temp of data"
+    },
+    {
+      "start": 2308.64,
+      "duration": 5.64,
+      "end": 2314.2799999999997,
+      "text": "if I do this it'll give me the value two"
+    },
+    {
+      "start": 2311.2,
+      "duration": 5.52,
+      "end": 2316.72,
+      "text": "correct but after that I need three how"
+    },
+    {
+      "start": 2314.28,
+      "duration": 5.0,
+      "end": 2319.28,
+      "text": "do I get three I have to take this temp"
+    },
+    {
+      "start": 2316.72,
+      "duration": 5.56,
+      "end": 2322.2799999999997,
+      "text": "to here how can I take this we have the"
+    },
+    {
+      "start": 2319.28,
+      "duration": 4.92,
+      "end": 2324.2000000000003,
+      "text": "next stored just go to the next after"
+    },
+    {
+      "start": 2322.28,
+      "duration": 4.44,
+      "end": 2326.7200000000003,
+      "text": "that I'll have to take one again go to"
+    },
+    {
+      "start": 2324.2,
+      "duration": 5.36,
+      "end": 2329.56,
+      "text": "the next after that I'll have eight"
+    },
+    {
+      "start": 2326.72,
+      "duration": 5.16,
+      "end": 2331.8799999999997,
+      "text": "again go to the next after that the temp"
+    },
+    {
+      "start": 2329.56,
+      "duration": 5.48,
+      "end": 2335.04,
+      "text": "will reach at the moment null the the"
+    },
+    {
+      "start": 2331.88,
+      "duration": 7.719,
+      "end": 2339.599,
+      "text": "moment it reaches null is stop so can I"
+    },
+    {
+      "start": 2335.04,
+      "duration": 5.96,
+      "end": 2341.0,
+      "text": "say if I have to to implement this it's"
+    },
+    {
+      "start": 2339.599,
+      "duration": 2.72,
+      "end": 2342.319,
+      "text": "I probably I'll just take the code"
+    },
+    {
+      "start": 2341.0,
+      "duration": 4.079,
+      "end": 2345.079,
+      "text": "editor and write it it's going to be"
+    },
+    {
+      "start": 2342.319,
+      "duration": 5.321,
+      "end": 2347.64,
+      "text": "super simple node start temp head"
+    },
+    {
+      "start": 2345.079,
+      "duration": 6.081,
+      "end": 2351.1600000000003,
+      "text": "because I don't want to Tamper my head"
+    },
+    {
+      "start": 2347.64,
+      "duration": 6.479,
+      "end": 2354.1189999999997,
+      "text": "node start temp equal to head while temp"
+    },
+    {
+      "start": 2351.16,
+      "duration": 7.88,
+      "end": 2359.04,
+      "text": "not equal to null or maybe you can just"
+    },
+    {
+      "start": 2354.119,
+      "duration": 9.401,
+      "end": 2363.52,
+      "text": "say while it is valid after this see out"
+    },
+    {
+      "start": 2359.04,
+      "duration": 6.4,
+      "end": 2365.44,
+      "text": "temp data and this and then temp will"
+    },
+    {
+      "start": 2363.52,
+      "duration": 4.24,
+      "end": 2367.7599999999998,
+      "text": "move to the"
+    },
+    {
+      "start": 2365.44,
+      "duration": 3.6,
+      "end": 2369.04,
+      "text": "next"
+    },
+    {
+      "start": 2367.76,
+      "duration": 5.4,
+      "end": 2373.1600000000003,
+      "text": "so let's move to the"
+    },
+    {
+      "start": 2369.04,
+      "duration": 6.88,
+      "end": 2375.92,
+      "text": "next let's try to play it so if I yeah"
+    },
+    {
+      "start": 2373.16,
+      "duration": 6.439,
+      "end": 2379.5989999999997,
+      "text": "the entire array is printed done if I"
+    },
+    {
+      "start": 2375.92,
+      "duration": 7.24,
+      "end": 2383.16,
+      "text": "have to show you in Java now you will"
+    },
+    {
+      "start": 2379.599,
+      "duration": 7.401,
+      "end": 2387.0,
+      "text": "appreciate me that hey it's very very"
+    },
+    {
+      "start": 2383.16,
+      "duration": 6.88,
+      "end": 2390.04,
+      "text": "easy so just take this instead of this"
+    },
+    {
+      "start": 2387.0,
+      "duration": 6.4,
+      "end": 2393.4,
+      "text": "I'll just say temp. data and probably do"
+    },
+    {
+      "start": 2390.04,
+      "duration": 6.6,
+      "end": 2396.64,
+      "text": "a plus this and instead of this I'll"
+    },
+    {
+      "start": 2393.4,
+      "duration": 5.52,
+      "end": 2398.92,
+      "text": "write this and I'll just take this and"
+    },
+    {
+      "start": 2396.64,
+      "duration": 6.0,
+      "end": 2402.64,
+      "text": "while this is not equal to null because"
+    },
+    {
+      "start": 2398.92,
+      "duration": 6.12,
+      "end": 2405.04,
+      "text": "in Java okay perfect let's try"
+    },
+    {
+      "start": 2402.64,
+      "duration": 4.12,
+      "end": 2406.7599999999998,
+      "text": "do should be perfect yeah let's Ry to"
+    },
+    {
+      "start": 2405.04,
+      "duration": 5.44,
+      "end": 2410.48,
+      "text": "play it"
+    },
+    {
+      "start": 2406.76,
+      "duration": 5.92,
+      "end": 2412.6800000000003,
+      "text": "done simple it's easy the C++ Java codes"
+    },
+    {
+      "start": 2410.48,
+      "duration": 5.32,
+      "end": 2415.8,
+      "text": "are same so you don't have to think"
+    },
+    {
+      "start": 2412.68,
+      "duration": 4.88,
+      "end": 2417.56,
+      "text": "about it so next one length of a link"
+    },
+    {
+      "start": 2415.8,
+      "duration": 4.76,
+      "end": 2420.5600000000004,
+      "text": "list how can you find a length of a link"
+    },
+    {
+      "start": 2417.56,
+      "duration": 5.24,
+      "end": 2422.7999999999997,
+      "text": "list imagine you're given a link list"
+    },
+    {
+      "start": 2420.56,
+      "duration": 4.799,
+      "end": 2425.359,
+      "text": "and you'll have to find out a length uh"
+    },
+    {
+      "start": 2422.8,
+      "duration": 6.68,
+      "end": 2429.48,
+      "text": "can I say private or"
+    },
+    {
+      "start": 2425.359,
+      "duration": 7.24,
+      "end": 2432.5989999999997,
+      "text": "maybe length of LL and always you'll be"
+    },
+    {
+      "start": 2429.48,
+      "duration": 5.32,
+      "end": 2434.8,
+      "text": "given the head so node star head will be"
+    },
+    {
+      "start": 2432.599,
+      "duration": 4.041,
+      "end": 2436.6400000000003,
+      "text": "given to you what do you do you take a"
+    },
+    {
+      "start": 2434.8,
+      "duration": 5.0,
+      "end": 2439.8,
+      "text": "counter zero you copy paste the"
+    },
+    {
+      "start": 2436.64,
+      "duration": 5.24,
+      "end": 2441.8799999999997,
+      "text": "traversal yes you just copy paste the"
+    },
+    {
+      "start": 2439.8,
+      "duration": 4.72,
+      "end": 2444.52,
+      "text": "traversal and inside the traversal you"
+    },
+    {
+      "start": 2441.88,
+      "duration": 5.68,
+      "end": 2447.56,
+      "text": "give a counter Plus+ and you can return"
+    },
+    {
+      "start": 2444.52,
+      "duration": 5.559,
+      "end": 2450.079,
+      "text": "the count that's it that's how you print"
+    },
+    {
+      "start": 2447.56,
+      "duration": 6.08,
+      "end": 2453.64,
+      "text": "the length so if I have to print the"
+    },
+    {
+      "start": 2450.079,
+      "duration": 5.24,
+      "end": 2455.319,
+      "text": "length I can simply say see out length"
+    },
+    {
+      "start": 2453.64,
+      "duration": 5.959,
+      "end": 2459.5989999999997,
+      "text": "of the link list oh my"
+    },
+    {
+      "start": 2455.319,
+      "duration": 6.52,
+      "end": 2461.839,
+      "text": "bad length of the link list and head and"
+    },
+    {
+      "start": 2459.599,
+      "duration": 3.921,
+      "end": 2463.52,
+      "text": "I can go ahead and run this probably"
+    },
+    {
+      "start": 2461.839,
+      "duration": 4.121,
+      "end": 2465.96,
+      "text": "yeah should be good I don't need to"
+    },
+    {
+      "start": 2463.52,
+      "duration": 5.079,
+      "end": 2468.599,
+      "text": "print this I can omit this off and if I"
+    },
+    {
+      "start": 2465.96,
+      "duration": 5.8,
+      "end": 2471.76,
+      "text": "print this the length is four perfect"
+    },
+    {
+      "start": 2468.599,
+      "duration": 6.401,
+      "end": 2475.0,
+      "text": "super simple again"
+    },
+    {
+      "start": 2471.76,
+      "duration": 5.44,
+      "end": 2477.2000000000003,
+      "text": "Java is do you need Java code now isn't"
+    },
+    {
+      "start": 2475.0,
+      "duration": 5.88,
+      "end": 2480.88,
+      "text": "it"
+    },
+    {
+      "start": 2477.2,
+      "duration": 6.36,
+      "end": 2483.56,
+      "text": "easy this remove this remove"
+    },
+    {
+      "start": 2480.88,
+      "duration": 6.08,
+      "end": 2486.96,
+      "text": "this do"
+    },
+    {
+      "start": 2483.56,
+      "duration": 4.72,
+      "end": 2488.2799999999997,
+      "text": "this do this none"
+    },
+    {
+      "start": 2486.96,
+      "duration": 4.24,
+      "end": 2491.2,
+      "text": "is it that"
+    },
+    {
+      "start": 2488.28,
+      "duration": 5.24,
+      "end": 2493.52,
+      "text": "tough okay let's let's take system. outp"
+    },
+    {
+      "start": 2491.2,
+      "duration": 5.119,
+      "end": 2496.319,
+      "text": "otherwise I'll have to write this and"
+    },
+    {
+      "start": 2493.52,
+      "duration": 5.48,
+      "end": 2499.0,
+      "text": "the link list head should be good should"
+    },
+    {
+      "start": 2496.319,
+      "duration": 7.361,
+      "end": 2503.68,
+      "text": "be good right let's run"
+    },
+    {
+      "start": 2499.0,
+      "duration": 6.96,
+      "end": 2505.96,
+      "text": "it my bad let's run it now four done"
+    },
+    {
+      "start": 2503.68,
+      "duration": 3.96,
+      "end": 2507.64,
+      "text": "quite simple I just remove two things"
+    },
+    {
+      "start": 2505.96,
+      "duration": 3.44,
+      "end": 2509.4,
+      "text": "the Java code also runs so let's take"
+    },
+    {
+      "start": 2507.64,
+      "duration": 4.56,
+      "end": 2512.2,
+      "text": "the same code and we'll go to the code"
+    },
+    {
+      "start": 2509.4,
+      "duration": 5.64,
+      "end": 2515.04,
+      "text": "Studio and copy paste here and try to"
+    },
+    {
+      "start": 2512.2,
+      "duration": 5.72,
+      "end": 2517.9199999999996,
+      "text": "submit it let's see if one time"
+    },
+    {
+      "start": 2515.04,
+      "duration": 4.52,
+      "end": 2519.56,
+      "text": "submission works it will so it's pretty"
+    },
+    {
+      "start": 2517.92,
+      "duration": 3.64,
+      "end": 2521.56,
+      "text": "easy isn't so the length of a link list"
+    },
+    {
+      "start": 2519.56,
+      "duration": 4.84,
+      "end": 2524.4,
+      "text": "is done it'll be taking a bego of end"
+    },
+    {
+      "start": 2521.56,
+      "duration": 5.64,
+      "end": 2527.2,
+      "text": "time complexity the next thing search in"
+    },
+    {
+      "start": 2524.4,
+      "duration": 5.199,
+      "end": 2529.599,
+      "text": "a link list most of you can do it so"
+    },
+    {
+      "start": 2527.2,
+      "duration": 4.119,
+      "end": 2531.319,
+      "text": "what is the question given a link list"
+    },
+    {
+      "start": 2529.599,
+      "duration": 3.881,
+      "end": 2533.48,
+      "text": "so whenever it is said that you're given"
+    },
+    {
+      "start": 2531.319,
+      "duration": 4.241,
+      "end": 2535.56,
+      "text": "a link list you'll always be given the"
+    },
+    {
+      "start": 2533.48,
+      "duration": 5.2,
+      "end": 2538.68,
+      "text": "head of the link list and given an"
+    },
+    {
+      "start": 2535.56,
+      "duration": 6.96,
+      "end": 2542.52,
+      "text": "element tell me if that element exists"
+    },
+    {
+      "start": 2538.68,
+      "duration": 7.2,
+      "end": 2545.8799999999997,
+      "text": "in a link list or not so search or check"
+    },
+    {
+      "start": 2542.52,
+      "duration": 4.559,
+      "end": 2547.079,
+      "text": "if present so it'll be given yes it'll"
+    },
+    {
+      "start": 2545.88,
+      "duration": 2.8,
+      "end": 2548.6800000000003,
+      "text": "be given the head and you'll be given"
+    },
+    {
+      "start": 2547.079,
+      "duration": 4.121,
+      "end": 2551.2000000000003,
+      "text": "the value that you have to check"
+    },
+    {
+      "start": 2548.68,
+      "duration": 4.8,
+      "end": 2553.48,
+      "text": "for one thing is for sure you always"
+    },
+    {
+      "start": 2551.2,
+      "duration": 4.919,
+      "end": 2556.1189999999997,
+      "text": "copy paste the traversal so please"
+    },
+    {
+      "start": 2553.48,
+      "duration": 7.119,
+      "end": 2560.599,
+      "text": "please copy pce the traverser never ever"
+    },
+    {
+      "start": 2556.119,
+      "duration": 8.0,
+      "end": 2564.119,
+      "text": "tamper the head so how do I check can I"
+    },
+    {
+      "start": 2560.599,
+      "duration": 7.72,
+      "end": 2568.319,
+      "text": "say any moment if temp do data equal to"
+    },
+    {
+      "start": 2564.119,
+      "duration": 6.361,
+      "end": 2570.48,
+      "text": "equal to Val I return yes which is one"
+    },
+    {
+      "start": 2568.319,
+      "duration": 4.52,
+      "end": 2572.839,
+      "text": "or else I return zero at the end if the"
+    },
+    {
+      "start": 2570.48,
+      "duration": 4.72,
+      "end": 2575.2,
+      "text": "entire traversal is complete quite"
+    },
+    {
+      "start": 2572.839,
+      "duration": 6.401,
+      "end": 2579.24,
+      "text": "simple can I write this probably I'll"
+    },
+    {
+      "start": 2575.2,
+      "duration": 6.56,
+      "end": 2581.7599999999998,
+      "text": "just uh remove this and I'll say this"
+    },
+    {
+      "start": 2579.24,
+      "duration": 5.04,
+      "end": 2584.2799999999997,
+      "text": "check if present and I'll probably pass"
+    },
+    {
+      "start": 2581.76,
+      "duration": 6.24,
+      "end": 2588.0,
+      "text": "on the head and I'll ask them to check"
+    },
+    {
+      "start": 2584.28,
+      "duration": 6.839,
+      "end": 2591.119,
+      "text": "for is five there let's see let's try"
+    },
+    {
+      "start": 2588.0,
+      "duration": 5.839,
+      "end": 2593.839,
+      "text": "one oh yeah it is there let's see 15 is"
+    },
+    {
+      "start": 2591.119,
+      "duration": 4.161,
+      "end": 2595.28,
+      "text": "there now it's not there so this is"
+    },
+    {
+      "start": 2593.839,
+      "duration": 3.48,
+      "end": 2597.319,
+      "text": "running so the next thing I'll do is"
+    },
+    {
+      "start": 2595.28,
+      "duration": 4.12,
+      "end": 2599.4,
+      "text": "I'll take this code and I'll copy paste"
+    },
+    {
+      "start": 2597.319,
+      "duration": 4.881,
+      "end": 2602.2,
+      "text": "in code Studio why am I running in code"
+    },
+    {
+      "start": 2599.4,
+      "duration": 5.32,
+      "end": 2604.7200000000003,
+      "text": "Studio because the environment in your"
+    },
+    {
+      "start": 2602.2,
+      "duration": 4.24,
+      "end": 2606.4399999999996,
+      "text": "coding rounds or your online assessments"
+    },
+    {
+      "start": 2604.72,
+      "duration": 3.24,
+      "end": 2607.9599999999996,
+      "text": "will be similar it just be given the"
+    },
+    {
+      "start": 2606.44,
+      "duration": 3.879,
+      "end": 2610.319,
+      "text": "function it'll not be given this int"
+    },
+    {
+      "start": 2607.96,
+      "duration": 4.119,
+      "end": 2612.079,
+      "text": "main or these things you have to"
+    },
+    {
+      "start": 2610.319,
+      "duration": 3.52,
+      "end": 2613.839,
+      "text": "understand so over here you're seeing"
+    },
+    {
+      "start": 2612.079,
+      "duration": 3.561,
+      "end": 2615.6400000000003,
+      "text": "that it's slightly different it's saying"
+    },
+    {
+      "start": 2613.839,
+      "duration": 3.401,
+      "end": 2617.24,
+      "text": "the type name the template is slightly"
+    },
+    {
+      "start": 2615.64,
+      "duration": 4.24,
+      "end": 2619.8799999999997,
+      "text": "different so whenever there is something"
+    },
+    {
+      "start": 2617.24,
+      "duration": 4.72,
+      "end": 2621.9599999999996,
+      "text": "like T which means you define it it can"
+    },
+    {
+      "start": 2619.88,
+      "duration": 4.679,
+      "end": 2624.559,
+      "text": "be integer it can be double like over"
+    },
+    {
+      "start": 2621.96,
+      "duration": 5.76,
+      "end": 2627.7200000000003,
+      "text": "here defining it that it'll be integer"
+    },
+    {
+      "start": 2624.559,
+      "duration": 5.0,
+      "end": 2629.559,
+      "text": "so this is how you write a you know like"
+    },
+    {
+      "start": 2627.72,
+      "duration": 4.8,
+      "end": 2632.52,
+      "text": "Global template that can be reused for"
+    },
+    {
+      "start": 2629.559,
+      "duration": 5.241,
+      "end": 2634.8,
+      "text": "anything if I write it as int I can only"
+    },
+    {
+      "start": 2632.52,
+      "duration": 5.559,
+      "end": 2638.079,
+      "text": "use it for INT but if I write it for T I"
+    },
+    {
+      "start": 2634.8,
+      "duration": 5.319,
+      "end": 2640.119,
+      "text": "can use it for string arrays anything"
+    },
+    {
+      "start": 2638.079,
+      "duration": 3.801,
+      "end": 2641.88,
+      "text": "this is how you write it got it so if"
+    },
+    {
+      "start": 2640.119,
+      "duration": 4.48,
+      "end": 2644.599,
+      "text": "you run this this will not run you'll"
+    },
+    {
+      "start": 2641.88,
+      "duration": 4.32,
+      "end": 2646.2000000000003,
+      "text": "have to specify over here like this yes"
+    },
+    {
+      "start": 2644.599,
+      "duration": 4.121,
+      "end": 2648.7200000000003,
+      "text": "you have to specify over here otherwise"
+    },
+    {
+      "start": 2646.2,
+      "duration": 4.359,
+      "end": 2650.5589999999997,
+      "text": "it will not run and this is K so let's"
+    },
+    {
+      "start": 2648.72,
+      "duration": 4.0,
+      "end": 2652.72,
+      "text": "do it K and try to submit it straight"
+    },
+    {
+      "start": 2650.559,
+      "duration": 4.361,
+      "end": 2654.92,
+      "text": "away so these are the things uh that is"
+    },
+    {
+      "start": 2652.72,
+      "duration": 3.68,
+      "end": 2656.3999999999996,
+      "text": "why I'm using compilers something which"
+    },
+    {
+      "start": 2654.92,
+      "duration": 3.48,
+      "end": 2658.4,
+      "text": "are similar to online assessment so that"
+    },
+    {
+      "start": 2656.4,
+      "duration": 4.159,
+      "end": 2660.559,
+      "text": "you understand how the questions should"
+    },
+    {
+      "start": 2658.4,
+      "duration": 5.48,
+      "end": 2663.88,
+      "text": "be asked what is the time"
+    },
+    {
+      "start": 2660.559,
+      "duration": 5.0,
+      "end": 2665.559,
+      "text": "complexity obviously be go of n at the"
+    },
+    {
+      "start": 2663.88,
+      "duration": 3.92,
+      "end": 2667.8,
+      "text": "worst case in case the element is not"
+    },
+    {
+      "start": 2665.559,
+      "duration": 5.481,
+      "end": 2671.0400000000004,
+      "text": "found we go off n at the best case in"
+    },
+    {
+      "start": 2667.8,
+      "duration": 4.88,
+      "end": 2672.6800000000003,
+      "text": "case the element is the head itself and"
+    },
+    {
+      "start": 2671.04,
+      "duration": 3.16,
+      "end": 2674.2,
+      "text": "the average will be n by two in case it"
+    },
+    {
+      "start": 2672.68,
+      "duration": 4.6,
+      "end": 2677.2799999999997,
+      "text": "is somewhere in between or somewhere"
+    },
+    {
+      "start": 2674.2,
+      "duration": 4.879,
+      "end": 2679.0789999999997,
+      "text": "like that so this is also done so you're"
+    },
+    {
+      "start": 2677.28,
+      "duration": 3.88,
+      "end": 2681.1600000000003,
+      "text": "still left with deletion and insertion"
+    },
+    {
+      "start": 2679.079,
+      "duration": 4.04,
+      "end": 2683.119,
+      "text": "we'll be doing that in the next lecture"
+    },
+    {
+      "start": 2681.16,
+      "duration": 3.88,
+      "end": 2685.04,
+      "text": "uh in case you're still watching please"
+    },
+    {
+      "start": 2683.119,
+      "duration": 3.641,
+      "end": 2686.76,
+      "text": "please do consider giving us a like and"
+    },
+    {
+      "start": 2685.04,
+      "duration": 3.12,
+      "end": 2688.16,
+      "text": "if you want all the codes uh you'll be"
+    },
+    {
+      "start": 2686.76,
+      "duration": 2.559,
+      "end": 2689.3190000000004,
+      "text": "finding the links in the description"
+    },
+    {
+      "start": 2688.16,
+      "duration": 3.12,
+      "end": 2691.2799999999997,
+      "text": "I'll be adding the note Link in the"
+    },
+    {
+      "start": 2689.319,
+      "duration": 4.28,
+      "end": 2693.599,
+      "text": "description you're finding the C++ Java"
+    },
+    {
+      "start": 2691.28,
+      "duration": 4.44,
+      "end": 2695.7200000000003,
+      "text": "python JavaScript code and if uh you're"
+    },
+    {
+      "start": 2693.599,
+      "duration": 3.76,
+      "end": 2697.3590000000004,
+      "text": "for the first time in on this channel"
+    },
+    {
+      "start": 2695.72,
+      "duration": 2.8,
+      "end": 2698.52,
+      "text": "please please do consider subscribing to"
+    },
+    {
+      "start": 2697.359,
+      "duration": 3.361,
+      "end": 2700.72,
+      "text": "us because that is the only thing that"
+    },
+    {
+      "start": 2698.52,
+      "duration": 3.68,
+      "end": 2702.2,
+      "text": "motivates me and if you haven't followed"
+    },
+    {
+      "start": 2700.72,
+      "duration": 3.119,
+      "end": 2703.839,
+      "text": "me on Instagram Twitter LinkedIn all the"
+    },
+    {
+      "start": 2702.2,
+      "duration": 3.28,
+      "end": 2705.48,
+      "text": "profile links will be in the description"
+    },
+    {
+      "start": 2703.839,
+      "duration": 2.681,
+      "end": 2706.52,
+      "text": "with this I'll be wrapping up this video"
+    },
+    {
+      "start": 2705.48,
+      "duration": 2.81,
+      "end": 2708.29,
+      "text": "Let's play in some of the video till"
+    },
+    {
+      "start": 2706.52,
+      "duration": 8.68,
+      "end": 2715.2,
+      "text": "them byebye take"
+    },
+    {
+      "start": 2708.29,
+      "duration": 9.91,
+      "end": 2718.2,
+      "text": "[Music]"
+    },
+    {
+      "start": 2715.2,
+      "duration": 3.0,
+      "end": 2718.2,
+      "text": "careen"
+    }
+  ]
+}

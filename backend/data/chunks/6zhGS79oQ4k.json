@@ -1,0 +1,207 @@
+{
+  "video_id": "6zhGS79oQ4k",
+  "position": 46,
+  "title": "BS-2. Implement Lower Bound and Upper Bound | Search Insert Position | Floor and Ceil",
+  "url": "https://www.youtube.com/watch?v=6zhGS79oQ4k",
+  "chunk_count": 18,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "6zhGS79oQ4k",
+      "position": 46,
+      "title": "BS-2. Implement Lower Bound and Upper Bound | Search Insert Position | Floor and Ceil",
+      "url": "https://www.youtube.com/watch?v=6zhGS79oQ4k",
+      "start": 2.94,
+      "end": 145.61999999999998,
+      "text": "so what is lower bound the definition goes as the smallest index yes the smallest index such that the number at that index is greater than equal to the given number let's take an example so this is a sorted array again the array has to be sorted for lower bound to be implemented imagine I give you X as eight if I give you X as 8 I can say the smallest index is 3 no it's five no S8 yes why because 8 is greater than equal to 8 that's why this is the first index where you get a number that is greater than equal to correct so what is the index if I have to write down the index 0 1 2 3 4 so the low bound will go as 2. quite simple what if x is nine in this case let's see N3 N5 can 8 15 yes 15 can be because 15 is greater than equal to 9 because X is nine so thereby the index will go as three perfect what if x is let's say 16. in that case is it no is it no is it no is it no yes this is 19 greater than equal to 16 so thereby the lower bound will be 4 in this case what if x is let's say 20 for 19 it will be this itself what if it's 20 this no this no this no this no this no so the last hypothetical index is five so the low bound will be the size of the array or the index the last hypothetical index because there is no one who is greater than equal to 20 so thereby it will be the last hypothetical scenario so what if I give you something as Let's uh rename this as 1919 and probably remove this and add one more 90. in this case ns7 what if this time x comes up as 19 what will be the answer which index obviously the smallest index so this one",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "6zhGS79oQ4k",
+      "position": 46,
+      "title": "BS-2. Implement Lower Bound and Upper Bound | Search Insert Position | Floor and Ceil",
+      "url": "https://www.youtube.com/watch?v=6zhGS79oQ4k",
+      "start": 139.14,
+      "end": 246.72,
+      "text": "obviously the smallest index so this one will be your answer first index where the number at that index is greater than equal to very important greater than equal to so by getting equal to fine if you're not getting find the greater so that's what you have to got the definition of flow bound so let's take X as 11. so if I ask you to find out the low bound of 11 what's the first approach that comes to your brain the first approach is very simple we'll go to one we'll go to 2 we'll go to 3 we'll go to 3 we'll go to 7 we'll go to 8 we'll go to 9 we'll go to 9 we'll go to 9 and this is where we stop because it's greater than equal to 11. it's kind of a linear search and I have to do a big go of n iteration I can use a for Loop because that will work so it's a big of n approach obviously this is something which you don't want because it's extremely easy now we know that the array is sorted so if we know that the array is sorted we have to search we kind of have to search so we have to think in the direction of searching so whenever the search space is sorted and I have to search which algorithm binary search yes this is the reason I'll apply binary search but in order to explain binary search better I'll change the value of X2 1 and let's see how binary search works so I'll be keeping my low at the zeroth index and my high as the ninth index now you know one thing for short no matter what happens even if the low bound doesn't exist even if there doesn't exist Any number greater than equal to X I will always have an answer equal to the size of the array in this case 10 basically the hypothetical index even if there is no answer possible even if there is no element",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "6zhGS79oQ4k",
+      "position": 46,
+      "title": "BS-2. Implement Lower Bound and Upper Bound | Search Insert Position | Floor and Ceil",
+      "url": "https://www.youtube.com/watch?v=6zhGS79oQ4k",
+      "start": 241.799,
+      "end": 356.09999999999997,
+      "text": "possible even if there is no element possible I will always return the last hypothetical index that is something I know for sure so I'll try to keep an answer why am I taking an answer variable you will understand and this is a trick which you have to keep in your mind throughout the binary search and it will be very very useful so what I'll say is okay let's find out mid what is mid would be 0 plus 9 by 2 4.5 that's integer value of 4. so the mid will be pointing to 7. I'm like yes 7 is greater than equal to 1 I got my lower bound no no I need to find the smallest I need to find the smallest so can I say I did not get my logo but probably I got a number probably I got a number which is greater than equal to one I definitely got a number which is greater than equal to one this can be my answer maybe maybe can be my answer so I know this maybe or can be my answer so thereby whatever is the index I will say I probably got someone who is greater than me who is greater than me so let's keep it so if I've got someone I need the smallest index so if you need the smaller one will you go left or will you go right he will go left smaller will always exist on left so you'll try to eliminate the right Source piece eliminate the right search piece so you'll try to eliminate this so This high will come over here so what you'll do is this high will be going to one place before the mid which is this perfect I have a probable answer let's see if I can get better I'll again take mid will be 0 plus 3 which is low plus I 1.5 that's one so this will be pointing to this portion let's see let's analyze we have a two yes we have a two so we",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "6zhGS79oQ4k",
+      "position": 46,
+      "title": "BS-2. Implement Lower Bound and Upper Bound | Search Insert Position | Floor and Ceil",
+      "url": "https://www.youtube.com/watch?v=6zhGS79oQ4k",
+      "start": 350.46,
+      "end": 467.69899999999996,
+      "text": "we have a two yes we have a two so we are like can this be my answer let's handle this 2 greater than equal to one I'm like yes it can be so I probably found a better index because I moved to left because I moved to left so I definitely found a better index because I I never moved to write so if I am moving to left that's definitely smaller and this is greater than equal to 1 can be maybe my answer maybe I don't know so I'll probably keep that index 1 because 2 occurs said and I'll keep it I'm like okay so if I have kept it I know this is an answer so I'll never look on the right anymore I'll go to the left so I'll move the high to this index and I'll eliminate mid again let's do the next thing again we are at low and high mid will be 0 plus 0 by 2 which is zero so it will also be this perfect let's see can this be my answer what is there one so like one greater than equal to one is like yes this might be your answer I'd be like okay the zeroth index might be my answer and I still have to look for smallest so I have to go left so what will happen is this high will go left and it will go at -1 equal to minus 1 so high across the slope I stop I stop when I stop so the last smallest which could be my answer is zero thereby the lower bound is zero thereby the low bound is zero I hope you understood this so let's take one more example to understand low bound better so I'll take X to be 9 this time let's see what how binary search will work so I'll keep the low here and as usual I'll keep the high here and initially what will be the answer either even if I do not find any numbers",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "6zhGS79oQ4k",
+      "position": 46,
+      "title": "BS-2. Implement Lower Bound and Upper Bound | Search Insert Position | Floor and Ceil",
+      "url": "https://www.youtube.com/watch?v=6zhGS79oQ4k",
+      "start": 462.78,
+      "end": 584.16,
+      "text": "either even if I do not find any numbers which are greater the hypothetical index will be my answer which is the last index which is index 10. let's try to analyze what is the value of bit low plus I 0 plus 9 Y 2 which is near about 4 integer which is this Phi is 5 greater than 9 no can 5 be your answer maybe and look it cannot be because 5 is not greater so it it doesn't have a probability to get my answer so if it doesn't have a probability to my answer so if it doesn't have a probability to be my answer can I say I'll not replace answer I will not so I'll never find an answer on the left as well because if 5 is not an answer anything to the left of five can never be my answer very obvious very obvious so where will I move I'll go on the right and I'll try to do a search thereby the slow will go here and try to do a search quite simple by any search next I'm over here so let's try to figure out the mid again mid will be 5 plus 9 by 2 which is 7 which is this let's see I'm like how much is this 10 it's greater than equal to 9. yes you can be my answer you may be I'm not sure let's store you what index seven let's store the index seven I store it so this might be my answer so I need smallest so this might be my answer I don't need to look at right because I need small small I go to the left so the third space will be trimmed down to the left so it trimmed on the right and we'll move left amazing my research is such an amazing algorithm next let's find out the new MID it's five plus six by two 11.5 okay so mid will also be pointing to this how much is the value 8 is 8 greater than",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "6zhGS79oQ4k",
+      "position": 46,
+      "title": "BS-2. Implement Lower Bound and Upper Bound | Search Insert Position | Floor and Ceil",
+      "url": "https://www.youtube.com/watch?v=6zhGS79oQ4k",
+      "start": 579.899,
+      "end": 699.899,
+      "text": "much is the value 8 is 8 greater than equal to nine no cannot be my possible answer don't don't alter the answer don't alter the answer don't alter the answer because the value at Mid is not greater than equal to 9 so do not alter the answer do not even touch because this doesn't have a probability to be my answer so if this doesn't have I have to go and look for probably right yes so I will this time take low and I'll move 1 ahead of mid so thereby low will be pointing here that's one ahead of mid perfect what's the next job a standing at eight very important we are standing at eight the same what will happen mid will be pointing to here and we'll get 8 which is at index 6. please please observe which is at index six but this value is not greater than 9 so not to be done and we will again move on right in the search space will be completed and we just got one occulents and that's my answer so index 7 is my answer which is actually my answer the first index where the value is greater than equal to There's No 9 so I have to find the greater value we got it so this is how we can easily find out the logo how can we implement this quite simple binary search you don't have to think a lot follow the same template take a function take an array take a Target and take the size of the array let's follow the same template we know binary search will always have zero and the high will always point to the last index which is n minus 1 and we know the third space over here there's a slight difference the we take an answer variable we take an answer variable so answer will be pointing to answer will be n and then while low lesser than equal to high is what we'll do and the generic tendency is mid equal to",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "6zhGS79oQ4k",
+      "position": 46,
+      "title": "BS-2. Implement Lower Bound and Upper Bound | Search Insert Position | Floor and Ceil",
+      "url": "https://www.youtube.com/watch?v=6zhGS79oQ4k",
+      "start": 693.959,
+      "end": 811.38,
+      "text": "mid equal to low plus High by 12 if you remember and what is the next thing if you remember in binary search you always did a equal to then you did a greater than you did a lesser right you don't need to do it here you don't need to do it here because you know maybe an answer is a possibility may be an answer or cannot be an answer there are only two possibilities maybe an answer or cannot be an answer so if you remember low was here I was here and mid was pointing here in this case when X was one I said this might be an answer so can I say if because I'm not searching I'm rather looking for a particular smallest index not searching for an element that's why all right if this is lesser than equal to oh sorry greater than equal to is my condition is greater than equal to X or my target whatever it is I know this may be an answer so I'll say this may be an answer so please store that maybe index in answer because it may be an answer and trim down the third space go to the left and find out go to the left and whenever you go to Left High goes High goes so that's it or else if that is not the case imagine if x was 9 in this case what will happen also this cannot be an answer cannot be an answer so the low will just go here so the low will just go here so just you move to the low to made plus one is that sort of it isn't so you just move the mid to sorry you just move the low to mid plus one done and at the end of the day if you found out an index fine you'll get it an answer otherwise answer stays as n which is your hypothetical answer always so that's what you'll return it's a very very important algorithm low",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "6zhGS79oQ4k",
+      "position": 46,
+      "title": "BS-2. Implement Lower Bound and Upper Bound | Search Insert Position | Floor and Ceil",
+      "url": "https://www.youtube.com/watch?v=6zhGS79oQ4k",
+      "start": 806.639,
+      "end": 917.279,
+      "text": "it's a very very important algorithm low bound it can solve so many of your problems so many trust me please please keep this in mind so coming to the code editor you can find the same code I have written in C plus plus you can write the equivalent Java Python and JavaScript code from the link in the description so what I'll do is I'll quickly go ahead and submit this and you'll see that this is running fine so please please make sure that you kind of keep in your brain what is low bound so if you're a C plus plus user and you're giving coding rounds you don't have to write this entire long piece of code if it comes up in a coding round you can simply write low bound index equal to lower underscore bound and you can keep the starting of the array like the starting iterator in case of arrays it will be array in case of vector it will be array dot begin array dot end so it will Define the search space starts from begin goes till end and looks for X so this will return an i Trader pointing to that index and I Trader pointing to that index and in order to get the index you just subtract this beginner iterator because if you subtract the beginner iterator the beginner iterator and wherever the load bound is you'll get the index you'll get the index so this is how you can easily do it in C plus plus if it's an array you write array comma array plus n imagine I ask you that the array is given from here to here which is basically this much and I ask you to find the low bond in this portion of the array not the entire array in that case what you will write is this is the second Index this is sixth index so you write add a plus second index array plus seventh index seven means the next one so it will go",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "6zhGS79oQ4k",
+      "position": 46,
+      "title": "BS-2. Implement Lower Bound and Upper Bound | Search Insert Position | Floor and Ceil",
+      "url": "https://www.youtube.com/watch?v=6zhGS79oQ4k",
+      "start": 912.72,
+      "end": 1028.1,
+      "text": "seven means the next one so it will go till six so this will go till 2 comma six and it will do a low Bound in this correct so this is how you can easily do it using the lower bound C plus plus STL in Java there is I I don't I'm not aware of such equivalent but yeah for Java people you can always write the pseudocode yourself so what is the time complexity of the lower bound algorithm obviously the same as binary search hence the time complexity is Big go of logarithmic base to n so we're done with low bound now we will be moving to Upper bound what is upper Bond same concept the only difference is it's a smallest index but there's just the greatest symbol the number at that index must be greater than x there's no equal to any further so to find me the smallest index such that the number that index is greater than x is what is the definition of upper bound imagine I give you X as 6 what is the upper bound of 6 so if I write down the index is 0 1 2 3 4 5 6 7 8 9 so n is over here 10. so for 6 I know 6 is there but 6 cannot be said as greater than 6 so thereby the upper bound will be index equal to 3y because at 3 you have 7 and 7 is greater than 6 thereby it is your upper bound imagine I give you something as X as 11. in that case 11 will be a low Ball but it's not a upper Bond the upper bound is 12. so it will be like index equal to 9. imagine I give you X as 12. imagine I give you X is 12. in that case there is no one greater than 12 there's no one greater than 12. so this in that case the index will be the hypothetical scenario which",
+      "word_count": 340
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "6zhGS79oQ4k",
+      "position": 46,
+      "title": "BS-2. Implement Lower Bound and Upper Bound | Search Insert Position | Floor and Ceil",
+      "url": "https://www.youtube.com/watch?v=6zhGS79oQ4k",
+      "start": 1021.92,
+      "end": 1145.9399999999998,
+      "text": "will be the hypothetical scenario which is n imagine I give you X as 13 Even In this case the hypothetical scenario 10 imagine I give you X as 0 so the first element is 2 which is greater than 0 so the index will be 0 got the definition of upper bound but find the greater so how can you do it isn't it similar to the lower bound it is what is the difference that we will do you we will kind of in in log on what did we do we will like array of mid if you remember the low bound greater than equal to X or yeah greater than equal to X you are my probable answer you may be my probable answer and go and look at the left for smallest or else this was the binary search code that he wrote or else go on the ride and look for someone who can be an answer for upper bound can I say I'll try to perform a similar search and I will say if array of mate is greater than x you can be my probable answer or if you are my probable answer I need I need smallest I need smaller index go on the left and find me out or else go on the right and figure out because if at this index I'm not getting go on the right direction go from greater indexes and find me out so the only difference is this greater than equal to gets converted into greater you can again do the dry run for this and not be going into depth because there's just a sign change because if I go into depth about all of these smaller smaller things we'll end up making a playlist of 100 hours and that's not possible okay so I am expecting you to understand the slight change after the code editor what I'll do is I'll copy paste this I'll go to Upper bound I'll paste this and I'll just remove the equal to and I'll go",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "6zhGS79oQ4k",
+      "position": 46,
+      "title": "BS-2. Implement Lower Bound and Upper Bound | Search Insert Position | Floor and Ceil",
+      "url": "https://www.youtube.com/watch?v=6zhGS79oQ4k",
+      "start": 1142.34,
+      "end": 1257.179,
+      "text": "just remove the equal to and I'll go ahead and submit this and see if it is running fine as I said you it should be yeah it does so that's the only change that you have to do in Upper bound so what is the time complexity the time complexity is again we go off logarithmic based one and if you're using something as C plus plus just change this low to Upper and you have a C plus plus still does it so this is very very important if you are going for coding nouns you don't have to write longer codes this will help you immensely so this is for C plus plus users so let's go ahead uh second go back to the sheet and let's see what we have done let's go to the binary search section and I can say that this is done and this is done what is the next question search insert position let's read the question you're given a sorted array of distinct values very important distinct values and a Target value M you need to search for the index of the target value in the array if the value is present in the array then it's very simple return its index if the value is not present determine the index where it would be inserted in the array while maintaining the sorted order let's take this example and understand this problem it's kind of saying array is given as 1 2 4 7 and the number is given as 6 so this is a sorted array and this number has to be inserted in the sorted array what they are asking is where should this number be ideally inserted so if I just write down the indexes 0 1 2 3 will be the indexes right so ideally can I say if I have to insert 6 it'll be like 1 2 4 and 6 will go here and 7 will go in can I say this I can because that is what will",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "6zhGS79oQ4k",
+      "position": 46,
+      "title": "BS-2. Implement Lower Bound and Upper Bound | Search Insert Position | Floor and Ceil",
+      "url": "https://www.youtube.com/watch?v=6zhGS79oQ4k",
+      "start": 1250.52,
+      "end": 1377.12,
+      "text": "say this I can because that is what will happen so 6 will go at index 3 and that is what they want you have to return the index where the 6 will be inserted what if for this example only I would have given you x equal to 2. in that case we have to insert 2 that 2 will go here and then the rest of the array can follow so in this case 2 was inserted at the first index so what will be your answer how can you find the search position isn't it similar to saying finding the low bond isn't it just for a second think isn't it because if there is two if there is two you just insert it wherever 2s and if there is no two like if there is no 6 and you go to the next guy isn't it equivalent to saying find the index where the value is either equal to because then I'm going to insert it or else greater if it's there I go and insert it at the smallest index wherever it is or else I go and insert it right at the Creator element which is in this case seven so I just have to figure out the low bound and my job will be done so I'll quickly go ahead and probably copy paste the same code and let's see if it works I'll go here and I'll try to copy paste the same code I'll hit a run let's see if it works okay there's some compilation errors okay I'm assuming uh okay this is given as m so let's quickly replace this as X now let's quickly Take n as array dot size and now let's quickly submit it and see if it is running fine it does so as I said if you know low bound that will actually solve so many of your problems going back to the sheet I can say that this one is done as well I will be completing the next problem as well",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "6zhGS79oQ4k",
+      "position": 46,
+      "title": "BS-2. Implement Lower Bound and Upper Bound | Search Insert Position | Floor and Ceil",
+      "url": "https://www.youtube.com/watch?v=6zhGS79oQ4k",
+      "start": 1372.62,
+      "end": 1500.419,
+      "text": "completing the next problem as well which is floor and seal in sorted array so if you ask me the definition of flow it's very simple the largest number in the array that is either equal or lesser than x and what is the definition of seal I think everyone knows the smallest number in the array which is either equal or greater than x so if I give you X as 25 can I say for x 25 the floor will be 20 because that is that is the largest like 10 is definitely smaller than 25 but 20 is smaller than 25 as well and we need the largest number so the largest number is 20. the floor is 20 it cannot be 30 because we need smaller than equal to okay what is the seal if I ask you the scene that's 34 sure why because 50 is definitely less greater than equal to 25 40 is greater than equal to 25 30 is greater than equal to 25 and I need the smallest number so the smallest is 30. so they are by the floor uh C is 30. what if I change the array I just changed the added step I say 10 20 25 30 40 and I give X as 25 so can I say in that case the floor will be 25 and the seal will also be 25 because we have the number itself so how do we solve this do you have any idea on how to solve this something I know for sure is what is this smallest number in an array greater than or equal to S I think everyone knows this this is nothing but lower bound we have done it we have done it this is nothing but low Bond because we know for sure that it is low Bond why because if x was 25 25 is the answer and if I just trim it down to something like 30 40 50 in that case for 25 the seal",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 13,
+      "video_id": "6zhGS79oQ4k",
+      "position": 46,
+      "title": "BS-2. Implement Lower Bound and Upper Bound | Search Insert Position | Floor and Ceil",
+      "url": "https://www.youtube.com/watch?v=6zhGS79oQ4k",
+      "start": 1490.76,
+      "end": 1610.5800000000002,
+      "text": "30 40 50 in that case for 25 the seal instead of 25 will this time become 30 and the floor will be 20 why because 25 was not there so it figured out the next small element and this is what was the definition of flow bar figure out the element that's greater than or equal to X and that is exactly the definition of seal so I know how to find C you just Implement what we have implemented in lower bound we just have to be careful about a certain thing in this case they might ask you if that doesn't exist any number in that case you have to probably return -1 or something so you have to be careful about that case but yeah it is quite similar to what you do in low Bar Road is this this is different the condition now changes and if the condition changes you know how to implement it just do some tweak to your implementations and that should be done so how do we tweak our implementation let's quickly check it out so you have seen how we have implemented the low bar it's pretty similar it's just a reversal of sign it's pretty much similar so can I write probably the pseudo code for floor something as like uh probably let's write it here floor array is given and the number X is given probably you can keep the answer as minus one to start off it because in case there is no one we will have minus one we will have low as 0 and the high as n minus 1. remember we need the number we do not need the index we need the number so over here also whenever you find the low bound send the number and that index don't send the index okay so what can I write can I write while low lesser than equal to high again the pattern will be similar the pattern will be similar mid will be figured out low plus High by 2.",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 14,
+      "video_id": "6zhGS79oQ4k",
+      "position": 46,
+      "title": "BS-2. Implement Lower Bound and Upper Bound | Search Insert Position | Floor and Ceil",
+      "url": "https://www.youtube.com/watch?v=6zhGS79oQ4k",
+      "start": 1604.64,
+      "end": 1720.32,
+      "text": "will be figured out low plus High by 2. I'm repeating the pattern is going to be very much similar throughout the binary research so can I say I'm looking out at if this is smaller than equal to Mid if this is smaller than equal to Mid then this can be by answer whatever is I'm not looking for index I'm looking for the values and keep it and now I'll be like this might be my answer so I just have it and then I'll move the low to mid plus one so remember I am going to the right I'm going to the right so whatever value you always get here will always be greater because you're going to the right so when you move to the right whatever value you get will always be greater that is why I am not comparing for largest that is why I'm not comparing for largest because binary search since it eliminates the left so space since it eliminates the left so space whatever I'm getting is going to be big is going to be big so there is thereby no need to compare for largest no need to compare for latches whatever you get will always be bigger than the previous one got it very simple or else you go to the left hand you figure out that's as easy as it can get it's just a playing around with the symbols that is why I was telling if you understand lower Bound in depth you will be able to solve so many questions so you can find the problem link for floor and seal in the description please make sure that you submit these problems so that you gain confidence so a quick note over here we had to return the element that is why I'm returning in a lot of places they might ask you for index as well so make sure you read the problem properly before submitting so uh we're pretty much done with low bound upper bound and we have done some",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 15,
+      "video_id": "6zhGS79oQ4k",
+      "position": 46,
+      "title": "BS-2. Implement Lower Bound and Upper Bound | Search Insert Position | Floor and Ceil",
+      "url": "https://www.youtube.com/watch?v=6zhGS79oQ4k",
+      "start": 1717.02,
+      "end": 1824.84,
+      "text": "upper bound and we have done some implementations of it and the next set of the lectures I'll be doing more problems based on low Bond and upper Bond but as of now I know you might have a small doubt how is binary search making sure that we get the smallest index or something like that so as I said binary search eliminates whenever I am saying smaller syntax by research eliminates the left half or the right half so you always move in a direction to find the smallest over here whenever you're trying to move a small list you always move in the left Direction you always eliminate you always eliminate so you're always moving on the left right so that is why whatever is stored whatever is stored if you remember in the example at where was the example if you remember this example we took some example where we started with 10 it boiled down to seven then boiled down to four then boil down to one remember it is always decreasing so binary search because the search space is eliminated in such a technique that it makes sure that if you're replacing it it gets replaced by smallest or largest depending on your conditional so by research by default takes care of the smallest or in this case the largest number or in this case the smallest number it does it for you because you're eliminating search spaces you're moving in a Direction so that you can find the largest over here when he is moving in this direction you're moving to find the largest that is why whatever you replace will always be pick up don't have that doubt and if you are still having a doubt take longer example so in order to understand binary search in depth during my college days the degree that I used was I took a lot of examples and I used to do a dry run I used to write everything I used to do dry run on pen and paper and then the",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 16,
+      "video_id": "6zhGS79oQ4k",
+      "position": 46,
+      "title": "BS-2. Implement Lower Bound and Upper Bound | Search Insert Position | Floor and Ceil",
+      "url": "https://www.youtube.com/watch?v=6zhGS79oQ4k",
+      "start": 1819.98,
+      "end": 1925.34,
+      "text": "dry run on pen and paper and then the understanding got much better and better with time it's just not about watching the lecture or it's just not about copy pasting the code that I'm writing try to take examples by yourself try to take the value of x by yourself try to do a dry run on the code so that the understanding goes better now in a lot of places you will find that this particular answer variable is not used they kind of return the low or high as the answer and I'll not go into that that is super complicated but once you get to that expert level in binary search you will figure this out that you don't have to store the answer you don't have to store the answer either of law or either of high will always be your answer again these things I'll dive deep as we move forward but as of now use the technique of answer when we are starting off use the technique of answer use another variable to store it as you gain confidence and as you become an expert you will notice that you don't need this answer the slow or this High either of these indexes will be pointing to your answer you will notice this you can take examples and you will see when you run out of when you run out of search space low and high one of them will be pointing to your answer just haven't noticed this again this we will discuss in depth as we move forward but for this video I think we have discussed a lot of things going back to the sheet I can mark this one as done as well so I hope you have understood everything about low bound and upper bound because it is going to be very very important as we move forward it is very important for coding rounds as well in case you have understood everything please please do give that like because that is very very",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 17,
+      "video_id": "6zhGS79oQ4k",
+      "position": 46,
+      "title": "BS-2. Implement Lower Bound and Upper Bound | Search Insert Position | Floor and Ceil",
+      "url": "https://www.youtube.com/watch?v=6zhGS79oQ4k",
+      "start": 1921.559,
+      "end": 1947.44,
+      "text": "give that like because that is very very uh important for me it keeps me motivated if you're new to our Channel please please please do consider subscribing to us and yes sir if you haven't followed me on Instagram LinkedIn and Twitter all the links will be in the description with this I'll be wrapping up this video let's fill in some other video tell them about whenever your heart is broken don't ever forget you're golden will find the lightning",
+      "word_count": 82
+    }
+  ]
+}

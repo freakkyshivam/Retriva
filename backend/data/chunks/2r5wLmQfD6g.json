@@ -1,0 +1,130 @@
+{
+  "video_id": "2r5wLmQfD6g",
+  "position": 103,
+  "title": "L31. Minimum time taken to BURN the Binary Tree from a Node | C++ | Java",
+  "url": "https://www.youtube.com/watch?v=2r5wLmQfD6g",
+  "chunk_count": 11,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "2r5wLmQfD6g",
+      "position": 103,
+      "title": "L31. Minimum time taken to BURN the Binary Tree from a Node | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=2r5wLmQfD6g",
+      "start": 0.0,
+      "end": 108.55999999999999,
+      "text": "so before starting the video i would love to thank relevel for sponsoring this entire tree series so if you're tired of waiting for companies to respond to your applications through different job portals the next few seconds are very very important for you because reliable by an academy is india's first hiring platform that can get you a job within a week itself yes all you have to do is to register for the relevant test and within a week your interview will be scheduled with india's top companies and the top budding unicorns so what are you waiting for make sure you check out the links in the description and apply for the relevant test because it is free hey everyone welcome back to the channel i hope you guys are doing extremely well so today we will be solving the problem find the minimum time that is required to burn a complete binary tree from any given node now this question can come up in a lot of fashion they might ask you from any given node from any given leaf node like they can give you the question as leaf node also so we will be solving the question for any given node and then you can definitely get the answer for leaf node as well so let's assume i take the node to be 2 okay so that's the node i take so this is the note that i have taken so if i'm asking you the time to burn so basically this guy will take a time one to one this these two guys like it will take one second to burn these two guys after that it will take two seconds to burn these two guys after that it will take three seconds to burn these guys so the entire tree if you burn the node the entire tree in order to burn will take three seconds so that is what we want uh you to return basically you i want you to return the minimum time that is",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "2r5wLmQfD6g",
+      "position": 103,
+      "title": "L31. Minimum time taken to BURN the Binary Tree from a Node | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=2r5wLmQfD6g",
+      "start": 103.6,
+      "end": 216.159,
+      "text": "to return the minimum time that is required in order to burn any given binary tree if you are given a node so i can say that this problem can be solved using bfs traversal what if i use a bfs and if this is the node given assume this is the node that is given to you that's the node 2. now the node can be directly given to you or the node can be like that address can be given to you doesn't matter so if this node is given to you what if i apply a bfs algorithm and i say on the first instance i'll color these two guys so a bfs i can work it right readily outwards i'll go like via one distance right after this i'll have these two notes so on these two notes i'll again go radially outwards i can go now and after this this will color these guys again the next node will be this this doesn't have any node and this guy will again go readily outwards so i can implement a bfs kind of algorithm in order to burn the entire tree but the problem that i will face is if the note 2 wants to go in the upper direction there will be a problem because we have the links that are pointed to downwards all the links are pointed to downwards so we can easily go downwards like when we are performing the bfs it can easily go downwards but in order to go upwards we are going to face problem and in order to have upward like in order to have an upward movement we have to assign parent pointers so the first step of the algorithm is to assign parent pointers to this binary tree so the first step will be to have parent pointers ready so what i'll do is i'll take a queue and i'll have the initial node that is the root node and we're going to do a level order traversal so this is the node that we are",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "2r5wLmQfD6g",
+      "position": 103,
+      "title": "L31. Minimum time taken to BURN the Binary Tree from a Node | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=2r5wLmQfD6g",
+      "start": 212.4,
+      "end": 323.919,
+      "text": "so this is the node that we are currently standing at so let's take this node out does this node have a left guy i can say yes it has so i can say 2 your parent pointer will be one again you can have some hash map in order to have that ready like i will have a single hash map which says me that the parent of two is one similarly i'll check if one has a right pointer and i see that one has a right pointer so i can say three your parent is one so three is parent has become one now so i can easily mark them right next step whatever where your left and right just put them into the queue so please make sure you put them into the queue done so once that is done i can say the task for the node one is complete and i'll move the level order traversal to the next node that is node two again do the same step does to have a left does it have a right the two have a left the two has a left that's four so you'll say four your parent pointer is two so four your parent pointer is two right so two is done so you'll take just four and you'll enter it so two is also done because it doesn't have a right next node is three so kindly take three out does three have a left yes that's five so mark the five's parent pointed to three five's parent pointer will be three does three hour write yes six mark the parent pointer of six two three mark the parent pointer of six two three perfect so i can say three is done if three is done just make sure you in enter five and six into the queue data structure right right after that you get four so the moment you get four that's four have a left no does four have a right yes so whichever is the right guy there's a",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "2r5wLmQfD6g",
+      "position": 103,
+      "title": "L31. Minimum time taken to BURN the Binary Tree from a Node | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=2r5wLmQfD6g",
+      "start": 319.919,
+      "end": 433.44,
+      "text": "whichever is the right guy there's a seventh parent pointer is four so please make sure you mark the parent pointer and at the same time insert that node into your q data structure four is done next get five there's five hour left no that's why i have a right no next get six there's six hour left and right no there's seven ever left no does it have a right now so i can see i have completed the entire yes i've completed the entire traversal and i made sure that the parent pointers are ready in some hash map now it's time to move ahead to the next step now once the parent pointers are marked it's time to start the bfs traversal now if the node is like if you're given a value 2 just figure out where is this node lying like you could have done that using the traversal like just figure out where is this node or else if you're given this node address it's absolutely fine if the node address is given it's okay if the address is not given just figure out where it lies that can be done using traversal i'll show you that in the code so as of now we have a note 2. so let's again do a bfs traversal and this time we'll take again a q data structure and this time the node 2 will be inserted in this and at the same time we are going to have a visited map yes we are going to have a visited map so let's have a visited map why i will tell you that because they're performing bfs so just tell them that two is visited okay two has visited let's start the bfs traversal so as of now the time is definitely zero right so the time is zero so when i start the bfs traversal i have this note too so currently i have a note two now two where can it go which guys can it burn logically two can burn",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "2r5wLmQfD6g",
+      "position": 103,
+      "title": "L31. Minimum time taken to BURN the Binary Tree from a Node | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=2r5wLmQfD6g",
+      "start": 428.96,
+      "end": 542.8,
+      "text": "logically two can burn someone who's above that someone who's on its left someone who's on the right above left right that is what two can burn right so two will burn the above guy and that's nothing but the parent pointer the above guy is the parent pointer whose parent point is one so it can burn one so you have visited one it can burn left that's four so you have visited four perfect done now since two has successfully burnt someone so it will take a time of one so i have successfully burnt the adjacent notes so that task of two is completed i'll move to the next now in the next traversal it's very important that you pick up all these two notes you do not like because these notes are burnt at the time one so you pick up both the notes instead of picking only one pick up both the notes and have simultaneous tasks on that so on one one will burn left one will burn right and one will burn top so as of now does one have a top no because one doesn't have a parent pointer again proved by the parent map does one have a left uh yes it does have two but that's already burnt you can figure that out from the visited array so again this will not be burnt that's one hour right yes indeed and that's three so what you can do is you can definitely burn three you can definitely burn three and mark it as visited so i can say the task of one is completed hence i can just strike it off from the queue now in the next like in the same iteration i know we will have four so we have a four what i do is again the same thing does four have a top yes that's four hour left yes there's four over right a yes like it might have so on four stop we have two that's already burnt so no need to burn it",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "2r5wLmQfD6g",
+      "position": 103,
+      "title": "L31. Minimum time taken to BURN the Binary Tree from a Node | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=2r5wLmQfD6g",
+      "start": 538.64,
+      "end": 653.12,
+      "text": "already burnt so no need to burn it that's four hour left no that's four have a right seven seven is not burnt yet so you will burn seven so put it into the queue mark it as visited so what i've done is all the guys that were burnt during time one have have burnt their adjacent notes have burnt their adjacent notes so one and four have been completed so can i say 1 4 at least burnt someone hence the time will increase to time 2 seconds in the next iteration i'll take the next set of notes which were burnt at time 2 that's the node 3 and node 7 and i'll again perform the same task 3 can burn the top the left the right so does 3 have a top yes that's one but that is already burnt if you carefully observe that's already burnt so we will not burn it does three have a left yes it has a left that's five so let's burn the note 5 there's three have a right yes let's burn it so five will be burnt six will be burned so mark them as visited put them into the queue data structure seven does it have a top yes that's four but that's already burnt does it have a left no does it have a right no so can i say can i say the time two guys that were three and seven have burned their adjacent notes and this tree has burned someone like five and six so it they burnt some adjacents so if they're burning some adjacents can i say the time will increase to three indeed and so this is over i'll move to the next set of notes the next set of notes are six and five so i have a five i have a six so currently whenever five the topmost node is three right that's already burnt and you can just figure that out from here visit it five doesn't have a left doesn't have a",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "2r5wLmQfD6g",
+      "position": 103,
+      "title": "L31. Minimum time taken to BURN the Binary Tree from a Node | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=2r5wLmQfD6g",
+      "start": 648.32,
+      "end": 770.8,
+      "text": "five doesn't have a left doesn't have a right so five actually doesn't burns anyone correct six does it have a top yes three which is already burnt six has a left six has a right but it doesn't burns anyone so can i say this five this sex did not burn anyone hence hence the time will no more increase hence the time will no more increase because they could not burn anyone right next if i try to find anyone else in the queue i don't find it so the queue is empty once the queue is empty whatever time is stored in your time variable will be your minimal time that's required to burn a binary tree from any given node if i change the question to leaf node doesn't matter you're just going to take parent pointers left right every time because whether it be a node whether it be a leaf node the bfs will still stay the same because i have applied bfs from two i started and i moved radially outwards that's bfs that is what we generally apply now you might ask a question why not dfs the reason is the tree is burning at the same time like from node two it's burning on the same time so you have to move level wise like if you just think this this is level zero like time zero this is time one time one so you can just imagine this as a level and after that at time two these two are burnt there are time three these three uh these two are burned so it's kind of a level wise movement first the level zero then the level one then the level two and then the level threes so that is the reason we cannot use uh dfs so as usual we have the c plus plus code on the left and the java code on the right so we are given the root and as you can see we are given the integer value of the node uh the node",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "2r5wLmQfD6g",
+      "position": 103,
+      "title": "L31. Minimum time taken to BURN the Binary Tree from a Node | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=2r5wLmQfD6g",
+      "start": 766.8,
+      "end": 886.16,
+      "text": "integer value of the node uh the node that we are looking for not the address so what i've done is i've initially created a map of binary tree to binary and i have a bfs which basically maps these nodes to its parents so in this bfs i'll pass the route i'll pass this map and i'll pass this start and this back this bfs does couple of tasks one is parent mapping while the other one is it returns me the the node the node address where this target lies because while doing a parent mapping i was doing bfs traversals so while travis i'll find that address and store it in return so let's check out the bfs to apparent map function at first so what i've done is i've declared a queue and i push the root that's the starting point and at the same time i have kept a resultant node so that i can store the address of the start right after that i start iterating i do a level order traversal i get the node right and if this node is equivalent to the start like the node that i'm looking for so i store that node so during the traversal if any time i find that node which is containing the value start i just store its address and after that i pop and if there is a left if there is a right what i do is i map i say left your parent does not at the same time i push it to the queue right your parent does not push it into the queue this is how the level order traversal will complete so after this line the target node is what where the start node will be and the bfs will make sure that this map contains all the nodes parents right after that i have one function find max parent find max distance where i pass this parent map and i pass this target node so since i have the target node the address i pass",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "2r5wLmQfD6g",
+      "position": 103,
+      "title": "L31. Minimum time taken to BURN the Binary Tree from a Node | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=2r5wLmQfD6g",
+      "start": 880.48,
+      "end": 990.56,
+      "text": "target node the address i pass it so as of now i have this find max distance correct so what do i have i have the parent map i have the target node now initially i have taken the q so i'll just push on the q like i just push on the target into that right after that i have this visited note correct and what i'm doing is i'm marking visited as one so marked visited as one after this i've kept the timer so initial timer is zero right after this i'll start iterating so if you remember whatever is the target node you have to keep that into the queue i have to mark that into the visited right after that i start iterating in the queue i take the size so if you remember first we had one then we like sorry first we had two then we had one and uh like if i remember well we had one and four so we will i trade for one and four and after that whatever set we had we iterated for it so that's why we are running directly on the size running directly on the size and if it's one and four we'll take one and four and do simultaneous works on that that's why you're running on the size so we'll take the node we'll pop it and what we check is does it have a left and is that not visited if it is i will burn it so kindly burn it that is marking visited and push it into the queue similar i'll do for right check it burn it and push it into the queue check it if it exists like map of node does it exist what does that mean does the parent pointer exist and if it exists does that parent pointer like is it already visited if it is not then burn it and push it into the queue so these are three left right and top i burn it and push it into the cube and",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "2r5wLmQfD6g",
+      "position": 103,
+      "title": "L31. Minimum time taken to BURN the Binary Tree from a Node | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=2r5wLmQfD6g",
+      "start": 985.68,
+      "end": 1090.799,
+      "text": "i burn it and push it into the cube and if anyone if i'm burning any adjacent node i am marking a flag as one i am marking a flag as one like if i'm burning any one and at the end at the end if the flag is marked as one that means i burned someone who was adjacent to me hence i'll do a maxi plus plus that means i'll do a timer plus plus at the end i can return the timer which i can ultimately return as my answer time complexity of this method so what i'm doing is i'm using a bfs to map parent that's a level order traversal which is going to take a big off and plus i'm again using a pfs kind of a function which is burning the adjacent nodes so that's the big go of n so i can just summarize like i can write it as b o of n i'm assuming i'm assuming that the map works at big o of one like i'm assuming map is working at big of one depending on what time complexity you're assuming map to work at then you can just make it n log login or whatever you want to make it and the space complexity is again you're using an external map you're using an external queue and similar stuff so i can just uh summarize it to be big of n so that is what the time complexity and the space complexity will be in order to get the minimum required time to burn a binary tree from any given node so i hope you've understood the entire explanation as well as the code just in case you did please please please make sure you like this video because it took a lot of efforts to make this entire tree series also if you wish you can definitely drop in a comment that will keep motivating me to make such further series also if you're new to the channel please do consider subscribing because i'm going to bring",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "2r5wLmQfD6g",
+      "position": 103,
+      "title": "L31. Minimum time taken to BURN the Binary Tree from a Node | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=2r5wLmQfD6g",
+      "start": 1087.76,
+      "end": 1104.829,
+      "text": "subscribing because i'm going to bring in such more series in the upcoming future as well with this uh let's wrap up this video let's speed in the next lecture bye bye [Music]",
+      "word_count": 33
+    }
+  ]
+}

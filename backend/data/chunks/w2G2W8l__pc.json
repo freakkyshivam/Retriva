@@ -1,0 +1,86 @@
+{
+  "video_id": "w2G2W8l__pc",
+  "position": 49,
+  "title": "BS-5. Search Element in Rotated Sorted Array II",
+  "url": "https://www.youtube.com/watch?v=w2G2W8l__pc",
+  "chunk_count": 7,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "w2G2W8l__pc",
+      "position": 49,
+      "title": "BS-5. Search Element in Rotated Sorted Array II",
+      "url": "https://www.youtube.com/watch?v=w2G2W8l__pc",
+      "start": 3.12,
+      "end": 113.579,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well so we will be continuing with our binary search playlist which is the part of the Strivers A to Z DSA course so till now I've covered up till this particular problem and in this video I'll be covering up the problem search in rotated sorted array part 2 but please please make sure that you watch the part one because if you haven't seen the part one you will not understand the part two because I'll be reusing the same code that I've written in the part one so what does the problem state it states that you have to again perform a search in a rotated sorted array but this time the array might have duplicates if you remember in part one it only had unique elements so we did write a solution for that and if I have to give a short recap the solution was quite simple we did the simple binary search thing and right after that we figured out which is the sorted half either the left half will be sorted or the right half will be sorted if the laptop is sorted we then checked if in the laptop we have the element if we have the element then we trim down the right half and if we did not then we trim down the left half and if it was right sorted we checked if the element is in the right half if it is then we trim down the left half or else we trim down the right half now my question is why will that approach not work so over here in this problem we do not need to return the index so if they're asking us Target 3 it does occur at three different indexes we do not have to return the index where it talks because if you try to do it using battery search that will not be possible you have to use the proper linear search now",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "w2G2W8l__pc",
+      "position": 49,
+      "title": "BS-5. Search Element in Rotated Sorted Array II",
+      "url": "https://www.youtube.com/watch?v=w2G2W8l__pc",
+      "start": 108.24,
+      "end": 242.879,
+      "text": "use the proper linear search now they are asking you does it exist or not so you have to tell me yes or no you do not have to tell me the index so why does the previous solution for Unique elements doesn't work so what was the first step that we were doing identifying the sorted half that was the first step that we had or that was The crucial step because if we do not know which part is sorted how can we eliminate how can we check in that part so that is why identifying the sorted half was very very important now the question comes well then it should work for this one as well but this for this one it doesn't work now let me write you some examples so let's write one two three four four five and six seven so assume this is an array it does have duplicates but over here imagine you start the low over here imagine you start the high over here and the mid is pointing here in that case you can say that this portion is sorted why can you say that it's a very simple thing because low was your middle was here and I was here you can easily say that this section is sorted why because this 2 is lesser than this 5 or this 6 is not lesser than 2 thereby the left half can never be sorted I did have duplicates but still I could easily compare right now let me give you some other example imagine I write one two three three four four four five so even if I take this array even if I take this array and I write low here and I write higher so the mid will be somewhere here over here again I can say that this portion is not sorted by doing some simple comparisons between two and four and two and four this two and four is lesser while as this is greater so this is definitely not the sorted part again",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "w2G2W8l__pc",
+      "position": 49,
+      "title": "BS-5. Search Element in Rotated Sorted Array II",
+      "url": "https://www.youtube.com/watch?v=w2G2W8l__pc",
+      "start": 238.56,
+      "end": 372.84,
+      "text": "is definitely not the sorted part again I can do it even if I had duplicates like four four when can I not do it as my question I'll show you an example so if I have something like just think of this Edge case what if I have something like one two three and goes on like or other I'll give you a very simple one three three three three three one two imagine this is my array just imagine and in that case the low will be pointing here the high will be pointing somewhere here and the mid will be pointing somewhere here now analyze over here you are standing at a position which is three and just because this entire thing yes just because this entire thing was equal so the last element tends to be same as the mid element right and over here the first element tends to be the same as the mid element and how were you identifying the sorted half by doing a comparison between middle and low and by doing a comparison between middle and height which cannot be done here because the mid is also three the low is also three the high is also three from the naked eye you can say that this portion is not okay not sorted and this portion is sorted but programmatically can you say this because all of them are three can you identify just by comparing these three elements you cannot yes you cannot say hi bye it fails so how can I make this work might be my question so one of the ways can be said as hey sorry what if we straight away like if the target is one we take that one and we check over here because they are same but again the question comes how do you know that the right half only contains consecutive threes it might happen this half as something like this so you are not sure so the better scenario is try to trim",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "w2G2W8l__pc",
+      "position": 49,
+      "title": "BS-5. Search Element in Rotated Sorted Array II",
+      "url": "https://www.youtube.com/watch?v=w2G2W8l__pc",
+      "start": 366.539,
+      "end": 494.639,
+      "text": "so the better scenario is try to trim down those things try to trim down those things try to trim down this condition how will you trim down this Condition it's super simple I'll tell you why do I say trim down because you don't know like which because over here in the Naked Eyes you can see there is three three but while standing here while standing here you cannot just say that we have two on this side you have to do multiple checks and when the array shrinks it might be a problem the only problem we have is array low is equal to array mid is equal to array High that is the only problem I have and due to this reason I cannot successfully identify the sorted Hub if I can get rid of this condition if I can somehow solve this condition my job will be done can I say let's stand admit and let's take this three this three is equivalent to this 3 and this three so what I'll do is I will say I've already compared this three with my target that's what I always do whatever is that made whatever is at Mid I compare with Target don't we do that if I go back don't we do that over here we compare with Target so can I say one thing for short since I know all of the three elements are equal can I actually trim down my search space from this to this and from this do this can I trim down my search space I can because if this is not equivalent to the Target neither will be this neither will be this because all of them are equal if this is not equal this will also not be equal taking advantage of the condition right that's not I'll just shrink my third space I'll just shrink my search space that's what I'll do I'll shrink my search space and I'll continue on the next step so basically what I do is",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "w2G2W8l__pc",
+      "position": 49,
+      "title": "BS-5. Search Element in Rotated Sorted Array II",
+      "url": "https://www.youtube.com/watch?v=w2G2W8l__pc",
+      "start": 489.539,
+      "end": 614.82,
+      "text": "next step so basically what I do is whenever we end up with this condition because this is what is stopping me to identify the sorted up whenever we get this condition shrink your search space and go ahead again you can shrink it again you can shrink it again you get shrink it so what I will do is I'll go back to the previous code that I've written remember this was the code so over here I will say I will attach the lines just here because this it works seamlessly the only problem that I have is when this will happen because if this happens then you cannot do an comparison you cannot do a comparison so what I'll do is I'll try to insert some lines and that lines I'll write it over here so those lines will be I'll be like Hey listen if array of flow is equal to equal to array of mid and similarly if array of mid is equal to equal to array of high can I say this I can in that case what I'll do is I will say please please go ahead buy one like I don't need you and please please go down one because I don't need you once you've done this continue why continue because I'm still not sure I'm still not sure it might be possible that this is also a three in that case again you'll come back to the same so it's better repeat the process so the next step you'll again get the same so again this can work out and again you will do a continue so basically what you'll do is instead of Performing this you'll again go back and start these steps and if you get these lines again again go back so until unless you get these conditions to be valid you never go here just keep on shrinking shrinking shrinking got it so within the C plus plus code in case you want the Java Python and JavaScript code",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "w2G2W8l__pc",
+      "position": 49,
+      "title": "BS-5. Search Element in Rotated Sorted Array II",
+      "url": "https://www.youtube.com/watch?v=w2G2W8l__pc",
+      "start": 611.399,
+      "end": 724.88,
+      "text": "want the Java Python and JavaScript code you can find them in the description and you can also find out the problem Link in the description so this gets submitted but if I ask you the time complexity of this what will be that now on average I can say it's a binary search like for most of the cases it will be we go off login log base to n that will be the average case that means the most of like in most of the cases what if I give you a test case like three three one three three three three so in this case what will happen can you tell me if I give you a test case like this what will happen think so first you take the low as this you take the high as this and you take the mid as this correct for the first time you do this for the next time you can do this for the next sign you again basically now you perform the binary search so if there are a lot of duplicates you basically keep shrinking keep shrinking keep shrinking till you are tell you about that so at the worst case you might end up shrinking like near about the half the size of the array near above near above not exactly not exactly near about half the size of the array you might so the worst case can be the go of n by 2 where you shrink almost the half and then you are left out with some elements and then then you do the comparisons got that in the future if you get problems which have duplicates always try to solve the problem in terms of unique and then see where the unique will fail because whatever conditions like in this case we took this condition so we saw that that condition is failing for certain test cases and try to fit in that test case on that particular uh solution that you did for unique and",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "w2G2W8l__pc",
+      "position": 49,
+      "title": "BS-5. Search Element in Rotated Sorted Array II",
+      "url": "https://www.youtube.com/watch?v=w2G2W8l__pc",
+      "start": 720.72,
+      "end": 765.019,
+      "text": "solution that you did for unique and eventually you will be able to solve for duplicates as well so this is how you generically approach problems which has duplicates in it so I hope you've understood the problem solving approach so going back to the sheet I can mark this one as done as well in case you're still watching please please please do consider giving us that like because that highly motivates me to make these kind of videos and if you're new to our Channel what are you waiting for hit that subscribe button right away and if you haven't followed me on Instagram Twitter and Linkedin all the links will be in the description with this I'll be wrapping up this video let's read in some other video till then bye bye take care whenever your heart is broken don't ever forget your golden I I will find the light",
+      "word_count": 153
+    }
+  ]
+}

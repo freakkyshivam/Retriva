@@ -1,0 +1,86 @@
+{
+  "video_id": "PATgNiuTP20",
+  "position": 158,
+  "title": "G-33. Dijkstra's Algorithm - Using Set - Part 2",
+  "url": "https://www.youtube.com/watch?v=PATgNiuTP20",
+  "chunk_count": 7,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "PATgNiuTP20",
+      "position": 158,
+      "title": "G-33. Dijkstra's Algorithm - Using Set - Part 2",
+      "url": "https://www.youtube.com/watch?v=PATgNiuTP20",
+      "start": 2.879,
+      "end": 138.06,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well in the previous video we have learned about Baxter's algorithm using practicum if you haven't seen that video please please go back and watch it because you won't understand anything in this video because it's an extension it's just an extension of the previous video okay so in the previous video we did uh Implement extras algorithm using the priority queue right but in this video what I'll do is I'll try to implement our dastos algorithm using the set data structure so if you remember what did we do in the previous video we just took a priority queue right and we stored everything in terms of distance and node why did we take priority queue because we always wanted the minimum distance at first that is the reason we took priority queue okay now set what is the definition of a set such stores unique values and the smallest at the top smallest at the top and then it stores everything in the ascending order if you know set data structure it stores everything in the ascending order right so that is what we were doing in practicum as well in Prodigy we were looking for the minimum distance if you take set it's going to do the same if you look at the top post element it will always be the minimum guy because set stores everything in ascending fashion however there is one other reason why I am going to use this particular set data structure and I'll explain you well again doing a dry run on the same example okay so we'll take a seam set data structure a distance a node a source node and initially as usual put 0 and everything else to be infinite that's what I'll start off with and I'll just put off distance 0 and the source 0 in the set data structure so let's take it out and erase it so distance 0 with a node 0 okay",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "PATgNiuTP20",
+      "position": 158,
+      "title": "G-33. Dijkstra's Algorithm - Using Set - Part 2",
+      "url": "https://www.youtube.com/watch?v=PATgNiuTP20",
+      "start": 130.619,
+      "end": 237.42000000000002,
+      "text": "distance 0 with a node 0 okay let's quickly uh move it uh to its adjacent node so I'll just go quick because you already know about it this is going to take plus four so the updated distance will be four I can reach at an updated distance of 4. thereby I'll go and say updated distance of 4 and a node one in the set data structure I can also reach the node to by taking a distance of 4 so another updated distance of 4 so 4 comma 2 will come here right and this is how we can wrap up the first load so right at the right after the first iteration 4 comma 1 will appear at the top because these two are same so it is differentiated by the node number so 4 comma 1 will tend to appear at the top so what I'll do is I'll take the four comma 1 this time so the distance is 4 and the node is one yes the distance is 4 and the node is one so if I have node one if I have node one where can I go from one I can go to zero and two so I'll try to go to 0 which is node 0 which will end up taking me four it will make the distance 8 which will which I'll not consider I'll try to go to node 2 by taking a distance of 2 which will make the distance of 6 which will again not be considered so this is done all right I'm going quick because you already know this next I'll take four two so four node two from node to where can you go you can go to node 0 that will cost you four which will make it a distance of uh eight which will not be considered you can go to node uh one as well which will take you a distance of 2 make it six which will not be considered these two things will not be considered",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "PATgNiuTP20",
+      "position": 158,
+      "title": "G-33. Dijkstra's Algorithm - Using Set - Part 2",
+      "url": "https://www.youtube.com/watch?v=PATgNiuTP20",
+      "start": 233.34,
+      "end": 344.82000000000005,
+      "text": "these two things will not be considered if you standard two there are other things like 3 4 and 5 where you can go so let's try to go to node three so if I try to go to three it'll take me a distance of 3 which will make me a distance of 7 that will be considered so 7 comma 3 will be considered so you can put that into the set data structure right you can so once 3 is done we will go to the next node which is node four and how much will we take we'll take one which will make the distance is 5 so 5 comma 4 is now the shortest one it will go at the top I'll update the distance here which is the next node the next node is five it'll take a distance of 6 which will make it a 10 so 10 comma 5 is what goes into the set and we'll update n over here so I can say this iteration is over so we can just go and omit this portion of okay done now that's why you understand let's go on the set and get the smallest one which is 5 comma 4 distance of 5 which is the node four okay where can 4 go 4 can go to 2 if you carefully see in the graph which will take it a distance of one which will make it a six which is not to be considered but from 4 you can go to 5 which is going to take 3 plus 3 is what it will take to go to 5 which will make it 8 and this is where you see previously Pi was reachable at 10 not in infinite if it would have been infinite please hear my words properly if it would have been infinite it means no one reached it ever but since it is 10 it means someone reached and someone reached 10 previously please hear me out properly at five we do not have an",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "PATgNiuTP20",
+      "position": 158,
+      "title": "G-33. Dijkstra's Algorithm - Using Set - Part 2",
+      "url": "https://www.youtube.com/watch?v=PATgNiuTP20",
+      "start": 339.66,
+      "end": 455.46,
+      "text": "properly at five we do not have an infinite we have a 10. had it been Infinity it means the first time someone is reaching 5 but since it is 10 it means someone has reached five which took him a distance of 10 so I'm sure there would be a 10 comma 5 in the set I'm sure there would be a ten comma five in the set because someone reached 5 at a distance of 10. I'm sure right so if I'm sure I'm getting a better one and I'm putting that into the set data structure something like an 8 comma 5 will go here like if I go and erase this portion something like an eight comma 5 will go here now if an eight comma five goes is there a point in keeping 10 comma five no this is where you say I know the set will have a 10 comma five set please erase it Priority queue cannot erase that you will do the iteration but set will say I have a liberty I can do this erase operation I'll go and erase it the moment I see there's a better alternative I'll definitely put in eight comma five but before putting in I'll say there's no need of 10 comma 5 I can reach 5 in a much much better distance and if I can reach 5 in a much much better distance why don't I use that better distance why will I end up using 10 I don't need extra iterations I don't want I don't want in the future that uh this happens like instrument I don't know in the future that I in The Next Step probably I'll get eight and I'll do for five and then again I'll take five and do with ten that won't be of any use because if a was taken prior to 10 it would have given me the shortest distance there's no point in taking 10 this is why I'll use set I'll use set to erase very",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "PATgNiuTP20",
+      "position": 158,
+      "title": "G-33. Dijkstra's Algorithm - Using Set - Part 2",
+      "url": "https://www.youtube.com/watch?v=PATgNiuTP20",
+      "start": 449.039,
+      "end": 580.6800000000001,
+      "text": "use set I'll use set to erase very important I'll use to it is already existing paths already existing paths does it uh improve the time complexity very very minorly not much very very like depends on the graphs but it's better that you use set because even set will go as uh even if you do an erase set dot erase is a logarithmic operation so now can I see that if I use set it will be a better complexity than practical no right because set.in is ends up taking a logarithmic time so you are probably saving up on iterations in the future which might not be but you are erasing it so it is takes login so you are investing a login and in the future you are saving some iteration so depending on the size of the graph a lot of things will depend so you cannot express at least tell me that set is better than practical or practical is better than set both of them can be used because it'll be hardly a minor difference this is how you tell to the interviewer that these are the cases where I can use these are the cases I cannot use if you tell the interview with such concept Clarity that you know like almost every bits and pieces you will be impressed and telling you learn from take you forward uh cool uh I hope you have understood the algorithmic implementation now it's time to code it up I'll be coding the C plus plus on the right and the exact similar Java code is on the left so we are given uh the vertex uh the adjacency list and the source so set of pair go and declare a set of pair because it's going to store set of pairs and please make sure you declare a distance array of b v comma and infinity which is 189 in our case perfect initial configuration set always stores what zero commas yes and distance of s equal to 0. same thing while just keep",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "PATgNiuTP20",
+      "position": 158,
+      "title": "G-33. Dijkstra's Algorithm - Using Set - Part 2",
+      "url": "https://www.youtube.com/watch?v=PATgNiuTP20",
+      "start": 574.2,
+      "end": 707.16,
+      "text": "s equal to 0. same thing while just keep on hydrating in the set it's exact similar yes it's the exact similar to this thing and now you say Auto ID and just point like if you do an eye Tweeter this iterator points to the beginner set and if you do a star you get the value at that address so St dot begin will be an iterator pointing to the address where the sets first element is and the star will give you the value so I can say the node is nothing but ID dot second and I can say the distance is ID not first cool another thing I can say now you need to remove it from the set as well that's the thing please make sure you just call the remove function that's it is after this you go across and travel in the set simple same thing that you did in Practical and you say okay this is my adjacency you know ID of 0 because it's a list that is given to you right and what do you do for Edge weight very simple you say Edge weight will be nothing but idea one simple next you say okay currently I've taken distance to reach this node I'll take another Edge weight to reach adjacent node if this is smaller than adjacent node that means I can update it but before that tweet we need to release if it existed which means if distance of adjacent node is not equal to one E9 it means someone reached someone reached and if someone reached can I go across and probably say set dot it is what that someone would have taken distance of adjacency no an adjacency note in the set erase once you've released you just go ahead and says the new distance is this I care about this now and the same thing I can go and tell to the set this is the new distance please insert that into yourself cooler and adjacency no once you've done this the",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "PATgNiuTP20",
+      "position": 158,
+      "title": "G-33. Dijkstra's Algorithm - Using Set - Part 2",
+      "url": "https://www.youtube.com/watch?v=PATgNiuTP20",
+      "start": 702.18,
+      "end": 748.82,
+      "text": "adjacency no once you've done this the same thing just go across and say return of distance so on submitting we see that all the test cases are running fine so so guys I hope you have understood this uh just in case your interviewer does ask you how do you have so much of clarity tell him that you read from uh striver and yeah just in case you understood everything please please please make sure you like this video and if you're new to our Channel what are you waiting for hit that subscribe button right away and if you haven't checked out our DP series and the SGC the links are in the description make sure you check them out with this I'll be wrapping up this video let's put in some other video till then bye bye take care whenever your heart is broken don't ever forget you're golden I",
+      "word_count": 154
+    }
+  ]
+}

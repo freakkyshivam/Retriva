@@ -1,0 +1,141 @@
+{
+  "video_id": "R6uoSjZ2imo",
+  "position": 179,
+  "title": "G-54. Strongly Connected Components - Kosaraju's Algorithm",
+  "url": "https://www.youtube.com/watch?v=R6uoSjZ2imo",
+  "chunk_count": 12,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "R6uoSjZ2imo",
+      "position": 179,
+      "title": "G-54. Strongly Connected Components - Kosaraju's Algorithm",
+      "url": "https://www.youtube.com/watch?v=R6uoSjZ2imo",
+      "start": 3.06,
+      "end": 127.079,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well so in this video we're going to learn how to find strongly connected components generically known as SCC and the algorithm that we will be using is the kosaraju's algorithm if you go in an interview there can be two kind of questions figure out the number of sccs okay or print the SCC so these can be the couple of questions right so I'll be giving you the entire logic behind this particular algorithm after you know the logic you can solve both the questions quite easily now something to remember strongly connected components are only valid for directed crafts please keep that in mind strongly connected components are only valid for directed graphs so you see this is a directed graph now what I'll do is I'll try to Mark the strongly connected components and then I'll explain you the definition so this yellow box is a strongly connected component like this is a strongly connected component why do I say that I'm going to explain you that I can the 3 is a strongly connected component in itself again why do I say that please wait I can say this is another strongly connected component I can say 7 in itself is another strongly connected component now let's understand so if I take this portion if I take this portion you will see any pair of vertices any pair of vertex you can take 0 1 so if you take 0 and 1 you can go from 0 to 1 and you can go from 1 to 0 as well so you can go both the ways if you take 0 2 you can go from 0 to 2 and you can go from two to zero so if you take one two you can go from one to two and you can go from to uh two to one as well so in this component every pair of vertex is reachable to each other but if I would",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "R6uoSjZ2imo",
+      "position": 179,
+      "title": "G-54. Strongly Connected Components - Kosaraju's Algorithm",
+      "url": "https://www.youtube.com/watch?v=R6uoSjZ2imo",
+      "start": 121.38,
+      "end": 243.239,
+      "text": "reachable to each other but if I would have taken this if I would have taken this and I would have taken the pair two and three you see two is reachable to 3 but 3 is not reachable to two that is why P was not involved that is why this is the first SCC remember this so I can say 0 1 2 is the first strongly connected component you can write them in any order doesn't matter now three is an individual SCC why because if you're gonna take this you can reach from three to four but not the alternate way so 3 is uh SCC with a single node so three is an SCC perfect now if you see this again is an SCC why take any two pair of Vertex 4 6 you can reach from four to six you can reach from six to four take five six you can reach from five to six you can reach from six to five take four five you can reach from four to five and five to four so every pair can be reached from each other so thereby this is one more similarly seven is an individual one so I can write four five six again you can write six five four five six four whatever order you wish to so I can say there are in total four strongly connected component so in an interview someone might ask you how many which is four as one might ask you print all the strongly connected components separately dot it doesn't matter you can print them in any order so that is what the question is you have to find the number of strongly connected component or print them so the algorithm that I will be using is the COS raju's algorithm but before understanding the algorithm let's understand the thought process or the intuition behind this algorithm because once you understand the thought process or the intuition like the algorithm is a very straightforward one so this is a",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "R6uoSjZ2imo",
+      "position": 179,
+      "title": "G-54. Strongly Connected Components - Kosaraju's Algorithm",
+      "url": "https://www.youtube.com/watch?v=R6uoSjZ2imo",
+      "start": 238.62,
+      "end": 365.34000000000003,
+      "text": "very straightforward one so this is a strongly connected comp this is a strongly connected component this is one and this is one now if I say let's start DFS from zero then you know how DFS Works it'll go to one it will go to two it will go to three it will go to four now it might go to seven or five let's go to five then it will go to six and then it will go to seven so ideally if you start from 0 it will end up visiting all the notes so can you differentiate between the strongly connected components no we cannot this is where a simple just observation comes into picture now I say this is strongly connected component one I say this is strongly connected component too and I say this is strongly connected component 3 and I said this is strongly connected component four basically this is this this is this this is this and this one is this right so can I see can I say this can go to the strongly connected component to it can I say strongly connected component 2 can go into component three I can can I say component 3 can also go to component four and this is the only reason when you started with 0 in the SCC one you ended up visiting everyone that was the only reason why because if you're going here this in itself will visit everyone then in this in itself will visit everyone right but over here if I say hey wait what if I say hey let's just quickly do a bit of change take this take this take this and reverse reverse these edges reverse these edges now can I say if I reverse these edges I reverse these as edges which will be like if I just try to just omit this just to give you a thought process so what I'll do is I'll try to reverse these edges remember this this was connected via this portion as well so",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "R6uoSjZ2imo",
+      "position": 179,
+      "title": "G-54. Strongly Connected Components - Kosaraju's Algorithm",
+      "url": "https://www.youtube.com/watch?v=R6uoSjZ2imo",
+      "start": 361.86,
+      "end": 485.34,
+      "text": "connected via this portion as well so I'll just take it off so I have as of now this kind of disconnected the strongly connected components how I'll come to that afterwards so what I'll do is I'll reverse this imagine I've reverse everyone if I reversed now just imagine if I started DFS from zero will I just visit the SCC one like I'll go to zero I'll go to one and then I'll go to two that's it I will not go to three because the edge is reversed similarly if I start from three I'll just end up at 3. if I start from 4 I'll go to Five I'll go to six right and similarly if I start from Seven this is where I will be so can I somehow say that hey if I'm starting the DFS from the first guy like right from the first cat and if these edges are reversed they will never go to the adjacent sccs like the secs which they are directed into they will never go can I see this I can now here comes a point if I do not know the SCC how do I reverse the edges fine reverse all the edges reverse all the edges you don't know about SCC can you reverse the entire graph I'll be like let me think I think I can I think I can if you reverse the entire graph will that make sense let's see they'll just reverse one component and let you think so if I reverse this entire graph will that make sense to the SCC the SEC doesn't bothers because scissors every pair of vertex is reachable in both the ways say even if you reverse I am still gonna visit everyone I'm still gonna go go I'm still gonna go so the SCC the internal SCC doesn't bothers if it reverse the edges because the definition of SCC is if you start from one you can reach everyone that's the definition of SCC if you're still reversing the edges still gonna reach",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "R6uoSjZ2imo",
+      "position": 179,
+      "title": "G-54. Strongly Connected Components - Kosaraju's Algorithm",
+      "url": "https://www.youtube.com/watch?v=R6uoSjZ2imo",
+      "start": 479.099,
+      "end": 613.14,
+      "text": "reversing the edges still gonna reach that's why reversal of edges will stop you to go to the next SCC but wait now you might say Trevor I still have a question and the question will be how do I know that I've just start from zero what if 0 was in this component you might think struggle what if Theta was in this component then I would have ended up visiting all the secs this is where something like uh starting time and finishing time will come in okay so I hope you have got the kind of intuition I'll teach you about the starting time and the finishing time everything but I want you to have the intuition Crystal here the intuition behind kind of reversing the edges stopping it to go is what now thought processes like I'll try to reverse the edges so that the DFS happens in individual strongly connected components that is what the intuition is okay now let's go to the algorithm and see how does it work so you know the thought process the thought process is kind of stopping one guy to go into the other SCC right that is the thought processarily algorithm States a the first point is pretty simple sort all the edges sort all the edges according to finishing time that is the first thing we will do okay second thing it states reverse the graph reverse the graph and the last point is do a DFS so let's perform the steps one by one and you'll understand sort all the edges according to finishing time so let's start the DFS from this zero so if I start the DFS from 0 if you like DFS of 0 right it has the DFS has not finished yet it will go to DFS of one not finished yet it will go to DFS off to not finished yet it will go to DFS of three not finished yet it'll go to DFS of code right this is where it is now from 4 it",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "R6uoSjZ2imo",
+      "position": 179,
+      "title": "G-54. Strongly Connected Components - Kosaraju's Algorithm",
+      "url": "https://www.youtube.com/watch?v=R6uoSjZ2imo",
+      "start": 608.16,
+      "end": 720.6,
+      "text": "right this is where it is now from 4 it can go to five or seven let's go to seven to have a better understanding now it goes to seven point a notice when you go to seven seven doesn't have anywhere to go it's finished seven is kind of finished it's a little backtrack seven is finished maybe you can store it somewhere seven is the first guy to that means he is in the last portion of the SCC is in the last portion of the SCC if you remember we had a CC1 scc2 is in the last portion that is why he finished first got it now let's go back so seven is finished you will come back to four now four will go to Five let's go to five and then 5 will go to 6. I'll say six cannot go to anywhere if you see six cannot go to anywhere so six is also finished so six is also finished I will backtrack five is finished I'll backtrack he'll say four is finished I'll backtrack the answer three is finished I will backtrack you'll say two is finished it'll backtrack he'll say one is finished your backtrack you'll see Zero is finished so what I've done is I've stored every one in the order of finishing time and maybe you can put them into some stack or something so everything this is the top guy remember this is the top guy the guy who finished at the last the guy who finished at the last and this is the first guy to finish a seven so I've done the defense simple enough done the leaves so first step I can say is done what is the next step reverse the graph so let's quickly reverse the graph and see how does it look so the second step is also done I have reversed the graph it's very simple while I code it I'll show it how to do it so the entire graph has been reversed now it says do a DFS",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "R6uoSjZ2imo",
+      "position": 179,
+      "title": "G-54. Strongly Connected Components - Kosaraju's Algorithm",
+      "url": "https://www.youtube.com/watch?v=R6uoSjZ2imo",
+      "start": 717.24,
+      "end": 847.9200000000001,
+      "text": "DFS and do the DFS if you remember the intuition what is the intuition SCC one reversed with a cc2 so you do the DFS of this guy and who will be this guy remember initially it was like SCC one going to scc2 going to SCC pre and so on so you will do the guys who went to DFS like this like this like this the guy who will be finishing at the last which is this guy zero do you know the first SCC one will be having zero you just take out zero that's why sorting them in order of finishing time was so important because if you sort them you know the first SCC one then you can go to scc2 so you know the guys with first test who are in the first SEC one so what I'll do is I will just go across and take out the first guy okay and now let's start the DFS of zero when you start the defense of zero visit it will go to DFS of two visit it will go to DFS of one visit but will it go to 3 no because the edge has been reversed so I will say done 0 to 1 done separately the DFS is done for this particular SCC as done in the order 0 to 1 you can store them if you wish to perfect next is one will you do for one it's already visited no will you do for two it's already visited next is three when you take three tree says hey I can go to two but two says I'm already visited just three just three so another sec with three perfect what's the next four so that is for let's start with four so if we start with four what will happen four goes to six so four is visited six is with six goes to five five is visited so four six five and the DFS is completed next four is visited five is visited takes is visited",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "R6uoSjZ2imo",
+      "position": 179,
+      "title": "G-54. Strongly Connected Components - Kosaraju's Algorithm",
+      "url": "https://www.youtube.com/watch?v=R6uoSjZ2imo",
+      "start": 842.82,
+      "end": 963.5999999999999,
+      "text": "visited five is visited takes is visited what is next seven so when I take out seven I'll go and Mark as seven as visited seven says can I go to four it says I'm visiting so done with seven seven is another SCC so apparently can I see we have done the DFS scores and the DFS calls were just called for zero were called for three were called for four and were called for seven out of all the nodes the DFS call was called for nudes so if the DFS call was called for four notes can I say there was a CC1 scc2 SCC 3 and scc4 that is why the DFS call was called for four notes isn't it icons have done the third I've got all the notes and the four times is what the number of SEC are so I hope you have got the intuition the third process and the algorithm just walking through the intuition again SCC one went to scc2 scc2 to scc3 324 because definitely there will be some SEC which goes to someone else then someone else and someone else that is for sure so if you know this we just need to figure out this like we will reverse the edge but before this we need to figure out the nodes which lie on the sec1 that is why this step and just to stop going into the next SEC reverse the graph step and to find out all the notes you take one node out of this and do a DFS all the three steps intuition are clear the algorithm is clear now we will go to code this up so over here the question States find the number of SCC in the graph now the graph is a zero based indexing graph and we're given the number of vertices and the adjacency list so what I'll do is I'll go across and code this up as usual you'll find the C Plus Solution on the right and you can figure out the exact similar Java",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "R6uoSjZ2imo",
+      "position": 179,
+      "title": "G-54. Strongly Connected Components - Kosaraju's Algorithm",
+      "url": "https://www.youtube.com/watch?v=R6uoSjZ2imo",
+      "start": 959.459,
+      "end": 1082.8799999999999,
+      "text": "can figure out the exact similar Java code on the left so we're given uh the V and we're given the adjacency list what was the step one so sort all the notes according to the finish time so we will require a visitor array for sure because we have to do a DFS so it'll be like B comma 0. now let's quickly do the DFS for all the notes so that we can have everything in terms of finishing time so if not visited of I then you can go across and say DFS of I then we can pass on the visitor then we can pass on the adjacency list and we can pass on the stack why stack because we need to store all the notes according to their finishing time right let's quickly now write the DFS so it will take a node and then it will take a visited guys so let's take a visited guy then it'll take an adjacency list simply take an adjacency list and then it will take a stack as well and make sure everything is passed by reference okay once this is done what is your next step the next step is just make sure everything is marked as visited whenever you reach the this one and whenever the DFS is over please make sure you store the no done and in the meanwhile can we do the Davis Travis we can so the defense traversal is very simple if like till now I think you know how to do the defense traverses if this is the case I say hey DFS of i t Davis of visited a hoe I.T visited adjacency list understand so this is how you can easily do the step one which will store all the nodes in order of finishing type what is the step two transpose the graph the graph has to be reversed so maybe I'll require one more adjacency list to store the Reversed graph so you can take a transpose adjacency list now let's go across",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "R6uoSjZ2imo",
+      "position": 179,
+      "title": "G-54. Strongly Connected Components - Kosaraju's Algorithm",
+      "url": "https://www.youtube.com/watch?v=R6uoSjZ2imo",
+      "start": 1077.84,
+      "end": 1193.5800000000002,
+      "text": "adjacency list now let's go across to this one because that was a step to reverse the graph so all the notes are there and let's Traverse for all that decent notes of this particular node now can I see this means I the adjacent node is ID that means there is an edge between I and I T from I and I T there is an H from I to i t there is an H can I see this and I need to reverse it which means from i t to I The Edge should be there after reversing the edge should be from i t to Y so I'll say adjacence of transpose i t is adjacent is I know so this is how you'll reverse the graph step two done step three perform the DFS again but on order of finishing time so I know the finishing time is stored in the stack right that is something which I know the finishing like the notes are stored in the stack in order of finishing time so I'll get the first node I'll also stack the top and I'll say standard pop so I got the first one now I need a visited array because I'm going to perform a DFS again we can reuse the same one so what I'll do is I'll just make sure everything is marked as unvisited again so that I can reuse the same thing so I'll be like hey if not visited node can you again call the DFS for this particular node ah with a visited and this time with the adjacency transpose this is what I will now I need to compute the number of sccs so can I say SCC will be something like over here I can do an SCC because a number of times I call that's the number of SEC but I need to write the DFS maybe DFS this is the third step I can write it as three and I can write something as private",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "R6uoSjZ2imo",
+      "position": 179,
+      "title": "G-54. Strongly Connected Components - Kosaraju's Algorithm",
+      "url": "https://www.youtube.com/watch?v=R6uoSjZ2imo",
+      "start": 1189.2,
+      "end": 1309.0200000000002,
+      "text": "can write something as private okay I can write this as private and this was not written as private so make sure it's a private function and then I can go across and say void step tfs3 and I can say I have a node I will have a same Vector of int and a visited and I'll have a same Vector of paint and adjacent's transpose but this time and I can write the same thing again and I have the same thing I can because I'm doing the DFS call again but this time we will not have the full parameter and it will call the same dfs3 so this is how you can again go and visit the transpose graph once you've visited the transpose graph you have the sccs can I say you can return the sccs and that is how you can complete the step three I'll go across and compile this and see if we have compilation errors we have let's quickly fix this okay this is an and this will not be an and and adjacency was not declared yeah this will be a decency of T perfect I think we should fine okay we are fine now let's quickly submit this and see if it is accepted or not it is it looks like accepted let's talk about the time complexity first a DFS so you know a DFS ends up taking a Biko of V plus e that's the number of edges number of nodes plus number of edges is what this will take then transposing the graph again I can say V plus e same can I say again step three is again having a DFS so V plus C so three into the DFS complexity right and one other thing is very by the way this over here this DFS is being called throughout so V plus C we don't know V plus C go back and lose the DFS video I've explained why V plus C okay so what about the",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "R6uoSjZ2imo",
+      "position": 179,
+      "title": "G-54. Strongly Connected Components - Kosaraju's Algorithm",
+      "url": "https://www.youtube.com/watch?v=R6uoSjZ2imo",
+      "start": 1303.38,
+      "end": 1365.509,
+      "text": "why V plus C okay so what about the space using big of n we go of N and storing the entire graph here so this is going to again take for every V there is an edge so V plus C is the space and 2v is the space over here because one for visited and one for the stack so this is the space complexity and this time complexity for this particular algorithm so guys I hope I was able to explain you the intuition the algorithm the code just in case I was able to explain you everything please hit that like button and if you're new to our Channel please do consider subscribing because I was checking our statistics nearly 50 of the users who watch our videos do not subscribe to us so please please please it's an honest request do consider hitting that subscribe button you can check out our other playlist as well with this I'll be wrapping up this video let's put in some other video till then bye take care [Music]",
+      "word_count": 180
+    }
+  ]
+}

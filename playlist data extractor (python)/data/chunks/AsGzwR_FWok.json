@@ -1,0 +1,108 @@
+{
+  "video_id": "AsGzwR_FWok",
+  "position": 293,
+  "title": "L10. Minimum number of platforms required in a railway station",
+  "url": "https://www.youtube.com/watch?v=AsGzwR_FWok",
+  "chunk_count": 9,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "AsGzwR_FWok",
+      "position": 293,
+      "title": "L10. Minimum number of platforms required in a railway station",
+      "url": "https://www.youtube.com/watch?v=AsGzwR_FWok",
+      "start": 3.199,
+      "end": 128.759,
+      "text": "so let's continue with the greedy algorithms playlist and before starting off a welcome back to the channel I hope you guys are doing extremely well so the problem that we will be solving today is minimum number of platforms required for a railway station so what is the problem statement you're given n number of trains and for every train you have the arrival time and you also have the departure time like the first train arrives at 99 and it leaves at 9:20 so you know the arrival time and the departure time for each of the end trains now your task is to tell me what is the minimum number of platforms required such that each of these end trains can arrive and depart let's understand so when I'm at the first uh like when the first train arrives at 9 how many platforms do I need I just need one so can I say that at platform number one the train will arrive at 9 and it will leave at 9:20 okay let's check out the next train it arrives at 9:45 do I need a platform number two no I don't need because this scen will depart at 9:20 so this platform will be empty so what I can do is I can just say hey can you go and take the platform number one perfect let's check the next one out the next one is going to arrive at 9:55 so if it is arriving at 9:55 can it arrive at platform number one no it cannot because there is already a train from 9:45 to 12 on that platform so what I can do is maybe I can say hey can you go to the platform number two and it will go to 9:55 11:30 will go to the platform number two perfect and the next one is arriving at 11 so can it go to the platform number one no can it go to the platform number two no so it'll be going to the platform",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "AsGzwR_FWok",
+      "position": 293,
+      "title": "L10. Minimum number of platforms required in a railway station",
+      "url": "https://www.youtube.com/watch?v=AsGzwR_FWok",
+      "start": 122.52,
+      "end": 255.63899999999998,
+      "text": "two no so it'll be going to the platform number three so arriving at 11 and leaving at 11:50 perfect what about the next one 15 and 1900 arrives at 15 leaves at 1900 so when it arrives at 1500 can I say that all of the three platforms will be empty all of the three platforms will be empty I can send it to anyone so may I'll ask him to go to platform number one 1500 1900 the next one is arriving at 1,800 so will it go to platform number one no it cannot because the train will leave at 19900 so it will go to the platform number two at 1,800 and it will leave at 20 so if you look at the entire Journey like entire day of end trains what was the maximum number of platforms that you needed at Max if you have three plat platform you can have all the trains arriving and departing do you need four four will also work but that will be Overkill because what's the use of the fourth platform that is what the question is asking how many minimum number of platforms will be able to accommodate all the trains arriving and departing over here I can see three platforms will be enough because at the worst case there are three trains which are intersecting which are inter icting in terms of arrival time and in terms of departure time understood the problem statement so what will be the Brute Force like what is the Brute Force again I did say a word intersecting right because the arrival times and the departure times if you carefully notice this one this one and this one all of the three were intersecting at some point that is why you needed three platforms to accommodate these three trains so if I can figure out the maximum number of intersections I think that will be doable right so what I will do is I'll pick up this uh like the extreme knp solution I'll pick up the",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "AsGzwR_FWok",
+      "position": 293,
+      "title": "L10. Minimum number of platforms required in a railway station",
+      "url": "https://www.youtube.com/watch?v=AsGzwR_FWok",
+      "start": 250.92,
+      "end": 392.96000000000004,
+      "text": "extreme knp solution I'll pick up the train number one and I'll say is this train like intersecting with anyone else no no no no no so this scen will require at Max of one platform perfect let's take this one is this train intersecting with anyone else not with this one but with this one and with this one because if you see the time times are intersecting like 9:45 if you say is from here to 12 is here 955 will be somewhere here and 1130 will be somewhere here so this is definitely intersecting then there is 1100 which is 1100 and 1150 will be here so it is also intersecting so I can say this one is intersecting with this and this so thereby I need three platforms over here perfect this one is also intersecting with this one and this one this one is also intersecting with this one and this one this one is only intersecting with this one and this one is also intersecting with this one so what I can say is at Max the number of intersections that I did see was three that's it then Dust it so if I have to ask you about intersections imagine a train is arriving at this time and it's leaving at this time the dots are di how can it intersect with other trains one of the wayas is the other train that it is intersecting with is has arrived previously and it will depart after it the other case can be it has arrived previously and it will depart before this particular train departs or it will arrive later and it will depart in some other case or or it will arrive and depart somewhere between them so there are four cases that you'll have to consider arriving before departing later arriving before departing middle arriving middle departing later arriving middle and departing middle so I have to consider four cases when you are considering the case of intersection right so quite simple that's what we will have to do so",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "AsGzwR_FWok",
+      "position": 293,
+      "title": "L10. Minimum number of platforms required in a railway station",
+      "url": "https://www.youtube.com/watch?v=AsGzwR_FWok",
+      "start": 388.8,
+      "end": 511.56,
+      "text": "simple that's what we will have to do so what I can do is I can write down the function for The Brute Force I'll be given the arrival time I'll be given the departure time right what do I need to do I just need to find out the maximum intersection at any point so maybe I can keep a Max count equal to zero and I can start from the first platform super simple I'll go until the last and I'll start checking how many intersections does it have for the train itself it will require a platform so I can keep the count as one I'll start comparing j = i + 1 can go up till n minus one perfect and I'll have an intersection check so you can write this check by yourself quite simple I leave that to you count Plus+ if it is intersecting you'll do a count Plus+ and whenever there is a count Plus+ or maybe after this you can do a Max count equal to Max of Max count comma count that's it and you can end this for Loop you can end this fall Loop and at the end of the day what you can do is you can end up returning the max count and that will be the maximum rather the minimum number of platforms required to accommodate all the end trains now this condition uh when you compare you're comparing between arrival of I departure of I with arrival of J and departure of G I've already told you four conditions you have to write down all the four conditions again this is a Brute Force you can definitely optimize slightly here and there but this is going to be the extreme na solu that comes to my brain and if I implement this what will be the DI complexity a beo ofen a beo near about B ofen so can I say that the time complexity will be somewhere around B of n Square I definitely can and can I say that the",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "AsGzwR_FWok",
+      "position": 293,
+      "title": "L10. Minimum number of platforms required in a railway station",
+      "url": "https://www.youtube.com/watch?v=AsGzwR_FWok",
+      "start": 507.8,
+      "end": 648.4799999999999,
+      "text": "definitely can and can I say that the space complexity will be somewhere around B of one because not using any external space and obviously the interview will not be happy with this n Square because it is quadratic in nature and this is where we ask you to optimize so we need to optimize n Square this is a clear indication that the algorithm that we are looking for will be somewhere around n login or a B Golf N okay so how do I optimize this now in the real world what I'll do is I'll go outside the raway station and I'll start observing as the time passes by so I see that the train number one arrives at 9:00 this is the first time that you see something happening so the train number one will arrive and it will take the platform number one or whatever platform number you can assign it as the clock takes by as the clock takes by what is the next time that you see 9:20 at 920 again something is happening and that is the train number one leaving train number one leaving okay done understood platform is empty what is the next time 9:45 is when the train number two arrives so I can say that at 920 9:45 train number two arrives what is the next time as your clock passes by 9:55 the train number three arrives as the clock passes by 11:00 the train number four arrives as the as the clock passes by what is the next 11:30 11:30 not 12 11:30 okay that's stream number three it goes off as the clock passes by 11:50 the train number four goes off as the clock passes by 1200 train number two goes off as the clock passes by 1500 which is train number five arriving as the clock passes by 1800 which is train number six arriving as the clock passes by 1900 is the train number five leaving as the clock passes by 2000 is the train number six leaving throughout the",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "AsGzwR_FWok",
+      "position": 293,
+      "title": "L10. Minimum number of platforms required in a railway station",
+      "url": "https://www.youtube.com/watch?v=AsGzwR_FWok",
+      "start": 642.92,
+      "end": 781.36,
+      "text": "number six leaving throughout the journey you did see that at Max you required three platforms you did observe that three platforms were used at Max perfect so what am I doing I'm standing and observe as the time passes by as the time passes by so can I sort everything according to time because then it will be easy so if I sort everything according to Time what will happen is I'll get something like 9:00 first arrival 9:20 first departure 9:45 arrival 9:55 another arrival 1100 another arrival after that 11:30 departure after that 11:50 a departure and I can keep on going I can combine these arrays and sort them according to the time because as the day passes by and what I can do is I can keep a account variable initially at zero because when I arrived at the railway station the count was zero and this is the first train it arrives at 9 so I say okay it's going to take up one it's going to take up one because it's arriving after that I go to the next time when something happens that's that's a departure happening which means okay one platform released after that I go to the next 9:45 an arrival happening count one 955 another arrival happening count two 1100 another arrival happening count three 11:30 departure happening count two 1150 departure happening count one and you can keep on going eventually throughout the journey the max count that you'll figure out is three and that is the minimum number of platforms that you will require got it I'm doing everything as for time I can follow this which is typically combining the arrival comb combining the departure and putting them into third array but this will require an extra space complexity can I do it on the same array probably yes because what I require is a Time sorted by because I'm doing everything on time as the day passes by can I sort everything according to time because I don't I'm not concerned about arrival and",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "AsGzwR_FWok",
+      "position": 293,
+      "title": "L10. Minimum number of platforms required in a railway station",
+      "url": "https://www.youtube.com/watch?v=AsGzwR_FWok",
+      "start": 775.639,
+      "end": 921.92,
+      "text": "not concerned about arrival and departures staying together because as the day passes by I'm keeping a account so what I will do is I'll sort the arrival time separately and if you see that this array is already sorted so it's already sorted I'll sort the departure time independently it is not sorted so let's quickly sort the departure time as well so what I've done is I've sorted the arrival time and the departure time so both of them are sorted now what I will try to do is I'll keep a pointer at the arrival I'll keep a pointer at the departure and when I start off I know the number of platforms as of now is zero I'm starting to observe what I am starting to observe is 9:00 is going to happen first as the day passes by so 9:00 happens and I go to the next 9:45 or 920 920 is going to happen which is a departure so count decreases and I go to 1130 9:45 or 11:30 9:45 that's a count of one and I go to the next 955 or 1130 955 that's a count of two I go to 11 11 or 11:30 11 that's a count of three 1500 or 1130 1130 count decreases goes to 1150 50 00 or 1150 1150 count decreases 1500 or 1200 1200 count decreases 1500 or 1900 1500 count increases goes to 1800 1800 or 1900 1800 goes off the arrival is done if all the trains have arrived there's no more trains going to arrive so no more platforms will be used so at Max throughout the journey you again saw that at Max I used three platforms that's what you'll have to return super simple can I super quickly code this up as the day goes by right so function what do you need an arrival time a departure time perfect what are we doing we sorting them let's quickly sort them up so arrival comma you can sort arrival again depending on the language you can write your",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "AsGzwR_FWok",
+      "position": 293,
+      "title": "L10. Minimum number of platforms required in a railway station",
+      "url": "https://www.youtube.com/watch?v=AsGzwR_FWok",
+      "start": 919.56,
+      "end": 1057.32,
+      "text": "write your sorting sorted both of them let's keep a i for the arrival let's keep a g for the departure and I know uh the arrival will always be exhausted at first so we can simply do I lesser than n perfect what after this okay I know one thing I need I need to keep a count that's zero I also need to keep a Max count throughout the journey so max count will be zero perfect I need to figure out and the DAT uh passes by which is happening first so if someone someone is arriving first so that's departure of J what I can do is I can do account Plus+ perfect at the same time when this arrival is done I go to the next event which is I + 1 but if someone is departing I'll do count equal to count minus one and I'll say J equal to J + 1 it's a simple two pointer concept done what after this after this I simply say okay what's the max ma count Max count is going to be Max of Max count comma count and I can say the while loop is done and I can straight away return the max okay done and dusted complexity time n login n login so that's a two n login and that's a b of is it a b no it's a why because at the end of the day you're traving throughout this array as well and throughout this array as well because sometime I + one is happening sometimes G+ one is so overall I can say this is taking B go of two n because you're traveling in two arrays sometimes in the first some types of the second and this is 2 N log so overall time complexity can be set as 2 into n log n plus a big of N and the space complexity will be big of one I'm distorting the given array but if in an interview the interviewer is asking you not to distort",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "AsGzwR_FWok",
+      "position": 293,
+      "title": "L10. Minimum number of platforms required in a railway station",
+      "url": "https://www.youtube.com/watch?v=AsGzwR_FWok",
+      "start": 1053.559,
+      "end": 1089.799,
+      "text": "interviewer is asking you not to distort a given array and follow the other approach where you take a third array put everything and then so can follow that as well time complexity and space complexity will pretty similar so yeah this will be it for this one I hope you've understood it so if you're still now watching and if youve understood the entire intuition please please do consider giving us a like and if you're new to our channel do consider subscribing to us as well with this I'll be wrapping up this video Let's Wait in some other videoen golden",
+      "word_count": 103
+    }
+  ]
+}

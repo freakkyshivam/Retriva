@@ -1,0 +1,86 @@
+{
+  "video_id": "xwjS0iZhw4I",
+  "position": 298,
+  "title": "L2. Check for Balanced Parentheses | Stack and Queue",
+  "url": "https://www.youtube.com/watch?v=xwjS0iZhw4I",
+  "chunk_count": 7,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "xwjS0iZhw4I",
+      "position": 298,
+      "title": "L2. Check for Balanced Parentheses | Stack and Queue",
+      "url": "https://www.youtube.com/watch?v=xwjS0iZhw4I",
+      "start": 3.32,
+      "end": 128.479,
+      "text": "so we will be continuing with our stack and Q playlist we starting off hey we welcome back to the channel I hope you guys are doing extremely well so the problem that we will be solving today is balanced parenthesis so what is the problem statement is stating that you will be given a string and it will only be containing characters like the brackets now these are the possible brackets that it might contain now your task is to check if the given string is a balanced parenthesis string or not what are the conditions it should follow to be called a balanced parenthesis string first one is every opening bracket should have a same closing bracket got it every closing bracket should have a same opening bracket the other examples will be this and this one got it and the third one is it should follow the order as well let's understand the three conditions so if I look at this particular example let's check if this is balanced or not now first I'm I'm seeing an opening bracket and after that I'm seeing a closing bracket so they're following the order and they're of the same type so opening and then closing perfect after that there is an opening after that there is an opening after that there is a closing so for this closing for this closing I have a corresponding opening right before it so they're following the order as well and they're of the same type as well perfect after this I have this one and then there is a closing so for this closing I have a corresponding opening so they are following the order got it so they have followed the order and they have also followed the order now I have a closing for this I have a opening as well so they are also following the order so every bracket has a similar kind of bracket that is closing itself and they're following the order as well so this can be called as a",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "xwjS0iZhw4I",
+      "position": 298,
+      "title": "L2. Check for Balanced Parentheses | Stack and Queue",
+      "url": "https://www.youtube.com/watch?v=xwjS0iZhw4I",
+      "start": 122.28,
+      "end": 260.639,
+      "text": "order as well so this can be called as a balanced parenthesis got it whereas if I look at this particular example this is an opening this is a closing so they are following the Order Perfect this is a opening this is a opening this is a closing so they are following the order after that this is a opening but this is a closing and this is not following the order they are not following the order thereby this is not a balanced parenthesis let's look at other examples so if I take an example like this now this is also not a balanced parenthesis why now they are following the order for this opening there is a closing but for this opening there is no closing thereby I said for every opening there must be a closing and vice versa if I take a string like this this is also not balanced because for every closing there is not an opening got it and this describes the order so these are the three conditions that you have to keep in mind if calling someone as a balanced parenthesis if you carefully look what do we need to solve now there are two things whenever I'm getting a closing bracket I'm checking out if the last opening that I saw the last opening that I saw is a my type is of my type that's what I'm checking right so what am I looking for I'm looking for last opening encountered that's it whenever I encounter an closing bracket I look for the last opening that I encountered correct okay so it kind of gives me an idea I'm looking for the last opening encountered so I just need to preserve the opening brackets that is the first thing that should come to my mind that I will be preserving all the opening brackets and the other thing is I should be able to see the last one so which data structure yes stack because that is going to tell me the last one",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "xwjS0iZhw4I",
+      "position": 298,
+      "title": "L2. Check for Balanced Parentheses | Stack and Queue",
+      "url": "https://www.youtube.com/watch?v=xwjS0iZhw4I",
+      "start": 256.32,
+      "end": 375.039,
+      "text": "that is going to tell me the last one because it follows a last in first out mechanism if you keep something in the data structure and you want to check out which one was the last thing that you kept that's where stack comes in got it so what I will be doing is I'll be doing a dryon using the stack data structure so let's take the stack data structure so this is my stack data structure now at the opening bracket we need to preserve the openings so I'll just preserve this opening after this I'll go to the next one now this is a closing bracket whenever you get a closing bracket you take out the top element from the stack you take out the top element from the stack and you compare with the current closing are they of the similar types you say yes and you're fine you can move ahead again you get an opening you have to preserve them so you preserve it in your stack you preserve it in your stack after that you get another opening again you preserve it in your stack after that you again get a closing this time when you getting a closing what you will do is you will head over and get the last opening that you had and you see that they're matching fine after that you get again an opening so you take it after that you get a closing so you take that closing and you head over to the stack you take out from it and you see that they are matching and if they're matching it's fine after that you get to the last one it's a closing bracket and if it is a closing one again you go to the stack and you see hey stack what is the last one he says this one oh you're matching perfect and after that the iteration is over and you see that the stack is empty what does it mean for every opening for every opening that I",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "xwjS0iZhw4I",
+      "position": 298,
+      "title": "L2. Check for Balanced Parentheses | Stack and Queue",
+      "url": "https://www.youtube.com/watch?v=xwjS0iZhw4I",
+      "start": 369.199,
+      "end": 481.919,
+      "text": "every opening for every opening that I preserved I got a corresponding closing so thereby I can say that this particular string is a Balan string got it perfect now what I will do is I'll now do the same iteration over the second string to understand how do we figure out that it is unbalanced again we can start from here maybe I can I can take a stack so that we understand it in a much better way perfect I've taken a stack first one is an opening one so I preserve it after that I go to the next one now this is a closing bracket so whenever it's a closing bracket I get the top of the stack I get the top of the stack and I see that they're matching I see that they're matching so it's fine again I go to this one it's an opening so I'll take it off after that again it's an opening so I'll take it off this time it's a closing whenever it's a closing I go back to the stack and I take out the closing and I match and it's a match again it's it's a opening so I take it off next time it's a closing so you go to the stack and say which is the last scene so it gives you this one and you say it's a m match and if it is a mess match you're done and dusted yes you're done and dusted so so it's very important to preserve the opening one to figure out which was the last one because every opening should have a corresponding closing and in the same order and the same order that is very very important understood uh some other cases if you want to do a super quick dry run some other cases would be let's say you take a string which is opening opening and closing and then I take a stack first one I have opening so you can put that in then I again have",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "xwjS0iZhw4I",
+      "position": 298,
+      "title": "L2. Check for Balanced Parentheses | Stack and Queue",
+      "url": "https://www.youtube.com/watch?v=xwjS0iZhw4I",
+      "start": 478.28,
+      "end": 611.3599999999999,
+      "text": "can put that in then I again have opening so you can put that in then again I have a closing so for this closing you'll get this one which is typically matching and after that the iteration is over but the stack still has an opening bracket which means every opening did not get a closing got it same might happen for something like this where you're just closing in that scenario whenever you have a stack and you encounter a closing bracket the stack will be M that means you don't have a corresponding opening for the closing so this is also unbalanced got it so time to write down the pseudo code again super simple we're going to write the function just going to return a bullion stating true or false if it is balanced or unbalanced respectively so I'll be getting a string first thing we need a stack so maybe I'll be defining a stack so we stack s again depending on the programming language you're using you can Define the stack stack will be storing characters so maybe I can iterate over the string so assuming the String's length is n we can iterate till n minus one at index we know one thing if it is an opening bracket and the opening bracket will only be S of I equal to equal to this or S of I equal to equal to this or S of I equal to equal to this so that's the case you ask the stack hey stack can you store this one and the stack is going to store it perfect now the logic comes up whenever it's a closing bracket if it's a closing bracket at at any moment the stack is empty that means it doesn't have a corresponding it doesn't have a corresponding opening bracket for itself so you can just break out and return false otherwise what we will be doing is inside the else we'll be like okay the stack has something maybe I can just get",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "xwjS0iZhw4I",
+      "position": 298,
+      "title": "L2. Check for Balanced Parentheses | Stack and Queue",
+      "url": "https://www.youtube.com/watch?v=xwjS0iZhw4I",
+      "start": 605.8,
+      "end": 728.36,
+      "text": "stack has something maybe I can just get out that element we can say character CH equal to St do top so you get the top and then you can pop it out because this will be required for comparison we know one thing it has to meet three conditions if s of I is equal to equal to the my bad it's a closing one so if this this is the closing one then the character that I got from the stack has to be the corresponding opening one has to be the corresponding opening one perfect so either this condition should be met or or I should be like s of I is equal to equal to if it is this particular closing then the character should be this particular opening or or for the third bracket if it is not matching if it is not matching in that scenario you go to the this particular if else and you return a false if this particular if is matching well and good otherwise you return of false and the fall Loop ends and at the end of the day you say return stack. empty if the stack is empty that means everything is matched but the stack still has some opening brackets that means it didn't find it corresponding closing brackets that's it that will be it if I have to discuss the time complexity what will that be I'm just iterating over so that's a beo of N and what about the space complexity I'm using the stack data structure at the worst case if everything is an opening bracket I'm going to store everything out I'm going to store everything out this will be the time complexity and the space complexity can we make it better no because we'll have to match uh for every corresponding opening there should be a corresponding closing so we need to store it somewhere to have a match got it so the space complexity cannot be improved so this will wait for this one so if you're",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "xwjS0iZhw4I",
+      "position": 298,
+      "title": "L2. Check for Balanced Parentheses | Stack and Queue",
+      "url": "https://www.youtube.com/watch?v=xwjS0iZhw4I",
+      "start": 725.48,
+      "end": 748.88,
+      "text": "will wait for this one so if you're still now watching and if you've understood everything please please do consider giving us a like and if you're new to our channel do consider subscribing to us as well with this I'll be wrapping up this video let's meet in some other video till thenbye take care brenet your golden I will",
+      "word_count": 61
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "video_id": "0ytpZyiZFhA",
+  "position": 162,
+  "title": "G-37. Path With Minimum Effort",
+  "url": "https://www.youtube.com/watch?v=0ytpZyiZFhA",
+  "chunk_count": 14,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "0ytpZyiZFhA",
+      "position": 162,
+      "title": "G-37. Path With Minimum Effort",
+      "url": "https://www.youtube.com/watch?v=0ytpZyiZFhA",
+      "start": 2.879,
+      "end": 126.96000000000001,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well so in this video we're going to solve the problem uh the path with the minimum effort uh what does the question state it states you are a hiker preparing for an upcoming hike okay a given Heights a 2d array of size rows comma uh cross columns where height row column represents the height of the C uh cell you are situated in the top left cell so I can say that this is our source and you have to travel to the bottom right cell uh so I can say this as our destination you can move in four directions and you wish to find a route that requires the minimum effort now a Roots effort is the maximum I repeat a Roots effort is the maximum absolute difference in Heights between to consecutive cells of that route so let us understand what is the question state so imagine this particular grid and uh we have clearly stated that this will always be the source and this will always be their destination something like this will be the source and something like this will always be the destination that is clearly stated to us okay now if I wish to reach from here to here and we are just allowed four directions we are just allowed for direction we can actually go something like this like this like this we can actually go something like this this this there can be multiple ways in which we can reach from here to here that is definitely short correct now if I take this path let's write this path one two two and two five this is the path where we go here here here and here okay now let's find out the difference so the difference is one the difference is one the difference uh rather the difference is zero the difference is zero and the difference is three now of all the differences which is the maximum difference can I see the",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "0ytpZyiZFhA",
+      "position": 162,
+      "title": "G-37. Path With Minimum Effort",
+      "url": "https://www.youtube.com/watch?v=0ytpZyiZFhA",
+      "start": 120.54,
+      "end": 239.64000000000001,
+      "text": "is the maximum difference can I see the max is three because I have only one zero and three so the maximum of them is three so this is the this is what the routes path will take as the effort three is the effort that it will take so I can write three is the effort that you will take but can I have any other path let's see what if I take something like this something like this something like this and something like this which is one three eight two five one three eight two five differences too differences five difference is six difference is three and the max effort is six so six is the effort it will take if it goes something like this like this like this can I have something better let's give it a try one let's take one three three five five three three five okay so it's something like one three five three five difference two difference two difference two remember absolute difference two what's the max two so two is the effort taken now what they want you to do is you you can figure out the efforts in all the parts you can figure out the efforts in all the parts and you need to give me the minimum of them you need to give me the minimum of them so in this path the effort taken is two and that's the minimal so the answer to this will be two you can say that 0 is the minimal no you don't need to take individual defenses no out of everyone once you figure out the max out of the max you have to figure out the Min out of all the max you have to figure out the Min that is the question so if I take uh the second grid What will be the answer if I go from here zero zero zero zero zero zero zero zero zero zero zero zero zero if I can take all the One path",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "0ytpZyiZFhA",
+      "position": 162,
+      "title": "G-37. Path With Minimum Effort",
+      "url": "https://www.youtube.com/watch?v=0ytpZyiZFhA",
+      "start": 235.68,
+      "end": 357.12,
+      "text": "all the One path the absolute difference between all the adjacent elements will be zero so I can say for this the paths effort is to while for this the paths effort is zero got it so which algorithm comes to your mind whenever you uh hear something related to path shortest path minimum kind of thing which algorithm does come to your brain the algorithm that comes to your brain is definitely dixtra's algorithm because that is one of the algorithm which is related to shortest path and that always involves something like a source to destination so let's try that algorithm out and see if we can reach our answer or not this is how you relate a problem to an algorithm because shortest path okay what are the algorithms I know okay the extra source and destination is there maybe we can try that out and see and then you give it a try run and see if it is working and then you figure out yeah this is the algorithm which can fit in and then while giving the dryer and you tend to understand okay this is the reason we are using it always follow the standard process of mapping algorithms to a problem that is figuring out keywords and then figuring out which one is applicable okay [Music] algorithm what is the initial configuration a priority queue and a distance array so let's quickly take it up so this is how the initial configuration looks like we will take a priority queue where we will be storing the difference since we always require the minimal difference we'll try to keep the difference at the first so that the minimum Heap or the priority queue uh you can use a minimum Heap always shows the minimal at the top and then the row and columns which are basically the coordinates of the node and we can assign a distance and make sure everything is everything is marked as infinite apart if it is basically a very big value just the associates with a zero because",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "0ytpZyiZFhA",
+      "position": 162,
+      "title": "G-37. Path With Minimum Effort",
+      "url": "https://www.youtube.com/watch?v=0ytpZyiZFhA",
+      "start": 351.72,
+      "end": 461.34000000000003,
+      "text": "just the associates with a zero because the source is where you do not need anything yes the source is the only point where you do not need anything so what is the starting point you always say difference is 0 and the coordinates are zero comma zero and you put that into your priority queue done let's quickly start that extras algorithm textures algorithm States okay I know one thing for sure we are at 0 comma zero until now the difference that we have taken until now the uh till now the difference that we have taken is 0 and we know for a path for a path the effort is maximum of all difference remember this Max of all difference in the path so we know this right so what I will do is keep that in mind and I know till now the difference has been zero so I'll try to go in all the directions and it states we can go in the top which is not possible we can go here we can go here and we can go here yeah so if I go to the right which is 2 if I go to the right which is 2 that's nothing but the coordinate 0 0 1 cell right the coordinates as well 0 1 2 0 1 2 so the coordinates is 0 1 and what will be the difference if I go here the absolute difference will be one so can I see the new difference is one can I say the new difference is one and we know Max of all difference in the path is what the effort is effort is very simple the effort is always recognized as Max of all so previously I took a difference of zero now I'm taking a difference of one so if I follow this path what will be the effort yes one so I know the effort is one which is lesser than infinity so I think difference of 1 and I say this is the effort that I will",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "0ytpZyiZFhA",
+      "position": 162,
+      "title": "G-37. Path With Minimum Effort",
+      "url": "https://www.youtube.com/watch?v=0ytpZyiZFhA",
+      "start": 455.819,
+      "end": 560.16,
+      "text": "and I say this is the effort that I will take in and I'll put in something like 0 comma 1 into the priority queue done now can I go to the down yes I can go to the down which is 1 comma 0 as the coordinate and the difference if you find the difference it's 1 3 so the difference will be 2. now previously the difference taken was Zero now I'm taking a difference of two and the path effort States maximum of all differences so 0 and 2 which is the maximum two so you'll just replace two as a 2 comma 1 comma 0 is what I'll put into the practicum and I'll just erase this because the iteration is done now if you go and look at the priority queue which one will be at the top the topmost element will be this one because you are looking for the minimum guy so this one will be at the top this one will be at the top so what I'll do is I'll just quickly take uh I know the difference taken as of now is one I'm standing at 0 comma 1 because that is where you're standing so once you've done this you can omit this from the priority queue from 0 comma 1 where can you go you cannot go on the top can you go here yes you can go here which is 0 comma two you can go to the right which is 0 comma two so if you go to the right the difference will be zero remember this the difference will be zero so over here the difference is zero but previously you have taken a difference of one so this path that you're taking still has an effort of one you just cannot take zero because you're required to take the maximum so you will be like I'll still take one which is better than what we have here so 1 comma 0 comma two is what I'll put it into the",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "0ytpZyiZFhA",
+      "position": 162,
+      "title": "G-37. Path With Minimum Effort",
+      "url": "https://www.youtube.com/watch?v=0ytpZyiZFhA",
+      "start": 554.88,
+      "end": 654.24,
+      "text": "0 comma two is what I'll put it into the priority queue done now can I go down yes I can go down we have a 2 and we have a 8 on the down so 1 comma 1 so if there's a two and there's eight what is the difference perfect six now previously it took till here it took a difference of one I'm taking a difference of six what will be the new effort yes six probably like till here I can take a six to six comma one comma one is what I'll update once I've done I can say the iteration is done I'll quickly omit this off done what is the next step get the minimum out of the priority queue which one will be the minimum definitely one I'll just take it out which says the difference is one and the coordinates are very easily 0 comma two right that's the coordinate so I'll just write the coordinate 0 comma two now we are at here can we go top no can we go right no can I go here yes which is two so I'll try to go here which is one comma two very very important which is one comma two so you're at one comma two and what will be the difference the difference will be 0 because there's a there's a two so the difference is zero but previously I've taken a difference of one so I'll just update it with one and you'll say one comma one comma two perfect can I go to the left yes and if you go to the left what do we have we have two which will be a difference of zero and the zero comma one zero comma one with a difference of zero now the difference over here is one this is zero so therefore it is still one and you have already taken one effort so no need to take it so I can say the iteration for this is also done",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "0ytpZyiZFhA",
+      "position": 162,
+      "title": "G-37. Path With Minimum Effort",
+      "url": "https://www.youtube.com/watch?v=0ytpZyiZFhA",
+      "start": 649.62,
+      "end": 760.68,
+      "text": "for this is also done okay now let's get the next thing which will be the next guy in the priority queue obviously one comma one comma two so the difference is now one and you are at one comma two which is this portion can I go top I can go top but if I try to go top which will be zero comma two with a difference of 0 then also the maximum is one which we already have over here so we will not go to the top instead of that can I go right no there's no one can I go bot I can go bottom which is 2 comma two which is apparently your destination will you take this no you'll wait you might find someone better that's why you'll not conclude as of now you will not conclude as of now you'll be like okay two comma two what's the difference three because two to five is difference of three so now previously one now three which is the parts effort the parts effort will be three so let's update it to three and I'll see three comma two comma two put it into the Practical do not conclude your answer now do not because this is not your answer so alarm at this uh you could try going to the left as well it'll be a six which is already there so there's no point in going to the left next which one will the party queue give obviously this one two comma one comma zero so I'll take two comma one comma zero now I'm saying the difference is 2 and we are at one comma 0 which is particularly this coordinate correct now from here where can I go can I go to the top I can I can so if I try to go to the top which is 0 comma zero the difference will be 2 and previously it was 2 as well and we already have a zero no point",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "0ytpZyiZFhA",
+      "position": 162,
+      "title": "G-37. Path With Minimum Effort",
+      "url": "https://www.youtube.com/watch?v=0ytpZyiZFhA",
+      "start": 755.76,
+      "end": 852.0,
+      "text": "well and we already have a zero no point in going there can I go to the right we can go to the right yes we can go to the right and if we go to the right which is one comma 1 the difference will be five which is better than the previous difference six I'll be like let's take this off let's say five comma 1 comma 1 into the priority queue perfect can I go down I can which is 2 comma zero and the difference will be two if you try to go down the difference will be still two so I'll just update it to two and I'll say 2 comma 2 comma 0 in the priority queue once this is done there is no left I'll just omit this one perfect that means next what will be your job your job will be to go into the priority queue and say which is the minimal and you see there's a two there's a five there's a three and there's a six so apparently the two comma two comma zero is the minimal so let's just take the two comma two comma zero it's like the difference is now two and we are standing at two comma zero where can you go is my question it's very easy you can try to go to the uh top which will give you a difference of two which is already there so no need to go you can try to go to the right which is infinity so yeah we can go to the right so let's try to go to the right which is two comma one and the new difference will be 2 because that's the difference and difference is to still not it's two so the maximum will still be two so updated with two and say two comma yes two comma 2 comma 1 can I go bottom no there's no bottom can I go left no so this side creation is also done perfect let's get the next",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "0ytpZyiZFhA",
+      "position": 162,
+      "title": "G-37. Path With Minimum Effort",
+      "url": "https://www.youtube.com/watch?v=0ytpZyiZFhA",
+      "start": 847.74,
+      "end": 958.74,
+      "text": "also done perfect let's get the next element out of the Practical will be the next element five three two six two obviously let's take it out so I can say the difference is two now and we are at 2 comma one we add two comma one so if you are two comma one where can you go you can go to the top which is one comma one basically this and the difference will be five and the difference will be five but we already have a five difference so no need to take can I go to the right we can which is 2 comma two which is the destination which is the destination and this time the difference is to point to notice because the difference is 2 and difference is 2 and it's two it's better than three it's better than three so you say two and it's a two comma two comma two is a two comma two comma two perfect what's the next thing can I go down no can I go left I can but it'll yield a difference of two which is already there so I can say this is done the next point is very very critical you look at the party queue and say who is there there's a two there's a five there's a three and you get two comma two with the difference of two which means the path effort they've reached your destination you've reached your destination in future will you get someone better the answer to that is no because if till now it is two and practically says you always get the minimal in the future even if someone comes up you will be greater than two like the difference might be smaller but when you take the max it will end up being a minimum of two you cannot go lesser than two because you had someone like if you see you had someone like three but before three two occur in the future it will either more than two or two",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "0ytpZyiZFhA",
+      "position": 162,
+      "title": "G-37. Path With Minimum Effort",
+      "url": "https://www.youtube.com/watch?v=0ytpZyiZFhA",
+      "start": 953.699,
+      "end": 1070.52,
+      "text": "it will either more than two or two cannot be two because you are jumping to a path where already the max effort taken is two even if you cover uh another portion of a path whatever the effort is even if it's like one zero the difference two the Max has already been two so if you combine the max with the other guys it'll still be a minimum of two cannot be cannot be lesser than two for sure so I am definitely sure once I reach the destination by taking out of the priority queue the answer is for sure this difference which is ultimately your effort and you can just go across and return that effort as your answer so it's a very very simple implementation of dixtra because dragster always keeps the track of the short leg of the path value and you're looking for minimum path value so you always have the minimum path value in future it's gonna just increase so keep this in mind and we're going to implement this now so I hope you've understood the entire approach it's time to code it up so I'll be coding the C plus plus on the right and you can find out the similar Java Solution on the left so by given just the heights so we can use the set data structure as well the python as well whichever sorry the priority queue as well so I'll be using the priority queue so this time we have to kind of take a bit more pairs and we need another uh thing so let's just quickly upgrade it to yeah that's the thing and over here if you just stimulate foreign EQ and this is how the Practical looks it's it's a very long one but yeah that's how it looks like if you just break the line you can probably read it so this is how the entire priority queue will be defined so I'll be keeping something like if I show you the structure this is I'll be keeping the",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "0ytpZyiZFhA",
+      "position": 162,
+      "title": "G-37. Path With Minimum Effort",
+      "url": "https://www.youtube.com/watch?v=0ytpZyiZFhA",
+      "start": 1067.039,
+      "end": 1176.6,
+      "text": "structure this is I'll be keeping the structure as I'll keep the difference and I'll keep the root column pretty straightforward that's that's what the structure is going to be for me uh you can probably create a class as well but uh and then you have to write the competitors which I don't want to what's the next thing you require the size of the heights so probably you can just take the like computer size [Music] and you can just do Heights uh zero dot size you'll get the M as well now what do you require you require something like to store the difference so maybe you can create the distance array or the difference we can call it as the difference or the distance this to be familiarized with the name so you can go across and declare that as well Vector of int and make sure everything is marked as infinite done that's the first thing you'll do what's the next thing make sure you iterate on the priority queue till it is not empty but before that do you need to do anything else yes you do need to do something like distance of 0 0 will be zero because you know that's the starting point for you and what is the other thing that you have to do you have to also say the priority queue to store the first guy which is zero comma 0 comma zero perfect that's the easiest thing next let's go across and take the pq.top so I'll just take the pq.top and I'll just say pq.com and once you've done this I can take the new diff uh runs which is nothing but very simple like if you say it dot first you'll get it and if you need the row again it's quite eminent it's something like it dot second DOT first if you need the column it's going to be ID dot second dot second now there are four directions one is the top ports which is the row minus",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "0ytpZyiZFhA",
+      "position": 162,
+      "title": "G-37. Path With Minimum Effort",
+      "url": "https://www.youtube.com/watch?v=0ytpZyiZFhA",
+      "start": 1171.5,
+      "end": 1278.74,
+      "text": "is the top ports which is the row minus one uh comma column uh then the other one is the right one which is this and there is one at the bottom which is row minus one comma column then there is one on the left which is row comma column minus one right so what I can do is I can probably create I have already taught you this uh in a lot of videos till now so minus one zero one and zero and then I can have something like DC equal to 0 comma 1 comma 0 comma minus 1 I can definitely declare it something like this and now what I'll do is I'll just go across and say I equal to 0 I less than 4 I plus plus and I can easily travels to all the adjacent nodes it's very simple you can say new R will be current row plus nothing but the change in this and you can say new column equal to column plus DC of I so what will happen is first time minus 1 and 0 will get added because this is over here next time 0 and 1 will get added next time 1 and 0 will get added next time zero and one will get added it will get it first thing that you need to do always is to check if they are valid or not so please go ahead and check if they are valid or not so very simple check you can probably put them into uh different functions if you wish to improve code readability and what after that now you know one thing you have checked for validity right what is the next thing you need to check you need to check if the difference that you are getting is eight lesser than the thing stored in the previous one right so probably we can we can first check for validity because after that we can find out so what is the new effort can I",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "0ytpZyiZFhA",
+      "position": 162,
+      "title": "G-37. Path With Minimum Effort",
+      "url": "https://www.youtube.com/watch?v=0ytpZyiZFhA",
+      "start": 1274.34,
+      "end": 1391.8799999999999,
+      "text": "find out so what is the new effort can I say the new effort will be nothing but Max of the current which is nothing but absolute of wherever you are yes wherever you are which is Heights of row column so let's write Heights of roll call this is currently Where You Are right and can I say types of new row and new column is where you're trying to go so this is what the new effort that I'll take and I'll just take it with this so if new effort like the max of this so once you've got the new effort what's your job you have to see if the new effort is lesser than whatever you have taken till now which is distance of new R if previously would have reached otherwise it would have been Infinity if it is if it is then you go across and say Hey listen distance you got someone better please go ahead and just do it right after that you'll say PQ dot push this distance which is distance of or you can write new effort simple this is the new distance and you will at the same time say new row because that's the new coordinates and a new column once you've done this you can I can say we will reach here but where did we get our answer if you remember the approach we said whenever we get our answer over here which is this and this because not while here because we might find minimals afterwards you saw an example I'm going to return over here the difference whatever difference I'm getting out from the priority queue I am going to return remember this I'll uh go and compile this and see if it is working fine it is and I'll quickly submit this to see if it is giving us correct answers so it does give us correct answers now it's uh time to discuss the time complexity you know that extra strain complexity it is always",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 13,
+      "video_id": "0ytpZyiZFhA",
+      "position": 162,
+      "title": "G-37. Path With Minimum Effort",
+      "url": "https://www.youtube.com/watch?v=0ytpZyiZFhA",
+      "start": 1386.299,
+      "end": 1469.84,
+      "text": "complexity it is always e log V if you want the derivation previous video in the previous video in the same series I have derived time complexity it's e log V what is the the total number of edges so how many total number of edges we will have if it's a grid you know in Grid there will be n cross M cells for sure there'll be n cross M cells for sure and for every cell there has four directions so that is the total number of edges because so every cell there is n Cross Four m cross log V what is V the total number of nodes how many nodes are there number of total cells which is n cross n got it so this will be the time complexity of this particular algorithm and you're using n cross m space and the pretty key uses a bit of space so you can say the approximate space is near about n cross M and this is how it will be done so guys I hope I was able to explain you the entire solution and the code so just in case iOS please please please make sure you like this video and if you're new to our Channel what are you waiting for hit that subscribe button right away and if you haven't checked out our DP series and this DC the links are in the description but this will be wrapping up this video let's read in some other videos till then bye take care whenever your heart is broken don't ever forget you're golden I",
+      "word_count": 271
+    }
+  ]
+}

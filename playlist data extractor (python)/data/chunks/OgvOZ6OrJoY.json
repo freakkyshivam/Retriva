@@ -1,0 +1,141 @@
+{
+  "video_id": "OgvOZ6OrJoY",
+  "position": 204,
+  "title": "DP 23. Unbounded Knapsack | 1-D Array Space Optimised Approach",
+  "url": "https://www.youtube.com/watch?v=OgvOZ6OrJoY",
+  "chunk_count": 12,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "OgvOZ6OrJoY",
+      "position": 204,
+      "title": "DP 23. Unbounded Knapsack | 1-D Array Space Optimised Approach",
+      "url": "https://www.youtube.com/watch?v=OgvOZ6OrJoY",
+      "start": 0.0,
+      "end": 147.68,
+      "text": "Hey everyone, welcome back to take you forward. Today we will be solving uh the 23rd problem from the dynamic programming playlist and the problem goes as unbounded knapsack. So, what is the problem state? By the way, in order to understand this question, you should have seen the problem 0/1 knapsack, which is the DP 19. So, please make sure you watch 0/1 knapsack, okay? So, how is unbounded knapsack different from the 0/1 knapsack? So, over here, there is a thief, right? Who goes into the house with a bag weight of 10, okay? And there are items. First item has a weight of two and if he steals that item, he gets a value five. The second item has a weight of four and if he steals that, he gets a value 11. The third item has a weight of six. If he steals that, he gets a weight of uh he gets a value of 13. But, the difference from like how is this problem different from 0/1 knapsack? Let's understand this. So, in 0/1 knapsack, it was clearly stated that there will only be one occurrence. Yes, I repeat, there will only be one occurrence of these instances, right? But, over here in unbounded knapsack, it states there are infinite supply. Yes, infinite supply against similar to the previous question coins in DP 22 and DP uh 20 that we did. Similar to that problem where we have been stated that, \"Hey, listen, there will be something as an infinite supply of every item.\" That means you can pick a single item as many times as you wish. Like, for an example, if the thief comes up with a weight of 10, he will be like, \"Okay, I can pick someone with a weight six and a weight four. And this will give me 13 plus 11, which is 24 value.\" Or someone can be like, \"Hey listen, I'll pick the weight six once and I'll pick the weight two, I'll pick this twice. And if I do this, this weight six will",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "OgvOZ6OrJoY",
+      "position": 204,
+      "title": "DP 23. Unbounded Knapsack | 1-D Array Space Optimised Approach",
+      "url": "https://www.youtube.com/watch?v=OgvOZ6OrJoY",
+      "start": 141.6,
+      "end": 271.96,
+      "text": "And if I do this, this weight six will give me 13 value and this two is giving me five, so five cross two will be 10. So 13 plus 10 will be 23 is the value that I can get.\" Or someone might be like that, \"Hey listen, I'm going to pick two items of weight four. Yes, two items of weight four plus one item of weight two.\" So if I'm picking two items of weight four, it'll be 11 cross two, which is 22. One item of weight two, which is 22 plus five, 27. So in this way you can actually pick up in a lot of other ways. Like you can also say that, \"Hey listen, I'm going to pick the weight two five times. Uh yeah, five times. Because if I weight if I pick up the weight two five times, that will be equivalent to the weight 10. And how much value will I get? Five into five, 25. So there can be numerous ways and you see that this value that you get is the maximum possible value. Yes, is the maximum possible value. And that's what is going to be the answer. Right? So I hope I hope that makes sense, the question. So how's this question different from zero one knapsack? It states you have an infinite supply, right? So again, you'll follow the pattern of knapsack and I've clearly stated what is the pattern of knapsack. You have to write a recurrence. And in order to write the recurrence, express everything in terms of index, weight, explore possibilities. Yes, explore all possibilities. And then knapsack states what is the maximum value that you can generate. So, return the max of everyone. Return the max of everyone. Every possibility rather. That's what you will simply do in order to solve this problem. So, let's quickly write down this recurrence. So, index and weight is the initial one. So, basically what I'm saying is, okay, so if there are three items, three items with a particular weight and a",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "OgvOZ6OrJoY",
+      "position": 204,
+      "title": "DP 23. Unbounded Knapsack | 1-D Array Space Optimised Approach",
+      "url": "https://www.youtube.com/watch?v=OgvOZ6OrJoY",
+      "start": 267.84,
+      "end": 383.24,
+      "text": "with a particular weight and a particular value, I'm saying till n minus one with a baggage weight of W. That means till here with a baggage like till here n minus one with a baggage weight of W, what is the maximum value can generate? What is the maximum value you can get? So, this function will tell you till n minus one with a baggage weight of A W, what is the maximum value that you can generate, right? So, what I can say is f of index W, right? So, let's forget about the base case. Now, let's think about all of the cases. Knapsack had couple of cases, right? Where you say that, okay, I'll not pick this guy, which is I'll not pick this guy. So, if I don't pick this guy, I will have a value addition of zero to myself. I'll have a value addition of zero to myself. And if I'm not picking this, I'll definitely move here. And the weight still stays the same. Okay, very simple. The take will be zero initially, but I'm looking for maximal value. So, if you remember, it will always be in between. Okay. Now, when can I pick it up? Again, very similar. I can only pick up if the weight of that guy is lesser than the bag weight. Yes, is lesser than the W, which is the bag weight. Then only I can pick up. And if I'm picking up, can I say the value addition will be value of index plus function of W minus weight of that guy's index. But what happens to this particular index? Again, similar to the previous one it stated infinite supply and whenever it is infinite, you stand at the same index. Previous question, previous question. Yes, because because you can again pick up that guy. So kindly stand at the same index. You don't need to do anything. Kindly stand at the same index. So I'm standing at the same index and then you just need to",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "OgvOZ6OrJoY",
+      "position": 204,
+      "title": "DP 23. Unbounded Knapsack | 1-D Array Space Optimised Approach",
+      "url": "https://www.youtube.com/watch?v=OgvOZ6OrJoY",
+      "start": 376.6,
+      "end": 499.20000000000005,
+      "text": "the same index and then you just need to return the max of take and the max of not take. So once you have done this that's perfectly fine. You need to write the base case. So how do you write the base case? So remember guys, in all the infinite supply unbounded cases the main point of concern is whenever you try to pick, you still stand at the same index because you can go on picking, go on picking. That's the crucial point. So what about uh the base case? As I said to you, whenever you start from n minus 1, the base case that you write is for zero, right? So whenever you come to zero, yes, whenever you come to zero always try to think in this case. Okay, this is zero. This guy uh probably has a weight of uh three and this guy probably has a value of 10, okay. And the thief still has a weight of eight left like thief's baggage weight left is eight. So if I ask you how many times can the thief steal this item? Because he will obviously steal. There is only one item left and he still has a baggage weight of eight. So it's very obvious that he's going to steal this guy. Like why will he not steal? Logically, he will always steal it because if he doesn't steal it because this is the last item. If he does not steals it, it will be his loss, right? So, if the weight is eight, what will he do? He'll try to steal it. That's for sure that I will say, \"Hey, listen. I am going to steal it, no matter what happens. I'm going to steal it.\" So, how many items will he steal? Because I know this guy is having an infinite supply. So, you'll be like, \"Striker, if he has a weight eight left, he'll steal two items.\" Because this has a three guy. So, he'll steal twice. If this was somewhere around 13, he'd steal this four times.",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "OgvOZ6OrJoY",
+      "position": 204,
+      "title": "DP 23. Unbounded Knapsack | 1-D Array Space Optimised Approach",
+      "url": "https://www.youtube.com/watch?v=OgvOZ6OrJoY",
+      "start": 493.6,
+      "end": 612.12,
+      "text": "around 13, he'd steal this four times. Make sense? If this was somewhere around two, he'll not be able to steal it. So, can I say whatever bag weight by the weight of zero is the number of times it can steal? Can I say this? Assuming that it will always have a weight, which is definitely because every item has a weight. None of the items can have a weight zero. So, can I say this is the number of times, like the integer, will be the number of times it can steal it? If it is eight, then I'll have eight by three saying two. If it is 13, then I'll have 13 by three saying four. Into what is the value that it will add? Value of zero is what it adds. So, can I say this is what the base case will be whenever you you reach the end? The answer for a single array is this. Again, very simple. So, can I say this? Can I say this? If I reach index equal to equal to zero I'm going to return a quite simple W by array of zero into or rather weight of zero into like you can do an integer of this into value of zero. And this is going to be my base case. Amazing. Perfect. So, if this is the base case, after this, I think your recurrence is ready. And once the recurrence is ready, again, this I have been talking through the time complexity will be exponential. Why not 2 to the power n? Because because because of this case. You're standing at the same index. Same index. And what about the space complexity? Auxiliary stack space will be the bag weight. Why? Assume Assume Assume you have weights of one two and another one, okay? Assume you have weights like this. So, this is a weight of one and you had a bag bag weight of 10. So, you'll be like, \"Okay, 10.\" If you pick up that will reduce to nine.",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "OgvOZ6OrJoY",
+      "position": 204,
+      "title": "DP 23. Unbounded Knapsack | 1-D Array Space Optimised Approach",
+      "url": "https://www.youtube.com/watch?v=OgvOZ6OrJoY",
+      "start": 608.2,
+      "end": 743.56,
+      "text": "If you pick up that will reduce to nine. If you pick up that will reduce to eight. So, the maximum stack space The maximum stack space used will be big of weight because you'll go for 10 depth reducing one one one. You'll go to 10 depth. So, can I say uh this is how you can easily generate for knapsack. So, the space complexity for unbounded knapsack. So, how do you convert this into memorization? Again, the same thing. You basically declare a DP of n and w and then you memorize. Very simple. I'm not going to do this any further. What about tabulation? Again, this is something which I'll be teaching. What's the first step? Write the base case. What's the next step? What are the changing parameters? Index and Yes, index and w, right? What's the next thing? Copy the recurrence. That's what you do. Let's write the base case. So, So, initially what you do is you declare the DP of n and w plus one. That's very obvious. And what's the first thing? Write the base case. Let's go and check out the base case. What's the base case? For index zero, w can be anything. It can be zero. It can be one. It can be two till the baggage weight. It can be anything. So, for everyone, this is what it stores. This is what it stores. Let's write it. For any W, yes, for any W which ranges from zero to the original W, you can say the weight of the bag or whatever you can call it. You can say DP of zero because this is the index. W is equal to W by weight of zero. Again, you can take an integer into value of zero. This is the base case. Again, very straightforward, very very straightforward. So, what is tabulation? Tabulation is nothing but top Sorry, a bottom-up. Tabulation is nothing but bottom-up. So, in recursion you did from n minus one till zero. Zero is the base case that you've computed. Now, with the help of",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "OgvOZ6OrJoY",
+      "position": 204,
+      "title": "DP 23. Unbounded Knapsack | 1-D Array Space Optimised Approach",
+      "url": "https://www.youtube.com/watch?v=OgvOZ6OrJoY",
+      "start": 739.88,
+      "end": 860.08,
+      "text": "you've computed. Now, with the help of zero you'll compute one, you'll compute two, and so on. So, index starts from one till n minus one. W starts from zero to W because in the recursion you wrote it opposite, W to zero. So, it'll be opposite. And the next thing is copy the recurrence. And once you've done this, your code should be ready. So, yeah, what are we waiting for? Let's get into the code. So, we are given the n, the W, the profit. We can call this as value and this as wt. So, let's quickly write a function. So, the function will definitely have index, a capital W, and we can definitely carry the val, we can also carry the weight, right? There's something which we can carry. And if index is equal to equal to zero, we return we we do return this, right? We take an integer division of how many items can I steal, which is the remaining W by whatever is the weight of the current zeroth index multiplied by like this is the integer multiplication at first Sorry, integer division at first multiplied the value like the number of items. And what are the other cases? There will be cases of not take where I say I'm not going to take. So, the addition will be zero with the previous index W, val, and WT. And there'll be something like take which will be zero. And I can say if yes, if W of index is lesser than equal to the remaining W that the knapsack has, I can say take equal to value of that index plus function. We stay at the same index because it is unbounded. And the W gets subtracted by weight of nothing but the current index. And we can go as val, and we can go as WT, and we can return the max of take and not take because that is what the answer will be. Over here, we just need to return the function of n minus one,",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "OgvOZ6OrJoY",
+      "position": 204,
+      "title": "DP 23. Unbounded Knapsack | 1-D Array Space Optimised Approach",
+      "url": "https://www.youtube.com/watch?v=OgvOZ6OrJoY",
+      "start": 855.2,
+      "end": 981.72,
+      "text": "minus one, W, val, and WT. So, that's how the recursive code will look like. It does run. So, what's the next step? Make sure we convert this into a DP. So, vector of vector int DP and vector int and W plus one comma minus one. Make sure you pass that DP over here. And just copy paste this particular DP. Again, just make sure you pass it over here with the reference. Over here also, you pass it again. Over here also, you pass it again. And this will be DP of index W equal to this. And just make sure you write one state check. If that state check has not been done prior to this, you return DP of index and a W. This is how you can easily run it. Let's super quickly run this off. It has run. Let's try to submit this and see if this is running fine. Indeed, it does run absolutely fine. So, we have made sure that memorization solution is running. What's the next step? We definitely have to convert this into tabulation. So, for tabulation, we look out at the base case. It is for index equal to zero and W can be anything. So, just make sure you write W can be anything from zero to W less than equal to W W plus plus and at DP of the index zero and the W, we will just be copy-pasting this portion. Very simple. Done. What's the next thing? Make sure you write couple of nested loops. The couple of nested loops will definitely be starting from one. They'll go till N index plus plus. There will be a W loop which will start from zero and the W goes till W and W plus plus. And what do you do? You basically just copy-paste this portion. Let's quickly copy-paste this portion. What was the next step? Just convert this into DP of index minus one. You make it W. You can super quickly erase this. Over here also, you just convert",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "OgvOZ6OrJoY",
+      "position": 204,
+      "title": "DP 23. Unbounded Knapsack | 1-D Array Space Optimised Approach",
+      "url": "https://www.youtube.com/watch?v=OgvOZ6OrJoY",
+      "start": 976.6,
+      "end": 1105.4,
+      "text": "this. Over here also, you just convert this into DP of index, right? And over here W minus W of index. Correct. And you can just do this and write over here. What you can do is this portion. And over here, you can just return DP of N minus one W. And you can just erase this off. And now, try to submit this. It is. And let's let's try to submit the tabulation one. Indeed, it does run. What is the next step? Obviously, the next step is to convert this into uh two two added space optimization. Why? Index minus one and index is there. So, you're just using the previous row. Again, if you have not seen the previous classes, please please watch it out because space optimization is something which I've taught in the previous classes. So, make sure you watch out the previous lectures. So, what I just need to do is I need to have something like vector of int previous. Right? And we need to have something as cur. and w plus one and zero. That's what we will be doing. And over here what we can do is this will be cur. This will definitely be previous. Right? And what's the other change that we need to do? This will be current. And over here we can write previous equal to current and this can easily be written as previous. So over here this will definitely be previous and you can just omit this portion. Now let's quickly try to run this. It has run. Now let's try to submit this off. Now the question arises, can we space optimize this from a two array to a one array because in the knapsack we did a space optimization from two array into one array. So let's look at the code. What am I using? I'm using a previous and I'm using a current in order to compute the current. So can I say this is the previous? Can I say this is the current? Right? And what am I doing?",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "OgvOZ6OrJoY",
+      "position": 204,
+      "title": "DP 23. Unbounded Knapsack | 1-D Array Space Optimised Approach",
+      "url": "https://www.youtube.com/watch?v=OgvOZ6OrJoY",
+      "start": 1099.88,
+      "end": 1237.96,
+      "text": "Right? And what am I doing? In order to compute this guy, what am I using? I'm using this guy which is like let's write down the lines. Not take is nothing but zero plus previous of w. Take is nothing but value of index plus current of if I just write it properly, w minus wt index, okay? So can I say can I say whenever you're trying to compute this guy, what are you using? You're using this guy and somewhere someone from the current but from the back. Whenever you're trying to compute this guy what are you using? Someone from here and someone from the previous. Whenever you're trying to compute this guy, what are you using? Someone from here and someone from the previous because W - WT is somewhere from here. Whenever you're trying to compute this, you're using someone from here and someone from the previous. Now, a simple question to you is, whenever you're trying to compute, let's say this guy, apart from this guy, are you requiring any of these guys? Are you requiring any of these guys? And the answer is no. Why? Because we're just requiring the same column guy. The same column guy. We're just requiring the same column guy. So, can I say whatever values, like this value, whatever value I'll get, I'll just rewrite over here, then I'll move here. Whatever value I get, I will rewrite over here. So, can I say can use a single guy? Single array? Yes, we can because because we do not need the previous values. We just need the same column guy. So, use the same column guy, use the previous, compute this, and just put it across here. And you can use a single array. Right? For an example, let me just uh give you Assume this is the previous, just a single array, okay? Assume this this is the previous and it had some values as 3 4 5 6 7 uh 1 2 for an example, something like this.",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "OgvOZ6OrJoY",
+      "position": 204,
+      "title": "DP 23. Unbounded Knapsack | 1-D Array Space Optimised Approach",
+      "url": "https://www.youtube.com/watch?v=OgvOZ6OrJoY",
+      "start": 1235.08,
+      "end": 1356.88,
+      "text": "like this. The moment you came to here and you wanted to compute this guy, you wanted to compute this guy for the current row. So, what did you do was you took three. Like for not take, you took three. For take, you looked at the back and you did not find anyone because that's not possible. So, whatever is the maximum, you rewrote it. Next, you came to here. You took four. And whatever is at the back, because you've rewritten it, whatever is at the back, you again took it. And again, whatever maximum you got, you rewrote it. Again, you went here, you took the five, you took someone from the back, and you took the maximum, rewrote it. Just because you do not need the previous values, you can rewrite this value to this guy. Once you have computed using this particular guy, thereby I can definitely space optimize this into a one D array. So, can I say this? If I go back to the code, I don't need a current now. Only one guy will work, like I can call it as the current guy only. Let's call it as previous to avoid confusion. So, I'll just require one guy. This is the previous W, the previous guy. Not take will be computed. From this previous only, like this is the row which I'm computing because I'm overwriting, I'm overwriting, so I can take it from here itself. And once I've computed, once I've computed non-take by using the previous value and the previous values, I will take the maximum of that, and I'll rewrite it to the W. So, the previous W gets rewritten by the max, and eventually you can find your answer. So, if I try to run this, this is also going to run in a one D array, and you see it is running. Wonderful, isn't it? We started from recursion, exponential complexity, then a two D complexity, then two arrays, then a one array. Wonderful, isn't it? So, just in case you didn't understand,",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "OgvOZ6OrJoY",
+      "position": 204,
+      "title": "DP 23. Unbounded Knapsack | 1-D Array Space Optimised Approach",
+      "url": "https://www.youtube.com/watch?v=OgvOZ6OrJoY",
+      "start": 1352.88,
+      "end": 1374.9199999999998,
+      "text": "So, just in case you didn't understand, please make sure you like this video, and if you're new to the channel, please, please, please do consider subscribing to us. And yeah, with this, I will be wrapping up this video. Let's meet in the next one. Bye-bye, take care. Whenever your heart is broken, don't ever forget you're golden. I will find the light",
+      "word_count": 64
+    }
+  ]
+}

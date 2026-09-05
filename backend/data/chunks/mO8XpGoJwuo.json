@@ -1,0 +1,141 @@
+{
+  "video_id": "mO8XpGoJwuo",
+  "position": 205,
+  "title": "DP 24. Rod Cutting Problem | 1D Array Space Optimised Approach",
+  "url": "https://www.youtube.com/watch?v=mO8XpGoJwuo",
+  "chunk_count": 12,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "mO8XpGoJwuo",
+      "position": 205,
+      "title": "DP 24. Rod Cutting Problem | 1D Array Space Optimised Approach",
+      "url": "https://www.youtube.com/watch?v=mO8XpGoJwuo",
+      "start": 0.08,
+      "end": 119.2,
+      "text": "hey everyone welcome back to take you forward today we will be doing the last problem on the dp on subsequences series and i'm definitely sure that after doing 11 problems on dpn subsequences you can solve any problem that has been given on the dp on subsequences so today's problem will be a rod cutting problem and it's the 24th lecture of the ongoing dynamic programming playlist so what does the problem state the problem state you will be given a particular n so assume over here we take n equal to five okay and for every length for ev every length you'll also be given in price so let's write the price array as 2 5 7 8 10 okay so this is what the price array looks like now the question states you're given n equal to five right so that's the rod length this is the rod length now what you need to do is you need to cut the rod into pieces cutting rod cutting cut the rod into pieces you can be like haste driver i can cut the five rod into a length one a length one a length one a length one a length one possible and for length one for length two length three length four length five for length one the price that you will get in the market is two so the pricing that you'll get in the market is two for every length of rot because you will cut the rod into pieces and you'll sell them in the market so the total price that you'll get in the market is ten okay can we cut it in some different way you can be like yes driver i will cut it into a piece of one a piece of two another piece of two and if i cut it into a piece of one i'll get a price too if i cut it into piece of two i'll get a price five and a 5 and the total cost will be 12 which is",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "mO8XpGoJwuo",
+      "position": 205,
+      "title": "DP 24. Rod Cutting Problem | 1D Array Space Optimised Approach",
+      "url": "https://www.youtube.com/watch?v=mO8XpGoJwuo",
+      "start": 115.759,
+      "end": 242.08,
+      "text": "which is greater so in this way you can actually cut this into several other ways like 1 4 probably 2 3 then it can be it can be a lot of lot of lot of ways one comma two comma two there can be a lot of ways so you need to tell me what is the maximum cost that you can get so this cost you have to maximize it and you can try every possible way and you will see that this is the maximal cost even if you take like two and a three the cost that two will give is five three will give us seven that is also twelve so the maximum cost that you'll get is twelve again and this is what the problem states you have to cut the rod into pieces and you have to sell that in the market and you have to make sure that the cost that you get from the market is the maximum cost and you need to print this particular value 12. so now the question is given and break it right so you might get confused but just try to think it in the other fashion try to think it in the other fashion what fashion can i say this you have a lot of lengths because if n is equal to five you know the rod lengths are like the rod lens can be one can be two can be three can be four can be five we can have five different rod lengths one of a length one one over length two one of a length three one over length four and one of a length five so can i say how do you collect rod lengths can i write this collect rod lengths to make n and while collecting raw lengths maximize the price can i say can i think the problem in the opposite fashion instead of saying break n into pieces of rod and cell can i say collect rod lengths",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "mO8XpGoJwuo",
+      "position": 205,
+      "title": "DP 24. Rod Cutting Problem | 1D Array Space Optimised Approach",
+      "url": "https://www.youtube.com/watch?v=mO8XpGoJwuo",
+      "start": 238.799,
+      "end": 387.28000000000003,
+      "text": "collect rod lengths and make it 10 and make sure it is maximized you'll be like yes river makes sense and this problem is quite of quite less similar to the knapsack kind of problems where we are given an array with values and weights and we collect weights and we try to form the n so this problem now becomes similar correct so can i say this can i say this for this particular example like if i just take this particular example 2 5 7 8 10 can i say this if i write down the index number 0 1 2 3 4 i know index four means a length five i know index three means a length four i know index two means a length three i know index one means a length two i know index zero means a length one so can i do can i solve the problem in a similar way to knapsack i think i can so what i'll do is i will try to pick lengths try to pick lengths and sum them up to make the given n this is my funda i'll try to pick them in various ways i'll try to pick length in all possible ways and whenever i say in all possible ways what comes to your brain your brain immediately starts saying okay best way is to draw right recurrence right recursion rather and how do you write recurrence i have taught you that fonda how do you write recurrence i have clearly stated you first express in terms of index obviously you can express in terms of index because you're given an array you're given an array of rod lengths and prices so you'll take a rod length so you'll take an odd length and you're looking to form this particular n you're looking to form this capital n which is initially 5 so that's what explore all possibilities so you know what are the possibilities on dp on subsequences it's not take and at stake and it is being",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "mO8XpGoJwuo",
+      "position": 205,
+      "title": "DP 24. Rod Cutting Problem | 1D Array Space Optimised Approach",
+      "url": "https://www.youtube.com/watch?v=mO8XpGoJwuo",
+      "start": 381.6,
+      "end": 519.5989999999999,
+      "text": "not take and at stake and it is being given you have to maximize the price so maximize the price maximal maximal of all the possibilities i can say is what you will have to write so the question is pretty much similar to what we did in unbounded knapsack why because over here what are you looking you're looking to format this particular n right and you're trying to maximize all the possibilities so can i say this can i say this i will start off with index and a capital n now 2 5 7 8 10 this was the pricing of rodnets can i say this if i'm writing 0 1 2 3 4 if i'm writing f of 4 which is f of n minus 1 comma a capital n can i say this what i'm asking is ill here what is the maximal cost that you can formate and till here what is the maximal cost that you can format and ill index four what is the maximum price you can obtain maximum price you obtain correct that is what the question states so can i say let's forget about the base case can i say i will be like okay i will have a not take case and if i not take if i do not take that rod length then the value added or the price added will be zero and i'll move to the previous index and the weight or the n remains same now when can you cut it can i say the take since i am looking for maximum pricing it will be initially intervene very obvious and can i say i can only cut because if i'm looking to form n that rod length has to be because if if you're coming up with a value as three and the rod length is having like something like three or four so how do you know the rod length i told you what is the rod length for this guy it's five what's the rod length for this guy",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "mO8XpGoJwuo",
+      "position": 205,
+      "title": "DP 24. Rod Cutting Problem | 1D Array Space Optimised Approach",
+      "url": "https://www.youtube.com/watch?v=mO8XpGoJwuo",
+      "start": 514.959,
+      "end": 638.3199999999999,
+      "text": "five what's the rod length for this guy it's two because the rod length is one two three four five so can i say this can i say this if the rod length like if i try to write it in a very sophisticated way can i say the rod length is nothing but index plus one again make sense the rod length is index plus one every time can i say the rod length has to be lesser than equal to the length that i'm looking for makes sense and if it is then i can take this rod length and the price added will be price of index plus function of index n minus the rod length because this much rod length will go off the rod length will go off now question arises do you stand at the same index yes baba yes you stand at the same index why because because if you carefully remember you can actually pick up one as many times as you want which case in finite supply of rods infinite supply of rods and whenever there is an infinite supply of rods what do you do i have already taught this in the previous lectures you stand at the same index you stand at the same index and right at the end of the day you can return the max of take and not take that's it what about the base case write the base case we definitely know the base case will be at index equal to equal to zero but we need to think on this base case as a single element now so what is the initial starting the initial starting that i started was n minus one so you will go on zero so zero is the base case let's just think it as a single element so we are the zeroth index we know the rod length for zero index is one and it will have a price assume it has a price of six and i'm coming up with a rod length yes",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "mO8XpGoJwuo",
+      "position": 205,
+      "title": "DP 24. Rod Cutting Problem | 1D Array Space Optimised Approach",
+      "url": "https://www.youtube.com/watch?v=mO8XpGoJwuo",
+      "start": 633.92,
+      "end": 765.76,
+      "text": "and i'm coming up with a rod length yes i'm coming up with a rod length 12. this is the remaining rod length that i'm looking to make initially whatever it is this is the remaining lot rod length i'm looking to make looking to make this because that is what the recurrence was stating right because that is what the recurrence was stating till index four what is the maximum price you can obtain in order to make n right so whatever n comes if at the last index n is 12 how can you make this 12 is the question so the question is how can you make this rod length 12 because over here it's a rod length one so if if you can take one one one one dot or dot one 12 times can i say that will make this remaining length 12 like yes yes it will it will so whatever n is left at the end of the day at index 0 can i say the pricing will be because the rod length is 1 i can make that rod length because if the remaining length is n it will require n rods n rods of length one n rods of length one is what it will require and if it requires n rod of length 1 what will be the price n into price of 0 perfect perfect so that's what you'll return you will say n into price of zero is what i'll return because because the last guy is of length one and if it is of length one i know i will require n rods of length one and the pricing will be into price of zero that's the base case super simple so once i've written the base case what's the next step it's a recursion code right so you have to convert the recursion into memo i action so overlapping sub problems will be there what's the time complexity of recursion obviously not not 2 to the power n it is",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "mO8XpGoJwuo",
+      "position": 205,
+      "title": "DP 24. Rod Cutting Problem | 1D Array Space Optimised Approach",
+      "url": "https://www.youtube.com/watch?v=mO8XpGoJwuo",
+      "start": 761.04,
+      "end": 883.279,
+      "text": "obviously not not 2 to the power n it is exponential it's greater than 2 to the power n we have already discussed why because of staying at the same index you're staying at the same index we have already discussed this what is the space complexity the auxiliary stack space is the recursion depth and it can go on till we go off target whatever target is because you're taking the target you're taking the target again and again so we go off target it can go as if you do memoize index and then couple of changing parameters index is n n is also n so n into n plus 1 will do [Music] and the time complexity will be b go off n into n the space complexity will be big o of n into n plus b go off the target as the auxiliary stack space and as usual i'm not a big fan of auxiliary stack spaces and if i'm not a big fan of auxiliary stack spaces what do i do i convert this into a tabulation code what are the rules rules rules write the base case write the two changing parameters copy the recurrence as simple as that as simple as it can get let's write the base case at first let's go back to the recreates by the way in order to convert it into a memoration just make sure you write dp of index n equal to and over here dp of index n not equal to minus 1 and you try to return simple as that so let's look at the base case it states index equal to 0 does it does it have a boundary on n does it have a boundary on n and the answer to that is it does not have a boundary on it so n can be anything it can be one it can be two it can be three it can be four in fact it can be zero as well it can be five it can be six it can be",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "mO8XpGoJwuo",
+      "position": 205,
+      "title": "DP 24. Rod Cutting Problem | 1D Array Space Optimised Approach",
+      "url": "https://www.youtube.com/watch?v=mO8XpGoJwuo",
+      "start": 880.639,
+      "end": 1008.639,
+      "text": "can be five it can be six it can be anything in the largest n so thereby i know index is set as 0 so i will be declaring dp of n and n plus 1 for sure so can i say the value of n can be from 0 to whatever the original ns thereby i can write dp of 0 n is nothing but whatever i wrote in the base case n into price of 0 perfect this is the base case i exactly copy pasted the same thing but i did it for every n i did it for every n because n can be anything perfect superb what about this what did you do in the recursion in the recursion it went from n minus 1 to 0 by 0 being the base case what is tabulation bottom up what is tabulation bottom up so from base case you go till the ultimate so base case is done so you start from one n minus one what about n you do it in the opposite done and now you just need to copy the records so here without without actually wasting any time let's super quickly code this up so given the price and you're given the n right so what i can do is i can write the function with index and the capital n and we can take the vector into and the price correct so that's what i will be taking can i say if index is equal to equal to zero i need to return the n into price of zero perfect and uh there will be other cases of not take antique right so not tick case will be zero value plus f of index minus one you move back to n and take a price but the take case will be having in uh you're looking for maximum right so intervene and what is the rod length the rod length is nothing but as of now at the index it's index plus one so i need to",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "mO8XpGoJwuo",
+      "position": 205,
+      "title": "DP 24. Rod Cutting Problem | 1D Array Space Optimised Approach",
+      "url": "https://www.youtube.com/watch?v=mO8XpGoJwuo",
+      "start": 1004.24,
+      "end": 1122.799,
+      "text": "index it's index plus one so i need to check if the rod length is lesser than the required n if that's the case i can definitely take it and if i take it it'll be price of index plus function of you stay at the same index and the rod length that you are looking for will reduce by the rod length perfect and you just pass on the price and over here you can return the max of take and not take and right here you can say return f off you start from the last index which is n minus one you look for the end rod length and you pass on the price so that's what you will have to write so you see it is giving correct answer what's the next step you know it will be giving you tle so please make sure you memoize this so create a dp array and try to memorize this into n into vector of int n plus 1 comma minus 1 once you memoize this this will go as dp obviously this will go as vector vector in dp this will be dp of index n this you can say fdp of index n not equal to minus 1 you can say return dp of index n perfect and just make sure you pass the dp here make sure you pass the dp here once you've done this super really run this off it is running let's quickly submit this and see if this is running fine it does it does give me 100 marks what's the next step the next step is to convert this into a tabulation step one make it zero step two oh sorry step one write the base cases it goes from zero goes until n n plus plus and you write dp of zero and the n equal to the base case whatever is the base keys just make sure you copy paste done what's the next step for int index equal to one index lesser than n",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "mO8XpGoJwuo",
+      "position": 205,
+      "title": "DP 24. Rod Cutting Problem | 1D Array Space Optimised Approach",
+      "url": "https://www.youtube.com/watch?v=mO8XpGoJwuo",
+      "start": 1117.039,
+      "end": 1243.52,
+      "text": "equal to one index lesser than n index plus plus and you can just go on from 4 int w equal to sorry rather n equal to 0 n goes lesser than n and you can do capital n plus plus just make sure you copy paste this entire stuff perfect uh copy paste this entire stuff do some dabbing spacing okay cool done what's the next step over here instead of f you write dp of index minus one you say this just make sure you do this and over here what will be this dp of index for about this n minus rod length perfect and over here you can just remove the return and over here instead of this you can just start you can write the return instead of this you can write the dp n minus 1 [Music] and the n perfect and you can just erase this off so this is let me quickly check it this is perfect now this looks perfect to me let's quickly run this off so that's how you write the tabulation and now let's quickly summit this off right does run what's the next step space optimization again in x minus 1 index previous previous current now now space optimization is so easy right when you started you were like oh my stop it is so tough but now it looks easy isn't it so vector of int previous n comma at the n plus one because a row is what you're taking curve n plus one comma zero so instead of this you can be like let's write previous instead of dp of index minus one why don't i write previous instead of dp of index why don't i write car instead of dpf index why don't i write car over here why don't i do it previous equal to car over here why don't you do it three years and i'll quickly run this off indeed it does run let's quickly submit this as well 100 a so this was",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "mO8XpGoJwuo",
+      "position": 205,
+      "title": "DP 24. Rod Cutting Problem | 1D Array Space Optimised Approach",
+      "url": "https://www.youtube.com/watch?v=mO8XpGoJwuo",
+      "start": 1238.4,
+      "end": 1361.84,
+      "text": "a so this was to array space optimization can we space optimize this into a 1d array and answer that is yes we can previous video unbounded knapsack so over there you saw we were using a state right above because n is the column number previous n is the right above and n minus is like if yes if you're trying to compute this you're trying to use the previous computed values and this guy this guy and the previous computed values so these guys have no no significance in the previous column this guy has like the crossfit guy have no significance so there's no need to store it whenever you're computing this current just rewrite over here whenever you're computing this current read over here whenever you're computing this current rewrite over here whenever you're computing this current rewrite over here use this compute this and try to rewrite over here that's it so you can easily use the single one yes so just use a single one no need to do previous equal to current no no need of this current one because just rewrite it because you're using the previous guys and the right above guy so done let's really run this off so one d array yeah single array and we're able to space optimize this so guys dp on subsequences is done we have done all the patterns on dpn subsequences now you tell me in the comment section can you solve any problem on dpn subsequences now if you can please please tell me in the comment section how did you like this dp on subsequences pattern where we solved a bunch of problems please please do that because that will highly motivate me and yes if you watch this video till now we have learned recursion memoration tabulation two space optimization one space optimization and you've understood everything so just in case you did please make sure you like this video and if you're new to this channel please please please do consider subscribing to",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "mO8XpGoJwuo",
+      "position": 205,
+      "title": "DP 24. Rod Cutting Problem | 1D Array Space Optimised Approach",
+      "url": "https://www.youtube.com/watch?v=mO8XpGoJwuo",
+      "start": 1358.48,
+      "end": 1374.89,
+      "text": "please please do consider subscribing to us and here with this let's wrap up this video let's read in the next one till then bye take care whenever your heart is broken [Music]",
+      "word_count": 33
+    }
+  ]
+}

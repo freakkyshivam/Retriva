@@ -1,0 +1,207 @@
+{
+  "video_id": "MM7fXopgyjw",
+  "position": 232,
+  "title": "DP 52. Evaluate Boolean Expression to True | Partition DP",
+  "url": "https://www.youtube.com/watch?v=MM7fXopgyjw",
+  "chunk_count": 18,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "MM7fXopgyjw",
+      "position": 232,
+      "title": "DP 52. Evaluate Boolean Expression to True | Partition DP",
+      "url": "https://www.youtube.com/watch?v=MM7fXopgyjw",
+      "start": 0.0,
+      "end": 116.64,
+      "text": "everyone welcome back to take you forward so today we will be solving the problem boolean evaluation to true now this is again a similar problem related to mcmdp so if you have not seen the mcm lecture go back watch dp 48 49 50 51 make sure you watch out all these four lectures and then you can definitely watch out boolean evaluation because this problem is so much related to mcm like if you know mcm this problem becomes like a cake so please please go back and watch it now what does the problem state let's understand the meaning of the problem so the problem states you'll be given a string okay now this is the string that is given to you and the string you'll be given true or false and then an expression the expressions can be or which goes by this and which goes by this and uh zor which is somewhat like this so these are the three expressions that you will be seeing all over now imagine i give you this particular expression now the standard way to solve this is you can go anywhere like true and true like you can probably write true and true is true and false which gives you false this is one of the possible ways that you say true and true is true and then true and false is false thereby this is false so this is one of the ways but what they want to you is to perform this like to solve this in such a way that at the end of the day you get true that at the end of the day you get true so for an example what i can do is see i can probably say i'll keep t then i'll keep or and then i'll perform this portion at first like i'll perform this portion at first so if i perform this portion at first we will get false true or false which gives you true so this is one of the ways in which you can",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "MM7fXopgyjw",
+      "position": 232,
+      "title": "DP 52. Evaluate Boolean Expression to True | Partition DP",
+      "url": "https://www.youtube.com/watch?v=MM7fXopgyjw",
+      "start": 113.04,
+      "end": 214.64,
+      "text": "one of the ways in which you can definitely yes in which you can definitely get true so i can say for this expression i have one way in which i can get true so do i find any other way no since we are not finding any other way you have to just print one this is nothing but the number of ways in which we can evaluate it to true okay now let me just quickly take one more example and try to explain you so let me take one more example this expression and try to solve it so imagine i say that i will be solving f or t at first then i'll be doing azor with f so f or t will give you what it will give you true definitely trues or f will give you true so if i follow this pattern of solving i am still evaluating this expression to true now if i go in the other way where i say okay listen let's keep this and let's try to solve p s or f at first now trues or f will be nothing but true and then there will be an f which again gives you true so if i follow this way and this way i'm still getting a true if i follow the other way of solving this first and this then also i'm getting a true so i can say there are two ways in which i can evaluate this expression to get true there are two ways in which i can evaluate this expression to get true so the question is very straightforward the question states given an expression you have to tell me the total number of ways you have to tell me the total number of ways in which in which you can evaluate this expression to true okay so how do you solve this problem how do you solve this problem again isn't it uh like you definitely know it will have true then it will have",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "MM7fXopgyjw",
+      "position": 232,
+      "title": "DP 52. Evaluate Boolean Expression to True | Partition DP",
+      "url": "https://www.youtube.com/watch?v=MM7fXopgyjw",
+      "start": 211.44,
+      "end": 324.639,
+      "text": "will have true then it will have probably zore then it will probably have false and it will probably have order and then a true probably then an and then a false and a zord then a true like it can be anything but something for sure you know is it starts with a true or false and then is followed by an operand then followed by a true or false followed by an operand followed by a true or false followed by an operand followed by a true and false followed by an operand followed by a true and false followed by an operand something i definitely know is either i saw this guy at first and then this then over here i can decide whether to solve this or that is a different thing but when i start can i think this problem in this a certain way that either i solve this and this or either i say this or this or either i say this or this or either i say this or this or either i say this or this so can i say can i say at every operand at every operand i can do a partition stating i solve the left sub problem i solve the right sub problem right or i can say on this operand i solve the left sub problem and the right sub problem or i can say on this operand i solve the left sub problem and the right sub problem or i can say on this operand i solve the left sub problem and the right sub problem or i can say on this operand i'll solve the left sub problem and the right solve sub problem so on every operand i'm actually breaking it down into sub problems and then imagine if i'm solving this this will give you a true and then on this on this like if i try to write this sub problem like if i just uh do it in yellowish f or t",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "MM7fXopgyjw",
+      "position": 232,
+      "title": "DP 52. Evaluate Boolean Expression to True | Partition DP",
+      "url": "https://www.youtube.com/watch?v=MM7fXopgyjw",
+      "start": 322.479,
+      "end": 442.479,
+      "text": "t now on this again you can do the same thing either you solve this and this either you solve this or this either you solve this or this either you solve this or this and again this will be solved so am i getting a pattern of breaking it down on the operand yes i'm getting a pattern to break it down on the operand so why don't i break it down on the operand let's let's actually break it down on the operand so can i say initially i have this entire expression to be solved so probably we know this is nothing but similar to something like mcm where we had a b c d e f we decided this will be solved at first and this will be solved at first so can we actually think uh this problem in that direction we definitely can and that is what we will move across and try to think so can i say initially i have this entire range i can call this as an i and j as we have been doing in all the other problems i can say this is the entire range that i'm looking to evaluate right starting from the true to this last gap i can say this is the initial range that i'm looking to evaluate now can i say can i say if i'm standing at i i can always do a partition on an operand on an operand on an operand on an operand on an operand i definitely can do and that operand can be this guy this guy this guy or this guy or this guy do you see a pattern evolving do you see a pattern evolving yes the operands are at a distance of two indexes the operands are at a distance of two indexes i can definitely vouch for that that the operands are or will always be at a difference of two right and if this is the entire expression that we are solving the first operand will be",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "MM7fXopgyjw",
+      "position": 232,
+      "title": "DP 52. Evaluate Boolean Expression to True | Partition DP",
+      "url": "https://www.youtube.com/watch?v=MM7fXopgyjw",
+      "start": 436.8,
+      "end": 553.519,
+      "text": "are solving the first operand will be starting from i plus one then you can do a plus two then you can again do a plus two then you can again do a plus two plus two in order to find your operands and you can go on till j minus 1 because that is where the last operand will be so i have practically understood where can i do a partition that is definite enough that where can i do a partition but now how do i solve a problem imagine let me just erase this blue lines because those are a lot of lines okay now this was the entire range right imagine i am doing i am doing an operand like i am trying to do a partition here this is an and operator this is an and operator so apparently this is the sub problem that i am saying to solve this is the sub problem that i'm saying to solve correct so if this partition is done at an index so can i say can i say the number of uh like i need to solve this partition which is f of i comma index minus 1 this belongs to this and this is nothing but f of index plus 1 comma j as usual this is a left sub problem this is a right sub problem now since there is an and operator since there is an and operator what should the left sub problem give you back what should the left sub problem give you back and what should the right sub problem give you back that is a simple enough question that i am asking you so we know that if there is an and operator and we know and will because you are saying there is a left guy and there is a and and there is a right guy so i know one thing for sure this left has to yield a true this left has to yield a true and this",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "MM7fXopgyjw",
+      "position": 232,
+      "title": "DP 52. Evaluate Boolean Expression to True | Partition DP",
+      "url": "https://www.youtube.com/watch?v=MM7fXopgyjw",
+      "start": 548.48,
+      "end": 686.48,
+      "text": "this left has to yield a true and this right has to yield a true that is for sure the number of ways can i say since i'm looking for the total number of ways to make true can i say the number of ways in which the left yields true imagine it is x number of ways and the number of ways the right yields true is y so can i say the total ways will be x into y where x is the number of ways in which the left guy gives true the left is true and similarly y is number of ways in which the right is true understood so that was for and operator that was for and operator now similarly if i if i think of other patterns where we are doing a partition at imagine or and there is a left guy that has to be solved and there is a right guy which has to be solved so if it's an or operator when does an or operator gives you are true like when will this yield a true can i say if the left sub problem yields true and the right sub problem yields are true and imagine this is x one ways this is x two is the left sub problem yields true or gives you true in x one ways the right sub problem gives you true in x two ways so can i say the number of ways will be x1 into x2 is it just limited to true no because it is an or operator so i can say if the right yields false in x3 ways because this sub this right sub problem might also give you a false might might give you a false and if the number of ways in which it gives you a false is x3 is x3 so what you say is hey listen there is true on the left there is false on the right so true and false if it's an or operator will also yield a true",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "MM7fXopgyjw",
+      "position": 232,
+      "title": "DP 52. Evaluate Boolean Expression to True | Partition DP",
+      "url": "https://www.youtube.com/watch?v=MM7fXopgyjw",
+      "start": 680.24,
+      "end": 803.4399999999999,
+      "text": "an or operator will also yield a true true or false will also yield a true thereby the number of ways can also be x1 number of ways in which you can make true on the left the number of ways in which you can make false on the right similarly can i say if i make false in x4 ways i can again say false from here true from here will also yield a true thereby x2 into x4 so i can say the total ways will be this i figure out the number of ways of true the number of phase of true number of false false and total will be this if it's an or operator if it's an if it's a simple uh and then it's an easy one it is just x into y if it is over then it becomes x one into x two x one into x three x two into x four right and similarly if it's a zor if it's a zord let's understand when does azor gives you a true so is basically if it's a true true it will give you a false it's a false or for uh it will give you a false it's true or false it gives you true it's a false or true it gives you true so these are the ways in which it can yield true remember this now i see one thing only there are two ways in which you can get true so thereby if there is a left sub problem if there is a right sub problem and if i can get the number of truths to be x1 the number of trues to be x2 the number of false to be x3 the number of false to be x4 so i can say it's true into false which is x1 into x4 that's true into false and false which is x3 into true which is x2 so for the zor whenever there is a zoro operator this will be the total number of ways this",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "MM7fXopgyjw",
+      "position": 232,
+      "title": "DP 52. Evaluate Boolean Expression to True | Partition DP",
+      "url": "https://www.youtube.com/watch?v=MM7fXopgyjw",
+      "start": 798.959,
+      "end": 902.959,
+      "text": "will be the total number of ways this will be the total number of phase so i i can understand one thing if i'm solving a left sub problem i have to figure out the number of ways in which it can be true and in which it can be false so i have to solve it in two ways i have to figure out in how many ways it can be true in how many ways it can be false understood now as of now we are just solving a true problem where we are given a range i j and we are trying to evaluate it to true but now whatever range because this is a problem and this is a sub problem now this might yield a true this might either true or this sub problem might be a false so whatever range i'm solving yes whatever range i am solving i need to figure out in how many ways it can be made true in how many ways it can be made false so i'm looking to make it true i'm looking to make it false i have to figure out both the ways so apparently can i just carry a third variable i can so what i'll do is i know this is the range that i'm looking to solve and i will say one or zero like true or false is true like are you looking for true so i will i'll have this guy is true if i'm looking to figure out the number of ways in which i can need to have it true i'll have it as one or i'll have it as zero like initially when you start let's go back and understand initially this is the guy and if i try to write down the indexes it's 0 1 2 3 4 5 6 7 8 9 10. so i will call it f of 0 comma 10 because the range is from 0 to 10 so i'll call it 0 to 10 and",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "MM7fXopgyjw",
+      "position": 232,
+      "title": "DP 52. Evaluate Boolean Expression to True | Partition DP",
+      "url": "https://www.youtube.com/watch?v=MM7fXopgyjw",
+      "start": 897.279,
+      "end": 1014.5600000000001,
+      "text": "from 0 to 10 so i'll call it 0 to 10 and this is the initial expression and the question states in how many ways can you make the initial expression true so i will call is true as 1 because i'm looking for true because i'm looking for the number of true so i'll call it as one got it perfect so what i'll do is i will simply uh have it as is true and initially i will start off with f of zero comma n minus one and one because i'm looking for the number of trues i'm looking for the number of ways in which you can make through the entire guy the entire stuff so that's why initially start with one but whenever you're solving the left and right sub problem make sure you uh take care of whether you need true or whether you need false got it so what will be the base case in partition dp now you know one thing for sure if the partition is over which is this case i greater than j this is partition over and there are zero ways in which you can make it true if there is no partition there is no true or no fault so you just return a zero as a standard way what's the other way now when do you actually get it true and false try to try to realize or try to think so imagine if i am if i'm just giving you this portion true or true or false or true imagine now wherever you're trying to solve this sub problem at like this was the initial sub problem i nj and then you broke it down into solving saying just solve this where i is this j is this and also solve this f z where i is this j is this and the other way you are saying solve this sub problem where i is this j is this and solve this sub problem where i is",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "MM7fXopgyjw",
+      "position": 232,
+      "title": "DP 52. Evaluate Boolean Expression to True | Partition DP",
+      "url": "https://www.youtube.com/watch?v=MM7fXopgyjw",
+      "start": 1009.759,
+      "end": 1135.28,
+      "text": "and solve this sub problem where i is this j is this now tell me one thing if this is a sub problem where i and j is he himself where i and j is he himself what will this guy give this guy will give one way to make it true this guy will give one way to make it true since i was looking to make this guy as true this will give true as one way because i is equal equal to j and it was true similarly over here single guy this will also give you one way so can i say can i say if if i is equal to equal to j then that is when i can say it's end if the single guy you know it's a true or false if the single guy it will either be true or it will either be false the single partition will either be true and false and if your is true is looking for one like if you're just looking for one if you passed on one which means you're saying how many truths are there in how many ways can you make it true you will say okay if is true is one then i will return you whatever is at my partition if that is true i'll return it true or else it will return a false this makes sure this will make sure that it returns a one if true zero if false remember this and if it is not if is true is like you're looking for false if you're looking for false remember this if you're looking for false in how many ways can you make it false then i will say okay then kindly return if the partition is false then only return one if the partition is false return one if false returns zero if true so in this way you can say that partition at the end of the day is true if you're looking for true it's one way",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "MM7fXopgyjw",
+      "position": 232,
+      "title": "DP 52. Evaluate Boolean Expression to True | Partition DP",
+      "url": "https://www.youtube.com/watch?v=MM7fXopgyjw",
+      "start": 1131.76,
+      "end": 1239.039,
+      "text": "if you're looking for true it's one way if you're looking for false it's one way otherwise it's not so this is how the base case can easily be written once you have written the base case we will get back and see okay where is the partition now where can you make the partition if this is i this is j i already told you you start from i plus 1 and you go until j minus 1 with a transition of plus 2 plus 2 plus 2 so just go across and make the partition so what you'll do is you'll just go across and try to make the partition right starting from index equal to i plus 1 index lesser than equal to j minus 1 and index equal to index plus 2 you'll always make a jump of plus 2. so imagine i'm saying x1 is the number of ways in which you can make the left partition true or let's have it a name better left partition can be made true in the number of phases i comma n minus 1 is the left partition i'm looking the left partition to be true so one the left partition can be made false in i comma n minus one comma zero the right partition can be made true in index plus one comma j is the right partition comma one the right partition can be made false in you can go to the right partition and say can you please bring me down so depending on if you want a true you send in a one if you want the false you send in a zero if you want a true you send in a one if you want a false you send in a zero now whatever formula we made for an example if your operand is by the way we are looking for the number of ways so we know number of ways is initially zero and all the ways you'll count all the ways you'll count and if you remember",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "MM7fXopgyjw",
+      "position": 232,
+      "title": "DP 52. Evaluate Boolean Expression to True | Partition DP",
+      "url": "https://www.youtube.com/watch?v=MM7fXopgyjw",
+      "start": 1234.08,
+      "end": 1347.4399999999998,
+      "text": "ways you'll count and if you remember the dp uh the recursion lecture seven i told you whenever you're counting ways if there is a one recursion called two recursion call you add up all of them so these are recursion calls being made you add up always what does that mean if you're counting always first you will try this and figure out the number of ways and add it then you will try this figure out the number phase and add it then you will try this figure out the number of ways and add it then you'll try this and this figure out the number of phase and you'll add it then you'll try this and this figure out the number phase and you will add it that's what you will keep on doing so can i say if this is what we have is a very straightforward one you say that hey listen if the operand is somewhere and if the operand is somewhere and i know the ways will be nothing but we just need true on the both sides so left will be true and right will be true just please add them up similarly you go on applying the formula for or and similarly you go on applying the formula for zor once you have done this just the formula that we wrote you return the total number of ways yes you just return the total number of ace that is what you'll do now are we done no you have to be careful enough is this correct no this is not correct why is this not correct because this just gives you true ways but if you remember your function had a parameter does it won't prove it might want false it might want false so on an and if i'm if i'm counting only if i want to only if i want true then i come across and do a true into true what if i want false then the number of ways will be",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "MM7fXopgyjw",
+      "position": 232,
+      "title": "DP 52. Evaluate Boolean Expression to True | Partition DP",
+      "url": "https://www.youtube.com/watch?v=MM7fXopgyjw",
+      "start": 1341.6,
+      "end": 1459.84,
+      "text": "false then the number of ways will be very simple if i want false it will be either one of them has to be false so either the right one has to be false or the left one has to be false or the both has to be false that will also work so if if the left is true and the right is false it will give you a false if the left is false and the right has to it will also give you false if both of them are false it will also give you a false so if you're looking for false ways this is how you count it if you're looking for true ways this is how you count it similarly for or you can write similarly for zord you can write and you can just return the number of ways that's how you do it so we are definitely applying recursion right what are we applying we are trying to apply recursion and if you are applying recursion the time complexity over here will be exponential and in order to get it better you will see if there are overlapping sub problems and we will notice that there are overlapping sub problems thereby like you can draw the recursion tree and you'll see overlapping sub problems thereby we can easily memorize it yes thereby we can easily memoize it and if you can easily memoize it rdmi's you go back to the function the function had an i the function enter j the function as is true all are changing parameters i can be from 0 to n minus 1 so an n size will be required for the state j can be from n minus 1 to 0 again an n size will be required is true either i required true or either i require false so there are two guys so i'll be requiring a 3d dp of nn2 a 3d dp of n n2 and you will be just writing it over here like dp of i dp of j and",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 13,
+      "video_id": "MM7fXopgyjw",
+      "position": 232,
+      "title": "DP 52. Evaluate Boolean Expression to True | Partition DP",
+      "url": "https://www.youtube.com/watch?v=MM7fXopgyjw",
+      "start": 1456.32,
+      "end": 1585.039,
+      "text": "and is true is equal to ways and similarly you can just uh plunge plunge that in over here right over here yeah right over here if if that dp has not been visited you end up returning the dp of whatever is that so just right across that and if you are doing this you will end up boiling down the time complexity to how many you're using these number of states n into n into these are the number of states that are using inside every state you're running a for loop for the partition to be made so this is almost near about to n cube what about the space complexity you're trying to uh memorize it in n square into two plus an auxiliary because you're trying to shrink it down so auxiliary stack space will be there so this will be the time complexity and space complexity in the next step we'll try to code this up so let's quickly check out the code now something very important uh to figure this out is since the number of ways might be a lot of ways you need to return the answer module or this okay so please make sure you take everything in long long otherwise it will be an issue so please make sure you do this in the i intj and uh ints2 is what we required right and you'll definitely require the string as well so probably you can write the string as well perfect now i know one thing if it exceeds this case will never happen but still let's for safety reasons let's write it and in this case if i know it is true and i will then return expression of i is that true if it is true i'll return it true or else it goes as false else i'll return expression is equal to false it's false it's a one way because if i'm looking for that perfect uh right after this i will have the number of ways so just a quick thing probably",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 14,
+      "video_id": "MM7fXopgyjw",
+      "position": 232,
+      "title": "DP 52. Evaluate Boolean Expression to True | Partition DP",
+      "url": "https://www.youtube.com/watch?v=MM7fXopgyjw",
+      "start": 1579.12,
+      "end": 1734.48,
+      "text": "just a quick thing probably this we can do long long just to avoid overflows yeah perfect long long ways is equal to zero for int index the partition will start from this and index will go on till j minus 1 and index plus equal to 2 perfect and if i'm doing the partition i'm looking for long long left i'll just uh instead of writing it again and again let's do one thing hash define long long is l that is perfect let's change it to ll just change this to l l left true will be function of i of index minus one let's find the number of trues ll left false will be f of i comma index minus 1 find the false ll right true will be f of index plus 1 comma j comma find the number of trues l l right or false will be f of index plus one comma j comma zero comma x pression okay this is how you can easily find this off perfect right after this i know there can be two ways one is the expression going to be and this is one of the ways else if the expression goes to be or that's another way and the last way is definitely of zor if it is and and i know it is true is what i'm looking for then i will go as ways plus right through into left true for sure and we will do a modulo mod and we will do a modular mod over here but if it is not then i will do ways equal to vs plus then this will go as right true into left i'm just looking for false so right true intellect false right true into uh it will go as left false that will definitely give you false because you're looking for true so it's it's just going to be true and true but if you're looking for false true and false will give you false plus the right false into left true will also",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 15,
+      "video_id": "MM7fXopgyjw",
+      "position": 232,
+      "title": "DP 52. Evaluate Boolean Expression to True | Partition DP",
+      "url": "https://www.youtube.com/watch?v=MM7fXopgyjw",
+      "start": 1729.279,
+      "end": 1887.279,
+      "text": "the right false into left true will also give you false plus both false will also give you false perfect and if you're adding every one of them just make sure after the addition just do a simple one otherwise it will overflow so false and true false and true and false and false everyone will give you a false perfect if it's or and if i'm looking for true then i know it will be ways plus if it's an or either left true into right true will give you a false it will give you a true rather i know the left true and the right false will also give you a true and i also know a left a right true rather or a left false and a right true will also give you a false sorry a true so all of these ways are bound to give you uh true but i'm looking for false another is only way the only way in which i can make it false is i take right false into left false and i do a modulo mod if i go across and do a modular mod on both the sides they both have to be false perfect similarly for us or i know for zol if i just write down the ways yeah this is how it is so if it is is true like if i'm looking for true then the ways will be ways plus modulo for sure and if i'm looking for true i know both this and this will be true so it will be left true into right false of modulo perfect and plus left false into right true of modulo this is what will be it is if it is not then it will be ways plus so either true and true will be false or false and false so left true into right true perfect or left false right falls perfect and you can just go and do a mod once you have done all of these you can",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 16,
+      "video_id": "MM7fXopgyjw",
+      "position": 232,
+      "title": "DP 52. Evaluate Boolean Expression to True | Partition DP",
+      "url": "https://www.youtube.com/watch?v=MM7fXopgyjw",
+      "start": 1882.32,
+      "end": 2011.84,
+      "text": "once you have done all of these you can simply return the ways uh it was a long one isn't it so over here what you can do is you can just return f of zero comma expression dot size minus one that is n minus one i need true and i need the expression perfect so this is what i'll write and once you've written this i think should be fine i'll try running this hopefully it runs as a long cod i did not now this is a recursion we need to convert this into memorization so simple step is vector vector vector and you can just go on as l and then you can go as dp and then you can go as n and then you can go as the double one that we did vector vector l again and then you can go the similar way when you you can say n uh comma vector again you can go on l and over here you can go as two comma minus one i think it should be perfect i'll just take it in the next line yeah now it should be visible so if we just do this i think we should be fine and now you can just pass on this just make sure you carry this across and make this a dp amazing so right at the next step just make sure if dp of i j is true is not equal to minus 1 return dp of i j is true okay once you've done this rather the last step write dp of i j is true and we write this i think we should be good to go okay my bad have a dp over here i have a dp over here i have a db over here i have a tpu over here as well so try running this and you will see this will be running fine it is and i'll try submitting so if you try submitting this you will be seeing that you're getting a wrong",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 17,
+      "video_id": "MM7fXopgyjw",
+      "position": 232,
+      "title": "DP 52. Evaluate Boolean Expression to True | Partition DP",
+      "url": "https://www.youtube.com/watch?v=MM7fXopgyjw",
+      "start": 2007.76,
+      "end": 2092.9190000000003,
+      "text": "be seeing that you're getting a wrong answer okay so we got a wrong answer that is strange looks like you've done a minor mistake this will be into my bad okay yeah apart from that looks fine to me i'll try submitting this and see if this is running fine it does it does so so guys i hope you have understood the memoration solution so just in case you want to write the tabulation format please follow the procedure that i have taught you right from the first in the dp series there are three changing parameters just make sure you write them make sure you write the base cases by yourself and right after that just copy paste the reference under the three nested loops and before nested loops it'll get a lot complex so let's not get deep into that instead of that let's keep it simple to the memory action solution but i highly appreciate if one among you can write the tabulation code by following the format that i have taught and put it in the comment section that will be immensely helpful for a lot of other people as well so yeah with this uh i will be wrapping up this video just in case you've understood everything just give a like and if you watch the video till here let me know in the comment section if you've understood it or not and if you're new to this channel please please please do subscribe to us because that is the only thing that motivates me to make these kind of content and how with this let's wrap up this video and meet in the next one till then bye take [Music] heart is care don't ever forget",
+      "word_count": 295
+    }
+  ]
+}

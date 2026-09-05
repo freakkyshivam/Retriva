@@ -1,0 +1,64 @@
+{
+  "video_id": "pDCXsbAw5Cg",
+  "position": 229,
+  "title": "DP 49. Matrix Chain Multiplication | Bottom-Up | Tabulation",
+  "url": "https://www.youtube.com/watch?v=pDCXsbAw5Cg",
+  "chunk_count": 5,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "pDCXsbAw5Cg",
+      "position": 229,
+      "title": "DP 49. Matrix Chain Multiplication | Bottom-Up | Tabulation",
+      "url": "https://www.youtube.com/watch?v=pDCXsbAw5Cg",
+      "start": 0.48,
+      "end": 137.44,
+      "text": "hey everyone welcome back to take you forward so in the previous video we did solve the mcm problem using the memoration technique but we saw that it was partially accepted and uh that was because there was auxiliary stack space involved and we were using recursion so in this video we will be learning the tabulation method or the bottom up dp method for mcm so what have i told for tabulation let's what were the rules for tabulation if you remember from the previous lectures guys if you do if you're not following this db playlist man you're missing a lot of things please follow from the first lecture then you'll understand the rules they follow the rules it becomes very simple what about the rules copy the base case without even thinking anything just copy the base case so there was a dp of n cross n that we used so let's declare this what was the base case so if you remember the code let's go back to the code so if i show you the code you remember what did the code say if i is equal to equal to j if i is equal to equal to j which means whatever i is if it is one this has to be one if it is two this has to be two if it is three this has to be three so for every similar set of eyes that means for every similar set of mat single matrix uh matrix or matrices whatever you can call for every similar because what does f of one one what does f of one one represents minimum cost to multiply matrix one to matrix one and that's zero so dp of i i equal to zero that's what the base cases minimum cost required to multiply the matrix with itself because you never multiply the matrix that's zero done write down the changing parameters is what i say write down the changing parameters so what are the changing parameters or changing states one was very simple i",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "pDCXsbAw5Cg",
+      "position": 229,
+      "title": "DP 49. Matrix Chain Multiplication | Bottom-Up | Tabulation",
+      "url": "https://www.youtube.com/watch?v=pDCXsbAw5Cg",
+      "start": 133.12,
+      "end": 285.68,
+      "text": "i the other one was j other third step copy the recurrence let's understand how will i go and how will j go so where did we start i from i can be like striver we started i from one and we moved it ahead because if you remember the initial call was made to f of one comma n minus one remember over here initial call where did i go yeah initial call was made to this guy for one comma n minus one so i know one thing uh the i started from one and then it went on moving ahead so what you can say is okay we do it opposite n minus 1 till 0 n minus 1 l 0 ok so what is top down let's understand what is top down and what is bottom up in order to write the records top down means generally generally bigger problem like over here the bigger problem was you took the entire set of data like if you remember the recursion tree you took the entire set of data then you broke it down into smaller problems so that's what top down is top down is very simple bigger problem into a smaller problem and generally the smaller problem is nothing but the base case that's the base case so bigger problem into smaller problem that's what top down is or that's what generally recursion you write you try to break the bigger problem into smaller problem and then then then you go back and get the answer for bigger problem what is bottom up that's very un uh that's that is something that you need to understand bottom up is the opposite you take the smaller problem yes you take the smaller problem and then build up build up build up to get the bigger one get the bigger one so what is the bigger one over here what is the bigger one so i can so the bigger one is nothing but looking for a large set of matrices to",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "pDCXsbAw5Cg",
+      "position": 229,
+      "title": "DP 49. Matrix Chain Multiplication | Bottom-Up | Tabulation",
+      "url": "https://www.youtube.com/watch?v=pDCXsbAw5Cg",
+      "start": 281.199,
+      "end": 414.319,
+      "text": "looking for a large set of matrices to be multiplied looking for a large set of matrices to be multiplied so if i is where's the tabulation i got lost yeah so if i is n minus 1 to 0 because that's very obvious because you'll go from the bottom only so if i is n minus 1 to 0 what about j you can be like strava one thing i know for sure that j is starting from where's the j running how did you call the function n minus 1 so ideally j is running from n minus 1 till 0 so apparently uh you would have done the opposite okay let's write down the opposite which is 0 to n minus 1 but does that make sense and the answer to that is no why because we know one thing i is something which will always be on the left of j i is something which is always be on the left of j so how can you always start j from 0 so can i say can i see this is where i need to be a bit practical i have to start from the right of i instead of going till 0 to n minus 1 so yes written both the loops just make sure this is i plus 1 because there has to be some set of data they cannot go to the left written the next step is copy the reference and you will be done with the tabulation as simple as it can get if you have written the recursive solution so what i'll do is i will just go back to the code and this is how the code looks so let's uh quickly change this to probably dp of n okay for the next thing i said for int i will go n minus 1 till i greater than 1 rather y naught 0 because if you remember i was from n minus 1 till 1 and not zero that's what you'll do",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "pDCXsbAw5Cg",
+      "position": 229,
+      "title": "DP 49. Matrix Chain Multiplication | Bottom-Up | Tabulation",
+      "url": "https://www.youtube.com/watch?v=pDCXsbAw5Cg",
+      "start": 408.319,
+      "end": 532.9590000000001,
+      "text": "that's what you'll do and j can go from i plus one till j uh lesser than n and j plus plus on the next thing just make sure copy paste the entire records yeah that's what you just need to do copy paste the entire record says done and instead of f just make sure instead of rather f you copy something like dp i k perfect and over here you just have dp k plus one j once you've done this this is what you write and over here you return dp of one n minus one and you just format this off that's what you will generally return okay the base case i forgot to write the base case so it's i equal to 1 till i lesser than n i plus plus and again the db of i i equal to zero so i think that should be pretty much it yeah looks like this is this is what the code will be so we try to run this i'm getting all the correct answer i'm going to submit this this time probably we will not get partially accepted this will be completely accepted it is it is it's two o'clock in the night cool guys uh easy isn't it once you write this it's just the opposite copying recurrence and understanding the base case is getting the opposite of ij like whatever you're running the ig and recursion is just the opposite that you need to do i just need to be a bit practical while you write it just think about edge cases because if you have run run this from zero then then there's a problem right so just make sure you be a bit practical when you try to write the for loops and if you are then you can easily solve this how the time complexity uh n cube space n square no auxiliary speed is being used so guys i hope you have understood the tabulation once just in case you did please please",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "pDCXsbAw5Cg",
+      "position": 229,
+      "title": "DP 49. Matrix Chain Multiplication | Bottom-Up | Tabulation",
+      "url": "https://www.youtube.com/watch?v=pDCXsbAw5Cg",
+      "start": 529.839,
+      "end": 546.959,
+      "text": "once just in case you did please please please make sure you like this video and when you do this channel please do consider subscribing to us and yeah with this let's wrap up this video and meet you in the [Music] a light next",
+      "word_count": 45
+    }
+  ]
+}

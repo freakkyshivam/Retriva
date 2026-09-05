@@ -1,0 +1,3812 @@
+{
+  "position": 275,
+  "video_id": "3E4JBHSLpYk",
+  "title": "L4. Max Consecutive Ones III | 2 Pointers and Sliding Window Playlist",
+  "url": "https://www.youtube.com/watch?v=3E4JBHSLpYk",
+  "transcript": [
+    {
+      "start": 4.48,
+      "duration": 4.0,
+      "end": 8.48,
+      "text": "so let's continue with these drivers a"
+    },
+    {
+      "start": 6.24,
+      "duration": 4.439,
+      "end": 10.679,
+      "text": "toz DSi course and the problem that we"
+    },
+    {
+      "start": 8.48,
+      "duration": 4.48,
+      "end": 12.96,
+      "text": "will be solving today will be involving"
+    },
+    {
+      "start": 10.679,
+      "duration": 4.441,
+      "end": 15.120000000000001,
+      "text": "the concepts of two-pointer and sliding"
+    },
+    {
+      "start": 12.96,
+      "duration": 3.44,
+      "end": 16.400000000000002,
+      "text": "window but before starting hey everyone"
+    },
+    {
+      "start": 15.12,
+      "duration": 3.319,
+      "end": 18.439,
+      "text": "welcome back to the channel I hope you"
+    },
+    {
+      "start": 16.4,
+      "duration": 4.84,
+      "end": 21.24,
+      "text": "guys are doing extremely well so the"
+    },
+    {
+      "start": 18.439,
+      "duration": 6.121,
+      "end": 24.560000000000002,
+      "text": "problem that we will be solving today is"
+    },
+    {
+      "start": 21.24,
+      "duration": 5.199,
+      "end": 26.439,
+      "text": "Max consecutive Ones Part three so what"
+    },
+    {
+      "start": 24.56,
+      "duration": 4.84,
+      "end": 29.4,
+      "text": "is the problem stating the stating that"
+    },
+    {
+      "start": 26.439,
+      "duration": 6.201,
+      "end": 32.64,
+      "text": "it'll be given an array which contains"
+    },
+    {
+      "start": 29.4,
+      "duration": 5.999,
+      "end": 35.399,
+      "text": "one and and zeros nothing apart from it"
+    },
+    {
+      "start": 32.64,
+      "duration": 5.16,
+      "end": 37.8,
+      "text": "and you'll be given an integer K so your"
+    },
+    {
+      "start": 35.399,
+      "duration": 5.84,
+      "end": 41.239000000000004,
+      "text": "task is to return the maximum"
+    },
+    {
+      "start": 37.8,
+      "duration": 7.599,
+      "end": 45.399,
+      "text": "consecutive ones given that you're"
+    },
+    {
+      "start": 41.239,
+      "duration": 8.16,
+      "end": 49.399,
+      "text": "allowed to flip at most K zeros you're"
+    },
+    {
+      "start": 45.399,
+      "duration": 6.561,
+      "end": 51.96,
+      "text": "allowed to flip at most K Zer let's"
+    },
+    {
+      "start": 49.399,
+      "duration": 6.48,
+      "end": 55.879000000000005,
+      "text": "understand now when I see maximum"
+    },
+    {
+      "start": 51.96,
+      "duration": 6.84,
+      "end": 58.8,
+      "text": "consecutive ones can I say these three"
+    },
+    {
+      "start": 55.879,
+      "duration": 5.84,
+      "end": 61.718999999999994,
+      "text": "ones are consecutive so the length is"
+    },
+    {
+      "start": 58.8,
+      "duration": 5.96,
+      "end": 64.75999999999999,
+      "text": "three so have three consecutive ones"
+    },
+    {
+      "start": 61.719,
+      "duration": 7.281,
+      "end": 69.0,
+      "text": "okay can I say I have four consecutive"
+    },
+    {
+      "start": 64.76,
+      "duration": 7.719,
+      "end": 72.479,
+      "text": "ones now the problem States you can flip"
+    },
+    {
+      "start": 69.0,
+      "duration": 6.32,
+      "end": 75.32,
+      "text": "at most of two zeros now assume I flip"
+    },
+    {
+      "start": 72.479,
+      "duration": 5.401,
+      "end": 77.88,
+      "text": "these two zeros what will be the length"
+    },
+    {
+      "start": 75.32,
+      "duration": 5.479,
+      "end": 80.79899999999999,
+      "text": "the length will be five I have five"
+    },
+    {
+      "start": 77.88,
+      "duration": 6.16,
+      "end": 84.03999999999999,
+      "text": "consecutive ones now okay what if I flip"
+    },
+    {
+      "start": 80.799,
+      "duration": 5.801,
+      "end": 86.60000000000001,
+      "text": "this and this then I'll have six"
+    },
+    {
+      "start": 84.04,
+      "duration": 5.96,
+      "end": 90.0,
+      "text": "consecutive ones okay what if I flip"
+    },
+    {
+      "start": 86.6,
+      "duration": 6.479,
+      "end": 93.079,
+      "text": "this and this I'll have six consecutive"
+    },
+    {
+      "start": 90.0,
+      "duration": 5.2,
+      "end": 95.2,
+      "text": "once can I do better than six probably"
+    },
+    {
+      "start": 93.079,
+      "duration": 6.201,
+      "end": 99.27999999999999,
+      "text": "not so I'll have to figure out what is"
+    },
+    {
+      "start": 95.2,
+      "duration": 7.32,
+      "end": 102.52000000000001,
+      "text": "the best way to flip at most of K zeros"
+    },
+    {
+      "start": 99.28,
+      "duration": 5.68,
+      "end": 104.96000000000001,
+      "text": "and then figure out the length so the"
+    },
+    {
+      "start": 102.52,
+      "duration": 5.879,
+      "end": 108.399,
+      "text": "length is six you don't need to print uh"
+    },
+    {
+      "start": 104.96,
+      "duration": 7.479,
+      "end": 112.439,
+      "text": "the segment we just have to print the"
+    },
+    {
+      "start": 108.399,
+      "duration": 6.08,
+      "end": 114.479,
+      "text": "length of the consecutive ones fine so"
+    },
+    {
+      "start": 112.439,
+      "duration": 6.68,
+      "end": 119.119,
+      "text": "if this problem comes up in an interview"
+    },
+    {
+      "start": 114.479,
+      "duration": 10.201,
+      "end": 124.68,
+      "text": "how can I approach this can I can I just"
+    },
+    {
+      "start": 119.119,
+      "duration": 7.761,
+      "end": 126.88,
+      "text": "uh convert this problem to finding the"
+    },
+    {
+      "start": 124.68,
+      "duration": 4.32,
+      "end": 129.0,
+      "text": "longest"
+    },
+    {
+      "start": 126.88,
+      "duration": 9.28,
+      "end": 136.16,
+      "text": "subarray"
+    },
+    {
+      "start": 129.0,
+      "duration": 10.879,
+      "end": 139.879,
+      "text": "with Max zeros as K like with at most z"
+    },
+    {
+      "start": 136.16,
+      "duration": 6.76,
+      "end": 142.92,
+      "text": "k zeros can I say this probably yes what"
+    },
+    {
+      "start": 139.879,
+      "duration": 5.281,
+      "end": 145.16,
+      "text": "is a subarray it's a consecutive portion"
+    },
+    {
+      "start": 142.92,
+      "duration": 4.08,
+      "end": 147.0,
+      "text": "of the array so can I say this is a"
+    },
+    {
+      "start": 145.16,
+      "duration": 6.56,
+      "end": 151.72,
+      "text": "consecutive portion of the array which"
+    },
+    {
+      "start": 147.0,
+      "duration": 8.239,
+      "end": 155.239,
+      "text": "is of length six and this has two zeros"
+    },
+    {
+      "start": 151.72,
+      "duration": 5.96,
+      "end": 157.68,
+      "text": "which is under the range so maybe I can"
+    },
+    {
+      "start": 155.239,
+      "duration": 7.36,
+      "end": 162.59900000000002,
+      "text": "just convert the question to finding the"
+    },
+    {
+      "start": 157.68,
+      "duration": 9.12,
+      "end": 166.8,
+      "text": "longest subarray with atmost of K zeros"
+    },
+    {
+      "start": 162.599,
+      "duration": 8.121,
+      "end": 170.72,
+      "text": "maybe I can just rename this with"
+    },
+    {
+      "start": 166.8,
+      "duration": 6.0,
+      "end": 172.8,
+      "text": "atmost K zeros I can do that right so"
+    },
+    {
+      "start": 170.72,
+      "duration": 4.239,
+      "end": 174.959,
+      "text": "what will be the Brute Force The Brute"
+    },
+    {
+      "start": 172.8,
+      "duration": 4.56,
+      "end": 177.36,
+      "text": "Force will be to generate all the"
+    },
+    {
+      "start": 174.959,
+      "duration": 6.28,
+      "end": 181.239,
+      "text": "subarrays and figure out which is the"
+    },
+    {
+      "start": 177.36,
+      "duration": 6.879,
+      "end": 184.239,
+      "text": "longest subarray that has at most K Zer"
+    },
+    {
+      "start": 181.239,
+      "duration": 5.121,
+      "end": 186.36,
+      "text": "is not Beyond it okay how can I generate"
+    },
+    {
+      "start": 184.239,
+      "duration": 5.56,
+      "end": 189.799,
+      "text": "all the subarrays I know that the first"
+    },
+    {
+      "start": 186.36,
+      "duration": 6.68,
+      "end": 193.04000000000002,
+      "text": "subarray is one itself the next subar is"
+    },
+    {
+      "start": 189.799,
+      "duration": 6.481,
+      "end": 196.28,
+      "text": "one one and the next subar is triple one"
+    },
+    {
+      "start": 193.04,
+      "duration": 6.279,
+      "end": 199.319,
+      "text": "the next subar is this one the next"
+    },
+    {
+      "start": 196.28,
+      "duration": 6.08,
+      "end": 202.36,
+      "text": "subar is this the next one is this the"
+    },
+    {
+      "start": 199.319,
+      "duration": 5.441,
+      "end": 204.76,
+      "text": "next one is this the next one is this so"
+    },
+    {
+      "start": 202.36,
+      "duration": 5.2,
+      "end": 207.56,
+      "text": "basically I'm writing down all the sub"
+    },
+    {
+      "start": 204.76,
+      "duration": 5.08,
+      "end": 209.84,
+      "text": "Ares that has the"
+    },
+    {
+      "start": 207.56,
+      "duration": 5.2,
+      "end": 212.76,
+      "text": "starting value as this particular one"
+    },
+    {
+      "start": 209.84,
+      "duration": 5.92,
+      "end": 215.76,
+      "text": "one correct after that I can start with"
+    },
+    {
+      "start": 212.76,
+      "duration": 5.6,
+      "end": 218.35999999999999,
+      "text": "this one so this is a subarray this is a"
+    },
+    {
+      "start": 215.76,
+      "duration": 5.0,
+      "end": 220.76,
+      "text": "subarray this is a subarray and this is"
+    },
+    {
+      "start": 218.36,
+      "duration": 5.56,
+      "end": 223.92000000000002,
+      "text": "a subarray so I can generate all the"
+    },
+    {
+      "start": 220.76,
+      "duration": 5.36,
+      "end": 226.12,
+      "text": "subarrays now can I say one thing when I"
+    },
+    {
+      "start": 223.92,
+      "duration": 5.039,
+      "end": 228.95899999999997,
+      "text": "have this subarray the number of zeros"
+    },
+    {
+      "start": 226.12,
+      "duration": 4.839,
+      "end": 230.959,
+      "text": "are zero when I have this sub AR the"
+    },
+    {
+      "start": 228.959,
+      "duration": 3.881,
+      "end": 232.84,
+      "text": "number of zeros are still zero when I"
+    },
+    {
+      "start": 230.959,
+      "duration": 3.56,
+      "end": 234.519,
+      "text": "have this the number of zeros are still"
+    },
+    {
+      "start": 232.84,
+      "duration": 4.399,
+      "end": 237.239,
+      "text": "zero when I have this the number of"
+    },
+    {
+      "start": 234.519,
+      "duration": 4.92,
+      "end": 239.439,
+      "text": "zeros are one when I have this the"
+    },
+    {
+      "start": 237.239,
+      "duration": 4.321,
+      "end": 241.56,
+      "text": "number of zeros are two when I have this"
+    },
+    {
+      "start": 239.439,
+      "duration": 4.761,
+      "end": 244.2,
+      "text": "the number of zeros are three and I can"
+    },
+    {
+      "start": 241.56,
+      "duration": 5.16,
+      "end": 246.72,
+      "text": "stop over here because Beyond this if I"
+    },
+    {
+      "start": 244.2,
+      "duration": 5.239,
+      "end": 249.439,
+      "text": "try to generate this one which includes"
+    },
+    {
+      "start": 246.72,
+      "duration": 5.56,
+      "end": 252.28,
+      "text": "this I cannot because I already have"
+    },
+    {
+      "start": 249.439,
+      "duration": 5.8,
+      "end": 255.239,
+      "text": "three zeros so I'll stop generating all"
+    },
+    {
+      "start": 252.28,
+      "duration": 5.079,
+      "end": 257.359,
+      "text": "the subarrays Beyond this point so the"
+    },
+    {
+      "start": 255.239,
+      "duration": 5.321,
+      "end": 260.56,
+      "text": "moment I get the number of zeros"
+    },
+    {
+      "start": 257.359,
+      "duration": 6.241,
+      "end": 263.59999999999997,
+      "text": "exceeding K I can stop so basically I"
+    },
+    {
+      "start": 260.56,
+      "duration": 5.44,
+      "end": 266.0,
+      "text": "can only take till here which has the"
+    },
+    {
+      "start": 263.6,
+      "duration": 4.8,
+      "end": 268.40000000000003,
+      "text": "starting value as this not Beyond it"
+    },
+    {
+      "start": 266.0,
+      "duration": 5.52,
+      "end": 271.52,
+      "text": "because I'll have one more zero and that"
+    },
+    {
+      "start": 268.4,
+      "duration": 5.44,
+      "end": 273.84,
+      "text": "is not required at at most two zeros"
+    },
+    {
+      "start": 271.52,
+      "duration": 4.679,
+      "end": 276.19899999999996,
+      "text": "okay for the next again I can start here"
+    },
+    {
+      "start": 273.84,
+      "duration": 4.799,
+      "end": 278.63899999999995,
+      "text": "I can take I can take I can take but I"
+    },
+    {
+      "start": 276.199,
+      "duration": 5.601,
+      "end": 281.8,
+      "text": "cannot take Beyond this I cannot take"
+    },
+    {
+      "start": 278.639,
+      "duration": 4.721,
+      "end": 283.36,
+      "text": "Beyond this so this is the formula or"
+    },
+    {
+      "start": 281.8,
+      "duration": 4.48,
+      "end": 286.28000000000003,
+      "text": "this is the logic that I will be"
+    },
+    {
+      "start": 283.36,
+      "duration": 5.119,
+      "end": 288.47900000000004,
+      "text": "applying so what I'll do is I'll start"
+    },
+    {
+      "start": 286.28,
+      "duration": 4.359,
+      "end": 290.63899999999995,
+      "text": "with let's say I need the maximum length"
+    },
+    {
+      "start": 288.479,
+      "duration": 4.761,
+      "end": 293.24,
+      "text": "right so I'll keep a maximum length as"
+    },
+    {
+      "start": 290.639,
+      "duration": 5.361,
+      "end": 296.0,
+      "text": "zero and I know the starting point will"
+    },
+    {
+      "start": 293.24,
+      "duration": 6.48,
+      "end": 299.72,
+      "text": "be I equal to zero because that is where"
+    },
+    {
+      "start": 296.0,
+      "duration": 5.6,
+      "end": 301.6,
+      "text": "I'll be starting the first subarray"
+    },
+    {
+      "start": 299.72,
+      "duration": 3.4,
+      "end": 303.12,
+      "text": "correct with this one and then this one"
+    },
+    {
+      "start": 301.6,
+      "duration": 5.92,
+      "end": 307.52000000000004,
+      "text": "and then this one and then this one and"
+    },
+    {
+      "start": 303.12,
+      "duration": 7.76,
+      "end": 310.88,
+      "text": "so on I know as I move keeping this one"
+    },
+    {
+      "start": 307.52,
+      "duration": 5.679,
+      "end": 313.19899999999996,
+      "text": "as the first element I'll have to count"
+    },
+    {
+      "start": 310.88,
+      "duration": 4.879,
+      "end": 315.759,
+      "text": "the number of zeros so initially the"
+    },
+    {
+      "start": 313.199,
+      "duration": 5.521,
+      "end": 318.72,
+      "text": "number of zeros are one sorry zero and I"
+    },
+    {
+      "start": 315.759,
+      "duration": 5.961,
+      "end": 321.72,
+      "text": "can start the J from the I itself"
+    },
+    {
+      "start": 318.72,
+      "duration": 4.68,
+      "end": 323.40000000000003,
+      "text": "because if this is I I can start J then"
+    },
+    {
+      "start": 321.72,
+      "duration": 3.72,
+      "end": 325.44000000000005,
+      "text": "I can move j then I can move j then I"
+    },
+    {
+      "start": 323.4,
+      "duration": 5.2,
+      "end": 328.59999999999997,
+      "text": "can move j then I can move j and that"
+    },
+    {
+      "start": 325.44,
+      "duration": 5.4,
+      "end": 330.84,
+      "text": "will be elongating the subar correct if"
+    },
+    {
+      "start": 328.6,
+      "duration": 3.56,
+      "end": 332.16,
+      "text": "I'm starting I here J will be here then"
+    },
+    {
+      "start": 330.84,
+      "duration": 3.32,
+      "end": 334.15999999999997,
+      "text": "it will be here then it will be here"
+    },
+    {
+      "start": 332.16,
+      "duration": 4.84,
+      "end": 337.0,
+      "text": "then it will be here elongating the sub"
+    },
+    {
+      "start": 334.16,
+      "duration": 6.879,
+      "end": 341.03900000000004,
+      "text": "array understood so what I can say is J"
+    },
+    {
+      "start": 337.0,
+      "duration": 8.08,
+      "end": 345.08,
+      "text": "equal to I till n and I know one thing"
+    },
+    {
+      "start": 341.039,
+      "duration": 8.0,
+      "end": 349.039,
+      "text": "if nums of or array of J is equal to"
+    },
+    {
+      "start": 345.08,
+      "duration": 7.76,
+      "end": 352.84,
+      "text": "equal to zero in that scenario I will be"
+    },
+    {
+      "start": 349.039,
+      "duration": 7.081,
+      "end": 356.12,
+      "text": "increasing the zeros count correct one"
+    },
+    {
+      "start": 352.84,
+      "duration": 5.84,
+      "end": 358.67999999999995,
+      "text": "more thing if the number of zeros is"
+    },
+    {
+      "start": 356.12,
+      "duration": 5.199,
+      "end": 361.319,
+      "text": "lesser than equal to K what is the"
+    },
+    {
+      "start": 358.68,
+      "duration": 3.44,
+      "end": 362.12,
+      "text": "length the L length of the subarray all"
+    },
+    {
+      "start": 361.319,
+      "duration": 7.241,
+      "end": 368.56,
+      "text": "of you"
+    },
+    {
+      "start": 362.12,
+      "duration": 9.32,
+      "end": 371.44,
+      "text": "know J - I + 1 typical subarray if I is"
+    },
+    {
+      "start": 368.56,
+      "duration": 6.12,
+      "end": 374.68,
+      "text": "here J is here this particular length is"
+    },
+    {
+      "start": 371.44,
+      "duration": 6.199,
+      "end": 377.639,
+      "text": "J minus I + 1 that's what I have written"
+    },
+    {
+      "start": 374.68,
+      "duration": 7.919,
+      "end": 382.599,
+      "text": "and what I can do is I can say Okay max"
+    },
+    {
+      "start": 377.639,
+      "duration": 10.081,
+      "end": 387.72,
+      "text": "length equal to Max of max length comma"
+    },
+    {
+      "start": 382.599,
+      "duration": 8.201,
+      "end": 390.8,
+      "text": "length done or else if the zeros have"
+    },
+    {
+      "start": 387.72,
+      "duration": 5.36,
+      "end": 393.08000000000004,
+      "text": "exceeded I can straight away break and"
+    },
+    {
+      "start": 390.8,
+      "duration": 4.519,
+      "end": 395.319,
+      "text": "stop the first fall Loop ends and the"
+    },
+    {
+      "start": 393.08,
+      "duration": 4.76,
+      "end": 397.84,
+      "text": "second fall Loop ends and eventually you"
+    },
+    {
+      "start": 395.319,
+      "duration": 4.561,
+      "end": 399.88,
+      "text": "can print the max length what is the"
+    },
+    {
+      "start": 397.84,
+      "duration": 4.759,
+      "end": 402.599,
+      "text": "time complexity I'm running couple of"
+    },
+    {
+      "start": 399.88,
+      "duration": 4.599,
+      "end": 404.479,
+      "text": "Loops somewhere near about n Square not"
+    },
+    {
+      "start": 402.599,
+      "duration": 4.681,
+      "end": 407.28,
+      "text": "exactly n Square because the first Loop"
+    },
+    {
+      "start": 404.479,
+      "duration": 5.321,
+      "end": 409.8,
+      "text": "is running for n the next Loop is not"
+    },
+    {
+      "start": 407.28,
+      "duration": 4.6,
+      "end": 411.88,
+      "text": "running for exactly n it's somewhere"
+    },
+    {
+      "start": 409.8,
+      "duration": 4.28,
+      "end": 414.08,
+      "text": "near about n so I can say that the time"
+    },
+    {
+      "start": 411.88,
+      "duration": 5.52,
+      "end": 417.4,
+      "text": "complexity is beo of"
+    },
+    {
+      "start": 414.08,
+      "duration": 5.959,
+      "end": 420.039,
+      "text": "n² and the space complexity is B go of"
+    },
+    {
+      "start": 417.4,
+      "duration": 5.04,
+      "end": 422.44,
+      "text": "one because I'm not using any external"
+    },
+    {
+      "start": 420.039,
+      "duration": 4.521,
+      "end": 424.56,
+      "text": "space and this is where the interviewer"
+    },
+    {
+      "start": 422.44,
+      "duration": 3.479,
+      "end": 425.919,
+      "text": "will not be happy because you're taking"
+    },
+    {
+      "start": 424.56,
+      "duration": 2.6,
+      "end": 427.16,
+      "text": "a lot of time and it'll ask you to"
+    },
+    {
+      "start": 425.919,
+      "duration": 3.921,
+      "end": 429.84,
+      "text": "optimize"
+    },
+    {
+      "start": 427.16,
+      "duration": 5.36,
+      "end": 432.52000000000004,
+      "text": "this so I need to optimize my Brute"
+    },
+    {
+      "start": 429.84,
+      "duration": 5.919,
+      "end": 435.75899999999996,
+      "text": "Force right the brute force was taking"
+    },
+    {
+      "start": 432.52,
+      "duration": 7.76,
+      "end": 440.28,
+      "text": "n² if I have to optimize it somewhere"
+    },
+    {
+      "start": 435.759,
+      "duration": 6.72,
+      "end": 442.47900000000004,
+      "text": "near about 10 correct it involves subar"
+    },
+    {
+      "start": 440.28,
+      "duration": 4.28,
+      "end": 444.55999999999995,
+      "text": "so what is the first algorithm that"
+    },
+    {
+      "start": 442.479,
+      "duration": 5.521,
+      "end": 448.0,
+      "text": "comes to your brain two pointer and"
+    },
+    {
+      "start": 444.56,
+      "duration": 5.28,
+      "end": 449.84,
+      "text": "sliding window yes subar and you'll have"
+    },
+    {
+      "start": 448.0,
+      "duration": 4.08,
+      "end": 452.08,
+      "text": "to figure out a complexity of around be"
+    },
+    {
+      "start": 449.84,
+      "duration": 4.96,
+      "end": 454.79999999999995,
+      "text": "go of and thereby you should start"
+    },
+    {
+      "start": 452.08,
+      "duration": 5.679,
+      "end": 457.75899999999996,
+      "text": "thinking of the sliding window okay how"
+    },
+    {
+      "start": 454.8,
+      "duration": 4.239,
+      "end": 459.039,
+      "text": "does sliding window work very simple we"
+    },
+    {
+      "start": 457.759,
+      "duration": 3.521,
+      "end": 461.28000000000003,
+      "text": "looking for"
+    },
+    {
+      "start": 459.039,
+      "duration": 4.961,
+      "end": 464.0,
+      "text": "zeros so let's"
+    },
+    {
+      "start": 461.28,
+      "duration": 6.4,
+      "end": 467.67999999999995,
+      "text": "assign something like zeros which keeps"
+    },
+    {
+      "start": 464.0,
+      "duration": 6.12,
+      "end": 470.12,
+      "text": "a track initially keep it as zero left"
+    },
+    {
+      "start": 467.68,
+      "duration": 5.12,
+      "end": 472.8,
+      "text": "pointer right pointer correct that is"
+    },
+    {
+      "start": 470.12,
+      "duration": 5.079,
+      "end": 475.199,
+      "text": "how sliding window starts so we have two"
+    },
+    {
+      "start": 472.8,
+      "duration": 5.44,
+      "end": 478.24,
+      "text": "pointers one is the left one is the"
+    },
+    {
+      "start": 475.199,
+      "duration": 5.12,
+      "end": 480.319,
+      "text": "right so what am I saying as of now this"
+    },
+    {
+      "start": 478.24,
+      "duration": 4.72,
+      "end": 482.96000000000004,
+      "text": "portion is the sub AR that I'm"
+    },
+    {
+      "start": 480.319,
+      "duration": 8.681,
+      "end": 489.0,
+      "text": "considering correct how many zeros does"
+    },
+    {
+      "start": 482.96,
+      "duration": 10.04,
+      "end": 493.0,
+      "text": "it have is it a zero no so it has 0 zos"
+    },
+    {
+      "start": 489.0,
+      "duration": 8.4,
+      "end": 497.4,
+      "text": "which is lesser than the maximum so can"
+    },
+    {
+      "start": 493.0,
+      "duration": 7.72,
+      "end": 500.72,
+      "text": "I say this is a possible subar I can so"
+    },
+    {
+      "start": 497.4,
+      "duration": 6.28,
+      "end": 503.67999999999995,
+      "text": "thereby probably I can take a max length"
+    },
+    {
+      "start": 500.72,
+      "duration": 6.599,
+      "end": 507.319,
+      "text": "as initially zero current length comes"
+    },
+    {
+      "start": 503.68,
+      "duration": 6.16,
+      "end": 509.84000000000003,
+      "text": "out to be r - L + 1 which is 0 - 0 + 1"
+    },
+    {
+      "start": 507.319,
+      "duration": 4.881,
+      "end": 512.2,
+      "text": "that's 1 so max length can be updated it"
+    },
+    {
+      "start": 509.84,
+      "duration": 4.28,
+      "end": 514.12,
+      "text": "to this and what you can do next is you"
+    },
+    {
+      "start": 512.2,
+      "duration": 4.399,
+      "end": 516.599,
+      "text": "can take this R and you can move it to"
+    },
+    {
+      "start": 514.12,
+      "duration": 4.32,
+      "end": 518.44,
+      "text": "the next again what do you have you're"
+    },
+    {
+      "start": 516.599,
+      "duration": 4.44,
+      "end": 521.0390000000001,
+      "text": "saying that this is your subarray and"
+    },
+    {
+      "start": 518.44,
+      "duration": 5.0,
+      "end": 523.44,
+      "text": "this is your one so the zeros will not"
+    },
+    {
+      "start": 521.039,
+      "duration": 5.721,
+      "end": 526.76,
+      "text": "be updated what will be updated is the"
+    },
+    {
+      "start": 523.44,
+      "duration": 6.0,
+      "end": 529.44,
+      "text": "value of R so 1 - 0 + one that gives you"
+    },
+    {
+      "start": 526.76,
+      "duration": 6.6,
+      "end": 533.36,
+      "text": "a length of two so max length gets"
+    },
+    {
+      "start": 529.44,
+      "duration": 7.32,
+      "end": 536.7600000000001,
+      "text": "updated to two Okay let's move on now so"
+    },
+    {
+      "start": 533.36,
+      "duration": 6.36,
+      "end": 539.72,
+      "text": "let's move R so when I move R I'll reach"
+    },
+    {
+      "start": 536.76,
+      "duration": 5.199,
+      "end": 541.959,
+      "text": "a again a one so the zeros will so the"
+    },
+    {
+      "start": 539.72,
+      "duration": 4.32,
+      "end": 544.0400000000001,
+      "text": "zeros will not be updated and the length"
+    },
+    {
+      "start": 541.959,
+      "duration": 4.361,
+      "end": 546.3199999999999,
+      "text": "will increase so thereby the max length"
+    },
+    {
+      "start": 544.04,
+      "duration": 5.479,
+      "end": 549.519,
+      "text": "again increases again makes sense"
+    },
+    {
+      "start": 546.32,
+      "duration": 5.8,
+      "end": 552.12,
+      "text": "because this is the subar and it has Zer"
+    },
+    {
+      "start": 549.519,
+      "duration": 6.32,
+      "end": 555.839,
+      "text": "zeros so this is possible perfect let's"
+    },
+    {
+      "start": 552.12,
+      "duration": 6.839,
+      "end": 558.9590000000001,
+      "text": "move this time I'm standing at this one"
+    },
+    {
+      "start": 555.839,
+      "duration": 5.24,
+      "end": 561.0790000000001,
+      "text": "so the zeros increase but keep in mind"
+    },
+    {
+      "start": 558.959,
+      "duration": 4.841,
+      "end": 563.8,
+      "text": "the zeros are still lesser than the"
+    },
+    {
+      "start": 561.079,
+      "duration": 5.161,
+      "end": 566.2399999999999,
+      "text": "maximum allowed so this is possible what"
+    },
+    {
+      "start": 563.8,
+      "duration": 3.88,
+      "end": 567.68,
+      "text": "is the length the length is four so I"
+    },
+    {
+      "start": 566.24,
+      "duration": 3.64,
+      "end": 569.88,
+      "text": "can say that the max length has been"
+    },
+    {
+      "start": 567.68,
+      "duration": 4.68,
+      "end": 572.3599999999999,
+      "text": "updated to four next time"
+    },
+    {
+      "start": 569.88,
+      "duration": 5.12,
+      "end": 575.0,
+      "text": "I'll take R and I'll move it here this"
+    },
+    {
+      "start": 572.36,
+      "duration": 5.84,
+      "end": 578.2,
+      "text": "time I'm considering this particular"
+    },
+    {
+      "start": 575.0,
+      "duration": 5.68,
+      "end": 580.68,
+      "text": "subar and it has a zero so thereby the"
+    },
+    {
+      "start": 578.2,
+      "duration": 5.04,
+      "end": 583.24,
+      "text": "number of zeros will increase to two and"
+    },
+    {
+      "start": 580.68,
+      "duration": 4.96,
+      "end": 585.64,
+      "text": "again can I say that the length will be"
+    },
+    {
+      "start": 583.24,
+      "duration": 6.599,
+      "end": 589.839,
+      "text": "updated to five I can so update the"
+    },
+    {
+      "start": 585.64,
+      "duration": 7.36,
+      "end": 593.0,
+      "text": "length to five next time the r moves"
+    },
+    {
+      "start": 589.839,
+      "duration": 5.401,
+      "end": 595.24,
+      "text": "here if the r moves here the number of"
+    },
+    {
+      "start": 593.0,
+      "duration": 4.56,
+      "end": 597.56,
+      "text": "zeros will increase to three the number"
+    },
+    {
+      "start": 595.24,
+      "duration": 6.36,
+      "end": 601.6,
+      "text": "of zeros will increase to three and"
+    },
+    {
+      "start": 597.56,
+      "duration": 6.36,
+      "end": 603.92,
+      "text": "thereby I cannot consider this subar"
+    },
+    {
+      "start": 601.6,
+      "duration": 4.76,
+      "end": 606.36,
+      "text": "because the maximum that I'm allowed is"
+    },
+    {
+      "start": 603.92,
+      "duration": 6.08,
+      "end": 610.0,
+      "text": "two I cannot consider this subar because"
+    },
+    {
+      "start": 606.36,
+      "duration": 6.919,
+      "end": 613.279,
+      "text": "it has three zeros so what do I need to"
+    },
+    {
+      "start": 610.0,
+      "duration": 6.12,
+      "end": 616.12,
+      "text": "do definitely if I have this portion I"
+    },
+    {
+      "start": 613.279,
+      "duration": 5.961,
+      "end": 619.24,
+      "text": "need to trim off some zeros so that the"
+    },
+    {
+      "start": 616.12,
+      "duration": 5.04,
+      "end": 621.16,
+      "text": "zeros get back to the maximum allowed I"
+    },
+    {
+      "start": 619.24,
+      "duration": 4.36,
+      "end": 623.6,
+      "text": "need to trim off three to somewhere to"
+    },
+    {
+      "start": 621.16,
+      "duration": 5.2,
+      "end": 626.36,
+      "text": "two because two is the maximum"
+    },
+    {
+      "start": 623.6,
+      "duration": 5.32,
+      "end": 628.9200000000001,
+      "text": "allowed what do I need to do this is"
+    },
+    {
+      "start": 626.36,
+      "duration": 5.039,
+      "end": 631.399,
+      "text": "where sliding window comes in sliding"
+    },
+    {
+      "start": 628.92,
+      "duration": 5.599,
+      "end": 634.519,
+      "text": "window says okay this is the window that"
+    },
+    {
+      "start": 631.399,
+      "duration": 5.321,
+      "end": 636.72,
+      "text": "you were considering now you cannot on"
+    },
+    {
+      "start": 634.519,
+      "duration": 5.201,
+      "end": 639.72,
+      "text": "your naked eye what is the window that"
+    },
+    {
+      "start": 636.72,
+      "duration": 5.6,
+      "end": 642.32,
+      "text": "you can consider this one this one"
+    },
+    {
+      "start": 639.72,
+      "duration": 5.239,
+      "end": 644.9590000000001,
+      "text": "correct never move the r Point as of now"
+    },
+    {
+      "start": 642.32,
+      "duration": 5.199,
+      "end": 647.519,
+      "text": "try to shrink it so thereby the L has to"
+    },
+    {
+      "start": 644.959,
+      "duration": 5.56,
+      "end": 650.5189999999999,
+      "text": "somehow move here that's what you'll do"
+    },
+    {
+      "start": 647.519,
+      "duration": 5.641,
+      "end": 653.16,
+      "text": "you'll be like okay where is l l is here"
+    },
+    {
+      "start": 650.519,
+      "duration": 6.32,
+      "end": 656.839,
+      "text": "is that a zero no that's not a zero move"
+    },
+    {
+      "start": 653.16,
+      "duration": 8.28,
+      "end": 661.4399999999999,
+      "text": "L to the next is that a zero no move"
+    },
+    {
+      "start": 656.839,
+      "duration": 7.481,
+      "end": 664.32,
+      "text": "well is that a zero no move well is that"
+    },
+    {
+      "start": 661.44,
+      "duration": 5.48,
+      "end": 666.9200000000001,
+      "text": "a zero yes that's a zero decrease the"
+    },
+    {
+      "start": 664.32,
+      "duration": 6.44,
+      "end": 670.7600000000001,
+      "text": "number of zeros decrease the number of"
+    },
+    {
+      "start": 666.92,
+      "duration": 6.919,
+      "end": 673.8389999999999,
+      "text": "zeros and move well so the moment you"
+    },
+    {
+      "start": 670.76,
+      "duration": 5.56,
+      "end": 676.3199999999999,
+      "text": "reach here the moment you reach here"
+    },
+    {
+      "start": 673.839,
+      "duration": 5.081,
+      "end": 678.9200000000001,
+      "text": "what do you see you see that you have"
+    },
+    {
+      "start": 676.32,
+      "duration": 4.6,
+      "end": 680.9200000000001,
+      "text": "the number of zeros under control and if"
+    },
+    {
+      "start": 678.92,
+      "duration": 4.159,
+      "end": 683.079,
+      "text": "that is the case you can again update"
+    },
+    {
+      "start": 680.92,
+      "duration": 5.12,
+      "end": 686.04,
+      "text": "the length what will be the length this"
+    },
+    {
+      "start": 683.079,
+      "duration": 5.681,
+      "end": 688.76,
+      "text": "time that's two and that's not greater"
+    },
+    {
+      "start": 686.04,
+      "duration": 5.52,
+      "end": 691.56,
+      "text": "than Max Len so you don't do anything"
+    },
+    {
+      "start": 688.76,
+      "duration": 4.56,
+      "end": 693.3199999999999,
+      "text": "and you start moving out again perfect"
+    },
+    {
+      "start": 691.56,
+      "duration": 4.04,
+      "end": 695.5999999999999,
+      "text": "so I'll move out to here sorry I'll move"
+    },
+    {
+      "start": 693.32,
+      "duration": 5.199,
+      "end": 698.519,
+      "text": "out to the next one it has a"
+    },
+    {
+      "start": 695.6,
+      "duration": 5.76,
+      "end": 701.36,
+      "text": "one okay so this is the sub add that I'm"
+    },
+    {
+      "start": 698.519,
+      "duration": 5.521,
+      "end": 704.04,
+      "text": "considering three three is the length"
+    },
+    {
+      "start": 701.36,
+      "duration": 5.76,
+      "end": 707.12,
+      "text": "which is not greater nothing to do let's"
+    },
+    {
+      "start": 704.04,
+      "duration": 5.039,
+      "end": 709.079,
+      "text": "move on I'll move out to here okay when"
+    },
+    {
+      "start": 707.12,
+      "duration": 5.0,
+      "end": 712.12,
+      "text": "I move my my bad I'll move out to the"
+    },
+    {
+      "start": 709.079,
+      "duration": 5.521,
+      "end": 714.5999999999999,
+      "text": "next when I move out to here again a one"
+    },
+    {
+      "start": 712.12,
+      "duration": 5.719,
+      "end": 717.839,
+      "text": "what is the length four number of zeros"
+    },
+    {
+      "start": 714.6,
+      "duration": 6.239,
+      "end": 720.839,
+      "text": "two doesn't exceed max length so move"
+    },
+    {
+      "start": 717.839,
+      "duration": 6.081,
+      "end": 723.9200000000001,
+      "text": "again r so when I move out to here what"
+    },
+    {
+      "start": 720.839,
+      "duration": 5.721,
+      "end": 726.5600000000001,
+      "text": "is the number of zeros two what is the"
+    },
+    {
+      "start": 723.92,
+      "duration": 4.84,
+      "end": 728.76,
+      "text": "length that I'm considering five and"
+    },
+    {
+      "start": 726.56,
+      "duration": 5.079,
+      "end": 731.6389999999999,
+      "text": "that's not greater than Max L so I'll"
+    },
+    {
+      "start": 728.76,
+      "duration": 6.48,
+      "end": 735.24,
+      "text": "not be updating it perfect let's move R"
+    },
+    {
+      "start": 731.639,
+      "duration": 5.481,
+      "end": 737.12,
+      "text": "again so this time when I move R this is"
+    },
+    {
+      "start": 735.24,
+      "duration": 4.0,
+      "end": 739.24,
+      "text": "the subar that I'm considering and the"
+    },
+    {
+      "start": 737.12,
+      "duration": 5.6,
+      "end": 742.72,
+      "text": "number of zeros are still two what is"
+    },
+    {
+      "start": 739.24,
+      "duration": 6.159,
+      "end": 745.399,
+      "text": "the length six so I will be updating the"
+    },
+    {
+      "start": 742.72,
+      "duration": 6.0,
+      "end": 748.72,
+      "text": "length perfect what is the next all will"
+    },
+    {
+      "start": 745.399,
+      "duration": 6.44,
+      "end": 751.839,
+      "text": "be moving to zero and this time the Zer"
+    },
+    {
+      "start": 748.72,
+      "duration": 5.44,
+      "end": 754.1600000000001,
+      "text": "is again increase to three so the zeros"
+    },
+    {
+      "start": 751.839,
+      "duration": 5.321,
+      "end": 757.1600000000001,
+      "text": "are increasing to three that means I"
+    },
+    {
+      "start": 754.16,
+      "duration": 5.52,
+      "end": 759.68,
+      "text": "cannot consider this subar this subar"
+    },
+    {
+      "start": 757.16,
+      "duration": 4.28,
+      "end": 761.4399999999999,
+      "text": "cannot be consider and if it cannot be"
+    },
+    {
+      "start": 759.68,
+      "duration": 4.839,
+      "end": 764.519,
+      "text": "considered what do I need to do I need"
+    },
+    {
+      "start": 761.44,
+      "duration": 6.959,
+      "end": 768.399,
+      "text": "to remove zeros from the left from the"
+    },
+    {
+      "start": 764.519,
+      "duration": 7.44,
+      "end": 771.9590000000001,
+      "text": "left that is two pointer okay is that a"
+    },
+    {
+      "start": 768.399,
+      "duration": 6.401,
+      "end": 774.8,
+      "text": "zero yes so the zeros will decrease and"
+    },
+    {
+      "start": 771.959,
+      "duration": 5.56,
+      "end": 777.5189999999999,
+      "text": "I'll say okay I'll get rid of you and if"
+    },
+    {
+      "start": 774.8,
+      "duration": 4.839,
+      "end": 779.639,
+      "text": "I get rid of you I get this subar which"
+    },
+    {
+      "start": 777.519,
+      "duration": 5.0,
+      "end": 782.519,
+      "text": "is possible which is possible"
+    },
+    {
+      "start": 779.639,
+      "duration": 6.681,
+      "end": 786.32,
+      "text": "and this is possible what is the length"
+    },
+    {
+      "start": 782.519,
+      "duration": 7.641,
+      "end": 790.16,
+      "text": "six doesn't exceeds let's move R so the"
+    },
+    {
+      "start": 786.32,
+      "duration": 6.079,
+      "end": 792.399,
+      "text": "moment you move R it goes beyond so you"
+    },
+    {
+      "start": 790.16,
+      "duration": 4.359,
+      "end": 794.519,
+      "text": "stop then and there and when you stop"
+    },
+    {
+      "start": 792.399,
+      "duration": 4.081,
+      "end": 796.48,
+      "text": "you'll have your max length as six and"
+    },
+    {
+      "start": 794.519,
+      "duration": 4.32,
+      "end": 798.839,
+      "text": "that is your answer this is how the"
+    },
+    {
+      "start": 796.48,
+      "duration": 4.359,
+      "end": 800.839,
+      "text": "sliding window moves you keep on moving"
+    },
+    {
+      "start": 798.839,
+      "duration": 4.0,
+      "end": 802.839,
+      "text": "you keep on moving and the moment you"
+    },
+    {
+      "start": 800.839,
+      "duration": 4.161,
+      "end": 805.0,
+      "text": "encounter someone you trim it down trim"
+    },
+    {
+      "start": 802.839,
+      "duration": 3.601,
+      "end": 806.44,
+      "text": "it down trim it down trim from the left"
+    },
+    {
+      "start": 805.0,
+      "duration": 5.04,
+      "end": 810.04,
+      "text": "that is two pointer that is sliding"
+    },
+    {
+      "start": 806.44,
+      "duration": 6.079,
+      "end": 812.519,
+      "text": "window always start with L and r got"
+    },
+    {
+      "start": 810.04,
+      "duration": 3.44,
+      "end": 813.48,
+      "text": "it so I'll have to write down the pseudo"
+    },
+    {
+      "start": 812.519,
+      "duration": 3.841,
+      "end": 816.36,
+      "text": "code"
+    },
+    {
+      "start": 813.48,
+      "duration": 9.28,
+      "end": 822.76,
+      "text": "now it'll be"
+    },
+    {
+      "start": 816.36,
+      "duration": 9.24,
+      "end": 825.6,
+      "text": "given the list let's call it as nums and"
+    },
+    {
+      "start": 822.76,
+      "duration": 5.079,
+      "end": 827.8389999999999,
+      "text": "it'll be given the value ke so I have to"
+    },
+    {
+      "start": 825.6,
+      "duration": 6.479,
+      "end": 832.0790000000001,
+      "text": "write down the pseudo code how do I"
+    },
+    {
+      "start": 827.839,
+      "duration": 6.841,
+      "end": 834.6800000000001,
+      "text": "start I know I need max length so maybe"
+    },
+    {
+      "start": 832.079,
+      "duration": 5.601,
+      "end": 837.68,
+      "text": "keep max length as Z I know I need L"
+    },
+    {
+      "start": 834.68,
+      "duration": 7.0,
+      "end": 841.68,
+      "text": "equal to0 I know I need r equal"
+    },
+    {
+      "start": 837.68,
+      "duration": 7.959,
+      "end": 845.6389999999999,
+      "text": "to0 what do I initially do I have L here"
+    },
+    {
+      "start": 841.68,
+      "duration": 7.12,
+      "end": 848.8,
+      "text": "I have R here correct so what I do is I"
+    },
+    {
+      "start": 845.639,
+      "duration": 6.961,
+      "end": 852.6,
+      "text": "start like and you know one thing we'll"
+    },
+    {
+      "start": 848.8,
+      "duration": 6.719,
+      "end": 855.519,
+      "text": "keep on going till it doesn't exceeds"
+    },
+    {
+      "start": 852.6,
+      "duration": 4.919,
+      "end": 857.519,
+      "text": "that's how the r moves R keeps on moving"
+    },
+    {
+      "start": 855.519,
+      "duration": 5.281,
+      "end": 860.8,
+      "text": "R keeps on moving R keeps on moving I"
+    },
+    {
+      "start": 857.519,
+      "duration": 5.921,
+      "end": 863.44,
+      "text": "know that for sure okay so initially"
+    },
+    {
+      "start": 860.8,
+      "duration": 4.959,
+      "end": 865.7589999999999,
+      "text": "when the r is here that's a one but I"
+    },
+    {
+      "start": 863.44,
+      "duration": 4.959,
+      "end": 868.399,
+      "text": "need to check I need to check and I need"
+    },
+    {
+      "start": 865.759,
+      "duration": 6.281,
+      "end": 872.04,
+      "text": "to keep a track of zeros as well so"
+    },
+    {
+      "start": 868.399,
+      "duration": 7.24,
+      "end": 875.639,
+      "text": "zeros will be Z so I'll be like okay if"
+    },
+    {
+      "start": 872.04,
+      "duration": 6.599,
+      "end": 878.639,
+      "text": "nums of R if that is equal to equal to"
+    },
+    {
+      "start": 875.639,
+      "duration": 3.0,
+      "end": 878.639,
+      "text": "zero"
+    },
+    {
+      "start": 878.88,
+      "duration": 5.399,
+      "end": 884.279,
+      "text": "let's increase the count of zeros"
+    },
+    {
+      "start": 882.04,
+      "duration": 4.96,
+      "end": 887.0,
+      "text": "perfect okay the handwriting is super"
+    },
+    {
+      "start": 884.279,
+      "duration": 6.081,
+      "end": 890.36,
+      "text": "bad so I'll be rewriting"
+    },
+    {
+      "start": 887.0,
+      "duration": 5.68,
+      "end": 892.68,
+      "text": "it that's better slightly better okay so"
+    },
+    {
+      "start": 890.36,
+      "duration": 6.039,
+      "end": 896.399,
+      "text": "the zeros increase now what is the next"
+    },
+    {
+      "start": 892.68,
+      "duration": 7.04,
+      "end": 899.7199999999999,
+      "text": "check if you have increased the zeros of"
+    },
+    {
+      "start": 896.399,
+      "duration": 5.641,
+      "end": 902.04,
+      "text": "it being a zero then we'll have to check"
+    },
+    {
+      "start": 899.72,
+      "duration": 3.96,
+      "end": 903.6800000000001,
+      "text": "remember this condition I'll be showing"
+    },
+    {
+      "start": 902.04,
+      "duration": 6.2,
+      "end": 908.24,
+      "text": "you that condition"
+    },
+    {
+      "start": 903.68,
+      "duration": 6.76,
+      "end": 910.4399999999999,
+      "text": "wait when R was here so imagine you get"
+    },
+    {
+      "start": 908.24,
+      "duration": 4.039,
+      "end": 912.279,
+      "text": "this one so the number of zeros will"
+    },
+    {
+      "start": 910.44,
+      "duration": 6.24,
+      "end": 916.6800000000001,
+      "text": "exceed so"
+    },
+    {
+      "start": 912.279,
+      "duration": 7.841,
+      "end": 920.12,
+      "text": "remember if the number of zeros have"
+    },
+    {
+      "start": 916.68,
+      "duration": 6.519,
+      "end": 923.199,
+      "text": "exceeded K in that scenario what did you"
+    },
+    {
+      "start": 920.12,
+      "duration": 5.12,
+      "end": 925.24,
+      "text": "do you you took off L you took off L you"
+    },
+    {
+      "start": 923.199,
+      "duration": 4.76,
+      "end": 927.959,
+      "text": "kept it moving you kept it moving so"
+    },
+    {
+      "start": 925.24,
+      "duration": 6.839,
+      "end": 932.0790000000001,
+      "text": "please do it now you'll be like okay"
+    },
+    {
+      "start": 927.959,
+      "duration": 8.081,
+      "end": 936.04,
+      "text": "if array of left is equal to equal to"
+    },
+    {
+      "start": 932.079,
+      "duration": 3.961,
+      "end": 936.04,
+      "text": "zero I'll do a 0 minus"
+    },
+    {
+      "start": 939.36,
+      "duration": 6.44,
+      "end": 945.8000000000001,
+      "text": "minus at the same time I'll increase"
+    },
+    {
+      "start": 941.8,
+      "duration": 6.32,
+      "end": 948.12,
+      "text": "left so any moment I get a zero I'll"
+    },
+    {
+      "start": 945.8,
+      "duration": 5.719,
+      "end": 951.519,
+      "text": "trim down the zeros and if it comes down"
+    },
+    {
+      "start": 948.12,
+      "duration": 7.24,
+      "end": 955.36,
+      "text": "to uh lesser than equal to K lesser than"
+    },
+    {
+      "start": 951.519,
+      "duration": 5.88,
+      "end": 957.399,
+      "text": "equal to K I stop moving So eventually L"
+    },
+    {
+      "start": 955.36,
+      "duration": 3.719,
+      "end": 959.0790000000001,
+      "text": "will be stopping over here cuz that's"
+    },
+    {
+      "start": 957.399,
+      "duration": 4.36,
+      "end": 961.759,
+      "text": "when you get the number of zeros to be"
+    },
+    {
+      "start": 959.079,
+      "duration": 5.24,
+      "end": 964.319,
+      "text": "lesser than equal to K perfect so this"
+    },
+    {
+      "start": 961.759,
+      "duration": 5.52,
+      "end": 967.279,
+      "text": "condition will make sure that the left"
+    },
+    {
+      "start": 964.319,
+      "duration": 5.361,
+      "end": 969.68,
+      "text": "is always in place from the left what is"
+    },
+    {
+      "start": 967.279,
+      "duration": 5.401,
+      "end": 972.68,
+      "text": "the next case the next case is very"
+    },
+    {
+      "start": 969.68,
+      "duration": 6.399,
+      "end": 976.079,
+      "text": "simple you just have a check Hey listen"
+    },
+    {
+      "start": 972.68,
+      "duration": 5.8,
+      "end": 978.4799999999999,
+      "text": "if the zeros are lesser than equal to K"
+    },
+    {
+      "start": 976.079,
+      "duration": 4.32,
+      "end": 980.399,
+      "text": "in that scenario please make sure that"
+    },
+    {
+      "start": 978.48,
+      "duration": 4.76,
+      "end": 983.24,
+      "text": "the length is you know the length is Rus"
+    },
+    {
+      "start": 980.399,
+      "duration": 5.961,
+      "end": 986.36,
+      "text": "L + 1 and at the same time compare it"
+    },
+    {
+      "start": 983.24,
+      "duration": 6.279,
+      "end": 989.519,
+      "text": "with the max length which is Max of"
+    },
+    {
+      "start": 986.36,
+      "duration": 6.159,
+      "end": 992.519,
+      "text": "length comma Max of length and that will"
+    },
+    {
+      "start": 989.519,
+      "duration": 5.041,
+      "end": 994.5600000000001,
+      "text": "be your answer so I have the check and"
+    },
+    {
+      "start": 992.519,
+      "duration": 4.44,
+      "end": 996.9590000000001,
+      "text": "that is completed what I can do is"
+    },
+    {
+      "start": 994.56,
+      "duration": 5.519,
+      "end": 1000.079,
+      "text": "before completing the while loop I can"
+    },
+    {
+      "start": 996.959,
+      "duration": 4.921,
+      "end": 1001.88,
+      "text": "move the right pointer one place ahead"
+    },
+    {
+      "start": 1000.079,
+      "duration": 4.0,
+      "end": 1004.079,
+      "text": "and then I can complete the while"
+    },
+    {
+      "start": 1001.88,
+      "duration": 5.519,
+      "end": 1007.399,
+      "text": "because the right pointer always moves"
+    },
+    {
+      "start": 1004.079,
+      "duration": 7.161,
+      "end": 1011.2399999999999,
+      "text": "to the next and eventually I can go"
+    },
+    {
+      "start": 1007.399,
+      "duration": 5.92,
+      "end": 1013.319,
+      "text": "ahead and return the max length and I"
+    },
+    {
+      "start": 1011.24,
+      "duration": 5.959,
+      "end": 1017.199,
+      "text": "can complete the function now the"
+    },
+    {
+      "start": 1013.319,
+      "duration": 7.44,
+      "end": 1020.759,
+      "text": "question is what is the time"
+    },
+    {
+      "start": 1017.199,
+      "duration": 5.521,
+      "end": 1022.7199999999999,
+      "text": "complexity what is d ding the complexity"
+    },
+    {
+      "start": 1020.759,
+      "duration": 5.28,
+      "end": 1026.039,
+      "text": "there is a while loop I'm very sure it"
+    },
+    {
+      "start": 1022.72,
+      "duration": 6.479,
+      "end": 1029.199,
+      "text": "is being driven by this capital r"
+    },
+    {
+      "start": 1026.039,
+      "duration": 5.721,
+      "end": 1031.76,
+      "text": "correct this capital r so the capital r"
+    },
+    {
+      "start": 1029.199,
+      "duration": 6.48,
+      "end": 1035.679,
+      "text": "is driving and it is going"
+    },
+    {
+      "start": 1031.76,
+      "duration": 6.0,
+      "end": 1037.76,
+      "text": "till the last so the r starts here and"
+    },
+    {
+      "start": 1035.679,
+      "duration": 4.441,
+      "end": 1040.1200000000001,
+      "text": "goes still here that's for sure so I"
+    },
+    {
+      "start": 1037.76,
+      "duration": 5.52,
+      "end": 1043.28,
+      "text": "know one thing there's a bego of n"
+    },
+    {
+      "start": 1040.12,
+      "duration": 5.319,
+      "end": 1045.4389999999999,
+      "text": "involved you might be thinking okay now"
+    },
+    {
+      "start": 1043.28,
+      "duration": 6.279,
+      "end": 1049.559,
+      "text": "inside this while loop there is another"
+    },
+    {
+      "start": 1045.439,
+      "duration": 6.761,
+      "end": 1052.2,
+      "text": "while loop but the question to you is"
+    },
+    {
+      "start": 1049.559,
+      "duration": 6.601,
+      "end": 1056.16,
+      "text": "is the wild Loop always running for B of"
+    },
+    {
+      "start": 1052.2,
+      "duration": 6.68,
+      "end": 1058.88,
+      "text": "end time no it isn't what can be the"
+    },
+    {
+      "start": 1056.16,
+      "duration": 4.8,
+      "end": 1060.96,
+      "text": "possible scenario sometime this L will"
+    },
+    {
+      "start": 1058.88,
+      "duration": 3.4,
+      "end": 1062.2800000000002,
+      "text": "run for this much then for this much"
+    },
+    {
+      "start": 1060.96,
+      "duration": 6.16,
+      "end": 1067.1200000000001,
+      "text": "then for this"
+    },
+    {
+      "start": 1062.28,
+      "duration": 8.519,
+      "end": 1070.799,
+      "text": "much small small small not not a n"
+    },
+    {
+      "start": 1067.12,
+      "duration": 6.16,
+      "end": 1073.28,
+      "text": "always not n always small small small"
+    },
+    {
+      "start": 1070.799,
+      "duration": 4.36,
+      "end": 1075.1589999999999,
+      "text": "right the worst possible scenario could"
+    },
+    {
+      "start": 1073.28,
+      "duration": 4.399,
+      "end": 1077.6789999999999,
+      "text": "be something like this imagine your 1"
+    },
+    {
+      "start": 1075.159,
+      "duration": 4.801,
+      "end": 1079.96,
+      "text": "one one one one one one and then a zero"
+    },
+    {
+      "start": 1077.679,
+      "duration": 4.24,
+      "end": 1081.919,
+      "text": "and then a zero so what happens is you"
+    },
+    {
+      "start": 1079.96,
+      "duration": 4.48,
+      "end": 1084.44,
+      "text": "take L you take R and eventually when"
+    },
+    {
+      "start": 1081.919,
+      "duration": 5.561,
+      "end": 1087.48,
+      "text": "the r reaches here the number of zeros"
+    },
+    {
+      "start": 1084.44,
+      "duration": 5.479,
+      "end": 1089.919,
+      "text": "are two and imagine K is 1 take this"
+    },
+    {
+      "start": 1087.48,
+      "duration": 4.48,
+      "end": 1091.96,
+      "text": "case what happens is when R reaches here"
+    },
+    {
+      "start": 1089.919,
+      "duration": 4.281,
+      "end": 1094.2,
+      "text": "the number of zeros are two so the L"
+    },
+    {
+      "start": 1091.96,
+      "duration": 5.959,
+      "end": 1097.919,
+      "text": "Starts Here L goes here L goes here L"
+    },
+    {
+      "start": 1094.2,
+      "duration": 6.16,
+      "end": 1100.3600000000001,
+      "text": "goes here here here here and for this"
+    },
+    {
+      "start": 1097.919,
+      "duration": 5.0,
+      "end": 1102.919,
+      "text": "zero it reduces this to one and then it"
+    },
+    {
+      "start": 1100.36,
+      "duration": 6.6,
+      "end": 1106.9599999999998,
+      "text": "goes here so at Max it will go like B go"
+    },
+    {
+      "start": 1102.919,
+      "duration": 7.321,
+      "end": 1110.24,
+      "text": "and overall overall so I can"
+    },
+    {
+      "start": 1106.96,
+      "duration": 4.88,
+      "end": 1111.8400000000001,
+      "text": "say at Max it will B go of n plus n"
+    },
+    {
+      "start": 1110.24,
+      "duration": 5.319,
+      "end": 1115.559,
+      "text": "which is B go of 2"
+    },
+    {
+      "start": 1111.84,
+      "duration": 5.92,
+      "end": 1117.76,
+      "text": "N because this L can at Max travel for"
+    },
+    {
+      "start": 1115.559,
+      "duration": 4.24,
+      "end": 1119.799,
+      "text": "this Index this Index this indexes till"
+    },
+    {
+      "start": 1117.76,
+      "duration": 5.56,
+      "end": 1123.32,
+      "text": "the last at Max it can travel for n"
+    },
+    {
+      "start": 1119.799,
+      "duration": 5.521,
+      "end": 1125.32,
+      "text": "indexes not Beyond it and N throughout"
+    },
+    {
+      "start": 1123.32,
+      "duration": 5.16,
+      "end": 1128.48,
+      "text": "the journey throughout the journey so"
+    },
+    {
+      "start": 1125.32,
+      "duration": 6.64,
+      "end": 1131.96,
+      "text": "thereby the time complexity is B go of 2"
+    },
+    {
+      "start": 1128.48,
+      "duration": 6.52,
+      "end": 1135.0,
+      "text": "N and the space complexity is B go of"
+    },
+    {
+      "start": 1131.96,
+      "duration": 5.64,
+      "end": 1137.6000000000001,
+      "text": "one because I'm not using any external"
+    },
+    {
+      "start": 1135.0,
+      "duration": 4.44,
+      "end": 1139.44,
+      "text": "space this time the interviewer might be"
+    },
+    {
+      "start": 1137.6,
+      "duration": 4.559,
+      "end": 1142.1589999999999,
+      "text": "happy with this a lot of interviewers"
+    },
+    {
+      "start": 1139.44,
+      "duration": 4.88,
+      "end": 1144.3200000000002,
+      "text": "will be happy with this but again if"
+    },
+    {
+      "start": 1142.159,
+      "duration": 4.281,
+      "end": 1146.44,
+      "text": "you're going for tougher companies they"
+    },
+    {
+      "start": 1144.32,
+      "duration": 4.719,
+      "end": 1149.039,
+      "text": "might ask you to optimize beo off to"
+    },
+    {
+      "start": 1146.44,
+      "duration": 4.8,
+      "end": 1151.24,
+      "text": "when they might ask you to remove this"
+    },
+    {
+      "start": 1149.039,
+      "duration": 4.921,
+      "end": 1153.96,
+      "text": "internal while loop and this is when"
+    },
+    {
+      "start": 1151.24,
+      "duration": 4.96,
+      "end": 1156.2,
+      "text": "we'll move to the like the most optimal"
+    },
+    {
+      "start": 1153.96,
+      "duration": 5.04,
+      "end": 1159.0,
+      "text": "solution so the most optimal solution"
+    },
+    {
+      "start": 1156.2,
+      "duration": 5.56,
+      "end": 1161.76,
+      "text": "also uses a sliding window but we'll be"
+    },
+    {
+      "start": 1159.0,
+      "duration": 5.159,
+      "end": 1164.159,
+      "text": "slightly smarter this time so we start"
+    },
+    {
+      "start": 1161.76,
+      "duration": 5.32,
+      "end": 1167.08,
+      "text": "with L we'll start with r at the zero"
+    },
+    {
+      "start": 1164.159,
+      "duration": 6.321,
+      "end": 1170.48,
+      "text": "index I'll keep the track of"
+    },
+    {
+      "start": 1167.08,
+      "duration": 5.719,
+      "end": 1172.799,
+      "text": "zeros and that's Zer I'll also keep the"
+    },
+    {
+      "start": 1170.48,
+      "duration": 5.319,
+      "end": 1175.799,
+      "text": "track of max length which is initially"
+    },
+    {
+      "start": 1172.799,
+      "duration": 5.641,
+      "end": 1178.44,
+      "text": "zero so initially I'm over here and"
+    },
+    {
+      "start": 1175.799,
+      "duration": 5.12,
+      "end": 1180.9189999999999,
+      "text": "that's a one so zeros will not increase"
+    },
+    {
+      "start": 1178.44,
+      "duration": 5.0,
+      "end": 1183.44,
+      "text": "so I'll figure out the length to be one"
+    },
+    {
+      "start": 1180.919,
+      "duration": 5.161,
+      "end": 1186.0800000000002,
+      "text": "so the max length gets updated to one"
+    },
+    {
+      "start": 1183.44,
+      "duration": 4.96,
+      "end": 1188.4,
+      "text": "and then what you do is you take the r"
+    },
+    {
+      "start": 1186.08,
+      "duration": 5.479,
+      "end": 1191.559,
+      "text": "and you move it to the next again it is"
+    },
+    {
+      "start": 1188.4,
+      "duration": 5.08,
+      "end": 1193.48,
+      "text": "a one so zeros will not increase and the"
+    },
+    {
+      "start": 1191.559,
+      "duration": 5.401,
+      "end": 1196.96,
+      "text": "length will be two so the max length"
+    },
+    {
+      "start": 1193.48,
+      "duration": 6.679,
+      "end": 1200.159,
+      "text": "gets updated to two next the r moves"
+    },
+    {
+      "start": 1196.96,
+      "duration": 5.28,
+      "end": 1202.24,
+      "text": "here and this time it's one zeros will"
+    },
+    {
+      "start": 1200.159,
+      "duration": 5.88,
+      "end": 1206.0390000000002,
+      "text": "not be updated and the max length gets"
+    },
+    {
+      "start": 1202.24,
+      "duration": 6.319,
+      "end": 1208.559,
+      "text": "updated next time the r moves here and"
+    },
+    {
+      "start": 1206.039,
+      "duration": 5.841,
+      "end": 1211.8799999999999,
+      "text": "the r moves here the zeros get subd but"
+    },
+    {
+      "start": 1208.559,
+      "duration": 6.201,
+      "end": 1214.76,
+      "text": "but but it is still lesser than equal to"
+    },
+    {
+      "start": 1211.88,
+      "duration": 5.12,
+      "end": 1217.0,
+      "text": "two is still lesser than equal to two so"
+    },
+    {
+      "start": 1214.76,
+      "duration": 5.64,
+      "end": 1220.4,
+      "text": "what happens the max length gets updated"
+    },
+    {
+      "start": 1217.0,
+      "duration": 5.96,
+      "end": 1222.96,
+      "text": "to four what is what is the next time"
+    },
+    {
+      "start": 1220.4,
+      "duration": 6.36,
+      "end": 1226.76,
+      "text": "the r moves here when the r moves there"
+    },
+    {
+      "start": 1222.96,
+      "duration": 6.079,
+      "end": 1229.039,
+      "text": "it's a zero so zeros gets updated to two"
+    },
+    {
+      "start": 1226.76,
+      "duration": 4.52,
+      "end": 1231.28,
+      "text": "the length gets updated to five because"
+    },
+    {
+      "start": 1229.039,
+      "duration": 7.081,
+      "end": 1236.12,
+      "text": "two zeros are peret what is the next"
+    },
+    {
+      "start": 1231.28,
+      "duration": 9.0,
+      "end": 1240.28,
+      "text": "thing the r moves here now this time the"
+    },
+    {
+      "start": 1236.12,
+      "duration": 7.4,
+      "end": 1243.52,
+      "text": "zeros gets updated to three if the zeros"
+    },
+    {
+      "start": 1240.28,
+      "duration": 6.96,
+      "end": 1247.24,
+      "text": "get updated to three I'm saying that"
+    },
+    {
+      "start": 1243.52,
+      "duration": 5.56,
+      "end": 1249.08,
+      "text": "this particular subarray has three zeros"
+    },
+    {
+      "start": 1247.24,
+      "duration": 5.08,
+      "end": 1252.32,
+      "text": "I need to trim off something from the"
+    },
+    {
+      "start": 1249.08,
+      "duration": 6.16,
+      "end": 1255.24,
+      "text": "left and in the previous algorithm we"
+    },
+    {
+      "start": 1252.32,
+      "duration": 4.839,
+      "end": 1257.1589999999999,
+      "text": "took the L entirely till here to trim of"
+    },
+    {
+      "start": 1255.24,
+      "duration": 4.36,
+      "end": 1259.6,
+      "text": "this particular zero to trim of this"
+    },
+    {
+      "start": 1257.159,
+      "duration": 5.961,
+      "end": 1263.1200000000001,
+      "text": "particular zero we took the L entirely"
+    },
+    {
+      "start": 1259.6,
+      "duration": 7.28,
+      "end": 1266.8799999999999,
+      "text": "to that index but over here we will not"
+    },
+    {
+      "start": 1263.12,
+      "duration": 6.24,
+      "end": 1269.36,
+      "text": "be doing that so we did find a zero will"
+    },
+    {
+      "start": 1266.88,
+      "duration": 4.44,
+      "end": 1271.3200000000002,
+      "text": "we will increase the count right and"
+    },
+    {
+      "start": 1269.36,
+      "duration": 5.319,
+      "end": 1274.6789999999999,
+      "text": "then we see a one over here so what we"
+    },
+    {
+      "start": 1271.32,
+      "duration": 6.12,
+      "end": 1277.4399999999998,
+      "text": "will do is we will not trim down it and"
+    },
+    {
+      "start": 1274.679,
+      "duration": 4.521,
+      "end": 1279.2,
+      "text": "we'll just be moving the L by one place"
+    },
+    {
+      "start": 1277.44,
+      "duration": 4.56,
+      "end": 1282.0,
+      "text": "we will just be moving the L by one"
+    },
+    {
+      "start": 1279.2,
+      "duration": 5.719,
+      "end": 1284.919,
+      "text": "place in doing this what we have"
+    },
+    {
+      "start": 1282.0,
+      "duration": 5.6,
+      "end": 1287.6,
+      "text": "succeeded in doing is we knew that the"
+    },
+    {
+      "start": 1284.919,
+      "duration": 6.041,
+      "end": 1290.96,
+      "text": "max length is five and I'm not exceeding"
+    },
+    {
+      "start": 1287.6,
+      "duration": 6.24,
+      "end": 1293.84,
+      "text": "that subar it is still length five it"
+    },
+    {
+      "start": 1290.96,
+      "duration": 6.079,
+      "end": 1297.039,
+      "text": "doesn't meet the condition but I am not"
+    },
+    {
+      "start": 1293.84,
+      "duration": 7.12,
+      "end": 1300.9599999999998,
+      "text": "allowing it to go beyond five because"
+    },
+    {
+      "start": 1297.039,
+      "duration": 6.401,
+      "end": 1303.44,
+      "text": "when L was here this was of a length six"
+    },
+    {
+      "start": 1300.96,
+      "duration": 5.199,
+      "end": 1306.159,
+      "text": "and the answer could have been updated I"
+    },
+    {
+      "start": 1303.44,
+      "duration": 7.479,
+      "end": 1310.919,
+      "text": "will not allow the answer to be updated"
+    },
+    {
+      "start": 1306.159,
+      "duration": 7.041,
+      "end": 1313.2,
+      "text": "till I till I get a zero under two I not"
+    },
+    {
+      "start": 1310.919,
+      "duration": 4.24,
+      "end": 1315.159,
+      "text": "allow the answer so thereby I'm saying"
+    },
+    {
+      "start": 1313.2,
+      "duration": 3.32,
+      "end": 1316.52,
+      "text": "five is the answer now okay I'll move"
+    },
+    {
+      "start": 1315.159,
+      "duration": 3.841,
+      "end": 1319.0,
+      "text": "here and I'll still keep the answer to"
+    },
+    {
+      "start": 1316.52,
+      "duration": 5.44,
+      "end": 1321.96,
+      "text": "be five I will not allow that answer to"
+    },
+    {
+      "start": 1319.0,
+      "duration": 6.96,
+      "end": 1325.96,
+      "text": "in increase okay I'm like fine don't"
+    },
+    {
+      "start": 1321.96,
+      "duration": 6.199,
+      "end": 1328.159,
+      "text": "allow so let's move R when I move R here"
+    },
+    {
+      "start": 1325.96,
+      "duration": 4.719,
+      "end": 1330.679,
+      "text": "that's the one so the zeros are still"
+    },
+    {
+      "start": 1328.159,
+      "duration": 6.161,
+      "end": 1334.3200000000002,
+      "text": "three the zeros are still three and the"
+    },
+    {
+      "start": 1330.679,
+      "duration": 5.761,
+      "end": 1336.44,
+      "text": "subar picture is of length six but I"
+    },
+    {
+      "start": 1334.32,
+      "duration": 5.0,
+      "end": 1339.32,
+      "text": "will not be allowed to update because"
+    },
+    {
+      "start": 1336.44,
+      "duration": 4.119,
+      "end": 1340.559,
+      "text": "the zeros are still three so what I'll"
+    },
+    {
+      "start": 1339.32,
+      "duration": 4.2,
+      "end": 1343.52,
+      "text": "do is"
+    },
+    {
+      "start": 1340.559,
+      "duration": 6.641,
+      "end": 1347.2,
+      "text": "okay this is a one so zeros cannot be"
+    },
+    {
+      "start": 1343.52,
+      "duration": 6.68,
+      "end": 1350.2,
+      "text": "decreased I'll still move again I'm not"
+    },
+    {
+      "start": 1347.2,
+      "duration": 6.28,
+      "end": 1353.48,
+      "text": "allowing you to go beyond five I'm not"
+    },
+    {
+      "start": 1350.2,
+      "duration": 5.92,
+      "end": 1356.1200000000001,
+      "text": "allowing you okay let's move R so when R"
+    },
+    {
+      "start": 1353.48,
+      "duration": 6.0,
+      "end": 1359.48,
+      "text": "goes here it's a one the zeros are still"
+    },
+    {
+      "start": 1356.12,
+      "duration": 5.52,
+      "end": 1361.6399999999999,
+      "text": "three I cannot update so what I'll do is"
+    },
+    {
+      "start": 1359.48,
+      "duration": 5.079,
+      "end": 1364.559,
+      "text": "I'll move"
+    },
+    {
+      "start": 1361.64,
+      "duration": 4.48,
+      "end": 1366.1200000000001,
+      "text": "L I'll move L but that was a one that"
+    },
+    {
+      "start": 1364.559,
+      "duration": 4.48,
+      "end": 1369.039,
+      "text": "was trimmed off that was a one that was"
+    },
+    {
+      "start": 1366.12,
+      "duration": 5.48,
+      "end": 1371.6,
+      "text": "trimmed off so the zeros still stay as"
+    },
+    {
+      "start": 1369.039,
+      "duration": 6.801,
+      "end": 1375.84,
+      "text": "three so the zeros still stay as three"
+    },
+    {
+      "start": 1371.6,
+      "duration": 8.6,
+      "end": 1380.1999999999998,
+      "text": "and this time I have I okay I'm still"
+    },
+    {
+      "start": 1375.84,
+      "duration": 7.88,
+      "end": 1383.72,
+      "text": "not allowing it fine let's move R this"
+    },
+    {
+      "start": 1380.2,
+      "duration": 5.92,
+      "end": 1386.1200000000001,
+      "text": "time when I move R where was it yes this"
+    },
+    {
+      "start": 1383.72,
+      "duration": 3.12,
+      "end": 1386.84,
+      "text": "time when I move R here I get the length"
+    },
+    {
+      "start": 1386.12,
+      "duration": 3.919,
+      "end": 1390.039,
+      "text": "as"
+    },
+    {
+      "start": 1386.84,
+      "duration": 7.719,
+      "end": 1394.559,
+      "text": "six and it has zeros as"
+    },
+    {
+      "start": 1390.039,
+      "duration": 6.76,
+      "end": 1396.799,
+      "text": "three okay L will be like L six no I'll"
+    },
+    {
+      "start": 1394.559,
+      "duration": 4.161,
+      "end": 1398.72,
+      "text": "move ahead so when it moves from here to"
+    },
+    {
+      "start": 1396.799,
+      "duration": 3.36,
+      "end": 1400.1589999999999,
+      "text": "here there's a zero there's a zero so"
+    },
+    {
+      "start": 1398.72,
+      "duration": 5.079,
+      "end": 1403.799,
+      "text": "this will"
+    },
+    {
+      "start": 1400.159,
+      "duration": 6.12,
+      "end": 1406.279,
+      "text": "reduce and when this reduces I'm like"
+    },
+    {
+      "start": 1403.799,
+      "duration": 5.321,
+      "end": 1409.12,
+      "text": "yeah this is possible this is possible"
+    },
+    {
+      "start": 1406.279,
+      "duration": 6.121,
+      "end": 1412.4,
+      "text": "the length is five and I'll keep it at 5"
+    },
+    {
+      "start": 1409.12,
+      "duration": 6.28,
+      "end": 1415.3999999999999,
+      "text": "perfect next I'll move R so when the r"
+    },
+    {
+      "start": 1412.4,
+      "duration": 6.0,
+      "end": 1418.4,
+      "text": "reaches here this time the number of"
+    },
+    {
+      "start": 1415.4,
+      "duration": 5.44,
+      "end": 1420.8400000000001,
+      "text": "zeros are two and the length is six so I"
+    },
+    {
+      "start": 1418.4,
+      "duration": 5.84,
+      "end": 1424.24,
+      "text": "can update it to six so I'll be updating"
+    },
+    {
+      "start": 1420.84,
+      "duration": 6.12,
+      "end": 1426.9599999999998,
+      "text": "it to six I'll not be moving L anymore"
+    },
+    {
+      "start": 1424.24,
+      "duration": 4.439,
+      "end": 1428.679,
+      "text": "so what happened was L kept on going"
+    },
+    {
+      "start": 1426.96,
+      "duration": 3.079,
+      "end": 1430.039,
+      "text": "kept on going kept on going and he's"
+    },
+    {
+      "start": 1428.679,
+      "duration": 3.801,
+      "end": 1432.48,
+      "text": "like I'm not going to allow you to"
+    },
+    {
+      "start": 1430.039,
+      "duration": 6.681,
+      "end": 1436.72,
+      "text": "increase your size till I get a zero and"
+    },
+    {
+      "start": 1432.48,
+      "duration": 7.48,
+      "end": 1439.96,
+      "text": "reduce myself interesting next the r"
+    },
+    {
+      "start": 1436.72,
+      "duration": 4.8,
+      "end": 1441.52,
+      "text": "goes here so so when the r goes here"
+    },
+    {
+      "start": 1439.96,
+      "duration": 4.76,
+      "end": 1444.72,
+      "text": "this time"
+    },
+    {
+      "start": 1441.52,
+      "duration": 5.08,
+      "end": 1446.6,
+      "text": "again this is a zero so the zeros will"
+    },
+    {
+      "start": 1444.72,
+      "duration": 4.36,
+      "end": 1449.08,
+      "text": "increase to three so when the zeros"
+    },
+    {
+      "start": 1446.6,
+      "duration": 4.92,
+      "end": 1451.52,
+      "text": "increase to three what happens is I'm"
+    },
+    {
+      "start": 1449.08,
+      "duration": 4.479,
+      "end": 1453.559,
+      "text": "saying this subar is not valid so L will"
+    },
+    {
+      "start": 1451.52,
+      "duration": 3.96,
+      "end": 1455.48,
+      "text": "be like okay I'll have to shrink I'll"
+    },
+    {
+      "start": 1453.559,
+      "duration": 3.841,
+      "end": 1457.3999999999999,
+      "text": "have to shrink but I know I can only"
+    },
+    {
+      "start": 1455.48,
+      "duration": 3.28,
+      "end": 1458.76,
+      "text": "string by one place so I'll string by"
+    },
+    {
+      "start": 1457.4,
+      "duration": 5.12,
+      "end": 1462.52,
+      "text": "one place and there was a zero that was"
+    },
+    {
+      "start": 1458.76,
+      "duration": 6.12,
+      "end": 1464.8799999999999,
+      "text": "removed so decreased now this subar can"
+    },
+    {
+      "start": 1462.52,
+      "duration": 6.039,
+      "end": 1468.559,
+      "text": "be considered because the zeros are two"
+    },
+    {
+      "start": 1464.88,
+      "duration": 7.159,
+      "end": 1472.0390000000002,
+      "text": "so the max length still stays as six"
+    },
+    {
+      "start": 1468.559,
+      "duration": 6.36,
+      "end": 1474.9189999999999,
+      "text": "pretty impressive right that's it that"
+    },
+    {
+      "start": 1472.039,
+      "duration": 5.36,
+      "end": 1477.399,
+      "text": "will be it for this one and if I have to"
+    },
+    {
+      "start": 1474.919,
+      "duration": 5.441,
+      "end": 1480.3600000000001,
+      "text": "write down the pseudo code it's very"
+    },
+    {
+      "start": 1477.399,
+      "duration": 5.561,
+      "end": 1482.9599999999998,
+      "text": "very very simple there the exact same"
+    },
+    {
+      "start": 1480.36,
+      "duration": 4.64,
+      "end": 1485.0,
+      "text": "code we'll just be doing very minor"
+    },
+    {
+      "start": 1482.96,
+      "duration": 4.56,
+      "end": 1487.52,
+      "text": "changes so"
+    },
+    {
+      "start": 1485.0,
+      "duration": 6.24,
+      "end": 1491.24,
+      "text": "function list of"
+    },
+    {
+      "start": 1487.52,
+      "duration": 8.0,
+      "end": 1495.52,
+      "text": "nums that's given to you and the K so"
+    },
+    {
+      "start": 1491.24,
+      "duration": 7.48,
+      "end": 1498.72,
+      "text": "you take an L you take a r you take a"
+    },
+    {
+      "start": 1495.52,
+      "duration": 7.279,
+      "end": 1502.799,
+      "text": "zeros and you take the max length to be"
+    },
+    {
+      "start": 1498.72,
+      "duration": 7.4,
+      "end": 1506.1200000000001,
+      "text": "zero this time I'll be starting from R"
+    },
+    {
+      "start": 1502.799,
+      "duration": 5.841,
+      "end": 1508.6399999999999,
+      "text": "and I'll be going to the"
+    },
+    {
+      "start": 1506.12,
+      "duration": 5.2,
+      "end": 1511.32,
+      "text": "size perfect what is the next thing that"
+    },
+    {
+      "start": 1508.64,
+      "duration": 5.72,
+      "end": 1514.3600000000001,
+      "text": "I'll do I'll be like okay I'm going till"
+    },
+    {
+      "start": 1511.32,
+      "duration": 7.56,
+      "end": 1518.8799999999999,
+      "text": "size first thing I'll do is Hey listen"
+    },
+    {
+      "start": 1514.36,
+      "duration": 7.319,
+      "end": 1521.6789999999999,
+      "text": "if nums of R is equal to equal to zero"
+    },
+    {
+      "start": 1518.88,
+      "duration": 7.039,
+      "end": 1525.919,
+      "text": "can you do a Zer Plus+ or you can"
+    },
+    {
+      "start": 1521.679,
+      "duration": 9.441,
+      "end": 1531.1200000000001,
+      "text": "convert the statement to something like"
+    },
+    {
+      "start": 1525.919,
+      "duration": 8.681,
+      "end": 1534.6000000000001,
+      "text": "Zer plus equal to not of nums of I"
+    },
+    {
+      "start": 1531.12,
+      "duration": 5.32,
+      "end": 1536.4399999999998,
+      "text": "because not means you know zero will be"
+    },
+    {
+      "start": 1534.6,
+      "duration": 3.079,
+      "end": 1537.6789999999999,
+      "text": "converted to one so that's the other way"
+    },
+    {
+      "start": 1536.44,
+      "duration": 3.92,
+      "end": 1540.3600000000001,
+      "text": "of writing you'll find a lot of people"
+    },
+    {
+      "start": 1537.679,
+      "duration": 5.12,
+      "end": 1542.799,
+      "text": "writing it but don't write that in an"
+    },
+    {
+      "start": 1540.36,
+      "duration": 4.6,
+      "end": 1544.9599999999998,
+      "text": "interview we usually write readable code"
+    },
+    {
+      "start": 1542.799,
+      "duration": 4.681,
+      "end": 1547.48,
+      "text": "that's not readable okay now what is my"
+    },
+    {
+      "start": 1544.96,
+      "duration": 8.16,
+      "end": 1553.1200000000001,
+      "text": "next step if the zeros have"
+    },
+    {
+      "start": 1547.48,
+      "duration": 7.88,
+      "end": 1555.3600000000001,
+      "text": "exceeded if the zeros have exceeded K I"
+    },
+    {
+      "start": 1553.12,
+      "duration": 4.76,
+      "end": 1557.8799999999999,
+      "text": "know one thing I'll have to take down"
+    },
+    {
+      "start": 1555.36,
+      "duration": 8.199,
+      "end": 1563.559,
+      "text": "I'll have to take it down from l so I'll"
+    },
+    {
+      "start": 1557.88,
+      "duration": 5.679,
+      "end": 1563.5590000000002,
+      "text": "be like Hey listen if nums"
+    },
+    {
+      "start": 1564.399,
+      "duration": 5.88,
+      "end": 1570.279,
+      "text": "of"
+    },
+    {
+      "start": 1566.399,
+      "duration": 5.841,
+      "end": 1572.2399999999998,
+      "text": "left is equal to equal to Z I will be"
+    },
+    {
+      "start": 1570.279,
+      "duration": 4.441,
+      "end": 1574.72,
+      "text": "trimming down zeros minus minus and"
+    },
+    {
+      "start": 1572.24,
+      "duration": 4.679,
+      "end": 1576.919,
+      "text": "doesn't matter if it got trimmed or not"
+    },
+    {
+      "start": 1574.72,
+      "duration": 5.92,
+      "end": 1580.64,
+      "text": "I will be moving the left I will be"
+    },
+    {
+      "start": 1576.919,
+      "duration": 8.961,
+      "end": 1585.88,
+      "text": "moving the left and after this I'll be"
+    },
+    {
+      "start": 1580.64,
+      "duration": 9.08,
+      "end": 1589.72,
+      "text": "checking Hey listen if the zeros are"
+    },
+    {
+      "start": 1585.88,
+      "duration": 8.88,
+      "end": 1594.7600000000002,
+      "text": "under k then I'll find out the length"
+    },
+    {
+      "start": 1589.72,
+      "duration": 10.04,
+      "end": 1599.76,
+      "text": "which is r - L + 1 and I'll update max"
+    },
+    {
+      "start": 1594.76,
+      "duration": 8.519,
+      "end": 1603.279,
+      "text": "length equal to Max of max length comma"
+    },
+    {
+      "start": 1599.76,
+      "duration": 5.399,
+      "end": 1605.1589999999999,
+      "text": "length so after this you can simply move"
+    },
+    {
+      "start": 1603.279,
+      "duration": 4.321,
+      "end": 1607.6,
+      "text": "the right which is"
+    },
+    {
+      "start": 1605.159,
+      "duration": 5.801,
+      "end": 1610.96,
+      "text": "r++ and you can finish off the while"
+    },
+    {
+      "start": 1607.6,
+      "duration": 9.0,
+      "end": 1616.6,
+      "text": "loop and after that you can"
+    },
+    {
+      "start": 1610.96,
+      "duration": 7.959,
+      "end": 1618.919,
+      "text": "return the max length and that is done"
+    },
+    {
+      "start": 1616.6,
+      "duration": 5.799,
+      "end": 1622.399,
+      "text": "so this is the simple version and this"
+    },
+    {
+      "start": 1618.919,
+      "duration": 6.321,
+      "end": 1625.24,
+      "text": "is how we can eliminate the while loop"
+    },
+    {
+      "start": 1622.399,
+      "duration": 5.4,
+      "end": 1627.799,
+      "text": "it works because you're not allowing it"
+    },
+    {
+      "start": 1625.24,
+      "duration": 4.24,
+      "end": 1629.48,
+      "text": "to extend the size the r is moving but"
+    },
+    {
+      "start": 1627.799,
+      "duration": 4.281,
+      "end": 1632.08,
+      "text": "I'm saying hey I'm not going to allow"
+    },
+    {
+      "start": 1629.48,
+      "duration": 4.72,
+      "end": 1634.2,
+      "text": "you to extend your size still stay at"
+    },
+    {
+      "start": 1632.08,
+      "duration": 5.04,
+      "end": 1637.12,
+      "text": "size five or size whatever it is the"
+    },
+    {
+      "start": 1634.2,
+      "duration": 4.92,
+      "end": 1639.1200000000001,
+      "text": "largest size when I get a zero then I"
+    },
+    {
+      "start": 1637.12,
+      "duration": 5.76,
+      "end": 1642.8799999999999,
+      "text": "stay constant then you can move then you"
+    },
+    {
+      "start": 1639.12,
+      "duration": 6.4,
+      "end": 1645.52,
+      "text": "can expand that's the algorithm behind"
+    },
+    {
+      "start": 1642.88,
+      "duration": 5.64,
+      "end": 1648.5200000000002,
+      "text": "eliminating the while loop so trying to"
+    },
+    {
+      "start": 1645.52,
+      "duration": 5.2,
+      "end": 1650.72,
+      "text": "discuss the time complexity what will be"
+    },
+    {
+      "start": 1648.52,
+      "duration": 5.6,
+      "end": 1654.12,
+      "text": "that so there's a while loop there's a"
+    },
+    {
+      "start": 1650.72,
+      "duration": 5.88,
+      "end": 1656.6000000000001,
+      "text": "definite beo of n now is there an inner"
+    },
+    {
+      "start": 1654.12,
+      "duration": 5.76,
+      "end": 1659.8799999999999,
+      "text": "while loop now there is no inner while"
+    },
+    {
+      "start": 1656.6,
+      "duration": 4.16,
+      "end": 1660.76,
+      "text": "Lo so this time if I take an example"
+    },
+    {
+      "start": 1659.88,
+      "duration": 5.399,
+      "end": 1665.279,
+      "text": "like"
+    },
+    {
+      "start": 1660.76,
+      "duration": 7.24,
+      "end": 1668.0,
+      "text": "this where assume K is 2 so what happens"
+    },
+    {
+      "start": 1665.279,
+      "duration": 7.0,
+      "end": 1672.279,
+      "text": "is you're keeping L here you're keeping"
+    },
+    {
+      "start": 1668.0,
+      "duration": 7.44,
+      "end": 1675.44,
+      "text": "R here and R moves R moves R moves R"
+    },
+    {
+      "start": 1672.279,
+      "duration": 5.28,
+      "end": 1677.559,
+      "text": "moves the number of zeros will be one"
+    },
+    {
+      "start": 1675.44,
+      "duration": 3.2,
+      "end": 1678.64,
+      "text": "then R again moves the number of zeros"
+    },
+    {
+      "start": 1677.559,
+      "duration": 2.84,
+      "end": 1680.399,
+      "text": "will increase"
+    },
+    {
+      "start": 1678.64,
+      "duration": 2.72,
+      "end": 1681.3600000000001,
+      "text": "the r again moves this time the number"
+    },
+    {
+      "start": 1680.399,
+      "duration": 4.88,
+      "end": 1685.279,
+      "text": "of"
+    },
+    {
+      "start": 1681.36,
+      "duration": 6.36,
+      "end": 1687.7199999999998,
+      "text": "zeros is three is three correct so"
+    },
+    {
+      "start": 1685.279,
+      "duration": 4.24,
+      "end": 1689.519,
+      "text": "thereby you cannot consider this you'll"
+    },
+    {
+      "start": 1687.72,
+      "duration": 3.959,
+      "end": 1691.679,
+      "text": "have to trim down some zeros you'll have"
+    },
+    {
+      "start": 1689.519,
+      "duration": 4.04,
+      "end": 1693.559,
+      "text": "to trim down and this is the zero that"
+    },
+    {
+      "start": 1691.679,
+      "duration": 4.6,
+      "end": 1696.279,
+      "text": "will be trimmed"
+    },
+    {
+      "start": 1693.559,
+      "duration": 5.48,
+      "end": 1699.039,
+      "text": "correct but over here in this particular"
+    },
+    {
+      "start": 1696.279,
+      "duration": 4.721,
+      "end": 1701.0,
+      "text": "algorithm what we are doing is we saying"
+    },
+    {
+      "start": 1699.039,
+      "duration": 5.681,
+      "end": 1704.72,
+      "text": "the"
+    },
+    {
+      "start": 1701.0,
+      "duration": 7.919,
+      "end": 1708.919,
+      "text": "max the max length is this"
+    },
+    {
+      "start": 1704.72,
+      "duration": 8.36,
+      "end": 1713.08,
+      "text": "much which is six"
+    },
+    {
+      "start": 1708.919,
+      "duration": 6.161,
+      "end": 1715.0800000000002,
+      "text": "okay so thereby just move L and that's"
+    },
+    {
+      "start": 1713.08,
+      "duration": 5.64,
+      "end": 1718.72,
+      "text": "not a zero that's not a zero that's not"
+    },
+    {
+      "start": 1715.08,
+      "duration": 6.439,
+      "end": 1721.519,
+      "text": "a zero so let's keep the length as six"
+    },
+    {
+      "start": 1718.72,
+      "duration": 6.839,
+      "end": 1725.559,
+      "text": "itself and then please move R and the"
+    },
+    {
+      "start": 1721.519,
+      "duration": 5.88,
+      "end": 1727.3990000000001,
+      "text": "moment R moves out you stop you stop and"
+    },
+    {
+      "start": 1725.559,
+      "duration": 4.681,
+      "end": 1730.24,
+      "text": "in the previous algorithm what you did"
+    },
+    {
+      "start": 1727.399,
+      "duration": 5.16,
+      "end": 1732.559,
+      "text": "was you took L from here till this"
+    },
+    {
+      "start": 1730.24,
+      "duration": 5.559,
+      "end": 1735.799,
+      "text": "portion till you got a zero and you"
+    },
+    {
+      "start": 1732.559,
+      "duration": 5.881,
+      "end": 1738.44,
+      "text": "reduced this to two you went till that"
+    },
+    {
+      "start": 1735.799,
+      "duration": 4.841,
+      "end": 1740.6399999999999,
+      "text": "but this doesn't helps because even if"
+    },
+    {
+      "start": 1738.44,
+      "duration": 3.479,
+      "end": 1741.919,
+      "text": "you're moving this L to here and then"
+    },
+    {
+      "start": 1740.64,
+      "duration": 4.08,
+      "end": 1744.72,
+      "text": "you're reducing and then you're moving"
+    },
+    {
+      "start": 1741.919,
+      "duration": 4.36,
+      "end": 1746.279,
+      "text": "the L here the size that you get is two"
+    },
+    {
+      "start": 1744.72,
+      "duration": 4.319,
+      "end": 1749.039,
+      "text": "which is never going to be greater than"
+    },
+    {
+      "start": 1746.279,
+      "duration": 4.921,
+      "end": 1751.2,
+      "text": "this so that's why the algorithm works"
+    },
+    {
+      "start": 1749.039,
+      "duration": 5.081,
+      "end": 1754.12,
+      "text": "you can take some more examples and you"
+    },
+    {
+      "start": 1751.2,
+      "duration": 5.64,
+      "end": 1756.8400000000001,
+      "text": "can try on it yourself like try it"
+    },
+    {
+      "start": 1754.12,
+      "duration": 4.96,
+      "end": 1759.08,
+      "text": "yourself thereby the time complexity is"
+    },
+    {
+      "start": 1756.84,
+      "duration": 4.719,
+      "end": 1761.559,
+      "text": "V go of nend because we are not moving L"
+    },
+    {
+      "start": 1759.08,
+      "duration": 7.199,
+      "end": 1766.279,
+      "text": "extremely to the right what about the"
+    },
+    {
+      "start": 1761.559,
+      "duration": 7.24,
+      "end": 1768.799,
+      "text": "space complexity that is B go of one so"
+    },
+    {
+      "start": 1766.279,
+      "duration": 4.4,
+      "end": 1770.679,
+      "text": "that will be it for this one so this was"
+    },
+    {
+      "start": 1768.799,
+      "duration": 3.641,
+      "end": 1772.44,
+      "text": "the pseudo code in case you want your"
+    },
+    {
+      "start": 1770.679,
+      "duration": 4.161,
+      "end": 1774.8400000000001,
+      "text": "language specific code you can find them"
+    },
+    {
+      "start": 1772.44,
+      "duration": 4.28,
+      "end": 1776.72,
+      "text": "below so with this uh this will be it"
+    },
+    {
+      "start": 1774.84,
+      "duration": 3.12,
+      "end": 1777.9599999999998,
+      "text": "for this one and if you're still now"
+    },
+    {
+      "start": 1776.72,
+      "duration": 2.839,
+      "end": 1779.559,
+      "text": "watching I hope you understood"
+    },
+    {
+      "start": 1777.96,
+      "duration": 3.04,
+      "end": 1781.0,
+      "text": "everything and if that is the case"
+    },
+    {
+      "start": 1779.559,
+      "duration": 3.201,
+      "end": 1782.76,
+      "text": "please please do consider giving us a"
+    },
+    {
+      "start": 1781.0,
+      "duration": 4.039,
+      "end": 1785.039,
+      "text": "like and if you're new to our channel do"
+    },
+    {
+      "start": 1782.76,
+      "duration": 3.48,
+      "end": 1786.24,
+      "text": "consider subscribing to us as well with"
+    },
+    {
+      "start": 1785.039,
+      "duration": 2.48,
+      "end": 1787.519,
+      "text": "this I'll be wrapping up this video"
+    },
+    {
+      "start": 1786.24,
+      "duration": 3.88,
+      "end": 1790.1200000000001,
+      "text": "let's meet in some of video till the"
+    },
+    {
+      "start": 1787.519,
+      "duration": 2.601,
+      "end": 1790.1200000000001,
+      "text": "duai take"
+    },
+    {
+      "start": 1791.559,
+      "duration": 7.681,
+      "end": 1799.24,
+      "text": "careen don't forget your"
+    },
+    {
+      "start": 1794.84,
+      "duration": 4.4,
+      "end": 1799.24,
+      "text": "golden I will light"
+    }
+  ]
+}

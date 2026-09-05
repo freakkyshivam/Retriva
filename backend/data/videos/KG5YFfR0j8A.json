@@ -1,0 +1,2384 @@
+{
+  "position": 143,
+  "video_id": "KG5YFfR0j8A",
+  "title": "G-18. Bipartite Graph | DFS | C++ | Java",
+  "url": "https://www.youtube.com/watch?v=KG5YFfR0j8A",
+  "transcript": [
+    {
+      "start": 3.199,
+      "duration": 3.441,
+      "end": 6.64,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 4.799,
+      "duration": 3.441,
+      "end": 8.24,
+      "text": "i hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.64,
+      "duration": 4.079,
+      "end": 10.719,
+      "text": "so in this video we are going to learn"
+    },
+    {
+      "start": 8.24,
+      "duration": 4.8,
+      "end": 13.04,
+      "text": "about bipartite graph and we are going"
+    },
+    {
+      "start": 10.719,
+      "duration": 4.641,
+      "end": 15.36,
+      "text": "to uh check if a graph is bipartite or"
+    },
+    {
+      "start": 13.04,
+      "duration": 4.8,
+      "end": 17.84,
+      "text": "not using the dfs algorithm which is the"
+    },
+    {
+      "start": 15.36,
+      "duration": 4.8,
+      "end": 20.16,
+      "text": "depth first search now what is the"
+    },
+    {
+      "start": 17.84,
+      "duration": 4.0,
+      "end": 21.84,
+      "text": "definition of a bipartite graph"
+    },
+    {
+      "start": 20.16,
+      "duration": 4.32,
+      "end": 24.48,
+      "text": "given a graph"
+    },
+    {
+      "start": 21.84,
+      "duration": 5.04,
+      "end": 26.88,
+      "text": "a graph that can be colored with exactly"
+    },
+    {
+      "start": 24.48,
+      "duration": 5.199,
+      "end": 29.679000000000002,
+      "text": "two colors exactly two colors"
+    },
+    {
+      "start": 26.88,
+      "duration": 5.199,
+      "end": 32.079,
+      "text": "such that no two adjacent nodes have the"
+    },
+    {
+      "start": 29.679,
+      "duration": 4.161,
+      "end": 33.839999999999996,
+      "text": "same color very very important you are"
+    },
+    {
+      "start": 32.079,
+      "duration": 4.64,
+      "end": 36.719,
+      "text": "given two colors you need to use those"
+    },
+    {
+      "start": 33.84,
+      "duration": 5.44,
+      "end": 39.28,
+      "text": "two colors to color a graph such that no"
+    },
+    {
+      "start": 36.719,
+      "duration": 4.401,
+      "end": 41.120000000000005,
+      "text": "two adjacent nodes have the same color"
+    },
+    {
+      "start": 39.28,
+      "duration": 3.76,
+      "end": 43.04,
+      "text": "very very important"
+    },
+    {
+      "start": 41.12,
+      "duration": 3.36,
+      "end": 44.48,
+      "text": "the two colors can be anything black"
+    },
+    {
+      "start": 43.04,
+      "duration": 3.44,
+      "end": 46.48,
+      "text": "white yellow green"
+    },
+    {
+      "start": 44.48,
+      "duration": 4.0,
+      "end": 48.48,
+      "text": "or whatever so"
+    },
+    {
+      "start": 46.48,
+      "duration": 4.48,
+      "end": 50.959999999999994,
+      "text": "let's take yellow and green now if i"
+    },
+    {
+      "start": 48.48,
+      "duration": 4.16,
+      "end": 52.64,
+      "text": "take this particular graph and try to"
+    },
+    {
+      "start": 50.96,
+      "duration": 3.04,
+      "end": 54.0,
+      "text": "color it so"
+    },
+    {
+      "start": 52.64,
+      "duration": 3.84,
+      "end": 56.480000000000004,
+      "text": "yellow"
+    },
+    {
+      "start": 54.0,
+      "duration": 4.399,
+      "end": 58.399,
+      "text": "obviously this is the adjacent node we"
+    },
+    {
+      "start": 56.48,
+      "duration": 3.759,
+      "end": 60.239,
+      "text": "cannot color it with yellow because"
+    },
+    {
+      "start": 58.399,
+      "duration": 4.0,
+      "end": 62.399,
+      "text": "yellow and yellow will have two adjacent"
+    },
+    {
+      "start": 60.239,
+      "duration": 3.681,
+      "end": 63.919999999999995,
+      "text": "nodes thereby we have to give it the"
+    },
+    {
+      "start": 62.399,
+      "duration": 2.961,
+      "end": 65.36,
+      "text": "opposite color green"
+    },
+    {
+      "start": 63.92,
+      "duration": 3.44,
+      "end": 67.36,
+      "text": "then the next one will definitely have"
+    },
+    {
+      "start": 65.36,
+      "duration": 4.24,
+      "end": 69.6,
+      "text": "the opposite yellow then the next one"
+    },
+    {
+      "start": 67.36,
+      "duration": 4.32,
+      "end": 71.68,
+      "text": "will have green the next one will have"
+    },
+    {
+      "start": 69.6,
+      "duration": 4.48,
+      "end": 74.08,
+      "text": "yellow the next one will have green"
+    },
+    {
+      "start": 71.68,
+      "duration": 4.64,
+      "end": 76.32000000000001,
+      "text": "right so if you see all of them are"
+    },
+    {
+      "start": 74.08,
+      "duration": 5.039,
+      "end": 79.119,
+      "text": "opposite and none of the adjacent nodes"
+    },
+    {
+      "start": 76.32,
+      "duration": 5.119,
+      "end": 81.439,
+      "text": "are having the same color now if we if"
+    },
+    {
+      "start": 79.119,
+      "duration": 4.481,
+      "end": 83.6,
+      "text": "we go this direction this will be given"
+    },
+    {
+      "start": 81.439,
+      "duration": 4.561,
+      "end": 86.0,
+      "text": "a yellow if we go the other this will be"
+    },
+    {
+      "start": 83.6,
+      "duration": 4.72,
+      "end": 88.32,
+      "text": "green again this will be yellow if you"
+    },
+    {
+      "start": 86.0,
+      "duration": 4.24,
+      "end": 90.24,
+      "text": "see the entire graph i took two colors"
+    },
+    {
+      "start": 88.32,
+      "duration": 3.92,
+      "end": 92.24,
+      "text": "yellow and green and i was able to color"
+    },
+    {
+      "start": 90.24,
+      "duration": 4.08,
+      "end": 94.32,
+      "text": "the graph in two different colors and if"
+    },
+    {
+      "start": 92.24,
+      "duration": 4.64,
+      "end": 96.88,
+      "text": "you carefully see every two adjacent"
+    },
+    {
+      "start": 94.32,
+      "duration": 3.52,
+      "end": 97.83999999999999,
+      "text": "notes yes every two adjacent notes are"
+    },
+    {
+      "start": 96.88,
+      "duration": 2.879,
+      "end": 99.759,
+      "text": "having"
+    },
+    {
+      "start": 97.84,
+      "duration": 5.04,
+      "end": 102.88000000000001,
+      "text": "different colors yes every two adjacent"
+    },
+    {
+      "start": 99.759,
+      "duration": 5.201,
+      "end": 104.96,
+      "text": "notes are having different color but"
+    },
+    {
+      "start": 102.88,
+      "duration": 5.36,
+      "end": 108.24,
+      "text": "if i take this particular graph"
+    },
+    {
+      "start": 104.96,
+      "duration": 6.479,
+      "end": 111.439,
+      "text": "so what i can say is this graph is a"
+    },
+    {
+      "start": 108.24,
+      "duration": 6.48,
+      "end": 114.72,
+      "text": "bipartite graphics i can call this graph"
+    },
+    {
+      "start": 111.439,
+      "duration": 5.921,
+      "end": 117.36,
+      "text": "as a bipartite graph at the same time if"
+    },
+    {
+      "start": 114.72,
+      "duration": 5.28,
+      "end": 120.0,
+      "text": "i check this out and i take the same"
+    },
+    {
+      "start": 117.36,
+      "duration": 4.56,
+      "end": 121.92,
+      "text": "color yellow and green yellow obviously"
+    },
+    {
+      "start": 120.0,
+      "duration": 5.52,
+      "end": 125.52,
+      "text": "the adjacent will be opposite green"
+    },
+    {
+      "start": 121.92,
+      "duration": 5.6,
+      "end": 127.52,
+      "text": "yellow green yellow green this is green"
+    },
+    {
+      "start": 125.52,
+      "duration": 4.799,
+      "end": 130.319,
+      "text": "so this will be yellow this is yellow so"
+    },
+    {
+      "start": 127.52,
+      "duration": 4.64,
+      "end": 132.16,
+      "text": "this will be green so if i follow this"
+    },
+    {
+      "start": 130.319,
+      "duration": 3.761,
+      "end": 134.07999999999998,
+      "text": "these two adjacent nodes are having"
+    },
+    {
+      "start": 132.16,
+      "duration": 4.079,
+      "end": 136.239,
+      "text": "different colors but at the same time if"
+    },
+    {
+      "start": 134.08,
+      "duration": 4.4,
+      "end": 138.48000000000002,
+      "text": "you see these uh these two adjacent"
+    },
+    {
+      "start": 136.239,
+      "duration": 5.041,
+      "end": 141.28,
+      "text": "nodes are having green color so thereby"
+    },
+    {
+      "start": 138.48,
+      "duration": 4.96,
+      "end": 143.44,
+      "text": "this graph cannot be colored you can try"
+    },
+    {
+      "start": 141.28,
+      "duration": 4.08,
+      "end": 145.36,
+      "text": "any other possibilities this graph"
+    },
+    {
+      "start": 143.44,
+      "duration": 4.0,
+      "end": 147.44,
+      "text": "cannot be colored with two colors"
+    },
+    {
+      "start": 145.36,
+      "duration": 3.84,
+      "end": 149.20000000000002,
+      "text": "because you will end up either having"
+    },
+    {
+      "start": 147.44,
+      "duration": 4.159,
+      "end": 151.599,
+      "text": "this or this"
+    },
+    {
+      "start": 149.2,
+      "duration": 4.88,
+      "end": 154.07999999999998,
+      "text": "same colors now the reason for that is"
+    },
+    {
+      "start": 151.599,
+      "duration": 5.041,
+      "end": 156.64,
+      "text": "very simple because it was a"
+    },
+    {
+      "start": 154.08,
+      "duration": 6.159,
+      "end": 160.239,
+      "text": "even lens cycle sorry odd length one two"
+    },
+    {
+      "start": 156.64,
+      "duration": 6.8,
+      "end": 163.44,
+      "text": "three four five if you uh see the length"
+    },
+    {
+      "start": 160.239,
+      "duration": 5.521,
+      "end": 165.76,
+      "text": "of the cycle it was odd so if a graph"
+    },
+    {
+      "start": 163.44,
+      "duration": 5.439,
+      "end": 168.879,
+      "text": "has a odd length cycle it will never be"
+    },
+    {
+      "start": 165.76,
+      "duration": 5.44,
+      "end": 171.2,
+      "text": "viper tight remember this if a graph has"
+    },
+    {
+      "start": 168.879,
+      "duration": 6.0,
+      "end": 174.879,
+      "text": "odd length cycle"
+    },
+    {
+      "start": 171.2,
+      "duration": 6.319,
+      "end": 177.51899999999998,
+      "text": "then it cannot be bipartite apart from"
+    },
+    {
+      "start": 174.879,
+      "duration": 6.321,
+      "end": 181.2,
+      "text": "that if you see this one"
+    },
+    {
+      "start": 177.519,
+      "duration": 7.121,
+      "end": 184.64000000000001,
+      "text": "one two three four five six so the"
+    },
+    {
+      "start": 181.2,
+      "duration": 5.36,
+      "end": 186.56,
+      "text": "length of this is six and if i see this"
+    },
+    {
+      "start": 184.64,
+      "duration": 2.959,
+      "end": 187.599,
+      "text": "is an even"
+    },
+    {
+      "start": 186.56,
+      "duration": 4.759,
+      "end": 191.31900000000002,
+      "text": "length"
+    },
+    {
+      "start": 187.599,
+      "duration": 5.521,
+      "end": 193.11999999999998,
+      "text": "this is an even length and this is a"
+    },
+    {
+      "start": 191.319,
+      "duration": 5.56,
+      "end": 196.879,
+      "text": "bipartite"
+    },
+    {
+      "start": 193.12,
+      "duration": 6.72,
+      "end": 199.84,
+      "text": "graphics and this is a bipartite graph"
+    },
+    {
+      "start": 196.879,
+      "duration": 5.681,
+      "end": 202.56,
+      "text": "similarly any linear length graph any"
+    },
+    {
+      "start": 199.84,
+      "duration": 4.64,
+      "end": 204.48,
+      "text": "linear length like if you give something"
+    },
+    {
+      "start": 202.56,
+      "duration": 3.039,
+      "end": 205.599,
+      "text": "like this and like this and like this"
+    },
+    {
+      "start": 204.48,
+      "duration": 3.839,
+      "end": 208.319,
+      "text": "then like this"
+    },
+    {
+      "start": 205.599,
+      "duration": 6.161,
+      "end": 211.76,
+      "text": "this is a bipartite because you can grow"
+    },
+    {
+      "start": 208.319,
+      "duration": 6.721,
+      "end": 215.04,
+      "text": "like blue green blue green you can color"
+    },
+    {
+      "start": 211.76,
+      "duration": 5.68,
+      "end": 217.44,
+      "text": "it so anything apart from a like any"
+    },
+    {
+      "start": 215.04,
+      "duration": 4.88,
+      "end": 219.92,
+      "text": "graph which does not contain an odd lens"
+    },
+    {
+      "start": 217.44,
+      "duration": 4.799,
+      "end": 222.239,
+      "text": "cycle are bipartite and any graph that"
+    },
+    {
+      "start": 219.92,
+      "duration": 4.879,
+      "end": 224.79899999999998,
+      "text": "contains the order cycle cannot be"
+    },
+    {
+      "start": 222.239,
+      "duration": 4.241,
+      "end": 226.48000000000002,
+      "text": "bipartite a simple definition of the"
+    },
+    {
+      "start": 224.799,
+      "duration": 4.241,
+      "end": 229.04000000000002,
+      "text": "bipartite graph"
+    },
+    {
+      "start": 226.48,
+      "duration": 4.24,
+      "end": 230.72,
+      "text": "so we will be taking this graph and the"
+    },
+    {
+      "start": 229.04,
+      "duration": 3.759,
+      "end": 232.79899999999998,
+      "text": "algorithm that we will be applying is"
+    },
+    {
+      "start": 230.72,
+      "duration": 4.719,
+      "end": 235.439,
+      "text": "dfs you know every graph can be"
+    },
+    {
+      "start": 232.799,
+      "duration": 4.481,
+      "end": 237.28,
+      "text": "represented in terms of adjacency list"
+    },
+    {
+      "start": 235.439,
+      "duration": 4.08,
+      "end": 239.519,
+      "text": "so this is the particular adjacency list"
+    },
+    {
+      "start": 237.28,
+      "duration": 4.64,
+      "end": 241.92,
+      "text": "for the graph and we are assuming that"
+    },
+    {
+      "start": 239.519,
+      "duration": 3.92,
+      "end": 243.439,
+      "text": "this graph has one component if we are"
+    },
+    {
+      "start": 241.92,
+      "duration": 3.519,
+      "end": 245.439,
+      "text": "able to solve it for one component we"
+    },
+    {
+      "start": 243.439,
+      "duration": 4.0,
+      "end": 247.439,
+      "text": "can definitely solve it for multiple"
+    },
+    {
+      "start": 245.439,
+      "duration": 4.321,
+      "end": 249.76,
+      "text": "components right now"
+    },
+    {
+      "start": 247.439,
+      "duration": 4.961,
+      "end": 252.4,
+      "text": "in dfs algorithm we always have a start"
+    },
+    {
+      "start": 249.76,
+      "duration": 4.16,
+      "end": 253.92,
+      "text": "node so we can assume the start node to"
+    },
+    {
+      "start": 252.4,
+      "duration": 3.36,
+      "end": 255.76000000000002,
+      "text": "be one you can take it to be eight you"
+    },
+    {
+      "start": 253.92,
+      "duration": 4.879,
+      "end": 258.799,
+      "text": "can take it to be four whichever you"
+    },
+    {
+      "start": 255.76,
+      "duration": 5.52,
+      "end": 261.28,
+      "text": "wish to and we always have a visited"
+    },
+    {
+      "start": 258.799,
+      "duration": 4.881,
+      "end": 263.67999999999995,
+      "text": "matrix uh sorry visited array but over"
+    },
+    {
+      "start": 261.28,
+      "duration": 5.52,
+      "end": 266.79999999999995,
+      "text": "here what we will do is we will take a"
+    },
+    {
+      "start": 263.68,
+      "duration": 5.68,
+      "end": 269.36,
+      "text": "color array and of the same size of the"
+    },
+    {
+      "start": 266.8,
+      "duration": 5.2,
+      "end": 272.0,
+      "text": "number of notes and we will make sure"
+    },
+    {
+      "start": 269.36,
+      "duration": 4.32,
+      "end": 273.68,
+      "text": "everyone is initially colored with -1"
+    },
+    {
+      "start": 272.0,
+      "duration": 3.68,
+      "end": 275.68,
+      "text": "which means none of the notes are"
+    },
+    {
+      "start": 273.68,
+      "duration": 5.04,
+      "end": 278.72,
+      "text": "colored and the colors that we will use"
+    },
+    {
+      "start": 275.68,
+      "duration": 6.4,
+      "end": 282.08,
+      "text": "to color the notes are 0 and 1 these can"
+    },
+    {
+      "start": 278.72,
+      "duration": 5.44,
+      "end": 284.16,
+      "text": "be like yellow and green so 0 and one"
+    },
+    {
+      "start": 282.08,
+      "duration": 4.32,
+      "end": 286.4,
+      "text": "so this is the graph so initially what"
+    },
+    {
+      "start": 284.16,
+      "duration": 4.24,
+      "end": 288.40000000000003,
+      "text": "you do is you call the dfs function yes"
+    },
+    {
+      "start": 286.4,
+      "duration": 2.72,
+      "end": 289.12,
+      "text": "initially you call the dfs function from"
+    },
+    {
+      "start": 288.4,
+      "duration": 2.4,
+      "end": 290.79999999999995,
+      "text": "one"
+    },
+    {
+      "start": 289.12,
+      "duration": 4.079,
+      "end": 293.199,
+      "text": "right and the moment you call it from"
+    },
+    {
+      "start": 290.8,
+      "duration": 3.92,
+      "end": 294.72,
+      "text": "one just make sure like you can just"
+    },
+    {
+      "start": 293.199,
+      "duration": 2.881,
+      "end": 296.08,
+      "text": "have it something like this"
+    },
+    {
+      "start": 294.72,
+      "duration": 3.919,
+      "end": 298.639,
+      "text": "you can pass the color that you want to"
+    },
+    {
+      "start": 296.08,
+      "duration": 5.04,
+      "end": 301.12,
+      "text": "color it with and pass the color zero so"
+    },
+    {
+      "start": 298.639,
+      "duration": 4.881,
+      "end": 303.52,
+      "text": "dfs of one zero so the so the moment the"
+    },
+    {
+      "start": 301.12,
+      "duration": 4.56,
+      "end": 305.68,
+      "text": "call comes in for dfs of one and the"
+    },
+    {
+      "start": 303.52,
+      "duration": 4.72,
+      "end": 308.24,
+      "text": "color zero it goes to the position one"
+    },
+    {
+      "start": 305.68,
+      "duration": 4.64,
+      "end": 310.32,
+      "text": "and says can you color it with the color"
+    },
+    {
+      "start": 308.24,
+      "duration": 3.76,
+      "end": 312.0,
+      "text": "zero and he's like yeah fine i can color"
+    },
+    {
+      "start": 310.32,
+      "duration": 3.84,
+      "end": 314.15999999999997,
+      "text": "it with the color zero so we have done"
+    },
+    {
+      "start": 312.0,
+      "duration": 3.84,
+      "end": 315.84,
+      "text": "it and now what we will see is who are"
+    },
+    {
+      "start": 314.16,
+      "duration": 4.319,
+      "end": 318.47900000000004,
+      "text": "the adjacent notes of one and we see"
+    },
+    {
+      "start": 315.84,
+      "duration": 4.56,
+      "end": 320.4,
+      "text": "that there is only one so what you do is"
+    },
+    {
+      "start": 318.479,
+      "duration": 4.481,
+      "end": 322.96,
+      "text": "you call it for two yes you call it for"
+    },
+    {
+      "start": 320.4,
+      "duration": 4.72,
+      "end": 325.12,
+      "text": "two now is two colored two is not"
+    },
+    {
+      "start": 322.96,
+      "duration": 3.84,
+      "end": 326.79999999999995,
+      "text": "colored so you call it for 2 and which"
+    },
+    {
+      "start": 325.12,
+      "duration": 4.48,
+      "end": 329.6,
+      "text": "color will you give to it'll obviously"
+    },
+    {
+      "start": 326.8,
+      "duration": 4.64,
+      "end": 331.44,
+      "text": "give the opposite color to what was of"
+    },
+    {
+      "start": 329.6,
+      "duration": 3.92,
+      "end": 333.52000000000004,
+      "text": "zero so you'll give it the opposite"
+    },
+    {
+      "start": 331.44,
+      "duration": 4.8,
+      "end": 336.24,
+      "text": "color which is one so you get the"
+    },
+    {
+      "start": 333.52,
+      "duration": 3.92,
+      "end": 337.44,
+      "text": "opposite color that is one so as of may"
+    },
+    {
+      "start": 336.24,
+      "duration": 3.44,
+      "end": 339.68,
+      "text": "you'll go to two"
+    },
+    {
+      "start": 337.44,
+      "duration": 4.64,
+      "end": 342.08,
+      "text": "so you'll have a color"
+    },
+    {
+      "start": 339.68,
+      "duration": 4.88,
+      "end": 344.56,
+      "text": "one so let's color it with one now you"
+    },
+    {
+      "start": 342.08,
+      "duration": 4.8,
+      "end": 346.88,
+      "text": "go to two and what the adjacent notes"
+    },
+    {
+      "start": 344.56,
+      "duration": 4.479,
+      "end": 349.039,
+      "text": "the first adjacent node is one"
+    },
+    {
+      "start": 346.88,
+      "duration": 4.96,
+      "end": 351.84,
+      "text": "and you see that it is already colored"
+    },
+    {
+      "start": 349.039,
+      "duration": 4.72,
+      "end": 353.759,
+      "text": "with the color zero right and this was"
+    },
+    {
+      "start": 351.84,
+      "duration": 3.919,
+      "end": 355.75899999999996,
+      "text": "colored with color one so it's an"
+    },
+    {
+      "start": 353.759,
+      "duration": 4.16,
+      "end": 357.91900000000004,
+      "text": "adjacent node and it is colored with a"
+    },
+    {
+      "start": 355.759,
+      "duration": 3.841,
+      "end": 359.6,
+      "text": "different color so that is okay it is"
+    },
+    {
+      "start": 357.919,
+      "duration": 5.041,
+      "end": 362.96,
+      "text": "already colored with a different color"
+    },
+    {
+      "start": 359.6,
+      "duration": 5.68,
+      "end": 365.28000000000003,
+      "text": "so i will not go there and the next is"
+    },
+    {
+      "start": 362.96,
+      "duration": 4.799,
+      "end": 367.75899999999996,
+      "text": "three so i see the next is three so what"
+    },
+    {
+      "start": 365.28,
+      "duration": 4.8,
+      "end": 370.08,
+      "text": "i'll do is i will go to three"
+    },
+    {
+      "start": 367.759,
+      "duration": 4.72,
+      "end": 372.47900000000004,
+      "text": "and i'll give it the opposite color and"
+    },
+    {
+      "start": 370.08,
+      "duration": 4.16,
+      "end": 374.24,
+      "text": "what is the opposite color zero so now"
+    },
+    {
+      "start": 372.479,
+      "duration": 5.041,
+      "end": 377.52,
+      "text": "you go to three and you say the color is"
+    },
+    {
+      "start": 374.24,
+      "duration": 4.32,
+      "end": 378.56,
+      "text": "zero and have it a color zero perfect"
+    },
+    {
+      "start": 377.52,
+      "duration": 3.44,
+      "end": 380.96,
+      "text": "so"
+    },
+    {
+      "start": 378.56,
+      "duration": 5.6,
+      "end": 384.16,
+      "text": "dfs call for three comes in and the"
+    },
+    {
+      "start": 380.96,
+      "duration": 5.6,
+      "end": 386.56,
+      "text": "first node that it sees is two so three"
+    },
+    {
+      "start": 384.16,
+      "duration": 4.96,
+      "end": 389.12,
+      "text": "sees that the first adjacent node is two"
+    },
+    {
+      "start": 386.56,
+      "duration": 4.079,
+      "end": 390.639,
+      "text": "as checks that okay my color is zero and"
+    },
+    {
+      "start": 389.12,
+      "duration": 3.6,
+      "end": 392.72,
+      "text": "the adjacent colors is one so it is"
+    },
+    {
+      "start": 390.639,
+      "duration": 5.12,
+      "end": 395.759,
+      "text": "perfect but it is already colored so i"
+    },
+    {
+      "start": 392.72,
+      "duration": 5.36,
+      "end": 398.08000000000004,
+      "text": "will not go and visit it perfect next we"
+    },
+    {
+      "start": 395.759,
+      "duration": 4.481,
+      "end": 400.24,
+      "text": "have a 4 and we see that it is not"
+    },
+    {
+      "start": 398.08,
+      "duration": 5.44,
+      "end": 403.52,
+      "text": "colored so what we will do is we will"
+    },
+    {
+      "start": 400.24,
+      "duration": 6.079,
+      "end": 406.319,
+      "text": "have a dfs call for 4 with the opposite"
+    },
+    {
+      "start": 403.52,
+      "duration": 6.399,
+      "end": 409.919,
+      "text": "color which is 1 so 4 will be colored"
+    },
+    {
+      "start": 406.319,
+      "duration": 7.6,
+      "end": 413.91900000000004,
+      "text": "with one now perfect next we have a dfs"
+    },
+    {
+      "start": 409.919,
+      "duration": 7.441,
+      "end": 417.35999999999996,
+      "text": "four and dfs four has a three dfs four"
+    },
+    {
+      "start": 413.919,
+      "duration": 5.521,
+      "end": 419.44,
+      "text": "has a three and the four has a color one"
+    },
+    {
+      "start": 417.36,
+      "duration": 4.0,
+      "end": 421.36,
+      "text": "and the three has a color zero it has an"
+    },
+    {
+      "start": 419.44,
+      "duration": 4.0,
+      "end": 423.44,
+      "text": "opposite color but it has been already"
+    },
+    {
+      "start": 421.36,
+      "duration": 4.64,
+      "end": 426.0,
+      "text": "colored so i will not go here the next"
+    },
+    {
+      "start": 423.44,
+      "duration": 5.36,
+      "end": 428.8,
+      "text": "adjacent node is five and the next is"
+    },
+    {
+      "start": 426.0,
+      "duration": 4.88,
+      "end": 430.88,
+      "text": "seven so probably uh let's go for seven"
+    },
+    {
+      "start": 428.8,
+      "duration": 4.16,
+      "end": 432.96000000000004,
+      "text": "first and then we can go for five just"
+    },
+    {
+      "start": 430.88,
+      "duration": 4.08,
+      "end": 434.96,
+      "text": "to uh have a better understanding of the"
+    },
+    {
+      "start": 432.96,
+      "duration": 3.519,
+      "end": 436.479,
+      "text": "dfs i'll go i'll just change it over"
+    },
+    {
+      "start": 434.96,
+      "duration": 2.799,
+      "end": 437.75899999999996,
+      "text": "here we'll have seven first and then"
+    },
+    {
+      "start": 436.479,
+      "duration": 4.0,
+      "end": 440.479,
+      "text": "five"
+    },
+    {
+      "start": 437.759,
+      "duration": 3.601,
+      "end": 441.36,
+      "text": "so the next node is seven so what i will"
+    },
+    {
+      "start": 440.479,
+      "duration": 4.481,
+      "end": 444.96,
+      "text": "do is"
+    },
+    {
+      "start": 441.36,
+      "duration": 4.72,
+      "end": 446.08000000000004,
+      "text": "i will now go to dfs of"
+    },
+    {
+      "start": 444.96,
+      "duration": 2.56,
+      "end": 447.52,
+      "text": "seven"
+    },
+    {
+      "start": 446.08,
+      "duration": 3.679,
+      "end": 449.75899999999996,
+      "text": "with the color zero"
+    },
+    {
+      "start": 447.52,
+      "duration": 4.48,
+      "end": 452.0,
+      "text": "and when i come back then i'll go to the"
+    },
+    {
+      "start": 449.759,
+      "duration": 3.921,
+      "end": 453.68,
+      "text": "dfs of five with the color zero because"
+    },
+    {
+      "start": 452.0,
+      "duration": 3.12,
+      "end": 455.12,
+      "text": "this is color one so we'll go to color"
+    },
+    {
+      "start": 453.68,
+      "duration": 3.6,
+      "end": 457.28000000000003,
+      "text": "zero this is color one so it'll go to"
+    },
+    {
+      "start": 455.12,
+      "duration": 3.84,
+      "end": 458.96,
+      "text": "color zero so dfs of four says i'll go"
+    },
+    {
+      "start": 457.28,
+      "duration": 2.96,
+      "end": 460.23999999999995,
+      "text": "to seven with the color zero it's like"
+    },
+    {
+      "start": 458.96,
+      "duration": 3.84,
+      "end": 462.79999999999995,
+      "text": "fine"
+    },
+    {
+      "start": 460.24,
+      "duration": 4.799,
+      "end": 465.039,
+      "text": "go to seven with the color zero right"
+    },
+    {
+      "start": 462.8,
+      "duration": 3.839,
+      "end": 466.639,
+      "text": "and now 7 says"
+    },
+    {
+      "start": 465.039,
+      "duration": 3.521,
+      "end": 468.56,
+      "text": "i have 4"
+    },
+    {
+      "start": 466.639,
+      "duration": 3.601,
+      "end": 470.24,
+      "text": "which is already colored and i have 8"
+    },
+    {
+      "start": 468.56,
+      "duration": 3.84,
+      "end": 472.4,
+      "text": "which is not color so please go to 8 and"
+    },
+    {
+      "start": 470.24,
+      "duration": 3.92,
+      "end": 474.16,
+      "text": "color it with the opposite color"
+    },
+    {
+      "start": 472.4,
+      "duration": 4.32,
+      "end": 476.71999999999997,
+      "text": "it's a dfs of 8"
+    },
+    {
+      "start": 474.16,
+      "duration": 4.4,
+      "end": 478.56,
+      "text": "with a color 1 so 8 goes and colors that"
+    },
+    {
+      "start": 476.72,
+      "duration": 4.96,
+      "end": 481.68,
+      "text": "with color one by the way just make sure"
+    },
+    {
+      "start": 478.56,
+      "duration": 5.84,
+      "end": 484.4,
+      "text": "you make mark the colors perfect now"
+    },
+    {
+      "start": 481.68,
+      "duration": 5.199,
+      "end": 486.879,
+      "text": "eight says i just have one guy seven"
+    },
+    {
+      "start": 484.4,
+      "duration": 4.799,
+      "end": 489.19899999999996,
+      "text": "eight says i just have one guy seven and"
+    },
+    {
+      "start": 486.879,
+      "duration": 4.241,
+      "end": 491.12,
+      "text": "that guy is already colored with zero"
+    },
+    {
+      "start": 489.199,
+      "duration": 4.641,
+      "end": 493.84000000000003,
+      "text": "which is my opposite color so that's"
+    },
+    {
+      "start": 491.12,
+      "duration": 5.04,
+      "end": 496.16,
+      "text": "okay so 8 says i do not have any further"
+    },
+    {
+      "start": 493.84,
+      "duration": 5.52,
+      "end": 499.35999999999996,
+      "text": "notes 8 says i do not have any further"
+    },
+    {
+      "start": 496.16,
+      "duration": 4.479,
+      "end": 500.639,
+      "text": "notes so what a does is 8 says"
+    },
+    {
+      "start": 499.36,
+      "duration": 4.08,
+      "end": 503.44,
+      "text": "fine"
+    },
+    {
+      "start": 500.639,
+      "duration": 5.361,
+      "end": 506.0,
+      "text": "from my end i did not have any problem i"
+    },
+    {
+      "start": 503.44,
+      "duration": 4.319,
+      "end": 507.759,
+      "text": "came up to 8 and i did not find any"
+    },
+    {
+      "start": 506.0,
+      "duration": 4.24,
+      "end": 510.24,
+      "text": "problem to color the graph with only two"
+    },
+    {
+      "start": 507.759,
+      "duration": 5.041,
+      "end": 512.8000000000001,
+      "text": "colors i had absolutely no problem so"
+    },
+    {
+      "start": 510.24,
+      "duration": 4.719,
+      "end": 514.9590000000001,
+      "text": "please go back so it will go back seven"
+    },
+    {
+      "start": 512.8,
+      "duration": 4.08,
+      "end": 516.88,
+      "text": "says okay fine my job is done because i"
+    },
+    {
+      "start": 514.959,
+      "duration": 4.401,
+      "end": 519.3599999999999,
+      "text": "don't have any further just notes go"
+    },
+    {
+      "start": 516.88,
+      "duration": 4.079,
+      "end": 520.959,
+      "text": "back now four says i had a call for"
+    },
+    {
+      "start": 519.36,
+      "duration": 3.84,
+      "end": 523.2,
+      "text": "seven which is over and they did not"
+    },
+    {
+      "start": 520.959,
+      "duration": 3.281,
+      "end": 524.2399999999999,
+      "text": "find any problem so i will now go for"
+    },
+    {
+      "start": 523.2,
+      "duration": 3.199,
+      "end": 526.399,
+      "text": "five"
+    },
+    {
+      "start": 524.24,
+      "duration": 4.56,
+      "end": 528.8,
+      "text": "perfect now i will go for five"
+    },
+    {
+      "start": 526.399,
+      "duration": 4.401,
+      "end": 530.8,
+      "text": "so you realize there was one node which"
+    },
+    {
+      "start": 528.8,
+      "duration": 4.159,
+      "end": 532.959,
+      "text": "got completed then you do the dfs for"
+    },
+    {
+      "start": 530.8,
+      "duration": 3.68,
+      "end": 534.4799999999999,
+      "text": "five now we will go for five so what"
+    },
+    {
+      "start": 532.959,
+      "duration": 3.44,
+      "end": 536.399,
+      "text": "will happen is you'll go to five and"
+    },
+    {
+      "start": 534.48,
+      "duration": 4.32,
+      "end": 538.8000000000001,
+      "text": "you'll have a color zero the five sees"
+    },
+    {
+      "start": 536.399,
+      "duration": 4.401,
+      "end": 540.8,
+      "text": "okay i have a color zero"
+    },
+    {
+      "start": 538.8,
+      "duration": 4.159,
+      "end": 542.959,
+      "text": "now when you come to five five has the"
+    },
+    {
+      "start": 540.8,
+      "duration": 4.08,
+      "end": 544.88,
+      "text": "adjacent node as four"
+    },
+    {
+      "start": 542.959,
+      "duration": 4.32,
+      "end": 547.279,
+      "text": "which is already colored with color one"
+    },
+    {
+      "start": 544.88,
+      "duration": 5.92,
+      "end": 550.8,
+      "text": "that's perfect opposite color and a five"
+    },
+    {
+      "start": 547.279,
+      "duration": 5.841,
+      "end": 553.12,
+      "text": "has a six so we will go to six now let's"
+    },
+    {
+      "start": 550.8,
+      "duration": 4.56,
+      "end": 555.3599999999999,
+      "text": "go to six so we will go to six with the"
+    },
+    {
+      "start": 553.12,
+      "duration": 5.6,
+      "end": 558.72,
+      "text": "opposite color of one so we go and mark"
+    },
+    {
+      "start": 555.36,
+      "duration": 6.159,
+      "end": 561.519,
+      "text": "it as one we mark this as one perfect"
+    },
+    {
+      "start": 558.72,
+      "duration": 5.84,
+      "end": 564.5600000000001,
+      "text": "now we are at six so six says my first"
+    },
+    {
+      "start": 561.519,
+      "duration": 5.841,
+      "end": 567.36,
+      "text": "adjacent node is two very important six"
+    },
+    {
+      "start": 564.56,
+      "duration": 5.36,
+      "end": 569.92,
+      "text": "says my first adjacent node is two and i"
+    },
+    {
+      "start": 567.36,
+      "duration": 4.4,
+      "end": 571.76,
+      "text": "see it's already colored but dude wait"
+    },
+    {
+      "start": 569.92,
+      "duration": 3.76,
+      "end": 573.68,
+      "text": "it has been colored with the same color"
+    },
+    {
+      "start": 571.76,
+      "duration": 4.4,
+      "end": 576.16,
+      "text": "it has been colored with the same color"
+    },
+    {
+      "start": 573.68,
+      "duration": 4.64,
+      "end": 578.3199999999999,
+      "text": "i got an adjacent note i got an adjacent"
+    },
+    {
+      "start": 576.16,
+      "duration": 4.88,
+      "end": 581.04,
+      "text": "node with the same colour"
+    },
+    {
+      "start": 578.32,
+      "duration": 4.639,
+      "end": 582.9590000000001,
+      "text": "that means it is a bipartite yes sorry"
+    },
+    {
+      "start": 581.04,
+      "duration": 5.68,
+      "end": 586.7199999999999,
+      "text": "that means it is not a bipartite it"
+    },
+    {
+      "start": 582.959,
+      "duration": 6.081,
+      "end": 589.04,
+      "text": "cannot be colored so six is hey"
+    },
+    {
+      "start": 586.72,
+      "duration": 4.4,
+      "end": 591.12,
+      "text": "when i was checking for two"
+    },
+    {
+      "start": 589.04,
+      "duration": 5.28,
+      "end": 594.3199999999999,
+      "text": "when i was checking for two"
+    },
+    {
+      "start": 591.12,
+      "duration": 4.08,
+      "end": 595.2,
+      "text": "it has the same color as i do have"
+    },
+    {
+      "start": 594.32,
+      "duration": 3.92,
+      "end": 598.24,
+      "text": "so"
+    },
+    {
+      "start": 595.2,
+      "duration": 6.24,
+      "end": 601.44,
+      "text": "it is not a wiper type he says hey can"
+    },
+    {
+      "start": 598.24,
+      "duration": 5.92,
+      "end": 604.16,
+      "text": "you please return false so this dfs is i"
+    },
+    {
+      "start": 601.44,
+      "duration": 4.88,
+      "end": 606.32,
+      "text": "called for sex that guy is saying me i"
+    },
+    {
+      "start": 604.16,
+      "duration": 4.4,
+      "end": 608.56,
+      "text": "cannot be bipartite so i also cannot be"
+    },
+    {
+      "start": 606.32,
+      "duration": 4.88,
+      "end": 611.2,
+      "text": "bipartite so he returns a false now the"
+    },
+    {
+      "start": 608.56,
+      "duration": 4.88,
+      "end": 613.4399999999999,
+      "text": "four says i called dfs of five and that"
+    },
+    {
+      "start": 611.2,
+      "duration": 4.639,
+      "end": 615.839,
+      "text": "guy says he cannot be bipartite so be"
+    },
+    {
+      "start": 613.44,
+      "duration": 4.32,
+      "end": 617.7600000000001,
+      "text": "like i also cannot be bipartite"
+    },
+    {
+      "start": 615.839,
+      "duration": 3.44,
+      "end": 619.2790000000001,
+      "text": "the three says i called four so i cannot"
+    },
+    {
+      "start": 617.76,
+      "duration": 3.28,
+      "end": 621.04,
+      "text": "be viper tight"
+    },
+    {
+      "start": 619.279,
+      "duration": 4.161,
+      "end": 623.4399999999999,
+      "text": "two says i call three so i cannot be"
+    },
+    {
+      "start": 621.04,
+      "duration": 5.52,
+      "end": 626.56,
+      "text": "bipartite one says i call two and he"
+    },
+    {
+      "start": 623.44,
+      "duration": 5.6,
+      "end": 629.0400000000001,
+      "text": "says paul so i say false"
+    },
+    {
+      "start": 626.56,
+      "duration": 4.8,
+      "end": 631.3599999999999,
+      "text": "so everyone says false so ultimately you"
+    },
+    {
+      "start": 629.04,
+      "duration": 5.359,
+      "end": 634.399,
+      "text": "get the reason or you get the validation"
+    },
+    {
+      "start": 631.36,
+      "duration": 4.719,
+      "end": 636.0790000000001,
+      "text": "as false that this is not a piper type i"
+    },
+    {
+      "start": 634.399,
+      "duration": 4.241,
+      "end": 638.64,
+      "text": "hope that makes sense"
+    },
+    {
+      "start": 636.079,
+      "duration": 4.241,
+      "end": 640.3199999999999,
+      "text": "now if you would have done a normal dfs"
+    },
+    {
+      "start": 638.64,
+      "duration": 3.68,
+      "end": 642.3199999999999,
+      "text": "where you would have let's say take this"
+    },
+    {
+      "start": 640.32,
+      "duration": 4.639,
+      "end": 644.9590000000001,
+      "text": "graph super simple so what would have"
+    },
+    {
+      "start": 642.32,
+      "duration": 4.72,
+      "end": 647.0400000000001,
+      "text": "happened was you'd have gone dfs of one"
+    },
+    {
+      "start": 644.959,
+      "duration": 4.641,
+      "end": 649.5999999999999,
+      "text": "color zero and then you would have gone"
+    },
+    {
+      "start": 647.04,
+      "duration": 4.96,
+      "end": 652.0,
+      "text": "dfs of two color one"
+    },
+    {
+      "start": 649.6,
+      "duration": 4.64,
+      "end": 654.24,
+      "text": "they would have gone for dfs of three"
+    },
+    {
+      "start": 652.0,
+      "duration": 3.92,
+      "end": 655.92,
+      "text": "color zero and then there was no other"
+    },
+    {
+      "start": 654.24,
+      "duration": 3.52,
+      "end": 657.76,
+      "text": "notes so apparently this guy would have"
+    },
+    {
+      "start": 655.92,
+      "duration": 4.64,
+      "end": 660.56,
+      "text": "returned true and this guy would have"
+    },
+    {
+      "start": 657.76,
+      "duration": 4.24,
+      "end": 662.0,
+      "text": "said i did not find false so return true"
+    },
+    {
+      "start": 660.56,
+      "duration": 3.6,
+      "end": 664.16,
+      "text": "this guy would have said i did not find"
+    },
+    {
+      "start": 662.0,
+      "duration": 5.12,
+      "end": 667.12,
+      "text": "false so return true so apparently you"
+    },
+    {
+      "start": 664.16,
+      "duration": 5.28,
+      "end": 669.4399999999999,
+      "text": "would have got true so unless and until"
+    },
+    {
+      "start": 667.12,
+      "duration": 4.719,
+      "end": 671.839,
+      "text": "very important unless and until you"
+    },
+    {
+      "start": 669.44,
+      "duration": 4.72,
+      "end": 674.1600000000001,
+      "text": "don't get a false do not return a false"
+    },
+    {
+      "start": 671.839,
+      "duration": 4.081,
+      "end": 675.9200000000001,
+      "text": "if you're getting a false which means"
+    },
+    {
+      "start": 674.16,
+      "duration": 4.48,
+      "end": 678.64,
+      "text": "the adjacent node"
+    },
+    {
+      "start": 675.92,
+      "duration": 5.359,
+      "end": 681.279,
+      "text": "color should be equal to this guy's"
+    },
+    {
+      "start": 678.64,
+      "duration": 5.04,
+      "end": 683.68,
+      "text": "color this guy's color right that is"
+    },
+    {
+      "start": 681.279,
+      "duration": 5.281,
+      "end": 686.56,
+      "text": "what you need to do so now what i'll do"
+    },
+    {
+      "start": 683.68,
+      "duration": 3.599,
+      "end": 687.279,
+      "text": "is i'll super quickly code this up"
+    },
+    {
+      "start": 686.56,
+      "duration": 2.8,
+      "end": 689.3599999999999,
+      "text": "so"
+    },
+    {
+      "start": 687.279,
+      "duration": 3.361,
+      "end": 690.64,
+      "text": "it's time to code it up c plus plus code"
+    },
+    {
+      "start": 689.36,
+      "duration": 3.76,
+      "end": 693.12,
+      "text": "on the right and the java code on the"
+    },
+    {
+      "start": 690.64,
+      "duration": 5.759,
+      "end": 696.399,
+      "text": "left so we're given v and we're given"
+    },
+    {
+      "start": 693.12,
+      "duration": 6.24,
+      "end": 699.36,
+      "text": "adjacency list so what we wrote was for"
+    },
+    {
+      "start": 696.399,
+      "duration": 4.801,
+      "end": 701.2,
+      "text": "a single like the logic that we debugged"
+    },
+    {
+      "start": 699.36,
+      "duration": 4.24,
+      "end": 703.6,
+      "text": "was for a single component so we're"
+    },
+    {
+      "start": 701.2,
+      "duration": 3.36,
+      "end": 704.5600000000001,
+      "text": "gonna write this for multiple components"
+    },
+    {
+      "start": 703.6,
+      "duration": 2.0,
+      "end": 705.6,
+      "text": "okay"
+    },
+    {
+      "start": 704.56,
+      "duration": 3.36,
+      "end": 707.92,
+      "text": "perfect"
+    },
+    {
+      "start": 705.6,
+      "duration": 4.0,
+      "end": 709.6,
+      "text": "next please run a loop and make sure"
+    },
+    {
+      "start": 707.92,
+      "duration": 4.88,
+      "end": 712.8,
+      "text": "everyone yes"
+    },
+    {
+      "start": 709.6,
+      "duration": 5.12,
+      "end": 714.72,
+      "text": "every one is marked as something"
+    },
+    {
+      "start": 712.8,
+      "duration": 3.36,
+      "end": 716.16,
+      "text": "as minus one but"
+    },
+    {
+      "start": 714.72,
+      "duration": 3.359,
+      "end": 718.0790000000001,
+      "text": "done now what's the next thing that"
+    },
+    {
+      "start": 716.16,
+      "duration": 3.76,
+      "end": 719.92,
+      "text": "you'll do you'll run it for components"
+    },
+    {
+      "start": 718.079,
+      "duration": 4.401,
+      "end": 722.4799999999999,
+      "text": "so you know how to run it for components"
+    },
+    {
+      "start": 719.92,
+      "duration": 3.919,
+      "end": 723.8389999999999,
+      "text": "connected components number of provinces"
+    },
+    {
+      "start": 722.48,
+      "duration": 4.08,
+      "end": 726.5600000000001,
+      "text": "question if you haven't seen it please"
+    },
+    {
+      "start": 723.839,
+      "duration": 4.721,
+      "end": 728.5600000000001,
+      "text": "go back and check it out so visit it off"
+    },
+    {
+      "start": 726.56,
+      "duration": 4.16,
+      "end": 730.7199999999999,
+      "text": "sorry it's instead of visited this time"
+    },
+    {
+      "start": 728.56,
+      "duration": 5.12,
+      "end": 733.68,
+      "text": "we'll say color of i equal to minus one"
+    },
+    {
+      "start": 730.72,
+      "duration": 4.799,
+      "end": 735.519,
+      "text": "right and what we will do is we will"
+    },
+    {
+      "start": 733.68,
+      "duration": 3.92,
+      "end": 737.5999999999999,
+      "text": "call the dfs"
+    },
+    {
+      "start": 735.519,
+      "duration": 4.161,
+      "end": 739.68,
+      "text": "and we will ask the dfs hey this is i"
+    },
+    {
+      "start": 737.6,
+      "duration": 5.679,
+      "end": 743.279,
+      "text": "start with color zero take the color"
+    },
+    {
+      "start": 739.68,
+      "duration": 6.08,
+      "end": 745.76,
+      "text": "array and take the adjacency okay and if"
+    },
+    {
+      "start": 743.279,
+      "duration": 5.201,
+      "end": 748.48,
+      "text": "you return a false then i guess it's not"
+    },
+    {
+      "start": 745.76,
+      "duration": 5.12,
+      "end": 750.88,
+      "text": "an appetite if you return a false"
+    },
+    {
+      "start": 748.48,
+      "duration": 4.159,
+      "end": 752.639,
+      "text": "if this dfs i said you if any of the"
+    },
+    {
+      "start": 750.88,
+      "duration": 3.759,
+      "end": 754.639,
+      "text": "defense returns or false"
+    },
+    {
+      "start": 752.639,
+      "duration": 4.88,
+      "end": 757.519,
+      "text": "it cannot be a byproduct if none of them"
+    },
+    {
+      "start": 754.639,
+      "duration": 6.241,
+      "end": 760.88,
+      "text": "do it's a true perfect done now we just"
+    },
+    {
+      "start": 757.519,
+      "duration": 5.041,
+      "end": 762.5600000000001,
+      "text": "need to write the bfs which is"
+    },
+    {
+      "start": 760.88,
+      "duration": 3.36,
+      "end": 764.24,
+      "text": "kind of simple"
+    },
+    {
+      "start": 762.56,
+      "duration": 3.04,
+      "end": 765.5999999999999,
+      "text": "we just need to write"
+    },
+    {
+      "start": 764.24,
+      "duration": 3.599,
+      "end": 767.839,
+      "text": "boolean dfs"
+    },
+    {
+      "start": 765.6,
+      "duration": 4.88,
+      "end": 770.48,
+      "text": "ind node id"
+    },
+    {
+      "start": 767.839,
+      "duration": 5.281,
+      "end": 773.12,
+      "text": "color which color is it carrying and the"
+    },
+    {
+      "start": 770.48,
+      "duration": 4.4,
+      "end": 774.88,
+      "text": "vector of"
+    },
+    {
+      "start": 773.12,
+      "duration": 3.68,
+      "end": 776.8,
+      "text": "adjacency"
+    },
+    {
+      "start": 774.88,
+      "duration": 3.68,
+      "end": 778.56,
+      "text": "now what we will do we'll always color"
+    },
+    {
+      "start": 776.8,
+      "duration": 3.68,
+      "end": 780.4799999999999,
+      "text": "the node with the given color so please"
+    },
+    {
+      "start": 778.56,
+      "duration": 3.36,
+      "end": 781.92,
+      "text": "do it"
+    },
+    {
+      "start": 780.48,
+      "duration": 3.76,
+      "end": 784.24,
+      "text": "now we know these are the adjacency"
+    },
+    {
+      "start": 781.92,
+      "duration": 5.359,
+      "end": 787.279,
+      "text": "notes so go and run it for the adjacency"
+    },
+    {
+      "start": 784.24,
+      "duration": 5.2,
+      "end": 789.44,
+      "text": "notes and you check is this previously"
+    },
+    {
+      "start": 787.279,
+      "duration": 4.0,
+      "end": 791.279,
+      "text": "not colored if this is previously not"
+    },
+    {
+      "start": 789.44,
+      "duration": 3.519,
+      "end": 792.9590000000001,
+      "text": "colored you say okay please go and color"
+    },
+    {
+      "start": 791.279,
+      "duration": 3.441,
+      "end": 794.72,
+      "text": "it with the opposite color of the color"
+    },
+    {
+      "start": 792.959,
+      "duration": 3.68,
+      "end": 796.6389999999999,
+      "text": "that i have"
+    },
+    {
+      "start": 794.72,
+      "duration": 4.08,
+      "end": 798.8000000000001,
+      "text": "but if this is previously colored this"
+    },
+    {
+      "start": 796.639,
+      "duration": 4.64,
+      "end": 801.279,
+      "text": "adjacent node is previously colored very"
+    },
+    {
+      "start": 798.8,
+      "duration": 4.4,
+      "end": 803.1999999999999,
+      "text": "very important if this adjacent node is"
+    },
+    {
+      "start": 801.279,
+      "duration": 5.281,
+      "end": 806.56,
+      "text": "previously colored and is having the"
+    },
+    {
+      "start": 803.2,
+      "duration": 4.8,
+      "end": 808.0,
+      "text": "same color as i have or you can say call"
+    },
+    {
+      "start": 806.56,
+      "duration": 4.0,
+      "end": 810.56,
+      "text": "if it is"
+    },
+    {
+      "start": 808.0,
+      "duration": 3.92,
+      "end": 811.92,
+      "text": "if it is then i say it cannot be of"
+    },
+    {
+      "start": 810.56,
+      "duration": 2.8,
+      "end": 813.3599999999999,
+      "text": "bipartite"
+    },
+    {
+      "start": 811.92,
+      "duration": 4.24,
+      "end": 816.16,
+      "text": "or if you have travis for all the"
+    },
+    {
+      "start": 813.36,
+      "duration": 5.36,
+      "end": 818.72,
+      "text": "adjusted notes and you never found out"
+    },
+    {
+      "start": 816.16,
+      "duration": 5.039,
+      "end": 821.199,
+      "text": "any false you get a true so this is a"
+    },
+    {
+      "start": 818.72,
+      "duration": 3.359,
+      "end": 822.0790000000001,
+      "text": "dfs call as i said if any of the dfs"
+    },
+    {
+      "start": 821.199,
+      "duration": 2.401,
+      "end": 823.5999999999999,
+      "text": "calls"
+    },
+    {
+      "start": 822.079,
+      "duration": 4.0,
+      "end": 826.079,
+      "text": "return or false"
+    },
+    {
+      "start": 823.6,
+      "duration": 5.44,
+      "end": 829.0400000000001,
+      "text": "because this call might return or false"
+    },
+    {
+      "start": 826.079,
+      "duration": 5.361,
+      "end": 831.4399999999999,
+      "text": "might then you say cannot be a hypertype"
+    },
+    {
+      "start": 829.04,
+      "duration": 4.0,
+      "end": 833.04,
+      "text": "if this dfs call returns or false"
+    },
+    {
+      "start": 831.44,
+      "duration": 3.759,
+      "end": 835.1990000000001,
+      "text": "don't need to check by any of the notes"
+    },
+    {
+      "start": 833.04,
+      "duration": 4.32,
+      "end": 837.36,
+      "text": "you cannot color it so this is how you"
+    },
+    {
+      "start": 835.199,
+      "duration": 4.481,
+      "end": 839.68,
+      "text": "can easily write so what i'll do is i'll"
+    },
+    {
+      "start": 837.36,
+      "duration": 4.32,
+      "end": 841.6800000000001,
+      "text": "now quickly compile this on"
+    },
+    {
+      "start": 839.68,
+      "duration": 3.839,
+      "end": 843.519,
+      "text": "so now let's discuss the time complexity"
+    },
+    {
+      "start": 841.68,
+      "duration": 4.159,
+      "end": 845.8389999999999,
+      "text": "and the space complexity which algorithm"
+    },
+    {
+      "start": 843.519,
+      "duration": 5.201,
+      "end": 848.72,
+      "text": "are we using we're using a simple tfs"
+    },
+    {
+      "start": 845.839,
+      "duration": 5.44,
+      "end": 851.2790000000001,
+      "text": "algorithm assuming that the graph is"
+    },
+    {
+      "start": 848.72,
+      "duration": 4.799,
+      "end": 853.519,
+      "text": "bipartite and you can color it then"
+    },
+    {
+      "start": 851.279,
+      "duration": 4.321,
+      "end": 855.6,
+      "text": "it's a simple traversal algorithm so the"
+    },
+    {
+      "start": 853.519,
+      "duration": 4.401,
+      "end": 857.92,
+      "text": "time complexity and the space complexity"
+    },
+    {
+      "start": 855.6,
+      "duration": 5.2,
+      "end": 860.8000000000001,
+      "text": "will be similar to what we used in dfs"
+    },
+    {
+      "start": 857.92,
+      "duration": 4.32,
+      "end": 862.24,
+      "text": "algorithm which is b go of v plus 2 e"
+    },
+    {
+      "start": 860.8,
+      "duration": 2.8,
+      "end": 863.5999999999999,
+      "text": "which is the time complexity and the"
+    },
+    {
+      "start": 862.24,
+      "duration": 3.76,
+      "end": 866.0,
+      "text": "space that we are using is the color"
+    },
+    {
+      "start": 863.6,
+      "duration": 3.599,
+      "end": 867.1990000000001,
+      "text": "array which is b co of v so guys i hope"
+    },
+    {
+      "start": 866.0,
+      "duration": 3.519,
+      "end": 869.519,
+      "text": "i was able to explain you this"
+    },
+    {
+      "start": 867.199,
+      "duration": 3.921,
+      "end": 871.12,
+      "text": "particular problem so just in case i was"
+    },
+    {
+      "start": 869.519,
+      "duration": 2.961,
+      "end": 872.48,
+      "text": "please please hit that like button and"
+    },
+    {
+      "start": 871.12,
+      "duration": 3.279,
+      "end": 874.399,
+      "text": "if you're new to our channel what are"
+    },
+    {
+      "start": 872.48,
+      "duration": 3.44,
+      "end": 875.9200000000001,
+      "text": "you waiting for i think you should hit"
+    },
+    {
+      "start": 874.399,
+      "duration": 3.361,
+      "end": 877.76,
+      "text": "that subscribe button right away and if"
+    },
+    {
+      "start": 875.92,
+      "duration": 3.359,
+      "end": 879.279,
+      "text": "you haven't checked out our dp series"
+    },
+    {
+      "start": 877.76,
+      "duration": 2.72,
+      "end": 880.48,
+      "text": "and the sd sheet the links are in the"
+    },
+    {
+      "start": 879.279,
+      "duration": 2.881,
+      "end": 882.16,
+      "text": "description please make sure you check"
+    },
+    {
+      "start": 880.48,
+      "duration": 2.799,
+      "end": 883.279,
+      "text": "it out and with this i'll be wrapping up"
+    },
+    {
+      "start": 882.16,
+      "duration": 3.44,
+      "end": 885.6,
+      "text": "this video let's meet in some other"
+    },
+    {
+      "start": 883.279,
+      "duration": 6.651,
+      "end": 889.93,
+      "text": "video till then go bye take care"
+    },
+    {
+      "start": 885.6,
+      "duration": 9.98,
+      "end": 895.58,
+      "text": "whenever your heart is broken"
+    },
+    {
+      "start": 889.93,
+      "duration": 5.65,
+      "end": 895.5799999999999,
+      "text": "[Music]"
+    }
+  ]
+}

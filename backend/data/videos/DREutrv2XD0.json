@@ -1,0 +1,4334 @@
+{
+  "position": 155,
+  "video_id": "DREutrv2XD0",
+  "title": "G-30. Word Ladder - 2 | Shortest Paths",
+  "url": "https://www.youtube.com/watch?v=DREutrv2XD0",
+  "transcript": [
+    {
+      "start": 3.12,
+      "duration": 3.52,
+      "end": 6.640000000000001,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 4.56,
+      "duration": 4.48,
+      "end": 9.04,
+      "text": "i hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.64,
+      "duration": 3.28,
+      "end": 9.92,
+      "text": "so in the previous video we did learn"
+    },
+    {
+      "start": 9.04,
+      "duration": 3.84,
+      "end": 12.879999999999999,
+      "text": "about"
+    },
+    {
+      "start": 9.92,
+      "duration": 4.56,
+      "end": 14.48,
+      "text": "word ladder one where we had to convert"
+    },
+    {
+      "start": 12.88,
+      "duration": 3.68,
+      "end": 16.560000000000002,
+      "text": "the starting work to the target word"
+    },
+    {
+      "start": 14.48,
+      "duration": 4.0,
+      "end": 18.48,
+      "text": "using the given word list and you to do"
+    },
+    {
+      "start": 16.56,
+      "duration": 3.36,
+      "end": 19.919999999999998,
+      "text": "it in a minimum number of"
+    },
+    {
+      "start": 18.48,
+      "duration": 4.48,
+      "end": 22.96,
+      "text": "transformations"
+    },
+    {
+      "start": 19.92,
+      "duration": 5.04,
+      "end": 24.96,
+      "text": "so what will add to is an extension of"
+    },
+    {
+      "start": 22.96,
+      "duration": 3.76,
+      "end": 26.72,
+      "text": "the previous problem so just in case you"
+    },
+    {
+      "start": 24.96,
+      "duration": 3.68,
+      "end": 28.64,
+      "text": "haven't checked out the previous problem"
+    },
+    {
+      "start": 26.72,
+      "duration": 3.04,
+      "end": 29.759999999999998,
+      "text": "the link is in the description please"
+    },
+    {
+      "start": 28.64,
+      "duration": 3.52,
+      "end": 32.160000000000004,
+      "text": "make sure you check it out because"
+    },
+    {
+      "start": 29.76,
+      "duration": 4.24,
+      "end": 34.0,
+      "text": "there's a pattern in which i have"
+    },
+    {
+      "start": 32.16,
+      "duration": 3.84,
+      "end": 36.0,
+      "text": "taught this particular quote i'll be"
+    },
+    {
+      "start": 34.0,
+      "duration": 4.239,
+      "end": 38.239,
+      "text": "using that pattern only to solve this"
+    },
+    {
+      "start": 36.0,
+      "duration": 4.0,
+      "end": 40.0,
+      "text": "problem what ladder too"
+    },
+    {
+      "start": 38.239,
+      "duration": 3.601,
+      "end": 41.839999999999996,
+      "text": "so before starting this i just want to"
+    },
+    {
+      "start": 40.0,
+      "duration": 4.079,
+      "end": 44.079,
+      "text": "give you a disclaimer that this is one"
+    },
+    {
+      "start": 41.84,
+      "duration": 3.76,
+      "end": 45.6,
+      "text": "of the toughest problems of the bfs so"
+    },
+    {
+      "start": 44.079,
+      "duration": 3.521,
+      "end": 47.6,
+      "text": "the end of the video just in case you"
+    },
+    {
+      "start": 45.6,
+      "duration": 4.88,
+      "end": 50.480000000000004,
+      "text": "have this vibe that how will i think"
+    },
+    {
+      "start": 47.6,
+      "duration": 5.04,
+      "end": 52.64,
+      "text": "about such solutions do not worry do not"
+    },
+    {
+      "start": 50.48,
+      "duration": 3.919,
+      "end": 54.398999999999994,
+      "text": "worry these problems are something which"
+    },
+    {
+      "start": 52.64,
+      "duration": 3.12,
+      "end": 55.76,
+      "text": "you have to practice so that if"
+    },
+    {
+      "start": 54.399,
+      "duration": 3.281,
+      "end": 57.68,
+      "text": "something similar comes up in an"
+    },
+    {
+      "start": 55.76,
+      "duration": 5.04,
+      "end": 60.8,
+      "text": "interview you can answer okay this will"
+    },
+    {
+      "start": 57.68,
+      "duration": 5.92,
+      "end": 63.6,
+      "text": "never come by yourself anyways so what"
+    },
+    {
+      "start": 60.8,
+      "duration": 3.92,
+      "end": 64.72,
+      "text": "is what ladder to all about so it's the"
+    },
+    {
+      "start": 63.6,
+      "duration": 2.72,
+      "end": 66.32000000000001,
+      "text": "same problem"
+    },
+    {
+      "start": 64.72,
+      "duration": 3.04,
+      "end": 67.76,
+      "text": "you will be given a start mode and"
+    },
+    {
+      "start": 66.32,
+      "duration": 2.88,
+      "end": 69.19999999999999,
+      "text": "you'll be given a target board and you"
+    },
+    {
+      "start": 67.76,
+      "duration": 4.08,
+      "end": 71.84,
+      "text": "need to convert the start mode to the"
+    },
+    {
+      "start": 69.2,
+      "duration": 4.32,
+      "end": 73.52000000000001,
+      "text": "target world and the transformations are"
+    },
+    {
+      "start": 71.84,
+      "duration": 4.48,
+      "end": 76.32000000000001,
+      "text": "only allowed in this particular word"
+    },
+    {
+      "start": 73.52,
+      "duration": 4.16,
+      "end": 77.67999999999999,
+      "text": "list but over here instead of printing"
+    },
+    {
+      "start": 76.32,
+      "duration": 3.2,
+      "end": 79.52,
+      "text": "like in the word ladder one you have to"
+    },
+    {
+      "start": 77.68,
+      "duration": 4.64,
+      "end": 82.32000000000001,
+      "text": "print the sequence the length of the"
+    },
+    {
+      "start": 79.52,
+      "duration": 6.4,
+      "end": 85.92,
+      "text": "sequence over here you have to print all"
+    },
+    {
+      "start": 82.32,
+      "duration": 5.36,
+      "end": 87.67999999999999,
+      "text": "the possible shortest sequences so if i"
+    },
+    {
+      "start": 85.92,
+      "duration": 3.839,
+      "end": 89.759,
+      "text": "go back to the ipad imagine the"
+    },
+    {
+      "start": 87.68,
+      "duration": 5.36,
+      "end": 93.04,
+      "text": "beginning word is backed and the end"
+    },
+    {
+      "start": 89.759,
+      "duration": 5.281,
+      "end": 95.04,
+      "text": "word is cause okay so and these are the"
+    },
+    {
+      "start": 93.04,
+      "duration": 3.759,
+      "end": 96.799,
+      "text": "word list separately uh these are the"
+    },
+    {
+      "start": 95.04,
+      "duration": 4.8,
+      "end": 99.84,
+      "text": "couple of these bat can be transformed"
+    },
+    {
+      "start": 96.799,
+      "duration": 4.96,
+      "end": 101.759,
+      "text": "to pat pat to pot pot to pause and then"
+    },
+    {
+      "start": 99.84,
+      "duration": 4.4,
+      "end": 104.24000000000001,
+      "text": "because and similarly bat can be"
+    },
+    {
+      "start": 101.759,
+      "duration": 4.161,
+      "end": 105.92,
+      "text": "transferred to what what to what what to"
+    },
+    {
+      "start": 104.24,
+      "duration": 3.68,
+      "end": 107.92,
+      "text": "cause was to cause"
+    },
+    {
+      "start": 105.92,
+      "duration": 4.159,
+      "end": 110.07900000000001,
+      "text": "this portion is similar but if you see"
+    },
+    {
+      "start": 107.92,
+      "duration": 3.199,
+      "end": 111.119,
+      "text": "the first transformation is different"
+    },
+    {
+      "start": 110.079,
+      "duration": 4.241,
+      "end": 114.32,
+      "text": "the first"
+    },
+    {
+      "start": 111.119,
+      "duration": 5.921,
+      "end": 117.04,
+      "text": "transformation is different so this is"
+    },
+    {
+      "start": 114.32,
+      "duration": 5.04,
+      "end": 119.36,
+      "text": "also taking like five sequence length"
+    },
+    {
+      "start": 117.04,
+      "duration": 4.079,
+      "end": 121.119,
+      "text": "this is also taking like five sequence"
+    },
+    {
+      "start": 119.36,
+      "duration": 3.52,
+      "end": 122.88,
+      "text": "length since both of these are taking"
+    },
+    {
+      "start": 121.119,
+      "duration": 4.401,
+      "end": 125.52,
+      "text": "five sequence length and that is the"
+    },
+    {
+      "start": 122.88,
+      "duration": 3.68,
+      "end": 126.56,
+      "text": "shortest we can do so you need to return"
+    },
+    {
+      "start": 125.52,
+      "duration": 3.12,
+      "end": 128.64,
+      "text": "me this"
+    },
+    {
+      "start": 126.56,
+      "duration": 3.759,
+      "end": 130.319,
+      "text": "and then you need to return me this one"
+    },
+    {
+      "start": 128.64,
+      "duration": 3.44,
+      "end": 132.07999999999998,
+      "text": "as well"
+    },
+    {
+      "start": 130.319,
+      "duration": 3.92,
+      "end": 134.23899999999998,
+      "text": "and also you can return the list in any"
+    },
+    {
+      "start": 132.08,
+      "duration": 4.56,
+      "end": 136.64000000000001,
+      "text": "possible order like this can be at first"
+    },
+    {
+      "start": 134.239,
+      "duration": 3.761,
+      "end": 138.0,
+      "text": "or this can be it first doesn't matter"
+    },
+    {
+      "start": 136.64,
+      "duration": 3.84,
+      "end": 140.48,
+      "text": "what i what matters is you need to"
+    },
+    {
+      "start": 138.0,
+      "duration": 3.36,
+      "end": 141.36,
+      "text": "return both of them any order doesn't"
+    },
+    {
+      "start": 140.48,
+      "duration": 3.36,
+      "end": 143.84,
+      "text": "matter"
+    },
+    {
+      "start": 141.36,
+      "duration": 4.879,
+      "end": 146.239,
+      "text": "so how do you do this because if you go"
+    },
+    {
+      "start": 143.84,
+      "duration": 4.72,
+      "end": 148.56,
+      "text": "back to the previous uh award ladder one"
+    },
+    {
+      "start": 146.239,
+      "duration": 4.481,
+      "end": 150.72,
+      "text": "problem it was very straightforward you"
+    },
+    {
+      "start": 148.56,
+      "duration": 4.959,
+      "end": 153.519,
+      "text": "started with the word you kept this"
+    },
+    {
+      "start": 150.72,
+      "duration": 5.92,
+      "end": 156.64,
+      "text": "length and you kept on trying to change"
+    },
+    {
+      "start": 153.519,
+      "duration": 4.401,
+      "end": 157.92000000000002,
+      "text": "from a to z to every alphabet and you"
+    },
+    {
+      "start": 156.64,
+      "duration": 4.64,
+      "end": 161.27999999999997,
+      "text": "ended up at"
+    },
+    {
+      "start": 157.92,
+      "duration": 5.44,
+      "end": 163.35999999999999,
+      "text": " will that method work over here no"
+    },
+    {
+      "start": 161.28,
+      "duration": 4.4,
+      "end": 165.68,
+      "text": "that method is not going to work"
+    },
+    {
+      "start": 163.36,
+      "duration": 3.519,
+      "end": 166.87900000000002,
+      "text": "why because you need to tell me the"
+    },
+    {
+      "start": 165.68,
+      "duration": 3.12,
+      "end": 168.8,
+      "text": "sequence"
+    },
+    {
+      "start": 166.879,
+      "duration": 4.64,
+      "end": 171.51899999999998,
+      "text": "so this time the algorithm will be"
+    },
+    {
+      "start": 168.8,
+      "duration": 5.12,
+      "end": 173.92000000000002,
+      "text": "slightly different yes it won't be a"
+    },
+    {
+      "start": 171.519,
+      "duration": 4.8,
+      "end": 176.31900000000002,
+      "text": "straightforward bfs instead of a"
+    },
+    {
+      "start": 173.92,
+      "duration": 4.64,
+      "end": 178.55999999999997,
+      "text": "straightforward bfs we have to do some"
+    },
+    {
+      "start": 176.319,
+      "duration": 3.681,
+      "end": 180.0,
+      "text": "observations yes we have to do some"
+    },
+    {
+      "start": 178.56,
+      "duration": 3.599,
+      "end": 182.159,
+      "text": "observations"
+    },
+    {
+      "start": 180.0,
+      "duration": 3.68,
+      "end": 183.68,
+      "text": "and while doing the dryer i'll be"
+    },
+    {
+      "start": 182.159,
+      "duration": 3.521,
+      "end": 185.67999999999998,
+      "text": "telling you about the observation so"
+    },
+    {
+      "start": 183.68,
+      "duration": 4.08,
+      "end": 187.76000000000002,
+      "text": "before doing the observation first"
+    },
+    {
+      "start": 185.68,
+      "duration": 3.68,
+      "end": 189.36,
+      "text": "observation that i want you to uh"
+    },
+    {
+      "start": 187.76,
+      "duration": 3.04,
+      "end": 190.79999999999998,
+      "text": "have a look is"
+    },
+    {
+      "start": 189.36,
+      "duration": 2.72,
+      "end": 192.08,
+      "text": "first level"
+    },
+    {
+      "start": 190.8,
+      "duration": 2.56,
+      "end": 193.36,
+      "text": "second level"
+    },
+    {
+      "start": 192.08,
+      "duration": 2.4,
+      "end": 194.48000000000002,
+      "text": "third level"
+    },
+    {
+      "start": 193.36,
+      "duration": 3.599,
+      "end": 196.959,
+      "text": "both"
+    },
+    {
+      "start": 194.48,
+      "duration": 3.92,
+      "end": 198.39999999999998,
+      "text": "fifth flip so the level always increases"
+    },
+    {
+      "start": 196.959,
+      "duration": 3.681,
+      "end": 200.64000000000001,
+      "text": "in this order"
+    },
+    {
+      "start": 198.4,
+      "duration": 3.6,
+      "end": 202.0,
+      "text": "in the bfs traversal if you know if"
+    },
+    {
+      "start": 200.64,
+      "duration": 3.2,
+      "end": 203.83999999999997,
+      "text": "you're doing steps"
+    },
+    {
+      "start": 202.0,
+      "duration": 3.68,
+      "end": 205.68,
+      "text": "you always go level one then you go to"
+    },
+    {
+      "start": 203.84,
+      "duration": 4.64,
+      "end": 208.48,
+      "text": "level two probably two level twos and"
+    },
+    {
+      "start": 205.68,
+      "duration": 4.4,
+      "end": 210.08,
+      "text": "probably level threes then level fours"
+    },
+    {
+      "start": 208.48,
+      "duration": 3.839,
+      "end": 212.319,
+      "text": "that is what the beef is traversal is"
+    },
+    {
+      "start": 210.08,
+      "duration": 4.64,
+      "end": 214.72,
+      "text": "all about and that is where the gist of"
+    },
+    {
+      "start": 212.319,
+      "duration": 5.041,
+      "end": 217.35999999999999,
+      "text": "the solution lies"
+    },
+    {
+      "start": 214.72,
+      "duration": 4.64,
+      "end": 219.35999999999999,
+      "text": "okay let's get started so"
+    },
+    {
+      "start": 217.36,
+      "duration": 3.519,
+      "end": 220.87900000000002,
+      "text": "what did we usually do"
+    },
+    {
+      "start": 219.36,
+      "duration": 3.84,
+      "end": 223.20000000000002,
+      "text": "in order to run a bfs travel so the"
+    },
+    {
+      "start": 220.879,
+      "duration": 4.401,
+      "end": 225.28,
+      "text": "first thing we did was we always took a"
+    },
+    {
+      "start": 223.2,
+      "duration": 4.72,
+      "end": 227.92,
+      "text": "q data structure so please please take a"
+    },
+    {
+      "start": 225.28,
+      "duration": 4.72,
+      "end": 230.0,
+      "text": "q data structure but this time the queue"
+    },
+    {
+      "start": 227.92,
+      "duration": 5.039,
+      "end": 232.95899999999997,
+      "text": "data structure will not be this big"
+    },
+    {
+      "start": 230.0,
+      "duration": 4.159,
+      "end": 234.159,
+      "text": "it'll be a bigger one yes why"
+    },
+    {
+      "start": 232.959,
+      "duration": 3.84,
+      "end": 236.799,
+      "text": "i'll tell you because we're going to"
+    },
+    {
+      "start": 234.159,
+      "duration": 5.28,
+      "end": 239.439,
+      "text": "store the sequence we're going to store"
+    },
+    {
+      "start": 236.799,
+      "duration": 5.841,
+      "end": 242.64000000000001,
+      "text": "the sequence so the sequence starts with"
+    },
+    {
+      "start": 239.439,
+      "duration": 5.121,
+      "end": 244.56,
+      "text": "bat for sure so do one thing just store"
+    },
+    {
+      "start": 242.64,
+      "duration": 3.76,
+      "end": 246.39999999999998,
+      "text": "back do not do anything"
+    },
+    {
+      "start": 244.56,
+      "duration": 5.2,
+      "end": 249.76,
+      "text": "just store back"
+    },
+    {
+      "start": 246.4,
+      "duration": 7.28,
+      "end": 253.68,
+      "text": "in a list and put that into the queue so"
+    },
+    {
+      "start": 249.76,
+      "duration": 5.6,
+      "end": 255.35999999999999,
+      "text": "your queue will be storing list okay so"
+    },
+    {
+      "start": 253.68,
+      "duration": 3.92,
+      "end": 257.6,
+      "text": "let's start the beef score so when the"
+    },
+    {
+      "start": 255.36,
+      "duration": 3.119,
+      "end": 258.47900000000004,
+      "text": "beef is called starts you get the list"
+    },
+    {
+      "start": 257.6,
+      "duration": 2.319,
+      "end": 259.91900000000004,
+      "text": "with"
+    },
+    {
+      "start": 258.479,
+      "duration": 4.481,
+      "end": 262.96,
+      "text": "bat"
+    },
+    {
+      "start": 259.919,
+      "duration": 5.201,
+      "end": 265.12,
+      "text": "so can i see if the sequence is back"
+    },
+    {
+      "start": 262.96,
+      "duration": 3.679,
+      "end": 266.63899999999995,
+      "text": "can i say the word is"
+    },
+    {
+      "start": 265.12,
+      "duration": 4.4,
+      "end": 269.52,
+      "text": "bad itself"
+    },
+    {
+      "start": 266.639,
+      "duration": 5.041,
+      "end": 271.68,
+      "text": "because if you are having a sequence the"
+    },
+    {
+      "start": 269.52,
+      "duration": 3.6,
+      "end": 273.12,
+      "text": "last word of that sequence is the word"
+    },
+    {
+      "start": 271.68,
+      "duration": 2.72,
+      "end": 274.40000000000003,
+      "text": "that you want to"
+    },
+    {
+      "start": 273.12,
+      "duration": 3.6,
+      "end": 276.72,
+      "text": "convert into"
+    },
+    {
+      "start": 274.4,
+      "duration": 5.04,
+      "end": 279.44,
+      "text": "so from that where can you go"
+    },
+    {
+      "start": 276.72,
+      "duration": 6.08,
+      "end": 282.8,
+      "text": "from bad you can change this b and you"
+    },
+    {
+      "start": 279.44,
+      "duration": 4.96,
+      "end": 284.4,
+      "text": "can make something as part"
+    },
+    {
+      "start": 282.8,
+      "duration": 3.52,
+      "end": 286.32,
+      "text": "you can change this b"
+    },
+    {
+      "start": 284.4,
+      "duration": 3.44,
+      "end": 287.84,
+      "text": "and you can make something as bad"
+    },
+    {
+      "start": 286.32,
+      "duration": 3.2,
+      "end": 289.52,
+      "text": "for sure"
+    },
+    {
+      "start": 287.84,
+      "duration": 3.12,
+      "end": 290.96,
+      "text": "do you erase pack"
+    },
+    {
+      "start": 289.52,
+      "duration": 3.119,
+      "end": 292.639,
+      "text": "now over here"
+    },
+    {
+      "start": 290.96,
+      "duration": 4.64,
+      "end": 295.59999999999997,
+      "text": "very very important"
+    },
+    {
+      "start": 292.639,
+      "duration": 3.761,
+      "end": 296.40000000000003,
+      "text": "you do not erase anything"
+    },
+    {
+      "start": 295.6,
+      "duration": 3.92,
+      "end": 299.52000000000004,
+      "text": "right"
+    },
+    {
+      "start": 296.4,
+      "duration": 4.0,
+      "end": 300.4,
+      "text": "now you do not raise anything right now"
+    },
+    {
+      "start": 299.52,
+      "duration": 3.119,
+      "end": 302.639,
+      "text": "why"
+    },
+    {
+      "start": 300.4,
+      "duration": 4.96,
+      "end": 305.35999999999996,
+      "text": "i'll tell you when we move forward do"
+    },
+    {
+      "start": 302.639,
+      "duration": 5.201,
+      "end": 307.84000000000003,
+      "text": "not it is bad for me keep it"
+    },
+    {
+      "start": 305.36,
+      "duration": 5.279,
+      "end": 310.639,
+      "text": "next can you change it to something else"
+    },
+    {
+      "start": 307.84,
+      "duration": 5.919,
+      "end": 313.75899999999996,
+      "text": "i think i can change it to bot as well"
+    },
+    {
+      "start": 310.639,
+      "duration": 5.84,
+      "end": 316.479,
+      "text": "if you carefully see if i change a to o"
+    },
+    {
+      "start": 313.759,
+      "duration": 4.961,
+      "end": 318.72,
+      "text": "that will be what what is here"
+    },
+    {
+      "start": 316.479,
+      "duration": 4.56,
+      "end": 321.039,
+      "text": "that is here so what i did was i took"
+    },
+    {
+      "start": 318.72,
+      "duration": 3.12,
+      "end": 321.84000000000003,
+      "text": "bat and i changed it to pat"
+    },
+    {
+      "start": 321.039,
+      "duration": 1.841,
+      "end": 322.88,
+      "text": "and"
+    },
+    {
+      "start": 321.84,
+      "duration": 1.919,
+      "end": 323.75899999999996,
+      "text": "bought"
+    },
+    {
+      "start": 322.88,
+      "duration": 3.2,
+      "end": 326.08,
+      "text": "so"
+    },
+    {
+      "start": 323.759,
+      "duration": 5.521,
+      "end": 329.28000000000003,
+      "text": "that can be changed to pat"
+    },
+    {
+      "start": 326.08,
+      "duration": 4.72,
+      "end": 330.8,
+      "text": "so if a bat is changed to pad can i say"
+    },
+    {
+      "start": 329.28,
+      "duration": 2.4,
+      "end": 331.67999999999995,
+      "text": "the new sequence"
+    },
+    {
+      "start": 330.8,
+      "duration": 3.52,
+      "end": 334.32,
+      "text": "will be"
+    },
+    {
+      "start": 331.68,
+      "duration": 5.04,
+      "end": 336.72,
+      "text": "bat comma pat"
+    },
+    {
+      "start": 334.32,
+      "duration": 5.12,
+      "end": 339.44,
+      "text": "for this one and if i'm changing bad to"
+    },
+    {
+      "start": 336.72,
+      "duration": 5.6,
+      "end": 342.32000000000005,
+      "text": "bot the new sequence will be bad comma"
+    },
+    {
+      "start": 339.44,
+      "duration": 5.68,
+      "end": 345.12,
+      "text": "bot can i see this because bad is"
+    },
+    {
+      "start": 342.32,
+      "duration": 5.04,
+      "end": 347.36,
+      "text": "transformed to pat so pad gets attached"
+    },
+    {
+      "start": 345.12,
+      "duration": 4.48,
+      "end": 349.6,
+      "text": "so you get back and back"
+    },
+    {
+      "start": 347.36,
+      "duration": 4.559,
+      "end": 351.91900000000004,
+      "text": "that gets transferred to what so bot"
+    },
+    {
+      "start": 349.6,
+      "duration": 3.2,
+      "end": 352.8,
+      "text": "gets attached so you get backed and"
+    },
+    {
+      "start": 351.919,
+      "duration": 3.041,
+      "end": 354.96,
+      "text": "bought"
+    },
+    {
+      "start": 352.8,
+      "duration": 5.28,
+      "end": 358.08,
+      "text": "yeah so the sequences"
+    },
+    {
+      "start": 354.96,
+      "duration": 3.92,
+      "end": 358.88,
+      "text": "are done off length too now comes the"
+    },
+    {
+      "start": 358.08,
+      "duration": 3.36,
+      "end": 361.44,
+      "text": "trick"
+    },
+    {
+      "start": 358.88,
+      "duration": 5.439,
+      "end": 364.319,
+      "text": "so you use something like a pat"
+    },
+    {
+      "start": 361.44,
+      "duration": 4.16,
+      "end": 365.6,
+      "text": "you used something like a box once you"
+    },
+    {
+      "start": 364.319,
+      "duration": 3.841,
+      "end": 368.16,
+      "text": "have"
+    },
+    {
+      "start": 365.6,
+      "duration": 4.48,
+      "end": 370.08000000000004,
+      "text": "done everything in that level once you"
+    },
+    {
+      "start": 368.16,
+      "duration": 4.479,
+      "end": 372.639,
+      "text": "have taken all the possible"
+    },
+    {
+      "start": 370.08,
+      "duration": 5.52,
+      "end": 375.59999999999997,
+      "text": "transformations in that level take the"
+    },
+    {
+      "start": 372.639,
+      "duration": 4.641,
+      "end": 377.28000000000003,
+      "text": "pattern back and delete"
+    },
+    {
+      "start": 375.6,
+      "duration": 3.92,
+      "end": 379.52000000000004,
+      "text": "then only delete"
+    },
+    {
+      "start": 377.28,
+      "duration": 4.72,
+      "end": 382.0,
+      "text": "why not when you meet"
+    },
+    {
+      "start": 379.52,
+      "duration": 4.72,
+      "end": 384.24,
+      "text": "i'll tell you do not worry about that"
+    },
+    {
+      "start": 382.0,
+      "duration": 2.24,
+      "end": 384.24,
+      "text": "done"
+    },
+    {
+      "start": 386.16,
+      "duration": 2.8,
+      "end": 388.96000000000004,
+      "text": "so this is"
+    },
+    {
+      "start": 387.36,
+      "duration": 3.44,
+      "end": 390.8,
+      "text": "one other level stuff"
+    },
+    {
+      "start": 388.96,
+      "duration": 5.88,
+      "end": 394.84,
+      "text": "next"
+    },
+    {
+      "start": 390.8,
+      "duration": 4.04,
+      "end": 394.84000000000003,
+      "text": "take backpack out"
+    },
+    {
+      "start": 397.199,
+      "duration": 5.201,
+      "end": 402.40000000000003,
+      "text": "now remember one thing when i say level"
+    },
+    {
+      "start": 400.08,
+      "duration": 3.76,
+      "end": 403.84,
+      "text": "level one only consists of this when i"
+    },
+    {
+      "start": 402.4,
+      "duration": 3.44,
+      "end": 405.84,
+      "text": "say level two"
+    },
+    {
+      "start": 403.84,
+      "duration": 2.88,
+      "end": 406.71999999999997,
+      "text": "level two consisted of these three two"
+    },
+    {
+      "start": 405.84,
+      "duration": 2.639,
+      "end": 408.479,
+      "text": "things"
+    },
+    {
+      "start": 406.72,
+      "duration": 4.0,
+      "end": 410.72,
+      "text": "level two consisted of"
+    },
+    {
+      "start": 408.479,
+      "duration": 3.761,
+      "end": 412.24,
+      "text": "these two things there are two guys at"
+    },
+    {
+      "start": 410.72,
+      "duration": 3.52,
+      "end": 414.24,
+      "text": "the level two there are two guys in the"
+    },
+    {
+      "start": 412.24,
+      "duration": 3.92,
+      "end": 416.16,
+      "text": "level two so you're gonna deal with"
+    },
+    {
+      "start": 414.24,
+      "duration": 3.36,
+      "end": 417.6,
+      "text": "both of these two guys and then you're"
+    },
+    {
+      "start": 416.16,
+      "duration": 2.8,
+      "end": 418.96000000000004,
+      "text": "going to delete and now you'll"
+    },
+    {
+      "start": 417.6,
+      "duration": 2.48,
+      "end": 420.08000000000004,
+      "text": "understand why"
+    },
+    {
+      "start": 418.96,
+      "duration": 3.679,
+      "end": 422.63899999999995,
+      "text": "so"
+    },
+    {
+      "start": 420.08,
+      "duration": 5.2,
+      "end": 425.28,
+      "text": "can i see if the sequence is this the"
+    },
+    {
+      "start": 422.639,
+      "duration": 4.4,
+      "end": 427.039,
+      "text": "last guy is packed for sure"
+    },
+    {
+      "start": 425.28,
+      "duration": 3.199,
+      "end": 428.479,
+      "text": "so i get the last cap"
+    },
+    {
+      "start": 427.039,
+      "duration": 3.761,
+      "end": 430.8,
+      "text": "and this is where we'll start the"
+    },
+    {
+      "start": 428.479,
+      "duration": 4.641,
+      "end": 433.12,
+      "text": "transformation problem so pat can"
+    },
+    {
+      "start": 430.8,
+      "duration": 4.32,
+      "end": 435.12,
+      "text": "actually be converted to something like"
+    },
+    {
+      "start": 433.12,
+      "duration": 4.639,
+      "end": 437.759,
+      "text": "port"
+    },
+    {
+      "start": 435.12,
+      "duration": 4.96,
+      "end": 440.08,
+      "text": "why because if you carefully see that"
+    },
+    {
+      "start": 437.759,
+      "duration": 4.401,
+      "end": 442.16,
+      "text": "can be converted to port because spot is"
+    },
+    {
+      "start": 440.08,
+      "duration": 4.08,
+      "end": 444.15999999999997,
+      "text": "there can i convert back to something"
+    },
+    {
+      "start": 442.16,
+      "duration": 3.84,
+      "end": 446.0,
+      "text": "else i don't think that"
+    },
+    {
+      "start": 444.16,
+      "duration": 4.08,
+      "end": 448.24,
+      "text": "you can try converting pack to something"
+    },
+    {
+      "start": 446.0,
+      "duration": 4.88,
+      "end": 450.88,
+      "text": "else maybe something like"
+    },
+    {
+      "start": 448.24,
+      "duration": 4.959,
+      "end": 453.199,
+      "text": "that could have been converted to bat"
+    },
+    {
+      "start": 450.88,
+      "duration": 4.319,
+      "end": 455.199,
+      "text": "but it's actually going back it's"
+    },
+    {
+      "start": 453.199,
+      "duration": 4.0,
+      "end": 457.199,
+      "text": "actually going back which i do not want"
+    },
+    {
+      "start": 455.199,
+      "duration": 4.72,
+      "end": 459.91900000000004,
+      "text": "and it is not in the world list as well"
+    },
+    {
+      "start": 457.199,
+      "duration": 5.201,
+      "end": 462.40000000000003,
+      "text": "so pad can only be converted to port"
+    },
+    {
+      "start": 459.919,
+      "duration": 5.28,
+      "end": 465.19899999999996,
+      "text": "will you erase pot you could have"
+    },
+    {
+      "start": 462.4,
+      "duration": 4.32,
+      "end": 466.71999999999997,
+      "text": "released what because this level is done"
+    },
+    {
+      "start": 465.199,
+      "duration": 3.84,
+      "end": 469.039,
+      "text": "this is level three"
+    },
+    {
+      "start": 466.72,
+      "duration": 5.12,
+      "end": 471.84000000000003,
+      "text": "level three is done because you got bat"
+    },
+    {
+      "start": 469.039,
+      "duration": 4.241,
+      "end": 473.28,
+      "text": "bat pot you got"
+    },
+    {
+      "start": 471.84,
+      "duration": 2.56,
+      "end": 474.4,
+      "text": "bat"
+    },
+    {
+      "start": 473.28,
+      "duration": 3.84,
+      "end": 477.11999999999995,
+      "text": "bat"
+    },
+    {
+      "start": 474.4,
+      "duration": 5.04,
+      "end": 479.44,
+      "text": "pot you could raise it"
+    },
+    {
+      "start": 477.12,
+      "duration": 4.56,
+      "end": 481.68,
+      "text": "but i said the entire level has to be"
+    },
+    {
+      "start": 479.44,
+      "duration": 3.84,
+      "end": 483.28,
+      "text": "completed the entire level two has to be"
+    },
+    {
+      "start": 481.68,
+      "duration": 3.28,
+      "end": 484.96,
+      "text": "completed"
+    },
+    {
+      "start": 483.28,
+      "duration": 4.0,
+      "end": 487.28,
+      "text": "you just completed backpack there is"
+    },
+    {
+      "start": 484.96,
+      "duration": 4.799,
+      "end": 489.75899999999996,
+      "text": "someone else of level two all already"
+    },
+    {
+      "start": 487.28,
+      "duration": 4.639,
+      "end": 491.919,
+      "text": "waiting so do not any spot from here do"
+    },
+    {
+      "start": 489.759,
+      "duration": 3.521,
+      "end": 493.28000000000003,
+      "text": "not erase spot from here why you'll"
+    },
+    {
+      "start": 491.919,
+      "duration": 3.201,
+      "end": 495.12,
+      "text": "understand now"
+    },
+    {
+      "start": 493.28,
+      "duration": 2.8,
+      "end": 496.08,
+      "text": "so batman is done"
+    },
+    {
+      "start": 495.12,
+      "duration": 2.56,
+      "end": 497.68,
+      "text": "perfect"
+    },
+    {
+      "start": 496.08,
+      "duration": 2.48,
+      "end": 498.56,
+      "text": "get the next guy"
+    },
+    {
+      "start": 497.68,
+      "duration": 2.079,
+      "end": 499.759,
+      "text": "back"
+    },
+    {
+      "start": 498.56,
+      "duration": 2.319,
+      "end": 500.879,
+      "text": "what"
+    },
+    {
+      "start": 499.759,
+      "duration": 2.56,
+      "end": 502.319,
+      "text": "bat"
+    },
+    {
+      "start": 500.879,
+      "duration": 4.641,
+      "end": 505.52000000000004,
+      "text": "bot"
+    },
+    {
+      "start": 502.319,
+      "duration": 5.361,
+      "end": 507.68,
+      "text": "so which is the last word bought to take"
+    },
+    {
+      "start": 505.52,
+      "duration": 4.64,
+      "end": 510.15999999999997,
+      "text": "the bot now in what if you do a"
+    },
+    {
+      "start": 507.68,
+      "duration": 5.359,
+      "end": 513.039,
+      "text": "transformation you can actually get"
+    },
+    {
+      "start": 510.16,
+      "duration": 4.16,
+      "end": 514.32,
+      "text": "bought again can actually get pot again"
+    },
+    {
+      "start": 513.039,
+      "duration": 3.68,
+      "end": 516.7189999999999,
+      "text": "and imagine"
+    },
+    {
+      "start": 514.32,
+      "duration": 4.639,
+      "end": 518.9590000000001,
+      "text": "while forming this if you have deleted"
+    },
+    {
+      "start": 516.719,
+      "duration": 4.721,
+      "end": 521.44,
+      "text": "port you would have never got port back"
+    },
+    {
+      "start": 518.959,
+      "duration": 4.88,
+      "end": 523.8389999999999,
+      "text": "again so the same level"
+    },
+    {
+      "start": 521.44,
+      "duration": 4.8,
+      "end": 526.24,
+      "text": "what can happen multiple times so if you"
+    },
+    {
+      "start": 523.839,
+      "duration": 4.961,
+      "end": 528.8000000000001,
+      "text": "look at the answer what happens here"
+    },
+    {
+      "start": 526.24,
+      "duration": 4.64,
+      "end": 530.88,
+      "text": "what happens here so once you form this"
+    },
+    {
+      "start": 528.8,
+      "duration": 3.92,
+      "end": 532.7199999999999,
+      "text": "you get what and similarly from what"
+    },
+    {
+      "start": 530.88,
+      "duration": 4.16,
+      "end": 535.04,
+      "text": "also when you get you get caught so do"
+    },
+    {
+      "start": 532.72,
+      "duration": 4.96,
+      "end": 537.6800000000001,
+      "text": "not delete yes"
+    },
+    {
+      "start": 535.04,
+      "duration": 3.68,
+      "end": 538.7199999999999,
+      "text": "beyond this do not take part do not take"
+    },
+    {
+      "start": 537.68,
+      "duration": 3.279,
+      "end": 540.959,
+      "text": "because"
+    },
+    {
+      "start": 538.72,
+      "duration": 4.0,
+      "end": 542.72,
+      "text": "of the reason that the length will you"
+    },
+    {
+      "start": 540.959,
+      "duration": 4.401,
+      "end": 545.3599999999999,
+      "text": "need the shortest length so if you get a"
+    },
+    {
+      "start": 542.72,
+      "duration": 4.559,
+      "end": 547.279,
+      "text": "pot at a level take it as many times as"
+    },
+    {
+      "start": 545.36,
+      "duration": 3.76,
+      "end": 549.12,
+      "text": "you are getting after this do not take"
+    },
+    {
+      "start": 547.279,
+      "duration": 3.761,
+      "end": 551.04,
+      "text": "because the length will be"
+    },
+    {
+      "start": 549.12,
+      "duration": 3.6,
+      "end": 552.72,
+      "text": "not the shortest one then"
+    },
+    {
+      "start": 551.04,
+      "duration": 3.6,
+      "end": 554.64,
+      "text": "thereby again you"
+    },
+    {
+      "start": 552.72,
+      "duration": 4.16,
+      "end": 556.88,
+      "text": "get a pot so the same what you do is you"
+    },
+    {
+      "start": 554.64,
+      "duration": 3.52,
+      "end": 558.16,
+      "text": "say bat"
+    },
+    {
+      "start": 556.88,
+      "duration": 2.24,
+      "end": 559.12,
+      "text": "bought"
+    },
+    {
+      "start": 558.16,
+      "duration": 2.239,
+      "end": 560.399,
+      "text": "pot"
+    },
+    {
+      "start": 559.12,
+      "duration": 2.8,
+      "end": 561.92,
+      "text": "and now"
+    },
+    {
+      "start": 560.399,
+      "duration": 3.761,
+      "end": 564.16,
+      "text": "since i can say"
+    },
+    {
+      "start": 561.92,
+      "duration": 4.4,
+      "end": 566.3199999999999,
+      "text": "all the level two guys are completed"
+    },
+    {
+      "start": 564.16,
+      "duration": 4.4,
+      "end": 568.56,
+      "text": "all the level two guys are completed now"
+    },
+    {
+      "start": 566.32,
+      "duration": 4.4,
+      "end": 570.72,
+      "text": "i can clearly state that hey listen"
+    },
+    {
+      "start": 568.56,
+      "duration": 6.08,
+      "end": 574.64,
+      "text": "all my level two guys are completed so"
+    },
+    {
+      "start": 570.72,
+      "duration": 5.679,
+      "end": 576.399,
+      "text": "what i will do is i will simply"
+    },
+    {
+      "start": 574.64,
+      "duration": 3.68,
+      "end": 578.3199999999999,
+      "text": "yes i'll simply now erase the pot"
+    },
+    {
+      "start": 576.399,
+      "duration": 3.761,
+      "end": 580.16,
+      "text": "because what has been used in this"
+    },
+    {
+      "start": 578.32,
+      "duration": 4.48,
+      "end": 582.8000000000001,
+      "text": "particular level as many times as i"
+    },
+    {
+      "start": 580.16,
+      "duration": 4.08,
+      "end": 584.24,
+      "text": "wanted perfect guess"
+    },
+    {
+      "start": 582.8,
+      "duration": 3.52,
+      "end": 586.3199999999999,
+      "text": "next"
+    },
+    {
+      "start": 584.24,
+      "duration": 3.68,
+      "end": 587.92,
+      "text": "next this is level three"
+    },
+    {
+      "start": 586.32,
+      "duration": 4.16,
+      "end": 590.48,
+      "text": "so there are two guys in the queue so"
+    },
+    {
+      "start": 587.92,
+      "duration": 4.72,
+      "end": 592.64,
+      "text": "you can hydrate for two times pick once"
+    },
+    {
+      "start": 590.48,
+      "duration": 4.08,
+      "end": 594.5600000000001,
+      "text": "this pick one says so i did for two"
+    },
+    {
+      "start": 592.64,
+      "duration": 3.84,
+      "end": 596.48,
+      "text": "times pick up the next two elements"
+    },
+    {
+      "start": 594.56,
+      "duration": 3.44,
+      "end": 598.0,
+      "text": "because you know the next two elements"
+    },
+    {
+      "start": 596.48,
+      "duration": 2.88,
+      "end": 599.36,
+      "text": "are level three because you know the"
+    },
+    {
+      "start": 598.0,
+      "duration": 4.08,
+      "end": 602.08,
+      "text": "next three elements are level three so"
+    },
+    {
+      "start": 599.36,
+      "duration": 5.72,
+      "end": 605.08,
+      "text": "just go ahead and do that first thing is"
+    },
+    {
+      "start": 602.08,
+      "duration": 3.0,
+      "end": 605.08,
+      "text": "that"
+    },
+    {
+      "start": 605.36,
+      "duration": 6.0,
+      "end": 611.36,
+      "text": "pot so can i say your water spot i can"
+    },
+    {
+      "start": 608.959,
+      "duration": 5.361,
+      "end": 614.3199999999999,
+      "text": "you can again try uh transforming pot"
+    },
+    {
+      "start": 611.36,
+      "duration": 5.2,
+      "end": 616.5600000000001,
+      "text": "into all of these like aot b or t then"
+    },
+    {
+      "start": 614.32,
+      "duration": 5.04,
+      "end": 619.36,
+      "text": "you can go for o like"
+    },
+    {
+      "start": 616.56,
+      "duration": 4.64,
+      "end": 621.1999999999999,
+      "text": "p b d pbt pct then you can go for t"
+    },
+    {
+      "start": 619.36,
+      "duration": 4.8,
+      "end": 624.16,
+      "text": "which will make it p o a"
+    },
+    {
+      "start": 621.2,
+      "duration": 5.52,
+      "end": 626.72,
+      "text": "p o b p o c and so on"
+    },
+    {
+      "start": 624.16,
+      "duration": 4.799,
+      "end": 628.959,
+      "text": "so if you try to convert pot you'll"
+    },
+    {
+      "start": 626.72,
+      "duration": 3.92,
+      "end": 630.64,
+      "text": "actually get p o sec it'll actually get"
+    },
+    {
+      "start": 628.959,
+      "duration": 4.801,
+      "end": 633.76,
+      "text": "posed because"
+    },
+    {
+      "start": 630.64,
+      "duration": 5.84,
+      "end": 636.48,
+      "text": "p can be converted to set and you'll get"
+    },
+    {
+      "start": 633.76,
+      "duration": 5.6,
+      "end": 639.36,
+      "text": "positive so the moment you get posit you"
+    },
+    {
+      "start": 636.48,
+      "duration": 4.72,
+      "end": 641.2,
+      "text": "see positive but do not delay"
+    },
+    {
+      "start": 639.36,
+      "duration": 4.0,
+      "end": 643.36,
+      "text": "it might be used in some same level"
+    },
+    {
+      "start": 641.2,
+      "duration": 4.24,
+      "end": 645.44,
+      "text": "again do not delete"
+    },
+    {
+      "start": 643.36,
+      "duration": 4.8,
+      "end": 648.16,
+      "text": "just attach this"
+    },
+    {
+      "start": 645.44,
+      "duration": 4.639,
+      "end": 650.0790000000001,
+      "text": "uh z to here and say okay this is"
+    },
+    {
+      "start": 648.16,
+      "duration": 3.28,
+      "end": 651.4399999999999,
+      "text": "something which i'll take into the queue"
+    },
+    {
+      "start": 650.079,
+      "duration": 3.681,
+      "end": 653.76,
+      "text": "that"
+    },
+    {
+      "start": 651.44,
+      "duration": 2.32,
+      "end": 653.7600000000001,
+      "text": "pat"
+    },
+    {
+      "start": 654.48,
+      "duration": 2.24,
+      "end": 656.72,
+      "text": "bat"
+    },
+    {
+      "start": 655.6,
+      "duration": 4.16,
+      "end": 659.76,
+      "text": "pat"
+    },
+    {
+      "start": 656.72,
+      "duration": 3.04,
+      "end": 659.76,
+      "text": "bot and"
+    },
+    {
+      "start": 659.839,
+      "duration": 3.601,
+      "end": 663.44,
+      "text": "so level four this is level four"
+    },
+    {
+      "start": 662.079,
+      "duration": 4.0,
+      "end": 666.079,
+      "text": "starting"
+    },
+    {
+      "start": 663.44,
+      "duration": 4.959,
+      "end": 668.399,
+      "text": "okay so now what i can say is"
+    },
+    {
+      "start": 666.079,
+      "duration": 3.841,
+      "end": 669.92,
+      "text": "cool this is done but do not delete do"
+    },
+    {
+      "start": 668.399,
+      "duration": 4.0,
+      "end": 672.399,
+      "text": "not delete level three is yet not"
+    },
+    {
+      "start": 669.92,
+      "duration": 5.2,
+      "end": 675.12,
+      "text": "completed because this is done the next"
+    },
+    {
+      "start": 672.399,
+      "duration": 3.841,
+      "end": 676.24,
+      "text": "guy is bat"
+    },
+    {
+      "start": 675.12,
+      "duration": 2.32,
+      "end": 677.44,
+      "text": "bot"
+    },
+    {
+      "start": 676.24,
+      "duration": 3.599,
+      "end": 679.839,
+      "text": "and pot"
+    },
+    {
+      "start": 677.44,
+      "duration": 5.519,
+      "end": 682.9590000000001,
+      "text": "so who is the last guy part again"
+    },
+    {
+      "start": 679.839,
+      "duration": 4.961,
+      "end": 684.8000000000001,
+      "text": "support can again be converted into poc"
+    },
+    {
+      "start": 682.959,
+      "duration": 3.12,
+      "end": 686.079,
+      "text": "so you get bad"
+    },
+    {
+      "start": 684.8,
+      "duration": 2.32,
+      "end": 687.12,
+      "text": "bot"
+    },
+    {
+      "start": 686.079,
+      "duration": 5.041,
+      "end": 691.12,
+      "text": "bot"
+    },
+    {
+      "start": 687.12,
+      "duration": 6.399,
+      "end": 693.519,
+      "text": "and puz so this time across"
+    },
+    {
+      "start": 691.12,
+      "duration": 5.44,
+      "end": 696.5600000000001,
+      "text": "you can see the level 3 has been"
+    },
+    {
+      "start": 693.519,
+      "duration": 5.76,
+      "end": 699.279,
+      "text": "completed the level 3 has been completed"
+    },
+    {
+      "start": 696.56,
+      "duration": 5.68,
+      "end": 702.2399999999999,
+      "text": "once that level has been completed i can"
+    },
+    {
+      "start": 699.279,
+      "duration": 5.201,
+      "end": 704.48,
+      "text": "go across and delete all the guys"
+    },
+    {
+      "start": 702.24,
+      "duration": 4.719,
+      "end": 706.9590000000001,
+      "text": "remember this i can go and delete all"
+    },
+    {
+      "start": 704.48,
+      "duration": 4.56,
+      "end": 709.04,
+      "text": "the guys those who have used so i can"
+    },
+    {
+      "start": 706.959,
+      "duration": 5.281,
+      "end": 712.2399999999999,
+      "text": "probably store which are the last guys"
+    },
+    {
+      "start": 709.04,
+      "duration": 5.52,
+      "end": 714.56,
+      "text": "use which is po z and i can delete those"
+    },
+    {
+      "start": 712.24,
+      "duration": 5.039,
+      "end": 717.279,
+      "text": "poc from here got it"
+    },
+    {
+      "start": 714.56,
+      "duration": 4.48,
+      "end": 719.04,
+      "text": "perfect next these are level fours and"
+    },
+    {
+      "start": 717.279,
+      "duration": 2.961,
+      "end": 720.24,
+      "text": "two guys in the level four take those"
+    },
+    {
+      "start": 719.04,
+      "duration": 4.0,
+      "end": 723.04,
+      "text": "two guys again"
+    },
+    {
+      "start": 720.24,
+      "duration": 2.8,
+      "end": 723.04,
+      "text": "so bat"
+    },
+    {
+      "start": 723.12,
+      "duration": 2.64,
+      "end": 725.76,
+      "text": "bat"
+    },
+    {
+      "start": 724.56,
+      "duration": 5.12,
+      "end": 729.68,
+      "text": "pot"
+    },
+    {
+      "start": 725.76,
+      "duration": 6.4,
+      "end": 732.16,
+      "text": "poc right which is the last guy using"
+    },
+    {
+      "start": 729.68,
+      "duration": 4.48,
+      "end": 734.16,
+      "text": "what can poc be converted into"
+    },
+    {
+      "start": 732.16,
+      "duration": 5.359,
+      "end": 737.519,
+      "text": "poc can definitely be converted into"
+    },
+    {
+      "start": 734.16,
+      "duration": 6.32,
+      "end": 740.48,
+      "text": "something like coc if you change p to c"
+    },
+    {
+      "start": 737.519,
+      "duration": 4.56,
+      "end": 742.079,
+      "text": "b c o z and c o z is already there so"
+    },
+    {
+      "start": 740.48,
+      "duration": 4.599,
+      "end": 745.0790000000001,
+      "text": "you get something like"
+    },
+    {
+      "start": 742.079,
+      "duration": 3.0,
+      "end": 745.079,
+      "text": "that"
+    },
+    {
+      "start": 746.56,
+      "duration": 3.76,
+      "end": 750.3199999999999,
+      "text": "z and cuz as the answer"
+    },
+    {
+      "start": 750.959,
+      "duration": 2.801,
+      "end": 753.76,
+      "text": "perfect"
+    },
+    {
+      "start": 752.24,
+      "duration": 3.36,
+      "end": 755.6,
+      "text": "so"
+    },
+    {
+      "start": 753.76,
+      "duration": 4.4,
+      "end": 758.16,
+      "text": "one done"
+    },
+    {
+      "start": 755.6,
+      "duration": 4.32,
+      "end": 759.9200000000001,
+      "text": "let's take the next level guy which is"
+    },
+    {
+      "start": 758.16,
+      "duration": 3.28,
+      "end": 761.4399999999999,
+      "text": "backpack pot"
+    },
+    {
+      "start": 759.92,
+      "duration": 2.719,
+      "end": 762.639,
+      "text": "bat"
+    },
+    {
+      "start": 761.44,
+      "duration": 2.16,
+      "end": 763.6,
+      "text": "fat"
+    },
+    {
+      "start": 762.639,
+      "duration": 4.081,
+      "end": 766.72,
+      "text": "port"
+    },
+    {
+      "start": 763.6,
+      "duration": 4.96,
+      "end": 768.5600000000001,
+      "text": "and poc so again the last guy is poc"
+    },
+    {
+      "start": 766.72,
+      "duration": 4.0,
+      "end": 770.72,
+      "text": "which needs to be transformed"
+    },
+    {
+      "start": 768.56,
+      "duration": 5.279,
+      "end": 773.8389999999999,
+      "text": "this can be transformed to coc they'll"
+    },
+    {
+      "start": 770.72,
+      "duration": 3.119,
+      "end": 773.839,
+      "text": "get again bat"
+    },
+    {
+      "start": 773.92,
+      "duration": 4.64,
+      "end": 778.56,
+      "text": "bot"
+    },
+    {
+      "start": 774.959,
+      "duration": 6.401,
+      "end": 781.3599999999999,
+      "text": "poc and coc perfect"
+    },
+    {
+      "start": 778.56,
+      "duration": 5.12,
+      "end": 783.68,
+      "text": "so apparently once the entire level has"
+    },
+    {
+      "start": 781.36,
+      "duration": 4.719,
+      "end": 786.0790000000001,
+      "text": "been completed because level three now"
+    },
+    {
+      "start": 783.68,
+      "duration": 5.12,
+      "end": 788.8,
+      "text": "level four has been completed so once"
+    },
+    {
+      "start": 786.079,
+      "duration": 5.601,
+      "end": 791.68,
+      "text": "the level 4 has been completed"
+    },
+    {
+      "start": 788.8,
+      "duration": 4.8,
+      "end": 793.5999999999999,
+      "text": "look at the last guy cuz and delete it"
+    },
+    {
+      "start": 791.68,
+      "duration": 3.68,
+      "end": 795.3599999999999,
+      "text": "delete it done"
+    },
+    {
+      "start": 793.6,
+      "duration": 4.0,
+      "end": 797.6,
+      "text": "next time"
+    },
+    {
+      "start": 795.36,
+      "duration": 3.89,
+      "end": 799.25,
+      "text": "take up the last sequence that you"
+    },
+    {
+      "start": 797.6,
+      "duration": 4.819,
+      "end": 802.419,
+      "text": "generated but"
+    },
+    {
+      "start": 799.25,
+      "duration": 3.169,
+      "end": 802.419,
+      "text": "[Music]"
+    },
+    {
+      "start": 803.76,
+      "duration": 3.84,
+      "end": 807.6,
+      "text": "and if you pick up the last word it is"
+    },
+    {
+      "start": 805.44,
+      "duration": 4.8,
+      "end": 810.24,
+      "text": "coc so if you pick up the last unit it"
+    },
+    {
+      "start": 807.6,
+      "duration": 3.76,
+      "end": 811.36,
+      "text": "is cuz and you see this particular word"
+    },
+    {
+      "start": 810.24,
+      "duration": 3.76,
+      "end": 814.0,
+      "text": "is your"
+    },
+    {
+      "start": 811.36,
+      "duration": 4.719,
+      "end": 816.0790000000001,
+      "text": "ending word which is coc is your ending"
+    },
+    {
+      "start": 814.0,
+      "duration": 4.48,
+      "end": 818.48,
+      "text": "word which is you see you can say okay i"
+    },
+    {
+      "start": 816.079,
+      "duration": 4.081,
+      "end": 820.16,
+      "text": "got my sequence and you know"
+    },
+    {
+      "start": 818.48,
+      "duration": 4.64,
+      "end": 823.12,
+      "text": "since the levels are increasing like"
+    },
+    {
+      "start": 820.16,
+      "duration": 4.96,
+      "end": 825.12,
+      "text": "this this is the shortest sequence"
+    },
+    {
+      "start": 823.12,
+      "duration": 3.2,
+      "end": 826.32,
+      "text": "so the sequence length is"
+    },
+    {
+      "start": 825.12,
+      "duration": 3.519,
+      "end": 828.639,
+      "text": "i"
+    },
+    {
+      "start": 826.32,
+      "duration": 4.639,
+      "end": 830.9590000000001,
+      "text": "store it in your answer store it in your"
+    },
+    {
+      "start": 828.639,
+      "duration": 3.2,
+      "end": 831.839,
+      "text": "answer of list of list"
+    },
+    {
+      "start": 830.959,
+      "duration": 3.841,
+      "end": 834.8,
+      "text": "so"
+    },
+    {
+      "start": 831.839,
+      "duration": 4.961,
+      "end": 836.8000000000001,
+      "text": "this is the answer array just put that"
+    },
+    {
+      "start": 834.8,
+      "duration": 4.32,
+      "end": 839.12,
+      "text": "into it next"
+    },
+    {
+      "start": 836.8,
+      "duration": 3.599,
+      "end": 840.399,
+      "text": "no need to do any transformations"
+    },
+    {
+      "start": 839.12,
+      "duration": 3.68,
+      "end": 842.8,
+      "text": "you get this"
+    },
+    {
+      "start": 840.399,
+      "duration": 4.401,
+      "end": 844.8,
+      "text": "the moment you get this you say okay"
+    },
+    {
+      "start": 842.8,
+      "duration": 4.719,
+      "end": 847.519,
+      "text": "this is also a length five let's put"
+    },
+    {
+      "start": 844.8,
+      "duration": 5.12,
+      "end": 849.92,
+      "text": "that in the list you keep on taking from"
+    },
+    {
+      "start": 847.519,
+      "duration": 4.241,
+      "end": 851.76,
+      "text": "the queue all the length five guys the"
+    },
+    {
+      "start": 849.92,
+      "duration": 3.919,
+      "end": 853.8389999999999,
+      "text": "moment you get someone greater than"
+    },
+    {
+      "start": 851.76,
+      "duration": 5.04,
+      "end": 856.8,
+      "text": "length five you say i don't need to do"
+    },
+    {
+      "start": 853.839,
+      "duration": 5.68,
+      "end": 859.519,
+      "text": "any four let's break out let's break up"
+    },
+    {
+      "start": 856.8,
+      "duration": 5.12,
+      "end": 861.92,
+      "text": "just simply break out but this is what"
+    },
+    {
+      "start": 859.519,
+      "duration": 4.641,
+      "end": 864.16,
+      "text": "we will do the moment we get an answer"
+    },
+    {
+      "start": 861.92,
+      "duration": 4.719,
+      "end": 866.639,
+      "text": "we take all of these guys which are of"
+    },
+    {
+      "start": 864.16,
+      "duration": 3.84,
+      "end": 868.0,
+      "text": "equivalent length and after that we can"
+    },
+    {
+      "start": 866.639,
+      "duration": 2.32,
+      "end": 868.9590000000001,
+      "text": "simply go"
+    },
+    {
+      "start": 868.0,
+      "duration": 3.92,
+      "end": 871.92,
+      "text": "out"
+    },
+    {
+      "start": 868.959,
+      "duration": 4.24,
+      "end": 873.199,
+      "text": "as how easy as it gets the only trick"
+    },
+    {
+      "start": 871.92,
+      "duration": 3.359,
+      "end": 875.279,
+      "text": "over here is"
+    },
+    {
+      "start": 873.199,
+      "duration": 4.32,
+      "end": 877.519,
+      "text": "do not delete the moment you are using"
+    },
+    {
+      "start": 875.279,
+      "duration": 4.401,
+      "end": 879.68,
+      "text": "it for a single guy do not delete"
+    },
+    {
+      "start": 877.519,
+      "duration": 4.88,
+      "end": 882.399,
+      "text": "because it might be used by the similar"
+    },
+    {
+      "start": 879.68,
+      "duration": 4.959,
+      "end": 884.6389999999999,
+      "text": "guys on the same level do you see it"
+    },
+    {
+      "start": 882.399,
+      "duration": 5.44,
+      "end": 887.839,
+      "text": "being used on the similar levels by the"
+    },
+    {
+      "start": 884.639,
+      "duration": 4.88,
+      "end": 889.519,
+      "text": "same guys so do not do not delete it the"
+    },
+    {
+      "start": 887.839,
+      "duration": 3.201,
+      "end": 891.0400000000001,
+      "text": "moment you got it so you must have"
+    },
+    {
+      "start": 889.519,
+      "duration": 3.921,
+      "end": 893.44,
+      "text": "understood the driver now you must be"
+    },
+    {
+      "start": 891.04,
+      "duration": 4.159,
+      "end": 895.199,
+      "text": "thinking how do we code this not an"
+    },
+    {
+      "start": 893.44,
+      "duration": 3.44,
+      "end": 896.8800000000001,
+      "text": "issue i'll go step by step i'll be"
+    },
+    {
+      "start": 895.199,
+      "duration": 3.921,
+      "end": 899.12,
+      "text": "writing the c plus plus code you can"
+    },
+    {
+      "start": 896.88,
+      "duration": 4.639,
+      "end": 901.519,
+      "text": "follow the exact similar java code on"
+    },
+    {
+      "start": 899.12,
+      "duration": 5.12,
+      "end": 904.24,
+      "text": "the left in case you feel what will be"
+    },
+    {
+      "start": 901.519,
+      "duration": 4.32,
+      "end": 905.839,
+      "text": "the equivalent in java okay so we have a"
+    },
+    {
+      "start": 904.24,
+      "duration": 2.56,
+      "end": 906.8,
+      "text": "begin word now the first thing that i'll"
+    },
+    {
+      "start": 905.839,
+      "duration": 3.521,
+      "end": 909.36,
+      "text": "do is"
+    },
+    {
+      "start": 906.8,
+      "duration": 5.61,
+      "end": 912.41,
+      "text": "yes i notice it put these words"
+    },
+    {
+      "start": 909.36,
+      "duration": 10.4,
+      "end": 919.76,
+      "text": "into an unordered set so"
+    },
+    {
+      "start": 912.41,
+      "duration": 8.15,
+      "end": 920.56,
+      "text": "[Music]"
+    },
+    {
+      "start": 919.76,
+      "duration": 2.16,
+      "end": 921.92,
+      "text": "done"
+    },
+    {
+      "start": 920.56,
+      "duration": 3.76,
+      "end": 924.3199999999999,
+      "text": "once you've done this what is the next"
+    },
+    {
+      "start": 921.92,
+      "duration": 4.64,
+      "end": 926.56,
+      "text": "thing you need a queue and the queue has"
+    },
+    {
+      "start": 924.32,
+      "duration": 3.68,
+      "end": 928.0,
+      "text": "to store a list of strings"
+    },
+    {
+      "start": 926.56,
+      "duration": 2.959,
+      "end": 929.5189999999999,
+      "text": "so that is something which you'll take"
+    },
+    {
+      "start": 928.0,
+      "duration": 3.68,
+      "end": 931.68,
+      "text": "and in that queue the first thing that"
+    },
+    {
+      "start": 929.519,
+      "duration": 5.201,
+      "end": 934.72,
+      "text": "you will insert is"
+    },
+    {
+      "start": 931.68,
+      "duration": 3.839,
+      "end": 935.519,
+      "text": "the first sequence which is this one"
+    },
+    {
+      "start": 934.72,
+      "duration": 2.96,
+      "end": 937.6800000000001,
+      "text": "okay"
+    },
+    {
+      "start": 935.519,
+      "duration": 5.281,
+      "end": 940.8,
+      "text": "what after that do we need anything else"
+    },
+    {
+      "start": 937.68,
+      "duration": 5.68,
+      "end": 943.3599999999999,
+      "text": "yes what you can do is you can say for"
+    },
+    {
+      "start": 940.8,
+      "duration": 3.44,
+      "end": 944.24,
+      "text": "every level yes for every level i will"
+    },
+    {
+      "start": 943.36,
+      "duration": 4.4,
+      "end": 947.76,
+      "text": "keep"
+    },
+    {
+      "start": 944.24,
+      "duration": 5.92,
+      "end": 950.16,
+      "text": "how many strings are being used so used"
+    },
+    {
+      "start": 947.76,
+      "duration": 4.72,
+      "end": 952.48,
+      "text": "so when you start off if you remember"
+    },
+    {
+      "start": 950.16,
+      "duration": 4.16,
+      "end": 954.3199999999999,
+      "text": "well enough when you start you just have"
+    },
+    {
+      "start": 952.48,
+      "duration": 4.56,
+      "end": 957.04,
+      "text": "a bat that you have inserted into the"
+    },
+    {
+      "start": 954.32,
+      "duration": 7.12,
+      "end": 961.44,
+      "text": "queue data structure and this is the guy"
+    },
+    {
+      "start": 957.04,
+      "duration": 6.239,
+      "end": 963.279,
+      "text": "who was used so used on level you can"
+    },
+    {
+      "start": 961.44,
+      "duration": 4.399,
+      "end": 965.839,
+      "text": "call it so that we understand the naming"
+    },
+    {
+      "start": 963.279,
+      "duration": 4.401,
+      "end": 967.68,
+      "text": "better used on level"
+    },
+    {
+      "start": 965.839,
+      "duration": 2.721,
+      "end": 968.5600000000001,
+      "text": "dot push back"
+    },
+    {
+      "start": 967.68,
+      "duration": 2.56,
+      "end": 970.2399999999999,
+      "text": "off"
+    },
+    {
+      "start": 968.56,
+      "duration": 4.16,
+      "end": 972.7199999999999,
+      "text": "what will you push back the begin what"
+    },
+    {
+      "start": 970.24,
+      "duration": 4.64,
+      "end": 974.88,
+      "text": "is the code that has been used and we'll"
+    },
+    {
+      "start": 972.72,
+      "duration": 5.679,
+      "end": 978.399,
+      "text": "keep the initial level is"
+    },
+    {
+      "start": 974.88,
+      "duration": 4.959,
+      "end": 979.8389999999999,
+      "text": "level zero i am considering this as the"
+    },
+    {
+      "start": 978.399,
+      "duration": 3.36,
+      "end": 981.759,
+      "text": "first"
+    },
+    {
+      "start": 979.839,
+      "duration": 3.761,
+      "end": 983.6,
+      "text": "zeroth like initially we are starting"
+    },
+    {
+      "start": 981.759,
+      "duration": 3.44,
+      "end": 985.1990000000001,
+      "text": "with nothing in the queue this is level"
+    },
+    {
+      "start": 983.6,
+      "duration": 3.52,
+      "end": 987.12,
+      "text": "one this is level two this is level"
+    },
+    {
+      "start": 985.199,
+      "duration": 4.161,
+      "end": 989.3599999999999,
+      "text": "three so initially before starting we"
+    },
+    {
+      "start": 987.12,
+      "duration": 4.639,
+      "end": 991.759,
+      "text": "are at level zero why i'll tell you this"
+    },
+    {
+      "start": 989.36,
+      "duration": 4.8,
+      "end": 994.16,
+      "text": "as well so we know"
+    },
+    {
+      "start": 991.759,
+      "duration": 3.08,
+      "end": 994.839,
+      "text": "one thing we need to learn the answers"
+    },
+    {
+      "start": 994.16,
+      "duration": 4.239,
+      "end": 998.399,
+      "text": "in"
+    },
+    {
+      "start": 994.839,
+      "duration": 5.161,
+      "end": 1000.0,
+      "text": "a list of lists so this will be all so"
+    },
+    {
+      "start": 998.399,
+      "duration": 4.88,
+      "end": 1003.279,
+      "text": "these are the initial things that we"
+    },
+    {
+      "start": 1000.0,
+      "duration": 5.6,
+      "end": 1005.6,
+      "text": "will declare okay next we will go across"
+    },
+    {
+      "start": 1003.279,
+      "duration": 5.68,
+      "end": 1008.959,
+      "text": "to the queue and iterate on it so let's"
+    },
+    {
+      "start": 1005.6,
+      "duration": 6.08,
+      "end": 1011.6800000000001,
+      "text": "go across and i trade till it has 90"
+    },
+    {
+      "start": 1008.959,
+      "duration": 4.721,
+      "end": 1013.68,
+      "text": "right done let's take the"
+    },
+    {
+      "start": 1011.68,
+      "duration": 5.12,
+      "end": 1016.8,
+      "text": "vector out so vector"
+    },
+    {
+      "start": 1013.68,
+      "duration": 4.32,
+      "end": 1018.0,
+      "text": "equal to q dot front at the same time do"
+    },
+    {
+      "start": 1016.8,
+      "duration": 3.68,
+      "end": 1020.4799999999999,
+      "text": "a q dot"
+    },
+    {
+      "start": 1018.0,
+      "duration": 4.88,
+      "end": 1022.88,
+      "text": "now you know these this is a sequence so"
+    },
+    {
+      "start": 1020.48,
+      "duration": 4.559,
+      "end": 1025.039,
+      "text": "remember one thing this is the level one"
+    },
+    {
+      "start": 1022.88,
+      "duration": 5.52,
+      "end": 1028.4,
+      "text": "sequence and before this you are at"
+    },
+    {
+      "start": 1025.039,
+      "duration": 5.441,
+      "end": 1030.48,
+      "text": "level zero right level zero so you are"
+    },
+    {
+      "start": 1028.4,
+      "duration": 4.639,
+      "end": 1033.039,
+      "text": "at level one so this is being used"
+    },
+    {
+      "start": 1030.48,
+      "duration": 5.28,
+      "end": 1035.76,
+      "text": "already has been used so what do you see"
+    },
+    {
+      "start": 1033.039,
+      "duration": 4.241,
+      "end": 1037.28,
+      "text": "is okay if i am on a newer level"
+    },
+    {
+      "start": 1035.76,
+      "duration": 3.76,
+      "end": 1039.52,
+      "text": "if i'm on a newer level which is very"
+    },
+    {
+      "start": 1037.28,
+      "duration": 4.559,
+      "end": 1041.839,
+      "text": "simple if the size exceeds level which"
+    },
+    {
+      "start": 1039.52,
+      "duration": 5.36,
+      "end": 1044.8799999999999,
+      "text": "is in this case initially the level was"
+    },
+    {
+      "start": 1041.839,
+      "duration": 5.2,
+      "end": 1047.039,
+      "text": "zero so the first time when you'll start"
+    },
+    {
+      "start": 1044.88,
+      "duration": 4.4,
+      "end": 1049.2800000000002,
+      "text": "off you'll get this guy which is"
+    },
+    {
+      "start": 1047.039,
+      "duration": 4.401,
+      "end": 1051.44,
+      "text": "increase in size because this is of size"
+    },
+    {
+      "start": 1049.28,
+      "duration": 4.32,
+      "end": 1053.6,
+      "text": "one right so what do you say is if it"
+    },
+    {
+      "start": 1051.44,
+      "duration": 4.96,
+      "end": 1056.4,
+      "text": "increases then i increase my level and i"
+    },
+    {
+      "start": 1053.6,
+      "duration": 5.12,
+      "end": 1058.7199999999998,
+      "text": "see whatever has been used yes whatever"
+    },
+    {
+      "start": 1056.4,
+      "duration": 5.04,
+      "end": 1061.44,
+      "text": "has been used"
+    },
+    {
+      "start": 1058.72,
+      "duration": 5.6,
+      "end": 1064.32,
+      "text": "i will simply tell the set hey can you"
+    },
+    {
+      "start": 1061.44,
+      "duration": 4.239,
+      "end": 1065.679,
+      "text": "please erase this so the first step yes"
+    },
+    {
+      "start": 1064.32,
+      "duration": 3.92,
+      "end": 1068.24,
+      "text": "at the first step"
+    },
+    {
+      "start": 1065.679,
+      "duration": 7.041,
+      "end": 1072.72,
+      "text": "this bat will be erased if it was on the"
+    },
+    {
+      "start": 1068.24,
+      "duration": 4.48,
+      "end": 1072.72,
+      "text": "word list this is very simple it is"
+    },
+    {
+      "start": 1072.88,
+      "duration": 3.36,
+      "end": 1076.24,
+      "text": "all words"
+    },
+    {
+      "start": 1074.24,
+      "duration": 5.2,
+      "end": 1079.44,
+      "text": "that has been"
+    },
+    {
+      "start": 1076.24,
+      "duration": 6.96,
+      "end": 1083.2,
+      "text": "used in the previous"
+    },
+    {
+      "start": 1079.44,
+      "duration": 4.96,
+      "end": 1084.4,
+      "text": "levels to transform simple done what is"
+    },
+    {
+      "start": 1083.2,
+      "duration": 2.96,
+      "end": 1086.16,
+      "text": "the next thing that you will do you need"
+    },
+    {
+      "start": 1084.4,
+      "duration": 4.08,
+      "end": 1088.48,
+      "text": "the word do you know what is the word"
+    },
+    {
+      "start": 1086.16,
+      "duration": 3.28,
+      "end": 1089.44,
+      "text": "what is very simple you just say the"
+    },
+    {
+      "start": 1088.48,
+      "duration": 3.28,
+      "end": 1091.76,
+      "text": "last"
+    },
+    {
+      "start": 1089.44,
+      "duration": 4.72,
+      "end": 1094.16,
+      "text": "guy in that sequence will be your word"
+    },
+    {
+      "start": 1091.76,
+      "duration": 4.64,
+      "end": 1096.4,
+      "text": "done next what will you do you will say"
+    },
+    {
+      "start": 1094.16,
+      "duration": 4.96,
+      "end": 1099.1200000000001,
+      "text": "okay fine i know one thing at a trap"
+    },
+    {
+      "start": 1096.4,
+      "duration": 4.72,
+      "end": 1101.1200000000001,
+      "text": "goes through the entire world and change"
+    },
+    {
+      "start": 1099.12,
+      "duration": 4.72,
+      "end": 1103.84,
+      "text": "every character so the first loop for"
+    },
+    {
+      "start": 1101.12,
+      "duration": 4.24,
+      "end": 1105.36,
+      "text": "that every character will be changed"
+    },
+    {
+      "start": 1103.84,
+      "duration": 3.04,
+      "end": 1106.8799999999999,
+      "text": "from"
+    },
+    {
+      "start": 1105.36,
+      "duration": 4.319,
+      "end": 1109.6789999999999,
+      "text": "this"
+    },
+    {
+      "start": 1106.88,
+      "duration": 4.32,
+      "end": 1111.2,
+      "text": "to this which is a to z"
+    },
+    {
+      "start": 1109.679,
+      "duration": 3.521,
+      "end": 1113.2,
+      "text": "and can i see"
+    },
+    {
+      "start": 1111.2,
+      "duration": 4.88,
+      "end": 1116.0800000000002,
+      "text": "character original"
+    },
+    {
+      "start": 1113.2,
+      "duration": 5.2,
+      "end": 1118.4,
+      "text": "equal to word dot i can i say this yes"
+    },
+    {
+      "start": 1116.08,
+      "duration": 4.24,
+      "end": 1120.32,
+      "text": "and can i at the same time say okay what"
+    },
+    {
+      "start": 1118.4,
+      "duration": 3.68,
+      "end": 1122.0800000000002,
+      "text": "if i equal to"
+    },
+    {
+      "start": 1120.32,
+      "duration": 3.92,
+      "end": 1124.24,
+      "text": "original"
+    },
+    {
+      "start": 1122.08,
+      "duration": 4.64,
+      "end": 1126.72,
+      "text": "so that anything that i have taken i"
+    },
+    {
+      "start": 1124.24,
+      "duration": 5.28,
+      "end": 1129.52,
+      "text": "just replace it back why because every"
+    },
+    {
+      "start": 1126.72,
+      "duration": 5.199,
+      "end": 1131.919,
+      "text": "time we are going to replace the ith guy"
+    },
+    {
+      "start": 1129.52,
+      "duration": 3.519,
+      "end": 1133.039,
+      "text": "with the c now what do i need to check"
+    },
+    {
+      "start": 1131.919,
+      "duration": 2.801,
+      "end": 1134.72,
+      "text": "does this"
+    },
+    {
+      "start": 1133.039,
+      "duration": 3.681,
+      "end": 1136.72,
+      "text": "transformed word"
+    },
+    {
+      "start": 1134.72,
+      "duration": 4.24,
+      "end": 1138.96,
+      "text": "exists on the set or not so i can just"
+    },
+    {
+      "start": 1136.72,
+      "duration": 4.0,
+      "end": 1140.72,
+      "text": "give a count and i can say do you exist"
+    },
+    {
+      "start": 1138.96,
+      "duration": 2.88,
+      "end": 1141.8400000000001,
+      "text": "and if you the count has to be greater"
+    },
+    {
+      "start": 1140.72,
+      "duration": 3.6,
+      "end": 1144.32,
+      "text": "than zero"
+    },
+    {
+      "start": 1141.84,
+      "duration": 4.16,
+      "end": 1146.0,
+      "text": "definitely not zero and if you do exist"
+    },
+    {
+      "start": 1144.32,
+      "duration": 3.2,
+      "end": 1147.52,
+      "text": "the first thing that i'll do is okay"
+    },
+    {
+      "start": 1146.0,
+      "duration": 3.76,
+      "end": 1149.76,
+      "text": "this is a sequence"
+    },
+    {
+      "start": 1147.52,
+      "duration": 4.8,
+      "end": 1152.32,
+      "text": "this is a sequence so i'll say a"
+    },
+    {
+      "start": 1149.76,
+      "duration": 5.279,
+      "end": 1155.039,
+      "text": "sequence can you just take it if you're"
+    },
+    {
+      "start": 1152.32,
+      "duration": 4.56,
+      "end": 1156.8799999999999,
+      "text": "like why not i'll just take it so let's"
+    },
+    {
+      "start": 1155.039,
+      "duration": 3.441,
+      "end": 1158.48,
+      "text": "take it into the sequence so you'll be"
+    },
+    {
+      "start": 1156.88,
+      "duration": 2.64,
+      "end": 1159.5200000000002,
+      "text": "like okay the word goes into the"
+    },
+    {
+      "start": 1158.48,
+      "duration": 3.36,
+      "end": 1161.84,
+      "text": "sequence"
+    },
+    {
+      "start": 1159.52,
+      "duration": 4.48,
+      "end": 1164.0,
+      "text": "and remember this you're trying every"
+    },
+    {
+      "start": 1161.84,
+      "duration": 4.24,
+      "end": 1166.08,
+      "text": "possible word every possible word so if"
+    },
+    {
+      "start": 1164.0,
+      "duration": 4.08,
+      "end": 1168.08,
+      "text": "i go back to the first time"
+    },
+    {
+      "start": 1166.08,
+      "duration": 5.92,
+      "end": 1172.0,
+      "text": "if you remember you had a bat"
+    },
+    {
+      "start": 1168.08,
+      "duration": 5.2,
+      "end": 1173.28,
+      "text": "and bat could be converted into bat"
+    },
+    {
+      "start": 1172.0,
+      "duration": 5.76,
+      "end": 1177.76,
+      "text": "and a"
+    },
+    {
+      "start": 1173.28,
+      "duration": 5.12,
+      "end": 1178.3999999999999,
+      "text": "bot as well so you got two sequins"
+    },
+    {
+      "start": 1177.76,
+      "duration": 2.799,
+      "end": 1180.559,
+      "text": "so"
+    },
+    {
+      "start": 1178.4,
+      "duration": 3.279,
+      "end": 1181.679,
+      "text": "first time you include pat you put that"
+    },
+    {
+      "start": 1180.559,
+      "duration": 4.0,
+      "end": 1184.559,
+      "text": "into the queue"
+    },
+    {
+      "start": 1181.679,
+      "duration": 5.441,
+      "end": 1187.1200000000001,
+      "text": "so the vector that he took out was bad"
+    },
+    {
+      "start": 1184.559,
+      "duration": 4.881,
+      "end": 1189.44,
+      "text": "you included pat in it you need to take"
+    },
+    {
+      "start": 1187.12,
+      "duration": 4.559,
+      "end": 1191.6789999999999,
+      "text": "it out as well because for the next"
+    },
+    {
+      "start": 1189.44,
+      "duration": 4.239,
+      "end": 1193.679,
+      "text": "occurrence you need it right so just"
+    },
+    {
+      "start": 1191.679,
+      "duration": 4.801,
+      "end": 1196.48,
+      "text": "take it out as well and in the meantime"
+    },
+    {
+      "start": 1193.679,
+      "duration": 4.641,
+      "end": 1198.3200000000002,
+      "text": "what you can do is you can say okay q"
+    },
+    {
+      "start": 1196.48,
+      "duration": 4.48,
+      "end": 1200.96,
+      "text": "can you take this new sequence because"
+    },
+    {
+      "start": 1198.32,
+      "duration": 5.359,
+      "end": 1203.6789999999999,
+      "text": "this is a new sequence which happened"
+    },
+    {
+      "start": 1200.96,
+      "duration": 4.8,
+      "end": 1205.76,
+      "text": "due to a transformation of a character"
+    },
+    {
+      "start": 1203.679,
+      "duration": 4.641,
+      "end": 1208.3200000000002,
+      "text": "so please take this new sequence at the"
+    },
+    {
+      "start": 1205.76,
+      "duration": 6.32,
+      "end": 1212.08,
+      "text": "same time tell the level"
+    },
+    {
+      "start": 1208.32,
+      "duration": 6.96,
+      "end": 1215.28,
+      "text": "tell the level that this guy was used"
+    },
+    {
+      "start": 1212.08,
+      "duration": 5.76,
+      "end": 1217.84,
+      "text": "this word was used in this level tell"
+    },
+    {
+      "start": 1215.28,
+      "duration": 3.68,
+      "end": 1218.96,
+      "text": "the guy so this is in terms of erasing"
+    },
+    {
+      "start": 1217.84,
+      "duration": 4.32,
+      "end": 1222.1599999999999,
+      "text": "from"
+    },
+    {
+      "start": 1218.96,
+      "duration": 5.12,
+      "end": 1224.08,
+      "text": "mark as visited on the level and"
+    },
+    {
+      "start": 1222.16,
+      "duration": 4.8,
+      "end": 1226.96,
+      "text": "whenever you reach the new levels this"
+    },
+    {
+      "start": 1224.08,
+      "duration": 5.12,
+      "end": 1229.1999999999998,
+      "text": "will make sure it deletes it so why pop"
+    },
+    {
+      "start": 1226.96,
+      "duration": 4.32,
+      "end": 1231.28,
+      "text": "back if you did not understand let me go"
+    },
+    {
+      "start": 1229.2,
+      "duration": 3.92,
+      "end": 1233.1200000000001,
+      "text": "back and again tell you because i'm sure"
+    },
+    {
+      "start": 1231.28,
+      "duration": 4.32,
+      "end": 1235.6,
+      "text": "you have a bit of confusion here so when"
+    },
+    {
+      "start": 1233.12,
+      "duration": 5.039,
+      "end": 1238.1589999999999,
+      "text": "you started with bat"
+    },
+    {
+      "start": 1235.6,
+      "duration": 4.18,
+      "end": 1239.78,
+      "text": "you convert it into pact right so the"
+    },
+    {
+      "start": 1238.159,
+      "duration": 3.281,
+      "end": 1241.44,
+      "text": "new sequence was formed"
+    },
+    {
+      "start": 1239.78,
+      "duration": 4.06,
+      "end": 1243.84,
+      "text": "[Music]"
+    },
+    {
+      "start": 1241.44,
+      "duration": 3.119,
+      "end": 1244.559,
+      "text": "and you inserted that over here"
+    },
+    {
+      "start": 1243.84,
+      "duration": 3.68,
+      "end": 1247.52,
+      "text": "so"
+    },
+    {
+      "start": 1244.559,
+      "duration": 3.841,
+      "end": 1248.3999999999999,
+      "text": "now the next time when you say okay"
+    },
+    {
+      "start": 1247.52,
+      "duration": 2.08,
+      "end": 1249.6,
+      "text": "let me"
+    },
+    {
+      "start": 1248.4,
+      "duration": 2.72,
+      "end": 1251.1200000000001,
+      "text": "replace"
+    },
+    {
+      "start": 1249.6,
+      "duration": 2.48,
+      "end": 1252.08,
+      "text": "something like"
+    },
+    {
+      "start": 1251.12,
+      "duration": 3.6,
+      "end": 1254.7199999999998,
+      "text": "what"
+    },
+    {
+      "start": 1252.08,
+      "duration": 6.0,
+      "end": 1258.08,
+      "text": "so battle is done to pat they're saying"
+    },
+    {
+      "start": 1254.72,
+      "duration": 4.88,
+      "end": 1259.6000000000001,
+      "text": "replace o a and get bought so if your"
+    },
+    {
+      "start": 1258.08,
+      "duration": 3.839,
+      "end": 1261.9189999999999,
+      "text": "sequence"
+    },
+    {
+      "start": 1259.6,
+      "duration": 4.559,
+      "end": 1264.1589999999999,
+      "text": "since you included pad if you do not"
+    },
+    {
+      "start": 1261.919,
+      "duration": 4.081,
+      "end": 1266.0,
+      "text": "remove it now when you add water the"
+    },
+    {
+      "start": 1264.159,
+      "duration": 4.561,
+      "end": 1268.72,
+      "text": "sequence will be of three lengths so"
+    },
+    {
+      "start": 1266.0,
+      "duration": 4.88,
+      "end": 1270.88,
+      "text": "that's why you add the pack but you add"
+    },
+    {
+      "start": 1268.72,
+      "duration": 4.64,
+      "end": 1273.3600000000001,
+      "text": "only to insert it into the cube then you"
+    },
+    {
+      "start": 1270.88,
+      "duration": 5.279,
+      "end": 1276.159,
+      "text": "remove it because for the next time and"
+    },
+    {
+      "start": 1273.36,
+      "duration": 4.799,
+      "end": 1278.1589999999999,
+      "text": "that gets converted to what"
+    },
+    {
+      "start": 1276.159,
+      "duration": 3.76,
+      "end": 1279.919,
+      "text": "you again can have a tool so whenever"
+    },
+    {
+      "start": 1278.159,
+      "duration": 3.681,
+      "end": 1281.8400000000001,
+      "text": "you add something to the sequence it's"
+    },
+    {
+      "start": 1279.919,
+      "duration": 4.321,
+      "end": 1284.24,
+      "text": "only for this particular transformation"
+    },
+    {
+      "start": 1281.84,
+      "duration": 4.719,
+      "end": 1286.559,
+      "text": "you need to take it out as well so this"
+    },
+    {
+      "start": 1284.24,
+      "duration": 3.919,
+      "end": 1288.159,
+      "text": "is the minor change that you'll do and"
+    },
+    {
+      "start": 1286.559,
+      "duration": 3.12,
+      "end": 1289.6789999999999,
+      "text": "at the end you can return the answer we"
+    },
+    {
+      "start": 1288.159,
+      "duration": 4.4,
+      "end": 1292.5590000000002,
+      "text": "haven't stored anything in the answer"
+    },
+    {
+      "start": 1289.679,
+      "duration": 5.041,
+      "end": 1294.72,
+      "text": "anything that is absolutely correct so"
+    },
+    {
+      "start": 1292.559,
+      "duration": 3.761,
+      "end": 1296.32,
+      "text": "what i can say is okay as of now we"
+    },
+    {
+      "start": 1294.72,
+      "duration": 4.959,
+      "end": 1299.679,
+      "text": "haven't stored anything to the answer so"
+    },
+    {
+      "start": 1296.32,
+      "duration": 5.359,
+      "end": 1301.6789999999999,
+      "text": "i'll be like okay fine if answer"
+    },
+    {
+      "start": 1299.679,
+      "duration": 3.841,
+      "end": 1303.52,
+      "text": "dot size is equal to equal to zero that"
+    },
+    {
+      "start": 1301.679,
+      "duration": 3.36,
+      "end": 1305.039,
+      "text": "means is the first time that means it is"
+    },
+    {
+      "start": 1303.52,
+      "duration": 3.519,
+      "end": 1307.039,
+      "text": "the first time all what you can say is"
+    },
+    {
+      "start": 1305.039,
+      "duration": 4.241,
+      "end": 1309.28,
+      "text": "okay let me do one thing you can keep it"
+    },
+    {
+      "start": 1307.039,
+      "duration": 3.76,
+      "end": 1310.799,
+      "text": "uh super simple like this is this might"
+    },
+    {
+      "start": 1309.28,
+      "duration": 3.84,
+      "end": 1313.12,
+      "text": "get complicated let's give it some"
+    },
+    {
+      "start": 1310.799,
+      "duration": 4.0,
+      "end": 1314.799,
+      "text": "simple if the word that we get is equal"
+    },
+    {
+      "start": 1313.12,
+      "duration": 2.48,
+      "end": 1315.6,
+      "text": "to the last word which is the end word"
+    },
+    {
+      "start": 1314.799,
+      "duration": 2.481,
+      "end": 1317.28,
+      "text": "okay"
+    },
+    {
+      "start": 1315.6,
+      "duration": 4.8,
+      "end": 1320.3999999999999,
+      "text": "if that is equal to the end over what i"
+    },
+    {
+      "start": 1317.28,
+      "duration": 5.92,
+      "end": 1323.2,
+      "text": "see hey listen this is equal to the end"
+    },
+    {
+      "start": 1320.4,
+      "duration": 5.2,
+      "end": 1325.6000000000001,
+      "text": "i'm like okay fine but"
+    },
+    {
+      "start": 1323.2,
+      "duration": 3.76,
+      "end": 1326.96,
+      "text": "if the answer to size is equal equal to"
+    },
+    {
+      "start": 1325.6,
+      "duration": 3.52,
+      "end": 1329.12,
+      "text": "zero it means"
+    },
+    {
+      "start": 1326.96,
+      "duration": 3.52,
+      "end": 1330.48,
+      "text": "first sequence"
+    },
+    {
+      "start": 1329.12,
+      "duration": 4.32,
+      "end": 1333.4399999999998,
+      "text": "is the first"
+    },
+    {
+      "start": 1330.48,
+      "duration": 5.199,
+      "end": 1335.679,
+      "text": "sequence where we reach to end where we"
+    },
+    {
+      "start": 1333.44,
+      "duration": 3.44,
+      "end": 1336.88,
+      "text": "reach the end if it is the case"
+    },
+    {
+      "start": 1335.679,
+      "duration": 2.401,
+      "end": 1338.0800000000002,
+      "text": "good enough"
+    },
+    {
+      "start": 1336.88,
+      "duration": 2.72,
+      "end": 1339.6000000000001,
+      "text": "we don't need to do anything we just"
+    },
+    {
+      "start": 1338.08,
+      "duration": 2.64,
+      "end": 1340.72,
+      "text": "take it"
+    },
+    {
+      "start": 1339.6,
+      "duration": 3.36,
+      "end": 1342.9599999999998,
+      "text": "and we say"
+    },
+    {
+      "start": 1340.72,
+      "duration": 3.68,
+      "end": 1344.4,
+      "text": "fine we just take it in"
+    },
+    {
+      "start": 1342.96,
+      "duration": 3.12,
+      "end": 1346.08,
+      "text": "into"
+    },
+    {
+      "start": 1344.4,
+      "duration": 3.12,
+      "end": 1347.52,
+      "text": "vector"
+    },
+    {
+      "start": 1346.08,
+      "duration": 3.68,
+      "end": 1349.76,
+      "text": "and if it is not"
+    },
+    {
+      "start": 1347.52,
+      "duration": 3.2,
+      "end": 1350.72,
+      "text": "if it's not the first time then i say"
+    },
+    {
+      "start": 1349.76,
+      "duration": 3.44,
+      "end": 1353.2,
+      "text": "okay"
+    },
+    {
+      "start": 1350.72,
+      "duration": 4.72,
+      "end": 1355.44,
+      "text": "not an issue if it is not the first time"
+    },
+    {
+      "start": 1353.2,
+      "duration": 5.04,
+      "end": 1358.24,
+      "text": "i have one of the sequence in the answer"
+    },
+    {
+      "start": 1355.44,
+      "duration": 4.64,
+      "end": 1360.0800000000002,
+      "text": "i get that sequence then and i see is"
+    },
+    {
+      "start": 1358.24,
+      "duration": 2.96,
+      "end": 1361.2,
+      "text": "that equal to the sequence that i've got"
+    },
+    {
+      "start": 1360.08,
+      "duration": 4.0,
+      "end": 1364.08,
+      "text": "if it is"
+    },
+    {
+      "start": 1361.2,
+      "duration": 5.44,
+      "end": 1366.64,
+      "text": "my answer will be more than happy"
+    },
+    {
+      "start": 1364.08,
+      "duration": 4.8,
+      "end": 1368.8799999999999,
+      "text": "to store the same guy"
+    },
+    {
+      "start": 1366.64,
+      "duration": 3.76,
+      "end": 1370.4,
+      "text": "because we need multiple sequences and"
+    },
+    {
+      "start": 1368.88,
+      "duration": 3.44,
+      "end": 1372.3200000000002,
+      "text": "if it is not the case we just keep on"
+    },
+    {
+      "start": 1370.4,
+      "duration": 4.8,
+      "end": 1375.2,
+      "text": "doing just keep on doing just keep on"
+    },
+    {
+      "start": 1372.32,
+      "duration": 4.4,
+      "end": 1376.72,
+      "text": "doing that's how you can easily store"
+    },
+    {
+      "start": 1375.2,
+      "duration": 3.12,
+      "end": 1378.32,
+      "text": "the answers that's how you so once"
+    },
+    {
+      "start": 1376.72,
+      "duration": 3.36,
+      "end": 1380.08,
+      "text": "you've written the entire code we can"
+    },
+    {
+      "start": 1378.32,
+      "duration": 4.239,
+      "end": 1382.559,
+      "text": "just click on a submit button and see if"
+    },
+    {
+      "start": 1380.08,
+      "duration": 4.079,
+      "end": 1384.1589999999999,
+      "text": "it's working fine so you will see that"
+    },
+    {
+      "start": 1382.559,
+      "duration": 4.0,
+      "end": 1386.559,
+      "text": "all the test cases will be running and"
+    },
+    {
+      "start": 1384.159,
+      "duration": 3.441,
+      "end": 1387.6000000000001,
+      "text": "this is how easily you can do it you"
+    },
+    {
+      "start": 1386.559,
+      "duration": 2.161,
+      "end": 1388.72,
+      "text": "just"
+    },
+    {
+      "start": 1387.6,
+      "duration": 3.36,
+      "end": 1390.9599999999998,
+      "text": "need to"
+    },
+    {
+      "start": 1388.72,
+      "duration": 3.28,
+      "end": 1392.0,
+      "text": "make sure that instead of deleting on"
+    },
+    {
+      "start": 1390.96,
+      "duration": 4.16,
+      "end": 1395.1200000000001,
+      "text": "every level"
+    },
+    {
+      "start": 1392.0,
+      "duration": 4.48,
+      "end": 1396.48,
+      "text": "you delete when you reach the next level"
+    },
+    {
+      "start": 1395.12,
+      "duration": 3.6,
+      "end": 1398.7199999999998,
+      "text": "right you keep on doing like for an"
+    },
+    {
+      "start": 1396.48,
+      "duration": 4.48,
+      "end": 1400.96,
+      "text": "example you're treating the second level"
+    },
+    {
+      "start": 1398.72,
+      "duration": 4.4,
+      "end": 1403.1200000000001,
+      "text": "guys second level guys then when you"
+    },
+    {
+      "start": 1400.96,
+      "duration": 4.48,
+      "end": 1405.44,
+      "text": "reach the newer level you got a bigger"
+    },
+    {
+      "start": 1403.12,
+      "duration": 5.28,
+      "end": 1408.3999999999999,
+      "text": "level they delete whatever has been used"
+    },
+    {
+      "start": 1405.44,
+      "duration": 4.719,
+      "end": 1410.159,
+      "text": "previously and a slight change in order"
+    },
+    {
+      "start": 1408.4,
+      "duration": 3.279,
+      "end": 1411.679,
+      "text": "to increase the time complexity once"
+    },
+    {
+      "start": 1410.159,
+      "duration": 3.601,
+      "end": 1413.7600000000002,
+      "text": "you've deleted everything on the level"
+    },
+    {
+      "start": 1411.679,
+      "duration": 3.601,
+      "end": 1415.2800000000002,
+      "text": "just make sure you clear it so that"
+    },
+    {
+      "start": 1413.76,
+      "duration": 2.799,
+      "end": 1416.559,
+      "text": "it can save a lot of time otherwise the"
+    },
+    {
+      "start": 1415.28,
+      "duration": 4.0,
+      "end": 1419.28,
+      "text": "next time again you'll go through them"
+    },
+    {
+      "start": 1416.559,
+      "duration": 4.961,
+      "end": 1421.52,
+      "text": "and delete it and they do not exist so"
+    },
+    {
+      "start": 1419.28,
+      "duration": 3.279,
+      "end": 1422.559,
+      "text": "new level new guys store so this is what"
+    },
+    {
+      "start": 1421.52,
+      "duration": 3.76,
+      "end": 1425.28,
+      "text": "you can"
+    },
+    {
+      "start": 1422.559,
+      "duration": 5.441,
+      "end": 1428.0,
+      "text": "easily do okay so let's analyze the time"
+    },
+    {
+      "start": 1425.28,
+      "duration": 4.96,
+      "end": 1430.24,
+      "text": "complexity now this is definitely one"
+    },
+    {
+      "start": 1428.0,
+      "duration": 3.76,
+      "end": 1431.76,
+      "text": "length into 26 but you cannot predict"
+    },
+    {
+      "start": 1430.24,
+      "duration": 3.28,
+      "end": 1433.52,
+      "text": "the time complexity of this because"
+    },
+    {
+      "start": 1431.76,
+      "duration": 3.84,
+      "end": 1435.6,
+      "text": "depending on examples two examples there"
+    },
+    {
+      "start": 1433.52,
+      "duration": 3.76,
+      "end": 1437.28,
+      "text": "might be multiple sequences so"
+    },
+    {
+      "start": 1435.6,
+      "duration": 4.16,
+      "end": 1439.76,
+      "text": "predicting a time complexity for this"
+    },
+    {
+      "start": 1437.28,
+      "duration": 5.519,
+      "end": 1442.799,
+      "text": "one is next to impossible it will vary"
+    },
+    {
+      "start": 1439.76,
+      "duration": 4.64,
+      "end": 1444.4,
+      "text": "from example to example so this is what"
+    },
+    {
+      "start": 1442.799,
+      "duration": 2.481,
+      "end": 1445.28,
+      "text": "you can always tell to the interviewer"
+    },
+    {
+      "start": 1444.4,
+      "duration": 2.639,
+      "end": 1447.039,
+      "text": "okay"
+    },
+    {
+      "start": 1445.28,
+      "duration": 3.279,
+      "end": 1448.559,
+      "text": "so before ending up this video i would"
+    },
+    {
+      "start": 1447.039,
+      "duration": 3.841,
+      "end": 1450.8799999999999,
+      "text": "like to mention one thing because if i"
+    },
+    {
+      "start": 1448.559,
+      "duration": 3.761,
+      "end": 1452.32,
+      "text": "do not then my comment section will be"
+    },
+    {
+      "start": 1450.88,
+      "duration": 2.96,
+      "end": 1453.8400000000001,
+      "text": "filled up with that one so this"
+    },
+    {
+      "start": 1452.32,
+      "duration": 4.959,
+      "end": 1457.279,
+      "text": "particular solution will be giving you"
+    },
+    {
+      "start": 1453.84,
+      "duration": 4.959,
+      "end": 1458.799,
+      "text": "tle if you try on lead code why because"
+    },
+    {
+      "start": 1457.279,
+      "duration": 3.28,
+      "end": 1460.559,
+      "text": "over the time limit i'm not sure what"
+    },
+    {
+      "start": 1458.799,
+      "duration": 3.281,
+      "end": 1462.08,
+      "text": "they have done but recently they have"
+    },
+    {
+      "start": 1460.559,
+      "duration": 3.521,
+      "end": 1464.08,
+      "text": "updated their test cases and the time"
+    },
+    {
+      "start": 1462.08,
+      "duration": 3.44,
+      "end": 1465.52,
+      "text": "limit is super strict if you go to the"
+    },
+    {
+      "start": 1464.08,
+      "duration": 3.12,
+      "end": 1467.1999999999998,
+      "text": "discussion forum you'll find people"
+    },
+    {
+      "start": 1465.52,
+      "duration": 3.92,
+      "end": 1469.44,
+      "text": "discussing about it that the previous"
+    },
+    {
+      "start": 1467.2,
+      "duration": 3.52,
+      "end": 1470.72,
+      "text": "solutions are not working and i checked"
+    },
+    {
+      "start": 1469.44,
+      "duration": 3.52,
+      "end": 1472.96,
+      "text": "i checked out the solutions which are"
+    },
+    {
+      "start": 1470.72,
+      "duration": 4.0,
+      "end": 1474.72,
+      "text": "currently working those are only cp"
+    },
+    {
+      "start": 1472.96,
+      "duration": 4.16,
+      "end": 1477.1200000000001,
+      "text": "oriented solutions not interview"
+    },
+    {
+      "start": 1474.72,
+      "duration": 4.72,
+      "end": 1479.44,
+      "text": "oriented you have to optimize in a very"
+    },
+    {
+      "start": 1477.12,
+      "duration": 4.159,
+      "end": 1481.279,
+      "text": "very large manner as you usually do in"
+    },
+    {
+      "start": 1479.44,
+      "duration": 3.76,
+      "end": 1483.2,
+      "text": "competitive programming and since we are"
+    },
+    {
+      "start": 1481.279,
+      "duration": 4.0,
+      "end": 1485.279,
+      "text": "talking about interviews in interviews"
+    },
+    {
+      "start": 1483.2,
+      "duration": 4.479,
+      "end": 1487.679,
+      "text": "this particular solution is gonna work"
+    },
+    {
+      "start": 1485.279,
+      "duration": 4.321,
+      "end": 1489.6,
+      "text": "absolutely fine so i'll recommend you to"
+    },
+    {
+      "start": 1487.679,
+      "duration": 3.6,
+      "end": 1491.279,
+      "text": "submit this problem on practice platform"
+    },
+    {
+      "start": 1489.6,
+      "duration": 3.76,
+      "end": 1493.36,
+      "text": "and if it is working fine it is"
+    },
+    {
+      "start": 1491.279,
+      "duration": 4.88,
+      "end": 1496.159,
+      "text": "absolutely fine no need to panic if it"
+    },
+    {
+      "start": 1493.36,
+      "duration": 4.88,
+      "end": 1498.24,
+      "text": "doesn't works only could okay guys so i"
+    },
+    {
+      "start": 1496.159,
+      "duration": 4.0,
+      "end": 1500.159,
+      "text": "think that should be it i hope you do"
+    },
+    {
+      "start": 1498.24,
+      "duration": 3.439,
+      "end": 1501.679,
+      "text": "not mess up my comment section that not"
+    },
+    {
+      "start": 1500.159,
+      "duration": 4.161,
+      "end": 1504.3200000000002,
+      "text": "working on lead code not working on lead"
+    },
+    {
+      "start": 1501.679,
+      "duration": 4.961,
+      "end": 1506.64,
+      "text": "code because i've already stated why if"
+    },
+    {
+      "start": 1504.32,
+      "duration": 4.08,
+      "end": 1508.3999999999999,
+      "text": "you are into cp you can try optimizing"
+    },
+    {
+      "start": 1506.64,
+      "duration": 3.84,
+      "end": 1510.48,
+      "text": "it and you can read the discussion forum"
+    },
+    {
+      "start": 1508.4,
+      "duration": 3.36,
+      "end": 1511.76,
+      "text": "and this will definitely work so guys i"
+    },
+    {
+      "start": 1510.48,
+      "duration": 3.36,
+      "end": 1513.84,
+      "text": "hope you have understood the entire"
+    },
+    {
+      "start": 1511.76,
+      "duration": 4.24,
+      "end": 1516.0,
+      "text": "algorithm and the complex code so just"
+    },
+    {
+      "start": 1513.84,
+      "duration": 3.439,
+      "end": 1517.279,
+      "text": "in case you did please please make sure"
+    },
+    {
+      "start": 1516.0,
+      "duration": 2.72,
+      "end": 1518.72,
+      "text": "you like this video and if you're new to"
+    },
+    {
+      "start": 1517.279,
+      "duration": 3.441,
+      "end": 1520.72,
+      "text": "our channel"
+    },
+    {
+      "start": 1518.72,
+      "duration": 3.68,
+      "end": 1522.4,
+      "text": "hit that subscribe button right away and"
+    },
+    {
+      "start": 1520.72,
+      "duration": 3.68,
+      "end": 1524.4,
+      "text": "if you haven't checked out our dp series"
+    },
+    {
+      "start": 1522.4,
+      "duration": 3.6,
+      "end": 1526.0,
+      "text": "and the hd sheet the links are in the"
+    },
+    {
+      "start": 1524.4,
+      "duration": 3.68,
+      "end": 1528.0800000000002,
+      "text": "description make sure you check them out"
+    },
+    {
+      "start": 1526.0,
+      "duration": 3.76,
+      "end": 1529.76,
+      "text": "because that is something you're missing"
+    },
+    {
+      "start": 1528.08,
+      "duration": 3.12,
+      "end": 1531.1999999999998,
+      "text": "out on with this let's wrap up this"
+    },
+    {
+      "start": 1529.76,
+      "duration": 3.519,
+      "end": 1533.279,
+      "text": "video and meet in some of the video till"
+    },
+    {
+      "start": 1531.2,
+      "duration": 6.359,
+      "end": 1537.559,
+      "text": "then bye take care"
+    },
+    {
+      "start": 1533.279,
+      "duration": 4.28,
+      "end": 1537.559,
+      "text": "whenever your heart is"
+    },
+    {
+      "start": 1537.6,
+      "duration": 5.63,
+      "end": 1543.23,
+      "text": "[Music]"
+    }
+  ]
+}

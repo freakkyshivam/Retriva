@@ -1,0 +1,1868 @@
+{
+  "position": 49,
+  "video_id": "w2G2W8l__pc",
+  "title": "BS-5. Search Element in Rotated Sorted Array II",
+  "url": "https://www.youtube.com/watch?v=w2G2W8l__pc",
+  "transcript": [
+    {
+      "start": 3.12,
+      "duration": 3.179,
+      "end": 6.2989999999999995,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 4.68,
+      "duration": 3.419,
+      "end": 8.099,
+      "text": "I hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.299,
+      "duration": 3.601,
+      "end": 9.9,
+      "text": "so we will be continuing with our binary"
+    },
+    {
+      "start": 8.099,
+      "duration": 4.861,
+      "end": 12.96,
+      "text": "search playlist which is the part of the"
+    },
+    {
+      "start": 9.9,
+      "duration": 4.38,
+      "end": 14.280000000000001,
+      "text": "Strivers A to Z DSA course so till now"
+    },
+    {
+      "start": 12.96,
+      "duration": 3.3,
+      "end": 16.26,
+      "text": "I've covered up till this particular"
+    },
+    {
+      "start": 14.28,
+      "duration": 4.14,
+      "end": 18.419999999999998,
+      "text": "problem and in this video I'll be"
+    },
+    {
+      "start": 16.26,
+      "duration": 5.519,
+      "end": 21.779000000000003,
+      "text": "covering up the problem search in"
+    },
+    {
+      "start": 18.42,
+      "duration": 5.519,
+      "end": 23.939,
+      "text": "rotated sorted array part 2 but please"
+    },
+    {
+      "start": 21.779,
+      "duration": 4.26,
+      "end": 26.039,
+      "text": "please make sure that you watch the part"
+    },
+    {
+      "start": 23.939,
+      "duration": 3.66,
+      "end": 27.599,
+      "text": "one because if you haven't seen the part"
+    },
+    {
+      "start": 26.039,
+      "duration": 3.66,
+      "end": 29.699,
+      "text": "one you will not understand the part two"
+    },
+    {
+      "start": 27.599,
+      "duration": 4.02,
+      "end": 31.619,
+      "text": "because I'll be reusing the same code"
+    },
+    {
+      "start": 29.699,
+      "duration": 4.741,
+      "end": 34.44,
+      "text": "that I've written in the part one"
+    },
+    {
+      "start": 31.619,
+      "duration": 5.1,
+      "end": 36.719,
+      "text": "so what does the problem state it states"
+    },
+    {
+      "start": 34.44,
+      "duration": 5.52,
+      "end": 39.959999999999994,
+      "text": "that you have to again perform a search"
+    },
+    {
+      "start": 36.719,
+      "duration": 5.701,
+      "end": 42.42,
+      "text": "in a rotated sorted array but this time"
+    },
+    {
+      "start": 39.96,
+      "duration": 6.3,
+      "end": 46.26,
+      "text": "the array might have duplicates if you"
+    },
+    {
+      "start": 42.42,
+      "duration": 6.84,
+      "end": 49.260000000000005,
+      "text": "remember in part one it only had unique"
+    },
+    {
+      "start": 46.26,
+      "duration": 5.4,
+      "end": 51.66,
+      "text": "elements so we did write a solution for"
+    },
+    {
+      "start": 49.26,
+      "duration": 5.88,
+      "end": 55.14,
+      "text": "that and if I have to give a short recap"
+    },
+    {
+      "start": 51.66,
+      "duration": 6.12,
+      "end": 57.779999999999994,
+      "text": "the solution was quite simple we did the"
+    },
+    {
+      "start": 55.14,
+      "duration": 5.04,
+      "end": 60.18,
+      "text": "simple binary search thing and right"
+    },
+    {
+      "start": 57.78,
+      "duration": 5.279,
+      "end": 63.059,
+      "text": "after that we figured out which is the"
+    },
+    {
+      "start": 60.18,
+      "duration": 5.4,
+      "end": 65.58,
+      "text": "sorted half either the left half will be"
+    },
+    {
+      "start": 63.059,
+      "duration": 5.521,
+      "end": 68.58,
+      "text": "sorted or the right half will be sorted"
+    },
+    {
+      "start": 65.58,
+      "duration": 6.66,
+      "end": 72.24,
+      "text": "if the laptop is sorted we then checked"
+    },
+    {
+      "start": 68.58,
+      "duration": 5.579,
+      "end": 74.15899999999999,
+      "text": "if in the laptop we have the element if"
+    },
+    {
+      "start": 72.24,
+      "duration": 4.14,
+      "end": 76.38,
+      "text": "we have the element then we trim down"
+    },
+    {
+      "start": 74.159,
+      "duration": 4.32,
+      "end": 78.47900000000001,
+      "text": "the right half and if we did not then we"
+    },
+    {
+      "start": 76.38,
+      "duration": 4.14,
+      "end": 80.52,
+      "text": "trim down the left half and if it was"
+    },
+    {
+      "start": 78.479,
+      "duration": 4.861,
+      "end": 83.34,
+      "text": "right sorted we checked if the element"
+    },
+    {
+      "start": 80.52,
+      "duration": 5.52,
+      "end": 86.03999999999999,
+      "text": "is in the right half if it is then we"
+    },
+    {
+      "start": 83.34,
+      "duration": 4.8,
+      "end": 88.14,
+      "text": "trim down the left half or else we trim"
+    },
+    {
+      "start": 86.04,
+      "duration": 6.48,
+      "end": 92.52000000000001,
+      "text": "down the right half now my question is"
+    },
+    {
+      "start": 88.14,
+      "duration": 6.54,
+      "end": 94.68,
+      "text": "why will that approach not work so over"
+    },
+    {
+      "start": 92.52,
+      "duration": 4.08,
+      "end": 96.6,
+      "text": "here in this problem we do not need to"
+    },
+    {
+      "start": 94.68,
+      "duration": 4.799,
+      "end": 99.47900000000001,
+      "text": "return the index so if they're asking us"
+    },
+    {
+      "start": 96.6,
+      "duration": 4.979,
+      "end": 101.579,
+      "text": "Target 3 it does occur at three"
+    },
+    {
+      "start": 99.479,
+      "duration": 3.78,
+      "end": 103.259,
+      "text": "different indexes we do not have to"
+    },
+    {
+      "start": 101.579,
+      "duration": 4.381,
+      "end": 105.96,
+      "text": "return the index where it talks because"
+    },
+    {
+      "start": 103.259,
+      "duration": 4.981,
+      "end": 108.24,
+      "text": "if you try to do it using battery search"
+    },
+    {
+      "start": 105.96,
+      "duration": 4.92,
+      "end": 110.88,
+      "text": "that will not be possible you have to"
+    },
+    {
+      "start": 108.24,
+      "duration": 5.339,
+      "end": 113.579,
+      "text": "use the proper linear search now"
+    },
+    {
+      "start": 110.88,
+      "duration": 5.46,
+      "end": 116.33999999999999,
+      "text": "they are asking you does it exist or not"
+    },
+    {
+      "start": 113.579,
+      "duration": 5.4,
+      "end": 118.979,
+      "text": "so you have to tell me yes or no you do"
+    },
+    {
+      "start": 116.34,
+      "duration": 5.34,
+      "end": 121.68,
+      "text": "not have to tell me the index so why"
+    },
+    {
+      "start": 118.979,
+      "duration": 5.46,
+      "end": 124.439,
+      "text": "does the previous solution for Unique"
+    },
+    {
+      "start": 121.68,
+      "duration": 3.84,
+      "end": 125.52000000000001,
+      "text": "elements doesn't work so what was the"
+    },
+    {
+      "start": 124.439,
+      "duration": 4.081,
+      "end": 128.51999999999998,
+      "text": "first step that we were doing"
+    },
+    {
+      "start": 125.52,
+      "duration": 3.0,
+      "end": 128.51999999999998,
+      "text": "identifying"
+    },
+    {
+      "start": 128.819,
+      "duration": 4.981,
+      "end": 133.79999999999998,
+      "text": "the sorted half"
+    },
+    {
+      "start": 131.819,
+      "duration": 4.861,
+      "end": 136.67999999999998,
+      "text": "that was the first step that we had or"
+    },
+    {
+      "start": 133.8,
+      "duration": 6.06,
+      "end": 139.86,
+      "text": "that was The crucial step because if we"
+    },
+    {
+      "start": 136.68,
+      "duration": 5.88,
+      "end": 142.56,
+      "text": "do not know which part is sorted how can"
+    },
+    {
+      "start": 139.86,
+      "duration": 5.64,
+      "end": 145.5,
+      "text": "we eliminate how can we check in that"
+    },
+    {
+      "start": 142.56,
+      "duration": 5.52,
+      "end": 148.08,
+      "text": "part so that is why identifying the"
+    },
+    {
+      "start": 145.5,
+      "duration": 4.8,
+      "end": 150.3,
+      "text": "sorted half was very very important now"
+    },
+    {
+      "start": 148.08,
+      "duration": 5.1,
+      "end": 153.18,
+      "text": "the question comes well then it should"
+    },
+    {
+      "start": 150.3,
+      "duration": 4.56,
+      "end": 154.86,
+      "text": "work for this one as well but this for"
+    },
+    {
+      "start": 153.18,
+      "duration": 3.9,
+      "end": 157.08,
+      "text": "this one it doesn't work now let me"
+    },
+    {
+      "start": 154.86,
+      "duration": 6.239,
+      "end": 161.09900000000002,
+      "text": "write you some examples"
+    },
+    {
+      "start": 157.08,
+      "duration": 7.08,
+      "end": 164.16000000000003,
+      "text": "so let's write one two three four four"
+    },
+    {
+      "start": 161.099,
+      "duration": 5.36,
+      "end": 166.459,
+      "text": "five and six seven so assume this is an"
+    },
+    {
+      "start": 164.16,
+      "duration": 2.299,
+      "end": 166.459,
+      "text": "array"
+    },
+    {
+      "start": 166.56,
+      "duration": 4.56,
+      "end": 171.12,
+      "text": "it does have duplicates"
+    },
+    {
+      "start": 168.54,
+      "duration": 4.919,
+      "end": 173.459,
+      "text": "but over here imagine you start the low"
+    },
+    {
+      "start": 171.12,
+      "duration": 5.699,
+      "end": 176.81900000000002,
+      "text": "over here imagine you start the high"
+    },
+    {
+      "start": 173.459,
+      "duration": 5.821,
+      "end": 179.28,
+      "text": "over here and the mid is pointing here"
+    },
+    {
+      "start": 176.819,
+      "duration": 4.92,
+      "end": 181.73899999999998,
+      "text": "in that case you can say that this"
+    },
+    {
+      "start": 179.28,
+      "duration": 4.44,
+      "end": 183.72,
+      "text": "portion is sorted why can you say that"
+    },
+    {
+      "start": 181.739,
+      "duration": 4.5,
+      "end": 186.239,
+      "text": "it's a very simple thing because low was"
+    },
+    {
+      "start": 183.72,
+      "duration": 4.44,
+      "end": 188.16,
+      "text": "your middle was here and I was here you"
+    },
+    {
+      "start": 186.239,
+      "duration": 4.801,
+      "end": 191.04,
+      "text": "can easily say that this section is"
+    },
+    {
+      "start": 188.16,
+      "duration": 7.98,
+      "end": 196.14,
+      "text": "sorted why because this 2 is lesser than"
+    },
+    {
+      "start": 191.04,
+      "duration": 7.559,
+      "end": 198.599,
+      "text": "this 5 or this 6 is not lesser than 2"
+    },
+    {
+      "start": 196.14,
+      "duration": 6.06,
+      "end": 202.2,
+      "text": "thereby the left half can never be"
+    },
+    {
+      "start": 198.599,
+      "duration": 6.661,
+      "end": 205.26,
+      "text": "sorted I did have duplicates but still I"
+    },
+    {
+      "start": 202.2,
+      "duration": 4.679,
+      "end": 206.879,
+      "text": "could easily compare right now let me"
+    },
+    {
+      "start": 205.26,
+      "duration": 3.86,
+      "end": 209.12,
+      "text": "give you some other example"
+    },
+    {
+      "start": 206.879,
+      "duration": 7.5,
+      "end": 214.379,
+      "text": "imagine I write"
+    },
+    {
+      "start": 209.12,
+      "duration": 7.72,
+      "end": 216.84,
+      "text": "one two three three four four four five"
+    },
+    {
+      "start": 214.379,
+      "duration": 4.86,
+      "end": 219.239,
+      "text": "so even if I take this array"
+    },
+    {
+      "start": 216.84,
+      "duration": 5.28,
+      "end": 222.12,
+      "text": "even if I take this array and I write"
+    },
+    {
+      "start": 219.239,
+      "duration": 4.801,
+      "end": 224.04,
+      "text": "low here and I write higher so the mid"
+    },
+    {
+      "start": 222.12,
+      "duration": 4.8,
+      "end": 226.92000000000002,
+      "text": "will be somewhere here"
+    },
+    {
+      "start": 224.04,
+      "duration": 7.199,
+      "end": 231.239,
+      "text": "over here again I can say that this"
+    },
+    {
+      "start": 226.92,
+      "duration": 6.539,
+      "end": 233.45899999999997,
+      "text": "portion is not sorted by doing some"
+    },
+    {
+      "start": 231.239,
+      "duration": 4.681,
+      "end": 235.92000000000002,
+      "text": "simple comparisons between two and four"
+    },
+    {
+      "start": 233.459,
+      "duration": 5.101,
+      "end": 238.56,
+      "text": "and two and four this two and four is"
+    },
+    {
+      "start": 235.92,
+      "duration": 4.739,
+      "end": 240.659,
+      "text": "lesser while as this is greater so this"
+    },
+    {
+      "start": 238.56,
+      "duration": 4.319,
+      "end": 242.879,
+      "text": "is definitely not the sorted part again"
+    },
+    {
+      "start": 240.659,
+      "duration": 3.421,
+      "end": 244.07999999999998,
+      "text": "I can do it even if I had duplicates"
+    },
+    {
+      "start": 242.879,
+      "duration": 3.72,
+      "end": 246.599,
+      "text": "like four four"
+    },
+    {
+      "start": 244.08,
+      "duration": 4.439,
+      "end": 248.519,
+      "text": "when can I not do it as my question I'll"
+    },
+    {
+      "start": 246.599,
+      "duration": 4.321,
+      "end": 250.92,
+      "text": "show you an example so if I have"
+    },
+    {
+      "start": 248.519,
+      "duration": 5.161,
+      "end": 253.68,
+      "text": "something like just think of this Edge"
+    },
+    {
+      "start": 250.92,
+      "duration": 4.4,
+      "end": 255.32,
+      "text": "case what if I have something like one"
+    },
+    {
+      "start": 253.68,
+      "duration": 5.519,
+      "end": 259.199,
+      "text": "two three"
+    },
+    {
+      "start": 255.32,
+      "duration": 5.56,
+      "end": 260.88,
+      "text": "and goes on like or other I'll give you"
+    },
+    {
+      "start": 259.199,
+      "duration": 3.141,
+      "end": 262.34000000000003,
+      "text": "a very simple one three three three"
+    },
+    {
+      "start": 260.88,
+      "duration": 5.16,
+      "end": 266.04,
+      "text": "three"
+    },
+    {
+      "start": 262.34,
+      "duration": 6.7,
+      "end": 269.03999999999996,
+      "text": "three one two imagine this is my array"
+    },
+    {
+      "start": 266.04,
+      "duration": 5.46,
+      "end": 271.5,
+      "text": "just imagine and in that case the low"
+    },
+    {
+      "start": 269.04,
+      "duration": 5.34,
+      "end": 274.38,
+      "text": "will be pointing here the high will be"
+    },
+    {
+      "start": 271.5,
+      "duration": 5.34,
+      "end": 276.84,
+      "text": "pointing somewhere here and the mid will"
+    },
+    {
+      "start": 274.38,
+      "duration": 4.319,
+      "end": 278.699,
+      "text": "be pointing somewhere here"
+    },
+    {
+      "start": 276.84,
+      "duration": 4.32,
+      "end": 281.15999999999997,
+      "text": "now analyze over here"
+    },
+    {
+      "start": 278.699,
+      "duration": 5.94,
+      "end": 284.639,
+      "text": "you are standing at a position which is"
+    },
+    {
+      "start": 281.16,
+      "duration": 7.08,
+      "end": 288.24,
+      "text": "three and just because this entire thing"
+    },
+    {
+      "start": 284.639,
+      "duration": 6.901,
+      "end": 291.54,
+      "text": "yes just because this entire thing was"
+    },
+    {
+      "start": 288.24,
+      "duration": 6.239,
+      "end": 294.479,
+      "text": "equal so the last element tends to be"
+    },
+    {
+      "start": 291.54,
+      "duration": 5.34,
+      "end": 296.88,
+      "text": "same as the mid element right and over"
+    },
+    {
+      "start": 294.479,
+      "duration": 4.141,
+      "end": 298.62,
+      "text": "here the first element tends to be the"
+    },
+    {
+      "start": 296.88,
+      "duration": 4.8,
+      "end": 301.68,
+      "text": "same as the mid element"
+    },
+    {
+      "start": 298.62,
+      "duration": 5.1,
+      "end": 303.72,
+      "text": "and how were you identifying the sorted"
+    },
+    {
+      "start": 301.68,
+      "duration": 4.32,
+      "end": 306.0,
+      "text": "half by doing a comparison between"
+    },
+    {
+      "start": 303.72,
+      "duration": 5.1,
+      "end": 308.82000000000005,
+      "text": "middle and low and by doing a comparison"
+    },
+    {
+      "start": 306.0,
+      "duration": 4.919,
+      "end": 310.919,
+      "text": "between middle and height which cannot"
+    },
+    {
+      "start": 308.82,
+      "duration": 3.659,
+      "end": 312.479,
+      "text": "be done here because the mid is also"
+    },
+    {
+      "start": 310.919,
+      "duration": 2.581,
+      "end": 313.5,
+      "text": "three the low is also three the high is"
+    },
+    {
+      "start": 312.479,
+      "duration": 3.601,
+      "end": 316.08,
+      "text": "also three"
+    },
+    {
+      "start": 313.5,
+      "duration": 6.0,
+      "end": 319.5,
+      "text": "from the naked eye you can say that this"
+    },
+    {
+      "start": 316.08,
+      "duration": 7.5,
+      "end": 323.58,
+      "text": "portion is not okay not sorted and this"
+    },
+    {
+      "start": 319.5,
+      "duration": 7.08,
+      "end": 326.58,
+      "text": "portion is sorted but programmatically"
+    },
+    {
+      "start": 323.58,
+      "duration": 6.6,
+      "end": 330.18,
+      "text": "can you say this because all of them are"
+    },
+    {
+      "start": 326.58,
+      "duration": 7.2,
+      "end": 333.78,
+      "text": "three can you identify just by comparing"
+    },
+    {
+      "start": 330.18,
+      "duration": 4.799,
+      "end": 334.979,
+      "text": "these three elements you cannot yes you"
+    },
+    {
+      "start": 333.78,
+      "duration": 3.0,
+      "end": 336.78,
+      "text": "cannot"
+    },
+    {
+      "start": 334.979,
+      "duration": 3.241,
+      "end": 338.21999999999997,
+      "text": "say hi bye"
+    },
+    {
+      "start": 336.78,
+      "duration": 3.6,
+      "end": 340.38,
+      "text": "it fails"
+    },
+    {
+      "start": 338.22,
+      "duration": 3.06,
+      "end": 341.28000000000003,
+      "text": "so how can I make this work might be my"
+    },
+    {
+      "start": 340.38,
+      "duration": 3.18,
+      "end": 343.56,
+      "text": "question"
+    },
+    {
+      "start": 341.28,
+      "duration": 6.06,
+      "end": 347.34,
+      "text": "so one of the ways"
+    },
+    {
+      "start": 343.56,
+      "duration": 5.76,
+      "end": 349.32,
+      "text": "can be said as hey sorry what if"
+    },
+    {
+      "start": 347.34,
+      "duration": 4.44,
+      "end": 351.78,
+      "text": "we straight away"
+    },
+    {
+      "start": 349.32,
+      "duration": 5.4,
+      "end": 354.71999999999997,
+      "text": "like if the target is"
+    },
+    {
+      "start": 351.78,
+      "duration": 5.639,
+      "end": 357.419,
+      "text": "one we take that one and we check over"
+    },
+    {
+      "start": 354.72,
+      "duration": 4.62,
+      "end": 359.34000000000003,
+      "text": "here because they are same but again the"
+    },
+    {
+      "start": 357.419,
+      "duration": 3.84,
+      "end": 361.25899999999996,
+      "text": "question comes how do you know that the"
+    },
+    {
+      "start": 359.34,
+      "duration": 4.56,
+      "end": 363.9,
+      "text": "right half only contains consecutive"
+    },
+    {
+      "start": 361.259,
+      "duration": 5.28,
+      "end": 366.539,
+      "text": "threes it might happen this half as"
+    },
+    {
+      "start": 363.9,
+      "duration": 6.66,
+      "end": 370.56,
+      "text": "something like this so you are not sure"
+    },
+    {
+      "start": 366.539,
+      "duration": 6.301,
+      "end": 372.84,
+      "text": "so the better scenario is try to trim"
+    },
+    {
+      "start": 370.56,
+      "duration": 3.54,
+      "end": 374.1,
+      "text": "down those things try to trim down those"
+    },
+    {
+      "start": 372.84,
+      "duration": 6.139,
+      "end": 378.979,
+      "text": "things"
+    },
+    {
+      "start": 374.1,
+      "duration": 4.879,
+      "end": 378.97900000000004,
+      "text": "try to trim down this condition"
+    },
+    {
+      "start": 379.62,
+      "duration": 3.299,
+      "end": 382.919,
+      "text": "how will you trim down this Condition"
+    },
+    {
+      "start": 381.06,
+      "duration": 3.12,
+      "end": 384.18,
+      "text": "it's super simple"
+    },
+    {
+      "start": 382.919,
+      "duration": 3.72,
+      "end": 386.639,
+      "text": "I'll tell you"
+    },
+    {
+      "start": 384.18,
+      "duration": 5.16,
+      "end": 389.34000000000003,
+      "text": "why do I say trim down because you don't"
+    },
+    {
+      "start": 386.639,
+      "duration": 4.021,
+      "end": 390.66,
+      "text": "know like which because over here in the"
+    },
+    {
+      "start": 389.34,
+      "duration": 3.0,
+      "end": 392.34,
+      "text": "Naked Eyes you can see there is three"
+    },
+    {
+      "start": 390.66,
+      "duration": 3.36,
+      "end": 394.02000000000004,
+      "text": "three but while standing here while"
+    },
+    {
+      "start": 392.34,
+      "duration": 4.44,
+      "end": 396.78,
+      "text": "standing here you cannot just say that"
+    },
+    {
+      "start": 394.02,
+      "duration": 4.799,
+      "end": 398.81899999999996,
+      "text": "we have two on this side you have to do"
+    },
+    {
+      "start": 396.78,
+      "duration": 4.32,
+      "end": 401.09999999999997,
+      "text": "multiple checks and when the array"
+    },
+    {
+      "start": 398.819,
+      "duration": 3.961,
+      "end": 402.78000000000003,
+      "text": "shrinks it might be a problem the only"
+    },
+    {
+      "start": 401.1,
+      "duration": 3.539,
+      "end": 404.639,
+      "text": "problem we have is"
+    },
+    {
+      "start": 402.78,
+      "duration": 4.62,
+      "end": 407.4,
+      "text": "array low"
+    },
+    {
+      "start": 404.639,
+      "duration": 6.12,
+      "end": 410.759,
+      "text": "is equal to array mid"
+    },
+    {
+      "start": 407.4,
+      "duration": 6.239,
+      "end": 413.63899999999995,
+      "text": "is equal to array High"
+    },
+    {
+      "start": 410.759,
+      "duration": 6.0,
+      "end": 416.759,
+      "text": "that is the only problem I have and due"
+    },
+    {
+      "start": 413.639,
+      "duration": 6.541,
+      "end": 420.18,
+      "text": "to this reason I cannot successfully"
+    },
+    {
+      "start": 416.759,
+      "duration": 7.38,
+      "end": 424.139,
+      "text": "identify the sorted Hub if I can get rid"
+    },
+    {
+      "start": 420.18,
+      "duration": 6.6,
+      "end": 426.78000000000003,
+      "text": "of this condition if I can somehow solve"
+    },
+    {
+      "start": 424.139,
+      "duration": 5.221,
+      "end": 429.36,
+      "text": "this condition my job will be done can I"
+    },
+    {
+      "start": 426.78,
+      "duration": 4.56,
+      "end": 431.34,
+      "text": "say let's stand admit and let's take"
+    },
+    {
+      "start": 429.36,
+      "duration": 3.839,
+      "end": 433.199,
+      "text": "this three this three is equivalent to"
+    },
+    {
+      "start": 431.34,
+      "duration": 3.419,
+      "end": 434.75899999999996,
+      "text": "this 3 and this three so what I'll do is"
+    },
+    {
+      "start": 433.199,
+      "duration": 3.84,
+      "end": 437.039,
+      "text": "I will say"
+    },
+    {
+      "start": 434.759,
+      "duration": 3.361,
+      "end": 438.12,
+      "text": "I've already compared this three with my"
+    },
+    {
+      "start": 437.039,
+      "duration": 3.72,
+      "end": 440.759,
+      "text": "target"
+    },
+    {
+      "start": 438.12,
+      "duration": 5.04,
+      "end": 443.16,
+      "text": "that's what I always do whatever is that"
+    },
+    {
+      "start": 440.759,
+      "duration": 4.621,
+      "end": 445.38,
+      "text": "made whatever is at Mid"
+    },
+    {
+      "start": 443.16,
+      "duration": 4.439,
+      "end": 447.59900000000005,
+      "text": "I compare with Target don't we do that"
+    },
+    {
+      "start": 445.38,
+      "duration": 4.439,
+      "end": 449.819,
+      "text": "if I go back don't we do that over here"
+    },
+    {
+      "start": 447.599,
+      "duration": 3.6,
+      "end": 451.199,
+      "text": "we compare with Target so can I say one"
+    },
+    {
+      "start": 449.819,
+      "duration": 3.0,
+      "end": 452.819,
+      "text": "thing for short"
+    },
+    {
+      "start": 451.199,
+      "duration": 2.521,
+      "end": 453.72,
+      "text": "since I know all of the three elements"
+    },
+    {
+      "start": 452.819,
+      "duration": 3.961,
+      "end": 456.78000000000003,
+      "text": "are equal"
+    },
+    {
+      "start": 453.72,
+      "duration": 5.16,
+      "end": 458.88000000000005,
+      "text": "can I actually trim down my search space"
+    },
+    {
+      "start": 456.78,
+      "duration": 3.539,
+      "end": 460.31899999999996,
+      "text": "from this"
+    },
+    {
+      "start": 458.88,
+      "duration": 3.24,
+      "end": 462.12,
+      "text": "to this"
+    },
+    {
+      "start": 460.319,
+      "duration": 4.44,
+      "end": 464.759,
+      "text": "and from this"
+    },
+    {
+      "start": 462.12,
+      "duration": 6.72,
+      "end": 468.84000000000003,
+      "text": "do this can I trim down my search space"
+    },
+    {
+      "start": 464.759,
+      "duration": 6.181,
+      "end": 470.94,
+      "text": "I can because if this is not equivalent"
+    },
+    {
+      "start": 468.84,
+      "duration": 4.079,
+      "end": 472.919,
+      "text": "to the Target neither will be this"
+    },
+    {
+      "start": 470.94,
+      "duration": 4.02,
+      "end": 474.96,
+      "text": "neither will be this because all of them"
+    },
+    {
+      "start": 472.919,
+      "duration": 4.68,
+      "end": 477.599,
+      "text": "are equal if this is not equal this will"
+    },
+    {
+      "start": 474.96,
+      "duration": 5.34,
+      "end": 480.29999999999995,
+      "text": "also not be equal taking advantage of"
+    },
+    {
+      "start": 477.599,
+      "duration": 4.261,
+      "end": 481.86,
+      "text": "the condition right that's not I'll just"
+    },
+    {
+      "start": 480.3,
+      "duration": 4.019,
+      "end": 484.319,
+      "text": "shrink my"
+    },
+    {
+      "start": 481.86,
+      "duration": 5.22,
+      "end": 487.08000000000004,
+      "text": "third space I'll just shrink my search"
+    },
+    {
+      "start": 484.319,
+      "duration": 5.22,
+      "end": 489.53900000000004,
+      "text": "space that's what I'll do I'll shrink my"
+    },
+    {
+      "start": 487.08,
+      "duration": 4.44,
+      "end": 491.52,
+      "text": "search space and I'll continue on the"
+    },
+    {
+      "start": 489.539,
+      "duration": 5.1,
+      "end": 494.639,
+      "text": "next step so basically what I do is"
+    },
+    {
+      "start": 491.52,
+      "duration": 5.64,
+      "end": 497.15999999999997,
+      "text": "whenever we end up with this condition"
+    },
+    {
+      "start": 494.639,
+      "duration": 5.041,
+      "end": 499.68,
+      "text": "because this is what is stopping me to"
+    },
+    {
+      "start": 497.16,
+      "duration": 3.719,
+      "end": 500.879,
+      "text": "identify the sorted up whenever we get"
+    },
+    {
+      "start": 499.68,
+      "duration": 3.419,
+      "end": 503.099,
+      "text": "this condition"
+    },
+    {
+      "start": 500.879,
+      "duration": 4.681,
+      "end": 505.56,
+      "text": "shrink your search space and go ahead"
+    },
+    {
+      "start": 503.099,
+      "duration": 5.581,
+      "end": 508.68,
+      "text": "again you can shrink it again you can"
+    },
+    {
+      "start": 505.56,
+      "duration": 5.579,
+      "end": 511.139,
+      "text": "shrink it again you get shrink it so"
+    },
+    {
+      "start": 508.68,
+      "duration": 4.26,
+      "end": 512.94,
+      "text": "what I will do is I'll go back to the"
+    },
+    {
+      "start": 511.139,
+      "duration": 4.741,
+      "end": 515.88,
+      "text": "previous code that I've written remember"
+    },
+    {
+      "start": 512.94,
+      "duration": 6.959,
+      "end": 519.899,
+      "text": "this was the code so over here I will"
+    },
+    {
+      "start": 515.88,
+      "duration": 6.599,
+      "end": 522.479,
+      "text": "say I will attach the lines just here"
+    },
+    {
+      "start": 519.899,
+      "duration": 5.88,
+      "end": 525.779,
+      "text": "because this"
+    },
+    {
+      "start": 522.479,
+      "duration": 6.181,
+      "end": 528.6600000000001,
+      "text": "it works seamlessly the only problem"
+    },
+    {
+      "start": 525.779,
+      "duration": 5.761,
+      "end": 531.54,
+      "text": "that I have is when this will happen"
+    },
+    {
+      "start": 528.66,
+      "duration": 4.799,
+      "end": 533.459,
+      "text": "because if this happens then you cannot"
+    },
+    {
+      "start": 531.54,
+      "duration": 4.44,
+      "end": 535.98,
+      "text": "do an comparison you cannot do a"
+    },
+    {
+      "start": 533.459,
+      "duration": 5.221,
+      "end": 538.68,
+      "text": "comparison so what I'll do is I'll try"
+    },
+    {
+      "start": 535.98,
+      "duration": 4.859,
+      "end": 540.839,
+      "text": "to insert some lines and that lines I'll"
+    },
+    {
+      "start": 538.68,
+      "duration": 6.24,
+      "end": 544.92,
+      "text": "write it over here so those lines will"
+    },
+    {
+      "start": 540.839,
+      "duration": 5.881,
+      "end": 546.72,
+      "text": "be I'll be like Hey listen if array of"
+    },
+    {
+      "start": 544.92,
+      "duration": 6.359,
+      "end": 551.279,
+      "text": "flow"
+    },
+    {
+      "start": 546.72,
+      "duration": 8.28,
+      "end": 555.0,
+      "text": "is equal to equal to array of mid and"
+    },
+    {
+      "start": 551.279,
+      "duration": 6.841,
+      "end": 558.12,
+      "text": "similarly if array of mid is equal to"
+    },
+    {
+      "start": 555.0,
+      "duration": 6.42,
+      "end": 561.42,
+      "text": "equal to array of high"
+    },
+    {
+      "start": 558.12,
+      "duration": 6.3,
+      "end": 564.42,
+      "text": "can I say this I can in that case what"
+    },
+    {
+      "start": 561.42,
+      "duration": 6.479,
+      "end": 567.899,
+      "text": "I'll do is I will say please please go"
+    },
+    {
+      "start": 564.42,
+      "duration": 6.539,
+      "end": 570.959,
+      "text": "ahead buy one like I don't need you and"
+    },
+    {
+      "start": 567.899,
+      "duration": 4.681,
+      "end": 572.58,
+      "text": "please please go down one because I"
+    },
+    {
+      "start": 570.959,
+      "duration": 4.981,
+      "end": 575.9399999999999,
+      "text": "don't need you once you've done this"
+    },
+    {
+      "start": 572.58,
+      "duration": 5.64,
+      "end": 578.22,
+      "text": "continue why continue"
+    },
+    {
+      "start": 575.94,
+      "duration": 5.22,
+      "end": 581.1600000000001,
+      "text": "because I'm still not sure I'm still not"
+    },
+    {
+      "start": 578.22,
+      "duration": 5.46,
+      "end": 583.6800000000001,
+      "text": "sure it might be possible that this is"
+    },
+    {
+      "start": 581.16,
+      "duration": 4.44,
+      "end": 585.6,
+      "text": "also a three in that case again you'll"
+    },
+    {
+      "start": 583.68,
+      "duration": 4.02,
+      "end": 587.6999999999999,
+      "text": "come back to the same so it's better"
+    },
+    {
+      "start": 585.6,
+      "duration": 5.1,
+      "end": 590.7,
+      "text": "repeat the process so the next step"
+    },
+    {
+      "start": 587.7,
+      "duration": 5.16,
+      "end": 592.86,
+      "text": "you'll again get the same so again this"
+    },
+    {
+      "start": 590.7,
+      "duration": 3.72,
+      "end": 594.4200000000001,
+      "text": "can work out and again you will do a"
+    },
+    {
+      "start": 592.86,
+      "duration": 4.08,
+      "end": 596.94,
+      "text": "continue so basically what you'll do is"
+    },
+    {
+      "start": 594.42,
+      "duration": 5.039,
+      "end": 599.459,
+      "text": "instead of Performing this you'll again"
+    },
+    {
+      "start": 596.94,
+      "duration": 5.22,
+      "end": 602.1600000000001,
+      "text": "go back and start these steps and if you"
+    },
+    {
+      "start": 599.459,
+      "duration": 5.281,
+      "end": 604.7399999999999,
+      "text": "get these lines again again go back so"
+    },
+    {
+      "start": 602.16,
+      "duration": 5.04,
+      "end": 607.1999999999999,
+      "text": "until unless you get these conditions to"
+    },
+    {
+      "start": 604.74,
+      "duration": 4.74,
+      "end": 609.48,
+      "text": "be valid you never go here just keep on"
+    },
+    {
+      "start": 607.2,
+      "duration": 4.199,
+      "end": 611.399,
+      "text": "shrinking shrinking shrinking got it so"
+    },
+    {
+      "start": 609.48,
+      "duration": 3.479,
+      "end": 612.9590000000001,
+      "text": "within the C plus plus code in case you"
+    },
+    {
+      "start": 611.399,
+      "duration": 3.421,
+      "end": 614.82,
+      "text": "want the Java Python and JavaScript code"
+    },
+    {
+      "start": 612.959,
+      "duration": 3.301,
+      "end": 616.26,
+      "text": "you can find them in the description and"
+    },
+    {
+      "start": 614.82,
+      "duration": 3.48,
+      "end": 618.3000000000001,
+      "text": "you can also find out the problem Link"
+    },
+    {
+      "start": 616.26,
+      "duration": 4.079,
+      "end": 620.3389999999999,
+      "text": "in the description so this gets"
+    },
+    {
+      "start": 618.3,
+      "duration": 5.039,
+      "end": 623.3389999999999,
+      "text": "submitted but if I ask you the time"
+    },
+    {
+      "start": 620.339,
+      "duration": 5.461,
+      "end": 625.8000000000001,
+      "text": "complexity of this what will be that now"
+    },
+    {
+      "start": 623.339,
+      "duration": 5.161,
+      "end": 628.5,
+      "text": "on average I can say it's a binary"
+    },
+    {
+      "start": 625.8,
+      "duration": 3.539,
+      "end": 629.3389999999999,
+      "text": "search like for most of the cases it"
+    },
+    {
+      "start": 628.5,
+      "duration": 5.339,
+      "end": 633.839,
+      "text": "will be"
+    },
+    {
+      "start": 629.339,
+      "duration": 7.56,
+      "end": 636.899,
+      "text": "we go off login log base to n"
+    },
+    {
+      "start": 633.839,
+      "duration": 5.101,
+      "end": 638.94,
+      "text": "that will be the average case that means"
+    },
+    {
+      "start": 636.899,
+      "duration": 4.981,
+      "end": 641.88,
+      "text": "the most of like in most of the cases"
+    },
+    {
+      "start": 638.94,
+      "duration": 7.459,
+      "end": 646.399,
+      "text": "what if I give you a test case like"
+    },
+    {
+      "start": 641.88,
+      "duration": 7.079,
+      "end": 648.959,
+      "text": "three three one three three three three"
+    },
+    {
+      "start": 646.399,
+      "duration": 3.521,
+      "end": 649.92,
+      "text": "so in this case what will happen can you"
+    },
+    {
+      "start": 648.959,
+      "duration": 2.701,
+      "end": 651.66,
+      "text": "tell me"
+    },
+    {
+      "start": 649.92,
+      "duration": 3.359,
+      "end": 653.279,
+      "text": "if I give you a test case like this what"
+    },
+    {
+      "start": 651.66,
+      "duration": 4.619,
+      "end": 656.279,
+      "text": "will happen think"
+    },
+    {
+      "start": 653.279,
+      "duration": 4.981,
+      "end": 658.26,
+      "text": "so first you take the low as this you"
+    },
+    {
+      "start": 656.279,
+      "duration": 4.021,
+      "end": 660.3,
+      "text": "take the high as this and you take the"
+    },
+    {
+      "start": 658.26,
+      "duration": 5.04,
+      "end": 663.3,
+      "text": "mid as this correct"
+    },
+    {
+      "start": 660.3,
+      "duration": 6.84,
+      "end": 667.14,
+      "text": "for the first time you do this"
+    },
+    {
+      "start": 663.3,
+      "duration": 6.12,
+      "end": 669.42,
+      "text": "for the next time you can do this"
+    },
+    {
+      "start": 667.14,
+      "duration": 4.92,
+      "end": 672.06,
+      "text": "for the next sign you again basically"
+    },
+    {
+      "start": 669.42,
+      "duration": 5.099,
+      "end": 674.519,
+      "text": "now you perform the binary search so if"
+    },
+    {
+      "start": 672.06,
+      "duration": 4.08,
+      "end": 676.14,
+      "text": "there are a lot of duplicates you"
+    },
+    {
+      "start": 674.519,
+      "duration": 3.541,
+      "end": 678.0600000000001,
+      "text": "basically keep shrinking keep shrinking"
+    },
+    {
+      "start": 676.14,
+      "duration": 4.8,
+      "end": 680.9399999999999,
+      "text": "keep shrinking till you are tell you"
+    },
+    {
+      "start": 678.06,
+      "duration": 5.399,
+      "end": 683.459,
+      "text": "about that so at the worst case you"
+    },
+    {
+      "start": 680.94,
+      "duration": 4.019,
+      "end": 684.9590000000001,
+      "text": "might end up shrinking like near about"
+    },
+    {
+      "start": 683.459,
+      "duration": 3.601,
+      "end": 687.06,
+      "text": "the half the size of the array near"
+    },
+    {
+      "start": 684.959,
+      "duration": 4.56,
+      "end": 689.5189999999999,
+      "text": "above near above not exactly not exactly"
+    },
+    {
+      "start": 687.06,
+      "duration": 6.12,
+      "end": 693.18,
+      "text": "near about half the size of the array"
+    },
+    {
+      "start": 689.519,
+      "duration": 6.421,
+      "end": 695.94,
+      "text": "you might so the worst case can be the"
+    },
+    {
+      "start": 693.18,
+      "duration": 4.5,
+      "end": 697.68,
+      "text": "go of n by 2 where you shrink almost the"
+    },
+    {
+      "start": 695.94,
+      "duration": 3.24,
+      "end": 699.1800000000001,
+      "text": "half and then you are left out with some"
+    },
+    {
+      "start": 697.68,
+      "duration": 3.839,
+      "end": 701.519,
+      "text": "elements and then then you do the"
+    },
+    {
+      "start": 699.18,
+      "duration": 4.32,
+      "end": 703.5,
+      "text": "comparisons got that in the future if"
+    },
+    {
+      "start": 701.519,
+      "duration": 4.201,
+      "end": 705.72,
+      "text": "you get problems which have duplicates"
+    },
+    {
+      "start": 703.5,
+      "duration": 5.04,
+      "end": 708.54,
+      "text": "always try to solve the problem in terms"
+    },
+    {
+      "start": 705.72,
+      "duration": 4.799,
+      "end": 710.519,
+      "text": "of unique and then see where the unique"
+    },
+    {
+      "start": 708.54,
+      "duration": 4.44,
+      "end": 712.98,
+      "text": "will fail because whatever conditions"
+    },
+    {
+      "start": 710.519,
+      "duration": 4.741,
+      "end": 715.26,
+      "text": "like in this case we took this condition"
+    },
+    {
+      "start": 712.98,
+      "duration": 5.22,
+      "end": 718.2,
+      "text": "so we saw that that condition is failing"
+    },
+    {
+      "start": 715.26,
+      "duration": 5.46,
+      "end": 720.72,
+      "text": "for certain test cases and try to fit in"
+    },
+    {
+      "start": 718.2,
+      "duration": 4.86,
+      "end": 723.0600000000001,
+      "text": "that test case on that particular uh"
+    },
+    {
+      "start": 720.72,
+      "duration": 4.16,
+      "end": 724.88,
+      "text": "solution that you did for unique and"
+    },
+    {
+      "start": 723.06,
+      "duration": 4.68,
+      "end": 727.7399999999999,
+      "text": "eventually you will be able to solve for"
+    },
+    {
+      "start": 724.88,
+      "duration": 5.139,
+      "end": 730.019,
+      "text": "duplicates as well so this is how you"
+    },
+    {
+      "start": 727.74,
+      "duration": 4.62,
+      "end": 732.36,
+      "text": "generically approach problems which has"
+    },
+    {
+      "start": 730.019,
+      "duration": 4.201,
+      "end": 734.22,
+      "text": "duplicates in it so I hope you've"
+    },
+    {
+      "start": 732.36,
+      "duration": 3.419,
+      "end": 735.779,
+      "text": "understood the problem solving approach"
+    },
+    {
+      "start": 734.22,
+      "duration": 3.9,
+      "end": 738.12,
+      "text": "so going back to the sheet I can mark"
+    },
+    {
+      "start": 735.779,
+      "duration": 4.381,
+      "end": 740.16,
+      "text": "this one as done as well in case you're"
+    },
+    {
+      "start": 738.12,
+      "duration": 3.3,
+      "end": 741.42,
+      "text": "still watching please please please do"
+    },
+    {
+      "start": 740.16,
+      "duration": 2.94,
+      "end": 743.1,
+      "text": "consider giving us that like because"
+    },
+    {
+      "start": 741.42,
+      "duration": 3.3,
+      "end": 744.7199999999999,
+      "text": "that highly motivates me to make these"
+    },
+    {
+      "start": 743.1,
+      "duration": 3.54,
+      "end": 746.64,
+      "text": "kind of videos and if you're new to our"
+    },
+    {
+      "start": 744.72,
+      "duration": 3.239,
+      "end": 747.9590000000001,
+      "text": "Channel what are you waiting for hit"
+    },
+    {
+      "start": 746.64,
+      "duration": 2.22,
+      "end": 748.86,
+      "text": "that subscribe button right away and if"
+    },
+    {
+      "start": 747.959,
+      "duration": 2.641,
+      "end": 750.5999999999999,
+      "text": "you haven't followed me on Instagram"
+    },
+    {
+      "start": 748.86,
+      "duration": 2.94,
+      "end": 751.8000000000001,
+      "text": "Twitter and Linkedin all the links will"
+    },
+    {
+      "start": 750.6,
+      "duration": 2.34,
+      "end": 752.94,
+      "text": "be in the description with this I'll be"
+    },
+    {
+      "start": 751.8,
+      "duration": 3.0,
+      "end": 754.8,
+      "text": "wrapping up this video let's read in"
+    },
+    {
+      "start": 752.94,
+      "duration": 6.18,
+      "end": 759.12,
+      "text": "some other video till then bye bye take"
+    },
+    {
+      "start": 754.8,
+      "duration": 7.92,
+      "end": 762.7199999999999,
+      "text": "care whenever your heart is broken don't"
+    },
+    {
+      "start": 759.12,
+      "duration": 5.899,
+      "end": 765.019,
+      "text": "ever forget your golden I I will find"
+    },
+    {
+      "start": 762.72,
+      "duration": 2.299,
+      "end": 765.019,
+      "text": "the light"
+    }
+  ]
+}

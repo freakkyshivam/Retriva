@@ -1,0 +1,141 @@
+{
+  "video_id": "j1QDfU21iZk",
+  "position": 181,
+  "title": "G-56. Articulation Point in Graph",
+  "url": "https://www.youtube.com/watch?v=j1QDfU21iZk",
+  "chunk_count": 12,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "j1QDfU21iZk",
+      "position": 181,
+      "title": "G-56. Articulation Point in Graph",
+      "url": "https://www.youtube.com/watch?v=j1QDfU21iZk",
+      "start": 3.319,
+      "end": 125.63999999999999,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well so in this video we will be learning about articulation Point what do you mean by articulation point now if this is the given graph any node on this graph on Whose removal the graph breaks into multiple components is what you call as articulation Point like if you see this graph for an example imagine I remove zero do you see the graph being broken into one and two component do you see that you see that right the graph got broken into two components on the removal of zero similarly if I try to remove two like if I try to remove two did the graph break down into multiple components yes I did one is here and the other one is here the graph broke down into multiple components here these edges will no more be there but the graph did break into multiple components so any node on Whose removal the graph breaks down into multiple component is known as an articulation point now can I say that 3 is an articulation point no I cannot because even if I remove three the graph is still connected I don't see any breakage apart from the removal of three that is why three is not an articulation point for this particular graph only 0 and 2 are articulation points now in order to understand articulation point there is a prerequisite and the prerequisite is this particular video bridges in a graph the video before this in this particular playlist is what you should have seen you should have understood what is time of insert question what is the lowest time and everything and if you know that then only you should watch them this particular video which is talking about articulation point because I'm assuming you've seen the video of bridges in a graph because the concept that we have used in bridges in a graph is what we will be using in the articulation point",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "j1QDfU21iZk",
+      "position": 181,
+      "title": "G-56. Articulation Point in Graph",
+      "url": "https://www.youtube.com/watch?v=j1QDfU21iZk",
+      "start": 121.439,
+      "end": 241.68,
+      "text": "will be using in the articulation point so please go back and watch it and come back and watch this video again so if you remember the bridges video we used two arrays one is the time of insertion while the other one was the lowest time of insertion now the definition still stays the same but there's a slight tweak over here the time of exertion States while you enter in the DFS you store it but the lowest type of insertion has been changed and it states minimum of all adjacent notes like you take all the adjacent notes apart from the parent and take all the lowest time of insertions but you also remove visited notes do not take parent and do not take visited notes why not visited notes I'll explain you in the bridges video there was nothing as visited notes there was simply apart from parent over here it's apart from the parent and apart from the visited notes why we will be talking that in depth when I take this example so let's if it did not understand the exact use of low do not worry when I do a dry run on this particular graph you'll get an idea about what is the exact definition of low here because it's slightly different from the bridges and the graph okay so in the bridges in a graph if you remember in that video the condition was very simple if the low of i t like if the low of it in any case was greater than the time of insertion of the node then we could say that node and ID is a bridge right that means if that is a node cannot reach back to the node or before it that means it a bridge this was the condition been used in the bridges in a graph of video now over here we are removing an edge no we're removing the entire node we're removing the entire node so if you are saying this is an articulation point the",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "j1QDfU21iZk",
+      "position": 181,
+      "title": "G-56. Articulation Point in Graph",
+      "url": "https://www.youtube.com/watch?v=j1QDfU21iZk",
+      "start": 236.94,
+      "end": 365.46000000000004,
+      "text": "saying this is an articulation point the five has to reach before not at this node not at this node in the previous in the previous Bridges if you could reach at 2 it was okay because the The Edge was removed over here you have to each before two somewhere before two that is why that slightly like we'll slightly change the definition of we will say hey if if the law of i t cannot reach that means if it is greater than the time of insertion of node that means it can either reach the node or it is greater even if it's reaching the node that is of no use because I am going to remove the node so even if you reach no that's that's of no use so this is the updated condition this is the updated condition and there's a slight new introduction and that states parent is not equal to -1 yes we have a slight new introduction we say parent is not equal to -1 why parent not equal to minus 1 let me explain so imagine if you have a graph like 0 and it points to 1 and then it goes to and then goes to 3 right so apparently if you are at 0 if you're at 0 0 can never be the articulation Point why because even if you remove 0 it still stays as a component it still stays as a single component so be very careful if it is the starting point if it is a starting point do not use the formula you will go wrong you'll go wrong but the starting point we will use some different logic which I'll talk at the back end but as of now remember if it is the starting point do not use this formula because this is of no use if you remove it stops to use the formula is of no use so do not use this for starting points for starting points really is a different logic okay so I",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "j1QDfU21iZk",
+      "position": 181,
+      "title": "G-56. Articulation Point in Graph",
+      "url": "https://www.youtube.com/watch?v=j1QDfU21iZk",
+      "start": 361.139,
+      "end": 481.139,
+      "text": "really is a different logic okay so I hope you have understood you have to reach before the node not at the node we have to reach before the node okay now let's quickly start our time of insertion so let's start the defense traversal with zero Market is visited so what are we storing time of insertion and low similar to Bridges we inserted at time one and the lowest time is one next we go here so Market is visited and two by two so does one have any of its adjacent no so we will go back when we go back will we apply the formula to this particular guy because we have came back from a node the DFS is completed but if you remember it stated that's the first guy parent is minus one do not do anything for first parents do not do anything for first parents okay go to two so we'll go to two and we will update it like three by three similarly it will go here and the moment it goes here it will update it by four by four But Here Comes The Twist so it says I have updated Myself by 4x4 I've updated Myself by 4x4 but I can go but it's already visited I can go but it's already visited so what I will say is Hey listen I will just update my low I'll just update by low but while updating Milo I will just take this and not this why I'll explain you as we go forward we will not look at this we will just look at the time of insertion and that is what I'll take I'll update it with one perfect time to come back when it comes back when it comes back the law looks around it and says you have one you have one you're not my parent you're not a visited node because you did your DFS since you did your DFS give your load to me that updates its low to one now can I",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "j1QDfU21iZk",
+      "position": 181,
+      "title": "G-56. Articulation Point in Graph",
+      "url": "https://www.youtube.com/watch?v=j1QDfU21iZk",
+      "start": 472.62,
+      "end": 595.08,
+      "text": "that updates its low to one now can I see the DFS of two called the DFS of three and adds back now since it is back two will say okay wait I have done a DFS let me see if I can be an articulation point now what is 2 to a stating my time is three two stating my time is 3 so 3 is saying my lowest is one so I can reach before you even if you are an articulation point I can still reach so even if you remove I am still somewhere in the same component so this will not be an articulation Point as of now as of now right this is why I said greater than equal to this is having a lowest point of one this is having an entry point of three and it can reach before three so this is why this is perfect perfect let's go down so three is done now we'll go to four so it'll be like sorry sorry but it'll be like five five we have five by five so it says I have five five right so it marks it as visited next goes to six by six Max it as well next goes to seven by seven marks it as visited now here comes the critical Junction year five s DFS is done why because five has one adjacent node which is already visited so no the law says I will look at the adjacent node but that's visited so I will not take one I'll not take one of its visitors I'll not take one if it's visited instead I'll just take three instead I'll just take three why why is the question I'll take three why not one why not one because in bridges we took one we took one because it was greedy you need to understand now this node was visited why was it visited because I traveled like this then I went here now I did not take one why because imagine just imagine it",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "j1QDfU21iZk",
+      "position": 181,
+      "title": "G-56. Articulation Point in Graph",
+      "url": "https://www.youtube.com/watch?v=j1QDfU21iZk",
+      "start": 590.58,
+      "end": 711.72,
+      "text": "one why because imagine just imagine it remove this too can you reach back to one had you taken one just just tell me how will you reach one you cannot so if it is a visited node do not take something which is via two which is wire 2 because 2 will be removed might be removed that's why you'll always take three and not one got it so can I say the DFS of 5 is completed and now it will try to come back so when it tries to come back see what happens so I can say DFS of 5 is completed so the call came in from six no it goes back so six is saying okay what is the entry point of six that is six what is the entry point of like where can 5 reach 5 can still reach 3 that means it can somewhere reach six pack again right even if you remove six it can still it's a part of the same component this cannot be an articulation Point go back so when it now goes back four says okay you're coming back let me take yours because you are an adjacent you're not a visitor and you are one of my additional who went into DFS completed it I'll take your three I'll take your three I will take your three now this time what happens is poor called six now what is force entry point five six is I can still somewhere go and reach three so I can still reach before you so you cannot be an articulation Point perfect now comes the critical junction 4 now goes back to two stating I'm complete I'm complete so four is complete it came from two so now it goes back two says okay you're done what's your minimum three my minimum is one no need to take it so two says can I be an articulation Point what's my entry point that's free what's your minimum entry you can just reach three that means you",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "j1QDfU21iZk",
+      "position": 181,
+      "title": "G-56. Articulation Point in Graph",
+      "url": "https://www.youtube.com/watch?v=j1QDfU21iZk",
+      "start": 706.14,
+      "end": 828.959,
+      "text": "you can just reach three that means you can reach to me not before me not before me so even if I remove myself you guys will be two separate two separate entities so thereby 2 is an articulation Point thereby I find two is an articulation point so I can say 2 is an articulation Point got it very simple very straightforward the only reason we did not take one is because had we taken one over here this one would have been propagated here this one would have propagated here and I somehow would have said I can reach 0 which is not possible because it's wired it's why the visited part that's why you do not take visited because if a path is via visited that's no point I want to go buy some adjacent notes got it perfect now two says let's go back when I go back again the parent is for this minus one so I'll not consider so mostly done the updated condition says I should reach before this and the parent should be -1 and low should only update itself if it's not parent and not visited if it's visited it takes the time of insertion simple done and dusted now the question comes is zero an articulation point it is because if you remove zero printed into two components so the logic over here is very straightforward and now imagine there is a node and it is like just connected to one in that case this can never be an articulation point because even if you take it off it's still a single comb it is not broken into multiple so it cannot be an articulation point but the same pattern if it is connected to multiple childrens if it is connected to multiple children the moment you break it the moment you break it they will always be individual components this is what happened in this case the moment it took it this was individual and this was individual which was later connected which was later",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "j1QDfU21iZk",
+      "position": 181,
+      "title": "G-56. Articulation Point in Graph",
+      "url": "https://www.youtube.com/watch?v=j1QDfU21iZk",
+      "start": 823.5,
+      "end": 946.3199999999999,
+      "text": "was later connected which was later connected here right so what's the grasp if it's the starting point and if it has multiple childrens if it has multiple childrens then only I will say that it's an articulation point so for the starting point if it has multiple children's then only I'll say it is an articulation point I will not apply the formula to the starting point never ever I'll do that got it so before moving on to the code Did You observe something now when he came back from four to two two said I am a articulation point because four cannot reach back to any position before I was saying that two is an articulation now what if there was another component which was similar to this seven and then eight and then nine and then similar so if there was another component would have again gone the same way and if again came back and again you would have found two is an articulation so it might happen during the traversal course you might find two to be the articulation Point multiple times because if I just extend this graph just imagine I extend this graph to something like this imagine I'm taking it to seven and then eight and then nine so similar graph just extended into portions so this when it came back it found out 2 was an articulation similarly when this goes and comes back it will find that this is again an articulation point so it might happen you might find two multiple times so instead of printing directly on the check of this condition create a hashing say two is an articulation but say 2 is an articulation say one is an articulation part just mark it and at the end of the day you can return it so I'll show you uh this during the code implementation so if you can see that the question States you'll be given a zero based indexing graph you have to find all the articulation points and if",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "j1QDfU21iZk",
+      "position": 181,
+      "title": "G-56. Articulation Point in Graph",
+      "url": "https://www.youtube.com/watch?v=j1QDfU21iZk",
+      "start": 941.699,
+      "end": 1066.2,
+      "text": "find all the articulation points and if there are none you have to return a list which is containing a minus one what are we given we're given the V we're given the adjacency list so what did we require in order to write the VFS sorry DFS we required a visitor so Market at this one just keep it as n and then you can have a t n of n then you can have a low time as in something which you can have always and then you can have a mark which marks which are articulation points and then you know there can be multiple components so maybe you can just scroll through and you can say if not visited of I you can say DFS of I and the parent can be minus one initially you can pass in the visitor T in the low the mark and the adjacent and at the end of the day you can say Vector of int answer and you can just go across all the notes and you can say if it is marked as articulation Point can you please store it over here and and if answer dot says like if there are no articulation points they State you to return minus one so please return minus one else you can like else you can return the answer quite simple I just need to write the DFS so let's go across and say private and you can have a timer as zero and you can have the void DFS the void deficit is int node and it says identity parent and then you can take all the things like vector visited they can take it by reference you can take the T in you can take the low at the same time you can say the vector of end and take by reference the mark and if at the same time you can take the adjacency list done what's the first thing that you will do it always when you start off you'll say visited Mark",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "j1QDfU21iZk",
+      "position": 181,
+      "title": "G-56. Articulation Point in Graph",
+      "url": "https://www.youtube.com/watch?v=j1QDfU21iZk",
+      "start": 1061.46,
+      "end": 1185.96,
+      "text": "you start off you'll say visited Mark does this and the time of insertion the lowest time will be marked as timer and you can always increase the timer plus plus for the next step now let's go across to the adjacent Norms which is like this and this one thing you know for sure is if it is the parent you do not update the lower time insertion so you can just go over here you know the other thing will be if it is not visited this adjacent node is not visited in that case what you will do is you will go across call it with the this DFS and you'll pass on the visitor the timing below the mark and the adjacent and when you come back you'll be very greedy to say hey whatever you brought in can you please give it to me okay done next is the condition to check because you're coming back so if you cannot reach somewhere before me and you're not the first guy you know the first guy if you remember sorry not equal to minus one if you're not the first guy you're an articulation point my friend so I'll just mark it and if it is visited if it is visited in that case I'll say low of node because that's the current guy will be minimum of low of node this time for the adjacent I will not take the low because it's visited I'll not take the low instead of that I'll take the time of insertion of that particular visited guy once I've done this I think we are pretty much done now I'll quickly compile this and see if it is running fine so you see this is just giving to why did it give 2 because for the starting point we have not written the logic if you remember the logic it was very simple count the child's like the unvisited child so you can just count it and at the end you can write Hey listen",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "j1QDfU21iZk",
+      "position": 181,
+      "title": "G-56. Articulation Point in Graph",
+      "url": "https://www.youtube.com/watch?v=j1QDfU21iZk",
+      "start": 1178.16,
+      "end": 1290.24,
+      "text": "and at the end you can write Hey listen if a child is greater than one if there are more than one child this is definitely an articulation point and if you are the starting okay it was a starting guy and the child is greater than one I can easily say that you are definitely a articulation point so if you add this condition up I think it should give zero it does now let's quickly sum it and see if it is running absolutely fine yeah it is so guys I hope you have understood this right shuttle change to Bridges one is you need to make sure you reach before it not on it before it is very important you don't compute for parents because it might happen it's a single parent and even on its removal it doesn't matter so it's very important for a single parent you write it like this because it might have multiple components so in that case it's definitely an articulation point if it has multiple component it's definitely an articulation part even if the condition is not satisfied so for parents you have to write shuttle different conditions and if it's a visited guy you don't take something on the top of it why because you came by that path came by that path so if that's removed you cannot go back you cannot go back that's why you just take the time of insertion and not the lowest if it's a visited one very very important this one and this line and this that's a subtle change from Bridges now if I discuss about the time complexity in the space complexity space complexity is quite simple 3n I heard about the time complexity the time complexity can be said as doing a DFS traversal so V plus 2E and then a big of n here so quite simple to get this so I hope you've understood everything now before wrapping up this video I have a very quick request to make I was going",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "j1QDfU21iZk",
+      "position": 181,
+      "title": "G-56. Articulation Point in Graph",
+      "url": "https://www.youtube.com/watch?v=j1QDfU21iZk",
+      "start": 1286.34,
+      "end": 1321.75,
+      "text": "a very quick request to make I was going through our Channel statistics nearly 50 of the users who watch my video do not subscribe to the channel so please please do consider subscribing to the channel if you haven't subscribed yet and if you understood the intuition the algorithm and the code what are you waiting for hit that like button and if you haven't checked out our DP series and the SG here and the other playlist all the links will be in the description make sure you check them out with this I'll be wrapping up this video Let's be in some other videos [Music]",
+      "word_count": 108
+    }
+  ]
+}

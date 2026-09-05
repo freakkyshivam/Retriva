@@ -1,0 +1,64 @@
+{
+  "video_id": "excAOvwF_Wk",
+  "position": 25,
+  "title": "DP 35. Best Time to Buy and Sell Stock | DP on Stocks 🔥",
+  "url": "https://www.youtube.com/watch?v=excAOvwF_Wk",
+  "chunk_count": 5,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "excAOvwF_Wk",
+      "position": 25,
+      "title": "DP 35. Best Time to Buy and Sell Stock | DP on Stocks 🔥",
+      "url": "https://www.youtube.com/watch?v=excAOvwF_Wk",
+      "start": 0.0,
+      "end": 135.44,
+      "text": "Hey everyone, welcome back to take you forward. So we completed 1 DDP, DP on grids, DP on subsequences and DP on strings. So it's time it's so it's time to start DP on stocks. Yes. And there are generically uh six problem stocks. Uh is that the spelling? Yeah, that's the spelling. So we have six problems and in any of the interviews if you go across by doing these six problems DP on stocks gets covered and I'll be doing all these six problems like sequentially and it's very important that you follow every problem like make sure you don't directly jump to the fourth problem make sure you watch all the videos on that given sequence because I'll be building the intuition problem by problem and Yes, in DPO stocks it's very important to understand the space optimization in an interview. You cannot skip this portion. You cannot skip the space optimization portion because in an interview in DP on stocks people tend to expect you to answer the space optimization technique. So it's very important you don't skip it. So yeah without without wasting any time uh let's actually start with the first problem. So the first problem is best time to buy and sell stock. What does the problem state? The problem state you will be given an array and it states if you sell or buy a stock on any given day. This is the first day. This is the second day. Third day. Fourth day. Fifth day. Sixth day. The price of that stock is 7 rupees. On the first day, the price is one. On the second day, the price is five. On the third day, the price is uh three. On the fourth day, the price is sixth. On the fifth, and so on. Now, it states you that you have n number of days. Yes, over here you have six days. You have to decide a day when you buy the stock. You have to decide a day when you buy the stock. And you have to",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "excAOvwF_Wk",
+      "position": 25,
+      "title": "DP 35. Best Time to Buy and Sell Stock | DP on Stocks 🔥",
+      "url": "https://www.youtube.com/watch?v=excAOvwF_Wk",
+      "start": 130.16,
+      "end": 257.759,
+      "text": "you buy the stock. And you have to decide a day when you sell off the stock. Assume I decide that I'm going to buy the stock on this day. So buying that will cost me 1 rupee. And I'm asking you when will you sell it? So you will be selling it on this day which is costing you six. So if I ask you you invested one in buying it and now you're selling it at six. What is the profit that you make? The profit that you make is five. So the question states you have to maximize the profit. Maximize the profit. Remember in order to sell a stock you have to buy it. So the buying has to be done before the selling. You can't be like okay I I'll sell it on this day. I'll buy it on this day. 7 - 1. No it doesn't works this way. First you have to buy it like you bought it on here and then you decided to sell it over here. You could have done other ways like buy it on this day, sell it on this day. This could have given you the profit of four and you are only allowed to do this transaction like buy and selling can only be done once. Can only be done once. So that is the problem. Given the stock prices on n number of days, you decide when do you buy it and then you decide when do you sell it and just make sure the difference of these guys the profit has to be maximum. The profit has to be maximum is what you need to do it. I hope that makes sense. So how do you approach this problem? Now in order to approach this problem just assume I'm asking you if you are selling the stock on this day selling it on this day when will you try to buy it you will definitely try to buy it on the day which is the minimum price like do you",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "excAOvwF_Wk",
+      "position": 25,
+      "title": "DP 35. Best Time to Buy and Sell Stock | DP on Stocks 🔥",
+      "url": "https://www.youtube.com/watch?v=excAOvwF_Wk",
+      "start": 252.159,
+      "end": 389.84,
+      "text": "which is the minimum price like do you agree or not like it won't make sense if you buy it on this day because then you will have loss if you're selling it over here on the left you will try to buy it on the day which has minimum which is this. Similarly, if you are selling it on this, you'll try to buy it on a day when it has a minimum. Always remember if you are selling on ayat day you buy on the minimum minimum price from the first day to the I minus one day. Agreed. If you are selling it over here, over here whichever is the minimum you buy it on that. So can I say can I say I will try for every day I'll be like okay I definitely cannot buy and sell on the same day because the profit will be zero. That won't make any sense because I want to make profit. I don't want to make uh losses right. So I'll definitely start from here for this guy. Who's the minimal? The minimal is seven. The profit will be negative. So not considered for this guy who is the minimal one. So the profit will be 5 - 1 4. So you got a profit of four. For this guy who the minimal 1. The profit will be 3 - 1 2. For this guy who's the minimal one. The profit will be 6 - 1 5. Perfect. For this guy who's the minimal 1. So the profit will be 4 - 1 3. So for every day for every price you saw what profit you can make and you got for this six if you sell it on six the profit you'll make five and that is the maximum so I can say for every guy if I can keep a track of the minimal on the left my job will be done so why don't you do that it's very simple and straightforward I like okay fine I know",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "excAOvwF_Wk",
+      "position": 25,
+      "title": "DP 35. Best Time to Buy and Sell Stock | DP on Stocks 🔥",
+      "url": "https://www.youtube.com/watch?v=excAOvwF_Wk",
+      "start": 383.28,
+      "end": 506.08000000000004,
+      "text": "straightforward I like okay fine I know one thing for sure the minimum as of Now the first guy is the minimum and I know the profit that I can make zero like I will not I'm not interested in making negative profit. If I'm making negative profit I will not buy and sell. I'll not buy and sell or I'll buy it on the same day. I'll sell it on the same day. So the profit will be zero. So profit is zero. Now can I say for I = 1 I lesser than N I ++ whenever you at I equal to 1 which is this guy this is the minimal this is the minimal so can I say the cost that you will the cost that it will cost you is if you uh like if you're selling it on this price and you bought it on the minimal price this is the cost and can I say the profit you you need to maximize it so can I say it will be of this cost or the previous one right now in the next step when I goes to two which means you will go to here which which means you'll go to here which is the second index this will be the minimum can I say before moving to the next guy before doing an I++ I just need to make sure the mini is updated by the share price on this day so that on the next iteration I keep a track of the minimal. So while moving I'm keeping a track of all the minimals of a of i. So that for the next of a of i for the next a of i will be having the minimal and I can easily find the costing and throughout whichever is the maximal profit is going to be my answer. So I've written the exact same code which I wrote on the iPad. Let's see if it is running fine. Yeah, it is running fine. Let's quickly submit this off to",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "excAOvwF_Wk",
+      "position": 25,
+      "title": "DP 35. Best Time to Buy and Sell Stock | DP on Stocks 🔥",
+      "url": "https://www.youtube.com/watch?v=excAOvwF_Wk",
+      "start": 501.759,
+      "end": 552.72,
+      "text": "fine. Let's quickly submit this off to see if this gives us the correct answer. It does give us the correct answer. Time complexity guys you can start the loop from one. So the time complexity is we go of n space a go of one. So why dynamic programming? Because what is dynamic programming? Remembering the past here remembering the minimum throughout. So that's why this comes under dynamic programming tag as well. But yeah like this is definitely constructive algorithm. So guys I hope you have understood the first problem on DP stocks. Just in case you did please make sure you like this video and if you're new to this channel please please please do consider subscribing to us and yeah to continue our tradition make sure you write it write understood in the comment section and with this we will be wrapping up this video. Let's meet in the next one where we will be doing the second problem on DPN stocks. Still in bye-bye take care.",
+      "word_count": 171
+    }
+  ]
+}

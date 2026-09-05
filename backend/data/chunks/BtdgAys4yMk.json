@@ -1,0 +1,141 @@
+{
+  "video_id": "BtdgAys4yMk",
+  "position": 139,
+  "title": "G-14. Surrounded Regions | Replace O's with X's | C++ | Java",
+  "url": "https://www.youtube.com/watch?v=BtdgAys4yMk",
+  "chunk_count": 12,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "BtdgAys4yMk",
+      "position": 139,
+      "title": "G-14. Surrounded Regions | Replace O's with X's | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=BtdgAys4yMk",
+      "start": 3.04,
+      "end": 131.2,
+      "text": "hey everyone welcome back to the channel i hope you guys are doing extremely well so in this video we are going to solve this problem replace o's with x so given a matrix of size n cross m where every element is either o or an x now your target is to replace o's with x that are surrounded by x a o or a set of o is considered to be surrounded by x if there are x at locations just below above left and right so let's take an example on the ipad if we take this example and if i see this o is not surrounded by x on the top this o is surrounded by a zero but this is not surrounded by x this o is surrounded by o on this but o on this but nothing on top so i can say this is a set of o's which is surrounded by x on the left on the bottom on the right but nothing on the top similarly these are the set of the zeroes which are surrounded by x on the left x on the right nothing on the uh nothing on the right rather x on the left nothing on the right nothing on the bottom but the moment the moment i say hey listen let's convert this guy to an x now if i take this set of o's on the top x on the left x on the right x on the bottom x remember diagonals are not considered just the top just this are considered not diagonals thereby they are surrounded by x on all the four directions so this set of zeros i can say these set of zeros are surrounded by x on all the four directions not diagonals thereby i can convert them to x i can convert these o's to x but the moment i see these o's this is surrounded by x on the left on the top but nothing on the right nothing on the bottom it has vacant so",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "BtdgAys4yMk",
+      "position": 139,
+      "title": "G-14. Surrounded Regions | Replace O's with X's | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=BtdgAys4yMk",
+      "start": 124.479,
+      "end": 250.08,
+      "text": "nothing on the bottom it has vacant so thereby these o's will stay as os only so what i can say is what is the first observation that you figured if someone is on the boundary if someone is on the boundary that is where he cannot be covered that is very obvious because for this example like if i just erase this for this example there was o's right this was the o now i know if these o's are somewhere not connected to a boundary they're bound to be surrounded by they're bound to be surrounded by acts very obvious right because they will be bound to be surrounded by x if they are not connected to the boundary but if somehow if somehow if i convert this x to o these guys will be surround like these guys will be connected to the boundary there will be connected to a zero which is on the boundary thereby you cannot convert these set of zeros so do you get an observation do you so let me give you one more example so if you see this they are nowhere connected to a boundary which has a zero so thereby they're bound to be surrounded by x they're bound to be surrounded by x on the top on the right on the bottom on the left they're bound because they're not connected to a boundary so this pretty simple observation is if i change this to an o you can't say that this set of o's will be surrounded by x completely because there's a boundary guy and if you take these set of o's you you have an empty over here you have an empty over here this might be surrounded but this has an empty so if someone is connected to the boundary if a set of zeros is connected to a boundary that cannot be surrounded by x that is my first observation a set of x connected to a boundary oh connected to a boundary o can't be converted can't be converted yes",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "BtdgAys4yMk",
+      "position": 139,
+      "title": "G-14. Surrounded Regions | Replace O's with X's | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=BtdgAys4yMk",
+      "start": 246.239,
+      "end": 363.039,
+      "text": "can't be converted yes pretty simple and straightforward now let's have some observations so can i see if i've observed this if i observe this now which algorithm shall i apply i just need to go through the connections go through the connections so can i say if this is an o that's a boundary you and that is what i'm considering anyone that is connected to the boundary i repeat any one that is connected to the boundary in this direction in this direction in this direction in this direction they will never be converted to x they will never ever be converted to x so i'm like okay i can just do simple algorithm which starts from this boundary and goes and connects to all the o's so probably if i just apply some dfs you can apply bfs as well if i apply dfs this is a no i know this cannot be converted then i go to this this is connected this also cannot be this is connected to this this also cannot be this is connected to this this also cannot be this is connected to this this also cannot be none of them cannot be none of them cannot be remember this and done because this boundary zero is no more connected to this because this is diagonal so apparently i can say these set of zeros no matter what you do since they're connected to this guy they cannot be converted to an x similarly i can say if i take this boundary and i say okay go to this so these two also cannot be converted to x can i say this i can now if i just go back a couple of steps okay since we have done the algorithm now what if i go across and i say okay let's do this x let's do this x now i know what is the boundary this is the first o bound like o boundary so this is where we have so if i say go and",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "BtdgAys4yMk",
+      "position": 139,
+      "title": "G-14. Surrounded Regions | Replace O's with X's | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=BtdgAys4yMk",
+      "start": 359.52,
+      "end": 488.479,
+      "text": "this is where we have so if i say go and connect with all those that you're connected with he will go and say okay these zeros but apart from that are these zeros touched no they are not touched no they are not touched so if they are not touched what do you say please convert them to x perfect so the algorithm is very simple start from the boundary zeros they can be multiples remember this there can be multiples start from the boundary zeros and mark them [Music] that they will not be converted that they will not be converted and convert the rest zeros convert the remaining sorry those remaining goes that's my algorithm okay so okay yeah so let's take this example and we're going to perform a dfs traversal you can do the bfs traversal as well as long as you're starting with the boundaries and marking all of those guys who are connected to it it's absolutely okay so what i'll do is this is my matrix right so i'll create a corresponding visited matrix again you can modify this but i do not modify the given matrix i don't modify the given matrix because over here they have clearly stated replace the o's with x so you just replace those with x and return that you just replace that and return apart from that i will not do any modification to the data so so what i'll do is i'll create a corresponding visited matrix now okay so on the left we have a matrix on the right we have a visited matrix okay now what you do is you know you need the boundary o's so you go to all the boundaries and find out the first two let's check out boundary no no no oh no oh no there is no o on the first row let's go uncheck and the first column is there any one in the first column i say the first column yes there is an o there is a no so do one thing",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "BtdgAys4yMk",
+      "position": 139,
+      "title": "G-14. Surrounded Regions | Replace O's with X's | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=BtdgAys4yMk",
+      "start": 483.68,
+      "end": 603.68,
+      "text": "there is a no so do one thing call the dfs with this guy call the dfs with this guy so what do you do is uh let's quickly write down the row numbers zero this is and the column numbers let's call the dfs from zero comma or rather four comma zero so this is the dfs chord you know how the dfs works dfs four comma zero will go and mark it as visited mark it as visited done df is a four comma zero checks the top guy it's a x no need to go to an x check the right guy it's a o please go and mark market please go and market so you will say okay i'll do a dfs for four comma one but will there be any subsequent dfs like when it comes back will there be a subsequent year no because there is no one on the bottom there is no one on the left this one is x and this one is the only you it just goes to this tfs so go to the full comma one now when you go to the four comma one you again mark it as visited you're standing at four comma one you check up okay this is a no this is an x no one already visited so you just go to this guy which is three comma one which is three comma one perfect now what will happen is you started here you went here you went here there three comma one please make sure your market has visited please make sure you mark it as visited done correct next three comma one standard three comma one up no no visited no so this guy this guy started from here and he did a dfs and mark this this this and then from here it did not find anyone else to go so he says no more dfs thereby comes back comes back apparently the dfs is over apparently the dfs is over once the",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "BtdgAys4yMk",
+      "position": 139,
+      "title": "G-14. Surrounded Regions | Replace O's with X's | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=BtdgAys4yMk",
+      "start": 597.04,
+      "end": 726.639,
+      "text": "over apparently the dfs is over once the dfs is over i can say these guys are marked done because this zero was connected to these three guys so it marked it these set of zeroes cannot be converted done so as if i've checked the first row and the first column let's check out the last call in the last column you have a o but that's already marked you have another o that's already marked so no need to again perform dfs traverses because their connections would have already been marked in the previous traversal xxx so this done this done and this time we only left with this guy we have an x you know we have oh yes start from here while checking you just get an o so the moment you got an o from there which is dfs off one comma four so this is an o which is dfs of one comma four please mark it as visited please mark it as visited the moment you have marked it as visited done now what is your next step the next step is very simple check out it's no no no yes which is dfsoft two comma four market is visited there you go here does it have on the right no does it have on the top visit it does it have on the right no does it have on the bottom no it does not have it does not do any for the travis this is also visited so apparently this zero is visited and this zero is listed because these set of o's where connected to the boundaries you can't say diagonal so apparently this is done you started the dfs done do we have a but this is already visited no need xx so i have traversed from all the boundaries and marked the corresponding set of zeros that cannot be converted the corresponding set of zeroes that cannot be converted job done traversal is done for all the boundary guys next step zero is it zero",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "BtdgAys4yMk",
+      "position": 139,
+      "title": "G-14. Surrounded Regions | Replace O's with X's | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=BtdgAys4yMk",
+      "start": 723.12,
+      "end": 868.0790000000001,
+      "text": "is it zero that means none of the boundary visited it so this can be converted to an x 0 0 x 0 0 x 0 1 someone visited from the boundary someone visited from the boundary keep it as o 0 0 x no one visited it from the boundary zero one someone visited from the boundary zero someone visited from the boundary zero someone visited from the boundary zero someone visited from the boundary so if someone did not visit it from the boundary you convert it into an x otherwise you do not this is as simple as it can get so if i break down the algorithm it's very simple from boundary find os and travels and connect or travis and mark always connected to it and travels and marked all o's or zeros whatever connected to it okay so let's quickly check out the code so guys as usual i'll be coding the c plus plus and the java code is on the left so we're given an m and a character vector so what do you need to do you need to basically convert it so what is the first step you need a visited one so please create a visited one there's the first thing you'll need n cross vector of int m zero so visited are marked as zeros that's the next thing that you need you need to travels the first row first column and the first and the last row and the last call so let's grab this on the first row which is so if it travels on the first row you will have to go to every column so so i can say this is a traverse rose travels first row and last row this will be doing it okay so can i see that if this is unvisited which is the first row means zero through and the column is j this is the first row and if i say the last row it means n minus one and j the",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "BtdgAys4yMk",
+      "position": 139,
+      "title": "G-14. Surrounded Regions | Replace O's with X's | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=BtdgAys4yMk",
+      "start": 860.48,
+      "end": 991.0400000000001,
+      "text": "last row it means n minus one and j the column so this is for first row and this is for the last two perfect very simple because if i take you back this is zero only this changes this changes this changes this changes so this is your j and the zero stays constant for the first row and if you look at for the last row this is constant and this changes that is what i have it right so this is the first row if it is not visited and it is a 0 very important it is rather i've been messing it up that's been very bad that's fine uh if of o and j but if it is oh can you go and say can you please call this dfs for i comma j with the visited matrix and the k matrix we'll write the dfs afterwards similarly can i say the same thing if it is having n minus 1 and j equal to equal to an o i say dfs of n minus 1 by the way this will not be i comma j this will be 0 comma j n minus 1 j visited matrix perfect done that will be for the first one the first column can i do a similar thing for the last true and last column sorry first column and the last column i can i can write something like this and i know the first column will be something like this if not visited of what i and the first column will always have zero and and matrix of i and this is equal to then you do a dfs traversal for i comma oh comma visited comma matrix perfect and similarly can i say if not visited the last column is going to be m minus 1 and and matrix of i and m minus 1 is going to be equal to equal to o then you do a dfs call for this guy which is i comma m minus 1 and i visited a matrix",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "BtdgAys4yMk",
+      "position": 139,
+      "title": "G-14. Surrounded Regions | Replace O's with X's | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=BtdgAys4yMk",
+      "start": 985.44,
+      "end": 1108.3200000000002,
+      "text": "i comma m minus 1 and i visited a matrix perfect so this is how you will do it and we'll write the dfs call slowly after that what you will do is you will go for the entire stuff yes i mean something like this you'll go for the entire stuff and you'll see if this guy is not visited and this guy is still uh oh that means you were not touched by anyone in the boundary so can you please convert yourself into an x and once you have can you return the same matrix right that is something which you have done i i solely did change the matrix because it was saying replace o's with x if it would have sent me uh something else then i would have not tampered with the matrix okay so this is done now i just need to write the dx so please write the dfs so it's very simple you say private void dfs you have the row you have the call and you have the visitor so now the moment you reach the row call please make sure you mark it because they are getting attached so once you've marked so once you've visited this guy what's your task check for top right bottom and left so how do you check i think everyone now remembers that isn't it we have been doing that throughout so if you are standing at a row column you need to check the top which is row minus one column you need to check the bottom which is row plus one column you need to check the right which is row comma column plus one you need to check the left which is row comma column minus one so apparently minus one plus zero minus one plus zero plus one plus zero that is the delta rho that will happen in my previous videos i've already told you this this is plus 0 this will be plus 1 plus 0 minus 1 so this is the delta rho and delta column",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "BtdgAys4yMk",
+      "position": 139,
+      "title": "G-14. Surrounded Regions | Replace O's with X's | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=BtdgAys4yMk",
+      "start": 1104.64,
+      "end": 1226.8799999999999,
+      "text": "and delta column right so what you can do is you can probably declare it over here the delta rules or you can declare it globally that is your choice i'll leave that on you so this will be the delta row and delta column and this will be the delta column which will be something like zero comma one comma zero comma minus one perfect so you can pass this on over here but a lot of i don't feel like passing these many parameters but it's okay so pass down this and now you just need to take it over here which is delta rho this is going to be delta perfect now you know there are four neighbors which is in this way go into the four neighbors now you just need to check if they are not visited previously so create the new neighbor so new neighbor will be row plus del row of i the new column will be column plus del column of i perfect now what is the next thing that you'll do you will say if the firstly please check for validity new row has to be uh by the way you need to also carry the nm uh that's a lot of things let's do one thing let's uh figure out a name over here because i need to change a lot of places which i am not fond of as of now so yeah done so you can say if this is greater than equal to 0 at the same time this n row is lesser than e lesser than n at the same time and column is greater than equal to 0 at the same time and column is also lesser than m and at the same time these are not visited in row and n column and at the same time the matrix also has to give you something like and oh if all of these suck all of these satisfy what you will do is you will say",
+      "word_count": 341
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "BtdgAys4yMk",
+      "position": 139,
+      "title": "G-14. Surrounded Regions | Replace O's with X's | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=BtdgAys4yMk",
+      "start": 1221.039,
+      "end": 1350.72,
+      "text": "satisfy what you will do is you will say okay we can call the dfs for the n row n column with a visited with a matrix with a del row and add alcohol so just make sure these are all capital o's not zeros my bad okay so once you've converted these i think we are pretty much uh okay and we can now do a comp so let's analyze the time complexity in space complexity so this is simple like big o of n uh because you're traversing for all the boundary of our rows boundary columns so this is b go of n this is another big o of n but at the end of the day how many times will this dfs be called assume you have all the matrix let's take a case where you have something like this zero zero zero zero zero zero zero zero zero zero zero if you have a matrix and you start with the first guy and then you call a dfs the dfs will go like this go like this go like this go like this go like this go like this and mark everyone at a single instance so it will be traversing everyone at the worst case but once this dfs call has been started from here it will mark every one and when you start the next dfs call it will never go it will never go so can i say the dfs in total will run for big o of n cross m cells into four for four directions that is obvious and plus they will be uh running they are running like the loop or boundaries couple of times so i can narrate it to almost near about n cross m i can narrate the time complexity to near about n cross m and if i ask you the space complexity yeah we're definitely using something like visited del rose n cross m and uh if you're performing a dfs at this case the worst auxiliary will also",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "BtdgAys4yMk",
+      "position": 139,
+      "title": "G-14. Surrounded Regions | Replace O's with X's | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=BtdgAys4yMk",
+      "start": 1345.679,
+      "end": 1398.38,
+      "text": "this case the worst auxiliary will also be n cross m because you will go go go go go so you'll completely go into the depth so the space complexity is also near about n cross m in almost all these problems that we are solving you'll find n cross m uh to be very standard in all the matrix problems so this is how this will be done so guys i hope i was able to uh make you explain this tough problem so just in case i was able to please please hit that like button and if you are new to our channel what are you waiting for hit that subscribe button right away and if you haven't checked out our sd sheet and the dp series the link is in the description please make sure you check it out and here with this i'll be wrapping up this video let's fill in some other video till then bye bye take care whenever your heart is broken [Music]",
+      "word_count": 171
+    }
+  ]
+}

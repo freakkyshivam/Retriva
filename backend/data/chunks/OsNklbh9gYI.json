@@ -1,0 +1,97 @@
+{
+  "video_id": "OsNklbh9gYI",
+  "position": 128,
+  "title": "G-3. Graph Representation in Java | Two Ways to Represent",
+  "url": "https://www.youtube.com/watch?v=OsNklbh9gYI",
+  "chunk_count": 8,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "OsNklbh9gYI",
+      "position": 128,
+      "title": "G-3. Graph Representation in Java | Two Ways to Represent",
+      "url": "https://www.youtube.com/watch?v=OsNklbh9gYI",
+      "start": 3.6,
+      "end": 122.64,
+      "text": "so in the previous video we did learn about graph and its type and all the other terminologies that are used in graphs in this video we will be learning about how to store such a complex data structure in java so i'll be breaking the video into two parts the first being how uh how's the input of a graph given to you that is very important to understand while the next being how do you store it or which data structure do we use to store it so let's understand about the input so if you see this is a graph data structure and the first thing that they will tell you is n and m where n is nothing but the number of nodes and m is nothing but the number of edges for this question for this graph rather the number of notes are 5 the number of edges are 6 y because 5 notes number of edges 1 2 3 4 5 6 number of edges six that is something which we know for sure now the next thing that they will tell you is given m lines given m lines and those m lines will represent all the edges and i'm talking about undirected or undirected graph as of now at the end i'll tell you what is the change that is required for directed graph so they can give you one two now one two resembles this particular edge they can give you 1 2 or they can give you something like 2 1 either of them either of them next being 1 3 3 4 2 4 2 5 4 5. order can be anything one three can be at first two four can be at first order can be anything as long as they are telling you about all the edges that is what matters so nm in the first line and the next will be containing this so the input will be something like 5 6 which represents n m",
+      "word_count": 340
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "OsNklbh9gYI",
+      "position": 128,
+      "title": "G-3. Graph Representation in Java | Two Ways to Represent",
+      "url": "https://www.youtube.com/watch?v=OsNklbh9gYI",
+      "start": 116.159,
+      "end": 235.04,
+      "text": "something like 5 6 which represents n m then 1 2 1 3 and so on till 4 and 5. this is how the input will look like right now it's a complex data structure so you might ask whatsoever how do we store it so in order to store it we're going to use two things one is the matrix which we call as adjacency matrix and the second is list which we call as adjacency list so in order to store the graph in a matrix the first thing we need to observe is is the graph a one based indexing graph or not so if you carefully see what do you mean by one based indexing the notes are numbered from one till five where the number of notes were five so it's a one based indexing graph okay so what you will do is you will define in matrix a 2d matrix of n plus 1 and n plus 1 size which is 6 cross 6 y 6 cross 6 so that you have the fifth index with you so that you have the fifth index with you done now what you will do is you will go to the first edge that is given to you one and two and you'll go to the first row second column and the intersection is where you'll say one one symbolizes there is an edge between one and two and there's also an edge between two and one because it's an undirected graph so what you'll do is you'll go to two you'll go to one and on the intersection again you'll put a one but this is how you can store the h next one three so you go to one and three mark it as one and three and one and mark it as one next you go to two four mark it as one four two and market as one next you go to three four market has one four and three market as one next you go to two and five market",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "OsNklbh9gYI",
+      "position": 128,
+      "title": "G-3. Graph Representation in Java | Two Ways to Represent",
+      "url": "https://www.youtube.com/watch?v=OsNklbh9gYI",
+      "start": 230.159,
+      "end": 347.52,
+      "text": "one next you go to two and five market has one five and two market has one next you go to four five market is one five four market is one this is how all of these things are stored in a matrix all the remaining guys can be easily filled up with zeros zero means there is no edge one means there's an edge between the i row like it node and the g8 column okay that is the definition of one now how much space are you using i can say i'm using n square space because i'm approximately taking n plus one into n plus 1 which is near about n square space so this is where this method is not appreciable because it ends up taking a lot of space thereby this method is not used widely but you can use this if the graph is a smaller graph so if you check out the java code for this adjacency matrix you're given n and m then you declare a matrix then assume the input the first thing they give you is one and two there's an edge between one and two you go to one and two and you mark it as one and you go to two and one and you mark it as one similarly for these guys as well like for every edge you mark i j and j i as one so if there is an edge given like u and v you see adjacency of u v equal to one and adjacency of v u equal to one that's how you can easily store them in an adjacency matrix so if you store them in a matrix it is going to be costly right so this is where something like an adjacency list comes in so what you do is you define something like an arraylist so i'll be something like arraylist okay and inside that i'll also be storing an arraylist so it'll be something like this arraylist inside that instead of integer",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "OsNklbh9gYI",
+      "position": 128,
+      "title": "G-3. Graph Representation in Java | Two Ways to Represent",
+      "url": "https://www.youtube.com/watch?v=OsNklbh9gYI",
+      "start": 342.96,
+      "end": 465.919,
+      "text": "arraylist inside that instead of integer it will be under the arraylist this is what we will be defining okay and the first step that you will check is again if it is one based indexing and if it is then what you will do is you will run a loop yes you will run a loop and you will add exactly n plus one error list to this particular adjacency list you will add exactly n plus one rls to this adjacency list so if you look at the code i have defined an adjacency list and then i have added exactly n plus one error list if the code is visible to you exactly n plus one error list have been added so once it is added how will it look like so it will be something like on the zeroth index there is an empty error list on the first index there is an empty error list second third and fourth so on all these five indexes you have an empty error list right and what is our target remember this our target is if i'm standing at the fourth error list this fourth error list should contain three two five this fourth error list should contain three to five so every array list on an index should contain its neighbors for two it should contain four five fun in any order that is what our target of arraylist will be okay so what we will do is if there is one and two for an example the first thing is one and two what i'll do is i'll go to the arrow list of one and i'll say please store two please store two and similarly one and two means two and one so i'll go to two and i'll say store one okay for one and three i'll say go to one and store three for three go and store one perfect for two and four i'll say four store two and also two please store four perfect and",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "OsNklbh9gYI",
+      "position": 128,
+      "title": "G-3. Graph Representation in Java | Two Ways to Represent",
+      "url": "https://www.youtube.com/watch?v=OsNklbh9gYI",
+      "start": 460.8,
+      "end": 575.76,
+      "text": "perfect and and for three and four i'll go to three and store four before i'll store three for two and five two store five five store two for four and five four store five fives to four so i can see all my list are completed and for every guy i have their neighbor notes i have the name of vertexes stored in this particular array list so this is how you can store it in a list so if you carefully observe what is the space that you're using if i ask you what is the space that you're using now every edge has two nodes every edge has two nodes and for every edge you're storing two guys like for one and two you stored for one you stored for one you stored two and four two you stored one right so twice so i can say b go of twice of edges is what is the space complexity again if you count the number of edges where six and the space that you took was one two three four five six seven eight nine ten eleven twelve exactly twelve is the space that you're taking yeah this might be an extra stop button near about you can say near about big go of 2m is the space that we are using so if i go back to the code and if you see edge 1 and 2 you can carefully observe that i am saying dot get 1 which means get the error list of 1 this means get the error list at the first index and please store two in it get the error list in the second index and place to one and this is how you use to one two so in short you can say get of u add v get of v add u for every uv that is given to you right and if you want to print the graph super simple you just i trade and you can print all the edges yes you can print all the edges",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "OsNklbh9gYI",
+      "position": 128,
+      "title": "G-3. Graph Representation in Java | Two Ways to Represent",
+      "url": "https://www.youtube.com/watch?v=OsNklbh9gYI",
+      "start": 571.12,
+      "end": 678.32,
+      "text": "yes you can print all the edges connected all the edges okay this is how you can easily print this particular graph now some question what if it's a directed graph so in that case it'll be like one is directed to true sorry two so what you'll do is you'll remove this so you just need one if they are saying if they are saying it's a directed graph you just add one edge it's from one to two or from u to v that's it v is a neighbor of u because you can go from u to v not from v to u so just add one so as of now you've understood how to store an undirected graph a directed graph what if i ask you how do you store weighted graph what does a weighted graph means now what if the graph comes up something like okay there's an edge between one and two and the weight is two there's an edge between one and three the weight is three edge between three and four the weight is four f2 into four the weight is one edge between this has six and an edge between this has three what if they start assigning something like weights to it yes what if this start assigning edge weights that's when you call that as weighted craft the first technique that we learned was matrix right and if there is an edge between one and two you basically went to one basically one went to two and you wrote one in it so instead of writing one you take the edge weight two and you write in both the places so that's a slight change that you have to do you have to go back to the code and instead of saying equal to one you say equal to weight so it's going to be like adjacency of u v equal to weight right but that was of matrix but if i ask you how do you store it in a list",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "OsNklbh9gYI",
+      "position": 128,
+      "title": "G-3. Graph Representation in Java | Two Ways to Represent",
+      "url": "https://www.youtube.com/watch?v=OsNklbh9gYI",
+      "start": 674.48,
+      "end": 791.0790000000001,
+      "text": "it in a list so remember in the list we were doing something like 0 1 2 3 4 5 and for 4 the neighbors were 2 3 5 if you carefully observe before the neighbors were two three five so how do you store the weights so as of now you're just storing two three five so instead of that yes instead of that what you'll do is you'll stop pairs in it let's do pairs in it and you'll see four can be like okay i know it has two but it has two comma one because the edge weight is one i know it has three but it has 3 comma 4 because the edge weight is 4. i nod is 5 but the edge weight is 3 so instead of storing something like 2 3 5 as single guys you will just tweak the data structure to store pairs to store pairs and those pairs will be like the first guy will be the four to two and the second guy will be the edge weight the first guy will be four to three and the second guy will be the edge weight so while defining the list instead of integer you have to define a pair class of integer and integer and you can easily yes you can easily store the weights as well i'll be showing you the implementation probably in some video where we will be solving the problem in weighted graphs but as of now just keep this in mind so i hope you've understood the entire implementation of graph in java just in case you did please make sure you like this video and if you're new to our channel what are you waiting for kill that subscribe button right away and if you haven't checked out our dp series and the hd sheet man the link is in the description make sure you check it out with this i'll be wrapping up this video let's speed in some other video till then bye take care whenever your heart is broken",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "OsNklbh9gYI",
+      "position": 128,
+      "title": "G-3. Graph Representation in Java | Two Ways to Represent",
+      "url": "https://www.youtube.com/watch?v=OsNklbh9gYI",
+      "start": 784.32,
+      "end": 791.0790000000001,
+      "text": "whenever your heart is broken don't ever forget",
+      "word_count": 8
+    }
+  ]
+}

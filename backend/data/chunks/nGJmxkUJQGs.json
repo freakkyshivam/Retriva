@@ -1,0 +1,207 @@
+{
+  "video_id": "nGJmxkUJQGs",
+  "position": 216,
+  "title": "DP 36. Buy and Sell Stock - II | Recursion to Space Optimisation",
+  "url": "https://www.youtube.com/watch?v=nGJmxkUJQGs",
+  "chunk_count": 18,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "nGJmxkUJQGs",
+      "position": 216,
+      "title": "DP 36. Buy and Sell Stock - II | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=nGJmxkUJQGs",
+      "start": 0.08,
+      "end": 124.56,
+      "text": "hey everyone welcome back to take you forward so we will be continuing with dp on stocks and it is the second problem best time to buy and sell stock part two so what does the problem state you'll be given prices of stocks on each day yeah so you have been given the prices on each day now you're allowed to buy and sell stocks as the name suggests you're allowed to buy and sell stocks now in this part one what we did was you were allowed to buy once sell once but over here you can buy as many times as you want and you can sell as many times as you want okay so what you can do is you are going into the market you say i'm going to buy it on this day so i'll say okay i'll buy it on this day and i'll sell it on this day so over here i'll make a profit of four i buy it with rupees one i sell it with five i make a profit of four then i say hey listen i'm going to again buy it over here and i'm going to again sell it over here which gives me a profit of three which in turn gives me a total profit of seven right i could have gone other ways like if i write down again seven one five three six four i could have gone other ways as well i could have said hey listen i will be i'll buy it over here i'll sell it over here right now the thing that you cannot do is you cannot go something like this you cannot buy buy before perform like if you're buying before performing the next buy you have to sell so buy and then you have to sell then again you can buy any day so this buy sell has to be done before performing the next buy sell you can't be like buy buy buy then sell sell sell that is strictly not allowed",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "nGJmxkUJQGs",
+      "position": 216,
+      "title": "DP 36. Buy and Sell Stock - II | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=nGJmxkUJQGs",
+      "start": 118.0,
+      "end": 257.59999999999997,
+      "text": "sell that is strictly not allowed got this so performing this buy sell can be anywhere like you could just do a one cell as well this is one where you say okay the profit that i will make is five so you can perform buy sell as many times as you want only with the condition that before buying a stock you should have sold out the previous holding stocks that is the clear instruction given to you so you can perform this as many times as you want and if to give me the maximal profit you have to maximize this profit in this example the answer is seven so you have to just make sure you do this right so how will you actually solve this particular problem is my question to you so let's analyze this problem and try to figure out how will i try to approach these kind of problems so what was i given i was given 7 1 5 3 six four okay so let's assume let's assume i will be starting over here okay let's assume i'll be starting over here it's kind of a 1d array and when i'm starting off when i'm starting off generically what can i do i can be like i can buy it or i can say i'll not buy it let's move i can buy it and then i can sell it or i'll not sell it i'll sell it here so what am i seeing a pattern of a lot of ways like you can do a buy cell you can probably do a buy sell you can do it on numerous occasions right and whenever there's a lot of ways what do you do you try always yes you try always and you get the best possible answer from always now when i say try always what comes to your brain what comes to your brain recursion recursion because there can be a lot of face so recursion comes to your brain right so how do you write recurrence in dp",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "nGJmxkUJQGs",
+      "position": 216,
+      "title": "DP 36. Buy and Sell Stock - II | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=nGJmxkUJQGs",
+      "start": 253.04,
+      "end": 397.28000000000003,
+      "text": "write recurrence in dp how do you write recurrence again we will follow a standard procedure what is the standard procedure of writing records the standard procedure is pretty straight forward it is express everything in terms of index now over here yes over here we have a plane array and you know whenever we have a plane array we can have the index working right across here so what i'll say is okay express everything in terms of index that is something which i'll do so we will be expressing everything in terms of index now do i need any other parameters is my question we need to think on this now we have done problems like knapsack if you remember and in that we have to uh we have to take care if our baggage was full or not right now over here if i am standing at here what decision can i make on it i can buy or i cannot buy how did you understand because you know before this you have not bought anything but if you're standing here what decision can you make what if if you bought someone here then you cannot buy here for sure you can sell it so what idea i'm getting is on any index i have to know whether i have bought anything previously or not because if this guy was bought here i cannot buy this again i definitely cannot or if this guy was sold here then i can buy so i have to know if any guys were bought right before this or any guys were sold right so do i have an allowance of buying so i can say probably i can carry something like buy a variable like buy which tells me can i buy or not if someone has bought this and he has not sold it so over here i definitely cannot buy so i have to carry a variable as buy which tells me can i buy that stock if i can i'll either decided to buy or",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "nGJmxkUJQGs",
+      "position": 216,
+      "title": "DP 36. Buy and Sell Stock - II | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=nGJmxkUJQGs",
+      "start": 392.8,
+      "end": 542.32,
+      "text": "if i can i'll either decided to buy or i'll skip it and go across and if i cannot buy then there are two options either sell it off or don't sell it off so i'll be like okay we have understood we need one more variable which tells me on that particular index can i buy or can i not right perfect explore possibilities explore possibilities on that day what am i looking for i'm looking for best possible answer so try to add up what i what are you trying to make profits try to add up if you're buying then it is as a minus if you are selling it as a plus i'll explain you when i write the records x or you're looking for profits right so take the addition of states or whatever you're doing wanting to do take the maximum of all profits make because you are looking for profits and then if you follow these and then there will be a base case if you follow all of these conditions i think you will be able to write very easily so without actually wasting any time let's try to write the recurrence okay so what what did i say express everything in terms of index and by okay so let's analyze f of index and by so assuming assuming uh the array is seven one five three six four so assuming you start at the zero earth index so this this is the price array and it's starting at the zeroth index so can i say at f of zero you have complete liberty of buying because that's the first guy that's the first guy i'm giving you complete liberty of banks i'll be like okay i get the complete liberty of buying which is one assuming uh liberty by one means you can zero means you cannot so i'm giving them complete liberty so what i am asking you is ff01 starting on zeroth day with by what max profit you can give me",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "nGJmxkUJQGs",
+      "position": 216,
+      "title": "DP 36. Buy and Sell Stock - II | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=nGJmxkUJQGs",
+      "start": 536.72,
+      "end": 666.6400000000001,
+      "text": "max profit you can give me what max profit you can give me that is what it signifies starting on this day you're starting to do your trading on the zero day what maximum profit can you give me is the question okay fine so what can be the states so we have understood uh these two states of index buy so let's uh tick mark the first thing explore possibilities on that day so let's analyze what can you do one thing i know for sure is there can be two possibilities whether like if there will be a buy like i'm allowed to buy i'm allowed to buy or else i'm not allowed to buy that is for sure the possibilities will be this and on those basis i can make two profits there'll be two profits that i'll make right so let's assume if i'm allowed to buy what will i do let's come back to this what can i do with this seven i will like striver i'll definitely buy this there's no other way wrong i will definitely buy this or i'll say he's rival oh this is too costly uh let's not buy this and move to the next guy and see if i can do a trading on the next day so i'm saying you can buy or you cannot buy back to the previous days of dp on subsequences take not kick buy or don't buy so assume just for an example assume if you decide to buy over here and you decide to sell it over here what is the profit that you make five minus seven is the profit that you make which is minus two so you're adding minus seven to the answer whenever you're buying you're actually adding minus seven to the answer when you're buying and when you're selling you're adding plus five got this because if you're doing a buy over here and if you're doing a cell over here it's basically 3 minus 7 is the profit so minus 7 is added to the",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "nGJmxkUJQGs",
+      "position": 216,
+      "title": "DP 36. Buy and Sell Stock - II | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=nGJmxkUJQGs",
+      "start": 661.2,
+      "end": 780.32,
+      "text": "the profit so minus 7 is added to the answer so can i say can i say if i decide to buy on that day the profit that i'll add is this guy and if i bought on that day i'll move to the next day which is index plus one and if i bought i bought in the next he cannot buy he has to sell so you cannot buy makes sense makes sense and what if i decide hey listen i am not interested to buy on this because the price looks huge i'm not interested to buy i'm like okay fine you are not interested to buy so why don't you don't buy and you go across to the next day and you see you still go with one saying hey listen i will still go with the buy because in the next day i still have the liberty to buy so you know this can be one way which is take if i just write this this is take case this is not a case and i definitely know what i require is max of all profits made so the profit will be max of these couple of guys either i buy or either i don't buy as simple as that what about sell because if i come across to the next guy it is sell right so again we'll try to sell because i know we cannot buy if i coming to else we cannot buy we have to sell again assume uh you are somewhere oh where was the example assume you are somewhere over here i'm like hey i'm not interested to sell because the price is very very low the price is very very low i'm not interested to sell or you can be like six if you're over here but the price is very high let's sell it so there can be again two ways i decide i'll sell it i'll say hey don't sell it let's move to the next day so two ways again so i'll be like fine",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "nGJmxkUJQGs",
+      "position": 216,
+      "title": "DP 36. Buy and Sell Stock - II | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=nGJmxkUJQGs",
+      "start": 776.32,
+      "end": 892.9590000000001,
+      "text": "be like fine let's go across if i decide to sell it i know the profit will be plus because i'm selling the money is coming to me the money is coming to me so i'll be like fine let's sell it so if i'm selling it i will be getting something around prices of index plus function if i've sold a stock if i've sold a stock i will move to the next day and i still have liberty to buy i still have liberty because i've sold it now i'm i'm free in the next junction i can buy but if i don't sell it then the profit made will be this i'll go to the next and i'll say hey listen you're still holding a stock you don't have a liberty to buy i don't know the max of this is what you take and you return the profit at the end of the day so can i say can i say this is what the possibilities will be and you're returning the max of profits so what i can say is okay fine we have explored possibilities on that day what's the next take the max profits has been done peace case you're trying you're trying on every day when do you end up when when you've tried on every day you've exhausted the days so i can be like when you exhaust the days that means when you reach this index because you started here you go here you go here you go here you go here you go here and ultimately you'll come to the nth index so whenever you come to the nth index there's no profit to be made the array is over there's no profit to be made but you have to be careful over here what if you actually bought a stock what if you bought a stock and you did not sell it so there will be a problem right so coming across when you end all the days so there is no profit to be made",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "nGJmxkUJQGs",
+      "position": 216,
+      "title": "DP 36. Buy and Sell Stock - II | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=nGJmxkUJQGs",
+      "start": 889.12,
+      "end": 1016.0,
+      "text": "profit to be made you have invested some money even if buyers even if buy is zero that means you're still holding a stock but if you're holding a stock that means you have gone you have invested a money minus so that won't matter so you will return zero no more no more money you'll get from the market because you're done no more money you'll get from the market so if you have gone with something it will be a negative value so that will not be considered into your answer this is how you can easily write the recursion so if you have written the recursion what is the time complexity the time complexity will be very simple 2 to the power n because for every index you can either sell like take or not take so to the parent space complexity will be we go off and the auxiliary stack space and you can definitely optimize this because there will be overlapping sub problems there will be overlapping sub problems if you try to draw the recursion tree you will see that there are overlapping sub problems of f of index and by so you can definitely apply the memoization technique and in order to apply the memory action technique what do you apply the changing parameters are index and the buy what are the values of index from 0 1 2 3 n so n different values what is buy either you say 0 or 1 1 for you are allowed to buy 0 4 you're not allowed to buy so there are two values zero or one so this will be the dp state that you need to optimize so if you use this dp states you will be easily able to write it so just make sure you just insert a couple of lines dp of index and buy one more line if dp of index and buy is not equal to minus 1 you return dp of index and buy again i have explained these steps in the entire",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "nGJmxkUJQGs",
+      "position": 216,
+      "title": "DP 36. Buy and Sell Stock - II | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=nGJmxkUJQGs",
+      "start": 1011.279,
+      "end": 1130.799,
+      "text": "have explained these steps in the entire dp playlist so if you're watching this video right from anywhere in between it's not my fault so yeah without wasting any time let's get started and code this so let's quickly quote this up uh you're given the values and the n so i'll just write the function we know it will be an index it'll be a buy and we can definitely carry the same array and uh and yeah perfect so we know if index reaches n uh it's over so you can return zero there is no more profit that you can make once that is over or else there can be a couple of ways you can say okay listen if buy is there or else a buy is not there and you know the profit can be easily made so you can just keep the profit to be uh zero and make sure it's long rather because they want the answer to be in long probability to constraints so profit will be max of couple of guys you know so either you decide to uh sell it off like you're buying so this is the cost that it will cost you and you cannot buy any further right or you can be like okay i'm not buying so i'll move to the next and you still have the liberty to do whatever or if you cannot buy then you can sell so if you can sell then there will be a plus that will that is something which you will get and it'll go across and say now you can buy it's now you can buy and over here or you can say okay listen i'm not going to sell as of now go and the liberty is sell zero like you cannot buy at the end of the day you can return the profit over here you can say return f of zero comma the buy is one values and n is what you return indeed it does run fine so what is the",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "nGJmxkUJQGs",
+      "position": 216,
+      "title": "DP 36. Buy and Sell Stock - II | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=nGJmxkUJQGs",
+      "start": 1126.48,
+      "end": 1253.679,
+      "text": "indeed it does run fine so what is the next step that we will do we will try to optimize this by dp so vector of vector n dp n comma vector end to size so to size minus 1 and please make sure you pass it over here versus dp and over here you can write vector of int dp and right over here before returning you can write dp of index and by again very straightforward and right over here you can just check if this guy has been previously visited if not why don't you return that guy which is index and buy just make sure you return it and i think once you've done this this should be running super fine okay it will not run because we forgot to pass the parameters over here my bad so just make sure you declare uh the dp to be long long otherwise it will give you a wrong answer that's how you can easily solve this problem but now it's time to convert this into a tabulation code so we have done the memoration code and we know the complexity of the memoration code will be uh big o of n crosser 2 the space complexity will be n cross a 2 plus an auxiliary stack space and you know i'm not a big fan of this so you notice that in order to remove the auxiliary stack space we have to apply tabulation what are the steps of tabulation the steps are very very straight forward you have to write the base case and then you write all the changing parameters this is i and then there is buy right and then you copy the records that's what you do right so let's write the base case what is the base case the base case was index equal equal to n so you can say that hey listen you will be creating a dp of n plus 1 this time and we will be starting off with dp of n equal to 0",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "nGJmxkUJQGs",
+      "position": 216,
+      "title": "DP 36. Buy and Sell Stock - II | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=nGJmxkUJQGs",
+      "start": 1250.4,
+      "end": 1374.6399999999999,
+      "text": "equal to 0 that's what you will be starting off with right and right after that what is i how did you run the recursion if you remember the recursion it went in from 0 to n so it's the reverse that you will do in tabulation you start from n minus 1 till 0 what about by it will be from zero to one you can go from one to zero as well but it'll be from zero to one so just write this and copy the recurrence and if you do this it will be running fine and after that we will do another space optimization on that so i'll go back to here and we'll make it zero okay and right here we can say uh just make sure it is n plus one so that we can be like dp of n of zero dp of n of 1 is equal to 0 that's for sure because index equal to equal to n by can be anything but it has to be 0. next is let's run the for loops so we know the loops will be running from here till and we know there will be a buy so probably it will be better if you write index because we are going to copy paste the recurrence so let's write index okay by can be from zero till one perfect ready next please make sure you copy paste the recurrence there's no need to apply your brains just copy paste the recurrence because tabulation is bottom up right it's the opposite of recursion so you have copy pasted that and over here just make sure you remove this instead of uh this entire thing it'll be dp of index plus one and it does buy one and this will be db of index plus one and zero so dp of index plus one and it will be zero this will be dpf index plus one and zero dp of index plus one and zero perfect this will be dp of",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "nGJmxkUJQGs",
+      "position": 216,
+      "title": "DP 36. Buy and Sell Stock - II | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=nGJmxkUJQGs",
+      "start": 1370.32,
+      "end": 1479.679,
+      "text": "one and zero perfect this will be dp of index plus one and one so just write this db of index plus one and one perfect so that's what uh you have written and right over here you have written this and this will be dp of zero one is what you return dp of zero one now try to run this and see if this is running in the tabulation mode it is indeed running let's quickly submit this and see if this is working fine it is indeed working fine now what is the next step we know that whenever we are dependent on the previous like this is the previous row like index plus one is the previous index plus one is the previous so we are dependent on the previous guy right so if i try to show you in the ipad you'll get a much clearer picture now if you are following the space optimization technique from the first lecture i think this is very easy for you but for anyone who is coming out to you what are we doing we were assigning these guys as 0 and 0 which is the nth index then we went on to n minus 1 at index and we tried to find this and find this and in order to in order to find this what am i using let's go back to the code we are using index plus one like if you are standing at n minus one if you're looking at at the code you're using index plus one which means you're just using these couple of guys right and you're filling this easily similarly you are also filling this easily by using these couple of guys that is what you're doing in x plus one and index plus one using these couple of guys to fill this and then you go to the next which is n minus 2 and in order to fill this you're using these couple of guys so do you actually need to store this now no",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "nGJmxkUJQGs",
+      "position": 216,
+      "title": "DP 36. Buy and Sell Stock - II | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=nGJmxkUJQGs",
+      "start": 1475.039,
+      "end": 1591.279,
+      "text": "actually need to store this now no again you'll fill this and then again you'll go to n minus 3 in order to fill this you'll use this and this how to fill this you'll use this in this so there's no need to store this so you just need to store two variables one is this and the another one is this just need to store two variables one is this and the another one is this so you can say this as the one variable this is the other variable so i can say uh this as the ahead because it's it's at the front or you can say whatever you can call it i'll try to call it let's because this is not the buy right you can call it whatever you wish to or you can take uh two variable array as well you can take two variable array as well that's your choice or you can take variables as well so what i'll do is i will be like okay i'll go back to the code what i'll do is i'll try to carry just two variables vector n or rather vector long of the ahead guy because it's the head and i'll be like two comma zero i know one thing for sure the ahead is this is that guy and i know there will be current which i'll compute because the current has to be computed right and uh these are the ahead so let's take it from head let's take it from ahead let's take it from add let's take it from ahead and this will be the current guy and once you've done this just interchange because in the next step if i if i show you the ipad whenever you go to the next n minus 2 this guy will be the ahead and now you will use these guys so just interchange once you have done this you know this at the end of the day is previous so you just change this off and",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 13,
+      "video_id": "nGJmxkUJQGs",
+      "position": 216,
+      "title": "DP 36. Buy and Sell Stock - II | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=nGJmxkUJQGs",
+      "start": 1586.159,
+      "end": 1703.84,
+      "text": "previous so you just change this off and you know try to run this okay my bad okay my bad it will be ahead not previous so yeah let's just make sure it is ahead i've been so habituated to use previous and current that uh i wrote it okay that's fine uh submit this it will be running fine okay so this is uh the most optimized stuff that you can do but in the discussion forum you will see that people not using the 2l array and they will be using variables you can also use variables instead of the two sized array that is the similar stuff and if you use uh the the studio error that then also it is similar like over here what are you using you're using uh two space over here and two so that's four so you'll see a lot of solutions having they're using four variables to write it it does not optimize is it it's still the same thing if you're using four variables to solve this the same as using a two and two size array it's four space that you're using right so so lead code discussion forum you will see that uh people uh using four different variables to solve this again i will not say that it is wrong you can still use four different variables such as your choice like what are we doing over here if you carefully see you're basically running a loop from n minus 1 till 0 and then there's a by which is like from 0 to 1 so it's like 0 once there is a 0 and once there is a 1. so whenever it's a 0 the else part gets executed whenever it's a one the if part gets executed so you will see in the lead code forum what they will do is they'll omit this since they omit this and since buy is zero and one both will get executed once and once so what they will do is they will first execute",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 14,
+      "video_id": "nGJmxkUJQGs",
+      "position": 216,
+      "title": "DP 36. Buy and Sell Stock - II | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=nGJmxkUJQGs",
+      "start": 1699.52,
+      "end": 1845.44,
+      "text": "they will first execute the zeroth guy then they will execute the one right and they'll store it so you can also do the same thing so what you can do is you can say this guy to be ahead ahead like this is the not by case so you can say ahead not by and you can say ahead by case and you can say this guy to be car not by and you can say this guy to be cur by okay so let's come back to whenever buy is zero what happens let's go back and check what happens i'm saying profit goes to the car by whenever buy is zero so let's write this curve not buy because by zero means cur not buy what happens on car not bad let's go back i'm saying the value of index plus ahead of one ahead of one means ahead of buy head of one means ahead of buy so let's write max of values of index plus ahead of buy is what you write and what's the other thing 0 plus ahead of 0 means ahead of not buy add off not buy so if you write this can i say the curve not by because what are you generating car of zero car of zero right curve zero and what is curve of zero if you carefully observe cur of zero is curve not by so you have generated that perfect what's the next thing that you'll do cut off not buy is done and this is also done next thing that you will do is you will take care of buy and you will write max because the next thing will be 1 which means this guy will generate which is square of y and for this what's the formula let's see let's go back whenever you add y which is 1 which is 1 this is 1 right this is 1 so whenever you add this as a formula minus value of index plus add of zero so let's write it",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 15,
+      "video_id": "nGJmxkUJQGs",
+      "position": 216,
+      "title": "DP 36. Buy and Sell Stock - II | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=nGJmxkUJQGs",
+      "start": 1839.52,
+      "end": 1994.08,
+      "text": "zero so let's write it minus values of index plus ahead of zero head of zero means not by ahead not by comma zero plus ahead of one zero plus ahead of one means ahead of by and in this way you can easily get the current buy not buy and current buy which means you have filled up this guy and this guy and in the next step when you go across you'll be like okay these guys will serve as head not by and they head by in order to compute this and this so you can just stomach this and say okay listen next step ahead of not buy will be cur of not buy so instead of 2d array you'll just do this and ahead of buy will be cur of buy and you actually solve this using this wonderful variables and this is the solution that you always find in a lot of discussion forums but you don't understand so this was the entire intuition behind this possible solution so now what i will do is i'll go back to the code and now i'll try to omit this portion okay and let's try to write it long zero means not buy you know this not bad perfect one means bye you also know this right so bye so this is what you write perfect let's quickly declare this as well long off ahead not by and long off ahead back perfect i've declared both and i've assigned them to be zeros amazing instead of this i'll omit this law let's omit this let's omit this entire stuff so and i need one other variables which is curve buy and cut not buy for sure okay so i know i'll have to switch so instead of this i'll say okay ahead by will be curved by and ahead not by will be current by for sure that's the first switch that i'll do perfect now let's come over here i know whenever by zero this is executed right so what i'll do is",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 16,
+      "video_id": "nGJmxkUJQGs",
+      "position": 216,
+      "title": "DP 36. Buy and Sell Stock - II | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=nGJmxkUJQGs",
+      "start": 1990.24,
+      "end": 2126.9599999999996,
+      "text": "right so what i'll do is i'll say okay this is definitely going to be executed and the profit goes and stores in carbide which is curved by car not by the else one the else one is cannot buy and whenever it buys its curl by for sure and i can remove this i'll make sure that both of them gets executed so this guy goes this guy also goes so i'm left off with carbine all right i'm left off with turbine i'm left with curd not by perfect this is over because i've assigned them so both of i'm executing both of them without actually running a for loop because i know both of them will execute it so first the curl of not buy was executing you can execute that at first or at end doesn't matter and you can execute the curve back perfect now let's come back uh to changing this slowly ahead of one means ahead of buy head of zero means not buy perfect head of zero means not buy perfect head of one means buy perfect i think we have done this and one means at a buy amazing amazing isn't it if i run this hopefully it runs yes yes it does it does let's submit this wow that is how you generate the variable solutions from a recursion from a tabulation from a space optimization this is how you generate the variable solution just don't mug it up have the intuition and it's 5 41 am in the morning so guys i hope you've understood the entire stuff just in case you did and just in case you did not please take your pen and paper and try to do it and just in case you did understand please please please give it a like and if you're new to this channel please do consider subscribing to us it is very very important for us and now with this i will be wrapping up this video let's meet in the next one till then bye bye take",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 17,
+      "video_id": "nGJmxkUJQGs",
+      "position": 216,
+      "title": "DP 36. Buy and Sell Stock - II | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=nGJmxkUJQGs",
+      "start": 2124.72,
+      "end": 2133.6400000000003,
+      "text": "take ever care you're golden",
+      "word_count": 5
+    }
+  ]
+}

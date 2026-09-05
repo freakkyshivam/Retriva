@@ -1,0 +1,3770 @@
+{
+  "position": 34,
+  "video_id": "bR7mQgwQ_o8",
+  "title": "Pascal Triangle | Finding nCr in minimal time",
+  "url": "https://www.youtube.com/watch?v=bR7mQgwQ_o8",
+  "transcript": [
+    {
+      "start": 2.94,
+      "duration": 3.359,
+      "end": 6.2989999999999995,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 4.68,
+      "duration": 3.36,
+      "end": 8.04,
+      "text": "I hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.299,
+      "duration": 4.021,
+      "end": 10.32,
+      "text": "so this is another lecture from the"
+    },
+    {
+      "start": 8.04,
+      "duration": 4.08,
+      "end": 12.12,
+      "text": "stripers A to Z DSA course just in case"
+    },
+    {
+      "start": 10.32,
+      "duration": 3.239,
+      "end": 13.559000000000001,
+      "text": "you're for the first time here this is"
+    },
+    {
+      "start": 12.12,
+      "duration": 3.24,
+      "end": 15.36,
+      "text": "world's most in-depth course when we"
+    },
+    {
+      "start": 13.559,
+      "duration": 4.98,
+      "end": 18.539,
+      "text": "talk about DS algo why do I say that"
+    },
+    {
+      "start": 15.36,
+      "duration": 4.98,
+      "end": 20.34,
+      "text": "this course is 455 modules by the end of"
+    },
+    {
+      "start": 18.539,
+      "duration": 4.681,
+      "end": 23.220000000000002,
+      "text": "the post it I've sold more than 400 plus"
+    },
+    {
+      "start": 20.34,
+      "duration": 4.5,
+      "end": 24.84,
+      "text": "problems in DS algo you can go over the"
+    },
+    {
+      "start": 23.22,
+      "duration": 3.42,
+      "end": 26.64,
+      "text": "entire internet you can buy any of the"
+    },
+    {
+      "start": 24.84,
+      "duration": 3.3,
+      "end": 28.14,
+      "text": "paid courses in the market none of them"
+    },
+    {
+      "start": 26.64,
+      "duration": 3.059,
+      "end": 29.699,
+      "text": "will be teaching you DS algo in such"
+    },
+    {
+      "start": 28.14,
+      "duration": 3.42,
+      "end": 31.560000000000002,
+      "text": "step something that I can give you as"
+    },
+    {
+      "start": 29.699,
+      "duration": 3.001,
+      "end": 32.7,
+      "text": "Assurance is once you complete the"
+    },
+    {
+      "start": 31.56,
+      "duration": 2.82,
+      "end": 34.379999999999995,
+      "text": "entire course you'll be able to create"
+    },
+    {
+      "start": 32.7,
+      "duration": 3.96,
+      "end": 36.660000000000004,
+      "text": "any of the DS algorithms in any of the"
+    },
+    {
+      "start": 34.38,
+      "duration": 4.019,
+      "end": 38.399,
+      "text": "companies in any part of the world so"
+    },
+    {
+      "start": 36.66,
+      "duration": 3.899,
+      "end": 40.559,
+      "text": "till now we have double till the easy"
+    },
+    {
+      "start": 38.399,
+      "duration": 3.48,
+      "end": 41.879,
+      "text": "and medium section of arrays now today"
+    },
+    {
+      "start": 40.559,
+      "duration": 2.701,
+      "end": 43.26,
+      "text": "we will be starting with the hard"
+    },
+    {
+      "start": 41.879,
+      "duration": 3.84,
+      "end": 45.718999999999994,
+      "text": "section of arrays and the first problem"
+    },
+    {
+      "start": 43.26,
+      "duration": 5.4,
+      "end": 48.66,
+      "text": "that we will be solving is the Pascal's"
+    },
+    {
+      "start": 45.719,
+      "duration": 5.281,
+      "end": 51.0,
+      "text": "triangle now what does the problem State"
+    },
+    {
+      "start": 48.66,
+      "duration": 5.46,
+      "end": 54.12,
+      "text": "before diving into the problem statement"
+    },
+    {
+      "start": 51.0,
+      "duration": 5.579,
+      "end": 56.579,
+      "text": "let's understand what is a pascal"
+    },
+    {
+      "start": 54.12,
+      "duration": 6.66,
+      "end": 60.78,
+      "text": "triangle so the first row will always"
+    },
+    {
+      "start": 56.579,
+      "duration": 7.381,
+      "end": 63.96,
+      "text": "have one and in the second row it is one"
+    },
+    {
+      "start": 60.78,
+      "duration": 5.879,
+      "end": 66.659,
+      "text": "at the starting it is one at the last"
+    },
+    {
+      "start": 63.96,
+      "duration": 5.76,
+      "end": 69.72,
+      "text": "and on the third row it is again one at"
+    },
+    {
+      "start": 66.659,
+      "duration": 5.521,
+      "end": 72.18,
+      "text": "the starting and one at the last and"
+    },
+    {
+      "start": 69.72,
+      "duration": 4.02,
+      "end": 73.74,
+      "text": "then you see in the previous row how"
+    },
+    {
+      "start": 72.18,
+      "duration": 4.02,
+      "end": 76.2,
+      "text": "many elements were there there were two"
+    },
+    {
+      "start": 73.74,
+      "duration": 3.9,
+      "end": 77.64,
+      "text": "if there were two elements there will be"
+    },
+    {
+      "start": 76.2,
+      "duration": 3.54,
+      "end": 79.74000000000001,
+      "text": "a middle element like there will be"
+    },
+    {
+      "start": 77.64,
+      "duration": 4.26,
+      "end": 81.9,
+      "text": "middle Place between there so what"
+    },
+    {
+      "start": 79.74,
+      "duration": 3.9,
+      "end": 83.64,
+      "text": "you'll do is you'll take this and you'll"
+    },
+    {
+      "start": 81.9,
+      "duration": 4.56,
+      "end": 86.46000000000001,
+      "text": "take this and you'll add it up so it"
+    },
+    {
+      "start": 83.64,
+      "duration": 5.58,
+      "end": 89.22,
+      "text": "gets you two and you place it in the"
+    },
+    {
+      "start": 86.46,
+      "duration": 6.299,
+      "end": 92.759,
+      "text": "middle in the next row done in the next"
+    },
+    {
+      "start": 89.22,
+      "duration": 5.88,
+      "end": 95.1,
+      "text": "row it's again one and one at the first"
+    },
+    {
+      "start": 92.759,
+      "duration": 4.021,
+      "end": 96.78,
+      "text": "and last after that you will see okay"
+    },
+    {
+      "start": 95.1,
+      "duration": 3.36,
+      "end": 98.46,
+      "text": "there are three elements so there will"
+    },
+    {
+      "start": 96.78,
+      "duration": 4.199,
+      "end": 100.979,
+      "text": "be two middle there will be two middle"
+    },
+    {
+      "start": 98.46,
+      "duration": 4.32,
+      "end": 102.78,
+      "text": "in that middle what you'll do is you'll"
+    },
+    {
+      "start": 100.979,
+      "duration": 4.081,
+      "end": 105.06,
+      "text": "take one you'll take two and you'll add"
+    },
+    {
+      "start": 102.78,
+      "duration": 3.72,
+      "end": 106.5,
+      "text": "it and you'll get three and again the"
+    },
+    {
+      "start": 105.06,
+      "duration": 3.419,
+      "end": 108.479,
+      "text": "other middle is here so you'll take two"
+    },
+    {
+      "start": 106.5,
+      "duration": 4.32,
+      "end": 110.82,
+      "text": "you'll take one and you'll add it you'll"
+    },
+    {
+      "start": 108.479,
+      "duration": 6.361,
+      "end": 114.84,
+      "text": "get three perfect what about the next"
+    },
+    {
+      "start": 110.82,
+      "duration": 6.18,
+      "end": 117.0,
+      "text": "again one of the start and one at the"
+    },
+    {
+      "start": 114.84,
+      "duration": 4.02,
+      "end": 118.86,
+      "text": "last how many minutes can I say one"
+    },
+    {
+      "start": 117.0,
+      "duration": 4.38,
+      "end": 121.38,
+      "text": "middle here one middle here one middle"
+    },
+    {
+      "start": 118.86,
+      "duration": 6.899,
+      "end": 125.759,
+      "text": "here so there are three middles this"
+    },
+    {
+      "start": 121.38,
+      "duration": 7.019,
+      "end": 128.399,
+      "text": "will be 1 plus 3 which is 4 3 plus 3 6 3"
+    },
+    {
+      "start": 125.759,
+      "duration": 5.401,
+      "end": 131.16,
+      "text": "plus 1 4 so basically three plus three"
+    },
+    {
+      "start": 128.399,
+      "duration": 5.581,
+      "end": 133.98,
+      "text": "six and three plus one four if I go"
+    },
+    {
+      "start": 131.16,
+      "duration": 6.0,
+      "end": 137.16,
+      "text": "ahead one at the start one at the back"
+    },
+    {
+      "start": 133.98,
+      "duration": 5.96,
+      "end": 139.94,
+      "text": "and then one middle here one middle so"
+    },
+    {
+      "start": 137.16,
+      "duration": 6.48,
+      "end": 143.64,
+      "text": "there are four middles add it up five"
+    },
+    {
+      "start": 139.94,
+      "duration": 6.28,
+      "end": 146.22,
+      "text": "ten ten five and you can keep on going"
+    },
+    {
+      "start": 143.64,
+      "duration": 4.38,
+      "end": 148.01999999999998,
+      "text": "and this is what the Pascal triangle"
+    },
+    {
+      "start": 146.22,
+      "duration": 3.599,
+      "end": 149.819,
+      "text": "looks like so if you go to an interview"
+    },
+    {
+      "start": 148.02,
+      "duration": 3.719,
+      "end": 151.739,
+      "text": "there can be three types of problems"
+    },
+    {
+      "start": 149.819,
+      "duration": 4.821,
+      "end": 154.64,
+      "text": "that might be asked to you the first one"
+    },
+    {
+      "start": 151.739,
+      "duration": 7.321,
+      "end": 159.06,
+      "text": "is super simple given the row number"
+    },
+    {
+      "start": 154.64,
+      "duration": 7.78,
+      "end": 162.42,
+      "text": "given row and column tell me the element"
+    },
+    {
+      "start": 159.06,
+      "duration": 6.24,
+      "end": 165.3,
+      "text": "at that place tell me the element at"
+    },
+    {
+      "start": 162.42,
+      "duration": 5.459,
+      "end": 167.879,
+      "text": "that place what does it mean imagine I"
+    },
+    {
+      "start": 165.3,
+      "duration": 4.74,
+      "end": 170.04000000000002,
+      "text": "give you r equal to 5 c equal to three"
+    },
+    {
+      "start": 167.879,
+      "duration": 3.72,
+      "end": 171.599,
+      "text": "so this is first row this is second row"
+    },
+    {
+      "start": 170.04,
+      "duration": 3.96,
+      "end": 174.0,
+      "text": "this is third row this is four this is"
+    },
+    {
+      "start": 171.599,
+      "duration": 4.621,
+      "end": 176.22,
+      "text": "fifth there's a sixth so in the fifth"
+    },
+    {
+      "start": 174.0,
+      "duration": 4.62,
+      "end": 178.62,
+      "text": "row I'm asking you the third element so"
+    },
+    {
+      "start": 176.22,
+      "duration": 3.2,
+      "end": 179.42,
+      "text": "that is six so the answer to this will"
+    },
+    {
+      "start": 178.62,
+      "duration": 4.14,
+      "end": 182.76,
+      "text": "be"
+    },
+    {
+      "start": 179.42,
+      "duration": 5.2,
+      "end": 184.61999999999998,
+      "text": "6. this is the first type of problem"
+    },
+    {
+      "start": 182.76,
+      "duration": 6.66,
+      "end": 189.42,
+      "text": "what can be the second type of problem"
+    },
+    {
+      "start": 184.62,
+      "duration": 9.8,
+      "end": 194.42000000000002,
+      "text": "they might ask you print any anyth role"
+    },
+    {
+      "start": 189.42,
+      "duration": 10.56,
+      "end": 199.98,
+      "text": "of the Pascal triangle nth row of Pascal"
+    },
+    {
+      "start": 194.42,
+      "duration": 8.2,
+      "end": 202.61999999999998,
+      "text": "triangle imagine I give you n as 5 so"
+    },
+    {
+      "start": 199.98,
+      "duration": 4.619,
+      "end": 204.599,
+      "text": "what will be the fifth row it'll be this"
+    },
+    {
+      "start": 202.62,
+      "duration": 5.1,
+      "end": 207.72,
+      "text": "one so what you need to return is you"
+    },
+    {
+      "start": 204.599,
+      "duration": 5.161,
+      "end": 209.76,
+      "text": "just need to return one four six four"
+    },
+    {
+      "start": 207.72,
+      "duration": 4.2,
+      "end": 211.92,
+      "text": "one this is the second type of problem"
+    },
+    {
+      "start": 209.76,
+      "duration": 4.8,
+      "end": 214.56,
+      "text": "what can be the third type the third"
+    },
+    {
+      "start": 211.92,
+      "duration": 5.099,
+      "end": 217.01899999999998,
+      "text": "type will be print the entire Pascal"
+    },
+    {
+      "start": 214.56,
+      "duration": 7.38,
+      "end": 221.94,
+      "text": "triangle give it n"
+    },
+    {
+      "start": 217.019,
+      "duration": 6.961,
+      "end": 223.98000000000002,
+      "text": "given n print the entire"
+    },
+    {
+      "start": 221.94,
+      "duration": 5.76,
+      "end": 227.7,
+      "text": "triangle"
+    },
+    {
+      "start": 223.98,
+      "duration": 5.399,
+      "end": 229.379,
+      "text": "so imagine I give you n as 6 in that"
+    },
+    {
+      "start": 227.7,
+      "duration": 3.3,
+      "end": 231.0,
+      "text": "case you have to print the entire"
+    },
+    {
+      "start": 229.379,
+      "duration": 3.841,
+      "end": 233.22,
+      "text": "triangle got it"
+    },
+    {
+      "start": 231.0,
+      "duration": 4.26,
+      "end": 235.26,
+      "text": "so let us solve the first question and"
+    },
+    {
+      "start": 233.22,
+      "duration": 4.019,
+      "end": 237.239,
+      "text": "the first question it is stating given R"
+    },
+    {
+      "start": 235.26,
+      "duration": 4.559,
+      "end": 239.819,
+      "text": "and C you have to tell me the element at"
+    },
+    {
+      "start": 237.239,
+      "duration": 4.92,
+      "end": 242.159,
+      "text": "that row number and the column number so"
+    },
+    {
+      "start": 239.819,
+      "duration": 3.901,
+      "end": 243.72,
+      "text": "one of the traditional ways is you say"
+    },
+    {
+      "start": 242.159,
+      "duration": 4.8,
+      "end": 246.959,
+      "text": "that you're going to generate the entire"
+    },
+    {
+      "start": 243.72,
+      "duration": 6.06,
+      "end": 249.78,
+      "text": "triangle and then get the value at R and"
+    },
+    {
+      "start": 246.959,
+      "duration": 4.741,
+      "end": 251.7,
+      "text": "c and that kind of makes sense and that"
+    },
+    {
+      "start": 249.78,
+      "duration": 5.519,
+      "end": 255.299,
+      "text": "is the Brute Force solution which we"
+    },
+    {
+      "start": 251.7,
+      "duration": 5.34,
+      "end": 257.03999999999996,
+      "text": "will be doing at the third type but do"
+    },
+    {
+      "start": 255.299,
+      "duration": 4.201,
+      "end": 259.5,
+      "text": "we have an easier way yes we do have"
+    },
+    {
+      "start": 257.04,
+      "duration": 4.379,
+      "end": 261.41900000000004,
+      "text": "there is a very simple formula to it so"
+    },
+    {
+      "start": 259.5,
+      "duration": 4.44,
+      "end": 263.94,
+      "text": "if you're given the row number"
+    },
+    {
+      "start": 261.419,
+      "duration": 4.441,
+      "end": 265.85999999999996,
+      "text": "then you do an R minus 1 and if you are"
+    },
+    {
+      "start": 263.94,
+      "duration": 4.4,
+      "end": 268.34,
+      "text": "given the column number you do a column"
+    },
+    {
+      "start": 265.86,
+      "duration": 6.36,
+      "end": 272.22,
+      "text": "minus one and you say R minus 1"
+    },
+    {
+      "start": 268.34,
+      "duration": 6.639,
+      "end": 274.979,
+      "text": "combination of C minus 1 so I'm sure"
+    },
+    {
+      "start": 272.22,
+      "duration": 6.9,
+      "end": 279.12,
+      "text": "that you know the NCR so in mathematics"
+    },
+    {
+      "start": 274.979,
+      "duration": 8.521,
+      "end": 283.5,
+      "text": "NCR is nothing but n factorial by R"
+    },
+    {
+      "start": 279.12,
+      "duration": 7.38,
+      "end": 286.5,
+      "text": "factorial into n minus r factorial I"
+    },
+    {
+      "start": 283.5,
+      "duration": 5.94,
+      "end": 289.44,
+      "text": "hope you know that right and how do you"
+    },
+    {
+      "start": 286.5,
+      "duration": 5.759,
+      "end": 292.259,
+      "text": "find this out easily because over here"
+    },
+    {
+      "start": 289.44,
+      "duration": 4.92,
+      "end": 294.36,
+      "text": "we know for this the answer is this so"
+    },
+    {
+      "start": 292.259,
+      "duration": 5.88,
+      "end": 298.139,
+      "text": "if we're given Phi if what you'll do is"
+    },
+    {
+      "start": 294.36,
+      "duration": 7.32,
+      "end": 301.68,
+      "text": "5 minus 1 is 4 C minus 1 is 3 minus 1 is"
+    },
+    {
+      "start": 298.139,
+      "duration": 6.421,
+      "end": 304.56,
+      "text": "2 so the answer is 4 c 2 and the value"
+    },
+    {
+      "start": 301.68,
+      "duration": 5.82,
+      "end": 307.5,
+      "text": "of 4 c 2 is nothing but 4 into 3 into 2"
+    },
+    {
+      "start": 304.56,
+      "duration": 5.94,
+      "end": 310.5,
+      "text": "into 1 according to n factorial what's"
+    },
+    {
+      "start": 307.5,
+      "duration": 5.4,
+      "end": 312.9,
+      "text": "the value of R factorial 2 into 1 and"
+    },
+    {
+      "start": 310.5,
+      "duration": 4.74,
+      "end": 315.24,
+      "text": "then it says n minus r which is 4 minus"
+    },
+    {
+      "start": 312.9,
+      "duration": 5.22,
+      "end": 318.12,
+      "text": "2 so another 2 factorial it's basically"
+    },
+    {
+      "start": 315.24,
+      "duration": 5.7,
+      "end": 320.94,
+      "text": "2 and 2 gets off and 2 and 2 so the"
+    },
+    {
+      "start": 318.12,
+      "duration": 4.56,
+      "end": 322.68,
+      "text": "value is 6 which is ideally the value if"
+    },
+    {
+      "start": 320.94,
+      "duration": 5.039,
+      "end": 325.979,
+      "text": "you carefully cheap that is the value"
+    },
+    {
+      "start": 322.68,
+      "duration": 5.88,
+      "end": 328.56,
+      "text": "right so we know the formula but how do"
+    },
+    {
+      "start": 325.979,
+      "duration": 5.641,
+      "end": 331.62,
+      "text": "you find it out one of the easiest ways"
+    },
+    {
+      "start": 328.56,
+      "duration": 5.639,
+      "end": 334.199,
+      "text": "is you figure out n factorial you figure"
+    },
+    {
+      "start": 331.62,
+      "duration": 5.24,
+      "end": 336.86,
+      "text": "out R factorial you figure out n minus r"
+    },
+    {
+      "start": 334.199,
+      "duration": 6.601,
+      "end": 340.8,
+      "text": "factorial and what you do is numerator"
+    },
+    {
+      "start": 336.86,
+      "duration": 5.26,
+      "end": 342.12,
+      "text": "by denominator 1 into denominator 2 and"
+    },
+    {
+      "start": 340.8,
+      "duration": 4.02,
+      "end": 344.82,
+      "text": "you know how to find out factorial"
+    },
+    {
+      "start": 342.12,
+      "duration": 4.98,
+      "end": 347.1,
+      "text": "that's a very simple step if you said n"
+    },
+    {
+      "start": 344.82,
+      "duration": 4.92,
+      "end": 349.74,
+      "text": "factorial you run into for n if I said R"
+    },
+    {
+      "start": 347.1,
+      "duration": 5.58,
+      "end": 352.68,
+      "text": "factorial you run a neutral r n minus r"
+    },
+    {
+      "start": 349.74,
+      "duration": 6.06,
+      "end": 355.8,
+      "text": "till n minus 1 so the simplest way to"
+    },
+    {
+      "start": 352.68,
+      "duration": 5.88,
+      "end": 358.56,
+      "text": "find out this value NCR is nothing but"
+    },
+    {
+      "start": 355.8,
+      "duration": 4.86,
+      "end": 360.66,
+      "text": "just n factorial R factorial and you"
+    },
+    {
+      "start": 358.56,
+      "duration": 4.62,
+      "end": 363.18,
+      "text": "just run Loops but that is the extreme"
+    },
+    {
+      "start": 360.66,
+      "duration": 4.979,
+      "end": 365.639,
+      "text": "brute force can we have a shortcut we"
+    },
+    {
+      "start": 363.18,
+      "duration": 6.84,
+      "end": 370.02,
+      "text": "can let's have some observation imagine"
+    },
+    {
+      "start": 365.639,
+      "duration": 8.28,
+      "end": 373.919,
+      "text": "you give it 7c2 formula States 7"
+    },
+    {
+      "start": 370.02,
+      "duration": 7.739,
+      "end": 377.75899999999996,
+      "text": "factorial by 2 factorial into"
+    },
+    {
+      "start": 373.919,
+      "duration": 5.761,
+      "end": 379.68,
+      "text": "7 minus 2 which is 5 factorial this is"
+    },
+    {
+      "start": 377.759,
+      "duration": 3.061,
+      "end": 380.82,
+      "text": "what the formula States so if I have to"
+    },
+    {
+      "start": 379.68,
+      "duration": 3.18,
+      "end": 382.86,
+      "text": "write it"
+    },
+    {
+      "start": 380.82,
+      "duration": 6.06,
+      "end": 386.88,
+      "text": "can I write it something like this 7"
+    },
+    {
+      "start": 382.86,
+      "duration": 5.1,
+      "end": 387.96000000000004,
+      "text": "into 6 into 5 into 4 into 3 into 2 into"
+    },
+    {
+      "start": 386.88,
+      "duration": 4.14,
+      "end": 391.02,
+      "text": "1"
+    },
+    {
+      "start": 387.96,
+      "duration": 5.76,
+      "end": 393.71999999999997,
+      "text": "7 factorial is this 2 factorial can be"
+    },
+    {
+      "start": 391.02,
+      "duration": 6.2,
+      "end": 397.21999999999997,
+      "text": "written as 2 into 1 into 5 factorial is"
+    },
+    {
+      "start": 393.72,
+      "duration": 6.96,
+      "end": 400.68,
+      "text": "5 into 4 into 3 into 2 into 1. can I say"
+    },
+    {
+      "start": 397.22,
+      "duration": 6.4,
+      "end": 403.62,
+      "text": "this and this will go off always and the"
+    },
+    {
+      "start": 400.68,
+      "duration": 5.34,
+      "end": 406.02,
+      "text": "remaining values will be 7 into 6"
+    },
+    {
+      "start": 403.62,
+      "duration": 3.54,
+      "end": 407.16,
+      "text": "and two into one something carefully to"
+    },
+    {
+      "start": 406.02,
+      "duration": 2.64,
+      "end": 408.65999999999997,
+      "text": "observe"
+    },
+    {
+      "start": 407.16,
+      "duration": 4.74,
+      "end": 411.90000000000003,
+      "text": "this one"
+    },
+    {
+      "start": 408.66,
+      "duration": 6.659,
+      "end": 415.319,
+      "text": "went for two places like two into one"
+    },
+    {
+      "start": 411.9,
+      "duration": 5.519,
+      "end": 417.419,
+      "text": "so from Seven you go two places so what"
+    },
+    {
+      "start": 415.319,
+      "duration": 5.1,
+      "end": 420.41900000000004,
+      "text": "is the shortcut that you noticed if I"
+    },
+    {
+      "start": 417.419,
+      "duration": 6.72,
+      "end": 424.139,
+      "text": "take 10 C 3 what you'll always do is"
+    },
+    {
+      "start": 420.419,
+      "duration": 6.72,
+      "end": 427.139,
+      "text": "you'll say three went three places three"
+    },
+    {
+      "start": 424.139,
+      "duration": 5.761,
+      "end": 429.90000000000003,
+      "text": "into two into one so 10 will also go"
+    },
+    {
+      "start": 427.139,
+      "duration": 4.921,
+      "end": 432.06,
+      "text": "three places ten into nine into eight so"
+    },
+    {
+      "start": 429.9,
+      "duration": 5.04,
+      "end": 434.94,
+      "text": "this is the shortcut that you will be"
+    },
+    {
+      "start": 432.06,
+      "duration": 5.16,
+      "end": 437.22,
+      "text": "applying okay but make sure when you"
+    },
+    {
+      "start": 434.94,
+      "duration": 5.18,
+      "end": 440.12,
+      "text": "compute this using for Loop you should"
+    },
+    {
+      "start": 437.22,
+      "duration": 10.979,
+      "end": 448.199,
+      "text": "be Computing from like in this sense"
+    },
+    {
+      "start": 440.12,
+      "duration": 10.419,
+      "end": 450.539,
+      "text": "10 by 1 into 9 by 2 into 8 by 3 why is"
+    },
+    {
+      "start": 448.199,
+      "duration": 5.28,
+      "end": 453.479,
+      "text": "that because if you initially take three"
+    },
+    {
+      "start": 450.539,
+      "duration": 4.56,
+      "end": 455.099,
+      "text": "and you try to divide by 10 that will"
+    },
+    {
+      "start": 453.479,
+      "duration": 4.44,
+      "end": 457.919,
+      "text": "give you nothing but if you initially"
+    },
+    {
+      "start": 455.099,
+      "duration": 6.061,
+      "end": 461.15999999999997,
+      "text": "take 10 by 1 it is divisible then if you"
+    },
+    {
+      "start": 457.919,
+      "duration": 6.0,
+      "end": 463.919,
+      "text": "take 10 into 9 by 2 2 will kind of"
+    },
+    {
+      "start": 461.16,
+      "duration": 5.64,
+      "end": 466.8,
+      "text": "divide it and then if you take three"
+    },
+    {
+      "start": 463.919,
+      "duration": 5.34,
+      "end": 469.25899999999996,
+      "text": "in three numbers one will definitely be"
+    },
+    {
+      "start": 466.8,
+      "duration": 4.92,
+      "end": 471.72,
+      "text": "divisible by three and hence it will be"
+    },
+    {
+      "start": 469.259,
+      "duration": 6.06,
+      "end": 475.319,
+      "text": "easier so what will the code look like"
+    },
+    {
+      "start": 471.72,
+      "duration": 6.24,
+      "end": 477.96000000000004,
+      "text": "can I say I know definitely for I know"
+    },
+    {
+      "start": 475.319,
+      "duration": 5.041,
+      "end": 480.36,
+      "text": "definitely one thing if it is three I'll"
+    },
+    {
+      "start": 477.96,
+      "duration": 4.62,
+      "end": 482.58,
+      "text": "run it for three times so let's go ahead"
+    },
+    {
+      "start": 480.36,
+      "duration": 4.8,
+      "end": 485.16,
+      "text": "and run it for three times so can I say"
+    },
+    {
+      "start": 482.58,
+      "duration": 4.019,
+      "end": 486.599,
+      "text": "I equal to 0 and I'll run it till"
+    },
+    {
+      "start": 485.16,
+      "duration": 3.18,
+      "end": 488.34000000000003,
+      "text": "whatever like if I have to write"
+    },
+    {
+      "start": 486.599,
+      "duration": 3.66,
+      "end": 490.259,
+      "text": "probably unite the function that will be"
+    },
+    {
+      "start": 488.34,
+      "duration": 2.759,
+      "end": 491.099,
+      "text": "a better job so imagine I wrote a"
+    },
+    {
+      "start": 490.259,
+      "duration": 4.921,
+      "end": 495.18,
+      "text": "function"
+    },
+    {
+      "start": 491.099,
+      "duration": 7.44,
+      "end": 498.539,
+      "text": "which Finds Me NCR and it is taking N"
+    },
+    {
+      "start": 495.18,
+      "duration": 5.639,
+      "end": 500.819,
+      "text": "and is taking R okay and what we say is"
+    },
+    {
+      "start": 498.539,
+      "duration": 5.22,
+      "end": 503.759,
+      "text": "okay we have a numerator"
+    },
+    {
+      "start": 500.819,
+      "duration": 5.82,
+      "end": 506.639,
+      "text": "or rather we can have a resultant as one"
+    },
+    {
+      "start": 503.759,
+      "duration": 5.821,
+      "end": 509.58000000000004,
+      "text": "let's have a resultant as one and we run"
+    },
+    {
+      "start": 506.639,
+      "duration": 4.56,
+      "end": 511.199,
+      "text": "a loop from I equal to 0 and we will run"
+    },
+    {
+      "start": 509.58,
+      "duration": 5.399,
+      "end": 514.9789999999999,
+      "text": "till r"
+    },
+    {
+      "start": 511.199,
+      "duration": 6.181,
+      "end": 517.38,
+      "text": "the k y because we know that if it is 3"
+    },
+    {
+      "start": 514.979,
+      "duration": 4.68,
+      "end": 519.659,
+      "text": "we just run three times so I'll run it"
+    },
+    {
+      "start": 517.38,
+      "duration": 6.06,
+      "end": 523.4399999999999,
+      "text": "like this and initially what we will do"
+    },
+    {
+      "start": 519.659,
+      "duration": 5.401,
+      "end": 525.06,
+      "text": "is resultant equal to resultant into if"
+    },
+    {
+      "start": 523.44,
+      "duration": 5.1,
+      "end": 528.5400000000001,
+      "text": "you carefully see initially it was 10"
+    },
+    {
+      "start": 525.06,
+      "duration": 6.959,
+      "end": 532.0189999999999,
+      "text": "which is basically n right and then it"
+    },
+    {
+      "start": 528.54,
+      "duration": 6.239,
+      "end": 534.779,
+      "text": "was 9 which is basically nothing but 10"
+    },
+    {
+      "start": 532.019,
+      "duration": 6.181,
+      "end": 538.2,
+      "text": "minus 1. then it is 8 which is basically"
+    },
+    {
+      "start": 534.779,
+      "duration": 6.781,
+      "end": 541.56,
+      "text": "10 minus 2 so whatever this I is what"
+    },
+    {
+      "start": 538.2,
+      "duration": 6.42,
+      "end": 544.62,
+      "text": "you will do is use n minus I because of"
+    },
+    {
+      "start": 541.56,
+      "duration": 5.88,
+      "end": 547.4399999999999,
+      "text": "the first time n is 10 so 10 minus 0"
+    },
+    {
+      "start": 544.62,
+      "duration": 5.399,
+      "end": 550.019,
+      "text": "will be 10 at the next time n is still"
+    },
+    {
+      "start": 547.44,
+      "duration": 5.16,
+      "end": 552.6,
+      "text": "10 but I is 1 so it will be 9 so the"
+    },
+    {
+      "start": 550.019,
+      "duration": 4.921,
+      "end": 554.94,
+      "text": "numerator keeps on getting multiplied"
+    },
+    {
+      "start": 552.6,
+      "duration": 4.679,
+      "end": 557.279,
+      "text": "and what you do is once you've done the"
+    },
+    {
+      "start": 554.94,
+      "duration": 4.5,
+      "end": 559.44,
+      "text": "multiplication you will go ahead and"
+    },
+    {
+      "start": 557.279,
+      "duration": 5.041,
+      "end": 562.32,
+      "text": "divide it with what value it's going to"
+    },
+    {
+      "start": 559.44,
+      "duration": 6.66,
+      "end": 566.1,
+      "text": "be very simple you say I plus 1 y i plus"
+    },
+    {
+      "start": 562.32,
+      "duration": 6.959,
+      "end": 569.279,
+      "text": "1 whenever I is 0 the first time you"
+    },
+    {
+      "start": 566.1,
+      "duration": 6.239,
+      "end": 572.339,
+      "text": "take 1 then whenever I is 1 you take 2"
+    },
+    {
+      "start": 569.279,
+      "duration": 5.461,
+      "end": 574.74,
+      "text": "whenever I is 2 you take three so Apple"
+    },
+    {
+      "start": 572.339,
+      "duration": 6.12,
+      "end": 578.4590000000001,
+      "text": "what will happen is first time 10 and 1"
+    },
+    {
+      "start": 574.74,
+      "duration": 6.42,
+      "end": 581.16,
+      "text": "10 9 by 2 then 8 by 3 and this will be"
+    },
+    {
+      "start": 578.459,
+      "duration": 5.641,
+      "end": 584.0999999999999,
+      "text": "done once this is done you can return"
+    },
+    {
+      "start": 581.16,
+      "duration": 4.679,
+      "end": 585.8389999999999,
+      "text": "the result and this will be your extreme"
+    },
+    {
+      "start": 584.1,
+      "duration": 4.32,
+      "end": 588.4200000000001,
+      "text": "Brute Force if I ask you the time"
+    },
+    {
+      "start": 585.839,
+      "duration": 4.56,
+      "end": 590.399,
+      "text": "complexity can I say the time complexity"
+    },
+    {
+      "start": 588.42,
+      "duration": 5.46,
+      "end": 593.88,
+      "text": "will be very simple we're running a loop"
+    },
+    {
+      "start": 590.399,
+      "duration": 6.481,
+      "end": 596.88,
+      "text": "for Big O of R so in order to find uh up"
+    },
+    {
+      "start": 593.88,
+      "duration": 5.88,
+      "end": 599.76,
+      "text": "NCR the time complexity taken is B go of"
+    },
+    {
+      "start": 596.88,
+      "duration": 7.5,
+      "end": 604.38,
+      "text": "R and the space complexity taken is B go"
+    },
+    {
+      "start": 599.76,
+      "duration": 6.24,
+      "end": 606.0,
+      "text": "of 1 please do not go ahead and run a"
+    },
+    {
+      "start": 604.38,
+      "duration": 3.899,
+      "end": 608.279,
+      "text": "loop like this because this will be n"
+    },
+    {
+      "start": 606.0,
+      "duration": 4.62,
+      "end": 610.62,
+      "text": "factorial if you go ahead and run a loop"
+    },
+    {
+      "start": 608.279,
+      "duration": 5.941,
+      "end": 614.22,
+      "text": "it will take B go of n plus b go of R"
+    },
+    {
+      "start": 610.62,
+      "duration": 5.339,
+      "end": 615.9590000000001,
+      "text": "plus b go of n minus r which might end"
+    },
+    {
+      "start": 614.22,
+      "duration": 4.679,
+      "end": 618.899,
+      "text": "up taking a lot of time"
+    },
+    {
+      "start": 615.959,
+      "duration": 5.581,
+      "end": 621.54,
+      "text": "and also when you calculate n factorial"
+    },
+    {
+      "start": 618.899,
+      "duration": 4.981,
+      "end": 623.88,
+      "text": "the values might be very big also"
+    },
+    {
+      "start": 621.54,
+      "duration": 5.34,
+      "end": 626.88,
+      "text": "remember one thing for such problems"
+    },
+    {
+      "start": 623.88,
+      "duration": 5.639,
+      "end": 629.519,
+      "text": "it's always safer to take the largest"
+    },
+    {
+      "start": 626.88,
+      "duration": 4.74,
+      "end": 631.62,
+      "text": "data type as long long so that there is"
+    },
+    {
+      "start": 629.519,
+      "duration": 4.38,
+      "end": 633.899,
+      "text": "no overflow got it so I've written my"
+    },
+    {
+      "start": 631.62,
+      "duration": 6.659,
+      "end": 638.279,
+      "text": "function NCR in order to solve the first"
+    },
+    {
+      "start": 633.899,
+      "duration": 7.981,
+      "end": 641.88,
+      "text": "type what I'll say is function NCR"
+    },
+    {
+      "start": 638.279,
+      "duration": 5.581,
+      "end": 643.86,
+      "text": "R minus 1 and C minus 1 if I pass these"
+    },
+    {
+      "start": 641.88,
+      "duration": 5.16,
+      "end": 647.04,
+      "text": "couple of parameters what will happen is"
+    },
+    {
+      "start": 643.86,
+      "duration": 6.9,
+      "end": 650.76,
+      "text": "this NCR will find me the value of R"
+    },
+    {
+      "start": 647.04,
+      "duration": 5.28,
+      "end": 652.3199999999999,
+      "text": "minus 1 and C of C minus 1 and will give"
+    },
+    {
+      "start": 650.76,
+      "duration": 3.3,
+      "end": 654.06,
+      "text": "me the answer and this is how you can"
+    },
+    {
+      "start": 652.32,
+      "duration": 3.24,
+      "end": 655.5600000000001,
+      "text": "easily solve the first ever problem now"
+    },
+    {
+      "start": 654.06,
+      "duration": 3.48,
+      "end": 657.54,
+      "text": "let's go to the second one"
+    },
+    {
+      "start": 655.56,
+      "duration": 4.98,
+      "end": 660.54,
+      "text": "so what is the second type of problem"
+    },
+    {
+      "start": 657.54,
+      "duration": 4.68,
+      "end": 662.2199999999999,
+      "text": "stating print any given row so imagine"
+    },
+    {
+      "start": 660.54,
+      "duration": 3.6,
+      "end": 664.14,
+      "text": "you have been asked to print the sixth"
+    },
+    {
+      "start": 662.22,
+      "duration": 4.559,
+      "end": 666.779,
+      "text": "row let's carefully observe something"
+    },
+    {
+      "start": 664.14,
+      "duration": 4.68,
+      "end": 668.8199999999999,
+      "text": "the first row has one element the second"
+    },
+    {
+      "start": 666.779,
+      "duration": 4.321,
+      "end": 671.1,
+      "text": "row has two elements the third row has"
+    },
+    {
+      "start": 668.82,
+      "duration": 6.06,
+      "end": 674.88,
+      "text": "three and similarly the sixth row has"
+    },
+    {
+      "start": 671.1,
+      "duration": 6.479,
+      "end": 677.5790000000001,
+      "text": "sixth elements can I say n row like the"
+    },
+    {
+      "start": 674.88,
+      "duration": 6.24,
+      "end": 681.12,
+      "text": "nth rule rather though Nitro will always"
+    },
+    {
+      "start": 677.579,
+      "duration": 5.82,
+      "end": 683.399,
+      "text": "have n elements I definitely can say"
+    },
+    {
+      "start": 681.12,
+      "duration": 4.74,
+      "end": 685.86,
+      "text": "that right so this is what we know at"
+    },
+    {
+      "start": 683.399,
+      "duration": 4.62,
+      "end": 688.019,
+      "text": "first that we have to roughly run a loop"
+    },
+    {
+      "start": 685.86,
+      "duration": 5.34,
+      "end": 691.2,
+      "text": "for n times now we know one thing for"
+    },
+    {
+      "start": 688.019,
+      "duration": 7.861,
+      "end": 695.88,
+      "text": "Sean everyone has a"
+    },
+    {
+      "start": 691.2,
+      "duration": 7.02,
+      "end": 698.22,
+      "text": "has this formula of R minus 1 and C of C"
+    },
+    {
+      "start": 695.88,
+      "duration": 5.28,
+      "end": 701.16,
+      "text": "minus 1 we know that so what we can do"
+    },
+    {
+      "start": 698.22,
+      "duration": 5.16,
+      "end": 703.38,
+      "text": "is the extreme brute force can be super"
+    },
+    {
+      "start": 701.16,
+      "duration": 4.5,
+      "end": 705.66,
+      "text": "simple we say we know one thing for sure"
+    },
+    {
+      "start": 703.38,
+      "duration": 4.86,
+      "end": 708.24,
+      "text": "the column will start from 1 and the"
+    },
+    {
+      "start": 705.66,
+      "duration": 4.679,
+      "end": 710.3389999999999,
+      "text": "column will go till the number of rows"
+    },
+    {
+      "start": 708.24,
+      "duration": 5.46,
+      "end": 713.7,
+      "text": "and then we can do a column plus plus"
+    },
+    {
+      "start": 710.339,
+      "duration": 6.361,
+      "end": 716.7,
+      "text": "and every time we can say rather print"
+    },
+    {
+      "start": 713.7,
+      "duration": 4.62,
+      "end": 718.32,
+      "text": "not C out we can easily say print we"
+    },
+    {
+      "start": 716.7,
+      "duration": 4.5,
+      "end": 721.2,
+      "text": "will call the function which computes"
+    },
+    {
+      "start": 718.32,
+      "duration": 4.74,
+      "end": 723.0600000000001,
+      "text": "NCR and what we will pass is we will"
+    },
+    {
+      "start": 721.2,
+      "duration": 4.86,
+      "end": 726.0600000000001,
+      "text": "pass the row number which is n minus 1"
+    },
+    {
+      "start": 723.06,
+      "duration": 5.88,
+      "end": 728.9399999999999,
+      "text": "and we know the formula is C minus 1 so"
+    },
+    {
+      "start": 726.06,
+      "duration": 4.62,
+      "end": 730.68,
+      "text": "C minus 1 and every time C changes"
+    },
+    {
+      "start": 728.94,
+      "duration": 5.1,
+      "end": 734.0400000000001,
+      "text": "because For the First Time c will be 1"
+    },
+    {
+      "start": 730.68,
+      "duration": 5.46,
+      "end": 736.14,
+      "text": "then C will be 2. and apparently it'll"
+    },
+    {
+      "start": 734.04,
+      "duration": 3.96,
+      "end": 738.0,
+      "text": "keep on printing this one then this one"
+    },
+    {
+      "start": 736.14,
+      "duration": 3.36,
+      "end": 739.5,
+      "text": "then this one then this then this so"
+    },
+    {
+      "start": 738.0,
+      "duration": 3.779,
+      "end": 741.779,
+      "text": "what will be the time complexity for"
+    },
+    {
+      "start": 739.5,
+      "duration": 5.339,
+      "end": 744.839,
+      "text": "this can I say we are running a loop for"
+    },
+    {
+      "start": 741.779,
+      "duration": 5.401,
+      "end": 747.18,
+      "text": "n times so it'll be n and we know this"
+    },
+    {
+      "start": 744.839,
+      "duration": 5.581,
+      "end": 750.4200000000001,
+      "text": "function takes bigot R so the time"
+    },
+    {
+      "start": 747.18,
+      "duration": 4.38,
+      "end": 751.56,
+      "text": "complexity will be n into R this is"
+    },
+    {
+      "start": 750.42,
+      "duration": 3.599,
+      "end": 754.019,
+      "text": "where the interviewer will not be happy"
+    },
+    {
+      "start": 751.56,
+      "duration": 4.62,
+      "end": 756.18,
+      "text": "you'll be like why are you using formula"
+    },
+    {
+      "start": 754.019,
+      "duration": 3.601,
+      "end": 757.62,
+      "text": "repeatedly can you do it in a better way"
+    },
+    {
+      "start": 756.18,
+      "duration": 3.06,
+      "end": 759.2399999999999,
+      "text": "and this is where we will try to"
+    },
+    {
+      "start": 757.62,
+      "duration": 4.08,
+      "end": 761.7,
+      "text": "optimize it"
+    },
+    {
+      "start": 759.24,
+      "duration": 4.38,
+      "end": 763.62,
+      "text": "okay so in order to optimize we have to"
+    },
+    {
+      "start": 761.7,
+      "duration": 5.579,
+      "end": 767.279,
+      "text": "dive deep into the formula the formula"
+    },
+    {
+      "start": 763.62,
+      "duration": 5.76,
+      "end": 769.38,
+      "text": "was R minus 1C and C minus 1 correct so"
+    },
+    {
+      "start": 767.279,
+      "duration": 5.581,
+      "end": 772.86,
+      "text": "let's look at the first element the"
+    },
+    {
+      "start": 769.38,
+      "duration": 7.44,
+      "end": 776.82,
+      "text": "first one is one let's look at the next"
+    },
+    {
+      "start": 772.86,
+      "duration": 7.5,
+      "end": 780.36,
+      "text": "it is 5. probably I can write it as 5 by"
+    },
+    {
+      "start": 776.82,
+      "duration": 4.56,
+      "end": 781.38,
+      "text": "upon probably what's the next one 10 and"
+    },
+    {
+      "start": 780.36,
+      "duration": 3.419,
+      "end": 783.779,
+      "text": "that is that"
+    },
+    {
+      "start": 781.38,
+      "duration": 5.22,
+      "end": 786.6,
+      "text": "the third column that's at the third"
+    },
+    {
+      "start": 783.779,
+      "duration": 7.321,
+      "end": 791.1,
+      "text": "column what will be the formula 6 minus"
+    },
+    {
+      "start": 786.6,
+      "duration": 7.5,
+      "end": 794.1,
+      "text": "1 5 C 3 minus two three minus 1 2 and"
+    },
+    {
+      "start": 791.1,
+      "duration": 6.239,
+      "end": 797.339,
+      "text": "it'll be like five into four and two"
+    },
+    {
+      "start": 794.1,
+      "duration": 6.06,
+      "end": 800.16,
+      "text": "into one can I say the 10 is coming from"
+    },
+    {
+      "start": 797.339,
+      "duration": 4.921,
+      "end": 802.2600000000001,
+      "text": "here which is this formula I can so what"
+    },
+    {
+      "start": 800.16,
+      "duration": 4.5,
+      "end": 804.66,
+      "text": "did you add more did you add four into"
+    },
+    {
+      "start": 802.26,
+      "duration": 5.4,
+      "end": 807.66,
+      "text": "one more from the previous one you did"
+    },
+    {
+      "start": 804.66,
+      "duration": 4.679,
+      "end": 809.3389999999999,
+      "text": "so this one is this this 5 is this and"
+    },
+    {
+      "start": 807.66,
+      "duration": 5.82,
+      "end": 813.48,
+      "text": "this can be written as"
+    },
+    {
+      "start": 809.339,
+      "duration": 5.821,
+      "end": 815.1600000000001,
+      "text": "5 into 4 and 1 into 2 I can so we are"
+    },
+    {
+      "start": 813.48,
+      "duration": 3.359,
+      "end": 816.839,
+      "text": "done with the third column it's time for"
+    },
+    {
+      "start": 815.16,
+      "duration": 4.32,
+      "end": 819.48,
+      "text": "the fourth column the fourth column what"
+    },
+    {
+      "start": 816.839,
+      "duration": 6.18,
+      "end": 823.019,
+      "text": "will be the formula n minus 1 5 C 4"
+    },
+    {
+      "start": 819.48,
+      "duration": 5.88,
+      "end": 825.36,
+      "text": "minus 1 3 5 C 3 so back three into two"
+    },
+    {
+      "start": 823.019,
+      "duration": 5.101,
+      "end": 828.12,
+      "text": "into one correct or if I have to write"
+    },
+    {
+      "start": 825.36,
+      "duration": 6.0,
+      "end": 831.36,
+      "text": "it in the other way it'll be 1 into 2"
+    },
+    {
+      "start": 828.12,
+      "duration": 4.98,
+      "end": 833.1,
+      "text": "into 3 and 5 will also go three times so"
+    },
+    {
+      "start": 831.36,
+      "duration": 2.64,
+      "end": 834.0,
+      "text": "if you carefully see what was the"
+    },
+    {
+      "start": 833.1,
+      "duration": 2.76,
+      "end": 835.86,
+      "text": "addition"
+    },
+    {
+      "start": 834.0,
+      "duration": 5.1,
+      "end": 839.1,
+      "text": "this was already there in the previous"
+    },
+    {
+      "start": 835.86,
+      "duration": 6.84,
+      "end": 842.7,
+      "text": "one and we just added this one so okay"
+    },
+    {
+      "start": 839.1,
+      "duration": 5.82,
+      "end": 844.9200000000001,
+      "text": "fine we'll be like five into four into"
+    },
+    {
+      "start": 842.7,
+      "duration": 4.8,
+      "end": 847.5,
+      "text": "two into three by three so there is an"
+    },
+    {
+      "start": 844.92,
+      "duration": 5.28,
+      "end": 850.1999999999999,
+      "text": "addition of this one okay let's look at"
+    },
+    {
+      "start": 847.5,
+      "duration": 6.959,
+      "end": 854.459,
+      "text": "the next at this one so this is going to"
+    },
+    {
+      "start": 850.2,
+      "duration": 6.42,
+      "end": 856.62,
+      "text": "be like 5 C what is this column this is"
+    },
+    {
+      "start": 854.459,
+      "duration": 4.44,
+      "end": 858.899,
+      "text": "the fifth column it's 5 minus one four"
+    },
+    {
+      "start": 856.62,
+      "duration": 5.58,
+      "end": 862.2,
+      "text": "five C four so one into two into three"
+    },
+    {
+      "start": 858.899,
+      "duration": 5.281,
+      "end": 864.18,
+      "text": "into four and five into four into three"
+    },
+    {
+      "start": 862.2,
+      "duration": 4.86,
+      "end": 867.0600000000001,
+      "text": "into two so if you carefully observe"
+    },
+    {
+      "start": 864.18,
+      "duration": 4.86,
+      "end": 869.04,
+      "text": "this was the answer for the previous one"
+    },
+    {
+      "start": 867.06,
+      "duration": 6.839,
+      "end": 873.899,
+      "text": "so as of now"
+    },
+    {
+      "start": 869.04,
+      "duration": 6.12,
+      "end": 875.16,
+      "text": "you are saying please add an extra this"
+    },
+    {
+      "start": 873.899,
+      "duration": 3.781,
+      "end": 877.68,
+      "text": "two by four"
+    },
+    {
+      "start": 875.16,
+      "duration": 4.679,
+      "end": 879.8389999999999,
+      "text": "amazing and you can keep going so if you"
+    },
+    {
+      "start": 877.68,
+      "duration": 4.8,
+      "end": 882.4799999999999,
+      "text": "carefully observe at first five by one"
+    },
+    {
+      "start": 879.839,
+      "duration": 5.101,
+      "end": 884.94,
+      "text": "Goddard next four by two got added next"
+    },
+    {
+      "start": 882.48,
+      "duration": 5.099,
+      "end": 887.5790000000001,
+      "text": "three by three got added next two by"
+    },
+    {
+      "start": 884.94,
+      "duration": 7.079,
+      "end": 892.019,
+      "text": "four got added so if you start with"
+    },
+    {
+      "start": 887.579,
+      "duration": 7.081,
+      "end": 894.66,
+      "text": "answer equal to 1. at column one and at"
+    },
+    {
+      "start": 892.019,
+      "duration": 4.741,
+      "end": 896.76,
+      "text": "column two what happens at column two"
+    },
+    {
+      "start": 894.66,
+      "duration": 5.28,
+      "end": 899.9399999999999,
+      "text": "you probably add a five"
+    },
+    {
+      "start": 896.76,
+      "duration": 6.66,
+      "end": 903.42,
+      "text": "by one and then at the next is probably"
+    },
+    {
+      "start": 899.94,
+      "duration": 6.18,
+      "end": 906.12,
+      "text": "add a four byte and in the next probably"
+    },
+    {
+      "start": 903.42,
+      "duration": 4.32,
+      "end": 907.74,
+      "text": "add a three by three so if you if you"
+    },
+    {
+      "start": 906.12,
+      "duration": 4.56,
+      "end": 910.68,
+      "text": "can somehow"
+    },
+    {
+      "start": 907.74,
+      "duration": 4.5,
+      "end": 912.24,
+      "text": "figure out a formula to do this I think"
+    },
+    {
+      "start": 910.68,
+      "duration": 3.599,
+      "end": 914.279,
+      "text": "our job will be pretty much done so"
+    },
+    {
+      "start": 912.24,
+      "duration": 4.44,
+      "end": 916.6800000000001,
+      "text": "let's try to figure out a formula"
+    },
+    {
+      "start": 914.279,
+      "duration": 3.901,
+      "end": 918.18,
+      "text": "so what will be the formula let's try to"
+    },
+    {
+      "start": 916.68,
+      "duration": 4.68,
+      "end": 921.3599999999999,
+      "text": "think and see if we can analyze the"
+    },
+    {
+      "start": 918.18,
+      "duration": 4.5,
+      "end": 922.68,
+      "text": "formula something I know for sure now"
+    },
+    {
+      "start": 921.36,
+      "duration": 3.12,
+      "end": 924.48,
+      "text": "what is the one thing that you know for"
+    },
+    {
+      "start": 922.68,
+      "duration": 4.74,
+      "end": 927.42,
+      "text": "sure the one thing that I know for sure"
+    },
+    {
+      "start": 924.48,
+      "duration": 5.7,
+      "end": 930.1800000000001,
+      "text": "is the first element will be one and the"
+    },
+    {
+      "start": 927.42,
+      "duration": 4.38,
+      "end": 931.8,
+      "text": "last element will definitely be one so"
+    },
+    {
+      "start": 930.18,
+      "duration": 4.2,
+      "end": 934.38,
+      "text": "we don't have to think about the first"
+    },
+    {
+      "start": 931.8,
+      "duration": 4.68,
+      "end": 936.4799999999999,
+      "text": "and the last that much but without it"
+    },
+    {
+      "start": 934.38,
+      "duration": 4.56,
+      "end": 938.9399999999999,
+      "text": "you need to think about everyone else"
+    },
+    {
+      "start": 936.48,
+      "duration": 5.039,
+      "end": 941.519,
+      "text": "okay so we probably can start with"
+    },
+    {
+      "start": 938.94,
+      "duration": 5.88,
+      "end": 944.82,
+      "text": "answer as one we can start with answer"
+    },
+    {
+      "start": 941.519,
+      "duration": 4.981,
+      "end": 946.5,
+      "text": "as one and in the first attempt we are"
+    },
+    {
+      "start": 944.82,
+      "duration": 5.28,
+      "end": 950.1,
+      "text": "doing a five by one"
+    },
+    {
+      "start": 946.5,
+      "duration": 9.06,
+      "end": 955.56,
+      "text": "and the column number was 2 column"
+    },
+    {
+      "start": 950.1,
+      "duration": 6.66,
+      "end": 956.76,
+      "text": "number was two so this is okay what if"
+    },
+    {
+      "start": 955.56,
+      "duration": 4.32,
+      "end": 959.88,
+      "text": "what if"
+    },
+    {
+      "start": 956.76,
+      "duration": 6.0,
+      "end": 962.76,
+      "text": "I take the columns in terms of zero"
+    },
+    {
+      "start": 959.88,
+      "duration": 4.92,
+      "end": 964.8,
+      "text": "based indexing will it be an easier job"
+    },
+    {
+      "start": 962.76,
+      "duration": 8.22,
+      "end": 970.98,
+      "text": "let's see so let's write down the zero"
+    },
+    {
+      "start": 964.8,
+      "duration": 9.12,
+      "end": 973.92,
+      "text": "based indexing this is 0 0 1 2 3 4."
+    },
+    {
+      "start": 970.98,
+      "duration": 5.4,
+      "end": 976.38,
+      "text": "does it make it easier yes it does"
+    },
+    {
+      "start": 973.92,
+      "duration": 6.599,
+      "end": 980.519,
+      "text": "over here one is here"
+    },
+    {
+      "start": 976.38,
+      "duration": 7.56,
+      "end": 983.9399999999999,
+      "text": "over here to is here over here three is"
+    },
+    {
+      "start": 980.519,
+      "duration": 6.18,
+      "end": 986.699,
+      "text": "here over here four is here kind of"
+    },
+    {
+      "start": 983.94,
+      "duration": 4.139,
+      "end": 988.0790000000001,
+      "text": "makes it easy right and if you go ahead"
+    },
+    {
+      "start": 986.699,
+      "duration": 3.601,
+      "end": 990.3,
+      "text": "and write the next one which is the"
+    },
+    {
+      "start": 988.079,
+      "duration": 5.161,
+      "end": 993.2399999999999,
+      "text": "fifth one it'll be like five into four"
+    },
+    {
+      "start": 990.3,
+      "duration": 4.86,
+      "end": 995.16,
+      "text": "into three into two was common 100 into"
+    },
+    {
+      "start": 993.24,
+      "duration": 3.539,
+      "end": 996.779,
+      "text": "three into four will be common the last"
+    },
+    {
+      "start": 995.16,
+      "duration": 5.22,
+      "end": 1000.38,
+      "text": "one will be five and this one will be"
+    },
+    {
+      "start": 996.779,
+      "duration": 7.441,
+      "end": 1004.22,
+      "text": "one so can I see what we are doing is"
+    },
+    {
+      "start": 1000.38,
+      "duration": 5.819,
+      "end": 1006.199,
+      "text": "answer into whatever is this column"
+    },
+    {
+      "start": 1004.22,
+      "duration": 4.739,
+      "end": 1008.9590000000001,
+      "text": "we are always dividing it by column"
+    },
+    {
+      "start": 1006.199,
+      "duration": 4.981,
+      "end": 1011.18,
+      "text": "column column column column whatever was"
+    },
+    {
+      "start": 1008.959,
+      "duration": 4.68,
+      "end": 1013.6389999999999,
+      "text": "the previous answer we are dividing it"
+    },
+    {
+      "start": 1011.18,
+      "duration": 5.76,
+      "end": 1016.9399999999999,
+      "text": "by column what are we multiplying you're"
+    },
+    {
+      "start": 1013.639,
+      "duration": 8.281,
+      "end": 1021.92,
+      "text": "multiplying at first five then four it's"
+    },
+    {
+      "start": 1016.94,
+      "duration": 8.879,
+      "end": 1025.819,
+      "text": "like if nth row is 6 can you relate"
+    },
+    {
+      "start": 1021.92,
+      "duration": 6.899,
+      "end": 1028.819,
+      "text": "6 becomes 5 reduction of one six becomes"
+    },
+    {
+      "start": 1025.819,
+      "duration": 6.421,
+      "end": 1032.24,
+      "text": "4 reduction of two six becomes 3"
+    },
+    {
+      "start": 1028.819,
+      "duration": 5.64,
+      "end": 1034.459,
+      "text": "reduction of three can I say it's n"
+    },
+    {
+      "start": 1032.24,
+      "duration": 5.16,
+      "end": 1037.4,
+      "text": "which is the row number or probably you"
+    },
+    {
+      "start": 1034.459,
+      "duration": 5.041,
+      "end": 1039.5,
+      "text": "can write row number rho minus column"
+    },
+    {
+      "start": 1037.4,
+      "duration": 4.32,
+      "end": 1041.72,
+      "text": "yes this is what you have to keep"
+    },
+    {
+      "start": 1039.5,
+      "duration": 4.38,
+      "end": 1043.88,
+      "text": "multiplying if you do this you'll be"
+    },
+    {
+      "start": 1041.72,
+      "duration": 3.66,
+      "end": 1045.38,
+      "text": "able to generate the entire row so if I"
+    },
+    {
+      "start": 1043.88,
+      "duration": 3.959,
+      "end": 1047.8390000000002,
+      "text": "have to write it if I have to write it"
+    },
+    {
+      "start": 1045.38,
+      "duration": 4.74,
+      "end": 1050.1200000000001,
+      "text": "it will be like I know one thing for"
+    },
+    {
+      "start": 1047.839,
+      "duration": 3.84,
+      "end": 1051.6789999999999,
+      "text": "sure probably I'll write it again I know"
+    },
+    {
+      "start": 1050.12,
+      "duration": 3.0,
+      "end": 1053.12,
+      "text": "one thing for sure"
+    },
+    {
+      "start": 1051.679,
+      "duration": 3.24,
+      "end": 1054.919,
+      "text": "that"
+    },
+    {
+      "start": 1053.12,
+      "duration": 5.64,
+      "end": 1058.76,
+      "text": "for"
+    },
+    {
+      "start": 1054.919,
+      "duration": 6.12,
+      "end": 1061.039,
+      "text": "rather let's keep answer equal to 1 and"
+    },
+    {
+      "start": 1058.76,
+      "duration": 4.2,
+      "end": 1062.96,
+      "text": "I know one thing that this will be my"
+    },
+    {
+      "start": 1061.039,
+      "duration": 5.221,
+      "end": 1066.26,
+      "text": "first"
+    },
+    {
+      "start": 1062.96,
+      "duration": 5.76,
+      "end": 1068.72,
+      "text": "this is my this will be my first because"
+    },
+    {
+      "start": 1066.26,
+      "duration": 3.84,
+      "end": 1070.1,
+      "text": "for the 0th row I know the answer will"
+    },
+    {
+      "start": 1068.72,
+      "duration": 5.579,
+      "end": 1074.299,
+      "text": "sorry zeroth column the answer will"
+    },
+    {
+      "start": 1070.1,
+      "duration": 7.38,
+      "end": 1077.48,
+      "text": "always be one so now I will start from"
+    },
+    {
+      "start": 1074.299,
+      "duration": 6.601,
+      "end": 1080.9,
+      "text": "for I equal to 1 this is where I start"
+    },
+    {
+      "start": 1077.48,
+      "duration": 5.46,
+      "end": 1082.94,
+      "text": "from and I will go on till"
+    },
+    {
+      "start": 1080.9,
+      "duration": 4.86,
+      "end": 1085.76,
+      "text": "the last"
+    },
+    {
+      "start": 1082.94,
+      "duration": 5.58,
+      "end": 1088.52,
+      "text": "which is n because the last one is fifth"
+    },
+    {
+      "start": 1085.76,
+      "duration": 5.64,
+      "end": 1091.4,
+      "text": "index and N was six so we go until this"
+    },
+    {
+      "start": 1088.52,
+      "duration": 5.64,
+      "end": 1094.16,
+      "text": "perfect and what will we do we will say"
+    },
+    {
+      "start": 1091.4,
+      "duration": 5.04,
+      "end": 1096.44,
+      "text": "answer equal to first we will try to"
+    },
+    {
+      "start": 1094.16,
+      "duration": 5.46,
+      "end": 1099.6200000000001,
+      "text": "multiply first we will try to multiply"
+    },
+    {
+      "start": 1096.44,
+      "duration": 6.72,
+      "end": 1103.16,
+      "text": "what will we multiply obviously this one"
+    },
+    {
+      "start": 1099.62,
+      "duration": 7.74,
+      "end": 1107.36,
+      "text": "which is nothing but whatever is n minus"
+    },
+    {
+      "start": 1103.16,
+      "duration": 7.879,
+      "end": 1111.039,
+      "text": "this I because this is I so minus and"
+    },
+    {
+      "start": 1107.36,
+      "duration": 5.64,
+      "end": 1113.0,
+      "text": "then we will say answer equal to answer"
+    },
+    {
+      "start": 1111.039,
+      "duration": 5.921,
+      "end": 1116.96,
+      "text": "divided by"
+    },
+    {
+      "start": 1113.0,
+      "duration": 5.88,
+      "end": 1118.88,
+      "text": "I super simple once this for Loop like"
+    },
+    {
+      "start": 1116.96,
+      "duration": 5.219,
+      "end": 1122.179,
+      "text": "this fondue will always keep on Printing"
+    },
+    {
+      "start": 1118.88,
+      "duration": 6.48,
+      "end": 1125.3600000000001,
+      "text": "and this will print the entire thing"
+    },
+    {
+      "start": 1122.179,
+      "duration": 5.701,
+      "end": 1127.88,
+      "text": "pretty simple isn't it what did I do I"
+    },
+    {
+      "start": 1125.36,
+      "duration": 5.64,
+      "end": 1131.0,
+      "text": "just kept on multiplying first five then"
+    },
+    {
+      "start": 1127.88,
+      "duration": 5.58,
+      "end": 1133.46,
+      "text": "by one then in the next step four by two"
+    },
+    {
+      "start": 1131.0,
+      "duration": 5.22,
+      "end": 1136.22,
+      "text": "it kept on generating kept on generating"
+    },
+    {
+      "start": 1133.46,
+      "duration": 5.88,
+      "end": 1139.3400000000001,
+      "text": "and we kept on printing So eventually we"
+    },
+    {
+      "start": 1136.22,
+      "duration": 5.76,
+      "end": 1141.98,
+      "text": "first print this then this then this and"
+    },
+    {
+      "start": 1139.34,
+      "duration": 4.86,
+      "end": 1144.1999999999998,
+      "text": "then this and we'll end up printing the"
+    },
+    {
+      "start": 1141.98,
+      "duration": 4.079,
+      "end": 1146.059,
+      "text": "entire nth row of the Pascal triangle"
+    },
+    {
+      "start": 1144.2,
+      "duration": 4.08,
+      "end": 1148.28,
+      "text": "got it if I talk about the time"
+    },
+    {
+      "start": 1146.059,
+      "duration": 3.301,
+      "end": 1149.36,
+      "text": "complexity can I say the time complex it"
+    },
+    {
+      "start": 1148.28,
+      "duration": 3.779,
+      "end": 1152.059,
+      "text": "will be"
+    },
+    {
+      "start": 1149.36,
+      "duration": 4.559,
+      "end": 1153.9189999999999,
+      "text": "whatever is the number of rows those"
+    },
+    {
+      "start": 1152.059,
+      "duration": 4.201,
+      "end": 1156.26,
+      "text": "many columns you have to print so the"
+    },
+    {
+      "start": 1153.919,
+      "duration": 4.5,
+      "end": 1158.419,
+      "text": "time complexity will be we go of N and"
+    },
+    {
+      "start": 1156.26,
+      "duration": 3.779,
+      "end": 1160.039,
+      "text": "the space complexity will be because1"
+    },
+    {
+      "start": 1158.419,
+      "duration": 3.361,
+      "end": 1161.7800000000002,
+      "text": "quite simple so you are done with the"
+    },
+    {
+      "start": 1160.039,
+      "duration": 3.481,
+      "end": 1163.52,
+      "text": "first and the second type what about the"
+    },
+    {
+      "start": 1161.78,
+      "duration": 4.38,
+      "end": 1166.16,
+      "text": "third type the third type is stating"
+    },
+    {
+      "start": 1163.52,
+      "duration": 5.1,
+      "end": 1168.62,
+      "text": "you'll be given n and you have to print"
+    },
+    {
+      "start": 1166.16,
+      "duration": 4.8,
+      "end": 1170.96,
+      "text": "this entire pastel triangle does it mean"
+    },
+    {
+      "start": 1168.62,
+      "duration": 4.2,
+      "end": 1172.82,
+      "text": "you have to give all these spaces no a"
+    },
+    {
+      "start": 1170.96,
+      "duration": 2.7,
+      "end": 1173.66,
+      "text": "short pattern printing what you have to"
+    },
+    {
+      "start": 1172.82,
+      "duration": 3.18,
+      "end": 1176.0,
+      "text": "do is"
+    },
+    {
+      "start": 1173.66,
+      "duration": 4.74,
+      "end": 1178.4,
+      "text": "the first row is containing one so you"
+    },
+    {
+      "start": 1176.0,
+      "duration": 5.28,
+      "end": 1181.28,
+      "text": "return one in a list then it is one one"
+    },
+    {
+      "start": 1178.4,
+      "duration": 6.779,
+      "end": 1185.179,
+      "text": "see written one one next one to one next"
+    },
+    {
+      "start": 1181.28,
+      "duration": 7.68,
+      "end": 1188.96,
+      "text": "one three three one next one four six"
+    },
+    {
+      "start": 1185.179,
+      "duration": 6.301,
+      "end": 1191.48,
+      "text": "four one next one five ten ten this will"
+    },
+    {
+      "start": 1188.96,
+      "duration": 6.12,
+      "end": 1195.08,
+      "text": "be the answer if ns6 and everything will"
+    },
+    {
+      "start": 1191.48,
+      "duration": 7.14,
+      "end": 1198.6200000000001,
+      "text": "be inside a list and all of these lists"
+    },
+    {
+      "start": 1195.08,
+      "duration": 5.28,
+      "end": 1200.36,
+      "text": "will be put inside a list and then this"
+    },
+    {
+      "start": 1198.62,
+      "duration": 3.9,
+      "end": 1202.52,
+      "text": "is what you have to return so what is"
+    },
+    {
+      "start": 1200.36,
+      "duration": 4.26,
+      "end": 1204.62,
+      "text": "the extreme naive brute approach that"
+    },
+    {
+      "start": 1202.52,
+      "duration": 4.74,
+      "end": 1207.26,
+      "text": "you can think of it's definitely using"
+    },
+    {
+      "start": 1204.62,
+      "duration": 4.74,
+      "end": 1209.36,
+      "text": "the formula R minus one c c minus one"
+    },
+    {
+      "start": 1207.26,
+      "duration": 5.279,
+      "end": 1212.539,
+      "text": "what you do is you know the rules will"
+    },
+    {
+      "start": 1209.36,
+      "duration": 6.36,
+      "end": 1215.7199999999998,
+      "text": "be from 1 to n so you can run a loop"
+    },
+    {
+      "start": 1212.539,
+      "duration": 5.461,
+      "end": 1218.0,
+      "text": "from one to n for rows and you know the"
+    },
+    {
+      "start": 1215.72,
+      "duration": 5.16,
+      "end": 1220.88,
+      "text": "columns will be wrong"
+    },
+    {
+      "start": 1218.0,
+      "duration": 4.38,
+      "end": 1222.38,
+      "text": "1 to this current row why is that"
+    },
+    {
+      "start": 1220.88,
+      "duration": 3.539,
+      "end": 1224.419,
+      "text": "because for the first row it is one"
+    },
+    {
+      "start": 1222.38,
+      "duration": 3.72,
+      "end": 1226.1000000000001,
+      "text": "element for the second order is two"
+    },
+    {
+      "start": 1224.419,
+      "duration": 4.081,
+      "end": 1228.5,
+      "text": "elements for the fifth it is five"
+    },
+    {
+      "start": 1226.1,
+      "duration": 4.8,
+      "end": 1230.8999999999999,
+      "text": "elements for the row number The Columns"
+    },
+    {
+      "start": 1228.5,
+      "duration": 4.26,
+      "end": 1232.76,
+      "text": "are equivalent to the row number so we"
+    },
+    {
+      "start": 1230.9,
+      "duration": 3.899,
+      "end": 1234.799,
+      "text": "know the answer will be a list which we"
+    },
+    {
+      "start": 1232.76,
+      "duration": 4.26,
+      "end": 1237.02,
+      "text": "have to return so probably take a"
+    },
+    {
+      "start": 1234.799,
+      "duration": 4.861,
+      "end": 1239.66,
+      "text": "temporary list"
+    },
+    {
+      "start": 1237.02,
+      "duration": 3.42,
+      "end": 1240.44,
+      "text": "and take an answer list and now what you"
+    },
+    {
+      "start": 1239.66,
+      "duration": 3.78,
+      "end": 1243.44,
+      "text": "do is"
+    },
+    {
+      "start": 1240.44,
+      "duration": 6.479,
+      "end": 1246.919,
+      "text": "inside the inner formula"
+    },
+    {
+      "start": 1243.44,
+      "duration": 6.18,
+      "end": 1249.6200000000001,
+      "text": "temporary list dot add as the NCR"
+    },
+    {
+      "start": 1246.919,
+      "duration": 4.441,
+      "end": 1251.3600000000001,
+      "text": "function that you wrote in the first to"
+    },
+    {
+      "start": 1249.62,
+      "duration": 4.02,
+      "end": 1253.6399999999999,
+      "text": "generate the answer for every element"
+    },
+    {
+      "start": 1251.36,
+      "duration": 4.92,
+      "end": 1256.28,
+      "text": "individual element and you can add it up"
+    },
+    {
+      "start": 1253.64,
+      "duration": 6.06,
+      "end": 1259.7,
+      "text": "once this temporary list is generated"
+    },
+    {
+      "start": 1256.28,
+      "duration": 6.6,
+      "end": 1262.8799999999999,
+      "text": "you can ask the answer to add the sub"
+    },
+    {
+      "start": 1259.7,
+      "duration": 6.3,
+      "end": 1266.0,
+      "text": "temporary list and eventually what you"
+    },
+    {
+      "start": 1262.88,
+      "duration": 4.679,
+      "end": 1267.5590000000002,
+      "text": "can do is you can return this answer yes"
+    },
+    {
+      "start": 1266.0,
+      "duration": 4.08,
+      "end": 1270.08,
+      "text": "eventually you can return this answer"
+    },
+    {
+      "start": 1267.559,
+      "duration": 4.561,
+      "end": 1272.12,
+      "text": "and this is how easily you can do it by"
+    },
+    {
+      "start": 1270.08,
+      "duration": 4.14,
+      "end": 1274.22,
+      "text": "the way the code for this you can find"
+    },
+    {
+      "start": 1272.12,
+      "duration": 3.419,
+      "end": 1275.539,
+      "text": "it in the updated article in the"
+    },
+    {
+      "start": 1274.22,
+      "duration": 2.579,
+      "end": 1276.799,
+      "text": "description below in case you want to"
+    },
+    {
+      "start": 1275.539,
+      "duration": 3.481,
+      "end": 1279.02,
+      "text": "see the code for this"
+    },
+    {
+      "start": 1276.799,
+      "duration": 4.201,
+      "end": 1281.0,
+      "text": "so what will be the time complexity can"
+    },
+    {
+      "start": 1279.02,
+      "duration": 4.38,
+      "end": 1283.4,
+      "text": "I say I'm running an N Loop another n"
+    },
+    {
+      "start": 1281.0,
+      "duration": 5.64,
+      "end": 1286.64,
+      "text": "Loop and this if you remember took B go"
+    },
+    {
+      "start": 1283.4,
+      "duration": 6.36,
+      "end": 1289.76,
+      "text": "of R that's near about not exactly near"
+    },
+    {
+      "start": 1286.64,
+      "duration": 6.06,
+      "end": 1292.7,
+      "text": "about n into n into on near the board"
+    },
+    {
+      "start": 1289.76,
+      "duration": 5.279,
+      "end": 1295.039,
+      "text": "which is near about B gov n cube in the"
+    },
+    {
+      "start": 1292.7,
+      "duration": 4.68,
+      "end": 1297.38,
+      "text": "worst like near the mouth not exactly we"
+    },
+    {
+      "start": 1295.039,
+      "duration": 4.62,
+      "end": 1299.6589999999999,
+      "text": "go of NQ we will not talk about the"
+    },
+    {
+      "start": 1297.38,
+      "duration": 4.32,
+      "end": 1301.7,
+      "text": "space complexity because we are storing"
+    },
+    {
+      "start": 1299.659,
+      "duration": 3.601,
+      "end": 1303.2600000000002,
+      "text": "the answer to return we are not using it"
+    },
+    {
+      "start": 1301.7,
+      "duration": 4.02,
+      "end": 1305.72,
+      "text": "to compute it is the answer which is"
+    },
+    {
+      "start": 1303.26,
+      "duration": 4.38,
+      "end": 1307.64,
+      "text": "stored so this time complexity is this"
+    },
+    {
+      "start": 1305.72,
+      "duration": 3.6,
+      "end": 1309.32,
+      "text": "obviously the interviewer will not be"
+    },
+    {
+      "start": 1307.64,
+      "duration": 4.2,
+      "end": 1311.8400000000001,
+      "text": "happy and they'll ask you to optimize it"
+    },
+    {
+      "start": 1309.32,
+      "duration": 5.16,
+      "end": 1314.48,
+      "text": "so how can you reduce it from Vigo of n"
+    },
+    {
+      "start": 1311.84,
+      "duration": 4.56,
+      "end": 1316.3999999999999,
+      "text": "Cube so we will use the second type if"
+    },
+    {
+      "start": 1314.48,
+      "duration": 5.579,
+      "end": 1320.059,
+      "text": "you remember the second type given any"
+    },
+    {
+      "start": 1316.4,
+      "duration": 6.42,
+      "end": 1322.8200000000002,
+      "text": "row number was generating you the entire"
+    },
+    {
+      "start": 1320.059,
+      "duration": 4.921,
+      "end": 1324.98,
+      "text": "row so we'll be using this to generate"
+    },
+    {
+      "start": 1322.82,
+      "duration": 5.4,
+      "end": 1328.22,
+      "text": "every row and this was taking a big off"
+    },
+    {
+      "start": 1324.98,
+      "duration": 5.46,
+      "end": 1330.44,
+      "text": "n complexity so for every row that there"
+    },
+    {
+      "start": 1328.22,
+      "duration": 4.439,
+      "end": 1332.659,
+      "text": "are n rows we will take big of n to"
+    },
+    {
+      "start": 1330.44,
+      "duration": 5.58,
+      "end": 1336.02,
+      "text": "generate that rule the total complexity"
+    },
+    {
+      "start": 1332.659,
+      "duration": 4.681,
+      "end": 1337.3400000000001,
+      "text": "will boil down to B go of n square and"
+    },
+    {
+      "start": 1336.02,
+      "duration": 3.84,
+      "end": 1339.86,
+      "text": "this is what will be your optimal"
+    },
+    {
+      "start": 1337.34,
+      "duration": 4.26,
+      "end": 1341.6,
+      "text": "solution for the type 3 okay so time to"
+    },
+    {
+      "start": 1339.86,
+      "duration": 3.299,
+      "end": 1343.1589999999999,
+      "text": "code the third type up again the problem"
+    },
+    {
+      "start": 1341.6,
+      "duration": 3.0,
+      "end": 1344.6,
+      "text": "link will be in the description please"
+    },
+    {
+      "start": 1343.159,
+      "duration": 3.601,
+      "end": 1346.7600000000002,
+      "text": "please make sure you try the problem"
+    },
+    {
+      "start": 1344.6,
+      "duration": 3.72,
+      "end": 1348.32,
+      "text": "from the link in the description itself"
+    },
+    {
+      "start": 1346.76,
+      "duration": 4.039,
+      "end": 1350.799,
+      "text": "so what is the first thing you'll write"
+    },
+    {
+      "start": 1348.32,
+      "duration": 6.3,
+      "end": 1354.62,
+      "text": "probably will write uh"
+    },
+    {
+      "start": 1350.799,
+      "duration": 6.041,
+      "end": 1356.84,
+      "text": "generate row function which will take"
+    },
+    {
+      "start": 1354.62,
+      "duration": 5.34,
+      "end": 1359.9599999999998,
+      "text": "the row number and it will give me a"
+    },
+    {
+      "start": 1356.84,
+      "duration": 5.28,
+      "end": 1362.12,
+      "text": "list of all the elements in that row and"
+    },
+    {
+      "start": 1359.96,
+      "duration": 5.64,
+      "end": 1365.6000000000001,
+      "text": "if you remember properly as I always"
+    },
+    {
+      "start": 1362.12,
+      "duration": 4.86,
+      "end": 1366.9799999999998,
+      "text": "said you please please take a long long"
+    },
+    {
+      "start": 1365.6,
+      "duration": 2.819,
+      "end": 1368.4189999999999,
+      "text": "over here"
+    },
+    {
+      "start": 1366.98,
+      "duration": 3.0,
+      "end": 1369.98,
+      "text": "because you'll be multiplying"
+    },
+    {
+      "start": 1368.419,
+      "duration": 4.5,
+      "end": 1372.919,
+      "text": "multiplying so the numbers might grow"
+    },
+    {
+      "start": 1369.98,
+      "duration": 6.26,
+      "end": 1376.24,
+      "text": "please take long what's the first thing"
+    },
+    {
+      "start": 1372.919,
+      "duration": 6.301,
+      "end": 1379.22,
+      "text": "you know this will be your answer Rook"
+    },
+    {
+      "start": 1376.24,
+      "duration": 6.46,
+      "end": 1382.7,
+      "text": "and we know one thing for sure"
+    },
+    {
+      "start": 1379.22,
+      "duration": 5.459,
+      "end": 1384.679,
+      "text": "we will always have one at the starting"
+    },
+    {
+      "start": 1382.7,
+      "duration": 4.979,
+      "end": 1387.679,
+      "text": "and then if you remember we started with"
+    },
+    {
+      "start": 1384.679,
+      "duration": 6.541,
+      "end": 1391.22,
+      "text": "zero based indexing if you remember"
+    },
+    {
+      "start": 1387.679,
+      "duration": 5.461,
+      "end": 1393.14,
+      "text": "this was considered as the zero where"
+    },
+    {
+      "start": 1391.22,
+      "duration": 4.38,
+      "end": 1395.6000000000001,
+      "text": "the answer was one this was considered"
+    },
+    {
+      "start": 1393.14,
+      "duration": 5.1,
+      "end": 1398.24,
+      "text": "as one and then it went across in data"
+    },
+    {
+      "start": 1395.6,
+      "duration": 4.86,
+      "end": 1400.4599999999998,
+      "text": "five cross one this was considered as 2"
+    },
+    {
+      "start": 1398.24,
+      "duration": 5.52,
+      "end": 1403.76,
+      "text": "and then it went across and did a two"
+    },
+    {
+      "start": 1400.46,
+      "duration": 4.74,
+      "end": 1405.2,
+      "text": "divide and a four so for this 2 what you"
+    },
+    {
+      "start": 1403.76,
+      "duration": 4.14,
+      "end": 1407.9,
+      "text": "did was"
+    },
+    {
+      "start": 1405.2,
+      "duration": 5.28,
+      "end": 1410.48,
+      "text": "and was six the rule number was six six"
+    },
+    {
+      "start": 1407.9,
+      "duration": 4.44,
+      "end": 1412.3400000000001,
+      "text": "minus two at the bottom U divided in it"
+    },
+    {
+      "start": 1410.48,
+      "duration": 3.78,
+      "end": 1414.26,
+      "text": "by two so this is something you will do"
+    },
+    {
+      "start": 1412.34,
+      "duration": 4.079,
+      "end": 1416.4189999999999,
+      "text": "so you will go ahead and say okay column"
+    },
+    {
+      "start": 1414.26,
+      "duration": 5.039,
+      "end": 1419.299,
+      "text": "now goes from one and if you remember"
+    },
+    {
+      "start": 1416.419,
+      "duration": 5.581,
+      "end": 1422.0,
+      "text": "the last one will be three four five the"
+    },
+    {
+      "start": 1419.299,
+      "duration": 5.041,
+      "end": 1424.34,
+      "text": "last one will be five so column will go"
+    },
+    {
+      "start": 1422.0,
+      "duration": 5.039,
+      "end": 1427.039,
+      "text": "till the row not equal to equal to"
+    },
+    {
+      "start": 1424.34,
+      "duration": 5.1,
+      "end": 1429.4399999999998,
+      "text": "rather this and over here let's probably"
+    },
+    {
+      "start": 1427.039,
+      "duration": 5.581,
+      "end": 1432.62,
+      "text": "take answer is there so what you do is"
+    },
+    {
+      "start": 1429.44,
+      "duration": 5.7,
+      "end": 1435.14,
+      "text": "answer equal to answer into at first"
+    },
+    {
+      "start": 1432.62,
+      "duration": 6.179,
+      "end": 1438.799,
+      "text": "let's have it uh on the top what is the"
+    },
+    {
+      "start": 1435.14,
+      "duration": 6.6,
+      "end": 1441.74,
+      "text": "top row minus column perfect and then"
+    },
+    {
+      "start": 1438.799,
+      "duration": 4.921,
+      "end": 1443.72,
+      "text": "you will say divide and what will be at"
+    },
+    {
+      "start": 1441.74,
+      "duration": 4.799,
+      "end": 1446.539,
+      "text": "the bottom at the bottom was the column"
+    },
+    {
+      "start": 1443.72,
+      "duration": 5.819,
+      "end": 1449.539,
+      "text": "okay done once you have done this you"
+    },
+    {
+      "start": 1446.539,
+      "duration": 5.161,
+      "end": 1451.7,
+      "text": "will say answer no can you please take"
+    },
+    {
+      "start": 1449.539,
+      "duration": 4.14,
+      "end": 1453.679,
+      "text": "this it will take it and then you can"
+    },
+    {
+      "start": 1451.7,
+      "duration": 3.599,
+      "end": 1455.299,
+      "text": "return this answer row so what you've"
+    },
+    {
+      "start": 1453.679,
+      "duration": 3.961,
+      "end": 1457.64,
+      "text": "done is you have written a function"
+    },
+    {
+      "start": 1455.299,
+      "duration": 4.86,
+      "end": 1460.1589999999999,
+      "text": "that's basically the type 2 which takes"
+    },
+    {
+      "start": 1457.64,
+      "duration": 4.919,
+      "end": 1462.5590000000002,
+      "text": "a row number and gives you the entire"
+    },
+    {
+      "start": 1460.159,
+      "duration": 3.9,
+      "end": 1464.0590000000002,
+      "text": "row and now it is wanting the entire"
+    },
+    {
+      "start": 1462.559,
+      "duration": 3.841,
+      "end": 1466.3999999999999,
+      "text": "triangle"
+    },
+    {
+      "start": 1464.059,
+      "duration": 5.181,
+      "end": 1469.24,
+      "text": "so we will say list"
+    },
+    {
+      "start": 1466.4,
+      "duration": 2.84,
+      "end": 1469.24,
+      "text": "of list"
+    },
+    {
+      "start": 1469.34,
+      "duration": 2.839,
+      "end": 1472.1789999999999,
+      "text": "and"
+    },
+    {
+      "start": 1472.58,
+      "duration": 7.38,
+      "end": 1479.96,
+      "text": "this will be okay and maybe"
+    },
+    {
+      "start": 1476.559,
+      "duration": 7.061,
+      "end": 1483.62,
+      "text": "and now we know the number of rows Will"
+    },
+    {
+      "start": 1479.96,
+      "duration": 5.4,
+      "end": 1485.3600000000001,
+      "text": "Go On from this to this I plus plus we"
+    },
+    {
+      "start": 1483.62,
+      "duration": 5.4,
+      "end": 1489.02,
+      "text": "definitely know this and we know they"
+    },
+    {
+      "start": 1485.36,
+      "duration": 5.699,
+      "end": 1491.059,
+      "text": "will be temporary probability detectory"
+    },
+    {
+      "start": 1489.02,
+      "duration": 5.039,
+      "end": 1494.059,
+      "text": "and this temporary will call the"
+    },
+    {
+      "start": 1491.059,
+      "duration": 5.881,
+      "end": 1496.94,
+      "text": "generate row and it will pass the slow"
+    },
+    {
+      "start": 1494.059,
+      "duration": 5.821,
+      "end": 1499.8799999999999,
+      "text": "number and once it is generated you will"
+    },
+    {
+      "start": 1496.94,
+      "duration": 5.58,
+      "end": 1502.52,
+      "text": "say answer can you please store this"
+    },
+    {
+      "start": 1499.88,
+      "duration": 5.46,
+      "end": 1505.3400000000001,
+      "text": "temporary and instead of taking it in a"
+    },
+    {
+      "start": 1502.52,
+      "duration": 5.46,
+      "end": 1507.98,
+      "text": "temporary you can also directly write it"
+    },
+    {
+      "start": 1505.34,
+      "duration": 4.98,
+      "end": 1510.32,
+      "text": "because the function returns a list the"
+    },
+    {
+      "start": 1507.98,
+      "duration": 4.98,
+      "end": 1512.96,
+      "text": "list itself will get into the answer"
+    },
+    {
+      "start": 1510.32,
+      "duration": 4.32,
+      "end": 1514.6399999999999,
+      "text": "once you have done this you can go ahead"
+    },
+    {
+      "start": 1512.96,
+      "duration": 3.36,
+      "end": 1516.32,
+      "text": "and return this and that will be your"
+    },
+    {
+      "start": 1514.64,
+      "duration": 3.18,
+      "end": 1517.8200000000002,
+      "text": "answer got it so whenever you're"
+    },
+    {
+      "start": 1516.32,
+      "duration": 3.3,
+      "end": 1519.62,
+      "text": "appearing for an interview please please"
+    },
+    {
+      "start": 1517.82,
+      "duration": 3.839,
+      "end": 1521.6589999999999,
+      "text": "make sure that you maintain code quality"
+    },
+    {
+      "start": 1519.62,
+      "duration": 3.419,
+      "end": 1523.039,
+      "text": "now what do I mean by code quality I've"
+    },
+    {
+      "start": 1521.659,
+      "duration": 3.601,
+      "end": 1525.2600000000002,
+      "text": "written the function like this and"
+    },
+    {
+      "start": 1523.039,
+      "duration": 3.781,
+      "end": 1526.82,
+      "text": "called it from here I could have also"
+    },
+    {
+      "start": 1525.26,
+      "duration": 4.98,
+      "end": 1530.24,
+      "text": "written it something like this probably"
+    },
+    {
+      "start": 1526.82,
+      "duration": 6.599,
+      "end": 1533.4189999999999,
+      "text": "I'll just have answer row here and I"
+    },
+    {
+      "start": 1530.24,
+      "duration": 5.76,
+      "end": 1536.0,
+      "text": "will just copy paste this portion I'll"
+    },
+    {
+      "start": 1533.419,
+      "duration": 4.681,
+      "end": 1538.1000000000001,
+      "text": "put it over here now this will also run"
+    },
+    {
+      "start": 1536.0,
+      "duration": 4.919,
+      "end": 1540.919,
+      "text": "this will and I'll erase the function"
+    },
+    {
+      "start": 1538.1,
+      "duration": 5.579,
+      "end": 1543.6789999999999,
+      "text": "this will also be submitted and you"
+    },
+    {
+      "start": 1540.919,
+      "duration": 4.681,
+      "end": 1545.6000000000001,
+      "text": "might think given a correct solution but"
+    },
+    {
+      "start": 1543.679,
+      "duration": 3.541,
+      "end": 1547.22,
+      "text": "that doesn't work like that the"
+    },
+    {
+      "start": 1545.6,
+      "duration": 3.959,
+      "end": 1549.559,
+      "text": "interviewers will focus on your code"
+    },
+    {
+      "start": 1547.22,
+      "duration": 4.8,
+      "end": 1552.02,
+      "text": "quality so please make sure if code is"
+    },
+    {
+      "start": 1549.559,
+      "duration": 4.321,
+      "end": 1553.8799999999999,
+      "text": "getting longer break it down into paths"
+    },
+    {
+      "start": 1552.02,
+      "duration": 4.08,
+      "end": 1556.1,
+      "text": "put them into functions a functions"
+    },
+    {
+      "start": 1553.88,
+      "duration": 4.2,
+      "end": 1558.0800000000002,
+      "text": "which are readable so that okay I know"
+    },
+    {
+      "start": 1556.1,
+      "duration": 4.5,
+      "end": 1560.6,
+      "text": "that this is a function which is"
+    },
+    {
+      "start": 1558.08,
+      "duration": 4.44,
+      "end": 1562.52,
+      "text": "generating row it is quite readable so"
+    },
+    {
+      "start": 1560.6,
+      "duration": 3.48,
+      "end": 1564.08,
+      "text": "try to have core quality of this format"
+    },
+    {
+      "start": 1562.52,
+      "duration": 3.36,
+      "end": 1565.8799999999999,
+      "text": "then only it will be very easy for you"
+    },
+    {
+      "start": 1564.08,
+      "duration": 4.079,
+      "end": 1568.1589999999999,
+      "text": "to clear interviews it's just not about"
+    },
+    {
+      "start": 1565.88,
+      "duration": 3.779,
+      "end": 1569.659,
+      "text": "solving problems trust me on this so"
+    },
+    {
+      "start": 1568.159,
+      "duration": 3.541,
+      "end": 1571.7,
+      "text": "going back to the sheet I can say that"
+    },
+    {
+      "start": 1569.659,
+      "duration": 4.201,
+      "end": 1573.8600000000001,
+      "text": "this is done I hope you have understood"
+    },
+    {
+      "start": 1571.7,
+      "duration": 3.66,
+      "end": 1575.3600000000001,
+      "text": "everything just in case you have please"
+    },
+    {
+      "start": 1573.86,
+      "duration": 3.24,
+      "end": 1577.1,
+      "text": "please consider giving us that like"
+    },
+    {
+      "start": 1575.36,
+      "duration": 3.0,
+      "end": 1578.36,
+      "text": "because it won't cost you anything but"
+    },
+    {
+      "start": 1577.1,
+      "duration": 3.179,
+      "end": 1580.279,
+      "text": "that is something that will definitely"
+    },
+    {
+      "start": 1578.36,
+      "duration": 3.78,
+      "end": 1582.1399999999999,
+      "text": "motivate me to make such kind of content"
+    },
+    {
+      "start": 1580.279,
+      "duration": 4.321,
+      "end": 1584.6,
+      "text": "more and more and yes if you're new to"
+    },
+    {
+      "start": 1582.14,
+      "duration": 4.5,
+      "end": 1586.64,
+      "text": "our Channel what are you waiting for hit"
+    },
+    {
+      "start": 1584.6,
+      "duration": 3.24,
+      "end": 1587.84,
+      "text": "that subscribe button man and to"
+    },
+    {
+      "start": 1586.64,
+      "duration": 2.7,
+      "end": 1589.3400000000001,
+      "text": "continue our tradition do comment"
+    },
+    {
+      "start": 1587.84,
+      "duration": 3.66,
+      "end": 1591.5,
+      "text": "understood and if you haven't followed"
+    },
+    {
+      "start": 1589.34,
+      "duration": 3.719,
+      "end": 1593.059,
+      "text": "me on LinkedIn Twitter Instagram all the"
+    },
+    {
+      "start": 1591.5,
+      "duration": 2.64,
+      "end": 1594.14,
+      "text": "links will be in the description with"
+    },
+    {
+      "start": 1593.059,
+      "duration": 3.501,
+      "end": 1596.56,
+      "text": "this I'll be wrapping up this video"
+    },
+    {
+      "start": 1594.14,
+      "duration": 8.599,
+      "end": 1602.739,
+      "text": "let's read in some other videos"
+    },
+    {
+      "start": 1596.56,
+      "duration": 6.179,
+      "end": 1602.739,
+      "text": "[Music]"
+    },
+    {
+      "start": 1603.14,
+      "duration": 3.38,
+      "end": 1606.5200000000002,
+      "text": "I will find the lighting"
+    }
+  ]
+}

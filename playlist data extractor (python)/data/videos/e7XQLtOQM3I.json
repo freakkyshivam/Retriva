@@ -1,0 +1,2486 @@
+{
+  "position": 301,
+  "video_id": "e7XQLtOQM3I",
+  "title": "L5. Next Greater Element | Stack and Queue Playlist",
+  "url": "https://www.youtube.com/watch?v=e7XQLtOQM3I",
+  "transcript": [
+    {
+      "start": 3.199,
+      "duration": 3.481,
+      "end": 6.68,
+      "text": "so let's continue with the stack and"
+    },
+    {
+      "start": 4.759,
+      "duration": 3.12,
+      "end": 7.8790000000000004,
+      "text": "Cube playlist today for starting off he"
+    },
+    {
+      "start": 6.68,
+      "duration": 3.2,
+      "end": 9.879999999999999,
+      "text": "everyone welcome back to the channel I"
+    },
+    {
+      "start": 7.879,
+      "duration": 3.64,
+      "end": 11.519,
+      "text": "hope you guys are doing extremely well"
+    },
+    {
+      "start": 9.88,
+      "duration": 5.959,
+      "end": 15.839,
+      "text": "so the problem that we will be solving"
+    },
+    {
+      "start": 11.519,
+      "duration": 6.161,
+      "end": 17.68,
+      "text": "today is next greater element so from"
+    },
+    {
+      "start": 15.839,
+      "duration": 5.481,
+      "end": 21.32,
+      "text": "this problem onwards we'll be starting"
+    },
+    {
+      "start": 17.68,
+      "duration": 6.4,
+      "end": 24.08,
+      "text": "off with monotonic stack so what is"
+    },
+    {
+      "start": 21.32,
+      "duration": 6.08,
+      "end": 27.4,
+      "text": "monotonic stack till now I've been using"
+    },
+    {
+      "start": 24.08,
+      "duration": 6.08,
+      "end": 30.159999999999997,
+      "text": "stack to store elements but the moment"
+    },
+    {
+      "start": 27.4,
+      "duration": 6.64,
+      "end": 34.04,
+      "text": "we use stack to store elements in a"
+    },
+    {
+      "start": 30.16,
+      "duration": 7.919,
+      "end": 38.079,
+      "text": "specific order in a specific order that"
+    },
+    {
+      "start": 34.04,
+      "duration": 6.839,
+      "end": 40.879,
+      "text": "is when we call it as a monotonic stack"
+    },
+    {
+      "start": 38.079,
+      "duration": 5.281,
+      "end": 43.36,
+      "text": "so maybe I can store elements in an"
+    },
+    {
+      "start": 40.879,
+      "duration": 5.241,
+      "end": 46.12,
+      "text": "increasing order in the stack or maybe"
+    },
+    {
+      "start": 43.36,
+      "duration": 5.28,
+      "end": 48.64,
+      "text": "in a decreasing order or maybe in some"
+    },
+    {
+      "start": 46.12,
+      "duration": 5.52,
+      "end": 51.64,
+      "text": "other order so whenever we are following"
+    },
+    {
+      "start": 48.64,
+      "duration": 6.64,
+      "end": 55.28,
+      "text": "a specific order that's when we call it"
+    },
+    {
+      "start": 51.64,
+      "duration": 7.8,
+      "end": 59.44,
+      "text": "as a monotonic stack got it so this"
+    },
+    {
+      "start": 55.28,
+      "duration": 6.279,
+      "end": 61.559,
+      "text": "problem is next greater element or"
+    },
+    {
+      "start": 59.44,
+      "duration": 5.16,
+      "end": 64.6,
+      "text": "commonly known as"
+    },
+    {
+      "start": 61.559,
+      "duration": 5.88,
+      "end": 67.439,
+      "text": "NG so what is the problem statement it's"
+    },
+    {
+      "start": 64.6,
+      "duration": 5.32,
+      "end": 69.91999999999999,
+      "text": "stating that you given an array for"
+    },
+    {
+      "start": 67.439,
+      "duration": 5.36,
+      "end": 72.79899999999999,
+      "text": "every element for every element in the"
+    },
+    {
+      "start": 69.92,
+      "duration": 7.16,
+      "end": 77.08,
+      "text": "array you have to tell me which one is"
+    },
+    {
+      "start": 72.799,
+      "duration": 6.521,
+      "end": 79.32000000000001,
+      "text": "the next greater element as the name is"
+    },
+    {
+      "start": 77.08,
+      "duration": 5.079,
+      "end": 82.15899999999999,
+      "text": "telling you what it is all about so you"
+    },
+    {
+      "start": 79.32,
+      "duration": 6.68,
+      "end": 86.0,
+      "text": "basically stand at six and then you look"
+    },
+    {
+      "start": 82.159,
+      "duration": 7.161,
+      "end": 89.32000000000001,
+      "text": "at the next elements is 0 greater than 6"
+    },
+    {
+      "start": 86.0,
+      "duration": 6.32,
+      "end": 92.32,
+      "text": "no it is not is 8 greater than 6 yes it"
+    },
+    {
+      "start": 89.32,
+      "duration": 5.88,
+      "end": 95.19999999999999,
+      "text": "is the first element that is greater"
+    },
+    {
+      "start": 92.32,
+      "duration": 7.0,
+      "end": 99.32,
+      "text": "than the element so you see that 8 is"
+    },
+    {
+      "start": 95.2,
+      "duration": 7.0,
+      "end": 102.2,
+      "text": "the NG of six so what I can do is I can"
+    },
+    {
+      "start": 99.32,
+      "duration": 4.799,
+      "end": 104.119,
+      "text": "write eight if you stand at zero and if"
+    },
+    {
+      "start": 102.2,
+      "duration": 5.0,
+      "end": 107.2,
+      "text": "you look at the right if you look at the"
+    },
+    {
+      "start": 104.119,
+      "duration": 6.32,
+      "end": 110.439,
+      "text": "right eight is the next greater element"
+    },
+    {
+      "start": 107.2,
+      "duration": 6.12,
+      "end": 113.32000000000001,
+      "text": "so again I can write eight if I stand at"
+    },
+    {
+      "start": 110.439,
+      "duration": 5.121,
+      "end": 115.55999999999999,
+      "text": "eight and if I look on the right I do"
+    },
+    {
+      "start": 113.32,
+      "duration": 6.32,
+      "end": 119.63999999999999,
+      "text": "not have an element that is greater than"
+    },
+    {
+      "start": 115.56,
+      "duration": 7.08,
+      "end": 122.64,
+      "text": "8 in such scenario I'll print minus1 if"
+    },
+    {
+      "start": 119.64,
+      "duration": 5.04,
+      "end": 124.68,
+      "text": "I stand at one if I look at the right I"
+    },
+    {
+      "start": 122.64,
+      "duration": 4.519,
+      "end": 127.159,
+      "text": "have a three which is greater than one"
+    },
+    {
+      "start": 124.68,
+      "duration": 3.96,
+      "end": 128.64000000000001,
+      "text": "so I'll write three if I stand at three"
+    },
+    {
+      "start": 127.159,
+      "duration": 4.281,
+      "end": 131.44,
+      "text": "and if I look at right there's nothing"
+    },
+    {
+      "start": 128.64,
+      "duration": 6.28,
+      "end": 134.92,
+      "text": "so I'll have minus one so this is what"
+    },
+    {
+      "start": 131.44,
+      "duration": 4.96,
+      "end": 136.4,
+      "text": "you'll have to return this array is what"
+    },
+    {
+      "start": 134.92,
+      "duration": 4.679,
+      "end": 139.599,
+      "text": "you will have to"
+    },
+    {
+      "start": 136.4,
+      "duration": 6.4,
+      "end": 142.8,
+      "text": "return straightforward isn't it what is"
+    },
+    {
+      "start": 139.599,
+      "duration": 6.161,
+      "end": 145.76,
+      "text": "the first approach that comes to my mind"
+    },
+    {
+      "start": 142.8,
+      "duration": 6.12,
+      "end": 148.92000000000002,
+      "text": "for every element go to the right and"
+    },
+    {
+      "start": 145.76,
+      "duration": 5.52,
+      "end": 151.28,
+      "text": "find the next greater element okay fine"
+    },
+    {
+      "start": 148.92,
+      "duration": 6.28,
+      "end": 155.2,
+      "text": "so in order to Trav for every element I"
+    },
+    {
+      "start": 151.28,
+      "duration": 6.0,
+      "end": 157.28,
+      "text": "know one thing for sure I need a loop 0"
+    },
+    {
+      "start": 155.2,
+      "duration": 4.6,
+      "end": 159.79999999999998,
+      "text": "to n minus one so I'll iterate on the"
+    },
+    {
+      "start": 157.28,
+      "duration": 5.08,
+      "end": 162.36,
+      "text": "array I'll go to every element now for"
+    },
+    {
+      "start": 159.8,
+      "duration": 5.439,
+      "end": 165.239,
+      "text": "every element I need the next greater"
+    },
+    {
+      "start": 162.36,
+      "duration": 4.599,
+      "end": 166.959,
+      "text": "element so one thing I know for sure the"
+    },
+    {
+      "start": 165.239,
+      "duration": 4.481,
+      "end": 169.72,
+      "text": "next greater element will be on the"
+    },
+    {
+      "start": 166.959,
+      "duration": 6.481,
+      "end": 173.44,
+      "text": "right thereby I'll start from the next"
+    },
+    {
+      "start": 169.72,
+      "duration": 6.599,
+      "end": 176.319,
+      "text": "index which is I + 1 I'll go until n"
+    },
+    {
+      "start": 173.44,
+      "duration": 5.799,
+      "end": 179.239,
+      "text": "minus one again"
+    },
+    {
+      "start": 176.319,
+      "duration": 7.601,
+      "end": 183.92,
+      "text": "straightforward if at any moment I say"
+    },
+    {
+      "start": 179.239,
+      "duration": 7.401,
+      "end": 186.64000000000001,
+      "text": "array of J is greater than array of I"
+    },
+    {
+      "start": 183.92,
+      "duration": 5.2,
+      "end": 189.11999999999998,
+      "text": "can I surely say that this is my next"
+    },
+    {
+      "start": 186.64,
+      "duration": 5.12,
+      "end": 191.76,
+      "text": "greater element I can maybe I need an"
+    },
+    {
+      "start": 189.12,
+      "duration": 7.0,
+      "end": 196.12,
+      "text": "array"
+    },
+    {
+      "start": 191.76,
+      "duration": 5.839,
+      "end": 197.599,
+      "text": "NG which initially can be of size uh it"
+    },
+    {
+      "start": 196.12,
+      "duration": 4.399,
+      "end": 200.519,
+      "text": "will be of size"
+    },
+    {
+      "start": 197.599,
+      "duration": 7.36,
+      "end": 204.959,
+      "text": "n and then you can say that"
+    },
+    {
+      "start": 200.519,
+      "duration": 6.761,
+      "end": 207.28,
+      "text": "NG of the index I will be array of J and"
+    },
+    {
+      "start": 204.959,
+      "duration": 4.56,
+      "end": 209.519,
+      "text": "at the same time you can say can you"
+    },
+    {
+      "start": 207.28,
+      "duration": 5.959,
+      "end": 213.239,
+      "text": "just break off and once you're done with"
+    },
+    {
+      "start": 209.519,
+      "duration": 7.161,
+      "end": 216.68,
+      "text": "this follow Loop ends the external fall"
+    },
+    {
+      "start": 213.239,
+      "duration": 8.481,
+      "end": 221.72,
+      "text": "Loop ends and I could end up returning"
+    },
+    {
+      "start": 216.68,
+      "duration": 7.279,
+      "end": 223.959,
+      "text": "the NG AR that understood again you"
+    },
+    {
+      "start": 221.72,
+      "duration": 4.879,
+      "end": 226.599,
+      "text": "cannot use this ngr and maybe you can"
+    },
+    {
+      "start": 223.959,
+      "duration": 5.961,
+      "end": 229.92000000000002,
+      "text": "modify the given array itself in an"
+    },
+    {
+      "start": 226.599,
+      "duration": 5.321,
+      "end": 231.92,
+      "text": "interview it is not encouraged to modify"
+    },
+    {
+      "start": 229.92,
+      "duration": 4.92,
+      "end": 234.83999999999997,
+      "text": "the given input don't do it okay it's"
+    },
+    {
+      "start": 231.92,
+      "duration": 5.0,
+      "end": 236.92,
+      "text": "not a good practice what about the time"
+    },
+    {
+      "start": 234.84,
+      "duration": 5.2,
+      "end": 240.04,
+      "text": "complexity can I say I'm running couple"
+    },
+    {
+      "start": 236.92,
+      "duration": 5.56,
+      "end": 242.48,
+      "text": "of Loops yes I am so B go of n Square"
+    },
+    {
+      "start": 240.04,
+      "duration": 4.68,
+      "end": 244.72,
+      "text": "near about near about b n Square what"
+    },
+    {
+      "start": 242.48,
+      "duration": 4.399,
+      "end": 246.879,
+      "text": "about the space complexity can I say"
+    },
+    {
+      "start": 244.72,
+      "duration": 6.0,
+      "end": 250.72,
+      "text": "that the amount of space that I'm taking"
+    },
+    {
+      "start": 246.879,
+      "duration": 6.121,
+      "end": 253.0,
+      "text": "is around B of n again this space is not"
+    },
+    {
+      "start": 250.72,
+      "duration": 4.599,
+      "end": 255.319,
+      "text": "used in order to solve the problem"
+    },
+    {
+      "start": 253.0,
+      "duration": 4.759,
+      "end": 257.759,
+      "text": "rather it is used to return the answer"
+    },
+    {
+      "start": 255.319,
+      "duration": 4.841,
+      "end": 260.15999999999997,
+      "text": "so it is something that you cannot"
+    },
+    {
+      "start": 257.759,
+      "duration": 4.241,
+      "end": 262.0,
+      "text": "avoid at this moment the interviewer"
+    },
+    {
+      "start": 260.16,
+      "duration": 3.96,
+      "end": 264.12,
+      "text": "will not be happy with the B of n square"
+    },
+    {
+      "start": 262.0,
+      "duration": 4.919,
+      "end": 266.919,
+      "text": "and he'll ask you to optimize it so we"
+    },
+    {
+      "start": 264.12,
+      "duration": 5.24,
+      "end": 269.36,
+      "text": "need to optimize beo of"
+    },
+    {
+      "start": 266.919,
+      "duration": 4.601,
+      "end": 271.52,
+      "text": "n² that clearly gives us an indication"
+    },
+    {
+      "start": 269.36,
+      "duration": 4.48,
+      "end": 273.84000000000003,
+      "text": "that we looking something around"
+    },
+    {
+      "start": 271.52,
+      "duration": 7.36,
+      "end": 278.88,
+      "text": "something around V of n or V of 2 and or"
+    },
+    {
+      "start": 273.84,
+      "duration": 7.68,
+      "end": 281.52,
+      "text": "V of 3 n or n login right fine so"
+    },
+    {
+      "start": 278.88,
+      "duration": 6.159,
+      "end": 285.039,
+      "text": "imagine you're standing at this element"
+    },
+    {
+      "start": 281.52,
+      "duration": 6.28,
+      "end": 287.79999999999995,
+      "text": "three and I'm asking you what is the NG"
+    },
+    {
+      "start": 285.039,
+      "duration": 5.88,
+      "end": 290.919,
+      "text": "of three now in order to know the next"
+    },
+    {
+      "start": 287.8,
+      "duration": 5.08,
+      "end": 292.88,
+      "text": "greater element of three you will look"
+    },
+    {
+      "start": 290.919,
+      "duration": 3.961,
+      "end": 294.88,
+      "text": "towards the right so you should be"
+    },
+    {
+      "start": 292.88,
+      "duration": 4.36,
+      "end": 297.24,
+      "text": "knowing the right elements you should be"
+    },
+    {
+      "start": 294.88,
+      "duration": 5.159,
+      "end": 300.039,
+      "text": "knowing the right elements"
+    },
+    {
+      "start": 297.24,
+      "duration": 6.6,
+      "end": 303.84000000000003,
+      "text": "beforehand but the generic way of"
+    },
+    {
+      "start": 300.039,
+      "duration": 5.361,
+      "end": 305.4,
+      "text": "traversal is starting from the left you"
+    },
+    {
+      "start": 303.84,
+      "duration": 4.359,
+      "end": 308.19899999999996,
+      "text": "start from here then you go here then"
+    },
+    {
+      "start": 305.4,
+      "duration": 4.48,
+      "end": 309.88,
+      "text": "you go here so there is no way that when"
+    },
+    {
+      "start": 308.199,
+      "duration": 4.56,
+      "end": 312.759,
+      "text": "you reach three that when you reach"
+    },
+    {
+      "start": 309.88,
+      "duration": 5.56,
+      "end": 315.44,
+      "text": "three you would be knowing what are the"
+    },
+    {
+      "start": 312.759,
+      "duration": 4.72,
+      "end": 317.47900000000004,
+      "text": "elements on the right there is no way"
+    },
+    {
+      "start": 315.44,
+      "duration": 4.039,
+      "end": 319.479,
+      "text": "when you reach three you'll be knowing"
+    },
+    {
+      "start": 317.479,
+      "duration": 4.44,
+      "end": 321.919,
+      "text": "what are the elements on the right so"
+    },
+    {
+      "start": 319.479,
+      "duration": 4.56,
+      "end": 324.039,
+      "text": "will it not be better if you Traverse"
+    },
+    {
+      "start": 321.919,
+      "duration": 4.681,
+      "end": 326.59999999999997,
+      "text": "from the back if you Traverse from the"
+    },
+    {
+      "start": 324.039,
+      "duration": 4.28,
+      "end": 328.31899999999996,
+      "text": "back and if you reach three at that"
+    },
+    {
+      "start": 326.6,
+      "duration": 3.48,
+      "end": 330.08000000000004,
+      "text": "moment you'll be knowing what are the"
+    },
+    {
+      "start": 328.319,
+      "duration": 6.121,
+      "end": 334.44,
+      "text": "elements on the right hand that is what"
+    },
+    {
+      "start": 330.08,
+      "duration": 6.839,
+      "end": 336.919,
+      "text": "you need the first optimization or first"
+    },
+    {
+      "start": 334.44,
+      "duration": 7.44,
+      "end": 341.88,
+      "text": "thought process that I can think of is"
+    },
+    {
+      "start": 336.919,
+      "duration": 7.961,
+      "end": 344.88,
+      "text": "maybe I'll start from the back so"
+    },
+    {
+      "start": 341.88,
+      "duration": 4.84,
+      "end": 346.71999999999997,
+      "text": "that at any particular index I would be"
+    },
+    {
+      "start": 344.88,
+      "duration": 4.28,
+      "end": 349.15999999999997,
+      "text": "knowing what are the elements on the"
+    },
+    {
+      "start": 346.72,
+      "duration": 4.84,
+      "end": 351.56,
+      "text": "right and then I can think of a solution"
+    },
+    {
+      "start": 349.16,
+      "duration": 4.64,
+      "end": 353.8,
+      "text": "then I can think of a solution okay now"
+    },
+    {
+      "start": 351.56,
+      "duration": 3.199,
+      "end": 354.759,
+      "text": "I know where to start from that is a"
+    },
+    {
+      "start": 353.8,
+      "duration": 3.6,
+      "end": 357.40000000000003,
+      "text": "back"
+    },
+    {
+      "start": 354.759,
+      "duration": 5.121,
+      "end": 359.88,
+      "text": "traverser so what I will do is I'll be"
+    },
+    {
+      "start": 357.4,
+      "duration": 4.6,
+      "end": 362.0,
+      "text": "taking a stack"
+    },
+    {
+      "start": 359.88,
+      "duration": 4.96,
+      "end": 364.84,
+      "text": "and this tack will be storing elements"
+    },
+    {
+      "start": 362.0,
+      "duration": 2.84,
+      "end": 364.84,
+      "text": "in a specific"
+    },
+    {
+      "start": 365.759,
+      "duration": 6.16,
+      "end": 371.91900000000004,
+      "text": "order why you'll understand as I"
+    },
+    {
+      "start": 368.599,
+      "duration": 6.44,
+      "end": 375.039,
+      "text": "explained the first element is six so"
+    },
+    {
+      "start": 371.919,
+      "duration": 5.161,
+      "end": 377.08,
+      "text": "what you do is you look in the stack and"
+    },
+    {
+      "start": 375.039,
+      "duration": 4.041,
+      "end": 379.08,
+      "text": "you don't have anything and if you do"
+    },
+    {
+      "start": 377.08,
+      "duration": 4.76,
+      "end": 381.84,
+      "text": "not have anything that means there are"
+    },
+    {
+      "start": 379.08,
+      "duration": 5.64,
+      "end": 384.71999999999997,
+      "text": "no right elements so what you can do is"
+    },
+    {
+      "start": 381.84,
+      "duration": 6.479,
+      "end": 388.31899999999996,
+      "text": "you can simply say minus one to8 you can"
+    },
+    {
+      "start": 384.72,
+      "duration": 6.479,
+      "end": 391.199,
+      "text": "simply say minus1 to8 got it what after"
+    },
+    {
+      "start": 388.319,
+      "duration": 4.761,
+      "end": 393.08000000000004,
+      "text": "that after that you take the element six"
+    },
+    {
+      "start": 391.199,
+      "duration": 4.321,
+      "end": 395.52000000000004,
+      "text": "and you put it into the stack and then"
+    },
+    {
+      "start": 393.08,
+      "duration": 5.36,
+      "end": 398.44,
+      "text": "you move back so now when you move back"
+    },
+    {
+      "start": 395.52,
+      "duration": 5.519,
+      "end": 401.039,
+      "text": "to four you look in the stack and you"
+    },
+    {
+      "start": 398.44,
+      "duration": 4.8,
+      "end": 403.24,
+      "text": "see that there is a six there is a six"
+    },
+    {
+      "start": 401.039,
+      "duration": 4.321,
+      "end": 405.36,
+      "text": "so you can say that that can be my next"
+    },
+    {
+      "start": 403.24,
+      "duration": 4.519,
+      "end": 407.759,
+      "text": "great element because six is greater"
+    },
+    {
+      "start": 405.36,
+      "duration": 4.88,
+      "end": 410.24,
+      "text": "than four so you say okay I have my next"
+    },
+    {
+      "start": 407.759,
+      "duration": 4.401,
+      "end": 412.16,
+      "text": "greater element and you take four and"
+    },
+    {
+      "start": 410.24,
+      "duration": 5.72,
+      "end": 415.96000000000004,
+      "text": "you put it into the stack after that you"
+    },
+    {
+      "start": 412.16,
+      "duration": 5.8,
+      "end": 417.96000000000004,
+      "text": "move back now you have something as two"
+    },
+    {
+      "start": 415.96,
+      "duration": 4.12,
+      "end": 420.08,
+      "text": "again you look into the stack and you"
+    },
+    {
+      "start": 417.96,
+      "duration": 3.799,
+      "end": 421.75899999999996,
+      "text": "have a four which can be your next"
+    },
+    {
+      "start": 420.08,
+      "duration": 3.92,
+      "end": 424.0,
+      "text": "greater element or which is your next"
+    },
+    {
+      "start": 421.759,
+      "duration": 4.401,
+      "end": 426.16,
+      "text": "greater element so you take four and you"
+    },
+    {
+      "start": 424.0,
+      "duration": 4.8,
+      "end": 428.8,
+      "text": "place it over here again you take two"
+    },
+    {
+      "start": 426.16,
+      "duration": 5.08,
+      "end": 431.24,
+      "text": "put it into the stack and you move back"
+    },
+    {
+      "start": 428.8,
+      "duration": 4.28,
+      "end": 433.08,
+      "text": "this time you are at one and you look"
+    },
+    {
+      "start": 431.24,
+      "duration": 4.399,
+      "end": 435.639,
+      "text": "into the stack and the topmost element"
+    },
+    {
+      "start": 433.08,
+      "duration": 4.959,
+      "end": 438.039,
+      "text": "is two so you say that okay this is my"
+    },
+    {
+      "start": 435.639,
+      "duration": 5.24,
+      "end": 440.879,
+      "text": "next great element I'll take one and put"
+    },
+    {
+      "start": 438.039,
+      "duration": 5.72,
+      "end": 443.759,
+      "text": "it back and I'll move across three I'll"
+    },
+    {
+      "start": 440.879,
+      "duration": 4.32,
+      "end": 445.199,
+      "text": "move across three now this is something"
+    },
+    {
+      "start": 443.759,
+      "duration": 3.72,
+      "end": 447.47900000000004,
+      "text": "where you need to"
+    },
+    {
+      "start": 445.199,
+      "duration": 4.84,
+      "end": 450.039,
+      "text": "understand what is stack storing as of"
+    },
+    {
+      "start": 447.479,
+      "duration": 7.44,
+      "end": 454.919,
+      "text": "now it is storing some something of a"
+    },
+    {
+      "start": 450.039,
+      "duration": 7.16,
+      "end": 457.199,
+      "text": "length like a six size just imagine"
+    },
+    {
+      "start": 454.919,
+      "duration": 4.96,
+      "end": 459.87899999999996,
+      "text": "light poles you know light poles of a"
+    },
+    {
+      "start": 457.199,
+      "duration": 6.161,
+      "end": 463.36,
+      "text": "length six after that it is storing"
+    },
+    {
+      "start": 459.879,
+      "duration": 5.961,
+      "end": 465.84000000000003,
+      "text": "something of a length four after that"
+    },
+    {
+      "start": 463.36,
+      "duration": 5.32,
+      "end": 468.68,
+      "text": "something of a length uh"
+    },
+    {
+      "start": 465.84,
+      "duration": 6.039,
+      "end": 471.87899999999996,
+      "text": "two and after that something of a length"
+    },
+    {
+      "start": 468.68,
+      "duration": 5.0,
+      "end": 473.68,
+      "text": "one now suddenly you are at three"
+    },
+    {
+      "start": 471.879,
+      "duration": 3.6,
+      "end": 475.47900000000004,
+      "text": "suddenly you are at three which is"
+    },
+    {
+      "start": 473.68,
+      "duration": 5.359,
+      "end": 479.039,
+      "text": "typically you can say somewhere around"
+    },
+    {
+      "start": 475.479,
+      "duration": 5.041,
+      "end": 480.52,
+      "text": "this correct now tell me one thing for"
+    },
+    {
+      "start": 479.039,
+      "duration": 4.241,
+      "end": 483.28,
+      "text": "this three"
+    },
+    {
+      "start": 480.52,
+      "duration": 6.32,
+      "end": 486.84,
+      "text": "which will be your next greater element"
+    },
+    {
+      "start": 483.28,
+      "duration": 7.68,
+      "end": 490.96,
+      "text": "it will be four for that you'll have to"
+    },
+    {
+      "start": 486.84,
+      "duration": 7.799,
+      "end": 494.63899999999995,
+      "text": "take them out now you might say if I"
+    },
+    {
+      "start": 490.96,
+      "duration": 5.44,
+      "end": 496.4,
+      "text": "take them out for the future elements I"
+    },
+    {
+      "start": 494.639,
+      "duration": 4.68,
+      "end": 499.319,
+      "text": "will lose out on some of the right"
+    },
+    {
+      "start": 496.4,
+      "duration": 7.079,
+      "end": 503.479,
+      "text": "elements no you'll not lose out let me"
+    },
+    {
+      "start": 499.319,
+      "duration": 7.681,
+      "end": 507.0,
+      "text": "explain you why imagine I come up with"
+    },
+    {
+      "start": 503.479,
+      "duration": 6.081,
+      "end": 509.56,
+      "text": "something like one over here after three"
+    },
+    {
+      "start": 507.0,
+      "duration": 4.399,
+      "end": 511.399,
+      "text": "just imagine just imagine after three"
+    },
+    {
+      "start": 509.56,
+      "duration": 5.0,
+      "end": 514.56,
+      "text": "there is an element which is of length"
+    },
+    {
+      "start": 511.399,
+      "duration": 6.08,
+      "end": 517.479,
+      "text": "one tell me one thing even if you lose"
+    },
+    {
+      "start": 514.56,
+      "duration": 4.2,
+      "end": 518.76,
+      "text": "out on one and two in order to get four"
+    },
+    {
+      "start": 517.479,
+      "duration": 2.8,
+      "end": 520.279,
+      "text": "because in order to get four you'll have"
+    },
+    {
+      "start": 518.76,
+      "duration": 3.48,
+      "end": 522.24,
+      "text": "to take out one two you'll have to take"
+    },
+    {
+      "start": 520.279,
+      "duration": 4.521,
+      "end": 524.8,
+      "text": "out one two so that's gone just imagine"
+    },
+    {
+      "start": 522.24,
+      "duration": 5.52,
+      "end": 527.76,
+      "text": "this is gone for this"
+    },
+    {
+      "start": 524.8,
+      "duration": 5.599,
+      "end": 530.399,
+      "text": "one if this three is your answer will"
+    },
+    {
+      "start": 527.76,
+      "duration": 4.519,
+      "end": 532.279,
+      "text": "one and two contribute to your answer"
+    },
+    {
+      "start": 530.399,
+      "duration": 4.44,
+      "end": 534.839,
+      "text": "the answer is no it will never"
+    },
+    {
+      "start": 532.279,
+      "duration": 5.081,
+      "end": 537.36,
+      "text": "contribute because for an element like"
+    },
+    {
+      "start": 534.839,
+      "duration": 4.24,
+      "end": 539.0790000000001,
+      "text": "one if three is the answer one and two"
+    },
+    {
+      "start": 537.36,
+      "duration": 4.8,
+      "end": 542.16,
+      "text": "can never contribute because this is a"
+    },
+    {
+      "start": 539.079,
+      "duration": 4.921,
+      "end": 544.0,
+      "text": "light pole which sees this and Beyond"
+    },
+    {
+      "start": 542.16,
+      "duration": 4.32,
+      "end": 546.48,
+      "text": "this it can never see this Beyond this"
+    },
+    {
+      "start": 544.0,
+      "duration": 5.32,
+      "end": 549.32,
+      "text": "it can only see a larger element Beyond"
+    },
+    {
+      "start": 546.48,
+      "duration": 5.4,
+      "end": 551.88,
+      "text": "this it can only see a larger element"
+    },
+    {
+      "start": 549.32,
+      "duration": 6.24,
+      "end": 555.5600000000001,
+      "text": "and Beyond this a larger element so will"
+    },
+    {
+      "start": 551.88,
+      "duration": 6.079,
+      "end": 557.959,
+      "text": "it not be will it not be sensible to"
+    },
+    {
+      "start": 555.56,
+      "duration": 4.6,
+      "end": 560.16,
+      "text": "store the elements in this decreasing"
+    },
+    {
+      "start": 557.959,
+      "duration": 5.681,
+      "end": 563.64,
+      "text": "order in the decreasing order which is"
+    },
+    {
+      "start": 560.16,
+      "duration": 5.32,
+      "end": 565.48,
+      "text": "like 6 4 2 1 and now when three came up"
+    },
+    {
+      "start": 563.64,
+      "duration": 3.84,
+      "end": 567.48,
+      "text": "you don't need to store one and two you"
+    },
+    {
+      "start": 565.48,
+      "duration": 4.24,
+      "end": 569.72,
+      "text": "don't need to store one and two because"
+    },
+    {
+      "start": 567.48,
+      "duration": 3.919,
+      "end": 571.399,
+      "text": "if three is the answer of someone one"
+    },
+    {
+      "start": 569.72,
+      "duration": 7.32,
+      "end": 577.0400000000001,
+      "text": "and two can never be one and two can"
+    },
+    {
+      "start": 571.399,
+      "duration": 8.961,
+      "end": 580.36,
+      "text": "never be got it perfect so what I'll do"
+    },
+    {
+      "start": 577.04,
+      "duration": 5.039,
+      "end": 582.079,
+      "text": "is I'm at three right I'm at three I'm"
+    },
+    {
+      "start": 580.36,
+      "duration": 5.32,
+      "end": 585.6800000000001,
+      "text": "saying one can never be my answer"
+    },
+    {
+      "start": 582.079,
+      "duration": 6.081,
+      "end": 588.16,
+      "text": "because that is lesser like okay remove"
+    },
+    {
+      "start": 585.68,
+      "duration": 4.76,
+      "end": 590.4399999999999,
+      "text": "can two be your answer no remove can"
+    },
+    {
+      "start": 588.16,
+      "duration": 5.2,
+      "end": 593.36,
+      "text": "four be your answer yes so what do you"
+    },
+    {
+      "start": 590.44,
+      "duration": 6.2,
+      "end": 596.6400000000001,
+      "text": "say is four is my answer take up three"
+    },
+    {
+      "start": 593.36,
+      "duration": 6.12,
+      "end": 599.48,
+      "text": "and put it into your stack after that"
+    },
+    {
+      "start": 596.64,
+      "duration": 5.48,
+      "end": 602.12,
+      "text": "move across to five now when you at five"
+    },
+    {
+      "start": 599.48,
+      "duration": 4.72,
+      "end": 604.2,
+      "text": "you're again looking at three no you're"
+    },
+    {
+      "start": 602.12,
+      "duration": 4.44,
+      "end": 606.5600000000001,
+      "text": "looking at four no so what you do is you"
+    },
+    {
+      "start": 604.2,
+      "duration": 5.079,
+      "end": 609.279,
+      "text": "basically take both of them out and six"
+    },
+    {
+      "start": 606.56,
+      "duration": 5.76,
+      "end": 612.3199999999999,
+      "text": "can be your answer so you write six and"
+    },
+    {
+      "start": 609.279,
+      "duration": 5.921,
+      "end": 615.2,
+      "text": "you put back five after that you move to"
+    },
+    {
+      "start": 612.32,
+      "duration": 5.36,
+      "end": 617.6800000000001,
+      "text": "two now when you move to two the top of"
+    },
+    {
+      "start": 615.2,
+      "duration": 3.48,
+      "end": 618.6800000000001,
+      "text": "the stack is your answer so you just"
+    },
+    {
+      "start": 617.68,
+      "duration": 3.839,
+      "end": 621.519,
+      "text": "take it"
+    },
+    {
+      "start": 618.68,
+      "duration": 5.68,
+      "end": 624.3599999999999,
+      "text": "across after that you take two put it"
+    },
+    {
+      "start": 621.519,
+      "duration": 5.56,
+      "end": 627.079,
+      "text": "back and you move back one the top of"
+    },
+    {
+      "start": 624.36,
+      "duration": 4.36,
+      "end": 628.72,
+      "text": "the stack is your answer two again you"
+    },
+    {
+      "start": 627.079,
+      "duration": 4.401,
+      "end": 631.4799999999999,
+      "text": "take one and put it back and you move"
+    },
+    {
+      "start": 628.72,
+      "duration": 4.32,
+      "end": 633.0400000000001,
+      "text": "back this time when you at three can one"
+    },
+    {
+      "start": 631.48,
+      "duration": 3.88,
+      "end": 635.36,
+      "text": "be your answer no can two be your answer"
+    },
+    {
+      "start": 633.04,
+      "duration": 5.039,
+      "end": 638.079,
+      "text": "no so you take both of them"
+    },
+    {
+      "start": 635.36,
+      "duration": 5.4,
+      "end": 640.76,
+      "text": "out you take all the elements which are"
+    },
+    {
+      "start": 638.079,
+      "duration": 4.361,
+      "end": 642.4399999999999,
+      "text": "lesser than that element and after that"
+    },
+    {
+      "start": 640.76,
+      "duration": 4.36,
+      "end": 645.12,
+      "text": "five can be your answer so you write"
+    },
+    {
+      "start": 642.44,
+      "duration": 6.68,
+      "end": 649.12,
+      "text": "five and you put back three and you move"
+    },
+    {
+      "start": 645.12,
+      "duration": 6.279,
+      "end": 651.399,
+      "text": "back you at five when you are at five"
+    },
+    {
+      "start": 649.12,
+      "duration": 3.8,
+      "end": 652.92,
+      "text": "can three be your answer no can five be"
+    },
+    {
+      "start": 651.399,
+      "duration": 3.961,
+      "end": 655.36,
+      "text": "your answer no you're looking for"
+    },
+    {
+      "start": 652.92,
+      "duration": 5.039,
+      "end": 657.959,
+      "text": "greater greater so I'll end up deleting"
+    },
+    {
+      "start": 655.36,
+      "duration": 6.08,
+      "end": 661.44,
+      "text": "both of them can six be your answer yes"
+    },
+    {
+      "start": 657.959,
+      "duration": 5.361,
+      "end": 663.3199999999999,
+      "text": "so I'll write six after this I'll insert"
+    },
+    {
+      "start": 661.44,
+      "duration": 6.28,
+      "end": 667.72,
+      "text": "five and I'll move"
+    },
+    {
+      "start": 663.32,
+      "duration": 7.079,
+      "end": 670.399,
+      "text": "back when I'm at 12 when I am at 12 I"
+    },
+    {
+      "start": 667.72,
+      "duration": 5.44,
+      "end": 673.1600000000001,
+      "text": "look onto the stack no no so both of"
+    },
+    {
+      "start": 670.399,
+      "duration": 4.961,
+      "end": 675.36,
+      "text": "them can go off both of them can go off"
+    },
+    {
+      "start": 673.16,
+      "duration": 4.08,
+      "end": 677.24,
+      "text": "and the stack will be empty the stack is"
+    },
+    {
+      "start": 675.36,
+      "duration": 4.36,
+      "end": 679.72,
+      "text": "empty you say that the answer is minus"
+    },
+    {
+      "start": 677.24,
+      "duration": 5.36,
+      "end": 682.6,
+      "text": "one and you put back 12 and now you go"
+    },
+    {
+      "start": 679.72,
+      "duration": 5.6,
+      "end": 685.32,
+      "text": "back four the top of the stack is 12"
+    },
+    {
+      "start": 682.6,
+      "duration": 6.76,
+      "end": 689.36,
+      "text": "that can be your answer put back four"
+    },
+    {
+      "start": 685.32,
+      "duration": 7.639,
+      "end": 692.9590000000001,
+      "text": "and then go off you're done and this is"
+    },
+    {
+      "start": 689.36,
+      "duration": 6.52,
+      "end": 695.88,
+      "text": "is your next greater element this is"
+    },
+    {
+      "start": 692.959,
+      "duration": 6.201,
+      "end": 699.16,
+      "text": "your answer yes so what did I do over"
+    },
+    {
+      "start": 695.88,
+      "duration": 5.399,
+      "end": 701.279,
+      "text": "here I did use a monotonic stack why"
+    },
+    {
+      "start": 699.16,
+      "duration": 4.76,
+      "end": 703.92,
+      "text": "because I was storing the elements in a"
+    },
+    {
+      "start": 701.279,
+      "duration": 5.921,
+      "end": 707.2,
+      "text": "specific order and that specific order"
+    },
+    {
+      "start": 703.92,
+      "duration": 6.359,
+      "end": 710.279,
+      "text": "was the decreasing order yes the"
+    },
+    {
+      "start": 707.2,
+      "duration": 6.24,
+      "end": 713.44,
+      "text": "decreasing order if you carefully notice"
+    },
+    {
+      "start": 710.279,
+      "duration": 5.321,
+      "end": 715.6,
+      "text": "I stored six which is typically let's"
+    },
+    {
+      "start": 713.44,
+      "duration": 4.24,
+      "end": 717.6800000000001,
+      "text": "say here and I stored five let's say"
+    },
+    {
+      "start": 715.6,
+      "duration": 4.6,
+      "end": 720.2,
+      "text": "typically here then I stored two let's"
+    },
+    {
+      "start": 717.68,
+      "duration": 5.36,
+      "end": 723.04,
+      "text": "say typically uh two is here and I"
+    },
+    {
+      "start": 720.2,
+      "duration": 4.16,
+      "end": 724.36,
+      "text": "stored one which is typically here so"
+    },
+    {
+      "start": 723.04,
+      "duration": 4.28,
+      "end": 727.3199999999999,
+      "text": "that was a decreasing order right that"
+    },
+    {
+      "start": 724.36,
+      "duration": 4.76,
+      "end": 729.12,
+      "text": "was a decreasing order and then when"
+    },
+    {
+      "start": 727.32,
+      "duration": 3.16,
+      "end": 730.48,
+      "text": "Whenever there was a three three would"
+    },
+    {
+      "start": 729.12,
+      "duration": 3.519,
+      "end": 732.639,
+      "text": "have been somewhere"
+    },
+    {
+      "start": 730.48,
+      "duration": 5.08,
+      "end": 735.5600000000001,
+      "text": "here that order would have been"
+    },
+    {
+      "start": 732.639,
+      "duration": 5.921,
+      "end": 738.5600000000001,
+      "text": "distorted that is why what I did was I"
+    },
+    {
+      "start": 735.56,
+      "duration": 5.399,
+      "end": 740.959,
+      "text": "removed two and one so that the"
+    },
+    {
+      "start": 738.56,
+      "duration": 4.2,
+      "end": 742.76,
+      "text": "decreasing order is still maintained so"
+    },
+    {
+      "start": 740.959,
+      "duration": 3.44,
+      "end": 744.399,
+      "text": "that the decreasing order is still"
+    },
+    {
+      "start": 742.76,
+      "duration": 6.16,
+      "end": 748.92,
+      "text": "maintained because I'm decreasing it I'm"
+    },
+    {
+      "start": 744.399,
+      "duration": 6.481,
+      "end": 750.88,
+      "text": "decreasing it got it so I hope you got"
+    },
+    {
+      "start": 748.92,
+      "duration": 4.479,
+      "end": 753.399,
+      "text": "next next like you got the concept of"
+    },
+    {
+      "start": 750.88,
+      "duration": 4.88,
+      "end": 755.76,
+      "text": "next greater element the intuition the"
+    },
+    {
+      "start": 753.399,
+      "duration": 5.161,
+      "end": 758.56,
+      "text": "intuition comes from the light poles if"
+    },
+    {
+      "start": 755.76,
+      "duration": 4.439,
+      "end": 760.199,
+      "text": "you are if you're a human being and"
+    },
+    {
+      "start": 758.56,
+      "duration": 3.959,
+      "end": 762.5189999999999,
+      "text": "you're looking on the rightward"
+    },
+    {
+      "start": 760.199,
+      "duration": 5.601,
+      "end": 765.8,
+      "text": "direction it's obvious that you'll only"
+    },
+    {
+      "start": 762.519,
+      "duration": 4.841,
+      "end": 767.36,
+      "text": "see increasing stuff nothing in between"
+    },
+    {
+      "start": 765.8,
+      "duration": 4.64,
+      "end": 770.4399999999999,
+      "text": "them nothing in between them you'll just"
+    },
+    {
+      "start": 767.36,
+      "duration": 5.479,
+      "end": 772.839,
+      "text": "see the increasing uh curve correct so"
+    },
+    {
+      "start": 770.44,
+      "duration": 4.72,
+      "end": 775.1600000000001,
+      "text": "the intuition comes from there"
+    },
+    {
+      "start": 772.839,
+      "duration": 5.44,
+      "end": 778.2790000000001,
+      "text": "perfect so time to write down the pseudo"
+    },
+    {
+      "start": 775.16,
+      "duration": 5.2,
+      "end": 780.36,
+      "text": "code so we will be returning a list or a"
+    },
+    {
+      "start": 778.279,
+      "duration": 4.161,
+      "end": 782.4399999999999,
+      "text": "vector according to the language that"
+    },
+    {
+      "start": 780.36,
+      "duration": 5.599,
+      "end": 785.9590000000001,
+      "text": "you're writing in so I'll be returning a"
+    },
+    {
+      "start": 782.44,
+      "duration": 6.519,
+      "end": 788.9590000000001,
+      "text": "list of integer and I have to find the"
+    },
+    {
+      "start": 785.959,
+      "duration": 5.481,
+      "end": 791.4399999999999,
+      "text": "next greater element so what will I be"
+    },
+    {
+      "start": 788.959,
+      "duration": 6.0,
+      "end": 794.959,
+      "text": "given I'll be given an array for"
+    },
+    {
+      "start": 791.44,
+      "duration": 5.68,
+      "end": 797.12,
+      "text": "sure okay so what do I need I need an"
+    },
+    {
+      "start": 794.959,
+      "duration": 6.601,
+      "end": 801.56,
+      "text": "array which stores all the next greater"
+    },
+    {
+      "start": 797.12,
+      "duration": 7.0,
+      "end": 804.12,
+      "text": "elements so maybe an NG of size N2"
+    },
+    {
+      "start": 801.56,
+      "duration": 4.639,
+      "end": 806.199,
+      "text": "perfect I need to Travers backwards and"
+    },
+    {
+      "start": 804.12,
+      "duration": 3.64,
+      "end": 807.76,
+      "text": "I also need a stack so maybe I can"
+    },
+    {
+      "start": 806.199,
+      "duration": 4.401,
+      "end": 810.5999999999999,
+      "text": "define a stack"
+    },
+    {
+      "start": 807.76,
+      "duration": 5.36,
+      "end": 813.12,
+      "text": "St I'm not writing the syntax at a"
+    },
+    {
+      "start": 810.6,
+      "duration": 4.28,
+      "end": 814.88,
+      "text": "pseudo code so let's quickly Traverse"
+    },
+    {
+      "start": 813.12,
+      "duration": 6.159,
+      "end": 819.279,
+      "text": "from the back so that is going to start"
+    },
+    {
+      "start": 814.88,
+      "duration": 7.44,
+      "end": 822.32,
+      "text": "from n minus1 till zero backward"
+    },
+    {
+      "start": 819.279,
+      "duration": 5.281,
+      "end": 824.56,
+      "text": "traversal so I know one thing if there"
+    },
+    {
+      "start": 822.32,
+      "duration": 5.199,
+      "end": 827.519,
+      "text": "are elements in the stack and there is"
+    },
+    {
+      "start": 824.56,
+      "duration": 6.12,
+      "end": 830.68,
+      "text": "something which is smaller I just take"
+    },
+    {
+      "start": 827.519,
+      "duration": 5.76,
+      "end": 833.279,
+      "text": "take them off so I say Hey listen if the"
+    },
+    {
+      "start": 830.68,
+      "duration": 5.44,
+      "end": 836.12,
+      "text": "stack has elements that is very if the"
+    },
+    {
+      "start": 833.279,
+      "duration": 2.841,
+      "end": 836.12,
+      "text": "stack is not"
+    },
+    {
+      "start": 836.519,
+      "duration": 5.401,
+      "end": 841.92,
+      "text": "empty and and the stack do top is"
+    },
+    {
+      "start": 840.079,
+      "duration": 4.161,
+      "end": 844.2399999999999,
+      "text": "something which is lesser than equal to"
+    },
+    {
+      "start": 841.92,
+      "duration": 4.76,
+      "end": 846.68,
+      "text": "very important you have to remove the"
+    },
+    {
+      "start": 844.24,
+      "duration": 4.599,
+      "end": 848.839,
+      "text": "Lesser and the equal elements as well"
+    },
+    {
+      "start": 846.68,
+      "duration": 4.68,
+      "end": 851.3599999999999,
+      "text": "lesser than equal to array of I so can"
+    },
+    {
+      "start": 848.839,
+      "duration": 4.201,
+      "end": 853.0400000000001,
+      "text": "you please do me a favor just do a"
+    },
+    {
+      "start": 851.36,
+      "duration": 4.279,
+      "end": 855.639,
+      "text": "stack. pop and keep on doing till the"
+    },
+    {
+      "start": 853.04,
+      "duration": 5.12,
+      "end": 858.16,
+      "text": "stack is either empty or you have"
+    },
+    {
+      "start": 855.639,
+      "duration": 4.521,
+      "end": 860.16,
+      "text": "removed all the smaller elements once"
+    },
+    {
+      "start": 858.16,
+      "duration": 5.52,
+      "end": 863.68,
+      "text": "this is done that means you removed the"
+    },
+    {
+      "start": 860.16,
+      "duration": 6.08,
+      "end": 866.24,
+      "text": "smaller elements for sure correct after"
+    },
+    {
+      "start": 863.68,
+      "duration": 4.36,
+      "end": 868.04,
+      "text": "this what you say is okay listen if the"
+    },
+    {
+      "start": 866.24,
+      "duration": 3.719,
+      "end": 869.9590000000001,
+      "text": "stack is empty now because after"
+    },
+    {
+      "start": 868.04,
+      "duration": 4.239,
+      "end": 872.279,
+      "text": "removing if the stack doesn't have"
+    },
+    {
+      "start": 869.959,
+      "duration": 5.88,
+      "end": 875.8389999999999,
+      "text": "anything which means all the elements in"
+    },
+    {
+      "start": 872.279,
+      "duration": 6.081,
+      "end": 878.36,
+      "text": "the stack were smaller which clearly"
+    },
+    {
+      "start": 875.839,
+      "duration": 8.041,
+      "end": 883.8800000000001,
+      "text": "tells me that NG of I should be minus"
+    },
+    {
+      "start": 878.36,
+      "duration": 8.2,
+      "end": 886.5600000000001,
+      "text": "one or else the NG of I should be aray"
+    },
+    {
+      "start": 883.88,
+      "duration": 6.16,
+      "end": 890.04,
+      "text": "or rather a stack."
+    },
+    {
+      "start": 886.56,
+      "duration": 6.92,
+      "end": 893.4799999999999,
+      "text": "top isn't it because that is the element"
+    },
+    {
+      "start": 890.04,
+      "duration": 6.719,
+      "end": 896.759,
+      "text": "that was not removed why because it was"
+    },
+    {
+      "start": 893.48,
+      "duration": 5.88,
+      "end": 899.36,
+      "text": "greater okay done what after this I say"
+    },
+    {
+      "start": 896.759,
+      "duration": 5.161,
+      "end": 901.92,
+      "text": "stack dot push"
+    },
+    {
+      "start": 899.36,
+      "duration": 5.36,
+      "end": 904.72,
+      "text": "what the current"
+    },
+    {
+      "start": 901.92,
+      "duration": 5.96,
+      "end": 907.88,
+      "text": "element and the followup is completed"
+    },
+    {
+      "start": 904.72,
+      "duration": 6.08,
+      "end": 910.8000000000001,
+      "text": "and once that is completed you end up"
+    },
+    {
+      "start": 907.88,
+      "duration": 6.68,
+      "end": 914.56,
+      "text": "returning the NG"
+    },
+    {
+      "start": 910.8,
+      "duration": 8.0,
+      "end": 918.8,
+      "text": "list perfect am I done I think I'm"
+    },
+    {
+      "start": 914.56,
+      "duration": 6.8,
+      "end": 921.3599999999999,
+      "text": "done so time to analyze the time"
+    },
+    {
+      "start": 918.8,
+      "duration": 5.0,
+      "end": 923.8,
+      "text": "complexity what do you think a lot of"
+    },
+    {
+      "start": 921.36,
+      "duration": 5.279,
+      "end": 926.639,
+      "text": "people will say that's still bego of n"
+    },
+    {
+      "start": 923.8,
+      "duration": 4.839,
+      "end": 928.639,
+      "text": "square a bego of n here and then you're"
+    },
+    {
+      "start": 926.639,
+      "duration": 7.401,
+      "end": 934.04,
+      "text": "iterating on the stacks another bego of"
+    },
+    {
+      "start": 928.639,
+      "duration": 9.44,
+      "end": 938.0790000000001,
+      "text": "n over here no it is not instead it is a"
+    },
+    {
+      "start": 934.04,
+      "duration": 7.64,
+      "end": 941.68,
+      "text": "beo of 2 N at the worst"
+    },
+    {
+      "start": 938.079,
+      "duration": 7.44,
+      "end": 945.519,
+      "text": "possible case b off to an at the worst"
+    },
+    {
+      "start": 941.68,
+      "duration": 5.68,
+      "end": 947.3599999999999,
+      "text": "possible case why so imagine like"
+    },
+    {
+      "start": 945.519,
+      "duration": 5.12,
+      "end": 950.639,
+      "text": "understand this is for sure running for"
+    },
+    {
+      "start": 947.36,
+      "duration": 4.76,
+      "end": 952.12,
+      "text": "B Goen but if I ask you how many times"
+    },
+    {
+      "start": 950.639,
+      "duration": 4.281,
+      "end": 954.92,
+      "text": "is the while loop"
+    },
+    {
+      "start": 952.12,
+      "duration": 5.6,
+      "end": 957.72,
+      "text": "running what will be that is it running"
+    },
+    {
+      "start": 954.92,
+      "duration": 5.88,
+      "end": 960.8,
+      "text": "for n every time is it running for n"
+    },
+    {
+      "start": 957.72,
+      "duration": 5.16,
+      "end": 962.88,
+      "text": "every time no it is not it is not"
+    },
+    {
+      "start": 960.8,
+      "duration": 5.36,
+      "end": 966.16,
+      "text": "running for n every time correct you"
+    },
+    {
+      "start": 962.88,
+      "duration": 5.639,
+      "end": 968.519,
+      "text": "need to understand this okay then how"
+    },
+    {
+      "start": 966.16,
+      "duration": 5.039,
+      "end": 971.199,
+      "text": "many times is it running so if you look"
+    },
+    {
+      "start": 968.519,
+      "duration": 5.88,
+      "end": 974.399,
+      "text": "at the example what is the stack"
+    },
+    {
+      "start": 971.199,
+      "duration": 6.08,
+      "end": 977.279,
+      "text": "containing stack is containing nothing"
+    },
+    {
+      "start": 974.399,
+      "duration": 6.081,
+      "end": 980.48,
+      "text": "but these elements but these"
+    },
+    {
+      "start": 977.279,
+      "duration": 4.961,
+      "end": 982.24,
+      "text": "elements so whenever you are at three"
+    },
+    {
+      "start": 980.48,
+      "duration": 4.24,
+      "end": 984.72,
+      "text": "what the stack contained was four"
+    },
+    {
+      "start": 982.24,
+      "duration": 4.76,
+      "end": 987.0,
+      "text": "elements so at the worst possible"
+    },
+    {
+      "start": 984.72,
+      "duration": 4.479,
+      "end": 989.1990000000001,
+      "text": "scenario at the worst possible scenario"
+    },
+    {
+      "start": 987.0,
+      "duration": 4.0,
+      "end": 991.0,
+      "text": "you will end up removing four elements"
+    },
+    {
+      "start": 989.199,
+      "duration": 5.241,
+      "end": 994.4399999999999,
+      "text": "you'll end up removing four elements for"
+    },
+    {
+      "start": 991.0,
+      "duration": 6.0,
+      "end": 997.0,
+      "text": "this element right so throughout"
+    },
+    {
+      "start": 994.44,
+      "duration": 6.72,
+      "end": 1001.1600000000001,
+      "text": "throughout the journey you might remove"
+    },
+    {
+      "start": 997.0,
+      "duration": 7.36,
+      "end": 1004.36,
+      "text": "this this this this this this this this"
+    },
+    {
+      "start": 1001.16,
+      "duration": 5.52,
+      "end": 1006.68,
+      "text": "this this this this this from the stack"
+    },
+    {
+      "start": 1004.36,
+      "duration": 4.479,
+      "end": 1008.839,
+      "text": "throughout the journey this is what at"
+    },
+    {
+      "start": 1006.68,
+      "duration": 6.12,
+      "end": 1012.8,
+      "text": "Max you can remove from the stack so can"
+    },
+    {
+      "start": 1008.839,
+      "duration": 6.161,
+      "end": 1015.0,
+      "text": "I say this stack. pop at Max can be"
+    },
+    {
+      "start": 1012.8,
+      "duration": 4.519,
+      "end": 1017.319,
+      "text": "performed for B Goen not Beyond it"
+    },
+    {
+      "start": 1015.0,
+      "duration": 4.04,
+      "end": 1019.04,
+      "text": "because I'll only remove the elements"
+    },
+    {
+      "start": 1017.319,
+      "duration": 4.52,
+      "end": 1021.8389999999999,
+      "text": "that I've inserted into the stack and"
+    },
+    {
+      "start": 1019.04,
+      "duration": 5.12,
+      "end": 1024.1599999999999,
+      "text": "I've only inserted at Max of n elements"
+    },
+    {
+      "start": 1021.839,
+      "duration": 4.72,
+      "end": 1026.559,
+      "text": "so I'll remove at Max of beo of n"
+    },
+    {
+      "start": 1024.16,
+      "duration": 3.799,
+      "end": 1027.959,
+      "text": "elements itself maybe sometimes I remove"
+    },
+    {
+      "start": 1026.559,
+      "duration": 3.12,
+      "end": 1029.6789999999999,
+      "text": "three elements maybe sometimes they"
+    },
+    {
+      "start": 1027.959,
+      "duration": 3.801,
+      "end": 1031.76,
+      "text": "remove two maybe sometimes they remove"
+    },
+    {
+      "start": 1029.679,
+      "duration": 6.201,
+      "end": 1035.88,
+      "text": "one but the addition of it will sum up"
+    },
+    {
+      "start": 1031.76,
+      "duration": 6.039,
+      "end": 1037.799,
+      "text": "to BB go of n got it okay so that is why"
+    },
+    {
+      "start": 1035.88,
+      "duration": 4.039,
+      "end": 1039.919,
+      "text": "the time complexity at the worst"
+    },
+    {
+      "start": 1037.799,
+      "duration": 3.921,
+      "end": 1041.72,
+      "text": "possible case will be B go of n for this"
+    },
+    {
+      "start": 1039.919,
+      "duration": 4.92,
+      "end": 1044.8390000000002,
+      "text": "one and throughout it might end up"
+    },
+    {
+      "start": 1041.72,
+      "duration": 6.8,
+      "end": 1048.52,
+      "text": "taking a beo of n which ends up making"
+    },
+    {
+      "start": 1044.839,
+      "duration": 5.041,
+      "end": 1049.8799999999999,
+      "text": "it a beo of 2 N okay what about the"
+    },
+    {
+      "start": 1048.52,
+      "duration": 4.08,
+      "end": 1052.6,
+      "text": "space"
+    },
+    {
+      "start": 1049.88,
+      "duration": 6.56,
+      "end": 1056.44,
+      "text": "complexity I'm using a stack so that's a"
+    },
+    {
+      "start": 1052.6,
+      "duration": 6.0,
+      "end": 1058.6,
+      "text": "b of N and I'm using another B of n in"
+    },
+    {
+      "start": 1056.44,
+      "duration": 4.04,
+      "end": 1060.48,
+      "text": "order to store the answer again this is"
+    },
+    {
+      "start": 1058.6,
+      "duration": 4.079,
+      "end": 1062.6789999999999,
+      "text": "something which I'll have to use in"
+    },
+    {
+      "start": 1060.48,
+      "duration": 4.64,
+      "end": 1065.1200000000001,
+      "text": "order to return the answer I don't want"
+    },
+    {
+      "start": 1062.679,
+      "duration": 4.961,
+      "end": 1067.64,
+      "text": "to modify the given input we don't do"
+    },
+    {
+      "start": 1065.12,
+      "duration": 4.439,
+      "end": 1069.559,
+      "text": "that in an interview usually use a"
+    },
+    {
+      "start": 1067.64,
+      "duration": 3.68,
+      "end": 1071.3200000000002,
+      "text": "different array in order to store all my"
+    },
+    {
+      "start": 1069.559,
+      "duration": 4.601,
+      "end": 1074.16,
+      "text": "answers so that will be the time"
+    },
+    {
+      "start": 1071.32,
+      "duration": 4.719,
+      "end": 1076.039,
+      "text": "complexity and the space complexity I"
+    },
+    {
+      "start": 1074.16,
+      "duration": 3.639,
+      "end": 1077.799,
+      "text": "hope you understood the thought process"
+    },
+    {
+      "start": 1076.039,
+      "duration": 3.88,
+      "end": 1079.919,
+      "text": "of traversing from the back I hope you"
+    },
+    {
+      "start": 1077.799,
+      "duration": 4.841,
+      "end": 1082.6399999999999,
+      "text": "understood the intuition of storing in a"
+    },
+    {
+      "start": 1079.919,
+      "duration": 5.0,
+      "end": 1084.919,
+      "text": "decreasing order the light pool concept"
+    },
+    {
+      "start": 1082.64,
+      "duration": 3.48,
+      "end": 1086.1200000000001,
+      "text": "got it that will be it for this one so"
+    },
+    {
+      "start": 1084.919,
+      "duration": 2.88,
+      "end": 1087.7990000000002,
+      "text": "if you're still now watching and if"
+    },
+    {
+      "start": 1086.12,
+      "duration": 3.52,
+      "end": 1089.6399999999999,
+      "text": "you've understood everything please"
+    },
+    {
+      "start": 1087.799,
+      "duration": 3.521,
+      "end": 1091.32,
+      "text": "please do consider giving us a like and"
+    },
+    {
+      "start": 1089.64,
+      "duration": 3.76,
+      "end": 1093.4,
+      "text": "if you're new to our channel do consider"
+    },
+    {
+      "start": 1091.32,
+      "duration": 3.4,
+      "end": 1094.72,
+      "text": "subscribing to us as well with this I'll"
+    },
+    {
+      "start": 1093.4,
+      "duration": 4.72,
+      "end": 1098.1200000000001,
+      "text": "be wrapping up this video let's me in"
+    },
+    {
+      "start": 1094.72,
+      "duration": 3.4,
+      "end": 1098.1200000000001,
+      "text": "some other video tell them by take"
+    },
+    {
+      "start": 1100.6,
+      "duration": 5.72,
+      "end": 1106.32,
+      "text": "careen"
+    },
+    {
+      "start": 1102.2,
+      "duration": 4.12,
+      "end": 1106.32,
+      "text": "golden I will"
+    }
+  ]
+}

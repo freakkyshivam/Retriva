@@ -1,0 +1,1910 @@
+{
+  "position": 270,
+  "video_id": "os82DjD2-MA",
+  "title": "L7. Count Prime in a range L-R | Maths Playlist",
+  "url": "https://www.youtube.com/watch?v=os82DjD2-MA",
+  "transcript": [
+    {
+      "start": 4.04,
+      "duration": 4.32,
+      "end": 8.36,
+      "text": "so let's continue with the math section"
+    },
+    {
+      "start": 5.759,
+      "duration": 4.201,
+      "end": 9.96,
+      "text": "in sters a toz DSA course but before"
+    },
+    {
+      "start": 8.36,
+      "duration": 3.439,
+      "end": 11.799,
+      "text": "that hey welcome back to the channel I"
+    },
+    {
+      "start": 9.96,
+      "duration": 3.639,
+      "end": 13.599,
+      "text": "hope you guys are doing extremely well"
+    },
+    {
+      "start": 11.799,
+      "duration": 5.361,
+      "end": 17.16,
+      "text": "so the problem that we will be solving"
+    },
+    {
+      "start": 13.599,
+      "duration": 7.081,
+      "end": 20.68,
+      "text": "today is printing the count of primes"
+    },
+    {
+      "start": 17.16,
+      "duration": 6.439,
+      "end": 23.599,
+      "text": "for a given range L to R now this will"
+    },
+    {
+      "start": 20.68,
+      "duration": 4.64,
+      "end": 25.32,
+      "text": "be a query based problem I'm not sure if"
+    },
+    {
+      "start": 23.599,
+      "duration": 4.0,
+      "end": 27.599,
+      "text": "you have soled a query based problem"
+    },
+    {
+      "start": 25.32,
+      "duration": 4.959,
+      "end": 30.279,
+      "text": "before this or not but I'll explain you"
+    },
+    {
+      "start": 27.599,
+      "duration": 7.201,
+      "end": 34.8,
+      "text": "the problem statement so it'll be given"
+    },
+    {
+      "start": 30.279,
+      "duration": 7.241,
+      "end": 37.519999999999996,
+      "text": "Q queries assume I give you Q equal to 3"
+    },
+    {
+      "start": 34.8,
+      "duration": 5.8,
+      "end": 40.599999999999994,
+      "text": "okay and for every query I'll be giving"
+    },
+    {
+      "start": 37.52,
+      "duration": 8.8,
+      "end": 46.32000000000001,
+      "text": "you L and R so imagine for the first"
+    },
+    {
+      "start": 40.6,
+      "duration": 11.759,
+      "end": 52.359,
+      "text": "query I give you L as 3 r as 10 for the"
+    },
+    {
+      "start": 46.32,
+      "duration": 9.96,
+      "end": 56.28,
+      "text": "next query I give you L as 8 r as 20 for"
+    },
+    {
+      "start": 52.359,
+      "duration": 7.88,
+      "end": 60.239000000000004,
+      "text": "the next I might give you L as 1 and R"
+    },
+    {
+      "start": 56.28,
+      "duration": 7.36,
+      "end": 63.64,
+      "text": "as 5 now the value of Q can be add as"
+    },
+    {
+      "start": 60.239,
+      "duration": 8.961,
+      "end": 69.2,
+      "text": "large as they can give you a q as large"
+    },
+    {
+      "start": 63.64,
+      "duration": 9.119,
+      "end": 72.759,
+      "text": "as 10 ^ 5 and L and R so L will always"
+    },
+    {
+      "start": 69.2,
+      "duration": 8.52,
+      "end": 77.72,
+      "text": "be lesser than R and R can go as big as"
+    },
+    {
+      "start": 72.759,
+      "duration": 8.201,
+      "end": 80.96000000000001,
+      "text": "10 to the power 6 okay so it is already"
+    },
+    {
+      "start": 77.72,
+      "duration": 6.16,
+      "end": 83.88,
+      "text": "stated uh so these are the constraints"
+    },
+    {
+      "start": 80.96,
+      "duration": 4.479,
+      "end": 85.439,
+      "text": "of this particular problem so this uh so"
+    },
+    {
+      "start": 83.88,
+      "duration": 3.68,
+      "end": 87.56,
+      "text": "this is the first query second query and"
+    },
+    {
+      "start": 85.439,
+      "duration": 4.201,
+      "end": 89.63999999999999,
+      "text": "third query three Q equal to 3 means"
+    },
+    {
+      "start": 87.56,
+      "duration": 4.08,
+      "end": 91.64,
+      "text": "three queries will be given to you now"
+    },
+    {
+      "start": 89.64,
+      "duration": 5.68,
+      "end": 95.32,
+      "text": "your task is to count the number of"
+    },
+    {
+      "start": 91.64,
+      "duration": 7.519,
+      "end": 99.159,
+      "text": "primes for every query so for the first"
+    },
+    {
+      "start": 95.32,
+      "duration": 6.68,
+      "end": 102.0,
+      "text": "query 3 to 10 how many primes are there"
+    },
+    {
+      "start": 99.159,
+      "duration": 5.081,
+      "end": 104.24000000000001,
+      "text": "three is a prime five is a prime seven"
+    },
+    {
+      "start": 102.0,
+      "duration": 5.119,
+      "end": 107.119,
+      "text": "is a prime yeah there are three primes"
+    },
+    {
+      "start": 104.24,
+      "duration": 6.76,
+      "end": 111.0,
+      "text": "so you'll be printing three in the first"
+    },
+    {
+      "start": 107.119,
+      "duration": 8.481,
+      "end": 115.6,
+      "text": "line after that you have 8 to 20 how"
+    },
+    {
+      "start": 111.0,
+      "duration": 8.6,
+      "end": 119.6,
+      "text": "many primes are there 11 is 1 13 is 1 17"
+    },
+    {
+      "start": 115.6,
+      "duration": 8.96,
+      "end": 124.56,
+      "text": "is 1 19 is 1 so there are four Primes"
+    },
+    {
+      "start": 119.6,
+      "duration": 7.92,
+      "end": 127.52,
+      "text": "from not wrong from 1 to 5 2 is 1 3 is 1"
+    },
+    {
+      "start": 124.56,
+      "duration": 5.0,
+      "end": 129.56,
+      "text": "5 is 1 three primes this is what you'll"
+    },
+    {
+      "start": 127.52,
+      "duration": 4.28,
+      "end": 131.79999999999998,
+      "text": "have to print if I have to write down"
+    },
+    {
+      "start": 129.56,
+      "duration": 5.2,
+      "end": 134.76,
+      "text": "the extreme like the extreme range"
+    },
+    {
+      "start": 131.8,
+      "duration": 5.719,
+      "end": 137.519,
+      "text": "solution what will be that first of all"
+    },
+    {
+      "start": 134.76,
+      "duration": 6.4,
+      "end": 141.16,
+      "text": "I'll be like okay I'll be taking the"
+    },
+    {
+      "start": 137.519,
+      "duration": 5.72,
+      "end": 143.239,
+      "text": "input of uh q that is basically the"
+    },
+    {
+      "start": 141.16,
+      "duration": 3.56,
+      "end": 144.72,
+      "text": "number of queries or maybe you'll be"
+    },
+    {
+      "start": 143.239,
+      "duration": 3.041,
+      "end": 146.28,
+      "text": "given something like a function let's"
+    },
+    {
+      "start": 144.72,
+      "duration": 5.799,
+      "end": 150.519,
+      "text": "assume we given a"
+    },
+    {
+      "start": 146.28,
+      "duration": 6.88,
+      "end": 153.16,
+      "text": "function we given a function which has"
+    },
+    {
+      "start": 150.519,
+      "duration": 2.641,
+      "end": 153.16,
+      "text": "a list"
+    },
+    {
+      "start": 154.0,
+      "duration": 6.0,
+      "end": 160.0,
+      "text": "of integer comma"
+    },
+    {
+      "start": 157.239,
+      "duration": 6.041,
+      "end": 163.28,
+      "text": "integer and these are queries so this is"
+    },
+    {
+      "start": 160.0,
+      "duration": 6.4,
+      "end": 166.4,
+      "text": "what is given to you so basically uh"
+    },
+    {
+      "start": 163.28,
+      "duration": 7.08,
+      "end": 170.36,
+      "text": "what will be q q will be queries do size"
+    },
+    {
+      "start": 166.4,
+      "duration": 6.32,
+      "end": 172.72,
+      "text": "because you'll be getting them in pair"
+    },
+    {
+      "start": 170.36,
+      "duration": 9.68,
+      "end": 180.04000000000002,
+      "text": "now what you can do is you can"
+    },
+    {
+      "start": 172.72,
+      "duration": 12.48,
+      "end": 185.2,
+      "text": "simply run a loop from i = 0 till Q - 1"
+    },
+    {
+      "start": 180.04,
+      "duration": 7.64,
+      "end": 187.67999999999998,
+      "text": "and you can say l will be list of I zero"
+    },
+    {
+      "start": 185.2,
+      "duration": 8.64,
+      "end": 193.83999999999997,
+      "text": "because in a pair the zeroth index will"
+    },
+    {
+      "start": 187.68,
+      "duration": 8.4,
+      "end": 196.08,
+      "text": "be this R will be list of I of one very"
+    },
+    {
+      "start": 193.84,
+      "duration": 4.56,
+      "end": 198.4,
+      "text": "simple simple pseudo code again"
+    },
+    {
+      "start": 196.08,
+      "duration": 4.84,
+      "end": 200.92000000000002,
+      "text": "depending on language if it is C++ this"
+    },
+    {
+      "start": 198.4,
+      "duration": 5.88,
+      "end": 204.28,
+      "text": "will be Vector if it is Java it can be"
+    },
+    {
+      "start": 200.92,
+      "duration": 6.12,
+      "end": 207.04,
+      "text": "ar list or a list so you have the L you"
+    },
+    {
+      "start": 204.28,
+      "duration": 5.28,
+      "end": 209.56,
+      "text": "have the r and this is for every query"
+    },
+    {
+      "start": 207.04,
+      "duration": 5.32,
+      "end": 212.35999999999999,
+      "text": "where I is the query number now what I"
+    },
+    {
+      "start": 209.56,
+      "duration": 6.399,
+      "end": 215.959,
+      "text": "can is I can simply say okay I'll keep a"
+    },
+    {
+      "start": 212.36,
+      "duration": 7.36,
+      "end": 219.72000000000003,
+      "text": "count equal to zero as if for I need to"
+    },
+    {
+      "start": 215.959,
+      "duration": 6.801,
+      "end": 222.76,
+      "text": "count from L to R right so I'll run a j"
+    },
+    {
+      "start": 219.72,
+      "duration": 5.84,
+      "end": 225.56,
+      "text": "loop from L to R and I'll call the prime"
+    },
+    {
+      "start": 222.76,
+      "duration": 5.24,
+      "end": 228.0,
+      "text": "function I'll call the prime function"
+    },
+    {
+      "start": 225.56,
+      "duration": 6.239,
+      "end": 231.799,
+      "text": "and I'll ask hey"
+    },
+    {
+      "start": 228.0,
+      "duration": 6.04,
+      "end": 234.04,
+      "text": "is this a prime number if it is can you"
+    },
+    {
+      "start": 231.799,
+      "duration": 5.841,
+      "end": 237.64000000000001,
+      "text": "do a count to Plus+ and at the end of"
+    },
+    {
+      "start": 234.04,
+      "duration": 5.919,
+      "end": 239.959,
+      "text": "the day I can say print my counter and"
+    },
+    {
+      "start": 237.64,
+      "duration": 5.72,
+      "end": 243.35999999999999,
+      "text": "that will be done so I can finish the"
+    },
+    {
+      "start": 239.959,
+      "duration": 5.721,
+      "end": 245.68,
+      "text": "fall Loop and the function is completed"
+    },
+    {
+      "start": 243.36,
+      "duration": 4.76,
+      "end": 248.12,
+      "text": "so every time I can print the count for"
+    },
+    {
+      "start": 245.68,
+      "duration": 5.36,
+      "end": 251.04000000000002,
+      "text": "every query correct so what will be the"
+    },
+    {
+      "start": 248.12,
+      "duration": 7.88,
+      "end": 256.0,
+      "text": "time complexity I'm very sure that this"
+    },
+    {
+      "start": 251.04,
+      "duration": 7.4,
+      "end": 258.44,
+      "text": "is B go of Q right this is running from"
+    },
+    {
+      "start": 256.0,
+      "duration": 7.68,
+      "end": 263.68,
+      "text": "L to R so I can"
+    },
+    {
+      "start": 258.44,
+      "duration": 8.16,
+      "end": 266.6,
+      "text": "say r - L + 1 where R and L will be"
+    },
+    {
+      "start": 263.68,
+      "duration": 6.2,
+      "end": 269.88,
+      "text": "veing multiplied with there's a prime"
+    },
+    {
+      "start": 266.6,
+      "duration": 5.84,
+      "end": 272.44,
+      "text": "check for every number we can say a"
+    },
+    {
+      "start": 269.88,
+      "duration": 5.039,
+      "end": 274.919,
+      "text": "number to be n so for every number it's"
+    },
+    {
+      "start": 272.44,
+      "duration": 5.68,
+      "end": 278.12,
+      "text": "a square root of n it will be varing"
+    },
+    {
+      "start": 274.919,
+      "duration": 7.12,
+      "end": 282.039,
+      "text": "because J is varing so I cannot pinpoint"
+    },
+    {
+      "start": 278.12,
+      "duration": 6.6,
+      "end": 284.72,
+      "text": "the time complexity but this is somehow"
+    },
+    {
+      "start": 282.039,
+      "duration": 5.641,
+      "end": 287.68,
+      "text": "this is what the time complexity will be"
+    },
+    {
+      "start": 284.72,
+      "duration": 6.039,
+      "end": 290.759,
+      "text": "and this is something multiplied with"
+    },
+    {
+      "start": 287.68,
+      "duration": 6.12,
+      "end": 293.8,
+      "text": "something multiplied with something so"
+    },
+    {
+      "start": 290.759,
+      "duration": 5.601,
+      "end": 296.36,
+      "text": "probably if I have to approximate it's"
+    },
+    {
+      "start": 293.8,
+      "duration": 4.8,
+      "end": 298.6,
+      "text": "something to the power CU in terms of"
+    },
+    {
+      "start": 296.36,
+      "duration": 5.279,
+      "end": 301.639,
+      "text": "QBE and if I look at if I look at the"
+    },
+    {
+      "start": 298.6,
+      "duration": 5.039,
+      "end": 303.639,
+      "text": "numbers it is 10 the 5 and 10^ 6"
+    },
+    {
+      "start": 301.639,
+      "duration": 6.161,
+      "end": 307.8,
+      "text": "something to the power like maybe even"
+    },
+    {
+      "start": 303.639,
+      "duration": 7.881,
+      "end": 311.52,
+      "text": "if I Take 10^ 5 if I say all the queries"
+    },
+    {
+      "start": 307.8,
+      "duration": 6.6,
+      "end": 314.40000000000003,
+      "text": "I like 1 comma 10^ 6 all the queries are"
+    },
+    {
+      "start": 311.52,
+      "duration": 5.64,
+      "end": 317.15999999999997,
+      "text": "from 1 to 10^ 6 in that scenario this"
+    },
+    {
+      "start": 314.4,
+      "duration": 6.519,
+      "end": 320.919,
+      "text": "will be taking 10^ 6 and this will again"
+    },
+    {
+      "start": 317.16,
+      "duration": 7.0,
+      "end": 324.16,
+      "text": "be a lot so that's a lot"
+    },
+    {
+      "start": 320.919,
+      "duration": 8.041,
+      "end": 328.96,
+      "text": "right if I have to approximate this how"
+    },
+    {
+      "start": 324.16,
+      "duration": 8.36,
+      "end": 332.52000000000004,
+      "text": "much is this Q at Max will be 10 5 this"
+    },
+    {
+      "start": 328.96,
+      "duration": 6.32,
+      "end": 335.28,
+      "text": "Rus imagine all the queries"
+    },
+    {
+      "start": 332.52,
+      "duration": 6.239,
+      "end": 338.75899999999996,
+      "text": "are all the queries"
+    },
+    {
+      "start": 335.28,
+      "duration": 6.28,
+      "end": 341.55999999999995,
+      "text": "are the extremest queries in this"
+    },
+    {
+      "start": 338.759,
+      "duration": 5.681,
+      "end": 344.44,
+      "text": "scenario this will be taking B go of 10"
+    },
+    {
+      "start": 341.56,
+      "duration": 5.52,
+      "end": 347.08,
+      "text": "the^ 6 Loop and this is a square root of"
+    },
+    {
+      "start": 344.44,
+      "duration": 4.8,
+      "end": 349.24,
+      "text": "n at this in itself is such a huge"
+    },
+    {
+      "start": 347.08,
+      "duration": 7.119,
+      "end": 354.19899999999996,
+      "text": "quantity it's still multiplying a prime"
+    },
+    {
+      "start": 349.24,
+      "duration": 9.04,
+      "end": 358.28000000000003,
+      "text": "J so obviously uh this is not accepted"
+    },
+    {
+      "start": 354.199,
+      "duration": 8.321,
+      "end": 362.52000000000004,
+      "text": "can I optimize this I can one thing I"
+    },
+    {
+      "start": 358.28,
+      "duration": 6.44,
+      "end": 364.71999999999997,
+      "text": "can do is I can optimize the prim check"
+    },
+    {
+      "start": 362.52,
+      "duration": 6.72,
+      "end": 369.24,
+      "text": "and I've already done it in my previous"
+    },
+    {
+      "start": 364.72,
+      "duration": 8.319,
+      "end": 373.03900000000004,
+      "text": "video where we did learn about sa the"
+    },
+    {
+      "start": 369.24,
+      "duration": 8.2,
+      "end": 377.44,
+      "text": "save technique maybe I can optimize this"
+    },
+    {
+      "start": 373.039,
+      "duration": 6.72,
+      "end": 379.759,
+      "text": "Prime check to a beo of fun I can do it"
+    },
+    {
+      "start": 377.44,
+      "duration": 4.08,
+      "end": 381.52,
+      "text": "and for that what I've done is I've"
+    },
+    {
+      "start": 379.759,
+      "duration": 5.84,
+      "end": 385.599,
+      "text": "written down a function that gives me"
+    },
+    {
+      "start": 381.52,
+      "duration": 6.28,
+      "end": 387.79999999999995,
+      "text": "the SE I and basically taken the value n"
+    },
+    {
+      "start": 385.599,
+      "duration": 5.16,
+      "end": 390.759,
+      "text": "and I'm saying create a list or an array"
+    },
+    {
+      "start": 387.8,
+      "duration": 6.0,
+      "end": 393.8,
+      "text": "of size this assign everything as one"
+    },
+    {
+      "start": 390.759,
+      "duration": 7.16,
+      "end": 397.91900000000004,
+      "text": "Loop and then if it is one mark all its"
+    },
+    {
+      "start": 393.8,
+      "duration": 6.519,
+      "end": 400.319,
+      "text": "multiples as zero and once youve done it"
+    },
+    {
+      "start": 397.919,
+      "duration": 5.12,
+      "end": 403.039,
+      "text": "return this list so I can easily get the"
+    },
+    {
+      "start": 400.319,
+      "duration": 7.921,
+      "end": 408.24,
+      "text": "SE I can easily get the seeve so what I"
+    },
+    {
+      "start": 403.039,
+      "duration": 9.081,
+      "end": 412.12,
+      "text": "can say is okay fine maybe I can say"
+    },
+    {
+      "start": 408.24,
+      "duration": 7.239,
+      "end": 415.479,
+      "text": "Prime equal to get save I know that the"
+    },
+    {
+      "start": 412.12,
+      "duration": 5.799,
+      "end": 417.919,
+      "text": "maximum possible maximum maximum"
+    },
+    {
+      "start": 415.479,
+      "duration": 5.921,
+      "end": 421.4,
+      "text": "possible number is R and R can be 10"
+    },
+    {
+      "start": 417.919,
+      "duration": 7.0,
+      "end": 424.919,
+      "text": "the^ 6 so I'll pass on 10^ 6 and it will"
+    },
+    {
+      "start": 421.4,
+      "duration": 7.28,
+      "end": 428.67999999999995,
+      "text": "be returning me an array an array or a"
+    },
+    {
+      "start": 424.919,
+      "duration": 5.321,
+      "end": 430.24,
+      "text": "list and now what I can do is I can"
+    },
+    {
+      "start": 428.68,
+      "duration": 4.359,
+      "end": 433.039,
+      "text": "remove this I'll not be calling the"
+    },
+    {
+      "start": 430.24,
+      "duration": 6.16,
+      "end": 436.40000000000003,
+      "text": "function that checks in square root of n"
+    },
+    {
+      "start": 433.039,
+      "duration": 6.361,
+      "end": 439.4,
+      "text": "instead of it I'll be simply checking"
+    },
+    {
+      "start": 436.4,
+      "duration": 4.04,
+      "end": 440.44,
+      "text": "with this array if this is one or not if"
+    },
+    {
+      "start": 439.4,
+      "duration": 4.0,
+      "end": 443.4,
+      "text": "this is"
+    },
+    {
+      "start": 440.44,
+      "duration": 8.0,
+      "end": 448.44,
+      "text": "one that means it is a prime so what I"
+    },
+    {
+      "start": 443.4,
+      "duration": 8.04,
+      "end": 451.44,
+      "text": "did was I introduced a n log of log n"
+    },
+    {
+      "start": 448.44,
+      "duration": 6.4,
+      "end": 454.84,
+      "text": "where n is 10^ 6 because that is the"
+    },
+    {
+      "start": 451.44,
+      "duration": 8.72,
+      "end": 460.16,
+      "text": "size that I'm looking for"
+    },
+    {
+      "start": 454.84,
+      "duration": 9.039,
+      "end": 463.87899999999996,
+      "text": "and over here what I did was Q into r -"
+    },
+    {
+      "start": 460.16,
+      "duration": 8.2,
+      "end": 468.36,
+      "text": "L + 1 it is still humongous what I"
+    },
+    {
+      "start": 463.879,
+      "duration": 7.88,
+      "end": 471.759,
+      "text": "omitted was just the prime complexity so"
+    },
+    {
+      "start": 468.36,
+      "duration": 6.04,
+      "end": 474.40000000000003,
+      "text": "this can be termed as a better solution"
+    },
+    {
+      "start": 471.759,
+      "duration": 7.16,
+      "end": 478.91900000000004,
+      "text": "now can I think in the direction of"
+    },
+    {
+      "start": 474.4,
+      "duration": 9.759,
+      "end": 484.159,
+      "text": "optimizing it maybe yes but for that"
+    },
+    {
+      "start": 478.919,
+      "duration": 7.56,
+      "end": 486.479,
+      "text": "we'll be requiring the prefix sum method"
+    },
+    {
+      "start": 484.159,
+      "duration": 4.841,
+      "end": 489.0,
+      "text": "so let's move into the optimal solution"
+    },
+    {
+      "start": 486.479,
+      "duration": 4.761,
+      "end": 491.24,
+      "text": "so I need to optimize our previous"
+    },
+    {
+      "start": 489.0,
+      "duration": 5.8,
+      "end": 494.8,
+      "text": "solution first of all one thing I know"
+    },
+    {
+      "start": 491.24,
+      "duration": 5.84,
+      "end": 497.08,
+      "text": "for sure is I cannot optimize Q because"
+    },
+    {
+      "start": 494.8,
+      "duration": 3.959,
+      "end": 498.759,
+      "text": "if there are Q queries I'll have to go"
+    },
+    {
+      "start": 497.08,
+      "duration": 3.16,
+      "end": 500.24,
+      "text": "through there there's no other way"
+    },
+    {
+      "start": 498.759,
+      "duration": 3.88,
+      "end": 502.639,
+      "text": "because I'll have to go through each and"
+    },
+    {
+      "start": 500.24,
+      "duration": 5.48,
+      "end": 505.72,
+      "text": "every query I have to print the number"
+    },
+    {
+      "start": 502.639,
+      "duration": 5.84,
+      "end": 508.479,
+      "text": "of frames so I cannot optimize Q what I"
+    },
+    {
+      "start": 505.72,
+      "duration": 6.0,
+      "end": 511.72,
+      "text": "can optimize is this one instead of"
+    },
+    {
+      "start": 508.479,
+      "duration": 5.841,
+      "end": 514.3199999999999,
+      "text": "iterating from to R if I can optimize"
+    },
+    {
+      "start": 511.72,
+      "duration": 5.28,
+      "end": 517.0,
+      "text": "this I think my job will be done if I"
+    },
+    {
+      "start": 514.32,
+      "duration": 3.719,
+      "end": 518.0390000000001,
+      "text": "can somehow say okay listen I'm not"
+    },
+    {
+      "start": 517.0,
+      "duration": 4.08,
+      "end": 521.08,
+      "text": "going to"
+    },
+    {
+      "start": 518.039,
+      "duration": 6.081,
+      "end": 524.12,
+      "text": "Lo can I do some pre-computation so that"
+    },
+    {
+      "start": 521.08,
+      "duration": 5.439,
+      "end": 526.519,
+      "text": "I can get the answer in B go off one if"
+    },
+    {
+      "start": 524.12,
+      "duration": 4.56,
+      "end": 528.68,
+      "text": "I can do that I'll be able to optimize"
+    },
+    {
+      "start": 526.519,
+      "duration": 5.521,
+      "end": 532.04,
+      "text": "this got it so that's what we will be"
+    },
+    {
+      "start": 528.68,
+      "duration": 6.159,
+      "end": 534.8389999999999,
+      "text": "trying to do so in order to understand"
+    },
+    {
+      "start": 532.04,
+      "duration": 5.76,
+      "end": 537.8,
+      "text": "uh what I'm trying to do is we will be"
+    },
+    {
+      "start": 534.839,
+      "duration": 5.761,
+      "end": 540.6,
+      "text": "taking a value 10 okay and I'll be"
+    },
+    {
+      "start": 537.8,
+      "duration": 4.84,
+      "end": 542.64,
+      "text": "creating a array of size 10 so let's"
+    },
+    {
+      "start": 540.6,
+      "duration": 5.72,
+      "end": 546.32,
+      "text": "create an array of size"
+    },
+    {
+      "start": 542.64,
+      "duration": 5.92,
+      "end": 548.56,
+      "text": "10 so I've taken this uh array of size"
+    },
+    {
+      "start": 546.32,
+      "duration": 5.16,
+      "end": 551.48,
+      "text": "so what I've done is for n equal to 10"
+    },
+    {
+      "start": 548.56,
+      "duration": 6.64,
+      "end": 555.1999999999999,
+      "text": "I've taken a size of 11 so that I have"
+    },
+    {
+      "start": 551.48,
+      "duration": 6.2,
+      "end": 557.6800000000001,
+      "text": "the 10th index as well now this is my"
+    },
+    {
+      "start": 555.2,
+      "duration": 7.0,
+      "end": 562.2,
+      "text": "are right so"
+    },
+    {
+      "start": 557.68,
+      "duration": 8.12,
+      "end": 565.8,
+      "text": "assume I ask hey get"
+    },
+    {
+      "start": 562.2,
+      "duration": 8.24,
+      "end": 570.44,
+      "text": "seen for 10 so this will be returning me"
+    },
+    {
+      "start": 565.8,
+      "duration": 7.88,
+      "end": 573.68,
+      "text": "a list and that is this particular list"
+    },
+    {
+      "start": 570.44,
+      "duration": 5.0,
+      "end": 575.44,
+      "text": "so it be filled with 0 0 1 because two"
+    },
+    {
+      "start": 573.68,
+      "duration": 3.92,
+      "end": 577.5999999999999,
+      "text": "is a prime three is a prime five is a"
+    },
+    {
+      "start": 575.44,
+      "duration": 5.44,
+      "end": 580.8800000000001,
+      "text": "prime seven is a prime and everything"
+    },
+    {
+      "start": 577.6,
+      "duration": 7.28,
+      "end": 584.88,
+      "text": "else will be filled with zeros remember"
+    },
+    {
+      "start": 580.88,
+      "duration": 7.12,
+      "end": 588.0,
+      "text": "the SE right so this is what the current"
+    },
+    {
+      "start": 584.88,
+      "duration": 6.6,
+      "end": 591.48,
+      "text": "prime array will look like if I call get"
+    },
+    {
+      "start": 588.0,
+      "duration": 6.36,
+      "end": 594.36,
+      "text": "C with the value 10 so we have our C"
+    },
+    {
+      "start": 591.48,
+      "duration": 5.2,
+      "end": 596.6800000000001,
+      "text": "array ready now this is telling me which"
+    },
+    {
+      "start": 594.36,
+      "duration": 6.2,
+      "end": 600.5600000000001,
+      "text": "number is prime and which number is not"
+    },
+    {
+      "start": 596.68,
+      "duration": 5.599,
+      "end": 602.279,
+      "text": "prime now if I ask you till five how"
+    },
+    {
+      "start": 600.56,
+      "duration": 5.12,
+      "end": 605.68,
+      "text": "many primes are there it will be like"
+    },
+    {
+      "start": 602.279,
+      "duration": 6.361,
+      "end": 608.64,
+      "text": "three 2 3 5 there are three primes and"
+    },
+    {
+      "start": 605.68,
+      "duration": 6.12,
+      "end": 611.8,
+      "text": "that is nothing but 1 + 1 +"
+    },
+    {
+      "start": 608.64,
+      "duration": 6.8,
+      "end": 615.4399999999999,
+      "text": "1 that's what I'll try to do at the"
+    },
+    {
+      "start": 611.8,
+      "duration": 6.12,
+      "end": 617.92,
+      "text": "index five I will try to store three"
+    },
+    {
+      "start": 615.44,
+      "duration": 5.68,
+      "end": 621.12,
+      "text": "which is the summation of the number of"
+    },
+    {
+      "start": 617.92,
+      "duration": 5.84,
+      "end": 623.76,
+      "text": "primes till the number five got it okay"
+    },
+    {
+      "start": 621.12,
+      "duration": 6.719,
+      "end": 627.839,
+      "text": "how can I do it it's a very simple thing"
+    },
+    {
+      "start": 623.76,
+      "duration": 6.8,
+      "end": 630.56,
+      "text": "I will say count equal to Z and if I go"
+    },
+    {
+      "start": 627.839,
+      "duration": 6.481,
+      "end": 634.32,
+      "text": "here this is a zero I'll add it to count"
+    },
+    {
+      "start": 630.56,
+      "duration": 7.6,
+      "end": 638.16,
+      "text": "0 + 0 is 0 I'll assign it 0 perfect next"
+    },
+    {
+      "start": 634.32,
+      "duration": 6.519,
+      "end": 640.839,
+      "text": "I'll go here I'll add a 0 0 + 0 is zero"
+    },
+    {
+      "start": 638.16,
+      "duration": 6.08,
+      "end": 644.24,
+      "text": "so I'll again assign zero next I'll go"
+    },
+    {
+      "start": 640.839,
+      "duration": 8.0,
+      "end": 648.839,
+      "text": "here it's one I'll add one and that"
+    },
+    {
+      "start": 644.24,
+      "duration": 7.8,
+      "end": 652.04,
+      "text": "becomes one so count becomes one okay so"
+    },
+    {
+      "start": 648.839,
+      "duration": 6.521,
+      "end": 655.36,
+      "text": "I'll assign one to here perfect next"
+    },
+    {
+      "start": 652.04,
+      "duration": 6.32,
+      "end": 658.36,
+      "text": "I'll go here which is the third index"
+    },
+    {
+      "start": 655.36,
+      "duration": 5.56,
+      "end": 660.92,
+      "text": "and I have a one so 1 + 1 will be two"
+    },
+    {
+      "start": 658.36,
+      "duration": 5.0,
+      "end": 663.36,
+      "text": "and I'll assign two perfect next I'll go"
+    },
+    {
+      "start": 660.92,
+      "duration": 5.12,
+      "end": 666.04,
+      "text": "here I have a zero so if I add two to"
+    },
+    {
+      "start": 663.36,
+      "duration": 4.44,
+      "end": 667.8000000000001,
+      "text": "Zer it will be two and I'll add a two"
+    },
+    {
+      "start": 666.04,
+      "duration": 4.4,
+      "end": 670.4399999999999,
+      "text": "next I'll go here there's a one if I add"
+    },
+    {
+      "start": 667.8,
+      "duration": 5.32,
+      "end": 673.12,
+      "text": "a one that will be three put a three"
+    },
+    {
+      "start": 670.44,
+      "duration": 4.959,
+      "end": 675.399,
+      "text": "next I'll go here it's a zero so assign"
+    },
+    {
+      "start": 673.12,
+      "duration": 4.839,
+      "end": 677.9590000000001,
+      "text": "three next I'll go here that's a one so"
+    },
+    {
+      "start": 675.399,
+      "duration": 6.201,
+      "end": 681.6,
+      "text": "this will be four assign four next I'll"
+    },
+    {
+      "start": 677.959,
+      "duration": 5.481,
+      "end": 683.4399999999999,
+      "text": "go here that's a zero so assign four"
+    },
+    {
+      "start": 681.6,
+      "duration": 3.799,
+      "end": 685.399,
+      "text": "next I'll go here that's a zero assign"
+    },
+    {
+      "start": 683.44,
+      "duration": 4.88,
+      "end": 688.32,
+      "text": "four next I'll go here that's a zero"
+    },
+    {
+      "start": 685.399,
+      "duration": 5.401,
+      "end": 690.8,
+      "text": "assign four so what I've done is I've"
+    },
+    {
+      "start": 688.32,
+      "duration": 4.519,
+      "end": 692.839,
+      "text": "assigned the SU"
+    },
+    {
+      "start": 690.8,
+      "duration": 5.08,
+      "end": 695.88,
+      "text": "so at the end of the day you will be"
+    },
+    {
+      "start": 692.839,
+      "duration": 5.641,
+      "end": 698.48,
+      "text": "seeing that you have the count ready"
+    },
+    {
+      "start": 695.88,
+      "duration": 7.199,
+      "end": 703.079,
+      "text": "okay perfect I have the count ready now"
+    },
+    {
+      "start": 698.48,
+      "duration": 7.24,
+      "end": 705.72,
+      "text": "if someone is asking me hey till 9 how"
+    },
+    {
+      "start": 703.079,
+      "duration": 5.961,
+      "end": 709.04,
+      "text": "many primes are there you will be like"
+    },
+    {
+      "start": 705.72,
+      "duration": 7.239,
+      "end": 712.9590000000001,
+      "text": "okay Prime nine what is your value he"
+    },
+    {
+      "start": 709.04,
+      "duration": 7.72,
+      "end": 716.76,
+      "text": "says my value is four you get the number"
+    },
+    {
+      "start": 712.959,
+      "duration": 7.761,
+      "end": 720.7199999999999,
+      "text": "perfect amazing right so if someone is"
+    },
+    {
+      "start": 716.76,
+      "duration": 6.8,
+      "end": 723.56,
+      "text": "asking you how many primes are"
+    },
+    {
+      "start": 720.72,
+      "duration": 7.4,
+      "end": 728.12,
+      "text": "there from 3 to"
+    },
+    {
+      "start": 723.56,
+      "duration": 8.68,
+      "end": 732.2399999999999,
+      "text": "9 now you know one thing Prime"
+    },
+    {
+      "start": 728.12,
+      "duration": 8.719,
+      "end": 736.839,
+      "text": "9 what's the value four we know it till"
+    },
+    {
+      "start": 732.24,
+      "duration": 8.0,
+      "end": 740.24,
+      "text": "nine I have four primes okay but I need"
+    },
+    {
+      "start": 736.839,
+      "duration": 8.24,
+      "end": 745.0790000000001,
+      "text": "from 3 to 9 not because this is nothing"
+    },
+    {
+      "start": 740.24,
+      "duration": 7.24,
+      "end": 747.48,
+      "text": "but 1 to9 okay but what do I need I need"
+    },
+    {
+      "start": 745.079,
+      "duration": 5.161,
+      "end": 750.2399999999999,
+      "text": "from 3 to 9 what do"
+    },
+    {
+      "start": 747.48,
+      "duration": 5.799,
+      "end": 753.279,
+      "text": "I what is the thing that I don't need"
+    },
+    {
+      "start": 750.24,
+      "duration": 6.959,
+      "end": 757.199,
+      "text": "that's from 1 to two I don't need this"
+    },
+    {
+      "start": 753.279,
+      "duration": 6.321,
+      "end": 759.6,
+      "text": "so can I say figure out Prime of two"
+    },
+    {
+      "start": 757.199,
+      "duration": 4.801,
+      "end": 762.0,
+      "text": "figure out Prime of two and that'll come"
+    },
+    {
+      "start": 759.6,
+      "duration": 4.359,
+      "end": 763.9590000000001,
+      "text": "out to be one and do a subtraction"
+    },
+    {
+      "start": 762.0,
+      "duration": 3.76,
+      "end": 765.76,
+      "text": "because you don't need it so it'll turn"
+    },
+    {
+      "start": 763.959,
+      "duration": 4.161,
+      "end": 768.1199999999999,
+      "text": "out to be three it'll turn out to be"
+    },
+    {
+      "start": 765.76,
+      "duration": 6.8,
+      "end": 772.56,
+      "text": "three so can I say if I do this"
+    },
+    {
+      "start": 768.12,
+      "duration": 11.24,
+      "end": 779.36,
+      "text": "computation the answer will be prime of"
+    },
+    {
+      "start": 772.56,
+      "duration": 9.04,
+      "end": 781.5999999999999,
+      "text": "R minus Prime of lus one yes it will be"
+    },
+    {
+      "start": 779.36,
+      "duration": 5.4,
+      "end": 784.76,
+      "text": "this will be the answer can I write the"
+    },
+    {
+      "start": 781.6,
+      "duration": 5.28,
+      "end": 786.88,
+      "text": "code I can it's going to be super simple"
+    },
+    {
+      "start": 784.76,
+      "duration": 4.199,
+      "end": 788.959,
+      "text": "I'll start writing the pseudo code again"
+    },
+    {
+      "start": 786.88,
+      "duration": 4.48,
+      "end": 791.36,
+      "text": "I'm writing down the pseudo code this"
+    },
+    {
+      "start": 788.959,
+      "duration": 4.801,
+      "end": 793.76,
+      "text": "course is not in C++ it is in pseudo"
+    },
+    {
+      "start": 791.36,
+      "duration": 6.56,
+      "end": 797.92,
+      "text": "code spread this"
+    },
+    {
+      "start": 793.76,
+      "duration": 7.519,
+      "end": 801.279,
+      "text": "across function it'll be given a list of"
+    },
+    {
+      "start": 797.92,
+      "duration": 7.4,
+      "end": 805.3199999999999,
+      "text": "queries so let's take all the"
+    },
+    {
+      "start": 801.279,
+      "duration": 7.841,
+      "end": 809.12,
+      "text": "queries first thing compute the SE so"
+    },
+    {
+      "start": 805.32,
+      "duration": 6.16,
+      "end": 811.48,
+      "text": "maybe compute this array by calling get"
+    },
+    {
+      "start": 809.12,
+      "duration": 5.92,
+      "end": 815.04,
+      "text": "receive and we know one thing that we"
+    },
+    {
+      "start": 811.48,
+      "duration": 7.44,
+      "end": 818.9200000000001,
+      "text": "will be requiring till 10 the^ 6 because"
+    },
+    {
+      "start": 815.04,
+      "duration": 5.919,
+      "end": 820.959,
+      "text": "the maximum value of R can be 10^ 6 so"
+    },
+    {
+      "start": 818.92,
+      "duration": 4.12,
+      "end": 823.04,
+      "text": "it will be giving me a sa we'll have the"
+    },
+    {
+      "start": 820.959,
+      "duration": 5.32,
+      "end": 826.279,
+      "text": "prime ready what is the next thing"
+    },
+    {
+      "start": 823.04,
+      "duration": 6.84,
+      "end": 829.88,
+      "text": "compute compute do the prefix s so maybe"
+    },
+    {
+      "start": 826.279,
+      "duration": 7.161,
+      "end": 833.4399999999999,
+      "text": "I can keep a counter as zero and what I"
+    },
+    {
+      "start": 829.88,
+      "duration": 5.8,
+      "end": 835.68,
+      "text": "can do is I can start from"
+    },
+    {
+      "start": 833.44,
+      "duration": 4.399,
+      "end": 837.839,
+      "text": "one or maybe I can start from two"
+    },
+    {
+      "start": 835.68,
+      "duration": 4.88,
+      "end": 840.56,
+      "text": "because I know the first Prime is two 2"
+    },
+    {
+      "start": 837.839,
+      "duration": 6.36,
+      "end": 844.1990000000001,
+      "text": "to 10 6 because that that is the maximum"
+    },
+    {
+      "start": 840.56,
+      "duration": 8.76,
+      "end": 849.3199999999999,
+      "text": "number and I'll be like counter is equal"
+    },
+    {
+      "start": 844.199,
+      "duration": 11.721,
+      "end": 855.92,
+      "text": "to counter plus Prime of I and then you"
+    },
+    {
+      "start": 849.32,
+      "duration": 10.68,
+      "end": 860.0,
+      "text": "can say Prime of I will be cter done"
+    },
+    {
+      "start": 855.92,
+      "duration": 6.2,
+      "end": 862.12,
+      "text": "very simple right so I have my PR"
+    },
+    {
+      "start": 860.0,
+      "duration": 4.6,
+      "end": 864.6,
+      "text": "computations ready what is my next thing"
+    },
+    {
+      "start": 862.12,
+      "duration": 4.2,
+      "end": 866.32,
+      "text": "I have to go through all the queries so"
+    },
+    {
+      "start": 864.6,
+      "duration": 6.44,
+      "end": 871.0400000000001,
+      "text": "probably go through all the queries now"
+    },
+    {
+      "start": 866.32,
+      "duration": 4.72,
+      "end": 871.0400000000001,
+      "text": "I equal to Z till query size"
+    },
+    {
+      "start": 871.16,
+      "duration": 6.039,
+      "end": 877.199,
+      "text": "so go through all the queries query size"
+    },
+    {
+      "start": 874.12,
+      "duration": 5.6,
+      "end": 879.72,
+      "text": "minus one because that's the last index"
+    },
+    {
+      "start": 877.199,
+      "duration": 4.121,
+      "end": 881.3199999999999,
+      "text": "and get the l l will"
+    },
+    {
+      "start": 879.72,
+      "duration": 7.359,
+      "end": 887.0790000000001,
+      "text": "be"
+    },
+    {
+      "start": 881.32,
+      "duration": 9.519,
+      "end": 890.839,
+      "text": "queries I query zero R will be queries"
+    },
+    {
+      "start": 887.079,
+      "duration": 5.56,
+      "end": 892.6389999999999,
+      "text": "ayat query and one perfect Now what is"
+    },
+    {
+      "start": 890.839,
+      "duration": 4.8,
+      "end": 895.639,
+      "text": "my answer what is my answer the answer"
+    },
+    {
+      "start": 892.639,
+      "duration": 6.921,
+      "end": 899.5600000000001,
+      "text": "is pretty straightforward"
+    },
+    {
+      "start": 895.639,
+      "duration": 5.681,
+      "end": 901.32,
+      "text": "print I'll require the prime still r and"
+    },
+    {
+      "start": 899.56,
+      "duration": 5.32,
+      "end": 904.88,
+      "text": "I'll not be requiring the prime till L"
+    },
+    {
+      "start": 901.32,
+      "duration": 5.36,
+      "end": 906.6800000000001,
+      "text": "minus one so that's my answer not"
+    },
+    {
+      "start": 904.88,
+      "duration": 5.759,
+      "end": 910.639,
+      "text": "understood now what is the time"
+    },
+    {
+      "start": 906.68,
+      "duration": 9.36,
+      "end": 916.04,
+      "text": "complexity let's analyze get C is"
+    },
+    {
+      "start": 910.639,
+      "duration": 9.76,
+      "end": 920.399,
+      "text": "working in N logarithmic of log n okay"
+    },
+    {
+      "start": 916.04,
+      "duration": 7.28,
+      "end": 923.3199999999999,
+      "text": "this is doing in B go of 10^ 6 okay and"
+    },
+    {
+      "start": 920.399,
+      "duration": 6.68,
+      "end": 927.079,
+      "text": "this is B go of Q so the overall time"
+    },
+    {
+      "start": 923.32,
+      "duration": 9.16,
+      "end": 932.48,
+      "text": "complexity is B go of n log of log n"
+    },
+    {
+      "start": 927.079,
+      "duration": 10.161,
+      "end": 937.2399999999999,
+      "text": "where n is 10^ 6 log log of log of 10 6"
+    },
+    {
+      "start": 932.48,
+      "duration": 7.159,
+      "end": 939.639,
+      "text": "plus b go of 10 6 plus b go of q q can"
+    },
+    {
+      "start": 937.24,
+      "duration": 5.599,
+      "end": 942.839,
+      "text": "vary and the maximum q that you can have"
+    },
+    {
+      "start": 939.639,
+      "duration": 7.161,
+      "end": 946.8,
+      "text": "is 10 to the^ 5 we not multiplying Q"
+    },
+    {
+      "start": 942.839,
+      "duration": 6.601,
+      "end": 949.44,
+      "text": "into n this is extremely optimized now"
+    },
+    {
+      "start": 946.8,
+      "duration": 6.2,
+      "end": 953.0,
+      "text": "the entire intention of solving this"
+    },
+    {
+      "start": 949.44,
+      "duration": 6.72,
+      "end": 956.1600000000001,
+      "text": "problem was that you understand how to"
+    },
+    {
+      "start": 953.0,
+      "duration": 5.36,
+      "end": 958.36,
+      "text": "precompute how to use the ceve they"
+    },
+    {
+      "start": 956.16,
+      "duration": 5.52,
+      "end": 961.68,
+      "text": "might twist the problem in some other"
+    },
+    {
+      "start": 958.36,
+      "duration": 6.32,
+      "end": 964.6800000000001,
+      "text": "way but the overall idea is we know that"
+    },
+    {
+      "start": 961.68,
+      "duration": 6.0,
+      "end": 967.68,
+      "text": "there is a black box which is in terms"
+    },
+    {
+      "start": 964.68,
+      "duration": 6.279,
+      "end": 970.959,
+      "text": "of n log of login which tells us the"
+    },
+    {
+      "start": 967.68,
+      "duration": 7.399,
+      "end": 975.079,
+      "text": "primes in the easiest possible manner"
+    },
+    {
+      "start": 970.959,
+      "duration": 7.201,
+      "end": 978.16,
+      "text": "this is the Black Box got this so this"
+    },
+    {
+      "start": 975.079,
+      "duration": 5.081,
+      "end": 980.16,
+      "text": "will be it for this one so I hope you"
+    },
+    {
+      "start": 978.16,
+      "duration": 3.56,
+      "end": 981.7199999999999,
+      "text": "have understood this entirely and if"
+    },
+    {
+      "start": 980.16,
+      "duration": 3.159,
+      "end": 983.319,
+      "text": "that is the case please please do"
+    },
+    {
+      "start": 981.72,
+      "duration": 2.84,
+      "end": 984.5600000000001,
+      "text": "consider giving us a like and if you're"
+    },
+    {
+      "start": 983.319,
+      "duration": 3.561,
+      "end": 986.88,
+      "text": "new to our channel do consider"
+    },
+    {
+      "start": 984.56,
+      "duration": 3.719,
+      "end": 988.279,
+      "text": "subscribing to us as well with this I'll"
+    },
+    {
+      "start": 986.88,
+      "duration": 4.28,
+      "end": 991.16,
+      "text": "be wrapping up this video let's me in"
+    },
+    {
+      "start": 988.279,
+      "duration": 5.0,
+      "end": 993.279,
+      "text": "some of video cuz then nobody take care"
+    },
+    {
+      "start": 991.16,
+      "duration": 5.44,
+      "end": 996.6,
+      "text": "when your heart is"
+    },
+    {
+      "start": 993.279,
+      "duration": 7.68,
+      "end": 1000.959,
+      "text": "broken don't forget your"
+    },
+    {
+      "start": 996.6,
+      "duration": 4.359,
+      "end": 1000.9590000000001,
+      "text": "golden I will"
+    }
+  ]
+}

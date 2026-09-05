@@ -1,0 +1,141 @@
+{
+  "video_id": "qyfekrNni90",
+  "position": 56,
+  "title": "BS-12. Koko Eating Bananas",
+  "url": "https://www.youtube.com/watch?v=qyfekrNni90",
+  "chunk_count": 12,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "qyfekrNni90",
+      "position": 56,
+      "title": "BS-12. Koko Eating Bananas",
+      "url": "https://www.youtube.com/watch?v=qyfekrNni90",
+      "start": 2.94,
+      "end": 122.22,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well so we will be continuing with our binary search playlist which is the part of the ongoing Strivers A to Z DSA course in case you haven't checked it out yet there's a link in the description please do check it out otherwise uh you'll end up missing out on a lot of things so the problem that we are going to solve today is Coco now Coco eating bananas Coco is an individual who is going to eat bananas but she has a problem in hand and the problem is they'll be given piles and basically n piles and every pile will have certain number of bananas for an example if you take this one or the first pile you have three bananas on the second pile you have six bananas on the 30 of seven and on the fourth you have 11 bananas and Coco will also be uh given a parameter H which is basically the number of hours so over here Coco is given eight hours now Coco's task is to eat bananas in the fastest manner but but she can only take at Max of 8 hours not more than that so your task is to tell Goku the minimum integer key so you have to basically find out that minimum integer K such that Coco can eat all bananas within eight hours now what is k k a is nothing but number of bananas she will eat per hour let me uh explain you so imagine I tell you that cocoa is eating uh two bananas per hour so for the first pile the number of hours that cocoa will take will be so there are three bananas in the first pile now remember Coco cannot move to the next file before finishing up on the previous one so if you have three bananas and you're saying two bananas per hour so Coco will take two hours to eat these three bananas ideally it will take 1.5 hours",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "qyfekrNni90",
+      "position": 56,
+      "title": "BS-12. Koko Eating Bananas",
+      "url": "https://www.youtube.com/watch?v=qyfekrNni90",
+      "start": 116.1,
+      "end": 232.319,
+      "text": "bananas ideally it will take 1.5 hours but whatever hour has been wasted like you cannot say Okay carry the point 0.5 to the next pile that cannot be done so if you are saying two bananas per hour okay for the first hour it will eat two and in the next hour since the pile just have just has one banana left it will take uh that one bananas So eventually on two hours it can eat three bananas so I can say cuckoo will take two hours to finish up three bananas I know it will take 1.5 but we always have to consider the seal value of ours so over here if I have six bananas and I'm saying two bananas per hour how many how much hour will it take it will take three hours very sure what about seven now this is seven so Coco will ideally take uh three points something but again if you're taking minutes it should always be considered as our in a single pile so the number of hours will be four hour why because seven bananas and two bananas per hour so it'll be like two plus two plus two this will be in the first three hour and in the remaining one you'll eat once it will be like uh 3.5 hour but you always have to take the seal value of hours so it'll end up taking four hour now in this we have 11 bananas so we'll end up taking uh 5.5 hours which is again you take the seal value that is six hours and if you sum it up like the total time that Coco took was three plus two five plus four nine plus six fifteen hours Coco ended up taking 15 hours but the problem stated you have to find the minimum integer K such that she can eat within eight hours so if you take two bananas per hour Coco will end up taking 15 hours which is not acceptable because eight hours is the deadline so obviously",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "qyfekrNni90",
+      "position": 56,
+      "title": "BS-12. Koko Eating Bananas",
+      "url": "https://www.youtube.com/watch?v=qyfekrNni90",
+      "start": 227.0,
+      "end": 341.22,
+      "text": "eight hours is the deadline so obviously this is not possible hence what Coco will do is Coco will probably try to increase this to Three Bananas per hour so when he takes three bananas per hour this will be taking one hour for sure because there are three bananas in that pile this will take two hours what about this this will take something like two point something thereby three hours what about this this will end up taking four hours if I'm not wrong am I wrong yeah this will end up taking four hours so what will be the overall value so if you sum it up it'll be four plus three seven plus two nine and ten hours which is again not under the deadline so maybe I can just increase this to four bananas per hour and this will take one so again take two this will take two and this will take three hours let's see three plus two five plus two seven plus one eight this is exactly matching the red line the deadline was eight hours if I eat four bananas per hour I'll end up taking exactly eight hours which is okay can I take five bananas per hour yes I can then the hour will reduce if I take six it might and reduce if I take seven it might reduce more if I take eight it might reduce more but the critical point of the question is minimum what is the minimum bananas per hour that you can eat you tried with two did not work you tried with three did not work you tried with four it did work so the minimum possible bananas per hour that he or she can eat is four thereby the answer is four so what is the first solution that comes to your head the extreme root force that I can think of is start with one banana per hour because that is the least I can eat and figure out the total time if that exceeds the deadline say",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "qyfekrNni90",
+      "position": 56,
+      "title": "BS-12. Koko Eating Bananas",
+      "url": "https://www.youtube.com/watch?v=qyfekrNni90",
+      "start": 335.16,
+      "end": 449.16,
+      "text": "time if that exceeds the deadline say it's not possible increase the count and move to the next integer which is two if that also exceeds increase the count move on to the next if that also increase move on to the next and whenever you find an integer which is under the deadline which is under the line you say this is possible and you stop and you return that as an answer and over here 4 was the answer so I stop at 4. this is kind of starting with one and keeping on increasing and we stop the moment we get our answer but the question is what can be the maximum possible answer like if I ask you like I know the minimum can be one banana per hour but what can be the maximum because I'm kind of trying to figure out a range what can be the maximum can I eat 13 bananas per hour I can but if I eat 13 this will take one hour this will take one hour this will take one hour this will take one hour which ends up taking 4 hours which ends up taking four hours so 13 does it make sense you will see maybe you can take 11 because even if you take 11 it will still take 4 hours but the moment you take 10 it might take slightly more than four might take slightly more than four so thereby the maximum will be 11 because even if you take 11 it is taking four hours even if you take 12 it will take four even if you take 13 it will take four even if you take 14 it will take four so the maximum banana in any of the piles is what you can eat as a maximum per hour so I can say one thing for sure my answer will always lie between 1 and 11. I just have to figure out the minimum possible integer in this range either the answer will be one like the answer will",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "qyfekrNni90",
+      "position": 56,
+      "title": "BS-12. Koko Eating Bananas",
+      "url": "https://www.youtube.com/watch?v=qyfekrNni90",
+      "start": 444.0,
+      "end": 554.4590000000001,
+      "text": "will be one like the answer will definitely be from 1 to 11. so I know that thing for sure so what I'll do is I know my answer will be from 1 to the max in the array the max in the array and you can easily figure that out you know how to find the maximum element in an array and what will you do after that you'll be like okay I so once I figured out the max this is the number of bananas you're eating so how much time will you require that's important to compute so what you can do is maybe you can write a function that computes so what you can say is required time maybe I'll write a function please compute me the required times I'll pass in the piles of bananas I'll tell him this is what you can eat per hour and you give me whatever time you require so this required time will be very easy to code I'll be so I have to write the function which computes the total hours it's going to be super simple I write the function I give him the pile of bananas and I tell him that this is what you can eat per hour after that I will basically write two till hours equal to 0 and I will go through the entire array which is going from 0 to the last element which is n minus 1 and I know at every pile it's gonna end up taking the Seal of array of I by the hourly that's very obvious because even if it's three point something I always take four even if it's six point something I always take seven so I can say the total hours will be added and eventually at the end of the day I can return the total hours like this correct so this will be returned as the total hours and this function will compute the total hours given the hourly rate at which you eat so this function is Computing you",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "qyfekrNni90",
+      "position": 56,
+      "title": "BS-12. Koko Eating Bananas",
+      "url": "https://www.youtube.com/watch?v=qyfekrNni90",
+      "start": 550.08,
+      "end": 682.1999999999999,
+      "text": "eat so this function is Computing you the total hours can I say if the required time is lesser than the given deadline this is your answer this is your answer very much sure and you end up so this is quite simple perfect it does work but what is the time complexity can I say the time complexity will be go off what is this running for Max of array element whatever Max the array has multiplied with basically running a function where you are where you're going across the entire piles of bananas so thereby it will be B go of n hence the time complexity is maximum of array element into n will this run no this will end up giving you a time limit exceeded so how do you improve this so if you remember I told you in initial classes we can apply binary search on answers whenever you see a pattern over here you are seeing a pattern you're seeing a pattern isn't it what is the pattern you know the range you know the range in which your answer will lie so if I go via for this particular example you know the range was 1 to 11. 123 was not possible 4 was the first first element where you can eat everything under the deadline five was also possible 6 was also possible seven was also possible eight was also possible nine was also possible ten was also possible so everything was possible is seeing a pattern not possible to possible now what you need to figure out is this particular thing this particular thing which is the least value at which it was possible can you apply binary search is my question yes you can whenever you have the scenario when you're sure not possible and possible you are sure about that what you can do is you can always replace this linear search because this is what you'd make this is a simple linear search where you're traversing from 1 to 11. the simple linear search can be replaced by",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "qyfekrNni90",
+      "position": 56,
+      "title": "BS-12. Koko Eating Bananas",
+      "url": "https://www.youtube.com/watch?v=qyfekrNni90",
+      "start": 676.8,
+      "end": 790.74,
+      "text": "simple linear search can be replaced by binary search and this is where this is where you can Implement binary search got it whenever you're solving uh questions related to binary search and answers it's very important to figure out the range like over here I know the answer will lie between 1 to 11. now the question is if you take 1 to 100 will the binary search work yes it will work it will also work if you take 1 200 but the key over here is to take the minimal possible range so that the time complexity is reduced whenever you're deciding the range as long as your answer is lying inside the range as as long as the answer is lying inside the range one research is going to work but whatever range you are taking the length of the range will determine the time complexity of binary search so it is very important that you make sure that you take the correct range so that the time complexity is minimized so over here we know that the range will be from 1 to 11 so I'll quickly write down the numbers so I've written down the numbers and what I can do is I can keep the low over here and I can keep the high over here so I've written down all the numbers and the low will always be pointing to the leftmost point and the high will always be pointing to the right most point whereas the first step figuring out the middle and the middle will be six why because 1 plus 11 by 2 6 super simple so you have six so what I'm saying is is 6 possible if it is possible then I will think afterwards but let's check if 6 is possible so I'll be like okay this will take one hour this will take one hour if I take six this will take two hour this will take two hour isn't it because that is what it will take what will be the total one",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "qyfekrNni90",
+      "position": 56,
+      "title": "BS-12. Koko Eating Bananas",
+      "url": "https://www.youtube.com/watch?v=qyfekrNni90",
+      "start": 785.82,
+      "end": 898.019,
+      "text": "it will take what will be the total one plus one two plus two four plus two six which is under the deadline so what I'm saying is 6 is a possible answer 6 is a possible answer maybe you can just store it in a variable but you'll understand without variable also this will work so you can store it in a variable saying okay 6 is possible now let's go back to the question it's asking me to find the minimum so will you go on this side or will you go on this side obviously this side because taking 7 8 9 10 11 will never help thereby you'll end up eliminating this portion and what you will say is okay this is no more possible thereby I'll end up taking High to this because taking seven eight nine will not make sense because I need the minimum perfect I have one and five again find the mid and the mid will be three this time so when the mid is 3 what will you do I'll again find the number of hours taken this will end up taking one this will end up taking two this will end up taking three this will end up taking 4 and the total will be 10 10 yeah which is greater than this particular 8 thereby what you can say is this is not possible this is not possible hence the answer will not be updated and if this is not possible if whenever you're eating like three bananas and it's not possible eating two bananas will also take more eating one will also take more thereby you eliminate this portion and this low will move to four this time just look at how binary search works next find out the middle this time it will be four plus five by two which is 4.5 that's 4 so the mid will be pointing to 4 this time let's again compute the total number of hours and see if it is fitting in our deadline this will be one",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "qyfekrNni90",
+      "position": 56,
+      "title": "BS-12. Koko Eating Bananas",
+      "url": "https://www.youtube.com/watch?v=qyfekrNni90",
+      "start": 892.74,
+      "end": 1017.3599999999999,
+      "text": "fitting in our deadline this will be one this will be two this will be two and this will be three so if I add it up one plus two three plus two five plus three eight it's fitting my deadline it's fitting my deadline so what I'll do is I'll update the answer to 4 because I've got a smaller value remember you moved left from six so whatever you will get will always be a smaller entity if it is satisfying the deadline so I move sorry I update for what's the job if you are saying this is possible 5 is also possible so you have already taken the minimum so thereby the high has to move because you eliminate the right part so the high has to move one before the mid one before the mid and this is where the binary search will end and this is where the binary search will end just erase it so that you can get a clear idea the binary search ends because the high has crossed the low and the answer is stored as sold so you can directly pick up the answer from this variable or if you carefully observe this was not possible this was not possible and these were possible and low was initially standing at a point which was not possible high was initially always standing at the point which was possible where did they end up at if you carefully observe high will always end up at the opposite polarity it was possible it ended up at not possible low was not possible it ended up being possible opposite polarity this is how you look at binary search it was asking us where it was possible so if the low was standing at impossible the low will always stand it possible thereby the answer will always be low this is how you figure out it's always the opposite polarity if you keep on doing examples you don't need to take this answer anymore without answer also you can just",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "qyfekrNni90",
+      "position": 56,
+      "title": "BS-12. Koko Eating Bananas",
+      "url": "https://www.youtube.com/watch?v=qyfekrNni90",
+      "start": 1012.199,
+      "end": 1144.38,
+      "text": "anymore without answer also you can just return the low and that will be your answer I hope you understood it so I hope you've understood the entire logic now it's time to write down the pseudo code it's going to be super simple by research given the array given the deadline low will always be one where will the high point two the max element so maybe you can write a function which figures out the max element in that array I'll leave that to you now you'll run while low lesser than equal to high in case you are still confused about the slow and high you can always keep an answer and since you need the minimum possible answer you can always keep it as into max to start off with or the max element whatever you wish to figure out the mid that's the first step figure out the mid once you've done this now figure out if this like whatever like what time is it ticking so maybe I can say total hours it takes write a function where you pass the array write a function where you are passing this array and this hourly banana eating rate and if you remember we have already written this function yes the same function after that you see hey if total hours is under the deadline I know this can be my possible answer this can be my possible answer and I need to look for minimum so I will go ahead and eliminate the right perfect or else no it's too small a value please increase low equal to Mid plus 1 perfect hence the while loop will end here hence the while loop will end here and this is how the binary search will look like now if I ask you about the time complexity what will be the time complexity of this particular code I'm doing the same function which is taking a big O of n so I'm still doing a big often but the linear search took the entire range like",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "qyfekrNni90",
+      "position": 56,
+      "title": "BS-12. Koko Eating Bananas",
+      "url": "https://www.youtube.com/watch?v=qyfekrNni90",
+      "start": 1139.4,
+      "end": 1238.28,
+      "text": "linear search took the entire range like you did run a for Loop We have replaced that with a binary search so this will take logarithmic off what is the range size the range was from 1 to 11 or can I say the range size was Max element so logarithmic of Max element because that was the range size because the range in which you did a binary search was from 1 to 11 so the number of elements were 11 which is the max element so the binary search will take logarithmic base to 11. thereby log base to 11 into the function which is counting the total number of hours so let's quickly go back to the code editor and look at the code and the shuttle changes that you have to do by the way you can find out the problem Link in the description and you'll find out C plus plus Java python JavaScript all the codes in the notes given below so uh this is a simple binary search the only thing that you have to take care is when you are doing the seal make sure you convert this to a double and this to a double because if you're doing integer by integer it'll give you an integer and when you send an integer to seal it will also return you the normal integer value so make sure to just type cast before dividing so that it it holds that double value and then you can pass it on to the seal so that you get the seal value that is very important so I will do is I'll quickly go ahead and submit this and this is the find Max function I hope you can write it so we are done with this so I hope you have understood this the main concept over here is to determine that range and to figure out where it is possible and where it is not possible once you figure that out you can solve every problem on",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "qyfekrNni90",
+      "position": 56,
+      "title": "BS-12. Koko Eating Bananas",
+      "url": "https://www.youtube.com/watch?v=qyfekrNni90",
+      "start": 1234.559,
+      "end": 1265.0,
+      "text": "that out you can solve every problem on binary search and answers this is my guarantee and yeah in case you are still watching please please do consider giving us that like and if you're new to our Channel what are you waiting for hit the Subscribe button and if you haven't followed me on Instagram Twitter and Linkedin all the profile links will be in the description when this I'll be wrapping up this video let's read some other video till then we're writing whenever your heart is broken don't ever forget your golden I I will find the light in",
+      "word_count": 102
+    }
+  ]
+}

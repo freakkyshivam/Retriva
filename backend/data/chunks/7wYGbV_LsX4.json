@@ -1,0 +1,130 @@
+{
+  "video_id": "7wYGbV_LsX4",
+  "position": 282,
+  "title": "L11. Subarray with k different integers | 2 Pointers and Sliding Window Playlist",
+  "url": "https://www.youtube.com/watch?v=7wYGbV_LsX4",
+  "chunk_count": 11,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "7wYGbV_LsX4",
+      "position": 282,
+      "title": "L11. Subarray with k different integers | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=7wYGbV_LsX4",
+      "start": 3.32,
+      "end": 129.16,
+      "text": "so let's continue with the two pointer and sliding window playlist from the sters a toz DS course whatever we're doing that he welcome back to the channel I hope you guys are doing extremely well so the problem that we will be solving today is subar with K different integers so what is the problem stating it stating that you will be given an array it will be containing integers also be given an integer K now your task is to count the number of subarrays any contagious portion of the array is known as subarray so you have to count down the number of subarrays which has exactly very important word which has exactly eight different integers let's pick up one of the subarray if I pick up this subarray how many different integers it has two that is 1 and two can I pick up this subarray and count it into my answer I cannot because I need exactly three exactly three can I pick up this one no I cannot why because this has four different integers four different integers so this also cannot be counted can I count this one yes I can count this one why because this has three different integers perfect I got one can I count this one yes I can count this one why because it has exactly three different integers that is 1 3 and four so the this can be counted I got two different sub Ares can I count this one yes I can because there there are four numbers but there are three different integers so thereby this can also be counted then this particular array I can see that I have three different subarrays or three subarrays with ke distinct integers so the answer is three and that is what you will be returning what if this problem comes up in an interview the extreme name solution that I can think think of is I'm hearing sub Aries right I'll be generating all the sub Aries yes that's",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "7wYGbV_LsX4",
+      "position": 282,
+      "title": "L11. Subarray with k different integers | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=7wYGbV_LsX4",
+      "start": 123.68,
+      "end": 250.12,
+      "text": "generating all the sub Aries yes that's the extreme na way I'll stand at one that's my first subarray the number itself then I'll take one two then I'll expand and take one to one one to one 3 1 2 1 3 4 so basically one as the first element and I keep expanding on the right and after that I can standard two and then I can keep expanding keep expanding so I'll be I'll be basically generating all the sub Ares and I'll be counting down those sub Ares where the number of different integers is exactly K very important so let's quickly write down the pseudo code again uh we will be starting off from zero index and it'll be going on the nth index every element can be considered as the starting element you can define a map which is going to store all the elements so that you can keep account of how many different integers have you seen till now after after that you can basically start from the index I and keep on adding elements till the last index and what you'll do is you'll go to the map and you'll say nums of J because that is the element that you're adding and you'll do a Plus+ once you have done that can I say if map do size is equal to equal to K exactly that means I have K different numbers and if that is the case you can do count equal to count + 1 and initially we can have count equal to Z and if if very important it's a small condition if MPP do size exceeds K there is no point in going to the right and adding elements because if it has exceeded K it cannot come back so what you can do is you can break out so that will be the end of the Fall Loop and that's it and you can return the count and what will be the time complexity can I say that the time complexity will be B",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "7wYGbV_LsX4",
+      "position": 282,
+      "title": "L11. Subarray with k different integers | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=7wYGbV_LsX4",
+      "start": 243.959,
+      "end": 370.12,
+      "text": "I say that the time complexity will be B of n Square near about and if you consider hashing that can go till n Square login what about the space complexity can I say the space complexity is B go of n at the worst possible scenario why because I have numbers if all the numbers are unique the map will end up storing all the numbers in it and if it's stores all the numbers the space complexity will be beo of and this is where the interviewer will not be happy because we we are using n Square it will ask you to optimize so we are looking to optimize n square that means I should be thinking of a solution which is around V go of N and if that is the case and the problem is having sub arrays in it which algorithm yes two pointer should come to your brain but this is not a typical two-pointer problem why because we're not asked to return the longest subarray rather we'll have to count down the total number of subarrays is slightly different so what I'll do is I'll start with a typical two-p pointer approach which is taking the smallest window expanding expanding expanding and then deleting and we will see why that doesn't works I'll try to figure out an algorithm that kind of works again very constructive it's not an algorithm it's more like a constructive thing so what I will do is I'll keep L I'll keep R the first segment which is this one and at the same time we will be taking a map data structure which tells us how many elements how many different elements we have first number is two so the first thing you'll do is you'll enter it into the map so what you'll do is number comma frequency that's what you'll store number comma frequency please store that perfect so as as of now can I say that for this segment the number of different integers is one so I cannot count this",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "7wYGbV_LsX4",
+      "position": 282,
+      "title": "L11. Subarray with k different integers | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=7wYGbV_LsX4",
+      "start": 364.24,
+      "end": 474.44,
+      "text": "integers is one so I cannot count this subar perfect so what I will do is I'll take R and I'll move it to one the moment I move it to one I will put it into the subar uh put it into the map so this time my segment is this can I count the subarray the total number of different integers is two I cannot count it if I cannot count it I'll move r I'll move R here so when I move R here the frequency gets updated this time can I count this sub array no because it still has two different integers so what I'll do is I'll take R and I'll move ahead again I have once I'll increase the frequency to three again I cannot count this segment so what I'll end up doing is I'll take up this R and I'll move it over here so when I move it over here we have a three and I'll put it into the map this time this particular subarray can be counted can be counted why because it has exactly three exactly three uh different integers so what I can do is I can have a count variable which is going to store one okay after this what I'll do is I'll take the r and I'll move it here so I'll insert four into the map now I'm asking a question can this segment be considered and it is saying that it has four different integers which is is more than what I require and if it is more than what I require that means the window has grown in size and if the window has grown in size I will have to I'll have to reduce so if I have to reduce I shrink down the window I take out the two so if I take out the two what happens is the two goes off because the frequency of two will be zero zero means you'll have to take it out of the",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "7wYGbV_LsX4",
+      "position": 282,
+      "title": "L11. Subarray with k different integers | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=7wYGbV_LsX4",
+      "start": 470.639,
+      "end": 610.8,
+      "text": "means you'll have to take it out of the map so if you take it out of the map the L will move ahead to this portion now you asking Hey listen will this window be valid or not and yes because the map has three distinct elements so this is valid so what you'll do is you will end up counting it and after this you will straight away take R and you will move it here right and you'll ask hey by the way please make sure you increase the frequency of three I've increased the frequency of three I'll be asking hey is this window valid and the answer that you get is okay is this valid yes it is valid because I still have three different integers which is 1 three and four I still have three different integers so you end up increasing the count but what happens is when you move this R you're actually losing out on a lot of sub Ares which are those so previously you did consider this right can I not consider this I can can I not consider this I can but you missed out on it so it is not sure that whether you should move the r window or you should shrink the L further it is not sure so you have to be careful about these things so whenever you are not sure about shrinking or expanding that is when you start thinking of some different approach now what if I just uh changed the problem statement I'll be changing the problem statement and I'll change the problem statement to can you count the number of sub arrays where the distinct or different integers are lesser than equal to K I'm changing the problem statement from equal to K to lesser than equal to K can I solve it I'm not sure but again I'll I'll try to do the standard sliding window and see if I can correct F expand and correct F shrink so what I'll do is",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "7wYGbV_LsX4",
+      "position": 282,
+      "title": "L11. Subarray with k different integers | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=7wYGbV_LsX4",
+      "start": 604.8,
+      "end": 732.32,
+      "text": "and correct F shrink so what I'll do is I will take an L I'll take a r and at the same time I'll be taking a map data structure which will be keeping a count of the number and again number comma frequency is what the map will be storing so I have the first segment so I can insert it into the map and I can keep a count remember we trying to find out number of subarrays where the different integers are lesser than equal to key okay so this is the segment I'm like can I consider this segment why not yes so my count will be + one and right after this you know why it is plus one right because it has one distinct integer it has one distinct integer which is lesser than equal to three thereby perfect the next thing I'll do is I'll just take on this r and I'll move it here so I have a one I'll take that one and I'll put it into the map this time I'm asking hey is this segment a valid one how do I know because the number of distinct integers is two which is lesser than equal to three so this is also valid but but but I'm saying this entire segment is valid but am I missing out on a sub array I am the one itself the one itself so whenever a new element is added it actually creates a lot more sub Aries that is one itself and then one two got it so what I'll end up adding is+ two to it so it will be three you'll understand as I keep moving it I'll take the r and I'll move it here so when I move it here the frequency increases now what I'm asking is hey is this segment valid and and this is a valid one because still has two distinct integers which is lesser than equal to K so what I'm trying to do is okay I've added one more",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "7wYGbV_LsX4",
+      "position": 282,
+      "title": "L11. Subarray with k different integers | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=7wYGbV_LsX4",
+      "start": 726.2,
+      "end": 846.32,
+      "text": "trying to do is okay I've added one more one so what subarrays am I generating what are the new subarrays I'm generating one itself because it has one distinct integer this one also and this one also now why are all the subarrays valid if the largest subarray is valid all the sub parts all the sub parts of it will be valent obvious that is why the one will be this then it will create this then it can create this so I can actually add three more to the answer so I add three more to the answer so that will be six what I can do next is I can take R sorry and take it to the next one so the frequency increases to three so again I'm asking is this valid yes so all the sub smaller parts in it will be valid so this one will end up creating 1 2 3 four so you can add a four so I can actually create 10 sub Ares where the sum is lesser than equal to K perfect I'll take the r and I'll move it to three so when I move it to three I have a three which is of a frequency one I'm asking again the same question is this segment valid and the answer comes up yes this is a valid one and if this is a valid one the three can form all of these subarrays all of of these sub Ares so in total it can actually Form 1 2 3 4 5 which is nothing but the length so I can increase it to 15 now what is the next thing I will take R and I'll place it here which is four 4 comma 1 now this is the moment I'm asking hey this is the segment is this a valid segment and it says no this is not a valid segment why because when I look over it it has four distinct integers and I'm looking for lesser than equal to",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "7wYGbV_LsX4",
+      "position": 282,
+      "title": "L11. Subarray with k different integers | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=7wYGbV_LsX4",
+      "start": 840.44,
+      "end": 953.839,
+      "text": "and I'm looking for lesser than equal to hence not valid and if it is not valid to shing down the window to shring down the window because if the longer segment is not valid I cannot be sure how many subp parts will be valid so what I'll do is I will trim down two so the moment I trim down two what happens is that two goes and the L will go one step ahead so the when the L goes one step ahead this is the new segment and this is the new segment I check it out and it says it is valid because it has three distinct integers and if the bigger sub part is valid I've added this element this was the new element that was added to the window thereby he itself including including including including till only here till only here and how many are there five so you can again add it so that will be 20 you can keep on doing this till the crosses the boundary you can keep on doing the dryon I'll not be emphasizing on it so we have kind of solved a part of the problem so what I will do is without wasting time I'll try to write down the pseudo code for this one okay so what I'm trying to do is break the problem down into sub problem and then try to solve it so nums and your given K you obviously will take L equal to 0 r equal to0 and there will be a counted equal to0 remember we are trying to solve the problem for lesser than equal to K number of subarrays whose sum is lesser than equal to K because we can be sure whether to move left or sorry whether to shrink or whether to expand we're very sure for this one okay next thing we'll be requiring a map so you can take a map again I'm writing down the pseudo code in case you want your language specific",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "7wYGbV_LsX4",
+      "position": 282,
+      "title": "L11. Subarray with k different integers | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=7wYGbV_LsX4",
+      "start": 950.48,
+      "end": 1085.64,
+      "text": "in case you want your language specific code you can find them below so what I will be doing is I'll be running a while loop standard sliding window and it will be going on till nums do size or you can just store it in uh n variable what you'll be doing is okay MPP nums of r++ perfect what after this I know one thing the segment has to be valid for its subp part to be valid so I'll keep a check hey if MPP do size seg ments the number of different integers is that lesser than K if this is not valid and you keep on shrinking keep on shrinking so I'll be writing a while loop I'll be writing a while loop and I can straight away go as MPP nums of L minus minus and you can do L = to L minus one and not here maybe before doing that what you can do is you can keep a very simple check hey if map doesn't contains this the map doesn't contains this please ask the map to take off this element and it will be doing it so you can just erase it perfect and then you can do L = to L minus one once youve done this you can complete the while loop done now you surely know that the segment L2 R has exactly ke different integers right so so the reason being the minimum value of K is 1 so you're very sure that this will happen after this what you can do is counter equal to counter plus the number of subpaths that you were able to create with the new element was R minus l+ one the length so you can just add it and then you can take R and you can say r + one and you can end up the while loop and then you can straight away return the count and that will end up the function okay so I've solved the problem for number of subar where the",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "7wYGbV_LsX4",
+      "position": 282,
+      "title": "L11. Subarray with k different integers | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=7wYGbV_LsX4",
+      "start": 1079.679,
+      "end": 1209.679,
+      "text": "problem for number of subar where the different integers is lesser than equal to K but wait I need it for equal to equal to K so can I actually solve the problem two times I can I'll say okay I'll find out the number of subar for lesser than equal to K right I'll find out that one for lesser than equal to K and I'll also find out for lesser than equal to K minus one I can also do that because I know the algorithm that finds out so I'll be finding out for lesser than equal to Kus one now if I have the number of subar for lesser than equal to K and for lesser than equal to K minus one how many will be exactly equivalent to K you heard that correct you can just subtract you can take this answer you can take both of the answers and you can simply subtract so what you'll do is you'll call the function like nums with K minus fun nums with K minus 1 and that will be your answer can I uh derive the time complexity I can there's a while loop on which it is dependent I can say this is taking a b go of n there is again an inner while loop where you are uh comparing and shrinking the window this throughout the course of time throughout the course of time will be taking B of in I've already done it in a lot of times I've already explained it a lot of times in the two pointer playlist so can I say that the overall complexity for the worst possible scenario will be beo of to and again assuming that the map Works in logarithmic sorry in constant time and the space complexity over here will be beo of and why because we are using a map data structure and the array contains all the unique elements all the elements are unique end up storing all elements of array into the map and the overall my bad the",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "7wYGbV_LsX4",
+      "position": 282,
+      "title": "L11. Subarray with k different integers | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=7wYGbV_LsX4",
+      "start": 1203.52,
+      "end": 1250.039,
+      "text": "the map and the overall my bad the overall time complexity will be two times of it will be two times of it why because we're calling it once for this once for this so the overall time complexity and space complexity will be two times of this so I hope you have understood this one so that will be it for this video so if you're still now watching and if you have understood everything please please do consider giving us a like and if you're new to our channel do consider subscribing to us as well with this I'll be wrapping up this video let's me in some other video till then byebye take care Bren golden",
+      "word_count": 119
+    }
+  ]
+}

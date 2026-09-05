@@ -1,0 +1,119 @@
+{
+  "video_id": "-vu34sct1g8",
+  "position": 142,
+  "title": "G-17. Bipartite Graph | BFS | C++ | Java",
+  "url": "https://www.youtube.com/watch?v=-vu34sct1g8",
+  "chunk_count": 10,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "-vu34sct1g8",
+      "position": 142,
+      "title": "G-17. Bipartite Graph | BFS | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=-vu34sct1g8",
+      "start": 3.52,
+      "end": 116.0,
+      "text": "hey everyone welcome back to the channel i hope you guys are doing extremely well so in this video we are going to learn about bipartite graph and we're going to uh solve this using the bfs technique so if you haven't watched the vfs video go back and watch it out so what is the definition of vipertite graph it states if you can color the graph with two colors such that no adjacent nodes have same color like you are given a graph and you can take any two colors black and white yellow and green any two colors in the world and if you are able to color it with those two colors such that none of the adjacent notes or you can call them as neighbor notes have the same color so for an example if you uh see this particular graph you see this right so let's take the color yellow and green and let's try to color it so imagine i give this a color yellow definitely this is the adjacent node i cannot color it with yellow color because the condition clearly states no two adjacent nodes have the same color so i have to color this with green so this is the next adjacent i cannot color it with green i have to color it with yellow so i'll color that with yellow and similarly green yellow green yellow green and over here it will be yellow because the previous one was green so this cannot be green so this will be a yellow and this will be a green and if you see for this particular graph i was able to color this particular graph but just two colors do you see that yes i took two colors and i was able to color this graph with two colors so thereby i can say that this graph is nothing but a bipartite graph yes this graph can be called as a bipartite graph now let's look at the next example now if you see this example and i again",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "-vu34sct1g8",
+      "position": 142,
+      "title": "G-17. Bipartite Graph | BFS | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=-vu34sct1g8",
+      "start": 111.2,
+      "end": 226.4,
+      "text": "now if you see this example and i again take the same color yellow and green and i try to color this will be yellow this cannot be yellow so it will be green the next one cannot be green so it will be yellow then it will be green then it will be yellow then it will be green so if you go over here this is green so this cannot be green so this will be yellow now the moment you try to color this with green because you cannot color it with yellow because this was yellow so you have to color it with the other color which is green but if you try to color it with the other color green you see that the next adjacent node also has a green so you need to color it with yellow but wait this is having a yellow color so you are somewhere in between where one of your adjacent notes has a green one of your artisan notes has in yellow thereby you cannot color it with any of the colors because the moment you color any of the two notes will have the same color thereby i can say this graph is not a bipartite graph i hope that makes sense something to observe something to observe very deeply we can always color a graph which is a linear graph imagine you're given a graph like this linear graphs now these are called linear graphs which will never have a cycle which will never have a cycle so you can always take two colors since they do not have a cycle you can just go on coloring them so linear graphs with no cycles are always bipartite are always pi per tight remember this they're always bipartite graph now what is the next step the next step is uh but this is a graph of the cycle but the cycle length let's count the cycle length the cycle length is one two three four five six so any graph with an even cycle length",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "-vu34sct1g8",
+      "position": 142,
+      "title": "G-17. Bipartite Graph | BFS | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=-vu34sct1g8",
+      "start": 221.44,
+      "end": 340.479,
+      "text": "so any graph with an even cycle length can also be vipetite very very important any graph with the even cycle length any graph with a evil is a even cycle length can also be pipette so i can say that any graph with the even cycle length can also be bipartite so which graphs cannot be vipetite yes any graph with a length of odd if you count the length 1 two three four five any graph which has an odd length cycle can never be a bipartite any graph with odd length cycle can never be a bipartite so if you're checking for bipartiteness and the graph is not a bipartite graph then you can say that the graph has a odd length cycle thereby it is a non-bipartite graph i hope the definition of bipartite is clear to you so we are going to check for bipediteness using the bfs algorithm and you know what are the requirements of a bfs algorithm it requires a queue data structure it requires a visited array but instead of visited we will take a color array where we have all the eight notes and everything is non-colored and minus one means not colored yet yes minus one means not colored yet and what we will try to do is we will try to color it with color zero or color one you can take any other colors as well but i'll try to color it with color zero and color one these are my two different colors and for this particular graph this is the corresponding adjacency list okay now let's quickly start off you can start with any of the given notes what i'll do is i'll start with this particular node one and i'll try to put that into the queue now whenever i try to put that into the queue what i'll try to do is i'll try to assign it a color so let's assume we start with color zero so i'll go over here and say hey listen you have",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "-vu34sct1g8",
+      "position": 142,
+      "title": "G-17. Bipartite Graph | BFS | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=-vu34sct1g8",
+      "start": 336.639,
+      "end": 442.08,
+      "text": "go over here and say hey listen you have a color zero he's like okay fine i have a color zero so apparently this guy has a color zero so that's the starting that's the initial stuff now you start to iterate on the cube now you start to iterate on the queue and you always get the top most element out is you always get the top most element out so what is your node the node is now one for you right the node is one so if i ask you who are the neighbor nodes of one that's two and you can easily get that by the adjacency list so the neighbor node is two now what we do is we check is the neighbor node colored and we see that the neighbor node is yet not colored so according to the biper tightness definition what is the definition no adjacent notes must have same colors so if this node one has a color zero so the adjacent node should have which color the opposite of it which is one so what you do is you color it with one yes you color this with one and not minus one you color this with one and you put that note into the queue data structure once you've done this i can say that this particular node does not have any further adjacent nodes thereby it's done next again you get the next guy too so let's see the next guy too and now let's check out for two for the adjacent notes of two for two the first adjacent note that you get is one which is already colored so there is no need of coloring this which is the next one three which is the next one six so there are two adjacent notes which have not been colored one is three one is six which color will you give three which color will you give three obviously the color that this guy has the opposite of it so that is zero so you give the",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "-vu34sct1g8",
+      "position": 142,
+      "title": "G-17. Bipartite Graph | BFS | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=-vu34sct1g8",
+      "start": 437.039,
+      "end": 539.04,
+      "text": "it so that is zero so you give the opposite color zero and you just put that into the queue which is the next adjacent node fix you give it the color zero and you put it into the cube so you can just give 6 the color 0 and put that into the queue so i can see the iteration for the node 2 is also completed let's get the next node which is node 3. now let's check for node 3. who are the adjacent nodes of node 3 let's quickly check it's 2 and 4 but we see 2 is already colored and is the color correct is the color correct have a check this node had a 3 0 color and the adjacent node has a color 1 so it's ok the adjacent notes do not have the same color which is the next adjacent node four does it have a color no please color it with which color opposite of it so that will be one so you go to four and you say okay can i give it a color one i will i will give it a color one and at the same time i'll put that into the queue data structure so i can say the node three is completed now i can see that the node three is completed now let's get the next node which is node six they'll get the node so the note 6 is here which is already colored with color 0. so note 6 says my adjacent node is 2 which is having an opposite color so that is ok we have a node 5 which is yet not colored we have a note 5 which is yet not colored so this is color 0 you need to color it with color 1 you need to color it with color 1 so this takes the color 1 and you can just put on the note 5 perfect so i can say the note 6 is also done let's see the next one which is node four",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "-vu34sct1g8",
+      "position": 142,
+      "title": "G-17. Bipartite Graph | BFS | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=-vu34sct1g8",
+      "start": 533.92,
+      "end": 665.6800000000001,
+      "text": "is node four this is the node four and here is you see a problem but this is where the node four will come in and give and will tell you that okay there was a problem so let's see for note 4 note 4 has a color one note 4 has an adjacent node of 3 so this adjacent node has an opposite color to this color which is okay next note 4 has a 5 but this 5 which is already colored has the same color has the same color thereby i say hey wait this guy has an adjacent node which was colored in some other direction and it apparently has the same color as i do have not a bipartite graph and you straight away say no you straight away return false saying it is not a bipartite graph if at any moment you find that any of the two adjacent notes are having are having the same colors you straight away tell them go back go back yes that is what you do so i will quickly take an example to show you what if it had an even length of cycle so let's quickly take an example four five perfect this is an even lens cycle so if you would have done uh if you would have taken the q data structure assuming you have this entire bfs algorithm into your head so node 1 color 0 node 1 will go to now that is the node will be 2 color 1 node 1 is done and push is 2 so node 1 is done next node 2 right node 2 says my adjacent is 1 which is color 0 okay we have a 3 we have a 5 opposite colors opposite colors three and five done next we get a note three the moment we get a note three no three says our color zero i have an adjacent two which is an opposite color so okay i have an adjacent four which is not colored color it with the opposite color",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "-vu34sct1g8",
+      "position": 142,
+      "title": "G-17. Bipartite Graph | BFS | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=-vu34sct1g8",
+      "start": 660.32,
+      "end": 777.6,
+      "text": "colored color it with the opposite color colored so now this 4 will go here perfect done next node 5 so node 5 says i have two adjacent nodes and both of them have opposite colors to what i have so that is okay so note 5 is done next node 4 comes in now when node 4 comes in it says okay we have one and this one has zero this one has zero only one is there which is uncolored color it with zero and put that into the queue node four is done next node six comes in and it says hey listen i have zero my adjacent node has one and i don't have any further adjusted notes so i'm done so ultimately ultimately yes the queue if you carefully see the queue becomes empty and you are able to color the color sorry you were able to color the graph and that will be stored in the color array and that will be stored in the color array so if you are able to color the graph and there is not a place where two adjacent nodes have the same color you can say that that graph is a bipartite graph i hope that makes sense so you might think okay bfs did work but what is the intuition the intuition is very simple it has brute force yes it is brute force what i did was very simple i started by coloring it uh coloring it with zero and whenever i found an adjacent note i gave him an opposite color at the next time whenever i had someone with color zero i give the adjacent notes zero and during the traversal if at any moment any two adjacent notes have been by mistakenly colored with the same colors i say it's not bipartite simple brute force of filling up colors zero one just keeping in mind two adjacent notes cannot have same color at any moment of traversal you get two adjacent notes having same color that means there has been a",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "-vu34sct1g8",
+      "position": 142,
+      "title": "G-17. Bipartite Graph | BFS | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=-vu34sct1g8",
+      "start": 773.44,
+      "end": 902.0,
+      "text": "color that means there has been a mistake and it's not a paper type simple there is no intuition it's a simple brute force of filling up colors using the traversal technique so now let's quickly get to the code so as usual i'll be writing the c plus plus code and the java code is on the left so we're given the adjacency uh list and the number of notes so we're going to follow a pfs technique so q we can secure that push uh it's a zero based indexing so zero we need a color so color of this please make sure all of these are colored with color of i equal to minus one so color is also done now let's quickly go on uh to travis the queue i can say node equal to q dot front right then i can secure that pop up now let's quickly travel in the adjacent nodes which is these guys and i say hey listen if you're yet not colored very very important if you are yet not colored that means this so at the first step make sure you color the zeroth guy with initial color zero so remember if the adjacent node is yet not color if the adjacent node is yet not colored what will you do you will get the opposite color will give the opposite color of the node so can i say the adjacent node is i t so the opposite color of the node will be not of this zero becomes one or one becomes zero but what if it has been colored what if it has been colored you just check hey adjacent note is your color equal to michael k adjacent node check so you just go ahead and say hey is the adjacent guy having the same color if it is that means someone would have colored before someone did color it on some other part like you saw in the example that we took this was colored in this direction so",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "-vu34sct1g8",
+      "position": 142,
+      "title": "G-17. Bipartite Graph | BFS | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=-vu34sct1g8",
+      "start": 897.92,
+      "end": 1014.0,
+      "text": "this was colored in this direction so someone would have colored it but if it violates then i say it is not a bipartite and i say it is not a bipartite remember this and over here if you're coloring just make sure you push that node over here and once everything is done and if you find that you have travis everyone and this never appeared and you you're able to put in colors that means it is a bipartite and you can just return a true so let's quickly compile this and check if it is working fine it looks like our code is failing on a very large test case now since there is no mention that there can be different components as well so i'm assuming that there are multiple components and we are just checking for starting with zero so if you remember the components code you just need to run a for loop and if we are able to run a for loop i think we should be able to check it so public or we can do it private bull check and we can just take the starting node and we can take the same thing yes just make sure you take the same thing so usually whenever it feels on larger test cases it's generally the component thing so what you'll do is you'll just take it back if you'll just take it back and over here instead of zero you'll say start perfect and over here you'll say start and this color is something which you can define maybe here perfect and that's done so this color is a component these colors are component individual right individual component is what it now this particular bull check well just check for component so now you can take the color away again these things uh component stuff i've already done in the previous videos please go back and watch it please please go back and watch it so over here it's very simple now you know",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "-vu34sct1g8",
+      "position": 142,
+      "title": "G-17. Bipartite Graph | BFS | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=-vu34sct1g8",
+      "start": 1009.519,
+      "end": 1107.039,
+      "text": "over here it's very simple now you know the notes are from 0 to v so just go something like this and say if it is not colored it means this component has not yet been touched so check for the check whether not i and v adjacent and the color guy and once you have checked it if if this comes out to be false that means this is not a vipertide and you can return or else at the end of the day if you have checked for all the components you can just return a true it's the same for loop that i've been teaching you in connected components like sorry components that if there are multiple components you always write the logic inside of for loop so what i'll do is i'll just quickly uh run this off it does it does run fine so it was for the component so remember whenever your code usually fails for larger test cases uh try this stuff out check for all the components what you can do is you can always start off with writing like this just in order to be safe so this is how we can easily check for piper tightness so what is the time complexity in the space complexity of this particular approach it's a similar to the pfs algorithm whatever bfs algorithm takes it's a similar over here so if you haven't checked out our bfs video you can go back and check it out so guys i hope i was able to explain you what is a bipartite graph so just in case i was please please make sure you like this video and if you're new to our channel what are you waiting for hit that subscribe button please please do hit that subscribe button if you haven't checked out our dpc's and the hd sheet the links are in the description with this i'll be wrapping up this video let's read some other video till then bye bye take care whenever your heart is [Music] a light broken",
+      "word_count": 349
+    }
+  ]
+}

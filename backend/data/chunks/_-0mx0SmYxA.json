@@ -1,0 +1,152 @@
+{
+  "video_id": "_-0mx0SmYxA",
+  "position": 165,
+  "title": "G-40. Number of Ways to Arrive at Destination",
+  "url": "https://www.youtube.com/watch?v=_-0mx0SmYxA",
+  "chunk_count": 13,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "_-0mx0SmYxA",
+      "position": 165,
+      "title": "G-40. Number of Ways to Arrive at Destination",
+      "url": "https://www.youtube.com/watch?v=_-0mx0SmYxA",
+      "start": 2.879,
+      "end": 118.13999999999999,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well so today we will be solving this interesting problem number of ways to arrive at a destination till now we have been doing problems like shortest path and all these stuff but this is pretty interesting and it's different from the all the standard problems so you're in a city that uh consists of an intersection numbered from 0 to n minus 1 which means that it's a zero based indexing uh graph and it's an undirected graph okay and these are definition of graphs so yeah given an integer n and 2D integer where they have stated uh the roads basically uh there's a Road between u and v and in order to travel from U to V or V to U you are taking time this means that whatever it is you want to uh know in how many ways you can travel from they've given the source as zero and the destination as n minus one now to figure out in how many ways can you reach from 0 to n minus 1 in the shortest amount of time is what the question does ask you so if you look at this particular example and N is seven so the source will be 0 and the destination will be 6 okay so if you travel from 0 to 6 directly it's taking you seven and this is the shortest that you can do enter out all other parts zero four six five and two again seven if you uh try something like zero one two five six zero one two five six you can see two three one one that is again seven and there is again 0 1 3 5 6 0 1 3 5 6. that's one three one one which is sorry two three one one which is again seven so all of these four parts are taking seven there is one other path as well which is this this this which is",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "_-0mx0SmYxA",
+      "position": 165,
+      "title": "G-40. Number of Ways to Arrive at Destination",
+      "url": "https://www.youtube.com/watch?v=_-0mx0SmYxA",
+      "start": 112.439,
+      "end": 246.54,
+      "text": "well which is this this this which is going to take you to three three which is eight but that's not what we require we require the number of shortest paths in short the question is the number of shortest Parts is what they're asking not the shortest path how many parts are there which are shortest is what the question States what is the first intuition that comes to your mind when you think of finding the number of shortest paths it is definitely something like if this is a source and the destination is this and we are reaching via various paths and if if I can figure out the shortest distance assume the shortest distance to be X this is also taking X this is also taking X in total this is also taking X and assume this takes X plus 5 so x x x three parts one two three so I can see the number of times someone reaches the destination with the shortest path is what I'll count that can be an intuition that is actually wrong that might work for examples which are something like this if I give you an example something like this a very very straightforward example where I take unit distance on every Edge weight so I'll be like okay one two so the distance over here assigned minimum distance assigned is two so you'll be like okay two again someone came by two again someone came by two so three times two did arrive so I can say it's three times oh what happened yeah three times we assigned or we ended up having two but this is completely wrong let me give you an example to prove it why it is wrong now assume I take this particular example okay now you will be thinking okay there's one guy coming from here there's one guy coming from here there's one guy coming from here so you might think we'll count this as part one part two part three so apparently if you",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "_-0mx0SmYxA",
+      "position": 165,
+      "title": "G-40. Number of Ways to Arrive at Destination",
+      "url": "https://www.youtube.com/watch?v=_-0mx0SmYxA",
+      "start": 242.76,
+      "end": 372.66,
+      "text": "two part three so apparently if you follow this logic you'll get three parts because once you'll come from this note once you'll come from this node once you'll come from this node so there can be three instances that is actually wrong why because one path might be this which is taking three Right One path might be this which is taking three something to observe the first path went via this and the second path also went via this got it again this might be a path which is again taking three again this might be a path which is again taking so can I see that if I just count one path from here that is wrong because to reach here to reach here there were two paths right so can I say to reach here there were two parts to reach here there was just one path to reach here there was just one path so can I see if I'm taking this I have to actually count two instead of counting one then one one so I can say four instead of three so you just do not say that okay I came from here I came from here I came from here and everyone was like distance three because this path also gave me three this also gave me three this also gave me three and there were three guys who gave me three so I cannot say three parts no because this he himself is arriving from two different positions or two different ways so if he himself is arriving from two different ways we just cannot count it as one so the logic of saying that the number of times I get the shortest path to the destination is actually wrong you have to trace back you have to trace back how many times did every node if this arrived to if this could have been 10 this could have been 100 you just have to add all of these guys who are arriving so if you're arriving at a node",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "_-0mx0SmYxA",
+      "position": 165,
+      "title": "G-40. Number of Ways to Arrive at Destination",
+      "url": "https://www.youtube.com/watch?v=_-0mx0SmYxA",
+      "start": 366.24,
+      "end": 492.539,
+      "text": "arriving so if you're arriving at a node if you're arriving at a particular node via various assume Node 1 node 2 node 3 and everyone and everyone is giving you the shortest distance then you say ways of node will be it won't be like one one one no it will be ways I arrived at this which is ways of node one plus the ways I arrived at the second node someone would have arrived over here at the top got it and plus the ways someone would have arrived at the Note 3 and I summarized that up I summarized that up and that is what the total ways will be similarly in order to find this guy the number of times these guys will be arriving similarly in order to find the ways for this this one so I hope you have understood the intuition what I was trying to convey just in case you did not not an issue I'll be taking this complex example and trying to explain you the intuition as well as the dry run so that the algorithm or the logic gets into your head straight away as usual we will be applying the Dragsters algorithm so what is the initial configuration right EQ and a distance but this time we need to count the ways as well so an additional ways array will be defined so let's check out the initial configuration so initially we will have a priority queue which is going to store a distance and a node as similar to the dextrose algorithm we will have a distance array we know the source is 0 so 0 will be assigned to 0 because when we start off the distance is always zero now we have an additional ways yes a number of ways in which you can reach a particular node now remember this is your Source node so what I say is hey I know one thing there's only one way where you can start from the source so let's keep it as one and everyone",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "_-0mx0SmYxA",
+      "position": 165,
+      "title": "G-40. Number of Ways to Arrive at Destination",
+      "url": "https://www.youtube.com/watch?v=_-0mx0SmYxA",
+      "start": 487.62,
+      "end": 598.7399999999999,
+      "text": "so let's keep it as one and everyone else has not been reached yet let's put a zero saying you haven't been reached your number of ways as of now as of now is zero okay now initially distance 0 Source uh node 0 is what we will put into the practicum so first iteration says Ahmed 0 I'm at the node 0. where can I go from 0 where can I go from 0 is my question so from 0 you can go to one you can actually go to two you can go to three and you can go to four and these are the distances you will take I'm assuming you are now very comfortable with tag straw so if you go to one this will be added and if you go to one plus one so the distance will be one so you'll see that the one is having infinite so I'll go and update this to one and you'll see one in order to reach one and can I see if you're coming from here this guy was taking one way and you're coming from here this guy will also take one way in order to reach via a distance of one can I see this I can so I'll update this to one as well I'll update this to one as well fine I've updated everything now can I go to two I can and the distance will be two so go and update that to two I can go with a distance of 2 2. and the ways will be one because from 0 0 was to reach 0 there was one way and if you're going via this it's just a one way to reach here right next you can definitely go to three which is taking one so again so three is taking one so one comma 3 is what you will put into the minimum keep data structure okay now what I will do is I'll also update the ways to be one because if you're coming from the source",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "_-0mx0SmYxA",
+      "position": 165,
+      "title": "G-40. Number of Ways to Arrive at Destination",
+      "url": "https://www.youtube.com/watch?v=_-0mx0SmYxA",
+      "start": 594.06,
+      "end": 706.4399999999999,
+      "text": "because if you're coming from the source again to 3 it will be one way similarly to four the distance will be two so go and update the distance to 2 The V is to 1 and I can say distance 2 to node four so I can set the iteration for zero is over pretty simple the Practical says who will be at the top the minimum and the minimum is 1 comma 1 so take out one comma 1 I am saying one in order to reach the Node 1 from 1 where can you go you can go back to zero that's gonna take a plus like if you try to go back to zero that will take a plus one and it will make a total distance of 2 which you will not consider because you're reaching at zero already not to be considered from one you can also go to five so if you decide to go to Five that will take a distance of 2 make a total distance of 3 which is better than infinite so you go and say okay I can reach at a better distance three so three comma 5 is what I'll take to reach now what will be the number of ways now one says I can reach in one way I just have one way so you will also 5 will also be one way right so I'll say okay five you can also keep one to yourself perfect done what will be the next smaller guy among all of these one comma three so I'll be like okay one and I will have a node three one and I'll have a node three so on node three where I'm I node three right where can I go I can go to five very very important very very very important Okay so I can go to node five that will take a distance of 2 correct so the total distance will be 3 carefully observe something very very carefully observe something",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "_-0mx0SmYxA",
+      "position": 165,
+      "title": "G-40. Number of Ways to Arrive at Destination",
+      "url": "https://www.youtube.com/watch?v=_-0mx0SmYxA",
+      "start": 702.3,
+      "end": 823.8000000000001,
+      "text": "something distance is taking as three right now I see at node 5 it's already taking a distance of V so it's not the first time it is not the first time that I am reaching with a minimal distance because three I've already reached I'm again reaching via another path with the same minimal distance so thereby I can say one more way I can and so in order to reach 3 how many ways did I take one so this will also be one way so I'll say five increase your number of ways to to not to reach 5 with a distance 3 I have taken something like this but will you put this into the priority queue is there a point of going and putting three comma 5 again when it is already there no but I need to count my ways because one more way I got got it perfect amazing super next where can 3 go 3 can go to seven and six let's try to go to seven so if three tries to go to seven seven is in finite so the distance taken will be plus three and the total distance will be four four way is one four comma seven is what you'll put into the priority queue it can also try to go to six if it tries to go to Six distance will be plus two total distance three first time one way this is three node six perfect right so I'll just quickly very simple because this one was one way one and three and this was on one way one and two and since you reached three via One path this will also be one path and this will also be one path so done let's erase this is this what's the next thing you'll figure out who uh sorry by the way uh one comma three is done so erase it now who is the next guy out of this which is the smallest two comma two take a two",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "_-0mx0SmYxA",
+      "position": 165,
+      "title": "G-40. Number of Ways to Arrive at Destination",
+      "url": "https://www.youtube.com/watch?v=_-0mx0SmYxA",
+      "start": 817.2,
+      "end": 936.0,
+      "text": "the smallest two comma two take a two comma two distance of 2 to a node 2. now from 2 where can you go you can go back to zero yes with a two you can go back but if you go back to zero with a distance of 2 total distance of 4 not to be considered because it's not the minimum okay where can you go you can go to five very very important again if you go to Five you take another one make a total distance of three but five says Hey I've already taken three so and one more and one more way in which I can reach five and one more way in which I can reach five the same minimal distance so I'll say no need to put this into the priority key no need just go and say to update this to one more way so three ways now wow amazing next I'll be like uh no two can you go somewhere else it's like no no I'm done with no two perfect so now two is done the two comma two is done next will be 2 comma four okay where can four go let's quickly Analyze This four can go to six four can go to six so let's see if I try to go to Six I'll take another one which will make a total distance of three but wait wait six has already taken a distance of three one more way guys with the distance three one movie with a guy distance three so I'll just increase this to do I need to put into the priority queue four could have gone back to zero but not to be considered okay so two comma four res also done who's the next guy three comma six or three comma five b comma five yes distance of three to a note five distance of 3 to a note 5 very very very important please please stay focused because this is where you understand the crusp of the algorithm",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "_-0mx0SmYxA",
+      "position": 165,
+      "title": "G-40. Number of Ways to Arrive at Destination",
+      "url": "https://www.youtube.com/watch?v=_-0mx0SmYxA",
+      "start": 930.18,
+      "end": 1060.74,
+      "text": "understand the crusp of the algorithm okay so you're reaching five by taking a distance three five can go to one but not to be considered can go to one not to be considered can go to three not to be considered because none of them will be lesser than these guys none of them will be lesser so there's only one way which will be lesser which is if you go to node 8 and that will be a total distance of Port it is infinite food but will you just put one or will you put three think very obvious you know in order to reach five the number of ways where three five could be reached in three ways so there are three parts which are associated with five so can I say that even if you reach eight for the first time with a distance of four but you actually reached for three times understood because there might be one way from here but actually this is three combination combination right so I can say okay I will just take whatever way is five has which is three perfect uh I get excited but yeah uh that's how I teach so I can say as of now four comma 8 is what I can reach so done so I can say this is done so thereby uh three comma 5 is done amazing next which is the smallest three comma six three comma six now six says where can I go let's stand at six cannot go to three not it will not give short cannot go to four it will not give shot can go to eight again important can go to 8 by taking a distance of 4 can go to eight right three plus one gives a four but eight says hey wait I've already reached with a distance of four you again reached by some other part which takes the same distance thereby I will go see A6 how many times did you did you how many",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "_-0mx0SmYxA",
+      "position": 165,
+      "title": "G-40. Number of Ways to Arrive at Destination",
+      "url": "https://www.youtube.com/watch?v=_-0mx0SmYxA",
+      "start": 1056.059,
+      "end": 1174.1399999999999,
+      "text": "how many times did you did you how many parts were there for you is this two which is very obvious I'll be like let's take two and add it to myself I have five parts now which reaches at eight with a four distance it's not just two it's five because you took into account these guys as well got it so do I take four and eight and put it no because they've already reached they do not take and put perfect next I have taken six into account so this is done actually Four comma seven so four comma seven now we have reached 7 with a distance of 4. now I can go to eight with a plus one makes it a total distance five but I'm like it's five it's more than this No need no need ignored similarly you can go ahead by doing focum ID will not get anything at the end of the day eight says I can reach in five ways eight says I can reach in five ways got it very simple very very simple so I hope the intuition was clear as well as the entire dry run because that is where the crust of the algorithm is now we will try to code this up so what are we given we are given the number of roads actually so we need to create the graph so we know the graph will be storing adjacent nodes and the edge weight so create the graph and we'll surprise because it's a one base indexing arrays so go ahead uh to all the roads and say hey Roots uh can you just go ahead let's take it this yeah ID of 0 dot push back of it of uh one which is the first adjacent node comma idf2 which is the weight similarly can I say I'll copy p is the same thing because it's an undirected graph and I'll make it 0 and I'll make it one uh one and zero so graph is ready now we need to",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "_-0mx0SmYxA",
+      "position": 165,
+      "title": "G-40. Number of Ways to Arrive at Destination",
+      "url": "https://www.youtube.com/watch?v=_-0mx0SmYxA",
+      "start": 1170.059,
+      "end": 1294.26,
+      "text": "zero so graph is ready now we need to apply diagrams algorithm so if you remember the direction is algorithm it required practical so let's quickly declare a priority queue this is how I can declare a priority queue of pairs because I'm going to store distance and node next is very very simple I'll take a distance and I'll say Okay n comma 18 everyone with infinity and I'll take a ways of uh one uh sorry n comma zero but after this we need to initialize so can I say distance of the source which is 0 0 can I say the ways in which you reach the uh starting node is just one and can I see PQ dot push will always contain distance 0 and the node 0 done now I can go ahead and iterate in the queue so simple diagram go and I trade in the queue next I can say Auto off i t or I can just maybe write something like I need this equal to P Q dot top DOT first and I can say int node equal to PQ dot top second and I can go ahead and say p q dot pop pop next I can go ahead and iterate on the graph and I can say the adjacency node is this and I can see the adjacency weight is this correct now what is the next thing the next thing I need to check is if the distance taken till now the head to eat is less than distance of adjacency node that means this is the first time I'm arriving this is the first time I am coming with this short distance it's not the repeated occurrence it's the first time I'm coming so can I say the way sorry let's first update the distance then I'll talk about the ways will be this plus 80 weight and I can say PQ can you go ahead and put uh This plus Ed weight comma adjacency node I can right what",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "_-0mx0SmYxA",
+      "position": 165,
+      "title": "G-40. Number of Ways to Arrive at Destination",
+      "url": "https://www.youtube.com/watch?v=_-0mx0SmYxA",
+      "start": 1289.58,
+      "end": 1414.3799999999999,
+      "text": "comma adjacency node I can right what about the v's can I see in order to reach the adjacency node I came via node I came by a node so whatever node was I'll just take it I'll just take it I'll not add it because it's the first time I'm arriving with such a short path so I'll just copy it but what if we are having a same path as the shortest path already arrived then I'll say okay no need to update the distance because this is the same shortest distance I've already gone so I'll be like ways off adjacency node can you please take ways like can you just go ahead and take adjacency node plus ways of node it should be like yes because whatever ways you have reached I'll just take you because that's my job once you have done this can I say this is what you'll return because that's what they need n minus 1 because that's the destination but wait will you submit this no because they are saying that please return the answer modulo 10 to the power 9 plus 7. so maybe you can keep something like okay now whenever you use modulo just make sure you do a modulo whenever you do an operation Like A Plus or a multiplication just do over there and over here also you can just go ahead and return it I think uh this much should be more than enough and now let's quickly compile and see if it is working fine [Music] errorless code at one go I'm proud of myself let's quickly submit this and see okay so it works fine now it's time to discuss the time complexity so we're using a very simple uh textures algorithm so I can say it's e-lock V because we're using something like this but this doesn't adds up to the time complexity it adds up uh we go of n to the space but not to the time got it so so guys I hope uh you were able to",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "_-0mx0SmYxA",
+      "position": 165,
+      "title": "G-40. Number of Ways to Arrive at Destination",
+      "url": "https://www.youtube.com/watch?v=_-0mx0SmYxA",
+      "start": 1409.1,
+      "end": 1445.9,
+      "text": "so guys I hope uh you were able to understand the entire intuition the extreme Dryden and now the code so just in case you did please please please make sure you like this video and if you're new to our Channel what are you waiting for hit that subscribe button right away and please let me know in comments did you like the energy of this video or not and if you uh if you haven't checked out our DP series and the SD sheet the links are in the description for this I'll be wrapping up this video let's read in some of the video till then bye whenever your heart is broken don't ever forget your golden I will",
+      "word_count": 122
+    }
+  ]
+}

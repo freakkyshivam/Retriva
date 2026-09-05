@@ -1,0 +1,3206 @@
+{
+  "position": 233,
+  "video_id": "_H8V5hJUGd0",
+  "title": "DP 53. Palindrome Partitioning - II | Front Partition 🔥",
+  "url": "https://www.youtube.com/watch?v=_H8V5hJUGd0",
+  "transcript": [
+    {
+      "start": 0.12,
+      "duration": 3.279,
+      "end": 3.399,
+      "text": "hey everyone welcome back to take you"
+    },
+    {
+      "start": 1.4,
+      "duration": 3.959,
+      "end": 5.359,
+      "text": "forward so today we will be solving this"
+    },
+    {
+      "start": 3.399,
+      "duration": 4.44,
+      "end": 7.839,
+      "text": "interesting problem palindrome"
+    },
+    {
+      "start": 5.359,
+      "duration": 6.16,
+      "end": 11.519,
+      "text": "partitioning now this will not be"
+    },
+    {
+      "start": 7.839,
+      "duration": 7.121,
+      "end": 14.96,
+      "text": "similar to MCM DP rather this will come"
+    },
+    {
+      "start": 11.519,
+      "duration": 5.52,
+      "end": 17.039,
+      "text": "under partition DP like I'll teach you a"
+    },
+    {
+      "start": 14.96,
+      "duration": 4.72,
+      "end": 19.68,
+      "text": "different form of partition over here"
+    },
+    {
+      "start": 17.039,
+      "duration": 5.16,
+      "end": 22.199,
+      "text": "okay now before starting this there is a"
+    },
+    {
+      "start": 19.68,
+      "duration": 4.4,
+      "end": 24.08,
+      "text": "palum partition one as well I've done"
+    },
+    {
+      "start": 22.199,
+      "duration": 3.24,
+      "end": 25.439,
+      "text": "that in the recursion series yes I've"
+    },
+    {
+      "start": 24.08,
+      "duration": 3.279,
+      "end": 27.358999999999998,
+      "text": "done that in the recursion Ser just in"
+    },
+    {
+      "start": 25.439,
+      "duration": 3.561,
+      "end": 29.0,
+      "text": "case you want to watch it you can but"
+    },
+    {
+      "start": 27.359,
+      "duration": 4.121,
+      "end": 31.480000000000004,
+      "text": "yeah let's uh like it's not a"
+    },
+    {
+      "start": 29.0,
+      "duration": 3.92,
+      "end": 32.92,
+      "text": "prerequisite for this problem palindrome"
+    },
+    {
+      "start": 31.48,
+      "duration": 3.919,
+      "end": 35.399,
+      "text": "partitioning two is there any"
+    },
+    {
+      "start": 32.92,
+      "duration": 4.52,
+      "end": 37.44,
+      "text": "prerequisite nothing let's get started"
+    },
+    {
+      "start": 35.399,
+      "duration": 5.041,
+      "end": 40.44,
+      "text": "so what does the question say you will"
+    },
+    {
+      "start": 37.44,
+      "duration": 6.16,
+      "end": 43.599999999999994,
+      "text": "be given a string like this let me uh"
+    },
+    {
+      "start": 40.44,
+      "duration": 7.4,
+      "end": 47.839999999999996,
+      "text": "first take a smaller string imagine"
+    },
+    {
+      "start": 43.6,
+      "duration": 9.04,
+      "end": 52.64,
+      "text": "you're given something uh like St string"
+    },
+    {
+      "start": 47.84,
+      "duration": 7.12,
+      "end": 54.96,
+      "text": "equal to double A B okay now I ask you"
+    },
+    {
+      "start": 52.64,
+      "duration": 4.32,
+      "end": 56.96,
+      "text": "cut them into cut them like make"
+    },
+    {
+      "start": 54.96,
+      "duration": 3.559,
+      "end": 58.519,
+      "text": "partitions so you can say okay I'll make"
+    },
+    {
+      "start": 56.96,
+      "duration": 2.72,
+      "end": 59.68,
+      "text": "a partition here I'll make a partition"
+    },
+    {
+      "start": 58.519,
+      "duration": 4.641,
+      "end": 63.16,
+      "text": "here I'll make a partition here I'll"
+    },
+    {
+      "start": 59.68,
+      "duration": 6.24,
+      "end": 65.92,
+      "text": "make a partition here so 1 2 3 and a"
+    },
+    {
+      "start": 63.16,
+      "duration": 7.48,
+      "end": 70.64,
+      "text": "string of length four a string of length"
+    },
+    {
+      "start": 65.92,
+      "duration": 6.839,
+      "end": 72.759,
+      "text": "four I am definitely sure if I can make"
+    },
+    {
+      "start": 70.64,
+      "duration": 5.519,
+      "end": 76.159,
+      "text": "n minus one"
+    },
+    {
+      "start": 72.759,
+      "duration": 5.68,
+      "end": 78.439,
+      "text": "partitions then every substring these"
+    },
+    {
+      "start": 76.159,
+      "duration": 6.081,
+      "end": 82.24000000000001,
+      "text": "are substrings every individual"
+    },
+    {
+      "start": 78.439,
+      "duration": 7.72,
+      "end": 86.15899999999999,
+      "text": "substring is will be a pindrop every"
+    },
+    {
+      "start": 82.24,
+      "duration": 6.8,
+      "end": 89.03999999999999,
+      "text": "individual substring will be a pindrop"
+    },
+    {
+      "start": 86.159,
+      "duration": 6.28,
+      "end": 92.43900000000001,
+      "text": "what is a pindrop a string that reads"
+    },
+    {
+      "start": 89.04,
+      "duration": 5.84,
+      "end": 94.88000000000001,
+      "text": "the same if you're reverse it as well so"
+    },
+    {
+      "start": 92.439,
+      "duration": 5.96,
+      "end": 98.39899999999999,
+      "text": "everyone is a pal drop so we definitely"
+    },
+    {
+      "start": 94.88,
+      "duration": 6.279,
+      "end": 101.15899999999999,
+      "text": "know a string can be partitioned such"
+    },
+    {
+      "start": 98.399,
+      "duration": 5.281,
+      "end": 103.68,
+      "text": "that every substring will always be a"
+    },
+    {
+      "start": 101.159,
+      "duration": 5.56,
+      "end": 106.71900000000001,
+      "text": "palr we definitely know that a string"
+    },
+    {
+      "start": 103.68,
+      "duration": 6.119,
+      "end": 109.799,
+      "text": "can be partition such that every"
+    },
+    {
+      "start": 106.719,
+      "duration": 5.281,
+      "end": 112.0,
+      "text": "substring will always be a pal androp"
+    },
+    {
+      "start": 109.799,
+      "duration": 5.28,
+      "end": 115.07900000000001,
+      "text": "and how many partitions do you require n"
+    },
+    {
+      "start": 112.0,
+      "duration": 8.2,
+      "end": 120.2,
+      "text": "minus one but over here they asking you"
+    },
+    {
+      "start": 115.079,
+      "duration": 7.96,
+      "end": 123.03899999999999,
+      "text": "find the minimum partitions find the"
+    },
+    {
+      "start": 120.2,
+      "duration": 4.919,
+      "end": 125.119,
+      "text": "minimum partitions that you will require"
+    },
+    {
+      "start": 123.039,
+      "duration": 5.2,
+      "end": 128.239,
+      "text": "in order to make the string as"
+    },
+    {
+      "start": 125.119,
+      "duration": 5.521,
+      "end": 130.64,
+      "text": "palindrome for an example in the string"
+    },
+    {
+      "start": 128.239,
+      "duration": 5.321,
+      "end": 133.56,
+      "text": "I can also go like I'll do a single"
+    },
+    {
+      "start": 130.64,
+      "duration": 4.76,
+      "end": 135.39999999999998,
+      "text": "partition then also this is palindrome"
+    },
+    {
+      "start": 133.56,
+      "duration": 5.88,
+      "end": 139.44,
+      "text": "and then also this is palindrome double"
+    },
+    {
+      "start": 135.4,
+      "duration": 6.28,
+      "end": 141.68,
+      "text": "a double b is palindrome correct so you"
+    },
+    {
+      "start": 139.44,
+      "duration": 4.04,
+      "end": 143.48,
+      "text": "can have a one partition and you can"
+    },
+    {
+      "start": 141.68,
+      "duration": 4.08,
+      "end": 145.76000000000002,
+      "text": "have it as palindrome now you might come"
+    },
+    {
+      "start": 143.48,
+      "duration": 5.24,
+      "end": 148.72,
+      "text": "and say St why do you need to partition"
+    },
+    {
+      "start": 145.76,
+      "duration": 5.559,
+      "end": 151.319,
+      "text": "because you cannot have a b like they"
+    },
+    {
+      "start": 148.72,
+      "duration": 4.4,
+      "end": 153.12,
+      "text": "cannot be same so what I see is okay"
+    },
+    {
+      "start": 151.319,
+      "duration": 3.801,
+      "end": 155.11999999999998,
+      "text": "this is a particular form of partition"
+    },
+    {
+      "start": 153.12,
+      "duration": 4.56,
+      "end": 157.68,
+      "text": "where I'm requiring one or you can say"
+    },
+    {
+      "start": 155.12,
+      "duration": 5.96,
+      "end": 161.08,
+      "text": "you can have a you can also have two"
+    },
+    {
+      "start": 157.68,
+      "duration": 5.919,
+      "end": 163.59900000000002,
+      "text": "partitions like this even if you do two"
+    },
+    {
+      "start": 161.08,
+      "duration": 5.04,
+      "end": 166.12,
+      "text": "partitions there still pal androp but"
+    },
+    {
+      "start": 163.599,
+      "duration": 3.801,
+      "end": 167.39999999999998,
+      "text": "the question States find the minimum"
+    },
+    {
+      "start": 166.12,
+      "duration": 3.68,
+      "end": 169.8,
+      "text": "number of partitions they don't want you"
+    },
+    {
+      "start": 167.4,
+      "duration": 5.04,
+      "end": 172.44,
+      "text": "to find maximum find the minimum number"
+    },
+    {
+      "start": 169.8,
+      "duration": 5.079,
+      "end": 174.87900000000002,
+      "text": "of partitions does an answer always"
+    },
+    {
+      "start": 172.44,
+      "duration": 4.719,
+      "end": 177.159,
+      "text": "exist yes because if I do n minus one"
+    },
+    {
+      "start": 174.879,
+      "duration": 5.36,
+      "end": 180.239,
+      "text": "partitions everyone will be a single"
+    },
+    {
+      "start": 177.159,
+      "duration": 6.44,
+      "end": 183.599,
+      "text": "character and everyone will be a palent"
+    },
+    {
+      "start": 180.239,
+      "duration": 4.841,
+      "end": 185.08,
+      "text": "in itself that is for sure so somewhere"
+    },
+    {
+      "start": 183.599,
+      "duration": 3.2,
+      "end": 186.79899999999998,
+      "text": "down the line we have figured out the"
+    },
+    {
+      "start": 185.08,
+      "duration": 4.079,
+      "end": 189.15900000000002,
+      "text": "questioner to figure out the minimum"
+    },
+    {
+      "start": 186.799,
+      "duration": 4.761,
+      "end": 191.56,
+      "text": "number of partitions right so like for"
+    },
+    {
+      "start": 189.159,
+      "duration": 6.681,
+      "end": 195.84,
+      "text": "this example like if I just go across"
+    },
+    {
+      "start": 191.56,
+      "duration": 7.239,
+      "end": 198.799,
+      "text": "and do a bab and then I do ab c d a then"
+    },
+    {
+      "start": 195.84,
+      "duration": 5.16,
+      "end": 201.0,
+      "text": "I keep D alone I keep C alone and I keep"
+    },
+    {
+      "start": 198.799,
+      "duration": 5.481,
+      "end": 204.28,
+      "text": "this so I'll be requiring four"
+    },
+    {
+      "start": 201.0,
+      "duration": 6.76,
+      "end": 207.76,
+      "text": "partitions over here four partitions bab"
+    },
+    {
+      "start": 204.28,
+      "duration": 6.08,
+      "end": 210.36,
+      "text": "is a palindrome abcb is a palindrome D"
+    },
+    {
+      "start": 207.76,
+      "duration": 6.72,
+      "end": 214.48,
+      "text": "is a palindrome C is a pal"
+    },
+    {
+      "start": 210.36,
+      "duration": 6.56,
+      "end": 216.92000000000002,
+      "text": "Ed is a palr so if I do four partitions"
+    },
+    {
+      "start": 214.48,
+      "duration": 4.24,
+      "end": 218.72,
+      "text": "if I do four partitions you're bound to"
+    },
+    {
+      "start": 216.92,
+      "duration": 4.28,
+      "end": 221.2,
+      "text": "say that all the strings all the"
+    },
+    {
+      "start": 218.72,
+      "duration": 5.159,
+      "end": 223.879,
+      "text": "substrings generated are palindrome so"
+    },
+    {
+      "start": 221.2,
+      "duration": 4.56,
+      "end": 225.76,
+      "text": "the answer to this will be four so this"
+    },
+    {
+      "start": 223.879,
+      "duration": 4.841,
+      "end": 228.72,
+      "text": "is the question given a string you need"
+    },
+    {
+      "start": 225.76,
+      "duration": 4.759,
+      "end": 230.519,
+      "text": "to tell me when do I have like how many"
+    },
+    {
+      "start": 228.72,
+      "duration": 4.439,
+      "end": 233.159,
+      "text": "minimum Cuts do I need to make in order"
+    },
+    {
+      "start": 230.519,
+      "duration": 5.161,
+      "end": 235.68,
+      "text": "to have all the substrings as"
+    },
+    {
+      "start": 233.159,
+      "duration": 5.481,
+      "end": 238.64,
+      "text": "palindrome so how do you approach such"
+    },
+    {
+      "start": 235.68,
+      "duration": 6.32,
+      "end": 242.0,
+      "text": "problems so such problems are generally"
+    },
+    {
+      "start": 238.64,
+      "duration": 5.959,
+      "end": 244.599,
+      "text": "solved using front partition okay now"
+    },
+    {
+      "start": 242.0,
+      "duration": 5.2,
+      "end": 247.2,
+      "text": "what do I mean by front partition you"
+    },
+    {
+      "start": 244.599,
+      "duration": 6.401,
+      "end": 251.0,
+      "text": "start off yes remember this you start"
+    },
+    {
+      "start": 247.2,
+      "duration": 6.56,
+      "end": 253.76,
+      "text": "off from here okay and you say can I do"
+    },
+    {
+      "start": 251.0,
+      "duration": 5.56,
+      "end": 256.56,
+      "text": "a partition over here you simply say can"
+    },
+    {
+      "start": 253.76,
+      "duration": 6.36,
+      "end": 260.12,
+      "text": "this guy like can this be a partition"
+    },
+    {
+      "start": 256.56,
+      "duration": 6.4,
+      "end": 262.96,
+      "text": "and you'll be like yes why because the"
+    },
+    {
+      "start": 260.12,
+      "duration": 5.6,
+      "end": 265.72,
+      "text": "only string over here is B the only"
+    },
+    {
+      "start": 262.96,
+      "duration": 5.519,
+      "end": 268.479,
+      "text": "string over here is B and it is a pal"
+    },
+    {
+      "start": 265.72,
+      "duration": 5.199,
+      "end": 270.91900000000004,
+      "text": "draw so you will be like I can do one"
+    },
+    {
+      "start": 268.479,
+      "duration": 5.361,
+      "end": 273.84,
+      "text": "partition you you will be like I can do"
+    },
+    {
+      "start": 270.919,
+      "duration": 6.521,
+      "end": 277.44,
+      "text": "one partition and the left over string"
+    },
+    {
+      "start": 273.84,
+      "duration": 5.48,
+      "end": 279.32,
+      "text": "will be this guy and I will try to find"
+    },
+    {
+      "start": 277.44,
+      "duration": 4.759,
+      "end": 282.199,
+      "text": "the answer for this guy so it is known"
+    },
+    {
+      "start": 279.32,
+      "duration": 5.319,
+      "end": 284.639,
+      "text": "as front partition I start from front"
+    },
+    {
+      "start": 282.199,
+      "duration": 4.681,
+      "end": 286.88,
+      "text": "and I do a partition then I solve for"
+    },
+    {
+      "start": 284.639,
+      "duration": 4.801,
+      "end": 289.44,
+      "text": "this so I know one partition I have done"
+    },
+    {
+      "start": 286.88,
+      "duration": 4.759,
+      "end": 291.639,
+      "text": "so I have to find the number of parti"
+    },
+    {
+      "start": 289.44,
+      "duration": 4.4,
+      "end": 293.84,
+      "text": "required over here right so either you"
+    },
+    {
+      "start": 291.639,
+      "duration": 4.641,
+      "end": 296.28000000000003,
+      "text": "can do a partition here or you can go"
+    },
+    {
+      "start": 293.84,
+      "duration": 4.639,
+      "end": 298.479,
+      "text": "across and say Hey listen I am not going"
+    },
+    {
+      "start": 296.28,
+      "duration": 4.199,
+      "end": 300.479,
+      "text": "to do a partition over here I'll try to"
+    },
+    {
+      "start": 298.479,
+      "duration": 5.361,
+      "end": 303.84,
+      "text": "do a partition over here but the moment"
+    },
+    {
+      "start": 300.479,
+      "duration": 6.681,
+      "end": 307.15999999999997,
+      "text": "I try to do a partition over here ba is"
+    },
+    {
+      "start": 303.84,
+      "duration": 5.88,
+      "end": 309.71999999999997,
+      "text": "not a palindrome I repeat ba is not a"
+    },
+    {
+      "start": 307.16,
+      "duration": 4.479,
+      "end": 311.639,
+      "text": "palindrome thereby I cannot partition so"
+    },
+    {
+      "start": 309.72,
+      "duration": 5.039,
+      "end": 314.759,
+      "text": "I'll go across to the next and can I do"
+    },
+    {
+      "start": 311.639,
+      "duration": 5.161,
+      "end": 316.8,
+      "text": "a partition I can so I will go across"
+    },
+    {
+      "start": 314.759,
+      "duration": 4.201,
+      "end": 318.96000000000004,
+      "text": "and say okay let me do a partition on"
+    },
+    {
+      "start": 316.8,
+      "duration": 5.88,
+      "end": 322.68,
+      "text": "bab which will take me this then let me"
+    },
+    {
+      "start": 318.96,
+      "duration": 6.16,
+      "end": 325.12,
+      "text": "have this guys okay so I'll try to find"
+    },
+    {
+      "start": 322.68,
+      "duration": 3.639,
+      "end": 326.319,
+      "text": "the answer for this portion I don't try"
+    },
+    {
+      "start": 325.12,
+      "duration": 3.28,
+      "end": 328.4,
+      "text": "to find the answer for this portion"
+    },
+    {
+      "start": 326.319,
+      "duration": 4.121,
+      "end": 330.44,
+      "text": "after I have partitioned here similarly"
+    },
+    {
+      "start": 328.4,
+      "duration": 6.12,
+      "end": 334.52,
+      "text": "you go across here can you a partition"
+    },
+    {
+      "start": 330.44,
+      "duration": 6.16,
+      "end": 336.6,
+      "text": "here no can you do a partition here yes"
+    },
+    {
+      "start": 334.52,
+      "duration": 4.48,
+      "end": 339.0,
+      "text": "because this is a palindrome again you"
+    },
+    {
+      "start": 336.6,
+      "duration": 5.719,
+      "end": 342.319,
+      "text": "try to do a partition here which is"
+    },
+    {
+      "start": 339.0,
+      "duration": 5.6,
+      "end": 344.6,
+      "text": "again 1 plus then you'll be left out"
+    },
+    {
+      "start": 342.319,
+      "duration": 4.961,
+      "end": 347.28000000000003,
+      "text": "with CB a d c e d"
+    },
+    {
+      "start": 344.6,
+      "duration": 5.319,
+      "end": 349.91900000000004,
+      "text": "e similarly you'll move ahead can you do"
+    },
+    {
+      "start": 347.28,
+      "duration": 5.0,
+      "end": 352.28,
+      "text": "a partition here no you'll move here can"
+    },
+    {
+      "start": 349.919,
+      "duration": 5.0,
+      "end": 354.919,
+      "text": "you do a partition here no can you do a"
+    },
+    {
+      "start": 352.28,
+      "duration": 5.359,
+      "end": 357.63899999999995,
+      "text": "partition here no can you do a partition"
+    },
+    {
+      "start": 354.919,
+      "duration": 5.761,
+      "end": 360.68,
+      "text": "here no can you do it here no can you do"
+    },
+    {
+      "start": 357.639,
+      "duration": 5.961,
+      "end": 363.6,
+      "text": "it here no can you do it here no can you"
+    },
+    {
+      "start": 360.68,
+      "duration": 5.32,
+      "end": 366.0,
+      "text": "do it here no so you will have three"
+    },
+    {
+      "start": 363.6,
+      "duration": 4.8,
+      "end": 368.40000000000003,
+      "text": "options of partitioning one is you do it"
+    },
+    {
+      "start": 366.0,
+      "duration": 4.84,
+      "end": 370.84,
+      "text": "here and you get one partition and then"
+    },
+    {
+      "start": 368.4,
+      "duration": 4.6,
+      "end": 373.0,
+      "text": "you still have this string in which you"
+    },
+    {
+      "start": 370.84,
+      "duration": 4.12,
+      "end": 374.96,
+      "text": "have to do partitions or you can say"
+    },
+    {
+      "start": 373.0,
+      "duration": 3.44,
+      "end": 376.44,
+      "text": "I'll do one partition here and I'll"
+    },
+    {
+      "start": 374.96,
+      "duration": 3.84,
+      "end": 378.79999999999995,
+      "text": "still have this string where I have to"
+    },
+    {
+      "start": 376.44,
+      "duration": 4.52,
+      "end": 380.96,
+      "text": "do some partition or you will say I'll"
+    },
+    {
+      "start": 378.8,
+      "duration": 5.0,
+      "end": 383.8,
+      "text": "do a partition here and I'll still have"
+    },
+    {
+      "start": 380.96,
+      "duration": 5.44,
+      "end": 386.4,
+      "text": "this string which has to be solved so"
+    },
+    {
+      "start": 383.8,
+      "duration": 5.0,
+      "end": 388.8,
+      "text": "imagine just imagine uh like these are"
+    },
+    {
+      "start": 386.4,
+      "duration": 4.799,
+      "end": 391.19899999999996,
+      "text": "three sub problems this is one this is"
+    },
+    {
+      "start": 388.8,
+      "duration": 4.679,
+      "end": 393.479,
+      "text": "one this is one so out of these"
+    },
+    {
+      "start": 391.199,
+      "duration": 3.84,
+      "end": 395.039,
+      "text": "whichever gives you the minimal Cuts"
+    },
+    {
+      "start": 393.479,
+      "duration": 3.401,
+      "end": 396.88,
+      "text": "because this string will give you some"
+    },
+    {
+      "start": 395.039,
+      "duration": 3.641,
+      "end": 398.68,
+      "text": "number this string will give you some"
+    },
+    {
+      "start": 396.88,
+      "duration": 5.12,
+      "end": 402.0,
+      "text": "number this string will give you some"
+    },
+    {
+      "start": 398.68,
+      "duration": 6.519,
+      "end": 405.199,
+      "text": "number out of these three whichever cut"
+    },
+    {
+      "start": 402.0,
+      "duration": 5.8,
+      "end": 407.8,
+      "text": "gives you the minimum number is which is"
+    },
+    {
+      "start": 405.199,
+      "duration": 5.161,
+      "end": 410.36,
+      "text": "the one that you will consider okay so"
+    },
+    {
+      "start": 407.8,
+      "duration": 5.399,
+      "end": 413.199,
+      "text": "imagine uh I just take up this partition"
+    },
+    {
+      "start": 410.36,
+      "duration": 5.559,
+      "end": 415.91900000000004,
+      "text": "okay imagine I take up this partition"
+    },
+    {
+      "start": 413.199,
+      "duration": 5.881,
+      "end": 419.08000000000004,
+      "text": "where you do bab and you have ABC so"
+    },
+    {
+      "start": 415.919,
+      "duration": 4.881,
+      "end": 420.79999999999995,
+      "text": "again this time this time remember you"
+    },
+    {
+      "start": 419.08,
+      "duration": 3.6,
+      "end": 422.68,
+      "text": "will keep a track on a you'll keep a"
+    },
+    {
+      "start": 420.8,
+      "duration": 4.76,
+      "end": 425.56,
+      "text": "track on a then can you do a partition"
+    },
+    {
+      "start": 422.68,
+      "duration": 4.28,
+      "end": 426.96,
+      "text": "here yes and when you do a partition"
+    },
+    {
+      "start": 425.56,
+      "duration": 3.84,
+      "end": 429.4,
+      "text": "here this time you don't check for this"
+    },
+    {
+      "start": 426.96,
+      "duration": 4.48,
+      "end": 431.44,
+      "text": "because B B has been taken so you just"
+    },
+    {
+      "start": 429.4,
+      "duration": 4.4,
+      "end": 433.79999999999995,
+      "text": "check for this a so you just check for"
+    },
+    {
+      "start": 431.44,
+      "duration": 4.039,
+      "end": 435.479,
+      "text": "this a so just check for this a so you"
+    },
+    {
+      "start": 433.8,
+      "duration": 3.519,
+      "end": 437.319,
+      "text": "will be able to do it so you'll be like"
+    },
+    {
+      "start": 435.479,
+      "duration": 5.641,
+      "end": 441.12,
+      "text": "okay I can do for one and then I'll be"
+    },
+    {
+      "start": 437.319,
+      "duration": 6.641,
+      "end": 443.96000000000004,
+      "text": "left off with b c b a d c e d e"
+    },
+    {
+      "start": 441.12,
+      "duration": 6.079,
+      "end": 447.199,
+      "text": "similarly can you do it here no can you"
+    },
+    {
+      "start": 443.96,
+      "duration": 6.32,
+      "end": 450.28,
+      "text": "do it here no can you do it here no can"
+    },
+    {
+      "start": 447.199,
+      "duration": 5.56,
+      "end": 452.759,
+      "text": "you do it here yes this is a pal Drome"
+    },
+    {
+      "start": 450.28,
+      "duration": 4.919,
+      "end": 455.19899999999996,
+      "text": "this is a palindrome so thereby you can"
+    },
+    {
+      "start": 452.759,
+      "duration": 5.081,
+      "end": 457.84000000000003,
+      "text": "do a partition here so you can also go"
+    },
+    {
+      "start": 455.199,
+      "duration": 5.961,
+      "end": 461.16,
+      "text": "on like I can do a partition one plus"
+    },
+    {
+      "start": 457.84,
+      "duration": 6.199,
+      "end": 464.039,
+      "text": "more and I'll still be left off a DC e"
+    },
+    {
+      "start": 461.16,
+      "duration": 5.039,
+      "end": 466.199,
+      "text": "to be solved so in this way you can do a"
+    },
+    {
+      "start": 464.039,
+      "duration": 4.0,
+      "end": 468.039,
+      "text": "front partition you start from the front"
+    },
+    {
+      "start": 466.199,
+      "duration": 4.361,
+      "end": 470.56,
+      "text": "you start from the front and you go on"
+    },
+    {
+      "start": 468.039,
+      "duration": 4.361,
+      "end": 472.4,
+      "text": "checking so if I if I ask you how do you"
+    },
+    {
+      "start": 470.56,
+      "duration": 4.639,
+      "end": 475.199,
+      "text": "start from the front now remember the"
+    },
+    {
+      "start": 472.4,
+      "duration": 2.799,
+      "end": 475.19899999999996,
+      "text": "rules of writing a"
+    },
+    {
+      "start": 475.56,
+      "duration": 5.359,
+      "end": 480.919,
+      "text": "recurence because this is nothing but"
+    },
+    {
+      "start": 477.919,
+      "duration": 4.84,
+      "end": 482.75899999999996,
+      "text": "the same logic it is nothing but the"
+    },
+    {
+      "start": 480.919,
+      "duration": 3.96,
+      "end": 484.87899999999996,
+      "text": "same recurrence logic where you're"
+    },
+    {
+      "start": 482.759,
+      "duration": 3.44,
+      "end": 486.199,
+      "text": "trying out all possible partitions"
+    },
+    {
+      "start": 484.879,
+      "duration": 2.961,
+      "end": 487.84000000000003,
+      "text": "you're trying out all possible"
+    },
+    {
+      "start": 486.199,
+      "duration": 2.801,
+      "end": 489.0,
+      "text": "partitions and the one that gives you"
+    },
+    {
+      "start": 487.84,
+      "duration": 3.72,
+      "end": 491.56,
+      "text": "the minimal answer is the one that"
+    },
+    {
+      "start": 489.0,
+      "duration": 3.68,
+      "end": 492.68,
+      "text": "you're taking right so you'll be like"
+    },
+    {
+      "start": 491.56,
+      "duration": 4.56,
+      "end": 496.12,
+      "text": "how do you write a rec question what is"
+    },
+    {
+      "start": 492.68,
+      "duration": 6.44,
+      "end": 499.12,
+      "text": "the rule express everything in terms"
+    },
+    {
+      "start": 496.12,
+      "duration": 3.0,
+      "end": 499.12,
+      "text": "of"
+    },
+    {
+      "start": 500.24,
+      "duration": 4.44,
+      "end": 504.68,
+      "text": "index so as I said it's a front"
+    },
+    {
+      "start": 502.68,
+      "duration": 4.079,
+      "end": 506.759,
+      "text": "partition problem so where will be your"
+    },
+    {
+      "start": 504.68,
+      "duration": 4.88,
+      "end": 509.56,
+      "text": "initial index you can probably place"
+    },
+    {
+      "start": 506.759,
+      "duration": 5.361,
+      "end": 512.12,
+      "text": "your initial index at I equal to Z"
+    },
+    {
+      "start": 509.56,
+      "duration": 4.76,
+      "end": 514.32,
+      "text": "because that is where is you're looking"
+    },
+    {
+      "start": 512.12,
+      "duration": 3.399,
+      "end": 515.519,
+      "text": "to start the partition from that is"
+    },
+    {
+      "start": 514.32,
+      "duration": 4.159,
+      "end": 518.479,
+      "text": "where you're looking to start the"
+    },
+    {
+      "start": 515.519,
+      "duration": 5.0,
+      "end": 520.519,
+      "text": "partition from so I can say okay I will"
+    },
+    {
+      "start": 518.479,
+      "duration": 4.56,
+      "end": 523.039,
+      "text": "have an index and that is where I'll"
+    },
+    {
+      "start": 520.519,
+      "duration": 4.521,
+      "end": 525.04,
+      "text": "start looking to make the partition from"
+    },
+    {
+      "start": 523.039,
+      "duration": 6.48,
+      "end": 529.519,
+      "text": "as simple as that perfect uh what's the"
+    },
+    {
+      "start": 525.04,
+      "duration": 7.0,
+      "end": 532.04,
+      "text": "next step next is uh Express all the"
+    },
+    {
+      "start": 529.519,
+      "duration": 6.081,
+      "end": 535.6,
+      "text": "ways that you can partition or rather"
+    },
+    {
+      "start": 532.04,
+      "duration": 5.6,
+      "end": 537.64,
+      "text": "Express all possibilities as the second"
+    },
+    {
+      "start": 535.6,
+      "duration": 4.479,
+      "end": 540.0790000000001,
+      "text": "step of writing"
+    },
+    {
+      "start": 537.64,
+      "duration": 5.319,
+      "end": 542.959,
+      "text": "recurrence express all possib I ities"
+    },
+    {
+      "start": 540.079,
+      "duration": 5.081,
+      "end": 545.16,
+      "text": "what is the third take the minimal"
+    },
+    {
+      "start": 542.959,
+      "duration": 4.56,
+      "end": 547.5189999999999,
+      "text": "because the question States minimal take"
+    },
+    {
+      "start": 545.16,
+      "duration": 4.28,
+      "end": 549.4399999999999,
+      "text": "the minimal of all"
+    },
+    {
+      "start": 547.519,
+      "duration": 4.32,
+      "end": 551.839,
+      "text": "possibilities and also write the base"
+    },
+    {
+      "start": 549.44,
+      "duration": 2.399,
+      "end": 551.839,
+      "text": "case for"
+    },
+    {
+      "start": 551.959,
+      "duration": 6.401,
+      "end": 558.3599999999999,
+      "text": "sure so can you tell"
+    },
+    {
+      "start": 554.839,
+      "duration": 7.0,
+      "end": 561.839,
+      "text": "me when is a paration possible if I ask"
+    },
+    {
+      "start": 558.36,
+      "duration": 5.52,
+      "end": 563.88,
+      "text": "you when is a paration possible so one"
+    },
+    {
+      "start": 561.839,
+      "duration": 4.0,
+      "end": 565.839,
+      "text": "thing we know for sure is we are"
+    },
+    {
+      "start": 563.88,
+      "duration": 4.28,
+      "end": 568.16,
+      "text": "expressing everything in terms of index"
+    },
+    {
+      "start": 565.839,
+      "duration": 7.841,
+      "end": 573.6800000000001,
+      "text": "so whenever I is zero I'm basically"
+    },
+    {
+      "start": 568.16,
+      "duration": 8.2,
+      "end": 576.36,
+      "text": "stating give me the minimum"
+    },
+    {
+      "start": 573.68,
+      "duration": 6.399,
+      "end": 580.079,
+      "text": "Cuts"
+    },
+    {
+      "start": 576.36,
+      "duration": 6.8,
+      "end": 583.16,
+      "text": "required to make it make all substrings"
+    },
+    {
+      "start": 580.079,
+      "duration": 7.0,
+      "end": 587.079,
+      "text": "pal andrum rather make all"
+    },
+    {
+      "start": 583.16,
+      "duration": 6.48,
+      "end": 589.64,
+      "text": "substrings pal andrum and can I say if"
+    },
+    {
+      "start": 587.079,
+      "duration": 5.361,
+      "end": 592.4399999999999,
+      "text": "I'm keeping I equal to Z that means in"
+    },
+    {
+      "start": 589.64,
+      "duration": 4.879,
+      "end": 594.519,
+      "text": "the string from 0 till n minus one is"
+    },
+    {
+      "start": 592.44,
+      "duration": 4.0,
+      "end": 596.44,
+      "text": "what I'm talking in the string 0 to n"
+    },
+    {
+      "start": 594.519,
+      "duration": 4.44,
+      "end": 598.9590000000001,
+      "text": "minus one and we have already decid like"
+    },
+    {
+      "start": 596.44,
+      "duration": 5.04,
+      "end": 601.48,
+      "text": "we have already uh proved that the"
+    },
+    {
+      "start": 598.959,
+      "duration": 6.0,
+      "end": 604.959,
+      "text": "minimum number of partitions in such"
+    },
+    {
+      "start": 601.48,
+      "duration": 6.08,
+      "end": 607.5600000000001,
+      "text": "case will always be n minus one which is"
+    },
+    {
+      "start": 604.959,
+      "duration": 5.0,
+      "end": 609.959,
+      "text": "the length of the string minus one so if"
+    },
+    {
+      "start": 607.56,
+      "duration": 5.44,
+      "end": 613.0,
+      "text": "I is zero that means I treating this as"
+    },
+    {
+      "start": 609.959,
+      "duration": 5.081,
+      "end": 615.04,
+      "text": "an entire string then what I do is I I"
+    },
+    {
+      "start": 613.0,
+      "duration": 4.04,
+      "end": 617.04,
+      "text": "try checking what are the possibilities"
+    },
+    {
+      "start": 615.04,
+      "duration": 4.239,
+      "end": 619.279,
+      "text": "can I do a partition here can I do a"
+    },
+    {
+      "start": 617.04,
+      "duration": 4.16,
+      "end": 621.1999999999999,
+      "text": "partition here can I do a partition here"
+    },
+    {
+      "start": 619.279,
+      "duration": 3.881,
+      "end": 623.16,
+      "text": "can I do a partition here can I do a"
+    },
+    {
+      "start": 621.2,
+      "duration": 5.48,
+      "end": 626.6800000000001,
+      "text": "partition here what am I doing I'm"
+    },
+    {
+      "start": 623.16,
+      "duration": 6.4,
+      "end": 629.56,
+      "text": "basically iterating from I to J this is"
+    },
+    {
+      "start": 626.68,
+      "duration": 5.32,
+      "end": 632.0,
+      "text": "J this is J"
+    },
+    {
+      "start": 629.56,
+      "duration": 5.279,
+      "end": 634.8389999999999,
+      "text": "whenever J is here this is b a b"
+    },
+    {
+      "start": 632.0,
+      "duration": 5.519,
+      "end": 637.519,
+      "text": "whenever J is here this is b a b a"
+    },
+    {
+      "start": 634.839,
+      "duration": 5.481,
+      "end": 640.32,
+      "text": "whenever J is here this is b a b a b"
+    },
+    {
+      "start": 637.519,
+      "duration": 5.721,
+      "end": 643.24,
+      "text": "whenever J is here this is b a b a BC"
+    },
+    {
+      "start": 640.32,
+      "duration": 6.24,
+      "end": 646.5600000000001,
+      "text": "whenever J is here b a b a b c b so"
+    },
+    {
+      "start": 643.24,
+      "duration": 5.52,
+      "end": 648.76,
+      "text": "you're basically taking a fall Loop"
+    },
+    {
+      "start": 646.56,
+      "duration": 5.92,
+      "end": 652.4799999999999,
+      "text": "right so if I try to write the recurence"
+    },
+    {
+      "start": 648.76,
+      "duration": 5.96,
+      "end": 654.72,
+      "text": "I know it will be I and when do I end"
+    },
+    {
+      "start": 652.48,
+      "duration": 4.599,
+      "end": 657.0790000000001,
+      "text": "when I don't have a string when I don't"
+    },
+    {
+      "start": 654.72,
+      "duration": 5.359,
+      "end": 660.0790000000001,
+      "text": "have a string I end can I say whenever I"
+    },
+    {
+      "start": 657.079,
+      "duration": 6.44,
+      "end": 663.519,
+      "text": "reach the end that is when I end for"
+    },
+    {
+      "start": 660.079,
+      "duration": 6.721,
+      "end": 666.8,
+      "text": "sure so whenever I end that is no"
+    },
+    {
+      "start": 663.519,
+      "duration": 6.361,
+      "end": 669.88,
+      "text": "partition if I'm not ending I know I"
+    },
+    {
+      "start": 666.8,
+      "duration": 4.159,
+      "end": 670.959,
+      "text": "will start the first first partition"
+    },
+    {
+      "start": 669.88,
+      "duration": 6.6,
+      "end": 676.48,
+      "text": "from"
+    },
+    {
+      "start": 670.959,
+      "duration": 9.88,
+      "end": 680.8389999999999,
+      "text": "J and I'll try on going on till n j++"
+    },
+    {
+      "start": 676.48,
+      "duration": 7.96,
+      "end": 684.44,
+      "text": "front partition okay now whenever J is"
+    },
+    {
+      "start": 680.839,
+      "duration": 6.081,
+      "end": 686.9200000000001,
+      "text": "I first time I'll pick up B then J will"
+    },
+    {
+      "start": 684.44,
+      "duration": 5.36,
+      "end": 689.8000000000001,
+      "text": "go here it's ba then J will go here it's"
+    },
+    {
+      "start": 686.92,
+      "duration": 5.64,
+      "end": 692.56,
+      "text": "b a b so every time J is moving I'm just"
+    },
+    {
+      "start": 689.8,
+      "duration": 5.479,
+      "end": 695.279,
+      "text": "adding a new character in it like first"
+    },
+    {
+      "start": 692.56,
+      "duration": 5.399,
+      "end": 697.959,
+      "text": "it was empty you added B then it become"
+    },
+    {
+      "start": 695.279,
+      "duration": 6.24,
+      "end": 701.519,
+      "text": "ba then it become b a b then it become"
+    },
+    {
+      "start": 697.959,
+      "duration": 5.841,
+      "end": 703.8,
+      "text": "bab then it become bab BB so can I say"
+    },
+    {
+      "start": 701.519,
+      "duration": 5.401,
+      "end": 706.92,
+      "text": "can I say probably I can keep a"
+    },
+    {
+      "start": 703.8,
+      "duration": 7.839,
+      "end": 711.639,
+      "text": "temporary string I can keep a temporary"
+    },
+    {
+      "start": 706.92,
+      "duration": 7.4,
+      "end": 714.3199999999999,
+      "text": "string and every time I move I can add s"
+    },
+    {
+      "start": 711.639,
+      "duration": 7.241,
+      "end": 718.88,
+      "text": "of J into it because from"
+    },
+    {
+      "start": 714.32,
+      "duration": 7.88,
+      "end": 722.2,
+      "text": "I because from I to J will always be"
+    },
+    {
+      "start": 718.88,
+      "duration": 5.84,
+      "end": 724.72,
+      "text": "stor in that temporary now when can I"
+    },
+    {
+      "start": 722.2,
+      "duration": 5.52,
+      "end": 727.72,
+      "text": "make a partition is the question I can"
+    },
+    {
+      "start": 724.72,
+      "duration": 6.799,
+      "end": 731.519,
+      "text": "definitely make a partition if that"
+    },
+    {
+      "start": 727.72,
+      "duration": 6.119,
+      "end": 733.839,
+      "text": "string is pal andrum if that string is"
+    },
+    {
+      "start": 731.519,
+      "duration": 5.281,
+      "end": 736.8,
+      "text": "palindrome like the temporary string is"
+    },
+    {
+      "start": 733.839,
+      "duration": 5.921,
+      "end": 739.7600000000001,
+      "text": "palindrome if that string is pal drop I"
+    },
+    {
+      "start": 736.8,
+      "duration": 5.36,
+      "end": 742.16,
+      "text": "can for an example let's go back and see"
+    },
+    {
+      "start": 739.76,
+      "duration": 5.319,
+      "end": 745.079,
+      "text": "can I make a partition at B yes why B is"
+    },
+    {
+      "start": 742.16,
+      "duration": 5.72,
+      "end": 747.88,
+      "text": "a pal drop can I make a partition at ba"
+    },
+    {
+      "start": 745.079,
+      "duration": 5.12,
+      "end": 750.199,
+      "text": "no can I make a partition at bab yes why"
+    },
+    {
+      "start": 747.88,
+      "duration": 5.44,
+      "end": 753.32,
+      "text": "bab is a pal drop so temp would have"
+    },
+    {
+      "start": 750.199,
+      "duration": 5.44,
+      "end": 755.639,
+      "text": "stored at first B then at a then at B so"
+    },
+    {
+      "start": 753.32,
+      "duration": 4.759,
+      "end": 758.0790000000001,
+      "text": "whenever it gets V A it tries to take"
+    },
+    {
+      "start": 755.639,
+      "duration": 6.841,
+      "end": 762.48,
+      "text": "one for the partition and then calls the"
+    },
+    {
+      "start": 758.079,
+      "duration": 6.76,
+      "end": 764.8389999999999,
+      "text": "string which string does it call C J was"
+    },
+    {
+      "start": 762.48,
+      "duration": 4.84,
+      "end": 767.32,
+      "text": "here so the next string starts from here"
+    },
+    {
+      "start": 764.839,
+      "duration": 5.68,
+      "end": 770.519,
+      "text": "so I should be here so it calls I for"
+    },
+    {
+      "start": 767.32,
+      "duration": 7.56,
+      "end": 774.88,
+      "text": "the next portion which is J + one which"
+    },
+    {
+      "start": 770.519,
+      "duration": 7.88,
+      "end": 778.399,
+      "text": "is J + one so I say okay remember the"
+    },
+    {
+      "start": 774.88,
+      "duration": 7.48,
+      "end": 782.36,
+      "text": "cost the cost encountered will be one"
+    },
+    {
+      "start": 778.399,
+      "duration": 6.24,
+      "end": 784.639,
+      "text": "for that partition and the next portion"
+    },
+    {
+      "start": 782.36,
+      "duration": 4.08,
+      "end": 786.44,
+      "text": "of the string starts from J + one is"
+    },
+    {
+      "start": 784.639,
+      "duration": 4.241,
+      "end": 788.88,
+      "text": "what you need to solve the next portion"
+    },
+    {
+      "start": 786.44,
+      "duration": 5.079,
+      "end": 791.519,
+      "text": "of the string starts from J + 1 and that"
+    },
+    {
+      "start": 788.88,
+      "duration": 5.519,
+      "end": 794.399,
+      "text": "is what you have to solve so that is the"
+    },
+    {
+      "start": 791.519,
+      "duration": 5.0,
+      "end": 796.519,
+      "text": "cost that you will get so for every J"
+    },
+    {
+      "start": 794.399,
+      "duration": 4.201,
+      "end": 798.6,
+      "text": "partition you're getting a cost and you"
+    },
+    {
+      "start": 796.519,
+      "duration": 4.521,
+      "end": 801.04,
+      "text": "need the minimum cost so probably you"
+    },
+    {
+      "start": 798.6,
+      "duration": 5.479,
+      "end": 804.0790000000001,
+      "text": "can keep the minimum cost as in"
+    },
+    {
+      "start": 801.04,
+      "duration": 5.44,
+      "end": 806.48,
+      "text": "something as Max and the minimum cost"
+    },
+    {
+      "start": 804.079,
+      "duration": 5.841,
+      "end": 809.92,
+      "text": "will be the Min of all of"
+    },
+    {
+      "start": 806.48,
+      "duration": 5.359,
+      "end": 811.839,
+      "text": "these so you can just keep the cost"
+    },
+    {
+      "start": 809.92,
+      "duration": 5.279,
+      "end": 815.199,
+      "text": "and this is how the partition will be"
+    },
+    {
+      "start": 811.839,
+      "duration": 6.321,
+      "end": 818.1600000000001,
+      "text": "done and you can easily return the Min"
+    },
+    {
+      "start": 815.199,
+      "duration": 6.121,
+      "end": 821.3199999999999,
+      "text": "cost yes you can easily return the Min"
+    },
+    {
+      "start": 818.16,
+      "duration": 5.84,
+      "end": 824.0,
+      "text": "cost and that is how simple it can be"
+    },
+    {
+      "start": 821.32,
+      "duration": 5.04,
+      "end": 826.36,
+      "text": "got it so that's how you can easily"
+    },
+    {
+      "start": 824.0,
+      "duration": 5.6,
+      "end": 829.6,
+      "text": "write the recursion whenever you end you"
+    },
+    {
+      "start": 826.36,
+      "duration": 5.479,
+      "end": 831.839,
+      "text": "end otherwise you try at every J right"
+    },
+    {
+      "start": 829.6,
+      "duration": 4.039,
+      "end": 833.639,
+      "text": "from the start till the end you try"
+    },
+    {
+      "start": 831.839,
+      "duration": 4.401,
+      "end": 836.24,
+      "text": "everything and every time you're trying"
+    },
+    {
+      "start": 833.639,
+      "duration": 4.681,
+      "end": 838.32,
+      "text": "it and among all you take the"
+    },
+    {
+      "start": 836.24,
+      "duration": 4.839,
+      "end": 841.0790000000001,
+      "text": "possibility so express everything in"
+    },
+    {
+      "start": 838.32,
+      "duration": 5.319,
+      "end": 843.639,
+      "text": "terms of index done explore all"
+    },
+    {
+      "start": 841.079,
+      "duration": 4.76,
+      "end": 845.8389999999999,
+      "text": "possibilities all partitions done take"
+    },
+    {
+      "start": 843.639,
+      "duration": 4.521,
+      "end": 848.16,
+      "text": "the minimum of all possibilities Done"
+    },
+    {
+      "start": 845.839,
+      "duration": 3.8,
+      "end": 849.639,
+      "text": "Right the base case done so you have"
+    },
+    {
+      "start": 848.16,
+      "duration": 2.64,
+      "end": 850.8,
+      "text": "successfully written the recurrence yes"
+    },
+    {
+      "start": 849.639,
+      "duration": 3.56,
+      "end": 853.199,
+      "text": "you have successfully written the"
+    },
+    {
+      "start": 850.8,
+      "duration": 4.64,
+      "end": 855.4399999999999,
+      "text": "recurence for for the forward partition"
+    },
+    {
+      "start": 853.199,
+      "duration": 4.161,
+      "end": 857.3599999999999,
+      "text": "or the front partition problem now once"
+    },
+    {
+      "start": 855.44,
+      "duration": 3.839,
+      "end": 859.2790000000001,
+      "text": "you have successfully return the"
+    },
+    {
+      "start": 857.36,
+      "duration": 5.24,
+      "end": 862.6,
+      "text": "recurence what will be the time"
+    },
+    {
+      "start": 859.279,
+      "duration": 6.721,
+      "end": 866.0,
+      "text": "complexity again you're trying out every"
+    },
+    {
+      "start": 862.6,
+      "duration": 6.599,
+      "end": 869.1990000000001,
+      "text": "possible paration so it will go"
+    },
+    {
+      "start": 866.0,
+      "duration": 5.88,
+      "end": 871.88,
+      "text": "exponential in nature and we have to see"
+    },
+    {
+      "start": 869.199,
+      "duration": 4.56,
+      "end": 873.7589999999999,
+      "text": "if there are overlapping sub problems"
+    },
+    {
+      "start": 871.88,
+      "duration": 3.72,
+      "end": 875.6,
+      "text": "and if they're overlapping sub problems"
+    },
+    {
+      "start": 873.759,
+      "duration": 4.88,
+      "end": 878.639,
+      "text": "you will see that there are you will"
+    },
+    {
+      "start": 875.6,
+      "duration": 5.359,
+      "end": 880.9590000000001,
+      "text": "apply memo iation into the recursion"
+    },
+    {
+      "start": 878.639,
+      "duration": 4.361,
+      "end": 883.0,
+      "text": "you'll apply memo iation into the"
+    },
+    {
+      "start": 880.959,
+      "duration": 3.281,
+      "end": 884.2399999999999,
+      "text": "recursion into the problem if you have"
+    },
+    {
+      "start": 883.0,
+      "duration": 3.56,
+      "end": 886.56,
+      "text": "if you don't know what is memo iation"
+    },
+    {
+      "start": 884.24,
+      "duration": 4.88,
+      "end": 889.12,
+      "text": "please go back and watch the entire DP"
+    },
+    {
+      "start": 886.56,
+      "duration": 4.719,
+      "end": 891.279,
+      "text": "playlist so how do you apply mation you"
+    },
+    {
+      "start": 889.12,
+      "duration": 4.36,
+      "end": 893.48,
+      "text": "go back to the function there is only"
+    },
+    {
+      "start": 891.279,
+      "duration": 4.641,
+      "end": 895.92,
+      "text": "one parameter that is changing so just"
+    },
+    {
+      "start": 893.48,
+      "duration": 5.159,
+      "end": 898.639,
+      "text": "write that one parameter what is its"
+    },
+    {
+      "start": 895.92,
+      "duration": 6.64,
+      "end": 902.56,
+      "text": "value starts from zero goes to n minus"
+    },
+    {
+      "start": 898.639,
+      "duration": 5.921,
+      "end": 904.5600000000001,
+      "text": "one so I can just keep a 1D array if I"
+    },
+    {
+      "start": 902.56,
+      "duration": 4.199,
+      "end": 906.7589999999999,
+      "text": "just keep a 1D array that does so what"
+    },
+    {
+      "start": 904.56,
+      "duration": 6.36,
+      "end": 910.92,
+      "text": "you do is go back and right over here"
+    },
+    {
+      "start": 906.759,
+      "duration": 6.32,
+      "end": 913.0790000000001,
+      "text": "you say DP of I is equal to minimum cost"
+    },
+    {
+      "start": 910.92,
+      "duration": 5.719,
+      "end": 916.639,
+      "text": "and right before having anything just"
+    },
+    {
+      "start": 913.079,
+      "duration": 6.601,
+      "end": 919.68,
+      "text": "keep if DP of I is not equal to minus1"
+    },
+    {
+      "start": 916.639,
+      "duration": 5.841,
+      "end": 922.48,
+      "text": "then return just couple of lines shuttle"
+    },
+    {
+      "start": 919.68,
+      "duration": 5.24,
+      "end": 924.92,
+      "text": "change we'll make sure that this is"
+    },
+    {
+      "start": 922.48,
+      "duration": 4.479,
+      "end": 926.9590000000001,
+      "text": "working so if we come back to the code"
+    },
+    {
+      "start": 924.92,
+      "duration": 5.68,
+      "end": 930.5999999999999,
+      "text": "we have the string Str Str so what I'll"
+    },
+    {
+      "start": 926.959,
+      "duration": 6.56,
+      "end": 933.5189999999999,
+      "text": "do is I'll just keep Str Str size okay"
+    },
+    {
+      "start": 930.6,
+      "duration": 2.919,
+      "end": 933.519,
+      "text": "and let's do one"
+    },
+    {
+      "start": 939.44,
+      "duration": 6.16,
+      "end": 945.6,
+      "text": "thing okay so we have done this and"
+    },
+    {
+      "start": 942.759,
+      "duration": 5.361,
+      "end": 948.12,
+      "text": "straight away let's uh call the function"
+    },
+    {
+      "start": 945.6,
+      "duration": 6.239,
+      "end": 951.839,
+      "text": "with the first index with the n and the"
+    },
+    {
+      "start": 948.12,
+      "duration": 7.279,
+      "end": 955.399,
+      "text": "St Str and let's write the function as"
+    },
+    {
+      "start": 951.839,
+      "duration": 4.761,
+      "end": 956.6,
+      "text": "inti n and string please make sure call"
+    },
+    {
+      "start": 955.399,
+      "duration": 3.88,
+      "end": 959.279,
+      "text": "it by reference because there will be"
+    },
+    {
+      "start": 956.6,
+      "duration": 3.96,
+      "end": 960.5600000000001,
+      "text": "multiple recursion calls whenever you"
+    },
+    {
+      "start": 959.279,
+      "duration": 2.761,
+      "end": 962.04,
+      "text": "reach the end there will be no"
+    },
+    {
+      "start": 960.56,
+      "duration": 4.0,
+      "end": 964.56,
+      "text": "partitions required so you can return a"
+    },
+    {
+      "start": 962.04,
+      "duration": 6.76,
+      "end": 968.8,
+      "text": "zero after that you can go across saying"
+    },
+    {
+      "start": 964.56,
+      "duration": 7.12,
+      "end": 971.68,
+      "text": "J will be I till n"
+    },
+    {
+      "start": 968.8,
+      "duration": 5.56,
+      "end": 974.3599999999999,
+      "text": "j++ and what you can do is you can"
+    },
+    {
+      "start": 971.68,
+      "duration": 4.8,
+      "end": 976.4799999999999,
+      "text": "probably uh like just have a string"
+    },
+    {
+      "start": 974.36,
+      "duration": 5.36,
+      "end": 979.72,
+      "text": "temporary equal to"
+    },
+    {
+      "start": 976.48,
+      "duration": 5.719,
+      "end": 982.1990000000001,
+      "text": "this or do you actually need to uh store"
+    },
+    {
+      "start": 979.72,
+      "duration": 4.479,
+      "end": 984.1990000000001,
+      "text": "this temporary string ask yourself do"
+    },
+    {
+      "start": 982.199,
+      "duration": 4.401,
+      "end": 986.5999999999999,
+      "text": "you need to store it because you know"
+    },
+    {
+      "start": 984.199,
+      "duration": 3.921,
+      "end": 988.12,
+      "text": "one thing for sure the string will be"
+    },
+    {
+      "start": 986.6,
+      "duration": 2.84,
+      "end": 989.44,
+      "text": "from like whenever you're trying to do a"
+    },
+    {
+      "start": 988.12,
+      "duration": 4.839,
+      "end": 992.9590000000001,
+      "text": "partition at J"
+    },
+    {
+      "start": 989.44,
+      "duration": 5.519,
+      "end": 994.9590000000001,
+      "text": "the string will always be from I till J"
+    },
+    {
+      "start": 992.959,
+      "duration": 3.88,
+      "end": 996.8389999999999,
+      "text": "the string will be from I to J so do you"
+    },
+    {
+      "start": 994.959,
+      "duration": 5.24,
+      "end": 1000.199,
+      "text": "actually need to store that temporary"
+    },
+    {
+      "start": 996.839,
+      "duration": 5.521,
+      "end": 1002.36,
+      "text": "the answer to that is no you don't need"
+    },
+    {
+      "start": 1000.199,
+      "duration": 5.401,
+      "end": 1005.5999999999999,
+      "text": "so what I'll do is okay I'll keep it and"
+    },
+    {
+      "start": 1002.36,
+      "duration": 7.64,
+      "end": 1010.0,
+      "text": "I'll say if is palindrome if the string"
+    },
+    {
+      "start": 1005.6,
+      "duration": 7.719,
+      "end": 1013.3190000000001,
+      "text": "from I till J is pal drop if it is and"
+    },
+    {
+      "start": 1010.0,
+      "duration": 6.8,
+      "end": 1016.8,
+      "text": "the cost will be 1 plus function of J +"
+    },
+    {
+      "start": 1013.319,
+      "duration": 5.121,
+      "end": 1018.4399999999999,
+      "text": "1 comma n comma St Str and this will be"
+    },
+    {
+      "start": 1016.8,
+      "duration": 5.24,
+      "end": 1022.04,
+      "text": "the cost and what I'll do is I'll just"
+    },
+    {
+      "start": 1018.44,
+      "duration": 3.6,
+      "end": 1022.0400000000001,
+      "text": "minimize it with Min"
+    },
+    {
+      "start": 1022.279,
+      "duration": 5.841,
+      "end": 1028.12,
+      "text": "cost yes and right after this I can just"
+    },
+    {
+      "start": 1025.199,
+      "duration": 4.961,
+      "end": 1030.16,
+      "text": "return the minimum cost perfect now I"
+    },
+    {
+      "start": 1028.12,
+      "duration": 3.4,
+      "end": 1031.52,
+      "text": "just need to write is palindrome and if"
+    },
+    {
+      "start": 1030.16,
+      "duration": 4.08,
+      "end": 1034.24,
+      "text": "I have written this I think we should be"
+    },
+    {
+      "start": 1031.52,
+      "duration": 5.519,
+      "end": 1037.039,
+      "text": "fine to go so let's write bullion is"
+    },
+    {
+      "start": 1034.24,
+      "duration": 5.64,
+      "end": 1039.88,
+      "text": "palindrome I can have I I I can have inj"
+    },
+    {
+      "start": 1037.039,
+      "duration": 5.561,
+      "end": 1042.6,
+      "text": "I can have the string s so we just need"
+    },
+    {
+      "start": 1039.88,
+      "duration": 5.28,
+      "end": 1045.16,
+      "text": "to make sure while I is lesser than J"
+    },
+    {
+      "start": 1042.6,
+      "duration": 6.48,
+      "end": 1049.08,
+      "text": "and if at any moment s of I is not equal"
+    },
+    {
+      "start": 1045.16,
+      "duration": 5.8,
+      "end": 1050.96,
+      "text": "to S of J we say return false or else do"
+    },
+    {
+      "start": 1049.08,
+      "duration": 5.2,
+      "end": 1054.28,
+      "text": "an i++ again I'm not going to teach how"
+    },
+    {
+      "start": 1050.96,
+      "duration": 5.92,
+      "end": 1056.88,
+      "text": "to do palum very obvious very obvious"
+    },
+    {
+      "start": 1054.28,
+      "duration": 4.16,
+      "end": 1058.44,
+      "text": "palum stuff so this is what you'll write"
+    },
+    {
+      "start": 1056.88,
+      "duration": 4.48,
+      "end": 1061.3600000000001,
+      "text": "and yeah if"
+    },
+    {
+      "start": 1058.44,
+      "duration": 5.0,
+      "end": 1063.44,
+      "text": "this if you try to run this you will"
+    },
+    {
+      "start": 1061.36,
+      "duration": 4.04,
+      "end": 1065.3999999999999,
+      "text": "again see some issues okay definitely"
+    },
+    {
+      "start": 1063.44,
+      "duration": 3.96,
+      "end": 1067.4,
+      "text": "you'll see because I have not"
+    },
+    {
+      "start": 1065.4,
+      "duration": 4.2,
+      "end": 1069.6000000000001,
+      "text": "declared so you're seeing that this is"
+    },
+    {
+      "start": 1067.4,
+      "duration": 4.04,
+      "end": 1071.44,
+      "text": "giving wrong answer and for that reason"
+    },
+    {
+      "start": 1069.6,
+      "duration": 3.28,
+      "end": 1072.8799999999999,
+      "text": "we took a very simple test case and you"
+    },
+    {
+      "start": 1071.44,
+      "duration": 4.0,
+      "end": 1075.44,
+      "text": "know the answer for this should have"
+    },
+    {
+      "start": 1072.88,
+      "duration": 4.279,
+      "end": 1077.159,
+      "text": "been a partition here a partition here"
+    },
+    {
+      "start": 1075.44,
+      "duration": 4.44,
+      "end": 1079.88,
+      "text": "and should have been two partition but"
+    },
+    {
+      "start": 1077.159,
+      "duration": 5.201,
+      "end": 1082.3600000000001,
+      "text": "what our code does is a code first does"
+    },
+    {
+      "start": 1079.88,
+      "duration": 5.0,
+      "end": 1084.88,
+      "text": "a partition here then calls for BC then"
+    },
+    {
+      "start": 1082.36,
+      "duration": 5.08,
+      "end": 1087.4399999999998,
+      "text": "in BC does a partition for B and then"
+    },
+    {
+      "start": 1084.88,
+      "duration": 4.96,
+      "end": 1089.8400000000001,
+      "text": "calls for C and then for C does a"
+    },
+    {
+      "start": 1087.44,
+      "duration": 5.56,
+      "end": 1093.0,
+      "text": "partition here then eventually calls for"
+    },
+    {
+      "start": 1089.84,
+      "duration": 6.12,
+      "end": 1095.9599999999998,
+      "text": "I equal equal to n got it so what"
+    },
+    {
+      "start": 1093.0,
+      "duration": 5.039,
+      "end": 1098.039,
+      "text": "happens is it does a partion right at"
+    },
+    {
+      "start": 1095.96,
+      "duration": 4.56,
+      "end": 1100.52,
+      "text": "the end so what you just need to make"
+    },
+    {
+      "start": 1098.039,
+      "duration": 4.561,
+      "end": 1102.6,
+      "text": "sure is whatever answer comes since it"
+    },
+    {
+      "start": 1100.52,
+      "duration": 4.24,
+      "end": 1104.76,
+      "text": "is doing a partition at the end you just"
+    },
+    {
+      "start": 1102.6,
+      "duration": 5.04,
+      "end": 1107.6399999999999,
+      "text": "need to subtract a one and if you try to"
+    },
+    {
+      "start": 1104.76,
+      "duration": 6.039,
+      "end": 1110.799,
+      "text": "subtract a one it should work the sole"
+    },
+    {
+      "start": 1107.64,
+      "duration": 4.96,
+      "end": 1112.6000000000001,
+      "text": "reason being because if you take a b c"
+    },
+    {
+      "start": 1110.799,
+      "duration": 3.721,
+      "end": 1114.52,
+      "text": "it does a partition here does a"
+    },
+    {
+      "start": 1112.6,
+      "duration": 4.16,
+      "end": 1116.76,
+      "text": "partition here then whenever the"
+    },
+    {
+      "start": 1114.52,
+      "duration": 4.2,
+      "end": 1118.72,
+      "text": "recursion is called for this much again"
+    },
+    {
+      "start": 1116.76,
+      "duration": 4.64,
+      "end": 1121.4,
+      "text": "it does a paration here so for that"
+    },
+    {
+      "start": 1118.72,
+      "duration": 5.16,
+      "end": 1123.88,
+      "text": "reason you have to take a minus one that"
+    },
+    {
+      "start": 1121.4,
+      "duration": 4.399,
+      "end": 1125.799,
+      "text": "is definite okay so once you've done"
+    },
+    {
+      "start": 1123.88,
+      "duration": 5.64,
+      "end": 1129.5200000000002,
+      "text": "this you just need to declare a"
+    },
+    {
+      "start": 1125.799,
+      "duration": 6.36,
+      "end": 1132.1589999999999,
+      "text": "vector of DP of n minus one and you can"
+    },
+    {
+      "start": 1129.52,
+      "duration": 4.039,
+      "end": 1133.559,
+      "text": "just pass on the DP over here make sure"
+    },
+    {
+      "start": 1132.159,
+      "duration": 4.921,
+      "end": 1137.0800000000002,
+      "text": "you carry the"
+    },
+    {
+      "start": 1133.559,
+      "duration": 7.041,
+      "end": 1140.6,
+      "text": "DP at all the places call it over here"
+    },
+    {
+      "start": 1137.08,
+      "duration": 5.88,
+      "end": 1142.96,
+      "text": "as well and whenever this is calling it"
+    },
+    {
+      "start": 1140.6,
+      "duration": 5.8,
+      "end": 1146.3999999999999,
+      "text": "make sure you have it and right before"
+    },
+    {
+      "start": 1142.96,
+      "duration": 5.36,
+      "end": 1148.32,
+      "text": "this also make sure if that DP of I is"
+    },
+    {
+      "start": 1146.4,
+      "duration": 5.639,
+      "end": 1152.039,
+      "text": "not equal to minus one you can return"
+    },
+    {
+      "start": 1148.32,
+      "duration": 5.64,
+      "end": 1153.96,
+      "text": "the DP of I perfect so if I try to run"
+    },
+    {
+      "start": 1152.039,
+      "duration": 4.801,
+      "end": 1156.84,
+      "text": "this you will see that this is running"
+    },
+    {
+      "start": 1153.96,
+      "duration": 4.839,
+      "end": 1158.799,
+      "text": "fine it is and try to submit this you"
+    },
+    {
+      "start": 1156.84,
+      "duration": 4.0,
+      "end": 1160.84,
+      "text": "will see that this is giving you an"
+    },
+    {
+      "start": 1158.799,
+      "duration": 5.88,
+      "end": 1164.679,
+      "text": "accepted answer it"
+    },
+    {
+      "start": 1160.84,
+      "duration": 5.36,
+      "end": 1166.1999999999998,
+      "text": "does 10 out of 10 T so if you now try to"
+    },
+    {
+      "start": 1164.679,
+      "duration": 3.681,
+      "end": 1168.3600000000001,
+      "text": "submit this you will see that this is"
+    },
+    {
+      "start": 1166.2,
+      "duration": 4.12,
+      "end": 1170.32,
+      "text": "running absolutely fine so this is how"
+    },
+    {
+      "start": 1168.36,
+      "duration": 3.52,
+      "end": 1171.8799999999999,
+      "text": "you solve all this using memorization"
+    },
+    {
+      "start": 1170.32,
+      "duration": 3.8,
+      "end": 1174.12,
+      "text": "but it's time to check out the"
+    },
+    {
+      "start": 1171.88,
+      "duration": 5.12,
+      "end": 1177.0,
+      "text": "tabulation code as well because in the"
+    },
+    {
+      "start": 1174.12,
+      "duration": 4.84,
+      "end": 1178.9599999999998,
+      "text": "memorization you'll always have auxilary"
+    },
+    {
+      "start": 1177.0,
+      "duration": 4.08,
+      "end": 1181.08,
+      "text": "stack space isn't it so let's go deep"
+    },
+    {
+      "start": 1178.96,
+      "duration": 4.88,
+      "end": 1183.8400000000001,
+      "text": "and check out the tabulation code now"
+    },
+    {
+      "start": 1181.08,
+      "duration": 5.719,
+      "end": 1186.799,
+      "text": "okay so if if we discuss the time"
+    },
+    {
+      "start": 1183.84,
+      "duration": 5.64,
+      "end": 1189.48,
+      "text": "complexity of that recursive solution"
+    },
+    {
+      "start": 1186.799,
+      "duration": 5.401,
+      "end": 1192.2,
+      "text": "it's definitely we have n States and"
+    },
+    {
+      "start": 1189.48,
+      "duration": 6.679,
+      "end": 1196.159,
+      "text": "there's a bigo of n Loop running inside"
+    },
+    {
+      "start": 1192.2,
+      "duration": 7.52,
+      "end": 1199.72,
+      "text": "it so it's n² and if I discuss the space"
+    },
+    {
+      "start": 1196.159,
+      "duration": 5.961,
+      "end": 1202.1200000000001,
+      "text": "complexity it's definitely be go of uh n"
+    },
+    {
+      "start": 1199.72,
+      "duration": 4.199,
+      "end": 1203.919,
+      "text": "for that DP and an auxiliary stack space"
+    },
+    {
+      "start": 1202.12,
+      "duration": 4.08,
+      "end": 1206.1999999999998,
+      "text": "of B go of n because if we're doing a"
+    },
+    {
+      "start": 1203.919,
+      "duration": 5.961,
+      "end": 1209.88,
+      "text": "partition partition partition you end up"
+    },
+    {
+      "start": 1206.2,
+      "duration": 5.599,
+      "end": 1211.799,
+      "text": "going right right at the end right so"
+    },
+    {
+      "start": 1209.88,
+      "duration": 4.679,
+      "end": 1214.5590000000002,
+      "text": "the space complexity will be B of n for"
+    },
+    {
+      "start": 1211.799,
+      "duration": 4.401,
+      "end": 1216.2,
+      "text": "the DP and B of n for the partition like"
+    },
+    {
+      "start": 1214.559,
+      "duration": 4.761,
+      "end": 1219.32,
+      "text": "you partition you partition so you"
+    },
+    {
+      "start": 1216.2,
+      "duration": 5.16,
+      "end": 1221.3600000000001,
+      "text": "exactly get into the depth so I'm not a"
+    },
+    {
+      "start": 1219.32,
+      "duration": 4.96,
+      "end": 1224.28,
+      "text": "big fan of as you know this auxiliary"
+    },
+    {
+      "start": 1221.36,
+      "duration": 4.0,
+      "end": 1225.36,
+      "text": "stack space so we write tabulation what"
+    },
+    {
+      "start": 1224.28,
+      "duration": 4.08,
+      "end": 1228.36,
+      "text": "are the"
+    },
+    {
+      "start": 1225.36,
+      "duration": 5.559,
+      "end": 1230.9189999999999,
+      "text": "rules write the base case so please"
+    },
+    {
+      "start": 1228.36,
+      "duration": 6.36,
+      "end": 1234.7199999999998,
+      "text": "please by the base case what is the base"
+    },
+    {
+      "start": 1230.919,
+      "duration": 8.361,
+      "end": 1239.2800000000002,
+      "text": "case at first it was if I is equal toal"
+    },
+    {
+      "start": 1234.72,
+      "duration": 7.16,
+      "end": 1241.88,
+      "text": "to n you return Zer so this means DP of"
+    },
+    {
+      "start": 1239.28,
+      "duration": 5.279,
+      "end": 1244.559,
+      "text": "n will always have a value zero just"
+    },
+    {
+      "start": 1241.88,
+      "duration": 4.84,
+      "end": 1246.72,
+      "text": "write it second write down the changing"
+    },
+    {
+      "start": 1244.559,
+      "duration": 4.401,
+      "end": 1248.96,
+      "text": "parameter over here there's only one so"
+    },
+    {
+      "start": 1246.72,
+      "duration": 5.16,
+      "end": 1251.88,
+      "text": "write it and in the recursion call you"
+    },
+    {
+      "start": 1248.96,
+      "duration": 5.88,
+      "end": 1254.8400000000001,
+      "text": "started from zero and you went all in 0"
+    },
+    {
+      "start": 1251.88,
+      "duration": 4.679,
+      "end": 1256.5590000000002,
+      "text": "to n so in DP it will be opposite you"
+    },
+    {
+      "start": 1254.84,
+      "duration": 4.199,
+      "end": 1259.039,
+      "text": "start from n minus one and you go on"
+    },
+    {
+      "start": 1256.559,
+      "duration": 4.36,
+      "end": 1260.9189999999999,
+      "text": "until zero because n is the base case so"
+    },
+    {
+      "start": 1259.039,
+      "duration": 6.081,
+      "end": 1265.12,
+      "text": "you start from n minus one you go until"
+    },
+    {
+      "start": 1260.919,
+      "duration": 6.961,
+      "end": 1267.88,
+      "text": "zero third is very simple copy the"
+    },
+    {
+      "start": 1265.12,
+      "duration": 4.919,
+      "end": 1270.039,
+      "text": "recurrence without even thinking let's"
+    },
+    {
+      "start": 1267.88,
+      "duration": 5.88,
+      "end": 1273.7600000000002,
+      "text": "go across and copy the recurence don't"
+    },
+    {
+      "start": 1270.039,
+      "duration": 6.201,
+      "end": 1276.24,
+      "text": "think much so that is what I will do so"
+    },
+    {
+      "start": 1273.76,
+      "duration": 6.32,
+      "end": 1280.08,
+      "text": "we have a DP so we can assign everything"
+    },
+    {
+      "start": 1276.24,
+      "duration": 5.96,
+      "end": 1282.2,
+      "text": "to zero DP of n will be zero okay"
+    },
+    {
+      "start": 1280.08,
+      "duration": 5.28,
+      "end": 1285.36,
+      "text": "perfect uh what's the next thing we know"
+    },
+    {
+      "start": 1282.2,
+      "duration": 5.8,
+      "end": 1288.0,
+      "text": "I will be from n minus one till 0 and"
+    },
+    {
+      "start": 1285.36,
+      "duration": 5.16,
+      "end": 1290.52,
+      "text": "iusus and once you have done this I'll"
+    },
+    {
+      "start": 1288.0,
+      "duration": 4.76,
+      "end": 1292.76,
+      "text": "just take this portion to be something"
+    },
+    {
+      "start": 1290.52,
+      "duration": 2.24,
+      "end": 1292.76,
+      "text": "like"
+    },
+    {
+      "start": 1293.32,
+      "duration": 7.68,
+      "end": 1301.0,
+      "text": "this okay and amazing now instead of DP"
+    },
+    {
+      "start": 1298.72,
+      "duration": 5.839,
+      "end": 1304.559,
+      "text": "of this we'll write just DP of j+ one"
+    },
+    {
+      "start": 1301.0,
+      "duration": 7.96,
+      "end": 1308.96,
+      "text": "that's it and if I write this will it"
+    },
+    {
+      "start": 1304.559,
+      "duration": 7.081,
+      "end": 1311.6399999999999,
+      "text": "run perfect it will but is there any"
+    },
+    {
+      "start": 1308.96,
+      "duration": 5.199,
+      "end": 1314.159,
+      "text": "still issue there is there is we did not"
+    },
+    {
+      "start": 1311.64,
+      "duration": 4.84,
+      "end": 1316.48,
+      "text": "copy this so please copy this as well so"
+    },
+    {
+      "start": 1314.159,
+      "duration": 5.201,
+      "end": 1319.3600000000001,
+      "text": "please copy this as well and right over"
+    },
+    {
+      "start": 1316.48,
+      "duration": 4.92,
+      "end": 1321.4,
+      "text": "here just try to have this red used and"
+    },
+    {
+      "start": 1319.36,
+      "duration": 4.76,
+      "end": 1324.12,
+      "text": "this will be DP of 0 yes whatever value"
+    },
+    {
+      "start": 1321.4,
+      "duration": 4.32,
+      "end": 1325.72,
+      "text": "is stored at DP of 0 minus one so if I"
+    },
+    {
+      "start": 1324.12,
+      "duration": 4.159,
+      "end": 1328.279,
+      "text": "now try running this you will see that"
+    },
+    {
+      "start": 1325.72,
+      "duration": 5.0,
+      "end": 1330.72,
+      "text": "this is running fine it is but it did"
+    },
+    {
+      "start": 1328.279,
+      "duration": 4.041,
+      "end": 1332.32,
+      "text": "give you a runtime error uh why did it"
+    },
+    {
+      "start": 1330.72,
+      "duration": 3.88,
+      "end": 1334.6000000000001,
+      "text": "give you a runtime error let's quickly"
+    },
+    {
+      "start": 1332.32,
+      "duration": 5.88,
+      "end": 1338.2,
+      "text": "have a check because it uh I think"
+    },
+    {
+      "start": 1334.6,
+      "duration": 6.679,
+      "end": 1341.279,
+      "text": "you're having it of size n g is going"
+    },
+    {
+      "start": 1338.2,
+      "duration": 6.88,
+      "end": 1345.0800000000002,
+      "text": "from I till n and you're doing a"
+    },
+    {
+      "start": 1341.279,
+      "duration": 5.481,
+      "end": 1346.76,
+      "text": "g++ so DP of G + 1 is it at any time"
+    },
+    {
+      "start": 1345.08,
+      "duration": 5.16,
+      "end": 1350.24,
+      "text": "giving you rtime let's quickly have a"
+    },
+    {
+      "start": 1346.76,
+      "duration": 5.32,
+      "end": 1352.08,
+      "text": "check yes yes we we will we will have a"
+    },
+    {
+      "start": 1350.24,
+      "duration": 3.52,
+      "end": 1353.76,
+      "text": "runtime error because we assigning DP of"
+    },
+    {
+      "start": 1352.08,
+      "duration": 4.839,
+      "end": 1356.9189999999999,
+      "text": "n so please make sure you have a DP of"
+    },
+    {
+      "start": 1353.76,
+      "duration": 5.64,
+      "end": 1359.4,
+      "text": "n+ one so once that is done I think it"
+    },
+    {
+      "start": 1356.919,
+      "duration": 3.801,
+      "end": 1360.72,
+      "text": "should be fine it is now try to submit"
+    },
+    {
+      "start": 1359.4,
+      "duration": 4.279,
+      "end": 1363.679,
+      "text": "this and you will see that this is"
+    },
+    {
+      "start": 1360.72,
+      "duration": 4.76,
+      "end": 1365.48,
+      "text": "giving you a accepted answer that's how"
+    },
+    {
+      "start": 1363.679,
+      "duration": 4.0,
+      "end": 1367.679,
+      "text": "you can easily convert this into a"
+    },
+    {
+      "start": 1365.48,
+      "duration": 4.84,
+      "end": 1370.32,
+      "text": "tabulation code it is so simple once you"
+    },
+    {
+      "start": 1367.679,
+      "duration": 5.0,
+      "end": 1372.679,
+      "text": "write the memorization so guys I hope I"
+    },
+    {
+      "start": 1370.32,
+      "duration": 4.239,
+      "end": 1374.559,
+      "text": "was able to explain you the memorization"
+    },
+    {
+      "start": 1372.679,
+      "duration": 3.641,
+      "end": 1376.3200000000002,
+      "text": "and then the tabulation one just in case"
+    },
+    {
+      "start": 1374.559,
+      "duration": 3.281,
+      "end": 1377.84,
+      "text": "I was please please please make sure you"
+    },
+    {
+      "start": 1376.32,
+      "duration": 2.68,
+      "end": 1379.0,
+      "text": "like this video and if you're new to"
+    },
+    {
+      "start": 1377.84,
+      "duration": 2.52,
+      "end": 1380.36,
+      "text": "this Channel please do consider"
+    },
+    {
+      "start": 1379.0,
+      "duration": 2.679,
+      "end": 1381.679,
+      "text": "subscribing to us because that is the"
+    },
+    {
+      "start": 1380.36,
+      "duration": 2.96,
+      "end": 1383.32,
+      "text": "only thing that keeps me motivated to"
+    },
+    {
+      "start": 1381.679,
+      "duration": 2.721,
+      "end": 1384.4,
+      "text": "make these kind of content and yeah with"
+    },
+    {
+      "start": 1383.32,
+      "duration": 2.76,
+      "end": 1386.08,
+      "text": "this I'll be wrapping up this video"
+    },
+    {
+      "start": 1384.4,
+      "duration": 4.08,
+      "end": 1388.48,
+      "text": "let's meet in the next one till then"
+    },
+    {
+      "start": 1386.08,
+      "duration": 5.719,
+      "end": 1391.799,
+      "text": "bye-bye take care see"
+    },
+    {
+      "start": 1388.48,
+      "duration": 3.319,
+      "end": 1391.799,
+      "text": "you is"
+    },
+    {
+      "start": 1392.039,
+      "duration": 5.681,
+      "end": 1397.72,
+      "text": "broken"
+    },
+    {
+      "start": 1393.64,
+      "duration": 4.08,
+      "end": 1397.72,
+      "text": "golden I will"
+    }
+  ]
+}

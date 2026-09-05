@@ -1,0 +1,64 @@
+{
+  "video_id": "3WaxQMELSkw",
+  "position": 187,
+  "title": "DP 6. House Robber 2 | 1D DP | DP on Subsequences",
+  "url": "https://www.youtube.com/watch?v=3WaxQMELSkw",
+  "chunk_count": 5,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "3WaxQMELSkw",
+      "position": 187,
+      "title": "DP 6. House Robber 2 | 1D DP | DP on Subsequences",
+      "url": "https://www.youtube.com/watch?v=3WaxQMELSkw",
+      "start": 0.0,
+      "end": 132.07999999999998,
+      "text": "hey everyone welcome back to the channel i hope you guys are doing extremely well so today is the lecture six of the dynamic programming playlist and the problem that we will be solving is house robber yes now this problem is quite similar to the lecture five so if you have not seen the lecture five i'll recommend you to go back watch lecture five and then come across and watch this because i won't be explaining this problem in deep because this problem can be solved using the same technique that i have used in lecture five i'm using the same code just there is a slight moderation in the problem so let's read the problem what does the problem state so mr x is a professional robber planning to rob houses along a street each house has a certain amount of money hidden all houses along the street are arranged in a circle okay that means the first house is the neighbor of the last one make sense meanwhile adjacent houses have a security system connected that means the houses that are adjacent have a security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night so you're given an array a list of non-negative very important non-negative integers array representing the amount of money at each house your task is to return the maximum amount of money mr x can rob tonight without alerting the police so basically it states that you have to pick up you have to steal from houses without alerting the police and how does the bullet uh how does the police gets elected if to adjacent houses like if you steal from two adjacent houses now the previous question was quite same your repo you're supposed to return the maximum sum of the subsequence with the constraint that no elements are adjacent in the given array the only difference in this problem is they're saying that the last house is the adjacent of the first one so it's a",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "3WaxQMELSkw",
+      "position": 187,
+      "title": "DP 6. House Robber 2 | 1D DP | DP on Subsequences",
+      "url": "https://www.youtube.com/watch?v=3WaxQMELSkw",
+      "start": 127.6,
+      "end": 262.479,
+      "text": "the adjacent of the first one so it's a circular kind of thing that they have given to you so yeah you need to solve this off so how will you solve this is a very very uh good question now let's take the first example two three two ideally according to lecture five yes ideally according to lecture five you could have picked this two and this two because they are not adjacent correct since they're not descended are picked up and you'd have got four but in lecture six in this problem this first and last guy are adjacent so you cannot pick them so apparently you will you're only allowed to pick this so the maximum that you can do is three so just a shuttle changes the question like the lecture five had uh stated clearly that you will have adjacent but over here it states that you cannot have adjacent sorry you will not have adjacent cannot have adjacent and the first and last are adjacents that's the change in this question so how can you solve this question now you might think of a lot of logic but do you actually need to think of a logic that's the question do you actually need any new logic do you need new logic and the answer to that is i don't think i need a new logic i can solve using the previous logic uh in the lecture five but how how can i do that can i say can i say i am definitely sure that whatever my answer will be it cannot contain both of the first and the last whatever my answer is cannot contain the first one and the last one this is practically impossible because according to the question first and the last one are adjacent so you cannot contain them make sense can i say my answer will either contain like it might it might or it might not but this thing is for sure first and last will not be together so can i say can i say",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "3WaxQMELSkw",
+      "position": 187,
+      "title": "DP 6. House Robber 2 | 1D DP | DP on Subsequences",
+      "url": "https://www.youtube.com/watch?v=3WaxQMELSkw",
+      "start": 257.84,
+      "end": 377.28,
+      "text": "can i say can i say if i say what if i consider the array from like i leave out the last element whatever is the array leave out the last element let's leave out the last element and consider the remaining portion of the array and and then apply the lecture five logic in saying find the maximum sum of the subsequence with adjacent remember i'm leaving out the last possible element so i've left out the last possible element okay make sense but you might say but trevor what if the last possible element was in the answer so what i can do is okay this is a possible stuff that i can do i can leave out the last element and i can apply the same logic on the remaining array or i can say let's leave out the first element yes let's leave out the first element and apply the same logic on the remaining portion of the array yes the lecture 5 logic make sense now i definitely know that first and last cannot be together so either this array will give you the answer or this array will give you the answer because that's what it tells if you just think slowly so can i say if this is giving me answer 1 and if this is giving me answer 2 like leaving out the last and leaving out the first can i say my answer to this question is max of both the answers it's very intuitive like it's very very intuitive because first and last cannot be together thereby i do one thing i remove the last and i apply the same logic of the previous question because the question was more or less similar i just was confused with the first and last i just removed that and now the question becomes pretty straightforward as the previous question so it's time that we will try to code this up so in the code just make sure that there is long long int",
+      "word_count": 341
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "3WaxQMELSkw",
+      "position": 187,
+      "title": "DP 6. House Robber 2 | 1D DP | DP on Subsequences",
+      "url": "https://www.youtube.com/watch?v=3WaxQMELSkw",
+      "start": 373.919,
+      "end": 503.44,
+      "text": "is long long int because 10 to the power cube 10 to the 1 9 i think long long it is not required long long or long would have done but it's okay so what i'll do is i'll just copy paste this one let's copy paste this one you have taken the taken from the previous lecture five so this is nothing but the lecture five space optimization solution okay so remember this this is nothing but lecture 5 space optimization solution okay the last one so we know it will take a numsar and it will give me the maximum sum so over here i know one thing for sure i will be computing the answer for the first half uh if i don't take the last one last element and i'll be computing for the rest half if i do not take the first element so assume i create a couple of temporary arrays okay make sense and what i'll do is in these temporary arrays if i is not equal to zero i know let's assume the temporary uh array is this one like temporary one contains everything apart from the first element so i can just keep it like this value in house of i okay make sense if i is not equal to last index by the way just make sure you declare n as this value in house dot size okay just make sure you do that so if this is not equal to can i say temporary to dot push back value in house i so what i did was apart from everything apart from the last element i pushed everything into the attempt to apart from the first element i pushed everything into the temp one that is what i've done so i have the temp one ready i have the temp two ready so temp one is containing now what i know is okay i know the answer is max off if i just call the same function let's call the same function with temp one",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "3WaxQMELSkw",
+      "position": 187,
+      "title": "DP 6. House Robber 2 | 1D DP | DP on Subsequences",
+      "url": "https://www.youtube.com/watch?v=3WaxQMELSkw",
+      "start": 498.56,
+      "end": 591.299,
+      "text": "call the same function with temp one let's call the same function with temp two okay make sense well does this work for all of these what if the array has only single element so that's the case that i have to consider just in case the array has single elements probably you can keep it over here if the array has single elements then you can just pick the that element itself because it cannot have any adjacents just pick it now if i try to run this code you see it is running let's quickly submit it and check yeah runs absolutely fine so you can see by the way summation time so if you're watching this video just make sure you like it because i do make these videos late night uh because i have my office hours in the day so yeah please make sure you like it so yeah uh 253 uh it works absolutely fine now this is how we can easily do it it is just a variation of the previous problem so always keep your eyes open whatever logic i'm teaching try to keep it and try to implicate them by slightly changing the logic don't change it wholeheartedly okay so guys this will be it for this video if you have watched the video till now please make sure you like it and let's follow our tradition please please do comment understood or us in the comment section if you've understood this problem and you can solve this problem in lead code it goes by the name house robert okay so with this let's start with this video [Music]",
+      "word_count": 278
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "video_id": "xtqN4qlgr8s",
+  "position": 278,
+  "title": "L7. Number of Substrings Containing All Three Characters | 2 Pointers and Sliding Window Playlist",
+  "url": "https://www.youtube.com/watch?v=xtqN4qlgr8s",
+  "chunk_count": 10,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "xtqN4qlgr8s",
+      "position": 278,
+      "title": "L7. Number of Substrings Containing All Three Characters | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=xtqN4qlgr8s",
+      "start": 3.24,
+      "end": 132.48,
+      "text": "so let's continue with the two pointer and sliding window playlist on the ders a toz DSC course but we was starting off hey welcome back to the channel I hope you guys are doing extremely well so the problem that we will be solving today is number of substrings containing all the three characters so what is the problem stating it's stating that you'll be given a string and the string will be containing a b c nothing apart from it only these three characters now your task is to figure out the number of substrings now what is the substring any consecutive portion of the string which has all the three characters three characters means a b and c for an example if I pick up this particular substring BBA it has two characters b and a but it doesn't has the third which is the character C so this cannot be considered for an example if I pick up this substring which is b b a c this can be considered because it has a b c in it so you have to figure out the total number of substrings substring obviously not this is the second no no yes this is the first substring so I have one this is also possible and this is also possible so I have three substrings correct okay after that I have this one not possible this one not possible this one possible this one possible this one possible so again have three 3 + 3 6 okay this one no this one no this one yes this one yes another two 6 + 2 8 this one no this one no this one yes because it has all the three characters so one 8 + 1 9 so the answer will be nine and this is what you'll have to return so again what is the extreme name solution that you can think go I just did it try out all the substrings can I do it very simple I'll be standing at here and then I'll be expanding",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "xtqN4qlgr8s",
+      "position": 278,
+      "title": "L7. Number of Substrings Containing All Three Characters | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=xtqN4qlgr8s",
+      "start": 128.16,
+      "end": 252.0,
+      "text": "here and then I'll be expanding expanding expanding expanding I'll keep a count of the number of characters so what I can do is I can straight away start I equal to Zer and I can go ahead till end you know how to iterate on all the substrings we already have done it so many times J will be from I to n stand and we have to keep a track of all the seen characters maybe what I can do is I can keep a hash array of size three because we only have a b and c and I can assign it initially to be zero so what I'll do is Hash of s of J you can subtract the smaller a from it so that a resembles to zero B resembles to one C resembles to two right and what you can do is maybe you can just mark it as one quite simple that means you have seen that particular character once this is done can I write he listen if hash of 0 plus hash of 1+ hash of two if that's equivalent to three which means all the three characters are there and if that is the case this can be added to my answer because this is definitely a substring this is definitely a substring can I say this and eventually I can end the PA loop and the count will be zero can I return this yes I can return this or you can print it whatever you wish to what will be the time complexity can I say that the time complexity will be V go of n Square because like near about n square if not exact near about n square and what about the space complexity I'm using a hash map sorry hash aray but that is a size three that's as good as we go of one so this will be the time complexity can I optimize The Brute Force yes I can not by a significant margin I'll show you a simple trick and",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "xtqN4qlgr8s",
+      "position": 278,
+      "title": "L7. Number of Substrings Containing All Three Characters | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=xtqN4qlgr8s",
+      "start": 246.68,
+      "end": 371.88,
+      "text": "margin I'll show you a simple trick and that trick is what we'll be using to derive the most optimal solution okay tell me one thing you started from here and you said that the B substring doesn't have three characters then you expanded and added the next B and you said BB is not then you expanded and added a a and you say no then you expanded and added C and you said yes this is the moment you said yes this is the moment the if will say yes now tell me one thing if I know that this possible substring has all the three characters do I need to Traverse any further no I don't need to because even if I add B even if I add a those substrings which will be formed in future by adding will also be a valid substring so can I say the moment I get a valid substring every substring Beyond this will also be valid I can so can I see if I if I get this here I can straight away add three to my answer and I don't need to go ahead I can straight away add three to my answer and how I can do it it's very simple if you write down the index number 0 1 2 3 4 5 this string length is six you figured it out at the third index that it is possible so you can say 6 minus third index and you can straight away add that to your answer so a simple optimization will be I can remove this count and I can write Hey listen hey count can you straight away add count plus whatever is the size of the string minus J you can figure out the size of the string and after that please break out please break out there is no need to add this B there's no need to add this a you can straight away now go ahead and start from this B this's ba",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "xtqN4qlgr8s",
+      "position": 278,
+      "title": "L7. Number of Substrings Containing All Three Characters | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=xtqN4qlgr8s",
+      "start": 364.88,
+      "end": 504.039,
+      "text": "go ahead and start from this B this's ba a b a c and again it will be valid over here so you can again add some more answers got it so this is a slight optimization will that improve the time complexity yes for certain test cases but not for the worst imagine I give you a string like a a a a it still Travers till the end right because because you don't have any valid combination where the break will be executed this is a shuttle optimization I did it because I want to explain you the optimal solution so I'm looking to optimize my previous solution the previous solution was taking n square if I'm looking to optimize I'm definitely looking to go towards the direction of B go of n the problem has substrings like two pointer right so I'll start thinking of the two pointer algorithm but now the question arises I need to make sure I have all the three characters so I need to make sure that I get a window which has all the three characters right that's how I have to think for sliding window okay but I'll have to figure out number I'll have to count it's not longest that I'll expand or string I have to count so I'm looking to count and there are substrings I know one thing with every index there are a bunch of substrings that start with b this is a substring bb bb a BB a c BB this this and then with this B this one this one this one with every character there is a substring there are multiple substrings that start I'll do the reverse I'll do the reverse I'll say with every character there is a substring that ends with every character there is a substring that ends I can do it from the front as well but I will do for the end for a frontward implementation you'll understand at the end uh with every character there is a substring that ends",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "xtqN4qlgr8s",
+      "position": 278,
+      "title": "L7. Number of Substrings Containing All Three Characters | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=xtqN4qlgr8s",
+      "start": 498.4,
+      "end": 626.839,
+      "text": "character there is a substring that ends what does that mean with the c I can say that this is a substring where this is the last character this is a substring where C is the last character this is a substring where C is the last character this is a substring where C is the last character okay so I know how to access uh every substring that ends at any given character okay so now I'll try to figure out okay listen just just for the sake of understanding if I'm standing at this B and I'm asking you hey what is the minimal length what is the minimal length of the substring that has all the three characters you will be like this one again please keep it in mind that you should be ending at the this B so you cannot take anything beyond this you have to look before it so I'm very sure that this particular substring has all the three characters and this is the minimum window we can have this is the minimum window we can have we can have this minimum window can I say this is one substring right how many more substrings can I have I cannot add in the front because I'm just looking for substrings that end at this B that end at this B so I cannot add it in the front but I can add in the back I already have one I can still expand it I can still expand it the same logic that we did in the Brute Force the optimization I can do an expansion so this is what I will try to do for every for every character I'll try to figure out the minimum window if I can figure out the minimum window I know one thing this is going to be one this is going to be two this is going to be three that's nothing but if I write down 0 1 2 basically index numbers this is the second index and if this is the minimum",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "xtqN4qlgr8s",
+      "position": 278,
+      "title": "L7. Number of Substrings Containing All Three Characters | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=xtqN4qlgr8s",
+      "start": 618.6,
+      "end": 770.8000000000001,
+      "text": "second index and if this is the minimum minimum how many substrings can you get that has all the three characters where basically Bally it ends with this B so ACB is one this is another and this is another correct ACB this one and this one so I have three which is nothing but index + 1 2 + 1 three correct let's try to expand this logic and let's see how I can figure it out I'll tell you Way as of now just understand what's my thought process so what I will do is I'll straight away take a hashmap and I'll keep a c equal to minus1 -1 = to minus1 okay and I'll start iterating I'll write down the indexes as well 0 1 2 3 4 5 you'll understand don't worry let's start it reading add the character B first thing you'll do is you'll update this and you'll say this is the at the B was last seen this is very important was last seen at the index zero okay tell me one thing for B if this is the last index I have to look on the left I'll have to look on the left right to get a valid window and I don't see it because I don't have a a I don't have a c I don't see it not an issue we will straightforward go to the next one I again have a b i don't I just do one thing I'll update this to index one but do I see a and see no it's still minus one so thereby three characters are not possible let's move ahead this that's an a update a to index 2 perfect but still there is no C so I cannot have a window let's go to the C now this is the moment you start understanding you see a c and you update it to three now tell me one thing tell me one thing if you're standing at C and",
+      "word_count": 340
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "xtqN4qlgr8s",
+      "position": 278,
+      "title": "L7. Number of Substrings Containing All Three Characters | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=xtqN4qlgr8s",
+      "start": 765.6,
+      "end": 894.24,
+      "text": "me one thing if you're standing at C and you have a you have B you have C how do you recognize that this is the minimal window how do you recognize that this is the minimal window which has all the three characters you basically look over all the last seen values and you see that b is at the index one thereby if you start from B and you know currently you are at C you'll have everything because the minimal value is at B A and C are after are after it so I'm very sure at index one till this it's a valid one which has all the three characters minimum possible window this is a valid substring and if this is a valid substring I can add on every character to the left I can add on every character to the left and I can generate more and more substrings which is ending at this particular character C which is ending at this particular character C okay fine how many do I get I get two very obvious one my bad I'll use the marker otherwise it be messy one and two we BAC and B A Perfect what is the next step I'll move the C to uh move the pointer to the B first thing you'll do is please update me now again you'll see that you have a you have B you have C and if you have them what you're looking at is what is the minimal window you look for the value of a b and c and you see that a is at the left most is at the left most so a is at two that means this is the minimal window and if this is the minimal window this is a possible substring you can add everything to the left thereby you can create this is the individual one and you can create two more three which is nothing but 2 + 1 so you can just create three more",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "xtqN4qlgr8s",
+      "position": 278,
+      "title": "L7. Number of Substrings Containing All Three Characters | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=xtqN4qlgr8s",
+      "start": 888.199,
+      "end": 1017.6800000000001,
+      "text": "1 so you can just create three more perfect next you will do is you will take this and you'll move it to a first thing you'll do is you will straight away update a to5 and now you will ask okay ending at this what is the minimal window and you'll figure it out a b c c has the minimal value so thereby this is the minimal window and if this is the minimal window can I say this that along with this I can add this this this typically four additions typically four additions and it is at index three so 3 + 1 4 and after that what you can do is you can finish it off and that is over so if you add it up you'll get nine so what I did was I did the same root Force thing I tried to generate all the substrings in a smarter way in a smarter way standing at every index I tried to figure out what is the minimal you could you could have done it in the opposite way as well standing at the first figure out the minimal on the right for that you'll have to to Travers on the backward Direction that's why I took the opposite that's why I took the opposite you can do the opposite as well very simple very clean figure out every possible figure out for every character because I have taken every character into consideration so I'll not be missing out on any substrings taking every character remember that in your head can we quickly write down the code obviously right okay uh which color let's use yellow yeah that's my fa favorite color which color should I use um orange that's my favorite one yeah take your forward is also in the orange theme so it'll be given a string right so let's take a string what is the first thing that you'll do I need to have a last scene so maybe you can create a last",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "xtqN4qlgr8s",
+      "position": 278,
+      "title": "L7. Number of Substrings Containing All Three Characters | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=xtqN4qlgr8s",
+      "start": 1012.24,
+      "end": 1156.08,
+      "text": "scene so maybe you can create a last scene a minus one minus one and a minus one where minus one signifies that you haven't seen it right and uh at the same time you can keep a count equal to zero after that what I can do is I can start iterating from at 0 to and and what I will do is first thing I'll do is last scene and whatever is the value again minus a equal to the current index and please make sure that that you have three of them so you can just write a simple condition if lasten what is it 0er is not equal to minus one and then for all the three that means you have three of them and if you have three of them what you do is you say count equal to count plus 1 plus is whatever is the index whatever is the index you do 1 plus to it right minimum of last scene of zero last scene of one last scene of two can just write it and once you've done this you can straight away return the value of count and that will be done so you can try omitting uh this check as well even if you do not check if three of them are what will happen is one of the minimums will come up as minus one if it is not there it will come up as minus1 and 1 + minus1 will end up to be zero so you can actually omit the check as well I did write it because I wanted to explain you so what will be the time complexity can I say that the time complexity will be I don't have to even explain straightforward B of n what about the space complexity a beo of fun because I'm just using three variables like three space AR so it's as good as a constant time super simple super clean you just have to think of it that's it think of the",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "xtqN4qlgr8s",
+      "position": 278,
+      "title": "L7. Number of Substrings Containing All Three Characters | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=xtqN4qlgr8s",
+      "start": 1151.32,
+      "end": 1181.5200000000002,
+      "text": "think of it that's it think of the windows Solutions again uh I hope you've understood it so this will be it for this one so if you're still now watching and if you've understood everything please please do consider giving us a like and if you're new to our channel do consider subscribing to us as well with this I'll be wrapping of this video let's me in some other video till then bye-bye [Music] Bren I",
+      "word_count": 78
+    }
+  ]
+}

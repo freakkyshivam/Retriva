@@ -1,0 +1,152 @@
+{
+  "video_id": "qf6qp7GzD5Q",
+  "position": 242,
+  "title": "L6. Odd Even Linked List | Multiple Approaches",
+  "url": "https://www.youtube.com/watch?v=qf6qp7GzD5Q",
+  "chunk_count": 13,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "qf6qp7GzD5Q",
+      "position": 242,
+      "title": "L6. Odd Even Linked List | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=qf6qp7GzD5Q",
+      "start": 3.32,
+      "end": 110.67999999999999,
+      "text": "so let's continue with our playlist before that hey every welcome back to the channel I hope you guys are doing extremely well so the problem that we will be solving today is odd and even link list what is the problem stating it is stating that you'll be given the head of the link list and your task is to group the odd index nodes what do you mean by odd index nodes if I try to number them then this is a odd index node this is a odd index node this is odd index Node 1 3 5 so you have to group them together and you have to group The even index node together so these are the even index node you have to group The even index node together and then you have to return it so basically what you have to do is you'll have to group one then this is a odd this is a odd this is a odd so after one you'll have four after four you'll have five that's done so youve grouped all the odd index nodes right right after that you group all the even index nodes so the even index node will go after that right after that it'll be six and then it'll be null so what I've done is I've basically taken the odd index nodes at first after that I've taken the even index notes and I've connected them so a group of odd and then a group of even then you connect them once you've connected them return the new head of the link list return the new ahead of the link list this is what you have to return so what if this problem comes up in an interview you will be starting off with the extreme name solution and what will be that data replacement what do I mean by that you have odd index nodes right these are the odd index nodes and if you visualize the final l l these are",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "qf6qp7GzD5Q",
+      "position": 242,
+      "title": "L6. Odd Even Linked List | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=qf6qp7GzD5Q",
+      "start": 104.719,
+      "end": 228.04,
+      "text": "if you visualize the final l l these are at the front these are at the front so you'll take them yes you'll take them and you'll place it on the front so basically you replace the data of the notes in the first half once this is done you will go through the even Notes 3 2 6 3 2 6 then you'll do the data replacement in the second half once you have replaced the data you can return the initial head and your link list will be ready it will not be reordered but you will rearrange the data such that such that the data is in the rearranged State got it how can I do that what I will do is I will take a list I'll take a list and I'll start traversing I'll take a temporary and I'll place it at the head what is the first thing I need to do I need to get the odd index data so I'll start at the head and I'll jump in by two indexes I'll jump it by two places right so the temp is standing at the head I'll get the first data which is one once I've got that I'll move the temporary to next of next two places I'll get the next data after that again I'll move it to the next of next I'll take the next data once I've done this temporary will reach null temporary will reach null once it has reached null we will stop so what I can say is one iteration is done but it did Jump by two places so technically it just ended up taking n by two time because you're jumping by two places the next iteration should be done to get the even index nodes how can I do that maybe I'll Place temporary at Heads next because that is where the even index starts correct again I'll take the data and I'll put it into the list and then I'll again jump it by two",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "qf6qp7GzD5Q",
+      "position": 242,
+      "title": "L6. Odd Even Linked List | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=qf6qp7GzD5Q",
+      "start": 222.4,
+      "end": 343.28,
+      "text": "list and then I'll again jump it by two I'll put the data into the list I'll jump it by two after this yes you'll again put it so when you try to jump you will not be able to jump because there is a null and if you is a next of next it doesn't exist null's next doesn't exist so you'll not be able to jump so remember whenever you reach the last node you will have to stop got it so what I've done is I've got a list I've got a list which has the odd and then the even index data what is the next step I'll have to go through the link list again and replace it this time what I'll do is I will go through it so I'll keep temporary placed at head and I'll keep one more point I placed at the zero index of the list and I'll start traversing okay I have one that's fine let's move temporary to the next let's move I to the next that's four let's replace it by four move temporary and move I next we have five replace it by five move temporary and move I next we have three replace it by three move temporary and move I next we have five replace it by two move I move temporary next we have six straight away replace it by six and then move temporary and move I I will exceed the length of the list and temporary will reach null this is when you stop and if you carefully observe data replacement has been done and this is your Brute Force solution so let's quickly check out the sudo code again I'll be writing the pseudo code in case you want C++ Java python JavaScript for The Brute Force the link will be in the description make sure you check it out so what is the first step we need an array so maybe let's assign the array to be an empty array we need temporary and",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "qf6qp7GzD5Q",
+      "position": 242,
+      "title": "L6. Odd Even Linked List | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=qf6qp7GzD5Q",
+      "start": 336.08,
+      "end": 467.40000000000003,
+      "text": "be an empty array we need temporary and first thing is take the odd index out so let's Place temporary at head that was the first step and what I will do is I'll keep the while condition empty and what we will do is we'll go inside and say array. add or push back whatever depending on your language and we a temporary can you give your data a value whatever is your struct's definition once you've done this you will say temporary can you move yourself and since I am going to odd index it will be a jump of two so temporary of next and next it will jump perfect can you tell me what will be the while condition I'm doing temporary so this should definitely not be null because null of next it will throw you an error so temporary should definitely not be null that's for sure and what will be the other condition I'm doing temporary next off next so this should also not be null because if this is null there's a problem null of next is not feasible so what I'll do is temporary next is not equal to null perfect once I've done this is it done is it done have I taken up is it done have I taken up all the odd index elements the answer is no I'll take an example imagine you have one that's pointing to two and that's pointing to three and it's pointing to null and this is where your head stands at so if you have temporary what the first step that will happen it'll go inside adds the value one right and then it'll move temporary to Temporary next of next so temporary will go here when your array just has one when your array just has one this is what your array has and when the temporary stands at the last node very important to notice when the temporary stands at the next last node this condition this condition temporary of next becomes null isn't it",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "qf6qp7GzD5Q",
+      "position": 242,
+      "title": "L6. Odd Even Linked List | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=qf6qp7GzD5Q",
+      "start": 461.879,
+      "end": 605.3599999999999,
+      "text": "of next becomes null isn't it Temporaries of next is null so it will never go inside if it happens to be a odd length if it happens to be odd length link list it will end up missing the last element so you will have to check if at at the end of the day yes temporary was there if it was not null you will say array can you please add that element because we might be skipping because of this condition we might end up skipping the last element so this is how you can put up all the odd elements and the time complexity will be n by2 because you're jumping twice what is the next job the next job is again repeating the same piece of code but this time the temporary will be the temporary will be pointing to head of next because that is where we start off head of next the same line of code the exact same line of code so I'll be like while temporary is not null and and temporary do next is not null I'll say array can you please add temporary. data and can you say temporary can you move to Temporary do next next so what this will do is this will take all the even index nodes why because you started with head next once this is done again it might happen to be the last node so if in case there is a last node ask your array to add that last node and that will be temporary of data perfect that will be temporary of data once you have done this it's done what is the next job just go through the index index will be zero and reassign temporary to head and reassign temporary to head and start writing the code so you say while temporary not null and what you say is temporary your data or value whatever you can call it equal to array of I and once you have done this you move I to the next index",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "qf6qp7GzD5Q",
+      "position": 242,
+      "title": "L6. Odd Even Linked List | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=qf6qp7GzD5Q",
+      "start": 600.959,
+      "end": 717.639,
+      "text": "done this you move I to the next index and you said temporary can you move to the next so temporary says why not I'll move to the next so it's like temporary do next once it is done it's going to be hey can I return the head just make sure there is a edge case the edge case is when you start off you check if um it's a single load what if the head is to be null if the head is null or or if it's a single element node so if this is null any of the cases if that's the case you will end up returning whatever is given to you single element or an empty link list you will not be doing anything otherwise you end up performing this step and again the step this is a beo of n by 2 and this is another beo of n because you're Travis in through all the elements so what will be the overall time complexity can I say the overall time complexity will be 21 yes I can say what will be the overall space complexity can I say that it will be boo of n why because we're using an external data structure an array to store all the elements this is where the interviewer will be like hey I'm not happy with the external space that you're using can you please optimize it so we need to optimize the space complexity of beo of n which technically means you're not allowed to use any external data structures that gives an hint that hey whatever we need to do we need to do within the given link list itself so let's try to think in that direction what is the final state that you need to return it starts off with the head of the link list because that's the first odd index node then you take the next odd index node then you take the next odd index node and once you've done this",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "qf6qp7GzD5Q",
+      "position": 242,
+      "title": "L6. Odd Even Linked List | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=qf6qp7GzD5Q",
+      "start": 712.12,
+      "end": 837.639,
+      "text": "odd index node and once you've done this you start with the even index nodes so that's basically three four and then six that's what you do and six is pointing to null and then you basically connect the last of odd to even and you return the current head itself you return the current head itself that's what you do so we need to do link changes in such a way that two's next is pointing to one One's next is pointing to five that's it that will make sure that the odd is connected once you done for the odd the even three is connected to the even four the even index 4 is connected to the six once this link change of odd and even is done what is remaining this five because five should connect to even starting so make five connect to this three that's it just make five connect to this three and your job should be done right so can I can I do the link changes I think I can so I need to find a logic and the logic will be be in two steps the first is changing the links for the odd index noes the second is changing the links for the even index noes correct so what I'll do is I'll take odd and it starts with the head because that is where the odd index starts I will take even I'll place it at head of next I'll place it at head of next done let's try to change the links for the odd can I see this should ideally be pointing to the next odd but it is pointing to three which I don't want so what I will say is hey odd hey odd your next can it point to odds next of next can I say this because if I say this then this next ends up pointing to this it does that's what I'll do that's what I'll do so I will basically change the link and point it to one done",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "qf6qp7GzD5Q",
+      "position": 242,
+      "title": "L6. Odd Even Linked List | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=qf6qp7GzD5Q",
+      "start": 831.0,
+      "end": 953.199,
+      "text": "change the link and point it to one done right after that you say OD move move to your next and and if I say next now the next is this so it moves I've changed the link for odd at the same time simultaneously I can do it for even as well no need to do it after like in one more Loop you can do it in the same Loop let's do for the even can I even hey your next is pointing to one which I don't want I want you to point to four can you do this he'll be like yes I'll say even next it should point to even next do next isn't it that's what it should be so straight away say hey instead of pointing it here can you point it to Fourth like why not sure done after this move the even to the even node perfect Next Step will be the same you'll say odd this is pointing to four which is wrong can you point to next of next which is this perfect once you've done this move the odd simultaneously do it for the even even this is wrong so you should technically be pointing to six and the even reaches here right after the step remember one thing the even will always be ahead of odd the even will always be in front of OD so whatever checks you'll write like whatever your last check is should be based on even should be based on even and you're seeing that even is at last you stop similarly odd no need to do anything you stop you have stopped so once we have done the two phases which is basically pointing the odd index nodes to the odd index noes pointing the even index noes to the even index noes the next job we have to do and the next job will be I know I'll start off at two I'll go to one I'll go to five and that's my last odd but this last odd",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "qf6qp7GzD5Q",
+      "position": 242,
+      "title": "L6. Odd Even Linked List | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=qf6qp7GzD5Q",
+      "start": 947.92,
+      "end": 1076.84,
+      "text": "that's my last odd but this last odd cannot point to six because six is the last even this five should technically point to three because in the real world two should point to one one should point to five and five should point to three and then the even starts right but the problem is five is pointing to six I still have to do a link change after those two phases I I'll have to do a link change so I need to make sure five points to three but do you have access to three do you have access to three you cannot call it as head next can you call it no so remember before starting me Memo memorize this remember this in the memory memorize this remember this in a separate variable even node even head or whatever and right after this after your phases you can say odds next should be because odd is pointing to five this next should be pointing to even head so what will happen is this link will go off and this will be pointing to if I have to it will get M here I know pointing to this so basically it goes like this this and this this this and this yes arranged looks messy but if you carefully look around it has been arranged according to the question so I'll be writing the pseudo code in case you want the C++ Java Python and JavaScript codes the link will be in the description make sure you check it out what do we need we need a odd we need a even where will the odd start at the head where will the even start head of next and where will the even head be it's at the head next so if you remember we need to memorize even head so that it can be used for the linkage okay let's try to write down the while loop because we need to Traverse and I'll not write the condition what's the first thing",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "qf6qp7GzD5Q",
+      "position": 242,
+      "title": "L6. Odd Even Linked List | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=qf6qp7GzD5Q",
+      "start": 1070.32,
+      "end": 1208.76,
+      "text": "the condition what's the first thing that we are doing we saying OD your next should be pointing to odds next of next again depending on language it can be dot it can be arrows right that's done for odd what about even even do next equal to even. next. nextt once this is done what is your next job you say odd can you go to your next I be like odd. next that's it because you've already pointed it to next next and is even it be even dot next of next done once this is done I write the while loop condition once this is done you say odd wherever you're standing your last should definitely be pointing to the even head now this this line is for this one done once you've done what will be your head the initial head will be the head itself because that is where the odd starts from and please make sure if the head is null or or that means an empty link or or if it is a single element you will not be doing any of these you will not be doing any of this and you'll be returning whatever is given to you whatever head is given to you if it's an empty it goes as null if it is a single elementes uh it goes as a single element so what will be the while condition will I just write for odd will I just write for even will I write for both that is the question let's understand we have two nodes odd and even rather two pointers which are traversing can I say one thing if even has not reached the end I repeat if even has not reached the end ODD will also not reach why because even is bound to be in front of what right if you see even is here what is below previous like previous to it if even is here ODD will also not reach null so if I can determine when even for",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "qf6qp7GzD5Q",
+      "position": 242,
+      "title": "L6. Odd Even Linked List | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=qf6qp7GzD5Q",
+      "start": 1203.12,
+      "end": 1316.36,
+      "text": "null so if I can determine when even for for even if I'm sure it is not it hasn't reached null that's it that's my job so what I'll do is I'll try to determine even has reached or not if it hasn't reached or will also not reach and I can do the operations I can do the operations so let's analyze what am I writing even dot something so this definitely cannot be null this definitely cannot be null for sure let's write it so even definitely cannot be null that's for sure I'm again doing even. next. next so this also cannot be null because null of next will throw a null pointer so even dot next also cannot be null simple way to analyze you don't need to check for this because if even. next next is null that basically means even is null so you don't need to check for for anything else if you just check for this and this that will work remember one thing even if you reach the end even if you reach the end in case of odd number of indexes wherever odd ends that's the correct position so you might be thinking hey you just written for even even is reaching the end right what if odd hasn't you might think that right let's take an example you're taking odd to be here you're taking even to be here right what are we doing we saying odd point this to this and then odd moves here and then you say even point this to this and then even moves here and this is when you stop you say even you at the last node right because even do next is null here the last node so stop no need to do and we carefully observe if this stops you're at the correct place for OD you're at the correct place so if you're just doing for even this will work out this will work out no need to think so what will be the time complexity of this",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "qf6qp7GzD5Q",
+      "position": 242,
+      "title": "L6. Odd Even Linked List | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=qf6qp7GzD5Q",
+      "start": 1312.0,
+      "end": 1430.44,
+      "text": "what will be the time complexity of this portion of code uh what I'll ask you is U please think about it and and write it in the comment section I want to see what you are thinking okay and after that hear me out so if you remember in The Brute Force we first wrote a while loop to separate the odd elements to a array and that while loop was taking beo of N by2 and then we went on to write another while loop to separate the even elements that was taking n by2 and both to get they added up to B go of n to segregate them into an array right over here what I've done is it's a single while loop but I'm doing the odd and the even operations together I'm doing it together simultaneously so technically the while loop technically the while loop is running for 1 2 3 which is basically n by two times not more than that it's basically running for n by two times okay so if it is running for n by 2 times can I say that the time complexity is n by2 maybe yes but you cannot you need to compute these unit operations you're doing two steps like they need to be computed as two steps because you're doing two operations two length changes so it's basically beo of n by 2 into 2 which balls down to be of n itself so this will be the time complexity now this will be slightly faster than doing it in two while Loops slightly not a huge difference because if you write odd and even in two while Loops it will be of the similar time complexity slightly slightly Creed slightly not much what about the space complexity it's a bigo of fun just doing little changes nothing else so if you're still watching I'm very very sure that you have understood everything and if that is the case please please do comment understood and please do consider giving us a like as",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "qf6qp7GzD5Q",
+      "position": 242,
+      "title": "L6. Odd Even Linked List | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=qf6qp7GzD5Q",
+      "start": 1427.039,
+      "end": 1446.4,
+      "text": "please do consider giving us a like as well if you're new to our Channel what are you waiting for hit that subscribe button right away and with this I'll be wrapping up this video Let's Wait in some other video till then bye-bye when your heart is is broken don't ever forget your golden I will find light",
+      "word_count": 59
+    }
+  ]
+}

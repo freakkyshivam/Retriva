@@ -1,0 +1,4886 @@
+{
+  "position": 43,
+  "video_id": "0e4bZaP3MDI",
+  "title": "Reverse Pairs | Hard Interview Question",
+  "url": "https://www.youtube.com/watch?v=0e4bZaP3MDI",
+  "transcript": [
+    {
+      "start": 2.94,
+      "duration": 2.94,
+      "end": 5.88,
+      "text": "if you want to go back to the channel I"
+    },
+    {
+      "start": 4.56,
+      "duration": 2.88,
+      "end": 7.4399999999999995,
+      "text": "hope you guys are doing extremely well"
+    },
+    {
+      "start": 5.88,
+      "duration": 3.48,
+      "end": 9.36,
+      "text": "so we will be continuing with the"
+    },
+    {
+      "start": 7.44,
+      "duration": 3.6,
+      "end": 11.040000000000001,
+      "text": "Strivers A to Z DSA course just in case"
+    },
+    {
+      "start": 9.36,
+      "duration": 3.42,
+      "end": 12.78,
+      "text": "you're for the first time here and you"
+    },
+    {
+      "start": 11.04,
+      "duration": 3.479,
+      "end": 14.518999999999998,
+      "text": "don't have any idea about what this is"
+    },
+    {
+      "start": 12.78,
+      "duration": 3.839,
+      "end": 16.619,
+      "text": "all about you can definitely check it"
+    },
+    {
+      "start": 14.519,
+      "duration": 3.6,
+      "end": 18.119,
+      "text": "out from the link in the description and"
+    },
+    {
+      "start": 16.619,
+      "duration": 3.24,
+      "end": 19.859,
+      "text": "yeah till now I have covered up till"
+    },
+    {
+      "start": 18.119,
+      "duration": 3.301,
+      "end": 21.42,
+      "text": "this particular problem and this video"
+    },
+    {
+      "start": 19.859,
+      "duration": 3.84,
+      "end": 23.699,
+      "text": "I'll be covering up the problem reverse"
+    },
+    {
+      "start": 21.42,
+      "duration": 4.619,
+      "end": 26.039,
+      "text": "space now this is a hard problem so"
+    },
+    {
+      "start": 23.699,
+      "duration": 4.08,
+      "end": 27.779000000000003,
+      "text": "please please make sure that you should"
+    },
+    {
+      "start": 26.039,
+      "duration": 4.4,
+      "end": 30.439,
+      "text": "have seen the problem count in versions"
+    },
+    {
+      "start": 27.779,
+      "duration": 6.181,
+      "end": 33.96,
+      "text": "and you should also be knowing about"
+    },
+    {
+      "start": 30.439,
+      "duration": 5.261,
+      "end": 35.7,
+      "text": "merge sort in detail so if you do not"
+    },
+    {
+      "start": 33.96,
+      "duration": 3.119,
+      "end": 37.079,
+      "text": "know about this pause this video right"
+    },
+    {
+      "start": 35.7,
+      "duration": 3.06,
+      "end": 38.760000000000005,
+      "text": "away there's a link in the description"
+    },
+    {
+      "start": 37.079,
+      "duration": 3.241,
+      "end": 40.32,
+      "text": "go back and watch these couple of videos"
+    },
+    {
+      "start": 38.76,
+      "duration": 3.299,
+      "end": 42.059,
+      "text": "and then you can come back and resume"
+    },
+    {
+      "start": 40.32,
+      "duration": 4.44,
+      "end": 44.76,
+      "text": "this video so what does the problem"
+    },
+    {
+      "start": 42.059,
+      "duration": 5.401,
+      "end": 47.459999999999994,
+      "text": "State the problem States you will be"
+    },
+    {
+      "start": 44.76,
+      "duration": 6.479,
+      "end": 51.239,
+      "text": "given an array of integers and what you"
+    },
+    {
+      "start": 47.46,
+      "duration": 6.66,
+      "end": 54.120000000000005,
+      "text": "have to find is the number of pairs"
+    },
+    {
+      "start": 51.239,
+      "duration": 6.66,
+      "end": 57.899,
+      "text": "and what should the bear do the left"
+    },
+    {
+      "start": 54.12,
+      "duration": 5.64,
+      "end": 59.76,
+      "text": "element should be greater than twice of"
+    },
+    {
+      "start": 57.899,
+      "duration": 4.32,
+      "end": 62.219,
+      "text": "the right element let me give you an"
+    },
+    {
+      "start": 59.76,
+      "duration": 4.74,
+      "end": 64.5,
+      "text": "example so if I take 2 which is"
+    },
+    {
+      "start": 62.219,
+      "duration": 4.681,
+      "end": 66.9,
+      "text": "basically this one then I can say that"
+    },
+    {
+      "start": 64.5,
+      "duration": 5.1,
+      "end": 69.6,
+      "text": "if I take 6 from the right which is"
+    },
+    {
+      "start": 66.9,
+      "duration": 5.82,
+      "end": 72.72,
+      "text": "basically this one 6 comma 2 can be a"
+    },
+    {
+      "start": 69.6,
+      "duration": 6.66,
+      "end": 76.25999999999999,
+      "text": "bear why because 6 is greater than twice"
+    },
+    {
+      "start": 72.72,
+      "duration": 6.3,
+      "end": 79.02,
+      "text": "of 2 it is as well as I can say 9 comma"
+    },
+    {
+      "start": 76.26,
+      "duration": 5.16,
+      "end": 81.42,
+      "text": "2 is a pair as well I can say 12 comma 2"
+    },
+    {
+      "start": 79.02,
+      "duration": 6.3,
+      "end": 85.32,
+      "text": "is a pair as well I can say 19 comma 2"
+    },
+    {
+      "start": 81.42,
+      "duration": 7.44,
+      "end": 88.86,
+      "text": "25 comma 2 40 comma 2 all of them are"
+    },
+    {
+      "start": 85.32,
+      "duration": 6.479,
+      "end": 91.79899999999999,
+      "text": "possible but something like 9 comma 6 is"
+    },
+    {
+      "start": 88.86,
+      "duration": 6.24,
+      "end": 95.1,
+      "text": "not possible why because 9 is not"
+    },
+    {
+      "start": 91.799,
+      "duration": 6.36,
+      "end": 98.159,
+      "text": "greater than twice of 6 got that even"
+    },
+    {
+      "start": 95.1,
+      "duration": 6.6,
+      "end": 101.69999999999999,
+      "text": "something like 12 comma 6 is not a pair"
+    },
+    {
+      "start": 98.159,
+      "duration": 6.78,
+      "end": 104.93900000000001,
+      "text": "why because 12 is not greater than twice"
+    },
+    {
+      "start": 101.7,
+      "duration": 5.879,
+      "end": 107.57900000000001,
+      "text": "of 6 so the key idea over here is it has"
+    },
+    {
+      "start": 104.939,
+      "duration": 4.741,
+      "end": 109.67999999999999,
+      "text": "to be greater than twice off and the"
+    },
+    {
+      "start": 107.579,
+      "duration": 3.601,
+      "end": 111.17999999999999,
+      "text": "problem called the inversions if you"
+    },
+    {
+      "start": 109.68,
+      "duration": 3.6,
+      "end": 113.28,
+      "text": "have seen the previous video in the"
+    },
+    {
+      "start": 111.18,
+      "duration": 5.88,
+      "end": 117.06,
+      "text": "problem count inversion the problem was"
+    },
+    {
+      "start": 113.28,
+      "duration": 5.94,
+      "end": 119.22,
+      "text": "array of I should be greater than array"
+    },
+    {
+      "start": 117.06,
+      "duration": 3.66,
+      "end": 120.72,
+      "text": "of J so we were able to solve this"
+    },
+    {
+      "start": 119.22,
+      "duration": 3.78,
+      "end": 123.0,
+      "text": "problem but this is slightly different"
+    },
+    {
+      "start": 120.72,
+      "duration": 5.16,
+      "end": 125.88,
+      "text": "we have to solve it keeping in mind that"
+    },
+    {
+      "start": 123.0,
+      "duration": 6.0,
+      "end": 129.0,
+      "text": "it is greater than twice of so any left"
+    },
+    {
+      "start": 125.88,
+      "duration": 5.82,
+      "end": 131.7,
+      "text": "element should be greater than the right"
+    },
+    {
+      "start": 129.0,
+      "duration": 4.68,
+      "end": 133.68,
+      "text": "element by twice that is what the"
+    },
+    {
+      "start": 131.7,
+      "duration": 5.039,
+      "end": 136.73899999999998,
+      "text": "problem States over here if I have to"
+    },
+    {
+      "start": 133.68,
+      "duration": 4.68,
+      "end": 138.36,
+      "text": "count the number of pairs uh for two all"
+    },
+    {
+      "start": 136.739,
+      "duration": 5.881,
+      "end": 142.62,
+      "text": "of them can form a pair which is"
+    },
+    {
+      "start": 138.36,
+      "duration": 6.42,
+      "end": 144.78,
+      "text": "basically I can get 6 pairs for six all"
+    },
+    {
+      "start": 142.62,
+      "duration": 5.1,
+      "end": 147.72,
+      "text": "of them can form a pair these people"
+    },
+    {
+      "start": 144.78,
+      "duration": 6.539,
+      "end": 151.319,
+      "text": "cannot so I'll get three more"
+    },
+    {
+      "start": 147.72,
+      "duration": 5.879,
+      "end": 153.599,
+      "text": "for 9 this cannot this scan this scan"
+    },
+    {
+      "start": 151.319,
+      "duration": 5.461,
+      "end": 156.78,
+      "text": "the scan so another three"
+    },
+    {
+      "start": 153.599,
+      "duration": 4.981,
+      "end": 158.57999999999998,
+      "text": "for 12 this cannot this can this can so"
+    },
+    {
+      "start": 156.78,
+      "duration": 4.62,
+      "end": 161.4,
+      "text": "another two"
+    },
+    {
+      "start": 158.58,
+      "duration": 5.519,
+      "end": 164.09900000000002,
+      "text": "for 19 this cannot but this can so"
+    },
+    {
+      "start": 161.4,
+      "duration": 5.4,
+      "end": 166.8,
+      "text": "another one and then for 25 this cannot"
+    },
+    {
+      "start": 164.099,
+      "duration": 3.901,
+      "end": 168.0,
+      "text": "so we are pretty much done with it so"
+    },
+    {
+      "start": 166.8,
+      "duration": 3.36,
+      "end": 170.16000000000003,
+      "text": "the number of pairs that you will get"
+    },
+    {
+      "start": 168.0,
+      "duration": 4.08,
+      "end": 172.08,
+      "text": "for this one is 15 and I want you to"
+    },
+    {
+      "start": 170.16,
+      "duration": 3.48,
+      "end": 173.64,
+      "text": "return the number 15. I don't want the"
+    },
+    {
+      "start": 172.08,
+      "duration": 3.54,
+      "end": 175.62,
+      "text": "base I just want the number which is 15"
+    },
+    {
+      "start": 173.64,
+      "duration": 3.06,
+      "end": 176.7,
+      "text": "that is what the problem States so if"
+    },
+    {
+      "start": 175.62,
+      "duration": 2.339,
+      "end": 177.959,
+      "text": "the problem comes up in an interview"
+    },
+    {
+      "start": 176.7,
+      "duration": 2.64,
+      "end": 179.33999999999997,
+      "text": "what is the first solution that you'll"
+    },
+    {
+      "start": 177.959,
+      "duration": 3.0,
+      "end": 180.959,
+      "text": "give to the interviewer that is"
+    },
+    {
+      "start": 179.34,
+      "duration": 3.24,
+      "end": 182.58,
+      "text": "definitely the Brute Force solution so"
+    },
+    {
+      "start": 180.959,
+      "duration": 3.78,
+      "end": 184.739,
+      "text": "what is the extreme night solution that"
+    },
+    {
+      "start": 182.58,
+      "duration": 4.439,
+      "end": 187.019,
+      "text": "comes to your plate it's like okay I"
+    },
+    {
+      "start": 184.739,
+      "duration": 4.321,
+      "end": 189.06,
+      "text": "need the I I need teaching basically I"
+    },
+    {
+      "start": 187.019,
+      "duration": 3.781,
+      "end": 190.8,
+      "text": "need a pair so can I generate all the"
+    },
+    {
+      "start": 189.06,
+      "duration": 4.62,
+      "end": 193.68,
+      "text": "best how can you generate all the best"
+    },
+    {
+      "start": 190.8,
+      "duration": 4.56,
+      "end": 195.36,
+      "text": "it's very simple you stand at 40 and you"
+    },
+    {
+      "start": 193.68,
+      "duration": 4.199,
+      "end": 197.87900000000002,
+      "text": "go through all the numbers on the right"
+    },
+    {
+      "start": 195.36,
+      "duration": 4.44,
+      "end": 199.8,
+      "text": "you stand at 25 and you go through all"
+    },
+    {
+      "start": 197.879,
+      "duration": 3.72,
+      "end": 201.599,
+      "text": "the numbers on the right you stand at 19"
+    },
+    {
+      "start": 199.8,
+      "duration": 3.48,
+      "end": 203.28,
+      "text": "and you go through all the numbers on"
+    },
+    {
+      "start": 201.599,
+      "duration": 2.761,
+      "end": 204.35999999999999,
+      "text": "the right you stand at 12 and you go"
+    },
+    {
+      "start": 203.28,
+      "duration": 3.539,
+      "end": 206.819,
+      "text": "through all the numbers on the right"
+    },
+    {
+      "start": 204.36,
+      "duration": 3.9,
+      "end": 208.26000000000002,
+      "text": "right so this is what I'll do I'll"
+    },
+    {
+      "start": 206.819,
+      "duration": 4.621,
+      "end": 211.44,
+      "text": "probably go through every number so"
+    },
+    {
+      "start": 208.26,
+      "duration": 5.88,
+      "end": 214.14,
+      "text": "that's basically I equal to 0 to n minus"
+    },
+    {
+      "start": 211.44,
+      "duration": 4.379,
+      "end": 215.819,
+      "text": "1. so this I will be like first over"
+    },
+    {
+      "start": 214.14,
+      "duration": 4.08,
+      "end": 218.22,
+      "text": "here then it will go here then it will"
+    },
+    {
+      "start": 215.819,
+      "duration": 5.461,
+      "end": 221.28,
+      "text": "go here then here then here and keep on"
+    },
+    {
+      "start": 218.22,
+      "duration": 5.519,
+      "end": 223.739,
+      "text": "going so whenever I is here where should"
+    },
+    {
+      "start": 221.28,
+      "duration": 5.519,
+      "end": 226.799,
+      "text": "we start from we should start from right"
+    },
+    {
+      "start": 223.739,
+      "duration": 5.22,
+      "end": 228.959,
+      "text": "of I so it starts from 25 goes till 2."
+    },
+    {
+      "start": 226.799,
+      "duration": 4.681,
+      "end": 231.48000000000002,
+      "text": "if we are at 25 it should start from"
+    },
+    {
+      "start": 228.959,
+      "duration": 4.081,
+      "end": 233.04,
+      "text": "here group and here so quite simple so"
+    },
+    {
+      "start": 231.48,
+      "duration": 4.56,
+      "end": 236.04,
+      "text": "what I'll do is I'll go ahead and run"
+    },
+    {
+      "start": 233.04,
+      "duration": 5.82,
+      "end": 238.85999999999999,
+      "text": "the G loop from I plus 1 and we'll again"
+    },
+    {
+      "start": 236.04,
+      "duration": 4.8,
+      "end": 240.84,
+      "text": "go until n minus 1 very simple and what"
+    },
+    {
+      "start": 238.86,
+      "duration": 6.84,
+      "end": 245.70000000000002,
+      "text": "will I write if I'll write the condition"
+    },
+    {
+      "start": 240.84,
+      "duration": 7.56,
+      "end": 248.4,
+      "text": "if a of I is twice of a of J if a of I"
+    },
+    {
+      "start": 245.7,
+      "duration": 4.259,
+      "end": 249.959,
+      "text": "is greater than twice of a of J I will"
+    },
+    {
+      "start": 248.4,
+      "duration": 4.14,
+      "end": 252.54,
+      "text": "keep a counter which will keep my"
+    },
+    {
+      "start": 249.959,
+      "duration": 3.48,
+      "end": 253.439,
+      "text": "account so initially counter can be 0 so"
+    },
+    {
+      "start": 252.54,
+      "duration": 3.18,
+      "end": 255.72,
+      "text": "I can"
+    },
+    {
+      "start": 253.439,
+      "duration": 5.281,
+      "end": 258.71999999999997,
+      "text": "complete these for loops and whatever"
+    },
+    {
+      "start": 255.72,
+      "duration": 5.46,
+      "end": 261.18,
+      "text": "count is there after the finishing of"
+    },
+    {
+      "start": 258.72,
+      "duration": 4.14,
+      "end": 262.86,
+      "text": "the ith Loop will be my answer but what"
+    },
+    {
+      "start": 261.18,
+      "duration": 3.959,
+      "end": 265.139,
+      "text": "will be the time complexity of such a"
+    },
+    {
+      "start": 262.86,
+      "duration": 4.8,
+      "end": 267.66,
+      "text": "approach obviously it will be big of N"
+    },
+    {
+      "start": 265.139,
+      "duration": 4.861,
+      "end": 270.0,
+      "text": "squared not exactly n Square somewhere"
+    },
+    {
+      "start": 267.66,
+      "duration": 4.92,
+      "end": 272.58000000000004,
+      "text": "near about y because this is running for"
+    },
+    {
+      "start": 270.0,
+      "duration": 4.56,
+      "end": 274.56,
+      "text": "n times and for the first time this will"
+    },
+    {
+      "start": 272.58,
+      "duration": 4.44,
+      "end": 277.02,
+      "text": "run for these many times for the next"
+    },
+    {
+      "start": 274.56,
+      "duration": 4.04,
+      "end": 278.6,
+      "text": "time for these many times somewhere near"
+    },
+    {
+      "start": 277.02,
+      "duration": 4.2,
+      "end": 281.21999999999997,
+      "text": "about 10"
+    },
+    {
+      "start": 278.6,
+      "duration": 5.56,
+      "end": 284.16,
+      "text": "not exactly so thereby the time"
+    },
+    {
+      "start": 281.22,
+      "duration": 4.44,
+      "end": 285.66,
+      "text": "complexity is we go off n Square what"
+    },
+    {
+      "start": 284.16,
+      "duration": 3.36,
+      "end": 287.52000000000004,
+      "text": "about the space complexity the space"
+    },
+    {
+      "start": 285.66,
+      "duration": 3.9,
+      "end": 289.56,
+      "text": "complexity can be called as B Co of 1"
+    },
+    {
+      "start": 287.52,
+      "duration": 4.26,
+      "end": 291.78,
+      "text": "because we are not using any external"
+    },
+    {
+      "start": 289.56,
+      "duration": 3.6,
+      "end": 293.16,
+      "text": "space obviously over here the"
+    },
+    {
+      "start": 291.78,
+      "duration": 3.24,
+      "end": 295.02,
+      "text": "interviewer will not be happy with the N"
+    },
+    {
+      "start": 293.16,
+      "duration": 3.3,
+      "end": 296.46000000000004,
+      "text": "square and it'll ask you to optimize it"
+    },
+    {
+      "start": 295.02,
+      "duration": 2.52,
+      "end": 297.53999999999996,
+      "text": "this is when we move to the optimal"
+    },
+    {
+      "start": 296.46,
+      "duration": 3.179,
+      "end": 299.63899999999995,
+      "text": "solution"
+    },
+    {
+      "start": 297.54,
+      "duration": 4.2,
+      "end": 301.74,
+      "text": "so the last approach was taking n square"
+    },
+    {
+      "start": 299.639,
+      "duration": 3.961,
+      "end": 303.6,
+      "text": "and we have to reduce it so if we have"
+    },
+    {
+      "start": 301.74,
+      "duration": 4.2,
+      "end": 305.94,
+      "text": "to reduce it it will be somewhere in"
+    },
+    {
+      "start": 303.6,
+      "duration": 4.8,
+      "end": 308.40000000000003,
+      "text": "login or we go off and and that is"
+    },
+    {
+      "start": 305.94,
+      "duration": 3.9,
+      "end": 309.84,
+      "text": "something we are getting as a hint so if"
+    },
+    {
+      "start": 308.4,
+      "duration": 5.4,
+      "end": 313.79999999999995,
+      "text": "you remember the last problem count"
+    },
+    {
+      "start": 309.84,
+      "duration": 7.079,
+      "end": 316.919,
+      "text": "inversions we did take examples where I"
+    },
+    {
+      "start": 313.8,
+      "duration": 5.82,
+      "end": 319.62,
+      "text": "was taking two arrays so let's for the"
+    },
+    {
+      "start": 316.919,
+      "duration": 6.241,
+      "end": 323.15999999999997,
+      "text": "moment forget about this problem let's"
+    },
+    {
+      "start": 319.62,
+      "duration": 6.84,
+      "end": 326.46,
+      "text": "go to a problem where we have been given"
+    },
+    {
+      "start": 323.16,
+      "duration": 5.34,
+      "end": 328.5,
+      "text": "couple of sorted arrays yes if you see"
+    },
+    {
+      "start": 326.46,
+      "duration": 4.56,
+      "end": 331.02,
+      "text": "both of the arrays are sorted in an"
+    },
+    {
+      "start": 328.5,
+      "duration": 4.62,
+      "end": 333.12,
+      "text": "ascending order so let's take this and"
+    },
+    {
+      "start": 331.02,
+      "duration": 4.92,
+      "end": 335.94,
+      "text": "if I ask you for these couple of arrays"
+    },
+    {
+      "start": 333.12,
+      "duration": 5.4,
+      "end": 338.52,
+      "text": "can you find me the number of pairs can"
+    },
+    {
+      "start": 335.94,
+      "duration": 4.56,
+      "end": 340.5,
+      "text": "you find me the number of pairs where if"
+    },
+    {
+      "start": 338.52,
+      "duration": 3.54,
+      "end": 342.06,
+      "text": "you take something from the left that"
+    },
+    {
+      "start": 340.5,
+      "duration": 3.9,
+      "end": 344.4,
+      "text": "should be greater than whatever you are"
+    },
+    {
+      "start": 342.06,
+      "duration": 4.56,
+      "end": 346.62,
+      "text": "taking from the right array for an"
+    },
+    {
+      "start": 344.4,
+      "duration": 4.32,
+      "end": 348.71999999999997,
+      "text": "example if you take 21 from here then"
+    },
+    {
+      "start": 346.62,
+      "duration": 4.68,
+      "end": 351.3,
+      "text": "you can pick up two and this can be a"
+    },
+    {
+      "start": 348.72,
+      "duration": 5.699,
+      "end": 354.41900000000004,
+      "text": "bear 21 comma 1 can be a pair 21 comma 3"
+    },
+    {
+      "start": 351.3,
+      "duration": 5.58,
+      "end": 356.88,
+      "text": "can be a pair but 21 comma 13 cannot be"
+    },
+    {
+      "start": 354.419,
+      "duration": 4.201,
+      "end": 358.62,
+      "text": "a pair because 21 is here 13 is here"
+    },
+    {
+      "start": 356.88,
+      "duration": 4.14,
+      "end": 361.02,
+      "text": "that's okay when it's not greater than"
+    },
+    {
+      "start": 358.62,
+      "duration": 5.1,
+      "end": 363.72,
+      "text": "twice so this cannot be a fair again"
+    },
+    {
+      "start": 361.02,
+      "duration": 6.0,
+      "end": 367.02,
+      "text": "something like 6 and 25 cannot be a bear"
+    },
+    {
+      "start": 363.72,
+      "duration": 5.58,
+      "end": 369.3,
+      "text": "something like 1 and 9 cannot be aware"
+    },
+    {
+      "start": 367.02,
+      "duration": 4.019,
+      "end": 371.039,
+      "text": "only pair is possible if something is"
+    },
+    {
+      "start": 369.3,
+      "duration": 3.78,
+      "end": 373.08,
+      "text": "from the left and something is from the"
+    },
+    {
+      "start": 371.039,
+      "duration": 5.341,
+      "end": 376.38,
+      "text": "right then only a pair is possible all"
+    },
+    {
+      "start": 373.08,
+      "duration": 4.92,
+      "end": 378.0,
+      "text": "right so let's again go the same way as"
+    },
+    {
+      "start": 376.38,
+      "duration": 4.259,
+      "end": 380.639,
+      "text": "we moved in the count inversions problem"
+    },
+    {
+      "start": 378.0,
+      "duration": 4.979,
+      "end": 382.979,
+      "text": "so we have to erase this one and this"
+    },
+    {
+      "start": 380.639,
+      "duration": 4.62,
+      "end": 385.259,
+      "text": "one both of them are softed so in the"
+    },
+    {
+      "start": 382.979,
+      "duration": 4.981,
+      "end": 387.96,
+      "text": "count in versions what we did was we"
+    },
+    {
+      "start": 385.259,
+      "duration": 7.801,
+      "end": 393.06,
+      "text": "were basically uh having a condition as"
+    },
+    {
+      "start": 387.96,
+      "duration": 7.019,
+      "end": 394.979,
+      "text": "array of I greater than array of J so in"
+    },
+    {
+      "start": 393.06,
+      "duration": 5.22,
+      "end": 398.28000000000003,
+      "text": "a case where we were standing at three"
+    },
+    {
+      "start": 394.979,
+      "duration": 7.201,
+      "end": 402.18,
+      "text": "and we were standing at six we were sure"
+    },
+    {
+      "start": 398.28,
+      "duration": 7.259,
+      "end": 405.539,
+      "text": "enough we were sure enough that F3"
+    },
+    {
+      "start": 402.18,
+      "duration": 7.139,
+      "end": 409.319,
+      "text": "and 6 are compared 6 is greater than 3"
+    },
+    {
+      "start": 405.539,
+      "duration": 6.301,
+      "end": 411.84,
+      "text": "so thereby all the numbers all the"
+    },
+    {
+      "start": 409.319,
+      "duration": 4.081,
+      "end": 413.40000000000003,
+      "text": "numbers can form a pair with three why"
+    },
+    {
+      "start": 411.84,
+      "duration": 3.84,
+      "end": 415.67999999999995,
+      "text": "because 6 comma 3 can be a pain"
+    },
+    {
+      "start": 413.4,
+      "duration": 4.68,
+      "end": 418.08,
+      "text": "according to this condition similarly 6"
+    },
+    {
+      "start": 415.68,
+      "duration": 4.62,
+      "end": 420.3,
+      "text": "comma 13 comma 3 can be appeared 21"
+    },
+    {
+      "start": 418.08,
+      "duration": 4.559,
+      "end": 422.639,
+      "text": "comma 3 can be a pair 25 comma 3 can be"
+    },
+    {
+      "start": 420.3,
+      "duration": 6.119,
+      "end": 426.419,
+      "text": "appeared and that was only possible"
+    },
+    {
+      "start": 422.639,
+      "duration": 5.941,
+      "end": 428.58,
+      "text": "because this 3 was smaller than 6"
+    },
+    {
+      "start": 426.419,
+      "duration": 4.441,
+      "end": 430.85999999999996,
+      "text": "thereby all the numbers on the right of"
+    },
+    {
+      "start": 428.58,
+      "duration": 4.2,
+      "end": 432.78,
+      "text": "six will always be greater than three"
+    },
+    {
+      "start": 430.86,
+      "duration": 5.04,
+      "end": 435.90000000000003,
+      "text": "that's why it is possible and that's why"
+    },
+    {
+      "start": 432.78,
+      "duration": 5.639,
+      "end": 438.419,
+      "text": "we ended up taking the count four as the"
+    },
+    {
+      "start": 435.9,
+      "duration": 5.1,
+      "end": 441.0,
+      "text": "answer because if 3 can form a pair with"
+    },
+    {
+      "start": 438.419,
+      "duration": 5.761,
+      "end": 444.18,
+      "text": "6 it can form with everyone but over"
+    },
+    {
+      "start": 441.0,
+      "duration": 7.44,
+      "end": 448.44,
+      "text": "here that condition or that process will"
+    },
+    {
+      "start": 444.18,
+      "duration": 6.959,
+      "end": 451.139,
+      "text": "not work why because over here 6 906 is"
+    },
+    {
+      "start": 448.44,
+      "duration": 5.759,
+      "end": 454.199,
+      "text": "greater than 3 but I know 6 is not"
+    },
+    {
+      "start": 451.139,
+      "duration": 7.62,
+      "end": 458.759,
+      "text": "greater than twice of 3 not"
+    },
+    {
+      "start": 454.199,
+      "duration": 7.261,
+      "end": 461.46000000000004,
+      "text": "so 6 cannot form a pair but 13 can 21"
+    },
+    {
+      "start": 458.759,
+      "duration": 4.44,
+      "end": 463.199,
+      "text": "can 25 can so you'll miss out you'll"
+    },
+    {
+      "start": 461.46,
+      "duration": 3.72,
+      "end": 465.18,
+      "text": "miss out you'll just take three and"
+    },
+    {
+      "start": 463.199,
+      "duration": 4.021,
+      "end": 467.22,
+      "text": "you'll move forward to four so you'll"
+    },
+    {
+      "start": 465.18,
+      "duration": 3.84,
+      "end": 469.02,
+      "text": "miss out on these pairs"
+    },
+    {
+      "start": 467.22,
+      "duration": 4.68,
+      "end": 471.90000000000003,
+      "text": "the only reason it worked for this one"
+    },
+    {
+      "start": 469.02,
+      "duration": 5.34,
+      "end": 474.35999999999996,
+      "text": "is is very straightforward if six forms"
+    },
+    {
+      "start": 471.9,
+      "duration": 4.739,
+      "end": 476.63899999999995,
+      "text": "these will form but over here you have a"
+    },
+    {
+      "start": 474.36,
+      "duration": 3.66,
+      "end": 478.02000000000004,
+      "text": "condition you have a condition let me"
+    },
+    {
+      "start": 476.639,
+      "duration": 3.861,
+      "end": 480.5,
+      "text": "write the condition now"
+    },
+    {
+      "start": 478.02,
+      "duration": 6.179,
+      "end": 484.19899999999996,
+      "text": "you have a condition of array of IE"
+    },
+    {
+      "start": 480.5,
+      "duration": 6.58,
+      "end": 487.08,
+      "text": "greater than twice of array of J so it"
+    },
+    {
+      "start": 484.199,
+      "duration": 5.581,
+      "end": 489.78000000000003,
+      "text": "doesn't matter if this one is forming a"
+    },
+    {
+      "start": 487.08,
+      "duration": 3.959,
+      "end": 491.039,
+      "text": "pair with this one or not because if sex"
+    },
+    {
+      "start": 489.78,
+      "duration": 2.46,
+      "end": 492.23999999999995,
+      "text": "is not"
+    },
+    {
+      "start": 491.039,
+      "duration": 3.72,
+      "end": 494.759,
+      "text": "the"
+    },
+    {
+      "start": 492.24,
+      "duration": 5.04,
+      "end": 497.28000000000003,
+      "text": "forward like the next elements might be"
+    },
+    {
+      "start": 494.759,
+      "duration": 5.22,
+      "end": 499.97900000000004,
+      "text": "so you will be missing it got it you do"
+    },
+    {
+      "start": 497.28,
+      "duration": 4.859,
+      "end": 502.13899999999995,
+      "text": "not understand roll back watch it again"
+    },
+    {
+      "start": 499.979,
+      "duration": 4.921,
+      "end": 504.9,
+      "text": "you will understand for sure so we"
+    },
+    {
+      "start": 502.139,
+      "duration": 5.4,
+      "end": 507.539,
+      "text": "cannot apply a method where we say if 6"
+    },
+    {
+      "start": 504.9,
+      "duration": 4.56,
+      "end": 509.46,
+      "text": "is forming a pair and the others will"
+    },
+    {
+      "start": 507.539,
+      "duration": 4.38,
+      "end": 511.919,
+      "text": "because that doesn't work because if 6"
+    },
+    {
+      "start": 509.46,
+      "duration": 4.56,
+      "end": 514.02,
+      "text": "doesn't form a pair the other's mind the"
+    },
+    {
+      "start": 511.919,
+      "duration": 4.56,
+      "end": 516.4789999999999,
+      "text": "others might so we will miss out so"
+    },
+    {
+      "start": 514.02,
+      "duration": 4.379,
+      "end": 518.399,
+      "text": "we'll try to apply some other logic"
+    },
+    {
+      "start": 516.479,
+      "duration": 4.92,
+      "end": 521.399,
+      "text": "understand the logic will be slightly"
+    },
+    {
+      "start": 518.399,
+      "duration": 6.301,
+      "end": 524.7,
+      "text": "different we'll try to stand over here"
+    },
+    {
+      "start": 521.399,
+      "duration": 6.181,
+      "end": 527.58,
+      "text": "and see who can like who can form a"
+    },
+    {
+      "start": 524.7,
+      "duration": 5.28,
+      "end": 529.98,
+      "text": "piano with six we will stand at 13 and"
+    },
+    {
+      "start": 527.58,
+      "duration": 4.86,
+      "end": 532.44,
+      "text": "say who can form a pair we'll stand at"
+    },
+    {
+      "start": 529.98,
+      "duration": 4.859,
+      "end": 534.839,
+      "text": "21 and we will say who can form a pair"
+    },
+    {
+      "start": 532.44,
+      "duration": 5.519,
+      "end": 537.9590000000001,
+      "text": "let's let's start and then we will try"
+    },
+    {
+      "start": 534.839,
+      "duration": 4.62,
+      "end": 539.4590000000001,
+      "text": "to optimize first I'm standing at six"
+    },
+    {
+      "start": 537.959,
+      "duration": 3.361,
+      "end": 541.3199999999999,
+      "text": "and I'm asking you"
+    },
+    {
+      "start": 539.459,
+      "duration": 4.32,
+      "end": 543.779,
+      "text": "which people can form a pair you'll be"
+    },
+    {
+      "start": 541.32,
+      "duration": 4.26,
+      "end": 545.58,
+      "text": "like one can two can so these two people"
+    },
+    {
+      "start": 543.779,
+      "duration": 5.161,
+      "end": 548.9399999999999,
+      "text": "will definitely form a pair with six"
+    },
+    {
+      "start": 545.58,
+      "duration": 5.699,
+      "end": 551.279,
+      "text": "right so let me write this six can form"
+    },
+    {
+      "start": 548.94,
+      "duration": 4.2,
+      "end": 553.1400000000001,
+      "text": "a pair with one comma two not way three"
+    },
+    {
+      "start": 551.279,
+      "duration": 4.141,
+      "end": 555.42,
+      "text": "not way three because it is greater not"
+    },
+    {
+      "start": 553.14,
+      "duration": 6.06,
+      "end": 559.1999999999999,
+      "text": "greater than equal to okay let's go to"
+    },
+    {
+      "start": 555.42,
+      "duration": 5.88,
+      "end": 561.3,
+      "text": "the next 13. let's see for 13"
+    },
+    {
+      "start": 559.2,
+      "duration": 4.319,
+      "end": 563.519,
+      "text": "who can form a pair for 30 in this scan"
+    },
+    {
+      "start": 561.3,
+      "duration": 4.44,
+      "end": 565.74,
+      "text": "this scan this scan this scan this scan"
+    },
+    {
+      "start": 563.519,
+      "duration": 8.521,
+      "end": 572.04,
+      "text": "this can every one of the skin so let's"
+    },
+    {
+      "start": 565.74,
+      "duration": 8.76,
+      "end": 574.5,
+      "text": "write that for 13 1 2 3 4 4 and 5K not"
+    },
+    {
+      "start": 572.04,
+      "duration": 4.799,
+      "end": 576.8389999999999,
+      "text": "nine not nine okay perfect"
+    },
+    {
+      "start": 574.5,
+      "duration": 5.64,
+      "end": 580.14,
+      "text": "let's move to the next"
+    },
+    {
+      "start": 576.839,
+      "duration": 5.641,
+      "end": 582.48,
+      "text": "which is 21. for 21 which element scan"
+    },
+    {
+      "start": 580.14,
+      "duration": 4.5,
+      "end": 584.64,
+      "text": "this scan this scan this can the scan"
+    },
+    {
+      "start": 582.48,
+      "duration": 4.38,
+      "end": 586.86,
+      "text": "this can this scan this"
+    },
+    {
+      "start": 584.64,
+      "duration": 5.34,
+      "end": 589.98,
+      "text": "okay can this slope"
+    },
+    {
+      "start": 586.86,
+      "duration": 5.159,
+      "end": 592.019,
+      "text": "so one can two can three can four can"
+    },
+    {
+      "start": 589.98,
+      "duration": 5.4,
+      "end": 595.38,
+      "text": "four can five can common nine can"
+    },
+    {
+      "start": 592.019,
+      "duration": 5.88,
+      "end": 597.899,
+      "text": "perfect let's go to the next one 25. 425"
+    },
+    {
+      "start": 595.38,
+      "duration": 7.38,
+      "end": 602.76,
+      "text": "okay this this this this this this this"
+    },
+    {
+      "start": 597.899,
+      "duration": 7.681,
+      "end": 605.58,
+      "text": "this till here not 30. so for 25"
+    },
+    {
+      "start": 602.76,
+      "duration": 4.56,
+      "end": 607.3199999999999,
+      "text": "actually I can take all the elements and"
+    },
+    {
+      "start": 605.58,
+      "duration": 5.52,
+      "end": 611.1,
+      "text": "I can take a level"
+    },
+    {
+      "start": 607.32,
+      "duration": 8.34,
+      "end": 615.6600000000001,
+      "text": "do you see a butt YouTube"
+    },
+    {
+      "start": 611.1,
+      "duration": 7.62,
+      "end": 618.72,
+      "text": "if one and two can form a pair with six"
+    },
+    {
+      "start": 615.66,
+      "duration": 5.64,
+      "end": 621.3,
+      "text": "I'll repeat if 1 and 2 can form a pair"
+    },
+    {
+      "start": 618.72,
+      "duration": 6.059,
+      "end": 624.779,
+      "text": "with six they can also form a pair with"
+    },
+    {
+      "start": 621.3,
+      "duration": 4.44,
+      "end": 625.74,
+      "text": "13 why please hear me out properly the"
+    },
+    {
+      "start": 624.779,
+      "duration": 4.021,
+      "end": 628.8,
+      "text": "reason is"
+    },
+    {
+      "start": 625.74,
+      "duration": 5.4,
+      "end": 631.14,
+      "text": "13 is greater than 13 is greater than 6"
+    },
+    {
+      "start": 628.8,
+      "duration": 4.8,
+      "end": 633.5999999999999,
+      "text": "so all the elements that form a pair"
+    },
+    {
+      "start": 631.14,
+      "duration": 5.16,
+      "end": 636.3,
+      "text": "with six will also form a pair with 13"
+    },
+    {
+      "start": 633.6,
+      "duration": 5.64,
+      "end": 639.24,
+      "text": "will also form a pair with 21 and also"
+    },
+    {
+      "start": 636.3,
+      "duration": 5.58,
+      "end": 641.88,
+      "text": "form a pair with 25 because if 6 is"
+    },
+    {
+      "start": 639.24,
+      "duration": 5.58,
+      "end": 644.82,
+      "text": "greater than someone 13 is bound to 21"
+    },
+    {
+      "start": 641.88,
+      "duration": 5.82,
+      "end": 647.7,
+      "text": "is boundary 25 is bound to be so I'll"
+    },
+    {
+      "start": 644.82,
+      "duration": 5.4,
+      "end": 650.22,
+      "text": "try to use this analogy that the same"
+    },
+    {
+      "start": 647.7,
+      "duration": 4.5,
+      "end": 652.2,
+      "text": "elements can be reused if you see same"
+    },
+    {
+      "start": 650.22,
+      "duration": 3.78,
+      "end": 654.0,
+      "text": "elements are being reused I'll try to"
+    },
+    {
+      "start": 652.2,
+      "duration": 4.079,
+      "end": 656.279,
+      "text": "form try to use this because as of now"
+    },
+    {
+      "start": 654.0,
+      "duration": 4.62,
+      "end": 658.62,
+      "text": "what I am doing is for six I'm trying to"
+    },
+    {
+      "start": 656.279,
+      "duration": 4.921,
+      "end": 661.2,
+      "text": "find the keys for 9 I'm trying to find"
+    },
+    {
+      "start": 658.62,
+      "duration": 4.56,
+      "end": 663.18,
+      "text": "some iterating throughout which might"
+    },
+    {
+      "start": 661.2,
+      "duration": 2.94,
+      "end": 664.1400000000001,
+      "text": "end up taking a lot of time so this is"
+    },
+    {
+      "start": 663.18,
+      "duration": 4.02,
+      "end": 667.1999999999999,
+      "text": "where"
+    },
+    {
+      "start": 664.14,
+      "duration": 5.58,
+      "end": 669.72,
+      "text": "because it is sorted I'll end up using a"
+    },
+    {
+      "start": 667.2,
+      "duration": 5.879,
+      "end": 673.0790000000001,
+      "text": "very simple formula not a formula rather"
+    },
+    {
+      "start": 669.72,
+      "duration": 6.0,
+      "end": 675.72,
+      "text": "uh iterative technique for six let's see"
+    },
+    {
+      "start": 673.079,
+      "duration": 4.2,
+      "end": 677.279,
+      "text": "till which we can have an answer"
+    },
+    {
+      "start": 675.72,
+      "duration": 4.799,
+      "end": 680.519,
+      "text": "this one can"
+    },
+    {
+      "start": 677.279,
+      "duration": 5.821,
+      "end": 683.1,
+      "text": "this one can and this one cannot so I'll"
+    },
+    {
+      "start": 680.519,
+      "duration": 5.521,
+      "end": 686.04,
+      "text": "stop here I'll stop here I checked for"
+    },
+    {
+      "start": 683.1,
+      "duration": 5.34,
+      "end": 688.44,
+      "text": "one it can for two it can like I'll"
+    },
+    {
+      "start": 686.04,
+      "duration": 4.979,
+      "end": 691.019,
+      "text": "check for this condition 6 is greater"
+    },
+    {
+      "start": 688.44,
+      "duration": 6.42,
+      "end": 694.86,
+      "text": "than twice of 1 6 is greater than twice"
+    },
+    {
+      "start": 691.019,
+      "duration": 7.021,
+      "end": 698.04,
+      "text": "of 2. 6 is greater than twice of 3. so I"
+    },
+    {
+      "start": 694.86,
+      "duration": 5.7,
+      "end": 700.5600000000001,
+      "text": "stop I stop here so for six I stopped"
+    },
+    {
+      "start": 698.04,
+      "duration": 4.14,
+      "end": 702.18,
+      "text": "here can I say I will take two more to"
+    },
+    {
+      "start": 700.56,
+      "duration": 4.08,
+      "end": 704.64,
+      "text": "do my answer because of these two"
+    },
+    {
+      "start": 702.18,
+      "duration": 5.04,
+      "end": 707.2199999999999,
+      "text": "elements I can so I've taken next I'll"
+    },
+    {
+      "start": 704.64,
+      "duration": 3.96,
+      "end": 708.6,
+      "text": "move to thirteen now remember you don't"
+    },
+    {
+      "start": 707.22,
+      "duration": 4.44,
+      "end": 711.6600000000001,
+      "text": "need to start checking from the first"
+    },
+    {
+      "start": 708.6,
+      "duration": 5.28,
+      "end": 713.88,
+      "text": "again no name straight away start from"
+    },
+    {
+      "start": 711.66,
+      "duration": 4.08,
+      "end": 715.74,
+      "text": "three straight away start from three"
+    },
+    {
+      "start": 713.88,
+      "duration": 4.82,
+      "end": 718.7,
+      "text": "okay for 13"
+    },
+    {
+      "start": 715.74,
+      "duration": 5.88,
+      "end": 721.62,
+      "text": "cross 3 yes for 13"
+    },
+    {
+      "start": 718.7,
+      "duration": 4.78,
+      "end": 723.48,
+      "text": "sorry for thirteen"
+    },
+    {
+      "start": 721.62,
+      "duration": 6.24,
+      "end": 727.86,
+      "text": "2 cross 3"
+    },
+    {
+      "start": 723.48,
+      "duration": 8.4,
+      "end": 731.88,
+      "text": "for 13 if I go here 2 cross 4 for 13"
+    },
+    {
+      "start": 727.86,
+      "duration": 6.919,
+      "end": 734.779,
+      "text": "February of two cross fours for 13 if I"
+    },
+    {
+      "start": 731.88,
+      "duration": 6.24,
+      "end": 738.12,
+      "text": "go here two plus five if I go here"
+    },
+    {
+      "start": 734.779,
+      "duration": 5.62,
+      "end": 740.399,
+      "text": "thirteen two cross nine no so we stop"
+    },
+    {
+      "start": 738.12,
+      "duration": 6.42,
+      "end": 744.54,
+      "text": "here we stop here it's not possible"
+    },
+    {
+      "start": 740.399,
+      "duration": 5.88,
+      "end": 746.279,
+      "text": "so I go check check check and this out"
+    },
+    {
+      "start": 744.54,
+      "duration": 4.5,
+      "end": 749.04,
+      "text": "and this is where it comes out to be not"
+    },
+    {
+      "start": 746.279,
+      "duration": 4.8,
+      "end": 751.079,
+      "text": "possible so all these elements are"
+    },
+    {
+      "start": 749.04,
+      "duration": 4.979,
+      "end": 754.019,
+      "text": "apparently possible so how many elements"
+    },
+    {
+      "start": 751.079,
+      "duration": 4.741,
+      "end": 755.8199999999999,
+      "text": "do you get now one two three four five"
+    },
+    {
+      "start": 754.019,
+      "duration": 3.241,
+      "end": 757.26,
+      "text": "six so six and eight to the answer"
+    },
+    {
+      "start": 755.82,
+      "duration": 3.6,
+      "end": 759.4200000000001,
+      "text": "perfect"
+    },
+    {
+      "start": 757.26,
+      "duration": 4.86,
+      "end": 762.12,
+      "text": "let's go to the next 21. let's see for"
+    },
+    {
+      "start": 759.42,
+      "duration": 4.38,
+      "end": 763.8,
+      "text": "21. again see for 21 you do not need to"
+    },
+    {
+      "start": 762.12,
+      "duration": 3.54,
+      "end": 765.66,
+      "text": "start from the first you can straight"
+    },
+    {
+      "start": 763.8,
+      "duration": 3.12,
+      "end": 766.92,
+      "text": "away start from length you don't need to"
+    },
+    {
+      "start": 765.66,
+      "duration": 3.96,
+      "end": 769.62,
+      "text": "start from one you can straight away"
+    },
+    {
+      "start": 766.92,
+      "duration": 5.219,
+      "end": 772.139,
+      "text": "start from nine for 21"
+    },
+    {
+      "start": 769.62,
+      "duration": 5.219,
+      "end": 774.839,
+      "text": "2 9 yes let's move"
+    },
+    {
+      "start": 772.139,
+      "duration": 3.961,
+      "end": 776.1,
+      "text": "for 21 to 11"
+    },
+    {
+      "start": 774.839,
+      "duration": 3.481,
+      "end": 778.32,
+      "text": "no"
+    },
+    {
+      "start": 776.1,
+      "duration": 4.799,
+      "end": 780.899,
+      "text": "so you stop here"
+    },
+    {
+      "start": 778.32,
+      "duration": 5.1,
+      "end": 783.4200000000001,
+      "text": "you stop here and you can say 9 can be"
+    },
+    {
+      "start": 780.899,
+      "duration": 3.301,
+      "end": 784.2,
+      "text": "taken separately Seven Elements this"
+    },
+    {
+      "start": 783.42,
+      "duration": 4.68,
+      "end": 788.0999999999999,
+      "text": "time"
+    },
+    {
+      "start": 784.2,
+      "duration": 8.22,
+      "end": 792.4200000000001,
+      "text": "perfect let's move to the next 25 for 25"
+    },
+    {
+      "start": 788.1,
+      "duration": 6.96,
+      "end": 795.0600000000001,
+      "text": "to 11 yes so you move ahead for 25 2"
+    },
+    {
+      "start": 792.42,
+      "duration": 4.44,
+      "end": 796.86,
+      "text": "cross 13 no so you stop"
+    },
+    {
+      "start": 795.06,
+      "duration": 4.26,
+      "end": 799.3199999999999,
+      "text": "so you moved ahead"
+    },
+    {
+      "start": 796.86,
+      "duration": 5.94,
+      "end": 802.8000000000001,
+      "text": "and he stopped here so apparently this"
+    },
+    {
+      "start": 799.32,
+      "duration": 6.36,
+      "end": 805.6800000000001,
+      "text": "time eight more relevance I'm done"
+    },
+    {
+      "start": 802.8,
+      "duration": 5.099,
+      "end": 807.899,
+      "text": "so for every element I figured out it"
+    },
+    {
+      "start": 805.68,
+      "duration": 4.8,
+      "end": 810.4799999999999,
+      "text": "can like how many elements can it form a"
+    },
+    {
+      "start": 807.899,
+      "duration": 4.261,
+      "end": 812.16,
+      "text": "pair with and this will be my answer the"
+    },
+    {
+      "start": 810.48,
+      "duration": 4.02,
+      "end": 814.5,
+      "text": "total will be my answer because those"
+    },
+    {
+      "start": 812.16,
+      "duration": 4.56,
+      "end": 816.7199999999999,
+      "text": "many pairs I can form from the left and"
+    },
+    {
+      "start": 814.5,
+      "duration": 4.74,
+      "end": 819.24,
+      "text": "from the right quite simple it wasn't"
+    },
+    {
+      "start": 816.72,
+      "duration": 5.1,
+      "end": 821.82,
+      "text": "that tough so this is what we will try"
+    },
+    {
+      "start": 819.24,
+      "duration": 5.58,
+      "end": 824.82,
+      "text": "to implement in the most shot why"
+    },
+    {
+      "start": 821.82,
+      "duration": 5.16,
+      "end": 826.98,
+      "text": "because both the parts are sorted and if"
+    },
+    {
+      "start": 824.82,
+      "duration": 4.079,
+      "end": 828.899,
+      "text": "you remember where did we have sorted"
+    },
+    {
+      "start": 826.98,
+      "duration": 4.74,
+      "end": 831.72,
+      "text": "arrays right because the starting array"
+    },
+    {
+      "start": 828.899,
+      "duration": 4.921,
+      "end": 833.82,
+      "text": "is definitely might not be sorted so we"
+    },
+    {
+      "start": 831.72,
+      "duration": 4.14,
+      "end": 835.86,
+      "text": "know one thing for sure when we break"
+    },
+    {
+      "start": 833.82,
+      "duration": 4.62,
+      "end": 838.44,
+      "text": "them down in more shop we get sorted"
+    },
+    {
+      "start": 835.86,
+      "duration": 4.68,
+      "end": 840.54,
+      "text": "parts so if for every sorted part for"
+    },
+    {
+      "start": 838.44,
+      "duration": 4.26,
+      "end": 842.7,
+      "text": "every sorted part I can compute the"
+    },
+    {
+      "start": 840.54,
+      "duration": 4.14,
+      "end": 844.68,
+      "text": "answer the overall answer will be my"
+    },
+    {
+      "start": 842.7,
+      "duration": 5.22,
+      "end": 847.9200000000001,
+      "text": "answer similar to what we did in count"
+    },
+    {
+      "start": 844.68,
+      "duration": 5.76,
+      "end": 850.4399999999999,
+      "text": "inversions got this logic so instead of"
+    },
+    {
+      "start": 847.92,
+      "duration": 5.34,
+      "end": 853.26,
+      "text": "relying on two pointers I slightly"
+    },
+    {
+      "start": 850.44,
+      "duration": 4.38,
+      "end": 854.82,
+      "text": "change the popater technique right so"
+    },
+    {
+      "start": 853.26,
+      "duration": 4.019,
+      "end": 857.279,
+      "text": "now let's come back to our original"
+    },
+    {
+      "start": 854.82,
+      "duration": 4.56,
+      "end": 859.38,
+      "text": "problem now we did solve a different"
+    },
+    {
+      "start": 857.279,
+      "duration": 4.86,
+      "end": 862.139,
+      "text": "problem where we were given two sorted"
+    },
+    {
+      "start": 859.38,
+      "duration": 4.86,
+      "end": 864.24,
+      "text": "arrays so if I have the original array"
+    },
+    {
+      "start": 862.139,
+      "duration": 4.621,
+      "end": 866.76,
+      "text": "How can I take them to a portion where"
+    },
+    {
+      "start": 864.24,
+      "duration": 4.68,
+      "end": 868.92,
+      "text": "they have two sorted arrays the best is"
+    },
+    {
+      "start": 866.76,
+      "duration": 4.5,
+      "end": 871.26,
+      "text": "to perform a more shot because it"
+    },
+    {
+      "start": 868.92,
+      "duration": 4.68,
+      "end": 873.5999999999999,
+      "text": "divides divides divides and then it auto"
+    },
+    {
+      "start": 871.26,
+      "duration": 5.639,
+      "end": 876.899,
+      "text": "converts them to to sorted array so"
+    },
+    {
+      "start": 873.6,
+      "duration": 5.76,
+      "end": 879.36,
+      "text": "let's try to do it so first I'll try to"
+    },
+    {
+      "start": 876.899,
+      "duration": 7.141,
+      "end": 884.04,
+      "text": "break it down into two portions and this"
+    },
+    {
+      "start": 879.36,
+      "duration": 9.3,
+      "end": 888.66,
+      "text": "portion will be 40 25 19 and 12 and the"
+    },
+    {
+      "start": 884.04,
+      "duration": 6.359,
+      "end": 890.399,
+      "text": "right will be 9 6 2. let's try to solve"
+    },
+    {
+      "start": 888.66,
+      "duration": 3.9,
+      "end": 892.56,
+      "text": "the left part first and then we can"
+    },
+    {
+      "start": 890.399,
+      "duration": 6.421,
+      "end": 896.82,
+      "text": "solve the right part so this will be 40"
+    },
+    {
+      "start": 892.56,
+      "duration": 7.019,
+      "end": 899.579,
+      "text": "25 whereas this will be 19 and 12. let's"
+    },
+    {
+      "start": 896.82,
+      "duration": 4.019,
+      "end": 900.839,
+      "text": "try to solve this this will be 40 and"
+    },
+    {
+      "start": 899.579,
+      "duration": 3.601,
+      "end": 903.18,
+      "text": "25."
+    },
+    {
+      "start": 900.839,
+      "duration": 4.201,
+      "end": 905.0400000000001,
+      "text": "so let's first solve the left part and"
+    },
+    {
+      "start": 903.18,
+      "duration": 3.36,
+      "end": 906.54,
+      "text": "then we will try to solve this so we"
+    },
+    {
+      "start": 905.04,
+      "duration": 4.38,
+      "end": 909.42,
+      "text": "have 40 and 25"
+    },
+    {
+      "start": 906.54,
+      "duration": 5.099,
+      "end": 911.639,
+      "text": "so if I try to write them separately 40"
+    },
+    {
+      "start": 909.42,
+      "duration": 5.34,
+      "end": 914.76,
+      "text": "and 25"
+    },
+    {
+      "start": 911.639,
+      "duration": 5.281,
+      "end": 916.92,
+      "text": "just try to map this to this problem"
+    },
+    {
+      "start": 914.76,
+      "duration": 4.439,
+      "end": 919.199,
+      "text": "isn't it the same"
+    },
+    {
+      "start": 916.92,
+      "duration": 5.159,
+      "end": 922.079,
+      "text": "two sorted Aries finding out the number"
+    },
+    {
+      "start": 919.199,
+      "duration": 5.101,
+      "end": 924.3,
+      "text": "of pairs okay let's try we stand here"
+    },
+    {
+      "start": 922.079,
+      "duration": 6.421,
+      "end": 928.5,
+      "text": "for 40."
+    },
+    {
+      "start": 924.3,
+      "duration": 6.659,
+      "end": 930.959,
+      "text": "it's 25 40 greater than 2 of 25 no so we"
+    },
+    {
+      "start": 928.5,
+      "duration": 6.86,
+      "end": 935.36,
+      "text": "stop here we stop here how many elements"
+    },
+    {
+      "start": 930.959,
+      "duration": 7.68,
+      "end": 938.6389999999999,
+      "text": "before that no so zero pairs let's move"
+    },
+    {
+      "start": 935.36,
+      "duration": 5.62,
+      "end": 940.98,
+      "text": "when we take 40 and 25 as two separate"
+    },
+    {
+      "start": 938.639,
+      "duration": 4.681,
+      "end": 943.32,
+      "text": "arrays perfect but"
+    },
+    {
+      "start": 940.98,
+      "duration": 4.979,
+      "end": 945.9590000000001,
+      "text": "this step is done this is a different"
+    },
+    {
+      "start": 943.32,
+      "duration": 3.9,
+      "end": 947.22,
+      "text": "step this is not the same step please"
+    },
+    {
+      "start": 945.959,
+      "duration": 3.541,
+      "end": 949.5,
+      "text": "please"
+    },
+    {
+      "start": 947.22,
+      "duration": 5.4,
+      "end": 952.62,
+      "text": "remember this this is not the same step"
+    },
+    {
+      "start": 949.5,
+      "duration": 5.399,
+      "end": 954.899,
+      "text": "as much once you have done this then you"
+    },
+    {
+      "start": 952.62,
+      "duration": 4.68,
+      "end": 957.3,
+      "text": "d uh then you do the normal step of"
+    },
+    {
+      "start": 954.899,
+      "duration": 5.401,
+      "end": 960.3,
+      "text": "merging which is basically 40 and 25"
+    },
+    {
+      "start": 957.3,
+      "duration": 5.46,
+      "end": 962.76,
+      "text": "which is smaller 25 you take it and then"
+    },
+    {
+      "start": 960.3,
+      "duration": 4.38,
+      "end": 964.68,
+      "text": "you take the 40. this is a completely"
+    },
+    {
+      "start": 962.76,
+      "duration": 4.019,
+      "end": 966.779,
+      "text": "different step please please remember"
+    },
+    {
+      "start": 964.68,
+      "duration": 4.26,
+      "end": 968.9399999999999,
+      "text": "this is a completely different step so"
+    },
+    {
+      "start": 966.779,
+      "duration": 3.24,
+      "end": 970.019,
+      "text": "I've got 25 and 40. so this time what"
+    },
+    {
+      "start": 968.94,
+      "duration": 2.82,
+      "end": 971.7600000000001,
+      "text": "I'll do is"
+    },
+    {
+      "start": 970.019,
+      "duration": 4.62,
+      "end": 974.639,
+      "text": "I will go back"
+    },
+    {
+      "start": 971.76,
+      "duration": 4.98,
+      "end": 976.74,
+      "text": "and I'll try to change it to 25 and 40."
+    },
+    {
+      "start": 974.639,
+      "duration": 4.5,
+      "end": 979.139,
+      "text": "perfect"
+    },
+    {
+      "start": 976.74,
+      "duration": 3.839,
+      "end": 980.5790000000001,
+      "text": "so the left portion is done now let's go"
+    },
+    {
+      "start": 979.139,
+      "duration": 3.301,
+      "end": 982.44,
+      "text": "to the right portion so on the right"
+    },
+    {
+      "start": 980.579,
+      "duration": 5.401,
+      "end": 985.9799999999999,
+      "text": "portion we can again go ahead and split"
+    },
+    {
+      "start": 982.44,
+      "duration": 5.82,
+      "end": 988.2600000000001,
+      "text": "it to 19 and 12"
+    },
+    {
+      "start": 985.98,
+      "duration": 4.62,
+      "end": 990.6,
+      "text": "perfect and if I again try to write it"
+    },
+    {
+      "start": 988.26,
+      "duration": 4.199,
+      "end": 992.459,
+      "text": "separately because I will have to come"
+    },
+    {
+      "start": 990.6,
+      "duration": 4.08,
+      "end": 994.6800000000001,
+      "text": "back so whenever you're coming back from"
+    },
+    {
+      "start": 992.459,
+      "duration": 4.32,
+      "end": 996.779,
+      "text": "the more shot you know you're merging it"
+    },
+    {
+      "start": 994.68,
+      "duration": 4.5,
+      "end": 999.18,
+      "text": "but before merging you perform one small"
+    },
+    {
+      "start": 996.779,
+      "duration": 4.5,
+      "end": 1001.279,
+      "text": "step before Magic"
+    },
+    {
+      "start": 999.18,
+      "duration": 3.36,
+      "end": 1002.54,
+      "text": "again try to map it to the same problem"
+    },
+    {
+      "start": 1001.279,
+      "duration": 3.961,
+      "end": 1005.24,
+      "text": "we solved"
+    },
+    {
+      "start": 1002.54,
+      "duration": 6.719,
+      "end": 1009.259,
+      "text": "for 19 let's try to find it up"
+    },
+    {
+      "start": 1005.24,
+      "duration": 6.599,
+      "end": 1011.839,
+      "text": "can 25 be no it cannot be so apparently"
+    },
+    {
+      "start": 1009.259,
+      "duration": 4.5,
+      "end": 1013.759,
+      "text": "anything before 12 like there's no"
+    },
+    {
+      "start": 1011.839,
+      "duration": 3.18,
+      "end": 1015.019,
+      "text": "numbers so 0 base again"
+    },
+    {
+      "start": 1013.759,
+      "duration": 4.08,
+      "end": 1017.839,
+      "text": "done"
+    },
+    {
+      "start": 1015.019,
+      "duration": 5.341,
+      "end": 1020.36,
+      "text": "our step is done do the more steps on"
+    },
+    {
+      "start": 1017.839,
+      "duration": 5.161,
+      "end": 1023.0,
+      "text": "merging you'll get 12 and 19. so this"
+    },
+    {
+      "start": 1020.36,
+      "duration": 4.26,
+      "end": 1024.6200000000001,
+      "text": "will be 12 and 19 so I'm more still"
+    },
+    {
+      "start": 1023.0,
+      "duration": 4.199,
+      "end": 1027.199,
+      "text": "perfect"
+    },
+    {
+      "start": 1024.62,
+      "duration": 5.04,
+      "end": 1029.6599999999999,
+      "text": "merged what's the next step"
+    },
+    {
+      "start": 1027.199,
+      "duration": 4.62,
+      "end": 1031.819,
+      "text": "this left and this right because both of"
+    },
+    {
+      "start": 1029.66,
+      "duration": 4.08,
+      "end": 1033.74,
+      "text": "them are solved try to merge them so"
+    },
+    {
+      "start": 1031.819,
+      "duration": 6.12,
+      "end": 1037.9389999999999,
+      "text": "before merging we will perform our steps"
+    },
+    {
+      "start": 1033.74,
+      "duration": 6.599,
+      "end": 1040.339,
+      "text": "so let's write them 25 40 again try to"
+    },
+    {
+      "start": 1037.939,
+      "duration": 4.801,
+      "end": 1042.74,
+      "text": "map it to our problem can I map it to"
+    },
+    {
+      "start": 1040.339,
+      "duration": 4.74,
+      "end": 1045.079,
+      "text": "our problem yes I can why because this"
+    },
+    {
+      "start": 1042.74,
+      "duration": 4.199,
+      "end": 1046.939,
+      "text": "is the left sorted array this is the"
+    },
+    {
+      "start": 1045.079,
+      "duration": 5.401,
+      "end": 1050.48,
+      "text": "right sorted array let's try to map them"
+    },
+    {
+      "start": 1046.939,
+      "duration": 6.901,
+      "end": 1053.8400000000001,
+      "text": "so for 25 if I try to figure it out can"
+    },
+    {
+      "start": 1050.48,
+      "duration": 6.0,
+      "end": 1056.48,
+      "text": "12 be possible 25 greater than 2 twice"
+    },
+    {
+      "start": 1053.84,
+      "duration": 5.339,
+      "end": 1059.1789999999999,
+      "text": "of 12 yes possible so I'll move to the"
+    },
+    {
+      "start": 1056.48,
+      "duration": 5.34,
+      "end": 1061.82,
+      "text": "next can 19 be possible 25 greater than"
+    },
+    {
+      "start": 1059.179,
+      "duration": 5.041,
+      "end": 1064.22,
+      "text": "twice of 90 no so I stop here it's not"
+    },
+    {
+      "start": 1061.82,
+      "duration": 4.38,
+      "end": 1066.2,
+      "text": "possible so everything before 12 very"
+    },
+    {
+      "start": 1064.22,
+      "duration": 4.56,
+      "end": 1068.78,
+      "text": "important everything before 12 is"
+    },
+    {
+      "start": 1066.2,
+      "duration": 6.0,
+      "end": 1072.2,
+      "text": "possible so I'll add 1 to my answer I'll"
+    },
+    {
+      "start": 1068.78,
+      "duration": 6.84,
+      "end": 1075.62,
+      "text": "add 1 to my answer perfect let's"
+    },
+    {
+      "start": 1072.2,
+      "duration": 6.12,
+      "end": 1078.32,
+      "text": "go for 40. so 40 40 greater than twice"
+    },
+    {
+      "start": 1075.62,
+      "duration": 3.84,
+      "end": 1079.4599999999998,
+      "text": "of 90. I'm like yes possible so let's"
+    },
+    {
+      "start": 1078.32,
+      "duration": 3.599,
+      "end": 1081.9189999999999,
+      "text": "move it"
+    },
+    {
+      "start": 1079.46,
+      "duration": 4.56,
+      "end": 1084.02,
+      "text": "and we are running out we are we run out"
+    },
+    {
+      "start": 1081.919,
+      "duration": 4.921,
+      "end": 1086.8400000000001,
+      "text": "of numbers since we ran out of numbers"
+    },
+    {
+      "start": 1084.02,
+      "duration": 5.34,
+      "end": 1089.36,
+      "text": "can I see can I say for sure since we"
+    },
+    {
+      "start": 1086.84,
+      "duration": 4.86,
+      "end": 1091.6999999999998,
+      "text": "ran out of numbers for 40 there will be"
+    },
+    {
+      "start": 1089.36,
+      "duration": 5.4,
+      "end": 1094.76,
+      "text": "these two numbers"
+    },
+    {
+      "start": 1091.7,
+      "duration": 5.88,
+      "end": 1097.5800000000002,
+      "text": "settle more and then he will run out of"
+    },
+    {
+      "start": 1094.76,
+      "duration": 4.799,
+      "end": 1099.559,
+      "text": "40 as well done our step is done once"
+    },
+    {
+      "start": 1097.58,
+      "duration": 3.959,
+      "end": 1101.539,
+      "text": "your step is done you simply perform the"
+    },
+    {
+      "start": 1099.559,
+      "duration": 5.281,
+      "end": 1104.84,
+      "text": "merge step and then merging you'll get"
+    },
+    {
+      "start": 1101.539,
+      "duration": 5.341,
+      "end": 1106.8799999999999,
+      "text": "12 19 25 40. you just perform the merge"
+    },
+    {
+      "start": 1104.84,
+      "duration": 3.839,
+      "end": 1108.6789999999999,
+      "text": "step which is in the most shot no need"
+    },
+    {
+      "start": 1106.88,
+      "duration": 6.48,
+      "end": 1113.3600000000001,
+      "text": "to do anything different just to form"
+    },
+    {
+      "start": 1108.679,
+      "duration": 6.541,
+      "end": 1115.22,
+      "text": "the merge shop 12 19 25 40 so I can say"
+    },
+    {
+      "start": 1113.36,
+      "duration": 3.72,
+      "end": 1117.08,
+      "text": "that I have solved the left portion now"
+    },
+    {
+      "start": 1115.22,
+      "duration": 3.6,
+      "end": 1118.82,
+      "text": "it's time that we go ahead and in the"
+    },
+    {
+      "start": 1117.08,
+      "duration": 4.02,
+      "end": 1121.1,
+      "text": "recursion solve the right portion so"
+    },
+    {
+      "start": 1118.82,
+      "duration": 5.52,
+      "end": 1124.34,
+      "text": "this will give me 9 and 6."
+    },
+    {
+      "start": 1121.1,
+      "duration": 7.8,
+      "end": 1128.8999999999999,
+      "text": "and this will give me two perfect what's"
+    },
+    {
+      "start": 1124.34,
+      "duration": 8.1,
+      "end": 1132.4399999999998,
+      "text": "the next step 9 and 6 9 and 6."
+    },
+    {
+      "start": 1128.9,
+      "duration": 5.639,
+      "end": 1134.539,
+      "text": "again try to map it into a similar zones"
+    },
+    {
+      "start": 1132.44,
+      "duration": 2.94,
+      "end": 1135.38,
+      "text": "because there are two sorted arrays for"
+    },
+    {
+      "start": 1134.539,
+      "duration": 2.701,
+      "end": 1137.24,
+      "text": "nine"
+    },
+    {
+      "start": 1135.38,
+      "duration": 5.34,
+      "end": 1140.72,
+      "text": "this is not possible so we stop here"
+    },
+    {
+      "start": 1137.24,
+      "duration": 5.819,
+      "end": 1143.059,
+      "text": "zero base and it's over so just quickly"
+    },
+    {
+      "start": 1140.72,
+      "duration": 4.199,
+      "end": 1144.919,
+      "text": "merge them let's quickly merge them I'm"
+    },
+    {
+      "start": 1143.059,
+      "duration": 4.561,
+      "end": 1147.62,
+      "text": "going faster now"
+    },
+    {
+      "start": 1144.919,
+      "duration": 4.321,
+      "end": 1149.24,
+      "text": "six and nine and where we have a single"
+    },
+    {
+      "start": 1147.62,
+      "duration": 3.86,
+      "end": 1151.4799999999998,
+      "text": "limit so let's try to again to the same"
+    },
+    {
+      "start": 1149.24,
+      "duration": 2.24,
+      "end": 1151.48,
+      "text": "job"
+    },
+    {
+      "start": 1154.9,
+      "duration": 4.84,
+      "end": 1159.74,
+      "text": "let's stand at six"
+    },
+    {
+      "start": 1157.28,
+      "duration": 4.74,
+      "end": 1162.02,
+      "text": "can to be possible 6 greater than twice"
+    },
+    {
+      "start": 1159.74,
+      "duration": 3.9,
+      "end": 1163.64,
+      "text": "up to possible so we'll take it and"
+    },
+    {
+      "start": 1162.02,
+      "duration": 3.18,
+      "end": 1165.2,
+      "text": "we'll move forward there are no further"
+    },
+    {
+      "start": 1163.64,
+      "duration": 3.84,
+      "end": 1167.48,
+      "text": "elements so if there are no further"
+    },
+    {
+      "start": 1165.2,
+      "duration": 4.44,
+      "end": 1169.64,
+      "text": "elements this is just one element on the"
+    },
+    {
+      "start": 1167.48,
+      "duration": 4.74,
+      "end": 1172.22,
+      "text": "left and thereby I can say that this"
+    },
+    {
+      "start": 1169.64,
+      "duration": 5.039,
+      "end": 1174.679,
+      "text": "particular one element is possible so"
+    },
+    {
+      "start": 1172.22,
+      "duration": 4.199,
+      "end": 1176.419,
+      "text": "I'll take one to my answer perfect and"
+    },
+    {
+      "start": 1174.679,
+      "duration": 3.36,
+      "end": 1178.039,
+      "text": "then I'll try to move it and when I try"
+    },
+    {
+      "start": 1176.419,
+      "duration": 3.481,
+      "end": 1179.9,
+      "text": "to move it again there are no further"
+    },
+    {
+      "start": 1178.039,
+      "duration": 3.721,
+      "end": 1181.76,
+      "text": "elements to compare so I'll just take"
+    },
+    {
+      "start": 1179.9,
+      "duration": 5.04,
+      "end": 1184.94,
+      "text": "that one element which is there which is"
+    },
+    {
+      "start": 1181.76,
+      "duration": 5.279,
+      "end": 1187.039,
+      "text": "plus one and I can say my step is done"
+    },
+    {
+      "start": 1184.94,
+      "duration": 4.619,
+      "end": 1189.559,
+      "text": "once my step is done you can merge them"
+    },
+    {
+      "start": 1187.039,
+      "duration": 4.5,
+      "end": 1191.539,
+      "text": "so let's go ahead and merge them let's"
+    },
+    {
+      "start": 1189.559,
+      "duration": 4.141,
+      "end": 1193.7,
+      "text": "go back and try to merge them so you'll"
+    },
+    {
+      "start": 1191.539,
+      "duration": 4.38,
+      "end": 1195.919,
+      "text": "get two six nine perfect and merge that"
+    },
+    {
+      "start": 1193.7,
+      "duration": 4.2,
+      "end": 1197.9,
+      "text": "what's the next step that you do you"
+    },
+    {
+      "start": 1195.919,
+      "duration": 4.321,
+      "end": 1200.24,
+      "text": "have this and this"
+    },
+    {
+      "start": 1197.9,
+      "duration": 3.84,
+      "end": 1201.74,
+      "text": "we will go back and try to merge them as"
+    },
+    {
+      "start": 1200.24,
+      "duration": 3.84,
+      "end": 1204.08,
+      "text": "well so let's try to merge them you have"
+    },
+    {
+      "start": 1201.74,
+      "duration": 7.98,
+      "end": 1209.72,
+      "text": "12 19"
+    },
+    {
+      "start": 1204.08,
+      "duration": 7.86,
+      "end": 1211.9399999999998,
+      "text": "25 40 and over here you have 2 6 9 let's"
+    },
+    {
+      "start": 1209.72,
+      "duration": 5.339,
+      "end": 1215.059,
+      "text": "try to perform our operation we are"
+    },
+    {
+      "start": 1211.94,
+      "duration": 6.3,
+      "end": 1218.24,
+      "text": "starting at 12 so let's quickly start"
+    },
+    {
+      "start": 1215.059,
+      "duration": 6.0,
+      "end": 1221.059,
+      "text": "from 2 let's check can 12 comma 2 be a"
+    },
+    {
+      "start": 1218.24,
+      "duration": 4.799,
+      "end": 1223.039,
+      "text": "bit can it be it can be y because 12 is"
+    },
+    {
+      "start": 1221.059,
+      "duration": 4.62,
+      "end": 1225.6789999999999,
+      "text": "greater than twice of 2 so it is"
+    },
+    {
+      "start": 1223.039,
+      "duration": 5.101,
+      "end": 1228.14,
+      "text": "possible let's move ahead 10 12 comma 6B"
+    },
+    {
+      "start": 1225.679,
+      "duration": 4.561,
+      "end": 1230.24,
+      "text": "up here the answer is no why because 12"
+    },
+    {
+      "start": 1228.14,
+      "duration": 4.38,
+      "end": 1232.5200000000002,
+      "text": "is not greater than twice of 6 so it"
+    },
+    {
+      "start": 1230.24,
+      "duration": 4.08,
+      "end": 1234.32,
+      "text": "cannot be appear so everything before 6"
+    },
+    {
+      "start": 1232.52,
+      "duration": 3.899,
+      "end": 1236.4189999999999,
+      "text": "which is 1 yes there will be one element"
+    },
+    {
+      "start": 1234.32,
+      "duration": 3.66,
+      "end": 1237.98,
+      "text": "which can be a bit so just add one to"
+    },
+    {
+      "start": 1236.419,
+      "duration": 3.721,
+      "end": 1240.14,
+      "text": "your answer once you have done that you"
+    },
+    {
+      "start": 1237.98,
+      "duration": 4.62,
+      "end": 1242.6,
+      "text": "can move it to 19 and the moment you"
+    },
+    {
+      "start": 1240.14,
+      "duration": 5.46,
+      "end": 1245.6000000000001,
+      "text": "move to 19 you start comparing 9 greater"
+    },
+    {
+      "start": 1242.6,
+      "duration": 4.92,
+      "end": 1247.52,
+      "text": "than twice of 6 yes that's possible so"
+    },
+    {
+      "start": 1245.6,
+      "duration": 4.98,
+      "end": 1250.58,
+      "text": "you move ahead now you compare 19"
+    },
+    {
+      "start": 1247.52,
+      "duration": 5.399,
+      "end": 1252.9189999999999,
+      "text": "greater than twice of 9 yes that is"
+    },
+    {
+      "start": 1250.58,
+      "duration": 4.56,
+      "end": 1255.1399999999999,
+      "text": "possible so you move ahead and you"
+    },
+    {
+      "start": 1252.919,
+      "duration": 4.38,
+      "end": 1257.2990000000002,
+      "text": "finish right you finish and when you"
+    },
+    {
+      "start": 1255.14,
+      "duration": 4.26,
+      "end": 1259.4,
+      "text": "finish for 90 you can see all the three"
+    },
+    {
+      "start": 1257.299,
+      "duration": 4.62,
+      "end": 1261.9189999999999,
+      "text": "elements can form a pair so what you do"
+    },
+    {
+      "start": 1259.4,
+      "duration": 5.82,
+      "end": 1265.22,
+      "text": "is you go ahead and add three to your"
+    },
+    {
+      "start": 1261.919,
+      "duration": 4.741,
+      "end": 1266.66,
+      "text": "answer very good next you go 25 and you"
+    },
+    {
+      "start": 1265.22,
+      "duration": 3.24,
+      "end": 1268.46,
+      "text": "see there are no numbers to compare you"
+    },
+    {
+      "start": 1266.66,
+      "duration": 3.72,
+      "end": 1270.38,
+      "text": "have already finished if you've already"
+    },
+    {
+      "start": 1268.46,
+      "duration": 4.02,
+      "end": 1272.48,
+      "text": "finished all of these three numbers can"
+    },
+    {
+      "start": 1270.38,
+      "duration": 4.5,
+      "end": 1274.88,
+      "text": "be a part so you'll again add 3 to it"
+    },
+    {
+      "start": 1272.48,
+      "duration": 4.38,
+      "end": 1276.8600000000001,
+      "text": "and then going ahead you'll move to 40."
+    },
+    {
+      "start": 1274.88,
+      "duration": 3.659,
+      "end": 1278.5390000000002,
+      "text": "again all of the numbers are finished so"
+    },
+    {
+      "start": 1276.86,
+      "duration": 3.9,
+      "end": 1280.76,
+      "text": "you'll add up three and then you'll end"
+    },
+    {
+      "start": 1278.539,
+      "duration": 4.321,
+      "end": 1282.86,
+      "text": "up once you have ended your job is"
+    },
+    {
+      "start": 1280.76,
+      "duration": 4.02,
+      "end": 1284.78,
+      "text": "complete your small job is complete and"
+    },
+    {
+      "start": 1282.86,
+      "duration": 4.8,
+      "end": 1287.6599999999999,
+      "text": "if your small job is complete try to"
+    },
+    {
+      "start": 1284.78,
+      "duration": 5.1,
+      "end": 1289.8799999999999,
+      "text": "merge it so on oh my bad"
+    },
+    {
+      "start": 1287.66,
+      "duration": 7.259,
+      "end": 1294.919,
+      "text": "Sun merging what you can do is you can"
+    },
+    {
+      "start": 1289.88,
+      "duration": 7.86,
+      "end": 1297.74,
+      "text": "merge them and you'll get 2 6 9 12 19 25"
+    },
+    {
+      "start": 1294.919,
+      "duration": 5.941,
+      "end": 1300.8600000000001,
+      "text": "40 and once I've done this you can add"
+    },
+    {
+      "start": 1297.74,
+      "duration": 4.559,
+      "end": 1302.299,
+      "text": "them up three four five six and there's"
+    },
+    {
+      "start": 1300.86,
+      "duration": 4.92,
+      "end": 1305.78,
+      "text": "nine so fifteen if you remember"
+    },
+    {
+      "start": 1302.299,
+      "duration": 5.821,
+      "end": 1308.12,
+      "text": "initially we got 15 and this is what the"
+    },
+    {
+      "start": 1305.78,
+      "duration": 4.44,
+      "end": 1310.22,
+      "text": "short algorithm will also give you again"
+    },
+    {
+      "start": 1308.12,
+      "duration": 4.26,
+      "end": 1312.3799999999999,
+      "text": "I'll not be rehydrating on the fact that"
+    },
+    {
+      "start": 1310.22,
+      "duration": 4.02,
+      "end": 1314.24,
+      "text": "why does my shot give you the answer of"
+    },
+    {
+      "start": 1312.38,
+      "duration": 4.14,
+      "end": 1316.5200000000002,
+      "text": "all pairs because I've already explained"
+    },
+    {
+      "start": 1314.24,
+      "duration": 5.22,
+      "end": 1319.46,
+      "text": "that in the problem count inversions"
+    },
+    {
+      "start": 1316.52,
+      "duration": 5.46,
+      "end": 1321.98,
+      "text": "it's because it's very simple because 40"
+    },
+    {
+      "start": 1319.46,
+      "duration": 4.5,
+      "end": 1323.96,
+      "text": "and 25 within themselves have got it so"
+    },
+    {
+      "start": 1321.98,
+      "duration": 3.78,
+      "end": 1325.76,
+      "text": "now they are looking for the right and"
+    },
+    {
+      "start": 1323.96,
+      "duration": 3.54,
+      "end": 1327.5,
+      "text": "when they have got it now they'll look"
+    },
+    {
+      "start": 1325.76,
+      "duration": 3.72,
+      "end": 1329.48,
+      "text": "for the rate so it's basically that"
+    },
+    {
+      "start": 1327.5,
+      "duration": 4.799,
+      "end": 1332.299,
+      "text": "concept that we have used in the count"
+    },
+    {
+      "start": 1329.48,
+      "duration": 5.1,
+      "end": 1334.58,
+      "text": "inversions so we have pretty much solved"
+    },
+    {
+      "start": 1332.299,
+      "duration": 3.961,
+      "end": 1336.26,
+      "text": "it so basically what we have to do is we"
+    },
+    {
+      "start": 1334.58,
+      "duration": 3.54,
+      "end": 1338.12,
+      "text": "have to perform our single step before"
+    },
+    {
+      "start": 1336.26,
+      "duration": 4.08,
+      "end": 1340.34,
+      "text": "the merge so we have to write a function"
+    },
+    {
+      "start": 1338.12,
+      "duration": 4.98,
+      "end": 1343.1,
+      "text": "which does it so let's quickly go back"
+    },
+    {
+      "start": 1340.34,
+      "duration": 5.52,
+      "end": 1345.86,
+      "text": "and try to probably write that function"
+    },
+    {
+      "start": 1343.1,
+      "duration": 5.1,
+      "end": 1348.1999999999998,
+      "text": "so let's probably think it as a more"
+    },
+    {
+      "start": 1345.86,
+      "duration": 3.6,
+      "end": 1349.4599999999998,
+      "text": "short thing and if you remember if you"
+    },
+    {
+      "start": 1348.2,
+      "duration": 4.38,
+      "end": 1352.5800000000002,
+      "text": "remember in the mall shot this is"
+    },
+    {
+      "start": 1349.46,
+      "duration": 5.459,
+      "end": 1354.919,
+      "text": "usually low this is usually mid this is"
+    },
+    {
+      "start": 1352.58,
+      "duration": 4.079,
+      "end": 1356.6589999999999,
+      "text": "usually emit plus one and this is"
+    },
+    {
+      "start": 1354.919,
+      "duration": 3.421,
+      "end": 1358.3400000000001,
+      "text": "usually height"
+    },
+    {
+      "start": 1356.659,
+      "duration": 3.541,
+      "end": 1360.2,
+      "text": "you know right my shot when you are"
+    },
+    {
+      "start": 1358.34,
+      "duration": 3.6,
+      "end": 1361.9399999999998,
+      "text": "doing a more shot this is your left"
+    },
+    {
+      "start": 1360.2,
+      "duration": 3.359,
+      "end": 1363.559,
+      "text": "portion of the array and this is your"
+    },
+    {
+      "start": 1361.94,
+      "duration": 3.42,
+      "end": 1365.3600000000001,
+      "text": "right portion of the array again my shot"
+    },
+    {
+      "start": 1363.559,
+      "duration": 3.541,
+      "end": 1367.1,
+      "text": "has to be clear it has to be in your"
+    },
+    {
+      "start": 1365.36,
+      "duration": 3.66,
+      "end": 1369.02,
+      "text": "head then only you'll understand this"
+    },
+    {
+      "start": 1367.1,
+      "duration": 3.3,
+      "end": 1370.3999999999999,
+      "text": "this is your left portion of the array"
+    },
+    {
+      "start": 1369.02,
+      "duration": 3.0,
+      "end": 1372.02,
+      "text": "and this is your right portion of the"
+    },
+    {
+      "start": 1370.4,
+      "duration": 3.48,
+      "end": 1373.88,
+      "text": "array you're trying to figure out the"
+    },
+    {
+      "start": 1372.02,
+      "duration": 4.68,
+      "end": 1376.7,
+      "text": "pairs between them right because the"
+    },
+    {
+      "start": 1373.88,
+      "duration": 5.039,
+      "end": 1378.919,
+      "text": "left is sorted the right is sorted so"
+    },
+    {
+      "start": 1376.7,
+      "duration": 5.58,
+      "end": 1382.28,
+      "text": "what we can do is we can say for"
+    },
+    {
+      "start": 1378.919,
+      "duration": 6.0,
+      "end": 1384.919,
+      "text": "I equal to low and it can go ahead till"
+    },
+    {
+      "start": 1382.28,
+      "duration": 4.379,
+      "end": 1386.6589999999999,
+      "text": "mid because for every number we have to"
+    },
+    {
+      "start": 1384.919,
+      "duration": 3.781,
+      "end": 1388.7,
+      "text": "find our answer for every number we have"
+    },
+    {
+      "start": 1386.659,
+      "duration": 4.801,
+      "end": 1391.46,
+      "text": "to find our answer and we can keep"
+    },
+    {
+      "start": 1388.7,
+      "duration": 4.68,
+      "end": 1393.38,
+      "text": "counter as 0 and inside this we will try"
+    },
+    {
+      "start": 1391.46,
+      "duration": 4.44,
+      "end": 1395.9,
+      "text": "to write our logic let's try so"
+    },
+    {
+      "start": 1393.38,
+      "duration": 4.2,
+      "end": 1397.5800000000002,
+      "text": "initially I am over here 6 what am I"
+    },
+    {
+      "start": 1395.9,
+      "duration": 4.44,
+      "end": 1400.3400000000001,
+      "text": "trying to do I'm trying to figure out"
+    },
+    {
+      "start": 1397.58,
+      "duration": 5.219,
+      "end": 1402.799,
+      "text": "like is one possible yes it is is two"
+    },
+    {
+      "start": 1400.34,
+      "duration": 4.02,
+      "end": 1404.36,
+      "text": "possible so I am trying to figure out in"
+    },
+    {
+      "start": 1402.799,
+      "duration": 3.661,
+      "end": 1406.46,
+      "text": "the right so I know the right will"
+    },
+    {
+      "start": 1404.36,
+      "duration": 4.38,
+      "end": 1408.74,
+      "text": "always start from mid plus one the right"
+    },
+    {
+      "start": 1406.46,
+      "duration": 4.199,
+      "end": 1410.659,
+      "text": "will always start from it plus one so"
+    },
+    {
+      "start": 1408.74,
+      "duration": 4.08,
+      "end": 1412.82,
+      "text": "let's try to figure out so I'll be like"
+    },
+    {
+      "start": 1410.659,
+      "duration": 4.201,
+      "end": 1414.8600000000001,
+      "text": "why in I know the right will go ahead"
+    },
+    {
+      "start": 1412.82,
+      "duration": 3.42,
+      "end": 1416.24,
+      "text": "till this portion"
+    },
+    {
+      "start": 1414.86,
+      "duration": 4.559,
+      "end": 1419.4189999999999,
+      "text": "let's"
+    },
+    {
+      "start": 1416.24,
+      "duration": 6.0,
+      "end": 1422.24,
+      "text": "less than equal to it will go and at the"
+    },
+    {
+      "start": 1419.419,
+      "duration": 4.921,
+      "end": 1424.3400000000001,
+      "text": "same time I know one thing let's let's"
+    },
+    {
+      "start": 1422.24,
+      "duration": 5.1,
+      "end": 1427.34,
+      "text": "keep on going if it is correct"
+    },
+    {
+      "start": 1424.34,
+      "duration": 6.18,
+      "end": 1430.52,
+      "text": "if the condition is correct if the"
+    },
+    {
+      "start": 1427.34,
+      "duration": 5.1,
+      "end": 1432.4399999999998,
+      "text": "condition is correct let's keep on going"
+    },
+    {
+      "start": 1430.52,
+      "duration": 3.72,
+      "end": 1434.24,
+      "text": "right the condition is correct so"
+    },
+    {
+      "start": 1432.44,
+      "duration": 3.479,
+      "end": 1435.919,
+      "text": "forever one is correct so let's go for"
+    },
+    {
+      "start": 1434.24,
+      "duration": 4.439,
+      "end": 1438.679,
+      "text": "here two is correct let's go for three"
+    },
+    {
+      "start": 1435.919,
+      "duration": 5.821,
+      "end": 1441.74,
+      "text": "it is wrong if you see for six three is"
+    },
+    {
+      "start": 1438.679,
+      "duration": 5.221,
+      "end": 1443.9,
+      "text": "incorrect because 6 greater than 2 of 3"
+    },
+    {
+      "start": 1441.74,
+      "duration": 4.5,
+      "end": 1446.24,
+      "text": "this will be raw this will be wrong so"
+    },
+    {
+      "start": 1443.9,
+      "duration": 4.86,
+      "end": 1448.76,
+      "text": "you stop and apart from that you just"
+    },
+    {
+      "start": 1446.24,
+      "duration": 5.76,
+      "end": 1452.0,
+      "text": "keep going and it will stop at this"
+    },
+    {
+      "start": 1448.76,
+      "duration": 6.12,
+      "end": 1454.8799999999999,
+      "text": "three whenever it's not possible so when"
+    },
+    {
+      "start": 1452.0,
+      "duration": 4.14,
+      "end": 1456.14,
+      "text": "you are stopping at this for six how"
+    },
+    {
+      "start": 1454.88,
+      "duration": 4.14,
+      "end": 1459.0200000000002,
+      "text": "many elements"
+    },
+    {
+      "start": 1456.14,
+      "duration": 4.44,
+      "end": 1460.5800000000002,
+      "text": "two elements can form a pair and if you"
+    },
+    {
+      "start": 1459.02,
+      "duration": 5.1,
+      "end": 1464.12,
+      "text": "are standing here which is your right"
+    },
+    {
+      "start": 1460.58,
+      "duration": 7.26,
+      "end": 1467.84,
+      "text": "how will you get the number of elements"
+    },
+    {
+      "start": 1464.12,
+      "duration": 6.6,
+      "end": 1470.7199999999998,
+      "text": "on the quite simple you say count equal"
+    },
+    {
+      "start": 1467.84,
+      "duration": 6.66,
+      "end": 1474.5,
+      "text": "to count because previous count plus you"
+    },
+    {
+      "start": 1470.72,
+      "duration": 5.819,
+      "end": 1476.539,
+      "text": "say write minus mid plus 1 that will"
+    },
+    {
+      "start": 1474.5,
+      "duration": 5.28,
+      "end": 1479.78,
+      "text": "give you the number of elements which"
+    },
+    {
+      "start": 1476.539,
+      "duration": 5.341,
+      "end": 1481.8799999999999,
+      "text": "are here quite simple and"
+    },
+    {
+      "start": 1479.78,
+      "duration": 4.8,
+      "end": 1484.58,
+      "text": "the next time what will happen this will"
+    },
+    {
+      "start": 1481.88,
+      "duration": 4.5,
+      "end": 1486.38,
+      "text": "move here which is 13 and this time"
+    },
+    {
+      "start": 1484.58,
+      "duration": 5.16,
+      "end": 1489.74,
+      "text": "right stands here and checks for three"
+    },
+    {
+      "start": 1486.38,
+      "duration": 5.58,
+      "end": 1491.96,
+      "text": "and it says yes then it moves to 4 then"
+    },
+    {
+      "start": 1489.74,
+      "duration": 4.799,
+      "end": 1494.539,
+      "text": "it says yes then it moves to 4 it says"
+    },
+    {
+      "start": 1491.96,
+      "duration": 4.98,
+      "end": 1496.94,
+      "text": "yes and it moves to 5 says yes then it"
+    },
+    {
+      "start": 1494.539,
+      "duration": 6.241,
+      "end": 1500.78,
+      "text": "moves to 9 says no and the while loop"
+    },
+    {
+      "start": 1496.94,
+      "duration": 5.28,
+      "end": 1502.22,
+      "text": "stops so when the right goes here this"
+    },
+    {
+      "start": 1500.78,
+      "duration": 3.6,
+      "end": 1504.3799999999999,
+      "text": "time the number of elements will be this"
+    },
+    {
+      "start": 1502.22,
+      "duration": 4.199,
+      "end": 1506.419,
+      "text": "and you can easily subtract and get it"
+    },
+    {
+      "start": 1504.38,
+      "duration": 3.539,
+      "end": 1507.919,
+      "text": "and eventually it will keep on moving so"
+    },
+    {
+      "start": 1506.419,
+      "duration": 3.181,
+      "end": 1509.6000000000001,
+      "text": "this is the function that you have to"
+    },
+    {
+      "start": 1507.919,
+      "duration": 5.101,
+      "end": 1513.0200000000002,
+      "text": "write that will give you the number of"
+    },
+    {
+      "start": 1509.6,
+      "duration": 6.78,
+      "end": 1516.3799999999999,
+      "text": "pairs and the overall count for every"
+    },
+    {
+      "start": 1513.02,
+      "duration": 4.8,
+      "end": 1517.82,
+      "text": "every merch will be your answer so let's"
+    },
+    {
+      "start": 1516.38,
+      "duration": 2.88,
+      "end": 1519.2600000000002,
+      "text": "quickly try out the problem again you"
+    },
+    {
+      "start": 1517.82,
+      "duration": 2.88,
+      "end": 1520.7,
+      "text": "can find the problem Link in the"
+    },
+    {
+      "start": 1519.26,
+      "duration": 3.24,
+      "end": 1522.5,
+      "text": "description and please please make sure"
+    },
+    {
+      "start": 1520.7,
+      "duration": 4.02,
+      "end": 1524.72,
+      "text": "that you try out the problem from the"
+    },
+    {
+      "start": 1522.5,
+      "duration": 3.539,
+      "end": 1526.039,
+      "text": "link in the description itself so going"
+    },
+    {
+      "start": 1524.72,
+      "duration": 3.24,
+      "end": 1527.96,
+      "text": "back to the sheet I know I'll be"
+    },
+    {
+      "start": 1526.039,
+      "duration": 4.801,
+      "end": 1530.84,
+      "text": "requiring more shops so I'll go to the"
+    },
+    {
+      "start": 1527.96,
+      "duration": 5.28,
+      "end": 1533.24,
+      "text": "article and I'll try to uh just pick up"
+    },
+    {
+      "start": 1530.84,
+      "duration": 4.26,
+      "end": 1535.1,
+      "text": "the code so this is the code that we"
+    },
+    {
+      "start": 1533.24,
+      "duration": 4.08,
+      "end": 1537.32,
+      "text": "have written in the most short video you"
+    },
+    {
+      "start": 1535.1,
+      "duration": 4.26,
+      "end": 1539.36,
+      "text": "can find the Java code over here so"
+    },
+    {
+      "start": 1537.32,
+      "duration": 4.14,
+      "end": 1541.46,
+      "text": "going here what I'll do is"
+    },
+    {
+      "start": 1539.36,
+      "duration": 4.62,
+      "end": 1543.9799999999998,
+      "text": "I'll simply copy paste this because that"
+    },
+    {
+      "start": 1541.46,
+      "duration": 4.68,
+      "end": 1546.14,
+      "text": "is the merge sort algorithm I know I've"
+    },
+    {
+      "start": 1543.98,
+      "duration": 6.54,
+      "end": 1550.52,
+      "text": "been given an array and an N so let's"
+    },
+    {
+      "start": 1546.14,
+      "duration": 5.94,
+      "end": 1552.0800000000002,
+      "text": "quickly call this merge sort with this"
+    },
+    {
+      "start": 1550.52,
+      "duration": 4.44,
+      "end": 1554.96,
+      "text": "array"
+    },
+    {
+      "start": 1552.08,
+      "duration": 4.86,
+      "end": 1556.9399999999998,
+      "text": "0 and N minus 1. so most sort will be"
+    },
+    {
+      "start": 1554.96,
+      "duration": 5.459,
+      "end": 1560.419,
+      "text": "sorting it I know one thing before the"
+    },
+    {
+      "start": 1556.94,
+      "duration": 6.239,
+      "end": 1563.179,
+      "text": "merge I have to perform my magic so"
+    },
+    {
+      "start": 1560.419,
+      "duration": 6.12,
+      "end": 1566.539,
+      "text": "maybe count base and I'll pass on the"
+    },
+    {
+      "start": 1563.179,
+      "duration": 6.961,
+      "end": 1570.14,
+      "text": "array the low the mid and the height"
+    },
+    {
+      "start": 1566.539,
+      "duration": 6.901,
+      "end": 1573.44,
+      "text": "let's try to write down this count base"
+    },
+    {
+      "start": 1570.14,
+      "duration": 4.32,
+      "end": 1574.46,
+      "text": "so void count base and this will be"
+    },
+    {
+      "start": 1573.44,
+      "duration": 3.479,
+      "end": 1576.919,
+      "text": "taking"
+    },
+    {
+      "start": 1574.46,
+      "duration": 5.52,
+      "end": 1579.98,
+      "text": "the array"
+    },
+    {
+      "start": 1576.919,
+      "duration": 4.62,
+      "end": 1581.539,
+      "text": "the low the mid and I again can be like"
+    },
+    {
+      "start": 1579.98,
+      "duration": 3.42,
+      "end": 1583.4,
+      "text": "instead of writing a separate function"
+    },
+    {
+      "start": 1581.539,
+      "duration": 4.981,
+      "end": 1586.52,
+      "text": "you can also write it inside the merge"
+    },
+    {
+      "start": 1583.4,
+      "duration": 4.92,
+      "end": 1588.3200000000002,
+      "text": "but that is not not a good practice try"
+    },
+    {
+      "start": 1586.52,
+      "duration": 4.62,
+      "end": 1591.1399999999999,
+      "text": "to write a cleaner code so this is where"
+    },
+    {
+      "start": 1588.32,
+      "duration": 4.26,
+      "end": 1592.58,
+      "text": "I have to count the code so count the"
+    },
+    {
+      "start": 1591.14,
+      "duration": 3.539,
+      "end": 1594.679,
+      "text": "base rather so whatever do is I'll keep"
+    },
+    {
+      "start": 1592.58,
+      "duration": 4.5,
+      "end": 1597.08,
+      "text": "a global variable just so that you"
+    },
+    {
+      "start": 1594.679,
+      "duration": 4.141,
+      "end": 1598.8200000000002,
+      "text": "understand it easily now what I'll do is"
+    },
+    {
+      "start": 1597.08,
+      "duration": 3.66,
+      "end": 1600.74,
+      "text": "I know one thing"
+    },
+    {
+      "start": 1598.82,
+      "duration": 3.479,
+      "end": 1602.299,
+      "text": "if you remember the pseudo Port we"
+    },
+    {
+      "start": 1600.74,
+      "duration": 3.96,
+      "end": 1604.7,
+      "text": "always started from low because I have"
+    },
+    {
+      "start": 1602.299,
+      "duration": 5.041,
+      "end": 1607.34,
+      "text": "to go through every variable"
+    },
+    {
+      "start": 1604.7,
+      "duration": 4.62,
+      "end": 1609.32,
+      "text": "everything on the left array and I will"
+    },
+    {
+      "start": 1607.34,
+      "duration": 4.02,
+      "end": 1611.36,
+      "text": "be going until mid this is something"
+    },
+    {
+      "start": 1609.32,
+      "duration": 3.599,
+      "end": 1612.9189999999999,
+      "text": "which we know for sure and if you"
+    },
+    {
+      "start": 1611.36,
+      "duration": 3.36,
+      "end": 1614.7199999999998,
+      "text": "remember we had a right"
+    },
+    {
+      "start": 1612.919,
+      "duration": 4.441,
+      "end": 1617.3600000000001,
+      "text": "that always started from with this one"
+    },
+    {
+      "start": 1614.72,
+      "duration": 6.6,
+      "end": 1621.32,
+      "text": "and what do you agree right inside while"
+    },
+    {
+      "start": 1617.36,
+      "duration": 8.16,
+      "end": 1625.52,
+      "text": "this right is lesser than equal to high"
+    },
+    {
+      "start": 1621.32,
+      "duration": 8.04,
+      "end": 1629.36,
+      "text": "and then this right or rather a of I"
+    },
+    {
+      "start": 1625.52,
+      "duration": 6.48,
+      "end": 1632.0,
+      "text": "is greater than twice of a of right it's"
+    },
+    {
+      "start": 1629.36,
+      "duration": 5.699,
+      "end": 1635.059,
+      "text": "perfect let's go ahead and move ring"
+    },
+    {
+      "start": 1632.0,
+      "duration": 4.5,
+      "end": 1636.5,
+      "text": "and once this is done in the count all"
+    },
+    {
+      "start": 1635.059,
+      "duration": 2.881,
+      "end": 1637.94,
+      "text": "the left elements to the right which is"
+    },
+    {
+      "start": 1636.5,
+      "duration": 3.6,
+      "end": 1640.1,
+      "text": "bit plus one"
+    },
+    {
+      "start": 1637.94,
+      "duration": 4.2,
+      "end": 1642.14,
+      "text": "please add them and once you've done"
+    },
+    {
+      "start": 1640.1,
+      "duration": 5.34,
+      "end": 1645.4399999999998,
+      "text": "this this should be counting all the"
+    },
+    {
+      "start": 1642.14,
+      "duration": 4.62,
+      "end": 1646.76,
+      "text": "best and eventually you can go ahead and"
+    },
+    {
+      "start": 1645.44,
+      "duration": 3.839,
+      "end": 1649.279,
+      "text": "return the call"
+    },
+    {
+      "start": 1646.76,
+      "duration": 4.44,
+      "end": 1651.2,
+      "text": "will this run this should because this"
+    },
+    {
+      "start": 1649.279,
+      "duration": 3.541,
+      "end": 1652.82,
+      "text": "will end up counting like this will make"
+    },
+    {
+      "start": 1651.2,
+      "duration": 3.0,
+      "end": 1654.2,
+      "text": "sure that everything is counted let's"
+    },
+    {
+      "start": 1652.82,
+      "duration": 3.06,
+      "end": 1655.8799999999999,
+      "text": "quickly see if we missed up something"
+    },
+    {
+      "start": 1654.2,
+      "duration": 3.599,
+      "end": 1657.799,
+      "text": "yeah we missed up this will be array"
+    },
+    {
+      "start": 1655.88,
+      "duration": 3.6,
+      "end": 1659.48,
+      "text": "this will be added perfect let's run it"
+    },
+    {
+      "start": 1657.799,
+      "duration": 3.421,
+      "end": 1661.22,
+      "text": "up again"
+    },
+    {
+      "start": 1659.48,
+      "duration": 4.079,
+      "end": 1663.559,
+      "text": "should be running fine yeah runs fine"
+    },
+    {
+      "start": 1661.22,
+      "duration": 3.9,
+      "end": 1665.1200000000001,
+      "text": "but we're using a global variable which"
+    },
+    {
+      "start": 1663.559,
+      "duration": 3.961,
+      "end": 1667.52,
+      "text": "is not a good practice so let's quickly"
+    },
+    {
+      "start": 1665.12,
+      "duration": 5.52,
+      "end": 1670.6399999999999,
+      "text": "get rid of this let's quickly convert"
+    },
+    {
+      "start": 1667.52,
+      "duration": 6.72,
+      "end": 1674.24,
+      "text": "this into an INT and let's have an ionic"
+    },
+    {
+      "start": 1670.64,
+      "duration": 6.12,
+      "end": 1676.76,
+      "text": "count equal to 0 and let's have this"
+    },
+    {
+      "start": 1674.24,
+      "duration": 4.08,
+      "end": 1678.32,
+      "text": "return code so every time you have two"
+    },
+    {
+      "start": 1676.76,
+      "duration": 3.899,
+      "end": 1680.6589999999999,
+      "text": "arrays"
+    },
+    {
+      "start": 1678.32,
+      "duration": 4.92,
+      "end": 1683.24,
+      "text": "you have to arise every time the more"
+    },
+    {
+      "start": 1680.659,
+      "duration": 3.961,
+      "end": 1684.6200000000001,
+      "text": "short Squad and those two Aries I'm"
+    },
+    {
+      "start": 1683.24,
+      "duration": 4.26,
+      "end": 1687.5,
+      "text": "watched and before that you're counting"
+    },
+    {
+      "start": 1684.62,
+      "duration": 4.5,
+      "end": 1689.12,
+      "text": "so maybe count every time you're"
+    },
+    {
+      "start": 1687.5,
+      "duration": 3.36,
+      "end": 1690.86,
+      "text": "counting so we can keep account variable"
+    },
+    {
+      "start": 1689.12,
+      "duration": 5.039,
+      "end": 1694.1589999999999,
+      "text": "here similar to what we didn't count in"
+    },
+    {
+      "start": 1690.86,
+      "duration": 5.52,
+      "end": 1696.3799999999999,
+      "text": "versions convert this into integer and"
+    },
+    {
+      "start": 1694.159,
+      "duration": 3.9,
+      "end": 1698.0590000000002,
+      "text": "for every every merge that you're"
+    },
+    {
+      "start": 1696.38,
+      "duration": 3.48,
+      "end": 1699.8600000000001,
+      "text": "calling it will definitely return your"
+    },
+    {
+      "start": 1698.059,
+      "duration": 3.841,
+      "end": 1701.8999999999999,
+      "text": "account it will definitely return your"
+    },
+    {
+      "start": 1699.86,
+      "duration": 5.939,
+      "end": 1705.799,
+      "text": "account right so that count has to be"
+    },
+    {
+      "start": 1701.9,
+      "duration": 6.54,
+      "end": 1708.44,
+      "text": "added every returned count every return"
+    },
+    {
+      "start": 1705.799,
+      "duration": 4.5,
+      "end": 1710.299,
+      "text": "comes from every single most shot plus"
+    },
+    {
+      "start": 1708.44,
+      "duration": 2.88,
+      "end": 1711.3200000000002,
+      "text": "the current one so basically what I'm"
+    },
+    {
+      "start": 1710.299,
+      "duration": 4.141,
+      "end": 1714.44,
+      "text": "saying is"
+    },
+    {
+      "start": 1711.32,
+      "duration": 6.06,
+      "end": 1717.3799999999999,
+      "text": "for this one sorry aha my bad"
+    },
+    {
+      "start": 1714.44,
+      "duration": 6.06,
+      "end": 1720.5,
+      "text": "for this one and for this one I will be"
+    },
+    {
+      "start": 1717.38,
+      "duration": 4.98,
+      "end": 1722.3600000000001,
+      "text": "merging them but before this they gave"
+    },
+    {
+      "start": 1720.5,
+      "duration": 3.659,
+      "end": 1724.159,
+      "text": "answer they gave an answer also they"
+    },
+    {
+      "start": 1722.36,
+      "duration": 3.36,
+      "end": 1725.7199999999998,
+      "text": "give answer so please add these things"
+    },
+    {
+      "start": 1724.159,
+      "duration": 3.361,
+      "end": 1727.5200000000002,
+      "text": "and please add these things and then"
+    },
+    {
+      "start": 1725.72,
+      "duration": 4.319,
+      "end": 1730.039,
+      "text": "only you can come over here so it's"
+    },
+    {
+      "start": 1727.52,
+      "duration": 4.38,
+      "end": 1731.9,
+      "text": "basically please add the bottom once and"
+    },
+    {
+      "start": 1730.039,
+      "duration": 3.661,
+      "end": 1733.7,
+      "text": "then you can add the current merge and"
+    },
+    {
+      "start": 1731.9,
+      "duration": 3.659,
+      "end": 1735.5590000000002,
+      "text": "eventually you can return this so this"
+    },
+    {
+      "start": 1733.7,
+      "duration": 3.54,
+      "end": 1737.24,
+      "text": "time instead of having a global variable"
+    },
+    {
+      "start": 1735.559,
+      "duration": 3.661,
+      "end": 1739.22,
+      "text": "I can go ahead and return this"
+    },
+    {
+      "start": 1737.24,
+      "duration": 4.08,
+      "end": 1741.32,
+      "text": "particular thing this will definitely"
+    },
+    {
+      "start": 1739.22,
+      "duration": 3.9,
+      "end": 1743.1200000000001,
+      "text": "distort the array make sure that you"
+    },
+    {
+      "start": 1741.32,
+      "duration": 5.459,
+      "end": 1746.779,
+      "text": "mention that to the interviewer as well"
+    },
+    {
+      "start": 1743.12,
+      "duration": 5.58,
+      "end": 1748.6999999999998,
+      "text": "okay anything problem okay this will be"
+    },
+    {
+      "start": 1746.779,
+      "duration": 4.081,
+      "end": 1750.86,
+      "text": "Clinton con which is basically zero if"
+    },
+    {
+      "start": 1748.7,
+      "duration": 3.359,
+      "end": 1752.059,
+      "text": "it runs out of the boundary once we have"
+    },
+    {
+      "start": 1750.86,
+      "duration": 2.939,
+      "end": 1753.799,
+      "text": "done this let's quickly submit this and"
+    },
+    {
+      "start": 1752.059,
+      "duration": 4.62,
+      "end": 1756.6789999999999,
+      "text": "see where it's running fine should be"
+    },
+    {
+      "start": 1753.799,
+      "duration": 5.281,
+      "end": 1759.08,
+      "text": "fine I am assuming it is time so what is"
+    },
+    {
+      "start": 1756.679,
+      "duration": 4.681,
+      "end": 1761.3600000000001,
+      "text": "the time complexity if I ask you can I"
+    },
+    {
+      "start": 1759.08,
+      "duration": 5.219,
+      "end": 1764.299,
+      "text": "say the time complexity will be I know"
+    },
+    {
+      "start": 1761.36,
+      "duration": 5.699,
+      "end": 1767.059,
+      "text": "one thing login is for the divisions"
+    },
+    {
+      "start": 1764.299,
+      "duration": 6.24,
+      "end": 1770.539,
+      "text": "that you do like because you divide and"
+    },
+    {
+      "start": 1767.059,
+      "duration": 5.521,
+      "end": 1772.58,
+      "text": "we go of n was for the merge operation"
+    },
+    {
+      "start": 1770.539,
+      "duration": 5.52,
+      "end": 1776.059,
+      "text": "so I'm now doing another operation"
+    },
+    {
+      "start": 1772.58,
+      "duration": 5.64,
+      "end": 1778.22,
+      "text": "including the merge before the martial"
+    },
+    {
+      "start": 1776.059,
+      "duration": 4.021,
+      "end": 1780.08,
+      "text": "so what is that another operation that"
+    },
+    {
+      "start": 1778.22,
+      "duration": 4.5,
+      "end": 1782.72,
+      "text": "is nothing but this one"
+    },
+    {
+      "start": 1780.08,
+      "duration": 4.62,
+      "end": 1784.6999999999998,
+      "text": "how much time is it like on a naked eye"
+    },
+    {
+      "start": 1782.72,
+      "duration": 4.74,
+      "end": 1787.46,
+      "text": "it might look like a beagle of an"
+    },
+    {
+      "start": 1784.7,
+      "duration": 5.52,
+      "end": 1790.22,
+      "text": "another big of it but if it's not why"
+    },
+    {
+      "start": 1787.46,
+      "duration": 5.339,
+      "end": 1792.799,
+      "text": "because he did an optimization for a six"
+    },
+    {
+      "start": 1790.22,
+      "duration": 4.5,
+      "end": 1794.72,
+      "text": "we went for two elements for a 13 we"
+    },
+    {
+      "start": 1792.799,
+      "duration": 4.201,
+      "end": 1797.0,
+      "text": "again restarted from here and we went on"
+    },
+    {
+      "start": 1794.72,
+      "duration": 4.679,
+      "end": 1799.3990000000001,
+      "text": "till here for 21 we really started from"
+    },
+    {
+      "start": 1797.0,
+      "duration": 5.299,
+      "end": 1802.299,
+      "text": "here we went down here for 25 we went on"
+    },
+    {
+      "start": 1799.399,
+      "duration": 5.76,
+      "end": 1805.1589999999999,
+      "text": "till this so it's like we are not always"
+    },
+    {
+      "start": 1802.299,
+      "duration": 4.901,
+      "end": 1807.2,
+      "text": "for six we are not always doing this for"
+    },
+    {
+      "start": 1805.159,
+      "duration": 3.9,
+      "end": 1809.0590000000002,
+      "text": "30 we are not always doing this for 21"
+    },
+    {
+      "start": 1807.2,
+      "duration": 4.099,
+      "end": 1811.299,
+      "text": "we are not always doing this for 25 we"
+    },
+    {
+      "start": 1809.059,
+      "duration": 5.881,
+      "end": 1814.94,
+      "text": "are not always doing this so thereby"
+    },
+    {
+      "start": 1811.299,
+      "duration": 6.88,
+      "end": 1818.179,
+      "text": "calling this as big of n will be a wrong"
+    },
+    {
+      "start": 1814.94,
+      "duration": 5.94,
+      "end": 1820.88,
+      "text": "it'll be wrong so thereby if I carefully"
+    },
+    {
+      "start": 1818.179,
+      "duration": 4.5,
+      "end": 1822.679,
+      "text": "analyze one two three four this one so"
+    },
+    {
+      "start": 1820.88,
+      "duration": 5.399,
+      "end": 1826.279,
+      "text": "that's like B go of N1"
+    },
+    {
+      "start": 1822.679,
+      "duration": 6.421,
+      "end": 1829.1000000000001,
+      "text": "right and can I say this is like"
+    },
+    {
+      "start": 1826.279,
+      "duration": 4.921,
+      "end": 1831.2,
+      "text": "every time you touch everything once all"
+    },
+    {
+      "start": 1829.1,
+      "duration": 4.26,
+      "end": 1833.36,
+      "text": "the elements are touched once so it's N2"
+    },
+    {
+      "start": 1831.2,
+      "duration": 4.199,
+      "end": 1835.3990000000001,
+      "text": "because first time might be this much"
+    },
+    {
+      "start": 1833.36,
+      "duration": 3.539,
+      "end": 1836.899,
+      "text": "next time might be this much next time"
+    },
+    {
+      "start": 1835.399,
+      "duration": 3.9,
+      "end": 1839.299,
+      "text": "might be this much next time must be"
+    },
+    {
+      "start": 1836.899,
+      "duration": 5.64,
+      "end": 1842.539,
+      "text": "this so the while loop over the rod"
+    },
+    {
+      "start": 1839.299,
+      "duration": 5.641,
+      "end": 1844.94,
+      "text": "overall runs fine too so can I say N1"
+    },
+    {
+      "start": 1842.539,
+      "duration": 4.561,
+      "end": 1847.1,
+      "text": "plus int which is the equivalent of the"
+    },
+    {
+      "start": 1844.94,
+      "duration": 4.14,
+      "end": 1849.0800000000002,
+      "text": "merge whatever merge was taking can I"
+    },
+    {
+      "start": 1847.1,
+      "duration": 3.959,
+      "end": 1851.059,
+      "text": "say this because merge also does the"
+    },
+    {
+      "start": 1849.08,
+      "duration": 4.44,
+      "end": 1853.52,
+      "text": "same thing it goes through every element"
+    },
+    {
+      "start": 1851.059,
+      "duration": 4.081,
+      "end": 1855.1399999999999,
+      "text": "individually and merges it and over here"
+    },
+    {
+      "start": 1853.52,
+      "duration": 3.12,
+      "end": 1856.6399999999999,
+      "text": "we are doing the C going through every"
+    },
+    {
+      "start": 1855.14,
+      "duration": 3.48,
+      "end": 1858.6200000000001,
+      "text": "element individually"
+    },
+    {
+      "start": 1856.64,
+      "duration": 4.5,
+      "end": 1861.14,
+      "text": "so"
+    },
+    {
+      "start": 1858.62,
+      "duration": 4.98,
+      "end": 1863.6,
+      "text": "um I can say easily it's 2L login"
+    },
+    {
+      "start": 1861.14,
+      "duration": 4.98,
+      "end": 1866.1200000000001,
+      "text": "because we are doing kind of similar"
+    },
+    {
+      "start": 1863.6,
+      "duration": 4.079,
+      "end": 1867.6789999999999,
+      "text": "merch kind of a thing but in a other"
+    },
+    {
+      "start": 1866.12,
+      "duration": 4.86,
+      "end": 1870.9799999999998,
+      "text": "fashion and what about the space"
+    },
+    {
+      "start": 1867.679,
+      "duration": 4.62,
+      "end": 1872.299,
+      "text": "complexity we go of n for the merge and"
+    },
+    {
+      "start": 1870.98,
+      "duration": 2.699,
+      "end": 1873.679,
+      "text": "we are distorting the array please"
+    },
+    {
+      "start": 1872.299,
+      "duration": 3.36,
+      "end": 1875.6589999999999,
+      "text": "mention that to the interviewer because"
+    },
+    {
+      "start": 1873.679,
+      "duration": 4.141,
+      "end": 1877.8200000000002,
+      "text": "you have to tell to the uh tell it to"
+    },
+    {
+      "start": 1875.659,
+      "duration": 4.321,
+      "end": 1879.98,
+      "text": "the interview that hey I'm distorting"
+    },
+    {
+      "start": 1877.82,
+      "duration": 4.32,
+      "end": 1882.1399999999999,
+      "text": "your alley so in case you have a problem"
+    },
+    {
+      "start": 1879.98,
+      "duration": 3.419,
+      "end": 1883.3990000000001,
+      "text": "with it I can take a copy and solve it"
+    },
+    {
+      "start": 1882.14,
+      "duration": 2.759,
+      "end": 1884.8990000000001,
+      "text": "so you have to mention that to the"
+    },
+    {
+      "start": 1883.399,
+      "duration": 3.241,
+      "end": 1886.6399999999999,
+      "text": "interviewer so that he knows that he's"
+    },
+    {
+      "start": 1884.899,
+      "duration": 3.541,
+      "end": 1888.4399999999998,
+      "text": "still aware of this thing that you're"
+    },
+    {
+      "start": 1886.64,
+      "duration": 3.539,
+      "end": 1890.179,
+      "text": "distorting the input given and it's very"
+    },
+    {
+      "start": 1888.44,
+      "duration": 3.54,
+      "end": 1891.98,
+      "text": "important to tell to the interview so"
+    },
+    {
+      "start": 1890.179,
+      "duration": 3.421,
+      "end": 1893.6000000000001,
+      "text": "once you're done with this the interview"
+    },
+    {
+      "start": 1891.98,
+      "duration": 4.98,
+      "end": 1896.96,
+      "text": "will be happy with you and it'll hire"
+    },
+    {
+      "start": 1893.6,
+      "duration": 5.52,
+      "end": 1899.12,
+      "text": "you so uh jokes apart uh not jokes it's"
+    },
+    {
+      "start": 1896.96,
+      "duration": 4.62,
+      "end": 1901.58,
+      "text": "a reality so going back to the sheet I"
+    },
+    {
+      "start": 1899.12,
+      "duration": 4.2,
+      "end": 1903.32,
+      "text": "can say that this one is done as well so"
+    },
+    {
+      "start": 1901.58,
+      "duration": 3.66,
+      "end": 1905.24,
+      "text": "we're done with the reverse pairs as"
+    },
+    {
+      "start": 1903.32,
+      "duration": 4.14,
+      "end": 1907.46,
+      "text": "well I hope you understood this problem"
+    },
+    {
+      "start": 1905.24,
+      "duration": 4.2,
+      "end": 1909.44,
+      "text": "this is a very very tough problem so you"
+    },
+    {
+      "start": 1907.46,
+      "duration": 4.439,
+      "end": 1911.8990000000001,
+      "text": "have to know it beforehand don't worry"
+    },
+    {
+      "start": 1909.44,
+      "duration": 4.44,
+      "end": 1913.88,
+      "text": "like you won't be able to invent this"
+    },
+    {
+      "start": 1911.899,
+      "duration": 3.061,
+      "end": 1914.9599999999998,
+      "text": "algorithm in the interview itself so you"
+    },
+    {
+      "start": 1913.88,
+      "duration": 2.94,
+      "end": 1916.8200000000002,
+      "text": "have to solve these kind of problems"
+    },
+    {
+      "start": 1914.96,
+      "duration": 4.079,
+      "end": 1919.039,
+      "text": "beforehand so if you understood this"
+    },
+    {
+      "start": 1916.82,
+      "duration": 3.66,
+      "end": 1920.48,
+      "text": "video entirely please please please make"
+    },
+    {
+      "start": 1919.039,
+      "duration": 3.12,
+      "end": 1922.1589999999999,
+      "text": "sure that you like this video if you're"
+    },
+    {
+      "start": 1920.48,
+      "duration": 3.66,
+      "end": 1924.14,
+      "text": "new to our child what are you waiting"
+    },
+    {
+      "start": 1922.159,
+      "duration": 3.721,
+      "end": 1925.88,
+      "text": "for hit that subscribe button man we"
+    },
+    {
+      "start": 1924.14,
+      "duration": 3.84,
+      "end": 1927.98,
+      "text": "keep on producing these kind of videos"
+    },
+    {
+      "start": 1925.88,
+      "duration": 4.14,
+      "end": 1930.0200000000002,
+      "text": "on our Channel every now and then so"
+    },
+    {
+      "start": 1927.98,
+      "duration": 3.24,
+      "end": 1931.22,
+      "text": "please do consider subscribing to us and"
+    },
+    {
+      "start": 1930.02,
+      "duration": 2.7,
+      "end": 1932.72,
+      "text": "if you haven't found followed me on"
+    },
+    {
+      "start": 1931.22,
+      "duration": 2.52,
+      "end": 1933.74,
+      "text": "Instagram Twitter LinkedIn the links"
+    },
+    {
+      "start": 1932.72,
+      "duration": 2.52,
+      "end": 1935.24,
+      "text": "will be in the description with this"
+    },
+    {
+      "start": 1933.74,
+      "duration": 3.78,
+      "end": 1937.52,
+      "text": "I'll be wrapping up this video let's"
+    },
+    {
+      "start": 1935.24,
+      "duration": 6.36,
+      "end": 1941.6,
+      "text": "read in some other videos"
+    },
+    {
+      "start": 1937.52,
+      "duration": 7.62,
+      "end": 1945.1399999999999,
+      "text": "whenever your heart is broken don't ever"
+    },
+    {
+      "start": 1941.6,
+      "duration": 5.66,
+      "end": 1947.26,
+      "text": "forget you're golden I I will find the"
+    },
+    {
+      "start": 1945.14,
+      "duration": 2.12,
+      "end": 1947.26,
+      "text": "light"
+    }
+  ]
+}

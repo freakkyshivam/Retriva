@@ -1,0 +1,130 @@
+{
+  "video_id": "aZNaLrVebKQ",
+  "position": 106,
+  "title": "L34. Construct a Binary Tree from Preorder and Inorder Traversal | C++ | Java",
+  "url": "https://www.youtube.com/watch?v=aZNaLrVebKQ",
+  "chunk_count": 11,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "aZNaLrVebKQ",
+      "position": 106,
+      "title": "L34. Construct a Binary Tree from Preorder and Inorder Traversal | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=aZNaLrVebKQ",
+      "start": 0.0,
+      "end": 114.88000000000001,
+      "text": "before starting this video i'd love to thank releval for sponsoring this entire tree series did you know that companies like google apple starbucks are now hiring people without any degree or experience why because they believe that skills are more important than anything else the top companies in india like the top startups have also started following this trend by hiring through a platform which is relevant which is backed up by an academy all you have to do is to give the relevant test and based on your score this flat send your candidate profiles to 50 plus companies which includes cred upgrade vedanta and you can get selected for a job role within a week another amazing thing about relevel is it's absolutely free so please make sure you check out the links in the description hey everyone welcome back to the channel i hope you guys are doing extremely well so we're going to solve this problem construct a binary tree from an inorder and a pre-order traversal so if you haven't seen my previous video can you construct a unique banner tree from any given uh two pairs of traversal you should definitely check it out because if you watch that video out you can understand if an inorder and a pre-order traversal is given then the binary tree that you create will always be an unique binary tree now what you will be given is an inorder traversal of any given tree and a preorder traversal of the same given tree that for whose the inorder traversal is given now since you're given both the traversals you need to figure out for which tree does this uh in order and tree like for which tree is this in order and pre-order satisfying so i can say like if i draw the tree like 10 20 uh 30 over here and then a 40 and then a 50 and then a 60 and if you try to write the inorder traversal you'll actually figure out that the inorder traversal is this and",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "aZNaLrVebKQ",
+      "position": 106,
+      "title": "L34. Construct a Binary Tree from Preorder and Inorder Traversal | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=aZNaLrVebKQ",
+      "start": 111.2,
+      "end": 224.72,
+      "text": "that the inorder traversal is this and if you try to write the pre-order traversal you'll figure out that the pre-order traversal is this again if you don't know in order and pre-order travis make sure you check out my previous videos you'll understand what is in order traversal now can we form any other tree in the previous video we did see that we cannot form any other tree because the in order in order is something which is unique if a pre-order is given right so i can say this is the tree and that is the question it'll be given in order pre-order and you got to return me the root of the tree yes you're going to return me the root of the tree and if i know the root of the tree i should get the same tree like i should get the same tree on in order and pre-order that's that is what the question is so how will you do this let's check that out so each of us know that uh inorder traversal is nothing but left root right right i know that and in order traversal is nothing but left root right and what is the pre-order traversal we also know that a pre-order traversal is root left right i think everyone knows this so can i definitely say can i definitely say whatever is the binary tree whatever is the binary this 10 i repeat this 10 will always be the root of the binary tree how many of you agree with me i think everyone does the reason is the reason is because if i'm saying root left tree whatever binary tree i take i'll start with the root and that is what the pre-order tells you the root perfect now what does inorder say inorder says left root right so if this root exists over here if this root exists over here can i say all these notes on the left will be the part of the left subtree now i don't know how will how",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "aZNaLrVebKQ",
+      "position": 106,
+      "title": "L34. Construct a Binary Tree from Preorder and Inorder Traversal | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=aZNaLrVebKQ",
+      "start": 219.44,
+      "end": 324.8,
+      "text": "subtree now i don't know how will how they align but i definitely know that these three notes will be the part of the left subtree correct and can i definitely say these these two uh notes on the right will be the part of the right subtree like i can definitely say because a minimum show in order means root is at the middle and the left the left guys are on the left and the right guys are on the right so we know that so can i write something like a recursive solution which sees me that hey here's the root can you attach the left to the subtree can you attach the right to the subtree and this sub tree will again solve itself as an individual problem now what was the initial problem that we started off with we started off with we have an inorder we have a pre-order and we were required to construct this particular binary tree so what i did is i just did one step i just i just made sure i figured out the root that was very simple the starting element will always be the root and what i did was i segregated the left and right part so can i do this can i do this similar task for 40 20 50 i think i can if i again have the in order for this guy and similarly if i have the pre-order for this guy if i have these two guys i can again segregate these notes okay let's see if you can do that so i'll come to the left i'll come to the left now since i know the left will have these notes what is the in order of these notes can i say the inorder will be 40 20 50. that's the in order i'm very much sure that this is the in order of uh this because it's this is what the in order will be what will be the pre-order if i ask you",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "aZNaLrVebKQ",
+      "position": 106,
+      "title": "L34. Construct a Binary Tree from Preorder and Inorder Traversal | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=aZNaLrVebKQ",
+      "start": 320.8,
+      "end": 441.919,
+      "text": "ask you can i say can i say that if the left sub tree contains three notes and since i know it's root left right so the moment you go to the left you again start with root that is what pre-order means the moment you go to the left you again start with root so can i say these three elements the first three elements will indeed be your pre-order traversal that's 20 40 50. like yeah you're correct yeah you're correct and similarly can i say for right for right this is going to be my inorder correct and these guys like right after these three guys whatever guys are there that is going to be my pre-order i think there's no doubt in that there's no doubt in that correct so we know that now we have two separate questions we are again given an in order we are again given a pre-order and we have to construct a tree or i can say the sub tree it's if i just boil this question to a sub problem it's again a problem of creating a tree where you're given an in order and a pre-order so i've broken the broken the entire question into creating sub trees and once i create sub trees i think the entire tree will be constructed so let's solve this left part and then i'll come back and solve this right part so on the left i have this in order and i have this pre-order again if i know that uh pre-order is something like root left right and this in order is nothing but left root right i know that right so why don't i again apply the same logic and create a tree so i can say this is definitely my root so why don't i attach that over here so i definitely know this is my root right and this is what i can return this left and that will get attached i'll show you that over the code so that's",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "aZNaLrVebKQ",
+      "position": 106,
+      "title": "L34. Construct a Binary Tree from Preorder and Inorder Traversal | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=aZNaLrVebKQ",
+      "start": 435.68,
+      "end": 546.88,
+      "text": "show you that over the code so that's that's 20. so can i say in in order 20 is here which is the root and can i say the left guy is 40 perfect the left guy comes out to be 40 and this is nothing but the in order traversal this is nothing but the in order traversal and can i say if there is one element of the left subtree then the one element will be the pre-order traversal the pre-order is this perfect so i figured out the pre-order traversal also the left now what about the right so the right can i say this will be the right like anything to the right of 20 will be my right perfect so i'll take that as the right that's 50 i'll take that as the right and i can say this will be my pre-order traversal so i've got again the inorder and i've again got the pre-order remember this this this these guys will wait uh until we form the entire left sub tree so again the question is again broken down into two sub paths where i where i have again an in order again a preorder again in an order again a pre-order so i do have this so let's solve this so currently can i say if on the left like this is what we have on the left right so on the left the pre-order is 40. so can i say this is the root of the tree perfect so i'll say this is the root of the tree 40 on 40 is left do we have anything and if we do not have anything this guy will be returning a null so this is null on this 40 right do you have anything no so when we call the right guy we will again get a null perfect so now 40 will come up come back as a node and this node will get attached to 20 is left and we have attached it i'll",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "aZNaLrVebKQ",
+      "position": 106,
+      "title": "L34. Construct a Binary Tree from Preorder and Inorder Traversal | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=aZNaLrVebKQ",
+      "start": 542.64,
+      "end": 642.56,
+      "text": "20 is left and we have attached it i'll show you that in the code or just understand now on 20 is right we have this so again can i say this this is the pre-order this will be the root so 50 becomes the root and on 50 the left is nothing so the left will be attached to null doesn't have anything on the right so it will be attached to null and this is a node now and that will be returned and attached to 20s right as soon as 20 has found its left as soon as 20 has found its right it'll try to return so 20 as a root gets returned and that gets attached to tents left that 10 will go and figure out its right that is when this will be executed so let's do that so as of now the pre-order traversal is 30 60. can i say this is the root of the tree i can indeed i can end it so i'll say this is the root of the tree and can i say for 30 there there is a left sub tree which will be containing 60 like the in order will be 60 so i can say the left will have uh in order as 60 and the pre-order will be 60 itself so i can again take a pre-order of 60. now on the right on the right do we have anything no and we similarly do not have a pre-order so on the right there will definitely be a null because we did not find anything on the right but on the left we did find something an inorder and a pre-order so again if we do the same stuff we will get a 60 on the left we will get a null on the right will get a null and this will be returned so a pointer will be there and again the 13th tree is completed so 30 will be returned and the tens right will point to 30 and",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "aZNaLrVebKQ",
+      "position": 106,
+      "title": "L34. Construct a Binary Tree from Preorder and Inorder Traversal | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=aZNaLrVebKQ",
+      "start": 638.959,
+      "end": 748.8,
+      "text": "and the tens right will point to 30 and ultimately i can say that i have the root and i can return this route which will be my ultimate answer so this is how i can create a unique banner tree from a given in order and a pre-order traversal so how to code this i'll just give you a preview so that you can try by yourself and then i'll be walking you through the code but for a preview like so that you can try what you can do is whatever in order you have okay whatever in order you have been given and you'll be given a pre-order right so what is the first step that you're always doing whenever you're given an inorder and a pre-order you're saying that the first guy is always your route and then you're trying to figure out this first guy across the inorder so you can you can optimize this if you're looking to find this guy across this you just hash hash all the values of inorder since since the question states that the inorder values will be unique just hash all the values of an order so if you if this number is 12 you can easily figure out where is 12 in the in order using the hash map like using hashing once you figure this out just tell these left guys that okay you are the new you are the new in order of left subtree okay and let's assume there are x elements take the first x elements and say that you are the new pre-order of the left subtree so you create a different like you just call the function saying that this is my inorder this is my pre-order please create my tree so you're calling the function again so it's a kind of recursive function and you say that this right portion is going to be my in order for the right and the remaining elements over here like remaining elements can be called as",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "aZNaLrVebKQ",
+      "position": 106,
+      "title": "L34. Construct a Binary Tree from Preorder and Inorder Traversal | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=aZNaLrVebKQ",
+      "start": 743.04,
+      "end": 849.279,
+      "text": "like remaining elements can be called as my pre-order for the right so again you just pass an in order and a pre-order for the left for the right and they will create themselves that is how you generally try and uh to write a recursive solution now i'll be showing you the code and along with that i'll be doing a example tryron so guys as usual uh the c plus plus code is on the left and the java code is on the right so we're given the pre-order traversal and that's the pre-order traversal like the example that i'll be doing a dry run on and that is the inorder traversal that is given to you so initially what you'll do is uh the entire in-order traversal just put that into the hash map okay so assuming uh the inorder traversal is this and you just put it on to the hash map you don't need to do anything else so what i did was zeroth index first index second index third index fourth index and i just made sure that i put them into the hash map so 9 will be appearing at 0 3 will be appearing on 1 15 will be appearing on 2 20 will be appearing on 3 7 will be appearing on 4 again you can sort the keys i've just written the hash map you can sort it by yourself so this step does this right after that what i do is i have to point this i pass the pre-order into the recursion of bill tree i pass on zero so this is this is where i'm pointing for pre-order initially and then i pass on pre-order size minus one that is over here okay and right after that i pass an inorder that's this and i pass on again the two pointers where one is this one is this so basically uh the two pointers are called pre-start that is where is the pre order starting where is the pre-order ending similarly where is the in starting and",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "aZNaLrVebKQ",
+      "position": 106,
+      "title": "L34. Construct a Binary Tree from Preorder and Inorder Traversal | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=aZNaLrVebKQ",
+      "start": 845.519,
+      "end": 946.0,
+      "text": "similarly where is the in starting and whereas the in-order ending along with the now what i am doing is what i am doing is as long as i have some pre-orders like as long as i have a pre-order as long as i have to create a tree i will create if by chance i do not have any pre-order like i get an empty in array then i return a null as i said in the last step i'll be returning another or else what i'll do is i'll create the root so let's assume initially i got the pre-start the pre-end the in start the in end as this okay as the name suggests inorder means in start in end pre-order means free start and pre so what i've done is i've taken the route and i've said hey why didn't you create a note so this is the node three i know this is going to be my root of the tree so i've created a root so this is my initial route that's created on the first level of recursion call next i say hey can you figure out where is the in root like where is the in order like where is this three lying so it says inmap will say it lies over here so this is where the in root points because you can directly get it from here right now how many numbers are on the left isn't it very easy if you have in root and if you do the in start like you know it's the start pointer so if you figure out you'll get the number of left is one there is one number on the left then i'm saying root dot left why don't you again build yourself with the i'll just pass on the pre-order and i'll say this time the pre-order starts from one point and next this is my new pre-order it starts from here it goes on by taking one more number so ultimately i can say",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "aZNaLrVebKQ",
+      "position": 106,
+      "title": "L34. Construct a Binary Tree from Preorder and Inorder Traversal | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=aZNaLrVebKQ",
+      "start": 941.04,
+      "end": 1048.4,
+      "text": "one more number so ultimately i can say this is my new pre-order so i've just taken one number i'm saying this is my pre-order so i'm saying next time the pre-start will be this the pre-end will be this so without actually reducing the array i'm just using these two pointers to mark the reduction of the array so you can see i've just figured out this as the new pre-order for the left guy correct and over here what i've done is i'm said for the next guy the in start like wherever i'm standing that will be definitely my starting of the inorder i'm saying in root minus 1 like this is the in root this is where 3 exists the root right before that is where my in order will be and that's what i'm passing to build the tree on the left what about right it's very simple i'm saying pre-start pre-start is three plus nums left that's one element plus one that is from 20 i'm starting to pre-end till this end pointer this is what i'm saying this is going to be my pre-order of the next so i've passed on over here see i've taken nums left like from nums left to plus 1 starts from 20 goes to pre-end what about in root so what about in order so can i say if i'm standing at in root in root plus 1 will be from 15 till the in end so i'll end up taking this as the in order for the right so left right is also passed so you have you have created a figure like you have created a pointer and you have called the left and the right another again the same thing will happen again you will come back again you will create a left root and at the end always return the root so again whenever you'll go you'll again create it and this guy will be returned and when this guy is returned it automatically attaches to left equal to because this bill tree",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "aZNaLrVebKQ",
+      "position": 106,
+      "title": "L34. Construct a Binary Tree from Preorder and Inorder Traversal | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=aZNaLrVebKQ",
+      "start": 1044.0,
+      "end": 1133.3090000000002,
+      "text": "left equal to because this bill tree will ultimately return this route and this will be attached to this so i hope you have understood how have i taken the pointers in order to reduce the array without actually reducing the array and that's the c plus plus code so if i discuss the time complexity it's it's big o of n and if you're assuming login for hash map you can take log n log n if you're not assuming login you can take it as n like depending on the hash map you're using you can use beak off and and or n log in about the space complexity are we using anything extra yes we are using and map extra so that's going to take a big of n as well as it's an a traversal that you are doing so it's a stack space of a big off and that you will be using so i can uh like i can just summarize it to be b curve and we go off and for the creation of a unique tree from an in order and a pre-order that is given to you so i hope you've understood the entire explanation as well as the code just in case you did please please please make sure you like this video because it took a lot of efforts to make this entire tree series also if you wish you can definitely drop in a comment that will keep motivating me to make such further series also if you're new to the channel please do consider subscribing because i'm going to bring in such more series in the upcoming future as well with this let's wrap up this video let's read in the next lecture bye [Music]",
+      "word_count": 298
+    }
+  ]
+}

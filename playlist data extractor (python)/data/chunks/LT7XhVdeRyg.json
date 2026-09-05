@@ -1,0 +1,108 @@
+{
+  "video_id": "LT7XhVdeRyg",
+  "position": 267,
+  "title": "L4. Print all prime factors of a Number | Maths Playlist",
+  "url": "https://www.youtube.com/watch?v=LT7XhVdeRyg",
+  "chunk_count": 9,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "LT7XhVdeRyg",
+      "position": 267,
+      "title": "L4. Print all prime factors of a Number | Maths Playlist",
+      "url": "https://www.youtube.com/watch?v=LT7XhVdeRyg",
+      "start": 3.6,
+      "end": 138.67999999999998,
+      "text": "so let's continue with the max section in sters A to Z DS C before that hey welcome back to the channel I hope you guys are doing extremely well so the problem that we will be solving today is print prime factors of a given number so what is the problem stating you will be given a value n and you'll have to print down all the prime factors now what are prime factors so if I write down all the devisers basically all the numbers that divide six then that will be 1 2 3 yes 4 5 uh 6 yes 7 8 9 10 correct uh 11 12 12 yes after that 15 after that 20 after that 30 and after that 60 now these are the numbers that are dividing in so they are the divisors if I'm asking you prime factor that means the numbers that are prime and are dividing the number so two is a number that is dividing the number and it is prime three is a number that is dividing 60 and it is prime five is also a number do I see any other number probably no these are the numbers yeah these are the numbers that are prime and are dividing this number and so these are the prime factors so you'll have to print 2 comma 3A 5 for 35 the prime factors will be 5 comma 7 for 780 the prime factors will be 2 3 really you'll find it out when we divide the easiest way to do it is 780 you divide it by two and then you get 390 you again divide it by two what you get is 1 and after that 1 19 19 195 after that can you divide it by three the answer is yes so you divide it by three you'll get 6 T5 yes can you divide it again by three no so you divide it by five you get 13 can you divide 13 by anything apart from 13 no so 13 is what",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "LT7XhVdeRyg",
+      "position": 267,
+      "title": "L4. Print all prime factors of a Number | Maths Playlist",
+      "url": "https://www.youtube.com/watch?v=LT7XhVdeRyg",
+      "start": 134.2,
+      "end": 259.479,
+      "text": "anything apart from 13 no so 13 is what you'll divide it by so the prime factors are 2 comma 3 comma 5A 13 the standard School way that we used to do so this is what you'll have to print if I ask you the stream Nave approach I think we can derive the Nave approach from printing down all the devices so if I so if I ask you the extreme Nave approach to this particular solution you'll be like maybe I can just find out all the devices and then check which are prime so I already know how to check Prime I've already written this uh piece of code in the last lecture how do you check Prime in a Time complexity of B go of square root of and maybe I can reuse it so what I will do is I'll take a list which will be storing all the prime factors I'll start it trating from two because that is the first Prime that I know of I'll go till n itself because the number can be the prime factor itself and then I'll go like i++ that'll be like hey if the number n is dividing if the number I is dividing n and at the same time if that is Prime please check if that is prime again prime check has been written in that case can you please uh please add this number I as your prime factor so I'll be adding it and the follow Loop will end so if I write down this portion of code the the time complexity will be B go of n into square root of n because n is for traversing and square root of n is for checking out Prime so this will be the time complexity and the space complexity will be for storing the prime factors again we cannot predict the space complexity because we are not using it to solve the problem we're using it to return the answers right and the answer is variable explain this to the",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "LT7XhVdeRyg",
+      "position": 267,
+      "title": "L4. Print all prime factors of a Number | Maths Playlist",
+      "url": "https://www.youtube.com/watch?v=LT7XhVdeRyg",
+      "start": 253.159,
+      "end": 383.039,
+      "text": "is variable explain this to the interview can I optimize it probably yes I already know one thing again going back to the devisor lecture I already know for 36 if one is one of the divisor the other divisor will be 36 if two is one divisor the other divisor will be 18 if three is a divisor the other divisor will be 12 if four is a divisor the other divisor is 9 multiplied right and then six and six can I use this thing can I use this thing and make sure that this Loop is not running till end because what I need is all the divisors and I know if I is the number the other divisor is n by I why can't I do this I can right so I'll be doing the same thing what I'll do is I'll start looping from I = 1 rather I equal to 2 because that is my first remember this that is my first prime number got it so if I have to write down the pseudo code what I will be doing is I'll be starting from I = to 1 and I'll be going till square root of n instead of n yes and this time I'll say Hey listen if n modu i is 0 in that scenario first of all please check if this number is prime if this number is prime that means the integer I that is dividing N is a prime factor so can you ask the list to add this I perfect and what about the other divisor I know that the other divisor is n by I so I'll take n by by I but I'll make sure that it is not the same number I why if you remember for six you might get the other divisor as six so it is very important to check it out so I'll just have a check I'll say if that is the case inside of this if please have a",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "LT7XhVdeRyg",
+      "position": 267,
+      "title": "L4. Print all prime factors of a Number | Maths Playlist",
+      "url": "https://www.youtube.com/watch?v=LT7XhVdeRyg",
+      "start": 374.68,
+      "end": 512.3199999999999,
+      "text": "the case inside of this if please have a check for is n by I a prime if that is prime I can say the list okay this is my other divisor so please add it and you can just finish this off finish this outside F and the fall Loop so what will be the time complexity for this one now on a naked eye it seems like the outer loop is running for square root of N and there is uh in a prime check for two times and the prime check takes square root of n that's on the naked eye I'll have to keep this in mind and you have to explain this to the interviewer that the time complexity is something that we cannot exactly derive why do I see that because there's a if condition every I from 1 to root of n is not going through a prime check only the I which are a factor are going through a prime check and this will be dependent on the given integer and so this is an approximate it will never be multiplied by multiplied by because not for all the numbers you're doing a pre check and definitely not for two times because one you'll be skipping for something like a six you might skip so this is an approximate time complexity but it'll be near about that what about the space complexity again we cannot predict it because we're using an list to store all the factors all the prime factors so it depends how many prime factors will be there for a number this is the time complexity and the space complexity can I improve on this can I do better can I go towards logarithmic probably yes and I will be following wait a second yes I will be following our school method of doing it instead of going through every number and checking it I'll be doing it in a shuttle way let's try to do it it's a very simple way to do it so I'll take the",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "LT7XhVdeRyg",
+      "position": 267,
+      "title": "L4. Print all prime factors of a Number | Maths Playlist",
+      "url": "https://www.youtube.com/watch?v=LT7XhVdeRyg",
+      "start": 506.08,
+      "end": 644.68,
+      "text": "simple way to do it so I'll take the first number which is 780 add the last one let's take 780 what am I doing I know that the first Prime I know that the first Prime is two so I'll divide it with two what if I get what is that 390 I will again divide it by two whatever I get what is uh that's basically one 95 so the division by two is completed so after two I'll check with three is it divisible by three it is so I'll divide it by three and when I divide it by three what will happen is I'll get 65 I'll again try dividing it by three it won't so I'll go to the next number which is four now one thing I'm very sure because I divided it by two as many times it was possible right it is possible till that time it divided so any multiple of two will not be able to divide it any further correct you will not be able to divide it for sure so when you try dividing 65 by 4 it will not so we don't need to do a external Prime check okay I'll go to the next number five I'll see that five is actually dividing it okay I'll divide it with five so when I divide it with five I get 1 three I again try to divide it by five it's not possible I'll go to the next number six again the same thing when you try dividing it by six it won't be possible the 13 won't be possible this is divisible by 6 this is divisible by 6 but you won't check with that number you check with the reduced number after Division and you don't need to do a prime check because 2 and three when you divide it by 2 and three six is done got it next you'll go to seven not possible 8 not possible 9 not possible 10 not possible 11 not possible 12 not",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "LT7XhVdeRyg",
+      "position": 267,
+      "title": "L4. Print all prime factors of a Number | Maths Playlist",
+      "url": "https://www.youtube.com/watch?v=LT7XhVdeRyg",
+      "start": 639.76,
+      "end": 775.48,
+      "text": "10 not possible 11 not possible 12 not possible 13 is possibly the last number because you're left out with 13 and 13 is possible so done and dust I'll follow the same methodology I will not do a prime check what I'll do is I'll start off with I equal to 2 because that is the first you know that is the first prime factor prime factor possible prime factor I will go until n I'll do an i ++ and I'll say Hey listen if the number is divisible by 0o then this is a prime factor I'm straight away seeing it you'll understand why and then I'll say Max it out if the number is two divide it by two as many times it was possible it be like okay n modu i equal to equal to z n = to n by I I kept on dividing it by two by two by two as many times as possible so when you cover four it will never be divisible by four and point to notice I'm doing it with n I'm reducing n so this fall Loop which was supposed to run till 780 will not run after the second iteration when I becomes three it will run till 195 when I becomes 5 it will run till 65 when I becomes 13 it will run till 13 it won't run till 780 I'm doing it in a lot lesser number of iterations and the if will be completed and then the fall Loop gets completed So eventually if you check out for 780 you can take pen and paper do a dry you'll see that this fall Loop is running for beo of 13 times because I'm updating the value n but I'm keeping a check on the N itself so it'll be running till 13 it's only running till 13 times is there will be exceptions so we saw that it is running for 13 times for a big number like 780 so is it optimized no it is not if I",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "LT7XhVdeRyg",
+      "position": 267,
+      "title": "L4. Print all prime factors of a Number | Maths Playlist",
+      "url": "https://www.youtube.com/watch?v=LT7XhVdeRyg",
+      "start": 771.12,
+      "end": 905.8000000000001,
+      "text": "so is it optimized no it is not if I give you a number like 37 if I ask you to write down the prime factors it is having one prime factor for 37 37 itself is the prime factor so if I try to run the loop from 2 to 37 that's what we were doing right I equal to 2 to 37 that is what we did over here if we try to divide no one will divide it apart from 37 so this time it will be running for 37 times which is B go of n so for a large number which is prime the complexity still stays is as B go of n for a large number that's Prime very important for a please explain these cases to the interviewer for a large number that is prime itself the complexity still stays as B go off and can I optimize this I can I can optimize this I know one thing for sure if 37 is the prime factor itself what if I just Loop till I = 2 till square root of n if I do this what will happen will it work it will and I read the same thing if n modu i is equal to equal to Z that means it's a factor list do add please add I and the same time if divide it till the max possible time you can till the max possible time you get this is still going to work so if I run it till square root of n it is still going to work but what will happen is it will not give you the prime factor 37 so I know one thing for sure if the number itself is the prime factor it's never going to come inside this for Loop because I'm running the follow Loop to square root of N and I'm taking I as the divisor or the factor so what I can do is at the end of the day I can have a",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "LT7XhVdeRyg",
+      "position": 267,
+      "title": "L4. Print all prime factors of a Number | Maths Playlist",
+      "url": "https://www.youtube.com/watch?v=LT7XhVdeRyg",
+      "start": 899.32,
+      "end": 1032.24,
+      "text": "is at the end of the day I can have a check Hey listen if n is not equal to 1 if n is not equal to one please add this as your prime factor please add this as your prime factor why this works let me explain you with an example let's take 780 and let's try dividing it first time n yes list will add it so list will add to 1 will divide it 390 will again divide it 195 and then the while will stop fall my bad fall Loop comes back and the value changes this time three yes list will add it and the Y Loop will divide it to once and the value it will get uh get is 65 and it will stop and this time the value is four remember you're running till square root of n n is 65 square root of 6 5 is how much 8 something so we're still running from 4 till 8 something it's still running we're still running okay four will never divide it okay we'll go to Five well five divide it five is possible so while loop will again divide it once and this time on Division I will get 13 and when it divides it please make sure you add it to the list as well five divides it since five is dividing what happened to the number the number went to become 13 right and again if I try to divide it by five the Y Loop says no I go back this is six but remember this is square root of N and square root because the number is 13 is 3 point something that's three so 6 till three the fall Loop terminates the fall Loop eliminates and at the end of the day I will find that this value of n is not one because it still has 13 so I didn't go till 13 and did a 13x13 till 1 I stopped when I reached a prime number I stopped when I reached a prime number",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "LT7XhVdeRyg",
+      "position": 267,
+      "title": "L4. Print all prime factors of a Number | Maths Playlist",
+      "url": "https://www.youtube.com/watch?v=LT7XhVdeRyg",
+      "start": 1027.72,
+      "end": 1134.96,
+      "text": "stopped when I reached a prime number something like that and eventually I just added it to the answer so this time I did Loop till six instead of 13 times I did Loop till six which was significantly lesser than 30 right not 780 times just six and then there was certain number of Divisions because of this y Loop which is you can say logarithmic when you divide it you usually say it as logarithmic so the overall time complexity again cannot be pinpointed can be approximated only beo of square root of n at the worst possible case when the number is prime because it won't produce and logarithmic n for the division very very optimized and the the space complexity again depending on the number of factors it will be varying got this and you might be thinking hey why did we check for n not equal to 1 why why you can simply add it because the last number I'll give you an example take 16 take 16 as the number and try take 16 as the number and try you will understand I want you to do the dry and got it again you'll find the C++ Java python JavaScript code in the link below and I hope you have understood everything so if you're still now watching please please do consider giving us a like if you're new to our channel do consider subscribing to us as well with this I'll be wrapping up this video Let's fin some the video do why take care whenever your heart is broken don't ever forget your golden I will find a light",
+      "word_count": 277
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "video_id": "1zktEppsdig",
+  "position": 261,
+  "title": "L25. Merge K Sorted Lists | Multiple Approaches",
+  "url": "https://www.youtube.com/watch?v=1zktEppsdig",
+  "chunk_count": 14,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "1zktEppsdig",
+      "position": 261,
+      "title": "L25. Merge K Sorted Lists | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=1zktEppsdig",
+      "start": 3.04,
+      "end": 124.159,
+      "text": "so we will be continuing with our playlist before that hey welcome back to the channel I hope you guys are doing extremely well so the problem that we will be solving today is merge K sorted list so what is the problem exactly stating it is stating that you'll be given K sorted list and your task is to take all the values the values will be integers all the integers together sort them up and put them into a new list once you have done that you'll have to return the head of that new list got it so if this problem comes up in an interview what is the extreme n solation that you can think of I'll be thinking okay I'll take all the elements from the first list from the second list from the third list and so on till the kth list I'll put them into an array once I put them into an array I'll have all the numbers or all the integers in an array I will be sorting that array so I will now get a sorted array so all the numbers all the integers will be in a short in a sorted fashion in that array once I have all the numbers I can apply the convert array to link list that we have already done in our previous videos I'll apply that convert array to link list logic and I'll get the new list and whenever you apply the convert array to link list logic you get the head of that new link list once you have the head you can simply return that head quite simple so this will be the extreme na solution so I will be writing down the pseudo code now in case you want the C++ Java python or JavaScript codes it will be given below so I will be writing down the function the function will be taking a list of node so what I given is a list having all the heads so you have given this you",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "1zktEppsdig",
+      "position": 261,
+      "title": "L25. Merge K Sorted Lists | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=1zktEppsdig",
+      "start": 118.56,
+      "end": 246.31900000000002,
+      "text": "all the heads so you have given this you given this you given this you given this head one head two head three so on till head K head because if you're given the head you can easily access the entire list if you're given the head you can easily access the entire list that's why a list of heads is given to you so you have uh all the heads of all the list now what is your task you have to put them into an array like all the integers into an array the first thing I'll do is I will take an array and it's an empty one after that I'll have to go through each and every list correct let's go through them first let's access every head so I'll be going from I equal to0 till I list do size and I know the head will be at the index so list of I will give me the head so I can take a temporary and this will will be my node now I have the head I have a temporary standing at the head so initially when I is zero temporary will be here after that temporary will be here after that temporary is here after that temporary is here now what is your job so take this one this one this one right and put them into an array after that take this one this one put them into an array Travers right you can do a simple travel that's super simple I can write a while loop which goes on till temporary is not null and I can say AR can you add this temporary value data whatever it is and then can I say temporary temporary next super simple the traversal is completed once the traversal is completed you have all the elements in the array what is the next step sort them so call the sort function and that will be sorting the entire array once the entire array is sorted I",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "1zktEppsdig",
+      "position": 261,
+      "title": "L25. Merge K Sorted Lists | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=1zktEppsdig",
+      "start": 241.079,
+      "end": 374.479,
+      "text": "array once the entire array is sorted I have to convert it into a list call the convert function you've already done that so this will be calling the convert function and it will be returning the head of that new list so basically I can say head equal to convert of array once that is done I can straight away return the head of that new list nust it now what will be the time complexity can I say this is taking a beo of K because I have been given K sorted list now what is the next thing I need to compute for the traversal to ease out computations what I will be assuming is each and every list is of length n hypothetical observation or assumption so this traversal will be taking B go of n so the overall complexity for this portion is nothing but n into k correct after that you're sorting it so the sort usually takes M logarithmic of M if the size of the array is M now what is the size of the array the size of the array will be all the elements combined how many elements are there if there are K list and each of its size is n can I say the number of elements are n into K I can so m is nothing but n into k that's the total number of elements assuming each list is of length n after that I'm converting so in order to convert it will be in linear traversal so the complexity again will be M where m is n into K after that I think we're done so the overall time complexity will be n into k+ M logarithmic of M plus b go of M where m is n into K what will be the space comp complexity I'm using an array so it'll be storing all the elements which is B go of M after that I'm creating a new list in order to store all the elements like all",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "1zktEppsdig",
+      "position": 261,
+      "title": "L25. Merge K Sorted Lists | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=1zktEppsdig",
+      "start": 368.919,
+      "end": 481.44,
+      "text": "order to store all the elements like all the merged elements so that's another B go of M so this is the overall time complexity and the space complexity for The Brute Force obviously the interviewer will not be happy with this and he'll ask you to optimize this so in order to optimize our previous solution you should have seen my previous video that is on mod two sorted list if you have seen that and you know how to merge two sorted list in place this will be easy so what I'll do is I'll take the first list I'll take the second list and I'll try to merge them together so I have two lists right I can merge them together right I know how to do it in place when I say in place I'll be using the same nodes this will be pointing to this this will be pointing to this and this will be pointing to this and this will be pointing to this and this will be pointing to null I know how to do it in place so let's quickly merge them into a new list so after merging them I have something like this The Next Step will be do go to the third list take this up and take the previous list can I merge them together I think I can right same process let's do it so once the merge is completed I have something like this after this you'll move on to the fourth list and again you can take both of them and again do a merge can I do it I can so let's do it once the last list is merged I have something like this I don't have any further list that I need to merge so I can simply return the head of the overall merged list now remember all of these notes are the same notes that were given to us I've not used any extra nodes done it in place so let's quickly addite on the pseudo code in",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "1zktEppsdig",
+      "position": 261,
+      "title": "L25. Merge K Sorted Lists | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=1zktEppsdig",
+      "start": 478.039,
+      "end": 633.32,
+      "text": "quickly addite on the pseudo code in case you want the C++ Java python or JavaScript code it will be given below first of all uh you'll have a function which will be taking a list of nodes so this is nothing but all the heads given to you in a list after that you have to merge them how do you merge it first thing we did was we took first two list and we tried to merge them into one so I'll be smart and what I'll do is I'll place a head node on the Zero list on the zeroth list I'm talking in terms of zero based indexing I'll be like okay head is list of zero perfect the next thing I'll do is I'll start traversing from the first I'll start traversing from the first let's try to do it for I = to 1 and I'll go on to the last which is list do size perfect this is what I'm writing after this can I say list of I is my first list and head is my zeroth list can I merge them yes I can so I'll call merge to list I'll pass on the head and I'll pass on the list I so what will happen is head is nothing but the zeroth list right is a list of I in the first iteration that is the first so I'm sending first tus right it will get merged I'll get the new head I'll get the new head of the merged list so what I can do is that new head I can store it in the head itself done done so if I do this what will happen at the next step is this will get omitted and whatever merged list you will get the head will be here again in the next iteration when I is at two you can again merge them simple so what I've done is I've taken the zero then I've taken the first and I merged them into a new list and",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "1zktEppsdig",
+      "position": 261,
+      "title": "L25. Merge K Sorted Lists | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=1zktEppsdig",
+      "start": 626.36,
+      "end": 779.959,
+      "text": "and I merged them into a new list and that is stored here next time in I do this merged the before merged list will go and list of two will go again you'll get a merged so at the end of the day the head will be the head of your merged list done and dusted super small code so let's analyze the time complexity in order to do that what I will do is assume the first list is of length N1 the second is of length n to N3 and N4 okay what is the first step of iteration doing when I is one what's happening you're merging the zeroth list with the first list in terms of zero based indexing agreed so first list is of size N1 the second list is of size N2 they are being merged merging them correct and what is the time complexity while merging to list that's very easy that's N1 plus N2 done that is for the first iteration that is for the first iteration done and dusted after this I will be to what will happen you'll have them merged into a new list which will be of size n 1% that will be a single list and that single list will try to get merged with this because this is where your iteration is standing you try to merge this into this correct so can I say this time the list that you're trying to merge will be of length N1 + N2 because it is a combination of the zero and the first now you're trying to merge with the third list agreed so the overall time complexity to merge them will be N1 + N2 + N3 very simple done understood I can just remove them what is the next step The Next Step will be I will be three which means you're standing at this one so you'll have a single list which will be which will be a merge of these three so basically N1 + N2 + N3 in length right",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "1zktEppsdig",
+      "position": 261,
+      "title": "L25. Merge K Sorted Lists | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=1zktEppsdig",
+      "start": 773.68,
+      "end": 900.759,
+      "text": "basically N1 + N2 + N3 in length right and you'll try to merge it with this one so this and this will try to get merged so can I set the next step this one will be N1 + N2 + N3 and this one will be N4 I can right I can say that so what will happen again the time taken will be N2 + N3 + N4 and this is when the iteration will get completed now I cannot figure out the time complexity so what I will do is I'll assume all of them to be equal length assume it to be of the maximum length so let's assume that each of them is of size n the maximum possible I can write this as 2 N I can write this as 3 N I can write this as 4 n perfect right probably if I'm adding so much if I add a very small n it won't matter that much because I'm already doing a lot of iterations agreed agreed right can I write this as n + 2 n + 3 n till K of n because I'll be doing it till K list right I'll be taking n common so it be 1 + 2 + 3 plus dot dot dot till K so in short it will be n into K into how much is it n into n + 1 by 2 right so I can say that this will be my like near about time complexity I cannot pinpoint the exct time complexity because the link list might be different in length what about the space complexity I'm not using any extra space I'm using everything in place I'm reusing the same nodes given to me I'm just changing the links so the space complexity will be big go of one if you look at the time complexity it has n k into K somewhere somewhere near about n Cube if just in case I assume K to be n it's in the power of Cubes",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "1zktEppsdig",
+      "position": 261,
+      "title": "L25. Merge K Sorted Lists | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=1zktEppsdig",
+      "start": 897.0,
+      "end": 1032.6789999999999,
+      "text": "it's in the power of Cubes obviously the interviewer will not be happy with this and he'll again ask you to optimize so in order to optimize our previous solution what I will be doing is I'll be using the concept of minimum Heap in case you don't know about it nothing to worry about just remember it's a data structure that returns you the minimum value if you are storing 10 values it will give you the minimum value that is it that is all that you need to know about in C++ Java priority Q is a data structure that implements minimum Heap so I'll be using priority Q got it so let's quickly Define a priority Q so I'll be defining a priority q and this priy Q will be in terms of minimum Heap got it and I'll be storing two values one is the integer at the first and then I'll be storing a node so I'll be storing a pair I'll be storing a pair one is integer the other is node initially the priority Q will be containing all the nodes that are head all the nodes that are head I take all the heads and store it into the priority CU let's do it the first one is two so she'll be taking two and the node taken the next one is one and the node the next one is one and the node the next one is eight and the node so what I've done is I've taken all the heads and stored them into the priority Cube what is my next step I need to merge all of them and create a new list so what I will do is I'll use the concept of dummy node now and use the concept of dummy node I'll have a temporary assigned to it and initially it will be pointing to null okay now in your result like in your answer list you always had your first element as the smallest one and you know",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "1zktEppsdig",
+      "position": 261,
+      "title": "L25. Merge K Sorted Lists | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=1zktEppsdig",
+      "start": 1027.079,
+      "end": 1158.2,
+      "text": "element as the smallest one and you know the smallest one will be one among it one among it and you have all of them in the priority CU so if you ask the minimum you'll always get either this or this right if you're storing two values it is always in terms of the like it is always sorted in terms of the first one so if you ask hey minimum Heap give me the minimum it will give you it will give you either this or this doesn't matter because both of them are one so you'll get one of them what you can do is you can take out you can take it out sorry my bad you can just take it out and once you've taken it out you can have it here here means here perfect and you can have temporary pointed to it once you have done it you can take temporary to this one done understood can I say taking one out that means this is gone this is gone so you can take the next value which is five can simply say okay give me your next so you'll give the next because one is done you need someone from it so takeen perfect what is the next step again figure out the minimum because in your resultant list you'll have the minimum after it after this you'll have the next minimum the next minimum is this agreed just take it out so just take it out and I'll again place it here I'll again have temporar pointed to it I'll move temporary here so can I say this is taken right take the next value and put it into the briq so I've done is I've taken this and put it into the Fret again get the next minimum which is the this take it out put it here make temporary Point here and go temporary here so this is also taken if this is taken you take the next value so you take this and put it over",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "1zktEppsdig",
+      "position": 261,
+      "title": "L25. Merge K Sorted Lists | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=1zktEppsdig",
+      "start": 1152.799,
+      "end": 1278.96,
+      "text": "value so you take this and put it over here you need the next minimum what will be the next minimum this one take it make temporary Point here temporary goes here so this two is gone now which means this is gone what is the next four place four here sorry uh this four goes here perfect what is the next minimum we'll get three keep on doing this keep on doing this till all the elements are into the prior Q like all of them are done so what is the next step you will get three let's take it so three is now done so you can just move three if three is done it will go as seven perfect what is the next step we'll get the next minimum which is four so it will have four maybe I can just point write it here and you can make sure that this is pointed and then temporary moves perfect what is the next thing you omit four from here you can just erase it and the next one will be six six perfect which is the next minimum five so take five make sure temporary points to it after this you can just remove five if you're removing five delete from here once it is deleted it doesn't have anything next it doesn't have anything in next no need to put it again no need to put it again let's do our next traversal which one is the smallest six make sure you take out six and make temporary point to it after this take out six if six is taken done does it have an x no nothing to put which is the next small seven take it out make sure this is pointing do it temporary goes take out seven as well 1 seven is taken does it have an next no none industried what is the next you just take out the next eight make sure temporary points to it temporary is done and eventually this is done this is done",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "1zktEppsdig",
+      "position": 261,
+      "title": "L25. Merge K Sorted Lists | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=1zktEppsdig",
+      "start": 1272.96,
+      "end": 1410.4799999999998,
+      "text": "and eventually this is done this is done again it's null over no need to put it so there will be a point where when you look at the priq when you look at your minimum Heap you'll see that there are no more elements in that minim heap if that is the case you stop then and there you stop then and there what I've done is I've reused the same notes I've reused the same nodes ask you what is like where is my head can I say dummy node do next is my head dummy node do next is my head correct so you'll be returning Dum node. next so let's write down the pseudo code again this is not in C++ or Java in case you want the C++ Java python or JavaScript code it will be given below I'll have a function I'll have a function which is taking a list that is containing all the heads right so the first thing I need a priority Q depending on your language you can define a priority Cube let's have its variable naming as PQ what is the first thing that I did I took all the heads and I did put them into the priority Cube let's it I'll be iterating through all the heads so I can go from zero to lists do size I can just run a follow Loop and I can say PQ can you add I need to store the integer at first and then the node so I can easily say list of I do value that will give me the value and I can simply say list do I now that will be my node itself done what after that I need to create a new list so I need definitely a dummy node so you can create a dummy node and you can have that dummy node assigned to a temporary in order to Travis now I need to go through that prior Cube till it has nothing left I'll",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "1zktEppsdig",
+      "position": 261,
+      "title": "L25. Merge K Sorted Lists | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=1zktEppsdig",
+      "start": 1404.12,
+      "end": 1558.279,
+      "text": "prior Cube till it has nothing left I'll be writing a while loop and I'll say okay till PRI Q is not empty I need to get the minimum you can use something as PQ dotop again according to language you can figure out how to get minimum so it's basically getting the minimum from the priority CU got it so you can be storing this in a pair of integer and a node so you can call it as P the pair right what after that you need to make sure the temporary is pointing to the speed. second y second very obvious if you're getting the top the minimum you need to make sure that the temporary is pointing to this done what after that need to remove it from the priq that's super simple you can say BQ do pop again this deletion might be different according to language you can figure out how to delete in your language if you say PQ bop it deletes it so I have deleted it now what is my next job if I have deleted if I deleted it I need the next to get into the prior right I can do that can I say if P do second its next is still there it might be null whatever if is standing here and it doesn't have so please make sure you check that there is an next if there is an next you say PQ do add can you take P do second next do Val because that is the integer part and P do second dot next as the node it will get into the priq do you have anything left you have you have to make sure temporary goes to the next as well because you made temporary point to that and you have to go to that node itself to change the link then understood at the end of the day you can return the dummy nodes next because that will be your head of the new newly created list super simple yeah that that",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "1zktEppsdig",
+      "position": 261,
+      "title": "L25. Merge K Sorted Lists | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=1zktEppsdig",
+      "start": 1554.24,
+      "end": 1692.039,
+      "text": "created list super simple yeah that that that was the code once your priority que gets empty you would have created your new list so that will be done now let's discuss about the time complexity I have a follow loop I have an add operation the add operation technically takes logarithmic of size of the priority Q so that's logarithmic of K and I have a follow Loop running and it's running for the size that's K into logarithmic of K because the ad takes logarithmic of K that will be the time complexity for the first half so the fall Loop is done now the next one is the while loop now what is the time complexity inside the while loop first of all let's analyze for how many times is the while loop running it's running till the priority Q is empty at every iteration it is getting a new node and attaching to the new list So eventually can I say I'm getting elements from the priority Cube and what does prq have it will eventually have all the elements all the elements into it so assuming assuming each of the list is of size n an assumption can I say the total number of elements is K into N I can so can I say that the Y Loop is running for K into n correct nice how many operations am I doing inside it PQ top PQ do poop and PQ do add so there are three operations on the priority q and I have already told you priority cu's operations do take logarithmic of K where K is the size of the priority Q so can I say I have three operations that's three of logarithmic of K so the overall time complexity is somewhere near about K into logarithmic k for the fall Loop plus n into K into logarithmic of K again n is assuming that all of the lists are of size n n can be the worst possible length that can be given to you for that",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 13,
+      "video_id": "1zktEppsdig",
+      "position": 261,
+      "title": "L25. Merge K Sorted Lists | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=1zktEppsdig",
+      "start": 1687.679,
+      "end": 1803.2,
+      "text": "length that can be given to you for that reason what about the space complexity can I say it is B go of K I can because I'm just using the priq and at Max it is storing K elements I'm reusing the nodes so nothing extra over there so this will be the overall time complexity and the space complexity and the previous solution the better solution was taking somewhere in terms of Q if you look over here it's somewhere in terms of square square into log right so it's this is the optimal solution got it so let's quickly get back to the code editor give the function signature this is how you can define a minimum Heap or a prity q in C++ I basically have an extra check over here just in case if the list is not null like it should not be null it should have a head then only I'm pushing it right after that I have a dummy node I have a temporary I go till VQ is not empty I get the dock I'm using the auto I'm not defining it as pair you can Define it as a pair as well after that PQ do poop if there is something after it I add it to my prq again make sure temporary is point to it once youve done this move temporary to the next and at the end of the day return Domino do next so I can go ahead and submit this and this will be running fine so if you're still watching I'm very sure that you have understood the brute the better and the optimal and if that is the case please please do consider giving us a like and if you're new to our Channel please do consider subscribing to us as well with this I'll be wrapping up this video let's meet in some other video till the I take care whenever your heart is broken don't never forget your golden I will find",
+      "word_count": 341
+    }
+  ]
+}

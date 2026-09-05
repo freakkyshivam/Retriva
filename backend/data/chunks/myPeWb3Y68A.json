@@ -1,0 +1,196 @@
+{
+  "video_id": "myPeWb3Y68A",
+  "position": 201,
+  "title": "DP 20. Minimum Coins | DP on Subsequences | Infinite Supplies Pattern",
+  "url": "https://www.youtube.com/watch?v=myPeWb3Y68A",
+  "chunk_count": 17,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "myPeWb3Y68A",
+      "position": 201,
+      "title": "DP 20. Minimum Coins | DP on Subsequences | Infinite Supplies Pattern",
+      "url": "https://www.youtube.com/watch?v=myPeWb3Y68A",
+      "start": 0.24,
+      "end": 120.96,
+      "text": "hey everyone welcome back to take you forward so today we will be solving the problem bp 20 and what is the problem the problem will be minimum coins yes now this problem is again a problem on the pattern of dp on subsequences that we have been doing and if you remember dp on subsequences it's very easy pick and non pick is what you generally use to solve dp on subsequences so it's a similar kind of problem so what does the problem state so the problem states that you're basically given an array which denotes denomination of coins assume the denomination of coins are one two three like you have coins which have denominations as one two and three okay and you're given a target assume the target is given as seven okay so what they're asking you is what is the minimum number of coins yes what is the minimum number of coins that you will require in order to form this particular target so over here i can say if i take one coin of three denomination another coin of three denomination another coin of one denomination that will add up to give us the given target and how many number of coins did we use the answer to that will be three so you have to minimize this number of coins like there can be other ways as well you can take two you can take two two to thrice and then you can take a one this also gives you a target but over here the number of coins required is four i don't want that the question clearly states you have to figure out the minimum number of coins required now you might be saying striver uh this is very simple uh we are just gonna take the target and whichever is the maximum value we divide by it like greedy we like the first approach so you'll be like we can definitely solve this using uh greedy so if it was greedy would have been like",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "myPeWb3Y68A",
+      "position": 201,
+      "title": "DP 20. Minimum Coins | DP on Subsequences | Infinite Supplies Pattern",
+      "url": "https://www.youtube.com/watch?v=myPeWb3Y68A",
+      "start": 117.119,
+      "end": 244.239,
+      "text": "so if it was greedy would have been like okay these are the other elements and the target required is seven pick up the biggest coin which is three can i have it yes it divides it by twice so i can have two denominations of coin three right and what is the leftover part seven minus seven minus two denomination of three which is seven minus six left over is one which is the next biggest coin two can it divide no zero denominations of two which is the next biggest coin one can it divide yes one denomination of one and after this one minus one denomination of one will be zero left so you'll be like okay i'll require two coins here one coin here which sums up to give me three coins greedy does work for this test case but it might fail so can we figure a test case where greedy fails assume i give you something like nine six five one okay and these are the denomination of coins and i'm looking for a target of 11 okay i'm looking for a target of 11 so will this fail if you apply greedy the biggest coin is 9 and it'll be like 11 by 9 1 denomination of 9 left over is 2 6 cannot be applied five cannot be applied one can be applied twice so you'll be like i i'll be requiring three coins in order to form the target of eleven but actually if you pick six and five the requirement of coins will be two and we saw that if we follow the greedy method it does fail again why same reason uniformity there is no uniformity there right you there's a nine but it might happen the next couple of elements might be something which gives you better values so uniformity is not there like if you nine to six difference is three six to five differences one one to five differences four so there is no uniformity in the differences of coin",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "myPeWb3Y68A",
+      "position": 201,
+      "title": "DP 20. Minimum Coins | DP on Subsequences | Infinite Supplies Pattern",
+      "url": "https://www.youtube.com/watch?v=myPeWb3Y68A",
+      "start": 240.239,
+      "end": 363.19899999999996,
+      "text": "uniformity in the differences of coin thereby you don't know what is the next denomination hence something like greedy cannot be applied in such cases and that's when we think of what trying out all combos to form target and this is something which we have done in which problem knapsack over there we had to figure out the maximum value over here over here we have to figure out what is the minimum count right so try out all the combos and take the combo that has minimum coins take the combo that has minimum coins right so the problem is to figure out minimum coins so what is the rule what is the standard rule to write the recurrence and how do you try out all combos there's only one way that is if you write the recurrence or recursion and then you can think of dp tabulation and everything so rules do you remember the rules guys i've been teaching that forever now what are the rules first rule is express the recurrence in terms of first is index and obviously you're looking to form something in a knapsack also you had a back over here also you're looking for a target so the second recurrence will be target which i can call it as t right then express yes then express third you have to take the minimal of all right you have to take the minimal of all because over here the question clearly states find out how many minimum coins will you require so what is the question stating the question is stating to find out the minimum coins correct so can i say i have to write a function that returns the minimal coin so if i'm writing n minus 1 and target so that means if there is an array like this yes if there is an array like this where this is 0 and this is n minus 1 i am saying till n minus 1 till the entire array what are the minimum coins that will be",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "myPeWb3Y68A",
+      "position": 201,
+      "title": "DP 20. Minimum Coins | DP on Subsequences | Infinite Supplies Pattern",
+      "url": "https://www.youtube.com/watch?v=myPeWb3Y68A",
+      "start": 359.52,
+      "end": 488.319,
+      "text": "what are the minimum coins that will be required to form this target this will tell me is it 2 is it 3 is it 4 is it 5 what are the minimum coins this f will tell me whatever is the question that is what the f generally resembles so this f is going to tell me what are the minimum number of coins that you'll be requiring to form the target and for this portion of the array n minus 1 means the array ends over here so i can say can start easily okay so let's write the recurrence now so we have an index okay and we have a target so let's forget about the base case and what did we learn about this express all possibilities generally in subsequences there are two possibilities either you take the coin you take the coin or you do not take the coin but over here there will be slight difference let's understand why so if you carefully see if you carefully see whenever we took the coin three used two additions of that right we used two additions of that so the question states there is an infinite yes there is an infinite supply of coins in the previous questions a single element was just used once like in the knapsack what you did was if you store if you steal or store whatever an element you just stole it once but over here this denomination can be used once twice thrice as many times as possible right now you might be thinking striver then the best thing is divide it like if you're using it do a seven by three and you're using it twice a twice will that make sense no because it might happen you don't need always like assume there is something like 25 25 by 3 is eight times you don't need to use it eight times probably there might be a case where you just have to take seven denominations of three make it 21 and probably take two denominations and",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "myPeWb3Y68A",
+      "position": 201,
+      "title": "DP 20. Minimum Coins | DP on Subsequences | Infinite Supplies Pattern",
+      "url": "https://www.youtube.com/watch?v=myPeWb3Y68A",
+      "start": 484.0,
+      "end": 611.2,
+      "text": "and probably take two denominations and make it 25 there might be cases like this it's always not necessary that if you're using a denomination you end up using the entire portion i will again repeat assume there was a target of 25 and the denomination is 3 it does not necessarily necessarily means that if you're taking the denomination of three you take eight denominations of three it can be seven denominations it can be six denominations it can be five denominations it can be any number of denominations that you can make sense so i'll be like okay there can be two cases one is i decide i will not take that's for sure and if i not take am i adding to the number of coins because the function what is the duty of the function to return the number of coins so make sure when you're not taking you count you count the number of coins so the number of coins counted will be zero and if you're not taking it what happens to this f you had an array right you probably are standing over here and this is your portion and if you do not take it you have to move back so please move back so when you move back it will be index minus one and target perfect and what about take so if you're taking right if you're taking now you're looking for minimum if you remember i told you whenever you're looking for maximum assign everything to intervene so that it's not considered whenever you're looking for minimum assign everything to intermax so that it is not considered so if you're taking it make sure take is considered as int max okay now when can you take it so this array you are at this index and assume this is 6 and the target is 3. can you take this denomination will it make sense to take this denomination the answer is no because if you take a denomination of 6 but you're looking for a target of 3 so",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "myPeWb3Y68A",
+      "position": 201,
+      "title": "DP 20. Minimum Coins | DP on Subsequences | Infinite Supplies Pattern",
+      "url": "https://www.youtube.com/watch?v=myPeWb3Y68A",
+      "start": 607.279,
+      "end": 728.72,
+      "text": "but you're looking for a target of 3 so it does not make sense so before taking any denomination just make sure you ask does the coin at that index is lesser than the target that i'm looking for if it is then i can take it now if you're taking a coin into your denomination let's understand if you're taking a coin what is this function doing this function is counting coins this function is counting coins so how many coins are you taking one and rest for the remaining target you have to figure out right for the remaining target is t minus coins of index because if you took up if you took up a coin [Music] if this is the array and there was three and the target was eight so if you took this three if you took this three this eight will reduce to five now that's what i'm doing over here this eight will reduce to five and now you look for what are the minimum in which i can form this five that's why you again call this function choice you will again call this function by taking it but there's a question what will happen to this index because if this three is picked only once you add one but if you go back you will not be allowed to pick it once more so the best thing that you do is you say i'm gonna stand over here itself yes i'm gonna stand over here itself and i'm gonna pick it again so i will call the index again and this time with the reduced so basically what i uh did was if there was a three under the target was eight so i was looking what are the minimum number of ways in which i can form eight in this portion of the array now if i picked up once this will be five and i'll again look in this array in how many ways can i form five that's my that's my motive that's my thinking",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "myPeWb3Y68A",
+      "position": 201,
+      "title": "DP 20. Minimum Coins | DP on Subsequences | Infinite Supplies Pattern",
+      "url": "https://www.youtube.com/watch?v=myPeWb3Y68A",
+      "start": 723.519,
+      "end": 849.6,
+      "text": "my that's my motive that's my thinking make sense so what i did was i stayed at the same index remember this as a thumb rule whenever there is an infinite supply of anything infinite supply multiple use such statements whenever there is infinite supply multiple use such statements always when you consider take it will stand at the same index it won't move to the previous index it will stand at the same index now you might have a question but driver if it stands at the same index it will keep standing no first it was eight when you picked up three next will become five when you pick up three next this five will become two and then you cannot pick up this three hence ultimately will move you will move at a moment because by picking up by picking up you're reducing this target you're reducing the target as much as possible so eventually you will move so that's the funda of take you always stand at the index remember this whenever there is something like infinite supply something like multiple use you always will stand at the same index and you'll just alter the target yes you'll just alter the target whatever like by how much possible you have to alter it so that's what you've done and now what do you need to return the minimum of the combo of take or not take is what you have to return so this is what you'll do you'll return the minimum of a can non take have i written the recurrence express recurrence minimum of all what is the next thing the next thing is base case i have already taught you that how do you write base cases whenever there is a case of base case and you're starting at n minus 1 you always look at the last index which is 0 and then you start thinking in terms of a single array containing a single element and a possible target so this is an array at index 0 and possibly containing a",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "myPeWb3Y68A",
+      "position": 201,
+      "title": "DP 20. Minimum Coins | DP on Subsequences | Infinite Supplies Pattern",
+      "url": "https://www.youtube.com/watch?v=myPeWb3Y68A",
+      "start": 843.36,
+      "end": 979.1990000000001,
+      "text": "at index 0 and possibly containing a value 6 and a target 7 now tell me one thing if this is containing a value 6 and a target 7 can this target be achieved like what are the minimum number of coins if i ask you what are the minimum number of coins that you will take to achieve this target equal to seven is my question what are the minimum number of coins that you will take in order to achieve this target seven and your answer to that will be striver the answer will be zero because i cannot achieve the target seven using a coin denomination of six but what if i tell you that this is seven now your answer will be striver we can achieve it because it will take us one denomination of seven to achieve this target seven now let me quickly change something if i change the target to be probably let's say 12 and the over here it's four then you'll be like striver we will be requiring three denominations is the minimal that i will require in order to achieve this target via the denomination four so can i say if the target is divisible by this four just very very logical if this target is divisible by this four then i written the minimum as target by denomination right and if it is not then i'll return that it's not possible so thereby the minimum number of coins is infinite no matter how many coins you bring you cannot don't return zero otherwise the minimum steps will be counted as zero don't return zero so let's write down the base case so you know the base case will be very simple if index is equal to equal to zero and then you'll have to write something so i know and we are we always assuming these cases the coins will always have a denomination of greater than zero because there will never be a denomination of coins you like that's common sense so if array of i or rather",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "myPeWb3Y68A",
+      "position": 201,
+      "title": "DP 20. Minimum Coins | DP on Subsequences | Infinite Supplies Pattern",
+      "url": "https://www.youtube.com/watch?v=myPeWb3Y68A",
+      "start": 975.6,
+      "end": 1090.1599999999999,
+      "text": "array of i or rather if target modulo array of i is equal to equal to zero we will return what we'll return target by a of i because that's the minimum that we will require or else there is like we cannot form it we will return into max that is how you can easily do this stuff right and just to make sure that uh it is no overflow probably you can uh return something as one e9 again why because see you're adding 1 plus 1 plus if any of the function gives into max it'll be 1 e 9. like if any of the function basically gives like it's 1 plus 1 plus any of the function gives into max so into max plus one plus one will go overflow thereby to in order to have safety i'm returning 189 okay what's the next case uh let's uh take an example and try to draw the dryer on the recursion tree so that the stuff gets more clear to you so let's take this example and do a dry run of the recursion tree so that you understand how this is working so initially uh we are like if i just try to write we are at f of two and you're looking to form eight you can take like you cannot take or you can take so assume you do not take you move to the previous index with the same target but if you take if you decide to take this guy so eight minus three that you know night the target will reduce to five now and there will be plus one of coin so you still stay at the same index but the target reduces to five perfect now you are at f of one eight you are saying in this portion can you form eight can you form eight and over here what you'll do is you'll say not take and take so if you're not take you'll move to zero and you will be at eight correct",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "myPeWb3Y68A",
+      "position": 201,
+      "title": "DP 20. Minimum Coins | DP on Subsequences | Infinite Supplies Pattern",
+      "url": "https://www.youtube.com/watch?v=myPeWb3Y68A",
+      "start": 1086.32,
+      "end": 1211.8400000000001,
+      "text": "eight correct and over here if you take it if you decide to take it plus one coin and if you take it there is two there is two so eventually what happens is you still stand at one but there is a reduction in the target that you're looking for six at zero eight what happens you are at this and you're looking for a target of eight there'll be eight coins required of denominations one right so you return eight coins perfect this guy returns eight coins f of one six will again be not so f of zero 6 so f of 0 6 there will be 6 denominations make sense and if you take again 1 and if you take 2 it will be something like 6 minus 2 will be 4 and plus one over here and f of one four will again be not take which will be f of zero four which will again return four denominations and if you take it it'll be f of one comma two you see every portion like every combination is being is being checked out thoroughly now at one comma two what can you do again you cannot take which will take it zero comma two which will return two denominations and f of one comma zero again you can go across and this is how it tends to work like this is zero denominations one denomination of two another denomination of two another denomination of two another denomination of two like four denominations of two also make eight or two denominations of two four denominations of one or three denominations of two one or two denominations of like every every angle is being seen on this particular recursion tree but what about the time complexity of this recursion your now over here is it 2 to the power n in all the other cases it is but over here it is way greater than like v greater than b of 2 to the power n because for a particular index",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "myPeWb3Y68A",
+      "position": 201,
+      "title": "DP 20. Minimum Coins | DP on Subsequences | Infinite Supplies Pattern",
+      "url": "https://www.youtube.com/watch?v=myPeWb3Y68A",
+      "start": 1208.64,
+      "end": 1323.2,
+      "text": "particular index you're taking it and you're still standing on the same index so in order to analyze this you have to say that for every index the options that you have is not exactly 2 to the power n it can go beyond that thereby we can like in general in the interview you don't have to explain so much you can call it as exponential because you cannot theoretically prove the time complexity so you can call it as exponential saying that every time our recurrence picks up it stands at the same index so for an index now we don't have two ways there can be multiple ways right so there can be a lot of these the time complexity is exponential as of now whatever the space complexity we're using an auxiliary space of big o of n can we say this again no it's way way more than that why because if you are standing at the same index and if you look at the recursion tree because of the standing of the same index the auxiliary space is not big of n it can go beyond beyond than that so at max it will be like assuming the minimum coin denomination is one at max it can go up to big o of target assuming it reduces by one one one one it can go to target so again [Music] a very different problem in terms of time complexity in the space complexity the next step will be to definitely memoize this we can see that it's a very different problem like it's not the typical problem where you can easily say 2 to the power n big of n because of this particular standing on the current index it tends to be far greater than the obvious problem so what's the next step obviously memorization and how do you memorize if there are overlapping sub problems so if you take bigger examples there will be overlapping sub problems and in order to memorize you look at which parameters are changing one is",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "myPeWb3Y68A",
+      "position": 201,
+      "title": "DP 20. Minimum Coins | DP on Subsequences | Infinite Supplies Pattern",
+      "url": "https://www.youtube.com/watch?v=myPeWb3Y68A",
+      "start": 1318.32,
+      "end": 1451.2,
+      "text": "which parameters are changing one is index one is target so whatever index is given to you n and assuming the max target is target you'll require this size dp array in order to have it memoized so make sure you memoize it and you know step is very simple how do you memorize if i go back yeah you basically write dp of index target equal to and over here you write if dp of index target is not equal to minus 1 you return dp of index target that's it that's what you easily do it couple of steps and you can memoize any recursion into dynamic programming now the moment you memorize this yes the moment you memorize this what is the time complexity now we go of n into target and the space complexity is now around big of n into t but still the auxiliary space is around big of target uh slightly beyond that so this has to be still reduced and how can you reduce it very simple tabulation is a way to go yes so what are the steps to tabulate i've already told you that it's very simple first base case second look at the parameters that are changing first parameter index next parameter target and write it in the opposite fashion third copy copy the recurrence you can convert any any memoration into tabulation it's it's a matter of seconds so let's let's analyze the b's case so we have to declare a dp of n and target plus one that's for sure so in order to analyze uh the base case let's look at the base case actually so what is the base case uh stating over here it states if index is zero and if the target is modulated of a of i what can be the values of target always think like don't think this target as the initial target it is not the initial target when the index is zero like there might be a call for zero",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "myPeWb3Y68A",
+      "position": 201,
+      "title": "DP 20. Minimum Coins | DP on Subsequences | Infinite Supplies Pattern",
+      "url": "https://www.youtube.com/watch?v=myPeWb3Y68A",
+      "start": 1447.76,
+      "end": 1577.2,
+      "text": "like there might be a call for zero comma six there might be a call for zero comma seven there might be a call for zero comma eight it can be anything it can be anything so can i say the target can be anything from 0 to e it can be anything from 0 to t makes sense so for anything from 0 to t what does it have t by a of i if it is getting divided why don't you write that it's very simple to write go and go ahead and write it for any target from zero to the original target given to you if the target is modulated of a of i is equal to equal to 0 or i can probably write this in some other lines if the target t modulated of a of 0 is equal to equal to 0 i can say dp of 0 target is equal to a of or rather target by a of 0 else db of 0 target will be into max that's what you wrote simple this is how the base case will be as simple as that just look over there and try to copy paste what about this your recursion runs from n minus 1 to 0 0 is the base case what's tabulation bottom up which is the bottom case one say start from one till n minus one what about target you started from target till zero go in the opposite fashion should be zero till target that's it i think we're pretty much done so next step is copy the regrets so i'll show you that in the code now so you're basically given this minimum elements function and add a num and the target okay so we can write the function so let's start off to write the function int f and index int t and really you can carry the vector as nums do you need anything else i don't think so i can say the base case is very",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 13,
+      "video_id": "myPeWb3Y68A",
+      "position": 201,
+      "title": "DP 20. Minimum Coins | DP on Subsequences | Infinite Supplies Pattern",
+      "url": "https://www.youtube.com/watch?v=myPeWb3Y68A",
+      "start": 1573.76,
+      "end": 1687.3600000000001,
+      "text": "think so i can say the base case is very simple if index is equal to equal to zero and the target is let's quickly check out if all the array elements are greater than one yeah it is it is greater than one so if t modulated of a of zero or nums of zero rather is equal to equal to zero we can definitely return something as uh what to say probably something as uh t divided by nums of zero make sense or else we will return something as one e9 again not an inter max and there will not take case can i say the not take case will be very simple uh zero plus f of index minus one and the target cell stays as the same and the nums and can i say the take case initially will be eight of max because you're looking for or rather you can just keep it as in max yeah that's perfect so what about the peak keys i definitely can pick it if it is less than equal to target and if i pick it there'll be one coin and will still stay at the same because we can reuse it and the target reduces by nums of index and i can just pass on the nums and it goes and i can return the max of take and not take and that should be fine and we will be returning the answer as f of n minus 1 and obviously n is not given over here so please make sure you can compute the m by taking nums rather num dot size okay perfect and we can just pass on the target and the num array it should be fine let's quickly run this off so you're getting some wrong answers it's because they've clearly stated if the answer is not possible print minus one so what we need to make sure is just make sure over here if yes just make sure over here probably you can keep the answer as this",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 14,
+      "video_id": "myPeWb3Y68A",
+      "position": 201,
+      "title": "DP 20. Minimum Coins | DP on Subsequences | Infinite Supplies Pattern",
+      "url": "https://www.youtube.com/watch?v=myPeWb3Y68A",
+      "start": 1682.88,
+      "end": 1812.1589999999999,
+      "text": "probably you can keep the answer as this and then make sure if if yes if the answer is because what are you returning you're returning something as one e9 right so if by chance the answer goes somewhere beyond 189 as number of steps return minus one or else whatever is the answer stored you can just directly return it and then they should be fine now as you can see this is fine now and if i submit this this will uh this will definitely give teary why am i submitting this now it's time to memorize this so let's quickly uh try to memoize this and in order to memorize this i'll take a vector a dp array and a size n and a vector another end at target plus one and com minus one and i can easily pass on the dp array over here let's call the dp array over here vector vector and and dp where the dp will go over here also the dp will go and over here the db will come across dp of index and t capital and over here if dp of index e is not equal to minus 1 return dp of index and t right and we can just uh now quickly run this off and see if this is running fine it is now let's quickly submit this this is this is accepted but as i said the auxiliary space has to be removed as i never like as i don't like memorization because of the extra auxiliary stack space time to convert this into yeah tabulation first step make it zero uh just make sure this is nums because we're gonna copy paste and we have used nums over here uh enter this is the first thing base case for into t equal to i've already described this 0 for every t lesser than target and t plus plus what is it going to be if the t is modulated by numbers of index that's then dp of 0",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 15,
+      "video_id": "myPeWb3Y68A",
+      "position": 201,
+      "title": "DP 20. Minimum Coins | DP on Subsequences | Infinite Supplies Pattern",
+      "url": "https://www.youtube.com/watch?v=myPeWb3Y68A",
+      "start": 1807.84,
+      "end": 1959.1200000000001,
+      "text": "then dp of 0 of t will be the same thing that we have written over here else if it is not then dp of 0 and t will be 189 the same thing that we have written over here if it is then this otherwise not written what's the next thing changing parameters index from one to end perfect next changing parameter target from zero to target quickly write it what's the next thing copy beast just take it go over here copy paste this the same thing and just make sure instead of this write this portion and what you can do is just omit this change it instead of this write this change this perfect done instead of return have this over here instead of f of n minus 1 make it dp of n minus 1 target and change this i think uh we're pretty much done let me just quickly yeah looks like this is this is it so if you do this you're getting all the right answers and let's see if this is correct so this is giving time limit exceeded partially accepted probably uh they would love you to space optimize this so let's quickly do a space optimization on this so as you know you'll be requiring a previous of target plus 1 comma 0 and a current of a target plus one comma zero so why can you space optimize again the same reason that i've been teaching in the last 19 lectures whenever you see something like index minus one is just the previous row that you need just the previous row so please do it first of all this is what the previous will be because of the first row dp of zero first row is done what about the next thing instead of dp of index minus one this is going to be previous instead of dp of index this is going to be current instead of db of index this is going to be current and right over here it is previous",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 16,
+      "video_id": "myPeWb3Y68A",
+      "position": 201,
+      "title": "DP 20. Minimum Coins | DP on Subsequences | Infinite Supplies Pattern",
+      "url": "https://www.youtube.com/watch?v=myPeWb3Y68A",
+      "start": 1953.519,
+      "end": 2056.03,
+      "text": "and right over here it is previous equal to current and what is over here it can be previous or index or curve what do they feel like so you just declare a couple of same column size same number of columns and then you just make sure that instead of computing in terms of dp you just take it row wise and just transfer the code so if you see uh if i run this off i think this should be running yeah if i submit this let's see if this passes all the test cases or not it does it does so the space optimization solution is passing all the test cases the tabulation uh memoration past all the tabulation did not uh not sure why it's it's mostly because i'll tell you the reason a lot of times happens is you can design test cases in such a way in memoration you actually don't visit all the all the n into target states so you might be visiting very less amount of states and there is an auxiliary space but you must be visiting a lot lesser number of seats but if you look over here it exactly visits and into target sets all the states and into target states are visited over here that's the reason mostly sometimes it might happen but most of the time it does not so probably they have designed the disk is in such a way so guys uh that will be it for this video i hope you have understood this entire video so just in case you did please make sure you like this video if you if you are new to the channel please please please do consider subscribing and to continue our tradition please make sure you comment understood before leaving off this video and yeah with this let's wrap up this video and meet in the next one till then bye whenever your heart is [Music]",
+      "word_count": 330
+    }
+  ]
+}

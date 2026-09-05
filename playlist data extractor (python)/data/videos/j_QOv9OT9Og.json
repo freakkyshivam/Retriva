@@ -1,0 +1,674 @@
+{
+  "position": 281,
+  "video_id": "j_QOv9OT9Og",
+  "title": "L10. Count number of Nice subarrays | 2 Pointers and Sliding Window Playlist",
+  "url": "https://www.youtube.com/watch?v=j_QOv9OT9Og",
+  "transcript": [
+    {
+      "start": 3.32,
+      "duration": 3.439,
+      "end": 6.759,
+      "text": "so let's continue with the two pointer"
+    },
+    {
+      "start": 5.16,
+      "duration": 4.0,
+      "end": 9.16,
+      "text": "and sliding window playlist from the"
+    },
+    {
+      "start": 6.759,
+      "duration": 4.441,
+      "end": 11.2,
+      "text": "stous a toz DS course what was starting"
+    },
+    {
+      "start": 9.16,
+      "duration": 4.0,
+      "end": 13.16,
+      "text": "off a welcome back to the channel I hope"
+    },
+    {
+      "start": 11.2,
+      "duration": 4.599,
+      "end": 15.799,
+      "text": "you guys are doing extremely well so the"
+    },
+    {
+      "start": 13.16,
+      "duration": 6.4,
+      "end": 19.560000000000002,
+      "text": "problem that we will be solving today is"
+    },
+    {
+      "start": 15.799,
+      "duration": 6.121,
+      "end": 21.92,
+      "text": "count the number of nice sub ARS so what"
+    },
+    {
+      "start": 19.56,
+      "duration": 4.24,
+      "end": 23.799999999999997,
+      "text": "is the problem stating stating that"
+    },
+    {
+      "start": 21.92,
+      "duration": 4.96,
+      "end": 26.880000000000003,
+      "text": "it'll be given an nums aray it can"
+    },
+    {
+      "start": 23.8,
+      "duration": 6.239,
+      "end": 30.039,
+      "text": "contain any possible integer it'll be"
+    },
+    {
+      "start": 26.88,
+      "duration": 5.92,
+      "end": 32.8,
+      "text": "given a value K right now your task is"
+    },
+    {
+      "start": 30.039,
+      "duration": 5.401,
+      "end": 35.44,
+      "text": "to count the number of subarrays now"
+    },
+    {
+      "start": 32.8,
+      "duration": 4.52,
+      "end": 37.31999999999999,
+      "text": "what is a subarray contagious portion of"
+    },
+    {
+      "start": 35.44,
+      "duration": 5.279,
+      "end": 40.718999999999994,
+      "text": "the array you have to count the number"
+    },
+    {
+      "start": 37.32,
+      "duration": 6.12,
+      "end": 43.44,
+      "text": "of subarrays where the count of odd"
+    },
+    {
+      "start": 40.719,
+      "duration": 6.921,
+      "end": 47.64,
+      "text": "integers is exactly equivalent to the"
+    },
+    {
+      "start": 43.44,
+      "duration": 5.84,
+      "end": 49.28,
+      "text": "given integer K let me explain you if I"
+    },
+    {
+      "start": 47.64,
+      "duration": 4.88,
+      "end": 52.52,
+      "text": "pick up this contagious portion of the"
+    },
+    {
+      "start": 49.28,
+      "duration": 6.88,
+      "end": 56.160000000000004,
+      "text": "array the number of odd numbers in it is"
+    },
+    {
+      "start": 52.52,
+      "duration": 6.44,
+      "end": 58.96,
+      "text": "two right and the number of even is one"
+    },
+    {
+      "start": 56.16,
+      "duration": 5.239,
+      "end": 61.398999999999994,
+      "text": "so this subar cannot be counted as a"
+    },
+    {
+      "start": 58.96,
+      "duration": 5.159,
+      "end": 64.119,
+      "text": "nice subar which one can be a nice"
+    },
+    {
+      "start": 61.399,
+      "duration": 4.921,
+      "end": 66.32000000000001,
+      "text": "subarray if I pick up this portion this"
+    },
+    {
+      "start": 64.119,
+      "duration": 5.241,
+      "end": 69.36,
+      "text": "can be a nice subarray because I have"
+    },
+    {
+      "start": 66.32,
+      "duration": 6.0,
+      "end": 72.32,
+      "text": "three odd numbers which is one one one"
+    },
+    {
+      "start": 69.36,
+      "duration": 5.799,
+      "end": 75.159,
+      "text": "and I have one even number which is two"
+    },
+    {
+      "start": 72.32,
+      "duration": 5.52,
+      "end": 77.83999999999999,
+      "text": "so this can be a possible nice subarray"
+    },
+    {
+      "start": 75.159,
+      "duration": 5.161,
+      "end": 80.32000000000001,
+      "text": "so that's one I can also pick up this"
+    },
+    {
+      "start": 77.84,
+      "duration": 5.239,
+      "end": 83.07900000000001,
+      "text": "one and this is also a nice subar"
+    },
+    {
+      "start": 80.32,
+      "duration": 6.56,
+      "end": 86.88,
+      "text": "because I have three odd numbers and"
+    },
+    {
+      "start": 83.079,
+      "duration": 6.481,
+      "end": 89.55999999999999,
+      "text": "that is what is the value of K so this"
+    },
+    {
+      "start": 86.88,
+      "duration": 4.52,
+      "end": 91.39999999999999,
+      "text": "is the problem statement so overall in"
+    },
+    {
+      "start": 89.56,
+      "duration": 3.96,
+      "end": 93.52,
+      "text": "like for for this particular example I"
+    },
+    {
+      "start": 91.4,
+      "duration": 4.88,
+      "end": 96.28,
+      "text": "can see that there are two nice sub Ares"
+    },
+    {
+      "start": 93.52,
+      "duration": 5.44,
+      "end": 98.96,
+      "text": "and that is what you will have to return"
+    },
+    {
+      "start": 96.28,
+      "duration": 5.32,
+      "end": 101.6,
+      "text": "got it now before getting into the"
+    },
+    {
+      "start": 98.96,
+      "duration": 5.519,
+      "end": 104.479,
+      "text": "solution there is a small prerequisite"
+    },
+    {
+      "start": 101.6,
+      "duration": 6.24,
+      "end": 107.83999999999999,
+      "text": "please please pause this video and uh go"
+    },
+    {
+      "start": 104.479,
+      "duration": 6.161,
+      "end": 110.64,
+      "text": "back and watch my video on binary subar"
+    },
+    {
+      "start": 107.84,
+      "duration": 5.76,
+      "end": 113.60000000000001,
+      "text": "with some please go back and watch it"
+    },
+    {
+      "start": 110.64,
+      "duration": 6.04,
+      "end": 116.68,
+      "text": "now in that particular problem statement"
+    },
+    {
+      "start": 113.6,
+      "duration": 5.519,
+      "end": 119.119,
+      "text": "we were given an array the array had one"
+    },
+    {
+      "start": 116.68,
+      "duration": 4.2,
+      "end": 120.88000000000001,
+      "text": "and zero in it it was a binary array"
+    },
+    {
+      "start": 119.119,
+      "duration": 3.841,
+      "end": 122.96,
+      "text": "you're given a value goal and the"
+    },
+    {
+      "start": 120.88,
+      "duration": 4.279,
+      "end": 125.15899999999999,
+      "text": "problem was stating you have to count"
+    },
+    {
+      "start": 122.96,
+      "duration": 5.519,
+      "end": 128.47899999999998,
+      "text": "the number of subarrays number of"
+    },
+    {
+      "start": 125.159,
+      "duration": 5.6,
+      "end": 130.75900000000001,
+      "text": "subarrays where the sum is equivalent to"
+    },
+    {
+      "start": 128.479,
+      "duration": 3.241,
+      "end": 131.72000000000003,
+      "text": "the goal where the sum is equivalent to"
+    },
+    {
+      "start": 130.759,
+      "duration": 5.12,
+      "end": 135.879,
+      "text": "the"
+    },
+    {
+      "start": 131.72,
+      "duration": 6.56,
+      "end": 138.28,
+      "text": "goal I'll try to convert this particular"
+    },
+    {
+      "start": 135.879,
+      "duration": 5.281,
+      "end": 141.16,
+      "text": "problem into that problem let's"
+    },
+    {
+      "start": 138.28,
+      "duration": 6.48,
+      "end": 144.76,
+      "text": "understand how what if I say Hey listen"
+    },
+    {
+      "start": 141.16,
+      "duration": 6.88,
+      "end": 148.04,
+      "text": "I'll consider all the odd numbers as one"
+    },
+    {
+      "start": 144.76,
+      "duration": 7.199,
+      "end": 151.959,
+      "text": "and all the even numbers as zero if I"
+    },
+    {
+      "start": 148.04,
+      "duration": 6.68,
+      "end": 154.72,
+      "text": "consider this can I I"
+    },
+    {
+      "start": 151.959,
+      "duration": 5.64,
+      "end": 157.599,
+      "text": "say this one is the odd number I can"
+    },
+    {
+      "start": 154.72,
+      "duration": 5.28,
+      "end": 160.0,
+      "text": "write it as one this one is a odd number"
+    },
+    {
+      "start": 157.599,
+      "duration": 5.121,
+      "end": 162.72,
+      "text": "this could have been five as well I"
+    },
+    {
+      "start": 160.0,
+      "duration": 5.319,
+      "end": 165.319,
+      "text": "don't care if it's a odd number I just"
+    },
+    {
+      "start": 162.72,
+      "duration": 4.72,
+      "end": 167.44,
+      "text": "write it as one right this two is an"
+    },
+    {
+      "start": 165.319,
+      "duration": 4.361,
+      "end": 169.67999999999998,
+      "text": "even number I can write it as zero this"
+    },
+    {
+      "start": 167.44,
+      "duration": 4.36,
+      "end": 171.8,
+      "text": "one is an odd number I can write it as"
+    },
+    {
+      "start": 169.68,
+      "duration": 5.4,
+      "end": 175.08,
+      "text": "one this one is again an odd number I"
+    },
+    {
+      "start": 171.8,
+      "duration": 6.04,
+      "end": 177.84,
+      "text": "can write it as one and K is"
+    },
+    {
+      "start": 175.08,
+      "duration": 5.72,
+      "end": 180.8,
+      "text": "three can I say can I"
+    },
+    {
+      "start": 177.84,
+      "duration": 7.88,
+      "end": 185.72,
+      "text": "say I'm counting the number number of"
+    },
+    {
+      "start": 180.8,
+      "duration": 8.28,
+      "end": 189.08,
+      "text": "subarrays where the sum is equivalent to"
+    },
+    {
+      "start": 185.72,
+      "duration": 5.56,
+      "end": 191.28,
+      "text": "K can I say this isn't it because if I"
+    },
+    {
+      "start": 189.08,
+      "duration": 4.56,
+      "end": 193.64000000000001,
+      "text": "pick up this particular subarray I know"
+    },
+    {
+      "start": 191.28,
+      "duration": 5.28,
+      "end": 196.56,
+      "text": "this is odd this is odd this is odd and"
+    },
+    {
+      "start": 193.64,
+      "duration": 5.36,
+      "end": 199.0,
+      "text": "the sum will be three which is"
+    },
+    {
+      "start": 196.56,
+      "duration": 4.8,
+      "end": 201.36,
+      "text": "equivalent to K so this problem is"
+    },
+    {
+      "start": 199.0,
+      "duration": 5.68,
+      "end": 204.68,
+      "text": "nothing but similar to the previous"
+    },
+    {
+      "start": 201.36,
+      "duration": 5.32,
+      "end": 206.68,
+      "text": "problem yes it is the exact same problem"
+    },
+    {
+      "start": 204.68,
+      "duration": 4.759,
+      "end": 209.43900000000002,
+      "text": "what the problem Setter has done is he"
+    },
+    {
+      "start": 206.68,
+      "duration": 4.6,
+      "end": 211.28,
+      "text": "has just Twisted a bit of words here and"
+    },
+    {
+      "start": 209.439,
+      "duration": 5.281,
+      "end": 214.72,
+      "text": "there so it's very important that you"
+    },
+    {
+      "start": 211.28,
+      "duration": 5.2,
+      "end": 216.48,
+      "text": "identify such problems right so what you"
+    },
+    {
+      "start": 214.72,
+      "duration": 3.36,
+      "end": 218.08,
+      "text": "can do is you can pick up the same"
+    },
+    {
+      "start": 216.48,
+      "duration": 3.759,
+      "end": 220.23899999999998,
+      "text": "solution yes you can pick up the same"
+    },
+    {
+      "start": 218.08,
+      "duration": 4.879,
+      "end": 222.959,
+      "text": "solution and the only changes that"
+    },
+    {
+      "start": 220.239,
+      "duration": 5.841,
+      "end": 226.08,
+      "text": "you'll have to do is okay we adding sum"
+    },
+    {
+      "start": 222.959,
+      "duration": 5.64,
+      "end": 228.599,
+      "text": "plus nums r instead of that if it's a"
+    },
+    {
+      "start": 226.08,
+      "duration": 4.96,
+      "end": 231.04000000000002,
+      "text": "odd number you can straight do a modul"
+    },
+    {
+      "start": 228.599,
+      "duration": 5.2,
+      "end": 233.79899999999998,
+      "text": "two because on modulo 2 if it's a odd"
+    },
+    {
+      "start": 231.04,
+      "duration": 6.24,
+      "end": 237.28,
+      "text": "number it will give you a one if it's a"
+    },
+    {
+      "start": 233.799,
+      "duration": 5.44,
+      "end": 239.239,
+      "text": "even it will give you a zero same over"
+    },
+    {
+      "start": 237.28,
+      "duration": 3.08,
+      "end": 240.36,
+      "text": "here when you're subtracting again do"
+    },
+    {
+      "start": 239.239,
+      "duration": 3.321,
+      "end": 242.56,
+      "text": "modul 2"
+    },
+    {
+      "start": 240.36,
+      "duration": 4.159,
+      "end": 244.519,
+      "text": "if it's a odd number you'll subtract one"
+    },
+    {
+      "start": 242.56,
+      "duration": 5.36,
+      "end": 247.92000000000002,
+      "text": "if it's an even number you'll subtract"
+    },
+    {
+      "start": 244.519,
+      "duration": 7.08,
+      "end": 251.59900000000002,
+      "text": "zero so the problem is exactly similar"
+    },
+    {
+      "start": 247.92,
+      "duration": 8.439,
+      "end": 256.359,
+      "text": "copy paste this this particular solution"
+    },
+    {
+      "start": 251.599,
+      "duration": 7.88,
+      "end": 259.479,
+      "text": "and use this formula it will be running"
+    },
+    {
+      "start": 256.359,
+      "duration": 5.921,
+      "end": 262.28,
+      "text": "absolutely fine so I hope you understood"
+    },
+    {
+      "start": 259.479,
+      "duration": 4.601,
+      "end": 264.08,
+      "text": "how to identify patterns in problem it"
+    },
+    {
+      "start": 262.28,
+      "duration": 4.96,
+      "end": 267.23999999999995,
+      "text": "is very very important the problem"
+    },
+    {
+      "start": 264.08,
+      "duration": 5.119,
+      "end": 269.19899999999996,
+      "text": "Setter or the interview might twist some"
+    },
+    {
+      "start": 267.24,
+      "duration": 4.44,
+      "end": 271.68,
+      "text": "of the known problems it's important"
+    },
+    {
+      "start": 269.199,
+      "duration": 4.56,
+      "end": 273.759,
+      "text": "that you are able to recognize these set"
+    },
+    {
+      "start": 271.68,
+      "duration": 3.28,
+      "end": 274.96,
+      "text": "of problems hope youve understood it so"
+    },
+    {
+      "start": 273.759,
+      "duration": 3.201,
+      "end": 276.96000000000004,
+      "text": "if you're still now watching and if"
+    },
+    {
+      "start": 274.96,
+      "duration": 3.44,
+      "end": 278.4,
+      "text": "you've understood this one please please"
+    },
+    {
+      "start": 276.96,
+      "duration": 2.84,
+      "end": 279.79999999999995,
+      "text": "do consider giving us a like and if"
+    },
+    {
+      "start": 278.4,
+      "duration": 3.72,
+      "end": 282.12,
+      "text": "you're new to our channel do consider"
+    },
+    {
+      "start": 279.8,
+      "duration": 3.839,
+      "end": 283.639,
+      "text": "subscribing to us as well with this I'll"
+    },
+    {
+      "start": 282.12,
+      "duration": 4.48,
+      "end": 286.6,
+      "text": "be wrapping up this video let's me some"
+    },
+    {
+      "start": 283.639,
+      "duration": 4.241,
+      "end": 287.88,
+      "text": "other video take care whenever your"
+    },
+    {
+      "start": 286.6,
+      "duration": 4.56,
+      "end": 291.16,
+      "text": "heart is"
+    },
+    {
+      "start": 287.88,
+      "duration": 7.68,
+      "end": 295.56,
+      "text": "broken don't ever forget your"
+    },
+    {
+      "start": 291.16,
+      "duration": 4.4,
+      "end": 295.56,
+      "text": "golden I will find the light"
+    }
+  ]
+}

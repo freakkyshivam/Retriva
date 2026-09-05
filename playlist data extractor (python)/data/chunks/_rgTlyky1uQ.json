@@ -1,0 +1,152 @@
+{
+  "video_id": "_rgTlyky1uQ",
+  "position": 191,
+  "title": "DP 10. Minimum Path Sum in Grid | Asked to me In Microsoft Internship Interview | DP on GRIDS",
+  "url": "https://www.youtube.com/watch?v=_rgTlyky1uQ",
+  "chunk_count": 13,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "_rgTlyky1uQ",
+      "position": 191,
+      "title": "DP 10. Minimum Path Sum in Grid | Asked to me In Microsoft Internship Interview | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=_rgTlyky1uQ",
+      "start": 0.32,
+      "end": 119.27999999999999,
+      "text": "hey everyone welcome to another lecture of the dynamic programming playlist i hope you guys are doing extremely well so uh dp on grits is what we we're doing so we're gonna do the third problem from dp on grids and it's going to be a slightly different problem than the couple of others that we have done in the playlist okay so if you're not following the playlist man you're missing on on a lot of premium stuff please make sure you follow the playlist because you want to learn dp in the best possible way so what is the problem today's problem will be uh on grids and that's minimum path sum so what is it saying it's saying uh there's something like ninja land is a country in the shape of a 2d grid with n rows and m columns each point on the grid has some cost associated with it right i need to find a path from the left which is 0 0 to the bottom right which is n minus 1 m minus 1 and you need to minimize the sum of the cost of all numbers along the path you need to tell the minimum sum of that path so this question was actually asked to me in my microsoft internship interview uh it's an amazing question basically it states if you start on from here and you're gonna go here so basically zero zero one two so if you if you just start on from zero zero and you wanna reach the end which is zero comma two what is the minimal that you will take now there can be a lot of paths now when i say there will be a lot of paths what does that signify that basically signifies for an example i can say one of the paths is 5 11 5 2 remember you're only allowed to move in the bottom or in the right you cannot move up and all these only couple of directions that's the bottom and that's the right",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "_rgTlyky1uQ",
+      "position": 191,
+      "title": "DP 10. Minimum Path Sum in Grid | Asked to me In Microsoft Internship Interview | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=_rgTlyky1uQ",
+      "start": 114.079,
+      "end": 230.319,
+      "text": "that's the bottom and that's the right that's it so basically i can say if i move in the white box direction that i've written the path sum will be 5 plus 11 plus 5 plus 2 which gives me 16 plus 5 29 plus 23 now this sum that you got you have to minimize this that's the question this sum that you have to you have got you have to minimize it so i can say okay let's try what if i start from five i go to nine i go to five and then i go to two i'm like okay let's add this up five plus nine plus five plus two so if i add this up i think i get something as 21. you can try out all the other parts and you will see that this is what is the minimal that you will get and this is your answer now how do you solve such kind of problems again paths all paths so why not greedy that's that's a very very good question that might be arising stream why not follow greedy why not follow greedy paths again make sense makes a lot of sense why don't you follow a greedy path let's understand how generically you understand that a greedy has not to be followed so imagine i give you a greed uh great rather something like this okay i'll give you a great something like this and i am like giving you something like okay i'm over here having one one two and i'm over here having a 10 and assume i'm giving you eight assume i'm giving you two i'm giving you 100 and over here i'm giving you five over here i'm giving you something like 10 okay now if you start greedily from 10 greedily you know you can move right or you can move down right so what you see is over here either you can move to 8 or either you can move to 10 but the greedyness will",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "_rgTlyky1uQ",
+      "position": 191,
+      "title": "DP 10. Minimum Path Sum in Grid | Asked to me In Microsoft Internship Interview | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=_rgTlyky1uQ",
+      "start": 225.2,
+      "end": 351.12,
+      "text": "can move to 10 but the greedyness will be like let's move to 8 because it will give you a lesser cost path so you will move to 8 now when you move to 8 again there will be a couple of options either you move to 2 or either you move to five so the greedy nature of yours will say i'll move to two and from two there is no other option you have to move to 100 then to two so what you saw was you ended up taking this path which is having hundred which is a very huge number thereby the cost of the path will significantly rise correct but over here if i would have followed probably this path i think this would have been the minimal path right if i would have followed this path so why did this happen because of uniformity the values are not uniform they are not saying the values will increase increase increase or decrease decrease it might increase it might decrease so what happens is today's decision might affect you tomorrow because of increasing probably super increased values or super decreased values so whenever there is something as uniformity like whenever there is no uniformity in the values you cannot apply a green nature because in future it might affect you got this thereby thereby in such cases what you can do is you can be like okay what i'll do is i'll apply something as dp but before dp what's the step don't directly go to dp what are you saying i have to figure out the minimum possible cost path right so if you're looking to figure out the minimal cost path what's the first way try out all paths that's the first way try out all parts and in those all parts tell me the path tell me the path which has minimal cost so whenever i say all paths what does that signify what algorithm that says that definitely says recursion because recursion is something that tries out all possible paths correct so",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "_rgTlyky1uQ",
+      "position": 191,
+      "title": "DP 10. Minimum Path Sum in Grid | Asked to me In Microsoft Internship Interview | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=_rgTlyky1uQ",
+      "start": 345.199,
+      "end": 462.0,
+      "text": "tries out all possible paths correct so what are the rules of writing recurrence relationships three rules that i've taught you what are the three rules the fields are very simple express the recurrence in terms of indexes over here it's a 2d grid so express the stuff in terms of rows and columns as i j second explore all parts explore all parts third take the best take the minimal path as the question recommends minimal maximum count whatever so if you follow these three steps you can again write any possible recursion so why don't you follow these three parts so can i say i'll try to write a recursion where i j will mean where i j will mean if i'm doing a grid if i'm again doing a grid and this position is i j i j will mean this is i and this is j i j will mean the minimal cost in order to reach from here to here the minimal cost in order to reach from 0 0 to i j which is what your equation should give me so if i ask f of n minus 1 m minus 1 it will give me the cost from 0 0 to n minus 1 and m minus 1 and that is what you require correct so let's quickly write down the recurrence relationship so can i say i'll write f of i comma j i definitely can write f of i comma j what's your base case can i say the base case is quite simple similar to the previous question that we did if we reach our destination yes if we reach our destination we can say that okay we have reached our destination let's return the value stored at a of 0 0 because this is going to be a part of my path let's understand this guy will be a part of your path don't you think so why don't you return this because this has to be added to the path correct and what about what about the other",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "_rgTlyky1uQ",
+      "position": 191,
+      "title": "DP 10. Minimum Path Sum in Grid | Asked to me In Microsoft Internship Interview | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=_rgTlyky1uQ",
+      "start": 458.479,
+      "end": 564.5600000000001,
+      "text": "and what about what about the other stuffs you know this will be i lesser than 0 or j lesser than 0 assuming your recursion is moving in all the paths moves out of the boundary moves left of the boundary similar so what will you return you will try to return something so that the answer is not this path is not taken into consideration remember if you are starting from here i'll take the red pen you're starting from here you moved up you moved up you moved up you moved up and this is out of boundary this is out of grid but you don't want this to be added this has to return something such that this path summation is not considered this has to return something such that this path summation is not considered so what will you return generically remember if you're trying to find minimum paths you'll try to return such a big value such a big value says that when you add this big value the path gets a maximum cost path gets a maximum cost and you never take this got it so i've written the base cases step one is done of expressing in terms of indexes and writing the base cases what's the next step the next step is very simple if i go upwards or if i go leftwards now can i say if i go upwards the current element is what i'm saying okay this will be a part of my path the current element i j i'm saying i j you will be a part of my path but i'll go up and i'll figure out how to reach from here to here that's what we mean by up let's understand what do you mean by up so imagine this is your grid and assume you are standing over here and this is your grid so if you're saying i'll take this and i'll move here that means you have to move from now here to here so this portion you have to solve this",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "_rgTlyky1uQ",
+      "position": 191,
+      "title": "DP 10. Minimum Path Sum in Grid | Asked to me In Microsoft Internship Interview | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=_rgTlyky1uQ",
+      "start": 561.2,
+      "end": 672.1600000000001,
+      "text": "this portion you have to solve this portion you have to solve so this is what you have taken so you'll be like okay so i'll be like okay i'll take array of a of j i'll have to go up so if i have to go up from there i have to find out till 0 what is the minimal cost similarly if i am going left i will have to take a of i j and i will have to go to the left and from there from there like if i go left same thing same thing see if i go somewhere from left i know this portion will be there but from here to here this matrix i have to figure out what is the minimal path from here to here i have to figure out that's what this recursion does recursion does that for you correct so at the end of the day so again step two is done which is exploring all the paths what's the next take the minimal of both of them make the minimal of both of them so what are you waiting for take the minimal of the upward and the leftward correct the upward and the leftward so that's it so this is the upward and the leftward again why upward because you're moving from the bottom to zero zero you're not moving from zero zero till the bottom again why why are you moving upward because you're solving the question in the reverse fashion the question stated in the right and the down so you're doing it in the opposite fashion thereby up and left similar like you're moving from the bottom to the top again the prerequisites are the dp 8 lecture that's the first lecture of the grid if you have not seen that please go back and watch it okay so we have seen in the previous lecture like in the lecture eight so please please please follow the playlist we have seen in the lecture eight that if the recursion is something like we're",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "_rgTlyky1uQ",
+      "position": 191,
+      "title": "DP 10. Minimum Path Sum in Grid | Asked to me In Microsoft Internship Interview | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=_rgTlyky1uQ",
+      "start": 667.839,
+      "end": 805.44,
+      "text": "if the recursion is something like we're moving in the up and left there there will be there will be overlapping sub problems and if there will be overlapping sub problems what can we apply memoization correct we can apply something as memo iation so how do you apply memorization again very simple trick very very simple trick the rule to apply or should i show you some overlapping subproblems i think doesn't make sense because i've already shown you whenever we did up and left there were problems which were overlapping so you can easily do that so we have to apply memory action again on what i j so what is the value of i j the maximum value is n minus 1 and m minus 1 so there will be a dp of n and m declared as -1 so declare it as -1 after that right before the result store it and return and before before calling the recursion if that state has been previously visited why don't you return that visited state yes why don't you return that visit state step three step one step sorry step two step three and step one is the declaration so memorization has been done and once you've done the memoration again the time complexity is n cross m the space complexity is n cross m but a recursion stack space of the path length and what is the path length m minus 1 plus n minus 1 again previous lectures previous lectures guys please please watch our previous lectures so the path length is this m minus 1 plus n minus 1. so memoration is done what is the next step tabulation we have to convert this into a tabulated solution how do you do this again quite straightforward i have told you already i and j two parameters where are the states from zero to n minus one is what i will be j will be from zero to m minus one so if you remember the previous uh grid classes",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "_rgTlyky1uQ",
+      "position": 191,
+      "title": "DP 10. Minimum Path Sum in Grid | Asked to me In Microsoft Internship Interview | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=_rgTlyky1uQ",
+      "start": 800.24,
+      "end": 928.959,
+      "text": "classes very simple i equal to 0 to n minus 1 j equal to 0 till n minus 1 m minus 1 and there will be dp of n and m and we know if at any moment i is equal to equal to zero and j is equal to equal to zero write down the recurrence dp of i j is equal to array of zero zero correct or else there will be up there will be a down sorry left rather and the dp of i j will take the minimal of up comma rather not down left else is completed for loop is completed and you can print the answer to be dp of n minus 1 m minus 1 you see how we can easily solve dp on grids it's so so simple you know up will be very simple array of aj plus dp of up is i minus 1 j similar to the previous classes guys this will be a of ij plus dp of i comma j minus 1 simple and you know you know basic stuffs will be if i has to be greater than 0 if j has to be greater than 0 just make sure you do the stuff because if i is not greater than 0 then this portion will not be there if j is not greater than 0 then this portion will not be there so make sure you add this guy if and if only i is greater than 0 make sure you add this guy if and if j is greater than zero otherwise it will just be these guys so everyone every one of you knows the snow perfect perfect so that's that's how we can uh easily uh do this stuff now since we have done it in the tabulated form how do you do space optimization they have taught you in the previous lecture how to do space optimization very very simple you know you are the zero through first i is zero when you compute the first true then i",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "_rgTlyky1uQ",
+      "position": 191,
+      "title": "DP 10. Minimum Path Sum in Grid | Asked to me In Microsoft Internship Interview | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=_rgTlyky1uQ",
+      "start": 924.16,
+      "end": 1048.72,
+      "text": "when you compute the first true then i goes to 1 when you compute the next row when i goes to 2 you compute the next row i goes to 3 you compute the next row and every time what you require is either dp of i minus 1 j or dp of i of j minus 1 so this is nothing but the current row and this is nothing but the previous row so just carry the previous row and the current row i've already taught you this in the lecture eight of the grids how do you do this i've already taught you this i'm not teaching you over here i was just teaching you how the recurrence will change if the question is slightly tweaked so i'm not explaining in depth because it's an extension it's an extension of the playlist so i'm assuming you've watched the lecture eight completely on that sole basis i'm just going on writing the recurrence relationships because it's more or less the extension of those problems minor changes so what i can do is i can definitely say n is a great dot size let's just start with just make sure this is fine so m is definitely a grid of zero dot size perfect that's n m so can i say uh the answer initially will be written f of n minus one m minus one and definitely grid again definitely i can see this over here i can write int f int i int j and i can say vector of vector of int grid i can can i say if i is at any moment 0 and and j is at any moment 0 i can return something as grid of i j i can if i is going lesser than 0 or j is going lesser than 0 at the same moment i can return something like into max or probably a bigger number like 189 perfect i can say i'll go up which means i'll take grid of i j plus",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "_rgTlyky1uQ",
+      "position": 191,
+      "title": "DP 10. Minimum Path Sum in Grid | Asked to me In Microsoft Internship Interview | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=_rgTlyky1uQ",
+      "start": 1042.319,
+      "end": 1176.64,
+      "text": "i'll take grid of i j plus f of i minus 1 j grid i can i can say i will go left which means i can take grid of i j plus f of i comma j minus 1 comma grid i can and what i can return is the minimal of left comma up done so if i just quickly run this up you'll see everything is running but i'll not submit it because we need to memoize it otherwise we know we will get something as a tle so how do you memorize again very simple this is how um is declare the dp pass the dp just copy paste understand this will be db pass the dp here pass the db here that's the first step declare and pass it next step initialize whatever answer you're storing next step if the same state is called in the same status called return this dp of ij done and i think that should be it if i run this it will be working fine it does let's submit this it is it is indeed giving me a correct answer okay so the recursion and memory action does work what about the tabulation again we know the tabulation is quite similar so we'll be like dp of n vector of end m comma minus instead of minus one you can put a 0. now what are the states we know those states are very simple i equal to 0 i lesser than n i plus plus correct over here what are the states i d i j equal to 0 j less than m j plus plus what is the next if i is equal equal to zero j is equal to equal to zero i can say dp of i j is equal to grade of i j perfect now can i say one thing in else there will be a path which will be initially let's assume grade of i j there will be a left path which is initially grade of i j taking current",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "_rgTlyky1uQ",
+      "position": 191,
+      "title": "DP 10. Minimum Path Sum in Grid | Asked to me In Microsoft Internship Interview | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=_rgTlyky1uQ",
+      "start": 1173.44,
+      "end": 1296.7199999999998,
+      "text": "taking current but the up path if if the i is greater than zero then the up will be adding something like dp of the previous guy but if i is not greater than zero you remember there is a base case if it's not greater than zero then you return something maximum so that this path is neglected so that this path is neglected similarly can you do for the left yes we can if the j is greater than zero we say left path will be taking dp of i of the previous guy the left guy or else the left will be taking no path that's it simple as that so in this way i can easily find out the left as well as the up so once i have figured out the left as well as the up i know dp of ij will be minimum of the left or the up path right and once i've done this i know the answer will be at dp of n minus 1 and m minus 1 so once i've done this i can definitely return this right fine let's summit this code super quick runs fine so next step space optimization which no one does let's analyze so whenever there is something like i minus 1 what am i saying i'm requiring the previous row so i'm requiring the previous row and another dp over here is dp of j minus 1 i means the current row dpi means current rows previous column so i require the previous rows j column this means let's understand this means requiring previous rows j column this means current rows j minus one column is what i require so what if instead of dp of i like the current row i can i can store the current row something like vector of int the curl row what if i store it okay make sense so can i say the current row is this car say i'll take from curse j minus one absolutely makes sense",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "_rgTlyky1uQ",
+      "position": 191,
+      "title": "DP 10. Minimum Path Sum in Grid | Asked to me In Microsoft Internship Interview | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=_rgTlyky1uQ",
+      "start": 1293.12,
+      "end": 1400.9599999999998,
+      "text": "absolutely makes sense and over here i can say a car of j because the current is this sorry over here i can say car of j right nice but what about this dpf i j i minus one j for the same require the previous so probably to start off with i can say there is no previous so initially it will be everything zero so i can say over here this is the previous guy perfect yeah make sense so we have taken the previous rows j column i have taken the current rows and away we can we can compute the current like this the current will be computing so once the entire current has been computed the value of i will increase in the next step the value of i will go to the next and for that next this current which has been computed will become previous so yeah i'll just do it previous will be current now and at the end of the day n minus 1 means if whenever this for loop ends whenever this for loop ends i's value will end up at n this volume will end when i is equal to n so for i equal to n who will be the previous n minus 1 so just write in and if i just submit this it will be running space optimization is very easy see correct answer submit it will be accepted check this out accept it as simple as it can get so it's not tough to space optimize there's only a trick whenever you see i minus one or something like that you try to space optimize and it's very simple store the previous row use it store it again use it store it again use it store it again use it that's how you will be doing right so yeah i hope i was able to make you understand the third problem on the grits so just in case i did please please please make sure you like it and to follow our tradition",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "_rgTlyky1uQ",
+      "position": 191,
+      "title": "DP 10. Minimum Path Sum in Grid | Asked to me In Microsoft Internship Interview | DP on GRIDS",
+      "url": "https://www.youtube.com/watch?v=_rgTlyky1uQ",
+      "start": 1397.36,
+      "end": 1425.48,
+      "text": "to follow our tradition we can you can definitely comment understood under the comment section or us so that i get to know you have understood the entire lecture and yes with this uh let's uh by the way if you're new to this channel you can definitely consider subscribing to us and with this i'll be wrapping up this lecture let's see in the next one till then bye bye whenever your heart is broken don't ever forget",
+      "word_count": 79
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "video_id": "2YBhNLodD8Q",
+  "position": 83,
+  "title": "L11. Iterative Postorder Traversal using 2 Stack | C++ | Java | Binary Tree",
+  "url": "https://www.youtube.com/watch?v=2YBhNLodD8Q",
+  "chunk_count": 4,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "2YBhNLodD8Q",
+      "position": 83,
+      "title": "L11. Iterative Postorder Traversal using 2 Stack | C++ | Java | Binary Tree",
+      "url": "https://www.youtube.com/watch?v=2YBhNLodD8Q",
+      "start": 0.0,
+      "end": 80.0,
+      "text": "so before starting this video i'd love to thank relevel for sponsoring this entire video a hiring platform with no degree required no experience required mentoring sessions available feels like a dream isn't it what if i say all of this is for free well reliable by an academy is here to make your dream come true but job opportunities in front and back end and business development from india's top companies for freshers and people in the early career reliable is here to make the entire hiring process super simple and super quick all you have to do is to give the relevant test and based on your score interviews will be scheduled and you will be hard so what are you waiting for make sure you check out all the links in the description and apply for the relevant tests as soon as possible if want to come back to the channel i hope you guys are getting extremely weight lifting we will be solving the problem finding the positive traversal not using the question rather by using iteration and in this video i'm going to solve this using two stacks in the next video and solve this using a single stack so what is a post-order traversal it's nothing but left first and then you'll go on right and then you will go to the node or root of the three okay this is for every tree so i'll say this is the battery i've asked you to write the post order transfers out of this planet so when i say first i'll go to the left so that's four and then i'll go to the right that's five then i will go to the root that's two so this three is done on the screen left is done so i'll have to go to the right so right i'll go now if i'm on the right i have to go to the uh left right then i have to go to the right then on the section right so it's gonna be eight",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "2YBhNLodD8Q",
+      "position": 83,
+      "title": "L11. Iterative Postorder Traversal using 2 Stack | C++ | Java | Binary Tree",
+      "url": "https://www.youtube.com/watch?v=2YBhNLodD8Q",
+      "start": 76.4,
+      "end": 136.72,
+      "text": "it's gonna be eight then seven there's six there are three there are one that is what the post order traversal for this given binary will be what people do is we initially take two stacks this is the first stack stack one that i take then i'll take then i'll be taking stack two okay so let's take stack two now what you will do is you'll take the tree and you'll enter that into the stack one that's the initial configuration now that is what your initial configuration will be when you start off now let's get started so when you start the program you take the first guy out and then you take this out you put that into your stack okay after that if this guy has a left that it has you'll take that if this guy's right you'll take that so you're taking the left as well as right now at the next step at the next direction when you come across stack dot the top limit is three so take this tree put this into your stack okay and again same thing stacks left that is six stacks right that is empty so if there's something but put the left left foot right now again come back by the next iteration equations at the top put it onto your stack okay so put that into your other stack next what do we have taken if there is a left of six take it into the right of six take it and put it into your stack all right i want this in the next generation when you come across you get seven so you take seven you put that into your stack two once you put that into your stack two for seven does that exist left now other existing right yes take it and put that in your start in the next situation when you come across take this eight put back into your stack two add it again that's eight on the left now does it",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "2YBhNLodD8Q",
+      "position": 83,
+      "title": "L11. Iterative Postorder Traversal using 2 Stack | C++ | Java | Binary Tree",
+      "url": "https://www.youtube.com/watch?v=2YBhNLodD8Q",
+      "start": 134.48,
+      "end": 194.64,
+      "text": "that's eight on the left now does it have a right no so you'll not do anything in the next direction when you come back you'll get a two so take this two and put that into your stack two now what you'll do is you'll again look there's the two left yes that's the top right case put them in next you'll again come back stack the top you can put it in your stack two that's right for the left right now next again come back you're gonna fall that's four on the left no that's what i'm right now so this will be the last one so once once your stack one becomes empty you can stop at the moment you stop take these elements out from the stack in the last first fashion the first four will be up so you'll get four then five will be absolutely five then two will be absolutely two then eight will be absolutely eight then seven will be up so you'll get seven then six will be up they'll get six then three will be up so you'll get three then one will be upgraded one so ultimately you will get the entire post order traversal using a couple of stacks so let's check out the code for this so as usual you know the customer code is on the app and the java code is definitely on the right so easily what i've done is i've taken the route and i've defined the post order list of two and if there's none with the bank i'll return an empty post order one as i'll deliver a stack and i'll be entering the root initially into the stack so i've done this i've taken the element and i've pushed it into the other stack after that if there exits the left put it onto the stack one if there exists a right put it on your stack one once your stack one becomes empty just pop out every element from step two and put it",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "2YBhNLodD8Q",
+      "position": 83,
+      "title": "L11. Iterative Postorder Traversal using 2 Stack | C++ | Java | Binary Tree",
+      "url": "https://www.youtube.com/watch?v=2YBhNLodD8Q",
+      "start": 192.159,
+      "end": 250.46,
+      "text": "every element from step two and put it into your post order and return that post so what are the time complexity of the solution definitely often because you are ultimately traversing for every node what are the space complexity i can say that the space complexity is actually two stacks that is two and you might say what's right are you also using a post order generally uh the the data structure where we store the value we do not consider that while computer but you can still consider that if you want another difference the main problem that you're seeing is we're using a couple of stacks okay so the next video i'll be telling you how can we solve this using a single stack so i hope you've understood the entire explanation as well as the code just in case you did please please please make sure you like this video because it took a lot of efforts to make this entire tree series also if you wish you can definitely drop in a comment that will keep motivating me to make such further series also if you're new to the channel please do consider subscribing because i'm going to bring in such more series in the upcoming future as well with this uh let's wrap up this video let's speed in the next lecture bye [Music]",
+      "word_count": 230
+    }
+  ]
+}

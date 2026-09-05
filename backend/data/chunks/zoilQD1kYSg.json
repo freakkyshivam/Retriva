@@ -1,0 +1,119 @@
+{
+  "video_id": "zoilQD1kYSg",
+  "position": 199,
+  "title": "DP 18. Count Partitions With Given Difference | Dp on Subsequences",
+  "url": "https://www.youtube.com/watch?v=zoilQD1kYSg",
+  "chunk_count": 10,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "zoilQD1kYSg",
+      "position": 199,
+      "title": "DP 18. Count Partitions With Given Difference | Dp on Subsequences",
+      "url": "https://www.youtube.com/watch?v=zoilQD1kYSg",
+      "start": 0.24,
+      "end": 121.43900000000001,
+      "text": "hey everyone welcome back to take you forward where we are trying to take you forward so dp 18 is what we will be doing today but before that i would love to address uh some of the comments that were there in the dp17 video what was dp17 video find the number of subsets yes find the number of subsets whose sum is equivalent to k okay and in that video in that video a lot of people were saying me striver what if the array is given us to as 0 comma 0 comma 1 and the sum is 1 your code will just give you the answer as one subset ideally it should have been four subsets because zero comma one where i consider this zero and this one then zero comma one where i consider the next zero and next one zero comma zero but i consider both the zeros and one and then just the one so ideally the answer should have been four so how did the previous code pass so if i just go back to the code of the number of subsets if you carefully see in the test cases it's clearly written the numbers will be greater than equal to one that's why i did not consider that case because we were clearly told that there will be no cases where there will be zeros that is the only reason it did pass now how would you solve this problem imagine i just change the constraints to be equal to zero like i say all the array of elements will be greater than equal to zero so in that case how will you uh solve this particular problem is a big concern right so can i say this can i say this that if it is 0 does 0 alter the sum no because addition of 0 or removal of 0 will never alter the sum the sum will still stay the same so that is the idea that we will take into consideration",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "zoilQD1kYSg",
+      "position": 199,
+      "title": "DP 18. Count Partitions With Given Difference | Dp on Subsequences",
+      "url": "https://www.youtube.com/watch?v=zoilQD1kYSg",
+      "start": 117.04,
+      "end": 229.76,
+      "text": "into consideration and we will compute the number of zeros and the number of zeros come out to be two because the array was zero comma zero comma one number of zeros come out to be two in how many ways two zeros can be represented one is this one is this one is double zero one is the empty subset if i just add one to both of them which was the subset that i was creating i'll get 0 1 i'll get 0 1 i'll get 0 0 1 i'll get just the one so if i can figure out how many ways i can represent the two zeros how many ways i can represent the two zeros then the answer will be there so how many ways can you represent the two zeros it's two to the power n comes from the algorithm power set so if you don't know this algorithm please check it out the number of ways in which you can represent numbers r to the power n into the original answer where the original answer was 1 so 2 to the power 2 into 1 is 4 into 1 is 4 subsets so that's one of the ways you will solve it when you say that you're going to compute the power like the number of zeros and then uh you just do power 2 to the power n into whatever answer you're getting from the written test case but the question is how do you correct it how do you correct it because that is the biggest uh stuff that we have to understand so why did it fail let's go to the code so in the code if you carefully see there is a line if sum equal to equal to zero so eventually what happens is if i give you an array like zero comma zero comma one and uh i am starting from here which is the second index with the sum one so whenever i say don't t yes whenever i say don't take i'll go to one",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "zoilQD1kYSg",
+      "position": 199,
+      "title": "DP 18. Count Partitions With Given Difference | Dp on Subsequences",
+      "url": "https://www.youtube.com/watch?v=zoilQD1kYSg",
+      "start": 224.879,
+      "end": 324.4,
+      "text": "whenever i say don't take i'll go to one comma one but whenever i say take i'll go to one comma zero because if i take this guy this one will be one minus one and this is where i'll go so if i go to f of one comma zero i get a 0 and if you remember in the code the first line itself stated if sum is equal to equal to 0 so this is where you return 1 so these couple of zeros are actually not considered thereby there is a problem so what i can say is i need to go deep yes i need to go deep instead of returning from here i need to go to non take which will take to me zero comma zero i'll again uh go to here when i'm at zero comma zero then i have to think of something so basically i have to go deep so the first thing that i will do in the code is i'll remove this if some equal equal to 0 because that is something which is creating problem and i have to go deep till index equal to equal to 0 and that's when i think of the base case and that's when i think of the base case now what will be the base cases let's think if you are just standing at the index 0 that means you just have a single element right and imagine if the sum is 0 if the sum is 0 and the element is zero what options do you have maybe like striver either you can take this guy into your subsequence because then also the sum will not be altered as driver if we will not take it then also there will be no problem so there are two options with the single guy there are two options you say i'll take the zero into consideration or you'll say i'm not going to take this into consideration so i can say if it is a zero and the sum is zero",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "zoilQD1kYSg",
+      "position": 199,
+      "title": "DP 18. Count Partitions With Given Difference | Dp on Subsequences",
+      "url": "https://www.youtube.com/watch?v=zoilQD1kYSg",
+      "start": 321.28,
+      "end": 424.96000000000004,
+      "text": "is zero i will have two options either i'll take the zero but i'll not take the zero so the first base case is very simple if a sum is zero and and array of zero is also zero then i can return a two that's the first base case because there can be two possible ways in which you can form the subsequence by taking it or by not taking it let's uh think of the other case i'm at zero and we have some five and the sum is zero so if you're looking at some zero and if you decide to take this guy then the sum will be altered so you just have one way which is not taking because if you don't take this then the subsequence will still have a sum zero thereby i can say else if or you can just write a if because there's a return statement if sum is equal to 0 you return 1 because there is only one way if this is 5 at the zeroth index and the sum is 5 then if i don't take it then the sum will not go to 0 which is problem because it will not go if i don't take it but if i take it then minus 5 will happen and the sum will go to 0 so again a single way so can i say either this or sum equal to equal to array of zero then it will return one and all the other cases i'll return zero so that's how we can modify by removing the first line of if statements now what i'll do is i'll just open the console and probably i'll give one test case and three is the rsis one is the sum zero zero one so ideally this should run let's check it out so you see the answer is now coming out to before which they are not expecting because the code has been written uh like the tester has written the code in terms of numbers",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "zoilQD1kYSg",
+      "position": 199,
+      "title": "DP 18. Count Partitions With Given Difference | Dp on Subsequences",
+      "url": "https://www.youtube.com/watch?v=zoilQD1kYSg",
+      "start": 420.639,
+      "end": 532.16,
+      "text": "written the code in terms of numbers greater than equal to 1 thereby there is a problem but you see the answer coming out to be true so that's the slight change that you will do in sum equal to like you have to just zoom the sum equal to 0 and let it travel till the last index just let it travel till the last index without actually stopping it in between so that's the minor change that you'll do so enough of dp17 now let's come back to the original stuff which is dp18 so what is the problem the problem states uh partitions with given difference so you're given an array which is using an array partition so given an array right partition it into two subsets two subsets such that the union is the original array that means you can take an array and partition them into two subsets let the sum of the elements of these two subsets be s1 and s2 fine given a difference d count the number of partitions in which s1 is greater than or equal to s2 and the difference between s1 and s2 is equal to d so basically if i understand the question properly there is an array given you have to uh basically divide them into two parts such that this part is giving you an s1 which is greater than equal to s2 and the difference between s1 and minus s2 should be equal to d and you have to count how many different subsets can you divide them into such that this is true so let's take one of the examples uh something like five two six four so if i take five two six four this is the array and the d is given as three so if i take this uh i can be like the two subsets will be five two and uh six and four so this will give me a sum of ten this will give me a seven and you will get the difference as",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "zoilQD1kYSg",
+      "position": 199,
+      "title": "DP 18. Count Partitions With Given Difference | Dp on Subsequences",
+      "url": "https://www.youtube.com/watch?v=zoilQD1kYSg",
+      "start": 527.68,
+      "end": 671.279,
+      "text": "the difference as three so i'll get the difference as three now uh subsets mean subsequences so it's not that it has to be consecutive you can pick up from anywhere so i think most of you have understood the question uh it's pretty much similar to the dp 15 that we did but over here we need to check this out because that's uh the main concern that we will be having okay so what is the problem telling us to find the selling is to find how many subsets are there which have a difference s1 minus s2 equal to d where s1 is greater than s2 right so can i say can i say this that s1 can also be written as total sum minus s2 if total sum is the total summation of array elements because if you just remove s2's sum you'll be left out with s1 sum right so can i just replace this and can i it will be like total sum minus s2 minus s2 equal to yes thereby it will be total sum minus d if i take the other side and 2 into s2 therefore s2 will be total sum minus d by 2 so can i say i'm looking for subsets yes i'm looking for subsets which are having yes which are having summation as total sum minus d by 2 so the question boils down to count find the count of subsets whose sum is total sum minus the difference by 2 and this is nothing but dp17 dp17 with a modified target with a modified target we have just modified the target it's as easy as it can get but do we have edge cases yes we definitely know that the constraints told us that the numbers will be like all the numbers of i will be greater than equal to zero so we know one thing for sure this cannot go negative definitely this cannot go negative it has to be greater than equal to zero that's one of the cases that",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "zoilQD1kYSg",
+      "position": 199,
+      "title": "DP 18. Count Partitions With Given Difference | Dp on Subsequences",
+      "url": "https://www.youtube.com/watch?v=zoilQD1kYSg",
+      "start": 666.959,
+      "end": 793.04,
+      "text": "that total sum minus d has to be uh greater than zero why because if i'm looking for a sum and that's what is the sum this sum is sum of a subset so if it's a subset and the numbers are greater than 0 how can a sum of a subset be negative thereby this element has to be greater than zero you're dividing by two so again there is no fractions all the numbers are zeros ones two so all are integers so if all are integers you can't have a decimal right thereby the other edge case would be total sum minus d has to be even has to be even right so there are two edge cases it has to be positive because all the numbers are greater than equal to zero so that so the sum has to be zero greater than zero and it has to be even because you don't have decimals so just check for these couple of cases and then the question boils down to count of subsets yes that is what the question boils down to so we need the number of subsets uh concept right so just copy paste uh the entire changed code that we wrote for zeros and now we'll paste it over here right and over here can i say this that we require the total sum so that's zero and then we can easily go across uh the array and we can add total sum plus equal to id that is something which you have done right what's the next stuff we know the total sum minus d has to be greater than zero so if it is lesser than zero that goes as false and total sum minus d has to be even so if it's odd it's still gone so i can just return a false so we are pretty much done with the false now we just need to return find ways and we call the array and we give the target as total sum minus d by 2",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "zoilQD1kYSg",
+      "position": 199,
+      "title": "DP 18. Count Partitions With Given Difference | Dp on Subsequences",
+      "url": "https://www.youtube.com/watch?v=zoilQD1kYSg",
+      "start": 788.959,
+      "end": 914.0,
+      "text": "minus d by 2 so if i can just find the number of subsets with total sum minus d by 2 it does work but over here they have asked since the answer may be too large you have to return module 10 to the power nine plus seven so really you can just declare a mod equal to 189 plus seven and over here just make sure you give a mod that should be fine let's so that was about the memoration but how can we optimize this obviously we can write tabulation so what i'll do is i'll copy paste the tabulation that we wrote over here but this is definitely not going to work because it did it does not handles the case where we have uh zeros so what did we changed if you remember we removed sum of zero so please remove sum of 0 because this is sum of 0 at every index so we remove this first case this let's let's think about this afterwards let's write the other cases what's the first case if sum is 0 and the number is zero at index zero so if the num is zero and then dp of zero at zero will be two else dp of zero at zero will be one basically i am saying at index 0 if the sum is 0 because the first parameter represents index the second parameter represents up so if at 0 the sum is also 0 and the number is also 0. so we have 2 cases take or not tick or else if if i'm at index zero and the sum is zero but the num is not zero and there is only one way which is not take so thereby one case what about this case number zero lesser than equal to target because at the zeroth index there can be a number assume five and the target is also five so there is only one way so you might think this is correct but this will fail",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "zoilQD1kYSg",
+      "position": 199,
+      "title": "DP 18. Count Partitions With Given Difference | Dp on Subsequences",
+      "url": "https://www.youtube.com/watch?v=zoilQD1kYSg",
+      "start": 909.519,
+      "end": 1034.799,
+      "text": "will fail what if number of zero is one zero only then it should have been it will come as dp of zero of zero as one which is wrong so make sure the number of zero is not equal to zero in that case anywhere anywhere i explain the case of five if it contains five then it will just have one way right so you just write at five there's only one way but if it is having zero then it is bound to have two ways so this is the two ways if it is not having zero it is having other numbers like seven there's only one way in which you can make the sum zero those cases is what i've written over here so if you just now try to submit it this is definitely going to run fine so let's submit this it does run and if i submit this it will definitely give me an accepted answer so what's the next step why did it give us a wrong answer oh we forgot to apply modular to it so please apply modulo to it very important concept please make sure you apply modulo to it every time you submit so after applying modulo i will be submitting this and it should definitely be working fine so what is the next step the next step is definitely space optimization so you know in order to do space optimization it's very simple you just omit this and you keep one row so vector of end previous of target plus one comma zero current of target plus one comma zero right and over here you can just do previous y also you can just do previous and over here also you just can do previous identity and once you've done this you know at dp of index minus 1 it changes to previous dpf index minus 1 it changes to previous and over here at dpf index it's more of like curve and the previous will be curve if you remember and over here",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "zoilQD1kYSg",
+      "position": 199,
+      "title": "DP 18. Count Partitions With Given Difference | Dp on Subsequences",
+      "url": "https://www.youtube.com/watch?v=zoilQD1kYSg",
+      "start": 1031.039,
+      "end": 1081.089,
+      "text": "curve if you remember and over here instead of dp of n minus 1 if you remember well it's going to be previous so these are the changes that you do and it becomes space optimized as well so you see we solved this using the massion the tabulation and the space optimization so just in case guys if you have understood the entire code the entire explanation and the correction that i did please please please make sure you like this video and if you're new to this channel please do consider subscribing and yes to continue our tradition please do write understood in the comment section so that i do get motivated that you are understanding whatever i'm explaining so yeah with this so let's wrap up this video and meet in the next one then bye bye whenever your heart is [Music]",
+      "word_count": 145
+    }
+  ]
+}

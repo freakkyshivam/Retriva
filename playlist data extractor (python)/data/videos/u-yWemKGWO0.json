@@ -1,0 +1,2582 @@
+{
+  "position": 104,
+  "video_id": "u-yWemKGWO0",
+  "title": "L32. Count total Nodes in a COMPLETE Binary Tree | O(Log^2 N) Approach | C++ | Java",
+  "url": "https://www.youtube.com/watch?v=u-yWemKGWO0",
+  "transcript": [
+    {
+      "start": 0.0,
+      "duration": 2.96,
+      "end": 2.96,
+      "text": "so before starting this video i would"
+    },
+    {
+      "start": 1.28,
+      "duration": 3.92,
+      "end": 5.2,
+      "text": "love to thank reliable for sponsoring"
+    },
+    {
+      "start": 2.96,
+      "duration": 4.08,
+      "end": 7.04,
+      "text": "this entire tree series so do you wish"
+    },
+    {
+      "start": 5.2,
+      "duration": 3.76,
+      "end": 8.96,
+      "text": "to work with companies like cred upgrad"
+    },
+    {
+      "start": 7.04,
+      "duration": 3.28,
+      "end": 10.32,
+      "text": "urban company razor pay but you are not"
+    },
+    {
+      "start": 8.96,
+      "duration": 3.679,
+      "end": 12.639000000000001,
+      "text": "able to apply because of your lack of"
+    },
+    {
+      "start": 10.32,
+      "duration": 3.92,
+      "end": 14.24,
+      "text": "experience and of lack of opportunities"
+    },
+    {
+      "start": 12.639,
+      "duration": 3.2,
+      "end": 15.838999999999999,
+      "text": "so here's the solution to this problem"
+    },
+    {
+      "start": 14.24,
+      "duration": 3.6,
+      "end": 17.84,
+      "text": "reliable by an academy is a hiring"
+    },
+    {
+      "start": 15.839,
+      "duration": 3.6,
+      "end": 19.439,
+      "text": "platform that helps freshers and"
+    },
+    {
+      "start": 17.84,
+      "duration": 3.439,
+      "end": 21.279,
+      "text": "experienced people to get jobs in"
+    },
+    {
+      "start": 19.439,
+      "duration": 3.361,
+      "end": 22.8,
+      "text": "india's top companies all you need is"
+    },
+    {
+      "start": 21.279,
+      "duration": 3.281,
+      "end": 24.56,
+      "text": "skills so what you need to do is you"
+    },
+    {
+      "start": 22.8,
+      "duration": 3.28,
+      "end": 26.080000000000002,
+      "text": "just need to give the relevant test that"
+    },
+    {
+      "start": 24.56,
+      "duration": 2.719,
+      "end": 27.279,
+      "text": "is completely based on your skills"
+    },
+    {
+      "start": 26.08,
+      "duration": 2.8,
+      "end": 28.88,
+      "text": "depending on your performance your"
+    },
+    {
+      "start": 27.279,
+      "duration": 3.601,
+      "end": 30.88,
+      "text": "interview will be scheduled and you will"
+    },
+    {
+      "start": 28.88,
+      "duration": 3.359,
+      "end": 32.239,
+      "text": "be hired from the relevant platform and"
+    },
+    {
+      "start": 30.88,
+      "duration": 2.88,
+      "end": 33.76,
+      "text": "the best thing about this is it's"
+    },
+    {
+      "start": 32.239,
+      "duration": 2.641,
+      "end": 34.879999999999995,
+      "text": "absolutely free so what are you waiting"
+    },
+    {
+      "start": 33.76,
+      "duration": 4.08,
+      "end": 37.839999999999996,
+      "text": "for please make sure you check out the"
+    },
+    {
+      "start": 34.88,
+      "duration": 2.96,
+      "end": 37.84,
+      "text": "links in the description"
+    },
+    {
+      "start": 41.2,
+      "duration": 3.679,
+      "end": 44.879000000000005,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 42.559,
+      "duration": 4.16,
+      "end": 46.718999999999994,
+      "text": "i hope you guys are doing extremely well"
+    },
+    {
+      "start": 44.879,
+      "duration": 4.801,
+      "end": 49.68,
+      "text": "so today we will be solving the problem"
+    },
+    {
+      "start": 46.719,
+      "duration": 5.041,
+      "end": 51.760000000000005,
+      "text": "count complete tree notes from the free"
+    },
+    {
+      "start": 49.68,
+      "duration": 4.08,
+      "end": 53.76,
+      "text": "country series so what does the problem"
+    },
+    {
+      "start": 51.76,
+      "duration": 4.88,
+      "end": 56.64,
+      "text": "states the problem states that you'll be"
+    },
+    {
+      "start": 53.76,
+      "duration": 3.6,
+      "end": 57.36,
+      "text": "given a root of a complete binary tree"
+    },
+    {
+      "start": 56.64,
+      "duration": 2.16,
+      "end": 58.8,
+      "text": "now"
+    },
+    {
+      "start": 57.36,
+      "duration": 4.4,
+      "end": 61.76,
+      "text": "if you remember the definition of"
+    },
+    {
+      "start": 58.8,
+      "duration": 5.999,
+      "end": 64.79899999999999,
+      "text": "complete planetary this is what it is uh"
+    },
+    {
+      "start": 61.76,
+      "duration": 5.679,
+      "end": 67.439,
+      "text": "every level except uh the last is"
+    },
+    {
+      "start": 64.799,
+      "duration": 5.441,
+      "end": 70.24000000000001,
+      "text": "completely filled and all the nodes in"
+    },
+    {
+      "start": 67.439,
+      "duration": 5.601,
+      "end": 73.03999999999999,
+      "text": "the last level are as far as left as"
+    },
+    {
+      "start": 70.24,
+      "duration": 5.76,
+      "end": 76.0,
+      "text": "possible okay so you need to you need to"
+    },
+    {
+      "start": 73.04,
+      "duration": 6.16,
+      "end": 79.2,
+      "text": "design an algorithm that definitely runs"
+    },
+    {
+      "start": 76.0,
+      "duration": 5.84,
+      "end": 81.84,
+      "text": "in lesser than b go of n time complexity"
+    },
+    {
+      "start": 79.2,
+      "duration": 4.32,
+      "end": 83.52000000000001,
+      "text": "like over here you can see one two three"
+    },
+    {
+      "start": 81.84,
+      "duration": 3.599,
+      "end": 85.43900000000001,
+      "text": "four five six"
+    },
+    {
+      "start": 83.52,
+      "duration": 4.56,
+      "end": 88.08,
+      "text": "the total number of nodes"
+    },
+    {
+      "start": 85.439,
+      "duration": 5.921,
+      "end": 91.36,
+      "text": "over here is 6 so you have to print the"
+    },
+    {
+      "start": 88.08,
+      "duration": 4.96,
+      "end": 93.03999999999999,
+      "text": "total number of nodes in a complete tree"
+    },
+    {
+      "start": 91.36,
+      "duration": 3.36,
+      "end": 94.72,
+      "text": "very very important"
+    },
+    {
+      "start": 93.04,
+      "duration": 4.0,
+      "end": 97.04,
+      "text": "and a complete tree is where you have to"
+    },
+    {
+      "start": 94.72,
+      "duration": 4.48,
+      "end": 99.2,
+      "text": "print the total notes"
+    },
+    {
+      "start": 97.04,
+      "duration": 4.32,
+      "end": 101.36000000000001,
+      "text": "so what is the first solution that comes"
+    },
+    {
+      "start": 99.2,
+      "duration": 5.12,
+      "end": 104.32000000000001,
+      "text": "to your mind whenever you hear about"
+    },
+    {
+      "start": 101.36,
+      "duration": 5.36,
+      "end": 106.72,
+      "text": "count notes it's very simple we are"
+    },
+    {
+      "start": 104.32,
+      "duration": 5.52,
+      "end": 109.83999999999999,
+      "text": "either going to do an in order pre-order"
+    },
+    {
+      "start": 106.72,
+      "duration": 6.0,
+      "end": 112.72,
+      "text": "post order level order or any traversal"
+    },
+    {
+      "start": 109.84,
+      "duration": 4.72,
+      "end": 114.56,
+      "text": "we do and probably we can count uh"
+    },
+    {
+      "start": 112.72,
+      "duration": 3.759,
+      "end": 116.479,
+      "text": "during that traversal right whenever you"
+    },
+    {
+      "start": 114.56,
+      "duration": 4.559,
+      "end": 119.119,
+      "text": "are doing the traversal because we know"
+    },
+    {
+      "start": 116.479,
+      "duration": 5.041,
+      "end": 121.52,
+      "text": "traversal means visiting notes so if you"
+    },
+    {
+      "start": 119.119,
+      "duration": 4.721,
+      "end": 123.84,
+      "text": "are visiting this node this node then"
+    },
+    {
+      "start": 121.52,
+      "duration": 4.559,
+      "end": 126.079,
+      "text": "this node then this node and so on every"
+    },
+    {
+      "start": 123.84,
+      "duration": 3.68,
+      "end": 127.52000000000001,
+      "text": "time you visit a node just make sure you"
+    },
+    {
+      "start": 126.079,
+      "duration": 3.841,
+      "end": 129.92,
+      "text": "increase the counter to counter plus"
+    },
+    {
+      "start": 127.52,
+      "duration": 5.12,
+      "end": 132.64,
+      "text": "plus so that's going to give us the"
+    },
+    {
+      "start": 129.92,
+      "duration": 4.64,
+      "end": 134.55999999999997,
+      "text": "count of notes in a complete tree but"
+    },
+    {
+      "start": 132.64,
+      "duration": 4.16,
+      "end": 136.79999999999998,
+      "text": "what is the time complexity of such a"
+    },
+    {
+      "start": 134.56,
+      "duration": 4.56,
+      "end": 139.12,
+      "text": "solution that's going to be big o of n"
+    },
+    {
+      "start": 136.8,
+      "duration": 4.32,
+      "end": 141.12,
+      "text": "because you're traversing for every node"
+    },
+    {
+      "start": 139.12,
+      "duration": 4.08,
+      "end": 143.20000000000002,
+      "text": "and what is the space complexity for"
+    },
+    {
+      "start": 141.12,
+      "duration": 4.16,
+      "end": 145.28,
+      "text": "such so if you're using something like"
+    },
+    {
+      "start": 143.2,
+      "duration": 4.399,
+      "end": 147.599,
+      "text": "an inorder pre-order or a post-order"
+    },
+    {
+      "start": 145.28,
+      "duration": 3.44,
+      "end": 148.72,
+      "text": "traversal the space complexity is going"
+    },
+    {
+      "start": 147.599,
+      "duration": 4.561,
+      "end": 152.16,
+      "text": "to be big"
+    },
+    {
+      "start": 148.72,
+      "duration": 6.32,
+      "end": 155.04,
+      "text": "h where h is the height of the binary"
+    },
+    {
+      "start": 152.16,
+      "duration": 5.84,
+      "end": 158.0,
+      "text": "tree and since it's a complete tree"
+    },
+    {
+      "start": 155.04,
+      "duration": 5.44,
+      "end": 160.48,
+      "text": "point to be noted since it's a complete"
+    },
+    {
+      "start": 158.0,
+      "duration": 5.12,
+      "end": 163.12,
+      "text": "tree the height of the binary tree at"
+    },
+    {
+      "start": 160.48,
+      "duration": 6.16,
+      "end": 166.64,
+      "text": "the worst case will be big o of"
+    },
+    {
+      "start": 163.12,
+      "duration": 5.6,
+      "end": 168.72,
+      "text": "logarithmic of n where n is the number"
+    },
+    {
+      "start": 166.64,
+      "duration": 4.959,
+      "end": 171.599,
+      "text": "of nodes in your tree right it's going"
+    },
+    {
+      "start": 168.72,
+      "duration": 5.84,
+      "end": 174.56,
+      "text": "to be logarithmic of n so i can say the"
+    },
+    {
+      "start": 171.599,
+      "duration": 4.561,
+      "end": 176.16,
+      "text": "space complexity the auxiliary space the"
+    },
+    {
+      "start": 174.56,
+      "duration": 5.36,
+      "end": 179.92000000000002,
+      "text": "auxiliary space that the inorder"
+    },
+    {
+      "start": 176.16,
+      "duration": 5.28,
+      "end": 181.44,
+      "text": "traversal takes is big o of h right if"
+    },
+    {
+      "start": 179.92,
+      "duration": 3.76,
+      "end": 183.67999999999998,
+      "text": "it would have been a normal binary tree"
+    },
+    {
+      "start": 181.44,
+      "duration": 4.56,
+      "end": 186.0,
+      "text": "then you would have said b of n because"
+    },
+    {
+      "start": 183.68,
+      "duration": 4.639,
+      "end": 188.31900000000002,
+      "text": "q tree might come in but in complete"
+    },
+    {
+      "start": 186.0,
+      "duration": 4.319,
+      "end": 190.319,
+      "text": "tree it's not a skew tree it's a log"
+    },
+    {
+      "start": 188.319,
+      "duration": 3.92,
+      "end": 192.23899999999998,
+      "text": "entry so that's why this is going to be"
+    },
+    {
+      "start": 190.319,
+      "duration": 4.56,
+      "end": 194.879,
+      "text": "the time complexity and the space"
+    },
+    {
+      "start": 192.239,
+      "duration": 5.441,
+      "end": 197.68,
+      "text": "complexity of the brute force solution"
+    },
+    {
+      "start": 194.879,
+      "duration": 5.761,
+      "end": 200.64,
+      "text": "in order to count the number of nodes"
+    },
+    {
+      "start": 197.68,
+      "duration": 5.6,
+      "end": 203.28,
+      "text": "complete tree so we're going to use a"
+    },
+    {
+      "start": 200.64,
+      "duration": 5.519,
+      "end": 206.159,
+      "text": "property of complete tree now as you can"
+    },
+    {
+      "start": 203.28,
+      "duration": 4.959,
+      "end": 208.239,
+      "text": "see this tree is completely filled right"
+    },
+    {
+      "start": 206.159,
+      "duration": 6.08,
+      "end": 212.239,
+      "text": "it's completely filled none of the"
+    },
+    {
+      "start": 208.239,
+      "duration": 5.521,
+      "end": 213.76,
+      "text": "levels have any node uh shortage so can"
+    },
+    {
+      "start": 212.239,
+      "duration": 4.161,
+      "end": 216.4,
+      "text": "i say can i say"
+    },
+    {
+      "start": 213.76,
+      "duration": 5.039,
+      "end": 218.79899999999998,
+      "text": "if the height of the tree like"
+    },
+    {
+      "start": 216.4,
+      "duration": 5.28,
+      "end": 221.68,
+      "text": "if i uh see the height of the tree"
+    },
+    {
+      "start": 218.799,
+      "duration": 4.881,
+      "end": 223.68,
+      "text": "that's three right so can i say the"
+    },
+    {
+      "start": 221.68,
+      "duration": 5.199,
+      "end": 226.87900000000002,
+      "text": "number of notes yes"
+    },
+    {
+      "start": 223.68,
+      "duration": 4.88,
+      "end": 228.56,
+      "text": "the number of notes are nothing but"
+    },
+    {
+      "start": 226.879,
+      "duration": 2.961,
+      "end": 229.84,
+      "text": "2 to the power 3"
+    },
+    {
+      "start": 228.56,
+      "duration": 3.84,
+      "end": 232.4,
+      "text": "minus 1"
+    },
+    {
+      "start": 229.84,
+      "duration": 5.52,
+      "end": 235.36,
+      "text": "that's 7 you'll be right yes you're"
+    },
+    {
+      "start": 232.4,
+      "duration": 5.44,
+      "end": 237.84,
+      "text": "correct so we're getting an idea that"
+    },
+    {
+      "start": 235.36,
+      "duration": 5.12,
+      "end": 240.48000000000002,
+      "text": "what if i can somehow"
+    },
+    {
+      "start": 237.84,
+      "duration": 4.56,
+      "end": 242.4,
+      "text": "compute the height of the tree then"
+    },
+    {
+      "start": 240.48,
+      "duration": 3.6,
+      "end": 244.07999999999998,
+      "text": "i can actually say that the"
+    },
+    {
+      "start": 242.4,
+      "duration": 2.72,
+      "end": 245.12,
+      "text": "number of nodes is 2 to the power 3"
+    },
+    {
+      "start": 244.08,
+      "duration": 2.64,
+      "end": 246.72,
+      "text": "minus 1"
+    },
+    {
+      "start": 245.12,
+      "duration": 4.0,
+      "end": 249.12,
+      "text": "but then you'll tell me"
+    },
+    {
+      "start": 246.72,
+      "duration": 5.2,
+      "end": 251.92,
+      "text": "but how will that help because"
+    },
+    {
+      "start": 249.12,
+      "duration": 5.119,
+      "end": 254.239,
+      "text": "it might happen that this portion is not"
+    },
+    {
+      "start": 251.92,
+      "duration": 3.92,
+      "end": 255.83999999999997,
+      "text": "present because it's a complete tree"
+    },
+    {
+      "start": 254.239,
+      "duration": 3.761,
+      "end": 258.0,
+      "text": "right it's a complete tree so might"
+    },
+    {
+      "start": 255.84,
+      "duration": 4.0,
+      "end": 259.84000000000003,
+      "text": "happen the 7 is not present so we're"
+    },
+    {
+      "start": 258.0,
+      "duration": 3.04,
+      "end": 261.04,
+      "text": "going to deduce an algorithm where we"
+    },
+    {
+      "start": 259.84,
+      "duration": 3.84,
+      "end": 263.67999999999995,
+      "text": "use this"
+    },
+    {
+      "start": 261.04,
+      "duration": 4.08,
+      "end": 265.12,
+      "text": "height property but smartly let's check"
+    },
+    {
+      "start": 263.68,
+      "duration": 3.36,
+      "end": 267.04,
+      "text": "that algorithm out"
+    },
+    {
+      "start": 265.12,
+      "duration": 3.84,
+      "end": 268.96,
+      "text": "so this is the binary tree for which you"
+    },
+    {
+      "start": 267.04,
+      "duration": 3.68,
+      "end": 270.72,
+      "text": "have to count the number of notes so as"
+    },
+    {
+      "start": 268.96,
+      "duration": 4.16,
+      "end": 273.12,
+      "text": "you can see that this portion is"
+    },
+    {
+      "start": 270.72,
+      "duration": 5.44,
+      "end": 276.16,
+      "text": "unfilled right but this is still a"
+    },
+    {
+      "start": 273.12,
+      "duration": 5.44,
+      "end": 278.56,
+      "text": "complete tree because in the last level"
+    },
+    {
+      "start": 276.16,
+      "duration": 4.16,
+      "end": 280.32000000000005,
+      "text": "we do not have all the notes filled but"
+    },
+    {
+      "start": 278.56,
+      "duration": 4.079,
+      "end": 282.639,
+      "text": "whatever notes we have we have on the"
+    },
+    {
+      "start": 280.32,
+      "duration": 4.56,
+      "end": 284.88,
+      "text": "left side so we can say that it is a"
+    },
+    {
+      "start": 282.639,
+      "duration": 5.12,
+      "end": 287.759,
+      "text": "complete tree but how do we count the"
+    },
+    {
+      "start": 284.88,
+      "duration": 5.52,
+      "end": 290.4,
+      "text": "number of nodes very very simple let's"
+    },
+    {
+      "start": 287.759,
+      "duration": 4.561,
+      "end": 292.32,
+      "text": "check out how do we do this just for an"
+    },
+    {
+      "start": 290.4,
+      "duration": 4.96,
+      "end": 295.35999999999996,
+      "text": "example assume this just for an example"
+    },
+    {
+      "start": 292.32,
+      "duration": 5.36,
+      "end": 297.68,
+      "text": "assume this that you're standing at this"
+    },
+    {
+      "start": 295.36,
+      "duration": 4.8,
+      "end": 300.16,
+      "text": "second node and you figure out that the"
+    },
+    {
+      "start": 297.68,
+      "duration": 4.959,
+      "end": 302.639,
+      "text": "height of this tree this sub tree like"
+    },
+    {
+      "start": 300.16,
+      "duration": 5.44,
+      "end": 305.6,
+      "text": "i'm talking about this subtree okay so"
+    },
+    {
+      "start": 302.639,
+      "duration": 5.12,
+      "end": 307.759,
+      "text": "height of this subtree is nothing but"
+    },
+    {
+      "start": 305.6,
+      "duration": 4.8,
+      "end": 310.40000000000003,
+      "text": "three so the number of nodes over here"
+    },
+    {
+      "start": 307.759,
+      "duration": 5.681,
+      "end": 313.44,
+      "text": "can be easily said as 2 to the power 3"
+    },
+    {
+      "start": 310.4,
+      "duration": 8.56,
+      "end": 318.96,
+      "text": "minus 1 that's 7 makes sense"
+    },
+    {
+      "start": 313.44,
+      "duration": 6.96,
+      "end": 320.4,
+      "text": "1 2 3 4 5 6 7 similarly if i talk about"
+    },
+    {
+      "start": 318.96,
+      "duration": 3.6,
+      "end": 322.56,
+      "text": "this subtree"
+    },
+    {
+      "start": 320.4,
+      "duration": 4.0,
+      "end": 324.4,
+      "text": "can i say the height of this subtree is"
+    },
+    {
+      "start": 322.56,
+      "duration": 4.4,
+      "end": 326.96,
+      "text": "nothing but 2"
+    },
+    {
+      "start": 324.4,
+      "duration": 6.4,
+      "end": 330.79999999999995,
+      "text": "hence the number of notes can i say that"
+    },
+    {
+      "start": 326.96,
+      "duration": 5.28,
+      "end": 332.23999999999995,
+      "text": "as 2 to the power 2 minus 1 that's 3"
+    },
+    {
+      "start": 330.8,
+      "duration": 3.679,
+      "end": 334.479,
+      "text": "and and"
+    },
+    {
+      "start": 332.24,
+      "duration": 2.959,
+      "end": 335.199,
+      "text": "if i ask the total number of notes can i"
+    },
+    {
+      "start": 334.479,
+      "duration": 2.961,
+      "end": 337.44,
+      "text": "say"
+    },
+    {
+      "start": 335.199,
+      "duration": 4.081,
+      "end": 339.28000000000003,
+      "text": "if i'm standing here that's"
+    },
+    {
+      "start": 337.44,
+      "duration": 2.8,
+      "end": 340.24,
+      "text": "1 for the root itself"
+    },
+    {
+      "start": 339.28,
+      "duration": 2.479,
+      "end": 341.75899999999996,
+      "text": "plus"
+    },
+    {
+      "start": 340.24,
+      "duration": 2.48,
+      "end": 342.72,
+      "text": "7 on the left"
+    },
+    {
+      "start": 341.759,
+      "duration": 3.761,
+      "end": 345.52000000000004,
+      "text": "3"
+    },
+    {
+      "start": 342.72,
+      "duration": 5.199,
+      "end": 347.91900000000004,
+      "text": "plus 3 on the right tree which makes it"
+    },
+    {
+      "start": 345.52,
+      "duration": 3.44,
+      "end": 348.96,
+      "text": "uh around 11 notes and that was the"
+    },
+    {
+      "start": 347.919,
+      "duration": 2.0,
+      "end": 349.919,
+      "text": "answer"
+    },
+    {
+      "start": 348.96,
+      "duration": 4.4,
+      "end": 353.35999999999996,
+      "text": "so"
+    },
+    {
+      "start": 349.919,
+      "duration": 6.081,
+      "end": 356.0,
+      "text": "can i actually check for every subtree"
+    },
+    {
+      "start": 353.36,
+      "duration": 4.72,
+      "end": 358.08000000000004,
+      "text": "i think i can i think i can so what i'll"
+    },
+    {
+      "start": 356.0,
+      "duration": 3.199,
+      "end": 359.199,
+      "text": "do is i'll try to check for every"
+    },
+    {
+      "start": 358.08,
+      "duration": 4.08,
+      "end": 362.15999999999997,
+      "text": "subtree"
+    },
+    {
+      "start": 359.199,
+      "duration": 5.921,
+      "end": 365.12,
+      "text": "and if any subtree is a full binary tree"
+    },
+    {
+      "start": 362.16,
+      "duration": 6.4,
+      "end": 368.56,
+      "text": "like if it has every like all the notes"
+    },
+    {
+      "start": 365.12,
+      "duration": 5.6,
+      "end": 370.72,
+      "text": "then i can directly apply the formula"
+    },
+    {
+      "start": 368.56,
+      "duration": 4.32,
+      "end": 372.88,
+      "text": "and i think i can get the number of"
+    },
+    {
+      "start": 370.72,
+      "duration": 4.8,
+      "end": 375.52000000000004,
+      "text": "notes of that subtree without actually"
+    },
+    {
+      "start": 372.88,
+      "duration": 5.759,
+      "end": 378.639,
+      "text": "traversing so i hope you have got an"
+    },
+    {
+      "start": 375.52,
+      "duration": 4.799,
+      "end": 380.31899999999996,
+      "text": "idea but if you haven't not an issue"
+    },
+    {
+      "start": 378.639,
+      "duration": 4.241,
+      "end": 382.88,
+      "text": "if you have understood it it is"
+    },
+    {
+      "start": 380.319,
+      "duration": 4.561,
+      "end": 384.88,
+      "text": "absolutely okay if you haven't not an"
+    },
+    {
+      "start": 382.88,
+      "duration": 4.4,
+      "end": 387.28,
+      "text": "issue because i'm going to do a dry run"
+    },
+    {
+      "start": 384.88,
+      "duration": 4.56,
+      "end": 389.44,
+      "text": "which will make things more clear"
+    },
+    {
+      "start": 387.28,
+      "duration": 3.919,
+      "end": 391.19899999999996,
+      "text": "so during the traversal what we will do"
+    },
+    {
+      "start": 389.44,
+      "duration": 4.16,
+      "end": 393.6,
+      "text": "is we'll start the traversal from the"
+    },
+    {
+      "start": 391.199,
+      "duration": 4.161,
+      "end": 395.36,
+      "text": "root of the tree okay and now what you"
+    },
+    {
+      "start": 393.6,
+      "duration": 4.48,
+      "end": 398.08000000000004,
+      "text": "do is you simply"
+    },
+    {
+      "start": 395.36,
+      "duration": 4.48,
+      "end": 399.84000000000003,
+      "text": "traverse to the left and find the left"
+    },
+    {
+      "start": 398.08,
+      "duration": 5.44,
+      "end": 403.52,
+      "text": "height of the tree so what's the left"
+    },
+    {
+      "start": 399.84,
+      "duration": 5.68,
+      "end": 405.52,
+      "text": "height of the tree that's one two three"
+    },
+    {
+      "start": 403.52,
+      "duration": 4.959,
+      "end": 408.479,
+      "text": "four so i can say if i'm standing at the"
+    },
+    {
+      "start": 405.52,
+      "duration": 4.48,
+      "end": 410.0,
+      "text": "root of the tree the left height this"
+    },
+    {
+      "start": 408.479,
+      "duration": 2.321,
+      "end": 410.8,
+      "text": "height is"
+    },
+    {
+      "start": 410.0,
+      "duration": 3.12,
+      "end": 413.12,
+      "text": "four"
+    },
+    {
+      "start": 410.8,
+      "duration": 4.48,
+      "end": 415.28000000000003,
+      "text": "and uh travel for the right of the tree"
+    },
+    {
+      "start": 413.12,
+      "duration": 3.76,
+      "end": 416.88,
+      "text": "and get the right height of the tree so"
+    },
+    {
+      "start": 415.28,
+      "duration": 4.319,
+      "end": 419.599,
+      "text": "i can say that the right height of the"
+    },
+    {
+      "start": 416.88,
+      "duration": 5.439,
+      "end": 422.319,
+      "text": "tree as you can see is nothing but three"
+    },
+    {
+      "start": 419.599,
+      "duration": 6.401,
+      "end": 426.0,
+      "text": "so what we are seeing is the left height"
+    },
+    {
+      "start": 422.319,
+      "duration": 6.481,
+      "end": 428.8,
+      "text": "is not equal to the right height if i'm"
+    },
+    {
+      "start": 426.0,
+      "duration": 5.68,
+      "end": 431.68,
+      "text": "standing at one which gives us an idea"
+    },
+    {
+      "start": 428.8,
+      "duration": 4.959,
+      "end": 433.759,
+      "text": "that this entire subtree is not a full"
+    },
+    {
+      "start": 431.68,
+      "duration": 5.12,
+      "end": 436.8,
+      "text": "binary tree like it's not a it's not"
+    },
+    {
+      "start": 433.759,
+      "duration": 4.88,
+      "end": 438.639,
+      "text": "completely filled hence we cannot"
+    },
+    {
+      "start": 436.8,
+      "duration": 3.76,
+      "end": 440.56,
+      "text": "implicate the formula"
+    },
+    {
+      "start": 438.639,
+      "duration": 4.161,
+      "end": 442.8,
+      "text": "please understand this we cannot"
+    },
+    {
+      "start": 440.56,
+      "duration": 4.0,
+      "end": 444.56,
+      "text": "implicate the formula"
+    },
+    {
+      "start": 442.8,
+      "duration": 4.959,
+      "end": 447.759,
+      "text": "so what we have to do is we have to"
+    },
+    {
+      "start": 444.56,
+      "duration": 5.359,
+      "end": 449.919,
+      "text": "start traversing in the left as well as"
+    },
+    {
+      "start": 447.759,
+      "duration": 2.961,
+      "end": 450.72,
+      "text": "in the right so for us the answer will"
+    },
+    {
+      "start": 449.919,
+      "duration": 2.4,
+      "end": 452.31899999999996,
+      "text": "be"
+    },
+    {
+      "start": 450.72,
+      "duration": 4.24,
+      "end": 454.96000000000004,
+      "text": "one for this guy"
+    },
+    {
+      "start": 452.319,
+      "duration": 4.641,
+      "end": 456.96000000000004,
+      "text": "okay and let's travis on the left"
+    },
+    {
+      "start": 454.96,
+      "duration": 4.4,
+      "end": 459.35999999999996,
+      "text": "let's travis on the right so whatever"
+    },
+    {
+      "start": 456.96,
+      "duration": 4.48,
+      "end": 461.44,
+      "text": "answer we get from the left and whatever"
+    },
+    {
+      "start": 459.36,
+      "duration": 4.64,
+      "end": 464.0,
+      "text": "answer we get from the right we're gonna"
+    },
+    {
+      "start": 461.44,
+      "duration": 5.36,
+      "end": 466.8,
+      "text": "simply add it and we can say that this"
+    },
+    {
+      "start": 464.0,
+      "duration": 5.039,
+      "end": 469.039,
+      "text": "is going to be my answer and for this"
+    },
+    {
+      "start": 466.8,
+      "duration": 3.76,
+      "end": 470.56,
+      "text": "left like this is a individual tree"
+    },
+    {
+      "start": 469.039,
+      "duration": 3.6,
+      "end": 472.639,
+      "text": "again right as you can see this is an"
+    },
+    {
+      "start": 470.56,
+      "duration": 4.72,
+      "end": 475.28000000000003,
+      "text": "individual tree again you're gonna again"
+    },
+    {
+      "start": 472.639,
+      "duration": 4.56,
+      "end": 477.199,
+      "text": "implicate the same idea okay so that's"
+    },
+    {
+      "start": 475.28,
+      "duration": 3.759,
+      "end": 479.039,
+      "text": "what we are going to do recursion"
+    },
+    {
+      "start": 477.199,
+      "duration": 3.921,
+      "end": 481.12,
+      "text": "recursion if"
+    },
+    {
+      "start": 479.039,
+      "duration": 4.321,
+      "end": 483.36,
+      "text": "left height is equivalent to the right"
+    },
+    {
+      "start": 481.12,
+      "duration": 4.24,
+      "end": 485.36,
+      "text": "height then we can actually directly see"
+    },
+    {
+      "start": 483.36,
+      "duration": 4.48,
+      "end": 487.84000000000003,
+      "text": "the answer if it is not we're going to"
+    },
+    {
+      "start": 485.36,
+      "duration": 4.399,
+      "end": 489.759,
+      "text": "take one for this current node and we're"
+    },
+    {
+      "start": 487.84,
+      "duration": 4.56,
+      "end": 492.4,
+      "text": "going to say the left tree and the right"
+    },
+    {
+      "start": 489.759,
+      "duration": 4.0,
+      "end": 493.759,
+      "text": "tree to compute their answers themselves"
+    },
+    {
+      "start": 492.4,
+      "duration": 3.04,
+      "end": 495.44,
+      "text": "you have to be good at recursion in"
+    },
+    {
+      "start": 493.759,
+      "duration": 4.241,
+      "end": 498.0,
+      "text": "order to understand this"
+    },
+    {
+      "start": 495.44,
+      "duration": 5.199,
+      "end": 500.639,
+      "text": "so what i can see is one plus"
+    },
+    {
+      "start": 498.0,
+      "duration": 5.36,
+      "end": 503.36,
+      "text": "i'm saying the left subtree plus"
+    },
+    {
+      "start": 500.639,
+      "duration": 4.641,
+      "end": 505.28000000000003,
+      "text": "right subtree so let's go to this left"
+    },
+    {
+      "start": 503.36,
+      "duration": 3.92,
+      "end": 507.28000000000003,
+      "text": "sub tree at first then we'll go to the"
+    },
+    {
+      "start": 505.28,
+      "duration": 3.599,
+      "end": 508.87899999999996,
+      "text": "right subtree so when i go to the left"
+    },
+    {
+      "start": 507.28,
+      "duration": 4.08,
+      "end": 511.35999999999996,
+      "text": "sub tree and i figure out the left"
+    },
+    {
+      "start": 508.879,
+      "duration": 5.201,
+      "end": 514.08,
+      "text": "height so can i say the left height came"
+    },
+    {
+      "start": 511.36,
+      "duration": 6.239,
+      "end": 517.599,
+      "text": "out to be one two three"
+    },
+    {
+      "start": 514.08,
+      "duration": 6.56,
+      "end": 520.64,
+      "text": "perfect and i said the right height"
+    },
+    {
+      "start": 517.599,
+      "duration": 5.68,
+      "end": 523.279,
+      "text": "came out to be three so apparently if"
+    },
+    {
+      "start": 520.64,
+      "duration": 4.639,
+      "end": 525.279,
+      "text": "i'm standing at this two node i can see"
+    },
+    {
+      "start": 523.279,
+      "duration": 3.921,
+      "end": 527.2,
+      "text": "that the left height is three and the"
+    },
+    {
+      "start": 525.279,
+      "duration": 4.161,
+      "end": 529.4399999999999,
+      "text": "right height is three both the heights"
+    },
+    {
+      "start": 527.2,
+      "duration": 3.92,
+      "end": 531.12,
+      "text": "are same which actually tells us that"
+    },
+    {
+      "start": 529.44,
+      "duration": 5.12,
+      "end": 534.5600000000001,
+      "text": "this subtree"
+    },
+    {
+      "start": 531.12,
+      "duration": 6.64,
+      "end": 537.76,
+      "text": "is indeed a complete tree hence can i"
+    },
+    {
+      "start": 534.56,
+      "duration": 6.32,
+      "end": 540.88,
+      "text": "directly say the answer will be"
+    },
+    {
+      "start": 537.76,
+      "duration": 5.84,
+      "end": 543.6,
+      "text": "2 to the power 3 minus 1 that's 7 so"
+    },
+    {
+      "start": 540.88,
+      "duration": 5.84,
+      "end": 546.72,
+      "text": "instead of traversing anywhere like"
+    },
+    {
+      "start": 543.6,
+      "duration": 6.32,
+      "end": 549.9200000000001,
+      "text": "anywhere down what we do is we directly"
+    },
+    {
+      "start": 546.72,
+      "duration": 5.119,
+      "end": 551.839,
+      "text": "return something a seven so this guy"
+    },
+    {
+      "start": 549.92,
+      "duration": 4.08,
+      "end": 554.0,
+      "text": "gets a value seven"
+    },
+    {
+      "start": 551.839,
+      "duration": 4.801,
+      "end": 556.6400000000001,
+      "text": "i did not have to traverse any further"
+    },
+    {
+      "start": 554.0,
+      "duration": 3.76,
+      "end": 557.76,
+      "text": "uh beyond this and i got a value seven"
+    },
+    {
+      "start": 556.64,
+      "duration": 3.199,
+      "end": 559.8389999999999,
+      "text": "perfect"
+    },
+    {
+      "start": 557.76,
+      "duration": 4.96,
+      "end": 562.72,
+      "text": "next time when i'll come across this"
+    },
+    {
+      "start": 559.839,
+      "duration": 5.841,
+      "end": 565.6800000000001,
+      "text": "that's for this guy when i come across"
+    },
+    {
+      "start": 562.72,
+      "duration": 3.84,
+      "end": 566.5600000000001,
+      "text": "this what i see is i'm standing at three"
+    },
+    {
+      "start": 565.68,
+      "duration": 2.56,
+      "end": 568.2399999999999,
+      "text": "right"
+    },
+    {
+      "start": 566.56,
+      "duration": 4.0,
+      "end": 570.56,
+      "text": "and i again figure out what's the left"
+    },
+    {
+      "start": 568.24,
+      "duration": 4.32,
+      "end": 572.5600000000001,
+      "text": "height and i get that as 2 right the"
+    },
+    {
+      "start": 570.56,
+      "duration": 4.24,
+      "end": 574.8,
+      "text": "left height is 2 and i get the right"
+    },
+    {
+      "start": 572.56,
+      "duration": 4.8,
+      "end": 577.3599999999999,
+      "text": "height what's the right height right"
+    },
+    {
+      "start": 574.8,
+      "duration": 5.039,
+      "end": 579.8389999999999,
+      "text": "height is also 2 so can i say the left"
+    },
+    {
+      "start": 577.36,
+      "duration": 4.96,
+      "end": 582.32,
+      "text": "height is 2 the right height is 2 which"
+    },
+    {
+      "start": 579.839,
+      "duration": 5.521,
+      "end": 585.36,
+      "text": "actually tells me that this is a"
+    },
+    {
+      "start": 582.32,
+      "duration": 5.28,
+      "end": 587.6,
+      "text": "complete subtree in itself yes it is and"
+    },
+    {
+      "start": 585.36,
+      "duration": 4.0,
+      "end": 589.36,
+      "text": "if it is a complete subtree in itself"
+    },
+    {
+      "start": 587.6,
+      "duration": 3.359,
+      "end": 590.9590000000001,
+      "text": "can i say the number of notes in that"
+    },
+    {
+      "start": 589.36,
+      "duration": 4.96,
+      "end": 594.32,
+      "text": "sub tree will be 2 to the power 2 minus"
+    },
+    {
+      "start": 590.959,
+      "duration": 6.401,
+      "end": 597.3599999999999,
+      "text": "1 that's 3 so instead of traversing"
+    },
+    {
+      "start": 594.32,
+      "duration": 5.76,
+      "end": 600.08,
+      "text": "anywhere anywhere like inside that what"
+    },
+    {
+      "start": 597.36,
+      "duration": 6.159,
+      "end": 603.519,
+      "text": "i do is i directly return something"
+    },
+    {
+      "start": 600.08,
+      "duration": 5.52,
+      "end": 605.6,
+      "text": "which is 3 hence i get a 3 from here so"
+    },
+    {
+      "start": 603.519,
+      "duration": 4.721,
+      "end": 608.24,
+      "text": "this guy this guy"
+    },
+    {
+      "start": 605.6,
+      "duration": 5.52,
+      "end": 611.12,
+      "text": "which called this left it it got it a"
+    },
+    {
+      "start": 608.24,
+      "duration": 4.96,
+      "end": 613.2,
+      "text": "value of seven all the right that got it"
+    },
+    {
+      "start": 611.12,
+      "duration": 3.76,
+      "end": 614.88,
+      "text": "the value is three so this guy"
+    },
+    {
+      "start": 613.2,
+      "duration": 4.639,
+      "end": 617.839,
+      "text": "ultimately returns"
+    },
+    {
+      "start": 614.88,
+      "duration": 5.12,
+      "end": 620.0,
+      "text": "one plus left subtree that's seven one"
+    },
+    {
+      "start": 617.839,
+      "duration": 4.24,
+      "end": 622.0790000000001,
+      "text": "plus seven is eight plus three eleven so"
+    },
+    {
+      "start": 620.0,
+      "duration": 5.44,
+      "end": 625.44,
+      "text": "ultimately i get the"
+    },
+    {
+      "start": 622.079,
+      "duration": 5.44,
+      "end": 627.519,
+      "text": "total number of nodes as eleven so i"
+    },
+    {
+      "start": 625.44,
+      "duration": 5.44,
+      "end": 630.8800000000001,
+      "text": "hope you're understanding what i'm"
+    },
+    {
+      "start": 627.519,
+      "duration": 6.641,
+      "end": 634.16,
+      "text": "trying to do is every time i visit a"
+    },
+    {
+      "start": 630.88,
+      "duration": 5.519,
+      "end": 636.399,
+      "text": "node i repeat every time i visit a node"
+    },
+    {
+      "start": 634.16,
+      "duration": 3.44,
+      "end": 637.6,
+      "text": "i compute the left height i compute the"
+    },
+    {
+      "start": 636.399,
+      "duration": 4.0,
+      "end": 640.399,
+      "text": "right height"
+    },
+    {
+      "start": 637.6,
+      "duration": 5.359,
+      "end": 642.9590000000001,
+      "text": "if they come out to be equal i directly"
+    },
+    {
+      "start": 640.399,
+      "duration": 5.041,
+      "end": 645.44,
+      "text": "figure out their uh total number of"
+    },
+    {
+      "start": 642.959,
+      "duration": 5.361,
+      "end": 648.3199999999999,
+      "text": "nodes and i return if they do not come"
+    },
+    {
+      "start": 645.44,
+      "duration": 5.6,
+      "end": 651.0400000000001,
+      "text": "out to be equal then i add one for it"
+    },
+    {
+      "start": 648.32,
+      "duration": 4.88,
+      "end": 653.2,
+      "text": "and then i go to the left as well as i"
+    },
+    {
+      "start": 651.04,
+      "duration": 4.479,
+      "end": 655.519,
+      "text": "go to the right so i again call for them"
+    },
+    {
+      "start": 653.2,
+      "duration": 3.92,
+      "end": 657.12,
+      "text": "and i keep on working this this is how i"
+    },
+    {
+      "start": 655.519,
+      "duration": 3.841,
+      "end": 659.36,
+      "text": "can actually think of an algorithm and"
+    },
+    {
+      "start": 657.12,
+      "duration": 3.279,
+      "end": 660.399,
+      "text": "this is how i can implement that 2 to"
+    },
+    {
+      "start": 659.36,
+      "duration": 4.159,
+      "end": 663.519,
+      "text": "the power"
+    },
+    {
+      "start": 660.399,
+      "duration": 5.841,
+      "end": 666.24,
+      "text": "height minus 1 yes 2 to the power height"
+    },
+    {
+      "start": 663.519,
+      "duration": 5.601,
+      "end": 669.12,
+      "text": "minus 1 formula in order to get the"
+    },
+    {
+      "start": 666.24,
+      "duration": 4.719,
+      "end": 670.9590000000001,
+      "text": "total number of notes i'll discuss the"
+    },
+    {
+      "start": 669.12,
+      "duration": 4.159,
+      "end": 673.279,
+      "text": "time complexity but before that let's"
+    },
+    {
+      "start": 670.959,
+      "duration": 4.081,
+      "end": 675.04,
+      "text": "check out the code so that the idea is"
+    },
+    {
+      "start": 673.279,
+      "duration": 4.24,
+      "end": 677.519,
+      "text": "clear to you and after that you can"
+    },
+    {
+      "start": 675.04,
+      "duration": 4.16,
+      "end": 679.1999999999999,
+      "text": "easily understand the time complexity so"
+    },
+    {
+      "start": 677.519,
+      "duration": 3.921,
+      "end": 681.44,
+      "text": "i'm gonna discuss the c plus plus as"
+    },
+    {
+      "start": 679.2,
+      "duration": 4.56,
+      "end": 683.76,
+      "text": "well as the java code so the c plus plus"
+    },
+    {
+      "start": 681.44,
+      "duration": 4.56,
+      "end": 686.0,
+      "text": "code is on the left and the java code is"
+    },
+    {
+      "start": 683.76,
+      "duration": 4.0,
+      "end": 687.76,
+      "text": "on the right so both of you guys can"
+    },
+    {
+      "start": 686.0,
+      "duration": 3.92,
+      "end": 689.92,
+      "text": "follow this so what i've done is i've"
+    },
+    {
+      "start": 687.76,
+      "duration": 4.56,
+      "end": 692.3199999999999,
+      "text": "initially taken the root of the tree and"
+    },
+    {
+      "start": 689.92,
+      "duration": 3.919,
+      "end": 693.8389999999999,
+      "text": "i know if the root is null what i'll do"
+    },
+    {
+      "start": 692.32,
+      "duration": 4.16,
+      "end": 696.48,
+      "text": "is i'll return a zero saying that the"
+    },
+    {
+      "start": 693.839,
+      "duration": 4.801,
+      "end": 698.6400000000001,
+      "text": "total number of nodes is zero"
+    },
+    {
+      "start": 696.48,
+      "duration": 3.84,
+      "end": 700.32,
+      "text": "or else what i'm doing is i'm currently"
+    },
+    {
+      "start": 698.64,
+      "duration": 3.439,
+      "end": 702.079,
+      "text": "standing at the root right"
+    },
+    {
+      "start": 700.32,
+      "duration": 4.32,
+      "end": 704.6400000000001,
+      "text": "i'll figure out the left height i'll"
+    },
+    {
+      "start": 702.079,
+      "duration": 4.561,
+      "end": 706.64,
+      "text": "figure out the right height if the left"
+    },
+    {
+      "start": 704.64,
+      "duration": 4.4,
+      "end": 709.04,
+      "text": "height and the right height are equal"
+    },
+    {
+      "start": 706.64,
+      "duration": 3.92,
+      "end": 710.56,
+      "text": "what i do is i say 2 to the power h like"
+    },
+    {
+      "start": 709.04,
+      "duration": 2.799,
+      "end": 711.8389999999999,
+      "text": "2 to the power height"
+    },
+    {
+      "start": 710.56,
+      "duration": 4.32,
+      "end": 714.88,
+      "text": "minus 1"
+    },
+    {
+      "start": 711.839,
+      "duration": 5.761,
+      "end": 717.6,
+      "text": "that's going to be my number of notes"
+    },
+    {
+      "start": 714.88,
+      "duration": 5.12,
+      "end": 720.0,
+      "text": "if if this is not equal then i know what"
+    },
+    {
+      "start": 717.6,
+      "duration": 4.88,
+      "end": 722.48,
+      "text": "i have to do one for the current node i"
+    },
+    {
+      "start": 720.0,
+      "duration": 4.8,
+      "end": 724.8,
+      "text": "go to the left i go to the right and i"
+    },
+    {
+      "start": 722.48,
+      "duration": 4.4,
+      "end": 726.88,
+      "text": "again call the same function which keeps"
+    },
+    {
+      "start": 724.8,
+      "duration": 4.64,
+      "end": 729.4399999999999,
+      "text": "on performing the same thing find left"
+    },
+    {
+      "start": 726.88,
+      "duration": 4.959,
+      "end": 731.8389999999999,
+      "text": "height find right right if equal return"
+    },
+    {
+      "start": 729.44,
+      "duration": 3.76,
+      "end": 733.2,
+      "text": "or else again go deep again go deep it's"
+    },
+    {
+      "start": 731.839,
+      "duration": 4.56,
+      "end": 736.399,
+      "text": "kind of a recursion that keeps on"
+    },
+    {
+      "start": 733.2,
+      "duration": 5.68,
+      "end": 738.88,
+      "text": "happening for every node and that's how"
+    },
+    {
+      "start": 736.399,
+      "duration": 4.321,
+      "end": 740.72,
+      "text": "you can easily get the count notes now"
+    },
+    {
+      "start": 738.88,
+      "duration": 4.399,
+      "end": 743.279,
+      "text": "you might be asking how do you get the"
+    },
+    {
+      "start": 740.72,
+      "duration": 4.72,
+      "end": 745.44,
+      "text": "left height so i am calling a function"
+    },
+    {
+      "start": 743.279,
+      "duration": 4.24,
+      "end": 747.519,
+      "text": "find height of left it's a very simple"
+    },
+    {
+      "start": 745.44,
+      "duration": 4.959,
+      "end": 750.399,
+      "text": "function if you carefully observe what"
+    },
+    {
+      "start": 747.519,
+      "duration": 5.361,
+      "end": 752.88,
+      "text": "i've done is i've taken the node i know"
+    },
+    {
+      "start": 750.399,
+      "duration": 4.721,
+      "end": 755.12,
+      "text": "if i'm standing here and i want to find"
+    },
+    {
+      "start": 752.88,
+      "duration": 4.079,
+      "end": 756.959,
+      "text": "what's the left height i have to go to"
+    },
+    {
+      "start": 755.12,
+      "duration": 3.68,
+      "end": 758.8,
+      "text": "the left left left until i don't reach"
+    },
+    {
+      "start": 756.959,
+      "duration": 4.0,
+      "end": 760.959,
+      "text": "end so what i've done is i've run a"
+    },
+    {
+      "start": 758.8,
+      "duration": 5.2,
+      "end": 764.0,
+      "text": "while loop and that keeps on going to"
+    },
+    {
+      "start": 760.959,
+      "duration": 5.201,
+      "end": 766.16,
+      "text": "the left till this exists i keep on"
+    },
+    {
+      "start": 764.0,
+      "duration": 4.16,
+      "end": 768.16,
+      "text": "incrementing the counter and at the end"
+    },
+    {
+      "start": 766.16,
+      "duration": 3.44,
+      "end": 769.6,
+      "text": "i return a counter similarly in order to"
+    },
+    {
+      "start": 768.16,
+      "duration": 4.16,
+      "end": 772.3199999999999,
+      "text": "find the right"
+    },
+    {
+      "start": 769.6,
+      "duration": 4.479,
+      "end": 774.0790000000001,
+      "text": "right height i'll keep on incrementing"
+    },
+    {
+      "start": 772.32,
+      "duration": 4.56,
+      "end": 776.88,
+      "text": "keep on inc like going right and keep on"
+    },
+    {
+      "start": 774.079,
+      "duration": 4.721,
+      "end": 778.8,
+      "text": "incrementing that's how i get the right"
+    },
+    {
+      "start": 776.88,
+      "duration": 4.24,
+      "end": 781.12,
+      "text": "height by going on right right right"
+    },
+    {
+      "start": 778.8,
+      "duration": 5.279,
+      "end": 784.079,
+      "text": "right right now since i know it's a"
+    },
+    {
+      "start": 781.12,
+      "duration": 4.8,
+      "end": 785.92,
+      "text": "complete tree these notes these notes"
+    },
+    {
+      "start": 784.079,
+      "duration": 4.32,
+      "end": 788.399,
+      "text": "will be filled these notes will always"
+    },
+    {
+      "start": 785.92,
+      "duration": 3.44,
+      "end": 789.36,
+      "text": "be filled right that's the reason it's a"
+    },
+    {
+      "start": 788.399,
+      "duration": 3.201,
+      "end": 791.6,
+      "text": "complete"
+    },
+    {
+      "start": 789.36,
+      "duration": 4.24,
+      "end": 793.6,
+      "text": "tree so in this way i can find fine"
+    },
+    {
+      "start": 791.6,
+      "duration": 5.6,
+      "end": 797.2,
+      "text": "height from left fine height from right"
+    },
+    {
+      "start": 793.6,
+      "duration": 5.679,
+      "end": 799.279,
+      "text": "and this is how my recursive code will"
+    },
+    {
+      "start": 797.2,
+      "duration": 4.639,
+      "end": 801.839,
+      "text": "look like so guys just in case if you"
+    },
+    {
+      "start": 799.279,
+      "duration": 5.281,
+      "end": 804.56,
+      "text": "have still like you still have confusion"
+    },
+    {
+      "start": 801.839,
+      "duration": 5.841,
+      "end": 807.6800000000001,
+      "text": "what i'll suggest you is to draw a lot"
+    },
+    {
+      "start": 804.56,
+      "duration": 6.0,
+      "end": 810.56,
+      "text": "of trees yes to draw a lot of trees and"
+    },
+    {
+      "start": 807.68,
+      "duration": 5.12,
+      "end": 812.8,
+      "text": "try to do the recursion by yourself keep"
+    },
+    {
+      "start": 810.56,
+      "duration": 4.8,
+      "end": 815.3599999999999,
+      "text": "on doing this for three or four examples"
+    },
+    {
+      "start": 812.8,
+      "duration": 4.56,
+      "end": 817.3599999999999,
+      "text": "the idea will get clear to you like by"
+    },
+    {
+      "start": 815.36,
+      "duration": 3.68,
+      "end": 819.04,
+      "text": "by yourself i don't have to help you any"
+    },
+    {
+      "start": 817.36,
+      "duration": 3.919,
+      "end": 821.279,
+      "text": "further now you might be thinking what"
+    },
+    {
+      "start": 819.04,
+      "duration": 4.64,
+      "end": 823.68,
+      "text": "is the time complexity of this solution"
+    },
+    {
+      "start": 821.279,
+      "duration": 3.841,
+      "end": 825.12,
+      "text": "the time complexity of this solution is"
+    },
+    {
+      "start": 823.68,
+      "duration": 2.64,
+      "end": 826.3199999999999,
+      "text": "big o of"
+    },
+    {
+      "start": 825.12,
+      "duration": 4.159,
+      "end": 829.279,
+      "text": "log n"
+    },
+    {
+      "start": 826.32,
+      "duration": 5.28,
+      "end": 831.6,
+      "text": "whole square they might be asking why is"
+    },
+    {
+      "start": 829.279,
+      "duration": 3.36,
+      "end": 832.639,
+      "text": "that big of log n whole square let me"
+    },
+    {
+      "start": 831.6,
+      "duration": 4.56,
+      "end": 836.16,
+      "text": "tell you this"
+    },
+    {
+      "start": 832.639,
+      "duration": 6.081,
+      "end": 838.72,
+      "text": "the height of the tree at any instance"
+    },
+    {
+      "start": 836.16,
+      "duration": 4.4,
+      "end": 840.56,
+      "text": "will not be more than login so whenever"
+    },
+    {
+      "start": 838.72,
+      "duration": 4.08,
+      "end": 842.8000000000001,
+      "text": "you're finding the height that's that's"
+    },
+    {
+      "start": 840.56,
+      "duration": 4.639,
+      "end": 845.199,
+      "text": "going to take your login and are you"
+    },
+    {
+      "start": 842.8,
+      "duration": 4.719,
+      "end": 847.519,
+      "text": "traversing for all the notes yeah if you"
+    },
+    {
+      "start": 845.199,
+      "duration": 3.921,
+      "end": 849.12,
+      "text": "think if you just uh have a pause and"
+    },
+    {
+      "start": 847.519,
+      "duration": 3.041,
+      "end": 850.5600000000001,
+      "text": "think you're actually never traversing"
+    },
+    {
+      "start": 849.12,
+      "duration": 4.8,
+      "end": 853.92,
+      "text": "for all the notes"
+    },
+    {
+      "start": 850.56,
+      "duration": 5.36,
+      "end": 855.92,
+      "text": "at max you'll travel for login notes not"
+    },
+    {
+      "start": 853.92,
+      "duration": 3.68,
+      "end": 857.5999999999999,
+      "text": "not more than that at max you'll"
+    },
+    {
+      "start": 855.92,
+      "duration": 3.919,
+      "end": 859.8389999999999,
+      "text": "traverse for login notes for an example"
+    },
+    {
+      "start": 857.6,
+      "duration": 4.56,
+      "end": 862.16,
+      "text": "let me give you a tree uh this is the"
+    },
+    {
+      "start": 859.839,
+      "duration": 4.641,
+      "end": 864.48,
+      "text": "tree that i will draw for you"
+    },
+    {
+      "start": 862.16,
+      "duration": 4.56,
+      "end": 866.7199999999999,
+      "text": "like just imagine this is the"
+    },
+    {
+      "start": 864.48,
+      "duration": 5.28,
+      "end": 869.76,
+      "text": "this is uh the"
+    },
+    {
+      "start": 866.72,
+      "duration": 5.119,
+      "end": 871.839,
+      "text": "worst case tree possible"
+    },
+    {
+      "start": 869.76,
+      "duration": 4.0,
+      "end": 873.76,
+      "text": "so what will happen is you'll traverse"
+    },
+    {
+      "start": 871.839,
+      "duration": 3.521,
+      "end": 875.36,
+      "text": "here then you'll traverse here then"
+    },
+    {
+      "start": 873.76,
+      "duration": 3.92,
+      "end": 877.68,
+      "text": "he'll traverse here then he'll traverse"
+    },
+    {
+      "start": 875.36,
+      "duration": 4.24,
+      "end": 879.6,
+      "text": "here right but over here the moment you"
+    },
+    {
+      "start": 877.68,
+      "duration": 3.519,
+      "end": 881.199,
+      "text": "come to this right portion"
+    },
+    {
+      "start": 879.6,
+      "duration": 4.16,
+      "end": 883.76,
+      "text": "you will not traverse beyond this"
+    },
+    {
+      "start": 881.199,
+      "duration": 4.961,
+      "end": 886.16,
+      "text": "because this is a complete subtree so at"
+    },
+    {
+      "start": 883.76,
+      "duration": 4.8,
+      "end": 888.56,
+      "text": "the worst case like at the worst case"
+    },
+    {
+      "start": 886.16,
+      "duration": 4.96,
+      "end": 891.12,
+      "text": "you will end up traversing login time"
+    },
+    {
+      "start": 888.56,
+      "duration": 4.959,
+      "end": 893.5189999999999,
+      "text": "right because the writer guys will be"
+    },
+    {
+      "start": 891.12,
+      "duration": 4.959,
+      "end": 896.079,
+      "text": "complete subtrees and they will be"
+    },
+    {
+      "start": 893.519,
+      "duration": 4.641,
+      "end": 898.16,
+      "text": "falling under this formula"
+    },
+    {
+      "start": 896.079,
+      "duration": 4.88,
+      "end": 900.959,
+      "text": "and you will just be traversing this"
+    },
+    {
+      "start": 898.16,
+      "duration": 4.08,
+      "end": 902.24,
+      "text": "left portion so that's why a login for"
+    },
+    {
+      "start": 900.959,
+      "duration": 3.361,
+      "end": 904.3199999999999,
+      "text": "traversing"
+    },
+    {
+      "start": 902.24,
+      "duration": 3.839,
+      "end": 906.0790000000001,
+      "text": "and since you're finding height so every"
+    },
+    {
+      "start": 904.32,
+      "duration": 3.36,
+      "end": 907.6800000000001,
+      "text": "time you're going right or you're going"
+    },
+    {
+      "start": 906.079,
+      "duration": 3.44,
+      "end": 909.519,
+      "text": "left that's height of the tree that"
+    },
+    {
+      "start": 907.68,
+      "duration": 4.24,
+      "end": 911.92,
+      "text": "you're traversing so that's a login so"
+    },
+    {
+      "start": 909.519,
+      "duration": 4.88,
+      "end": 914.399,
+      "text": "that's why login square is the time"
+    },
+    {
+      "start": 911.92,
+      "duration": 4.56,
+      "end": 916.4799999999999,
+      "text": "complexity what's the space complexity"
+    },
+    {
+      "start": 914.399,
+      "duration": 3.761,
+      "end": 918.16,
+      "text": "again we're not using any external space"
+    },
+    {
+      "start": 916.48,
+      "duration": 4.32,
+      "end": 920.8000000000001,
+      "text": "apart from the recursive space that"
+    },
+    {
+      "start": 918.16,
+      "duration": 5.359,
+      "end": 923.519,
+      "text": "we're using the recursive space can go"
+    },
+    {
+      "start": 920.8,
+      "duration": 4.159,
+      "end": 924.959,
+      "text": "as deep as login because that is the"
+    },
+    {
+      "start": 923.519,
+      "duration": 4.32,
+      "end": 927.839,
+      "text": "height of the tree"
+    },
+    {
+      "start": 924.959,
+      "duration": 5.281,
+      "end": 930.2399999999999,
+      "text": "and we can go up till the last uh last"
+    },
+    {
+      "start": 927.839,
+      "duration": 4.721,
+      "end": 932.5600000000001,
+      "text": "node in order to compute the height so"
+    },
+    {
+      "start": 930.24,
+      "duration": 4.48,
+      "end": 934.72,
+      "text": "the space complexity will be"
+    },
+    {
+      "start": 932.56,
+      "duration": 4.959,
+      "end": 937.5189999999999,
+      "text": "logarithmic off and and the time"
+    },
+    {
+      "start": 934.72,
+      "duration": 5.119,
+      "end": 939.839,
+      "text": "complexity will be log n square instead"
+    },
+    {
+      "start": 937.519,
+      "duration": 3.44,
+      "end": 940.9590000000001,
+      "text": "of the big o of n that we discussed so i"
+    },
+    {
+      "start": 939.839,
+      "duration": 2.881,
+      "end": 942.72,
+      "text": "hope you've understood the entire"
+    },
+    {
+      "start": 940.959,
+      "duration": 3.521,
+      "end": 944.4799999999999,
+      "text": "explanation as well as the code just in"
+    },
+    {
+      "start": 942.72,
+      "duration": 3.359,
+      "end": 946.0790000000001,
+      "text": "case you did please please please make"
+    },
+    {
+      "start": 944.48,
+      "duration": 3.919,
+      "end": 948.399,
+      "text": "sure you like this video because it took"
+    },
+    {
+      "start": 946.079,
+      "duration": 4.32,
+      "end": 950.399,
+      "text": "a lot of efforts to make this entire"
+    },
+    {
+      "start": 948.399,
+      "duration": 3.68,
+      "end": 952.079,
+      "text": "tree series also if you wish you can"
+    },
+    {
+      "start": 950.399,
+      "duration": 3.921,
+      "end": 954.32,
+      "text": "definitely drop in a comment that will"
+    },
+    {
+      "start": 952.079,
+      "duration": 4.241,
+      "end": 956.3199999999999,
+      "text": "keep motivating me to make such further"
+    },
+    {
+      "start": 954.32,
+      "duration": 3.36,
+      "end": 957.6800000000001,
+      "text": "series also if you're new to the channel"
+    },
+    {
+      "start": 956.32,
+      "duration": 3.12,
+      "end": 959.44,
+      "text": "please do consider subscribing because"
+    },
+    {
+      "start": 957.68,
+      "duration": 3.92,
+      "end": 961.5999999999999,
+      "text": "i'm going to bring in such more series"
+    },
+    {
+      "start": 959.44,
+      "duration": 3.44,
+      "end": 962.8800000000001,
+      "text": "in the upcoming future as well with this"
+    },
+    {
+      "start": 961.6,
+      "duration": 2.41,
+      "end": 964.01,
+      "text": "uh let's wrap up this video let's speed"
+    },
+    {
+      "start": 962.88,
+      "duration": 4.19,
+      "end": 967.07,
+      "text": "in the next lecture bye take"
+    },
+    {
+      "start": 964.01,
+      "duration": 3.06,
+      "end": 967.0699999999999,
+      "text": "[Music]"
+    },
+    {
+      "start": 967.279,
+      "duration": 4.68,
+      "end": 971.959,
+      "text": "don't care forget you're golden"
+    }
+  ]
+}

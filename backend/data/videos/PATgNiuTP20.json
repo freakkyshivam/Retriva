@@ -1,0 +1,1790 @@
+{
+  "position": 158,
+  "video_id": "PATgNiuTP20",
+  "title": "G-33. Dijkstra's Algorithm - Using Set - Part 2",
+  "url": "https://www.youtube.com/watch?v=PATgNiuTP20",
+  "transcript": [
+    {
+      "start": 2.879,
+      "duration": 3.121,
+      "end": 6.0,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 4.44,
+      "duration": 3.24,
+      "end": 7.680000000000001,
+      "text": "I hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.0,
+      "duration": 3.78,
+      "end": 9.78,
+      "text": "in the previous video we have learned"
+    },
+    {
+      "start": 7.68,
+      "duration": 4.02,
+      "end": 11.7,
+      "text": "about Baxter's algorithm using practicum"
+    },
+    {
+      "start": 9.78,
+      "duration": 4.68,
+      "end": 14.459999999999999,
+      "text": "if you haven't seen that video please"
+    },
+    {
+      "start": 11.7,
+      "duration": 4.26,
+      "end": 15.959999999999999,
+      "text": "please go back and watch it because you"
+    },
+    {
+      "start": 14.46,
+      "duration": 3.78,
+      "end": 18.240000000000002,
+      "text": "won't understand anything in this video"
+    },
+    {
+      "start": 15.96,
+      "duration": 5.28,
+      "end": 21.240000000000002,
+      "text": "because it's an extension it's just an"
+    },
+    {
+      "start": 18.24,
+      "duration": 4.68,
+      "end": 22.919999999999998,
+      "text": "extension of the previous video okay so"
+    },
+    {
+      "start": 21.24,
+      "duration": 3.66,
+      "end": 24.9,
+      "text": "in the previous video we did uh"
+    },
+    {
+      "start": 22.92,
+      "duration": 3.72,
+      "end": 26.64,
+      "text": "Implement extras algorithm using the"
+    },
+    {
+      "start": 24.9,
+      "duration": 3.9,
+      "end": 28.799999999999997,
+      "text": "priority queue right but in this video"
+    },
+    {
+      "start": 26.64,
+      "duration": 6.0,
+      "end": 32.64,
+      "text": "what I'll do is I'll try to implement"
+    },
+    {
+      "start": 28.8,
+      "duration": 6.96,
+      "end": 35.76,
+      "text": "our dastos algorithm using the set data"
+    },
+    {
+      "start": 32.64,
+      "duration": 6.24,
+      "end": 38.88,
+      "text": "structure so if you remember what did we"
+    },
+    {
+      "start": 35.76,
+      "duration": 5.58,
+      "end": 41.339999999999996,
+      "text": "do in the previous video we just took a"
+    },
+    {
+      "start": 38.88,
+      "duration": 5.16,
+      "end": 44.040000000000006,
+      "text": "priority queue right and we stored"
+    },
+    {
+      "start": 41.34,
+      "duration": 5.219,
+      "end": 46.559000000000005,
+      "text": "everything in terms of distance and node"
+    },
+    {
+      "start": 44.04,
+      "duration": 5.58,
+      "end": 49.62,
+      "text": "why did we take priority queue because"
+    },
+    {
+      "start": 46.559,
+      "duration": 5.101,
+      "end": 51.66,
+      "text": "we always wanted the minimum distance at"
+    },
+    {
+      "start": 49.62,
+      "duration": 4.619,
+      "end": 54.239,
+      "text": "first that is the reason we took"
+    },
+    {
+      "start": 51.66,
+      "duration": 6.18,
+      "end": 57.839999999999996,
+      "text": "priority queue okay now"
+    },
+    {
+      "start": 54.239,
+      "duration": 6.48,
+      "end": 60.718999999999994,
+      "text": "set what is the definition of a set such"
+    },
+    {
+      "start": 57.84,
+      "duration": 6.959,
+      "end": 64.799,
+      "text": "stores unique values"
+    },
+    {
+      "start": 60.719,
+      "duration": 6.601,
+      "end": 67.32000000000001,
+      "text": "and the smallest at the top"
+    },
+    {
+      "start": 64.799,
+      "duration": 5.941,
+      "end": 70.74000000000001,
+      "text": "smallest at the top and then it stores"
+    },
+    {
+      "start": 67.32,
+      "duration": 5.82,
+      "end": 73.13999999999999,
+      "text": "everything in the ascending order if you"
+    },
+    {
+      "start": 70.74,
+      "duration": 5.34,
+      "end": 76.08,
+      "text": "know set data structure it stores"
+    },
+    {
+      "start": 73.14,
+      "duration": 4.86,
+      "end": 78.0,
+      "text": "everything in the ascending order right"
+    },
+    {
+      "start": 76.08,
+      "duration": 4.32,
+      "end": 80.4,
+      "text": "so that is what"
+    },
+    {
+      "start": 78.0,
+      "duration": 4.56,
+      "end": 82.56,
+      "text": "we were doing in practicum as well in"
+    },
+    {
+      "start": 80.4,
+      "duration": 3.359,
+      "end": 83.759,
+      "text": "Prodigy we were looking for the minimum"
+    },
+    {
+      "start": 82.56,
+      "duration": 3.599,
+      "end": 86.159,
+      "text": "distance"
+    },
+    {
+      "start": 83.759,
+      "duration": 4.981,
+      "end": 88.74,
+      "text": "if you take set it's going to do the"
+    },
+    {
+      "start": 86.159,
+      "duration": 4.561,
+      "end": 90.72,
+      "text": "same if you look at the top post element"
+    },
+    {
+      "start": 88.74,
+      "duration": 5.28,
+      "end": 94.02,
+      "text": "it will always be the minimum guy"
+    },
+    {
+      "start": 90.72,
+      "duration": 7.02,
+      "end": 97.74,
+      "text": "because set stores everything in"
+    },
+    {
+      "start": 94.02,
+      "duration": 7.26,
+      "end": 101.28,
+      "text": "ascending fashion however there is one"
+    },
+    {
+      "start": 97.74,
+      "duration": 5.58,
+      "end": 103.32,
+      "text": "other reason why I am going to use this"
+    },
+    {
+      "start": 101.28,
+      "duration": 4.5,
+      "end": 105.78,
+      "text": "particular set data structure and I'll"
+    },
+    {
+      "start": 103.32,
+      "duration": 6.119,
+      "end": 109.439,
+      "text": "explain you well again doing a dry run"
+    },
+    {
+      "start": 105.78,
+      "duration": 6.299,
+      "end": 112.07900000000001,
+      "text": "on the same example okay so we'll take a"
+    },
+    {
+      "start": 109.439,
+      "duration": 5.701,
+      "end": 115.13999999999999,
+      "text": "seam set data structure a distance a"
+    },
+    {
+      "start": 112.079,
+      "duration": 6.381,
+      "end": 118.46,
+      "text": "node a source node and initially as"
+    },
+    {
+      "start": 115.14,
+      "duration": 6.06,
+      "end": 121.2,
+      "text": "usual put 0 and everything else to be"
+    },
+    {
+      "start": 118.46,
+      "duration": 6.88,
+      "end": 125.33999999999999,
+      "text": "infinite that's what I'll start off with"
+    },
+    {
+      "start": 121.2,
+      "duration": 7.38,
+      "end": 128.58,
+      "text": "and I'll just put off distance 0 and the"
+    },
+    {
+      "start": 125.34,
+      "duration": 5.279,
+      "end": 130.619,
+      "text": "source 0 in the set data structure so"
+    },
+    {
+      "start": 128.58,
+      "duration": 6.54,
+      "end": 135.12,
+      "text": "let's take it out and erase it so"
+    },
+    {
+      "start": 130.619,
+      "duration": 7.441,
+      "end": 138.06,
+      "text": "distance 0 with a node 0 okay"
+    },
+    {
+      "start": 135.12,
+      "duration": 4.32,
+      "end": 139.44,
+      "text": "let's quickly uh move it uh to its"
+    },
+    {
+      "start": 138.06,
+      "duration": 3.539,
+      "end": 141.599,
+      "text": "adjacent node so I'll just go quick"
+    },
+    {
+      "start": 139.44,
+      "duration": 3.6,
+      "end": 143.04,
+      "text": "because you already know about it this"
+    },
+    {
+      "start": 141.599,
+      "duration": 3.421,
+      "end": 145.01999999999998,
+      "text": "is going to take plus four so the"
+    },
+    {
+      "start": 143.04,
+      "duration": 4.26,
+      "end": 147.29999999999998,
+      "text": "updated distance will be four I can"
+    },
+    {
+      "start": 145.02,
+      "duration": 4.38,
+      "end": 149.4,
+      "text": "reach at an updated distance of 4."
+    },
+    {
+      "start": 147.3,
+      "duration": 4.26,
+      "end": 151.56,
+      "text": "thereby I'll go and say updated distance"
+    },
+    {
+      "start": 149.4,
+      "duration": 4.68,
+      "end": 154.08,
+      "text": "of 4 and a node one"
+    },
+    {
+      "start": 151.56,
+      "duration": 6.3,
+      "end": 157.86,
+      "text": "in the set data structure I can also"
+    },
+    {
+      "start": 154.08,
+      "duration": 7.26,
+      "end": 161.34,
+      "text": "reach the node to by taking a distance"
+    },
+    {
+      "start": 157.86,
+      "duration": 7.08,
+      "end": 164.94000000000003,
+      "text": "of 4 so another updated distance of 4 so"
+    },
+    {
+      "start": 161.34,
+      "duration": 6.24,
+      "end": 167.58,
+      "text": "4 comma 2 will come here right and this"
+    },
+    {
+      "start": 164.94,
+      "duration": 5.1,
+      "end": 170.04,
+      "text": "is how we can wrap up the first load so"
+    },
+    {
+      "start": 167.58,
+      "duration": 5.22,
+      "end": 172.8,
+      "text": "right at the right after the first"
+    },
+    {
+      "start": 170.04,
+      "duration": 5.82,
+      "end": 175.85999999999999,
+      "text": "iteration 4 comma 1 will appear at the"
+    },
+    {
+      "start": 172.8,
+      "duration": 4.92,
+      "end": 177.72,
+      "text": "top because these two are same so it is"
+    },
+    {
+      "start": 175.86,
+      "duration": 4.2,
+      "end": 180.06,
+      "text": "differentiated by the node number so 4"
+    },
+    {
+      "start": 177.72,
+      "duration": 4.019,
+      "end": 181.739,
+      "text": "comma 1 will tend to appear at the top"
+    },
+    {
+      "start": 180.06,
+      "duration": 3.959,
+      "end": 184.019,
+      "text": "so what I'll do is I'll take the four"
+    },
+    {
+      "start": 181.739,
+      "duration": 5.881,
+      "end": 187.62,
+      "text": "comma 1 this time so the distance is 4"
+    },
+    {
+      "start": 184.019,
+      "duration": 7.321,
+      "end": 191.34,
+      "text": "and the node is one yes the distance is"
+    },
+    {
+      "start": 187.62,
+      "duration": 5.64,
+      "end": 193.26,
+      "text": "4 and the node is one so if I have node"
+    },
+    {
+      "start": 191.34,
+      "duration": 5.039,
+      "end": 196.379,
+      "text": "one if I have node one where can I go"
+    },
+    {
+      "start": 193.26,
+      "duration": 5.94,
+      "end": 199.2,
+      "text": "from one I can go to zero and two so"
+    },
+    {
+      "start": 196.379,
+      "duration": 5.101,
+      "end": 201.48,
+      "text": "I'll try to go to 0 which is node 0"
+    },
+    {
+      "start": 199.2,
+      "duration": 3.959,
+      "end": 203.159,
+      "text": "which will end up taking me four it will"
+    },
+    {
+      "start": 201.48,
+      "duration": 4.08,
+      "end": 205.56,
+      "text": "make the distance 8 which will which"
+    },
+    {
+      "start": 203.159,
+      "duration": 4.561,
+      "end": 207.72,
+      "text": "I'll not consider I'll try to go to node"
+    },
+    {
+      "start": 205.56,
+      "duration": 3.78,
+      "end": 209.34,
+      "text": "2 by taking a distance of 2 which will"
+    },
+    {
+      "start": 207.72,
+      "duration": 4.5,
+      "end": 212.22,
+      "text": "make the distance of 6 which will again"
+    },
+    {
+      "start": 209.34,
+      "duration": 5.22,
+      "end": 214.56,
+      "text": "not be considered so this is done"
+    },
+    {
+      "start": 212.22,
+      "duration": 4.14,
+      "end": 216.35999999999999,
+      "text": "all right I'm going quick because you"
+    },
+    {
+      "start": 214.56,
+      "duration": 5.039,
+      "end": 219.599,
+      "text": "already know this next I'll take four"
+    },
+    {
+      "start": 216.36,
+      "duration": 5.82,
+      "end": 222.18,
+      "text": "two so four node two from node to where"
+    },
+    {
+      "start": 219.599,
+      "duration": 4.56,
+      "end": 224.159,
+      "text": "can you go you can go to node 0 that"
+    },
+    {
+      "start": 222.18,
+      "duration": 4.32,
+      "end": 226.5,
+      "text": "will cost you four which will make it a"
+    },
+    {
+      "start": 224.159,
+      "duration": 5.461,
+      "end": 229.62,
+      "text": "distance of uh eight which will not be"
+    },
+    {
+      "start": 226.5,
+      "duration": 4.92,
+      "end": 231.42,
+      "text": "considered you can go to node uh one as"
+    },
+    {
+      "start": 229.62,
+      "duration": 3.72,
+      "end": 233.34,
+      "text": "well which will take you a distance of 2"
+    },
+    {
+      "start": 231.42,
+      "duration": 3.84,
+      "end": 235.26,
+      "text": "make it six which will not be considered"
+    },
+    {
+      "start": 233.34,
+      "duration": 4.08,
+      "end": 237.42000000000002,
+      "text": "these two things will not be considered"
+    },
+    {
+      "start": 235.26,
+      "duration": 5.399,
+      "end": 240.659,
+      "text": "if you standard two there are other"
+    },
+    {
+      "start": 237.42,
+      "duration": 6.36,
+      "end": 243.78,
+      "text": "things like 3 4 and 5 where you can go"
+    },
+    {
+      "start": 240.659,
+      "duration": 4.561,
+      "end": 245.22,
+      "text": "so let's try to go to node three so if I"
+    },
+    {
+      "start": 243.78,
+      "duration": 3.48,
+      "end": 247.26,
+      "text": "try to go to three"
+    },
+    {
+      "start": 245.22,
+      "duration": 4.2,
+      "end": 249.42,
+      "text": "it'll take me a distance of 3 which will"
+    },
+    {
+      "start": 247.26,
+      "duration": 4.199,
+      "end": 251.459,
+      "text": "make me a distance of 7 that will be"
+    },
+    {
+      "start": 249.42,
+      "duration": 3.66,
+      "end": 253.07999999999998,
+      "text": "considered so 7 comma 3 will be"
+    },
+    {
+      "start": 251.459,
+      "duration": 4.981,
+      "end": 256.44,
+      "text": "considered so you can put that into the"
+    },
+    {
+      "start": 253.08,
+      "duration": 5.52,
+      "end": 258.6,
+      "text": "set data structure right you can so once"
+    },
+    {
+      "start": 256.44,
+      "duration": 4.56,
+      "end": 261.0,
+      "text": "3 is done we will go to the next node"
+    },
+    {
+      "start": 258.6,
+      "duration": 4.14,
+      "end": 262.74,
+      "text": "which is node four and how much will we"
+    },
+    {
+      "start": 261.0,
+      "duration": 4.74,
+      "end": 265.74,
+      "text": "take we'll take one which will make the"
+    },
+    {
+      "start": 262.74,
+      "duration": 5.04,
+      "end": 267.78000000000003,
+      "text": "distance is 5 so 5 comma 4 is now the"
+    },
+    {
+      "start": 265.74,
+      "duration": 3.959,
+      "end": 269.699,
+      "text": "shortest one it will go at the top I'll"
+    },
+    {
+      "start": 267.78,
+      "duration": 4.56,
+      "end": 272.34,
+      "text": "update the distance here which is the"
+    },
+    {
+      "start": 269.699,
+      "duration": 4.201,
+      "end": 273.90000000000003,
+      "text": "next node the next node is five it'll"
+    },
+    {
+      "start": 272.34,
+      "duration": 5.7,
+      "end": 278.03999999999996,
+      "text": "take a distance of 6 which will make it"
+    },
+    {
+      "start": 273.9,
+      "duration": 6.06,
+      "end": 279.96,
+      "text": "a 10 so 10 comma 5 is what goes into the"
+    },
+    {
+      "start": 278.04,
+      "duration": 4.379,
+      "end": 282.41900000000004,
+      "text": "set and we'll update n over here so I"
+    },
+    {
+      "start": 279.96,
+      "duration": 6.0,
+      "end": 285.96,
+      "text": "can say this iteration is over so we can"
+    },
+    {
+      "start": 282.419,
+      "duration": 7.261,
+      "end": 289.68,
+      "text": "just go and omit this portion of okay"
+    },
+    {
+      "start": 285.96,
+      "duration": 5.34,
+      "end": 291.29999999999995,
+      "text": "done now that's why you understand let's"
+    },
+    {
+      "start": 289.68,
+      "duration": 4.38,
+      "end": 294.06,
+      "text": "go on the set and get the smallest one"
+    },
+    {
+      "start": 291.3,
+      "duration": 6.0,
+      "end": 297.3,
+      "text": "which is 5 comma 4 distance of 5 which"
+    },
+    {
+      "start": 294.06,
+      "duration": 5.28,
+      "end": 299.34,
+      "text": "is the node four okay where can 4 go 4"
+    },
+    {
+      "start": 297.3,
+      "duration": 4.02,
+      "end": 301.32,
+      "text": "can go to 2 if you carefully see in the"
+    },
+    {
+      "start": 299.34,
+      "duration": 3.96,
+      "end": 303.29999999999995,
+      "text": "graph which will take it a distance of"
+    },
+    {
+      "start": 301.32,
+      "duration": 3.9,
+      "end": 305.21999999999997,
+      "text": "one which will make it a six which is"
+    },
+    {
+      "start": 303.3,
+      "duration": 4.679,
+      "end": 307.979,
+      "text": "not to be considered but"
+    },
+    {
+      "start": 305.22,
+      "duration": 4.56,
+      "end": 309.78000000000003,
+      "text": "from 4 you can go to 5 which is going to"
+    },
+    {
+      "start": 307.979,
+      "duration": 4.44,
+      "end": 312.419,
+      "text": "take 3"
+    },
+    {
+      "start": 309.78,
+      "duration": 5.58,
+      "end": 315.35999999999996,
+      "text": "plus 3 is what it will take to go to 5"
+    },
+    {
+      "start": 312.419,
+      "duration": 4.081,
+      "end": 316.5,
+      "text": "which will make it 8 and this is where"
+    },
+    {
+      "start": 315.36,
+      "duration": 4.559,
+      "end": 319.91900000000004,
+      "text": "you see"
+    },
+    {
+      "start": 316.5,
+      "duration": 6.78,
+      "end": 323.28,
+      "text": "previously Pi was reachable at 10 not in"
+    },
+    {
+      "start": 319.919,
+      "duration": 6.84,
+      "end": 326.75899999999996,
+      "text": "infinite if it would have been infinite"
+    },
+    {
+      "start": 323.28,
+      "duration": 6.24,
+      "end": 329.52,
+      "text": "please hear my words properly if it"
+    },
+    {
+      "start": 326.759,
+      "duration": 5.641,
+      "end": 332.40000000000003,
+      "text": "would have been infinite it means no one"
+    },
+    {
+      "start": 329.52,
+      "duration": 6.42,
+      "end": 335.94,
+      "text": "reached it ever but since it is 10 it"
+    },
+    {
+      "start": 332.4,
+      "duration": 7.26,
+      "end": 339.65999999999997,
+      "text": "means someone reached and someone"
+    },
+    {
+      "start": 335.94,
+      "duration": 6.42,
+      "end": 342.36,
+      "text": "reached 10 previously please hear me out"
+    },
+    {
+      "start": 339.66,
+      "duration": 5.16,
+      "end": 344.82000000000005,
+      "text": "properly at five we do not have an"
+    },
+    {
+      "start": 342.36,
+      "duration": 4.92,
+      "end": 347.28000000000003,
+      "text": "infinite we have a 10. had it been"
+    },
+    {
+      "start": 344.82,
+      "duration": 5.7,
+      "end": 350.52,
+      "text": "Infinity it means the first time someone"
+    },
+    {
+      "start": 347.28,
+      "duration": 6.84,
+      "end": 354.11999999999995,
+      "text": "is reaching 5 but since it is 10 it"
+    },
+    {
+      "start": 350.52,
+      "duration": 7.22,
+      "end": 357.74,
+      "text": "means someone has reached five which"
+    },
+    {
+      "start": 354.12,
+      "duration": 7.079,
+      "end": 361.199,
+      "text": "took him a distance of 10 so I'm sure"
+    },
+    {
+      "start": 357.74,
+      "duration": 5.38,
+      "end": 363.12,
+      "text": "there would be a 10 comma 5 in the set"
+    },
+    {
+      "start": 361.199,
+      "duration": 5.101,
+      "end": 366.3,
+      "text": "I'm sure there would be a ten comma five"
+    },
+    {
+      "start": 363.12,
+      "duration": 5.579,
+      "end": 368.699,
+      "text": "in the set because someone reached 5 at"
+    },
+    {
+      "start": 366.3,
+      "duration": 4.92,
+      "end": 371.22,
+      "text": "a distance of 10. I'm sure right so if"
+    },
+    {
+      "start": 368.699,
+      "duration": 4.201,
+      "end": 372.90000000000003,
+      "text": "I'm sure I'm getting a better one and"
+    },
+    {
+      "start": 371.22,
+      "duration": 4.38,
+      "end": 375.6,
+      "text": "I'm putting that into the set data"
+    },
+    {
+      "start": 372.9,
+      "duration": 4.2,
+      "end": 377.09999999999997,
+      "text": "structure something like an 8 comma 5"
+    },
+    {
+      "start": 375.6,
+      "duration": 3.36,
+      "end": 378.96000000000004,
+      "text": "will go here"
+    },
+    {
+      "start": 377.1,
+      "duration": 3.96,
+      "end": 381.06,
+      "text": "like if I go and erase"
+    },
+    {
+      "start": 378.96,
+      "duration": 3.78,
+      "end": 382.73999999999995,
+      "text": "this portion something like an eight"
+    },
+    {
+      "start": 381.06,
+      "duration": 4.74,
+      "end": 385.8,
+      "text": "comma 5 will go here"
+    },
+    {
+      "start": 382.74,
+      "duration": 6.54,
+      "end": 389.28000000000003,
+      "text": "now if an eight comma five goes is there"
+    },
+    {
+      "start": 385.8,
+      "duration": 6.179,
+      "end": 391.979,
+      "text": "a point in keeping 10 comma five no this"
+    },
+    {
+      "start": 389.28,
+      "duration": 4.62,
+      "end": 393.9,
+      "text": "is where you say I know the set will"
+    },
+    {
+      "start": 391.979,
+      "duration": 4.681,
+      "end": 396.65999999999997,
+      "text": "have a 10 comma five"
+    },
+    {
+      "start": 393.9,
+      "duration": 4.799,
+      "end": 398.69899999999996,
+      "text": "set please erase it Priority queue"
+    },
+    {
+      "start": 396.66,
+      "duration": 5.039,
+      "end": 401.699,
+      "text": "cannot erase that you will do the"
+    },
+    {
+      "start": 398.699,
+      "duration": 5.821,
+      "end": 404.52000000000004,
+      "text": "iteration but set will say I have a"
+    },
+    {
+      "start": 401.699,
+      "duration": 5.22,
+      "end": 406.91900000000004,
+      "text": "liberty I can do this erase operation"
+    },
+    {
+      "start": 404.52,
+      "duration": 4.26,
+      "end": 408.78,
+      "text": "I'll go and erase it the moment I see"
+    },
+    {
+      "start": 406.919,
+      "duration": 3.9,
+      "end": 410.81899999999996,
+      "text": "there's a better alternative I'll"
+    },
+    {
+      "start": 408.78,
+      "duration": 3.96,
+      "end": 412.73999999999995,
+      "text": "definitely put in eight comma five but"
+    },
+    {
+      "start": 410.819,
+      "duration": 4.741,
+      "end": 415.56,
+      "text": "before putting in I'll say there's no"
+    },
+    {
+      "start": 412.74,
+      "duration": 4.62,
+      "end": 417.36,
+      "text": "need of 10 comma 5 I can reach 5 in a"
+    },
+    {
+      "start": 415.56,
+      "duration": 3.54,
+      "end": 419.1,
+      "text": "much much better distance and if I can"
+    },
+    {
+      "start": 417.36,
+      "duration": 4.26,
+      "end": 421.62,
+      "text": "reach 5 in a much much better distance"
+    },
+    {
+      "start": 419.1,
+      "duration": 4.5,
+      "end": 423.6,
+      "text": "why don't I use that better distance why"
+    },
+    {
+      "start": 421.62,
+      "duration": 4.919,
+      "end": 426.539,
+      "text": "will I end up using 10 I don't need"
+    },
+    {
+      "start": 423.6,
+      "duration": 5.099,
+      "end": 428.699,
+      "text": "extra iterations I don't want I don't"
+    },
+    {
+      "start": 426.539,
+      "duration": 3.301,
+      "end": 429.84,
+      "text": "want in the future that uh this happens"
+    },
+    {
+      "start": 428.699,
+      "duration": 2.581,
+      "end": 431.28000000000003,
+      "text": "like"
+    },
+    {
+      "start": 429.84,
+      "duration": 3.54,
+      "end": 433.38,
+      "text": "instrument I don't know in the future"
+    },
+    {
+      "start": 431.28,
+      "duration": 5.46,
+      "end": 436.73999999999995,
+      "text": "that I in The Next Step probably I'll"
+    },
+    {
+      "start": 433.38,
+      "duration": 5.879,
+      "end": 439.259,
+      "text": "get eight and I'll do for five and then"
+    },
+    {
+      "start": 436.74,
+      "duration": 5.519,
+      "end": 442.259,
+      "text": "again I'll take five and do with ten"
+    },
+    {
+      "start": 439.259,
+      "duration": 5.461,
+      "end": 444.72,
+      "text": "that won't be of any use because if a"
+    },
+    {
+      "start": 442.259,
+      "duration": 4.5,
+      "end": 446.759,
+      "text": "was taken prior to 10 it would have"
+    },
+    {
+      "start": 444.72,
+      "duration": 4.319,
+      "end": 449.03900000000004,
+      "text": "given me the shortest distance there's"
+    },
+    {
+      "start": 446.759,
+      "duration": 5.88,
+      "end": 452.639,
+      "text": "no point in taking 10 this is why I'll"
+    },
+    {
+      "start": 449.039,
+      "duration": 6.421,
+      "end": 455.46,
+      "text": "use set I'll use set to erase very"
+    },
+    {
+      "start": 452.639,
+      "duration": 6.62,
+      "end": 459.259,
+      "text": "important I'll use to it is"
+    },
+    {
+      "start": 455.46,
+      "duration": 7.2,
+      "end": 462.65999999999997,
+      "text": "already existing paths already"
+    },
+    {
+      "start": 459.259,
+      "duration": 6.701,
+      "end": 465.96000000000004,
+      "text": "existing paths does it uh improve the"
+    },
+    {
+      "start": 462.66,
+      "duration": 6.96,
+      "end": 469.62,
+      "text": "time complexity very very minorly not"
+    },
+    {
+      "start": 465.96,
+      "duration": 6.72,
+      "end": 472.68,
+      "text": "much very very like depends on the"
+    },
+    {
+      "start": 469.62,
+      "duration": 5.699,
+      "end": 475.319,
+      "text": "graphs but it's better that you use set"
+    },
+    {
+      "start": 472.68,
+      "duration": 5.04,
+      "end": 477.72,
+      "text": "because even set will go as uh even if"
+    },
+    {
+      "start": 475.319,
+      "duration": 4.801,
+      "end": 480.12,
+      "text": "you do an erase set dot erase is a"
+    },
+    {
+      "start": 477.72,
+      "duration": 6.0,
+      "end": 483.72,
+      "text": "logarithmic operation so"
+    },
+    {
+      "start": 480.12,
+      "duration": 5.76,
+      "end": 485.88,
+      "text": "now can I see that if I use set it will"
+    },
+    {
+      "start": 483.72,
+      "duration": 6.24,
+      "end": 489.96000000000004,
+      "text": "be a better complexity than practical no"
+    },
+    {
+      "start": 485.88,
+      "duration": 6.06,
+      "end": 491.94,
+      "text": "right because set.in is ends up taking a"
+    },
+    {
+      "start": 489.96,
+      "duration": 4.98,
+      "end": 494.94,
+      "text": "logarithmic time so"
+    },
+    {
+      "start": 491.94,
+      "duration": 4.44,
+      "end": 496.38,
+      "text": "you are probably saving up on iterations"
+    },
+    {
+      "start": 494.94,
+      "duration": 3.84,
+      "end": 498.78,
+      "text": "in the future"
+    },
+    {
+      "start": 496.38,
+      "duration": 3.3,
+      "end": 499.68,
+      "text": "which might not be but you are erasing"
+    },
+    {
+      "start": 498.78,
+      "duration": 2.52,
+      "end": 501.29999999999995,
+      "text": "it"
+    },
+    {
+      "start": 499.68,
+      "duration": 3.54,
+      "end": 503.22,
+      "text": "so"
+    },
+    {
+      "start": 501.3,
+      "duration": 4.56,
+      "end": 505.86,
+      "text": "it is takes login"
+    },
+    {
+      "start": 503.22,
+      "duration": 4.8,
+      "end": 508.02000000000004,
+      "text": "so you are investing a login and in the"
+    },
+    {
+      "start": 505.86,
+      "duration": 4.559,
+      "end": 510.41900000000004,
+      "text": "future you are saving some iteration so"
+    },
+    {
+      "start": 508.02,
+      "duration": 3.899,
+      "end": 511.919,
+      "text": "depending on the size of the graph a lot"
+    },
+    {
+      "start": 510.419,
+      "duration": 4.141,
+      "end": 514.56,
+      "text": "of things will depend so you cannot"
+    },
+    {
+      "start": 511.919,
+      "duration": 4.021,
+      "end": 515.9399999999999,
+      "text": "express at least tell me that set is"
+    },
+    {
+      "start": 514.56,
+      "duration": 3.839,
+      "end": 518.399,
+      "text": "better than practical or practical is"
+    },
+    {
+      "start": 515.94,
+      "duration": 5.099,
+      "end": 521.0390000000001,
+      "text": "better than set both of them can be used"
+    },
+    {
+      "start": 518.399,
+      "duration": 4.56,
+      "end": 522.959,
+      "text": "because it'll be hardly a minor"
+    },
+    {
+      "start": 521.039,
+      "duration": 3.18,
+      "end": 524.2189999999999,
+      "text": "difference this is how you tell to the"
+    },
+    {
+      "start": 522.959,
+      "duration": 3.721,
+      "end": 526.68,
+      "text": "interviewer that these are the cases"
+    },
+    {
+      "start": 524.219,
+      "duration": 4.381,
+      "end": 528.6,
+      "text": "where I can use these are the cases I"
+    },
+    {
+      "start": 526.68,
+      "duration": 4.8,
+      "end": 531.4799999999999,
+      "text": "cannot use if you tell the interview"
+    },
+    {
+      "start": 528.6,
+      "duration": 5.64,
+      "end": 534.24,
+      "text": "with such concept Clarity that you know"
+    },
+    {
+      "start": 531.48,
+      "duration": 5.22,
+      "end": 536.7,
+      "text": "like almost every bits and pieces you"
+    },
+    {
+      "start": 534.24,
+      "duration": 5.4,
+      "end": 539.64,
+      "text": "will be impressed and telling you learn"
+    },
+    {
+      "start": 536.7,
+      "duration": 4.139,
+      "end": 540.839,
+      "text": "from take you forward uh cool uh I hope"
+    },
+    {
+      "start": 539.64,
+      "duration": 2.699,
+      "end": 542.3389999999999,
+      "text": "you have understood the algorithmic"
+    },
+    {
+      "start": 540.839,
+      "duration": 4.021,
+      "end": 544.86,
+      "text": "implementation now it's time to code it"
+    },
+    {
+      "start": 542.339,
+      "duration": 5.761,
+      "end": 548.1,
+      "text": "up I'll be coding the C plus plus on the"
+    },
+    {
+      "start": 544.86,
+      "duration": 4.2,
+      "end": 549.0600000000001,
+      "text": "right and the exact similar Java code is"
+    },
+    {
+      "start": 548.1,
+      "duration": 4.02,
+      "end": 552.12,
+      "text": "on the left"
+    },
+    {
+      "start": 549.06,
+      "duration": 5.1,
+      "end": 554.16,
+      "text": "so we are given uh the vertex uh the"
+    },
+    {
+      "start": 552.12,
+      "duration": 4.26,
+      "end": 556.38,
+      "text": "adjacency list and the source so set of"
+    },
+    {
+      "start": 554.16,
+      "duration": 4.5,
+      "end": 558.66,
+      "text": "pair go and declare a set of pair"
+    },
+    {
+      "start": 556.38,
+      "duration": 4.62,
+      "end": 561.0,
+      "text": "because it's going to store set of pairs"
+    },
+    {
+      "start": 558.66,
+      "duration": 5.22,
+      "end": 563.88,
+      "text": "and please make sure you declare a"
+    },
+    {
+      "start": 561.0,
+      "duration": 5.64,
+      "end": 566.64,
+      "text": "distance array of b v comma and infinity"
+    },
+    {
+      "start": 563.88,
+      "duration": 5.519,
+      "end": 569.399,
+      "text": "which is 189 in our case perfect"
+    },
+    {
+      "start": 566.64,
+      "duration": 7.56,
+      "end": 574.1999999999999,
+      "text": "initial configuration set always stores"
+    },
+    {
+      "start": 569.399,
+      "duration": 9.181,
+      "end": 578.58,
+      "text": "what zero commas yes and distance of"
+    },
+    {
+      "start": 574.2,
+      "duration": 6.48,
+      "end": 580.6800000000001,
+      "text": "s equal to 0. same thing while just keep"
+    },
+    {
+      "start": 578.58,
+      "duration": 4.86,
+      "end": 583.44,
+      "text": "on hydrating in the set it's exact"
+    },
+    {
+      "start": 580.68,
+      "duration": 5.779,
+      "end": 586.459,
+      "text": "similar yes it's the exact similar to"
+    },
+    {
+      "start": 583.44,
+      "duration": 6.0,
+      "end": 589.44,
+      "text": "this thing and now you say Auto ID and"
+    },
+    {
+      "start": 586.459,
+      "duration": 5.201,
+      "end": 591.66,
+      "text": "just point like if you do an eye Tweeter"
+    },
+    {
+      "start": 589.44,
+      "duration": 4.26,
+      "end": 593.7,
+      "text": "this iterator points to the beginner set"
+    },
+    {
+      "start": 591.66,
+      "duration": 5.34,
+      "end": 597.0,
+      "text": "and if you do a star you get the value"
+    },
+    {
+      "start": 593.7,
+      "duration": 5.699,
+      "end": 599.399,
+      "text": "at that address so St dot begin will be"
+    },
+    {
+      "start": 597.0,
+      "duration": 5.76,
+      "end": 602.76,
+      "text": "an iterator pointing to the address"
+    },
+    {
+      "start": 599.399,
+      "duration": 5.221,
+      "end": 604.62,
+      "text": "where the sets first element is and the"
+    },
+    {
+      "start": 602.76,
+      "duration": 4.92,
+      "end": 607.68,
+      "text": "star will give you the value so I can"
+    },
+    {
+      "start": 604.62,
+      "duration": 4.26,
+      "end": 608.88,
+      "text": "say the node is nothing but ID dot"
+    },
+    {
+      "start": 607.68,
+      "duration": 4.44,
+      "end": 612.12,
+      "text": "second"
+    },
+    {
+      "start": 608.88,
+      "duration": 6.54,
+      "end": 615.42,
+      "text": "and I can say the distance is ID not"
+    },
+    {
+      "start": 612.12,
+      "duration": 5.1,
+      "end": 617.22,
+      "text": "first cool another thing I can say now"
+    },
+    {
+      "start": 615.42,
+      "duration": 4.14,
+      "end": 619.56,
+      "text": "you need to remove it from the set as"
+    },
+    {
+      "start": 617.22,
+      "duration": 4.38,
+      "end": 621.6,
+      "text": "well that's the thing please make sure"
+    },
+    {
+      "start": 619.56,
+      "duration": 5.1,
+      "end": 624.66,
+      "text": "you just call the remove function that's"
+    },
+    {
+      "start": 621.6,
+      "duration": 5.76,
+      "end": 627.36,
+      "text": "it is after this you go across and"
+    },
+    {
+      "start": 624.66,
+      "duration": 4.679,
+      "end": 629.3389999999999,
+      "text": "travel in the set simple same thing that"
+    },
+    {
+      "start": 627.36,
+      "duration": 4.56,
+      "end": 631.92,
+      "text": "you did in Practical and you say okay"
+    },
+    {
+      "start": 629.339,
+      "duration": 5.101,
+      "end": 634.44,
+      "text": "this is my adjacency you know ID of 0"
+    },
+    {
+      "start": 631.92,
+      "duration": 5.34,
+      "end": 637.26,
+      "text": "because it's a list that is given to you"
+    },
+    {
+      "start": 634.44,
+      "duration": 5.519,
+      "end": 639.9590000000001,
+      "text": "right and what do you do for Edge weight"
+    },
+    {
+      "start": 637.26,
+      "duration": 5.4,
+      "end": 642.66,
+      "text": "very simple you say Edge weight will be"
+    },
+    {
+      "start": 639.959,
+      "duration": 6.12,
+      "end": 646.079,
+      "text": "nothing but idea one"
+    },
+    {
+      "start": 642.66,
+      "duration": 5.58,
+      "end": 648.24,
+      "text": "simple next you say okay currently I've"
+    },
+    {
+      "start": 646.079,
+      "duration": 4.561,
+      "end": 650.64,
+      "text": "taken distance to reach this node I'll"
+    },
+    {
+      "start": 648.24,
+      "duration": 5.599,
+      "end": 653.839,
+      "text": "take another Edge weight to reach"
+    },
+    {
+      "start": 650.64,
+      "duration": 6.18,
+      "end": 656.8199999999999,
+      "text": "adjacent node if this is smaller than"
+    },
+    {
+      "start": 653.839,
+      "duration": 4.721,
+      "end": 658.5600000000001,
+      "text": "adjacent node that means I can update it"
+    },
+    {
+      "start": 656.82,
+      "duration": 4.139,
+      "end": 660.9590000000001,
+      "text": "but before that tweet"
+    },
+    {
+      "start": 658.56,
+      "duration": 6.779,
+      "end": 665.3389999999999,
+      "text": "we need to release if"
+    },
+    {
+      "start": 660.959,
+      "duration": 7.62,
+      "end": 668.579,
+      "text": "it existed which means if distance of"
+    },
+    {
+      "start": 665.339,
+      "duration": 4.081,
+      "end": 669.4200000000001,
+      "text": "adjacent node is not equal to one E9 it"
+    },
+    {
+      "start": 668.579,
+      "duration": 3.721,
+      "end": 672.3,
+      "text": "means"
+    },
+    {
+      "start": 669.42,
+      "duration": 5.34,
+      "end": 674.76,
+      "text": "someone reached someone reached and if"
+    },
+    {
+      "start": 672.3,
+      "duration": 4.76,
+      "end": 677.06,
+      "text": "someone reached can I go across and"
+    },
+    {
+      "start": 674.76,
+      "duration": 5.639,
+      "end": 680.399,
+      "text": "probably say set dot it is"
+    },
+    {
+      "start": 677.06,
+      "duration": 5.74,
+      "end": 682.8,
+      "text": "what that someone would have taken"
+    },
+    {
+      "start": 680.399,
+      "duration": 4.5,
+      "end": 684.899,
+      "text": "distance of adjacency no an adjacency"
+    },
+    {
+      "start": 682.8,
+      "duration": 5.039,
+      "end": 687.8389999999999,
+      "text": "note in the set erase once you've"
+    },
+    {
+      "start": 684.899,
+      "duration": 5.461,
+      "end": 690.36,
+      "text": "released you just go ahead and says the"
+    },
+    {
+      "start": 687.839,
+      "duration": 4.201,
+      "end": 692.0400000000001,
+      "text": "new distance is this I care about this"
+    },
+    {
+      "start": 690.36,
+      "duration": 4.44,
+      "end": 694.8000000000001,
+      "text": "now"
+    },
+    {
+      "start": 692.04,
+      "duration": 5.7,
+      "end": 697.74,
+      "text": "and the same thing I can go and tell to"
+    },
+    {
+      "start": 694.8,
+      "duration": 7.38,
+      "end": 702.18,
+      "text": "the set this is the new distance please"
+    },
+    {
+      "start": 697.74,
+      "duration": 7.44,
+      "end": 705.1800000000001,
+      "text": "insert that into yourself cooler and"
+    },
+    {
+      "start": 702.18,
+      "duration": 4.98,
+      "end": 707.16,
+      "text": "adjacency no once you've done this the"
+    },
+    {
+      "start": 705.18,
+      "duration": 3.779,
+      "end": 708.959,
+      "text": "same thing just go across and say return"
+    },
+    {
+      "start": 707.16,
+      "duration": 4.14,
+      "end": 711.3,
+      "text": "of distance"
+    },
+    {
+      "start": 708.959,
+      "duration": 5.461,
+      "end": 714.42,
+      "text": "so on submitting we see that all the"
+    },
+    {
+      "start": 711.3,
+      "duration": 4.74,
+      "end": 716.04,
+      "text": "test cases are running fine so so guys I"
+    },
+    {
+      "start": 714.42,
+      "duration": 4.02,
+      "end": 718.4399999999999,
+      "text": "hope you have understood this uh just in"
+    },
+    {
+      "start": 716.04,
+      "duration": 4.38,
+      "end": 720.42,
+      "text": "case your interviewer does ask you how"
+    },
+    {
+      "start": 718.44,
+      "duration": 4.5,
+      "end": 722.94,
+      "text": "do you have so much of clarity tell him"
+    },
+    {
+      "start": 720.42,
+      "duration": 3.72,
+      "end": 724.14,
+      "text": "that you read from uh striver and yeah"
+    },
+    {
+      "start": 722.94,
+      "duration": 3.12,
+      "end": 726.0600000000001,
+      "text": "just in case you understood everything"
+    },
+    {
+      "start": 724.14,
+      "duration": 3.3,
+      "end": 727.4399999999999,
+      "text": "please please please make sure you like"
+    },
+    {
+      "start": 726.06,
+      "duration": 3.18,
+      "end": 729.2399999999999,
+      "text": "this video and if you're new to our"
+    },
+    {
+      "start": 727.44,
+      "duration": 3.48,
+      "end": 730.9200000000001,
+      "text": "Channel what are you waiting for hit"
+    },
+    {
+      "start": 729.24,
+      "duration": 3.0,
+      "end": 732.24,
+      "text": "that subscribe button right away and if"
+    },
+    {
+      "start": 730.92,
+      "duration": 3.659,
+      "end": 734.579,
+      "text": "you haven't checked out our DP series"
+    },
+    {
+      "start": 732.24,
+      "duration": 3.539,
+      "end": 735.779,
+      "text": "and the SGC the links are in the"
+    },
+    {
+      "start": 734.579,
+      "duration": 2.581,
+      "end": 737.16,
+      "text": "description make sure you check them out"
+    },
+    {
+      "start": 735.779,
+      "duration": 2.881,
+      "end": 738.66,
+      "text": "with this I'll be wrapping up this video"
+    },
+    {
+      "start": 737.16,
+      "duration": 3.2,
+      "end": 740.36,
+      "text": "let's put in some other video till then"
+    },
+    {
+      "start": 738.66,
+      "duration": 5.82,
+      "end": 744.48,
+      "text": "bye bye take care"
+    },
+    {
+      "start": 740.36,
+      "duration": 8.46,
+      "end": 748.82,
+      "text": "whenever your heart is broken don't ever"
+    },
+    {
+      "start": 744.48,
+      "duration": 4.34,
+      "end": 748.82,
+      "text": "forget you're golden I"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "video_id": "hnswaLJvr6g",
+  "position": 44,
+  "title": "Maximum Product Subarray - Best Intuitive Approach Discussed",
+  "url": "https://www.youtube.com/watch?v=hnswaLJvr6g",
+  "chunk_count": 11,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "hnswaLJvr6g",
+      "position": 44,
+      "title": "Maximum Product Subarray - Best Intuitive Approach Discussed",
+      "url": "https://www.youtube.com/watch?v=hnswaLJvr6g",
+      "start": 2.94,
+      "end": 106.439,
+      "text": "hey everyone go back to the channel I hope you guys are doing extremely well so we will be continuing with this drivers A to Z DS equals just in case you're for the first time here there's a link in the description please please do make sure that you check it out because it is highly beneficial for you so till now I have covered up till this particular problem and this video I'll be covering up the last problem of the arrays playlist so just a quick update I've made a Strivers DSA playlist separately and over here we will be adding all the series and if you go over there it's classified into much compact sections and you get the Articles you get the practice link you get the video Solutions everything and if you go over here we will also be updating the format of the Articles very very soon like in a couple of weeks we'll be updating the entire format of the article you'll be able to read the articles in a much much better way so in the article uh you will be getting all the approaches C plus plus Java and python code will be added so everything is present in the article so please please do consider checking out this because void forward you will find all the plainest all the DSA playlist under this section and you can practice them easily at a place so I think that's a lot of promotion now let's quickly get back and get started with the video so what does the problem State the problem states that you will be given an array and the array will be containing integers and your task is to find me out the maximum product sub array now what is the definition of a sub array the definition of a sabare is any contiguous part of the array any contiguous for an example this is a sub array for example this is a sub array for example this single element is also",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "hnswaLJvr6g",
+      "position": 44,
+      "title": "Maximum Product Subarray - Best Intuitive Approach Discussed",
+      "url": "https://www.youtube.com/watch?v=hnswaLJvr6g",
+      "start": 100.439,
+      "end": 217.739,
+      "text": "for example this single element is also a sub array also the entire array can also be called as a sub array something that you cannot say as a sub array is maybe if you pick up 2 and minus 2 this is not a sub array this is a subsequence so your task is to tell me which sub array gives me the maximum product so if you take this particular example so in this particular example if I pick up 2 and 3 the product will be 6 and this is the maximum product that you can get of all the sub arrays so if this problem comes up in an interview what is the first solution that you should be telling to the interviewer that is definitely the Brute Force whenever the problem has sub array what is the Brute Force The Brute Force is generate all the subares and I've already done that in so many problems how do you generate all the sub arrays you know the first sub array is this the second is this the third is this the fourth is this and then it's three three two and then this then it's this and then this so basically we stand at a point and we expand and we expand and we expand so what I can do is I can say okay for I equal to 0 I lesser than n i plus plus so what will happen is I will be first standing here then I will be standing here then I will be standing here then I will be standing here so whenever I stands here what's the first sabari it's just two so maybe J can start with whenever I is so let's quickly start off J right from I and go ahead uh Del n perfect so if I is here J is here what is the sub array it's from I to J is the sub array the next moment I will be here J will go here sits from I to J the next",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "hnswaLJvr6g",
+      "position": 44,
+      "title": "Maximum Product Subarray - Best Intuitive Approach Discussed",
+      "url": "https://www.youtube.com/watch?v=hnswaLJvr6g",
+      "start": 213.18,
+      "end": 318.84,
+      "text": "will go here sits from I to J the next moment I will be here J will be here so it will be from here to here the next moment I will be here J will be here sits from here to here after that I will increase and I will be here so this is the next sub array next sub array will be this and then the next sub array will be this so the sub array is from I to J we know that version so maybe we can run another loop which goes from I to J so there will be three Loops so if you run three Loops it will always give you all these sub arrays this is the standard procedure what am I looking for product in a sub array how do I get the product let's see I am going from I to J that is the Safari maybe I can keep a product as one and every time I'm going I can do product equal to product into array of okay perfect array of K and this will give me the entire product from I to J that is the sub array once I've got the product I need the maximum maybe I can store maximum as end mean and over here I can say maximum equal to Max of Maximum whatever current product this is generating this will be my extreme naive Force which is generating all the sub arrays if I ask you the time complexity can I say it's like n it's near about n it is already near about 10 so there are three Loops which are running like three nested Loops so thereby the time complexity is not exactly in q but it is near about NQ what about the space complexity it is somewhere big go off one obviously the interview will not be happy with the N Cube and will ask you to optimize it so the moment someone is asking you to optimize n Cube you move",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "hnswaLJvr6g",
+      "position": 44,
+      "title": "Maximum Product Subarray - Best Intuitive Approach Discussed",
+      "url": "https://www.youtube.com/watch?v=hnswaLJvr6g",
+      "start": 314.4,
+      "end": 430.31899999999996,
+      "text": "asking you to optimize n Cube you move towards n square right you try to think of something related to n Square can I think of n Square I can if you have seen my previous videos I think you can think why let's analyze for the first time the sub array was just two for the next time J moved and the summary is 2 3. for the next time G moved and the sub array is 2 3 minus two for the next time J moved the sabbar is 2 3 minus two four what's happening over here the product will be two over here the product will be 6 which is basically a multiplication of three which is basically a multiplication of three over here the product will be 6 into minus 2 that's minus 12 and over here the product will be minus 12 into 4 which is minus 48 so basically every time you multiply a new number so do you actually need to run through the entire sub array you don't need to if you can just store a product variable as one and every time you get the new value because only the new value is added as J is moving only the new value is added in the new sub array so the new product can easily be found out and you can say maximum equal to Max of Maximum comma product so this can be trimmed out so if I trim it down can I say the complexity has been trimmed down to n square right now over here again you are doing n Square so the interview will not be happy it will ask you to optimize n Square as well uh if I'm asking you to optimize n Square where do we move we move towards we go of it so let's try to think of a solution which is near about big whole thing so this problem has two optimal approaches one of them is purely observation based and this is the one",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "hnswaLJvr6g",
+      "position": 44,
+      "title": "Maximum Product Subarray - Best Intuitive Approach Discussed",
+      "url": "https://www.youtube.com/watch?v=hnswaLJvr6g",
+      "start": 425.34,
+      "end": 546.9590000000001,
+      "text": "observation based and this is the one you should tell in the interview why because this is the most intuitive solution to this particular problem and you'll be easily able to explain your thought process and the other one will be using the modification of Cadance algorithm again this method you should never tell in the interview never ever because this is not that intuitive it is not that initiative you can go over a lot of YouTube videos people will just write the formulas do a driven and they'll say yeah it's working but this one is not intuitive so I will not be teaching this because I also feel like it's a lot of like cramming algorithm instead of going for this go for the observation Beast because it is the same time complexity and the intuition is much much visible so please please in the interviewer do not go for this rather go for this if you want to read about the Cadance you can definitely read about it or you can watch the other YouTube videos and once you've seen them you'll understand why I was strive was saying that it's not intuitive so let's quickly go and understand the observation based approach so let's talk about the observations uh that I was talking about in the first optimal approach the first optimal approach has a lot of observations the first one if I ask a very very simple question what if the array has all positive elements you'll be like if it has all positive elements the answer will be multiplication of everyone I'll just pick up everyone in my imagine this array was something like this then you'll just take up all the numbers that will be your sub area and you'll multiply everyone very very easy what if it has even negatives even negatives and rest all are positive so something like 2 3 minus two six minus two in this case you have two negatives which is like even number of negatives again you will be like",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "hnswaLJvr6g",
+      "position": 44,
+      "title": "Maximum Product Subarray - Best Intuitive Approach Discussed",
+      "url": "https://www.youtube.com/watch?v=hnswaLJvr6g",
+      "start": 542.519,
+      "end": 688.86,
+      "text": "negatives again you will be like multiply everyone because if there are even number of negatives and I multiply every one I think I will get my answer okay perfect three what if there are odd negatives what are their odd negatives and others are positive in that case you will be like okay if there are odd negatives let me probably take some examples something like three two minus one four minus six three minus two let's say six so I've taken something like this so I have odd negatives one two three there are three negatives three is a odd number so if I have three negatives what should be my ideal scenario because I know one thing if I take everyone what will happen is I'll end up multiplying three negatives and three negatives on multiplication will give me a negative which I don't want I want a maximum product maximum I want to increase it so how do I increase it if I just go towards positive if I just go towards positive so my idea will be what if probably I can ignore minus one what if I can ignore minus one I'll be like I can in that case I'll have this much I'll have this much okay either of this which is six and this will also be a positive because if I ignore 1 minus everyone else will be positive because if you try to multiply there are even what if I ignore minus six in that case this might not be so this will not be a good case what if I ignore minus two in that case I have six and I'll have again some numbers which gives me positive so can I say whatever answer you are getting if you have an observation let's observe when you ignore -6 this was your answer like this is the maximum when you ignore -6 whatever array you're taking was here and was here whenever you ignore minus 2 it was here and it was here",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "hnswaLJvr6g",
+      "position": 44,
+      "title": "Maximum Product Subarray - Best Intuitive Approach Discussed",
+      "url": "https://www.youtube.com/watch?v=hnswaLJvr6g",
+      "start": 684.12,
+      "end": 825.899,
+      "text": "and it was here so something to observe whatever you are taking it is either prefix or it's either suffix I think I'm correct I think I'm correct let's have an observation again it's either like if you avoid this it's either prefix or it's either suffix if you avoid this it's either prefix or it's either suffix if you avoid this it's either prefix or either it's suffix correct now you might ask but streiber when we remove this there is one negative okay now this case this case will never give you answer because a better case will always be removing this and there are two negatives so there will always be a better case so okay we will always get even negatives so we kind of figured out that our answer will be either in the prefix multiplication or will be either in the suffix multiplication when it how does this work even if I take something like minus 2 4 5 6 minus 7 so there are two negatives so the entire prefix is the answer or you can say the entire suffix is the answer right even if I have something like a minus 1 here in this case if you remove this the prefix is the answer if you remove this the suffix is the answer if you remove this the prefix or the suffix is answer so I kind of got an idea that I need to start from the first get all the prefix Max I gotta start from the back and got get all the suffix Max and at whatever Junction whatever is maximum that will be my answer but am I done am I done I don't think because we are missing still one case what if it has zeros what if it has zeros imagine I give you something like minus two three four minus 1 and again is 0 and then minus two three one four and then again is zero then four six minus one four can I say this I got three conditions",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "hnswaLJvr6g",
+      "position": 44,
+      "title": "Maximum Product Subarray - Best Intuitive Approach Discussed",
+      "url": "https://www.youtube.com/watch?v=hnswaLJvr6g",
+      "start": 820.019,
+      "end": 936.899,
+      "text": "I got three conditions and if I have if I have zeros I know one thing if I take this no matter how big the numbers are if there is a zero the multiplication will be zero if there's a zero the multiplication will turn out to be zero so taking a zero doesn't make sense so can I say this is a separate array this is a separate array this is a separate array not logically makes sense because there's no point in considering zero and can I say I can find the max over here I can find the max over here and I can find the max over here and whatever answer I'll get that will be my answer that will remains quite simple I'll take a Max of this Max of this Max of this Rhode Island cell get that will be my answer so basically three different arrays three different parts solved because the sub array will never have zero will never be an inclusion of separate ones okay I've also solved this so we have somehow got the observation right now it's time to implement it I might be thinking how to handle this zero I'll tell you that but I'll just take this particular example which is 2 3 minus 2 and 4 and try to implement it what did we know either the answer will be somewhere of the prefix or somewhere on the suffix so let's keep a Max as a very minimal number which is int mean let's keep a prefix equal to 1 let's go to 2 so prefix will be multiplied so it's two it is 2 which is better than maximum so you'll update next it will go to 3 so it will be multiplied with three so it'll be six so the max will be updated to six next it will go to minus two so this will be minus 12. so max will no more be updated because it's minus 12. next we will go to 4 so this will be minus 48 that's no",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "hnswaLJvr6g",
+      "position": 44,
+      "title": "Maximum Product Subarray - Best Intuitive Approach Discussed",
+      "url": "https://www.youtube.com/watch?v=hnswaLJvr6g",
+      "start": 931.199,
+      "end": 1051.62,
+      "text": "to 4 so this will be minus 48 that's no more updated so apparently you saw this prefix was the Max and that is what is stored and the next step let's start from the back let's keep a suffix as one so you have four multiply four you'll get four next you get minus 2. this 4 is not greater than 6 so you will not take it next is minus two multiply you'll get minus eight next is 3 multiply you will get minus 24. next is to multiply you'll get minus 40 and 6 value was the maximum thereby this is your answer this is the answer which is this prefix Max which is this prefix so what you did was you tried out all prefix and you tried out all suffix and you to the maximum of all of them and it's pretty simple and now you might be thinking whatsoever how do we implement it with zeros ah it's easy prefix is one multiply minus 2 multiply minus 6 multiply minus 24 multiply plus 24 so this till now is plus 24 right the moment you move to 0 what does 0 give you the prefix will be 0 0 so if you carry 0 0 will be carried so what you'll do is whenever you see 0 you'll turn it back to one whenever you see the prefix multiplication has got 0 you'll turn it back to 1 because that means you're starting off new starting of new because of the multiplication of 0 it was 0 a starting of new so again start so again the prefix will be computed in like minus 2 then 3 which is minus 6 then it will go to one so in this way it'll be computed so this is how you will do it whenever you see 0 turn it to 1. so if I have to write the code it will be like once you go from the front once you go from the back do you need to do that I",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "hnswaLJvr6g",
+      "position": 44,
+      "title": "Maximum Product Subarray - Best Intuitive Approach Discussed",
+      "url": "https://www.youtube.com/watch?v=hnswaLJvr6g",
+      "start": 1046.579,
+      "end": 1157.34,
+      "text": "from the back do you need to do that I can actually do it in one go I can actually do it in one go yeah it's simple it's actually very simple if you if you know basic array you can do it what I'll do is I'll be like okay let's do it in one go so I'll keep the prefix as one I'll keep the suffix as one and I'll I trade from I equal to 0 till n minus 1 and what I'll do is I know one thing if at any moment prefix turns 0 that means we are at a new start so we just make it or at any moment suffix turns 0 that means we will restart quite simple quite simple we'll do this and what can I say prefix is equal to prefix into array of I what that will mean is first time it will do this next time it will do this next time it will do with this next time it'll do with this right what about suffix suffix should be from the back so suffix into array of n minus I minus 1 so whenever I is 0 this will be n minus 0 minus 1 which is n minus 1 whenever I is 1 it will be n minus 2 whenever I is 2 it will be n minus 3 so it'll automatically come from back and your maximum can be said as Max of Max C comma Max of either the prefix will be your answer or from the suffix will be your answer quite simple and this will be it and you can return a maximum in case my handwriting was not good you can look at the cleaner code over here I've written the cleaner code and it is accepted as well what is the time complexity I'm just doing a big of n traversal and couple of operations so can I say the time complexity is nothing but we go off n yes which is much much",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "hnswaLJvr6g",
+      "position": 44,
+      "title": "Maximum Product Subarray - Best Intuitive Approach Discussed",
+      "url": "https://www.youtube.com/watch?v=hnswaLJvr6g",
+      "start": 1151.82,
+      "end": 1228.28,
+      "text": "but we go off n yes which is much much better than what we did in the previous one what about the space complexity it's a b go off one if you are still thinking why is this working now you need to think yourself now I did couple of examples I cannot do a lot of examples because the video will go now so what you need to do is take a notepad write on multiple examples and try to solve each of them and every with every example it will get more clear to you why is this method working and you'll understand yourself you don't need anyone to explain you it will get to you by yourself only if you do these examples on a like using pen and paper so please do it okay so going back to the sheet I can mark this one as done as well with this vrapper Paris finally waited so in case you have understood everything about this lecture please please please do consider giving us that like and if you're new to our Channel what are you waiting for click that subscribe button because that is the only thing that motivates me to make these kind of videos if you haven't followed me on Instagram Twitter and Linkedin all the links will be in the description with this I'll be wrapping up this video let's read in some other video till then bye take care whenever your heart is broken don't ever forget your golden I I will find the light",
+      "word_count": 262
+    }
+  ]
+}

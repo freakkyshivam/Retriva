@@ -1,0 +1,1496 @@
+{
+  "position": 68,
+  "video_id": "SCz-1TtYxDI",
+  "title": "BS 23. Row with maximum number of 1s | Binary Search on 2D Arrays",
+  "url": "https://www.youtube.com/watch?v=SCz-1TtYxDI",
+  "transcript": [
+    {
+      "start": 2.94,
+      "duration": 3.12,
+      "end": 6.0600000000000005,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 4.56,
+      "duration": 3.359,
+      "end": 7.919,
+      "text": "I hope you guys are doing extremely well"
+    },
+    {
+      "start": 6.06,
+      "duration": 3.42,
+      "end": 9.48,
+      "text": "so we will be continuing with our binary"
+    },
+    {
+      "start": 7.919,
+      "duration": 4.441,
+      "end": 12.36,
+      "text": "search playlist that is a part of the"
+    },
+    {
+      "start": 9.48,
+      "duration": 4.619,
+      "end": 14.099,
+      "text": "Strivers A to Z DSi course in case you"
+    },
+    {
+      "start": 12.36,
+      "duration": 3.239,
+      "end": 15.599,
+      "text": "haven't checked it out yet you should"
+    },
+    {
+      "start": 14.099,
+      "duration": 3.18,
+      "end": 17.279,
+      "text": "definitely check it out from the link in"
+    },
+    {
+      "start": 15.599,
+      "duration": 4.501,
+      "end": 20.1,
+      "text": "the description otherwise you'll be"
+    },
+    {
+      "start": 17.279,
+      "duration": 4.681,
+      "end": 21.96,
+      "text": "missing out on a lot of things so in"
+    },
+    {
+      "start": 20.1,
+      "duration": 4.8,
+      "end": 24.900000000000002,
+      "text": "this video we will be starting off with"
+    },
+    {
+      "start": 21.96,
+      "duration": 4.38,
+      "end": 26.34,
+      "text": "binary search on 2D arrays"
+    },
+    {
+      "start": 24.9,
+      "duration": 4.5,
+      "end": 29.4,
+      "text": "the first problem that we will be"
+    },
+    {
+      "start": 26.34,
+      "duration": 5.88,
+      "end": 32.22,
+      "text": "solving is find the row with maximum"
+    },
+    {
+      "start": 29.4,
+      "duration": 5.54,
+      "end": 34.94,
+      "text": "number of ones and you'll be given a 2d"
+    },
+    {
+      "start": 32.22,
+      "duration": 6.06,
+      "end": 38.28,
+      "text": "Matrix and the Matrix will just have"
+    },
+    {
+      "start": 34.94,
+      "duration": 6.639,
+      "end": 41.579,
+      "text": "zeros and ones and every row of the"
+    },
+    {
+      "start": 38.28,
+      "duration": 5.4,
+      "end": 43.68,
+      "text": "Matrix will be sorted it's a very"
+    },
+    {
+      "start": 41.579,
+      "duration": 4.32,
+      "end": 45.899,
+      "text": "critical point every Row in the mat text"
+    },
+    {
+      "start": 43.68,
+      "duration": 7.32,
+      "end": 51.0,
+      "text": "will be sorted now you have to tell me"
+    },
+    {
+      "start": 45.899,
+      "duration": 7.14,
+      "end": 53.039,
+      "text": "which row contains the maximum once in"
+    },
+    {
+      "start": 51.0,
+      "duration": 4.68,
+      "end": 55.68,
+      "text": "case there are multiple rows with"
+    },
+    {
+      "start": 53.039,
+      "duration": 4.741,
+      "end": 57.78,
+      "text": "maximum ones return the row with the"
+    },
+    {
+      "start": 55.68,
+      "duration": 5.519,
+      "end": 61.199,
+      "text": "smallest index let's understand what"
+    },
+    {
+      "start": 57.78,
+      "duration": 7.26,
+      "end": 65.04,
+      "text": "does that mean so zero through first row"
+    },
+    {
+      "start": 61.199,
+      "duration": 6.181,
+      "end": 67.38,
+      "text": "second row third row and fourth row so"
+    },
+    {
+      "start": 65.04,
+      "duration": 6.96,
+      "end": 72.0,
+      "text": "if you carefully observe this row has"
+    },
+    {
+      "start": 67.38,
+      "duration": 7.5,
+      "end": 74.88,
+      "text": "three ones this row has zero ones this"
+    },
+    {
+      "start": 72.0,
+      "duration": 5.159,
+      "end": 77.159,
+      "text": "row has four this row has zero"
+    },
+    {
+      "start": 74.88,
+      "duration": 4.44,
+      "end": 79.32,
+      "text": "this rule has four so if I ask you which"
+    },
+    {
+      "start": 77.159,
+      "duration": 4.201,
+      "end": 81.36,
+      "text": "row has the maximum ones you can say"
+    },
+    {
+      "start": 79.32,
+      "duration": 4.56,
+      "end": 83.88,
+      "text": "this one and this one which is basically"
+    },
+    {
+      "start": 81.36,
+      "duration": 4.5,
+      "end": 85.86,
+      "text": "the second row and the fourth row so"
+    },
+    {
+      "start": 83.88,
+      "duration": 5.76,
+      "end": 89.64,
+      "text": "which one will you return if there are"
+    },
+    {
+      "start": 85.86,
+      "duration": 7.02,
+      "end": 92.88,
+      "text": "same instances of Maximum ones you end"
+    },
+    {
+      "start": 89.64,
+      "duration": 5.939,
+      "end": 95.57900000000001,
+      "text": "up returning the smallest row number"
+    },
+    {
+      "start": 92.88,
+      "duration": 4.8,
+      "end": 97.67999999999999,
+      "text": "which is two so where the answer will be"
+    },
+    {
+      "start": 95.579,
+      "duration": 3.781,
+      "end": 99.36,
+      "text": "2. so what is the first solution that"
+    },
+    {
+      "start": 97.68,
+      "duration": 4.52,
+      "end": 102.2,
+      "text": "comes to your brain like the extreme"
+    },
+    {
+      "start": 99.36,
+      "duration": 5.82,
+      "end": 105.18,
+      "text": "nine one it's"
+    },
+    {
+      "start": 102.2,
+      "duration": 5.5,
+      "end": 107.7,
+      "text": "and count the number of ones and the row"
+    },
+    {
+      "start": 105.18,
+      "duration": 5.579,
+      "end": 110.759,
+      "text": "with the maximum number of ones you just"
+    },
+    {
+      "start": 107.7,
+      "duration": 6.12,
+      "end": 113.82000000000001,
+      "text": "return it so can I say that we have an N"
+    },
+    {
+      "start": 110.759,
+      "duration": 5.461,
+      "end": 116.22,
+      "text": "cross M Matrix thereby I can go through"
+    },
+    {
+      "start": 113.82,
+      "duration": 4.56,
+      "end": 118.38,
+      "text": "every row by traversing from 0 to n"
+    },
+    {
+      "start": 116.22,
+      "duration": 4.259,
+      "end": 120.479,
+      "text": "minus 1 because if you know because if"
+    },
+    {
+      "start": 118.38,
+      "duration": 5.04,
+      "end": 123.42,
+      "text": "you know the rows are numbered like 0 1"
+    },
+    {
+      "start": 120.479,
+      "duration": 5.761,
+      "end": 126.24,
+      "text": "2 3 4 and the last one is n minus one so"
+    },
+    {
+      "start": 123.42,
+      "duration": 6.479,
+      "end": 129.899,
+      "text": "go up like that and maybe I'll say count"
+    },
+    {
+      "start": 126.24,
+      "duration": 6.3,
+      "end": 132.54,
+      "text": "row like count Row one equal to zero and"
+    },
+    {
+      "start": 129.899,
+      "duration": 5.041,
+      "end": 134.94,
+      "text": "I'll keep the max count initially as"
+    },
+    {
+      "start": 132.54,
+      "duration": 4.32,
+      "end": 136.85999999999999,
+      "text": "minus one because minus 1 is never"
+    },
+    {
+      "start": 134.94,
+      "duration": 4.14,
+      "end": 139.07999999999998,
+      "text": "possible and I'll also keep the index"
+    },
+    {
+      "start": 136.86,
+      "duration": 3.78,
+      "end": 140.64000000000001,
+      "text": "the row index as minus one"
+    },
+    {
+      "start": 139.08,
+      "duration": 3.96,
+      "end": 143.04000000000002,
+      "text": "this time I'll go through the entire"
+    },
+    {
+      "start": 140.64,
+      "duration": 4.56,
+      "end": 145.2,
+      "text": "column which is basically every single"
+    },
+    {
+      "start": 143.04,
+      "duration": 4.74,
+      "end": 147.78,
+      "text": "element whenever I is 0 we go through"
+    },
+    {
+      "start": 145.2,
+      "duration": 4.679,
+      "end": 149.879,
+      "text": "every single element whenever I is 1 we"
+    },
+    {
+      "start": 147.78,
+      "duration": 4.08,
+      "end": 151.86,
+      "text": "go through every single element so that"
+    },
+    {
+      "start": 149.879,
+      "duration": 4.741,
+      "end": 154.62,
+      "text": "is something which we can do which is"
+    },
+    {
+      "start": 151.86,
+      "duration": 4.2,
+      "end": 156.06,
+      "text": "basically going from 0 to M minus 1 and"
+    },
+    {
+      "start": 154.62,
+      "duration": 4.38,
+      "end": 159.0,
+      "text": "this time what I'll do is I'll say"
+    },
+    {
+      "start": 156.06,
+      "duration": 6.78,
+      "end": 162.84,
+      "text": "please count the ones so I can just go"
+    },
+    {
+      "start": 159.0,
+      "duration": 7.14,
+      "end": 166.14,
+      "text": "ahead and add array of i j so if I add"
+    },
+    {
+      "start": 162.84,
+      "duration": 6.6,
+      "end": 169.44,
+      "text": "array of i j that will make sure that"
+    },
+    {
+      "start": 166.14,
+      "duration": 6.179,
+      "end": 172.319,
+      "text": "like it adds 0 plus 0 plus 1 plus 1 plus"
+    },
+    {
+      "start": 169.44,
+      "duration": 5.579,
+      "end": 175.019,
+      "text": "1 basically it will simply add up all"
+    },
+    {
+      "start": 172.319,
+      "duration": 4.801,
+      "end": 177.11999999999998,
+      "text": "the ones once I have the count rows"
+    },
+    {
+      "start": 175.019,
+      "duration": 5.521,
+      "end": 180.54,
+      "text": "can I say if the count rows very"
+    },
+    {
+      "start": 177.12,
+      "duration": 5.759,
+      "end": 182.87900000000002,
+      "text": "important count rows has to exceed the"
+    },
+    {
+      "start": 180.54,
+      "duration": 5.76,
+      "end": 186.29999999999998,
+      "text": "max count it cannot be equal to because"
+    },
+    {
+      "start": 182.879,
+      "duration": 6.181,
+      "end": 189.06,
+      "text": "if there are instances of same number of"
+    },
+    {
+      "start": 186.3,
+      "duration": 5.7,
+      "end": 192.0,
+      "text": "ones you always written the minimal one"
+    },
+    {
+      "start": 189.06,
+      "duration": 6.3,
+      "end": 195.36,
+      "text": "it's very important to write greater in"
+    },
+    {
+      "start": 192.0,
+      "duration": 6.599,
+      "end": 198.599,
+      "text": "that case you will see Max count equal"
+    },
+    {
+      "start": 195.36,
+      "duration": 6.72,
+      "end": 202.08,
+      "text": "to count Rule and you also update the"
+    },
+    {
+      "start": 198.599,
+      "duration": 4.981,
+      "end": 203.57999999999998,
+      "text": "index to I quite simple and at the end"
+    },
+    {
+      "start": 202.08,
+      "duration": 4.2,
+      "end": 206.28,
+      "text": "of the day you can simply go ahead and"
+    },
+    {
+      "start": 203.58,
+      "duration": 5.34,
+      "end": 208.92000000000002,
+      "text": "print the index that will be your answer"
+    },
+    {
+      "start": 206.28,
+      "duration": 5.28,
+      "end": 211.56,
+      "text": "what will be the time complexity can I"
+    },
+    {
+      "start": 208.92,
+      "duration": 5.039,
+      "end": 213.95899999999997,
+      "text": "say the time complexity is B go of N and"
+    },
+    {
+      "start": 211.56,
+      "duration": 4.08,
+      "end": 215.64000000000001,
+      "text": "M like n cross M will be the time"
+    },
+    {
+      "start": 213.959,
+      "duration": 3.541,
+      "end": 217.5,
+      "text": "complexity of this particular solution"
+    },
+    {
+      "start": 215.64,
+      "duration": 4.56,
+      "end": 220.2,
+      "text": "and"
+    },
+    {
+      "start": 217.5,
+      "duration": 5.099,
+      "end": 222.599,
+      "text": "what is the space complexity a bigger of"
+    },
+    {
+      "start": 220.2,
+      "duration": 4.14,
+      "end": 224.33999999999997,
+      "text": "one obviously the interviewer will not"
+    },
+    {
+      "start": 222.599,
+      "duration": 3.621,
+      "end": 226.22,
+      "text": "be happy with the N cross M and he'll"
+    },
+    {
+      "start": 224.34,
+      "duration": 4.86,
+      "end": 229.20000000000002,
+      "text": "ask you to optimize it now remember"
+    },
+    {
+      "start": 226.22,
+      "duration": 4.78,
+      "end": 231.0,
+      "text": "whenever you have been asked to optimize"
+    },
+    {
+      "start": 229.2,
+      "duration": 4.5,
+      "end": 233.7,
+      "text": "n cross m"
+    },
+    {
+      "start": 231.0,
+      "duration": 4.68,
+      "end": 235.68,
+      "text": "and you see something as because the"
+    },
+    {
+      "start": 233.7,
+      "duration": 4.02,
+      "end": 237.72,
+      "text": "entire row is sorted entire row is"
+    },
+    {
+      "start": 235.68,
+      "duration": 4.02,
+      "end": 239.70000000000002,
+      "text": "sorted entire row is sorted entire row"
+    },
+    {
+      "start": 237.72,
+      "duration": 4.86,
+      "end": 242.58,
+      "text": "is sorted so what you can think of is"
+    },
+    {
+      "start": 239.7,
+      "duration": 4.8,
+      "end": 244.5,
+      "text": "okay sorted the entire row is sorted and"
+    },
+    {
+      "start": 242.58,
+      "duration": 4.2,
+      "end": 246.78,
+      "text": "this is where I'm travising"
+    },
+    {
+      "start": 244.5,
+      "duration": 4.44,
+      "end": 248.94,
+      "text": "in the entire rook and that is taking me"
+    },
+    {
+      "start": 246.78,
+      "duration": 5.22,
+      "end": 252.0,
+      "text": "a Big O of M tank so I can probably"
+    },
+    {
+      "start": 248.94,
+      "duration": 5.999,
+      "end": 254.939,
+      "text": "optimize this I cannot optimize Road"
+    },
+    {
+      "start": 252.0,
+      "duration": 4.919,
+      "end": 256.919,
+      "text": "traversal but I can optimize the way I'm"
+    },
+    {
+      "start": 254.939,
+      "duration": 4.2,
+      "end": 259.139,
+      "text": "Computing the number of ones I can"
+    },
+    {
+      "start": 256.919,
+      "duration": 4.56,
+      "end": 261.479,
+      "text": "optimize that that is when you start"
+    },
+    {
+      "start": 259.139,
+      "duration": 4.201,
+      "end": 263.34000000000003,
+      "text": "thinking of a binary search solution"
+    },
+    {
+      "start": 261.479,
+      "duration": 5.581,
+      "end": 267.06,
+      "text": "why binary search because the entire"
+    },
+    {
+      "start": 263.34,
+      "duration": 5.88,
+      "end": 269.21999999999997,
+      "text": "because the entire row is sorted so can"
+    },
+    {
+      "start": 267.06,
+      "duration": 3.54,
+      "end": 270.6,
+      "text": "you treat this as an individual array"
+    },
+    {
+      "start": 269.22,
+      "duration": 3.78,
+      "end": 273.0,
+      "text": "like if I just read this as an"
+    },
+    {
+      "start": 270.6,
+      "duration": 4.56,
+      "end": 275.16,
+      "text": "individual array"
+    },
+    {
+      "start": 273.0,
+      "duration": 5.16,
+      "end": 278.16,
+      "text": "which has just read this as an"
+    },
+    {
+      "start": 275.16,
+      "duration": 5.28,
+      "end": 280.44,
+      "text": "individual array which is three ones"
+    },
+    {
+      "start": 278.16,
+      "duration": 4.2,
+      "end": 282.36,
+      "text": "just think it as an individual array in"
+    },
+    {
+      "start": 280.44,
+      "duration": 4.62,
+      "end": 285.06,
+      "text": "this case what will happen you just have"
+    },
+    {
+      "start": 282.36,
+      "duration": 5.52,
+      "end": 287.88,
+      "text": "to figure out the first one the moment"
+    },
+    {
+      "start": 285.06,
+      "duration": 4.199,
+      "end": 289.259,
+      "text": "you figure out the first one I think the"
+    },
+    {
+      "start": 287.88,
+      "duration": 4.62,
+      "end": 292.5,
+      "text": "number of ones are very simple because"
+    },
+    {
+      "start": 289.259,
+      "duration": 5.761,
+      "end": 295.02000000000004,
+      "text": "it is a sorted array so the size of this"
+    },
+    {
+      "start": 292.5,
+      "duration": 5.4,
+      "end": 297.9,
+      "text": "is five and if I have to figure out the"
+    },
+    {
+      "start": 295.02,
+      "duration": 4.98,
+      "end": 300.0,
+      "text": "first one it lies at the index too it"
+    },
+    {
+      "start": 297.9,
+      "duration": 4.26,
+      "end": 302.15999999999997,
+      "text": "lies at the index two so the number of"
+    },
+    {
+      "start": 300.0,
+      "duration": 6.54,
+      "end": 306.54,
+      "text": "ones will be the number of ones will be"
+    },
+    {
+      "start": 302.16,
+      "duration": 7.14,
+      "end": 309.3,
+      "text": "the size of that rho which is m m is the"
+    },
+    {
+      "start": 306.54,
+      "duration": 4.439,
+      "end": 310.97900000000004,
+      "text": "size of that row minus wherever the"
+    },
+    {
+      "start": 309.3,
+      "duration": 5.399,
+      "end": 314.699,
+      "text": "first one occurs which is 2 in this case"
+    },
+    {
+      "start": 310.979,
+      "duration": 7.021,
+      "end": 318.0,
+      "text": "5 minus 2 3 which is exactly the number"
+    },
+    {
+      "start": 314.699,
+      "duration": 5.701,
+      "end": 320.40000000000003,
+      "text": "of ones in that thing so if I can figure"
+    },
+    {
+      "start": 318.0,
+      "duration": 3.479,
+      "end": 321.479,
+      "text": "out the first occurrence of one and you"
+    },
+    {
+      "start": 320.4,
+      "duration": 3.18,
+      "end": 323.58,
+      "text": "know how to figure out the first"
+    },
+    {
+      "start": 321.479,
+      "duration": 5.881,
+      "end": 327.36,
+      "text": "occurrence of any number one of the"
+    },
+    {
+      "start": 323.58,
+      "duration": 6.78,
+      "end": 330.35999999999996,
+      "text": "possible ways is you say lower bound of"
+    },
+    {
+      "start": 327.36,
+      "duration": 7.26,
+      "end": 334.62,
+      "text": "one and that will be pointing to the"
+    },
+    {
+      "start": 330.36,
+      "duration": 6.779,
+      "end": 337.139,
+      "text": "first one or you say upper bound of 0"
+    },
+    {
+      "start": 334.62,
+      "duration": 4.74,
+      "end": 339.36,
+      "text": "even if you say upper bound of 0 then"
+    },
+    {
+      "start": 337.139,
+      "duration": 5.941,
+      "end": 343.08,
+      "text": "it'll also be pointing to this or you"
+    },
+    {
+      "start": 339.36,
+      "duration": 5.04,
+      "end": 344.40000000000003,
+      "text": "see first occurrence of one"
+    },
+    {
+      "start": 343.08,
+      "duration": 3.3,
+      "end": 346.38,
+      "text": "now"
+    },
+    {
+      "start": 344.4,
+      "duration": 4.019,
+      "end": 348.419,
+      "text": "all of these three problems have been"
+    },
+    {
+      "start": 346.38,
+      "duration": 4.259,
+      "end": 350.639,
+      "text": "solved in binary search are 1D Aries"
+    },
+    {
+      "start": 348.419,
+      "duration": 5.161,
+      "end": 353.58,
+      "text": "I've already done that so"
+    },
+    {
+      "start": 350.639,
+      "duration": 5.941,
+      "end": 356.58,
+      "text": "we can use either of them and we can"
+    },
+    {
+      "start": 353.58,
+      "duration": 6.48,
+      "end": 360.06,
+      "text": "easily find out the number of ones and I"
+    },
+    {
+      "start": 356.58,
+      "duration": 6.72,
+      "end": 363.3,
+      "text": "can do it for every row individually I"
+    },
+    {
+      "start": 360.06,
+      "duration": 5.579,
+      "end": 365.639,
+      "text": "can do it for every row individually so"
+    },
+    {
+      "start": 363.3,
+      "duration": 5.1,
+      "end": 368.40000000000003,
+      "text": "if I have to pick up this array it's"
+    },
+    {
+      "start": 365.639,
+      "duration": 5.701,
+      "end": 371.34000000000003,
+      "text": "nothing but this array is nothing but"
+    },
+    {
+      "start": 368.4,
+      "duration": 6.859,
+      "end": 375.25899999999996,
+      "text": "Matrix of zero so if you will see if you"
+    },
+    {
+      "start": 371.34,
+      "duration": 7.32,
+      "end": 378.65999999999997,
+      "text": "pass Matrix of 0 this first"
+    },
+    {
+      "start": 375.259,
+      "duration": 6.461,
+      "end": 381.72,
+      "text": "the first row goes as an array if you"
+    },
+    {
+      "start": 378.66,
+      "duration": 5.64,
+      "end": 384.3,
+      "text": "pass Matrix of 1 then this one goes as"
+    },
+    {
+      "start": 381.72,
+      "duration": 4.74,
+      "end": 386.46000000000004,
+      "text": "an array if you pass Matrix of 2 this"
+    },
+    {
+      "start": 384.3,
+      "duration": 4.86,
+      "end": 389.16,
+      "text": "one will go as an array so it's very"
+    },
+    {
+      "start": 386.46,
+      "duration": 4.92,
+      "end": 391.38,
+      "text": "simple in binary search remember you"
+    },
+    {
+      "start": 389.16,
+      "duration": 4.5,
+      "end": 393.66,
+      "text": "cannot change the row traversal what you"
+    },
+    {
+      "start": 391.38,
+      "duration": 4.86,
+      "end": 396.24,
+      "text": "can do is you can optimize the things"
+    },
+    {
+      "start": 393.66,
+      "duration": 5.039,
+      "end": 398.699,
+      "text": "that you are doing on every row you"
+    },
+    {
+      "start": 396.24,
+      "duration": 6.0,
+      "end": 402.24,
+      "text": "cannot optimize this hence you optimize"
+    },
+    {
+      "start": 398.699,
+      "duration": 5.461,
+      "end": 404.16,
+      "text": "this transfer got it so let's quickly go"
+    },
+    {
+      "start": 402.24,
+      "duration": 4.019,
+      "end": 406.259,
+      "text": "back to the code editor and try solving"
+    },
+    {
+      "start": 404.16,
+      "duration": 6.18,
+      "end": 410.34000000000003,
+      "text": "it so what I'll do is I'll try to just"
+    },
+    {
+      "start": 406.259,
+      "duration": 5.88,
+      "end": 412.139,
+      "text": "copy paste the low Bond code because"
+    },
+    {
+      "start": 410.34,
+      "duration": 4.859,
+      "end": 415.19899999999996,
+      "text": "like you can do any of them up about"
+    },
+    {
+      "start": 412.139,
+      "duration": 5.041,
+      "end": 417.18,
+      "text": "first occurrence any of any of them so I"
+    },
+    {
+      "start": 415.199,
+      "duration": 4.56,
+      "end": 419.759,
+      "text": "have to find the number of this so what"
+    },
+    {
+      "start": 417.18,
+      "duration": 4.92,
+      "end": 422.1,
+      "text": "I'll do this I'll say count Max equal to"
+    },
+    {
+      "start": 419.759,
+      "duration": 4.321,
+      "end": 424.08000000000004,
+      "text": "0 and I'll keep an index equal to let's"
+    },
+    {
+      "start": 422.1,
+      "duration": 4.08,
+      "end": 426.18,
+      "text": "say minus one okay count Max can be kept"
+    },
+    {
+      "start": 424.08,
+      "duration": 4.32,
+      "end": 428.4,
+      "text": "as minus one the same what I'll do is"
+    },
+    {
+      "start": 426.18,
+      "duration": 5.22,
+      "end": 431.40000000000003,
+      "text": "let's quickly it travels from zero till"
+    },
+    {
+      "start": 428.4,
+      "duration": 4.859,
+      "end": 433.25899999999996,
+      "text": "n perfect and now I'll I'll have to"
+    },
+    {
+      "start": 431.4,
+      "duration": 4.139,
+      "end": 435.539,
+      "text": "count right so can I say the count will"
+    },
+    {
+      "start": 433.259,
+      "duration": 4.141,
+      "end": 437.40000000000003,
+      "text": "be what will be the count the count will"
+    },
+    {
+      "start": 435.539,
+      "duration": 5.1,
+      "end": 440.639,
+      "text": "be nothing but I can just go ahead and"
+    },
+    {
+      "start": 437.4,
+      "duration": 5.579,
+      "end": 442.979,
+      "text": "say low bound low bound it needs an"
+    },
+    {
+      "start": 440.639,
+      "duration": 5.701,
+      "end": 446.34000000000003,
+      "text": "array it needs an array something like"
+    },
+    {
+      "start": 442.979,
+      "duration": 5.761,
+      "end": 448.74,
+      "text": "Matrix of I because if I just pick up"
+    },
+    {
+      "start": 446.34,
+      "duration": 5.579,
+      "end": 451.919,
+      "text": "the row it's an array in itself the size"
+    },
+    {
+      "start": 448.74,
+      "duration": 5.22,
+      "end": 453.96000000000004,
+      "text": "of that array is M because m is the size"
+    },
+    {
+      "start": 451.919,
+      "duration": 5.101,
+      "end": 457.02,
+      "text": "of the array and the element that I'm"
+    },
+    {
+      "start": 453.96,
+      "duration": 6.54,
+      "end": 460.5,
+      "text": "looking for the lower bound of one so"
+    },
+    {
+      "start": 457.02,
+      "duration": 5.16,
+      "end": 462.18,
+      "text": "this will give me wherever it occurs and"
+    },
+    {
+      "start": 460.5,
+      "duration": 4.02,
+      "end": 464.52,
+      "text": "if I subtract the number of elements"
+    },
+    {
+      "start": 462.18,
+      "duration": 5.22,
+      "end": 467.40000000000003,
+      "text": "which is M minus I'll get the count of"
+    },
+    {
+      "start": 464.52,
+      "duration": 4.92,
+      "end": 469.44,
+      "text": "ones I'll get the count of ones once I"
+    },
+    {
+      "start": 467.4,
+      "duration": 7.799,
+      "end": 475.19899999999996,
+      "text": "get the count of funds I can say if the"
+    },
+    {
+      "start": 469.44,
+      "duration": 7.92,
+      "end": 477.36,
+      "text": "count of once exceeds the count of Max"
+    },
+    {
+      "start": 475.199,
+      "duration": 5.461,
+      "end": 480.66,
+      "text": "then go ahead and do a count of Max"
+    },
+    {
+      "start": 477.36,
+      "duration": 6.059,
+      "end": 483.41900000000004,
+      "text": "equal to count of ones and also update"
+    },
+    {
+      "start": 480.66,
+      "duration": 4.68,
+      "end": 485.34000000000003,
+      "text": "the index to I once you've done this you"
+    },
+    {
+      "start": 483.419,
+      "duration": 4.321,
+      "end": 487.74,
+      "text": "can straight away return the index this"
+    },
+    {
+      "start": 485.34,
+      "duration": 4.859,
+      "end": 490.19899999999996,
+      "text": "is how easy it gets"
+    },
+    {
+      "start": 487.74,
+      "duration": 5.1,
+      "end": 492.84000000000003,
+      "text": "so as you see that one test case is"
+    },
+    {
+      "start": 490.199,
+      "duration": 4.921,
+      "end": 495.12,
+      "text": "failing why because it clearly states if"
+    },
+    {
+      "start": 492.84,
+      "duration": 4.799,
+      "end": 497.63899999999995,
+      "text": "there is no row with at least one they"
+    },
+    {
+      "start": 495.12,
+      "duration": 4.979,
+      "end": 500.099,
+      "text": "return minus one so basically what I'm"
+    },
+    {
+      "start": 497.639,
+      "duration": 4.56,
+      "end": 502.199,
+      "text": "saying is okay let's take this any let's"
+    },
+    {
+      "start": 500.099,
+      "duration": 5.16,
+      "end": 505.259,
+      "text": "try to do an up a low bound or upper bar"
+    },
+    {
+      "start": 502.199,
+      "duration": 4.801,
+      "end": 507.0,
+      "text": "whatever zero zero zero zero so if"
+    },
+    {
+      "start": 505.259,
+      "duration": 3.301,
+      "end": 508.56,
+      "text": "you're trying to do an upper bound over"
+    },
+    {
+      "start": 507.0,
+      "duration": 3.84,
+      "end": 510.84,
+      "text": "here m is 5"
+    },
+    {
+      "start": 508.56,
+      "duration": 4.62,
+      "end": 513.18,
+      "text": "sorry low amount of fun so if you say"
+    },
+    {
+      "start": 510.84,
+      "duration": 6.18,
+      "end": 517.02,
+      "text": "low bound of one it will point to the"
+    },
+    {
+      "start": 513.18,
+      "duration": 5.94,
+      "end": 519.12,
+      "text": "hypothetical index of 0 1 2 3 4 5. so"
+    },
+    {
+      "start": 517.02,
+      "duration": 4.8,
+      "end": 521.8199999999999,
+      "text": "even if you do five minus five the count"
+    },
+    {
+      "start": 519.12,
+      "duration": 4.68,
+      "end": 523.8,
+      "text": "will come up to be zero so remember the"
+    },
+    {
+      "start": 521.82,
+      "duration": 5.4,
+      "end": 527.22,
+      "text": "count is zero you don't need to obtain"
+    },
+    {
+      "start": 523.8,
+      "duration": 5.88,
+      "end": 529.68,
+      "text": "it so what I can do is Hey listen what I"
+    },
+    {
+      "start": 527.22,
+      "duration": 4.44,
+      "end": 531.6600000000001,
+      "text": "can do is I can keep the count of X as 0"
+    },
+    {
+      "start": 529.68,
+      "duration": 4.14,
+      "end": 533.8199999999999,
+      "text": "and I can initially see the index to be"
+    },
+    {
+      "start": 531.66,
+      "duration": 3.9,
+      "end": 535.56,
+      "text": "minus one if if the count is zero I"
+    },
+    {
+      "start": 533.82,
+      "duration": 3.42,
+      "end": 537.24,
+      "text": "don't update it simple as that any"
+    },
+    {
+      "start": 535.56,
+      "duration": 3.66,
+      "end": 539.2199999999999,
+      "text": "moment I get anything greater than 0 I"
+    },
+    {
+      "start": 537.24,
+      "duration": 4.02,
+      "end": 541.26,
+      "text": "update the indexer now let's quickly run"
+    },
+    {
+      "start": 539.22,
+      "duration": 4.619,
+      "end": 543.839,
+      "text": "and see if it is running fine it will be"
+    },
+    {
+      "start": 541.26,
+      "duration": 5.22,
+      "end": 546.48,
+      "text": "because we have made sure that this case"
+    },
+    {
+      "start": 543.839,
+      "duration": 4.741,
+      "end": 548.58,
+      "text": "is taken care of again if you want the"
+    },
+    {
+      "start": 546.48,
+      "duration": 3.6,
+      "end": 550.08,
+      "text": "Java python JavaScript code the links"
+    },
+    {
+      "start": 548.58,
+      "duration": 3.42,
+      "end": 552.0,
+      "text": "will be in the description so I'll be"
+    },
+    {
+      "start": 550.08,
+      "duration": 4.14,
+      "end": 554.22,
+      "text": "running this and we see that it is"
+    },
+    {
+      "start": 552.0,
+      "duration": 4.44,
+      "end": 556.44,
+      "text": "running absolutely fine what is the time"
+    },
+    {
+      "start": 554.22,
+      "duration": 3.84,
+      "end": 558.0600000000001,
+      "text": "complexity now a big go of n for sure"
+    },
+    {
+      "start": 556.44,
+      "duration": 3.66,
+      "end": 560.1,
+      "text": "and the slow bound ends up taking"
+    },
+    {
+      "start": 558.06,
+      "duration": 4.02,
+      "end": 562.0799999999999,
+      "text": "logarithmic often so I can say the time"
+    },
+    {
+      "start": 560.1,
+      "duration": 4.859,
+      "end": 564.9590000000001,
+      "text": "complexity this time is n cross"
+    },
+    {
+      "start": 562.08,
+      "duration": 7.68,
+      "end": 569.76,
+      "text": "logarithmic of Base to M very important"
+    },
+    {
+      "start": 564.959,
+      "duration": 7.861,
+      "end": 572.8199999999999,
+      "text": "M because that rows size is m not and so"
+    },
+    {
+      "start": 569.76,
+      "duration": 5.699,
+      "end": 575.459,
+      "text": "n into log base 2 so you can just write"
+    },
+    {
+      "start": 572.82,
+      "duration": 4.74,
+      "end": 577.5600000000001,
+      "text": "it log base 2 m will be the time"
+    },
+    {
+      "start": 575.459,
+      "duration": 4.021,
+      "end": 579.4799999999999,
+      "text": "complexity what about the space am I"
+    },
+    {
+      "start": 577.56,
+      "duration": 3.66,
+      "end": 581.2199999999999,
+      "text": "using any space no I'm not using any"
+    },
+    {
+      "start": 579.48,
+      "duration": 3.9,
+      "end": 583.38,
+      "text": "space again you can use the upper bound"
+    },
+    {
+      "start": 581.22,
+      "duration": 4.38,
+      "end": 585.6,
+      "text": "you can also use the first to occurrence"
+    },
+    {
+      "start": 583.38,
+      "duration": 4.86,
+      "end": 588.24,
+      "text": "concept you can use whatever you wish to"
+    },
+    {
+      "start": 585.6,
+      "duration": 4.2,
+      "end": 589.8000000000001,
+      "text": "the main thing is you have to do it on"
+    },
+    {
+      "start": 588.24,
+      "duration": 3.24,
+      "end": 591.48,
+      "text": "that particular row and that will be"
+    },
+    {
+      "start": 589.8,
+      "duration": 2.82,
+      "end": 592.62,
+      "text": "working fine so if you are watching till"
+    },
+    {
+      "start": 591.48,
+      "duration": 2.58,
+      "end": 594.0600000000001,
+      "text": "yeah I hope you have understood"
+    },
+    {
+      "start": 592.62,
+      "duration": 3.18,
+      "end": 595.8,
+      "text": "everything just in case you have"
+    },
+    {
+      "start": 594.06,
+      "duration": 3.3,
+      "end": 597.3599999999999,
+      "text": "understood everything please please do"
+    },
+    {
+      "start": 595.8,
+      "duration": 3.42,
+      "end": 599.2199999999999,
+      "text": "consider giving us that like and if"
+    },
+    {
+      "start": 597.36,
+      "duration": 3.72,
+      "end": 601.08,
+      "text": "you're new to our Channel what are you"
+    },
+    {
+      "start": 599.22,
+      "duration": 3.119,
+      "end": 602.339,
+      "text": "waiting for hit that subscribe button"
+    },
+    {
+      "start": 601.08,
+      "duration": 3.06,
+      "end": 604.14,
+      "text": "right away and if you haven't followed"
+    },
+    {
+      "start": 602.339,
+      "duration": 2.821,
+      "end": 605.1600000000001,
+      "text": "me on Instagram Twitter and Linkedin all"
+    },
+    {
+      "start": 604.14,
+      "duration": 2.1,
+      "end": 606.24,
+      "text": "the profile links will be in the"
+    },
+    {
+      "start": 605.16,
+      "duration": 2.7,
+      "end": 607.86,
+      "text": "description where this I'll be wrapping"
+    },
+    {
+      "start": 606.24,
+      "duration": 3.779,
+      "end": 610.019,
+      "text": "up this video let's read in some other"
+    },
+    {
+      "start": 607.86,
+      "duration": 6.0,
+      "end": 613.86,
+      "text": "video till then bye-bye take care"
+    },
+    {
+      "start": 610.019,
+      "duration": 7.38,
+      "end": 617.399,
+      "text": "whenever your heart is broken don't ever"
+    },
+    {
+      "start": 613.86,
+      "duration": 5.84,
+      "end": 619.7,
+      "text": "forget your golden I I will find the"
+    },
+    {
+      "start": 617.399,
+      "duration": 2.301,
+      "end": 619.7,
+      "text": "light in"
+    }
+  ]
+}

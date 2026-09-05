@@ -1,0 +1,2654 @@
+{
+  "position": 65,
+  "video_id": "C2rRzz-JDk8",
+  "title": "BS 21: Median of two Sorted Arrays of Different Sizes | Brute and Better Approach",
+  "url": "https://www.youtube.com/watch?v=C2rRzz-JDk8",
+  "transcript": [
+    {
+      "start": 3.08,
+      "duration": 2.56,
+      "end": 5.640000000000001,
+      "text": "Okay, so we will be continuing with our"
+    },
+    {
+      "start": 4.36,
+      "duration": 3.56,
+      "end": 7.92,
+      "text": "binary search playlist. Now, this is a"
+    },
+    {
+      "start": 5.64,
+      "duration": 3.88,
+      "end": 9.52,
+      "text": "part of the strivers A to Z DSA course."
+    },
+    {
+      "start": 7.92,
+      "duration": 3.16,
+      "end": 11.08,
+      "text": "In case you haven't checked it out yet,"
+    },
+    {
+      "start": 9.52,
+      "duration": 3.0,
+      "end": 12.52,
+      "text": "there's a link in the description. Make"
+    },
+    {
+      "start": 11.08,
+      "duration": 2.72,
+      "end": 13.8,
+      "text": "sure you check it out. So, before"
+    },
+    {
+      "start": 12.52,
+      "duration": 2.28,
+      "end": 14.799999999999999,
+      "text": "starting, hey everyone, welcome back to"
+    },
+    {
+      "start": 13.8,
+      "duration": 2.92,
+      "end": 16.72,
+      "text": "the channel. I hope you guys are doing"
+    },
+    {
+      "start": 14.8,
+      "duration": 3.68,
+      "end": 18.48,
+      "text": "extremely well. So, the problem that"
+    },
+    {
+      "start": 16.72,
+      "duration": 4.36,
+      "end": 21.08,
+      "text": "you're going to solve today is finding"
+    },
+    {
+      "start": 18.48,
+      "duration": 3.96,
+      "end": 22.44,
+      "text": "out the median of two sorted arrays."
+    },
+    {
+      "start": 21.08,
+      "duration": 3.12,
+      "end": 24.2,
+      "text": "Now, this word is very important,"
+    },
+    {
+      "start": 22.44,
+      "duration": 3.48,
+      "end": 25.92,
+      "text": "sorted, because that is what will help"
+    },
+    {
+      "start": 24.2,
+      "duration": 4.0,
+      "end": 28.2,
+      "text": "us to solve this problem. Now, you can"
+    },
+    {
+      "start": 25.92,
+      "duration": 4.08,
+      "end": 30.0,
+      "text": "be given two arrays of equal size. You"
+    },
+    {
+      "start": 28.2,
+      "duration": 3.64,
+      "end": 31.84,
+      "text": "can also be given uh two arrays of"
+    },
+    {
+      "start": 30.0,
+      "duration": 4.88,
+      "end": 34.88,
+      "text": "different size. Like in this example,"
+    },
+    {
+      "start": 31.84,
+      "duration": 5.56,
+      "end": 37.4,
+      "text": "you can see this array is of size six"
+    },
+    {
+      "start": 34.88,
+      "duration": 4.52,
+      "end": 39.400000000000006,
+      "text": "and it is sorted. This array is of size"
+    },
+    {
+      "start": 37.4,
+      "duration": 3.68,
+      "end": 41.08,
+      "text": "four and it is sorted. Now, what you"
+    },
+    {
+      "start": 39.4,
+      "duration": 4.32,
+      "end": 43.72,
+      "text": "have to do is you have to find the"
+    },
+    {
+      "start": 41.08,
+      "duration": 4.36,
+      "end": 45.44,
+      "text": "median of these two sorted arrays. So,"
+    },
+    {
+      "start": 43.72,
+      "duration": 3.68,
+      "end": 47.4,
+      "text": "what you have to do is you have to take"
+    },
+    {
+      "start": 45.44,
+      "duration": 4.04,
+      "end": 49.48,
+      "text": "both of those sorted arrays and you have"
+    },
+    {
+      "start": 47.4,
+      "duration": 10.48,
+      "end": 57.879999999999995,
+      "text": "to combine them. So, if I combine them,"
+    },
+    {
+      "start": 49.48,
+      "duration": 10.08,
+      "end": 59.559999999999995,
+      "text": "what I get is 1 2 3 3 4 6 7 10 12 15."
+    },
+    {
+      "start": 57.88,
+      "duration": 3.0,
+      "end": 60.88,
+      "text": "What is the total number of elements?"
+    },
+    {
+      "start": 59.56,
+      "duration": 5.04,
+      "end": 64.60000000000001,
+      "text": "The total number of elements in this"
+    },
+    {
+      "start": 60.88,
+      "duration": 5.12,
+      "end": 66.0,
+      "text": "case is 10. Why? Because N1 was six. N2"
+    },
+    {
+      "start": 64.6,
+      "duration": 2.8,
+      "end": 67.39999999999999,
+      "text": "was four. So, the total number of"
+    },
+    {
+      "start": 66.0,
+      "duration": 3.6,
+      "end": 69.6,
+      "text": "elements is"
+    },
+    {
+      "start": 67.4,
+      "duration": 3.92,
+      "end": 71.32000000000001,
+      "text": "10, right? So, if I try to find out the"
+    },
+    {
+      "start": 69.6,
+      "duration": 4.28,
+      "end": 73.88,
+      "text": "median, can I find a median of 10"
+    },
+    {
+      "start": 71.32,
+      "duration": 5.48,
+      "end": 76.8,
+      "text": "elements? I cannot. Why? Because if I"
+    },
+    {
+      "start": 73.88,
+      "duration": 5.44,
+      "end": 79.32,
+      "text": "stand over at four, there are four"
+    },
+    {
+      "start": 76.8,
+      "duration": 4.8,
+      "end": 81.6,
+      "text": "elements on the left. There are five"
+    },
+    {
+      "start": 79.32,
+      "duration": 4.24,
+      "end": 83.55999999999999,
+      "text": "elements on the right. If I stand at"
+    },
+    {
+      "start": 81.6,
+      "duration": 4.68,
+      "end": 86.28,
+      "text": "six, there are five elements on the"
+    },
+    {
+      "start": 83.56,
+      "duration": 4.68,
+      "end": 88.24000000000001,
+      "text": "left, four elements on the right. So,"
+    },
+    {
+      "start": 86.28,
+      "duration": 4.76,
+      "end": 91.04,
+      "text": "there is no specific median, because"
+    },
+    {
+      "start": 88.24,
+      "duration": 4.6,
+      "end": 92.83999999999999,
+      "text": "median means on the left and on the"
+    },
+    {
+      "start": 91.04,
+      "duration": 3.8,
+      "end": 94.84,
+      "text": "right, there must be equal number of"
+    },
+    {
+      "start": 92.84,
+      "duration": 3.48,
+      "end": 96.32000000000001,
+      "text": "elements. Now, this is not in this case."
+    },
+    {
+      "start": 94.84,
+      "duration": 4.12,
+      "end": 98.96000000000001,
+      "text": "This is like five and four. They're not"
+    },
+    {
+      "start": 96.32,
+      "duration": 4.4,
+      "end": 100.72,
+      "text": "equal. So, can I say the median will be"
+    },
+    {
+      "start": 98.96,
+      "duration": 3.8,
+      "end": 102.75999999999999,
+      "text": "somewhere between four and six be-"
+    },
+    {
+      "start": 100.72,
+      "duration": 4.84,
+      "end": 105.56,
+      "text": "because if I take somewhere between four"
+    },
+    {
+      "start": 102.76,
+      "duration": 4.24,
+      "end": 107.0,
+      "text": "and six, on the left there are five, on"
+    },
+    {
+      "start": 105.56,
+      "duration": 4.24,
+      "end": 109.8,
+      "text": "the right there are five, which is"
+    },
+    {
+      "start": 107.0,
+      "duration": 5.48,
+      "end": 112.48,
+      "text": "equal. So, I can say that the median is"
+    },
+    {
+      "start": 109.8,
+      "duration": 5.36,
+      "end": 115.16,
+      "text": "somewhere between four and six. So, it's"
+    },
+    {
+      "start": 112.48,
+      "duration": 5.92,
+      "end": 118.4,
+      "text": "like the middle of four and six. So, 4 +"
+    },
+    {
+      "start": 115.16,
+      "duration": 5.64,
+      "end": 120.8,
+      "text": "6 / 2. Five is the median in this case."
+    },
+    {
+      "start": 118.4,
+      "duration": 5.12,
+      "end": 123.52000000000001,
+      "text": "Now, over here the point to notice was"
+    },
+    {
+      "start": 120.8,
+      "duration": 4.96,
+      "end": 125.75999999999999,
+      "text": "the total number of elements was even."
+    },
+    {
+      "start": 123.52,
+      "duration": 3.959,
+      "end": 127.479,
+      "text": "That is why it did not have a specific"
+    },
+    {
+      "start": 125.76,
+      "duration": 3.919,
+      "end": 129.679,
+      "text": "median. But, what if I take this"
+    },
+    {
+      "start": 127.479,
+      "duration": 4.241,
+      "end": 131.72,
+      "text": "example? There's like three elements."
+    },
+    {
+      "start": 129.679,
+      "duration": 4.201,
+      "end": 133.88,
+      "text": "There's like two elements. So, what is"
+    },
+    {
+      "start": 131.72,
+      "duration": 4.08,
+      "end": 135.8,
+      "text": "the total number of elements? Can I say"
+    },
+    {
+      "start": 133.88,
+      "duration": 4.92,
+      "end": 138.79999999999998,
+      "text": "that the total number of elements in"
+    },
+    {
+      "start": 135.8,
+      "duration": 5.52,
+      "end": 141.32000000000002,
+      "text": "this case is five? I can. So, if I try"
+    },
+    {
+      "start": 138.8,
+      "duration": 3.84,
+      "end": 142.64000000000001,
+      "text": "to combine them in this time, what will"
+    },
+    {
+      "start": 141.32,
+      "duration": 5.44,
+      "end": 146.76,
+      "text": "I get? If I try to combine them, I'll"
+    },
+    {
+      "start": 142.64,
+      "duration": 6.16,
+      "end": 148.79999999999998,
+      "text": "get one, two, three, three, four. If I"
+    },
+    {
+      "start": 146.76,
+      "duration": 4.64,
+      "end": 151.39999999999998,
+      "text": "ask you what is the median? Can I say"
+    },
+    {
+      "start": 148.8,
+      "duration": 4.12,
+      "end": 152.92000000000002,
+      "text": "this is the median? I can. Why? Because"
+    },
+    {
+      "start": 151.4,
+      "duration": 3.76,
+      "end": 155.16,
+      "text": "there's like two elements on the left."
+    },
+    {
+      "start": 152.92,
+      "duration": 4.44,
+      "end": 157.35999999999999,
+      "text": "There's like two elements on the right."
+    },
+    {
+      "start": 155.16,
+      "duration": 5.48,
+      "end": 160.64,
+      "text": "Thereby, the median is pretty simple,"
+    },
+    {
+      "start": 157.36,
+      "duration": 4.8,
+      "end": 162.16000000000003,
+      "text": "the midpoint. So, in case of"
+    },
+    {
+      "start": 160.64,
+      "duration": 3.48,
+      "end": 164.11999999999998,
+      "text": "the total number of elements being odd,"
+    },
+    {
+      "start": 162.16,
+      "duration": 4.28,
+      "end": 166.44,
+      "text": "it's very simple. In case the total"
+    },
+    {
+      "start": 164.12,
+      "duration": 4.04,
+      "end": 168.16,
+      "text": "number of elements is even, I have to"
+    },
+    {
+      "start": 166.44,
+      "duration": 4.0,
+      "end": 170.44,
+      "text": "consider two elements. I have to take"
+    },
+    {
+      "start": 168.16,
+      "duration": 3.32,
+      "end": 171.48,
+      "text": "the middle of it. Got it? Now, this is"
+    },
+    {
+      "start": 170.44,
+      "duration": 3.4,
+      "end": 173.84,
+      "text": "what we have to find. We have to find"
+    },
+    {
+      "start": 171.48,
+      "duration": 3.52,
+      "end": 175.0,
+      "text": "the median of two sorted arrays. So,"
+    },
+    {
+      "start": 173.84,
+      "duration": 3.119,
+      "end": 176.959,
+      "text": "what is the first solution that you can"
+    },
+    {
+      "start": 175.0,
+      "duration": 4.48,
+      "end": 179.48,
+      "text": "think of? The extreme brute force that"
+    },
+    {
+      "start": 176.959,
+      "duration": 3.921,
+      "end": 180.88,
+      "text": "comes to my mind is, okay, two sorted"
+    },
+    {
+      "start": 179.48,
+      "duration": 4.08,
+      "end": 183.56,
+      "text": "arrays."
+    },
+    {
+      "start": 180.88,
+      "duration": 5.8,
+      "end": 186.68,
+      "text": "Can I merge them into a third sorted"
+    },
+    {
+      "start": 183.56,
+      "duration": 5.56,
+      "end": 189.12,
+      "text": "array? And if I merge them, then I know"
+    },
+    {
+      "start": 186.68,
+      "duration": 4.12,
+      "end": 190.8,
+      "text": "I can solve it afterwards."
+    },
+    {
+      "start": 189.12,
+      "duration": 4.16,
+      "end": 193.28,
+      "text": "Now, the point to notice over here is"
+    },
+    {
+      "start": 190.8,
+      "duration": 5.04,
+      "end": 195.84,
+      "text": "both of them are sorted arrays. And you"
+    },
+    {
+      "start": 193.28,
+      "duration": 4.04,
+      "end": 197.32,
+      "text": "know how to merge two sorted arrays into"
+    },
+    {
+      "start": 195.84,
+      "duration": 3.8,
+      "end": 199.64000000000001,
+      "text": "one. We have done that in merge sort,"
+    },
+    {
+      "start": 197.32,
+      "duration": 5.0,
+      "end": 202.32,
+      "text": "isn't it? So, what I'll do is I'll stand"
+    },
+    {
+      "start": 199.64,
+      "duration": 5.56,
+      "end": 205.2,
+      "text": "at one and I'll stand at two. And I'll"
+    },
+    {
+      "start": 202.32,
+      "duration": 4.76,
+      "end": 207.07999999999998,
+      "text": "try to take another third array."
+    },
+    {
+      "start": 205.2,
+      "duration": 4.6,
+      "end": 209.79999999999998,
+      "text": "And I'll try to put it over there."
+    },
+    {
+      "start": 207.08,
+      "duration": 4.24,
+      "end": 211.32000000000002,
+      "text": "Will I take one or will I take two? I'll"
+    },
+    {
+      "start": 209.8,
+      "duration": 3.159,
+      "end": 212.959,
+      "text": "take one because I'm trying to form a"
+    },
+    {
+      "start": 211.32,
+      "duration": 3.72,
+      "end": 215.04,
+      "text": "sorted array. So, I'll take one. And"
+    },
+    {
+      "start": 212.959,
+      "duration": 4.56,
+      "end": 217.519,
+      "text": "I'll move. Will I take two or will I"
+    },
+    {
+      "start": 215.04,
+      "duration": 4.199,
+      "end": 219.239,
+      "text": "take three? I'll take two and I'll move."
+    },
+    {
+      "start": 217.519,
+      "duration": 3.561,
+      "end": 221.08,
+      "text": "Will I take three or three? I can take"
+    },
+    {
+      "start": 219.239,
+      "duration": 3.681,
+      "end": 222.92000000000002,
+      "text": "any one. I'll take three and move. Will"
+    },
+    {
+      "start": 221.08,
+      "duration": 3.8,
+      "end": 224.88000000000002,
+      "text": "I take three and four? I'll take three"
+    },
+    {
+      "start": 222.92,
+      "duration": 3.84,
+      "end": 226.76,
+      "text": "and I'll move. Will I take six and four?"
+    },
+    {
+      "start": 224.88,
+      "duration": 4.12,
+      "end": 229.0,
+      "text": "I'll take four and I'll move. Will I"
+    },
+    {
+      "start": 226.76,
+      "duration": 4.759,
+      "end": 231.519,
+      "text": "take six or seven? I'll take six and"
+    },
+    {
+      "start": 229.0,
+      "duration": 5.44,
+      "end": 234.44,
+      "text": "I'll move. Will I take seven or 15? I'll"
+    },
+    {
+      "start": 231.519,
+      "duration": 6.001,
+      "end": 237.52,
+      "text": "take seven. I'll move. Will I take 10?"
+    },
+    {
+      "start": 234.44,
+      "duration": 4.52,
+      "end": 238.96,
+      "text": "Yes. Will I take 12? Yes. Will I take"
+    },
+    {
+      "start": 237.52,
+      "duration": 2.8,
+      "end": 240.32000000000002,
+      "text": "After this, there's nothing. So,"
+    },
+    {
+      "start": 238.96,
+      "duration": 3.16,
+      "end": 242.12,
+      "text": "whatever is left on the right, I'll just"
+    },
+    {
+      "start": 240.32,
+      "duration": 3.44,
+      "end": 243.76,
+      "text": "take it. So, we have put two sorted"
+    },
+    {
+      "start": 242.12,
+      "duration": 3.4,
+      "end": 245.52,
+      "text": "arrays into the third one. Now, what is"
+    },
+    {
+      "start": 243.76,
+      "duration": 4.0,
+      "end": 247.76,
+      "text": "the next step? The next step is to find"
+    },
+    {
+      "start": 245.52,
+      "duration": 4.28,
+      "end": 249.8,
+      "text": "out the median. Can I say if the total"
+    },
+    {
+      "start": 247.76,
+      "duration": 5.24,
+      "end": 253.0,
+      "text": "number of elements is even, I need to"
+    },
+    {
+      "start": 249.8,
+      "duration": 5.159,
+      "end": 254.959,
+      "text": "find two median elements. One is four"
+    },
+    {
+      "start": 253.0,
+      "duration": 4.32,
+      "end": 257.32,
+      "text": "and the other one is six. And I need to"
+    },
+    {
+      "start": 254.959,
+      "duration": 4.761,
+      "end": 259.72,
+      "text": "basically add them and divide by two to"
+    },
+    {
+      "start": 257.32,
+      "duration": 5.36,
+      "end": 262.68,
+      "text": "get our median, right? And you know how"
+    },
+    {
+      "start": 259.72,
+      "duration": 4.36,
+      "end": 264.08000000000004,
+      "text": "to find it. The index is 0 1 2 3 4 5."
+    },
+    {
+      "start": 262.68,
+      "duration": 3.76,
+      "end": 266.44,
+      "text": "You need the fourth index and the fifth"
+    },
+    {
+      "start": 264.08,
+      "duration": 5.04,
+      "end": 269.12,
+      "text": "index. Fifth index is nothing but 10 by"
+    },
+    {
+      "start": 266.44,
+      "duration": 4.64,
+      "end": 271.08,
+      "text": "2. And the fourth index is nothing by 10"
+    },
+    {
+      "start": 269.12,
+      "duration": 3.68,
+      "end": 272.8,
+      "text": "by 2 minus 1. So, you get both the"
+    },
+    {
+      "start": 271.08,
+      "duration": 3.0,
+      "end": 274.08,
+      "text": "indexes and then you can do your job."
+    },
+    {
+      "start": 272.8,
+      "duration": 3.68,
+      "end": 276.48,
+      "text": "I'll write that in code, but before"
+    },
+    {
+      "start": 274.08,
+      "duration": 4.0,
+      "end": 278.08,
+      "text": "that, let's look at the other example."
+    },
+    {
+      "start": 276.48,
+      "duration": 4.28,
+      "end": 280.76,
+      "text": "In the other example, when you try to"
+    },
+    {
+      "start": 278.08,
+      "duration": 5.8,
+      "end": 283.88,
+      "text": "merge them, you'll get something as 1 2"
+    },
+    {
+      "start": 280.76,
+      "duration": 5.8,
+      "end": 286.56,
+      "text": "3 3 4. And over here,"
+    },
+    {
+      "start": 283.88,
+      "duration": 4.8,
+      "end": 288.68,
+      "text": "the total number of elements is odd. And"
+    },
+    {
+      "start": 286.56,
+      "duration": 5.0,
+      "end": 291.56,
+      "text": "which index do you require? You straight"
+    },
+    {
+      "start": 288.68,
+      "duration": 5.96,
+      "end": 294.64,
+      "text": "away require this one, which is the"
+    },
+    {
+      "start": 291.56,
+      "duration": 5.08,
+      "end": 296.64,
+      "text": "second index. Can I straight away write"
+    },
+    {
+      "start": 294.64,
+      "duration": 4.08,
+      "end": 298.71999999999997,
+      "text": "5 by 2? And that will be the second"
+    },
+    {
+      "start": 296.64,
+      "duration": 4.6,
+      "end": 301.24,
+      "text": "index. And that will be my only median."
+    },
+    {
+      "start": 298.72,
+      "duration": 4.16,
+      "end": 302.88000000000005,
+      "text": "I can, right? So, this is how the brute"
+    },
+    {
+      "start": 301.24,
+      "duration": 3.0,
+      "end": 304.24,
+      "text": "force will be. So, let's quickly write"
+    },
+    {
+      "start": 302.88,
+      "duration": 2.96,
+      "end": 305.84,
+      "text": "down So, let's quickly write down the"
+    },
+    {
+      "start": 304.24,
+      "duration": 3.16,
+      "end": 307.40000000000003,
+      "text": "pseudo code. So, what I've done is I've"
+    },
+    {
+      "start": 305.84,
+      "duration": 3.92,
+      "end": 309.76,
+      "text": "taken an array three, which is an empty"
+    },
+    {
+      "start": 307.4,
+      "duration": 4.8,
+      "end": 312.2,
+      "text": "array. I've taken index I, which points"
+    },
+    {
+      "start": 309.76,
+      "duration": 4.8,
+      "end": 314.56,
+      "text": "to the first element of array one. I've"
+    },
+    {
+      "start": 312.2,
+      "duration": 4.2,
+      "end": 316.4,
+      "text": "taken index J, which points to the first"
+    },
+    {
+      "start": 314.56,
+      "duration": 4.04,
+      "end": 318.6,
+      "text": "element of array two. Now, what I know"
+    },
+    {
+      "start": 316.4,
+      "duration": 4.56,
+      "end": 320.96,
+      "text": "is I have to merge them. So, I'll keep"
+    },
+    {
+      "start": 318.6,
+      "duration": 4.48,
+      "end": 323.08000000000004,
+      "text": "on going till I is lesser than N1, which"
+    },
+    {
+      "start": 320.96,
+      "duration": 3.6,
+      "end": 324.56,
+      "text": "is basically the size of the first one."
+    },
+    {
+      "start": 323.08,
+      "duration": 3.56,
+      "end": 326.64,
+      "text": "I'll keep on going till it is lesser"
+    },
+    {
+      "start": 324.56,
+      "duration": 3.96,
+      "end": 328.52,
+      "text": "than N2, which is the size of the next"
+    },
+    {
+      "start": 326.64,
+      "duration": 5.88,
+      "end": 332.52,
+      "text": "one. Now, what I'll do is"
+    },
+    {
+      "start": 328.52,
+      "duration": 6.44,
+      "end": 334.96,
+      "text": "if array of one of I is lesser than"
+    },
+    {
+      "start": 332.52,
+      "duration": 5.44,
+      "end": 337.96,
+      "text": "array of two of J,"
+    },
+    {
+      "start": 334.96,
+      "duration": 6.48,
+      "end": 341.44,
+      "text": "in that case, I'll ask array three to"
+    },
+    {
+      "start": 337.96,
+      "duration": 6.2,
+      "end": 344.15999999999997,
+      "text": "add array of one of I and do a plus"
+    },
+    {
+      "start": 341.44,
+      "duration": 4.8,
+      "end": 346.24,
+      "text": "plus. Basically, after you add, you move"
+    },
+    {
+      "start": 344.16,
+      "duration": 6.24,
+      "end": 350.40000000000003,
+      "text": "forward because we're done with you."
+    },
+    {
+      "start": 346.24,
+      "duration": 6.92,
+      "end": 353.16,
+      "text": "Else, I will say array three to add"
+    },
+    {
+      "start": 350.4,
+      "duration": 5.56,
+      "end": 355.96,
+      "text": "array two of J because that is the small"
+    },
+    {
+      "start": 353.16,
+      "duration": 4.68,
+      "end": 357.84000000000003,
+      "text": "element. At the same time, go ahead"
+    },
+    {
+      "start": 355.96,
+      "duration": 3.4,
+      "end": 359.35999999999996,
+      "text": "because you're done."
+    },
+    {
+      "start": 357.84,
+      "duration": 4.16,
+      "end": 362.0,
+      "text": "So, what this will do is this will make"
+    },
+    {
+      "start": 359.36,
+      "duration": 5.36,
+      "end": 364.72,
+      "text": "sure I end up adding up all the"
+    },
+    {
+      "start": 362.0,
+      "duration": 4.6,
+      "end": 366.6,
+      "text": "elements. But, once I'm done, like if"
+    },
+    {
+      "start": 364.72,
+      "duration": 3.88,
+      "end": 368.6,
+      "text": "this condition exhaust, if this"
+    },
+    {
+      "start": 366.6,
+      "duration": 3.92,
+      "end": 370.52000000000004,
+      "text": "condition exhaust, or this condition"
+    },
+    {
+      "start": 368.6,
+      "duration": 5.52,
+      "end": 374.12,
+      "text": "exhaust, there must be some elements"
+    },
+    {
+      "start": 370.52,
+      "duration": 4.96,
+      "end": 375.47999999999996,
+      "text": "left. So, I say if some element is left"
+    },
+    {
+      "start": 374.12,
+      "duration": 2.56,
+      "end": 376.68,
+      "text": "on the"
+    },
+    {
+      "start": 375.48,
+      "duration": 3.64,
+      "end": 379.12,
+      "text": "first array,"
+    },
+    {
+      "start": 376.68,
+      "duration": 4.28,
+      "end": 380.96,
+      "text": "then array three, can you just"
+    },
+    {
+      "start": 379.12,
+      "duration": 4.799,
+      "end": 383.919,
+      "text": "add up to yourself?"
+    },
+    {
+      "start": 380.96,
+      "duration": 4.68,
+      "end": 385.64,
+      "text": "Which is like array one of I plus plus."
+    },
+    {
+      "start": 383.919,
+      "duration": 3.721,
+      "end": 387.64,
+      "text": "I'm not going to explain this. It's a"
+    },
+    {
+      "start": 385.64,
+      "duration": 3.2,
+      "end": 388.84,
+      "text": "very very standard one, very very"
+    },
+    {
+      "start": 387.64,
+      "duration": 4.04,
+      "end": 391.68,
+      "text": "standard."
+    },
+    {
+      "start": 388.84,
+      "duration": 5.24,
+      "end": 394.08,
+      "text": "If J is lesser than N2, I say array"
+    },
+    {
+      "start": 391.68,
+      "duration": 6.12,
+      "end": 397.8,
+      "text": "three dot add"
+    },
+    {
+      "start": 394.08,
+      "duration": 6.44,
+      "end": 400.52,
+      "text": "array three J plus plus. Quite simple."
+    },
+    {
+      "start": 397.8,
+      "duration": 5.2,
+      "end": 403.0,
+      "text": "What this will do is this algorithm will"
+    },
+    {
+      "start": 400.52,
+      "duration": 4.0,
+      "end": 404.52,
+      "text": "make sure array three has the sorted"
+    },
+    {
+      "start": 403.0,
+      "duration": 4.24,
+      "end": 407.24,
+      "text": "array. Now, I just need to find the"
+    },
+    {
+      "start": 404.52,
+      "duration": 5.64,
+      "end": 410.15999999999997,
+      "text": "median. I know if"
+    },
+    {
+      "start": 407.24,
+      "duration": 7.32,
+      "end": 414.56,
+      "text": "So, maybe I can do one thing. I can say"
+    },
+    {
+      "start": 410.16,
+      "duration": 6.52,
+      "end": 416.68,
+      "text": "N is equal to N1 plus N2."
+    },
+    {
+      "start": 414.56,
+      "duration": 3.68,
+      "end": 418.24,
+      "text": "If"
+    },
+    {
+      "start": 416.68,
+      "duration": 4.32,
+      "end": 421.0,
+      "text": "N is"
+    },
+    {
+      "start": 418.24,
+      "duration": 4.56,
+      "end": 422.8,
+      "text": "e- rather odd, I know the answer will be"
+    },
+    {
+      "start": 421.0,
+      "duration": 3.84,
+      "end": 424.84,
+      "text": "very simple."
+    },
+    {
+      "start": 422.8,
+      "duration": 3.36,
+      "end": 426.16,
+      "text": "Array three of"
+    },
+    {
+      "start": 424.84,
+      "duration": 4.56,
+      "end": 429.4,
+      "text": "N by two."
+    },
+    {
+      "start": 426.16,
+      "duration": 5.0,
+      "end": 431.16,
+      "text": "Because in that case, it's exactly the"
+    },
+    {
+      "start": 429.4,
+      "duration": 3.64,
+      "end": 433.03999999999996,
+      "text": "middle. If you remember for five, the"
+    },
+    {
+      "start": 431.16,
+      "duration": 3.4,
+      "end": 434.56,
+      "text": "middle was two, which is five by two."
+    },
+    {
+      "start": 433.04,
+      "duration": 2.48,
+      "end": 435.52000000000004,
+      "text": "So, you just take out the middle and you"
+    },
+    {
+      "start": 434.56,
+      "duration": 2.48,
+      "end": 437.04,
+      "text": "send it back."
+    },
+    {
+      "start": 435.52,
+      "duration": 3.96,
+      "end": 439.47999999999996,
+      "text": "Or else,"
+    },
+    {
+      "start": 437.04,
+      "duration": 5.04,
+      "end": 442.08000000000004,
+      "text": "the median will be if I have to write,"
+    },
+    {
+      "start": 439.48,
+      "duration": 5.0,
+      "end": 444.48,
+      "text": "it's array three"
+    },
+    {
+      "start": 442.08,
+      "duration": 5.0,
+      "end": 447.08,
+      "text": "N by two. Because if you remember for"
+    },
+    {
+      "start": 444.48,
+      "duration": 4.12,
+      "end": 448.6,
+      "text": "10, you had to pick up the fourth index,"
+    },
+    {
+      "start": 447.08,
+      "duration": 3.64,
+      "end": 450.71999999999997,
+      "text": "you have to pick up the fifth fifth"
+    },
+    {
+      "start": 448.6,
+      "duration": 3.24,
+      "end": 451.84000000000003,
+      "text": "index. And the element were four and"
+    },
+    {
+      "start": 450.72,
+      "duration": 2.44,
+      "end": 453.16,
+      "text": "six."
+    },
+    {
+      "start": 451.84,
+      "duration": 3.48,
+      "end": 455.32,
+      "text": "And you added them and you divided them"
+    },
+    {
+      "start": 453.16,
+      "duration": 4.28,
+      "end": 457.44,
+      "text": "by two. So, this"
+    },
+    {
+      "start": 455.32,
+      "duration": 4.88,
+      "end": 460.2,
+      "text": "plus array of three"
+    },
+    {
+      "start": 457.44,
+      "duration": 4.92,
+      "end": 462.36,
+      "text": "N by two minus one divided by two is"
+    },
+    {
+      "start": 460.2,
+      "duration": 4.32,
+      "end": 464.52,
+      "text": "what you return. And this will be the"
+    },
+    {
+      "start": 462.36,
+      "duration": 3.92,
+      "end": 466.28000000000003,
+      "text": "pseudo code, simple as that. So, let's"
+    },
+    {
+      "start": 464.52,
+      "duration": 3.4,
+      "end": 467.91999999999996,
+      "text": "quickly jump into the code editor. As"
+    },
+    {
+      "start": 466.28,
+      "duration": 4.6,
+      "end": 470.88,
+      "text": "you can see that I've written the exact"
+    },
+    {
+      "start": 467.92,
+      "duration": 4.52,
+      "end": 472.44,
+      "text": "same code. The only minute difference is"
+    },
+    {
+      "start": 470.88,
+      "duration": 3.12,
+      "end": 474.0,
+      "text": "I'm type casting over here because the"
+    },
+    {
+      "start": 472.44,
+      "duration": 3.96,
+      "end": 476.4,
+      "text": "answer will be in double, and if you do"
+    },
+    {
+      "start": 474.0,
+      "duration": 4.4,
+      "end": 478.4,
+      "text": "not type cast, these are integers. You"
+    },
+    {
+      "start": 476.4,
+      "duration": 3.68,
+      "end": 480.08,
+      "text": "might end up getting incorrect answers."
+    },
+    {
+      "start": 478.4,
+      "duration": 5.0,
+      "end": 483.4,
+      "text": "So, if we try to submit this, you'll get"
+    },
+    {
+      "start": 480.08,
+      "duration": 5.08,
+      "end": 485.15999999999997,
+      "text": "a partially accepted. Why? Because it is"
+    },
+    {
+      "start": 483.4,
+      "duration": 3.68,
+      "end": 487.08,
+      "text": "it's taking a lot of time."
+    },
+    {
+      "start": 485.16,
+      "duration": 3.64,
+      "end": 488.8,
+      "text": "The total time taken over here will be"
+    },
+    {
+      "start": 487.08,
+      "duration": 3.08,
+      "end": 490.15999999999997,
+      "text": "you're going through every element in"
+    },
+    {
+      "start": 488.8,
+      "duration": 3.04,
+      "end": 491.84000000000003,
+      "text": "both the arrays, and you're putting them"
+    },
+    {
+      "start": 490.16,
+      "duration": 3.8,
+      "end": 493.96000000000004,
+      "text": "into a third array. So, since you're"
+    },
+    {
+      "start": 491.84,
+      "duration": 3.48,
+      "end": 495.32,
+      "text": "going through every element, that's N1 +"
+    },
+    {
+      "start": 493.96,
+      "duration": 3.48,
+      "end": 497.44,
+      "text": "N2 because that is the total number of"
+    },
+    {
+      "start": 495.32,
+      "duration": 4.48,
+      "end": 499.8,
+      "text": "elements. Using a third array to store"
+    },
+    {
+      "start": 497.44,
+      "duration": 4.76,
+      "end": 502.2,
+      "text": "all the elements, so that's a big of N1"
+    },
+    {
+      "start": 499.8,
+      "duration": 4.88,
+      "end": 504.68,
+      "text": "+ N2. Now, this is giving you a time"
+    },
+    {
+      "start": 502.2,
+      "duration": 3.92,
+      "end": 506.12,
+      "text": "limit exceeded. Now, can we do better?"
+    },
+    {
+      "start": 504.68,
+      "duration": 3.68,
+      "end": 508.36,
+      "text": "The next better solution will be to"
+    },
+    {
+      "start": 506.12,
+      "duration": 4.44,
+      "end": 510.56,
+      "text": "optimize the space, and after that we'll"
+    },
+    {
+      "start": 508.36,
+      "duration": 4.359,
+      "end": 512.719,
+      "text": "try to work on this time limit exceeded."
+    },
+    {
+      "start": 510.56,
+      "duration": 4.32,
+      "end": 514.88,
+      "text": "But as of now, can we optimize the"
+    },
+    {
+      "start": 512.719,
+      "duration": 4.0,
+      "end": 516.719,
+      "text": "space? Like get rid of this third array."
+    },
+    {
+      "start": 514.88,
+      "duration": 3.12,
+      "end": 518.0,
+      "text": "That is what we'll look forward. So, in"
+    },
+    {
+      "start": 516.719,
+      "duration": 3.0,
+      "end": 519.719,
+      "text": "the brute force solution, we were using"
+    },
+    {
+      "start": 518.0,
+      "duration": 3.599,
+      "end": 521.599,
+      "text": "an extra space. So, why was that?"
+    },
+    {
+      "start": 519.719,
+      "duration": 3.88,
+      "end": 523.599,
+      "text": "Because I was using an array three where"
+    },
+    {
+      "start": 521.599,
+      "duration": 4.001,
+      "end": 525.6,
+      "text": "I was storing all the elements. But if I"
+    },
+    {
+      "start": 523.599,
+      "duration": 4.121,
+      "end": 527.72,
+      "text": "just think logically, do I need all the"
+    },
+    {
+      "start": 525.6,
+      "duration": 5.08,
+      "end": 530.6800000000001,
+      "text": "elements? The answer to that is no."
+    },
+    {
+      "start": 527.72,
+      "duration": 5.56,
+      "end": 533.28,
+      "text": "If I can somehow just get four and six"
+    },
+    {
+      "start": 530.68,
+      "duration": 5.32,
+      "end": 536.0,
+      "text": "for this example, and then just divide"
+    },
+    {
+      "start": 533.28,
+      "duration": 4.559,
+      "end": 537.8389999999999,
+      "text": "them by two, that's done. I don't need"
+    },
+    {
+      "start": 536.0,
+      "duration": 4.04,
+      "end": 540.04,
+      "text": "all the elements. Why am I storing all"
+    },
+    {
+      "start": 537.839,
+      "duration": 3.961,
+      "end": 541.8000000000001,
+      "text": "the elements? I just need four and six."
+    },
+    {
+      "start": 540.04,
+      "duration": 3.64,
+      "end": 543.68,
+      "text": "In this particular example,"
+    },
+    {
+      "start": 541.8,
+      "duration": 4.84,
+      "end": 546.64,
+      "text": "I just need three. I don't need all the"
+    },
+    {
+      "start": 543.68,
+      "duration": 5.64,
+      "end": 549.3199999999999,
+      "text": "elements. So, let's focus on picking up"
+    },
+    {
+      "start": 546.64,
+      "duration": 5.28,
+      "end": 551.92,
+      "text": "four and six only, or let's focus on"
+    },
+    {
+      "start": 549.32,
+      "duration": 4.92,
+      "end": 554.24,
+      "text": "picking up three only. So, when you're"
+    },
+    {
+      "start": 551.92,
+      "duration": 5.0,
+      "end": 556.92,
+      "text": "doing the algorithm, if you remember, we"
+    },
+    {
+      "start": 554.24,
+      "duration": 4.599,
+      "end": 558.839,
+      "text": "we checked for N's value at the end. If"
+    },
+    {
+      "start": 556.92,
+      "duration": 3.96,
+      "end": 560.88,
+      "text": "it was odd, we did the computation. If"
+    },
+    {
+      "start": 558.839,
+      "duration": 4.881,
+      "end": 563.72,
+      "text": "it was even, we did the computation at"
+    },
+    {
+      "start": 560.88,
+      "duration": 4.32,
+      "end": 565.2,
+      "text": "the end. But before that, we merged them"
+    },
+    {
+      "start": 563.72,
+      "duration": 3.44,
+      "end": 567.1600000000001,
+      "text": "together. So, let's have some"
+    },
+    {
+      "start": 565.2,
+      "duration": 4.12,
+      "end": 569.32,
+      "text": "observations. The total number of"
+    },
+    {
+      "start": 567.16,
+      "duration": 4.24,
+      "end": 571.4,
+      "text": "elements are 10."
+    },
+    {
+      "start": 569.32,
+      "duration": 4.6,
+      "end": 573.9200000000001,
+      "text": "At the fourth index, I have the first"
+    },
+    {
+      "start": 571.4,
+      "duration": 5.36,
+      "end": 576.76,
+      "text": "index one element. At the fifth index, I"
+    },
+    {
+      "start": 573.92,
+      "duration": 5.6,
+      "end": 579.52,
+      "text": "have the index two element. And if it is"
+    },
+    {
+      "start": 576.76,
+      "duration": 6.24,
+      "end": 583.0,
+      "text": "even, I'm adding them up and dividing it"
+    },
+    {
+      "start": 579.52,
+      "duration": 6.2,
+      "end": 585.72,
+      "text": "by two. So, let's call index one as four"
+    },
+    {
+      "start": 583.0,
+      "duration": 5.48,
+      "end": 588.48,
+      "text": "because I am the fourth index element"
+    },
+    {
+      "start": 585.72,
+      "duration": 4.36,
+      "end": 590.08,
+      "text": "and index two as five. I am the fifth"
+    },
+    {
+      "start": 588.48,
+      "duration": 3.76,
+      "end": 592.24,
+      "text": "index"
+    },
+    {
+      "start": 590.08,
+      "duration": 3.92,
+      "end": 594.0,
+      "text": "element which is called as element one"
+    },
+    {
+      "start": 592.24,
+      "duration": 2.88,
+      "end": 595.12,
+      "text": "and element two. And what is these"
+    },
+    {
+      "start": 594.0,
+      "duration": 3.56,
+      "end": 597.56,
+      "text": "values?"
+    },
+    {
+      "start": 595.12,
+      "duration": 4.8,
+      "end": 599.92,
+      "text": "If you if you just do total by two,"
+    },
+    {
+      "start": 597.56,
+      "duration": 4.88,
+      "end": 602.4399999999999,
+      "text": "you'll get index two. And if you just"
+    },
+    {
+      "start": 599.92,
+      "duration": 5.44,
+      "end": 605.36,
+      "text": "subtract it by one, you'll get the index"
+    },
+    {
+      "start": 602.44,
+      "duration": 5.24,
+      "end": 607.6800000000001,
+      "text": "four. So, it's basically n by two and n"
+    },
+    {
+      "start": 605.36,
+      "duration": 3.44,
+      "end": 608.8000000000001,
+      "text": "by two minus one. And this is index one"
+    },
+    {
+      "start": 607.68,
+      "duration": 2.24,
+      "end": 609.92,
+      "text": "and this is index two."
+    },
+    {
+      "start": 608.8,
+      "duration": 4.24,
+      "end": 613.04,
+      "text": "Quite simple."
+    },
+    {
+      "start": 609.92,
+      "duration": 5.68,
+      "end": 615.5999999999999,
+      "text": "In this case, if you divide by two, you"
+    },
+    {
+      "start": 613.04,
+      "duration": 4.04,
+      "end": 617.0799999999999,
+      "text": "will get index two because the formulas"
+    },
+    {
+      "start": 615.6,
+      "duration": 3.12,
+      "end": 618.72,
+      "text": "are similar. I want to keep the same"
+    },
+    {
+      "start": 617.08,
+      "duration": 4.32,
+      "end": 621.4000000000001,
+      "text": "formula so that I don't have to write"
+    },
+    {
+      "start": 618.72,
+      "duration": 4.12,
+      "end": 622.84,
+      "text": "repetitive code. So, element two."
+    },
+    {
+      "start": 621.4,
+      "duration": 4.04,
+      "end": 625.4399999999999,
+      "text": "So, what I'll try to do is I'll try to"
+    },
+    {
+      "start": 622.84,
+      "duration": 5.52,
+      "end": 628.36,
+      "text": "find index one and index two."
+    },
+    {
+      "start": 625.44,
+      "duration": 4.24,
+      "end": 629.6800000000001,
+      "text": "In case n is even, I take both of these"
+    },
+    {
+      "start": 628.36,
+      "duration": 4.56,
+      "end": 632.92,
+      "text": "elements"
+    },
+    {
+      "start": 629.68,
+      "duration": 5.28,
+      "end": 634.9599999999999,
+      "text": "sum and divide by two. In case"
+    },
+    {
+      "start": 632.92,
+      "duration": 3.48,
+      "end": 636.4,
+      "text": "the element is odd, I will have index"
+    },
+    {
+      "start": 634.96,
+      "duration": 3.04,
+      "end": 638.0,
+      "text": "one and element one, but I'll discard"
+    },
+    {
+      "start": 636.4,
+      "duration": 4.2,
+      "end": 640.6,
+      "text": "it. I'll discard it and I'll just take"
+    },
+    {
+      "start": 638.0,
+      "duration": 4.96,
+      "end": 642.96,
+      "text": "element two. That will be my answer. So,"
+    },
+    {
+      "start": 640.6,
+      "duration": 4.36,
+      "end": 644.96,
+      "text": "let's quickly try to merge it and in the"
+    },
+    {
+      "start": 642.96,
+      "duration": 4.0,
+      "end": 646.96,
+      "text": "process try to find the fourth index"
+    },
+    {
+      "start": 644.96,
+      "duration": 4.4,
+      "end": 649.36,
+      "text": "element and in the process try to find"
+    },
+    {
+      "start": 646.96,
+      "duration": 4.08,
+      "end": 651.0400000000001,
+      "text": "the fifth index element. That is index"
+    },
+    {
+      "start": 649.36,
+      "duration": 4.479,
+      "end": 653.839,
+      "text": "one and index two."
+    },
+    {
+      "start": 651.04,
+      "duration": 6.84,
+      "end": 657.88,
+      "text": "So, we will not be merging it. And let's"
+    },
+    {
+      "start": 653.839,
+      "duration": 6.481,
+      "end": 660.32,
+      "text": "call the first index as count zero."
+    },
+    {
+      "start": 657.88,
+      "duration": 4.88,
+      "end": 662.76,
+      "text": "Count refers to the first index which is"
+    },
+    {
+      "start": 660.32,
+      "duration": 3.96,
+      "end": 664.2800000000001,
+      "text": "zero. How did we merge? We started at"
+    },
+    {
+      "start": 662.76,
+      "duration": 4.2,
+      "end": 666.96,
+      "text": "one and we started at two."
+    },
+    {
+      "start": 664.28,
+      "duration": 4.2,
+      "end": 668.48,
+      "text": "Hypothetically, which one will be your"
+    },
+    {
+      "start": 666.96,
+      "duration": 2.52,
+      "end": 669.48,
+      "text": "zeroth index guy?"
+    },
+    {
+      "start": 668.48,
+      "duration": 2.359,
+      "end": 670.839,
+      "text": "One."
+    },
+    {
+      "start": 669.48,
+      "duration": 2.64,
+      "end": 672.12,
+      "text": "One will be your zeroth index guy,"
+    },
+    {
+      "start": 670.839,
+      "duration": 2.881,
+      "end": 673.72,
+      "text": "right?"
+    },
+    {
+      "start": 672.12,
+      "duration": 4.16,
+      "end": 676.28,
+      "text": "Let's move to three."
+    },
+    {
+      "start": 673.72,
+      "duration": 4.48,
+      "end": 678.2,
+      "text": "And that means the count moves to first."
+    },
+    {
+      "start": 676.28,
+      "duration": 3.559,
+      "end": 679.8389999999999,
+      "text": "You're looking for your first index guy"
+    },
+    {
+      "start": 678.2,
+      "duration": 3.04,
+      "end": 681.24,
+      "text": "and that's two."
+    },
+    {
+      "start": 679.839,
+      "duration": 4.321,
+      "end": 684.1600000000001,
+      "text": "Let's take two."
+    },
+    {
+      "start": 681.24,
+      "duration": 4.84,
+      "end": 686.08,
+      "text": "And now let's move this and move the"
+    },
+    {
+      "start": 684.16,
+      "duration": 3.76,
+      "end": 687.92,
+      "text": "count to the second index. Now, you're"
+    },
+    {
+      "start": 686.08,
+      "duration": 4.08,
+      "end": 690.1600000000001,
+      "text": "looking for your third index guy. Who is"
+    },
+    {
+      "start": 687.92,
+      "duration": 5.64,
+      "end": 693.56,
+      "text": "your third index guy? Three. Let's take"
+    },
+    {
+      "start": 690.16,
+      "duration": 4.64,
+      "end": 694.8,
+      "text": "three and move count to three. Now, what"
+    },
+    {
+      "start": 693.56,
+      "duration": 3.64,
+      "end": 697.1999999999999,
+      "text": "are you looking for? You're looking for"
+    },
+    {
+      "start": 694.8,
+      "duration": 4.92,
+      "end": 699.7199999999999,
+      "text": "your third index guy. The third index"
+    },
+    {
+      "start": 697.2,
+      "duration": 4.88,
+      "end": 702.08,
+      "text": "guy will be three. Let's take three, and"
+    },
+    {
+      "start": 699.72,
+      "duration": 4.64,
+      "end": 704.36,
+      "text": "move the count to the fourth index. Here"
+    },
+    {
+      "start": 702.08,
+      "duration": 7.04,
+      "end": 709.12,
+      "text": "comes the twist."
+    },
+    {
+      "start": 704.36,
+      "duration": 6.96,
+      "end": 711.32,
+      "text": "Your count is looking for an index which"
+    },
+    {
+      "start": 709.12,
+      "duration": 4.72,
+      "end": 713.84,
+      "text": "you need, which you need. So, which one"
+    },
+    {
+      "start": 711.32,
+      "duration": 4.4,
+      "end": 715.72,
+      "text": "will it be? Four or six? It says four"
+    },
+    {
+      "start": 713.84,
+      "duration": 3.68,
+      "end": 717.52,
+      "text": "because of the comparison. So, I take"
+    },
+    {
+      "start": 715.72,
+      "duration": 3.52,
+      "end": 719.24,
+      "text": "four, and I say, \"Got my element one"
+    },
+    {
+      "start": 717.52,
+      "duration": 3.88,
+      "end": 721.4,
+      "text": "because I was looking for the fourth"
+    },
+    {
+      "start": 719.24,
+      "duration": 4.68,
+      "end": 723.92,
+      "text": "index guy.\" So, I got my element. I got"
+    },
+    {
+      "start": 721.4,
+      "duration": 3.8,
+      "end": 725.1999999999999,
+      "text": "my element. And after that, I'll move."
+    },
+    {
+      "start": 723.92,
+      "duration": 2.72,
+      "end": 726.64,
+      "text": "Now, the count will move to the fifth"
+    },
+    {
+      "start": 725.2,
+      "duration": 3.2,
+      "end": 728.4000000000001,
+      "text": "index because I'm looking for the fifth"
+    },
+    {
+      "start": 726.64,
+      "duration": 3.64,
+      "end": 730.28,
+      "text": "index guy. Again, it's happening"
+    },
+    {
+      "start": 728.4,
+      "duration": 3.44,
+      "end": 731.84,
+      "text": "hypothetically. You're not storing these"
+    },
+    {
+      "start": 730.28,
+      "duration": 2.96,
+      "end": 733.24,
+      "text": "elements. You're just not storing."
+    },
+    {
+      "start": 731.84,
+      "duration": 3.08,
+      "end": 734.9200000000001,
+      "text": "You're just playing with the pointers."
+    },
+    {
+      "start": 733.24,
+      "duration": 4.96,
+      "end": 738.2,
+      "text": "You just move the pointers. The count is"
+    },
+    {
+      "start": 734.92,
+      "duration": 5.04,
+      "end": 739.9599999999999,
+      "text": "at fifth, and it says six is the guy,"
+    },
+    {
+      "start": 738.2,
+      "duration": 3.56,
+      "end": 741.76,
+      "text": "and he stored the six."
+    },
+    {
+      "start": 739.96,
+      "duration": 3.6,
+      "end": 743.5600000000001,
+      "text": "Just stored the six. And then, you move"
+    },
+    {
+      "start": 741.76,
+      "duration": 4.4,
+      "end": 746.16,
+      "text": "to the count, and you keep on doing your"
+    },
+    {
+      "start": 743.56,
+      "duration": 3.72,
+      "end": 747.28,
+      "text": "process. You keep on doing your process."
+    },
+    {
+      "start": 746.16,
+      "duration": 3.4,
+      "end": 749.56,
+      "text": "And"
+    },
+    {
+      "start": 747.28,
+      "duration": 4.08,
+      "end": 751.36,
+      "text": "if you've figured out both the elements,"
+    },
+    {
+      "start": 749.56,
+      "duration": 4.0,
+      "end": 753.56,
+      "text": "if you've figured out both the elements,"
+    },
+    {
+      "start": 751.36,
+      "duration": 4.52,
+      "end": 755.88,
+      "text": "your job is done, and the answer will be"
+    },
+    {
+      "start": 753.56,
+      "duration": 5.52,
+      "end": 759.0799999999999,
+      "text": "element one plus element two by two. And"
+    },
+    {
+      "start": 755.88,
+      "duration": 4.84,
+      "end": 760.72,
+      "text": "that's it. In case n was odd, the answer"
+    },
+    {
+      "start": 759.08,
+      "duration": 2.92,
+      "end": 762.0,
+      "text": "will be element two."
+    },
+    {
+      "start": 760.72,
+      "duration": 3.36,
+      "end": 764.08,
+      "text": "You would have stored element one, but"
+    },
+    {
+      "start": 762.0,
+      "duration": 4.32,
+      "end": 766.32,
+      "text": "the answer will be element two."
+    },
+    {
+      "start": 764.08,
+      "duration": 3.68,
+      "end": 767.76,
+      "text": "Right? Got it? And let's quickly get"
+    },
+    {
+      "start": 766.32,
+      "duration": 3.519,
+      "end": 769.839,
+      "text": "back into the code editor because if I"
+    },
+    {
+      "start": 767.76,
+      "duration": 3.92,
+      "end": 771.68,
+      "text": "try to write down the code in the iPad,"
+    },
+    {
+      "start": 769.839,
+      "duration": 4.361,
+      "end": 774.2,
+      "text": "it's going to be super messy. And since"
+    },
+    {
+      "start": 771.68,
+      "duration": 4.96,
+      "end": 776.64,
+      "text": "we're just using increment operators and"
+    },
+    {
+      "start": 774.2,
+      "duration": 3.72,
+      "end": 777.9200000000001,
+      "text": "while loops, I think the C++ Java and"
+    },
+    {
+      "start": 776.64,
+      "duration": 2.84,
+      "end": 779.48,
+      "text": "all the versions will be similar, so"
+    },
+    {
+      "start": 777.92,
+      "duration": 3.16,
+      "end": 781.0799999999999,
+      "text": "you'll be understanding it. Doesn't"
+    },
+    {
+      "start": 779.48,
+      "duration": 4.28,
+      "end": 783.76,
+      "text": "matter which language you follow. So,"
+    },
+    {
+      "start": 781.08,
+      "duration": 5.8,
+      "end": 786.88,
+      "text": "what I am doing is at first, making sure"
+    },
+    {
+      "start": 783.76,
+      "duration": 5.32,
+      "end": 789.08,
+      "text": "I take n1, n2, and ini- initialize I and"
+    },
+    {
+      "start": 786.88,
+      "duration": 4.44,
+      "end": 791.32,
+      "text": "J pointers, and get the value of n."
+    },
+    {
+      "start": 789.08,
+      "duration": 4.56,
+      "end": 793.64,
+      "text": "After that, we know the values of index"
+    },
+    {
+      "start": 791.32,
+      "duration": 4.519,
+      "end": 795.839,
+      "text": "two will be half of the total length."
+    },
+    {
+      "start": 793.64,
+      "duration": 4.199,
+      "end": 797.8389999999999,
+      "text": "And index one will be one before that."
+    },
+    {
+      "start": 795.839,
+      "duration": 3.921,
+      "end": 799.7600000000001,
+      "text": "Simple. And we're keeping the index"
+    },
+    {
+      "start": 797.839,
+      "duration": 3.121,
+      "end": 800.96,
+      "text": "tracker. This is the tracker. The count"
+    },
+    {
+      "start": 799.76,
+      "duration": 2.92,
+      "end": 802.68,
+      "text": "is the tracker, which is basically"
+    },
+    {
+      "start": 800.96,
+      "duration": 3.08,
+      "end": 804.0400000000001,
+      "text": "saying, \"Okay, on array three, this is"
+    },
+    {
+      "start": 802.68,
+      "duration": 2.6,
+      "end": 805.28,
+      "text": "the index that I'm looking for.\""
+    },
+    {
+      "start": 804.04,
+      "duration": 2.4,
+      "end": 806.4399999999999,
+      "text": "Initially, you're looking for zeroth"
+    },
+    {
+      "start": 805.28,
+      "duration": 3.12,
+      "end": 808.4,
+      "text": "index, right? So, that's your index"
+    },
+    {
+      "start": 806.44,
+      "duration": 4.6,
+      "end": 811.0400000000001,
+      "text": "tracker. And we haven't figured out the"
+    },
+    {
+      "start": 808.4,
+      "duration": 3.64,
+      "end": 812.04,
+      "text": "element, so that can be stored as minus"
+    },
+    {
+      "start": 811.04,
+      "duration": 3.04,
+      "end": 814.0799999999999,
+      "text": "one."
+    },
+    {
+      "start": 812.04,
+      "duration": 4.48,
+      "end": 816.52,
+      "text": "What I do is I basically do the same"
+    },
+    {
+      "start": 814.08,
+      "duration": 4.04,
+      "end": 818.12,
+      "text": "loop where I try to merge both of them."
+    },
+    {
+      "start": 816.52,
+      "duration": 4.12,
+      "end": 820.64,
+      "text": "If"
+    },
+    {
+      "start": 818.12,
+      "duration": 4.84,
+      "end": 822.96,
+      "text": "for this index tracker count zero, this"
+    },
+    {
+      "start": 820.64,
+      "duration": 4.96,
+      "end": 825.6,
+      "text": "element is smaller, I go inside and I"
+    },
+    {
+      "start": 822.96,
+      "duration": 5.92,
+      "end": 828.88,
+      "text": "know array of I is the element that will"
+    },
+    {
+      "start": 825.6,
+      "duration": 5.76,
+      "end": 831.36,
+      "text": "be present at my current index. And if"
+    },
+    {
+      "start": 828.88,
+      "duration": 4.76,
+      "end": 833.64,
+      "text": "the index tracker is equivalent to one"
+    },
+    {
+      "start": 831.36,
+      "duration": 4.76,
+      "end": 836.12,
+      "text": "of my index that I'm looking for, I say,"
+    },
+    {
+      "start": 833.64,
+      "duration": 5.12,
+      "end": 838.76,
+      "text": "\"Hey, please assign yourself.\" If my"
+    },
+    {
+      "start": 836.12,
+      "duration": 4.12,
+      "end": 840.24,
+      "text": "index tracker is"
+    },
+    {
+      "start": 838.76,
+      "duration": 3.68,
+      "end": 842.4399999999999,
+      "text": "equivalent to the other index that I'm"
+    },
+    {
+      "start": 840.24,
+      "duration": 4.08,
+      "end": 844.32,
+      "text": "looking for, maybe assign yourself. So,"
+    },
+    {
+      "start": 842.44,
+      "duration": 3.96,
+      "end": 846.4000000000001,
+      "text": "either of these conditions."
+    },
+    {
+      "start": 844.32,
+      "duration": 3.88,
+      "end": 848.2,
+      "text": "And after that, count plus plus because"
+    },
+    {
+      "start": 846.4,
+      "duration": 4.6,
+      "end": 851.0,
+      "text": "this index is done. Let's find out the"
+    },
+    {
+      "start": 848.2,
+      "duration": 4.64,
+      "end": 852.84,
+      "text": "next index and I plus plus."
+    },
+    {
+      "start": 851.0,
+      "duration": 3.24,
+      "end": 854.24,
+      "text": "So, this is how this one will look."
+    },
+    {
+      "start": 852.84,
+      "duration": 3.68,
+      "end": 856.52,
+      "text": "The similar thing will happen for the"
+    },
+    {
+      "start": 854.24,
+      "duration": 4.44,
+      "end": 858.6800000000001,
+      "text": "else. What if we have taken B? In that"
+    },
+    {
+      "start": 856.52,
+      "duration": 4.28,
+      "end": 860.8,
+      "text": "case, the index tracker will just think"
+    },
+    {
+      "start": 858.68,
+      "duration": 3.96,
+      "end": 862.64,
+      "text": "the B and we move forward. Very"
+    },
+    {
+      "start": 860.8,
+      "duration": 4.8,
+      "end": 865.5999999999999,
+      "text": "straightforward, very simple. Again,"
+    },
+    {
+      "start": 862.64,
+      "duration": 4.88,
+      "end": 867.52,
+      "text": "this uh condition can be trimmed when"
+    },
+    {
+      "start": 865.6,
+      "duration": 3.96,
+      "end": 869.5600000000001,
+      "text": "you find index like you can also"
+    },
+    {
+      "start": 867.52,
+      "duration": 3.68,
+      "end": 871.1999999999999,
+      "text": "optimize this by saying, \"We will stop"
+    },
+    {
+      "start": 869.56,
+      "duration": 3.56,
+      "end": 873.1199999999999,
+      "text": "then and there the moment we find index"
+    },
+    {
+      "start": 871.2,
+      "duration": 3.04,
+      "end": 874.24,
+      "text": "one and index two both.\" And that is"
+    },
+    {
+      "start": 873.12,
+      "duration": 2.88,
+      "end": 876.0,
+      "text": "what we're looking for. The moment we"
+    },
+    {
+      "start": 874.24,
+      "duration": 3.599,
+      "end": 877.839,
+      "text": "find both, we can stop. You can do those"
+    },
+    {
+      "start": 876.0,
+      "duration": 4.16,
+      "end": 880.16,
+      "text": "optimizations by yourself. I'm over here"
+    },
+    {
+      "start": 877.839,
+      "duration": 4.121,
+      "end": 881.96,
+      "text": "to just explaining the concept. Right"
+    },
+    {
+      "start": 880.16,
+      "duration": 4.28,
+      "end": 884.4399999999999,
+      "text": "after that, the same thing. If there are"
+    },
+    {
+      "start": 881.96,
+      "duration": 4.44,
+      "end": 886.4000000000001,
+      "text": "leftover elements on the array one, you"
+    },
+    {
+      "start": 884.44,
+      "duration": 3.68,
+      "end": 888.12,
+      "text": "just do the same thing. Is index tracker"
+    },
+    {
+      "start": 886.4,
+      "duration": 3.72,
+      "end": 890.12,
+      "text": "equivalent? Then you pick it up. Or"
+    },
+    {
+      "start": 888.12,
+      "duration": 4.76,
+      "end": 892.88,
+      "text": "else, you just keep on moving."
+    },
+    {
+      "start": 890.12,
+      "duration": 4.0,
+      "end": 894.12,
+      "text": "Is on the right? If the index tracker is"
+    },
+    {
+      "start": 892.88,
+      "duration": 3.2,
+      "end": 896.08,
+      "text": "equivalent, you pick up from the right"
+    },
+    {
+      "start": 894.12,
+      "duration": 4.04,
+      "end": 898.16,
+      "text": "and you keep on moving. Again, the"
+    },
+    {
+      "start": 896.08,
+      "duration": 3.92,
+      "end": 900.0,
+      "text": "optimizations can be done. If you find"
+    },
+    {
+      "start": 898.16,
+      "duration": 3.48,
+      "end": 901.64,
+      "text": "index one and index two, like both have"
+    },
+    {
+      "start": 900.0,
+      "duration": 4.4,
+      "end": 904.4,
+      "text": "been found, you can just break out. You"
+    },
+    {
+      "start": 901.64,
+      "duration": 4.96,
+      "end": 906.6,
+      "text": "can break out. And instead of minus one,"
+    },
+    {
+      "start": 904.4,
+      "duration": 4.04,
+      "end": 908.4399999999999,
+      "text": "probably you have to give int min or int"
+    },
+    {
+      "start": 906.6,
+      "duration": 3.6,
+      "end": 910.2,
+      "text": "max something. Such an element which"
+    },
+    {
+      "start": 908.44,
+      "duration": 3.28,
+      "end": 911.72,
+      "text": "doesn't exist in the array. And then you"
+    },
+    {
+      "start": 910.2,
+      "duration": 3.639,
+      "end": 913.839,
+      "text": "can simply break out the moment you"
+    },
+    {
+      "start": 911.72,
+      "duration": 3.8,
+      "end": 915.52,
+      "text": "figured out both of them. And then these"
+    },
+    {
+      "start": 913.839,
+      "duration": 4.041,
+      "end": 917.8800000000001,
+      "text": "conditions will be executed. If it is an"
+    },
+    {
+      "start": 915.52,
+      "duration": 4.56,
+      "end": 920.0799999999999,
+      "text": "odd, I just need the index two. If it is"
+    },
+    {
+      "start": 917.88,
+      "duration": 4.8,
+      "end": 922.68,
+      "text": "an even, I have to do the type casting,"
+    },
+    {
+      "start": 920.08,
+      "duration": 4.16,
+      "end": 924.24,
+      "text": "sum it up, divide it by 2.0 and I"
+    },
+    {
+      "start": 922.68,
+      "duration": 3.68,
+      "end": 926.3599999999999,
+      "text": "return. So, if you try to submit it,"
+    },
+    {
+      "start": 924.24,
+      "duration": 3.76,
+      "end": 928.0,
+      "text": "this will also be partially accepted."
+    },
+    {
+      "start": 926.36,
+      "duration": 3.56,
+      "end": 929.92,
+      "text": "Why? Because we haven't reduced down the"
+    },
+    {
+      "start": 928.0,
+      "duration": 3.64,
+      "end": 931.64,
+      "text": "time complexity. What we have done is"
+    },
+    {
+      "start": 929.92,
+      "duration": 3.4,
+      "end": 933.3199999999999,
+      "text": "we've reduced the space. We're no more"
+    },
+    {
+      "start": 931.64,
+      "duration": 3.84,
+      "end": 935.48,
+      "text": "using the extra space that we are using"
+    },
+    {
+      "start": 933.32,
+      "duration": 4.12,
+      "end": 937.44,
+      "text": "for storing the entire array. We're just"
+    },
+    {
+      "start": 935.48,
+      "duration": 3.04,
+      "end": 938.52,
+      "text": "keeping the trackers, which tracks the"
+    },
+    {
+      "start": 937.44,
+      "duration": 4.12,
+      "end": 941.5600000000001,
+      "text": "element, because that is what we"
+    },
+    {
+      "start": 938.52,
+      "duration": 3.04,
+      "end": 941.56,
+      "text": "require. Got it?"
+    },
+    {
+      "start": 950.72,
+      "duration": 4.2,
+      "end": 954.9200000000001,
+      "text": "Whenever your heart is broken, don't"
+    },
+    {
+      "start": 952.48,
+      "duration": 2.44,
+      "end": 954.9200000000001,
+      "text": "ever forget you're golden."
+    },
+    {
+      "start": 957.04,
+      "duration": 2.56,
+      "end": 959.5999999999999,
+      "text": "I will find the"
+    }
+  ]
+}

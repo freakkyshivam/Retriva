@@ -1,0 +1,53 @@
+{
+  "video_id": "k4eK-vEmnKg",
+  "position": 220,
+  "title": "DP 40. Buy and Sell Stocks With Transaction Fee | Recursion to Space Optimisation",
+  "url": "https://www.youtube.com/watch?v=k4eK-vEmnKg",
+  "chunk_count": 4,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "k4eK-vEmnKg",
+      "position": 220,
+      "title": "DP 40. Buy and Sell Stocks With Transaction Fee | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=k4eK-vEmnKg",
+      "start": 0.16,
+      "end": 114.96,
+      "text": "so as you know i've been taking some free sessions on an academy so before starting off the video i'd love to tell you about the next couple of sessions that i'll be taking on the upcoming saturday and sunday also on sunday i'll be taking another session where i'll be discussing about how can you get a placement via gate and in the session again i'll be talking you about the plethora of opportunities that you'll be getting via gate so again book your calendar at 8pm 27th march you can interact with me one is to one the link is again in the description so guys make sure you join at 8pm hey everyone welcome back to take you forward so last problem the sixth problem on stocks and this is the last problem on dp on stocks and after that we will be completing dp on stocks and as i promised when i complete dp on stocks you'll be like you can do any problem on dp on stocks and uh let's do this problem and then then you can definitely tell me in the comment section best time to buy and sell stock like i'm asking you what is the best time to buy and sell stock we have been doing across like all problems but now i'm saying there is a transaction fee that i will add so the question is pretty much similar to the previous questions over here buy and sell can be done unlimited times but every time you complete a transaction that means every time you complete buy and sell a fee will be charged to you for an example if i give you the prices to builders apparently buy and sell this is what you can do making a profit of seven buy and sell this is what you can do making a profit of five but since a transactional fee of two was costed and you did two transactions so this will take two from it this will take two from it so a net",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "k4eK-vEmnKg",
+      "position": 220,
+      "title": "DP 40. Buy and Sell Stocks With Transaction Fee | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=k4eK-vEmnKg",
+      "start": 108.88,
+      "end": 231.35999999999999,
+      "text": "this will take two from it so a net profit of eight is what you will make so a net profit of eight is what you'll make it so basically if i write it again buy a cell gives it seven buy a cell gives it five but a transaction fee of 2 is charged so 2 will be charged hence this will be the net profit and the question states i want you to maximize this net profit so it's pretty much similar to the previous problem we just uh have to figure out the transactional fee stuff so buy and sell unlimited times remember the second problem yes buy and sell part two over there uh unlimited time was there and if you remember the code it was something like we had an index we hadn't buy initially index was passed down at zero and buy was initially this and we went on to seeing the base keys to be equal to equal to zero and you can return whenever you have exhausted the days and you will be like if buy is one you can buy or else you can just get across and over here if you buy you end up giving to the market so thereby minus plus you go to the next day index plus one and now you're allowed to sell and if you don't buy you go to the next day and you say you're not allowed to is still allowed to buy and you return the max of it yes you return the max of it and if you're selling you get this from the market if you're selling you get this from the market and you go to the next day and you say you can now buy or if you're not selling you go to the next day and you say you can still sell and you return the max of it yes you return the max of it or this one that's what uh was the code for buy and sell stock to",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "k4eK-vEmnKg",
+      "position": 220,
+      "title": "DP 40. Buy and Sell Stocks With Transaction Fee | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=k4eK-vEmnKg",
+      "start": 226.879,
+      "end": 346.0,
+      "text": "stock to now what am i adding i am saying every time you complete a transaction a fee will be added so when are you completing a transaction can i say every time you perform a sell operation every time you perform a sell operation or buy together you are combining one transaction so you can do two steps you can be like okay this is when i will also have to give a transactional fee like you can pay off a like after the transaction that is after the sell is done this is when the seller will be completed you can pay the transaction so if you pay the transaction that money is gone the money is gone so you have to keep a minus fee or you can be like i i'm not interested to pay it up front uh sorry not paid after conducting sell i will pay it right when i buy because up front i'll be like whenever i start a transaction of bile paint right up front i don't want to keep attention you can either pay it upfront or you can pay it after completing the transaction both are okay as long as you're paying it once on a buy and sell it should be absolutely okay so we have figured out that uh this is the slight change in the buy and sales uh code that we have to do prices of index minus v and we will be able to do this problem so if i go back to the code and selling like buy and sell stock 2 this was the code like the space optimized code now i'll come back over here and i'll say okay this is the stuff let's copy paste let's make it int so this is the normal code when i was buying and selling now this was cannot buy means sell right and this was buy stuff where we were saying if i'm buying this is what i get and then i go across to the other guy the simple space optimization technique",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "k4eK-vEmnKg",
+      "position": 220,
+      "title": "DP 40. Buy and Sell Stocks With Transaction Fee | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=k4eK-vEmnKg",
+      "start": 341.36,
+      "end": 439.56,
+      "text": "optimization technique now can i say if i'm buying i will incur a minus fee that's for sure and if i'm selling i'm not incurring anything now if i just run this by including a minus v into the space optimized code okay it does fail okay we just need to change it to values the name has been changed over here it does run and if i submit this code you will see that it does give me a correct answer so as i said you can either apply this fee while doing the cell so let's assume i don't apply it during the cell and i say i'll apply it right at the front went by is happening so you just attach that to buy and even if you attach that to the buy it will also give you the correct answer so you can either attach it after the transaction is done or right at the starting of the transaction that is absolutely your choice so as long as you're doing this it will be running fine so guys i hope you have understood all the six variants of dp on stock so just in case you did please please please make sure you like this video and since we are completing again a pattern on dp on stocks let me know in the comment section now can you solve any problem on dpn stocks if you can please please it's an honest request that tell me in the comment section can you or can you not and now with this i'll be wrapping up this video just make sure if you're new to this channel please do consider subscribing to us and do hit that like button and with this let's wrap up this video and meet in the next one till then bye take care whenever your heart ever is your golden",
+      "word_count": 317
+    }
+  ]
+}

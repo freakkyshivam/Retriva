@@ -1,0 +1,130 @@
+{
+  "video_id": "XnMdNUkX6VM",
+  "position": 280,
+  "title": "L9. Binary Subarrays With Sum | 2 Pointers and Sliding Window Playlist",
+  "url": "https://www.youtube.com/watch?v=XnMdNUkX6VM",
+  "chunk_count": 11,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "XnMdNUkX6VM",
+      "position": 280,
+      "title": "L9. Binary Subarrays With Sum | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=XnMdNUkX6VM",
+      "start": 3.199,
+      "end": 124.719,
+      "text": "so let's continue with the 2 pointer SL sliding window playlist from the drivers A2Z DS course what starting hey welcome back to the channel I hope you guys are doing extremely well so the problem that we will be solving today is binary subarrays with some but before uh starting off with this problem please please go back and watch my video on count subar where the sum equals K now this is a problem that I have already done in the arrays and the hashing playlist please go back and watch it so I'm assuming that you have seen that video so let's understand what is the current problem stating it is stating that you will be given an array the array will be a binary array that means it will be containing one and zeros in it and it'll also be given an integer goal now your task is to compute the number of subarrays now what is subarrays a consecu portion of an array right so you'll have to uh you'll have to compute the total number of sub arrays where the sum is equivalent to this particular given goal so let's uh pick up one of the subarrays if I pick up this subarray the sum of the subarray is one so this is not equivalent to the goal so you cannot count it so which subarrays can I count probably I can count this one so if I take this one the sum is two so I have one subar right can I take this one yes because the sum is again two so the count is two now can I take this subar yes I can so I have three subar can I take this one yes I can I have four subar do I see anything else no I don't see any other subar so in total there are four subarrays and this is what you return and you might be thinking hey straver it is the exact same problem because the problem counts sub array",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "XnMdNUkX6VM",
+      "position": 280,
+      "title": "L9. Binary Subarrays With Sum | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=XnMdNUkX6VM",
+      "start": 119.52,
+      "end": 244.67999999999998,
+      "text": "because the problem counts sub array where the sum is equivalent to the given G it is the exact same problem now in this problem it was given that the array can have positive as well as negative integers so we did a bro we did a better and the most optimal solution was the hashing solution right which was taking a Time complexity of B go of N and a space complexity of B go of n again I'm assuming that the map is working in B go one if you assume that the map takes logarithmic of n you can add that as well so this was the most optimal solution now this most optimal solution will also work for this particular problem statement but over here it is mentioned that it is a binary array so what we can do is we can further optimize it this particular solution was working for positive and negative but uh we can still further optimize the only reason is we're given a special condition that the array contains one and zeros in it now if I'm looking to optimize a Time complexity of B go of N and a space complexity of B go of N I definitely cannot optimize B go of n time because I have n elements I cannot do better than that that's for sure so the only place that I can optimize is the space can I get of the external map that I was using again I'm assuming that you have seen that video so that is why I'm referencing like that so I have to get rid of that map data structure so that is where the optimization will come in okay so if I get rid of the map so I'm looking at a time complexity of bego of N and a space complexity of beo of one and the problem is involving sub arrays so if I'm not using external data structures which algorithm comes to your brain yes the two pointer and the sliding window that",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "XnMdNUkX6VM",
+      "position": 280,
+      "title": "L9. Binary Subarrays With Sum | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=XnMdNUkX6VM",
+      "start": 239.879,
+      "end": 357.88,
+      "text": "two pointer and the sliding window that is where I have to think but wait whatever problems they have done till now has been something like finding the longest subarray or a substring but this is slightly different over here the problem is finding the number of sub ARs with a given sum number of subar you have to count you don't have to find the longest you have to count so how can I do it first of all let's try to analyze how the sliding window and 2 pointer works and see if can like if at all can we solve it by two pointer or sliding window so let's take an example where it is something like one uh 0 1 1 0 and uh the goal is two so what do we do generally in 2.2 we take a l Point uh we take a l we take R and we make it stand at the first place we're looking for a sum of the segment and we also looking for the count of subar so let's initially have it as zero so initially I'm standing at this element so this is the segment itself so can I take this number and add it to the sum I can once I've added it to the sum is it equivalent to the goal it is not so what I can do is I can go ahead and take this R and move forward the moment I move it forward I get a zero I can add it to the sum no change the sum is the sum is is no more equivalent to the goal so what I do is I again move the r again the segment will not have it so I again take the r and I'll move it forward this is the moment I'll add it to the sum and the sum will be two and this is the entire segment correct and the sum is two which is equivalent to the goal so I can say that this is definitely a subar",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "XnMdNUkX6VM",
+      "position": 280,
+      "title": "L9. Binary Subarrays With Sum | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=XnMdNUkX6VM",
+      "start": 351.08,
+      "end": 458.52,
+      "text": "can say that this is definitely a subar right can I count this I can once you have counted it now what is the next step you'll straight away take this all and you'll move it ahead isn't it right so I moved it ahead I have a one so what you can do is you can add it to your sum and your sum is three now this is the moment you look for this segment and the sum is three which is not equivalent to the goal but the sum has exceeded the goal so thereby if you keep on adding numbers if you keep on adding numbers to the window the sum will increase you'll have to decrease the sum because sum has exceeded the goal so if I have to decrease I'll have to eliminate numbers from the left I have to shring the window shring the window I'm looking to shrink the window the first element that I'll remove is this one so if I remove this one what will happen is the sum will again shrink back to two and the L will be over here now this is where I can say that hey is this segment a valid one it is because the sum is two can I have a count I can have a count so I can count this as well now ideally what I will do is because the sum is equivalent I'll take the r and I'll move ahead if I do this what happens is you did consider this segment right you did consider this segment but you could have also considered this segment right you could have also considered this segment but you didn't because you made sure that the L was standing now you might be thinking okay keep moving L keep moving L okay it doesn't work like that if you keep moving l what will happen is you'll you'll miss out on this segment this is also a valid segment right when you move",
+      "word_count": 341
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "XnMdNUkX6VM",
+      "position": 280,
+      "title": "L9. Binary Subarrays With Sum | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=XnMdNUkX6VM",
+      "start": 453.919,
+      "end": 581.32,
+      "text": "also a valid segment right when you move R when you move R and you keep the L here this is a valid segment correct so we are not sure we are not sure whether to move L or whether to move R we are in dilemma right so I know one thing for sure as of now I cannot I cannot figure out where to move L and R if I'm looking for some equivalent to the goal because it's saying equal to it's saying equal to and why is the problem coming up because we have zeros on removing zeros sum is not getting affected that is where the problem is coming up okay so we need to find a better solution so I know that I cannot solve this problem to find out the exact sum equivalent to goal can I do this can I do this let's try to solve a different problem and see if I can figure out a sliding window solution to it can I figure out the number of sub arrays when the sum is lesser than equal to goal I know that the problem is asking you to find equal to goal but I'll try to solve it for lesser than equal to goal and again I'll try again I'll try the same method let's take an L let's take an R because we know this this is how we deal with Windows we will take some my bad we will take sum and that can be initially zero and we will take count and that can also be initially zero so where am I standing I'm standing at this segment so I can add it to the sum is that lesser than equal to goal is my very simple question to you is this lesser than equal to goal it is so can I say this segment is a valid segment I'm like yes this is a valid segment and if it is increase the G perfect now what is the next one I'll",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "XnMdNUkX6VM",
+      "position": 280,
+      "title": "L9. Binary Subarrays With Sum | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=XnMdNUkX6VM",
+      "start": 575.399,
+      "end": 709.8,
+      "text": "G perfect now what is the next one I'll take the r and I'll move it here now this is where you need to apply some mathematics I'm asking you a very simple question when you move it to here you add it to the sum the sum still stays as one and this is lesser than equal to goal now if if if the sum is lesser than equal to goal even after adding an element can I say that element individually can I say that element individually can be a subarray where the sum is lesser than equal to goal I can I can so this element individually is a subarray as well as this element can combine with the left element so I can say I have two subarrays I can say two subarrays where the sum is lesser than equal to goal one is the zero itself one is the one zero agreed so I add another two okay what is the next step I'll move R the moment I move R sum will not change sum will not change and the sum is still lesser than equal to goal why did that happen because the element in itself is not allowing it to exceed more than goal okay so can I say this element individually can be a subar like yeah can be subar I'm very sure okay can this be a subar it can be can this be a subar yes so what I'm trying to do is I'm adding this element if I'm adding this element I'm trying to figure out how many subarrays this element can form with the previous valid answer and that is one itself two and three that's nothing but the length the length so I add three more to the answer perfect let's move R so this is when I move R and this reaches one and the sum gets updated to two now this time what happened the sum is still lesser than equal to goal the sum is still lesser than equal to goal",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "XnMdNUkX6VM",
+      "position": 280,
+      "title": "L9. Binary Subarrays With Sum | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=XnMdNUkX6VM",
+      "start": 703.8,
+      "end": 831.24,
+      "text": "sum is still lesser than equal to goal okay so I'm very sure that this element in itself is possible is possible if this is possible how many subar can it form I already have a valid I already have a valid segment so 1 2 3 and a four I can form four which is typically the length which is typically the length okay perfect what is the next step now this is when you start understanding I'm going over here the sum gets increased to three now when the sum gets increased to three what happens this time is I'm saying hey on adding this no no no you'll have to shrink you'll have to shrink I won't under goal I want under goal three is exceeding exceeding so I'm like okay okay let's try to make a valid segment so I'm like can I just take it off take it off if we take it off the sum decreases and the L will go ahead and now you stop why do you stop because this is less than two so you stop now when you're stopping now you can definitely say that this entire segment is a valid one this entire segment is a valid one right right and can I say that this is one subartic this is another this is another and this is another I can so I again have four subarrays and you might have a question hey hey hey wait did you consider this we did we did did you consider this we did when we were standing at zero when the r was at zero I considered this you remember I considered zero and then I considered this when I was standing here I I considered this I considered this I considered this I've already considered these subies perfect wow next I'll take R and I'll move it here so on moving it here it's still valid it's still valid because the sum is still lesser than equal to Gold so again you'll add the",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "XnMdNUkX6VM",
+      "position": 280,
+      "title": "L9. Binary Subarrays With Sum | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=XnMdNUkX6VM",
+      "start": 826.24,
+      "end": 958.6,
+      "text": "equal to Gold so again you'll add the length and this will be your overall count and right after the step what will happen is R will move out of the boundary and you will be stopping so now I know one for sure how many sub arrays are there that is lesser than equal to Gold I know that I know an algorithm to find it correct so I'll try to write this algorithm and after that I'll see how can I find an answer for sum equal to equal to goal because that is what we'll have to solve let's try to uh write down the algorithm can I say uh maybe I'll write a function and the function will be taking a list of of integers let's call it nums and it will be taking a goal what is the first step I need an L which is zero I need R which is zero I need a sum which is zero do I need anything else yeah I definitely need a count count is zero what I can do is I can start like while R lesser than equal to something like nums do size I can do that perfect okay I've done that what is the next thing that I'll do the next thing that I'll do is I'll be like sum plus equal to nums of R I know it and after this I'll add it to the answer only if I can combine the while and the if check if the sum by any means exceeds the goal then you know what to do you will be taking out from the back you will be shrinking it which is nums of L and you can do L equal to l + 1 so what I've done is I've have combined a conditional check with a while loop because if this is true it will keep removing and if it is not true it will go ahead and add your valid segments how many valid segments will you",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "XnMdNUkX6VM",
+      "position": 280,
+      "title": "L9. Binary Subarrays With Sum | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=XnMdNUkX6VM",
+      "start": 953.88,
+      "end": 1100.2,
+      "text": "segments will you get we did see it was the count it was the count count that was added and the count is r - L + 1 you remember we always if L was here R was here we said one 2 and three that's not nothing but the count r- L +1 so I've added this once I've added this you can do r equal to R +1 and the while loop can end over here there is an hedge case please make sure if not here please make sure if the goal is lesser than zero you can return uh zero again at the starting I said the goal will be from 0 to n I'm writing this Edge case for a specific reason you'll understand in the next step in case your goal is under zero because the elements in the array are one and zero so you can never achieve any subarray where the goal is lesser than zero this case will come up when we'll understand okay so I know one thing for short I have an algorithm that tells me how many sub ARS for a sum lesser than equal to Gold what am I looking for sum equal to equal to goal can I apply simple mathematics and say hey for this the answer will be I can call the function with the nums array and I can ask him to find how many are lesser than equal to goal it will give me right and then I can Subtract with how many are with Goal minus one isn't it that will work because if I can get because if I can get how many are lesser than equal to goal and how many are lesser than equal to goal minus one and if I can subtract them that will be equivalent to go that will be isn't it and that is why I introduced this condition imagine if the goal is given as zero whenever you write 0 minus one this will be minus one that's when this condition will come",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "XnMdNUkX6VM",
+      "position": 280,
+      "title": "L9. Binary Subarrays With Sum | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=XnMdNUkX6VM",
+      "start": 1094.799,
+      "end": 1221.8799999999999,
+      "text": "that's when this condition will come into effect I hope this is clear this is a very very simple condition very simple maths just it that's it and that will be the answer if I have to deduce the time complexity uh let's first uh figure out the time complexity for the function over here we have a beo of n for sure and then there's a y Loop which is excluding which is excluding something now overall overall it might be running for like if you sum it up throughout the course of this while loop this might run for B go and throughout not at an individual occurrence so can I say the time complexity of this function is B go of 2 N at the worst possible scenario and the space complexity is beo of one and this is the worst possible test piece it is not going to happen every now and then and I'm calling it for two times so can I say B go of 2 into 2N will be the time complexity and the space complexity will be bigger of one so I have optimized my space complexity yes I've compromised a bit on the time but again it will be only for extreme uh bad test cases not for everything so this will be the most optimal solution I'm not discussing the brute better because if you have seen this particular video you can figure out what is the brute and better The Brute will be generating all the subar and the better will be the hashing solution and this can be the optimal solution and in case you want the codes you can find them below so I hope you understood it and uh that will be it for this one so if you're still now watching and if youve understood everything please please do consider giving us a like and if you're new to our channel do consider subscribing to us as well with this I'll be wrapping up this video let's read in some other video then bye-bye take",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "XnMdNUkX6VM",
+      "position": 280,
+      "title": "L9. Binary Subarrays With Sum | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=XnMdNUkX6VM",
+      "start": 1216.52,
+      "end": 1228.8799999999999,
+      "text": "some other video then bye-bye take care Bren forget your golden I will",
+      "word_count": 13
+    }
+  ]
+}

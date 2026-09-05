@@ -1,0 +1,86 @@
+{
+  "video_id": "NzIGLLwZBS8",
+  "position": 84,
+  "title": "L12. Iterative Postorder Traversal using 1 Stack | C++ | Java | Binary Trees",
+  "url": "https://www.youtube.com/watch?v=NzIGLLwZBS8",
+  "chunk_count": 7,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "NzIGLLwZBS8",
+      "position": 84,
+      "title": "L12. Iterative Postorder Traversal using 1 Stack | C++ | Java | Binary Trees",
+      "url": "https://www.youtube.com/watch?v=NzIGLLwZBS8",
+      "start": 0.0,
+      "end": 114.88,
+      "text": "before starting this video i'd love to thank reliable for sponsoring this entire tree series the placement season is here i know a lot of you are planning to sit for companies which come on campus in case you are disappointed that the top startups like thread upgrade razor pay are not hiring directly from your campus there is an easier way to work here just register for the available tests conducted by reliable by unacademy and you will get a chance to apply for front-end backend and business development roles at india's top startups and unicorn companies reliable has thousand plus openings by 50 plus companies and the best thing is it's absolutely free so please make sure you check out all the links in the description and give the relevant test as soon as possible hey everyone welcome back to the channel i hope you guys are doing extremely well so today i will be solving the problem iterative post order traversal now in the previous video we did check that uh the post order traversal can be done iteratively using couple of stacks but in this video i'll tell you how to do this using one stack so what's the post order traversal it's basically nothing but left then you go to right and then it's root so it's a left right root that is what a post order traversal is so what did you do in the recursion if you remember it was left then it was right then it was print so logically thinking it was kind of go to left left left left left left left and then when it when it ended then go to the right and then when the right again recursion call then right again go to left left left left and again when the recursion ended then go to the right then again left left left left left then again right and then after that you print it right then after that when you came back the right got printed so it's kind of a go",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "NzIGLLwZBS8",
+      "position": 84,
+      "title": "L12. Iterative Postorder Traversal using 1 Stack | C++ | Java | Binary Trees",
+      "url": "https://www.youtube.com/watch?v=NzIGLLwZBS8",
+      "start": 109.6,
+      "end": 221.20000000000002,
+      "text": "right got printed so it's kind of a go left go left go left and the moment it gets you something as null try to go right and then again go left left left left left right so that is how our algorithm will focus on and we're going to use an external stack in order to maintain the stack trace or stack space so i've already discussed the intuition you try to go to left left left left and then a right and then again left left left then a right then again left left left and i know the post order is left right root so this is the algorithm that i have already written why have i written it uh prior to this because otherwise it will get very tricky to understand so i've written the algorithm i'll do a dragon and when i do the dragon you will see that the intuition is being applied over here the going of left left left and then right and then left left left the intuition is being applied so let's start so what you will start as you will take a curve and it will point to the root of the node okay l point to the root of the node remember this and you'll take a stack so take a stack and you know stack is nothing but a last in first out data structure so just take a stack which is pointing to uh like which is empty and start the traverse and try to go as left as possible so when you start the curve has to be not null and the stack like or the stack has to be non-empty so the car is one which is the root car is not null first condition stack dot push car so what he'll do is he'll take this one and they will push it okay and it says left so i'll go car dot left that's two perfect again you come back curved not null so stack dot push",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "NzIGLLwZBS8",
+      "position": 84,
+      "title": "L12. Iterative Postorder Traversal using 1 Stack | C++ | Java | Binary Trees",
+      "url": "https://www.youtube.com/watch?v=NzIGLLwZBS8",
+      "start": 215.84,
+      "end": 345.36,
+      "text": "curved not null so stack dot push curve and curve will go again curve dot left so curve will again go to three again come back stack dot push three curve equal to curve dot left so this will become null i hope you have understood i went like left left left left and why am i not printing because i print uh the extreme left right after that i print the right this is a subtree for which i do not have a left so left is no not printed so right will be printed then three will be printed so i have to go to the right perfect so how will that happen that is not null so the moment i come back again i see curve is null so this if is not executed so this guy is executed what happens is temporary is st top right three threes right threes right is four so temporary is a variable that's assigned to three's right that's four so i sign that it's temporary null no so car will be reassigned to the right so car is reassigned to four okay now again you come back stack will say okay i'll take you and i'll move left so when it four tries to move left it again finds a null so again this will happen the moment you again come back temporary this time says stack dot top four what's your right your right is five so temporary is assigned to five so what i see is temporary is not null so car is reassigned to five so car will be reassigned to five again i come back stack will say okay i'll store you and five why don't you go to left so the moment it tries to go to left it will be a null again comes back temporary says stack dot top dot right so temporary becomes six and this time temporary is not null so the curve will reassign itself to temporary so the curve becomes six again",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "NzIGLLwZBS8",
+      "position": 84,
+      "title": "L12. Iterative Postorder Traversal using 1 Stack | C++ | Java | Binary Trees",
+      "url": "https://www.youtube.com/watch?v=NzIGLLwZBS8",
+      "start": 339.759,
+      "end": 451.36,
+      "text": "temporary so the curve becomes six again again it comes back stack says hey why don't i take six and i'll say girl why did you move left so the moment it moves left it becomes null i hope you've understood i went left left left right there was no left so again right no left so again right similar to post order now the moment i have reached you it's time to print this how do you print this at the moment the moment you come back again car is null so temporarily this time says stack dot top right so that's null so temporary becomes null this time the moment temporary becomes null what happens see temporary says okay i'm gonna pick up the topmost element and pop it out so he is gonna take up this element and pop it out so i popped it out at the same time i'm saying post order why don't you add it so post order says okay i'm gonna add this so this is my first post order logically correct left right so on this this is the extremist right so that's why next what is this for loop for what is this while loop for it states if the stack is non-empty and the temporary is six if it is equivalent to stack dot top right so what is top five so five is right it is it is i have to go back i have to go back to five and if i'm going back to five as a temp why didn't you reassign yourself to five right basically the previous value and probably pop yourself out at the same time the post order will also add it so i've taken it perfect again the while loop executes and again i check for right is 5 or not and it is so i again do the same thing i again pop this value out and i reassign temp at the same time i say uh post order why don't you have yourself",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "NzIGLLwZBS8",
+      "position": 84,
+      "title": "L12. Iterative Postorder Traversal using 1 Stack | C++ | Java | Binary Trees",
+      "url": "https://www.youtube.com/watch?v=NzIGLLwZBS8",
+      "start": 446.479,
+      "end": 563.68,
+      "text": "post order why don't you have yourself again i do the same thing i say 3 is your right 4 yes so i take 3 out and i reassign temp at the same time i say post order why don't you have so basically i'm going up root root root i've gone now what's left two two is your right three no so this there is no more root for three there's no more root for three so i'll not go back now when i don't go back what happens this while loop is over this time car is still null so i'll go back again and temporary will be st top right so when i have st top that's two the right will be null again so if i have null again temporary i again perform these following steps temporary says why don't you take the top so two is taken and it's popped out and the moment i take two it says post order why don't you have it supposedly has it does it have a root like does it have a root it says this while loop will say no it doesn't have a route so nothing to be printed so also again i'll come back again i'll come back and the car is still none so i'll say st top dot right this time the top is one so the right becomes 7 so this time temporary becomes 7 so the temporary is not null car is reassigned to temporary so car becomes 7 this time so the moment the car becomes 7 again start your same thing stack dot push seven and curl becomes card dot left the seven will go two eight again comes back stack dot push eight car says why don't you go left the moment it goes left it becomes null okay so this is what is being stored in your stack as of now it's not again comes back temporarily says stack dot top eight what's your right so temporary says eighth right is null",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "NzIGLLwZBS8",
+      "position": 84,
+      "title": "L12. Iterative Postorder Traversal using 1 Stack | C++ | Java | Binary Trees",
+      "url": "https://www.youtube.com/watch?v=NzIGLLwZBS8",
+      "start": 560.399,
+      "end": 676.88,
+      "text": "null if it is i say temporary why don't you take your top so temporary says okay i'll take the top so it will become you make you eight after that it says post order why don't you have it so i'll say okay i'll have it does eight have any root notes of this while loop will not be executed and i will come out again and the moment i come out i again get kara's null so again temporarily says cool i'm going to take the right i'm going to take stack dot tops right so 7's right i'm taking because eight has been traversed it's time to go to the right of this subtree so seven says my rate is null so temporary again becomes null again this will be executed temporary says st.top so the top is seven correct so you just take this seven and you re assign temporary and the post order will also take the seven perfect well does seven have a root yes seven has a root why because seven has a root one so what it does is it takes temporary now as one and this guy re post or the post order is added with one once this is added your stack ultimately becomes empty once the stack becomes empty you will end up getting stack empty as well as karnal like as you can see stack is empty and the car is null as soon as it happens you can say that the post order is ultimately printed for this given tree binary tree and that's the answer that this is how the i twitter post order traversal will look like so guys what will be the time complexity of this the time complexity will end up being we go off twice of n now you'll ask hey striper why it is twice often the answer will be very very simple see what did you do initially if you remember like assume as you might give you a binary tree which looks something like this",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "NzIGLLwZBS8",
+      "position": 84,
+      "title": "L12. Iterative Postorder Traversal using 1 Stack | C++ | Java | Binary Trees",
+      "url": "https://www.youtube.com/watch?v=NzIGLLwZBS8",
+      "start": 673.12,
+      "end": 754.259,
+      "text": "like this just having a right node so what will you do you will start with this doesn't have a left so you'll add this to the stack then you'll go to the right we'll add this to the stack it'll go to the right it'll add this to the stack it'll go to the right you'll add this to the stack and while coming back you'll print this then you'll check this then you'll check this then you'll check this so this while loop will be extremely executed for n times and first you took n times in order to insert all these elements in order to insert all these elements into your stack so can i say the worst case complexity will be twice of n but i will be using only a single stack yes you're using a post order but that's used for storing like that's used for storing so i can ignore that so i can say the space complexity will be deco of n so i hope you've understood the entire explanation as well as the code just in case you did please please please make sure you like this video because it took a lot of efforts to make this entire tree series also if you wish you can definitely drop in a comment that will keep motivating me to make such further series also if you're new to the channel please do consider subscribing because i'm going to bring in such more series in the upcoming future as well with this let's wrap up this video let's speed in the next lecture but i take [Music]",
+      "word_count": 274
+    }
+  ]
+}

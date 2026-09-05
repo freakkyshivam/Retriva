@@ -1,0 +1,42 @@
+{
+  "video_id": "xm_W1ub-K-w",
+  "position": 114,
+  "title": "L42. Floor in a Binary Search Tree | BST | C++ | Java",
+  "url": "https://www.youtube.com/watch?v=xm_W1ub-K-w",
+  "chunk_count": 3,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "xm_W1ub-K-w",
+      "position": 114,
+      "title": "L42. Floor in a Binary Search Tree | BST | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=xm_W1ub-K-w",
+      "start": 0.0,
+      "end": 125.36,
+      "text": "before starting this video i'd love to thank relevel for sponsoring this entire tree series the placement season is here i know a lot of you are planning to sit for companies which come on campus in case you are disappointed that the top startups like tread upgrad razor pay are not hiring directly from your campus there is an easier way to work here just register for the relevant test conducted by reliable by an academy and you'll get a chance to apply for front-end backend and business development roles at india's top startups and unicorn companies reliable has thousand plus openings by 50 plus companies and the best thing is it's absolutely free so please make sure you check out all the links in the description and give the relevant test as soon as possible hey everyone welcome back to the channel i hope you guys are doing extremely well so today we will be solving the problem floor in a binary search tree what does this signify basically you will be given a key assume the key is given as seven in this entire binary search tree you have to figure out which value is the greatest value that's smaller than or equal to 7 i repeat that's smaller than or equal to seven so i can say the greatest value that is smaller than or equal to seven is indeed six so i can say the floor if the key is given as seven will be six similarly if i modify the key to be something like 14 which is the greatest value that's smaller than equal to 14 that's going to be 10 so that's the definition of floor in a bst i need to figure out the greatest value that's smaller than equal to a given key so how do you do that very very simple let's okay uh so assuming that the key has been given as nine okay and i want to figure out which is the value that's which is the greatest value that's lesser than equal to key so",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "xm_W1ub-K-w",
+      "position": 114,
+      "title": "L42. Floor in a Binary Search Tree | BST | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=xm_W1ub-K-w",
+      "start": 121.2,
+      "end": 230.319,
+      "text": "value that's lesser than equal to key so it's very simple what you do is you start doing a binary search you start off at right at the root that's 10 right and that's definitely greater than your key so that cannot be your answer okay so you can keep our answer variable that cannot be your answer for sure so what you do is you try to move left because 10 is indeed greater than 9 but you want someone lesser than so you have to move left so move left over here you have 5 so you got someone who's lesser than 9 so 5 is as of now you answer now what do you want you want this value to be as large as possible so if you so if you want to make this large will you move left or will you move right it's an obvious answer you will definitely move right why because if you move right this answer 5 will increase now you have 8 that's lesser than 9 yes that's less than 9 so you can take this 8 so answer will be updated to 5. now you want to increase the state further you want to increase the state further so what will you do you will definitely move right and the moment you move right you reach null so you can stop so ultimately the answer is storing something as eight that's how you get the bst just keep on moving keep on moving in order of increasing this value just try to move in such a way that this value is always increased and whatever is the last answer stored is definitely going to be your floor in a binary search tree so if i discuss the code the c plus plus and the java code are almost identical so i'll be just i'll be just telling you the c plus plus code you're given the root you're given the key very simple initially stored the answer of the floor as minus one if if",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "xm_W1ub-K-w",
+      "position": 114,
+      "title": "L42. Floor in a Binary Search Tree | BST | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=xm_W1ub-K-w",
+      "start": 227.28,
+      "end": 295.44,
+      "text": "if if that's equivalent to key that then there's no need to go left and right you cannot you cannot increase this any further store in the floor and return the floor or you can directly return the root dot valve now what if the key that's given to you that's greater than the current root val that you're standing at if that's the case and you too then you need to increase it in order to increase it you move right just make sure you store the floor what if it's not then just go left because you need to increase you need to decrease you need to have it under key yes you need to have it under key so just go left that's how you can find floor in a binary so i hope you've understood the entire explanation as well as the code just in case you did please please please make sure you like this video because it took a lot of efforts to make this entire tree series also if you wish you can definitely drop in a comment that will keep motivating me to make such further series also if you're new to the channel please do consider subscribing because i'm going to bring in such more series in the upcoming future as well with this uh let's wrap up this video let's speed in the next lecture [Music] you're bye",
+      "word_count": 238
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "video_id": "yf3oUhkvqA0",
+  "position": 135,
+  "title": "G-10. Rotten Oranges | C++ | Java",
+  "url": "https://www.youtube.com/watch?v=yf3oUhkvqA0",
+  "chunk_count": 13,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "yf3oUhkvqA0",
+      "position": 135,
+      "title": "G-10. Rotten Oranges | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=yf3oUhkvqA0",
+      "start": 3.439,
+      "end": 123.719,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well so today we will be uh solving the problem rotten oranges what is the problem State the problem States will be given a grid of Dimension n cross n that means a 2d Matrix will be given of size n cross M now they are saying that zero means empty one means the cell has fresh oranges and the cell is marked with two it means the cells have rten oranges now you have to deter mind what is the minimum time required to rot all oranges that means you have to figure out what is the minimum time that you need in order to rot all the oranges so how will the oranges get rotten so if there is a rotten orange at any given cell by index i j it can rot all the other fresh oranges that are at up down left right in unit time if they are fresh now let's understand the question in depth so imagine this like because this is two this is a rotten orange and this is connected to this this this this and this but of this this is only a fresh orange so these fresh oranges will be rotten in the first second it says in one unit of time it will rot the neighboring guys only so after one unit of time this is the state of all the oranges okay and the next what will happen in the next step this guy has already rotted uh all his name neighbors so there is this orange left this Orange has this this this this this so this will rotten this and this so in time two in time two this orange and this orange will rotten all its neighboring oranges so it goes down rottens this goes down rottens this right now we have this guy here here here here so this is already rotten already rotten and this guy is zero which is an empty cell it does not",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "yf3oUhkvqA0",
+      "position": 135,
+      "title": "G-10. Rotten Oranges | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=yf3oUhkvqA0",
+      "start": 119.28,
+      "end": 237.48,
+      "text": "zero which is an empty cell it does not have an orange so you cannot rotten it so apparently right after time equal to 2 these couple of oranges did rotten the neighboring oranges after that now these are the new two oranges so can I say this guy has no one yes but this guy has someone on the bottom no one over here no one over here no one over here but someone at the bottom so I can say at time equal to three this guy will be rotten perfect what about time right after this now this guy is the new rotten orange so this guy has something like this so this guy will be rotten now so at time equal to 4 this guy was rotten so what is the time that you required to rotten all the oranges that is 4 seconds or 4 unit of time is what your answer will be for this particular question so let's take another example so this is an example and if you see the in the starting there are three rotten oranges yes in the starting there are three rotten oranges so if I say at time equal to 1 second what will happen this rotten orange will rotten all its neighboring oranges this rotten orange will also rotten all its neighboring oranges this orange will also rot in all its neighboring oranges so what will happen is this guy has this neighbor this neighbor this neighbor out of this this is just the single fresh orange so it will rotten it now time for this this guy and it happens simultaneously like when this guy will rot in this orange this guy will rot in this and this simultaneously right so what will happen is now this guy will rotten this and this after this there is only one orange left which is this which is rotten this guy will be like something like this so it'll be rotting this done so I can say right after one second this guy rot in",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "yf3oUhkvqA0",
+      "position": 135,
+      "title": "G-10. Rotten Oranges | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=yf3oUhkvqA0",
+      "start": 232.04,
+      "end": 353.88,
+      "text": "right after one second this guy rot in this this guy rot in this and this guy rot in this so apparently if you came carefully see are there any fresh oranges left the answer to that is no so the answer is in one unit of time I was able to rotten all the fresh oranges that were there in the Matrix so let's take one more example so if I see this example over here we just have a single rotten orange to start off with so this will be rottening this guy this guy and this guy so please rotten it rotten so this will be the case at time equal to 1 second right at time equal to two what will happen the new oranges that were rotten they will rotten so this was rotten they will rotten its neighborhoods which is this then this guy will rotten its neighborhoods no fresh oranges nothing to rotten then this guy will rot in its neighborhood no fresh oranges nothing to rotten so apparently at time equal to two these three guys rotten all their neighboring oranges right after this we have another guy left right so this guy does not have any neor done so at time equal to two is when we will last rotten it because after that there are no neighboring oranges to be rotten but even after this we see there is one guy left who is a fresh orange but is it reachable no it is not why because the movements are only like this so a rotten orange can only rotten someone at the top someone on the right someone on the bottom someone on the left you cannot rotten someone who is at a diagonal or is at a distance you need to be attached to them in only these four directions uh to get rotten so as of now I can say this is not possible and if it is not possible you return minus1 as your possible answer so if I ask you a very",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "yf3oUhkvqA0",
+      "position": 135,
+      "title": "G-10. Rotten Oranges | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=yf3oUhkvqA0",
+      "start": 349.44,
+      "end": 473.11999999999995,
+      "text": "possible answer so if I ask you a very simple question which algorithm should we use so we have two rotten oranges and I can say it does rot its neighbor at the same time which is 1 second so it is similar to saying these guys were at a distance of one or at a level one so each of them got rotten at a similar stage and if you're visiting same level guys because this is at level one level one level one same level guys at same time What algorithm do you use BFS because this is the only algorithm that travises level wise had you gone something like DFS what would have happened is probably would have gone from here to here then to here then to here then to here then to here which would have taken you 1 second 2 second 3 second 4 second 5 second if you would have used DFS which is depth first search you'd have gone in the depth and you would have visited all the neighboring fresh oranges but you need to make sure you require minimum time over here it's not like you need to rotten all the oranges over here it is like you need to apply the minimum time and that is only possible if you move in the neighboring directions at an equal Pace at a equal Pace right so that is what we will do this is the intuition behind BFS algorithm because we want to rotten them simultaneously that is why something like in BFS algorithm will be used so do you remember the BFS algorithm yes you do what is the initial configuration yes it is a q so you can always Define a Q and in the initial configuration you can always say that over here we have couple of starting points or the number of starting points will depend on the number of rotten oranges present initially and these are the two rotten oranges which are present initially so if I just number them uh the row number",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "yf3oUhkvqA0",
+      "position": 135,
+      "title": "G-10. Rotten Oranges | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=yf3oUhkvqA0",
+      "start": 468.84,
+      "end": 581.3199999999999,
+      "text": "if I just number them uh the row number will go like the first rotten orange is at 2 comma 0 the next rotten orange is at 0a 2 so you can easily just pass on this and remember this what is the other thing that we require a visited array so probably you can create a visited 2D Matrix so go ahead and create a visited 2D Matrix done over here you can say the two rotten oranges that you pushed in you can easily mark them as two done now I need the minimum time right I need the minimum time so what you need to do is you need to always say that Hey listen when these guys started it was the initial time so you need to carry one more variable something like zero with these guys saying at a zero time this these were the guys who were rotten okay right after that what you'll do is you'll say Okay 2 comma 0 is the row or the cell number and the time is zero now if I go to 2 comma 0 this is what it is now we go to its neighbors who are its neighbors these are its neighbors invalid invalid empty cell only one neighbor is having a fresh orange take up this neighbor take up this neor put it into the queue with a time of 1 second because you will be taking one more second than the previous time so you'll put them into the cube at the same time make sure you rotten it over here done what is the next step that you'll do you'll take this is done the next St you'll take 0 comma 2 and the time is again zero the time is again zero okay and now what you will do is you saw okay at 0 comma 2 the time is Z okay so where is 0 comma 2 here who are its neighbors this guy invalid this guy invalid this guy a fresh this guy a",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "yf3oUhkvqA0",
+      "position": 135,
+      "title": "G-10. Rotten Oranges | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=yf3oUhkvqA0",
+      "start": 576.16,
+      "end": 693.92,
+      "text": "invalid this guy a fresh this guy a fresh so there are two fresh oranges so you'll just pick up those two fresh oranges first one being 1 2 comma 1 so one two is the fresh orange which is this and the time is 1 second over here it is zero and one so you'll pick up 0er and one and this will be one perfect this is also done at the same time please make sure you mark them as rot next 2A 1A 1 the time is 1 now we taking time equal to 1 probably you can keep a variable which keeps a counter of the maximum time the maximum time as of now is one right the maximum time as of now is one so we have someone as 2 comma 1 where is 2 comma 1 this portion is 2A 1 who its neighbors this guy a fresh orange this guy a fresh orange this guy invalid and this is already rotten already rotten so I found two fresh oranges so go ahead and rotten them in the next second which is two and over here add 2 comma 2 and and make sure you mark them as visited perfect this is also done at the next you take 1A 2A 1 this is a Time equal to 1 where is 1A 2 let's write it 1A 2 is here already rotten invalid already rotten already rotten so there is no fresh oranges remaining so done with this as well next you get 0 comma 1 comma 1 where is 0a 1 comma 1 here were its neighbors already roten already roten because over here you can find that they are already roted in the visited arrays so no more neighbors of this guy so this is also done next time you get one comma 1 comma two so you got someone who took 2 seconds so you can say the time to be updated to 2 seconds now at 1 comma 1A 2 again if you see this is already rotten",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "yf3oUhkvqA0",
+      "position": 135,
+      "title": "G-10. Rotten Oranges | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=yf3oUhkvqA0",
+      "start": 689.8,
+      "end": 799.6,
+      "text": "again if you see this is already rotten this is already rotten this is already rotten this is already uh empty so you find already rotten by this so no one again this is also done the next step you get 2 comma 2 and the time is two so the time is already two so if you see 2 comma 2 up one already rotten invalid invalid already R so I can see this is also done so at the end of the day I can say the Q turns out to be empty and I have always visited all the cells I've already visited all the cells so let's see did all the fresh oranges got roted if we started rotting from these two let's see this was a fresh orange is it rotten yes this was a fresh orange is it rotten yes this was a fresh orange is it rotten yes this was a fresh orange is it rotten yes this was a fresh orange is it rotten yes so all the fresh oranges were rotten so I was able to rotten all the fresh oranges and what is the maximum time I took the maximum time I took was 2 seconds so this is going to be my answer if any of the fresh oranges were not roten in the visited array you could have printed minus one you could have easily printed minus one so as usual I'll be coding the C++ code and you can find the Java code on the left so that you can easily follow so what do we need at first we have the grid right so please just make sure you figure out the N&M because that will be required going forward just make sure you figure them out okay fine N&M has been figured out what is the next step that we did we always said get me all the rotten oranges and put them into the queue so what you can do is you can store them into the queue something like a pair so",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "yf3oUhkvqA0",
+      "position": 135,
+      "title": "G-10. Rotten Oranges | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=yf3oUhkvqA0",
+      "start": 794.6,
+      "end": 915.92,
+      "text": "into the queue something like a pair so this guy will be storing the row column and then you can store the time so this is how you can have the que it's basically going to store something like this okay it's over here the row column and over here the time so this is how the data structure looks like next you can always declare something like a visited array perfect so declare this visited array okay now what you'll do is you will be traversing across the grid and get all the oranges that are rotten so just travel and over here you can say if grid of I J is equal to equal to two that means it is rotten and if it in case is rotten I will say Q can you just take these guys because these are rotten and at Time Zero please take them right so this is something which you will always do so once you have done this what is your job you also need to make sure that these guys are marked as rotten at the visited so this is also done right after this you need the time to be computed so initially you can keep it as this and now you know you will always write the BFS this is how the BFS is written and you can always get the first row as Q do first do first and in Q uh the front element is front so yeah that's how you'll get it right after this you can always get the column as q. front do first. second again follow this particular data structure guys follow this particular data structure first do first first do second what be the time the time will definitely be something like Q Q do front I be at the second done after this you can do q. pop once everything is done you need to visit all the neighboring guys so if I go back and write for all the neighboring guys we",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "yf3oUhkvqA0",
+      "position": 135,
+      "title": "G-10. Rotten Oranges | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=yf3oUhkvqA0",
+      "start": 909.68,
+      "end": 1022.12,
+      "text": "write for all the neighboring guys we have a row column right so at the top at the right at the bottom at the left so at the top we have something like row minus one column at the right we have something like row comma column + one at the down we will have row + one column at the left we will have something like row comma column minus one correct so this is at the top this is at the right this is at the bottom this is at the left so can I say there is a change of minus1 and plus 0 when we go at the top can I say over here there's a change of plus 0 and + one so if I probably write something as del row Delta row equal to like this can be an array minus 1 0 + 1 0 and I can write Delta column as something as 0 + 1 sorry my bad yeah plus 0 and minus one perfect and now can I say on the row if I add this which is minus one on the column if I add this I will get the topmost C similarly if I on the row add zero which is row and if I add plus one column plus one I'll get this guy similarly if I add this I'll get this similarly if I add this I'll get this can I say I can definitely say so what you'll do is you'll just simply create create this Delta guys it's very simple you can say d and you can create something like -1 0 + 1 Z and you can similarly create something like d column right and D column can also be have something like 0 comma 1 comma 0 comma minus one perfect this is how you can easily get the D row and D column so how many neighbors are there there are exactly four neighbors so you can easily Travers for them so what will be the neighboring Row the neighboring",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "yf3oUhkvqA0",
+      "position": 135,
+      "title": "G-10. Rotten Oranges | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=yf3oUhkvqA0",
+      "start": 1018.199,
+      "end": 1135.679,
+      "text": "be the neighboring Row the neighboring row is going to be very simple it's going to be the initial row and the change which is D Delta row of I the neighboring column it's going to be the column plus the D column perfect so this is how you can easily write it please make sure you maintain variable namings because code quality is very very important right after this you can say okay is this valid okay is this valid okay is n column valid have a check always is end this valid once they are valid I need to check I I need to make sure are they previously not rotten which is neighboring row neighboring column are you previously not rotten that means are you not visited previously if you are not and are you a fresh guy because if you're not a fresh guy or you are an empty cell I don't go are you a fresh guy if you are a fresh guy and if you're not rotten then you are one among me and I can easily put you in the neighboring Row in the queue with an Al timer increased right so the timer will increase at the same time I can say the visitor to say okay these are my guys can you just mark them as one once this is done I'm getting the time every time so every time you get the time just make sure you store the maximum because whatever maximum you take that is what you'll store so just make sure that over here if it is not a rotten orang mark them as zero because it is very very important that you initialize the visited one and once the queue is done you can return the timer but before that you need to do a check so before returning the time you need to check if all of these fresh oranges like the oranges which were initially fresh where all of these converted into rotten or not if it is not something like if",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "yf3oUhkvqA0",
+      "position": 135,
+      "title": "G-10. Rotten Oranges | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=yf3oUhkvqA0",
+      "start": 1128.44,
+      "end": 1238.28,
+      "text": "or not if it is not something like if visited of IG is equal is not equal to two and and on this grid it is a fresh orange if all the fresh oranges have not been converted you return a minus one this is a check if it is not then you return the timer just make sure you take uh an array instead of vector because you need to Define Vector if you take like it'll be a messy stuff so keep it short this is now let's submit this now you might argue but St why did you check at the end you could have applied a different logic where initially you can keep a count so what you can do slightly different is probably over here do something like grade of i j equal to equal to one and keep a count of fresh that's it so you can always keep a count of fresh over here and so if you have kept initially a count of fresh okay so what you can do is okay you've kept account of fresh so every time you're getting a fresh orange you are uh pushing that into the queue correct so what you can do is you can just keep a count over here every time you're getting a fresh you're pushing that into the que so the end if the counter is not equal to all the count fresh that means you did not push them into the queue or you did not touch so you can just return a minus one you can also do this and this will also be running fine so even if you submited via this count fresh method it still runs fine so yeah these things you can do you might argue instead of visited I can use the grid only yes you can do that but I always say whenever some data is given to you do not alter it because in Industry if someone is giving you a data to perform something you don't change the data and",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "yf3oUhkvqA0",
+      "position": 135,
+      "title": "G-10. Rotten Oranges | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=yf3oUhkvqA0",
+      "start": 1234.12,
+      "end": 1336.559,
+      "text": "something you don't change the data and work an algorithm on it right just take this data and you work on it basically copy of it so that is why never ever alter something which is passed by reference or something like this because that is a data that is given to you okay so this is how the code will look like so if I talk about the time complexity or let's first talk about the space complexity we are using a que so how many total total nodes or total oranges it can have all the oranges can be rotten which will mean that we will have n cross M oranges so n cross M will be the space over here you're using n cross M over here as well to visit it so you can say that overall it's like n cross M as the space that we are using on an extra basis the space complexity can be set to be n cross M but what about the time complexity we at first running n cross M Loop so n cross M then we know at total the Q will run if all the oranges are rotten sorry all the oranges are fresh then it will run for n cross M because that will be the number of times you will put them into the Q so the Q will run for that and for every guy we are running four times so for every node like for all the nodes we will be running for four times this Loop so again this can be aggregated to n cross M only that will be the time complexity if you aggregate this so guys I hope I was able to make you explain this tough question so just in case I was please make sure you like this video and if you're new to our Channel what are you waiting for hit that subscribe button right away and yes if you haven't checked out our DP series and the SD she",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "yf3oUhkvqA0",
+      "position": 135,
+      "title": "G-10. Rotten Oranges | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=yf3oUhkvqA0",
+      "start": 1333.0,
+      "end": 1351.159,
+      "text": "checked out our DP series and the SD she the links are in the description please make sure to check them out and with this let's wrap up this video and meet you in the next one till then bye-bye take care is broken don't ever forget your golden I will find in",
+      "word_count": 53
+    }
+  ]
+}

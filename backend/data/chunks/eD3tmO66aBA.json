@@ -1,0 +1,64 @@
+{
+  "video_id": "eD3tmO66aBA",
+  "position": 86,
+  "title": "L14. Maximum Depth in Binary Tree | Height of Binary Tree | C++ | Java",
+  "url": "https://www.youtube.com/watch?v=eD3tmO66aBA",
+  "chunk_count": 5,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "eD3tmO66aBA",
+      "position": 86,
+      "title": "L14. Maximum Depth in Binary Tree | Height of Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=eD3tmO66aBA",
+      "start": 0.0,
+      "end": 113.6,
+      "text": "so before starting this video i would love to thank reliable for sponsoring this entire tree series so do you wish to work with companies like cred upgrad urban company razor pay but you are not able to apply because of your lack of experience and of lack of opportunities so here's the solution to this problem relevant by an academy is a hiring platform that helps freshers and experienced people to get jobs in india's top companies all you need is skills so what you need to do is you just need to give the relevant test that is completely based on your skills depending on your performance your interview will be scheduled and you will be hired from the relevant platform and the best thing about this is it's absolutely free so what are you waiting for please make sure you check out the links in the description hey everyone welcome back to the channel i hope you guys are doing extremely well so today we will be solving the problem find maximum depth of any given binary tree so for this binary tree what's the maximum depth one two three four so i can say the maximum depth or height of this binary tree is nothing but four so we got to figure that out so in order to do that what we uh what is the traversal that we can use we can either use uh the recursive traversal or else we can use the level order traversal which doesn't require any recursion now what's the disadvantage of using that we have to use a queue data structure which at the worst case might end up taking a space complexity of big off n the recursive uh doesn't uses any space complexity but it does use the auxiliary space right and the auxiliary space can go up to as high as we go off height of the binary tree again uh prerequisite when the level order might end up taking like similar kind of uh space complexity if you consider the worst case like for",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "eD3tmO66aBA",
+      "position": 86,
+      "title": "L14. Maximum Depth in Binary Tree | Height of Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=eD3tmO66aBA",
+      "start": 109.119,
+      "end": 223.76,
+      "text": "if you consider the worst case like for this level order the worst case will be when you're given a complete binary tree right when the last level is completely filled then this level order will end up taking b go off uh like n near about space because the last level is gonna have a lot of notes but uh if you talk about the recursive solution then here whenever you're given a skew tree this is what you call a skew tree a linear tree whenever you're given a linear tree the recursive traversal will end up taking a stack space as equal to the number of nodes so both have both have their worst cases you can use any of the traversal in order to compute the maximum depth you can use the recursive or you can use the level order traversals generally people tend to use the recursive traversal because uh generally in binary trees are not skew rather trees end up having a very very small height of login in almost all the cases that is the that is the reason we use recursive but again you can use any of them as i said both of them have their own worst cases so if i think of a logical answer can i say if i'm standing at any given note and the answer will be one plus maximum height of this left side and the maximum height of the right side like whichever is having the maximum height can i say a one plus because one for the current node and the maximum one left or the maximum on the right uh can give me the answer like logically this should be the answer isn't it so why can't we uh use a recurrence and try to figure out like for the left tree for the right tree every time let's see so initially we start at the root of the tree now we do not know the left height or neither do we know the right height",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "eD3tmO66aBA",
+      "position": 86,
+      "title": "L14. Maximum Depth in Binary Tree | Height of Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=eD3tmO66aBA",
+      "start": 220.159,
+      "end": 329.919,
+      "text": "or neither do we know the right height so what we will do is at first we will move to the left and then we will move to the right but at first we will move to the left okay so when you move to the left this guy doesn't have a left so 1 plus max of left will be 0 for this guy max because for this 2 if i write 1 plus max of left will be 0 comma what's the right again 0 so can i say for this 2 guy the height is indeed like if you're standing over here the height is indeed 1 plus max of 0 on left a 0 right that's 1 so can i say this guy got me a height of 1 perfect now i came across with the height 1 from this side now i'm on the right side so i come across 3 and i know the answer will be one plus max of left and max of right so we again go to the left and we again go to the right okay now when we come across over here i know one thing for four the answer will be one of max plus left max plus uh right so again we go to the left so on left for five we know the answer will be one plus max of left that's zero comma right that's zero so we can say it's gonna be one for this five perfect so whenever you're standing at four you actually said one plus max of left what did left give you one what did what will right give you zero so can i say for this 4 the answer came out to be 1 plus max of 1 comma 0 that's 1 plus 1 2 so for this 4 i ended up getting a height of 2. now when i'll come to 6 when i'll come to 6 for 6 the answer will be 1 plus max of for 6 the left will be 0 the",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "eD3tmO66aBA",
+      "position": 86,
+      "title": "L14. Maximum Depth in Binary Tree | Height of Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=eD3tmO66aBA",
+      "start": 324.8,
+      "end": 441.75899999999996,
+      "text": "max of for 6 the left will be 0 the right will be 0 so can i say for 6 the answer will be 1 perfect now when i'm at 3 can i say for 3 the answer will be 1 plus max off now the left has been computed that's two and the right has been completed that one that's one so can i say one plus max of this that's one plus two three so can i say from the left i got a three from from the right i got a three from the left i got a one so for this guy one can i say the answer will be one plus the left guy came out to be one the right guy came out to be three hence the answer is one plus three that's four so ultimately using this simple recurrence of 1 plus max of left comma right i was able to figure out the maximum depth of any given binary tree that's how you do it so if you carefully observe this uh we're actually traversing all the notes right so this is we cannot we cannot improve this because we have to find out the maximum depth so you have to ultimately go through all the notes that that cannot be avoided the c plus code can be fine on the left the java code can be found on the right so as you can see i'm given a root and you know whenever the root is null i'm going to run a zero or else i figure out the left height by going to the root left i figure out the right height by going to the root right and once i figure that out what i'll do is one plus max of left height and right height simple as that it's a simple recurrence that i've already shown you via tryron what's the time complexity of this again you have to travel all the notes so you you cannot reduce that anything lesser than big of n and the",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "eD3tmO66aBA",
+      "position": 86,
+      "title": "L14. Maximum Depth in Binary Tree | Height of Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=eD3tmO66aBA",
+      "start": 437.28,
+      "end": 486.79,
+      "text": "anything lesser than big of n and the space complexity at the worst case if it's a skew tree it'll go on to big off n for this kind of traversals and you cannot do better than this so that's that's what the time complexity and space complexity will be for the solution so i hope you've understood the entire explanation as well as the code just in case you did please please please make sure you like this video because it took a lot of efforts to make this entire tree series also if you wish you can definitely drop in a comment that will keep motivating me to make such further series also if you're new to the channel please do consider subscribing because i'm going to bring in such more series in the upcoming future as well with this uh let's wrap up this video let's speed in the next lecture heart is [Music]",
+      "word_count": 157
+    }
+  ]
+}

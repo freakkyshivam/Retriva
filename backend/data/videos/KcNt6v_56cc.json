@@ -1,0 +1,1022 @@
+{
+  "position": 112,
+  "video_id": "KcNt6v_56cc",
+  "title": "L40. Search in a Binary Search Tree | BST | C++ | Java",
+  "url": "https://www.youtube.com/watch?v=KcNt6v_56cc",
+  "transcript": [
+    {
+      "start": 0.0,
+      "duration": 3.439,
+      "end": 3.439,
+      "text": "before starting this video i'd love to"
+    },
+    {
+      "start": 1.439,
+      "duration": 3.681,
+      "end": 5.12,
+      "text": "thank releval for sponsoring this entire"
+    },
+    {
+      "start": 3.439,
+      "duration": 3.601,
+      "end": 7.04,
+      "text": "tree series did you know that companies"
+    },
+    {
+      "start": 5.12,
+      "duration": 3.439,
+      "end": 8.559000000000001,
+      "text": "like google apple starbucks are now"
+    },
+    {
+      "start": 7.04,
+      "duration": 3.679,
+      "end": 10.719,
+      "text": "hiring people without any degree or"
+    },
+    {
+      "start": 8.559,
+      "duration": 4.0,
+      "end": 12.559,
+      "text": "experience why because they believe that"
+    },
+    {
+      "start": 10.719,
+      "duration": 4.0,
+      "end": 14.719,
+      "text": "skills are more important than anything"
+    },
+    {
+      "start": 12.559,
+      "duration": 4.081,
+      "end": 16.64,
+      "text": "else the top companies in india like the"
+    },
+    {
+      "start": 14.719,
+      "duration": 3.521,
+      "end": 18.24,
+      "text": "top startups have also started following"
+    },
+    {
+      "start": 16.64,
+      "duration": 3.68,
+      "end": 20.32,
+      "text": "this trend by hiring through a platform"
+    },
+    {
+      "start": 18.24,
+      "duration": 4.0,
+      "end": 22.24,
+      "text": "which is relevant which is backed up by"
+    },
+    {
+      "start": 20.32,
+      "duration": 3.68,
+      "end": 24.0,
+      "text": "an academy all you have to do is to give"
+    },
+    {
+      "start": 22.24,
+      "duration": 3.359,
+      "end": 25.598999999999997,
+      "text": "the relevant test and based on your"
+    },
+    {
+      "start": 24.0,
+      "duration": 3.68,
+      "end": 27.68,
+      "text": "score this flat send your candidate"
+    },
+    {
+      "start": 25.599,
+      "duration": 4.881,
+      "end": 30.48,
+      "text": "profiles to 50 plus companies which"
+    },
+    {
+      "start": 27.68,
+      "duration": 4.559,
+      "end": 32.239,
+      "text": "includes cred upgrade vedanta"
+    },
+    {
+      "start": 30.48,
+      "duration": 3.84,
+      "end": 34.32,
+      "text": "and you can get selected for a job role"
+    },
+    {
+      "start": 32.239,
+      "duration": 4.32,
+      "end": 36.559,
+      "text": "within a week another amazing thing"
+    },
+    {
+      "start": 34.32,
+      "duration": 3.52,
+      "end": 37.84,
+      "text": "about relevel is it's absolutely free so"
+    },
+    {
+      "start": 36.559,
+      "duration": 3.52,
+      "end": 40.079,
+      "text": "please make sure you check out the links"
+    },
+    {
+      "start": 37.84,
+      "duration": 2.239,
+      "end": 40.079,
+      "text": "in the"
+    },
+    {
+      "start": 42.84,
+      "duration": 3.399,
+      "end": 46.239000000000004,
+      "text": "description everyone welcome back to the"
+    },
+    {
+      "start": 44.96,
+      "duration": 3.439,
+      "end": 48.399,
+      "text": "channel i hope you guys are doing"
+    },
+    {
+      "start": 46.239,
+      "duration": 5.601,
+      "end": 51.839999999999996,
+      "text": "extremely well so today we will be"
+    },
+    {
+      "start": 48.399,
+      "duration": 6.8,
+      "end": 55.199,
+      "text": "solving the problem search in a binary"
+    },
+    {
+      "start": 51.84,
+      "duration": 7.44,
+      "end": 59.28,
+      "text": "search tree now assume you are given a"
+    },
+    {
+      "start": 55.199,
+      "duration": 6.961,
+      "end": 62.16,
+      "text": "node with a value for an example 10 okay"
+    },
+    {
+      "start": 59.28,
+      "duration": 4.72,
+      "end": 64.0,
+      "text": "and i want you to return the reference"
+    },
+    {
+      "start": 62.16,
+      "duration": 4.8,
+      "end": 66.96,
+      "text": "or the address what whatever you can"
+    },
+    {
+      "start": 64.0,
+      "duration": 5.36,
+      "end": 69.36,
+      "text": "call i want to return this entire node"
+    },
+    {
+      "start": 66.96,
+      "duration": 4.56,
+      "end": 71.52,
+      "text": "which contains this value basically i'll"
+    },
+    {
+      "start": 69.36,
+      "duration": 4.96,
+      "end": 74.32,
+      "text": "be giving you the integral value and i"
+    },
+    {
+      "start": 71.52,
+      "duration": 5.279,
+      "end": 76.79899999999999,
+      "text": "want you to return the entire node"
+    },
+    {
+      "start": 74.32,
+      "duration": 4.56,
+      "end": 78.88,
+      "text": "what if this value doesn't exist then i"
+    },
+    {
+      "start": 76.799,
+      "duration": 3.36,
+      "end": 80.159,
+      "text": "want you to return something which is"
+    },
+    {
+      "start": 78.88,
+      "duration": 3.2,
+      "end": 82.08,
+      "text": "null"
+    },
+    {
+      "start": 80.159,
+      "duration": 4.481,
+      "end": 84.64,
+      "text": "now remember this"
+    },
+    {
+      "start": 82.08,
+      "duration": 5.12,
+      "end": 87.2,
+      "text": "is a binary search tree not a binary"
+    },
+    {
+      "start": 84.64,
+      "duration": 6.24,
+      "end": 90.88,
+      "text": "tree had this been a binary tree and you"
+    },
+    {
+      "start": 87.2,
+      "duration": 7.44,
+      "end": 94.64,
+      "text": "could have done uh in order or a pre"
+    },
+    {
+      "start": 90.88,
+      "duration": 6.72,
+      "end": 97.6,
+      "text": "or a post or a level and you could have"
+    },
+    {
+      "start": 94.64,
+      "duration": 5.36,
+      "end": 100.0,
+      "text": "just written if root dot value equal to"
+    },
+    {
+      "start": 97.6,
+      "duration": 4.96,
+      "end": 102.55999999999999,
+      "text": "equal to this no dot value then yes"
+    },
+    {
+      "start": 100.0,
+      "duration": 5.28,
+      "end": 105.28,
+      "text": "return this but it's not"
+    },
+    {
+      "start": 102.56,
+      "duration": 4.72,
+      "end": 107.28,
+      "text": "so binary tree a search will end up"
+    },
+    {
+      "start": 105.28,
+      "duration": 4.4,
+      "end": 109.68,
+      "text": "taking big off and"
+    },
+    {
+      "start": 107.28,
+      "duration": 4.64,
+      "end": 111.92,
+      "text": "as i said in the first lecture"
+    },
+    {
+      "start": 109.68,
+      "duration": 4.719,
+      "end": 114.399,
+      "text": "almost every like every binary a binary"
+    },
+    {
+      "start": 111.92,
+      "duration": 5.44,
+      "end": 117.36,
+      "text": "search tree that is given to you is of"
+    },
+    {
+      "start": 114.399,
+      "duration": 5.281,
+      "end": 119.68,
+      "text": "longer the make base 2 and height yes"
+    },
+    {
+      "start": 117.36,
+      "duration": 4.32,
+      "end": 121.68,
+      "text": "it's a logarithmic base 2 and height so"
+    },
+    {
+      "start": 119.68,
+      "duration": 5.28,
+      "end": 124.96000000000001,
+      "text": "how will you solve that now we know a"
+    },
+    {
+      "start": 121.68,
+      "duration": 6.96,
+      "end": 128.64000000000001,
+      "text": "property in binary search tree the left"
+    },
+    {
+      "start": 124.96,
+      "duration": 6.48,
+      "end": 131.44,
+      "text": "is always lesser than the current node"
+    },
+    {
+      "start": 128.64,
+      "duration": 5.12,
+      "end": 133.76,
+      "text": "that you are standing and the right is"
+    },
+    {
+      "start": 131.44,
+      "duration": 4.799,
+      "end": 136.239,
+      "text": "always greater than the current node"
+    },
+    {
+      "start": 133.76,
+      "duration": 4.559,
+      "end": 138.319,
+      "text": "that you are standing so assuming i"
+    },
+    {
+      "start": 136.239,
+      "duration": 4.801,
+      "end": 141.04,
+      "text": "start at eight okay assuming i started"
+    },
+    {
+      "start": 138.319,
+      "duration": 5.28,
+      "end": 143.599,
+      "text": "eight i have a ten okay"
+    },
+    {
+      "start": 141.04,
+      "duration": 4.16,
+      "end": 145.2,
+      "text": "that's not equal 8 is not equal to 10"
+    },
+    {
+      "start": 143.599,
+      "duration": 3.28,
+      "end": 146.879,
+      "text": "and if that's not equal"
+    },
+    {
+      "start": 145.2,
+      "duration": 2.72,
+      "end": 147.92,
+      "text": "what does your brain say your brain"
+    },
+    {
+      "start": 146.879,
+      "duration": 3.281,
+      "end": 150.16,
+      "text": "knows"
+    },
+    {
+      "start": 147.92,
+      "duration": 4.72,
+      "end": 152.64,
+      "text": "this left part yes i repeat this left"
+    },
+    {
+      "start": 150.16,
+      "duration": 4.64,
+      "end": 154.79999999999998,
+      "text": "part is lesser than 8 that is something"
+    },
+    {
+      "start": 152.64,
+      "duration": 3.76,
+      "end": 156.39999999999998,
+      "text": "which your brain definitely knows"
+    },
+    {
+      "start": 154.8,
+      "duration": 3.6,
+      "end": 158.4,
+      "text": "this right part"
+    },
+    {
+      "start": 156.4,
+      "duration": 4.16,
+      "end": 160.56,
+      "text": "is something which is greater than eight"
+    },
+    {
+      "start": 158.4,
+      "duration": 3.68,
+      "end": 162.08,
+      "text": "again your brain knows that definitely"
+    },
+    {
+      "start": 160.56,
+      "duration": 3.759,
+      "end": 164.319,
+      "text": "so"
+    },
+    {
+      "start": 162.08,
+      "duration": 5.2,
+      "end": 167.28,
+      "text": "where will the stem lie on the lesser"
+    },
+    {
+      "start": 164.319,
+      "duration": 4.721,
+      "end": 169.04,
+      "text": "part or on the greater part your answer"
+    },
+    {
+      "start": 167.28,
+      "duration": 4.0,
+      "end": 171.28,
+      "text": "will be it will definitely lie on the"
+    },
+    {
+      "start": 169.04,
+      "duration": 3.919,
+      "end": 172.959,
+      "text": "greater part so what you will do is you"
+    },
+    {
+      "start": 171.28,
+      "duration": 3.599,
+      "end": 174.879,
+      "text": "will move to the greater part and you"
+    },
+    {
+      "start": 172.959,
+      "duration": 4.401,
+      "end": 177.36,
+      "text": "end up at 12"
+    },
+    {
+      "start": 174.879,
+      "duration": 4.801,
+      "end": 179.67999999999998,
+      "text": "is this 12 equivalent to this 10 no it"
+    },
+    {
+      "start": 177.36,
+      "duration": 4.4,
+      "end": 181.76000000000002,
+      "text": "isn't so what do you look as you again"
+    },
+    {
+      "start": 179.68,
+      "duration": 5.839,
+      "end": 185.519,
+      "text": "look at the left the left is smaller the"
+    },
+    {
+      "start": 181.76,
+      "duration": 6.0,
+      "end": 187.76,
+      "text": "right is greater so apparently 10 is"
+    },
+    {
+      "start": 185.519,
+      "duration": 4.08,
+      "end": 189.59900000000002,
+      "text": "smaller than 12 so it should definitely"
+    },
+    {
+      "start": 187.76,
+      "duration": 4.8,
+      "end": 192.56,
+      "text": "lie on the left part so again you move"
+    },
+    {
+      "start": 189.599,
+      "duration": 5.92,
+      "end": 195.51899999999998,
+      "text": "to left and you end up at n"
+    },
+    {
+      "start": 192.56,
+      "duration": 4.959,
+      "end": 197.519,
+      "text": "is this 10 equivalent to this value 10"
+    },
+    {
+      "start": 195.519,
+      "duration": 4.321,
+      "end": 199.84,
+      "text": "and you'll be like yes it is it is"
+    },
+    {
+      "start": 197.519,
+      "duration": 5.201,
+      "end": 202.72,
+      "text": "equivalent so you'll take this entire"
+    },
+    {
+      "start": 199.84,
+      "duration": 5.52,
+      "end": 205.36,
+      "text": "node and you will end up returning it"
+    },
+    {
+      "start": 202.72,
+      "duration": 4.48,
+      "end": 207.2,
+      "text": "yes you'll end up returning this node"
+    },
+    {
+      "start": 205.36,
+      "duration": 4.799,
+      "end": 210.15900000000002,
+      "text": "hence you can easily get your answer"
+    },
+    {
+      "start": 207.2,
+      "duration": 5.28,
+      "end": 212.48,
+      "text": "what if i had made this value 9 yes what"
+    },
+    {
+      "start": 210.159,
+      "duration": 4.321,
+      "end": 214.48,
+      "text": "if i would have made this value 9 uh the"
+    },
+    {
+      "start": 212.48,
+      "duration": 3.039,
+      "end": 215.51899999999998,
+      "text": "moment you reach"
+    },
+    {
+      "start": 214.48,
+      "duration": 2.399,
+      "end": 216.879,
+      "text": "10"
+    },
+    {
+      "start": 215.519,
+      "duration": 4.08,
+      "end": 219.59900000000002,
+      "text": "you will be like"
+    },
+    {
+      "start": 216.879,
+      "duration": 4.881,
+      "end": 221.76,
+      "text": "10 is not equivalent to this 9"
+    },
+    {
+      "start": 219.599,
+      "duration": 5.041,
+      "end": 224.64,
+      "text": "so it will either be on the left or on"
+    },
+    {
+      "start": 221.76,
+      "duration": 5.759,
+      "end": 227.519,
+      "text": "the right so since left is smaller you"
+    },
+    {
+      "start": 224.64,
+      "duration": 6.159,
+      "end": 230.79899999999998,
+      "text": "end up going to the left which is indeed"
+    },
+    {
+      "start": 227.519,
+      "duration": 5.28,
+      "end": 232.799,
+      "text": "a value null so you end up reaching null"
+    },
+    {
+      "start": 230.799,
+      "duration": 4.321,
+      "end": 235.12,
+      "text": "so you'll automatically be whenever you"
+    },
+    {
+      "start": 232.799,
+      "duration": 4.8,
+      "end": 237.59900000000002,
+      "text": "reach null you're going to return null"
+    },
+    {
+      "start": 235.12,
+      "duration": 5.119,
+      "end": 240.239,
+      "text": "or else if you reach the value desired"
+    },
+    {
+      "start": 237.599,
+      "duration": 4.801,
+      "end": 242.39999999999998,
+      "text": "to be you return that entire node as"
+    },
+    {
+      "start": 240.239,
+      "duration": 5.2,
+      "end": 245.439,
+      "text": "simple as that so that's how search in a"
+    },
+    {
+      "start": 242.4,
+      "duration": 5.119,
+      "end": 247.519,
+      "text": "bst works and if you carefully observe"
+    },
+    {
+      "start": 245.439,
+      "duration": 4.561,
+      "end": 250.0,
+      "text": "you are not traversing the entire tree"
+    },
+    {
+      "start": 247.519,
+      "duration": 4.8,
+      "end": 252.31900000000002,
+      "text": "it'll be something like this this this"
+    },
+    {
+      "start": 250.0,
+      "duration": 4.72,
+      "end": 254.72,
+      "text": "this this this you'll be actually"
+    },
+    {
+      "start": 252.319,
+      "duration": 4.64,
+      "end": 256.959,
+      "text": "traversing somewhere around the height"
+    },
+    {
+      "start": 254.72,
+      "duration": 4.72,
+      "end": 259.44,
+      "text": "of the tree and as i said the height of"
+    },
+    {
+      "start": 256.959,
+      "duration": 4.641,
+      "end": 261.6,
+      "text": "the tree is always going to be log base"
+    },
+    {
+      "start": 259.44,
+      "duration": 4.0,
+      "end": 263.44,
+      "text": "2 and like in almost all the cases in"
+    },
+    {
+      "start": 261.6,
+      "duration": 4.4,
+      "end": 266.0,
+      "text": "bst the height is definitely going to be"
+    },
+    {
+      "start": 263.44,
+      "duration": 4.96,
+      "end": 268.4,
+      "text": "log base 2 n so can i say i'm not"
+    },
+    {
+      "start": 266.0,
+      "duration": 5.36,
+      "end": 271.36,
+      "text": "traversing the entire tree hence my time"
+    },
+    {
+      "start": 268.4,
+      "duration": 4.64,
+      "end": 273.03999999999996,
+      "text": "complexity will never be big o of n and"
+    },
+    {
+      "start": 271.36,
+      "duration": 4.0,
+      "end": 275.36,
+      "text": "my time complexity will be the height of"
+    },
+    {
+      "start": 273.04,
+      "duration": 4.8,
+      "end": 277.84000000000003,
+      "text": "the tree because i'll be traversing log"
+    },
+    {
+      "start": 275.36,
+      "duration": 4.399,
+      "end": 279.759,
+      "text": "and height if i just go on this all"
+    },
+    {
+      "start": 277.84,
+      "duration": 4.56,
+      "end": 282.4,
+      "text": "these nodes will never be traversed so"
+    },
+    {
+      "start": 279.759,
+      "duration": 5.281,
+      "end": 285.04,
+      "text": "i'll be traversing log base 2 and height"
+    },
+    {
+      "start": 282.4,
+      "duration": 5.76,
+      "end": 288.15999999999997,
+      "text": "because either i'll be moving right"
+    },
+    {
+      "start": 285.04,
+      "duration": 5.84,
+      "end": 290.88,
+      "text": "or left or right right all left or right"
+    },
+    {
+      "start": 288.16,
+      "duration": 6.56,
+      "end": 294.72,
+      "text": "so i'll end up going to the leaf node at"
+    },
+    {
+      "start": 290.88,
+      "duration": 6.48,
+      "end": 297.36,
+      "text": "the worst case hence the traversal time"
+    },
+    {
+      "start": 294.72,
+      "duration": 5.039,
+      "end": 299.759,
+      "text": "will be log base to n okay so that's the"
+    },
+    {
+      "start": 297.36,
+      "duration": 6.64,
+      "end": 304.0,
+      "text": "advantage of having a bst"
+    },
+    {
+      "start": 299.759,
+      "duration": 5.921,
+      "end": 305.68,
+      "text": "over something as a binary three so as"
+    },
+    {
+      "start": 304.0,
+      "duration": 4.8,
+      "end": 308.8,
+      "text": "usual the c plus plus code is on the"
+    },
+    {
+      "start": 305.68,
+      "duration": 5.28,
+      "end": 310.96,
+      "text": "left and the java code is on the right"
+    },
+    {
+      "start": 308.8,
+      "duration": 4.16,
+      "end": 312.96000000000004,
+      "text": "so what are you given you're given root"
+    },
+    {
+      "start": 310.96,
+      "duration": 4.56,
+      "end": 315.52,
+      "text": "and a given val right both of these"
+    },
+    {
+      "start": 312.96,
+      "duration": 4.4,
+      "end": 317.35999999999996,
+      "text": "things are given so what i do is i keep"
+    },
+    {
+      "start": 315.52,
+      "duration": 3.6,
+      "end": 319.12,
+      "text": "on traversing till i don't reach now"
+    },
+    {
+      "start": 317.36,
+      "duration": 3.36,
+      "end": 320.72,
+      "text": "very simple so"
+    },
+    {
+      "start": 319.12,
+      "duration": 2.799,
+      "end": 321.919,
+      "text": "if i don't reach null i'll keep on"
+    },
+    {
+      "start": 320.72,
+      "duration": 4.479,
+      "end": 325.199,
+      "text": "traversing"
+    },
+    {
+      "start": 321.919,
+      "duration": 5.041,
+      "end": 326.96,
+      "text": "or or if my value does not coincides"
+    },
+    {
+      "start": 325.199,
+      "duration": 2.881,
+      "end": 328.08,
+      "text": "with the value that i'm looking for"
+    },
+    {
+      "start": 326.96,
+      "duration": 4.32,
+      "end": 331.28,
+      "text": "perfect"
+    },
+    {
+      "start": 328.08,
+      "duration": 5.6,
+      "end": 333.68,
+      "text": "now if the value is gree like if the"
+    },
+    {
+      "start": 331.28,
+      "duration": 5.12,
+      "end": 336.4,
+      "text": "value is lesser than root val"
+    },
+    {
+      "start": 333.68,
+      "duration": 5.04,
+      "end": 338.72,
+      "text": "if it is if it is then i"
+    },
+    {
+      "start": 336.4,
+      "duration": 4.88,
+      "end": 341.28,
+      "text": "always end up moving left"
+    },
+    {
+      "start": 338.72,
+      "duration": 4.4,
+      "end": 343.12,
+      "text": "or i'll move right like if it's lesser"
+    },
+    {
+      "start": 341.28,
+      "duration": 4.56,
+      "end": 345.84,
+      "text": "i'll move left or i'll move to right if"
+    },
+    {
+      "start": 343.12,
+      "duration": 4.48,
+      "end": 347.6,
+      "text": "it was equal it would have stopped at"
+    },
+    {
+      "start": 345.84,
+      "duration": 3.52,
+      "end": 349.35999999999996,
+      "text": "this condition if it was equal it would"
+    },
+    {
+      "start": 347.6,
+      "duration": 4.319,
+      "end": 351.91900000000004,
+      "text": "have stopped at this condition and i"
+    },
+    {
+      "start": 349.36,
+      "duration": 5.04,
+      "end": 354.40000000000003,
+      "text": "would have returned null if it was not"
+    },
+    {
+      "start": 351.919,
+      "duration": 4.72,
+      "end": 356.639,
+      "text": "there then whenever root becomes null it"
+    },
+    {
+      "start": 354.4,
+      "duration": 3.84,
+      "end": 358.23999999999995,
+      "text": "will return null simple as that you can"
+    },
+    {
+      "start": 356.639,
+      "duration": 3.441,
+      "end": 360.08,
+      "text": "take any binary search tree and you can"
+    },
+    {
+      "start": 358.24,
+      "duration": 3.12,
+      "end": 361.36,
+      "text": "easily do that out so i hope you've"
+    },
+    {
+      "start": 360.08,
+      "duration": 3.28,
+      "end": 363.35999999999996,
+      "text": "understood the entire explanation as"
+    },
+    {
+      "start": 361.36,
+      "duration": 3.44,
+      "end": 364.8,
+      "text": "well as the code just in case you did"
+    },
+    {
+      "start": 363.36,
+      "duration": 2.88,
+      "end": 366.24,
+      "text": "please please please make sure you like"
+    },
+    {
+      "start": 364.8,
+      "duration": 4.32,
+      "end": 369.12,
+      "text": "this video because it took a lot of"
+    },
+    {
+      "start": 366.24,
+      "duration": 4.56,
+      "end": 370.8,
+      "text": "efforts to make this entire tree series"
+    },
+    {
+      "start": 369.12,
+      "duration": 3.44,
+      "end": 372.56,
+      "text": "also if you wish you can definitely drop"
+    },
+    {
+      "start": 370.8,
+      "duration": 4.56,
+      "end": 375.36,
+      "text": "in a comment that will keep motivating"
+    },
+    {
+      "start": 372.56,
+      "duration": 3.919,
+      "end": 376.479,
+      "text": "me to make such further series also if"
+    },
+    {
+      "start": 375.36,
+      "duration": 2.48,
+      "end": 377.84000000000003,
+      "text": "you're new to this channel please do"
+    },
+    {
+      "start": 376.479,
+      "duration": 2.961,
+      "end": 379.44,
+      "text": "consider subscribing because i'm going"
+    },
+    {
+      "start": 377.84,
+      "duration": 3.68,
+      "end": 381.52,
+      "text": "to bring in such more series in the"
+    },
+    {
+      "start": 379.44,
+      "duration": 3.36,
+      "end": 382.8,
+      "text": "upcoming future as well with this uh"
+    },
+    {
+      "start": 381.52,
+      "duration": 4.48,
+      "end": 386.0,
+      "text": "let's wrap up this video let's speed in"
+    },
+    {
+      "start": 382.8,
+      "duration": 11.099,
+      "end": 393.899,
+      "text": "the next lecture bye"
+    },
+    {
+      "start": 386.0,
+      "duration": 7.899,
+      "end": 393.899,
+      "text": "[Music]"
+    }
+  ]
+}

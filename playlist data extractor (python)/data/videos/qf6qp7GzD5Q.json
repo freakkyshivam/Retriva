@@ -1,0 +1,3254 @@
+{
+  "position": 242,
+  "video_id": "qf6qp7GzD5Q",
+  "title": "L6. Odd Even Linked List | Multiple Approaches",
+  "url": "https://www.youtube.com/watch?v=qf6qp7GzD5Q",
+  "transcript": [
+    {
+      "start": 3.32,
+      "duration": 2.559,
+      "end": 5.879,
+      "text": "so let's continue with our playlist"
+    },
+    {
+      "start": 4.72,
+      "duration": 2.28,
+      "end": 7.0,
+      "text": "before that hey every welcome back to"
+    },
+    {
+      "start": 5.879,
+      "duration": 3.001,
+      "end": 8.879999999999999,
+      "text": "the channel I hope you guys are doing"
+    },
+    {
+      "start": 7.0,
+      "duration": 4.84,
+      "end": 11.84,
+      "text": "extremely well so the problem that we"
+    },
+    {
+      "start": 8.88,
+      "duration": 5.36,
+      "end": 14.240000000000002,
+      "text": "will be solving today is odd and even"
+    },
+    {
+      "start": 11.84,
+      "duration": 4.199,
+      "end": 16.039,
+      "text": "link list what is the problem stating it"
+    },
+    {
+      "start": 14.24,
+      "duration": 4.6,
+      "end": 18.84,
+      "text": "is stating that you'll be given the head"
+    },
+    {
+      "start": 16.039,
+      "duration": 5.921,
+      "end": 21.96,
+      "text": "of the link list and your task is to"
+    },
+    {
+      "start": 18.84,
+      "duration": 5.24,
+      "end": 24.08,
+      "text": "group the odd index nodes what do you"
+    },
+    {
+      "start": 21.96,
+      "duration": 3.559,
+      "end": 25.519000000000002,
+      "text": "mean by odd index nodes if I try to"
+    },
+    {
+      "start": 24.08,
+      "duration": 4.519,
+      "end": 28.598999999999997,
+      "text": "number"
+    },
+    {
+      "start": 25.519,
+      "duration": 5.08,
+      "end": 30.598999999999997,
+      "text": "them then this is a odd index node this"
+    },
+    {
+      "start": 28.599,
+      "duration": 5.761,
+      "end": 34.36,
+      "text": "is a odd index node this is odd index"
+    },
+    {
+      "start": 30.599,
+      "duration": 5.721,
+      "end": 36.32,
+      "text": "Node 1 3 5 so you have to group them"
+    },
+    {
+      "start": 34.36,
+      "duration": 4.64,
+      "end": 39.0,
+      "text": "together and you have to group The even"
+    },
+    {
+      "start": 36.32,
+      "duration": 4.84,
+      "end": 41.16,
+      "text": "index node together so these are the"
+    },
+    {
+      "start": 39.0,
+      "duration": 4.12,
+      "end": 43.12,
+      "text": "even index node you have to group The"
+    },
+    {
+      "start": 41.16,
+      "duration": 3.68,
+      "end": 44.839999999999996,
+      "text": "even index node together and then you"
+    },
+    {
+      "start": 43.12,
+      "duration": 4.36,
+      "end": 47.48,
+      "text": "have to return it so basically what you"
+    },
+    {
+      "start": 44.84,
+      "duration": 6.08,
+      "end": 50.92,
+      "text": "have to do is you'll have to group"
+    },
+    {
+      "start": 47.48,
+      "duration": 5.919,
+      "end": 53.398999999999994,
+      "text": "one then this is a odd this is a odd"
+    },
+    {
+      "start": 50.92,
+      "duration": 6.159,
+      "end": 57.079,
+      "text": "this is a odd so after one you'll have"
+    },
+    {
+      "start": 53.399,
+      "duration": 5.521,
+      "end": 58.92,
+      "text": "four after four you'll have five that's"
+    },
+    {
+      "start": 57.079,
+      "duration": 3.881,
+      "end": 60.96,
+      "text": "done so youve grouped all the odd index"
+    },
+    {
+      "start": 58.92,
+      "duration": 4.76,
+      "end": 63.68,
+      "text": "nodes right right after that you group"
+    },
+    {
+      "start": 60.96,
+      "duration": 5.479,
+      "end": 66.43900000000001,
+      "text": "all the even index nodes so the even"
+    },
+    {
+      "start": 63.68,
+      "duration": 5.88,
+      "end": 69.56,
+      "text": "index node will go after"
+    },
+    {
+      "start": 66.439,
+      "duration": 5.881,
+      "end": 72.32,
+      "text": "that right after that it'll be six and"
+    },
+    {
+      "start": 69.56,
+      "duration": 5.52,
+      "end": 75.08,
+      "text": "then it'll be null so what I've done is"
+    },
+    {
+      "start": 72.32,
+      "duration": 6.119,
+      "end": 78.439,
+      "text": "I've basically taken the odd index nodes"
+    },
+    {
+      "start": 75.08,
+      "duration": 6.039,
+      "end": 81.119,
+      "text": "at first after that I've taken the even"
+    },
+    {
+      "start": 78.439,
+      "duration": 6.201,
+      "end": 84.63999999999999,
+      "text": "index notes and I've connected them so a"
+    },
+    {
+      "start": 81.119,
+      "duration": 5.201,
+      "end": 86.32,
+      "text": "group of odd and then a group of even"
+    },
+    {
+      "start": 84.64,
+      "duration": 3.839,
+      "end": 88.479,
+      "text": "then you connect them once you've"
+    },
+    {
+      "start": 86.32,
+      "duration": 3.92,
+      "end": 90.24,
+      "text": "connected them return the new head of"
+    },
+    {
+      "start": 88.479,
+      "duration": 3.401,
+      "end": 91.88,
+      "text": "the link list return the new ahead of"
+    },
+    {
+      "start": 90.24,
+      "duration": 3.64,
+      "end": 93.88,
+      "text": "the link list this is what you have to"
+    },
+    {
+      "start": 91.88,
+      "duration": 3.8,
+      "end": 95.67999999999999,
+      "text": "return so what if this problem comes up"
+    },
+    {
+      "start": 93.88,
+      "duration": 3.32,
+      "end": 97.19999999999999,
+      "text": "in an interview you will be starting off"
+    },
+    {
+      "start": 95.68,
+      "duration": 4.0,
+      "end": 99.68,
+      "text": "with the extreme name solution and what"
+    },
+    {
+      "start": 97.2,
+      "duration": 5.199,
+      "end": 102.399,
+      "text": "will be that data replacement what do I"
+    },
+    {
+      "start": 99.68,
+      "duration": 5.039,
+      "end": 104.71900000000001,
+      "text": "mean by that you have odd index nodes"
+    },
+    {
+      "start": 102.399,
+      "duration": 6.241,
+      "end": 108.64,
+      "text": "right these are the odd index nodes and"
+    },
+    {
+      "start": 104.719,
+      "duration": 5.961,
+      "end": 110.67999999999999,
+      "text": "if you visualize the final l l these are"
+    },
+    {
+      "start": 108.64,
+      "duration": 4.36,
+      "end": 113.0,
+      "text": "at the front these are at the front so"
+    },
+    {
+      "start": 110.68,
+      "duration": 4.64,
+      "end": 115.32000000000001,
+      "text": "you'll take them yes you'll take them"
+    },
+    {
+      "start": 113.0,
+      "duration": 4.84,
+      "end": 117.84,
+      "text": "and you'll place it on the front so"
+    },
+    {
+      "start": 115.32,
+      "duration": 5.2,
+      "end": 120.52,
+      "text": "basically you replace the data of the"
+    },
+    {
+      "start": 117.84,
+      "duration": 5.0,
+      "end": 122.84,
+      "text": "notes in the first half once this is"
+    },
+    {
+      "start": 120.52,
+      "duration": 7.719,
+      "end": 128.239,
+      "text": "done you will go through the even Notes"
+    },
+    {
+      "start": 122.84,
+      "duration": 8.759,
+      "end": 131.599,
+      "text": "3 2 6 3 2 6 then you'll do the data"
+    },
+    {
+      "start": 128.239,
+      "duration": 5.481,
+      "end": 133.72,
+      "text": "replacement in the second half once you"
+    },
+    {
+      "start": 131.599,
+      "duration": 4.841,
+      "end": 136.44,
+      "text": "have replaced the data you can return"
+    },
+    {
+      "start": 133.72,
+      "duration": 5.64,
+      "end": 139.35999999999999,
+      "text": "the initial head and your link list will"
+    },
+    {
+      "start": 136.44,
+      "duration": 5.799,
+      "end": 142.239,
+      "text": "be ready it will not be reordered but"
+    },
+    {
+      "start": 139.36,
+      "duration": 5.599,
+      "end": 144.959,
+      "text": "you will rearrange the data such that"
+    },
+    {
+      "start": 142.239,
+      "duration": 5.441,
+      "end": 147.68,
+      "text": "such that the data is in the rearranged"
+    },
+    {
+      "start": 144.959,
+      "duration": 6.241,
+      "end": 151.2,
+      "text": "State got it how can I do that what I"
+    },
+    {
+      "start": 147.68,
+      "duration": 6.68,
+      "end": 154.36,
+      "text": "will do is I will take a list"
+    },
+    {
+      "start": 151.2,
+      "duration": 5.56,
+      "end": 156.76,
+      "text": "I'll take a list and I'll start"
+    },
+    {
+      "start": 154.36,
+      "duration": 4.48,
+      "end": 158.84,
+      "text": "traversing I'll take a temporary and"
+    },
+    {
+      "start": 156.76,
+      "duration": 4.479,
+      "end": 161.239,
+      "text": "I'll place it at the head what is the"
+    },
+    {
+      "start": 158.84,
+      "duration": 5.36,
+      "end": 164.20000000000002,
+      "text": "first thing I need to do I need to get"
+    },
+    {
+      "start": 161.239,
+      "duration": 5.321,
+      "end": 166.56,
+      "text": "the odd index data so I'll start at the"
+    },
+    {
+      "start": 164.2,
+      "duration": 5.56,
+      "end": 169.76,
+      "text": "head and I'll jump in by two indexes"
+    },
+    {
+      "start": 166.56,
+      "duration": 5.24,
+      "end": 171.8,
+      "text": "I'll jump it by two places right so the"
+    },
+    {
+      "start": 169.76,
+      "duration": 4.199,
+      "end": 173.959,
+      "text": "temp is standing at the head I'll get"
+    },
+    {
+      "start": 171.8,
+      "duration": 5.2,
+      "end": 177.0,
+      "text": "the first data which is one once I've"
+    },
+    {
+      "start": 173.959,
+      "duration": 5.521,
+      "end": 179.48,
+      "text": "got that I'll move the temporary to next"
+    },
+    {
+      "start": 177.0,
+      "duration": 4.08,
+      "end": 181.08,
+      "text": "of next two places I'll get the next"
+    },
+    {
+      "start": 179.48,
+      "duration": 3.56,
+      "end": 183.04,
+      "text": "data"
+    },
+    {
+      "start": 181.08,
+      "duration": 4.76,
+      "end": 185.84,
+      "text": "after that again I'll move it to the"
+    },
+    {
+      "start": 183.04,
+      "duration": 5.96,
+      "end": 189.0,
+      "text": "next of next I'll take the next data"
+    },
+    {
+      "start": 185.84,
+      "duration": 6.52,
+      "end": 192.36,
+      "text": "once I've done this temporary will reach"
+    },
+    {
+      "start": 189.0,
+      "duration": 6.12,
+      "end": 195.12,
+      "text": "null temporary will reach null once it"
+    },
+    {
+      "start": 192.36,
+      "duration": 6.48,
+      "end": 198.84,
+      "text": "has reached null we will stop so what I"
+    },
+    {
+      "start": 195.12,
+      "duration": 7.24,
+      "end": 202.36,
+      "text": "can say is one iteration is done but it"
+    },
+    {
+      "start": 198.84,
+      "duration": 5.88,
+      "end": 204.72,
+      "text": "did Jump by two places so technically it"
+    },
+    {
+      "start": 202.36,
+      "duration": 4.64,
+      "end": 207.0,
+      "text": "just ended up taking n by two time"
+    },
+    {
+      "start": 204.72,
+      "duration": 4.64,
+      "end": 209.35999999999999,
+      "text": "because you're jumping by two places the"
+    },
+    {
+      "start": 207.0,
+      "duration": 5.159,
+      "end": 212.159,
+      "text": "next iteration should be done to get the"
+    },
+    {
+      "start": 209.36,
+      "duration": 6.799,
+      "end": 216.15900000000002,
+      "text": "even index nodes how can I do that maybe"
+    },
+    {
+      "start": 212.159,
+      "duration": 5.681,
+      "end": 217.84,
+      "text": "I'll Place temporary at Heads next"
+    },
+    {
+      "start": 216.159,
+      "duration": 4.64,
+      "end": 220.79899999999998,
+      "text": "because that is where the even index"
+    },
+    {
+      "start": 217.84,
+      "duration": 4.56,
+      "end": 222.4,
+      "text": "starts correct again I'll take the data"
+    },
+    {
+      "start": 220.799,
+      "duration": 4.481,
+      "end": 225.28,
+      "text": "and I'll put it into the"
+    },
+    {
+      "start": 222.4,
+      "duration": 5.64,
+      "end": 228.04,
+      "text": "list and then I'll again jump it by two"
+    },
+    {
+      "start": 225.28,
+      "duration": 5.28,
+      "end": 230.56,
+      "text": "I'll put the data into the list I'll"
+    },
+    {
+      "start": 228.04,
+      "duration": 2.52,
+      "end": 230.56,
+      "text": "jump it by"
+    },
+    {
+      "start": 231.4,
+      "duration": 5.52,
+      "end": 236.92000000000002,
+      "text": "two after this yes you'll again put it"
+    },
+    {
+      "start": 235.159,
+      "duration": 4.321,
+      "end": 239.48,
+      "text": "so when you try to jump you will not be"
+    },
+    {
+      "start": 236.92,
+      "duration": 5.56,
+      "end": 242.48,
+      "text": "able to jump because there is a null and"
+    },
+    {
+      "start": 239.48,
+      "duration": 6.08,
+      "end": 245.56,
+      "text": "if you is a next of next it doesn't"
+    },
+    {
+      "start": 242.48,
+      "duration": 4.959,
+      "end": 247.439,
+      "text": "exist null's next doesn't exist so"
+    },
+    {
+      "start": 245.56,
+      "duration": 4.48,
+      "end": 250.04,
+      "text": "you'll not be able to jump so remember"
+    },
+    {
+      "start": 247.439,
+      "duration": 5.241,
+      "end": 252.68,
+      "text": "whenever you reach the last node you"
+    },
+    {
+      "start": 250.04,
+      "duration": 6.439,
+      "end": 256.479,
+      "text": "will have to stop got it so what I've"
+    },
+    {
+      "start": 252.68,
+      "duration": 7.36,
+      "end": 260.04,
+      "text": "done is I've got a list I've got a list"
+    },
+    {
+      "start": 256.479,
+      "duration": 5.801,
+      "end": 262.28,
+      "text": "which has the odd and then the even"
+    },
+    {
+      "start": 260.04,
+      "duration": 4.159,
+      "end": 264.199,
+      "text": "index data what is the next step I'll"
+    },
+    {
+      "start": 262.28,
+      "duration": 4.84,
+      "end": 267.11999999999995,
+      "text": "have to go through the link list again"
+    },
+    {
+      "start": 264.199,
+      "duration": 4.401,
+      "end": 268.6,
+      "text": "and replace it this time what I'll do is"
+    },
+    {
+      "start": 267.12,
+      "duration": 4.32,
+      "end": 271.44,
+      "text": "I will go through it so I'll keep"
+    },
+    {
+      "start": 268.6,
+      "duration": 5.599,
+      "end": 274.199,
+      "text": "temporary placed at head and I'll keep"
+    },
+    {
+      "start": 271.44,
+      "duration": 5.199,
+      "end": 276.639,
+      "text": "one more point I placed at the zero"
+    },
+    {
+      "start": 274.199,
+      "duration": 5.241,
+      "end": 279.44,
+      "text": "index of the list and I'll start"
+    },
+    {
+      "start": 276.639,
+      "duration": 4.881,
+      "end": 281.52,
+      "text": "traversing okay I have one that's fine"
+    },
+    {
+      "start": 279.44,
+      "duration": 4.68,
+      "end": 284.12,
+      "text": "let's move temporary to the next let's"
+    },
+    {
+      "start": 281.52,
+      "duration": 5.6,
+      "end": 287.12,
+      "text": "move I to the next that's four let's"
+    },
+    {
+      "start": 284.12,
+      "duration": 6.359,
+      "end": 290.479,
+      "text": "replace it by four move temporary and"
+    },
+    {
+      "start": 287.12,
+      "duration": 6.6,
+      "end": 293.72,
+      "text": "move I next we have five replace it by"
+    },
+    {
+      "start": 290.479,
+      "duration": 5.881,
+      "end": 296.36,
+      "text": "five move temporary and move I next we"
+    },
+    {
+      "start": 293.72,
+      "duration": 5.84,
+      "end": 299.56,
+      "text": "have three replace it by three move"
+    },
+    {
+      "start": 296.36,
+      "duration": 6.8,
+      "end": 303.16,
+      "text": "temporary and move I next we have five"
+    },
+    {
+      "start": 299.56,
+      "duration": 5.919,
+      "end": 305.479,
+      "text": "replace it by two move I move temporary"
+    },
+    {
+      "start": 303.16,
+      "duration": 5.479,
+      "end": 308.639,
+      "text": "next we have six straight away replace"
+    },
+    {
+      "start": 305.479,
+      "duration": 6.601,
+      "end": 312.08,
+      "text": "it by six and then move temporary and"
+    },
+    {
+      "start": 308.639,
+      "duration": 7.28,
+      "end": 315.919,
+      "text": "move I I will exceed the length of the"
+    },
+    {
+      "start": 312.08,
+      "duration": 6.239,
+      "end": 318.31899999999996,
+      "text": "list and temporary will reach null this"
+    },
+    {
+      "start": 315.919,
+      "duration": 4.601,
+      "end": 320.52,
+      "text": "is when you stop and if you carefully"
+    },
+    {
+      "start": 318.319,
+      "duration": 4.121,
+      "end": 322.44,
+      "text": "observe data replacement has been done"
+    },
+    {
+      "start": 320.52,
+      "duration": 3.44,
+      "end": 323.96,
+      "text": "and this is your Brute Force solution so"
+    },
+    {
+      "start": 322.44,
+      "duration": 3.56,
+      "end": 326.0,
+      "text": "let's quickly check out the sudo code"
+    },
+    {
+      "start": 323.96,
+      "duration": 4.44,
+      "end": 328.4,
+      "text": "again I'll be writing the pseudo code in"
+    },
+    {
+      "start": 326.0,
+      "duration": 4.28,
+      "end": 330.28,
+      "text": "case you want C++ Java python JavaScript"
+    },
+    {
+      "start": 328.4,
+      "duration": 3.12,
+      "end": 331.52,
+      "text": "for The Brute Force the link will be in"
+    },
+    {
+      "start": 330.28,
+      "duration": 3.6,
+      "end": 333.88,
+      "text": "the description make sure you check it"
+    },
+    {
+      "start": 331.52,
+      "duration": 4.56,
+      "end": 336.08,
+      "text": "out so what is the first step we need an"
+    },
+    {
+      "start": 333.88,
+      "duration": 6.64,
+      "end": 340.52,
+      "text": "array so maybe let's assign the array to"
+    },
+    {
+      "start": 336.08,
+      "duration": 7.2,
+      "end": 343.28,
+      "text": "be an empty array we need temporary and"
+    },
+    {
+      "start": 340.52,
+      "duration": 4.76,
+      "end": 345.28,
+      "text": "first thing is take the odd index out so"
+    },
+    {
+      "start": 343.28,
+      "duration": 4.12,
+      "end": 347.4,
+      "text": "let's Place temporary at head that was"
+    },
+    {
+      "start": 345.28,
+      "duration": 4.639,
+      "end": 349.919,
+      "text": "the first step and what I will do is"
+    },
+    {
+      "start": 347.4,
+      "duration": 4.96,
+      "end": 352.35999999999996,
+      "text": "I'll keep the while condition empty and"
+    },
+    {
+      "start": 349.919,
+      "duration": 5.56,
+      "end": 355.479,
+      "text": "what we will do is we'll go inside and"
+    },
+    {
+      "start": 352.36,
+      "duration": 5.32,
+      "end": 357.68,
+      "text": "say array. add or push back whatever"
+    },
+    {
+      "start": 355.479,
+      "duration": 5.241,
+      "end": 360.71999999999997,
+      "text": "depending on your language and we a"
+    },
+    {
+      "start": 357.68,
+      "duration": 6.16,
+      "end": 363.84000000000003,
+      "text": "temporary can you give your data a value"
+    },
+    {
+      "start": 360.72,
+      "duration": 5.16,
+      "end": 365.88000000000005,
+      "text": "whatever is your struct's definition"
+    },
+    {
+      "start": 363.84,
+      "duration": 4.32,
+      "end": 368.15999999999997,
+      "text": "once you've done this you will say"
+    },
+    {
+      "start": 365.88,
+      "duration": 4.56,
+      "end": 370.44,
+      "text": "temporary can you move yourself and"
+    },
+    {
+      "start": 368.16,
+      "duration": 5.759,
+      "end": 373.91900000000004,
+      "text": "since I am going to odd index it will be"
+    },
+    {
+      "start": 370.44,
+      "duration": 7.0,
+      "end": 377.44,
+      "text": "a jump of two so temporary of next and"
+    },
+    {
+      "start": 373.919,
+      "duration": 7.041,
+      "end": 380.96,
+      "text": "next it will jump perfect can you tell"
+    },
+    {
+      "start": 377.44,
+      "duration": 5.759,
+      "end": 383.199,
+      "text": "me what will be the while condition I'm"
+    },
+    {
+      "start": 380.96,
+      "duration": 4.32,
+      "end": 385.28,
+      "text": "doing temporary so this should"
+    },
+    {
+      "start": 383.199,
+      "duration": 5.0,
+      "end": 388.199,
+      "text": "definitely not be null because null of"
+    },
+    {
+      "start": 385.28,
+      "duration": 5.359,
+      "end": 390.63899999999995,
+      "text": "next it will throw you an error so"
+    },
+    {
+      "start": 388.199,
+      "duration": 3.961,
+      "end": 392.16,
+      "text": "temporary should definitely not be null"
+    },
+    {
+      "start": 390.639,
+      "duration": 3.481,
+      "end": 394.12,
+      "text": "that's for"
+    },
+    {
+      "start": 392.16,
+      "duration": 4.72,
+      "end": 396.88000000000005,
+      "text": "sure and what will be the other"
+    },
+    {
+      "start": 394.12,
+      "duration": 5.519,
+      "end": 399.639,
+      "text": "condition I'm doing temporary next off"
+    },
+    {
+      "start": 396.88,
+      "duration": 4.439,
+      "end": 401.319,
+      "text": "next so this should also not be null"
+    },
+    {
+      "start": 399.639,
+      "duration": 5.4,
+      "end": 405.039,
+      "text": "because if this is null there's a"
+    },
+    {
+      "start": 401.319,
+      "duration": 5.401,
+      "end": 406.72,
+      "text": "problem null of next is not feasible so"
+    },
+    {
+      "start": 405.039,
+      "duration": 6.28,
+      "end": 411.31899999999996,
+      "text": "what I'll do is"
+    },
+    {
+      "start": 406.72,
+      "duration": 8.44,
+      "end": 415.16,
+      "text": "temporary next is not equal to"
+    },
+    {
+      "start": 411.319,
+      "duration": 6.761,
+      "end": 418.08000000000004,
+      "text": "null perfect once I've done this is it"
+    },
+    {
+      "start": 415.16,
+      "duration": 5.599,
+      "end": 420.759,
+      "text": "done is it done have I taken up is it"
+    },
+    {
+      "start": 418.08,
+      "duration": 5.2,
+      "end": 423.28,
+      "text": "done have I taken up all the odd index"
+    },
+    {
+      "start": 420.759,
+      "duration": 5.521,
+      "end": 426.28000000000003,
+      "text": "elements the answer is no I'll take an"
+    },
+    {
+      "start": 423.28,
+      "duration": 5.08,
+      "end": 428.35999999999996,
+      "text": "example imagine you have one that's"
+    },
+    {
+      "start": 426.28,
+      "duration": 4.88,
+      "end": 431.15999999999997,
+      "text": "pointing to two and that's pointing to"
+    },
+    {
+      "start": 428.36,
+      "duration": 5.559,
+      "end": 433.91900000000004,
+      "text": "three and it's pointing to null and this"
+    },
+    {
+      "start": 431.16,
+      "duration": 5.0,
+      "end": 436.16,
+      "text": "is where your head stands at so if you"
+    },
+    {
+      "start": 433.919,
+      "duration": 5.72,
+      "end": 439.639,
+      "text": "have temporary what the first step that"
+    },
+    {
+      "start": 436.16,
+      "duration": 6.039,
+      "end": 442.199,
+      "text": "will happen it'll go inside adds the"
+    },
+    {
+      "start": 439.639,
+      "duration": 5.601,
+      "end": 445.24,
+      "text": "value one right and then it'll move"
+    },
+    {
+      "start": 442.199,
+      "duration": 5.44,
+      "end": 447.639,
+      "text": "temporary to Temporary next of next so"
+    },
+    {
+      "start": 445.24,
+      "duration": 4.48,
+      "end": 449.72,
+      "text": "temporary will go here when your array"
+    },
+    {
+      "start": 447.639,
+      "duration": 4.801,
+      "end": 452.44,
+      "text": "just has one when your array just has"
+    },
+    {
+      "start": 449.72,
+      "duration": 4.8,
+      "end": 454.52000000000004,
+      "text": "one this is what your array has and when"
+    },
+    {
+      "start": 452.44,
+      "duration": 3.84,
+      "end": 456.28,
+      "text": "the temporary stands at the last node"
+    },
+    {
+      "start": 454.52,
+      "duration": 5.119,
+      "end": 459.639,
+      "text": "very important to notice when the"
+    },
+    {
+      "start": 456.28,
+      "duration": 5.599,
+      "end": 461.87899999999996,
+      "text": "temporary stands at the next last node"
+    },
+    {
+      "start": 459.639,
+      "duration": 4.68,
+      "end": 464.319,
+      "text": "this condition this condition temporary"
+    },
+    {
+      "start": 461.879,
+      "duration": 5.521,
+      "end": 467.40000000000003,
+      "text": "of next becomes null isn't it"
+    },
+    {
+      "start": 464.319,
+      "duration": 6.801,
+      "end": 471.12,
+      "text": "Temporaries of next is null so it will"
+    },
+    {
+      "start": 467.4,
+      "duration": 6.199,
+      "end": 473.599,
+      "text": "never go inside if it happens to be a"
+    },
+    {
+      "start": 471.12,
+      "duration": 4.799,
+      "end": 475.919,
+      "text": "odd length if it happens to be odd"
+    },
+    {
+      "start": 473.599,
+      "duration": 4.521,
+      "end": 478.12,
+      "text": "length link list it will end up missing"
+    },
+    {
+      "start": 475.919,
+      "duration": 6.0,
+      "end": 481.919,
+      "text": "the last element so you will have to"
+    },
+    {
+      "start": 478.12,
+      "duration": 6.72,
+      "end": 484.84000000000003,
+      "text": "check if at at the end of the day yes"
+    },
+    {
+      "start": 481.919,
+      "duration": 5.361,
+      "end": 487.28,
+      "text": "temporary was there if it was not null"
+    },
+    {
+      "start": 484.84,
+      "duration": 4.56,
+      "end": 489.4,
+      "text": "you will say array can you please add"
+    },
+    {
+      "start": 487.28,
+      "duration": 6.16,
+      "end": 493.44,
+      "text": "that element"
+    },
+    {
+      "start": 489.4,
+      "duration": 6.0,
+      "end": 495.4,
+      "text": "because we might be skipping because of"
+    },
+    {
+      "start": 493.44,
+      "duration": 4.759,
+      "end": 498.199,
+      "text": "this condition we might end up skipping"
+    },
+    {
+      "start": 495.4,
+      "duration": 5.56,
+      "end": 500.96,
+      "text": "the last element so this is how you can"
+    },
+    {
+      "start": 498.199,
+      "duration": 5.521,
+      "end": 503.72,
+      "text": "put up all the odd elements and the time"
+    },
+    {
+      "start": 500.96,
+      "duration": 5.88,
+      "end": 506.84,
+      "text": "complexity will be n by2 because you're"
+    },
+    {
+      "start": 503.72,
+      "duration": 4.879,
+      "end": 508.59900000000005,
+      "text": "jumping twice what is the next job the"
+    },
+    {
+      "start": 506.84,
+      "duration": 4.559,
+      "end": 511.399,
+      "text": "next job is again repeating the same"
+    },
+    {
+      "start": 508.599,
+      "duration": 5.201,
+      "end": 513.8,
+      "text": "piece of code but this time the"
+    },
+    {
+      "start": 511.399,
+      "duration": 5.921,
+      "end": 517.32,
+      "text": "temporary will"
+    },
+    {
+      "start": 513.8,
+      "duration": 5.479,
+      "end": 519.279,
+      "text": "be the temporary will be pointing to"
+    },
+    {
+      "start": 517.32,
+      "duration": 5.519,
+      "end": 522.839,
+      "text": "head of next because that is where we"
+    },
+    {
+      "start": 519.279,
+      "duration": 6.441,
+      "end": 525.72,
+      "text": "start off head of next the same line of"
+    },
+    {
+      "start": 522.839,
+      "duration": 8.401,
+      "end": 531.24,
+      "text": "code the exact same line of code so I'll"
+    },
+    {
+      "start": 525.72,
+      "duration": 5.52,
+      "end": 531.24,
+      "text": "be like while temporary is not"
+    },
+    {
+      "start": 531.32,
+      "duration": 11.04,
+      "end": 542.36,
+      "text": "null and and temporary do next is not"
+    },
+    {
+      "start": 538.2,
+      "duration": 7.199,
+      "end": 545.399,
+      "text": "null I'll say array can you please"
+    },
+    {
+      "start": 542.36,
+      "duration": 5.8,
+      "end": 548.16,
+      "text": "add temporary."
+    },
+    {
+      "start": 545.399,
+      "duration": 4.041,
+      "end": 549.44,
+      "text": "data and can you say temporary can you"
+    },
+    {
+      "start": 548.16,
+      "duration": 6.0,
+      "end": 554.16,
+      "text": "move to"
+    },
+    {
+      "start": 549.44,
+      "duration": 7.44,
+      "end": 556.8800000000001,
+      "text": "Temporary do next next so what this will"
+    },
+    {
+      "start": 554.16,
+      "duration": 5.32,
+      "end": 559.48,
+      "text": "do is this will take all the even index"
+    },
+    {
+      "start": 556.88,
+      "duration": 6.12,
+      "end": 563.0,
+      "text": "nodes why because you started with head"
+    },
+    {
+      "start": 559.48,
+      "duration": 5.919,
+      "end": 565.399,
+      "text": "next once this is done again it might"
+    },
+    {
+      "start": 563.0,
+      "duration": 5.16,
+      "end": 568.16,
+      "text": "happen to be the last node so if in case"
+    },
+    {
+      "start": 565.399,
+      "duration": 4.361,
+      "end": 569.76,
+      "text": "there is a last node ask your array to"
+    },
+    {
+      "start": 568.16,
+      "duration": 4.32,
+      "end": 572.48,
+      "text": "add that last node"
+    },
+    {
+      "start": 569.76,
+      "duration": 4.72,
+      "end": 574.48,
+      "text": "and that will be temporary of data"
+    },
+    {
+      "start": 572.48,
+      "duration": 4.16,
+      "end": 576.64,
+      "text": "perfect that will be temporary of data"
+    },
+    {
+      "start": 574.48,
+      "duration": 5.4,
+      "end": 579.88,
+      "text": "once you have done this it's done what"
+    },
+    {
+      "start": 576.64,
+      "duration": 6.08,
+      "end": 582.72,
+      "text": "is the next job just go through the"
+    },
+    {
+      "start": 579.88,
+      "duration": 5.44,
+      "end": 585.32,
+      "text": "index index will be zero and reassign"
+    },
+    {
+      "start": 582.72,
+      "duration": 4.88,
+      "end": 587.6,
+      "text": "temporary to head and reassign temporary"
+    },
+    {
+      "start": 585.32,
+      "duration": 6.16,
+      "end": 591.48,
+      "text": "to head and start writing the code so"
+    },
+    {
+      "start": 587.6,
+      "duration": 3.88,
+      "end": 591.48,
+      "text": "you say while temporary not"
+    },
+    {
+      "start": 592.6,
+      "duration": 5.44,
+      "end": 598.0400000000001,
+      "text": "null and what you say is temporary your"
+    },
+    {
+      "start": 595.68,
+      "duration": 5.279,
+      "end": 600.959,
+      "text": "data or value whatever you can call it"
+    },
+    {
+      "start": 598.04,
+      "duration": 5.6,
+      "end": 603.64,
+      "text": "equal to array of I and once you have"
+    },
+    {
+      "start": 600.959,
+      "duration": 4.401,
+      "end": 605.3599999999999,
+      "text": "done this you move I to the next index"
+    },
+    {
+      "start": 603.64,
+      "duration": 4.12,
+      "end": 607.76,
+      "text": "and you said temporary can you move to"
+    },
+    {
+      "start": 605.36,
+      "duration": 4.84,
+      "end": 610.2,
+      "text": "the next so temporary says why not I'll"
+    },
+    {
+      "start": 607.76,
+      "duration": 6.84,
+      "end": 614.6,
+      "text": "move to the next so it's like temporary"
+    },
+    {
+      "start": 610.2,
+      "duration": 9.16,
+      "end": 619.36,
+      "text": "do next once it is done it's going to be"
+    },
+    {
+      "start": 614.6,
+      "duration": 6.76,
+      "end": 621.36,
+      "text": "hey can I return the head just make sure"
+    },
+    {
+      "start": 619.36,
+      "duration": 5.479,
+      "end": 624.839,
+      "text": "there is a edge case the edge case is"
+    },
+    {
+      "start": 621.36,
+      "duration": 6.36,
+      "end": 627.72,
+      "text": "when you start off you check if um it's"
+    },
+    {
+      "start": 624.839,
+      "duration": 8.481,
+      "end": 633.32,
+      "text": "a single load what if the head is to be"
+    },
+    {
+      "start": 627.72,
+      "duration": 9.72,
+      "end": 637.44,
+      "text": "null if the head is null or or if it's a"
+    },
+    {
+      "start": 633.32,
+      "duration": 8.639,
+      "end": 641.9590000000001,
+      "text": "single element node so if this is"
+    },
+    {
+      "start": 637.44,
+      "duration": 6.32,
+      "end": 643.7600000000001,
+      "text": "null any of the cases if that's the case"
+    },
+    {
+      "start": 641.959,
+      "duration": 3.88,
+      "end": 645.8389999999999,
+      "text": "you will end up returning whatever is"
+    },
+    {
+      "start": 643.76,
+      "duration": 4.519,
+      "end": 648.279,
+      "text": "given to you single element or an empty"
+    },
+    {
+      "start": 645.839,
+      "duration": 5.081,
+      "end": 650.9200000000001,
+      "text": "link list you will not be doing anything"
+    },
+    {
+      "start": 648.279,
+      "duration": 6.36,
+      "end": 654.639,
+      "text": "otherwise you end up performing this"
+    },
+    {
+      "start": 650.92,
+      "duration": 7.359,
+      "end": 658.279,
+      "text": "step and again the step this is a beo of"
+    },
+    {
+      "start": 654.639,
+      "duration": 5.561,
+      "end": 660.2,
+      "text": "n by 2 and this is another beo of n"
+    },
+    {
+      "start": 658.279,
+      "duration": 3.761,
+      "end": 662.04,
+      "text": "because you're Travis in through all the"
+    },
+    {
+      "start": 660.2,
+      "duration": 3.52,
+      "end": 663.72,
+      "text": "elements so what will be the overall"
+    },
+    {
+      "start": 662.04,
+      "duration": 4.599,
+      "end": 666.639,
+      "text": "time complexity can I say the overall"
+    },
+    {
+      "start": 663.72,
+      "duration": 4.16,
+      "end": 667.88,
+      "text": "time complexity will be 21 yes I can say"
+    },
+    {
+      "start": 666.639,
+      "duration": 3.561,
+      "end": 670.2,
+      "text": "what will be the overall space"
+    },
+    {
+      "start": 667.88,
+      "duration": 6.399,
+      "end": 674.279,
+      "text": "complexity can I say that it will be boo"
+    },
+    {
+      "start": 670.2,
+      "duration": 6.36,
+      "end": 676.5600000000001,
+      "text": "of n why because we're using an external"
+    },
+    {
+      "start": 674.279,
+      "duration": 4.081,
+      "end": 678.36,
+      "text": "data structure an array to store all the"
+    },
+    {
+      "start": 676.56,
+      "duration": 3.76,
+      "end": 680.3199999999999,
+      "text": "elements this is where the interviewer"
+    },
+    {
+      "start": 678.36,
+      "duration": 3.76,
+      "end": 682.12,
+      "text": "will be like hey I'm not happy with the"
+    },
+    {
+      "start": 680.32,
+      "duration": 3.56,
+      "end": 683.88,
+      "text": "external space that you're using can you"
+    },
+    {
+      "start": 682.12,
+      "duration": 4.04,
+      "end": 686.16,
+      "text": "please optimize it so we need to"
+    },
+    {
+      "start": 683.88,
+      "duration": 4.72,
+      "end": 688.6,
+      "text": "optimize the space complexity of beo of"
+    },
+    {
+      "start": 686.16,
+      "duration": 4.239,
+      "end": 690.399,
+      "text": "n which technically means you're not"
+    },
+    {
+      "start": 688.6,
+      "duration": 4.44,
+      "end": 693.0400000000001,
+      "text": "allowed to use any external data"
+    },
+    {
+      "start": 690.399,
+      "duration": 4.361,
+      "end": 694.76,
+      "text": "structures that gives an hint that hey"
+    },
+    {
+      "start": 693.04,
+      "duration": 3.799,
+      "end": 696.8389999999999,
+      "text": "whatever we need to do we need to do"
+    },
+    {
+      "start": 694.76,
+      "duration": 4.879,
+      "end": 699.639,
+      "text": "within the given link list itself so"
+    },
+    {
+      "start": 696.839,
+      "duration": 4.641,
+      "end": 701.48,
+      "text": "let's try to think in that direction"
+    },
+    {
+      "start": 699.639,
+      "duration": 4.801,
+      "end": 704.44,
+      "text": "what is the final state that you need to"
+    },
+    {
+      "start": 701.48,
+      "duration": 5.039,
+      "end": 706.519,
+      "text": "return it starts off with the head of"
+    },
+    {
+      "start": 704.44,
+      "duration": 5.199,
+      "end": 709.639,
+      "text": "the link list because that's the first"
+    },
+    {
+      "start": 706.519,
+      "duration": 5.601,
+      "end": 712.12,
+      "text": "odd index node then you take the next"
+    },
+    {
+      "start": 709.639,
+      "duration": 5.841,
+      "end": 715.48,
+      "text": "odd index node then you take the next"
+    },
+    {
+      "start": 712.12,
+      "duration": 5.519,
+      "end": 717.639,
+      "text": "odd index node and once you've done this"
+    },
+    {
+      "start": 715.48,
+      "duration": 4.599,
+      "end": 720.0790000000001,
+      "text": "you start with the even index nodes so"
+    },
+    {
+      "start": 717.639,
+      "duration": 5.681,
+      "end": 723.32,
+      "text": "that's basically three"
+    },
+    {
+      "start": 720.079,
+      "duration": 5.161,
+      "end": 725.2399999999999,
+      "text": "four and then six that's what you do and"
+    },
+    {
+      "start": 723.32,
+      "duration": 4.88,
+      "end": 728.2,
+      "text": "six is pointing to null and then you"
+    },
+    {
+      "start": 725.24,
+      "duration": 5.44,
+      "end": 730.6800000000001,
+      "text": "basically connect the last of odd to"
+    },
+    {
+      "start": 728.2,
+      "duration": 4.84,
+      "end": 733.0400000000001,
+      "text": "even and you return the current head"
+    },
+    {
+      "start": 730.68,
+      "duration": 4.68,
+      "end": 735.3599999999999,
+      "text": "itself you return the current head"
+    },
+    {
+      "start": 733.04,
+      "duration": 5.76,
+      "end": 738.8,
+      "text": "itself that's what you do so we need to"
+    },
+    {
+      "start": 735.36,
+      "duration": 7.08,
+      "end": 742.44,
+      "text": "do link changes in such a way that two's"
+    },
+    {
+      "start": 738.8,
+      "duration": 6.96,
+      "end": 745.76,
+      "text": "next is pointing to one One's next is"
+    },
+    {
+      "start": 742.44,
+      "duration": 6.24,
+      "end": 748.6800000000001,
+      "text": "pointing to five that's it that will"
+    },
+    {
+      "start": 745.76,
+      "duration": 5.72,
+      "end": 751.48,
+      "text": "make sure that the odd is connected once"
+    },
+    {
+      "start": 748.68,
+      "duration": 5.959,
+      "end": 754.6389999999999,
+      "text": "you done for the odd the even three is"
+    },
+    {
+      "start": 751.48,
+      "duration": 6.719,
+      "end": 758.1990000000001,
+      "text": "connected to the even four the even"
+    },
+    {
+      "start": 754.639,
+      "duration": 7.361,
+      "end": 762.0,
+      "text": "index 4 is connected to the six once"
+    },
+    {
+      "start": 758.199,
+      "duration": 6.801,
+      "end": 765.0,
+      "text": "this link change of odd and even is done"
+    },
+    {
+      "start": 762.0,
+      "duration": 5.76,
+      "end": 767.76,
+      "text": "what is remaining this five because five"
+    },
+    {
+      "start": 765.0,
+      "duration": 4.6,
+      "end": 769.6,
+      "text": "should connect to even starting so make"
+    },
+    {
+      "start": 767.76,
+      "duration": 3.56,
+      "end": 771.3199999999999,
+      "text": "five connect to this three that's it"
+    },
+    {
+      "start": 769.6,
+      "duration": 4.2,
+      "end": 773.8000000000001,
+      "text": "just make five connect to this three and"
+    },
+    {
+      "start": 771.32,
+      "duration": 5.56,
+      "end": 776.88,
+      "text": "your job should be done right so can I"
+    },
+    {
+      "start": 773.8,
+      "duration": 4.8,
+      "end": 778.5999999999999,
+      "text": "can I do the link changes I think I can"
+    },
+    {
+      "start": 776.88,
+      "duration": 4.48,
+      "end": 781.36,
+      "text": "so I need to find a logic and the logic"
+    },
+    {
+      "start": 778.6,
+      "duration": 4.72,
+      "end": 783.32,
+      "text": "will be be in two steps the first is"
+    },
+    {
+      "start": 781.36,
+      "duration": 4.56,
+      "end": 785.92,
+      "text": "changing the links for the odd index"
+    },
+    {
+      "start": 783.32,
+      "duration": 4.959,
+      "end": 788.279,
+      "text": "noes the second is changing the links"
+    },
+    {
+      "start": 785.92,
+      "duration": 5.919,
+      "end": 791.8389999999999,
+      "text": "for the even index noes correct so what"
+    },
+    {
+      "start": 788.279,
+      "duration": 5.0,
+      "end": 793.279,
+      "text": "I'll do is I'll take odd and it starts"
+    },
+    {
+      "start": 791.839,
+      "duration": 4.841,
+      "end": 796.6800000000001,
+      "text": "with the head because that is where the"
+    },
+    {
+      "start": 793.279,
+      "duration": 5.92,
+      "end": 799.199,
+      "text": "odd index starts I will take even I'll"
+    },
+    {
+      "start": 796.68,
+      "duration": 5.36,
+      "end": 802.04,
+      "text": "place it at head of next I'll place it"
+    },
+    {
+      "start": 799.199,
+      "duration": 5.64,
+      "end": 804.8389999999999,
+      "text": "at head of next done let's try to change"
+    },
+    {
+      "start": 802.04,
+      "duration": 5.08,
+      "end": 807.12,
+      "text": "the links for the odd can I see this"
+    },
+    {
+      "start": 804.839,
+      "duration": 6.0,
+      "end": 810.839,
+      "text": "should ideally be pointing to the next"
+    },
+    {
+      "start": 807.12,
+      "duration": 7.519,
+      "end": 814.639,
+      "text": "odd but it is pointing to three which I"
+    },
+    {
+      "start": 810.839,
+      "duration": 8.281,
+      "end": 819.12,
+      "text": "don't want so what I will say is hey odd"
+    },
+    {
+      "start": 814.639,
+      "duration": 7.76,
+      "end": 822.399,
+      "text": "hey odd your next can it point to odds"
+    },
+    {
+      "start": 819.12,
+      "duration": 6.279,
+      "end": 825.399,
+      "text": "next of next can I say this because if I"
+    },
+    {
+      "start": 822.399,
+      "duration": 6.161,
+      "end": 828.56,
+      "text": "say this then this next ends up pointing"
+    },
+    {
+      "start": 825.399,
+      "duration": 5.601,
+      "end": 831.0,
+      "text": "to this it does that's what I'll do"
+    },
+    {
+      "start": 828.56,
+      "duration": 6.44,
+      "end": 835.0,
+      "text": "that's what I'll do so I will basically"
+    },
+    {
+      "start": 831.0,
+      "duration": 6.639,
+      "end": 837.639,
+      "text": "change the link and point it to one done"
+    },
+    {
+      "start": 835.0,
+      "duration": 5.68,
+      "end": 840.68,
+      "text": "right after that you say OD move move to"
+    },
+    {
+      "start": 837.639,
+      "duration": 5.88,
+      "end": 843.519,
+      "text": "your next and and if I say next now the"
+    },
+    {
+      "start": 840.68,
+      "duration": 5.399,
+      "end": 846.079,
+      "text": "next is this so it moves I've changed"
+    },
+    {
+      "start": 843.519,
+      "duration": 4.32,
+      "end": 847.839,
+      "text": "the link for odd at the same time"
+    },
+    {
+      "start": 846.079,
+      "duration": 4.88,
+      "end": 850.959,
+      "text": "simultaneously I can do it for even as"
+    },
+    {
+      "start": 847.839,
+      "duration": 5.041,
+      "end": 852.8800000000001,
+      "text": "well no need to do it after like in one"
+    },
+    {
+      "start": 850.959,
+      "duration": 5.041,
+      "end": 856.0,
+      "text": "more Loop you can do it in the same Loop"
+    },
+    {
+      "start": 852.88,
+      "duration": 4.92,
+      "end": 857.8,
+      "text": "let's do for the even can I even hey"
+    },
+    {
+      "start": 856.0,
+      "duration": 4.199,
+      "end": 860.199,
+      "text": "your next is pointing to one which I"
+    },
+    {
+      "start": 857.8,
+      "duration": 5.159,
+      "end": 862.959,
+      "text": "don't want I want you to point to four"
+    },
+    {
+      "start": 860.199,
+      "duration": 7.281,
+      "end": 867.4799999999999,
+      "text": "can you do this he'll be like yes I'll"
+    },
+    {
+      "start": 862.959,
+      "duration": 6.281,
+      "end": 869.2399999999999,
+      "text": "say even next it should point to even"
+    },
+    {
+      "start": 867.48,
+      "duration": 5.0,
+      "end": 872.48,
+      "text": "next do next"
+    },
+    {
+      "start": 869.24,
+      "duration": 4.959,
+      "end": 874.199,
+      "text": "isn't it that's what it should be so"
+    },
+    {
+      "start": 872.48,
+      "duration": 3.96,
+      "end": 876.44,
+      "text": "straight away say hey instead of"
+    },
+    {
+      "start": 874.199,
+      "duration": 7.0,
+      "end": 881.199,
+      "text": "pointing it here can you point it to"
+    },
+    {
+      "start": 876.44,
+      "duration": 8.8,
+      "end": 885.24,
+      "text": "Fourth like why not sure done after this"
+    },
+    {
+      "start": 881.199,
+      "duration": 7.841,
+      "end": 889.04,
+      "text": "move the even to the even node perfect"
+    },
+    {
+      "start": 885.24,
+      "duration": 6.08,
+      "end": 891.32,
+      "text": "Next Step will be the same you'll say"
+    },
+    {
+      "start": 889.04,
+      "duration": 4.56,
+      "end": 893.5999999999999,
+      "text": "odd this is pointing to four which is"
+    },
+    {
+      "start": 891.32,
+      "duration": 4.959,
+      "end": 896.279,
+      "text": "wrong can you point to next of next"
+    },
+    {
+      "start": 893.6,
+      "duration": 5.76,
+      "end": 899.36,
+      "text": "which is this perfect once you've done"
+    },
+    {
+      "start": 896.279,
+      "duration": 6.12,
+      "end": 902.399,
+      "text": "this move the odd"
+    },
+    {
+      "start": 899.36,
+      "duration": 5.08,
+      "end": 904.44,
+      "text": "simultaneously do it for the even even"
+    },
+    {
+      "start": 902.399,
+      "duration": 4.641,
+      "end": 907.04,
+      "text": "this is wrong so you should technically"
+    },
+    {
+      "start": 904.44,
+      "duration": 6.079,
+      "end": 910.519,
+      "text": "be pointing to six and the even reaches"
+    },
+    {
+      "start": 907.04,
+      "duration": 6.52,
+      "end": 913.56,
+      "text": "here right after the step remember one"
+    },
+    {
+      "start": 910.519,
+      "duration": 5.961,
+      "end": 916.48,
+      "text": "thing the even will always be ahead of"
+    },
+    {
+      "start": 913.56,
+      "duration": 5.719,
+      "end": 919.279,
+      "text": "odd the even will always be in front of"
+    },
+    {
+      "start": 916.48,
+      "duration": 4.919,
+      "end": 921.399,
+      "text": "OD so whatever checks you'll write like"
+    },
+    {
+      "start": 919.279,
+      "duration": 4.601,
+      "end": 923.88,
+      "text": "whatever your last check is should be"
+    },
+    {
+      "start": 921.399,
+      "duration": 4.401,
+      "end": 925.8,
+      "text": "based on even should be based on even"
+    },
+    {
+      "start": 923.88,
+      "duration": 5.199,
+      "end": 929.079,
+      "text": "and you're seeing that even is at last"
+    },
+    {
+      "start": 925.8,
+      "duration": 5.959,
+      "end": 931.7589999999999,
+      "text": "you stop similarly odd no need to do"
+    },
+    {
+      "start": 929.079,
+      "duration": 4.161,
+      "end": 933.2399999999999,
+      "text": "anything you stop you have stopped so"
+    },
+    {
+      "start": 931.759,
+      "duration": 4.161,
+      "end": 935.92,
+      "text": "once we have done the two phases which"
+    },
+    {
+      "start": 933.24,
+      "duration": 5.8,
+      "end": 939.04,
+      "text": "is basically pointing the odd index"
+    },
+    {
+      "start": 935.92,
+      "duration": 5.44,
+      "end": 941.36,
+      "text": "nodes to the odd index noes pointing the"
+    },
+    {
+      "start": 939.04,
+      "duration": 4.44,
+      "end": 943.48,
+      "text": "even index noes to the even index noes"
+    },
+    {
+      "start": 941.36,
+      "duration": 4.68,
+      "end": 946.04,
+      "text": "the next job we have to do and the next"
+    },
+    {
+      "start": 943.48,
+      "duration": 4.44,
+      "end": 947.9200000000001,
+      "text": "job will be I know I'll start off at two"
+    },
+    {
+      "start": 946.04,
+      "duration": 5.2,
+      "end": 951.24,
+      "text": "I'll go to one I'll go to five and"
+    },
+    {
+      "start": 947.92,
+      "duration": 5.279,
+      "end": 953.199,
+      "text": "that's my last odd but this last odd"
+    },
+    {
+      "start": 951.24,
+      "duration": 4.839,
+      "end": 956.0790000000001,
+      "text": "cannot point to six because six is the"
+    },
+    {
+      "start": 953.199,
+      "duration": 6.76,
+      "end": 959.959,
+      "text": "last even this five should technically"
+    },
+    {
+      "start": 956.079,
+      "duration": 5.44,
+      "end": 961.519,
+      "text": "point to three because in the real world"
+    },
+    {
+      "start": 959.959,
+      "duration": 4.281,
+      "end": 964.2399999999999,
+      "text": "two should point to one one should point"
+    },
+    {
+      "start": 961.519,
+      "duration": 6.24,
+      "end": 967.759,
+      "text": "to five and five should point to three"
+    },
+    {
+      "start": 964.24,
+      "duration": 5.48,
+      "end": 969.72,
+      "text": "and then the even starts right but the"
+    },
+    {
+      "start": 967.759,
+      "duration": 3.841,
+      "end": 971.6,
+      "text": "problem is five is pointing to six I"
+    },
+    {
+      "start": 969.72,
+      "duration": 3.919,
+      "end": 973.639,
+      "text": "still have to do a link change after"
+    },
+    {
+      "start": 971.6,
+      "duration": 4.44,
+      "end": 976.0400000000001,
+      "text": "those two phases I I'll have to do a"
+    },
+    {
+      "start": 973.639,
+      "duration": 5.32,
+      "end": 978.9590000000001,
+      "text": "link change so I need to make sure five"
+    },
+    {
+      "start": 976.04,
+      "duration": 5.039,
+      "end": 981.079,
+      "text": "points to three but do you have access"
+    },
+    {
+      "start": 978.959,
+      "duration": 4.521,
+      "end": 983.4799999999999,
+      "text": "to three do you have access to three you"
+    },
+    {
+      "start": 981.079,
+      "duration": 6.44,
+      "end": 987.519,
+      "text": "cannot call it as head next can you call"
+    },
+    {
+      "start": 983.48,
+      "duration": 5.919,
+      "end": 989.399,
+      "text": "it no so remember before"
+    },
+    {
+      "start": 987.519,
+      "duration": 4.481,
+      "end": 992.0,
+      "text": "starting"
+    },
+    {
+      "start": 989.399,
+      "duration": 5.92,
+      "end": 995.319,
+      "text": "me Memo memorize this remember this in"
+    },
+    {
+      "start": 992.0,
+      "duration": 6.6,
+      "end": 998.6,
+      "text": "the memory memorize this remember this"
+    },
+    {
+      "start": 995.319,
+      "duration": 6.32,
+      "end": 1001.639,
+      "text": "in a separate variable even node even"
+    },
+    {
+      "start": 998.6,
+      "duration": 6.039,
+      "end": 1004.639,
+      "text": "head or whatever and right after this"
+    },
+    {
+      "start": 1001.639,
+      "duration": 4.76,
+      "end": 1006.399,
+      "text": "after your phases you can say odds next"
+    },
+    {
+      "start": 1004.639,
+      "duration": 4.64,
+      "end": 1009.279,
+      "text": "should be because odd is pointing to"
+    },
+    {
+      "start": 1006.399,
+      "duration": 5.601,
+      "end": 1012.0,
+      "text": "five this next should be pointing to"
+    },
+    {
+      "start": 1009.279,
+      "duration": 6.24,
+      "end": 1015.519,
+      "text": "even head so what will happen"
+    },
+    {
+      "start": 1012.0,
+      "duration": 6.56,
+      "end": 1018.56,
+      "text": "is this link will go off and this will"
+    },
+    {
+      "start": 1015.519,
+      "duration": 4.081,
+      "end": 1019.6,
+      "text": "be pointing to if I have to it will get"
+    },
+    {
+      "start": 1018.56,
+      "duration": 4.079,
+      "end": 1022.6389999999999,
+      "text": "M here I"
+    },
+    {
+      "start": 1019.6,
+      "duration": 8.479,
+      "end": 1028.079,
+      "text": "know pointing to this so basically it"
+    },
+    {
+      "start": 1022.639,
+      "duration": 9.841,
+      "end": 1032.48,
+      "text": "goes like this this and this this this"
+    },
+    {
+      "start": 1028.079,
+      "duration": 6.441,
+      "end": 1034.52,
+      "text": "and this yes arranged looks messy but if"
+    },
+    {
+      "start": 1032.48,
+      "duration": 3.68,
+      "end": 1036.16,
+      "text": "you carefully look around it has been"
+    },
+    {
+      "start": 1034.52,
+      "duration": 3.2,
+      "end": 1037.72,
+      "text": "arranged according to the question so"
+    },
+    {
+      "start": 1036.16,
+      "duration": 3.48,
+      "end": 1039.64,
+      "text": "I'll be writing the pseudo code in case"
+    },
+    {
+      "start": 1037.72,
+      "duration": 3.52,
+      "end": 1041.24,
+      "text": "you want the C++ Java Python and"
+    },
+    {
+      "start": 1039.64,
+      "duration": 3.64,
+      "end": 1043.2800000000002,
+      "text": "JavaScript codes the link will be in the"
+    },
+    {
+      "start": 1041.24,
+      "duration": 5.0,
+      "end": 1046.24,
+      "text": "description make sure you check it out"
+    },
+    {
+      "start": 1043.28,
+      "duration": 5.639,
+      "end": 1048.9189999999999,
+      "text": "what do we need we need a odd we need a"
+    },
+    {
+      "start": 1046.24,
+      "duration": 5.28,
+      "end": 1051.52,
+      "text": "even where will the odd start"
+    },
+    {
+      "start": 1048.919,
+      "duration": 3.921,
+      "end": 1052.8400000000001,
+      "text": "at the head where will the even start"
+    },
+    {
+      "start": 1051.52,
+      "duration": 5.84,
+      "end": 1057.36,
+      "text": "head of"
+    },
+    {
+      "start": 1052.84,
+      "duration": 7.24,
+      "end": 1060.08,
+      "text": "next and where will the even head be"
+    },
+    {
+      "start": 1057.36,
+      "duration": 5.88,
+      "end": 1063.24,
+      "text": "it's at the head next so if you remember"
+    },
+    {
+      "start": 1060.08,
+      "duration": 6.0,
+      "end": 1066.08,
+      "text": "we need to memorize even head so that it"
+    },
+    {
+      "start": 1063.24,
+      "duration": 5.08,
+      "end": 1068.32,
+      "text": "can be used for the linkage okay let's"
+    },
+    {
+      "start": 1066.08,
+      "duration": 4.24,
+      "end": 1070.32,
+      "text": "try to write down the while loop because"
+    },
+    {
+      "start": 1068.32,
+      "duration": 4.32,
+      "end": 1072.6399999999999,
+      "text": "we need to Traverse and I'll not write"
+    },
+    {
+      "start": 1070.32,
+      "duration": 6.52,
+      "end": 1076.84,
+      "text": "the condition what's the first thing"
+    },
+    {
+      "start": 1072.64,
+      "duration": 9.519,
+      "end": 1082.159,
+      "text": "that we are doing we saying OD your next"
+    },
+    {
+      "start": 1076.84,
+      "duration": 6.68,
+      "end": 1083.52,
+      "text": "should be pointing to odds next of next"
+    },
+    {
+      "start": 1082.159,
+      "duration": 2.801,
+      "end": 1084.96,
+      "text": "again depending on language it can be"
+    },
+    {
+      "start": 1083.52,
+      "duration": 4.48,
+      "end": 1088.0,
+      "text": "dot it can be"
+    },
+    {
+      "start": 1084.96,
+      "duration": 5.959,
+      "end": 1090.919,
+      "text": "arrows right that's done for odd what"
+    },
+    {
+      "start": 1088.0,
+      "duration": 9.76,
+      "end": 1097.76,
+      "text": "about even even do"
+    },
+    {
+      "start": 1090.919,
+      "duration": 9.24,
+      "end": 1100.159,
+      "text": "next equal to even. next. nextt once"
+    },
+    {
+      "start": 1097.76,
+      "duration": 4.96,
+      "end": 1102.72,
+      "text": "this is done what is your next job you"
+    },
+    {
+      "start": 1100.159,
+      "duration": 4.801,
+      "end": 1104.96,
+      "text": "say odd can you go to your next I be"
+    },
+    {
+      "start": 1102.72,
+      "duration": 4.6,
+      "end": 1107.32,
+      "text": "like odd. next that's it because you've"
+    },
+    {
+      "start": 1104.96,
+      "duration": 7.32,
+      "end": 1112.28,
+      "text": "already pointed it to next next and is"
+    },
+    {
+      "start": 1107.32,
+      "duration": 6.68,
+      "end": 1114.0,
+      "text": "even it be even dot next of"
+    },
+    {
+      "start": 1112.28,
+      "duration": 4.68,
+      "end": 1116.96,
+      "text": "next"
+    },
+    {
+      "start": 1114.0,
+      "duration": 6.0,
+      "end": 1120.0,
+      "text": "done once this is done I write the while"
+    },
+    {
+      "start": 1116.96,
+      "duration": 6.16,
+      "end": 1123.1200000000001,
+      "text": "loop condition once this is done you say"
+    },
+    {
+      "start": 1120.0,
+      "duration": 4.76,
+      "end": 1124.76,
+      "text": "odd wherever you're standing your last"
+    },
+    {
+      "start": 1123.12,
+      "duration": 4.039,
+      "end": 1127.1589999999999,
+      "text": "should definitely be pointing to the"
+    },
+    {
+      "start": 1124.76,
+      "duration": 6.279,
+      "end": 1131.039,
+      "text": "even head now"
+    },
+    {
+      "start": 1127.159,
+      "duration": 7.121,
+      "end": 1134.2800000000002,
+      "text": "this this line is for this"
+    },
+    {
+      "start": 1131.039,
+      "duration": 6.041,
+      "end": 1137.08,
+      "text": "one done once you've done what will be"
+    },
+    {
+      "start": 1134.28,
+      "duration": 4.84,
+      "end": 1139.12,
+      "text": "your head the initial head will be the"
+    },
+    {
+      "start": 1137.08,
+      "duration": 5.479,
+      "end": 1142.559,
+      "text": "head itself because that is where the"
+    },
+    {
+      "start": 1139.12,
+      "duration": 5.84,
+      "end": 1144.9599999999998,
+      "text": "odd starts from and please make sure if"
+    },
+    {
+      "start": 1142.559,
+      "duration": 6.521,
+      "end": 1149.08,
+      "text": "the head is"
+    },
+    {
+      "start": 1144.96,
+      "duration": 7.0,
+      "end": 1151.96,
+      "text": "null or or that means an empty link or"
+    },
+    {
+      "start": 1149.08,
+      "duration": 5.32,
+      "end": 1154.3999999999999,
+      "text": "or if it is a single element you will"
+    },
+    {
+      "start": 1151.96,
+      "duration": 3.76,
+      "end": 1155.72,
+      "text": "not be doing any of these you will not"
+    },
+    {
+      "start": 1154.4,
+      "duration": 3.32,
+      "end": 1157.72,
+      "text": "be doing any of this and you'll be"
+    },
+    {
+      "start": 1155.72,
+      "duration": 3.72,
+      "end": 1159.44,
+      "text": "returning whatever is given to you"
+    },
+    {
+      "start": 1157.72,
+      "duration": 3.959,
+      "end": 1161.679,
+      "text": "whatever head is given to you if it's an"
+    },
+    {
+      "start": 1159.44,
+      "duration": 5.04,
+      "end": 1164.48,
+      "text": "empty it goes as null if it is a single"
+    },
+    {
+      "start": 1161.679,
+      "duration": 5.041,
+      "end": 1166.72,
+      "text": "elementes uh it goes as a single element"
+    },
+    {
+      "start": 1164.48,
+      "duration": 4.679,
+      "end": 1169.159,
+      "text": "so what will be the while condition will"
+    },
+    {
+      "start": 1166.72,
+      "duration": 5.48,
+      "end": 1172.2,
+      "text": "I just write for odd will I just write"
+    },
+    {
+      "start": 1169.159,
+      "duration": 5.4,
+      "end": 1174.5590000000002,
+      "text": "for even will I write for both that is"
+    },
+    {
+      "start": 1172.2,
+      "duration": 5.44,
+      "end": 1177.64,
+      "text": "the question let's understand we have"
+    },
+    {
+      "start": 1174.559,
+      "duration": 5.801,
+      "end": 1180.36,
+      "text": "two nodes odd and even rather two"
+    },
+    {
+      "start": 1177.64,
+      "duration": 6.84,
+      "end": 1184.48,
+      "text": "pointers which are traversing can I say"
+    },
+    {
+      "start": 1180.36,
+      "duration": 9.12,
+      "end": 1189.4799999999998,
+      "text": "one thing if even has not reached the"
+    },
+    {
+      "start": 1184.48,
+      "duration": 8.48,
+      "end": 1192.96,
+      "text": "end I repeat if even has not reached the"
+    },
+    {
+      "start": 1189.48,
+      "duration": 6.76,
+      "end": 1196.24,
+      "text": "end ODD will also not reach why because"
+    },
+    {
+      "start": 1192.96,
+      "duration": 5.32,
+      "end": 1198.28,
+      "text": "even is bound to be in front of what"
+    },
+    {
+      "start": 1196.24,
+      "duration": 4.52,
+      "end": 1200.76,
+      "text": "right if you see even is here what is"
+    },
+    {
+      "start": 1198.28,
+      "duration": 4.84,
+      "end": 1203.12,
+      "text": "below previous like previous to it if"
+    },
+    {
+      "start": 1200.76,
+      "duration": 5.68,
+      "end": 1206.44,
+      "text": "even is here ODD will also not reach"
+    },
+    {
+      "start": 1203.12,
+      "duration": 5.64,
+      "end": 1208.76,
+      "text": "null so if I can determine when even for"
+    },
+    {
+      "start": 1206.44,
+      "duration": 5.04,
+      "end": 1211.48,
+      "text": "for even if I'm sure it is not it hasn't"
+    },
+    {
+      "start": 1208.76,
+      "duration": 4.919,
+      "end": 1213.679,
+      "text": "reached null that's it that's my job so"
+    },
+    {
+      "start": 1211.48,
+      "duration": 4.48,
+      "end": 1215.96,
+      "text": "what I'll do is I'll try to determine"
+    },
+    {
+      "start": 1213.679,
+      "duration": 4.48,
+      "end": 1218.159,
+      "text": "even has reached or not if it hasn't"
+    },
+    {
+      "start": 1215.96,
+      "duration": 4.04,
+      "end": 1220.0,
+      "text": "reached or will also not reach and I can"
+    },
+    {
+      "start": 1218.159,
+      "duration": 4.64,
+      "end": 1222.7990000000002,
+      "text": "do the operations I can do the"
+    },
+    {
+      "start": 1220.0,
+      "duration": 6.64,
+      "end": 1226.64,
+      "text": "operations so let's analyze what am I"
+    },
+    {
+      "start": 1222.799,
+      "duration": 5.36,
+      "end": 1228.1589999999999,
+      "text": "writing even dot something so this"
+    },
+    {
+      "start": 1226.64,
+      "duration": 3.12,
+      "end": 1229.76,
+      "text": "definitely cannot be null this"
+    },
+    {
+      "start": 1228.159,
+      "duration": 4.76,
+      "end": 1232.919,
+      "text": "definitely cannot be null for sure let's"
+    },
+    {
+      "start": 1229.76,
+      "duration": 5.76,
+      "end": 1235.52,
+      "text": "write it so even definitely cannot be"
+    },
+    {
+      "start": 1232.919,
+      "duration": 6.281,
+      "end": 1239.2,
+      "text": "null that's for"
+    },
+    {
+      "start": 1235.52,
+      "duration": 5.6,
+      "end": 1241.12,
+      "text": "sure I'm again doing even. next. next so"
+    },
+    {
+      "start": 1239.2,
+      "duration": 6.44,
+      "end": 1245.64,
+      "text": "this also cannot be null because null of"
+    },
+    {
+      "start": 1241.12,
+      "duration": 7.84,
+      "end": 1248.9599999999998,
+      "text": "next will throw a null pointer so even"
+    },
+    {
+      "start": 1245.64,
+      "duration": 6.08,
+      "end": 1251.72,
+      "text": "dot next also cannot be"
+    },
+    {
+      "start": 1248.96,
+      "duration": 5.079,
+      "end": 1254.039,
+      "text": "null simple way to analyze you don't"
+    },
+    {
+      "start": 1251.72,
+      "duration": 4.56,
+      "end": 1256.28,
+      "text": "need to check for this because if even."
+    },
+    {
+      "start": 1254.039,
+      "duration": 3.961,
+      "end": 1258.0,
+      "text": "next next is null that basically means"
+    },
+    {
+      "start": 1256.28,
+      "duration": 2.879,
+      "end": 1259.1589999999999,
+      "text": "even is null so you don't need to check"
+    },
+    {
+      "start": 1258.0,
+      "duration": 3.32,
+      "end": 1261.32,
+      "text": "for for anything else if you just check"
+    },
+    {
+      "start": 1259.159,
+      "duration": 4.561,
+      "end": 1263.72,
+      "text": "for this and this that will work"
+    },
+    {
+      "start": 1261.32,
+      "duration": 5.08,
+      "end": 1266.3999999999999,
+      "text": "remember one thing even if you reach the"
+    },
+    {
+      "start": 1263.72,
+      "duration": 6.28,
+      "end": 1270.0,
+      "text": "end even if you reach the end in case of"
+    },
+    {
+      "start": 1266.4,
+      "duration": 5.72,
+      "end": 1272.1200000000001,
+      "text": "odd number of indexes wherever odd ends"
+    },
+    {
+      "start": 1270.0,
+      "duration": 3.84,
+      "end": 1273.84,
+      "text": "that's the correct position so you might"
+    },
+    {
+      "start": 1272.12,
+      "duration": 4.84,
+      "end": 1276.9599999999998,
+      "text": "be thinking hey you just written for"
+    },
+    {
+      "start": 1273.84,
+      "duration": 5.439,
+      "end": 1279.279,
+      "text": "even even is reaching the end right what"
+    },
+    {
+      "start": 1276.96,
+      "duration": 4.76,
+      "end": 1281.72,
+      "text": "if odd hasn't you might think that right"
+    },
+    {
+      "start": 1279.279,
+      "duration": 4.721,
+      "end": 1284.0,
+      "text": "let's take an example you're taking odd"
+    },
+    {
+      "start": 1281.72,
+      "duration": 5.439,
+      "end": 1287.159,
+      "text": "to be here you're taking even to be here"
+    },
+    {
+      "start": 1284.0,
+      "duration": 4.799,
+      "end": 1288.799,
+      "text": "right what are we doing we saying odd"
+    },
+    {
+      "start": 1287.159,
+      "duration": 4.041,
+      "end": 1291.2,
+      "text": "point this to this and then odd moves"
+    },
+    {
+      "start": 1288.799,
+      "duration": 4.88,
+      "end": 1293.679,
+      "text": "here and then you say even point this to"
+    },
+    {
+      "start": 1291.2,
+      "duration": 4.76,
+      "end": 1295.96,
+      "text": "this and then even moves here and this"
+    },
+    {
+      "start": 1293.679,
+      "duration": 5.12,
+      "end": 1298.799,
+      "text": "is when you stop you say even you at the"
+    },
+    {
+      "start": 1295.96,
+      "duration": 5.28,
+      "end": 1301.24,
+      "text": "last node right because even do next is"
+    },
+    {
+      "start": 1298.799,
+      "duration": 4.921,
+      "end": 1303.72,
+      "text": "null here the last node so stop no need"
+    },
+    {
+      "start": 1301.24,
+      "duration": 4.799,
+      "end": 1306.039,
+      "text": "to do and we carefully observe if this"
+    },
+    {
+      "start": 1303.72,
+      "duration": 3.88,
+      "end": 1307.6000000000001,
+      "text": "stops you're at the correct place for OD"
+    },
+    {
+      "start": 1306.039,
+      "duration": 3.64,
+      "end": 1309.679,
+      "text": "you're at the correct place so if you're"
+    },
+    {
+      "start": 1307.6,
+      "duration": 4.4,
+      "end": 1312.0,
+      "text": "just doing for even this will work out"
+    },
+    {
+      "start": 1309.679,
+      "duration": 4.041,
+      "end": 1313.72,
+      "text": "this will work out no need to think so"
+    },
+    {
+      "start": 1312.0,
+      "duration": 4.36,
+      "end": 1316.36,
+      "text": "what will be the time complexity of this"
+    },
+    {
+      "start": 1313.72,
+      "duration": 4.72,
+      "end": 1318.44,
+      "text": "portion of code uh what I'll ask you is"
+    },
+    {
+      "start": 1316.36,
+      "duration": 4.0,
+      "end": 1320.36,
+      "text": "U please think about it and and write it"
+    },
+    {
+      "start": 1318.44,
+      "duration": 4.0,
+      "end": 1322.44,
+      "text": "in the comment section I want to see"
+    },
+    {
+      "start": 1320.36,
+      "duration": 4.64,
+      "end": 1325.0,
+      "text": "what you are thinking okay and after"
+    },
+    {
+      "start": 1322.44,
+      "duration": 5.2,
+      "end": 1327.64,
+      "text": "that hear me out so if you remember in"
+    },
+    {
+      "start": 1325.0,
+      "duration": 5.84,
+      "end": 1330.84,
+      "text": "The Brute Force we first wrote a while"
+    },
+    {
+      "start": 1327.64,
+      "duration": 5.6,
+      "end": 1333.24,
+      "text": "loop to separate the odd elements to a"
+    },
+    {
+      "start": 1330.84,
+      "duration": 5.0,
+      "end": 1335.84,
+      "text": "array and that while loop was taking beo"
+    },
+    {
+      "start": 1333.24,
+      "duration": 4.96,
+      "end": 1338.2,
+      "text": "of N by2 and then we went on to write"
+    },
+    {
+      "start": 1335.84,
+      "duration": 5.839,
+      "end": 1341.6789999999999,
+      "text": "another while loop to separate the even"
+    },
+    {
+      "start": 1338.2,
+      "duration": 6.719,
+      "end": 1344.919,
+      "text": "elements that was taking n by2 and both"
+    },
+    {
+      "start": 1341.679,
+      "duration": 6.761,
+      "end": 1348.44,
+      "text": "to get they added up to B go of n to"
+    },
+    {
+      "start": 1344.919,
+      "duration": 5.481,
+      "end": 1350.4,
+      "text": "segregate them into an array right over"
+    },
+    {
+      "start": 1348.44,
+      "duration": 4.4,
+      "end": 1352.8400000000001,
+      "text": "here what I've done is it's a single"
+    },
+    {
+      "start": 1350.4,
+      "duration": 5.279,
+      "end": 1355.679,
+      "text": "while loop but I'm doing the odd and the"
+    },
+    {
+      "start": 1352.84,
+      "duration": 3.839,
+      "end": 1356.6789999999999,
+      "text": "even operations together I'm doing it"
+    },
+    {
+      "start": 1355.679,
+      "duration": 3.201,
+      "end": 1358.88,
+      "text": "together"
+    },
+    {
+      "start": 1356.679,
+      "duration": 4.12,
+      "end": 1360.799,
+      "text": "simultaneously so technically the while"
+    },
+    {
+      "start": 1358.88,
+      "duration": 6.679,
+      "end": 1365.5590000000002,
+      "text": "loop technically the while loop is"
+    },
+    {
+      "start": 1360.799,
+      "duration": 7.401,
+      "end": 1368.2,
+      "text": "running for 1 2 3 which is basically n"
+    },
+    {
+      "start": 1365.559,
+      "duration": 5.441,
+      "end": 1371.0,
+      "text": "by two times not more than that it's"
+    },
+    {
+      "start": 1368.2,
+      "duration": 6.0,
+      "end": 1374.2,
+      "text": "basically running for n by two times"
+    },
+    {
+      "start": 1371.0,
+      "duration": 5.559,
+      "end": 1376.559,
+      "text": "okay so if it is running for n by 2"
+    },
+    {
+      "start": 1374.2,
+      "duration": 4.8,
+      "end": 1379.0,
+      "text": "times can I say that the time complexity"
+    },
+    {
+      "start": 1376.559,
+      "duration": 5.401,
+      "end": 1381.96,
+      "text": "is n by2"
+    },
+    {
+      "start": 1379.0,
+      "duration": 5.039,
+      "end": 1384.039,
+      "text": "maybe yes but you cannot you need to"
+    },
+    {
+      "start": 1381.96,
+      "duration": 5.56,
+      "end": 1387.52,
+      "text": "compute these unit operations you're"
+    },
+    {
+      "start": 1384.039,
+      "duration": 5.161,
+      "end": 1389.2,
+      "text": "doing two steps like they need to be"
+    },
+    {
+      "start": 1387.52,
+      "duration": 3.92,
+      "end": 1391.44,
+      "text": "computed as two steps because you're"
+    },
+    {
+      "start": 1389.2,
+      "duration": 6.28,
+      "end": 1395.48,
+      "text": "doing two operations two length changes"
+    },
+    {
+      "start": 1391.44,
+      "duration": 6.599,
+      "end": 1398.039,
+      "text": "so it's basically beo of n by 2 into 2"
+    },
+    {
+      "start": 1395.48,
+      "duration": 4.199,
+      "end": 1399.679,
+      "text": "which balls down to be of n itself so"
+    },
+    {
+      "start": 1398.039,
+      "duration": 3.64,
+      "end": 1401.679,
+      "text": "this will be the time complexity now"
+    },
+    {
+      "start": 1399.679,
+      "duration": 4.88,
+      "end": 1404.5590000000002,
+      "text": "this will be slightly faster than doing"
+    },
+    {
+      "start": 1401.679,
+      "duration": 5.321,
+      "end": 1407.0,
+      "text": "it in two while Loops slightly not a"
+    },
+    {
+      "start": 1404.559,
+      "duration": 4.801,
+      "end": 1409.36,
+      "text": "huge difference because if you write odd"
+    },
+    {
+      "start": 1407.0,
+      "duration": 5.08,
+      "end": 1412.08,
+      "text": "and even in two while Loops it will be"
+    },
+    {
+      "start": 1409.36,
+      "duration": 5.36,
+      "end": 1414.7199999999998,
+      "text": "of the similar time complexity slightly"
+    },
+    {
+      "start": 1412.08,
+      "duration": 4.92,
+      "end": 1417.0,
+      "text": "slightly Creed slightly not much what"
+    },
+    {
+      "start": 1414.72,
+      "duration": 4.8,
+      "end": 1419.52,
+      "text": "about the space complexity it's a bigo"
+    },
+    {
+      "start": 1417.0,
+      "duration": 4.84,
+      "end": 1421.84,
+      "text": "of fun just doing little changes nothing"
+    },
+    {
+      "start": 1419.52,
+      "duration": 3.92,
+      "end": 1423.44,
+      "text": "else so if you're still watching I'm"
+    },
+    {
+      "start": 1421.84,
+      "duration": 3.199,
+      "end": 1425.039,
+      "text": "very very sure that you have understood"
+    },
+    {
+      "start": 1423.44,
+      "duration": 3.599,
+      "end": 1427.039,
+      "text": "everything and if that is the case"
+    },
+    {
+      "start": 1425.039,
+      "duration": 3.64,
+      "end": 1428.679,
+      "text": "please please do comment understood and"
+    },
+    {
+      "start": 1427.039,
+      "duration": 3.401,
+      "end": 1430.44,
+      "text": "please do consider giving us a like as"
+    },
+    {
+      "start": 1428.679,
+      "duration": 3.6,
+      "end": 1432.279,
+      "text": "well if you're new to our Channel what"
+    },
+    {
+      "start": 1430.44,
+      "duration": 3.239,
+      "end": 1433.679,
+      "text": "are you waiting for hit that subscribe"
+    },
+    {
+      "start": 1432.279,
+      "duration": 2.561,
+      "end": 1434.84,
+      "text": "button right away and with this I'll be"
+    },
+    {
+      "start": 1433.679,
+      "duration": 3.441,
+      "end": 1437.1200000000001,
+      "text": "wrapping up this video Let's Wait in"
+    },
+    {
+      "start": 1434.84,
+      "duration": 3.8,
+      "end": 1438.6399999999999,
+      "text": "some other video till then bye-bye when"
+    },
+    {
+      "start": 1437.12,
+      "duration": 4.84,
+      "end": 1441.9599999999998,
+      "text": "your heart is is"
+    },
+    {
+      "start": 1438.64,
+      "duration": 7.76,
+      "end": 1446.4,
+      "text": "broken don't ever forget your"
+    },
+    {
+      "start": 1441.96,
+      "duration": 4.44,
+      "end": 1446.4,
+      "text": "golden I will find light"
+    }
+  ]
+}

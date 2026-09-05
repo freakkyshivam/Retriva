@@ -1,0 +1,152 @@
+{
+  "video_id": "uRbJ1OF9aYM",
+  "position": 145,
+  "title": "G-20. Find Eventual Safe States - DFS",
+  "url": "https://www.youtube.com/watch?v=uRbJ1OF9aYM",
+  "chunk_count": 13,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "uRbJ1OF9aYM",
+      "position": 145,
+      "title": "G-20. Find Eventual Safe States - DFS",
+      "url": "https://www.youtube.com/watch?v=uRbJ1OF9aYM",
+      "start": 0.0,
+      "end": 121.28,
+      "text": "so hey everyone welcome back to the channel i hope you guys are doing extremely well one more problem in the graph series which is the eventual save states what is the problem state the problem states are given a directed graph of v vertices and e edges and the graph is a zero based flexing graph a note is a terminal note if there are no outgoing edges so there should be incoming they might be incoming edges but there should be no outgoing edges then we call that node as a terminal node a node is a safe node if every possible very very important point if every possible path starting from that node leads to a terminal node okay now you need to return me an array containing all the safe nodes of the graph the answer should be sorted in a ascending order so what does the question state so this is the given example they're asking you out of this which are the c notes that's what you need to figure out what is the safe node every path very important every path ends up at a terminal node ends up at which node a terminal node what is a terminal node no outgoing edges or you can say out degree of that node is zero so in this video i'll be solving this using the cycle detection technique and the next video i'll be solving this using the bfs or the tuple sort technique so in this video you need to uh be knowing about cycle detection in an undirected graph if you haven't seen and you can go back like three or four videos in the series you'll get that video so out degree has to be zero so can i see this guy has one outgoing edge but this is definitely not a terminal node can i say this has no outgoing edge i can and can i say this is a terminal node for me i can so the first terminal node i can",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "uRbJ1OF9aYM",
+      "position": 145,
+      "title": "G-20. Find Eventual Safe States - DFS",
+      "url": "https://www.youtube.com/watch?v=uRbJ1OF9aYM",
+      "start": 115.2,
+      "end": 233.28,
+      "text": "i can so the first terminal node i can spot is six do you spot any other terminal nodes yes you do if you see five has incoming but no outgoing so i spotted one more terminal which is five do i spot any further terminal notes i do not i do not because everyone has an incoming and an outgoing edge as well so let's start with zero let's figure out the first part one three so it redirects me back to zero not toward any of the terminal nodes so zero cannot be a part or zero cannot be called a same note let's try out with one one goes to three three goes to zero zero comes back to one so the one can also not be part of a safe note because it comes back to himself or it doesn't like all the parts do not end up at the terminal node let's check out two two has only one path if a capital c two has only one path and that ends up at five two has only one path that ends up at five so can i see this yes can i see this that two is a same node i can definitely see that two is the same node so two is the same node let's check out the three three one of your paths is definitely ending up at the terminal notes but are all the paths let's check three has one more path like this like this and like this which ends up at the three himself so i can definitely say three cannot be a part of it can i have four as a part of it yes it does end up at a terminal node five so four can also be a part of my same node right let's check out for five five is himself a terminal node which means it's a safe node so five is a safe node let's check out for six itself a terminal node so",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "uRbJ1OF9aYM",
+      "position": 145,
+      "title": "G-20. Find Eventual Safe States - DFS",
+      "url": "https://www.youtube.com/watch?v=uRbJ1OF9aYM",
+      "start": 228.799,
+      "end": 347.6,
+      "text": "out for six itself a terminal node so our safe node so i can say this is the array in the sorting order which you have to return as an answer so you have to figure out all the parts and if all of the parts like end up at a terminal node then you say that okay that guy is definitely a safe node so the question is very straightforward give me all the safe nodes present in a graph so do you remember the cycle detection technique where we detected a cycle so can i see by observing this particular example we did figure out that all the possible paths are going to end up somewhere but if they return back to themselves if they return back to themselves like there's one three zero right these three we have the part of the cycle and they can never be safe something to observe anyone who's a part of the cycle can never be a safe node so imagine if i have a 7 which is pointing to 1 will 7 be a safe node no why because 7 can have a path through the same cycle and end back at not a safe node or not a terminal node so what you can say is everyone who's a part of the cycle to carefully observe everyone who's a part of the cycle have everyone who's connected to the cycle you can say everyone is a part of the cycle and everyone has a connected to the cycle will never be safe notes and if you look at this this is not having any incoming edges to the cycle no incoming edges to the cycle thereby it will always end up at terminal nodes if there is a cycle and anyone who is connected to that incoming edges so it will turn back on that stuff so you cannot end up at a terminal node so a slight observation we have noticed is anyone who's a part of the cycle anyone who is a part of the cycle",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "uRbJ1OF9aYM",
+      "position": 145,
+      "title": "G-20. Find Eventual Safe States - DFS",
+      "url": "https://www.youtube.com/watch?v=uRbJ1OF9aYM",
+      "start": 341.36,
+      "end": 452.56,
+      "text": "anyone who is a part of the cycle cannot be a safe note and anyone that leads to a cycle anyone that leads to a cycle cannot be so i have figured out two ways apart from them everyone else can be asleep i can definitely say that right so the whole problem can be easily solved by figuring out which guys are a part of a cycle and and which guys are incoming to the cycle that is what we need to figure out once you figure that out i think we should be able to solve this problem very very easily so now you know both the points right so we have already learned how to detect a cycle using the dfs technique and if you do not know please go back and watch it and over there we used couple of arrays one is the visited and one is the path visited right that is what we used so we're going to do the same thing and we will run the same thing on this particular algorithm and we will see how can we figure out which is a cycle and which nodes are approaching the cycle so we've learned cycle detection in the previous videos right and over there we used couple of concepts one is the visitor and the other one is the path visited now over here we are going to apply the same concept and we are going to determine which are the same nodes so as of now for this particular graph what you can do is you can draw the corresponding adjacency list so this is how the corresponding adjacency list will look for this particular graph so what we will do is if you remember we had couple of visited arrays so we will create both the visited arrays and assign them with zero so let's create both both of them okay so as of now what i've done is i've created the adjacency list as well as i've made the visited array and the path",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "uRbJ1OF9aYM",
+      "position": 145,
+      "title": "G-20. Find Eventual Safe States - DFS",
+      "url": "https://www.youtube.com/watch?v=uRbJ1OF9aYM",
+      "start": 448.16,
+      "end": 560.72,
+      "text": "i've made the visited array and the path visited array as well so remember all of these are assigned with zeros so let's start the dfs calls again since this can have multiple components we will start the dfs in the standard way where we write i equal to 0 and then go for v and then we say not visited then we call the dfs remember this so that's what we will do the very basic standard way if there are multiple components so which is the first one it will go from zero so let's start from zero so starting from zero this is where we are so we will start the defense call from zero so let's start the call from zero the moment you are at zero what you will say is okay hey listen until this call gets completed until this call gets completed then only i'll call it as a safe note and if this call gets a cycle anywhere anywhere in the path i will not call this as a safe note got it so let's start so the office of zeo says hey listen i am visited and paths visited as well i am visited and i'm path visited as well done next it goes to the adjacent which is dfs of one right this is the adjacent node this is the adjacent node goes to it and as of now says visited and path visited one will now go to two and when it goes to two it says visited and path visited two will now go to three so when it goes to three it again says it has visited and path visited remember this starts from here goes here goes here and it has two options either it can from three it has two options either it can go to five either it can go to four so three goes and checks who's the first in the adjacency list so the first it finds is four so it'll go to four remember",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "uRbJ1OF9aYM",
+      "position": 145,
+      "title": "G-20. Find Eventual Safe States - DFS",
+      "url": "https://www.youtube.com/watch?v=uRbJ1OF9aYM",
+      "start": 555.36,
+      "end": 678.399,
+      "text": "is four so it'll go to four remember this it'll go to four and then it'll come back and probably go to five but that will be done in the later stage when the recursion is complete percussion classes guys so december ah sorry dfs three two dfs four so we will go for four who is visited path visited as well next four will go to home for will go to six let's go to six dfs of six again it will mark six as visited and path visited as well now six it's a very important point six is pointing to seven six is pointing to seven so it will call for seven it will call for seven and it will mark it as visited and path visited visited and path visited now when you go to seven it states hey i do not have anyone i do not have anyone to further call dfs so i'm like did i get a cycle no we actually reached an end we started our journey from here and we reached and can i say every node in this is a safe mode because you started a journey but wait there's one more part to be checked fine we'll check it afterwards but as of now can i say from six there's one outgoing edge which ends at seven and seven is the terminal node where i'm standing at so from seven there cannot be any further dfs call so kinesis seven is definitely 7 is definitely a safe note i can say it's a terminal so what i'll do is i'll just mark 7 you can use any map or a third array to just keep a mark which is a check so i say everything for seven is done no for the dfs calls so this is a safe note marked it as true right what's the next thing that we will do what we will do is okay we've marked it as two next we come back so let's come back now six scenes",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "uRbJ1OF9aYM",
+      "position": 145,
+      "title": "G-20. Find Eventual Safe States - DFS",
+      "url": "https://www.youtube.com/watch?v=uRbJ1OF9aYM",
+      "start": 674.24,
+      "end": 787.8389999999999,
+      "text": "six scenes i had a call for seven and i ended i do not have any further calls why six only had seven to go fine dfs is over for six go for the calls this guy is also a safe node this guy is also safe not market and remember when you are returning the path visit will go as zero the path because it will go zero so not return before the four things i do not have any further calls i just had four six and i did it i'm back or doesn't have any dfs calls four is also a safe node so mark it as true oh why am i going up mark it as true and at the same time make sure force path visit is done because four will now go back so now three which went cannot call it as a silk node cannot call it as a safe node as of now why because there's one more path which he has to explore what does sep uh what the safe node means all the parts should end up at terminal node over here three states one path ends at a terminal node i have one more part to figure out does it end at a terminal node i have to figure that out right so that is what we're gonna do we'll start from six now sorry five no so we'll go to five and we'll see path visited path visited now five goes to six five goes to six because fives next node is six but the moment you go to six you actually say hey wait wait six is already visited six is already visited it got visited in this this direction and if six is already visited and i did not get any cycle i did not get any cycle six is visited but six is not path visited it's not in the same path it went in this part now it's just other path it's not in the same path it's definitely not a cycle and if",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "uRbJ1OF9aYM",
+      "position": 145,
+      "title": "G-20. Find Eventual Safe States - DFS",
+      "url": "https://www.youtube.com/watch?v=uRbJ1OF9aYM",
+      "start": 783.68,
+      "end": 897.6,
+      "text": "and if six has been checked and we did not get a cycle i will no more go and check for six i'll no more go and check for six and i'll be like fine i don't need to check for six so i don't need to do a call because six has already been checked if you carefully see e6 has already been checked and it did not get a cycle so i will not go because six is not definitely not a cycle why because it was in a different path and this is in a different path six is definitely not a cycle because if it is a cycle it would have gone like this so it is not a cycle it is not a cycle can five do any further dfs calls apart from six no so i'll say five is a safe node and then mark five is unvisited and i'll go back now three explore this part explore this part can i say for three it explode both the paths which eventually means it is a safe node so mark three also has a safe node and i'll now go back going back make sure this is 0 2 says i'm also a safe node so 2 marks itself and goes back one says i'm also safe note marks itself and goes back 0 says i explored all my paths i'm also safe node marks it has zero and goes back every one the path has been travis we did not get a cycle because this part does not have a cycle and everyone ends at seven if you see every one ends at seven so thereby all of these nodes can be called as a safe node right so everyone done now this will change to one to two to three to four and it finds everyone has visited which means they have been checked there is no need to check any and they have been checked so what i will do is i'll now go to eight and that's when we find",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "uRbJ1OF9aYM",
+      "position": 145,
+      "title": "G-20. Find Eventual Safe States - DFS",
+      "url": "https://www.youtube.com/watch?v=uRbJ1OF9aYM",
+      "start": 891.6,
+      "end": 1013.8389999999999,
+      "text": "now go to eight and that's when we find it as unvisited we will go to eight and that is when we find it as unvisited so what i'll do is i'll call a difference for eight now so i'll just quickly raise this up because the next call will go for eight right so as of now we have a dfs call for eight so let's start the dfs for eight now so i start the dfs for eight when you start it for eight you mark them as visited and path visited right eight has couple of them one and nine so one and nine so as of now can i see this eight goes to one right but will you go to one that's my question will the eight call a dfs for one no why so when a tries to go to one it says hey listen i am already visited i am already visited and i am not part visited which means i'm not i'm not a part of a cycle or i'm not someone who gets into a cycle because if this guy was a part of a cycle it would have been visited and path visited as well got it it's not a part of the cycle because if you'd have encountered a cycle like this the moment you encountered cyclone returned i would have returned so the path visited for this guy would have also been one because anytime you get a cycle you break and return you do not reset the path visit you only reset the path visit if and only if you did not get a cycle got it cycle detection video so eight states one you just visited you did not get a cycle so fine this path is safe i'll not call it but this part is safe i still have a path to explore which is dfs of nine let's explore so i go to nine and i say fine visited path visited nine says i go to dfs of ten tenses okay",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "uRbJ1OF9aYM",
+      "position": 145,
+      "title": "G-20. Find Eventual Safe States - DFS",
+      "url": "https://www.youtube.com/watch?v=uRbJ1OF9aYM",
+      "start": 1009.04,
+      "end": 1140.08,
+      "text": "tenses okay visited path visited this is the next guy that i have is eight and that guy is saying visited bath visited which means false which means false so this guy cannot be a safe note because 10 encountered an 8 cycle cannot be saved thereby it doesn't doesn't really marks it itself as zero doesn't it just goes back you just return the moment you get a cycle you determine do not reset nine says you got a cycle ten got a cycle return eight says you guys got a cycle i'll return no one unmarked themselves so all of them are marked as visited and paths visited nothing that i was explaining everyone returned and none of them were safe notes perfect so we have we're done with this next this will go to like eight nine ten that's number eleven at the moment you try for eleven see what will happen 11 says i have a nine the woman the next one he tried to go to 11th neighbor which is nine it says i'm visited and i'm path visited which means i got a cycle that's why i'm still path visited there's someone returned someone did not unmark me thereby this is also not safe node eventually you'd have marked all the safe nodes and you can just store them very simple very straightforward okay so guys i hope you understood the explanation now the moment i'll start coding this you'll see that this sticks into your head in a much better way so i'll go to the detector cycle in a directed graph i'll go to the summations and i'll pick the dfs code from there so this was the code if you remember this was the dfs that i wrote so i'll just pick up that and i'll paste it here that's the first thing that i'll do next thing i'll do is i'll just pick up the internal thing for cycle check okay so once you've pasted it it's very important to analyze that you need to return a",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "uRbJ1OF9aYM",
+      "position": 145,
+      "title": "G-20. Find Eventual Safe States - DFS",
+      "url": "https://www.youtube.com/watch?v=uRbJ1OF9aYM",
+      "start": 1135.52,
+      "end": 1248.32,
+      "text": "analyze that you need to return a vector or a list as an answer so probably you can just store it as safe notes right and we need to keep a mark which are the same notes so just make sure they are marked just make sure they are marked okay now something very important over here we do not break whenever we get a cycle because we need to continue all the defense calls remember this we need to do all the defaults because we need to check for all the roots so it's not like you get a cycle and you break out do not do that over here you need to check for all the possible notes okay all the possible unvisited notes rather that's a small thing that you'll do at the end of the day you'll see okay let's quickly have a check for all the notes and something like if the check uh comes out to be one then i'll put them into the same notes we will see how we mark seat nodes and then i'll return the sequence very simple very simple and easy now the question is how does check work so in order to do that let's carry check as well over here and over here as well and pass it over here so what did i tell you that if the dfs is successfully completed for a node you always see it as safe not because if there is a cycle it will always break out either here or either here if there is a cycle it will always break out either here or either on this portion that is for sure and if there is no cycle then it will explore all the adjacent parts over on this for loop it will explore all the adjacent parts over the for loop and if it reaches the line number 31 it means it did not find the cycle so you can say that it is true so whenever you just enter just make sure",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "uRbJ1OF9aYM",
+      "position": 145,
+      "title": "G-20. Find Eventual Safe States - DFS",
+      "url": "https://www.youtube.com/watch?v=uRbJ1OF9aYM",
+      "start": 1243.84,
+      "end": 1360.0,
+      "text": "just enter just make sure whenever you enter this guy just make sure you see it as zero perfect now whenever i get a cycle whenever i get a cycle it means for this particular node for this particular node on this id i got a cycle so this node definitely cannot be a part of it this now definitely cannot be part of it so take notes so what you'll do is just take the return node inside it and right before this you will say this though cannot be a sequel no no way this is not required because you're initializing it but still i want to explain it if there's a cycle it cannot be similarly if it is a cycle this guy can not be if the cycle this guy cannot be because it tried to explore a part of id it found the cycle so it cannot be and if it explode all the parts then you say yes this is the minor gene that you needed to do on the cycle detection and it does work fine so that is the reason i see you that having concepts so strong that you can modify it in whatever way you like and you can always submit your quotes so let's discuss the space complexity we're using uh three arrays and it might take like three n but we can do this in a single array as well if you try to maintain counters but then i'll not go that way i'll keep it very simple because this is what industry requires industry doesn't requires like doing it in one area they require something which is understandable so this is code quality in interviews do not go for a single array where you do 0 1 2 3 4 and certain stuffs because that is not poor quality that is where the interview might give you lesser number of points yes you can state that like in interview always state this approach and then you can tell the interview that",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "uRbJ1OF9aYM",
+      "position": 145,
+      "title": "G-20. Find Eventual Safe States - DFS",
+      "url": "https://www.youtube.com/watch?v=uRbJ1OF9aYM",
+      "start": 1356.64,
+      "end": 1421.24,
+      "text": "and then you can tell the interview that maybe i can optimize this to a single array in the space complexity by keeping like a count of zero one two three four certain stuff so you can try that out definitely by yourself but that is something which you you should not propose at the first stage because the code quality goes down the readability goes very very down whatever the space complexity it's the same what dfs takes i'm not going to discuss this any further so that should be it for this problem so uh in the next video i'll be solving this using the toposort method so guys i hope you have understood this problem and the entire code so just in case you did please please please make sure you like this video and if you haven't checked out our dp series and the hdc what are you doing the links are in the description please make sure you check them out and if you haven't subscribed to our channel it has a very very earnest request that please do consider subscribing to us because that is the only thing that keeps you motivated to make these kind of content i know what this will be wrapping up this video let's put in some other video till then bye take care whenever your heart is broken don't ever forget",
+      "word_count": 233
+    }
+  ]
+}

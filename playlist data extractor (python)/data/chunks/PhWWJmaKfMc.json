@@ -1,0 +1,141 @@
+{
+  "video_id": "PhWWJmaKfMc",
+  "position": 234,
+  "title": "DP 54. Partition Array for Maximum Sum | Front Partition 🔥",
+  "url": "https://www.youtube.com/watch?v=PhWWJmaKfMc",
+  "chunk_count": 12,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "PhWWJmaKfMc",
+      "position": 234,
+      "title": "DP 54. Partition Array for Maximum Sum | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=PhWWJmaKfMc",
+      "start": 0.0,
+      "end": 117.03999999999999,
+      "text": "hey everyone welcome back to take you forward so today we will be solving the problem partition array such that you get the maximum sum what does the problem state the problem state you're given an array okay and you have something like 1 15 7 9 2 5 10. so this is what the array is and you'll be given a certain k okay now you need to partition the array such that none of the partitions have more than length three like you cannot have something a partition like this and these are four elements in a partition this is not allowed at max 3 at max 3 for an example if i decide that one of the partitions will be at right 1 15 and then i'll do a partition then i'll take 7 9 2 then i'll do a partition then i'll take 510 probably this is what i can think of doing a partition like if i do just two partitions this is length 2 which is allowed length 3 which is allowed length 2 which is allowed because at max length 3 is allowed so all of these are allowed now once you've done the partition the array changes to in this partition which is the maximum 15 so the addition so the array changes to 15 15 in this partition which is the maximum nine so the array changes to nine nine nine in this partition which is the maximum ten so the array changes to ten and ten so once uh it has changed to something like this i can say the summation is 30 40 50 and then there is 27 so which makes it 77 so the summation in total is 77 if i decide to do a partition here remember whenever you do a partition the entire sub array will change to maximum the entire sub array will change to maximum the entire sub array will change to maximum now for an example if i decide that okay listen i am going to do the partition in slightly different",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "PhWWJmaKfMc",
+      "position": 234,
+      "title": "DP 54. Partition Array for Maximum Sum | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=PhWWJmaKfMc",
+      "start": 112.079,
+      "end": 231.28,
+      "text": "do the partition in slightly different way and i'm going to take 1 15 7 on a partition then i'm going to take 9 on a partition and i'm going to take 2 5 10. so imagine i do the partition in this way that i have 1 15 7 is of size 3 which is allowed 9 is of size 1 which is allowed then size 3 is again allowed if i do a partition in this way the array will change to 15 15 15 because the sub array takes the value of the maximum the next one will be 9 and this has a 10 as maximum so it'll be changed to 10 10 10 so now if i try to add up the value that you'll get is there is 45 554 and 3084 is the summation that you'll get so you see that if you do the partition in this way and if you do the partition in this way there are two different summation that do come up so your question is you have to do a partition in such a way that you get the maximum summation so make sure the summation is maximized whatever you do you have to maximize the summation that is what the problem is stating now this question is quite a lot similar to the palindrome partition question if you have not seen please go back and watch it right before this we did a problem palindrome partitioning 2 and that was solved using the front partition logic the front partition logic right so do we see that over here there can be various recurrences we do see because if this is an array we can have multiple partitions like you see this is a partition that i took and this is a partition i took so there can be various partitions so we see that there can be various partitions because we can have a partition like this then like this then like this so whenever we know that there are various ways",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "PhWWJmaKfMc",
+      "position": 234,
+      "title": "DP 54. Partition Array for Maximum Sum | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=PhWWJmaKfMc",
+      "start": 227.44,
+      "end": 347.84000000000003,
+      "text": "ways to solve this problem what do we do we tend to try out yes we try out always and we know in order to try out always there is only one possibilities uh that is to write the recursion and out of all ways we take the best uh possible way to solve this problem isn't it so that is what uh we will do so what are the rules to write the recurrence again we follow the same pattern can you tell me what are the rules to write the records obviously the first one is express everything in terms of index so try to express everything in terms of index if there is and i can say that over here we definitely can because we are dealing with an array so if you're dealing with an array we can say this is index 0 1 2 3 4 5 6 so this index so we can express the array in terms of index and try to write the recurrence in index sense which is representing an array element so we know that over here the first step can be done next is try partitions try partitions rather i can rewrite this to try every partition possible from that index try every pos uh every partition possible from that index so that is something which we can definitely do and at the end of the day we will say take the best partition yes take the best partition so this is what we generally do we try to express everything then we try to try every possible way then out of all the possible way we try to take the maximum as the question suggested so we know one thing for sure that we will be starting off with something like f of index and this problem is similar to palindrome partitioning so what we can say is we will be using the front partition logic we will be using the front partition logic so what i'll do is i'll just",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "PhWWJmaKfMc",
+      "position": 234,
+      "title": "DP 54. Partition Array for Maximum Sum | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=PhWWJmaKfMc",
+      "start": 343.759,
+      "end": 469.039,
+      "text": "logic so what i'll do is i'll just quickly uh write down the example it's 1 15 7 9 2 5 10 so this was the array so what does f of 0 signify this means the index value is at the zeroth index the index value is at the zeroth index i'm stating f of 0 means give me yes give me the maximum sum if you have the array from 0 if you have the array from 0 give me the maximum sum that means if they are a from 0 what is the maximum sum that you can generate kindly give me that if i'm saying f of 3 which means give me the maximum sum that you can generate from this portion if i'm saying f of 3 if i'm saying f of 1 it means gif which can be generated from this that is the meaning of f of index given the maximum sum that can be generated from that index till the end from that index till the end so can i say if i'm standing here this is what i start off with right so we can think of the base case afterwards so the first step is definitely done which is expressing everything in terms of index now try every partition now if you remember there was a clear-cut mention that there will be k equal to 3 which states you cannot have any longer partition like longer than 3 like you cannot have a partition over here because this will mean there are four elements this will mean there are four elements so if i ask you let's go back to the array since i'm going to try out all partitions let me write down that quickly so i'm going to try out all partitions from the index let us think easily so if this is the index where can the partitions be you can be like striver we can do a partition here then this portion can be solved in itself again it does make sense you'll",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "PhWWJmaKfMc",
+      "position": 234,
+      "title": "DP 54. Partition Array for Maximum Sum | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=PhWWJmaKfMc",
+      "start": 465.12,
+      "end": 582.399,
+      "text": "itself again it does make sense you'll be like okay straight we can do a partition here this portion can be solved by itself again makes sense again you'll be like striver we can do a partition here and these three elements will be there and we can solve this by himself again does make sense can we do a partition here no we cannot because this will mean we have four elements thereby not possible so can i say can i say i can do a partition here i can do a partition here i can do a partition here i can so i can figure out where can i do the partition first partition second partition third partition right and the fourth partition is when i stop on the fourth partition is when i stop or i can say if i am crossing the kth partition i do stop so can i say this can i say this if i'm having an index if i'm having an index i can definitely start the partitions like if i try to write it generically i can definitely do the partition right starting from j equal to index and i can probably go on till like what will be it it will definitely be index plus one right index plus key rather because you have to do till kth partition like you cannot exceed that you cannot exceed that you have to do till partition that is something which we know for sure and is this okay because it might happen index plus k exceeds the last element so please make sure please make sure you write either minimum of n or index plus k if if the array is complete you stop over there j plus plus so i know one thing for sure we can do a partition at index and we can go on and go on so that is something which i know for sure so these are the places where we can definitely do a partition so you have written a for loop which signifies that",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "PhWWJmaKfMc",
+      "position": 234,
+      "title": "DP 54. Partition Array for Maximum Sum | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=PhWWJmaKfMc",
+      "start": 577.92,
+      "end": 690.1600000000001,
+      "text": "written a for loop which signifies that hey listen a partition can be here a partition can be here a partition can be here right so if i ask you a very simple question if a partition is here which is assume this to be the j assume this to be the j and you're doing a partition here can i say till here the summation of this element what does that like what will the array change itself to be 15 15 15 if you remember if it's a partition it changes itself to the maximum value which is 15 15 15. so if i ask you what is the sum of that sub array what is the sum of that sub array what will be our answer the answer will be it's nothing but like if i just remove this portion it's nothing but the length it's nothing but the lengths into the maximum element it is nothing but the length into the maximum element so what i can do is when i go to the first j i can say length is 1 when i j will go here i can say length is 2 when j will go here i can say length is 3 in this way i can keep a counter of length like i'll simply keep a counter of length which is kind of 0 at first the moment it goes inside yes the moment it goes inside it does length plus plus and i know i have to keep a track of the maximum as well i have to keep a track of maximum like if you see there is one so till here the maximum is one the moment you go to 15 the maximum will be replaced by 15 the moment we go to 7 the maximum still stays as 15 so you can easily keep a track of maximum as well so probably we can keep this as a very smaller number like in mean and the moment we enter we can say can",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "PhWWJmaKfMc",
+      "position": 234,
+      "title": "DP 54. Partition Array for Maximum Sum | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=PhWWJmaKfMc",
+      "start": 685.2,
+      "end": 794.8,
+      "text": "and the moment we enter we can say can you please compare the maximum with our maximum element and the array of j this is something which we can do and once we have compared yes once we have compared what is the next step that we will do can i say the summation will be can i say the summation will be if i'm doing a partition here it will be 15 into 3 plus this portion has to be solved by itself which is if this is j this has to be j plus 1 which has to be solved so can i say plus j plus 1 has to be solved please go and solve j plus 1 and as of now i will take for the current one length into maximum whatever is the maximum into length will be the current sub array sum and for the forward partition i will be just going across to the next center which is j plus 1 and i'll try to solve it and since i'm looking for the max answer since i'm looking for the max answer probably i can store a variable and i can say max answer equal to max of max answer comma summation and once you have tried out all partition you can simply return the max answer now the question arises what is max answer so remember whenever you're doing partition there is a sum which is generated so every time you do a partition here this plus this is the sum which is generated every time you do a partition here this plus this is the sum which is generated every time you do a partition here this plus this is the sum which is generated so every time you are trying to generate a sum so for this partition there is a sum for this partition there is a sum for this partition there is a sum so for all the partitions there is a sum and since you're trying out always if you remember dp you take the best possible",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "PhWWJmaKfMc",
+      "position": 234,
+      "title": "DP 54. Partition Array for Maximum Sum | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=PhWWJmaKfMc",
+      "start": 788.88,
+      "end": 902.0,
+      "text": "remember dp you take the best possible so out of all partition sums you take the maximum and that is what you return simple enough and we know if we are traversing in terms of index we will end if our index reaches the last index which is there will be no partitions um if we are if we are done with all the indexes the summation returned will be 0 we will be left out with literally nothing which is zero summation simple as that so that's how yes that's how you can easily write the front partition front partitions are very simple you just move from the index until whatever portion you can just go across and just apply the formula and just call the front again that will do its job front partitions are very very simple if you just follow the traditional technique of carrying the index exploring all partitions and then take the best partition that is how you can solve any partition problem like you can try out a lot of other problems as well just make sure you follow the simple one try with index and then try every partition across so we have we have done the recursion stuff and we know if you are doing the recursion stuff the time complexity will be exponential in nature everyone knows that the time complexity will be exponential in nature so thereby we will check across if there are overlapping yes thereby we will check across if there are overlapping sub problems if there are overlapping sub problems we will say we will apply memoization and in order to apply memorization we'll go to the function and we will see there is only one changing parameter there is only one changing state so if there is only one changing state we need to memorize that state only so what is the value of index at max it can be n so i just require a dp of n so now what i'll do is i'll go across right before",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "PhWWJmaKfMc",
+      "position": 234,
+      "title": "DP 54. Partition Array for Maximum Sum | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=PhWWJmaKfMc",
+      "start": 896.88,
+      "end": 1009.44,
+      "text": "i'll do is i'll go across right before returning we will say dp of index is equal to max answer and right over here we can insert something like if dp of you know the line not equal to minus 1 you can return the state value so this is how you can easily convert that into a memoization solution once you have done that into a memoization solution the time complexity will be for all the states that a big o of n states you're trying out k partitions remember this you're trying out k partitions not n partitions you're trying out k partitions there is an inner loop there is an inner loop which runs for k times there's an inner loop which transfer k times thereby the time complexity will be n into k and if i talk about the space complexity we're using the states which is big o of n as a db table and there's an auxiliary stack space since you're doing partitions imagine you do a partition at every index every index every index so there will be a big o of an auxiliary stack space which will be used okay so this is about the time complexity and the space complexity of this particular solution now let's quickly uh try to code this up and then we will check out the tabulation code as well so you're given the number and the case so let me quickly uh take the n equal to num dot size and let me quickly call return function of zero and we can just pass on num k and if you want to pass you can pass and otherwise you can just keep it as it is let's go over here and please make sure you use hash include done against indf int index vector int num int k okay perfect now what i can say is at any moment this reaches num dot size i can simply return a zero perfect amazing now what is the next step that we will take next step is",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "PhWWJmaKfMc",
+      "position": 234,
+      "title": "DP 54. Partition Array for Maximum Sum | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=PhWWJmaKfMc",
+      "start": 1003.839,
+      "end": 1129.36,
+      "text": "step that we will take next step is super simple what we say is hey listen we will be taking a length which is zero nice we will be let's quickly check if the summation will exceed or not uh input is given so the answer will fit in the 32-bit integer so it will not so you can just take integers this will be in between and then we will take the max answer and we can also assign that to into b perfect done once we are done with this we can just go across to g and we can start from index the j will go on till minimum off either you go until all the k partitions or you say i'm gonna stop right click right before right at the last index and every time you go the length decreases every time you go there is a new element which is updated so please please update it to the num of index or at the number j once you've updated it you'll be requiring some variable the sum will be length into max c for this particular guy and you have to call it for the other one which is j plus one once you've done this you just need to compare the max and max comma sum once you've done this please return the max answer and that's perfect uh and now you can just quickly try to run this code okay we're getting some error okay this will be num dot size looks like looks like i've done a shuttle mistake this will be index plus k okay it does run fine and now it's time to quickly memorize it so we know we will be requiring a vector of inter dp of n comma minus one right and that is something which you can pass over here please make sure you copy paste the same thing across everything make it past via reference okay and over here you can say dp of index equal to this",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "PhWWJmaKfMc",
+      "position": 234,
+      "title": "DP 54. Partition Array for Maximum Sum | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=PhWWJmaKfMc",
+      "start": 1125.76,
+      "end": 1251.1200000000001,
+      "text": "equal to this right here you can say dp of index is not equal to minus 1 you can return dp of index perfect and i'll try running this off it does run let's quickly submit this and this will be running fine indeed it does run now the next step is definitely converting this into a tabulation code so i think it's an easy now like it's a cakewalk what are the steps to convert this into a tabulation i have already taught you first thing is write the base case so if you remember the base case was if index equal to equal to n so that means dp of n that means index is n that means dp of n and you where returning is zero that's the base case next write down the changing variables there is only one and you are calling it from zero till n minus one this time it will be opposite n minus one to zero so you call it from n minus one to zero this time and third is copy the recurrence you don't need to do anything else just copy the recurrence so three lines changing parameter written in the opposite copy the recurrence and if you do this i think you're pretty much comfortable enough to convert this into a tabulation code so what i'll do is obviously i'll just assign this to zero i'll have index right from this tilde still this perfect now what i'll do is i'll just try to copy paste this okay now i'll just go across and try to copy paste this this will be db of index and over here it will be dp of zero let me see if i have any issues yeah we will have an issue this f of j plus one please keep it at db of g plus one remember one thing since you're trying j plus one and it is right from index so you need an n plus one because index is n minus one so it might",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "PhWWJmaKfMc",
+      "position": 234,
+      "title": "DP 54. Partition Array for Maximum Sum | Front Partition 🔥",
+      "url": "https://www.youtube.com/watch?v=PhWWJmaKfMc",
+      "start": 1246.48,
+      "end": 1300.519,
+      "text": "because index is n minus one so it might that's the shuttle change that you need to do i think apart from that everything looks good so if you see it is running fun and if you just submit this it will give you an accepted answer again the time complexity and the space complexity remains same only the auxiliary stack space is removed so guys i hope i was able to explain you the recursion the memoration and the tabulation code just in case i was able to please please please make sure you like this video and if you're new to this channel please do consider subscribing to us because that's the only thing that keeps you motivated to make these kind of videos so please please do consider subscribing to us and spread the word about this dp series with this with this i'll be wrapping up this video let's meet in the next one till then bye take care whenever your heart is [Music]",
+      "word_count": 168
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "video_id": "-uQGzhYj8BQ",
+  "position": 217,
+  "title": "DP 37. Buy and Sell Stocks III | Recursion to Space Optimisation",
+  "url": "https://www.youtube.com/watch?v=-uQGzhYj8BQ",
+  "chunk_count": 17,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "-uQGzhYj8BQ",
+      "position": 217,
+      "title": "DP 37. Buy and Sell Stocks III | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=-uQGzhYj8BQ",
+      "start": 0.24,
+      "end": 122.719,
+      "text": "hey everyone welcome back to take you forward so today we will be solving the third problem in the buy and sell stock category and what does the third problem state before understanding this the prerequisites are that you should have done the part one and the part two what was part one the part one stated that you will be given a prices and you are to you're just allowed to do one yes one transaction so probably you could have bought over here and you could have sold it over here hence the profit that you'd have made was four correct and with what was part two part two said that you can do as many like infinite transactions but just make sure you don't engage in multiple transactions together so you could have said i will buy here i'll sell it here so this is where you could have done uh two profit buy here sell here three profit buy here sell here three profit so you could have made a total of eight profit if you'd have gone by the part two because in part two you can do unlimited number of transactions just make sure none of the two transactions are overlapping what is part three part three states at max two transactions yes at max what you can do is two transactions not more than two transactions okay so we are basically limiting the number of transactions that we are doing so apparently if there was unlimited transactions you could have gone this then this and then this so you could have done three transactions to get the maximum profit but over here you're limited so how can you do at max two transactions probably you can say i can do this i can do this then you'll get two then you'll get three which makes it a total profit of five in this way you can do two transactions or you can say i'll do a transaction here which will give me a profit of two i'll do a",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "-uQGzhYj8BQ",
+      "position": 217,
+      "title": "DP 37. Buy and Sell Stocks III | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=-uQGzhYj8BQ",
+      "start": 119.6,
+      "end": 233.27999999999997,
+      "text": "give me a profit of two i'll do a transaction here which will give me a profit of three hence i'll get a total profit of five basically buy the sell buy the stock here sell the stock here buy the stock here sell the stock here it will give you a profit of five or i can say is hey listen buy here sell here to get a profit of three again buy here and again sell here to get a profit of three in total you can make a profit of six that means you can do these couple of transactions and you can make a profit of six and that's the maximum you can make that's 3 minus 0 equal to 3 and 4 minus 1 equal to 3 which makes it a total sum of 6 and that is the maximum profit that you can make yes that is the maximum profit you can make by buying here selling here buying here selling here so you'd have done at max two transactions now this problem is an extension of the buy and sell stock two problem that we do we did over there if you remember let's get back to the code over there if you remember the recursive code how did the recursive code look like we started with the zeroth index right and we took the buy initially to be you're allowed to buy right you took it as true so yeah you started with the zeroth index and you as you said that you're allowed to buy so that's how you started correct and then what you did was if you allowed to buy you took that guy you took that guy and when you took it it did add a negative value to you it did add a negative value to you why because if you're taking that stock that means you are investing money into the market so the money is gone thereby a minus and then you said i'll go to the next guy i'll go to the next day",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "-uQGzhYj8BQ",
+      "position": 217,
+      "title": "DP 37. Buy and Sell Stocks III | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=-uQGzhYj8BQ",
+      "start": 228.64,
+      "end": 338.0,
+      "text": "to the next day and this guy is this guy will be sell that means you're not allowed to buy zero means no more buy now you have to sell okay and what is the other thing you say that i'll not buy on this day and i'll go to the next day with still giving him permission to buy so if you are allowed to buy either you can buy or either you cannot buy that's all you will do if you are allowed to buy right and if you are asked that hey listen i am not allowed to buy i'm allowed to just sell so either you can sell so if you sell from the market you'll get this value back so this is the value that you'll get back and you'll go to the next day so if you have sold on the next day you're again allowed to buy you're again allowed to buy right and if you say that hey listen i'm not interested to sell today that means the amount that you'll get from the market is zero it'll go to the next day and they're still able to sell and not able to buy so that's how you can say sell or not sell this is how the code was looking for the case where we have where we had infinite transactions where we had infinite transactions that is the reason we just keep we just kept a track of day and by now if i am introducing something as an infinite transactions i can do as many transactions as i wish and i am doing but now instead of infinite i am saying make it a two transactions i'm putting a bound so can you relate this to the knapsack problem where i'm saying hey listen you can just do this much you cannot do more than this you're just allowed to do two transactions so can i say okay fine if i'm allowed to do two transactions can i rewrite the same code into",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "-uQGzhYj8BQ",
+      "position": 217,
+      "title": "DP 37. Buy and Sell Stocks III | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=-uQGzhYj8BQ",
+      "start": 332.88,
+      "end": 446.96000000000004,
+      "text": "can i rewrite the same code into something like similar code when i say index and buy and i put a cap like this is the maximum number of transactions i can do i cannot exceed uh these cap of transactions so let's forget about the base case let's write the buy case if i'm allowed to buy and let's write the other case if i'm not allowed to buy so if i'm allowed to buy what will i do i will say if i buy this is what i lose out on to the market for sure because this is the price that i'll give it to the market so that is gone from me so minus prices of index plus f of index plus one and i'm not allowed to buy i'm not allowed to buy so zero in the next step i'll go and do a normal cell so the initial cap yes the initial cap that you can pass is two and y will be one and index will be zero where zero resembles the zeroth day now tell me if you are performing a buy is a transaction complete is the transaction complete the answer to that is no the transaction is yet not completed because you're performing a buy for a transaction to be completed it has to be a buy sell it has to be a buy sell so the transaction is yet not completed right so what you do is you say hey the transaction is yet not completed so please go on with the number of transactions that you had or else i can say hey listen on this given day i'm not interested to buy i'm not interested to buy so i'm not interested to buy can i say i'll take a zero can i say i'll take a zero plus f off i'll go to the next day right and i will say i'll still be able to buy because i did not buy anything and the transaction cap will be like i will still have the",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "-uQGzhYj8BQ",
+      "position": 217,
+      "title": "DP 37. Buy and Sell Stocks III | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=-uQGzhYj8BQ",
+      "start": 443.36,
+      "end": 561.04,
+      "text": "will be like i will still have the similar number of transactions and what i will return is max of these couple of elements as simple as that i return the max of this or the max of this is what i return back correct now what is about else let's quickly check out what about else else means you know what does else means sell so let's try to sell so if i'm selling i can definitely sell so if i sell this is what i'll add up to my value correct and i'll go to the next index saying i've sold so on the next day you're allowed to buy so please go across and give him one you're allowed to buy perfect what will happen to the cap so if you're performing a cell so obviously in the previous past you would have performed a buy and now you're performing a cell so can i say can i say you're completing one complete transaction which eventually means the number of transaction will get reduced by one which eventually means the number of transactions will get reduced by one or else you say that hey listen i'm not interested to sell as of now so you go to the next day with the same cell allowance and you see the number of transactions to be same and what you return is the max of these two that's how a shuttle change will happen on the cap of transactions whenever you complete the number of transactions just make sure you reduce it by one so that you can keep a track like how long will you perform the transactions keep a track of it right over here you are given the function now what will you do next i can say that okay i have to write the base case so i know i will end up the transactions when i reach n that's when i reach n and what did we write the base case over here if you remember it simply returned a zero",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "-uQGzhYj8BQ",
+      "position": 217,
+      "title": "DP 37. Buy and Sell Stocks III | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=-uQGzhYj8BQ",
+      "start": 557.279,
+      "end": 681.04,
+      "text": "remember it simply returned a zero because when you're reaching the like you have exhausted all the days you'll not get anything from the market will you get anything from the market definitely not so you get a return zero what's the other case if i also exhaust the transactions will i get anything back from the market no so can i say these couple of stuffs will be my base case i will not get anything from the market i cannot perform anything so that's over or if i've exhausted the number of days i'll not get anything from the market so this is what i will be doing a shuttle change on the cap of the transactions will enable me to convert the previous code to this problem where we are bounded with certain number of transactions which says at most two i hope you have got the fair bit of idea so we are we are doing as of now recursion right and you know you will be trying out all possibilities so the time complexity will be exponential i'll give you a tle but the space complexity that you will be using will have auxiliary stack space of big o of n because you're performing on index plus one so the depth of the recursion will go on to index plus one so this is the auxiliary stack space that you will be involving but but we need to optimize this and how can you optimize this if there are overlapping yes i have taught this in the previous 34 lectures so if you are joining this video for the first time please go back and watch out all the lectures because this playlist is sequential you cannot just start from anything in between so if there are overlapping sub problems you can draw the recursion tree and you will see that there are certain overlapping sub problems thereby what we can do is we can definitely apply something as memo iodization to stop pre-computation of the repeated",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "-uQGzhYj8BQ",
+      "position": 217,
+      "title": "DP 37. Buy and Sell Stocks III | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=-uQGzhYj8BQ",
+      "start": 675.68,
+      "end": 804.48,
+      "text": "stop pre-computation of the repeated states so what are the states we have an index we have a by we have a cap let's analyze what are the maximum value of index can be this index can be from 0 to n minus 1 which makes it a total of n different states from 0 to n minus 1 what can be buy by can be either you are not allowed to buy or either you are allowed to buy two different states of buy what can be capped either you have zero transactions remaining one transactions remaining or two transactions remaining thereby you can have three different set of transactions so i see three changing parameters or three changing states thereby you just need to create a dp state of n cross two cross three and if you're able to do this you will yes you will be able to code this up now this is kind of a 3d dp you can call it just make sure you memoize in terms of index buy and cap before returning that's what you just need to do in order to convert this into a memo iation solution and we're able to convert this into a memoization solution the time complexity of that solution will be n cross 2 cross 3 because that's what you have over here n cross 2 cross 3 and the space complexity will be obviously n cross 2 cross 3 plus the auxiliary stack space plus the auxiliary stack space of the recursion so yeah without actually waiting let's quickly code this up and see if this is working so you can see uh this is the question which states you have at most two transactions so given the prices you're given the n so what do you need to do you basically uh have to call the function right and the function will start from zero with the initial buy and transaction cap as two and you can send the prices and the n as the external variables make sure you write into index",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "-uQGzhYj8BQ",
+      "position": 217,
+      "title": "DP 37. Buy and Sell Stocks III | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=-uQGzhYj8BQ",
+      "start": 798.839,
+      "end": 899.6,
+      "text": "variables make sure you write into index int by which allows you to buy or not and cap is which tells you how many are there vector and prices and intent is what you'll take right over here you can say if index has reached n or or if the cap has been becoming zero then you can say you'll return a zero or else you'll be like okay if the buy is true like if you're allowed to buy please go across and perform these couple of transactions either you buy which makes uh makes you take something like prices of index and if you're buying then you're moving to the next day and you're not allowed to buy any more and the transaction cap is still the same or what you can say is okay i'm having nothing which is zero plus i move to the next day i'm still allowed to buy and i'll have the same cap that's what i can do so if uh the buy happens it's fine if the buy does not happen so you automatically come to the cell so there is no need to write else you will automatically come over here so if you're selling it you need to be very careful if you're selling it what happens either you sell it which means you'll get this from the market and you'll move to the next day with saying that you can now buy but if you are selling it you complete a transaction so that's what will happen and if you're not selling it this is what you'll get from the market you'll go to the next you'll still have selling authority and the transaction still stays the same so this is what you will return right and if you just quickly run this off you will see the answer is coming absolutely fine indeed it does run now what's the next thing that we will do we'll definitely try to have a 3d dp array so generally you can define something like vector vector",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "-uQGzhYj8BQ",
+      "position": 217,
+      "title": "DP 37. Buy and Sell Stocks III | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=-uQGzhYj8BQ",
+      "start": 895.6,
+      "end": 1027.919,
+      "text": "something like vector vector this is how you define three dps done right after this you can say the first state is n then just make sure you define the second state and just go across in the same way just define the second state or the second state the second state uh like i'll just uh yeah the second state is something like inter uh inside the 3d there is a 2d right of size 2 cross 3. so yeah just make it of size plus three that's it that's what you just need to make sure and if you've done this this is how you will define a dp and yeah make sure you carry this across everywhere that's uh please make sure you carry by reference and before returning just make sure you [Music] have it memorized so make sure you memoize it so once you've memoized it also make sure this is minimized index by cap perfect and also before visiting if any of these states are revisited just make sure you do a return of dp of index by cap perfect it does run let's quickly submit this and see if the memoration code is running fine okay so we see that we are getting around 90 of score and it is giving us time limit exceeded the probable reason is because we are having still auxiliary stack space so let's uh try to optimize this into the tabulation format and then we will see so we saw that the tabulation so we saw that the memorization code gave you a tle right so it's the next step definitely we have to convert this into a tabulation right so how do you convert this into tabulation code it's very straightforward i told you the cases you write the base cases just make sure you write all the base cases the second changing parameters what are the changing parameters i by and cap if you properly see these three are the changing parameters when you have an i",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "-uQGzhYj8BQ",
+      "position": 217,
+      "title": "DP 37. Buy and Sell Stocks III | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=-uQGzhYj8BQ",
+      "start": 1023.36,
+      "end": 1175.2,
+      "text": "changing parameters when you have an i you have a buy you have a cap right you write them in the reverse order next you just make sure you copy the recurrence just make sure you copy paste the recurrence nothing different you have to do cool let's look at the base cases that you wrote let's come back into the memoration code what are the base cases that you wrote you said for any cap 0 any index n either cap 0 either n that means whenever cap is 0 index and y can be anything index i repeat index and y can be anything if index is n index and cap can be anything please hear me out properly if index is n index and cap can be anything so let me write it states if cap is 0 which means index and y can be anything so index can be anything from 0 to n minus 1 y can be anything from 0 to 1 so thereby the dp of index by and cap is 0 because cap will be 0 will be 0 that's the first base case that i'll write perfect over the second base case we like the second base case is a very simple striker just go across and say that hey for index equal to equal to n by and cap can be anything so i'll be like okay i can be from zero to one cap can be from zero to one sorry zero to two thereby dp of index is n y is right from here cap is right from here and that will be zero that's the second base case that's how you write the base cases once you've written the base cases this is the opposite so it starts from yes n minus one l zero this starts from the opposite zero to one this starts from the opposite that is zero to two so just run these three loops and then copy paste the recurrence and your answer will be at the initial call the",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "-uQGzhYj8BQ",
+      "position": 217,
+      "title": "DP 37. Buy and Sell Stocks III | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=-uQGzhYj8BQ",
+      "start": 1170.72,
+      "end": 1278.96,
+      "text": "answer will be at the initial call the call was made for zero by two transactions allowed this is where your answer will lie that's how you convert this into a proper tabulated code so it's time to write the tabulation code so what we will do is we'll just make it zero right and we know there are base cases and the base cases will also have values as zero so practically thinking like there's no point because it's already assigned as zero initially so writing conditions for base case will not make any sense yes i did write them in the ipad but well it makes sense because it's already zero only if this would have been one or something else you would have written right so let's not write it and let's uh quickly write the first thing which is index where are we actually starting it from zero so we started from the opposite one which is one and we go until zero and we do index minus minus and make sure this is somewhere around n plus one okay and you know this other thing which is by where are we starting by from one so you can just do it by equal to zero by lesser than equal to one and by plus plus right how's the other thing cap so you can also run a loop for cap so you know the cap will start from zero and the cap will go till two and cap plus plus now you need to be very careful uh very careful about cap in one thing you can start cap from zero but you know for every cap zero if you look at the base case for every cap zero the value is going to be zero so do you need to compute for cap zero the answer to that is no so you can just compute for cap one okay and you can ignore zero you can start from one and you can go until two so now what's the next",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "-uQGzhYj8BQ",
+      "position": 217,
+      "title": "DP 37. Buy and Sell Stocks III | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=-uQGzhYj8BQ",
+      "start": 1275.039,
+      "end": 1405.1999999999998,
+      "text": "go until two so now what's the next thing that you'll do you will simply take this and copy paste over here so let's quickly take this and copy paste with some tabulations okay done now instead of return it will be dp of this and this will go under the else portion again instead of return this will be this and what will be this f of index plus 1 0 cap it will definitely be dp of index plus 1 zero cap okay and right over here you can just omit this portion and you can have the other thing which is dp of index plus one cap and this is what you can easily do and now you can omit this off that's how you can give this one and this one also you can rewrite as dp of index plus 1 1 and then you can write cap minus 1 and this portion is something which you can definitely remove and you can write this as again dp of index plus 1 and 0 and you can write cap and this is something which you can easily do and now you can definitely remove this so once you've removed this you know this will be dp of 0 1 and two right so let's quickly omit this off as well i'll try to run this and see if this is running fine indeed it is now let's try to submit this off and see if it is accepted indeed it is accepted so this is how you can easily change it into the tabulation format so this is how the tabulation code looks like now you need to space optimize this and i've told you whenever you see something like this index plus 1 index plus 1 index plus 1 index plus 1 you can just take it off and you can replace it with after guy now over here we are using a 3d array as n cross 2 cross 3 right and so this is the row",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "-uQGzhYj8BQ",
+      "position": 217,
+      "title": "DP 37. Buy and Sell Stocks III | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=-uQGzhYj8BQ",
+      "start": 1399.12,
+      "end": 1513.3600000000001,
+      "text": "2 cross 3 right and so this is the row and then these other couple of guys can be treated as uh like you can treat them as single and you can treat them as single now you can visualize this as a 2d dp so you just need to memorize this guy so index plus one is what you need to memorize index plus one and this guy will be constant because these guys are constant so you will just keep them so what you'll do is you'll just go across and you will declare an after game yes you'll just declare an after game so just make sure you declare an after guy so this is your after guide definitely i just copy paste this and say this is going to be my current gap perfect and instead of dp of index plus one you say after instead of dp of index plus one you say after instead of again dp of index plus one you say after and over here also you say after perfect and instead of dp of index you say current instead of db of index you see current once you have done the entire 2d calculation for this index you say previous will get swapped sorry after rather after will get swapped with current and once it is swapped you can say this is your answer right or current whatever you can call so simple thing i just made sure i did not change it same space optimization technique that we have been using in all the problems we just make sure we are taking care of these 2d variables instead of 1d so once you do this you can submit this and you will see that this is giving you a correct answer so this is the space optimized solution where you you're definitely using a six size array which is as good as a constant array so i can say the time complexity is n into 2 into 3 and the space complexity",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 13,
+      "video_id": "-uQGzhYj8BQ",
+      "position": 217,
+      "title": "DP 37. Buy and Sell Stocks III | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=-uQGzhYj8BQ",
+      "start": 1506.72,
+      "end": 1629.279,
+      "text": "n into 2 into 3 and the space complexity is constant because 2 into 3 is just a six size array it's it's as good as a constant size array right so i can say the space complexity is constant as of now so that's how you can do it so there is so there is another way of solving this as well let's understand that in the next part of the lecture so guys i hope you have understood this solution of memorization which was n cross 2 cross 3 right and this was the d or index this was the buy and this was the cap on the transactions right so that's one of the ways to do it but if you go to the discussion forum or if you just go across solutions in different sites what you'll see is there are a couple of other solutions which are also discussed one of them is when where they do not use this instead of that they use an n cross 4 dp because they use an n cross 4 db that is one of the solutions and the other one is where they use there are four different variables you have that right they use four different variables now this is something which i'll not teach why because this is not intuitive i don't find this intuitive i find the solution as something which someone tells me and i'm like he's saying it correct so that's why i like tried to be like yes but i don't think the solution should be even discussed in an interview you should not come up with this because the interview will never expect you to come up with this either you say the n cross 2 cross 3 either you say that or either you go across and say the n cross 4 dp solution they might be asking hey what is n cross 4 now as of now what did we do we stated let's start at the day 0 give him a permission of buy and have a",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 14,
+      "video_id": "-uQGzhYj8BQ",
+      "position": 217,
+      "title": "DP 37. Buy and Sell Stocks III | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=-uQGzhYj8BQ",
+      "start": 1624.799,
+      "end": 1754.48,
+      "text": "give him a permission of buy and have a maximum cap of 2 transactions and then keep on doing buy sell buy a cell and whenever the cell is happening do a cap minus 1. that's what we do in that's what we have done in this particular solution but i'll not change it i'll not code it i'll just explain you the theory part probably you can code and submit what if i say i will not have buy instead of that i will have an f of index and a transaction number a transaction number so if i'm performing two transactions if i'm performing two transactions can i say this means buy sell by sell can i say this and if i number them can i say them as 0 1 2 3 can i i can i can if i'm performing a buy that's 0 or 2 or in short can i say it's an even index it's an even number when i perform the by portion and can i say it's the odd when i'm performing the cell it's the odd when i'm selling the stock make sense so i can start from zero and then i can go one then i can go to go three and whenever i'm performing a transaction i move to the next if you carefully see i move to the next so instead of carrying a buy which tells me whether to buy and sell what i did was i converted this uh cap this two cap into four guys and just tried to express buy and sell via the transaction numbers that is this uh slight change that i'll do so can i say i will have to perform all the three transactions so the base case will definitely turn to if i have reached the end or if i have performed all the transactions which is four in this case because zero one two three the moment you perform the third transaction you'll come up to four so whenever you perform all the four transactions or you have",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 15,
+      "video_id": "-uQGzhYj8BQ",
+      "position": 217,
+      "title": "DP 37. Buy and Sell Stocks III | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=-uQGzhYj8BQ",
+      "start": 1750.96,
+      "end": 1877.8400000000001,
+      "text": "all the four transactions or you have come to the end that's when you return zero perfect what about the other thing can i say if the transaction number is even this means it's a buy or else it's a cell or else it's a cell and whenever it is a buy how can you do a buy you know you have to invest this much into the market you move to the next day and what about the transaction number you move to the next transaction number so transaction plus one and if you're not buying you move to the next day but the transaction number will not change perfect and what you return is the max of them what do you return is the max of them and if you're performing a sell then you sell it so this is what you get across to yourself and you go to the next day and you increase the transaction by plus one and this is zero you go to the next day and the transaction remains same and you again return the max of it and that's the shuttle change that will happen and then you can say the memoration can easily be done in n cross 4 because there are four transactions so what i did was i just converted them into a transaction number to convert it into a different set of n cross 4 dp so guys i could have coded this but i'm giving you like i've written the recursive code i will want you to uh write the memorization code then convert it into the tabulation then convert it into the space optimization and please post the space optimization or the tabulation code in the comment section like i can do this but let's let's have some homework for you so let's post the tabulation and the space optimization of this portion where we use couple of variables index and transaction in the tabulation in the comment section so guys i hope you have understood this one",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 16,
+      "video_id": "-uQGzhYj8BQ",
+      "position": 217,
+      "title": "DP 37. Buy and Sell Stocks III | Recursion to Space Optimisation",
+      "url": "https://www.youtube.com/watch?v=-uQGzhYj8BQ",
+      "start": 1874.159,
+      "end": 1909.32,
+      "text": "this one as well as this one you have understood both the solutions right now if you've understood both the solution no need to understand this i tell you no need to understand this ignore and if you've understood this this problem is done and dusted so just in case you have understood this please please please make sure you like this video and if you're new to this channel please do consider subscribing to us i never this let's wrap up this video and meet in the next one till then bye bye thank you whenever your heart is broken don't ever forget you're golden",
+      "word_count": 106
+    }
+  ]
+}

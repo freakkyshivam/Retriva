@@ -1,0 +1,6176 @@
+{
+  "position": 198,
+  "video_id": "ZHyb-A2Mte4",
+  "title": "DP 17. Counts Subsets with Sum K | Dp on Subsequences",
+  "url": "https://www.youtube.com/watch?v=ZHyb-A2Mte4",
+  "transcript": [
+    {
+      "start": 0.16,
+      "duration": 3.68,
+      "end": 3.8400000000000003,
+      "text": "hey everyone welcome back to take you"
+    },
+    {
+      "start": 1.439,
+      "duration": 6.721,
+      "end": 8.16,
+      "text": "forward where we are taking you forward"
+    },
+    {
+      "start": 3.84,
+      "duration": 6.08,
+      "end": 9.92,
+      "text": "so today uh we will be solving dp16 so"
+    },
+    {
+      "start": 8.16,
+      "duration": 4.96,
+      "end": 13.120000000000001,
+      "text": "what is the pattern of problems that we"
+    },
+    {
+      "start": 9.92,
+      "duration": 6.88,
+      "end": 16.8,
+      "text": "are solving dp on subsequence is what we"
+    },
+    {
+      "start": 13.12,
+      "duration": 7.52,
+      "end": 20.64,
+      "text": "started on dp13 i think db14 is where we"
+    },
+    {
+      "start": 16.8,
+      "duration": 5.84,
+      "end": 22.64,
+      "text": "started we did dp 15 we did dp 16 and if"
+    },
+    {
+      "start": 20.64,
+      "duration": 4.399,
+      "end": 25.039,
+      "text": "you remember all of these things"
+    },
+    {
+      "start": 22.64,
+      "duration": 3.84,
+      "end": 26.48,
+      "text": "were based on a problem"
+    },
+    {
+      "start": 25.039,
+      "duration": 2.32,
+      "end": 27.359,
+      "text": "subsets"
+    },
+    {
+      "start": 26.48,
+      "duration": 3.36,
+      "end": 29.84,
+      "text": "sum"
+    },
+    {
+      "start": 27.359,
+      "duration": 3.601,
+      "end": 30.96,
+      "text": "right where we were basically given a"
+    },
+    {
+      "start": 29.84,
+      "duration": 4.08,
+      "end": 33.92,
+      "text": "target"
+    },
+    {
+      "start": 30.96,
+      "duration": 5.119,
+      "end": 36.079,
+      "text": "and we are being asked if that target is"
+    },
+    {
+      "start": 33.92,
+      "duration": 4.639,
+      "end": 38.559000000000005,
+      "text": "achievable or not and these couple of"
+    },
+    {
+      "start": 36.079,
+      "duration": 5.281,
+      "end": 41.36,
+      "text": "questions were follow-up of the question"
+    },
+    {
+      "start": 38.559,
+      "duration": 5.281,
+      "end": 43.839999999999996,
+      "text": "dp of 14 so"
+    },
+    {
+      "start": 41.36,
+      "duration": 4.8,
+      "end": 46.16,
+      "text": "in order to understand dp of 17 i highly"
+    },
+    {
+      "start": 43.84,
+      "duration": 5.36,
+      "end": 49.2,
+      "text": "recommend please do all these three"
+    },
+    {
+      "start": 46.16,
+      "duration": 4.8,
+      "end": 50.959999999999994,
+      "text": "problems then only start dp 17 because"
+    },
+    {
+      "start": 49.2,
+      "duration": 3.359,
+      "end": 52.559000000000005,
+      "text": "it's an entire playlist if you skip any"
+    },
+    {
+      "start": 50.96,
+      "duration": 4.72,
+      "end": 55.68,
+      "text": "of the videos you might miss out on a"
+    },
+    {
+      "start": 52.559,
+      "duration": 5.281,
+      "end": 57.839999999999996,
+      "text": "lot of things so dp17 without wasting"
+    },
+    {
+      "start": 55.68,
+      "duration": 3.92,
+      "end": 59.6,
+      "text": "any time let's check out the problem so"
+    },
+    {
+      "start": 57.84,
+      "duration": 4.64,
+      "end": 62.480000000000004,
+      "text": "over here it's being given that you have"
+    },
+    {
+      "start": 59.6,
+      "duration": 4.8,
+      "end": 64.4,
+      "text": "to count the number of subsets so what"
+    },
+    {
+      "start": 62.48,
+      "duration": 4.8,
+      "end": 67.28,
+      "text": "is the problem statement you're given a"
+    },
+    {
+      "start": 64.4,
+      "duration": 4.96,
+      "end": 69.36,
+      "text": "zero based indexing array of positive"
+    },
+    {
+      "start": 67.28,
+      "duration": 4.0,
+      "end": 71.28,
+      "text": "integers again very very important of"
+    },
+    {
+      "start": 69.36,
+      "duration": 3.36,
+      "end": 72.72,
+      "text": "positive integers now in the previous"
+    },
+    {
+      "start": 71.28,
+      "duration": 3.6,
+      "end": 74.88,
+      "text": "video a lot of people were commenting"
+    },
+    {
+      "start": 72.72,
+      "duration": 3.68,
+      "end": 76.4,
+      "text": "what if the elements are negative and"
+    },
+    {
+      "start": 74.88,
+      "duration": 3.919,
+      "end": 78.79899999999999,
+      "text": "everything so i'll be talking about"
+    },
+    {
+      "start": 76.4,
+      "duration": 3.92,
+      "end": 80.32000000000001,
+      "text": "negative in the later half or the last"
+    },
+    {
+      "start": 78.799,
+      "duration": 4.081,
+      "end": 82.88000000000001,
+      "text": "stage of the video where i'll be telling"
+    },
+    {
+      "start": 80.32,
+      "duration": 4.56,
+      "end": 84.88,
+      "text": "you if it's negative how do you think"
+    },
+    {
+      "start": 82.88,
+      "duration": 3.36,
+      "end": 86.24,
+      "text": "how do you modify dp we'll be talking"
+    },
+    {
+      "start": 84.88,
+      "duration": 3.2,
+      "end": 88.08,
+      "text": "about all of that but in the later half"
+    },
+    {
+      "start": 86.24,
+      "duration": 4.879,
+      "end": 91.119,
+      "text": "of the video okay so you're given an"
+    },
+    {
+      "start": 88.08,
+      "duration": 5.6,
+      "end": 93.67999999999999,
+      "text": "array of positive integers and you have"
+    },
+    {
+      "start": 91.119,
+      "duration": 4.161,
+      "end": 95.28,
+      "text": "to tell how many uh different ways of"
+    },
+    {
+      "start": 93.68,
+      "duration": 4.079,
+      "end": 97.759,
+      "text": "selecting the elements from the array"
+    },
+    {
+      "start": 95.28,
+      "duration": 6.159,
+      "end": 101.43900000000001,
+      "text": "are there such that the sum of chosen"
+    },
+    {
+      "start": 97.759,
+      "duration": 6.72,
+      "end": 104.479,
+      "text": "elements is equal to target number star"
+    },
+    {
+      "start": 101.439,
+      "duration": 5.201,
+      "end": 106.63999999999999,
+      "text": "okay so basically they are saying key"
+    },
+    {
+      "start": 104.479,
+      "duration": 3.761,
+      "end": 108.24,
+      "text": "let's uh let's take an example the first"
+    },
+    {
+      "start": 106.64,
+      "duration": 3.04,
+      "end": 109.68,
+      "text": "example is"
+    },
+    {
+      "start": 108.24,
+      "duration": 3.519,
+      "end": 111.759,
+      "text": "one two"
+    },
+    {
+      "start": 109.68,
+      "duration": 3.84,
+      "end": 113.52000000000001,
+      "text": "two three so this is the array given"
+    },
+    {
+      "start": 111.759,
+      "duration": 4.881,
+      "end": 116.64,
+      "text": "right and they're giving you our target"
+    },
+    {
+      "start": 113.52,
+      "duration": 5.44,
+      "end": 118.96,
+      "text": "over here as three so how many subsets"
+    },
+    {
+      "start": 116.64,
+      "duration": 4.159,
+      "end": 120.799,
+      "text": "now there the question has been changed"
+    },
+    {
+      "start": 118.96,
+      "duration": 4.0,
+      "end": 122.96,
+      "text": "instead of saying does there exist a"
+    },
+    {
+      "start": 120.799,
+      "duration": 3.201,
+      "end": 124.0,
+      "text": "subset like in all the previous problem"
+    },
+    {
+      "start": 122.96,
+      "duration": 2.88,
+      "end": 125.83999999999999,
+      "text": "it was"
+    },
+    {
+      "start": 124.0,
+      "duration": 4.0,
+      "end": 128.0,
+      "text": "does there exist a subset which gives"
+    },
+    {
+      "start": 125.84,
+      "duration": 3.44,
+      "end": 129.28,
+      "text": "you this particular sum now instead of"
+    },
+    {
+      "start": 128.0,
+      "duration": 2.64,
+      "end": 130.64,
+      "text": "that what now"
+    },
+    {
+      "start": 129.28,
+      "duration": 2.88,
+      "end": 132.16,
+      "text": "they are saying is"
+    },
+    {
+      "start": 130.64,
+      "duration": 4.239,
+      "end": 134.879,
+      "text": "count the"
+    },
+    {
+      "start": 132.16,
+      "duration": 4.96,
+      "end": 137.12,
+      "text": "number of subsets yes that just changes"
+    },
+    {
+      "start": 134.879,
+      "duration": 5.281,
+      "end": 140.16,
+      "text": "the problem and they're asking you what"
+    },
+    {
+      "start": 137.12,
+      "duration": 5.52,
+      "end": 142.64000000000001,
+      "text": "is the count of the number of subsets so"
+    },
+    {
+      "start": 140.16,
+      "duration": 5.04,
+      "end": 145.2,
+      "text": "i can say one of the possible subsets is"
+    },
+    {
+      "start": 142.64,
+      "duration": 4.64,
+      "end": 147.27999999999997,
+      "text": "one and two where i pick this one and i"
+    },
+    {
+      "start": 145.2,
+      "duration": 4.0,
+      "end": 149.2,
+      "text": "pick this two and if you know if you"
+    },
+    {
+      "start": 147.28,
+      "duration": 3.76,
+      "end": 151.04,
+      "text": "pick these uh couple of elements you are"
+    },
+    {
+      "start": 149.2,
+      "duration": 4.16,
+      "end": 153.35999999999999,
+      "text": "bound to get the target three the"
+    },
+    {
+      "start": 151.04,
+      "duration": 4.0,
+      "end": 155.04,
+      "text": "another one is again one two now they"
+    },
+    {
+      "start": 153.36,
+      "duration": 3.44,
+      "end": 156.8,
+      "text": "might look similar they might look"
+    },
+    {
+      "start": 155.04,
+      "duration": 3.68,
+      "end": 158.72,
+      "text": "similar but this time it is formed by"
+    },
+    {
+      "start": 156.8,
+      "duration": 3.84,
+      "end": 160.64000000000001,
+      "text": "picking this one and this too so i"
+    },
+    {
+      "start": 158.72,
+      "duration": 3.76,
+      "end": 162.48,
+      "text": "picked two different elements to form"
+    },
+    {
+      "start": 160.64,
+      "duration": 3.76,
+      "end": 164.39999999999998,
+      "text": "this one too yeah the subsequences might"
+    },
+    {
+      "start": 162.48,
+      "duration": 3.68,
+      "end": 166.16,
+      "text": "be same one too but doesn't matter i"
+    },
+    {
+      "start": 164.4,
+      "duration": 4.0,
+      "end": 168.4,
+      "text": "want the unique elements to be picked"
+    },
+    {
+      "start": 166.16,
+      "duration": 4.0,
+      "end": 170.16,
+      "text": "like uh this is one this is true so it's"
+    },
+    {
+      "start": 168.4,
+      "duration": 3.6,
+      "end": 172.0,
+      "text": "a different subsequence if this one and"
+    },
+    {
+      "start": 170.16,
+      "duration": 4.24,
+      "end": 174.4,
+      "text": "this two it's a different subsequence"
+    },
+    {
+      "start": 172.0,
+      "duration": 5.04,
+      "end": 177.04,
+      "text": "make sense and the other one can be"
+    },
+    {
+      "start": 174.4,
+      "duration": 5.36,
+      "end": 179.76000000000002,
+      "text": "three so if you see there are in total"
+    },
+    {
+      "start": 177.04,
+      "duration": 5.839,
+      "end": 182.879,
+      "text": "of three subsets yes in total of three"
+    },
+    {
+      "start": 179.76,
+      "duration": 4.8,
+      "end": 184.56,
+      "text": "subsets that give you the total sum as"
+    },
+    {
+      "start": 182.879,
+      "duration": 5.041,
+      "end": 187.92,
+      "text": "three so the question is you have to"
+    },
+    {
+      "start": 184.56,
+      "duration": 5.039,
+      "end": 189.599,
+      "text": "count the number of subsets now what is"
+    },
+    {
+      "start": 187.92,
+      "duration": 3.36,
+      "end": 191.28,
+      "text": "the prerequisite uh to solve this"
+    },
+    {
+      "start": 189.599,
+      "duration": 5.041,
+      "end": 194.64,
+      "text": "problem"
+    },
+    {
+      "start": 191.28,
+      "duration": 5.76,
+      "end": 197.04,
+      "text": "definite prerequisite is dp14"
+    },
+    {
+      "start": 194.64,
+      "duration": 4.48,
+      "end": 199.11999999999998,
+      "text": "where i have taught you about"
+    },
+    {
+      "start": 197.04,
+      "duration": 3.52,
+      "end": 200.56,
+      "text": "how do you approach subsequence problems"
+    },
+    {
+      "start": 199.12,
+      "duration": 3.839,
+      "end": 202.959,
+      "text": "about the pick"
+    },
+    {
+      "start": 200.56,
+      "duration": 4.959,
+      "end": 205.519,
+      "text": "and the not pick or take or the not pick"
+    },
+    {
+      "start": 202.959,
+      "duration": 3.36,
+      "end": 206.31900000000002,
+      "text": "technique that's the first prerequisite"
+    },
+    {
+      "start": 205.519,
+      "duration": 4.401,
+      "end": 209.92000000000002,
+      "text": "and"
+    },
+    {
+      "start": 206.319,
+      "duration": 5.121,
+      "end": 211.44,
+      "text": "lecture 7 of the recursion playlist"
+    },
+    {
+      "start": 209.92,
+      "duration": 2.48,
+      "end": 212.39999999999998,
+      "text": "the recursion playlist link is in the"
+    },
+    {
+      "start": 211.44,
+      "duration": 3.519,
+      "end": 214.959,
+      "text": "description"
+    },
+    {
+      "start": 212.4,
+      "duration": 4.64,
+      "end": 217.04,
+      "text": "lecture 7 of the recursion playlist now"
+    },
+    {
+      "start": 214.959,
+      "duration": 3.84,
+      "end": 218.799,
+      "text": "in the lecture 7 i told you"
+    },
+    {
+      "start": 217.04,
+      "duration": 3.839,
+      "end": 220.879,
+      "text": "whenever there is a problem related to"
+    },
+    {
+      "start": 218.799,
+      "duration": 3.52,
+      "end": 222.31900000000002,
+      "text": "count yes whenever there is a problem"
+    },
+    {
+      "start": 220.879,
+      "duration": 3.041,
+      "end": 223.92,
+      "text": "related to count"
+    },
+    {
+      "start": 222.319,
+      "duration": 3.121,
+      "end": 225.44,
+      "text": "you write the function"
+    },
+    {
+      "start": 223.92,
+      "duration": 2.64,
+      "end": 226.55999999999997,
+      "text": "and in the base case whatever is the"
+    },
+    {
+      "start": 225.44,
+      "duration": 3.28,
+      "end": 228.72,
+      "text": "condition"
+    },
+    {
+      "start": 226.56,
+      "duration": 4.08,
+      "end": 230.64000000000001,
+      "text": "if the condition is satisfying you"
+    },
+    {
+      "start": 228.72,
+      "duration": 3.68,
+      "end": 232.4,
+      "text": "return one"
+    },
+    {
+      "start": 230.64,
+      "duration": 3.28,
+      "end": 233.92,
+      "text": "and if the condition is not satisfying"
+    },
+    {
+      "start": 232.4,
+      "duration": 3.839,
+      "end": 236.239,
+      "text": "you return zero"
+    },
+    {
+      "start": 233.92,
+      "duration": 3.599,
+      "end": 237.51899999999998,
+      "text": "this will always be done in all the"
+    },
+    {
+      "start": 236.239,
+      "duration": 3.761,
+      "end": 240.0,
+      "text": "count problems i've told you in the"
+    },
+    {
+      "start": 237.519,
+      "duration": 5.121,
+      "end": 242.64000000000001,
+      "text": "lecture right and what did i tell you if"
+    },
+    {
+      "start": 240.0,
+      "duration": 5.04,
+      "end": 245.04,
+      "text": "there are multiple function calls"
+    },
+    {
+      "start": 242.64,
+      "duration": 4.799,
+      "end": 247.439,
+      "text": "then all the function calls addition"
+    },
+    {
+      "start": 245.04,
+      "duration": 4.559,
+      "end": 249.599,
+      "text": "will be the number of ways that will be"
+    },
+    {
+      "start": 247.439,
+      "duration": 4.641,
+      "end": 252.07999999999998,
+      "text": "returned so these couple of things i"
+    },
+    {
+      "start": 249.599,
+      "duration": 4.081,
+      "end": 253.67999999999998,
+      "text": "have told you if there is any question"
+    },
+    {
+      "start": 252.08,
+      "duration": 2.56,
+      "end": 254.64000000000001,
+      "text": "that tells you to count the number of"
+    },
+    {
+      "start": 253.68,
+      "duration": 2.48,
+      "end": 256.16,
+      "text": "ways"
+    },
+    {
+      "start": 254.64,
+      "duration": 4.559,
+      "end": 259.199,
+      "text": "always in the base case there will be"
+    },
+    {
+      "start": 256.16,
+      "duration": 4.799,
+      "end": 260.959,
+      "text": "return one or return zero because you're"
+    },
+    {
+      "start": 259.199,
+      "duration": 3.28,
+      "end": 262.479,
+      "text": "basically trying out every possible"
+    },
+    {
+      "start": 260.959,
+      "duration": 3.361,
+      "end": 264.32,
+      "text": "choices and at the end of the day they"
+    },
+    {
+      "start": 262.479,
+      "duration": 4.081,
+      "end": 266.56,
+      "text": "will tell you if it's possible or if"
+    },
+    {
+      "start": 264.32,
+      "duration": 4.159,
+      "end": 268.479,
+      "text": "it's not possible and these are the ways"
+    },
+    {
+      "start": 266.56,
+      "duration": 4.079,
+      "end": 270.639,
+      "text": "you basically add up all the ways and"
+    },
+    {
+      "start": 268.479,
+      "duration": 4.0,
+      "end": 272.479,
+      "text": "you return that right"
+    },
+    {
+      "start": 270.639,
+      "duration": 3.84,
+      "end": 274.479,
+      "text": "so what i can say is okay"
+    },
+    {
+      "start": 272.479,
+      "duration": 3.601,
+      "end": 276.08,
+      "text": "the problem is count so we know this is"
+    },
+    {
+      "start": 274.479,
+      "duration": 3.28,
+      "end": 277.75899999999996,
+      "text": "the pattern of count but you have to"
+    },
+    {
+      "start": 276.08,
+      "duration": 3.36,
+      "end": 279.44,
+      "text": "write the recurrence and what are the"
+    },
+    {
+      "start": 277.759,
+      "duration": 4.321,
+      "end": 282.08000000000004,
+      "text": "rules that i have taught you to write"
+    },
+    {
+      "start": 279.44,
+      "duration": 3.68,
+      "end": 283.12,
+      "text": "the recurrence can you tell me the first"
+    },
+    {
+      "start": 282.08,
+      "duration": 3.44,
+      "end": 285.52,
+      "text": "rule is"
+    },
+    {
+      "start": 283.12,
+      "duration": 4.0,
+      "end": 287.12,
+      "text": "if it's an array if it's an array then"
+    },
+    {
+      "start": 285.52,
+      "duration": 4.72,
+      "end": 290.24,
+      "text": "and if you're dealing with subsequence"
+    },
+    {
+      "start": 287.12,
+      "duration": 5.84,
+      "end": 292.96,
+      "text": "you know you have to express"
+    },
+    {
+      "start": 290.24,
+      "duration": 4.56,
+      "end": 294.8,
+      "text": "the recurrence in terms of indexes"
+    },
+    {
+      "start": 292.96,
+      "duration": 4.16,
+      "end": 297.12,
+      "text": "because it's an array this time it will"
+    },
+    {
+      "start": 294.8,
+      "duration": 4.959,
+      "end": 299.759,
+      "text": "be array index and what are we looking"
+    },
+    {
+      "start": 297.12,
+      "duration": 5.12,
+      "end": 302.24,
+      "text": "for we are looking for a specific target"
+    },
+    {
+      "start": 299.759,
+      "duration": 4.561,
+      "end": 304.32,
+      "text": "so we are looking for something right so"
+    },
+    {
+      "start": 302.24,
+      "duration": 4.64,
+      "end": 306.88,
+      "text": "that something will also be part so"
+    },
+    {
+      "start": 304.32,
+      "duration": 4.56,
+      "end": 308.88,
+      "text": "that's a thumb rule like always express"
+    },
+    {
+      "start": 306.88,
+      "duration": 5.44,
+      "end": 312.32,
+      "text": "everything in terms of indexes it can be"
+    },
+    {
+      "start": 308.88,
+      "duration": 5.759,
+      "end": 314.639,
+      "text": "grids it can be 1d array it can be 2d it"
+    },
+    {
+      "start": 312.32,
+      "duration": 4.8,
+      "end": 317.12,
+      "text": "can be 3d the thumb rule is the first"
+    },
+    {
+      "start": 314.639,
+      "duration": 5.84,
+      "end": 320.479,
+      "text": "parameter will always like you'll see in"
+    },
+    {
+      "start": 317.12,
+      "duration": 5.12,
+      "end": 322.24,
+      "text": "almost all the cases it will be indexes"
+    },
+    {
+      "start": 320.479,
+      "duration": 4.16,
+      "end": 324.639,
+      "text": "and the other one over here since the"
+    },
+    {
+      "start": 322.24,
+      "duration": 4.239,
+      "end": 326.479,
+      "text": "question is revolving around target it"
+    },
+    {
+      "start": 324.639,
+      "duration": 4.0,
+      "end": 328.639,
+      "text": "will be target so your recurrence will"
+    },
+    {
+      "start": 326.479,
+      "duration": 4.72,
+      "end": 331.199,
+      "text": "be expressed in terms of index and"
+    },
+    {
+      "start": 328.639,
+      "duration": 4.961,
+      "end": 333.6,
+      "text": "target what is the third rule"
+    },
+    {
+      "start": 331.199,
+      "duration": 4.72,
+      "end": 335.91900000000004,
+      "text": "explore all possibilities we can be"
+    },
+    {
+      "start": 333.6,
+      "duration": 3.92,
+      "end": 337.52000000000004,
+      "text": "talking about this afterwards but that"
+    },
+    {
+      "start": 335.919,
+      "duration": 4.56,
+      "end": 340.479,
+      "text": "is the third rule explore all the"
+    },
+    {
+      "start": 337.52,
+      "duration": 4.08,
+      "end": 341.59999999999997,
+      "text": "possibilities what is the"
+    },
+    {
+      "start": 340.479,
+      "duration": 2.241,
+      "end": 342.71999999999997,
+      "text": "third rule"
+    },
+    {
+      "start": 341.6,
+      "duration": 3.52,
+      "end": 345.12,
+      "text": "sum up"
+    },
+    {
+      "start": 342.72,
+      "duration": 4.64,
+      "end": 347.36,
+      "text": "sum all of them up sum all of the"
+    },
+    {
+      "start": 345.12,
+      "duration": 5.2,
+      "end": 350.32,
+      "text": "possibilities up and return"
+    },
+    {
+      "start": 347.36,
+      "duration": 5.839,
+      "end": 353.199,
+      "text": "why is this the third rule"
+    },
+    {
+      "start": 350.32,
+      "duration": 6.96,
+      "end": 357.28,
+      "text": "because the question stated count the"
+    },
+    {
+      "start": 353.199,
+      "duration": 6.481,
+      "end": 359.68,
+      "text": "total number of ways correct so"
+    },
+    {
+      "start": 357.28,
+      "duration": 4.0,
+      "end": 361.28,
+      "text": "can i say this since the array is one"
+    },
+    {
+      "start": 359.68,
+      "duration": 2.4,
+      "end": 362.08,
+      "text": "two two three"
+    },
+    {
+      "start": 361.28,
+      "duration": 3.12,
+      "end": 364.4,
+      "text": "and"
+    },
+    {
+      "start": 362.08,
+      "duration": 5.44,
+      "end": 367.52,
+      "text": "if i just write that a and the sum that"
+    },
+    {
+      "start": 364.4,
+      "duration": 6.239,
+      "end": 370.63899999999995,
+      "text": "i'm looking for is 3 can i say this if"
+    },
+    {
+      "start": 367.52,
+      "duration": 6.16,
+      "end": 373.68,
+      "text": "i'm writing remember this f of n minus 1"
+    },
+    {
+      "start": 370.639,
+      "duration": 5.68,
+      "end": 376.319,
+      "text": "and 3 if i write this or f of n minus 1"
+    },
+    {
+      "start": 373.68,
+      "duration": 3.68,
+      "end": 377.36,
+      "text": "or some if i write this what does this"
+    },
+    {
+      "start": 376.319,
+      "duration": 3.281,
+      "end": 379.6,
+      "text": "signify"
+    },
+    {
+      "start": 377.36,
+      "duration": 3.679,
+      "end": 381.039,
+      "text": "this signifies"
+    },
+    {
+      "start": 379.6,
+      "duration": 3.599,
+      "end": 383.199,
+      "text": "till here"
+    },
+    {
+      "start": 381.039,
+      "duration": 4.321,
+      "end": 385.36,
+      "text": "like in this entire array"
+    },
+    {
+      "start": 383.199,
+      "duration": 4.321,
+      "end": 387.52000000000004,
+      "text": "can you get a subsequence like how many"
+    },
+    {
+      "start": 385.36,
+      "duration": 3.679,
+      "end": 389.039,
+      "text": "subsequences are there which will give"
+    },
+    {
+      "start": 387.52,
+      "duration": 2.72,
+      "end": 390.24,
+      "text": "you a sum s"
+    },
+    {
+      "start": 389.039,
+      "duration": 3.841,
+      "end": 392.88,
+      "text": "i repeat"
+    },
+    {
+      "start": 390.24,
+      "duration": 4.64,
+      "end": 394.88,
+      "text": "if i write 0 1 2 3"
+    },
+    {
+      "start": 392.88,
+      "duration": 3.2,
+      "end": 396.08,
+      "text": "till the third index"
+    },
+    {
+      "start": 394.88,
+      "duration": 3.039,
+      "end": 397.919,
+      "text": "till"
+    },
+    {
+      "start": 396.08,
+      "duration": 3.119,
+      "end": 399.199,
+      "text": "third index"
+    },
+    {
+      "start": 397.919,
+      "duration": 3.761,
+      "end": 401.68,
+      "text": "how many"
+    },
+    {
+      "start": 399.199,
+      "duration": 4.881,
+      "end": 404.08000000000004,
+      "text": "subsets will give you the sum equal to"
+    },
+    {
+      "start": 401.68,
+      "duration": 4.72,
+      "end": 406.40000000000003,
+      "text": "three that is the meaning of f of n"
+    },
+    {
+      "start": 404.08,
+      "duration": 5.76,
+      "end": 409.84,
+      "text": "minus one three so if someone is calling"
+    },
+    {
+      "start": 406.4,
+      "duration": 4.56,
+      "end": 410.96,
+      "text": "f of 3 comma 3 that means till the third"
+    },
+    {
+      "start": 409.84,
+      "duration": 3.04,
+      "end": 412.88,
+      "text": "index"
+    },
+    {
+      "start": 410.96,
+      "duration": 3.92,
+      "end": 414.88,
+      "text": "how many subsequence are there that"
+    },
+    {
+      "start": 412.88,
+      "duration": 4.8,
+      "end": 417.68,
+      "text": "gives you sum equal to 3 that is the"
+    },
+    {
+      "start": 414.88,
+      "duration": 5.92,
+      "end": 420.8,
+      "text": "meaning of the recurrence right so if i"
+    },
+    {
+      "start": 417.68,
+      "duration": 5.44,
+      "end": 423.12,
+      "text": "if i write this f of index"
+    },
+    {
+      "start": 420.8,
+      "duration": 4.56,
+      "end": 425.36,
+      "text": "comma sum there will be definitely a"
+    },
+    {
+      "start": 423.12,
+      "duration": 4.24,
+      "end": 427.36,
+      "text": "base case now we know if we are dealing"
+    },
+    {
+      "start": 425.36,
+      "duration": 3.76,
+      "end": 429.12,
+      "text": "with the indexes"
+    },
+    {
+      "start": 427.36,
+      "duration": 4.64,
+      "end": 432.0,
+      "text": "something is for sure if you're dealing"
+    },
+    {
+      "start": 429.12,
+      "duration": 4.24,
+      "end": 433.36,
+      "text": "with indexes the indexes we're starting"
+    },
+    {
+      "start": 432.0,
+      "duration": 3.28,
+      "end": 435.28,
+      "text": "from the back side which is we're"
+    },
+    {
+      "start": 433.36,
+      "duration": 3.36,
+      "end": 436.72,
+      "text": "starting from three so we'll move here"
+    },
+    {
+      "start": 435.28,
+      "duration": 3.28,
+      "end": 438.55999999999995,
+      "text": "then we'll move here then we'll move"
+    },
+    {
+      "start": 436.72,
+      "duration": 4.16,
+      "end": 440.88000000000005,
+      "text": "here so this is the end point where we"
+    },
+    {
+      "start": 438.56,
+      "duration": 4.479,
+      "end": 443.039,
+      "text": "will move right this is the last"
+    },
+    {
+      "start": 440.88,
+      "duration": 3.36,
+      "end": 444.24,
+      "text": "position that we will move again a very"
+    },
+    {
+      "start": 443.039,
+      "duration": 2.961,
+      "end": 446.0,
+      "text": "common thing that you have seen in"
+    },
+    {
+      "start": 444.24,
+      "duration": 3.679,
+      "end": 447.919,
+      "text": "almost all problems"
+    },
+    {
+      "start": 446.0,
+      "duration": 3.199,
+      "end": 449.199,
+      "text": "in all the index problems either if"
+    },
+    {
+      "start": 447.919,
+      "duration": 2.961,
+      "end": 450.88,
+      "text": "you're starting from the back it's going"
+    },
+    {
+      "start": 449.199,
+      "duration": 2.881,
+      "end": 452.08,
+      "text": "to be index equal to equal to 0 if"
+    },
+    {
+      "start": 450.88,
+      "duration": 3.12,
+      "end": 454.0,
+      "text": "you're starting from the front it's"
+    },
+    {
+      "start": 452.08,
+      "duration": 4.0,
+      "end": 456.08,
+      "text": "going to be the last index that's what"
+    },
+    {
+      "start": 454.0,
+      "duration": 4.639,
+      "end": 458.639,
+      "text": "the base case will be now what did i"
+    },
+    {
+      "start": 456.08,
+      "duration": 5.04,
+      "end": 461.12,
+      "text": "tell you in count pattern problems"
+    },
+    {
+      "start": 458.639,
+      "duration": 4.721,
+      "end": 463.36,
+      "text": "lecture 7 guys lecture 7 nahil if you"
+    },
+    {
+      "start": 461.12,
+      "duration": 4.4,
+      "end": 465.52,
+      "text": "have not seen it's your fault go back"
+    },
+    {
+      "start": 463.36,
+      "duration": 4.399,
+      "end": 467.759,
+      "text": "and watch it lecture seven is the most"
+    },
+    {
+      "start": 465.52,
+      "duration": 4.079,
+      "end": 469.599,
+      "text": "important lecture in the entire universe"
+    },
+    {
+      "start": 467.759,
+      "duration": 3.521,
+      "end": 471.28000000000003,
+      "text": "could be like this is the most important"
+    },
+    {
+      "start": 469.599,
+      "duration": 4.32,
+      "end": 473.919,
+      "text": "lecture if you're solving any problem on"
+    },
+    {
+      "start": 471.28,
+      "duration": 4.08,
+      "end": 475.35999999999996,
+      "text": "recursion dp anything lecture seven man"
+    },
+    {
+      "start": 473.919,
+      "duration": 2.321,
+      "end": 476.24,
+      "text": "lecture seven"
+    },
+    {
+      "start": 475.36,
+      "duration": 2.0,
+      "end": 477.36,
+      "text": "so"
+    },
+    {
+      "start": 476.24,
+      "duration": 4.399,
+      "end": 480.639,
+      "text": "return"
+    },
+    {
+      "start": 477.36,
+      "duration": 4.8,
+      "end": 482.16,
+      "text": "one if the condition is satisfied so we"
+    },
+    {
+      "start": 480.639,
+      "duration": 4.96,
+      "end": 485.599,
+      "text": "are at the base case"
+    },
+    {
+      "start": 482.16,
+      "duration": 5.92,
+      "end": 488.08000000000004,
+      "text": "now we need to write something which"
+    },
+    {
+      "start": 485.599,
+      "duration": 5.361,
+      "end": 490.96,
+      "text": "returns one and something which returns"
+    },
+    {
+      "start": 488.08,
+      "duration": 4.48,
+      "end": 492.56,
+      "text": "zero just keep it apart from some time"
+    },
+    {
+      "start": 490.96,
+      "duration": 3.84,
+      "end": 494.79999999999995,
+      "text": "keep it apart for some time we will"
+    },
+    {
+      "start": 492.56,
+      "duration": 3.759,
+      "end": 496.319,
+      "text": "think about this afterwards like what"
+    },
+    {
+      "start": 494.8,
+      "duration": 3.6,
+      "end": 498.40000000000003,
+      "text": "are the conditions on which you will"
+    },
+    {
+      "start": 496.319,
+      "duration": 3.761,
+      "end": 500.08000000000004,
+      "text": "return one and uh on which will return"
+    },
+    {
+      "start": 498.4,
+      "duration": 4.32,
+      "end": 502.71999999999997,
+      "text": "zero we'll think about that after some"
+    },
+    {
+      "start": 500.08,
+      "duration": 4.559,
+      "end": 504.639,
+      "text": "time first thing is done partially"
+    },
+    {
+      "start": 502.72,
+      "duration": 3.12,
+      "end": 505.84000000000003,
+      "text": "explore all possibilities"
+    },
+    {
+      "start": 504.639,
+      "duration": 2.4,
+      "end": 507.039,
+      "text": "in subsequences what are the"
+    },
+    {
+      "start": 505.84,
+      "duration": 4.079,
+      "end": 509.919,
+      "text": "possibilities"
+    },
+    {
+      "start": 507.039,
+      "duration": 4.16,
+      "end": 511.199,
+      "text": "one is the not pick"
+    },
+    {
+      "start": 509.919,
+      "duration": 3.36,
+      "end": 513.279,
+      "text": "where you see"
+    },
+    {
+      "start": 511.199,
+      "duration": 3.921,
+      "end": 515.12,
+      "text": "that guy will not be part of the subset"
+    },
+    {
+      "start": 513.279,
+      "duration": 4.081,
+      "end": 517.36,
+      "text": "that is very obvious"
+    },
+    {
+      "start": 515.12,
+      "duration": 4.08,
+      "end": 519.2,
+      "text": "the other one is the pick where you say"
+    },
+    {
+      "start": 517.36,
+      "duration": 3.919,
+      "end": 521.279,
+      "text": "that this guy is going to be the part of"
+    },
+    {
+      "start": 519.2,
+      "duration": 4.56,
+      "end": 523.76,
+      "text": "my subsequence we have already done in"
+    },
+    {
+      "start": 521.279,
+      "duration": 3.361,
+      "end": 524.64,
+      "text": "the done in the subset problem right"
+    },
+    {
+      "start": 523.76,
+      "duration": 2.88,
+      "end": 526.64,
+      "text": "so"
+    },
+    {
+      "start": 524.64,
+      "duration": 4.319,
+      "end": 528.959,
+      "text": "if i say not pick"
+    },
+    {
+      "start": 526.64,
+      "duration": 3.84,
+      "end": 530.48,
+      "text": "i am not picking that"
+    },
+    {
+      "start": 528.959,
+      "duration": 4.721,
+      "end": 533.68,
+      "text": "so basically"
+    },
+    {
+      "start": 530.48,
+      "duration": 6.08,
+      "end": 536.5600000000001,
+      "text": "if i'm at index if this is the array and"
+    },
+    {
+      "start": 533.68,
+      "duration": 6.0,
+      "end": 539.68,
+      "text": "if i'm at this index and i'm saying on"
+    },
+    {
+      "start": 536.56,
+      "duration": 5.52,
+      "end": 542.0799999999999,
+      "text": "this array can i get this sum so i'm"
+    },
+    {
+      "start": 539.68,
+      "duration": 4.32,
+      "end": 544.0,
+      "text": "saying let's not pick this i'll not pick"
+    },
+    {
+      "start": 542.08,
+      "duration": 3.52,
+      "end": 545.6,
+      "text": "this guy so the remaining portion of the"
+    },
+    {
+      "start": 544.0,
+      "duration": 5.12,
+      "end": 549.12,
+      "text": "array is this much"
+    },
+    {
+      "start": 545.6,
+      "duration": 6.16,
+      "end": 551.76,
+      "text": "this much so i'll go one lesser right"
+    },
+    {
+      "start": 549.12,
+      "duration": 4.399,
+      "end": 553.519,
+      "text": "so i'll go one lesser with the same sum"
+    },
+    {
+      "start": 551.76,
+      "duration": 3.759,
+      "end": 555.519,
+      "text": "because i have not picked that into the"
+    },
+    {
+      "start": 553.519,
+      "duration": 4.88,
+      "end": 558.399,
+      "text": "subset perfect"
+    },
+    {
+      "start": 555.519,
+      "duration": 5.041,
+      "end": 560.5600000000001,
+      "text": "when can you pick is my question"
+    },
+    {
+      "start": 558.399,
+      "duration": 4.481,
+      "end": 562.88,
+      "text": "assuming as of now you have not picked"
+    },
+    {
+      "start": 560.56,
+      "duration": 4.08,
+      "end": 564.64,
+      "text": "it so let's keep it at zero y zero"
+    },
+    {
+      "start": 562.88,
+      "duration": 3.84,
+      "end": 566.72,
+      "text": "because we are adding up we are adding"
+    },
+    {
+      "start": 564.64,
+      "duration": 3.52,
+      "end": 568.16,
+      "text": "up we are looking for number of ways so"
+    },
+    {
+      "start": 566.72,
+      "duration": 2.32,
+      "end": 569.0400000000001,
+      "text": "we'll keep it zero"
+    },
+    {
+      "start": 568.16,
+      "duration": 2.72,
+      "end": 570.88,
+      "text": "so"
+    },
+    {
+      "start": 569.04,
+      "duration": 4.239,
+      "end": 573.279,
+      "text": "we have a zero right"
+    },
+    {
+      "start": 570.88,
+      "duration": 3.68,
+      "end": 574.56,
+      "text": "now the question arises key okay when"
+    },
+    {
+      "start": 573.279,
+      "duration": 3.441,
+      "end": 576.72,
+      "text": "can we pick up"
+    },
+    {
+      "start": 574.56,
+      "duration": 4.399,
+      "end": 578.959,
+      "text": "so again let's understand"
+    },
+    {
+      "start": 576.72,
+      "duration": 4.64,
+      "end": 581.36,
+      "text": "if the summation is 3"
+    },
+    {
+      "start": 578.959,
+      "duration": 4.56,
+      "end": 583.5189999999999,
+      "text": "and the element over here is 2 so i'm"
+    },
+    {
+      "start": 581.36,
+      "duration": 3.68,
+      "end": 585.04,
+      "text": "saying till here"
+    },
+    {
+      "start": 583.519,
+      "duration": 3.44,
+      "end": 586.9590000000001,
+      "text": "on this array"
+    },
+    {
+      "start": 585.04,
+      "duration": 3.44,
+      "end": 588.48,
+      "text": "can you get the summation equal to 3. so"
+    },
+    {
+      "start": 586.959,
+      "duration": 5.44,
+      "end": 592.399,
+      "text": "if i'm trying to pick"
+    },
+    {
+      "start": 588.48,
+      "duration": 6.4,
+      "end": 594.88,
+      "text": "i can pick 2 i can but if i make the 6"
+    },
+    {
+      "start": 592.399,
+      "duration": 4.241,
+      "end": 596.64,
+      "text": "if i make this index 6"
+    },
+    {
+      "start": 594.88,
+      "duration": 4.32,
+      "end": 599.2,
+      "text": "can i pick it because i'm looking for a"
+    },
+    {
+      "start": 596.64,
+      "duration": 5.439,
+      "end": 602.079,
+      "text": "sum equal to 3 can i pick a 6 into my"
+    },
+    {
+      "start": 599.2,
+      "duration": 4.48,
+      "end": 603.6800000000001,
+      "text": "subset that will that will be of no use"
+    },
+    {
+      "start": 602.079,
+      "duration": 2.801,
+      "end": 604.88,
+      "text": "so i'll be like"
+    },
+    {
+      "start": 603.68,
+      "duration": 2.399,
+      "end": 606.079,
+      "text": "if"
+    },
+    {
+      "start": 604.88,
+      "duration": 2.88,
+      "end": 607.76,
+      "text": "if"
+    },
+    {
+      "start": 606.079,
+      "duration": 3.681,
+      "end": 609.76,
+      "text": "array of index"
+    },
+    {
+      "start": 607.76,
+      "duration": 4.0,
+      "end": 611.76,
+      "text": "is someone lesser than s"
+    },
+    {
+      "start": 609.76,
+      "duration": 4.319,
+      "end": 614.079,
+      "text": "then probably i can pick it"
+    },
+    {
+      "start": 611.76,
+      "duration": 4.24,
+      "end": 616.0,
+      "text": "then probably i can pick it and if i'm"
+    },
+    {
+      "start": 614.079,
+      "duration": 3.121,
+      "end": 617.1999999999999,
+      "text": "picking let's understand what will"
+    },
+    {
+      "start": 616.0,
+      "duration": 3.76,
+      "end": 619.76,
+      "text": "happen"
+    },
+    {
+      "start": 617.2,
+      "duration": 5.759,
+      "end": 622.9590000000001,
+      "text": "if i am picking this index"
+    },
+    {
+      "start": 619.76,
+      "duration": 5.68,
+      "end": 625.4399999999999,
+      "text": "so over here i was looking for a index"
+    },
+    {
+      "start": 622.959,
+      "duration": 4.401,
+      "end": 627.3599999999999,
+      "text": "and sum that means in this array i was"
+    },
+    {
+      "start": 625.44,
+      "duration": 4.48,
+      "end": 629.9200000000001,
+      "text": "trying to form the sum so if i decide"
+    },
+    {
+      "start": 627.36,
+      "duration": 4.719,
+      "end": 632.0790000000001,
+      "text": "that i will take this guy into my"
+    },
+    {
+      "start": 629.92,
+      "duration": 5.28,
+      "end": 635.1999999999999,
+      "text": "into my subset then the array will be"
+    },
+    {
+      "start": 632.079,
+      "duration": 5.76,
+      "end": 637.8389999999999,
+      "text": "reduced which makes it f of index minus"
+    },
+    {
+      "start": 635.2,
+      "duration": 4.8,
+      "end": 640.0,
+      "text": "1 but if i take this into my"
+    },
+    {
+      "start": 637.839,
+      "duration": 4.161,
+      "end": 642.0,
+      "text": "want the sum that i'm looking for will"
+    },
+    {
+      "start": 640.0,
+      "duration": 4.399,
+      "end": 644.399,
+      "text": "minimize it will so why don't you"
+    },
+    {
+      "start": 642.0,
+      "duration": 4.399,
+      "end": 646.399,
+      "text": "minimize so i'll be like okay"
+    },
+    {
+      "start": 644.399,
+      "duration": 5.361,
+      "end": 649.76,
+      "text": "f of index minus 1"
+    },
+    {
+      "start": 646.399,
+      "duration": 5.521,
+      "end": 651.92,
+      "text": "and let's minimize the sum by a of index"
+    },
+    {
+      "start": 649.76,
+      "duration": 4.88,
+      "end": 654.64,
+      "text": "so the sum will also be minimized so"
+    },
+    {
+      "start": 651.92,
+      "duration": 4.64,
+      "end": 656.56,
+      "text": "this are the two patterns again we have"
+    },
+    {
+      "start": 654.64,
+      "duration": 4.72,
+      "end": 659.36,
+      "text": "been seeing this in all the subsets"
+    },
+    {
+      "start": 656.56,
+      "duration": 5.04,
+      "end": 661.5999999999999,
+      "text": "problem not pick and pick pattern all"
+    },
+    {
+      "start": 659.36,
+      "duration": 4.4,
+      "end": 663.76,
+      "text": "sub sequence problems will have not pick"
+    },
+    {
+      "start": 661.6,
+      "duration": 5.44,
+      "end": 667.0400000000001,
+      "text": "and tick where you say okay i don't pick"
+    },
+    {
+      "start": 663.76,
+      "duration": 6.079,
+      "end": 669.8389999999999,
+      "text": "it so it's it stays still the same and"
+    },
+    {
+      "start": 667.04,
+      "duration": 5.68,
+      "end": 672.7199999999999,
+      "text": "if i pick it it is going to reduce so"
+    },
+    {
+      "start": 669.839,
+      "duration": 5.521,
+      "end": 675.36,
+      "text": "what was the pattern of problem"
+    },
+    {
+      "start": 672.72,
+      "duration": 3.76,
+      "end": 676.48,
+      "text": "count and then count what do we do"
+    },
+    {
+      "start": 675.36,
+      "duration": 2.08,
+      "end": 677.44,
+      "text": "we add up"
+    },
+    {
+      "start": 676.48,
+      "duration": 3.039,
+      "end": 679.519,
+      "text": "because"
+    },
+    {
+      "start": 677.44,
+      "duration": 4.16,
+      "end": 681.6,
+      "text": "how many choices do we have we have one"
+    },
+    {
+      "start": 679.519,
+      "duration": 4.641,
+      "end": 684.16,
+      "text": "choice as not pick we have another"
+    },
+    {
+      "start": 681.6,
+      "duration": 3.76,
+      "end": 685.36,
+      "text": "choice as pick so you're going to add"
+    },
+    {
+      "start": 684.16,
+      "duration": 2.4,
+      "end": 686.56,
+      "text": "not pick"
+    },
+    {
+      "start": 685.36,
+      "duration": 4.56,
+      "end": 689.92,
+      "text": "and pick"
+    },
+    {
+      "start": 686.56,
+      "duration": 5.76,
+      "end": 692.3199999999999,
+      "text": "we're going to add not pick and pick so"
+    },
+    {
+      "start": 689.92,
+      "duration": 4.24,
+      "end": 694.16,
+      "text": "i can say yes i can say"
+    },
+    {
+      "start": 692.32,
+      "duration": 2.959,
+      "end": 695.279,
+      "text": "you're going to return"
+    },
+    {
+      "start": 694.16,
+      "duration": 2.32,
+      "end": 696.48,
+      "text": "pick"
+    },
+    {
+      "start": 695.279,
+      "duration": 2.321,
+      "end": 697.6,
+      "text": "plus"
+    },
+    {
+      "start": 696.48,
+      "duration": 2.0,
+      "end": 698.48,
+      "text": "not"
+    },
+    {
+      "start": 697.6,
+      "duration": 2.08,
+      "end": 699.6800000000001,
+      "text": "pick"
+    },
+    {
+      "start": 698.48,
+      "duration": 4.0,
+      "end": 702.48,
+      "text": "so"
+    },
+    {
+      "start": 699.68,
+      "duration": 5.52,
+      "end": 705.1999999999999,
+      "text": "this is a choice this is a choice"
+    },
+    {
+      "start": 702.48,
+      "duration": 3.68,
+      "end": 706.16,
+      "text": "if this choice gives you some subsets"
+    },
+    {
+      "start": 705.2,
+      "duration": 2.879,
+      "end": 708.0790000000001,
+      "text": "take it"
+    },
+    {
+      "start": 706.16,
+      "duration": 4.239,
+      "end": 710.399,
+      "text": "this choice is going to give you some"
+    },
+    {
+      "start": 708.079,
+      "duration": 3.121,
+      "end": 711.1999999999999,
+      "text": "number of subsets take it"
+    },
+    {
+      "start": 710.399,
+      "duration": 4.321,
+      "end": 714.72,
+      "text": "and"
+    },
+    {
+      "start": 711.2,
+      "duration": 6.16,
+      "end": 717.36,
+      "text": "add them up to get the original answer"
+    },
+    {
+      "start": 714.72,
+      "duration": 4.96,
+      "end": 719.6800000000001,
+      "text": "so we have almost done the last couple"
+    },
+    {
+      "start": 717.36,
+      "duration": 3.84,
+      "end": 721.2,
+      "text": "of steps"
+    },
+    {
+      "start": 719.68,
+      "duration": 4.08,
+      "end": 723.76,
+      "text": "but still"
+    },
+    {
+      "start": 721.2,
+      "duration": 4.96,
+      "end": 726.1600000000001,
+      "text": "figuring out return 1 and return 0 is"
+    },
+    {
+      "start": 723.76,
+      "duration": 4.879,
+      "end": 728.639,
+      "text": "left okay so what does index of 0"
+    },
+    {
+      "start": 726.16,
+      "duration": 5.52,
+      "end": 731.68,
+      "text": "signify let's understand this indeed"
+    },
+    {
+      "start": 728.639,
+      "duration": 4.561,
+      "end": 733.2,
+      "text": "so if i am standing at an uh"
+    },
+    {
+      "start": 731.68,
+      "duration": 3.839,
+      "end": 735.519,
+      "text": "0"
+    },
+    {
+      "start": 733.2,
+      "duration": 4.319,
+      "end": 737.519,
+      "text": "and i come up with a sum if i come up"
+    },
+    {
+      "start": 735.519,
+      "duration": 4.241,
+      "end": 739.76,
+      "text": "with a sum"
+    },
+    {
+      "start": 737.519,
+      "duration": 5.041,
+      "end": 742.5600000000001,
+      "text": "when can"
+    },
+    {
+      "start": 739.76,
+      "duration": 5.759,
+      "end": 745.519,
+      "text": "an array having a single element because"
+    },
+    {
+      "start": 742.56,
+      "duration": 4.64,
+      "end": 747.1999999999999,
+      "text": "if i am standing at the index zero it"
+    },
+    {
+      "start": 745.519,
+      "duration": 3.281,
+      "end": 748.8,
+      "text": "eventually means that it has single"
+    },
+    {
+      "start": 747.2,
+      "duration": 4.0,
+      "end": 751.2,
+      "text": "element make sense because if i'm"
+    },
+    {
+      "start": 748.8,
+      "duration": 4.56,
+      "end": 753.3599999999999,
+      "text": "standing then there are has a single"
+    },
+    {
+      "start": 751.2,
+      "duration": 5.36,
+      "end": 756.5600000000001,
+      "text": "and if i'm having a sum"
+    },
+    {
+      "start": 753.36,
+      "duration": 3.2,
+      "end": 756.5600000000001,
+      "text": "when can this guy"
+    },
+    {
+      "start": 756.959,
+      "duration": 3.921,
+      "end": 760.88,
+      "text": "give me this sum"
+    },
+    {
+      "start": 758.639,
+      "duration": 4.481,
+      "end": 763.12,
+      "text": "i'd be like"
+    },
+    {
+      "start": 760.88,
+      "duration": 4.32,
+      "end": 765.2,
+      "text": "if this sum value is 2"
+    },
+    {
+      "start": 763.12,
+      "duration": 4.8,
+      "end": 767.92,
+      "text": "this also has to be 2."
+    },
+    {
+      "start": 765.2,
+      "duration": 5.84,
+      "end": 771.0400000000001,
+      "text": "if this sum value value is 4 this also"
+    },
+    {
+      "start": 767.92,
+      "duration": 4.719,
+      "end": 772.639,
+      "text": "has to be 4 if this sum value is 0"
+    },
+    {
+      "start": 771.04,
+      "duration": 3.28,
+      "end": 774.3199999999999,
+      "text": "then also it's possible"
+    },
+    {
+      "start": 772.639,
+      "duration": 4.721,
+      "end": 777.36,
+      "text": "even if it's 4"
+    },
+    {
+      "start": 774.32,
+      "duration": 6.24,
+      "end": 780.5600000000001,
+      "text": "even if it's 4 and the sum value is 0"
+    },
+    {
+      "start": 777.36,
+      "duration": 5.36,
+      "end": 782.72,
+      "text": "it's still possible why"
+    },
+    {
+      "start": 780.56,
+      "duration": 4.0,
+      "end": 784.56,
+      "text": "because because"
+    },
+    {
+      "start": 782.72,
+      "duration": 4.64,
+      "end": 787.36,
+      "text": "i am having"
+    },
+    {
+      "start": 784.56,
+      "duration": 5.36,
+      "end": 789.92,
+      "text": "a 4 over here and also not pick it so"
+    },
+    {
+      "start": 787.36,
+      "duration": 5.919,
+      "end": 793.279,
+      "text": "probably you can write one more case"
+    },
+    {
+      "start": 789.92,
+      "duration": 4.24,
+      "end": 794.16,
+      "text": "of if at any moment sum becomes equal to"
+    },
+    {
+      "start": 793.279,
+      "duration": 4.0,
+      "end": 797.279,
+      "text": "0"
+    },
+    {
+      "start": 794.16,
+      "duration": 5.359,
+      "end": 799.519,
+      "text": "you can also return 1 so that's one more"
+    },
+    {
+      "start": 797.279,
+      "duration": 4.8,
+      "end": 802.079,
+      "text": "counting case that you will add if at"
+    },
+    {
+      "start": 799.519,
+      "duration": 4.721,
+      "end": 804.24,
+      "text": "any index sum is equal to equal to zero"
+    },
+    {
+      "start": 802.079,
+      "duration": 4.161,
+      "end": 806.2399999999999,
+      "text": "so"
+    },
+    {
+      "start": 804.24,
+      "duration": 3.68,
+      "end": 807.92,
+      "text": "now the base case will be slightly"
+    },
+    {
+      "start": 806.24,
+      "duration": 3.039,
+      "end": 809.279,
+      "text": "difference"
+    },
+    {
+      "start": 807.92,
+      "duration": 3.919,
+      "end": 811.8389999999999,
+      "text": "it will be"
+    },
+    {
+      "start": 809.279,
+      "duration": 5.761,
+      "end": 815.04,
+      "text": "we are at index zero and f of zero sum"
+    },
+    {
+      "start": 811.839,
+      "duration": 7.201,
+      "end": 819.0400000000001,
+      "text": "so in order for this guy to give me this"
+    },
+    {
+      "start": 815.04,
+      "duration": 6.0,
+      "end": 821.04,
+      "text": "sum this has to be s this has to be s"
+    },
+    {
+      "start": 819.04,
+      "duration": 3.2,
+      "end": 822.24,
+      "text": "so i can say"
+    },
+    {
+      "start": 821.04,
+      "duration": 2.799,
+      "end": 823.8389999999999,
+      "text": "if"
+    },
+    {
+      "start": 822.24,
+      "duration": 4.32,
+      "end": 826.5600000000001,
+      "text": "or i can say"
+    },
+    {
+      "start": 823.839,
+      "duration": 2.721,
+      "end": 826.5600000000001,
+      "text": "in short"
+    },
+    {
+      "start": 826.88,
+      "duration": 3.759,
+      "end": 830.639,
+      "text": "return"
+    },
+    {
+      "start": 828.72,
+      "duration": 4.479,
+      "end": 833.1990000000001,
+      "text": "array of index"
+    },
+    {
+      "start": 830.639,
+      "duration": 5.041,
+      "end": 835.6800000000001,
+      "text": "is equal to equal to s"
+    },
+    {
+      "start": 833.199,
+      "duration": 3.921,
+      "end": 837.12,
+      "text": "then only this guy can give me a subset"
+    },
+    {
+      "start": 835.68,
+      "duration": 4.399,
+      "end": 840.079,
+      "text": "then only it will"
+    },
+    {
+      "start": 837.12,
+      "duration": 3.92,
+      "end": 841.04,
+      "text": "return a one otherwise it will return a"
+    },
+    {
+      "start": 840.079,
+      "duration": 3.2,
+      "end": 843.279,
+      "text": "zero"
+    },
+    {
+      "start": 841.04,
+      "duration": 4.88,
+      "end": 845.92,
+      "text": "sense i'll repeat again"
+    },
+    {
+      "start": 843.279,
+      "duration": 4.081,
+      "end": 847.36,
+      "text": "i said if at any moment i get the sum"
+    },
+    {
+      "start": 845.92,
+      "duration": 3.599,
+      "end": 849.519,
+      "text": "it's a subset"
+    },
+    {
+      "start": 847.36,
+      "duration": 4.56,
+      "end": 851.92,
+      "text": "or if i reach the last index"
+    },
+    {
+      "start": 849.519,
+      "duration": 5.041,
+      "end": 854.5600000000001,
+      "text": "i'm still left out to form"
+    },
+    {
+      "start": 851.92,
+      "duration": 5.52,
+      "end": 857.4399999999999,
+      "text": "this s this guy has to be s this guy has"
+    },
+    {
+      "start": 854.56,
+      "duration": 4.8,
+      "end": 859.3599999999999,
+      "text": "to be s there is no other option"
+    },
+    {
+      "start": 857.44,
+      "duration": 4.16,
+      "end": 861.6,
+      "text": "and then only i'll count it so i just"
+    },
+    {
+      "start": 859.36,
+      "duration": 4.0,
+      "end": 863.36,
+      "text": "make it equal and i count it as one and"
+    },
+    {
+      "start": 861.6,
+      "duration": 5.039,
+      "end": 866.639,
+      "text": "if they are not equal then i'll return"
+    },
+    {
+      "start": 863.36,
+      "duration": 6.4,
+      "end": 869.76,
+      "text": "zero so automatically return one"
+    },
+    {
+      "start": 866.639,
+      "duration": 5.601,
+      "end": 872.24,
+      "text": "and return zero have been covered so"
+    },
+    {
+      "start": 869.76,
+      "duration": 6.4,
+      "end": 876.16,
+      "text": "that's how you do it you either return 0"
+    },
+    {
+      "start": 872.24,
+      "duration": 7.36,
+      "end": 879.6,
+      "text": "or 1. now this this is exactly similar"
+    },
+    {
+      "start": 876.16,
+      "duration": 7.52,
+      "end": 883.68,
+      "text": "to dp14 if you remember this is exactly"
+    },
+    {
+      "start": 879.6,
+      "duration": 7.2,
+      "end": 886.8000000000001,
+      "text": "yes point to point similar to dp 14 the"
+    },
+    {
+      "start": 883.68,
+      "duration": 5.839,
+      "end": 889.519,
+      "text": "only slide change that we are doing is"
+    },
+    {
+      "start": 886.8,
+      "duration": 5.52,
+      "end": 892.3199999999999,
+      "text": "we are counting it instead of doing in"
+    },
+    {
+      "start": 889.519,
+      "duration": 3.68,
+      "end": 893.199,
+      "text": "that dp problem we did"
+    },
+    {
+      "start": 892.32,
+      "duration": 3.759,
+      "end": 896.0790000000001,
+      "text": "pick"
+    },
+    {
+      "start": 893.199,
+      "duration": 4.401,
+      "end": 897.5999999999999,
+      "text": "or not pick we did this why did we do"
+    },
+    {
+      "start": 896.079,
+      "duration": 2.961,
+      "end": 899.04,
+      "text": "this because"
+    },
+    {
+      "start": 897.6,
+      "duration": 3.599,
+      "end": 901.1990000000001,
+      "text": "we were looking for"
+    },
+    {
+      "start": 899.04,
+      "duration": 4.159,
+      "end": 903.199,
+      "text": "if this choice gives you answer but if"
+    },
+    {
+      "start": 901.199,
+      "duration": 4.08,
+      "end": 905.279,
+      "text": "this choice gives you answer over here"
+    },
+    {
+      "start": 903.199,
+      "duration": 4.801,
+      "end": 908.0,
+      "text": "we are looking to count how many choices"
+    },
+    {
+      "start": 905.279,
+      "duration": 4.081,
+      "end": 909.36,
+      "text": "are giving you answer thereby"
+    },
+    {
+      "start": 908.0,
+      "duration": 2.959,
+      "end": 910.959,
+      "text": "sum it up"
+    },
+    {
+      "start": 909.36,
+      "duration": 3.12,
+      "end": 912.48,
+      "text": "make sense right"
+    },
+    {
+      "start": 910.959,
+      "duration": 4.32,
+      "end": 915.279,
+      "text": "so what"
+    },
+    {
+      "start": 912.48,
+      "duration": 4.479,
+      "end": 916.9590000000001,
+      "text": "so we have written a recursion right"
+    },
+    {
+      "start": 915.279,
+      "duration": 2.481,
+      "end": 917.76,
+      "text": "so what will be the time complexity for"
+    },
+    {
+      "start": 916.959,
+      "duration": 2.641,
+      "end": 919.5999999999999,
+      "text": "this"
+    },
+    {
+      "start": 917.76,
+      "duration": 3.439,
+      "end": 921.199,
+      "text": "definitely we go of 2 to the power n"
+    },
+    {
+      "start": 919.6,
+      "duration": 3.52,
+      "end": 923.12,
+      "text": "because there are two choices for"
+    },
+    {
+      "start": 921.199,
+      "duration": 3.361,
+      "end": 924.56,
+      "text": "everyone you say you are going to pick"
+    },
+    {
+      "start": 923.12,
+      "duration": 3.12,
+      "end": 926.24,
+      "text": "it or you are saying that i'm not going"
+    },
+    {
+      "start": 924.56,
+      "duration": 3.44,
+      "end": 928.0,
+      "text": "to pick it fan no matter what happens i"
+    },
+    {
+      "start": 926.24,
+      "duration": 3.519,
+      "end": 929.759,
+      "text": "am not going to make it i'm like that's"
+    },
+    {
+      "start": 928.0,
+      "duration": 4.16,
+      "end": 932.16,
+      "text": "fine that's fine let's not pick it so"
+    },
+    {
+      "start": 929.759,
+      "duration": 4.401,
+      "end": 934.16,
+      "text": "trudy powering is the number of choices"
+    },
+    {
+      "start": 932.16,
+      "duration": 4.32,
+      "end": 936.48,
+      "text": "that you can have however the space"
+    },
+    {
+      "start": 934.16,
+      "duration": 5.039,
+      "end": 939.199,
+      "text": "complexity that's definitely an"
+    },
+    {
+      "start": 936.48,
+      "duration": 4.719,
+      "end": 941.1990000000001,
+      "text": "auxiliary stack space of big of it now"
+    },
+    {
+      "start": 939.199,
+      "duration": 4.32,
+      "end": 943.519,
+      "text": "can we memorize this"
+    },
+    {
+      "start": 941.199,
+      "duration": 4.0,
+      "end": 945.199,
+      "text": "yes we can"
+    },
+    {
+      "start": 943.519,
+      "duration": 4.801,
+      "end": 948.32,
+      "text": "only if there are"
+    },
+    {
+      "start": 945.199,
+      "duration": 5.841,
+      "end": 951.04,
+      "text": "overlapping sub problems yes only if"
+    },
+    {
+      "start": 948.32,
+      "duration": 4.4,
+      "end": 952.72,
+      "text": "there are overlapping sub problems and"
+    },
+    {
+      "start": 951.04,
+      "duration": 3.76,
+      "end": 954.8,
+      "text": "we know that there will be overlapping"
+    },
+    {
+      "start": 952.72,
+      "duration": 4.239,
+      "end": 956.9590000000001,
+      "text": "sub problems we have been seeing that"
+    },
+    {
+      "start": 954.8,
+      "duration": 5.279,
+      "end": 960.079,
+      "text": "but still in order to understand this"
+    },
+    {
+      "start": 956.959,
+      "duration": 4.88,
+      "end": 961.8389999999999,
+      "text": "algorithm of count better because we are"
+    },
+    {
+      "start": 960.079,
+      "duration": 4.161,
+      "end": 964.2399999999999,
+      "text": "going to deal with a lot of problems in"
+    },
+    {
+      "start": 961.839,
+      "duration": 4.24,
+      "end": 966.0790000000001,
+      "text": "count only for this problem i'll be"
+    },
+    {
+      "start": 964.24,
+      "duration": 4.08,
+      "end": 968.32,
+      "text": "drawing the recursion tree so that the"
+    },
+    {
+      "start": 966.079,
+      "duration": 4.081,
+      "end": 970.16,
+      "text": "count recursion tree is clear to you and"
+    },
+    {
+      "start": 968.32,
+      "duration": 4.16,
+      "end": 972.48,
+      "text": "you get a clear visualization how does"
+    },
+    {
+      "start": 970.16,
+      "duration": 4.799,
+      "end": 974.959,
+      "text": "that work so let's take the array to be"
+    },
+    {
+      "start": 972.48,
+      "duration": 3.68,
+      "end": 976.16,
+      "text": "uh one uh"
+    },
+    {
+      "start": 974.959,
+      "duration": 3.601,
+      "end": 978.56,
+      "text": "three two"
+    },
+    {
+      "start": 976.16,
+      "duration": 4.56,
+      "end": 980.7199999999999,
+      "text": "and i'm looking for the sum as three so"
+    },
+    {
+      "start": 978.56,
+      "duration": 4.399,
+      "end": 982.959,
+      "text": "i've shrinked the array to this so what"
+    },
+    {
+      "start": 980.72,
+      "duration": 4.799,
+      "end": 985.519,
+      "text": "do i start off with i started with the"
+    },
+    {
+      "start": 982.959,
+      "duration": 4.481,
+      "end": 987.4399999999999,
+      "text": "index two and three because this is"
+    },
+    {
+      "start": 985.519,
+      "duration": 4.161,
+      "end": 989.68,
+      "text": "where i start up which is zero one two"
+    },
+    {
+      "start": 987.44,
+      "duration": 4.639,
+      "end": 992.0790000000001,
+      "text": "index and with the sum three"
+    },
+    {
+      "start": 989.68,
+      "duration": 4.159,
+      "end": 993.8389999999999,
+      "text": "what are the options i sell not pick or"
+    },
+    {
+      "start": 992.079,
+      "duration": 4.32,
+      "end": 996.399,
+      "text": "i say i'll pick"
+    },
+    {
+      "start": 993.839,
+      "duration": 5.041,
+      "end": 998.8800000000001,
+      "text": "right so if i don't pick i'll move to"
+    },
+    {
+      "start": 996.399,
+      "duration": 6.161,
+      "end": 1002.56,
+      "text": "the previous index with the same guy"
+    },
+    {
+      "start": 998.88,
+      "duration": 5.44,
+      "end": 1004.32,
+      "text": "same sub and if i decide to uh pick"
+    },
+    {
+      "start": 1002.56,
+      "duration": 3.6,
+      "end": 1006.16,
+      "text": "i'll pick this guy too"
+    },
+    {
+      "start": 1004.32,
+      "duration": 2.8,
+      "end": 1007.12,
+      "text": "and i'll be left off with the sum one"
+    },
+    {
+      "start": 1006.16,
+      "duration": 3.119,
+      "end": 1009.279,
+      "text": "because"
+    },
+    {
+      "start": 1007.12,
+      "duration": 3.519,
+      "end": 1010.639,
+      "text": "if i take this two into account the sum"
+    },
+    {
+      "start": 1009.279,
+      "duration": 3.761,
+      "end": 1013.04,
+      "text": "will shrink"
+    },
+    {
+      "start": 1010.639,
+      "duration": 5.521,
+      "end": 1016.16,
+      "text": "by the value two and it'll give me this"
+    },
+    {
+      "start": 1013.04,
+      "duration": 4.0,
+      "end": 1017.04,
+      "text": "one this is one way of"
+    },
+    {
+      "start": 1016.16,
+      "duration": 2.88,
+      "end": 1019.04,
+      "text": "pick"
+    },
+    {
+      "start": 1017.04,
+      "duration": 3.52,
+      "end": 1020.56,
+      "text": "this is one way of not pick because if"
+    },
+    {
+      "start": 1019.04,
+      "duration": 2.479,
+      "end": 1021.519,
+      "text": "i'm not picking then i'm just moving"
+    },
+    {
+      "start": 1020.56,
+      "duration": 2.639,
+      "end": 1023.199,
+      "text": "across"
+    },
+    {
+      "start": 1021.519,
+      "duration": 4.881,
+      "end": 1026.4,
+      "text": "again there'll be two ways"
+    },
+    {
+      "start": 1023.199,
+      "duration": 5.6,
+      "end": 1028.799,
+      "text": "pick and not pick so i am at index one"
+    },
+    {
+      "start": 1026.4,
+      "duration": 4.159,
+      "end": 1030.5590000000002,
+      "text": "and i am saying i'll not pick so i'll"
+    },
+    {
+      "start": 1028.799,
+      "duration": 2.721,
+      "end": 1031.52,
+      "text": "move to index zero"
+    },
+    {
+      "start": 1030.559,
+      "duration": 3.52,
+      "end": 1034.079,
+      "text": "with"
+    },
+    {
+      "start": 1031.52,
+      "duration": 4.48,
+      "end": 1036.0,
+      "text": "three and i'll move to index zero over"
+    },
+    {
+      "start": 1034.079,
+      "duration": 3.36,
+      "end": 1037.4389999999999,
+      "text": "here let's understand what happens"
+    },
+    {
+      "start": 1036.0,
+      "duration": 4.559,
+      "end": 1040.559,
+      "text": "you are saying pick"
+    },
+    {
+      "start": 1037.439,
+      "duration": 5.52,
+      "end": 1042.959,
+      "text": "at index one index one is having three"
+    },
+    {
+      "start": 1040.559,
+      "duration": 3.28,
+      "end": 1043.839,
+      "text": "so three was the initial guy you took"
+    },
+    {
+      "start": 1042.959,
+      "duration": 2.561,
+      "end": 1045.52,
+      "text": "three"
+    },
+    {
+      "start": 1043.839,
+      "duration": 2.48,
+      "end": 1046.319,
+      "text": "so this is what happens three minus"
+    },
+    {
+      "start": 1045.52,
+      "duration": 4.159,
+      "end": 1049.679,
+      "text": "three"
+    },
+    {
+      "start": 1046.319,
+      "duration": 4.881,
+      "end": 1051.2,
+      "text": "thereby zero comma zero okay now this is"
+    },
+    {
+      "start": 1049.679,
+      "duration": 3.841,
+      "end": 1053.52,
+      "text": "zero comma three"
+    },
+    {
+      "start": 1051.2,
+      "duration": 4.08,
+      "end": 1055.28,
+      "text": "so you have reached the index 0"
+    },
+    {
+      "start": 1053.52,
+      "duration": 4.0,
+      "end": 1057.52,
+      "text": "that means you have reached here"
+    },
+    {
+      "start": 1055.28,
+      "duration": 4.32,
+      "end": 1059.6,
+      "text": "and you are still looking for 3 you're"
+    },
+    {
+      "start": 1057.52,
+      "duration": 4.72,
+      "end": 1062.24,
+      "text": "still looking for 3 can you obtain 3"
+    },
+    {
+      "start": 1059.6,
+      "duration": 4.64,
+      "end": 1064.24,
+      "text": "from here no so you say"
+    },
+    {
+      "start": 1062.24,
+      "duration": 3.36,
+      "end": 1065.6,
+      "text": "this is not a possible way"
+    },
+    {
+      "start": 1064.24,
+      "duration": 2.48,
+      "end": 1066.72,
+      "text": "make sense this is definitely not a"
+    },
+    {
+      "start": 1065.6,
+      "duration": 3.12,
+      "end": 1068.7199999999998,
+      "text": "possible way"
+    },
+    {
+      "start": 1066.72,
+      "duration": 3.92,
+      "end": 1070.64,
+      "text": "you're at f of zero zero you have"
+    },
+    {
+      "start": 1068.72,
+      "duration": 3.12,
+      "end": 1071.84,
+      "text": "achieved your target you've achieved"
+    },
+    {
+      "start": 1070.64,
+      "duration": 3.039,
+      "end": 1073.679,
+      "text": "your target"
+    },
+    {
+      "start": 1071.84,
+      "duration": 4.48,
+      "end": 1076.32,
+      "text": "let's look at over here you've achieved"
+    },
+    {
+      "start": 1073.679,
+      "duration": 5.12,
+      "end": 1078.799,
+      "text": "your target so you're going to return"
+    },
+    {
+      "start": 1076.32,
+      "duration": 4.239,
+      "end": 1080.559,
+      "text": "a one you've achieved your target so in"
+    },
+    {
+      "start": 1078.799,
+      "duration": 2.721,
+      "end": 1081.52,
+      "text": "total this"
+    },
+    {
+      "start": 1080.559,
+      "duration": 3.041,
+      "end": 1083.6,
+      "text": "choice"
+    },
+    {
+      "start": 1081.52,
+      "duration": 4.48,
+      "end": 1086.0,
+      "text": "the non-picked choice give you zero"
+    },
+    {
+      "start": 1083.6,
+      "duration": 5.36,
+      "end": 1088.9599999999998,
+      "text": "substitutes the pictures give you one"
+    },
+    {
+      "start": 1086.0,
+      "duration": 5.039,
+      "end": 1091.039,
+      "text": "subset so this in total gave you"
+    },
+    {
+      "start": 1088.96,
+      "duration": 4.4,
+      "end": 1093.3600000000001,
+      "text": "one subset perfect"
+    },
+    {
+      "start": 1091.039,
+      "duration": 4.0,
+      "end": 1095.039,
+      "text": "now you are having one comma one again"
+    },
+    {
+      "start": 1093.36,
+      "duration": 4.0,
+      "end": 1097.36,
+      "text": "it will have two choices"
+    },
+    {
+      "start": 1095.039,
+      "duration": 4.241,
+      "end": 1099.28,
+      "text": "of not picking up of"
+    },
+    {
+      "start": 1097.36,
+      "duration": 4.24,
+      "end": 1101.6,
+      "text": "picking up so if you decide to not pick"
+    },
+    {
+      "start": 1099.28,
+      "duration": 4.32,
+      "end": 1103.6,
+      "text": "up you'll go to zero with one and we"
+    },
+    {
+      "start": 1101.6,
+      "duration": 2.959,
+      "end": 1104.559,
+      "text": "decide to pick up can you pick up is my"
+    },
+    {
+      "start": 1103.6,
+      "duration": 3.76,
+      "end": 1107.36,
+      "text": "question"
+    },
+    {
+      "start": 1104.559,
+      "duration": 4.961,
+      "end": 1109.52,
+      "text": "you can't pick up you can't pick up why"
+    },
+    {
+      "start": 1107.36,
+      "duration": 4.0,
+      "end": 1111.36,
+      "text": "because at index one you have a three"
+    },
+    {
+      "start": 1109.52,
+      "duration": 4.0,
+      "end": 1113.52,
+      "text": "and you're looking for something as one"
+    },
+    {
+      "start": 1111.36,
+      "duration": 4.24,
+      "end": 1115.6,
+      "text": "so you can't pick up the pickup option"
+    },
+    {
+      "start": 1113.52,
+      "duration": 4.32,
+      "end": 1117.84,
+      "text": "will not be there the pickup option will"
+    },
+    {
+      "start": 1115.6,
+      "duration": 4.88,
+      "end": 1120.48,
+      "text": "never be there so this guy will be zero"
+    },
+    {
+      "start": 1117.84,
+      "duration": 4.8,
+      "end": 1122.6399999999999,
+      "text": "the pickup option will be zero"
+    },
+    {
+      "start": 1120.48,
+      "duration": 4.24,
+      "end": 1124.72,
+      "text": "you see over here the pickup option is"
+    },
+    {
+      "start": 1122.64,
+      "duration": 3.44,
+      "end": 1126.0800000000002,
+      "text": "zero just see pickup option is zero you"
+    },
+    {
+      "start": 1124.72,
+      "duration": 4.72,
+      "end": 1129.44,
+      "text": "can't pick up this line will not be"
+    },
+    {
+      "start": 1126.08,
+      "duration": 4.64,
+      "end": 1130.72,
+      "text": "executed so the pickup stays as zero"
+    },
+    {
+      "start": 1129.44,
+      "duration": 3.92,
+      "end": 1133.3600000000001,
+      "text": "what about this"
+    },
+    {
+      "start": 1130.72,
+      "duration": 4.64,
+      "end": 1135.3600000000001,
+      "text": "you you are at index zero"
+    },
+    {
+      "start": 1133.36,
+      "duration": 3.28,
+      "end": 1136.6399999999999,
+      "text": "and you're having a value one so you got"
+    },
+    {
+      "start": 1135.36,
+      "duration": 3.12,
+      "end": 1138.4799999999998,
+      "text": "that value 1"
+    },
+    {
+      "start": 1136.64,
+      "duration": 6.0,
+      "end": 1142.64,
+      "text": "so 1"
+    },
+    {
+      "start": 1138.48,
+      "duration": 5.04,
+      "end": 1143.52,
+      "text": "equal to equal to 1 thereby this returns"
+    },
+    {
+      "start": 1142.64,
+      "duration": 3.6,
+      "end": 1146.24,
+      "text": "1"
+    },
+    {
+      "start": 1143.52,
+      "duration": 5.6,
+      "end": 1149.12,
+      "text": "so a not pick choice give you 1 a pick"
+    },
+    {
+      "start": 1146.24,
+      "duration": 6.08,
+      "end": 1152.32,
+      "text": "choice give you 0 so in total you got 1"
+    },
+    {
+      "start": 1149.12,
+      "duration": 5.439,
+      "end": 1154.559,
+      "text": "subset now the over here the pick"
+    },
+    {
+      "start": 1152.32,
+      "duration": 4.96,
+      "end": 1157.28,
+      "text": "the not pick choice give you one"
+    },
+    {
+      "start": 1154.559,
+      "duration": 5.12,
+      "end": 1159.6789999999999,
+      "text": "the pictures give you one so you sum it"
+    },
+    {
+      "start": 1157.28,
+      "duration": 5.68,
+      "end": 1162.96,
+      "text": "up and you get in total of two choices"
+    },
+    {
+      "start": 1159.679,
+      "duration": 5.12,
+      "end": 1164.799,
+      "text": "so the number of choices over here is"
+    },
+    {
+      "start": 1162.96,
+      "duration": 4.4,
+      "end": 1167.3600000000001,
+      "text": "two and that makes sense because one is"
+    },
+    {
+      "start": 1164.799,
+      "duration": 4.561,
+      "end": 1169.36,
+      "text": "one comma two the other is three so"
+    },
+    {
+      "start": 1167.36,
+      "duration": 5.679,
+      "end": 1173.039,
+      "text": "that's how the recursion works and"
+    },
+    {
+      "start": 1169.36,
+      "duration": 3.679,
+      "end": 1173.039,
+      "text": "remember the recursion will go like this"
+    },
+    {
+      "start": 1176.72,
+      "duration": 3.12,
+      "end": 1179.84,
+      "text": "remember recursion"
+    },
+    {
+      "start": 1181.679,
+      "duration": 4.321,
+      "end": 1186.0,
+      "text": "this is how the recursion goes man"
+    },
+    {
+      "start": 1184.48,
+      "duration": 3.12,
+      "end": 1187.6,
+      "text": "perfect so"
+    },
+    {
+      "start": 1186.0,
+      "duration": 3.36,
+      "end": 1189.36,
+      "text": "we did not see any overlapping sub"
+    },
+    {
+      "start": 1187.6,
+      "duration": 3.92,
+      "end": 1191.52,
+      "text": "problems here but if you take the array"
+    },
+    {
+      "start": 1189.36,
+      "duration": 4.64,
+      "end": 1194.0,
+      "text": "to be bigger you can observe overlapping"
+    },
+    {
+      "start": 1191.52,
+      "duration": 6.08,
+      "end": 1197.6,
+      "text": "sub problems so now it's time to"
+    },
+    {
+      "start": 1194.0,
+      "duration": 3.6,
+      "end": 1197.6,
+      "text": "definitely memoize"
+    },
+    {
+      "start": 1198.08,
+      "duration": 5.44,
+      "end": 1203.52,
+      "text": "so if i'm looking for memoization"
+    },
+    {
+      "start": 1201.36,
+      "duration": 3.04,
+      "end": 1204.3999999999999,
+      "text": "you know there are two parameters one is"
+    },
+    {
+      "start": 1203.52,
+      "duration": 2.88,
+      "end": 1206.4,
+      "text": "index"
+    },
+    {
+      "start": 1204.4,
+      "duration": 4.159,
+      "end": 1208.5590000000002,
+      "text": "the another one is sum"
+    },
+    {
+      "start": 1206.4,
+      "duration": 4.399,
+      "end": 1210.799,
+      "text": "so what do you do for index"
+    },
+    {
+      "start": 1208.559,
+      "duration": 4.961,
+      "end": 1213.52,
+      "text": "you make it for uh"
+    },
+    {
+      "start": 1210.799,
+      "duration": 5.921,
+      "end": 1216.72,
+      "text": "0 to n minus 1 is the index so you will"
+    },
+    {
+      "start": 1213.52,
+      "duration": 5.6,
+      "end": 1219.12,
+      "text": "be requiring an n size array the sum is"
+    },
+    {
+      "start": 1216.72,
+      "duration": 5.04,
+      "end": 1221.76,
+      "text": "whatever sum is given to you so you take"
+    },
+    {
+      "start": 1219.12,
+      "duration": 5.76,
+      "end": 1224.8799999999999,
+      "text": "one more size sum plus one so this is"
+    },
+    {
+      "start": 1221.76,
+      "duration": 4.56,
+      "end": 1226.32,
+      "text": "going to be the dp of n"
+    },
+    {
+      "start": 1224.88,
+      "duration": 3.6,
+      "end": 1228.48,
+      "text": "sum plus one"
+    },
+    {
+      "start": 1226.32,
+      "duration": 3.839,
+      "end": 1230.1589999999999,
+      "text": "and you know how to memorize this it's a"
+    },
+    {
+      "start": 1228.48,
+      "duration": 2.88,
+      "end": 1231.3600000000001,
+      "text": "very simple step how do you memorize"
+    },
+    {
+      "start": 1230.159,
+      "duration": 2.4,
+      "end": 1232.5590000000002,
+      "text": "guys come on"
+    },
+    {
+      "start": 1231.36,
+      "duration": 3.439,
+      "end": 1234.799,
+      "text": "very simple"
+    },
+    {
+      "start": 1232.559,
+      "duration": 4.161,
+      "end": 1236.72,
+      "text": "now though it's like"
+    },
+    {
+      "start": 1234.799,
+      "duration": 3.281,
+      "end": 1238.08,
+      "text": "bread and butter to you like you just"
+    },
+    {
+      "start": 1236.72,
+      "duration": 3.92,
+      "end": 1240.64,
+      "text": "know it"
+    },
+    {
+      "start": 1238.08,
+      "duration": 3.44,
+      "end": 1241.52,
+      "text": "equal to perfect and one more line"
+    },
+    {
+      "start": 1240.64,
+      "duration": 2.24,
+      "end": 1242.88,
+      "text": "if"
+    },
+    {
+      "start": 1241.52,
+      "duration": 2.639,
+      "end": 1244.1589999999999,
+      "text": "dp of"
+    },
+    {
+      "start": 1242.88,
+      "duration": 2.32,
+      "end": 1245.2,
+      "text": "index"
+    },
+    {
+      "start": 1244.159,
+      "duration": 3.041,
+      "end": 1247.2,
+      "text": "sum"
+    },
+    {
+      "start": 1245.2,
+      "duration": 3.52,
+      "end": 1248.72,
+      "text": "not equal to minus 1"
+    },
+    {
+      "start": 1247.2,
+      "duration": 4.959,
+      "end": 1252.159,
+      "text": "return if that state has not been"
+    },
+    {
+      "start": 1248.72,
+      "duration": 5.52,
+      "end": 1254.24,
+      "text": "visited return how easy it is to convert"
+    },
+    {
+      "start": 1252.159,
+      "duration": 3.841,
+      "end": 1256.0,
+      "text": "a memoi action solution sorry to write a"
+    },
+    {
+      "start": 1254.24,
+      "duration": 3.84,
+      "end": 1258.08,
+      "text": "memoration solution so once you've"
+    },
+    {
+      "start": 1256.0,
+      "duration": 3.36,
+      "end": 1259.36,
+      "text": "written the memoration solution"
+    },
+    {
+      "start": 1258.08,
+      "duration": 3.839,
+      "end": 1261.9189999999999,
+      "text": "can i say"
+    },
+    {
+      "start": 1259.36,
+      "duration": 3.84,
+      "end": 1263.1999999999998,
+      "text": "now the time complexity is we go of n"
+    },
+    {
+      "start": 1261.919,
+      "duration": 3.441,
+      "end": 1265.3600000000001,
+      "text": "into sum"
+    },
+    {
+      "start": 1263.2,
+      "duration": 3.92,
+      "end": 1267.1200000000001,
+      "text": "and the space complexity is big o of n"
+    },
+    {
+      "start": 1265.36,
+      "duration": 3.679,
+      "end": 1269.039,
+      "text": "into sum for the matrix"
+    },
+    {
+      "start": 1267.12,
+      "duration": 4.08,
+      "end": 1271.1999999999998,
+      "text": "plus a big o of n"
+    },
+    {
+      "start": 1269.039,
+      "duration": 3.841,
+      "end": 1272.8799999999999,
+      "text": "for an auxiliary stack space why an"
+    },
+    {
+      "start": 1271.2,
+      "duration": 3.92,
+      "end": 1275.1200000000001,
+      "text": "auxiliary stack space"
+    },
+    {
+      "start": 1272.88,
+      "duration": 5.44,
+      "end": 1278.3200000000002,
+      "text": "because of this"
+    },
+    {
+      "start": 1275.12,
+      "duration": 5.52,
+      "end": 1280.6399999999999,
+      "text": "one two three so there is three"
+    },
+    {
+      "start": 1278.32,
+      "duration": 4.08,
+      "end": 1282.3999999999999,
+      "text": "this function called will will wait this"
+    },
+    {
+      "start": 1280.64,
+      "duration": 2.8,
+      "end": 1283.44,
+      "text": "function call will wait and then this"
+    },
+    {
+      "start": 1282.4,
+      "duration": 3.2,
+      "end": 1285.6000000000001,
+      "text": "will be executed so there is an"
+    },
+    {
+      "start": 1283.44,
+      "duration": 4.239,
+      "end": 1287.679,
+      "text": "auxiliary stack space"
+    },
+    {
+      "start": 1285.6,
+      "duration": 4.079,
+      "end": 1289.6789999999999,
+      "text": "lecture one i've already taught lecture"
+    },
+    {
+      "start": 1287.679,
+      "duration": 3.521,
+      "end": 1291.2,
+      "text": "one recursion playlist what is auxiliary"
+    },
+    {
+      "start": 1289.679,
+      "duration": 2.641,
+      "end": 1292.3200000000002,
+      "text": "stack space"
+    },
+    {
+      "start": 1291.2,
+      "duration": 1.48,
+      "end": 1292.68,
+      "text": "so"
+    },
+    {
+      "start": 1292.32,
+      "duration": 2.0,
+      "end": 1294.32,
+      "text": "done"
+    },
+    {
+      "start": 1292.68,
+      "duration": 3.64,
+      "end": 1296.3200000000002,
+      "text": "[Music]"
+    },
+    {
+      "start": 1294.32,
+      "duration": 3.52,
+      "end": 1297.84,
+      "text": "next step"
+    },
+    {
+      "start": 1296.32,
+      "duration": 3.2,
+      "end": 1299.52,
+      "text": "next step"
+    },
+    {
+      "start": 1297.84,
+      "duration": 3.92,
+      "end": 1301.76,
+      "text": "yes"
+    },
+    {
+      "start": 1299.52,
+      "duration": 3.519,
+      "end": 1303.039,
+      "text": "i don't like this i don't like auxiliary"
+    },
+    {
+      "start": 1301.76,
+      "duration": 3.919,
+      "end": 1305.679,
+      "text": "sex pieces"
+    },
+    {
+      "start": 1303.039,
+      "duration": 5.52,
+      "end": 1308.559,
+      "text": "so what do you do you convert this into"
+    },
+    {
+      "start": 1305.679,
+      "duration": 4.801,
+      "end": 1310.48,
+      "text": "a tabulation you convert the recursion"
+    },
+    {
+      "start": 1308.559,
+      "duration": 4.161,
+      "end": 1312.72,
+      "text": "into a tabulation because you don't like"
+    },
+    {
+      "start": 1310.48,
+      "duration": 4.24,
+      "end": 1314.72,
+      "text": "it right so how do you convert this into"
+    },
+    {
+      "start": 1312.72,
+      "duration": 3.92,
+      "end": 1316.64,
+      "text": "a tabulation very simple what's the"
+    },
+    {
+      "start": 1314.72,
+      "duration": 4.0,
+      "end": 1318.72,
+      "text": "first thing"
+    },
+    {
+      "start": 1316.64,
+      "duration": 4.56,
+      "end": 1321.2,
+      "text": "base case write the base case"
+    },
+    {
+      "start": 1318.72,
+      "duration": 6.24,
+      "end": 1324.96,
+      "text": "what's the next thing"
+    },
+    {
+      "start": 1321.2,
+      "duration": 3.76,
+      "end": 1324.96,
+      "text": "look at the changed parameters"
+    },
+    {
+      "start": 1325.2,
+      "duration": 3.52,
+      "end": 1328.72,
+      "text": "look at the changing parameters"
+    },
+    {
+      "start": 1330.159,
+      "duration": 3.681,
+      "end": 1333.8400000000001,
+      "text": "and right nested loops"
+    },
+    {
+      "start": 1335.52,
+      "duration": 5.519,
+      "end": 1341.039,
+      "text": "and the last step"
+    },
+    {
+      "start": 1337.919,
+      "duration": 3.12,
+      "end": 1341.039,
+      "text": "copy the recursion"
+    },
+    {
+      "start": 1342.0,
+      "duration": 4.88,
+      "end": 1346.88,
+      "text": "nothing special just copy the recursion"
+    },
+    {
+      "start": 1343.84,
+      "duration": 4.4,
+      "end": 1348.24,
+      "text": "okay so base case"
+    },
+    {
+      "start": 1346.88,
+      "duration": 5.12,
+      "end": 1352.0,
+      "text": "first step so you know the dp will"
+    },
+    {
+      "start": 1348.24,
+      "duration": 3.76,
+      "end": 1352.0,
+      "text": "always be same so int"
+    },
+    {
+      "start": 1352.88,
+      "duration": 2.96,
+      "end": 1355.8400000000001,
+      "text": "dp of"
+    },
+    {
+      "start": 1354.48,
+      "duration": 4.48,
+      "end": 1358.96,
+      "text": "n"
+    },
+    {
+      "start": 1355.84,
+      "duration": 5.36,
+      "end": 1361.1999999999998,
+      "text": "sum plus 1 the dp will be say"
+    },
+    {
+      "start": 1358.96,
+      "duration": 3.839,
+      "end": 1362.799,
+      "text": "okay now let's look at the base cases"
+    },
+    {
+      "start": 1361.2,
+      "duration": 3.28,
+      "end": 1364.48,
+      "text": "what are the base cases"
+    },
+    {
+      "start": 1362.799,
+      "duration": 5.36,
+      "end": 1368.1589999999999,
+      "text": "observe this"
+    },
+    {
+      "start": 1364.48,
+      "duration": 5.36,
+      "end": 1369.84,
+      "text": "the first base case is if sum is 0"
+    },
+    {
+      "start": 1368.159,
+      "duration": 3.121,
+      "end": 1371.2800000000002,
+      "text": "so if sum is 0"
+    },
+    {
+      "start": 1369.84,
+      "duration": 3.44,
+      "end": 1373.28,
+      "text": "what can be the possible value of"
+    },
+    {
+      "start": 1371.28,
+      "duration": 3.6,
+      "end": 1374.8799999999999,
+      "text": "indexes ask yourself"
+    },
+    {
+      "start": 1373.28,
+      "duration": 6.96,
+      "end": 1380.24,
+      "text": "index can be"
+    },
+    {
+      "start": 1374.88,
+      "duration": 6.32,
+      "end": 1381.2,
+      "text": "0 1 2 3 till any index"
+    },
+    {
+      "start": 1380.24,
+      "duration": 4.08,
+      "end": 1384.32,
+      "text": "because"
+    },
+    {
+      "start": 1381.2,
+      "duration": 5.28,
+      "end": 1386.48,
+      "text": "we are not giving a check on index we"
+    },
+    {
+      "start": 1384.32,
+      "duration": 4.4,
+      "end": 1388.72,
+      "text": "are not giving a check on the index we"
+    },
+    {
+      "start": 1386.48,
+      "duration": 6.24,
+      "end": 1392.72,
+      "text": "are giving a check on the s so we know"
+    },
+    {
+      "start": 1388.72,
+      "duration": 5.839,
+      "end": 1394.559,
+      "text": "one thing okay index can be anything"
+    },
+    {
+      "start": 1392.72,
+      "duration": 4.0,
+      "end": 1396.72,
+      "text": "so thereby"
+    },
+    {
+      "start": 1394.559,
+      "duration": 5.801,
+      "end": 1400.36,
+      "text": "first base case will be i'm not giving"
+    },
+    {
+      "start": 1396.72,
+      "duration": 3.64,
+      "end": 1400.3600000000001,
+      "text": "any check on the index"
+    },
+    {
+      "start": 1403.52,
+      "duration": 4.8,
+      "end": 1408.32,
+      "text": "so on any index on 0"
+    },
+    {
+      "start": 1405.76,
+      "duration": 3.52,
+      "end": 1409.28,
+      "text": "i will be having a true make sense makes"
+    },
+    {
+      "start": 1408.32,
+      "duration": 3.839,
+      "end": 1412.1589999999999,
+      "text": "sense"
+    },
+    {
+      "start": 1409.28,
+      "duration": 2.879,
+      "end": 1412.1589999999999,
+      "text": "let's have the next one"
+    },
+    {
+      "start": 1413.2,
+      "duration": 4.719,
+      "end": 1417.919,
+      "text": "we come over here and we are having"
+    },
+    {
+      "start": 1415.52,
+      "duration": 4.88,
+      "end": 1420.4,
+      "text": "index equal to 0"
+    },
+    {
+      "start": 1417.919,
+      "duration": 4.801,
+      "end": 1422.72,
+      "text": "so on index equal to equal to 0 when"
+    },
+    {
+      "start": 1420.4,
+      "duration": 4.24,
+      "end": 1424.64,
+      "text": "will this guy return a true"
+    },
+    {
+      "start": 1422.72,
+      "duration": 3.92,
+      "end": 1426.64,
+      "text": "on index equal to equal to 0 when will"
+    },
+    {
+      "start": 1424.64,
+      "duration": 3.519,
+      "end": 1428.159,
+      "text": "this guy return a 1 rather when will"
+    },
+    {
+      "start": 1426.64,
+      "duration": 3.36,
+      "end": 1430.0,
+      "text": "this guy return a 1"
+    },
+    {
+      "start": 1428.159,
+      "duration": 4.081,
+      "end": 1432.24,
+      "text": "that's my case by the way what have i"
+    },
+    {
+      "start": 1430.0,
+      "duration": 5.36,
+      "end": 1435.36,
+      "text": "written have i written true or false"
+    },
+    {
+      "start": 1432.24,
+      "duration": 3.12,
+      "end": 1435.36,
+      "text": "this will be by the way one"
+    },
+    {
+      "start": 1436.4,
+      "duration": 2.08,
+      "end": 1438.48,
+      "text": "so"
+    },
+    {
+      "start": 1437.36,
+      "duration": 3.76,
+      "end": 1441.12,
+      "text": "as i said"
+    },
+    {
+      "start": 1438.48,
+      "duration": 4.799,
+      "end": 1443.279,
+      "text": "when will this guy yes i repeat"
+    },
+    {
+      "start": 1441.12,
+      "duration": 3.679,
+      "end": 1444.799,
+      "text": "when will this index equal to zero"
+    },
+    {
+      "start": 1443.279,
+      "duration": 6.081,
+      "end": 1449.36,
+      "text": "return are true"
+    },
+    {
+      "start": 1444.799,
+      "duration": 7.36,
+      "end": 1452.1589999999999,
+      "text": "only at a of index only at a of index so"
+    },
+    {
+      "start": 1449.36,
+      "duration": 6.96,
+      "end": 1456.32,
+      "text": "there has to be a case where you write"
+    },
+    {
+      "start": 1452.159,
+      "duration": 6.801,
+      "end": 1458.96,
+      "text": "a dp of 0 will only be 1 at a of index"
+    },
+    {
+      "start": 1456.32,
+      "duration": 6.4,
+      "end": 1462.72,
+      "text": "that means at a of 0 it will be"
+    },
+    {
+      "start": 1458.96,
+      "duration": 6.88,
+      "end": 1465.8400000000001,
+      "text": "only one but there is a slight stuff the"
+    },
+    {
+      "start": 1462.72,
+      "duration": 4.559,
+      "end": 1467.279,
+      "text": "dp is declared of s s plus 1 so just"
+    },
+    {
+      "start": 1465.84,
+      "duration": 4.48,
+      "end": 1470.32,
+      "text": "make sure"
+    },
+    {
+      "start": 1467.279,
+      "duration": 5.121,
+      "end": 1472.4,
+      "text": "the a of 0 has to be lesser than s in"
+    },
+    {
+      "start": 1470.32,
+      "duration": 4.8,
+      "end": 1475.12,
+      "text": "order to this to be executed otherwise"
+    },
+    {
+      "start": 1472.4,
+      "duration": 6.0,
+      "end": 1478.4,
+      "text": "it will give you a runtime error and i"
+    },
+    {
+      "start": 1475.12,
+      "duration": 4.96,
+      "end": 1480.08,
+      "text": "did miss this in the lecture dp14"
+    },
+    {
+      "start": 1478.4,
+      "duration": 3.92,
+      "end": 1482.3200000000002,
+      "text": "this line it's very important because"
+    },
+    {
+      "start": 1480.08,
+      "duration": 4.32,
+      "end": 1484.3999999999999,
+      "text": "you're declaring s plus one so if you're"
+    },
+    {
+      "start": 1482.32,
+      "duration": 4.16,
+      "end": 1486.48,
+      "text": "just having the second parameter as a of"
+    },
+    {
+      "start": 1484.4,
+      "duration": 4.0,
+      "end": 1488.4,
+      "text": "zero you just need to make sure so base"
+    },
+    {
+      "start": 1486.48,
+      "duration": 4.24,
+      "end": 1490.72,
+      "text": "cases have been done base cases are very"
+    },
+    {
+      "start": 1488.4,
+      "duration": 4.0,
+      "end": 1492.4,
+      "text": "simple to write you just have to observe"
+    },
+    {
+      "start": 1490.72,
+      "duration": 4.16,
+      "end": 1494.88,
+      "text": "okay let's move across"
+    },
+    {
+      "start": 1492.4,
+      "duration": 4.72,
+      "end": 1497.1200000000001,
+      "text": "base case is done what's the next"
+    },
+    {
+      "start": 1494.88,
+      "duration": 4.08,
+      "end": 1498.96,
+      "text": "look at the changing parameters"
+    },
+    {
+      "start": 1497.12,
+      "duration": 3.28,
+      "end": 1500.3999999999999,
+      "text": "which are the changing parameters so"
+    },
+    {
+      "start": 1498.96,
+      "duration": 2.56,
+      "end": 1501.52,
+      "text": "what are the changing parameters if i"
+    },
+    {
+      "start": 1500.4,
+      "duration": 3.279,
+      "end": 1503.679,
+      "text": "ask you"
+    },
+    {
+      "start": 1501.52,
+      "duration": 4.48,
+      "end": 1506.0,
+      "text": "one is index"
+    },
+    {
+      "start": 1503.679,
+      "duration": 4.641,
+      "end": 1508.3200000000002,
+      "text": "the other one is"
+    },
+    {
+      "start": 1506.0,
+      "duration": 4.799,
+      "end": 1510.799,
+      "text": "you can say sum"
+    },
+    {
+      "start": 1508.32,
+      "duration": 6.08,
+      "end": 1514.3999999999999,
+      "text": "in the recursion what is recursion"
+    },
+    {
+      "start": 1510.799,
+      "duration": 5.12,
+      "end": 1515.9189999999999,
+      "text": "recursion is"
+    },
+    {
+      "start": 1514.4,
+      "duration": 3.6,
+      "end": 1518.0,
+      "text": "top"
+    },
+    {
+      "start": 1515.919,
+      "duration": 3.441,
+      "end": 1519.3600000000001,
+      "text": "down then accumulate"
+    },
+    {
+      "start": 1518.0,
+      "duration": 2.96,
+      "end": 1520.96,
+      "text": "so where did you start the recursion"
+    },
+    {
+      "start": 1519.36,
+      "duration": 5.12,
+      "end": 1524.4799999999998,
+      "text": "from two"
+    },
+    {
+      "start": 1520.96,
+      "duration": 6.56,
+      "end": 1527.52,
+      "text": "one zero what is tabulation you start"
+    },
+    {
+      "start": 1524.48,
+      "duration": 5.439,
+      "end": 1529.919,
+      "text": "from the base cases you accumulate you"
+    },
+    {
+      "start": 1527.52,
+      "duration": 5.279,
+      "end": 1532.799,
+      "text": "start from the base cases you accumulate"
+    },
+    {
+      "start": 1529.919,
+      "duration": 5.201,
+      "end": 1535.1200000000001,
+      "text": "then you take these and form this that's"
+    },
+    {
+      "start": 1532.799,
+      "duration": 4.561,
+      "end": 1537.36,
+      "text": "that's tabulation you take these base"
+    },
+    {
+      "start": 1535.12,
+      "duration": 4.32,
+      "end": 1539.4399999999998,
+      "text": "cases accumulate you take these base"
+    },
+    {
+      "start": 1537.36,
+      "duration": 4.64,
+      "end": 1542.0,
+      "text": "cases accumulate then you take these"
+    },
+    {
+      "start": 1539.44,
+      "duration": 3.68,
+      "end": 1543.1200000000001,
+      "text": "base cases then you accumulate bottom up"
+    },
+    {
+      "start": 1542.0,
+      "duration": 3.76,
+      "end": 1545.76,
+      "text": "bottom up"
+    },
+    {
+      "start": 1543.12,
+      "duration": 4.159,
+      "end": 1547.279,
+      "text": "so again bottom up doesn't means from"
+    },
+    {
+      "start": 1545.76,
+      "duration": 3.519,
+      "end": 1549.279,
+      "text": "zero to two"
+    },
+    {
+      "start": 1547.279,
+      "duration": 3.441,
+      "end": 1550.72,
+      "text": "depends depends"
+    },
+    {
+      "start": 1549.279,
+      "duration": 3.28,
+      "end": 1552.559,
+      "text": "as long as you're starting from base"
+    },
+    {
+      "start": 1550.72,
+      "duration": 2.72,
+      "end": 1553.44,
+      "text": "case and you're moving up that's bottom"
+    },
+    {
+      "start": 1552.559,
+      "duration": 2.641,
+      "end": 1555.2,
+      "text": "up"
+    },
+    {
+      "start": 1553.44,
+      "duration": 3.44,
+      "end": 1556.88,
+      "text": "so"
+    },
+    {
+      "start": 1555.2,
+      "duration": 3.44,
+      "end": 1558.64,
+      "text": "can i say this can i say this the"
+    },
+    {
+      "start": 1556.88,
+      "duration": 5.2,
+      "end": 1562.0800000000002,
+      "text": "changing parameters are quite"
+    },
+    {
+      "start": 1558.64,
+      "duration": 5.44,
+      "end": 1564.0800000000002,
+      "text": "straightforward and that's index and sum"
+    },
+    {
+      "start": 1562.08,
+      "duration": 4.56,
+      "end": 1566.6399999999999,
+      "text": "so where is where is actually the index"
+    },
+    {
+      "start": 1564.08,
+      "duration": 5.04,
+      "end": 1569.12,
+      "text": "running from in the recursion from n"
+    },
+    {
+      "start": 1566.64,
+      "duration": 4.88,
+      "end": 1571.5200000000002,
+      "text": "minus one to zero and over here the base"
+    },
+    {
+      "start": 1569.12,
+      "duration": 4.64,
+      "end": 1573.76,
+      "text": "case is zero so the base case is written"
+    },
+    {
+      "start": 1571.52,
+      "duration": 4.08,
+      "end": 1575.6,
+      "text": "this will run from one to n minus one"
+    },
+    {
+      "start": 1573.76,
+      "duration": 3.76,
+      "end": 1577.52,
+      "text": "and the sum will run from"
+    },
+    {
+      "start": 1575.6,
+      "duration": 4.16,
+      "end": 1579.76,
+      "text": "zero to s"
+    },
+    {
+      "start": 1577.52,
+      "duration": 4.48,
+      "end": 1582.0,
+      "text": "this is how you can write the two nested"
+    },
+    {
+      "start": 1579.76,
+      "duration": 5.12,
+      "end": 1584.8799999999999,
+      "text": "loops and once you've written this it's"
+    },
+    {
+      "start": 1582.0,
+      "duration": 4.72,
+      "end": 1586.72,
+      "text": "time to copy the recursion so i can see"
+    },
+    {
+      "start": 1584.88,
+      "duration": 3.6,
+      "end": 1588.48,
+      "text": "the next lines will be"
+    },
+    {
+      "start": 1586.72,
+      "duration": 4.64,
+      "end": 1591.3600000000001,
+      "text": "i equal to"
+    },
+    {
+      "start": 1588.48,
+      "duration": 4.72,
+      "end": 1593.2,
+      "text": "1 till n minus 1 because 0 has been done"
+    },
+    {
+      "start": 1591.36,
+      "duration": 4.08,
+      "end": 1595.4399999999998,
+      "text": "and the sum will be"
+    },
+    {
+      "start": 1593.2,
+      "duration": 5.28,
+      "end": 1598.48,
+      "text": "0 till the sum"
+    },
+    {
+      "start": 1595.44,
+      "duration": 4.32,
+      "end": 1599.76,
+      "text": "and these will be the lines"
+    },
+    {
+      "start": 1598.48,
+      "duration": 4.24,
+      "end": 1602.72,
+      "text": "and over here"
+    },
+    {
+      "start": 1599.76,
+      "duration": 4.48,
+      "end": 1604.24,
+      "text": "copy the recurrence"
+    },
+    {
+      "start": 1602.72,
+      "duration": 3.36,
+      "end": 1606.08,
+      "text": "and if i do this"
+    },
+    {
+      "start": 1604.24,
+      "duration": 4.319,
+      "end": 1608.559,
+      "text": "then the extra auxiliary space that we"
+    },
+    {
+      "start": 1606.08,
+      "duration": 4.64,
+      "end": 1610.72,
+      "text": "are using will be omitted and this will"
+    },
+    {
+      "start": 1608.559,
+      "duration": 4.161,
+      "end": 1612.72,
+      "text": "be the time and space complexity so what"
+    },
+    {
+      "start": 1610.72,
+      "duration": 3.76,
+      "end": 1614.48,
+      "text": "i'll do is i'll show you by coding this"
+    },
+    {
+      "start": 1612.72,
+      "duration": 4.4,
+      "end": 1617.1200000000001,
+      "text": "and over there will copy paste and then"
+    },
+    {
+      "start": 1614.48,
+      "duration": 4.799,
+      "end": 1619.279,
+      "text": "we will do the next step which is space"
+    },
+    {
+      "start": 1617.12,
+      "duration": 4.08,
+      "end": 1621.1999999999998,
+      "text": "optimization so without wasting any time"
+    },
+    {
+      "start": 1619.279,
+      "duration": 4.0,
+      "end": 1623.279,
+      "text": "let's check out the code okay so we're"
+    },
+    {
+      "start": 1621.2,
+      "duration": 4.079,
+      "end": 1625.279,
+      "text": "given this num and the target so what"
+    },
+    {
+      "start": 1623.279,
+      "duration": 3.681,
+      "end": 1626.96,
+      "text": "i'll do is i'll just write the function"
+    },
+    {
+      "start": 1625.279,
+      "duration": 2.801,
+      "end": 1628.08,
+      "text": "and we know the function will have index"
+    },
+    {
+      "start": 1626.96,
+      "duration": 3.52,
+      "end": 1630.48,
+      "text": "and"
+    },
+    {
+      "start": 1628.08,
+      "duration": 2.4,
+      "end": 1630.48,
+      "text": "the sum"
+    },
+    {
+      "start": 1630.559,
+      "duration": 4.0,
+      "end": 1634.559,
+      "text": "and the target"
+    },
+    {
+      "start": 1632.559,
+      "duration": 3.441,
+      "end": 1636.0,
+      "text": "sorry and the num array and the base"
+    },
+    {
+      "start": 1634.559,
+      "duration": 4.0,
+      "end": 1638.559,
+      "text": "case was very simple if you remember the"
+    },
+    {
+      "start": 1636.0,
+      "duration": 5.2,
+      "end": 1641.2,
+      "text": "sum of zero i'll return as one"
+    },
+    {
+      "start": 1638.559,
+      "duration": 5.761,
+      "end": 1644.32,
+      "text": "if the index is zero then you're going"
+    },
+    {
+      "start": 1641.2,
+      "duration": 4.479,
+      "end": 1645.679,
+      "text": "to return a of zero is equal to equal to"
+    },
+    {
+      "start": 1644.32,
+      "duration": 3.68,
+      "end": 1648.0,
+      "text": "some that's what we're going to return"
+    },
+    {
+      "start": 1645.679,
+      "duration": 5.36,
+      "end": 1651.039,
+      "text": "and there'll be a not take case"
+    },
+    {
+      "start": 1648.0,
+      "duration": 4.72,
+      "end": 1652.72,
+      "text": "which will definitely be f of index"
+    },
+    {
+      "start": 1651.039,
+      "duration": 4.0,
+      "end": 1655.039,
+      "text": "minus one"
+    },
+    {
+      "start": 1652.72,
+      "duration": 4.959,
+      "end": 1657.679,
+      "text": "and sum will go as it is there will be a"
+    },
+    {
+      "start": 1655.039,
+      "duration": 4.961,
+      "end": 1660.0,
+      "text": "take case which will be 0 initially but"
+    },
+    {
+      "start": 1657.679,
+      "duration": 4.72,
+      "end": 1662.3990000000001,
+      "text": "i can definitely pick it up if the array"
+    },
+    {
+      "start": 1660.0,
+      "duration": 4.159,
+      "end": 1664.159,
+      "text": "of index is someone who is lesser than"
+    },
+    {
+      "start": 1662.399,
+      "duration": 3.921,
+      "end": 1666.32,
+      "text": "equal to the sum that i'm looking for"
+    },
+    {
+      "start": 1664.159,
+      "duration": 4.4,
+      "end": 1668.5590000000002,
+      "text": "and that's the case the take will be f"
+    },
+    {
+      "start": 1666.32,
+      "duration": 4.079,
+      "end": 1670.399,
+      "text": "of index minus 1 and if it picks up the"
+    },
+    {
+      "start": 1668.559,
+      "duration": 3.521,
+      "end": 1672.08,
+      "text": "sum goes"
+    },
+    {
+      "start": 1670.399,
+      "duration": 3.201,
+      "end": 1673.6,
+      "text": "lesser by"
+    },
+    {
+      "start": 1672.08,
+      "duration": 3.28,
+      "end": 1675.36,
+      "text": "definitely"
+    },
+    {
+      "start": 1673.6,
+      "duration": 3.199,
+      "end": 1676.799,
+      "text": "it's by the way not a of zero will be"
+    },
+    {
+      "start": 1675.36,
+      "duration": 5.48,
+      "end": 1680.84,
+      "text": "num of zero"
+    },
+    {
+      "start": 1676.799,
+      "duration": 7.441,
+      "end": 1684.24,
+      "text": "sum goes lesser than by num of"
+    },
+    {
+      "start": 1680.84,
+      "duration": 6.439,
+      "end": 1687.279,
+      "text": "index and over here this will be num"
+    },
+    {
+      "start": 1684.24,
+      "duration": 4.4,
+      "end": 1688.64,
+      "text": "at the end of the day you can say return"
+    },
+    {
+      "start": 1687.279,
+      "duration": 2.961,
+      "end": 1690.24,
+      "text": "not take"
+    },
+    {
+      "start": 1688.64,
+      "duration": 4.72,
+      "end": 1693.3600000000001,
+      "text": "plus take so this is the recursive"
+    },
+    {
+      "start": 1690.24,
+      "duration": 5.039,
+      "end": 1695.279,
+      "text": "solution that does come to my mind and"
+    },
+    {
+      "start": 1693.36,
+      "duration": 4.88,
+      "end": 1698.24,
+      "text": "so over here we just need to figure out"
+    },
+    {
+      "start": 1695.279,
+      "duration": 4.88,
+      "end": 1700.159,
+      "text": "n equal to num dot size"
+    },
+    {
+      "start": 1698.24,
+      "duration": 4.0,
+      "end": 1702.24,
+      "text": "and once you have done n equal to num"
+    },
+    {
+      "start": 1700.159,
+      "duration": 3.201,
+      "end": 1703.3600000000001,
+      "text": "dot size what's the next thing we just"
+    },
+    {
+      "start": 1702.24,
+      "duration": 4.48,
+      "end": 1706.72,
+      "text": "return"
+    },
+    {
+      "start": 1703.36,
+      "duration": 4.64,
+      "end": 1708.0,
+      "text": "f of n minus 1 and the target"
+    },
+    {
+      "start": 1706.72,
+      "duration": 4.0,
+      "end": 1710.72,
+      "text": "and the nums"
+    },
+    {
+      "start": 1708.0,
+      "duration": 4.88,
+      "end": 1712.88,
+      "text": "perfect and yeah we have pretty much"
+    },
+    {
+      "start": 1710.72,
+      "duration": 5.679,
+      "end": 1716.3990000000001,
+      "text": "done it so let's run this code and see"
+    },
+    {
+      "start": 1712.88,
+      "duration": 3.519,
+      "end": 1716.3990000000001,
+      "text": "if the recurrence is correct or not"
+    },
+    {
+      "start": 1716.88,
+      "duration": 3.6,
+      "end": 1720.48,
+      "text": "so we see that there is a problem here"
+    },
+    {
+      "start": 1719.12,
+      "duration": 3.6,
+      "end": 1722.7199999999998,
+      "text": "there is a problem because we have not"
+    },
+    {
+      "start": 1720.48,
+      "duration": 3.919,
+      "end": 1724.3990000000001,
+      "text": "passed the num over here and also over"
+    },
+    {
+      "start": 1722.72,
+      "duration": 4.079,
+      "end": 1726.799,
+      "text": "here so this makes you pass the num"
+    },
+    {
+      "start": 1724.399,
+      "duration": 4.321,
+      "end": 1728.7199999999998,
+      "text": "array as well so i forgot to say y"
+    },
+    {
+      "start": 1726.799,
+      "duration": 4.401,
+      "end": 1731.2,
+      "text": "recursion now whenever there is a"
+    },
+    {
+      "start": 1728.72,
+      "duration": 4.559,
+      "end": 1733.279,
+      "text": "question like count and all these things"
+    },
+    {
+      "start": 1731.2,
+      "duration": 3.599,
+      "end": 1734.799,
+      "text": "it's always better that we try recursion"
+    },
+    {
+      "start": 1733.279,
+      "duration": 3.361,
+      "end": 1736.64,
+      "text": "because"
+    },
+    {
+      "start": 1734.799,
+      "duration": 3.6,
+      "end": 1738.399,
+      "text": "we're exploring all parts and we have to"
+    },
+    {
+      "start": 1736.64,
+      "duration": 4.0,
+      "end": 1740.64,
+      "text": "count all paths so to explore all the"
+    },
+    {
+      "start": 1738.399,
+      "duration": 4.561,
+      "end": 1742.9599999999998,
+      "text": "paths the best thing is recursion that's"
+    },
+    {
+      "start": 1740.64,
+      "duration": 4.0,
+      "end": 1744.64,
+      "text": "why we started with recursion okay so it"
+    },
+    {
+      "start": 1742.96,
+      "duration": 3.439,
+      "end": 1746.3990000000001,
+      "text": "is giving correct answer but we know"
+    },
+    {
+      "start": 1744.64,
+      "duration": 5.919,
+      "end": 1750.5590000000002,
+      "text": "this will give tle so let's quickly"
+    },
+    {
+      "start": 1746.399,
+      "duration": 8.481,
+      "end": 1754.8799999999999,
+      "text": "memoize this so vector of vector of int"
+    },
+    {
+      "start": 1750.559,
+      "duration": 7.6,
+      "end": 1758.1589999999999,
+      "text": "dp of definitely n comma"
+    },
+    {
+      "start": 1754.88,
+      "duration": 5.12,
+      "end": 1760.0,
+      "text": "vector of int definitely"
+    },
+    {
+      "start": 1758.159,
+      "duration": 4.961,
+      "end": 1763.1200000000001,
+      "text": "this will be target"
+    },
+    {
+      "start": 1760.0,
+      "duration": 5.2,
+      "end": 1765.2,
+      "text": "plus one comma zero rather minus one"
+    },
+    {
+      "start": 1763.12,
+      "duration": 3.919,
+      "end": 1767.039,
+      "text": "just make sure this was declared and you"
+    },
+    {
+      "start": 1765.2,
+      "duration": 3.52,
+      "end": 1768.72,
+      "text": "can just declare the end before this"
+    },
+    {
+      "start": 1767.039,
+      "duration": 4.161,
+      "end": 1771.2,
+      "text": "just to avoid something"
+    },
+    {
+      "start": 1768.72,
+      "duration": 4.4,
+      "end": 1773.1200000000001,
+      "text": "and over here you can just say"
+    },
+    {
+      "start": 1771.2,
+      "duration": 3.599,
+      "end": 1774.799,
+      "text": "vector of"
+    },
+    {
+      "start": 1773.12,
+      "duration": 4.559,
+      "end": 1777.6789999999999,
+      "text": "vector of"
+    },
+    {
+      "start": 1774.799,
+      "duration": 7.041,
+      "end": 1781.84,
+      "text": "and dp or rather"
+    },
+    {
+      "start": 1777.679,
+      "duration": 4.161,
+      "end": 1781.8400000000001,
+      "text": "this will be copy pasted here"
+    },
+    {
+      "start": 1782.08,
+      "duration": 4.88,
+      "end": 1786.96,
+      "text": "perfect this will pass by reference and"
+    },
+    {
+      "start": 1784.64,
+      "duration": 4.399,
+      "end": 1789.039,
+      "text": "away i'll just pass the dp over here"
+    },
+    {
+      "start": 1786.96,
+      "duration": 4.64,
+      "end": 1791.6000000000001,
+      "text": "i'll just pass the dp over here you'll"
+    },
+    {
+      "start": 1789.039,
+      "duration": 6.081,
+      "end": 1795.12,
+      "text": "just pass the dp over here"
+    },
+    {
+      "start": 1791.6,
+      "duration": 5.76,
+      "end": 1797.36,
+      "text": "memoize the index and the sum"
+    },
+    {
+      "start": 1795.12,
+      "duration": 4.559,
+      "end": 1799.6789999999999,
+      "text": "right and over here it will be dp of"
+    },
+    {
+      "start": 1797.36,
+      "duration": 3.679,
+      "end": 1801.039,
+      "text": "index"
+    },
+    {
+      "start": 1799.679,
+      "duration": 4.401,
+      "end": 1804.0800000000002,
+      "text": "sum"
+    },
+    {
+      "start": 1801.039,
+      "duration": 4.161,
+      "end": 1805.2,
+      "text": "if not equal to minus 1 return dp of"
+    },
+    {
+      "start": 1804.08,
+      "duration": 4.719,
+      "end": 1808.799,
+      "text": "index"
+    },
+    {
+      "start": 1805.2,
+      "duration": 6.32,
+      "end": 1811.52,
+      "text": "sum right"
+    },
+    {
+      "start": 1808.799,
+      "duration": 4.801,
+      "end": 1813.6,
+      "text": "that's how you can easily do it"
+    },
+    {
+      "start": 1811.52,
+      "duration": 3.759,
+      "end": 1815.279,
+      "text": "it does give me the correct answer now"
+    },
+    {
+      "start": 1813.6,
+      "duration": 3.439,
+      "end": 1817.039,
+      "text": "if i just submit it it will be fine a"
+    },
+    {
+      "start": 1815.279,
+      "duration": 4.481,
+      "end": 1819.76,
+      "text": "lot so there's a lot of people who are"
+    },
+    {
+      "start": 1817.039,
+      "duration": 4.081,
+      "end": 1821.12,
+      "text": "saying me what if the problem says you"
+    },
+    {
+      "start": 1819.76,
+      "duration": 2.639,
+      "end": 1822.399,
+      "text": "don't have positive integers and"
+    },
+    {
+      "start": 1821.12,
+      "duration": 3.2,
+      "end": 1824.32,
+      "text": "negative integers"
+    },
+    {
+      "start": 1822.399,
+      "duration": 3.361,
+      "end": 1825.76,
+      "text": "so a lot of people were asking me but"
+    },
+    {
+      "start": 1824.32,
+      "duration": 3.839,
+      "end": 1828.1589999999999,
+      "text": "trevor over here there are positive"
+    },
+    {
+      "start": 1825.76,
+      "duration": 4.56,
+      "end": 1830.32,
+      "text": "integers so you can easily memoize by"
+    },
+    {
+      "start": 1828.159,
+      "duration": 3.12,
+      "end": 1831.279,
+      "text": "creating a dp table"
+    },
+    {
+      "start": 1830.32,
+      "duration": 3.12,
+      "end": 1833.4399999999998,
+      "text": "so"
+    },
+    {
+      "start": 1831.279,
+      "duration": 5.76,
+      "end": 1837.039,
+      "text": "what if there are negative integers"
+    },
+    {
+      "start": 1833.44,
+      "duration": 5.76,
+      "end": 1839.2,
+      "text": "guys what is dp doing"
+    },
+    {
+      "start": 1837.039,
+      "duration": 3.921,
+      "end": 1840.96,
+      "text": "for states like"
+    },
+    {
+      "start": 1839.2,
+      "duration": 3.68,
+      "end": 1842.88,
+      "text": "for states like"
+    },
+    {
+      "start": 1840.96,
+      "duration": 4.0,
+      "end": 1844.96,
+      "text": "index comma sum"
+    },
+    {
+      "start": 1842.88,
+      "duration": 3.84,
+      "end": 1846.72,
+      "text": "db is basically storing the value of"
+    },
+    {
+      "start": 1844.96,
+      "duration": 3.12,
+      "end": 1848.08,
+      "text": "that state what is the value of index"
+    },
+    {
+      "start": 1846.72,
+      "duration": 5.36,
+      "end": 1852.08,
+      "text": "comma state"
+    },
+    {
+      "start": 1848.08,
+      "duration": 6.88,
+      "end": 1854.96,
+      "text": "so you are storing it in a matrix right"
+    },
+    {
+      "start": 1852.08,
+      "duration": 3.599,
+      "end": 1855.6789999999999,
+      "text": "where index comma sum is an index number"
+    },
+    {
+      "start": 1854.96,
+      "duration": 2.88,
+      "end": 1857.8400000000001,
+      "text": "so"
+    },
+    {
+      "start": 1855.679,
+      "duration": 4.801,
+      "end": 1860.48,
+      "text": "if the sum goes negative"
+    },
+    {
+      "start": 1857.84,
+      "duration": 4.319,
+      "end": 1862.1589999999999,
+      "text": "your doubt is how will this matrix store"
+    },
+    {
+      "start": 1860.48,
+      "duration": 2.96,
+      "end": 1863.44,
+      "text": "it because it cannot have negative"
+    },
+    {
+      "start": 1862.159,
+      "duration": 3.681,
+      "end": 1865.8400000000001,
+      "text": "indexes"
+    },
+    {
+      "start": 1863.44,
+      "duration": 4.64,
+      "end": 1868.0800000000002,
+      "text": "so guys here why are you using matrix to"
+    },
+    {
+      "start": 1865.84,
+      "duration": 3.839,
+      "end": 1869.6789999999999,
+      "text": "store to store"
+    },
+    {
+      "start": 1868.08,
+      "duration": 3.68,
+      "end": 1871.76,
+      "text": "there are a lot of other data structures"
+    },
+    {
+      "start": 1869.679,
+      "duration": 3.281,
+      "end": 1872.96,
+      "text": "that can store values of index comma"
+    },
+    {
+      "start": 1871.76,
+      "duration": 2.88,
+      "end": 1874.64,
+      "text": "some"
+    },
+    {
+      "start": 1872.96,
+      "duration": 3.439,
+      "end": 1876.3990000000001,
+      "text": "yes"
+    },
+    {
+      "start": 1874.64,
+      "duration": 2.879,
+      "end": 1877.519,
+      "text": "i've given you the hint"
+    },
+    {
+      "start": 1876.399,
+      "duration": 3.28,
+      "end": 1879.6789999999999,
+      "text": "you have to tell me in the comment"
+    },
+    {
+      "start": 1877.519,
+      "duration": 3.681,
+      "end": 1881.2,
+      "text": "section if the sum goes negative what is"
+    },
+    {
+      "start": 1879.679,
+      "duration": 2.88,
+      "end": 1882.5590000000002,
+      "text": "the data structure that you can use"
+    },
+    {
+      "start": 1881.2,
+      "duration": 3.599,
+      "end": 1884.799,
+      "text": "instead of a"
+    },
+    {
+      "start": 1882.559,
+      "duration": 4.161,
+      "end": 1886.72,
+      "text": "instead of an array to store it tell me"
+    },
+    {
+      "start": 1884.799,
+      "duration": 3.921,
+      "end": 1888.72,
+      "text": "in the comment section okay"
+    },
+    {
+      "start": 1886.72,
+      "duration": 4.4,
+      "end": 1891.1200000000001,
+      "text": "and in the next video or in the comments"
+    },
+    {
+      "start": 1888.72,
+      "duration": 4.64,
+      "end": 1893.3600000000001,
+      "text": "only i'll uh reply if it's correct okay"
+    },
+    {
+      "start": 1891.12,
+      "duration": 4.08,
+      "end": 1895.1999999999998,
+      "text": "so try it out okay so we've done this"
+    },
+    {
+      "start": 1893.36,
+      "duration": 4.4,
+      "end": 1897.76,
+      "text": "now what's the next step the next step"
+    },
+    {
+      "start": 1895.2,
+      "duration": 3.25,
+      "end": 1898.45,
+      "text": "we know is dp of"
+    },
+    {
+      "start": 1897.76,
+      "duration": 1.919,
+      "end": 1899.679,
+      "text": "best thing to do"
+    },
+    {
+      "start": 1898.45,
+      "duration": 2.109,
+      "end": 1900.559,
+      "text": "[Music]"
+    },
+    {
+      "start": 1899.679,
+      "duration": 2.48,
+      "end": 1902.159,
+      "text": "or"
+    },
+    {
+      "start": 1900.559,
+      "duration": 4.0,
+      "end": 1904.559,
+      "text": "okay let's keep it so what is the next"
+    },
+    {
+      "start": 1902.159,
+      "duration": 4.881,
+      "end": 1907.0400000000002,
+      "text": "thing let's convert this into tabulation"
+    },
+    {
+      "start": 1904.559,
+      "duration": 3.921,
+      "end": 1908.48,
+      "text": "as usual and what do we do"
+    },
+    {
+      "start": 1907.04,
+      "duration": 3.6,
+      "end": 1910.6399999999999,
+      "text": "[Music]"
+    },
+    {
+      "start": 1908.48,
+      "duration": 4.559,
+      "end": 1913.039,
+      "text": "first thing all the base cases"
+    },
+    {
+      "start": 1910.64,
+      "duration": 3.519,
+      "end": 1914.159,
+      "text": "zero to n i plus plus what is the first"
+    },
+    {
+      "start": 1913.039,
+      "duration": 5.041,
+      "end": 1918.08,
+      "text": "base case"
+    },
+    {
+      "start": 1914.159,
+      "duration": 6.961,
+      "end": 1921.1200000000001,
+      "text": "if dp of i and 0 is"
+    },
+    {
+      "start": 1918.08,
+      "duration": 7.199,
+      "end": 1925.279,
+      "text": "that's one what the next base case"
+    },
+    {
+      "start": 1921.12,
+      "duration": 7.6,
+      "end": 1928.7199999999998,
+      "text": "if a of 0 is lesser than equal to r"
+    },
+    {
+      "start": 1925.279,
+      "duration": 6.24,
+      "end": 1931.519,
+      "text": "this is a okay it can be tau and dp of"
+    },
+    {
+      "start": 1928.72,
+      "duration": 4.0,
+      "end": 1932.72,
+      "text": "0 and a of 0"
+    },
+    {
+      "start": 1931.519,
+      "duration": 2.961,
+      "end": 1934.48,
+      "text": "will be 1."
+    },
+    {
+      "start": 1932.72,
+      "duration": 3.52,
+      "end": 1936.24,
+      "text": "perfect and"
+    },
+    {
+      "start": 1934.48,
+      "duration": 3.28,
+      "end": 1937.76,
+      "text": "write the changing parameters"
+    },
+    {
+      "start": 1936.24,
+      "duration": 3.039,
+      "end": 1939.279,
+      "text": "1 till n"
+    },
+    {
+      "start": 1937.76,
+      "duration": 4.08,
+      "end": 1941.84,
+      "text": "because the base case is at 0 so you"
+    },
+    {
+      "start": 1939.279,
+      "duration": 4.64,
+      "end": 1943.919,
+      "text": "start from 1 and the summation"
+    },
+    {
+      "start": 1941.84,
+      "duration": 4.719,
+      "end": 1946.559,
+      "text": "will be going from 0"
+    },
+    {
+      "start": 1943.919,
+      "duration": 5.12,
+      "end": 1949.039,
+      "text": "till some lesser than equal to 10 okay"
+    },
+    {
+      "start": 1946.559,
+      "duration": 5.12,
+      "end": 1951.6789999999999,
+      "text": "and sub plus perfect so what did i tell"
+    },
+    {
+      "start": 1949.039,
+      "duration": 4.961,
+      "end": 1954.0,
+      "text": "you you don't need to think anything"
+    },
+    {
+      "start": 1951.679,
+      "duration": 3.521,
+      "end": 1955.2,
+      "text": "yeah your task is not thinking so much"
+    },
+    {
+      "start": 1954.0,
+      "duration": 2.24,
+      "end": 1956.24,
+      "text": "because you're just moving in the"
+    },
+    {
+      "start": 1955.2,
+      "duration": 2.719,
+      "end": 1957.919,
+      "text": "opposite fashion so it will"
+    },
+    {
+      "start": 1956.24,
+      "duration": 3.2,
+      "end": 1959.44,
+      "text": "automatically fill up"
+    },
+    {
+      "start": 1957.919,
+      "duration": 2.88,
+      "end": 1960.7990000000002,
+      "text": "done"
+    },
+    {
+      "start": 1959.44,
+      "duration": 4.359,
+      "end": 1963.799,
+      "text": "instead of this"
+    },
+    {
+      "start": 1960.799,
+      "duration": 3.0,
+      "end": 1963.799,
+      "text": "dp"
+    },
+    {
+      "start": 1964.96,
+      "duration": 4.24,
+      "end": 1969.2,
+      "text": "okay instead of this sum"
+    },
+    {
+      "start": 1967.36,
+      "duration": 4.64,
+      "end": 1972.0,
+      "text": "and it is"
+    },
+    {
+      "start": 1969.2,
+      "duration": 5.64,
+      "end": 1974.8400000000001,
+      "text": "perfect what's the next thing"
+    },
+    {
+      "start": 1972.0,
+      "duration": 5.039,
+      "end": 1977.039,
+      "text": "tp of index minus"
+    },
+    {
+      "start": 1974.84,
+      "duration": 4.04,
+      "end": 1978.8799999999999,
+      "text": "one sum minus"
+    },
+    {
+      "start": 1977.039,
+      "duration": 4.88,
+      "end": 1981.919,
+      "text": "this so just fill it up"
+    },
+    {
+      "start": 1978.88,
+      "duration": 3.039,
+      "end": 1981.919,
+      "text": "and over this portion"
+    },
+    {
+      "start": 1983.36,
+      "duration": 2.64,
+      "end": 1986.0,
+      "text": "perfect"
+    },
+    {
+      "start": 1984.64,
+      "duration": 2.8,
+      "end": 1987.44,
+      "text": "instead of return"
+    },
+    {
+      "start": 1986.0,
+      "duration": 6.399,
+      "end": 1992.399,
+      "text": "write this"
+    },
+    {
+      "start": 1987.44,
+      "duration": 6.88,
+      "end": 1994.3200000000002,
+      "text": "and instead of n minus 1 dp of n minus 1"
+    },
+    {
+      "start": 1992.399,
+      "duration": 3.361,
+      "end": 1995.76,
+      "text": "ta the call that you made to the"
+    },
+    {
+      "start": 1994.32,
+      "duration": 2.959,
+      "end": 1997.279,
+      "text": "recurrence okay"
+    },
+    {
+      "start": 1995.76,
+      "duration": 3.759,
+      "end": 1999.519,
+      "text": "and omit this"
+    },
+    {
+      "start": 1997.279,
+      "duration": 4.64,
+      "end": 2001.919,
+      "text": "and if you have done this"
+    },
+    {
+      "start": 1999.519,
+      "duration": 4.081,
+      "end": 2003.6,
+      "text": "now try to run it off and see if it is"
+    },
+    {
+      "start": 2001.919,
+      "duration": 2.721,
+      "end": 2004.64,
+      "text": "running by the way it will be index"
+    },
+    {
+      "start": 2003.6,
+      "duration": 2.4,
+      "end": 2006.0,
+      "text": "because you've written everything in"
+    },
+    {
+      "start": 2004.64,
+      "duration": 2.96,
+      "end": 2007.6000000000001,
+      "text": "terms of indexes but if you write"
+    },
+    {
+      "start": 2006.0,
+      "duration": 3.279,
+      "end": 2009.279,
+      "text": "everything in terms of index"
+    },
+    {
+      "start": 2007.6,
+      "duration": 4.959,
+      "end": 2012.559,
+      "text": "now try to run this tabulation code and"
+    },
+    {
+      "start": 2009.279,
+      "duration": 5.12,
+      "end": 2014.399,
+      "text": "see if it is running fine or not"
+    },
+    {
+      "start": 2012.559,
+      "duration": 4.641,
+      "end": 2017.2,
+      "text": "again i get some mistakes"
+    },
+    {
+      "start": 2014.399,
+      "duration": 4.961,
+      "end": 2019.36,
+      "text": "uh probably the mistake is due to array"
+    },
+    {
+      "start": 2017.2,
+      "duration": 4.319,
+      "end": 2021.519,
+      "text": "yeah over here it'll be"
+    },
+    {
+      "start": 2019.36,
+      "duration": 4.24,
+      "end": 2023.6,
+      "text": "no so just make it dumb"
+    },
+    {
+      "start": 2021.519,
+      "duration": 3.601,
+      "end": 2025.1200000000001,
+      "text": "indeed it does run now let's quickly"
+    },
+    {
+      "start": 2023.6,
+      "duration": 3.12,
+      "end": 2026.7199999999998,
+      "text": "submit it off"
+    },
+    {
+      "start": 2025.12,
+      "duration": 3.84,
+      "end": 2028.9599999999998,
+      "text": "so what's the next step"
+    },
+    {
+      "start": 2026.72,
+      "duration": 3.92,
+      "end": 2030.64,
+      "text": "space optimization can you do a space"
+    },
+    {
+      "start": 2028.96,
+      "duration": 3.12,
+      "end": 2032.08,
+      "text": "optimization over here"
+    },
+    {
+      "start": 2030.64,
+      "duration": 3.279,
+      "end": 2033.919,
+      "text": "what is the trick that i've told you in"
+    },
+    {
+      "start": 2032.08,
+      "duration": 3.839,
+      "end": 2035.9189999999999,
+      "text": "order to recognize if there can be a"
+    },
+    {
+      "start": 2033.919,
+      "duration": 3.841,
+      "end": 2037.76,
+      "text": "space optimization if you have seen all"
+    },
+    {
+      "start": 2035.919,
+      "duration": 3.921,
+      "end": 2039.8400000000001,
+      "text": "my previous videos you know"
+    },
+    {
+      "start": 2037.76,
+      "duration": 3.519,
+      "end": 2041.279,
+      "text": "if you see anything like index minus one"
+    },
+    {
+      "start": 2039.84,
+      "duration": 3.6,
+      "end": 2043.4399999999998,
+      "text": "or index plus one"
+    },
+    {
+      "start": 2041.279,
+      "duration": 3.921,
+      "end": 2045.2,
+      "text": "what's the concept what is the concept"
+    },
+    {
+      "start": 2043.44,
+      "duration": 2.959,
+      "end": 2046.3990000000001,
+      "text": "i'll i'm not gonna repeat it watch my"
+    },
+    {
+      "start": 2045.2,
+      "duration": 2.959,
+      "end": 2048.159,
+      "text": "previous videos"
+    },
+    {
+      "start": 2046.399,
+      "duration": 3.44,
+      "end": 2049.839,
+      "text": "very simple yes"
+    },
+    {
+      "start": 2048.159,
+      "duration": 4.401,
+      "end": 2052.56,
+      "text": "instead of this"
+    },
+    {
+      "start": 2049.839,
+      "duration": 5.52,
+      "end": 2055.359,
+      "text": "just create the row"
+    },
+    {
+      "start": 2052.56,
+      "duration": 6.4,
+      "end": 2058.96,
+      "text": "previous row of same size target plus"
+    },
+    {
+      "start": 2055.359,
+      "duration": 6.56,
+      "end": 2061.919,
+      "text": "one comma zero and a current row of"
+    },
+    {
+      "start": 2058.96,
+      "duration": 4.8,
+      "end": 2063.76,
+      "text": "so basically just create two rows"
+    },
+    {
+      "start": 2061.919,
+      "duration": 4.72,
+      "end": 2066.6389999999997,
+      "text": "and"
+    },
+    {
+      "start": 2063.76,
+      "duration": 4.159,
+      "end": 2067.9190000000003,
+      "text": "instead of dp of i now this will be the"
+    },
+    {
+      "start": 2066.639,
+      "duration": 3.841,
+      "end": 2070.48,
+      "text": "what will be this"
+    },
+    {
+      "start": 2067.919,
+      "duration": 5.281,
+      "end": 2073.2,
+      "text": "do you uh can i say that"
+    },
+    {
+      "start": 2070.48,
+      "duration": 5.76,
+      "end": 2076.2400000000002,
+      "text": "for every i equal to 0 as for every i"
+    },
+    {
+      "start": 2073.2,
+      "duration": 4.56,
+      "end": 2077.7599999999998,
+      "text": "equal to 0 it will always be yes it will"
+    },
+    {
+      "start": 2076.24,
+      "duration": 3.439,
+      "end": 2079.6789999999996,
+      "text": "always be"
+    },
+    {
+      "start": 2077.76,
+      "duration": 2.879,
+      "end": 2080.639,
+      "text": "true so what you can say is instead of"
+    },
+    {
+      "start": 2079.679,
+      "duration": 2.96,
+      "end": 2082.639,
+      "text": "this"
+    },
+    {
+      "start": 2080.639,
+      "duration": 2.96,
+      "end": 2083.599,
+      "text": "because what does this signify i equal"
+    },
+    {
+      "start": 2082.639,
+      "duration": 2.72,
+      "end": 2085.359,
+      "text": "to 0"
+    },
+    {
+      "start": 2083.599,
+      "duration": 3.921,
+      "end": 2087.52,
+      "text": "it signifies"
+    },
+    {
+      "start": 2085.359,
+      "duration": 3.201,
+      "end": 2088.56,
+      "text": "for every index is for every index the"
+    },
+    {
+      "start": 2087.52,
+      "duration": 3.04,
+      "end": 2090.56,
+      "text": "zero"
+    },
+    {
+      "start": 2088.56,
+      "duration": 4.48,
+      "end": 2093.04,
+      "text": "that means for every row that you're"
+    },
+    {
+      "start": 2090.56,
+      "duration": 4.96,
+      "end": 2095.52,
+      "text": "taking the zeroth index for every row"
+    },
+    {
+      "start": 2093.04,
+      "duration": 3.92,
+      "end": 2096.96,
+      "text": "that you're taking the zeroth index for"
+    },
+    {
+      "start": 2095.52,
+      "duration": 2.8,
+      "end": 2098.32,
+      "text": "every row that you're taking the zeroth"
+    },
+    {
+      "start": 2096.96,
+      "duration": 4.399,
+      "end": 2101.359,
+      "text": "index will be one"
+    },
+    {
+      "start": 2098.32,
+      "duration": 4.72,
+      "end": 2103.04,
+      "text": "right so as of now you've taken"
+    },
+    {
+      "start": 2101.359,
+      "duration": 3.76,
+      "end": 2105.119,
+      "text": "the first guy"
+    },
+    {
+      "start": 2103.04,
+      "duration": 4.16,
+      "end": 2107.2,
+      "text": "and the second guy and the first guy is"
+    },
+    {
+      "start": 2105.119,
+      "duration": 3.441,
+      "end": 2108.56,
+      "text": "known as previous the second guy is"
+    },
+    {
+      "start": 2107.2,
+      "duration": 3.44,
+      "end": 2110.64,
+      "text": "known as cur"
+    },
+    {
+      "start": 2108.56,
+      "duration": 3.039,
+      "end": 2111.599,
+      "text": "so just make sure you do it instead of"
+    },
+    {
+      "start": 2110.64,
+      "duration": 2.4,
+      "end": 2113.04,
+      "text": "this"
+    },
+    {
+      "start": 2111.599,
+      "duration": 3.281,
+      "end": 2114.88,
+      "text": "you say okay"
+    },
+    {
+      "start": 2113.04,
+      "duration": 5.039,
+      "end": 2118.079,
+      "text": "the first guy the first row previous"
+    },
+    {
+      "start": 2114.88,
+      "duration": 4.88,
+      "end": 2119.76,
+      "text": "zero will be uh one"
+    },
+    {
+      "start": 2118.079,
+      "duration": 4.321,
+      "end": 2122.4,
+      "text": "and there is another guy"
+    },
+    {
+      "start": 2119.76,
+      "duration": 3.68,
+      "end": 2123.44,
+      "text": "curve zero will be one"
+    },
+    {
+      "start": 2122.4,
+      "duration": 2.8,
+      "end": 2125.2000000000003,
+      "text": "perfect"
+    },
+    {
+      "start": 2123.44,
+      "duration": 3.76,
+      "end": 2127.2000000000003,
+      "text": "and over here instead of dp of zero you"
+    },
+    {
+      "start": 2125.2,
+      "duration": 2.96,
+      "end": 2128.16,
+      "text": "know what it'll wait it'll be previous"
+    },
+    {
+      "start": 2127.2,
+      "duration": 2.56,
+      "end": 2129.7599999999998,
+      "text": "yes"
+    },
+    {
+      "start": 2128.16,
+      "duration": 3.36,
+      "end": 2131.52,
+      "text": "that's all you just need to write it"
+    },
+    {
+      "start": 2129.76,
+      "duration": 3.839,
+      "end": 2133.599,
+      "text": "once you've written this for the changes"
+    },
+    {
+      "start": 2131.52,
+      "duration": 4.0,
+      "end": 2135.52,
+      "text": "instead of index minus one that is the"
+    },
+    {
+      "start": 2133.599,
+      "duration": 3.121,
+      "end": 2136.7200000000003,
+      "text": "previous row in x minus one means the"
+    },
+    {
+      "start": 2135.52,
+      "duration": 2.559,
+      "end": 2138.079,
+      "text": "previous row"
+    },
+    {
+      "start": 2136.72,
+      "duration": 3.44,
+      "end": 2140.16,
+      "text": "done"
+    },
+    {
+      "start": 2138.079,
+      "duration": 4.641,
+      "end": 2142.7200000000003,
+      "text": "and what about dpf index that's the"
+    },
+    {
+      "start": 2140.16,
+      "duration": 4.24,
+      "end": 2144.3999999999996,
+      "text": "current rule once you've done this"
+    },
+    {
+      "start": 2142.72,
+      "duration": 4.32,
+      "end": 2147.04,
+      "text": "can i say the previous will be equal to"
+    },
+    {
+      "start": 2144.4,
+      "duration": 4.719,
+      "end": 2149.119,
+      "text": "curve i can and away what will be d of"
+    },
+    {
+      "start": 2147.04,
+      "duration": 4.079,
+      "end": 2151.119,
+      "text": "index minus 1 that's the previous or"
+    },
+    {
+      "start": 2149.119,
+      "duration": 3.281,
+      "end": 2152.4,
+      "text": "current you can take it and if you just"
+    },
+    {
+      "start": 2151.119,
+      "duration": 3.361,
+      "end": 2154.48,
+      "text": "submit this"
+    },
+    {
+      "start": 2152.4,
+      "duration": 4.64,
+      "end": 2157.04,
+      "text": "you will see this is also running"
+    },
+    {
+      "start": 2154.48,
+      "duration": 5.44,
+      "end": 2159.92,
+      "text": "absolutely fine and if i submit this it"
+    },
+    {
+      "start": 2157.04,
+      "duration": 4.48,
+      "end": 2161.52,
+      "text": "will be giving me the correct answer but"
+    },
+    {
+      "start": 2159.92,
+      "duration": 4.08,
+      "end": 2164.0,
+      "text": "the question is"
+    },
+    {
+      "start": 2161.52,
+      "duration": 4.079,
+      "end": 2165.599,
+      "text": "did we optimize in time obviously not we"
+    },
+    {
+      "start": 2164.0,
+      "duration": 4.56,
+      "end": 2168.56,
+      "text": "just optimized the space that we're"
+    },
+    {
+      "start": 2165.599,
+      "duration": 5.601,
+      "end": 2171.2000000000003,
+      "text": "using now a 2d array is not being used"
+    },
+    {
+      "start": 2168.56,
+      "duration": 4.96,
+      "end": 2173.52,
+      "text": "we're just using an 1d array again if"
+    },
+    {
+      "start": 2171.2,
+      "duration": 4.159,
+      "end": 2175.359,
+      "text": "these are negative numbers you can use"
+    },
+    {
+      "start": 2173.52,
+      "duration": 3.04,
+      "end": 2176.56,
+      "text": "the data structure that i was discussing"
+    },
+    {
+      "start": 2175.359,
+      "duration": 3.601,
+      "end": 2178.96,
+      "text": "or in the comment section you'll find"
+    },
+    {
+      "start": 2176.56,
+      "duration": 4.24,
+      "end": 2180.7999999999997,
+      "text": "the answer so guys i want you that i"
+    },
+    {
+      "start": 2178.96,
+      "duration": 3.68,
+      "end": 2182.64,
+      "text": "want you guys to write write in the"
+    },
+    {
+      "start": 2180.8,
+      "duration": 3.6,
+      "end": 2184.4,
+      "text": "comment section what if"
+    },
+    {
+      "start": 2182.64,
+      "duration": 3.04,
+      "end": 2185.68,
+      "text": "these were negative numbers which data"
+    },
+    {
+      "start": 2184.4,
+      "duration": 3.04,
+      "end": 2187.44,
+      "text": "structure will you use i want you to"
+    },
+    {
+      "start": 2185.68,
+      "duration": 2.96,
+      "end": 2188.64,
+      "text": "write that in the comment section so"
+    },
+    {
+      "start": 2187.44,
+      "duration": 3.36,
+      "end": 2190.8,
+      "text": "guys i hope you have understood the"
+    },
+    {
+      "start": 2188.64,
+      "duration": 3.36,
+      "end": 2192.0,
+      "text": "entire explanation just in case you did"
+    },
+    {
+      "start": 2190.8,
+      "duration": 2.48,
+      "end": 2193.28,
+      "text": "please please make sure you like this"
+    },
+    {
+      "start": 2192.0,
+      "duration": 3.2,
+      "end": 2195.2,
+      "text": "video and if you're new to the channel"
+    },
+    {
+      "start": 2193.28,
+      "duration": 3.52,
+      "end": 2196.8,
+      "text": "do consider subscribing to us and to"
+    },
+    {
+      "start": 2195.2,
+      "duration": 3.04,
+      "end": 2198.24,
+      "text": "continue our tradition please do comment"
+    },
+    {
+      "start": 2196.8,
+      "duration": 2.96,
+      "end": 2199.76,
+      "text": "understood under the comment section so"
+    },
+    {
+      "start": 2198.24,
+      "duration": 3.839,
+      "end": 2202.0789999999997,
+      "text": "that i get motivation that you are"
+    },
+    {
+      "start": 2199.76,
+      "duration": 3.599,
+      "end": 2203.3590000000004,
+      "text": "understanding whatever i am explaining"
+    },
+    {
+      "start": 2202.079,
+      "duration": 2.481,
+      "end": 2204.5600000000004,
+      "text": "so with this i'll be wrapping up this"
+    },
+    {
+      "start": 2203.359,
+      "duration": 2.48,
+      "end": 2205.839,
+      "text": "video let's meet in the next one where"
+    },
+    {
+      "start": 2204.56,
+      "duration": 3.68,
+      "end": 2208.24,
+      "text": "we will be discussing the next problem"
+    },
+    {
+      "start": 2205.839,
+      "duration": 6.681,
+      "end": 2212.52,
+      "text": "from the dp playlist hello bye take care"
+    },
+    {
+      "start": 2208.24,
+      "duration": 4.28,
+      "end": 2212.52,
+      "text": "whenever your heart is"
+    },
+    {
+      "start": 2214.64,
+      "duration": 3.24,
+      "end": 2217.8799999999997,
+      "text": "i will"
+    }
+  ]
+}

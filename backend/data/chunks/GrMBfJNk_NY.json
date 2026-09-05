@@ -1,0 +1,207 @@
+{
+  "video_id": "GrMBfJNk_NY",
+  "position": 186,
+  "title": "DP 5. Maximum Sum of Non-Adjacent Elements | House Robber | 1-D | DP on Subsequences",
+  "url": "https://www.youtube.com/watch?v=GrMBfJNk_NY",
+  "chunk_count": 18,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "GrMBfJNk_NY",
+      "position": 186,
+      "title": "DP 5. Maximum Sum of Non-Adjacent Elements | House Robber | 1-D | DP on Subsequences",
+      "url": "https://www.youtube.com/watch?v=GrMBfJNk_NY",
+      "start": 0.0,
+      "end": 106.799,
+      "text": "hey everyone welcome back to the channel i hope you guys are doing extremely well so welcome to the fourth lecture of dynamic programming playlist what is the problem today's problem is going to be maximum sum of non-adjacent elements again one kind of one ddp that we will be solving i'll be following the same pattern you might have solved this problem previously but the way i'll be teaching you will be something very very very different so please please do watch the video till the end to understand all the logic don't think that if you understand memorization it's done you have to understand tabulation you have to understand space optimization in order to be the best okay so let's let's understand the question uh basically it states you will be given an array of n-integers that means you are given an array which consists of an integers okay so you're supposed to return the maximum sum of the subsequence now remember you have to pick up a subsequence which gives you a maximum sum but there's a constraint in the subsequence none of the elements can be adjacent from the array okay so for an example if i look on this test case which is one two four you can't pick some you can't pick something like one comma two or you can't pick something like two comma four because they are adjacent got it so probably you can pick something like one and four which gives you the maximum sum five that's what the maximum sum will be like over here you can't pick something like four and nine together you have to pick one of them so probably i'll pick uh nine and then i'll pick two to get the maximum sum as eleven so you'll be given an array and you'll be given the size of the array you have to tell me what is the maximum sum that you can pick by picking up no adjacent elements in that subsequence so what's the first thing that comes to",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "GrMBfJNk_NY",
+      "position": 186,
+      "title": "DP 5. Maximum Sum of Non-Adjacent Elements | House Robber | 1-D | DP on Subsequences",
+      "url": "https://www.youtube.com/watch?v=GrMBfJNk_NY",
+      "start": 103.68,
+      "end": 251.2,
+      "text": "what's the first thing that comes to your brain when you hear about this problem it comes key uh let's try out all subsequences so that is something which comes to my brain is let's try out all subsequences with the given constraint as something which comes to my brain and out of all these subsequences let's pick the one with the maximum sup correct like i'm gonna put out all subsequences and whichever subsequences gives you the maximum sum we're gonna pick that one as simple as that now the question arises whenever we say trying out all stuff what comes to your brain obviously one thing comes to your brain which is recursion so you're going to try out recursion correct and after that we are going to see if there are overlapping sub problems and that's that's that's for the remaining part but we have we have understood that why recursion because if they're asking you to try out all subsequences we have to and that is only doable by recursion so how do you print all subsequences that's that's a big question uh before uh solving this question how do you print all subsequences so there's a technique which is known as pick and non-pick okay so i have taught this entire technique in lecture six of recursion series and a lecture seven in depth so if you haven't seen both of the lectures pause it right now yes i repeat pause this video right now go back to lecture six and lecture seven understand the pick and non pick come back and then watch this video if you don't watch lecture six and lecture seven do not say me key striver did not teach well okay so you have to know this logic of pick and non pick okay so i know how to uh write recurrence what did it teach you express every recursion in terms of indexes okay make sense do stuffs on that index okay do stuffs on that index then return the best that you can get",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "GrMBfJNk_NY",
+      "position": 186,
+      "title": "DP 5. Maximum Sum of Non-Adjacent Elements | House Robber | 1-D | DP on Subsequences",
+      "url": "https://www.youtube.com/watch?v=GrMBfJNk_NY",
+      "start": 245.439,
+      "end": 378.479,
+      "text": "then return the best that you can get written the best that you can get that is something which i know now over here what is the problem pick subsequence with no adjustment remember this with no adjacent elements so where do you pick where do you pick sub sequence from you pick subsequence from an array right you pick subsequence from an array and whenever there is an array there has to be an index so the first property has been satisfied that i will have the recurrence based on the index okay now there is a question there's a constraint rather with no adjacent how do i deal with it because i know how to print all the subsequences but now there's a constraint which states with no adjacent elements right so we want the maximum sum correct so can i say our recursion to define something like this f of index states the maximum sum like the maximum sum that you can get if you pick a subsequence from the index 0 till the index maximum sum that you can get by picking up a subsequence with no adjacent elements from 0 to index make sense so can i say can i say this that if i end up at index 0 if i end up at index 0 what will be the best thing that i can do like there can be a lot of things but as of now let's keep this aside let's think of the other cases because we know we're gonna start from n minus one now in recursion we know in order to print subsequence you have a pick which states key take this element into your subsequence pick says take this element into your subsequence so if you take this element into a subsequence the sum has to increase and the sum will increase by a of index perfect now tell me one thing think on yourself i'm saying do stuffs you're saying okay what are the stuffs that i can do i can say",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "GrMBfJNk_NY",
+      "position": 186,
+      "title": "DP 5. Maximum Sum of Non-Adjacent Elements | House Robber | 1-D | DP on Subsequences",
+      "url": "https://www.youtube.com/watch?v=GrMBfJNk_NY",
+      "start": 374.88,
+      "end": 489.59900000000005,
+      "text": "say this particular index element will be a part of my subsequence or i can say let's not take this and i will go so if i decide that i will not pick then it will be a zero plus i decide that i will not take this it will be a zero plus okay so on stuffs i can say these are the stuffs that i can do i can either take that element take the element index into my subsequence or i can say i will not take this into my subsequence these are the couple of things that i can only do now tell me one thing if you are picking up an index yes if you are picking up an index what is the question stating you cannot pick up an adjacent element so will you go to the previous index which you generally did in 1d will you because if you go to the previous element there will be a no option there will be no option of picking that because you have picked up the index so you cannot pick up the index minus one so can i say you will not pick index minus 1 so can i directly go to index minus 2 think on this make sense because if i am picking index i cannot pick index minus 1 because the condition states no adjacent so the transition instead of going to index minus 1 and deciding what will we do for index minus 1 instead of that what we do is we say go to index minus 2 is go back to index minus 2 because index minus 1 cannot be but this is how you can do now if i decide that i'm not going to pick if i'm not picking an index can i pick an index minus 1 makes sense so i will say okay i will pick up the index right now can i say this is for the current and the sum from index minus 2 to 0 will be given by this recurrence so",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "GrMBfJNk_NY",
+      "position": 186,
+      "title": "DP 5. Maximum Sum of Non-Adjacent Elements | House Robber | 1-D | DP on Subsequences",
+      "url": "https://www.youtube.com/watch?v=GrMBfJNk_NY",
+      "start": 484.879,
+      "end": 602.0,
+      "text": "to 0 will be given by this recurrence so this plus this will be the sum that you will get from 0 till index the maximum subsequent sum makes sense so can i say the last step is written best because you want the maximum sum so return max of pick and not pick that's how you do it but now still there's a question what if we reach somewhere around index equal to equal to zero so if we are reaching at index equal to equal to 0 at any moment that means you have not picked up index equal to equal to 1 think on this if you are reaching index equal to equal to 0 that means you haven't picked up index equal to 1 thereby you are reaching index equal to 0 right because if you would have picked index equal to 1 then index minus 2 would have happened and you would have not reached so thereby i can say that you have not picked index equal to 1. so can i say the best that i can do is pick this element because if i haven't picked up index 1 i need to pick it because then only i can maximize my sum because remember the array does not have any negative elements thereby i can say i will return whatever there is right but what if what if index was 1 and you did 1 minus 2 and you went on to a negative index so you are running out of bound so there will be another edge case that you have to think in recursion so i can say if i am going index lesser than 0 i will be like return 0 because there will be nothing else so over here realize what i what i did in the subsequence problem the only change that i did was i represented it as index i picked up the element but instead of going to index minus 1 i just did index minus 2 that's a shuttle",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "GrMBfJNk_NY",
+      "position": 186,
+      "title": "DP 5. Maximum Sum of Non-Adjacent Elements | House Robber | 1-D | DP on Subsequences",
+      "url": "https://www.youtube.com/watch?v=GrMBfJNk_NY",
+      "start": 598.64,
+      "end": 711.839,
+      "text": "did index minus 2 that's a shuttle change that i did in the subsequence problem because there was a condition with stated no adjacent right and there was one base case where i stated if i reach this space because i'll pick up and if i cross this base case there is nothing else to pick up so there will be a couple of base cases we have to think on this and there's no not pick and pick so in this way i have modulated the subsequence code that i've taught you in the lecture six in order to write a same similar problem with an additional no adjacent constraint so i hope you have understood the recurrence it's pretty straightforward so if you talk about this recurrence you're going to try out all the possible ways the time complexity is definitely exponential which is 2 to the power n because you'll try out all like it's not exactly 2 to the power n it's going to be lesser than that so you have to memoize it now now question arises how do you optimize recursion you have to figure out if the recursion has overlapping sub problems like if the recursion has overlapping sub problems then we can definitely memoize it right so it will have overlapping sub problems so what we will do is we will take a very simple example two one four nine and i'll write the index numbers as zero one two three let's start from f of three where f of three basically states is what is the maximum sum you can get you if you pick up a subsequence with no adjacent from the index 0 to index 3 which essentially means the entire array what is the maximum sum if you pick from this so f of 3 is basically stating hey listen i can definitely pick up okay i can definitely pick up so if i pick up i will go to the f of one why because if i decide to pick up this particular guy i",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "GrMBfJNk_NY",
+      "position": 186,
+      "title": "DP 5. Maximum Sum of Non-Adjacent Elements | House Robber | 1-D | DP on Subsequences",
+      "url": "https://www.youtube.com/watch?v=GrMBfJNk_NY",
+      "start": 707.12,
+      "end": 808.639,
+      "text": "decide to pick up this particular guy i cannot pick up this so i'll go to f of one directly that's perfect and if i decide not to pick up i will go to just f of 2 makes sense now if you are at f of 1 again there are a couple of conditions you say i'm going to pick up so if you pick up you're going to go to f of minus 1 and if you decide you're not going to pick up you're going to go to f of 0 okay it makes sense so right over here at f 1 you have encountered an f of minus 1. so if i try to write this f 1 in the code generally f of 1 will look something like this and this will be calling a pic right which will be it'll be saying let's pick this f of 1 which is a of one what was the value of a of one let's see that's nothing but one so let's pick up one so be like let's pick up one plus f of minus one now if you remember what does f of minus one signify it signifies zero you remember this so this guy will be zero so what i can say is for f of one if you pick up it will be one right and if i decide to not pick up it will be zero plus f of zero correct what is f of zero whenever you reach f of zero you are going to take that element up correct because if you remember at f of zero what you did you returned you returned the rf index so kindly yes kindly try to return that area of index whatever it is so the first element was two so you can return it so this will be two now the pick gives you one the notepad gives you two which is the maximum that's 2. so f of 1 will be 2 f of 1 will be",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "GrMBfJNk_NY",
+      "position": 186,
+      "title": "DP 5. Maximum Sum of Non-Adjacent Elements | House Robber | 1-D | DP on Subsequences",
+      "url": "https://www.youtube.com/watch?v=GrMBfJNk_NY",
+      "start": 803.12,
+      "end": 900.959,
+      "text": "2 f of 1 will be 2. now a very uh simple question arises yes a very very simple question arises what does this signify what does f of 1 signify i told you f of one signifies the maximum sum that you can gather if you pick up a subsequence with no adjacent elements from zero to index one so if i just take this portion of the array i can either pick two as a subsequence or i can either pick one because there are no other options because in this particular array if i forget this in this particular array i can either take two other subsequence or one as a subsequence so thereby it is very obvious that i got two because taking two would be a better choice i hope that makes sense so i can say f of 1 give you 2 so i can just erase it so i've raised it f of 1 is given as 2 now what will be f of 3 f of 3 will say ok i am going to pick what will i pick i'll pick a of 3 what's a of 3 that's 9 so i'm going to pick 9 plus f of 1 and i'm going to pick not pick so 0 plus f of 2 correct 0 plus f of 2 i'll have to do this so there will be a call for f of 2 now otherwise there will be a call for f of 2 so call for f of 2 will now go remember this first f of 1 went and came back with a value two so it came back with a value two then f of two will go so now f of two will go got this so let's quickly do the f of two and then we can wrap this up so if i have yes if i have f of two what can i say i'll either pick it up so if i pick it up i'll go to f of zero if i",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "GrMBfJNk_NY",
+      "position": 186,
+      "title": "DP 5. Maximum Sum of Non-Adjacent Elements | House Robber | 1-D | DP on Subsequences",
+      "url": "https://www.youtube.com/watch?v=GrMBfJNk_NY",
+      "start": 896.88,
+      "end": 1004.2399999999999,
+      "text": "pick it up i'll go to f of zero if i decide i'm not gonna pick it up so i'll go to f of one now do you see an overlapping sub problem you do see right this f of one is an overlapping problem there is no need to again go to f of minus one f of 0 there's no need there is no need so you can directly take f of 1 right from here because that's the value which has already been stored so what i can say is in f of 2 if i write the pick the pick will be i'll pick the a of 2 which is 4 plus f of 0 what will be f of 0 that's this particular element 2 so 4 plus 2 will be 6. so again makes pretty much sense if i decide to not pick that will be 0 plus f of one what's the value of f of one two so which one will you prefer the pick or the not pick i'll be like i will prefer the pic portion which is six so thereby this value gets as six and you can easily get this f of one from here which is two thereby we did not do any further recursions overlapping sub prop limbs got it again what does f of two signify let's let's think on this what is f of two signify the sum between zero to index two sum between zero to index two so if i decide if i take this again make sense it'll be preferable to take these two elements that's why you got six as the value because it'll be preferable to take these two guys instead of taking these two or like instead of taking this one or instead of just taking this more preferable to take these two guys right that's why you got a value as six so at the last moment whenever you are at f of three let me quickly so let me quickly write you this",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "GrMBfJNk_NY",
+      "position": 186,
+      "title": "DP 5. Maximum Sum of Non-Adjacent Elements | House Robber | 1-D | DP on Subsequences",
+      "url": "https://www.youtube.com/watch?v=GrMBfJNk_NY",
+      "start": 1000.959,
+      "end": 1099.919,
+      "text": "so let me quickly write you this whenever you are at f of three what will happen there will be a case of pick which will sell pick f of three which will give you a value of nine and you will say if i pick i'll go to f of 1 and if i do not pick i'll go to f of 2 so f of 2 gave you 6 f of 1 give you 2 so 9 plus 2 gave you 11 0 plus 6 give you 6. so which one will you do you will directly say this value will be 11. again make sense because you're going to pick this and you're going to pick this so thereby the answer is 11 and you saw that they were overlapping sub problems because in order to solve f of 3 we required f of one twice and whatever the answer for f of one is computed once that can be reused because answer will never change for a particular set of array correct that's all that's how we prove that there are overlapping sub problems and how did the recursion work so now we can easily apply memoization to it and we can reduce the time complexity because what will be the memory action technique obviously how many states are there f of three f of one f of two so can i say there are n states like states like 0 1 2 3 because there'll be f of 0 f of 1 f of 2 f of 3 so there are n states so you can create an array of size bp of n and you can initially initialize that with minus 1 and then you know the couple of steps with a couple of steps over here you say dp of index and you write one more step over here if dp of index is not equal to minus 1 you return dp of index so if you just write these couple of steps what will happen is",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "GrMBfJNk_NY",
+      "position": 186,
+      "title": "DP 5. Maximum Sum of Non-Adjacent Elements | House Robber | 1-D | DP on Subsequences",
+      "url": "https://www.youtube.com/watch?v=GrMBfJNk_NY",
+      "start": 1094.88,
+      "end": 1206.24,
+      "text": "of steps what will happen is it will change it to a time complexity of big o of n instead of the exponential one and the space complexity will change to be of n stack space and a big o of n at a space so that is what the memoization time complexity is still but there is still a recursion stack space which we have to omit but before that let's uh code this up and submit this so can i say n will be nothing but nums dot size i definitely can so let's keep it as that way and can i say i will return a function which will have initially start from the last index which is this and we can definitely uh carry the nums with that so we can surely write this and over here we can write the function which is intf and can i write int index vector of int and this will be nums and what i can definitely do is if index is equal to equal to 0 we can return zero if index goes lesser than zero we can return something as zero so by the way if index is zero please written nums index because we're going to pick that up so please do that and this will be zero and can i say if i pick the element remember it's very simple you either pick in almost all subsequence problems it will be always pick or you don't pick that's as simple as that and if you pick you'll go to the next and this will be the this one and if you're not pick you will basically will be basically like 0 plus if you don't pick you will simply go to index minus 1 with the nums correct and at the end of the day you can say return max of pick and not pick so if i try to run this so you see all the test cases running but if i submit this you'll get a tle so let's quickly uh",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "GrMBfJNk_NY",
+      "position": 186,
+      "title": "DP 5. Maximum Sum of Non-Adjacent Elements | House Robber | 1-D | DP on Subsequences",
+      "url": "https://www.youtube.com/watch?v=GrMBfJNk_NY",
+      "start": 1201.6,
+      "end": 1314.559,
+      "text": "let's quickly uh quickly have a dp array so it's a db vector of people can easily take some analyst or something like that at minus one and you can just pass on the dp over here and over here what you'll do is you'll say vector of end and you can say ing dp so just make sure you always pass it by reference over here dp over here dp and what you do over here is step one is done that is passing the dp as -1 next step is initializing whatever the value of f of index is computed next step is if that state is again called no need to do any further recursion calls instead of that please use the pre-stored value because we are not going to any further do recursion calls and increase our time complexity so if i now run this you will see this running perfectly and if i submit this you'll see it is working absolutely fine so so we have learned about the memoration what's what is the next step that i generally teach you guessed it correctly i'm gonna learn the tabulation yes we're going to convert the membership into tabulation step one declare the dpi of the same size and you can fill that with zeros or whatever you wish to so the dpi has been filled up with let's take the base case that's that's how you generally convert uh minimization right so let's assume what's the base case at index 0 it says a of index so dp of index dp of 0 will be f index correct so please please write it so can i say the base case will be dp of 0 will be a of 0 because that is what the base cases do i have one more base case i do let's see what is the base case the base case states if index is lesser than zero then you have to return zero so in negative indexes you have to return zero so can i say uh",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "GrMBfJNk_NY",
+      "position": 186,
+      "title": "DP 5. Maximum Sum of Non-Adjacent Elements | House Robber | 1-D | DP on Subsequences",
+      "url": "https://www.youtube.com/watch?v=GrMBfJNk_NY",
+      "start": 1310.32,
+      "end": 1428.159,
+      "text": "zero so can i say uh probably i cannot store this because it's a negative index so can i store this in a variable where i say negative is equal to zero like like negative is zero basically whenever there is a negative index encountered i'll add zero just just for understanding purpose so both the base cases have been assigned now let's look at the next portion what's the next portion where does uh like if index is passed on zero it stops over here if index is passed on one it goes if index is passed onto it goes so you know you know this that what is tabulation tabulation by reputation i've been saying it is bottom up so from bottom to up what is the base case is zero so from zero you'll start building so zero you've built so you'll start from one so quickly start from one and you can go until n i plus plus correct now what is the take case let's write the case what is the take case take case is saying i'll take the array of index that is what they have written the recursion and they were saying f of index minus two and i've told you instead of f you'll write d p of i minus two let's come to this edge cases i'll come across afterwards we will write this what about the non take case the non take case will be 0 plus dp of just the previous one and dp of i will be max of take and non take do you agree with me you have there's absolutely no other option right so everyone has agreed with this now i see an edge case what is that case the hk states if dp like i minus 2 for an example whenever i is 1 so 1 minus 2 this will go to a negative index and the case of f of minus 1 you remember there was a case of f of minus 1 in the recursion tree if",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 13,
+      "video_id": "GrMBfJNk_NY",
+      "position": 186,
+      "title": "DP 5. Maximum Sum of Non-Adjacent Elements | House Robber | 1-D | DP on Subsequences",
+      "url": "https://www.youtube.com/watch?v=GrMBfJNk_NY",
+      "start": 1424.0,
+      "end": 1544.3999999999999,
+      "text": "of f of minus 1 in the recursion tree if i take you slowly there was a case of f of minus 1 over here right so that case will be encountered so can i say can i say probably i can write something like this like what is the negative the negative is 0 so if it goes to negative then only this portion will be there because this will be plus 0 if it's a negative and if it's a and if it is not then i add up this so can i say can i say something like this right right can i say if i is greater than 1 then take plus equal to dp of i minus 2 if it is if it is like you're allowed to add this because that will always be there but if it is like if it is i equal to equal to 1 then there will be addition of 0 so it stays as it is and if i exceeds like i is 2 then you have to add this with this so it automatically performs so can i just add this line up so just add it only if it exceeds so if you not do this this will be the tabulated form yes this will be the tabulated form and if i ask you the time complexity now we go of n space complexity just a big often no auxiliary stack space that's the time complexity and the space complexity for this particular tabulation code and i hope it was as simple as it could have been what's the next step that i generally do come on guys this is something which none of the creators does which is space optimization if anyone teaches you space optimization anyone you can come and tell me everyone teaches you memoration some some will teach you memoration some will teach memorization plus tabulation and some will teach you some patterns but over here you get everything including space optimization which is the ultimate form of dp like",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 14,
+      "video_id": "GrMBfJNk_NY",
+      "position": 186,
+      "title": "DP 5. Maximum Sum of Non-Adjacent Elements | House Robber | 1-D | DP on Subsequences",
+      "url": "https://www.youtube.com/watch?v=GrMBfJNk_NY",
+      "start": 1541.36,
+      "end": 1663.2,
+      "text": "of dp like if you don't do space optimization you don't know dp as simple as that like pattern structure if you are if you're understanding how to do space optimization you are actually understanding dp in depth that last two states and so on and so on okay so let's analyze over here in order to compute dp of i what am i requiring i'm requiring a dp of i minus 1 and i'm requiring a dp of i minus 2 point to note point to note if i put dots again our famous dots if i'm computing any i let's let's for an example take any i what am i requiring i am requiring i minus 1's value and i minus 2's value as of now where are they stored at dpi minus 2 and dp i minus 1 as of now they are stored at any particular array do i require i minus three are in no baba no do i require i minus four no bubba no do you require i minus five array baba laska give me the last two and i will do my job so i say hey you just required last two so you require just two space you don't require a huge array because in order to compute this you just require these guys and the moment i plus plus happens and for loop moves ahead to this guy then you'll be requiring these two guys and after this when i move so then you'll be recording these two guys so if i can somehow carry the last two guys my job will be done and that's the track of space optimization so what i will say is okay instead of storing them in some dp can i store them in a couple of variables previous and previous to i'll be like yeah you can so let's store them now who is way what's stopping you so i will store them into previous and previous two and i can say this as ker i what will",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 15,
+      "video_id": "GrMBfJNk_NY",
+      "position": 186,
+      "title": "DP 5. Maximum Sum of Non-Adjacent Elements | House Robber | 1-D | DP on Subsequences",
+      "url": "https://www.youtube.com/watch?v=GrMBfJNk_NY",
+      "start": 1657.52,
+      "end": 1786.159,
+      "text": "and i can say this as ker i what will happen in the next step i will move here so this karahi karai like the previous i that was used will become someone's previous now for this i now this guy will be the previous no yeah and the previous will become previous too yeah so can i again formulate the same logic that we have used in lecture two lecture three lecture four so previous two will be previous previous will be karai with complete proof i have done the space optimization so can i do this now can i say instead of this probably i can keep previous now instead of negative i can keep previous two because that's what 0 and z minus 1 will be so can i over here write previous two now i can can i over here write something as previous i can can i over here write as take a non tick will be there again sorry take a non take will be there can i over here write as car i i can instead of ending over here instead of ending over here i will write previous two becomes previous and previous becomes karai that's it at the end where will be your answer like generically the answer is that dp of n minus 1 so can i say this for loop ends at whenever i is n so whenever i is at n whenever i is at n the last n minus 1 where will be the value where will be the value this is i minus 1 where will be the value previous previous yeah yeah yeah at previous so you understood how to do a space optimization now if i talk about the time complexity we solved this particular problem in a big o of n and a space complexity of big o of one amazing right so what are you waiting for let's quickly code this up so what do i require i require a previous for sure",
+      "word_count": 341
+    },
+    {
+      "chunk_index": 16,
+      "video_id": "GrMBfJNk_NY",
+      "position": 186,
+      "title": "DP 5. Maximum Sum of Non-Adjacent Elements | House Robber | 1-D | DP on Subsequences",
+      "url": "https://www.youtube.com/watch?v=GrMBfJNk_NY",
+      "start": 1781.679,
+      "end": 1912.559,
+      "text": "require i require a previous for sure which is a of zero or nums of zero over here i require a previous two for sure which is zero in this case and i start from zero i go on till this and i say the take will be definitely by the way just make sure you start from one so you say it will start from nums of i take and you will only take the previous guy if it's minus two if it's greater than one what do we not take nothing will be zero plus dp of i minus one which is previous can i say previous two will become previous i can i definitely can there's no doubt in that and can i say the previous will now become karai at the end of the day can i say i have to return just the previous and that will be my answer makes it so if i just erase this off now if i try to run this you will see this running fine it goes for the summation bingo works fine amazing right so if i give a summary of the entire today's lecture it was we learned something as subsequence pick or take or not take or pick or not pick technique and then we applied a constraint on that because we didn't know about the pick and not pick technique but we applied additional understood how to solve it after that we created the tabulation and we noticed that there was i minus 1 and i minus 2 only being used thereby we converted it into a space optimization so if you have understood the entire stuff please please please write us in the previous videos there was around seven thousand to eight thousand views there's hardly eighty ninety people writing us please yeah i request you to write us because it does take a lot of effort it does takes a lot of effort to make these kind of videos and if you don't support how will i maintain consistency right so",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 17,
+      "video_id": "GrMBfJNk_NY",
+      "position": 186,
+      "title": "DP 5. Maximum Sum of Non-Adjacent Elements | House Robber | 1-D | DP on Subsequences",
+      "url": "https://www.youtube.com/watch?v=GrMBfJNk_NY",
+      "start": 1909.039,
+      "end": 1941.48,
+      "text": "how will i maintain consistency right so please please do right even if you're watching it after the dp series has been completed still make a point that you write us because whenever i see people writing us that motivates me that okay i'm teaching and people are understanding and yeah just me do not forget to like uh like this video now please please do subscribe to us because i do put very very genuine content on this channel and with this let's wrap up this video and meet in the next one don't ever forget",
+      "word_count": 97
+    }
+  ]
+}

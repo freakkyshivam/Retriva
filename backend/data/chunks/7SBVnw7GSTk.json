@@ -1,0 +1,108 @@
+{
+  "video_id": "7SBVnw7GSTk",
+  "position": 288,
+  "title": "L5. Jump Game - II | Greedy Algorithm Playlist",
+  "url": "https://www.youtube.com/watch?v=7SBVnw7GSTk",
+  "chunk_count": 9,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "7SBVnw7GSTk",
+      "position": 288,
+      "title": "L5. Jump Game - II | Greedy Algorithm Playlist",
+      "url": "https://www.youtube.com/watch?v=7SBVnw7GSTk",
+      "start": 3.199,
+      "end": 112.36,
+      "text": "so let's continue with our greedy algorithms playlist right before that hey everyone welcome back to the channel I hope you guys are doing extremely well so the problem that we will be solving today is Jump game part two in case you haven't seen my part one video please please go back and watch it so what is the part to stating stating that you will be standing at the first element you're given an array every element tells you what is the maximum jump that you can take for an example if it is given as two you can jump till here till here either of them there's the maximum that you can take so you can jump to either of these elements now the question is tell me the minimum number of jumps that it will take to reach from the start till the end from the start till the end and it is guaranteed that you will reach the end it is guaranteed the test cases are given in such a way that you will definitely reach the end in the part one the question was will you will you reach the end over here the question is tell me the minimum jumps that you will take to reach the end got it so what will be the answer for this particular test case what I can do is from here I can jump till here which is a jump single jump from one I can take one more jump which is another jump from four I can directly jump to the last so I'm taking three jumps right so I've taken three jumps and this is going to be the answer minimum jumps you can try out all of the possible ways and three is the minimum answer that you will get if this problem comes up in an interview what is the extreme solution that you can think of I know one thing starting at the zeroth index and there are two possible ways there are two possible ways one is this one is",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "7SBVnw7GSTk",
+      "position": 288,
+      "title": "L5. Jump Game - II | Greedy Algorithm Playlist",
+      "url": "https://www.youtube.com/watch?v=7SBVnw7GSTk",
+      "start": 107.56,
+      "end": 229.519,
+      "text": "two possible ways one is this one is this from here there are three possible ways so every index has different ways different ways can I try out all way yes I I can try out always and then can I pick the minimum of all of them I can right so what I will do is I'll just take a smaller example let's take a smaller example which is 2 314 can I say I can start at the zero index I'll be trying out all possible ways and you know how to do it recursion recursion playlist remember I'll be starting with the zero index and the number of jumps that I would have taken as of now is zero what I can do is I know I'm allowed to take at Max of two jumps so I'll take a jump of one I'll reach the index one and that will be one jump or I'll take two jumps I'll reach the index two and that will be two jumps from here there's three given to you so maybe I can take one jump maybe I can take a two jump or maybe I can take a three jump so if I take a one jump I'll reach two correct if I take uh that will be two jumps if I take two jumps I'll reach three that'll be two jumps if I take three I'll be reaching the fourth index and there will be two jumps and if you carefully see this is one of the ways one of the ways this is one of the ways this is one of the ways and this is going to tell you hey you've reached your end so you're going to take minimum of this minimum of this and minimum of this so even eventually it will be returning you two because taken two Chumps so you'll get your answer as two for this particular test case try out all possible ways Lan recursion very simple recursion can I super quickly write down",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "7SBVnw7GSTk",
+      "position": 288,
+      "title": "L5. Jump Game - II | Greedy Algorithm Playlist",
+      "url": "https://www.youtube.com/watch?v=7SBVnw7GSTk",
+      "start": 224.12,
+      "end": 360.6,
+      "text": "recursion can I super quickly write down the recursive code maybe yes so I'll be write okay uh function maybe I can take an index I can take the jumps and this will be called with f of 0 0 with the array obviously you know what is the base case what is the end case I know one thing for sure the end case is hey if at any moment the index is greater than n minus one that means we either reached or crossed over and if that is the case I'll be like hey can you return now this is very important can you return what will I return I'll be returning U the number of jumps right perfect done what is the next thing I'll be like okay how many jumps can I take I can start from one I know for sure I can start from one and I can go ahead till array of index those many jumps I can take I'll have to take the minimum of all of them so maybe I can keep a mini equal to something as I need a mini answer right so I'll keep it as in Max perfect and what I'll do is Mini equal to minimum of mini right comma what I can write is function of standing at index if I take the jump I I'll reach index plus I and the jumps will be added by plus one perfect so I'll take all the jumps and whatever is the minimum I will straight away return it then indust that's it just make sure you don't start with zero then it will go to the same index there's no point in jumping to the same Index this will be the recursive code and if I have to write down the time complexity this will be exponential in nature you are going for n indexes so n to the power n assuming all the jumps are n or somewh near about that it can go exponential in nature what about the",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "7SBVnw7GSTk",
+      "position": 288,
+      "title": "L5. Jump Game - II | Greedy Algorithm Playlist",
+      "url": "https://www.youtube.com/watch?v=7SBVnw7GSTk",
+      "start": 355.16,
+      "end": 494.44,
+      "text": "go exponential in nature what about the space complexity I'll be using auxiliary stack space of B go of correct now what you can do is this is exponential you can optimize this yes you can optimize this how can you optimize this again if you haven't seen the dynamic programming playlist don't watch this dynamic programming portion if you know dynamic programming you can watch it so for the people who have seen my dynamic programming you know how to optimize an exponential state to a quadratic State you know it there are two variables that are changing one is index the other one is jumps so what you can do is instead of returning mini you can technically declare a DP of n n correct and you can say DP of index and jumps equal to Min and over here you can say hey if not here over here you can say hey if DP of this state has been visited previously make sure initially you have minus one has been visited previously you can return DP of index jumps quite simple so if you do this the solution will be converted into a beo of n² solution to a b of n Square solution with a space complexity of bco of n Square this is what it will be converted into uh okay perfect I think we have pretty much understood uh we have understood it right what is the next thing again you can optimize this you can optimize the space go into space optimization I leave that this is not a DP problem so leave that in case you have seen my DP playlist you know how to solve it obviously the interviewer will not be happy with the B of n square and I'll ask you to optimize it so I'm looking forward to optimize n Square that means I'll have to go somewhere around B of correct okay how how should I think a b go of n Solution that's a big question right what was I doing in the recursion",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "7SBVnw7GSTk",
+      "position": 288,
+      "title": "L5. Jump Game - II | Greedy Algorithm Playlist",
+      "url": "https://www.youtube.com/watch?v=7SBVnw7GSTk",
+      "start": 489.319,
+      "end": 603.72,
+      "text": "right what was I doing in the recursion I was trying out all possible ways trying out all possible ways then I took the minimum can I try out all possible ways maybe I I can I know at zero jump I'm standing at the first element right if I take this jump of two what are the possibilities I can go to I can go to here I can go to here that means I can take a jump of one I can take a jump of one and I can reach either three or either one right okay so I'll keep it in mind that this portion can be reached remember this now I'm dealing with ranges instead of doing the recursion for this for this I'm carrying the range I'm saying jump one means this much this one can be reached in Jump one already done a similar problem which is valid parenthesis string go back and watch it you optimize the recursion in two ways okay so I'm saying instead of recursion I can reach from here to here perect if I take a jump from here I can either reach here which is going to take me like two jumps there's no point CU I can reach this place in one jump so I'll not do this because recursion means minimum I'll do the minimum okay there way I can reach here or I can reach here so I can reach both the places both the places so that means the farthest I can reach is this farthest I can reach is this okay for this the farthest I can reach is here thereby I'll be like this is the next range I can reach by taking two jumps two jumps in range concept I tried jumping from here and the max I could do is this range so if someone is asking you what is the minimum jumps taken till for like two jumps straight away know okay from four where can you go you can go here",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "7SBVnw7GSTk",
+      "position": 288,
+      "title": "L5. Jump Game - II | Greedy Algorithm Playlist",
+      "url": "https://www.youtube.com/watch?v=7SBVnw7GSTk",
+      "start": 600.0,
+      "end": 714.0400000000001,
+      "text": "four where can you go you can go here which is going to take you one jump sorry one more jump three jumps in total because till four you took two you want to take three jumps still here no so go here can you go here yes in three jumps you can go here can you go here in three jumps yes can you go here and three jumps yes because still here it was two so I know I can reach till the last I can reach till the last okay for this one I can reach here so I know the max I can reach is here so from here to here I can reach in third jump that is going to be the last range once you reach the last you stop and what is the last range reachable at it's reachable at three jumps it's reachable at three jumps so what I did was I didn't create individual recursive uh calls I carried a range for it instead I carried a range Let's uh check out the code is it super easy I write a very very simple code way tell me the initial jums you know it right initial jumps is zero tell me the initial range this much so maybe you can carry a l and R which is initially at the zeroth index okay from here where can I jump till here till here what is the next range range it the next range is this so where will L go where will L go please Focus L will go to one place ahead of r one place ahead of r where will R go to the farthest to the farthest that I can jump perfect and with this jump what will be the value of jumps one so if I take one jump I will reach this range not indust what is the next one for this three the farthest I can go is this much for this one the farthest I can go",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "7SBVnw7GSTk",
+      "position": 288,
+      "title": "L5. Jump Game - II | Greedy Algorithm Playlist",
+      "url": "https://www.youtube.com/watch?v=7SBVnw7GSTk",
+      "start": 708.839,
+      "end": 830.0,
+      "text": "much for this one the farthest I can go is this much so from this range from this range the farthest I can go is still here so what I'll do is I'll update L okay again Focus L will go one place ahead of r r will go to the farthest done what will happen to the range what will happen to the jumps rather two okay standing at this place again four can go how much can go here here here here farthest farthest farthest okay one can go here the far this you can go from this ranges till this place so what you'll do is first updated which is going to be 1 plus of R then update R which is going to be this and the moment R reaches or crosses n minus one at index by the way update the Jump update the jump for this one once it crosses the N minus one at index jumps is going to be your answer jumps is going to be your answer got it very simple the code is going to be super duper simple uh I'm going to write the function I have the array I may we given the size of the array as well or if not you can compute the size of the array what do I need okay initially I am doing zero chobs I'm having L initially at zero R initially at zero so I'm going to try out everything now okay I can try out till my range I know the right of range should be lesser than n minus one if it exceeds goes still like goes at n minus one or Beyond n minus one I stop okay at this time what do I do for this range I find out what is the farthest I can go what is the farthest okay so like what is the farthest right maybe I can call it farthest equal to zero because I'm trying to get the farthest now what I can do is I can start from",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "7SBVnw7GSTk",
+      "position": 288,
+      "title": "L5. Jump Game - II | Greedy Algorithm Playlist",
+      "url": "https://www.youtube.com/watch?v=7SBVnw7GSTk",
+      "start": 824.44,
+      "end": 964.079,
+      "text": "start from index what is my range it's from L to it's from L to R right it's from L to R so what I will do is I'll start traversing from L to R okay and I know one thing if I'm standing at I I can go till the jump allowed the jump allowed and I need to see what's the farthest I can go so I'll be like okay what's the farthest it's going to Max of this one comma farthest very simple once this is done once you have traversed for all elements in that range you know the new new range and what is going to be the new Range L is going to be at r + one right after that 11 and R will be the farthest and please make sure your update jumps so at the same time you can do jumps equal to jumps + one and you can end the while loop and once you have ended the while loop what you can do is you can straight away return the number of jumps it ended up taking and that's it that's pretty much it done anded what is the time complexity on a very naked eye it might look like while loop into a fall Loop B go of n Square no no what did you do first you traversed two then you traversed three one then you traversed 4 One and eventually you reached eventually you reached so what you are doing at the end of the day is traversing each element one by one one by one this wi Loop is just to check did you reach did you reach So eventually eventually the time complexity is B go of n which is linear in nature and the space complexity is B go of one that's it h how is it so you let see I thought of a recursive solution and instead of doing the recursive tree they kept a range converted the recursive solution into a range based solution right and this is",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "7SBVnw7GSTk",
+      "position": 288,
+      "title": "L5. Jump Game - II | Greedy Algorithm Playlist",
+      "url": "https://www.youtube.com/watch?v=7SBVnw7GSTk",
+      "start": 957.399,
+      "end": 1006.0400000000001,
+      "text": "range based solution right and this is how you can do it why is it under greedy algorithms the reason being I'm trying to reach the farthest I'm trying to reach the farthest that is why this is under the greedy algorithm playlist I hope you have understood I hope you understood how I started uh with a recursion solution then how I optimize that recursion solution into a linear solution so this will be for this one so if you're still now watching and if you've understood everything please please do consider giving us a like and if you new to our channel do consider subscribing to us as well with this I'll be wrapping up this video Let's waet in some other video till byebye take care heart is broken don't forget your golden I will find light",
+      "word_count": 140
+    }
+  ]
+}

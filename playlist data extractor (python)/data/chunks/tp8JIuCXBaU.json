@@ -1,0 +1,163 @@
+{
+  "video_id": "tp8JIuCXBaU",
+  "position": 22,
+  "title": "Sort an array of 0's 1's & 2's | Intuition of Algo🔥 | C++ Java Python | Brute-Better-Optimal",
+  "url": "https://www.youtube.com/watch?v=tp8JIuCXBaU",
+  "chunk_count": 14,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "tp8JIuCXBaU",
+      "position": 22,
+      "title": "Sort an array of 0's 1's & 2's | Intuition of Algo🔥 | C++ Java Python | Brute-Better-Optimal",
+      "url": "https://www.youtube.com/watch?v=tp8JIuCXBaU",
+      "start": 2.94,
+      "end": 99.83999999999999,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well so this is another video from the stripers A to Z DSA course just in case you're for the first time here this is world's most in-depth course in Dia sangu why do I say that because we are covering 456 modules by the end of the course you would have solved 400 plus problems in DS algo you can go over the entire internet you can buy any of the paid courses none of them will be teaching UDS I'll go in such depth one thing that I can give you as a guarantee from my end is if you complete this course you can actually clear any of the DS algorithms in any of the companies in any part of the world so till the last video we have covered uh the twosome problem in this video I will be covering the problem sort an array of zeros ones and twos what does the problems take you'll be given an array but the array only consists of 0 1 2. nothing else only these three integers 0 1 and 2 and your task is to sort it you might be thinking it's an easy problem no it is not when you will hear about the most optimal solution your mind will be like wow so what's the first solution that you'll give to the interview that's definitely the Brute Force solution and we know what is that that is to use any of the Sorting algorithms if we end up using merge sort it will take a Time complexity of n login and it will take a space complexity of bigo open which is the temporary array that we use during the birth chart if you do not the most shot I've already made a video on that you can go back and watch it obviously the interview will not be happy with n Log In Time complexity and the extra space that you're using so I'll ask you",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "tp8JIuCXBaU",
+      "position": 22,
+      "title": "Sort an array of 0's 1's & 2's | Intuition of Algo🔥 | C++ Java Python | Brute-Better-Optimal",
+      "url": "https://www.youtube.com/watch?v=tp8JIuCXBaU",
+      "start": 95.939,
+      "end": 198.65900000000002,
+      "text": "space that you're using so I'll ask you to optimize it that's when you'll be telling the better solution now what is the better solution that comes up now something I can say is Hey listen one thing I know for sure is the array contains 0 1 and 2. so what I'll be doing is I will do a single iteration and I'll keep three variables count zero count one and count two and in all of the iterations so when I reach 0 it's a zero so I'll increase it by one then when I reach one I'll increase this by one when I reach 2 I'll increase this by one when I reach 0 I'll increase this by 2 and eventually I will keep on going and I'll reach the end of the array once I've reached the end of the array the count 0 will be containing the number of zeros the count one will be containing the number of ones and the count two will be containing the number of twos in this case the count 0 will be five count one will be four count two will be three so once you have done this what you can do is very simply run a loop from 0 to 4 because we know the first five places will be occupied by zero because if you are sorting an array of 0 1 and 2 the first place will only have zeros the next place will only have once and the next place will only have two so you will run a loop which runs five times and you will just manually overwrite the first five values to zero then you'll run a loop for four times and you will manually overwrite the next four elements to one then you will run a loop for three times and you'll manually overwrite the last three m comments as to once you have done this I can say that the array is sorted according to zeros at first then once and then twos",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "tp8JIuCXBaU",
+      "position": 22,
+      "title": "Sort an array of 0's 1's & 2's | Intuition of Algo🔥 | C++ Java Python | Brute-Better-Optimal",
+      "url": "https://www.youtube.com/watch?v=tp8JIuCXBaU",
+      "start": 193.8,
+      "end": 288.84000000000003,
+      "text": "zeros at first then once and then twos so what I can say is the better solution will be running a loop in order to count the zeros once at Do's that will be taking a big go of n time complexity then we will be running a first Loop then a second Loop and the third Loop which overall is actually bigger of n because the count of zero plus count of one plus count of two is equal to n so overall I can say the time complexity that I'll end up taking is n plus n 2 N am I using any extra space I can say that no I'm not using any extra space we are just modifying the given array which is the given task because we've been asked to sort an array so we're modifying the given array so by the way this will go from 0 to count 0 in order to fill up the first count zero places once I filled up the first term zero places the next place will start from count zero index and it will go until Cal zero plus count one because till then you will fill up then the next will start from count zero because these many have been filled up so it starts from there and it goes until the end so that's how the better solution will be looking like now the interview will be like hey you're taking B go off to n which is two iterations I don't need two iterations can you further optimize this this is when the most optimal solution will come in and this is going to blow your mind off so let's talk about the most optimal solution and that will be using the touch national flag algorithm now across all the lectures on YouTube I've seen something very common people are just giving you the algorithm that right and then the code no one is talking about the indication no one is talking about the thought process so in",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "tp8JIuCXBaU",
+      "position": 22,
+      "title": "Sort an array of 0's 1's & 2's | Intuition of Algo🔥 | C++ Java Python | Brute-Better-Optimal",
+      "url": "https://www.youtube.com/watch?v=tp8JIuCXBaU",
+      "start": 285.24,
+      "end": 433.74,
+      "text": "talking about the thought process so in this video I'll be focusing on the thought process and the intuition behind the algorithm so make sure you watch the video till the end because one thing I can assure you is you are going to take away a lot of things when you end this particular video so the algorithm will be using three pointers that is where the thought process starts low mid High and the algorithm is revolving around three rules and the rules are very simple it states everything from 0 to low minus 1 will be zeros everything between 0 to low minus one not low low minus one will be zeros which is nothing but the extreme left and then it states everything from low again very important everything from low to make minus 1 minus 1 should be 1 then it states High plus 1 plus 1 to n minus 1 should be 2. now this is something which is Extreme right now these are the three rules on which the algorithm is based now let me let me explain you all the three rules in diagram imagine this is the zero pointer of the array and imagine this is no minus 1. so these are the indexes hypothetical indexes so they are filled with zeros that's what they are State then with the low index which is the right next index after no minus 1. till the mid minus one index everything is filled with one then right after mid minus one there's a mid index under the high index everything is filled with random numbers in an unsorted way in an unsorted way then right after high comes High plus 1 till n minus 1 everything over here is filled with twos such like two two so again it's in hypothetical array where 0 to low minus 1 is zeros low to mid minus 1 is once mid to high is 0 1 2's and high plus 1 to n minus 1 is just twos these are the three rules on which we",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "tp8JIuCXBaU",
+      "position": 22,
+      "title": "Sort an array of 0's 1's & 2's | Intuition of Algo🔥 | C++ Java Python | Brute-Better-Optimal",
+      "url": "https://www.youtube.com/watch?v=tp8JIuCXBaU",
+      "start": 427.919,
+      "end": 545.22,
+      "text": "these are the three rules on which we will be using this three pointers to sort the array so we've understood the three rules clearly now let's have some observations can I say from this portion to this portion the array is sorted from this portion to this portion the array is sorted if I can somehow manage to sort this particular unsorted portion then my task will be easy so can I say initially we are starting with an entire array so can I say the mid or rather I'll take the n look can I say the mid will be pointing here and the high will be here why because the entire array is unsoft because the entire array is unsorted and that is what we were looking to sort the entire arrays and so on and thereby I can say the low can be just put over here why because that's the starting index and we know from 0 to low minus 1 everything is zero so that is still valid still valid even if I put a low here because 0 to like 0 to low minus 1 is nothing so this is still valid the main thing that we are looking at is from mid to high everything should be containing 0 1 and 2 and everything should be unsorted that is valid now our algorithm will work on a of mid you can also make it work on a of I that is okay but I'll try to tell you in terms of a of mid if I tell you in terms of a of mid you can actually write it in terms of a of high as well so I'll try to tell you in terms of a of mid so what can be the possible values of array of weight it can be zero or it can be 1 or what is the other thing or it can be 2. now these are the three possible values of array of mid right now let's analyze",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "tp8JIuCXBaU",
+      "position": 22,
+      "title": "Sort an array of 0's 1's & 2's | Intuition of Algo🔥 | C++ Java Python | Brute-Better-Optimal",
+      "url": "https://www.youtube.com/watch?v=tp8JIuCXBaU",
+      "start": 539.339,
+      "end": 662.279,
+      "text": "of array of mid right now let's analyze what happens if it is 0 what happens if it is 1 what happens if it is two now we know one thing we are taking pointers and whenever we are applying a pointer algorithm the pointers will always move that is the that is the use of pointers so coming back to the algorithm something to think about we're talking about myth we're talking about height and this portion is what we are looking to sort now what is the first case when array is said to be the area of mid array of mid is said to be having zero because that is the first case when I'm saying array of mate has a zero so array of mid has a zero now if I have to ask you how do you make sure that this 0 is in a softened order it'll be like hey wait I know one thing the left portion is sorted so the zero has to be somewhere on the left and we have to hypothetically think can I say the 0 will be somewhere here so that this still stays in a sorted order yes so what I will do is I'll say Okay zero can you go here but then if I take the 0 here what will happen to one and like wait if I take this 0 here and if I take this one here it's like what will happen so it'll be like zero zero zero zero zero zero one one one one and one it will still be sorted it'll still be sorted what I did was since it was 0 I I just brought it to the correct place and I know what is the correct place it will be low why because that is where the section contains the first one so I'll bring it to the correct place and I know this will still be sorted now can I say something if this is sorted if this is sorted what is now unsorted the element",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "tp8JIuCXBaU",
+      "position": 22,
+      "title": "Sort an array of 0's 1's & 2's | Intuition of Algo🔥 | C++ Java Python | Brute-Better-Optimal",
+      "url": "https://www.youtube.com/watch?v=tp8JIuCXBaU",
+      "start": 655.68,
+      "end": 780.42,
+      "text": "sorted what is now unsorted the element after mid plus 1 till high is unsorted because now this portion is entirely sorted because you did swap one and zeros so they are completely sorted let's do the swap and then think about the other steps so what I'll do is I'll quickly do the shaft so I've done the swap now can I see this that the mid can easily move to the next because now we are looking for this portion to be sorted like this portion is unsorted now because this is now sorted so mid has moved but now can I say one more thing what is the first law zero to low minus one everything zero but as of now zero to lower is everything zero so what will happen this low will also move a step this low will also move a step yes and the low pointer will be now pointing to this so now 0 to low minus L will be this low to mid minus 1 will be this which is palette so what did we do first thing we did was very simple we said can you go ahead and swap a of low and a of mid so that that 0 comes into its correct order then I know if there is a addition of 0 if there is an addition of zero so this range will increase the low will increase and since mid is the element admit is now at a sorted position let's move wait done so the first step I know how to move the pointer with the first step I will be easily able to move my bit pointer right so we are back to our initial configuration because this is the rule that we are following in order to reduce the algorithm so now next to what if it was one let's now think let's go back again what if there was a one here then what would have happened can I see if it's a one either this was sorted",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "tp8JIuCXBaU",
+      "position": 22,
+      "title": "Sort an array of 0's 1's & 2's | Intuition of Algo🔥 | C++ Java Python | Brute-Better-Optimal",
+      "url": "https://www.youtube.com/watch?v=tp8JIuCXBaU",
+      "start": 775.74,
+      "end": 886.92,
+      "text": "either this was sorted can I say this is also sorted yeah it is sorted we don't need to do anything with that one because that one is attached right after one so this is already softened so the elements that are not sorted are in this category so just move mid because mid is sorted so I'll not do anything if it's a one I will say dude I don't care you can just move ahead that's what I will do so the second step is also done let's talk about the third step so in the third step I'm saying what if at the area of mid there is two so if there is two where should you put two like logically I know all the tools are over here and in the sorted fashion and all the zeros and ones are over here so you can say maybe I can put two at the end maybe I can take two and put it somewhere in between but think logical just think low chicken they have to take two and I what am I looking for I'm looking to make sure that this portion is sorted so can I say something I know this portion is sorted what if I take this to and put it right before this right before this then what will happen this portion will get sorted and this will shrink to this much so I will be able to sort one more element I'll be able to solve one more element can I say this I can't so this is what I'll do no matter if there is a zero if there's a zero there's a one there's a two at this index no matter I will take this two and I'll say can you go over here so what will happen is this two will go over there and whatever is there even it if it's a zero it will come over here so now what will happen is if you have swapped it now you can say this portion is sorted",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "tp8JIuCXBaU",
+      "position": 22,
+      "title": "Sort an array of 0's 1's & 2's | Intuition of Algo🔥 | C++ Java Python | Brute-Better-Optimal",
+      "url": "https://www.youtube.com/watch?v=tp8JIuCXBaU",
+      "start": 880.8,
+      "end": 1005.3000000000001,
+      "text": "now you can say this portion is sorted now which portion is still unsorted can I say from mid to high minus 1 make why lesser than high because high is now sorted so we shrinked the right at half this time we shrinked the writer half this time got it so so did you understand this we are not moving mid now in The Next Step since you got a zero from here this zero will be treated according to the first condition I will show you that in the dryer but as of now can I say what I did was very simple I said swap of a of mid and a of high and then I'll see since high is getting a correct correct guy of 2 so we can just move High one this back and it will be sorted so these are the three rules and I hope you have understood the entire thought process when all these three rules so keeping all the three rules in the mind let's do our dragons of the algorithm sticks to your brain remember one thing whenever I do a dragon try to visualize in terms of this particular diagram okay let's throw that run we have a zero what do we do in terms of zero we strap a upload and a of a so 0 and 0 are at the same place they get swapped and low and mid both will move so let's quickly move both so low I'll go here and mid will go here and erase the other things okay that what's the next it's a one so array of mid is one submit plus plus you don't do anything you just move submit will reach here what's the next it's again one you don't do anything you just move mid submit will reach here this time so can you visualize so can you relate this to the diagram that we did draw 0 to low minus one all zeros low to bit minus 1 all ones mid to high all",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "tp8JIuCXBaU",
+      "position": 22,
+      "title": "Sort an array of 0's 1's & 2's | Intuition of Algo🔥 | C++ Java Python | Brute-Better-Optimal",
+      "url": "https://www.youtube.com/watch?v=tp8JIuCXBaU",
+      "start": 998.94,
+      "end": 1112.76,
+      "text": "minus 1 all ones mid to high all unsorted correct let's move and see if the diagram is still being relatable or not so we have a mid it's a zero we know what do we do in terms of zero we take it here and we take it here let's do it so it's like zero will go here and one will come here and after that yes low will move one place ahead and mid will move one place aired let's quickly erase this because they have moved one place ahead that was the next job yes middle one no need to do anything just move mid one please add if you have moved it is this what is that no again try to relate zero to low minus one all zeros low domain minus one all ones mid to high unsorted still relatable right what's the next we have to but we have to you have to put it on the back that was the thought process so if there's a two what will you do you'll be like okay these two will go here the zero will come here let's show this so this two will become a bad this 2 will become zero and two will go yeah you just slap both the places once you have done this this portion is sorted so what will happen to this hi this I will come here let's do this once I've done this quickly raise this for okay now now we have a zero again we fall back to the step one this zero has to be here and this one has to be here let's quickly do this the zero has to be here and probably led is this and I'll bring the what here if I've done this was an X drop we just move the mid here and we move the low here quite simple I'll erase this as well now can I say again if I have to relate it 0 to low minus one all zeros low to mid",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "tp8JIuCXBaU",
+      "position": 22,
+      "title": "Sort an array of 0's 1's & 2's | Intuition of Algo🔥 | C++ Java Python | Brute-Better-Optimal",
+      "url": "https://www.youtube.com/watch?v=tp8JIuCXBaU",
+      "start": 1107.36,
+      "end": 1218.96,
+      "text": "0 to low minus one all zeros low to mid minus 1 all ones mid to high unsorted now again it is one so you do not do anything just say we will move the pointer ahead so let's move the pointer ahead where are we we are at a two and this portion is unsorted so this time this will go here and this will go here because if it's a 2 put it at the extreme right so you'll put it at the extreme right so this will go here and we will get a zero here and what will happen to this High it will just shrink so let's quickly shrink it so if you shrink it it shrinks like this so we have a mid and high as 0 0 if it's a zero would have happened yes it will go here this will come here please do it 0 and this will be one so it quickly raise this will be like zero it'll be like one once you've done this what will you do you will move the low and you'll move the mid as well so the low end mid will move and I can quickly raise the previous occurrences of the bandwidth done what's the next job so let's quickly swap it at one and done once you've done this you move low and you move the mid and the mid goes here and if I just quickly it is the last occurrence of mid and the last occurrence of low this is how it looks like and there's a point where you say the mid has gone past height which means the area that you are trying to sort is not over that's why your mid past high and if that is the case can I say that the array is sorted and if you carefully look around from 0 to low minus one everything is zero from low to middle minus one everything is one and from High plus 1 to last everything is S2 and it is",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "tp8JIuCXBaU",
+      "position": 22,
+      "title": "Sort an array of 0's 1's & 2's | Intuition of Algo🔥 | C++ Java Python | Brute-Better-Optimal",
+      "url": "https://www.youtube.com/watch?v=tp8JIuCXBaU",
+      "start": 1211.82,
+      "end": 1326.299,
+      "text": "to last everything is S2 and it is sorted so we are still following the condition I hope this diagram helped you to visualize the Dutch national flag algorithm and it is very important to understand the thought process most of the videos will be like three steps do I run code and done no this is indeed important so it is very important to understand if there's a zero why it is moving here and why the one is moving here if there's a one we are not doing anything if there's a two why is it moving back all the three steps are very very important to understand so that you can explain it to the interviewer also your problem solving skills will grow if you understand these problems in very depth so let's quickly jump into the code editor and try to code it up again the problem link will be in the description so we have two rather three pointers so let's mark all the three pointers we know this is uh the starting points and I'll keep on going till this is till we have an unsorted section and we know we are working on area from it if that is 0 it can be one case else if array of mid is 1 or else it will be always 2 because the array only consists of 0 1 and 2. if it is 0 what are we doing we are seeing area flow can you please swap with array of it and once you've done this can you move yourself and mint ahead in this case I am saying just move mid ahead in this case I am saying swap array of rather mid and array of high once you've done this since this 2 is at the back I will shrink once this is done I can say that the array which is passed by reference is indeed sorted now so we can see this and now we will quickly go and run again it's a void function you don't have to return",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "tp8JIuCXBaU",
+      "position": 22,
+      "title": "Sort an array of 0's 1's & 2's | Intuition of Algo🔥 | C++ Java Python | Brute-Better-Optimal",
+      "url": "https://www.youtube.com/watch?v=tp8JIuCXBaU",
+      "start": 1323.059,
+      "end": 1431.0,
+      "text": "function you don't have to return anything you have to just work it on the particular given array so we see that this is submitted okay so let's go back to the iPad and discuss the time complexity now we know one thing we have to go from the mid and till the high and make sure the unsorted section is sorted and initially the mid was here if you remember and the high was here so there is an entire length of n that you have to sort that is something which we know and we know at every step we perform either this either this or either this so if we perform this the mid increases by one so it's like on one iteration that you're doing so you are shrinking the mid on to the right so that's like plus one iteration if you do this if you do this it is still shrinking the mid which is like plus one iteration but if you are doing this step the mids is staying where it is rather the high is shrinking and the high shrinking bright this section how does it matter because at the end of the day if you're moving the mid by onto the right one of the elements will be sorted and if you are moving the high to the left again one of the elements will be socket so in each of the three steps in each of the three steps you are actually solving one element so the end of the day overall if at every step you're sorting one element and all the elements and all the elements were unsorted can I say at the end of the day you'll end up sorting n Elements by taking n and guess a snake n those cases that's why the time complexity is Big go often a single iteration and the space complexity is bigger or fun just in case you did not understand the time complexity what I usually did in my initial years was",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 13,
+      "video_id": "tp8JIuCXBaU",
+      "position": 22,
+      "title": "Sort an array of 0's 1's & 2's | Intuition of Algo🔥 | C++ Java Python | Brute-Better-Optimal",
+      "url": "https://www.youtube.com/watch?v=tp8JIuCXBaU",
+      "start": 1426.799,
+      "end": 1507.93,
+      "text": "initial years was they can take this particular array and whenever I'm moving whenever I'm doing an iteration I count plus one I count plus one I count plus one and then I can visualize how many iterations where done by using this particular example and then I can relate white as we go off and please do dry runs please count one iteration please count one iteration that will help you do uh analyze the time complexity in a much much better way so coming back to the sheet I can mark this as done and I hope you have understood the thought process and the intuition behind the Dutch national flag algorithm I know the algorithm is easy but you have to understand the third process right so if I understood everything to continue our tradition please do comment understood so that I understand that my effort was worth it because I really did put a lot of time on to this video and if you're new to our Channel please please do consider subscribing it's 2 8 am in the night and I have an office tomorrow so please do consider subscribing because that does motivate me to make such kind of video videos late in the night and yeah if you haven't followed me on Instagram LinkedIn and Twitter the links will be in the description with this let's wrap up this video and millions of other videos [Music]",
+      "word_count": 243
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "video_id": "gRII7LhdJWc",
+  "position": 243,
+  "title": "L7. Sort a LinkedList of 0's, 1's and 2's | Multiple Approaches",
+  "url": "https://www.youtube.com/watch?v=gRII7LhdJWc",
+  "chunk_count": 13,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "gRII7LhdJWc",
+      "position": 243,
+      "title": "L7. Sort a LinkedList of 0's, 1's and 2's | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=gRII7LhdJWc",
+      "start": 3.04,
+      "end": 104.28,
+      "text": "let's continue with our playlist before that hey every welcome back to the channel I hope you guys are doing extremely well so the problem that we will be solving today is sorting a given link list which has Zer ones and twos in it so what is the problem stating it is stating that you'll be given the head of the link list and this link list only has 0 1 and two in it your task is to sort this particular link list according to the data which means initially there will be zeros followed by once followed by two once you sorted this particular link list you'll have to return me the updated head of this particular link list so what if this problem comes up in an interview you start off with the brute force and what is the extreme name solution that you can think of data replacement what you see is we just have zeros ones and twos so what we can do is we can take count zero we can take count one we can take count zero and initially have them initialized as zero after that we can do a single traversal maybe we can keep a temporary pointing to head and whatever is the value of temporary in this case it is one first occurrence as one so you go and increase the value after that you move the temporary to zero so it is zero so you increase the Zero by one let's again move it it's one so you increase it to two let's again move it it's two so you increase the 2 by one let's again move it it's zero let's increase it let's again move it it's two let's again increase it let's again move it it's one let's again increase it after that move it again it is at null the moment you reach null it means the traversal is completed once the traversal is completed I can say that the count zero is holding the number of zeros count one is holding the",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "gRII7LhdJWc",
+      "position": 243,
+      "title": "L7. Sort a LinkedList of 0's, 1's and 2's | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=gRII7LhdJWc",
+      "start": 100.0,
+      "end": 205.44,
+      "text": "number of zeros count one is holding the number of ones count two is holding the number of twos so after the initial traversal you have count zero count one and count two that's time to do the data replacement so what I'll do is I'll do another traversal I'll take the temporary place it at head and what I'll check is what is the value of count zero doesn't have any zeros it says that I have two zeros so let's take one and place it the moment you take one you reduce the value to one and then move the temporary again you check hey count Zer do you have something it states that hey I have something so I'll take that place it and reduce the value and then move after that when temporary moves here you check with count zero doesn't have any zero it states I do not have any zero this time I look at count one because after zero there is one it has three I'll take one yes I'll take one I'll reduce I will move again when temporary is at the is at this particular node you again check it's count zero there no there is no count zero is count one there yes there is so maybe just place it reduce it and move it again do the same thing count one take count one place it reduce it move it when you're standing here you check for count zero it is zero you check for count one there is no count one you check for count two so there is count count two so you take it place it reduce it and then move it again you check for zeros and ones there are no zeros and one so you take the count two take it place it reduce it move it so temporary is at null the moment you reach at null you stop so if you carefully look at the link list the data replacement has been done so let's quickly write down the",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "gRII7LhdJWc",
+      "position": 243,
+      "title": "L7. Sort a LinkedList of 0's, 1's and 2's | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=gRII7LhdJWc",
+      "start": 202.319,
+      "end": 321.319,
+      "text": "done so let's quickly write down the pseudo code again you can find out the C++ Java python JavaScript code links in the description make sure you check it out so what is the first step we have a temporary which is pointing to the Head we have counter zero which will be counting the number of zeros we will have a counter one that will be counting the number of ones we'll have counter two which will be counting the number of twos and let's quickly start the traversal so the temporary will keep moving till it reaches the last which is the null and what will be the first step if temporary data is equal to equal to zero I will say counter Plus+ else if temporary data is one I will say counter 1 ++ else it will be definitely two so I'll say counter 2++ once this is done I can move the temporary to the next which is temporary goes to Temporary next and the while loop is completed so this is my first traversal after the first traversal I can see that counter zero will have the number of zeros counter one will have the number of ones counter two will have the number of twos what is the next job again Travis and do the data replacement so let's quickly do it what I'll do is I'll take the temporary place it at the head of the link list right after this I'll say while temporary is not equal to null because I need to retra this particular link list and I'll check hey do we have a count zero if we have a count zero replace so it will say temporary your data will be replaced by zero at the same time counter zero will reduce Itself by one similarly if Z is not there then I go to LF and I asked hey is there count of one do I have one if I have one that means maybe replace this to one perfect at the same time do a",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "gRII7LhdJWc",
+      "position": 243,
+      "title": "L7. Sort a LinkedList of 0's, 1's and 2's | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=gRII7LhdJWc",
+      "start": 315.199,
+      "end": 439.08000000000004,
+      "text": "to one perfect at the same time do a counter 1 minus minus what if there is no zero and there is no one it will fall to the else if it does I'll say temporary data equal to 2 because if there are no zeros and ones it means there is two and then we will say counter two minus minus once this is done once you have done the data replacement we'll ask the temporary to move to the next which is temporary equal to Temporary do next and this is where the traversal will complete so what will be the time complexity can I say it will be B go of 2 N why because one traversal is here while the other one is here so if you're traversing the entire link list twice it will be 2 of n so B go of 2 of n is the time complexity what will be the space complexity B go of one and this is where the interviewer will not be happy why because you're traversing it twice it ask you to do it in one pass so we need to convert a two pass solution into a one pass solution which means I cannot do data replacement I definitely cannot do data replacement what can I do if I'm traversing once and I need to rearrange them the only option is I change the given links yes I change the given links how can I do this what was the final Arrangement the final Arrangement had zeros at the start so if I just take up the zeros it had zeros at the start and it had one following that so I take up the ones these are the ones it had once after that and also after that it was followed by twos right so let's take the twos so can I do this while traversing while traversing can I segregate the zeros can I segregate the ones can I segregate the twos if I can do that once",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "gRII7LhdJWc",
+      "position": 243,
+      "title": "L7. Sort a LinkedList of 0's, 1's and 2's | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=gRII7LhdJWc",
+      "start": 432.879,
+      "end": 551.6,
+      "text": "segregate the twos if I can do that once I've done that right at the end I repeat right at the end the end of the zero can be connected to one the end of the one can be connected to two once you have done this this will be my head of the link list and this is what you can return I can probably do this and this is what I Look to do because I need to do it in one traversal and this is the best that I can do store all the zeros basically make a link list of the zeros have the ones have the twos and then connect them after that you can return the head of the link list so let's try to do it so after I have completed the traversal what am I looking at I'm looking at a list zero which will have all the zero I'm looking at list one which will have all the ones I'm looking at a list two which will have all the twos so I need three segregated list after I have completed the traversal so what I will do is I will take three dummy notes yes I will take three dumy notes one for the zero and I'll call it a zero head I'll explain you what is dummy note I will take one for the one so this will be one head and I'll take one for the two since during the start I don't have the list because I don't have any elements so the list is empty I'll initially assign a dummy just the start with minus one okay this is what I'll assign and over here I will call this a zero I'll take one more pointer pointing to it I'll take one more pointer pointing to it I'll take one more pointer pointing to it this is my dummy nodes so these are my starting point for 0 1 and two so we have the l0 L1 and L2 what is your next job to",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "gRII7LhdJWc",
+      "position": 243,
+      "title": "L7. Sort a LinkedList of 0's, 1's and 2's | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=gRII7LhdJWc",
+      "start": 544.839,
+      "end": 658.5600000000001,
+      "text": "L1 and L2 what is your next job to Traverse and attach it so let's Traverse if this is one we attach it over here if this is zero we attach it over here if this is one we attach it over here if this is two we attach it over here and keep traversing this is what I will look to do right let's try to do it so I'll take a temporary and place it at the head of the link list right what is the next job have a check the value is one so that means it will go and get attached to the L1 the list one let's do it how can I do it remember you will not create a new node you will not create a new node instead of it you will say hey one because this is your dummy head hey one do next can you be temporary so what this will do is this will take the next and point to this one right so for visual representation can I say it'll be pointing to this once you have done this you say one can you go here because I always need to stand at the last and if this is done I'll take temporary and move it perfect remember this is not a new node this is not a new node it's actually pointing to this it's actually pointing to this this one is just done for a visual understanding okay let's look at the next one what is the value zero this time what you'll do is you'll go to l0 and you'll take the zero and you'll say 0. next you should be pointing to this to the temp so do it again for visual purpose and just writing it separately once this is done you move zero to the next you basically move zero to the next and move the temporary perfect what is your next job you look at the value which is one so you again say hey one your next should",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "gRII7LhdJWc",
+      "position": 243,
+      "title": "L7. Sort a LinkedList of 0's, 1's and 2's | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=gRII7LhdJWc",
+      "start": 653.72,
+      "end": 775.72,
+      "text": "you again say hey one your next should be pointing to this this is why I moved one this this is why I moved one so again for visual purpose draw it and move the one perfect let's move temporary what is the value two which means L2 let's take it again two's next we'll be pointing to two visual representation visual representation in real world this will be pointing to this perfect let's take two move ahead and let's take temporary move ahead what's the value zero let's point0 and then move zero again visual representation and let's move temp it's a two let's take two again point it here and then move two what's the next job temp will move to the last and it is one so this will be pointing to one and then one will move here and after this temp will move here and this is where it stops this is where it stops so after the traversal if you carefully observe the dummy zero head that you did take it's next is pointing to the head of l0 the dummy one head that you did take it's next is pointing to the first node of L1 the dummy two head that you take it's next is pointing to the first node of L2 right one more thing the zero will be pointing to the last node of zero the one will be pointing to the last node of one the two will be pointing to the last node of two please observe this because it will be helpful while we write down the code where will the zero point to like where will the Zero's next point to can I say it will be pointing to the starting it will it will only if there are ones only if there are ones we will look at the code don't worry but as of now remember the last of zero will be pointing to the starting of ones only if there are ones and where will the last",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "gRII7LhdJWc",
+      "position": 243,
+      "title": "L7. Sort a LinkedList of 0's, 1's and 2's | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=gRII7LhdJWc",
+      "start": 770.519,
+      "end": 898.399,
+      "text": "there are ones and where will the last of one. two to the starting of two only if I repeat only if there are two and this two will be pointing to null which is very obvious right so I'll be writing down the pseudo code and in case you want the C++ Java python JavaScript codes the link will be in the description so what will be the initial thing that we need to write what if the link list is empty we don't need to sort it what if the link list has one element we don't need to sort it so make sure you write down these edge cases where if the head is null which means it's an empty link list or if it is a single single element link list in both the cases you will return whatever is given to you please return whatever is given to you apart from this what did we do we took a dummy zero head we took a dummy one head and we took a dummy two head right and maybe you can say new node of minus1 depending on the language that you're using new node of -1 it can be any value not necessarily minus1 it can be -50 as long as it is not zero not one not it is okay done apart from this what did we do we also took uh zero which was pointing to this zero head we also took a one which is pointing to the one head perfect we also took a two which is pointing to the two head and this was used for Travers right after that what did we do we took a temporary which was pointing to the Head perfect now we will be traversing so that basically means while temporary not equal to null because that is what the traversal means what do we do we have a check what if it's a zero right so let's have a check what if it's a zero temporary data if you're a",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "gRII7LhdJWc",
+      "position": 243,
+      "title": "L7. Sort a LinkedList of 0's, 1's and 2's | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=gRII7LhdJWc",
+      "start": 893.839,
+      "end": 1030.48,
+      "text": "if you're a zero we will do something different what will we will take zeros next and we will point to Temporary that's what we did if you remember properly this is what we did we simply pointed to the temporary once you have done this you will say zero can you now go to the next zero can you go to Zero's next which is basically temporary so you can straight away say zero can you go to Temporary you basically moved the zero what you did was you connected then you took the zero and you took get ahead once you have done this the temporary you if you remember it moved ahead so let's move the temporary temporary will always move maybe we can do it afterwards as a common step we can done what if it's a one what if it's a one in that case very simple 1 do next will be Temp and one will be temp perfect or else 2. next will be 10 it's super easy isn't it and two will be temp once the conditionals are done once you have segregated the node connected the node what is your next job make sure temporary goes to the next because I I have to go to the next node and the while loop completes so this will make sure this while loop will make sure you have this you have this and you have this after this is the main job that you will have to do tell me one thing the Zero's next should be pointing to this one which is basically one Heads next right what if what if I don't have anyone I don't have anyone in that case I will just have the dummy one head I'll just have the dummy one head and the next will be pointing to null and then the next will be pointing to null so I cannot point this two here because if it doesn't have any one and the zero will be connected to",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "gRII7LhdJWc",
+      "position": 243,
+      "title": "L7. Sort a LinkedList of 0's, 1's and 2's | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=gRII7LhdJWc",
+      "start": 1024.439,
+      "end": 1143.559,
+      "text": "one and the zero will be connected to two agreed agreed so can I say this can I say this right after this I need to make sure zero is connected right so can I say zero because 0 is the last Zero's next will be if one head of next is there if it is there if it is not null then I will connect it to one head. next basically saying why one head do next because one head is your dummy node the next is your first note remember so this is what I'll do make sure Zero's next is connected to one Heads next which is this perfect but what if this is null then you will say hey can you go and connect to two head next you might have one more question hey hey St what what if there is no two head what if I don't have twos I don't have ones it's fine in that case this will be pointing to null isn't this will be pointing to null so basically zero will end up pointing to null which is okay which is okay if it doesn't have ones if it doesn't have twos it will eventually point to null which is okay right I just need to make sure if there are no ones I connect it to two two can be null I don't mind because if there are no twos I will connect it to null might be thinking one more thing he is TR what if there are no zeros in that case the dummy zero head will be pointing to this fair enough okay if there are no zeros it will be pointing to this which is okay because zero will be here and Zer next will be pointing to this or Z next will be pointing to this which is okay doesn't matter we have understood this so we have done the job for zero we have made sure it is either connected to one or it is either",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "gRII7LhdJWc",
+      "position": 243,
+      "title": "L7. Sort a LinkedList of 0's, 1's and 2's | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=gRII7LhdJWc",
+      "start": 1139.12,
+      "end": 1263.76,
+      "text": "connected to one or it is either connected to two and if they are null it will be connected to null what is the next job it's for the one it's for the one so can I say one next is what I'll have to think of okay let's see the next should be connected to this should be which is basically two head snakes just write it just write it one Snak will be connected to two head next why two head next why to next very obvious very obvious TOS next is this one so it should be connected to this what if there are no fine if there are no that's fine it will be connected into null which is okay which is okay right okay fine what if there is no ones in case there are no ones in case there are no ones the one head gets connected to this which is okay I don't mind I don't mind so all the cases are covered you can take pen and paper and you can try out what is the next job it's for the two two's next no matter what it is it will always be null it will always be null because the last will be pointing to null because the last will be pointing to null what if there are no twos fine the twos this one will be pointing to null doesn't matter doesn't matter once this is done what is your job your job is to get the new head and what will be the new head can I say the new head will be the zero dummy head that you took that's next can I say this I can why because either this one will be your new head or else if this is pointing to this that will be a new head or if this is pointing to this this will be a new head that's why I said said even if this is empty let it point to this it's fine",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "gRII7LhdJWc",
+      "position": 243,
+      "title": "L7. Sort a LinkedList of 0's, 1's and 2's | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=gRII7LhdJWc",
+      "start": 1259.24,
+      "end": 1375.1589999999999,
+      "text": "is empty let it point to this it's fine let it point to this it's fine because these will be the new heads if there are no zeros so the new head will be this one you can return the new head and in case you're using C++ need to free right so make sure you delete all the dummy heads that you take all the dummy heads should be deleted please make sure you delete all the three dummy heads which is basically this one this one and this one you free of the space done and dusted I know you might still be thinking about this AK pen and paper take multiple examples take examples where you just have zeros take examples where you just have zeros and ones take examples where you just have ones and twos try with all examples and you will understand these things in much much deeper way this is how I did learn I used to take pen and paper just wrote down multiple examples and then figured out okay it's working okay that's how you learn okay what will be the time complexity can I say this is this is nearly big off and nearly not exactly big off in because I'm doing a single Travers after this these are link changes so I won't count it so can I say I'm actually doing it in beo of n I'm using the same nodes so B of one space complexity indeed so I've optimized a two pass solution into a one pass solution so let's quickly check the code in the code editor as you can see the edge case is written right at the start after that the dummy notes right after that the notes for traversal we Traverse right after that the linking of 0 to 1 to two then you head and make sure this is just for C++ you delete you free of the space once you have done this you return the new head and I'll hit the submit button the Java the Java python",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "gRII7LhdJWc",
+      "position": 243,
+      "title": "L7. Sort a LinkedList of 0's, 1's and 2's | Multiple Approaches",
+      "url": "https://www.youtube.com/watch?v=gRII7LhdJWc",
+      "start": 1371.039,
+      "end": 1404.0800000000002,
+      "text": "submit button the Java the Java python JavaScript codes are pretty much similar you'll find the code Link in the description in case you want do have a reference for it so if you're still watching I'm very very sure that youve understood everything and if that is the case please do consider giving us a like and if you're new to our channel do consider subscribing to us as well with this I'll be wrapping up this video let's meet in some other video till then bye-bye take care whenever your heart is broken don't ever forget your golden I will find a light",
+      "word_count": 105
+    }
+  ]
+}

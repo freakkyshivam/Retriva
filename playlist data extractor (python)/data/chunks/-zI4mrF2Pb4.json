@@ -1,0 +1,108 @@
+{
+  "video_id": "-zI4mrF2Pb4",
+  "position": 207,
+  "title": "DP 26. Print Longest Common Subsequence | Dp on Strings",
+  "url": "https://www.youtube.com/watch?v=-zI4mrF2Pb4",
+  "chunk_count": 9,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "-zI4mrF2Pb4",
+      "position": 207,
+      "title": "DP 26. Print Longest Common Subsequence | Dp on Strings",
+      "url": "https://www.youtube.com/watch?v=-zI4mrF2Pb4",
+      "start": 0.16,
+      "end": 114.399,
+      "text": "hey everyone welcome back to take you forward so in the previous video we did solve the lcs we did learn about the memoration technique the tabulation technique and the space optimization technique but what did we learn about uh learn over there we will be given couple of strings and we did learn how to print the length of the longest common subsequence like the length over here is three so we did learn how to print the length of the longest common subsequence and we got it as three now what if i change the question the question might ask you okay it's fine you're giving me the length what if i want the string yes what if i want the string like over here the longest common subsequence is nothing but if i carefully see i i will have a b i will have a b i will have a d i'll have a d i'll have an e so i can say the string is b d e this is the lcs what if someone comes up and says hey can you please print me the lcs can you do this you can do it via brute force but can you do it in an optimized way i think we can so in order to do this what i will do is i'll go back to the summation that we did so if you remember well enough uh we did a summation uh you know not this one the tabulation summation let's copy paste the tabulation summation so this is the summation that we did okay now let's take couple uh let's take the example a b c d e and b d g e k okay and let's do one thing let's simply uh print the dp array okay let's uh zero j lesser than equal to m and j plus plus i can be like c out of dp of i j okay and this is something and we can go as c out of n perfect so let's quickly",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "-zI4mrF2Pb4",
+      "position": 207,
+      "title": "DP 26. Print Longest Common Subsequence | Dp on Strings",
+      "url": "https://www.youtube.com/watch?v=-zI4mrF2Pb4",
+      "start": 108.96,
+      "end": 237.2,
+      "text": "as c out of n perfect so let's quickly uh print the dp array and let's see what is the dbra coming across so this is what the dbra looks like and this is the answer 3 so let's write this in our ipad and then i'll be explaining you okay so this is how the dp array looks like we did print it and we know this is the i like this these are the row numbers and the column numbers go over here and if you remember while doing the tabulation we converted this into a one based indexing you must be remembering that's why if i write down the indexes this is the zeroth index first index second index third index fourth index fifth index there's a zero this is the first is the second is the third is the fourth is the fifth and if we take the string s one equal to a b c d e and s 2 equal to b d g e k so this is a string of length 5 but if i write down the indexes 0 1 2 3 4 but the answer is stored over here like if you carefully see the answer is stored over here in a five and a five okay so basically i can say a b c d e this is the ith guy and then you can say b d like or you can just write it over here b d g e k because you're doing one based indexing so this is why only this portion of the dp matters and these guys do not have any value okay so what does this three signify where is the stored at five and five let's write the meaning of dp of five and five what is the string abcde length 5 means entire string wins entire string abcde length 5 means entire string so b d g e k in both the and both the strings what's the longest length 3 that is what is",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "-zI4mrF2Pb4",
+      "position": 207,
+      "title": "DP 26. Print Longest Common Subsequence | Dp on Strings",
+      "url": "https://www.youtube.com/watch?v=-zI4mrF2Pb4",
+      "start": 230.72,
+      "end": 356.319,
+      "text": "the longest length 3 that is what is stored here ok so in order to understand this let's take this 2 where is this stored stored at the index 4 and stored at the index 2 so at 4 and 2 this is stored so let's write dp of 4 2 so it's saying take a length of 4 string that means abcd abcd take a length two string which means bd let's see bd so in this what is the length of the lcs that's two if you carefully observe we have a b we have a d and we have bd the length of the longest common subsequence is 2. thereby the dp array stores a 2 over here similarly if i say why is the one stored over here because in this bd why is the one stored over here because in this bdg and in this abc there is only one thing common that's b there by one is stored over here that's the meaning of the b's okay so how do you compute that answer that's that's a big question so if i ask you how is the tabulation looking so if i ask you what are the formulas that you wrote you wrote a simple formula dp of ij is equal to 1 plus dp of i minus 1 and j minus 1 and this did happen when when these guys were equal like s of i minus 1 was equal to equal to like s of 2 j minus 1 this is when you wrote this remember this is the first condition that you wrote or else what did you write or else you wrote very simple condition dp of ij was max of dp of i minus 1 j that since previous row same column ndp of i comma j minus one same row previous uh column this is what he wrote either the upper one or the down either this one or either this one is what you wrote so if i ask you a very very straightforward question",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "-zI4mrF2Pb4",
+      "position": 207,
+      "title": "DP 26. Print Longest Common Subsequence | Dp on Strings",
+      "url": "https://www.youtube.com/watch?v=-zI4mrF2Pb4",
+      "start": 351.68,
+      "end": 476.879,
+      "text": "straightforward question over here we have a three right and we have an e and we have a k do the match i say no so basically when the tabulation will go across like i'll show you in the code basically what happens is there's an i and there's a j so they will be running so whenever they will be at this stage from where does this three come whenever you're at this portion and you're trying to fill up dp of 5 and 5 dp of 5 and 5 when you're trying to fill this up does k and e match no k and d do not match so if they do not match where does this three come in from this line either the maximum of the previous row column or the previous guy so basically either the maximum of previous row this is i comma j minus sorry this is i minus one comma j and this is i comma j minus one either of these guys maximum comes and gets stored over here thereby this three did come from here three so what you'll do is you'll say okay fine we came from here so you will go over here you will straight forward go over there right you start from this last guy which is n cross m and then you start moving start moving the pointer so right over here you're here okay now this is an e this is an e which means they are a match they are a match and if they are a match where will this three come in from where will this three come in from this three will come from 1 plus something on i minus 1 and j minus 1 what is i minus 1 and j minus 1 that's nothing but this sky i minus 1 and j minus 1 is nothing but this guy so basically what you did was you took the value from here you added a plus 1 and you wrote it over here so now",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "-zI4mrF2Pb4",
+      "position": 207,
+      "title": "DP 26. Print Longest Common Subsequence | Dp on Strings",
+      "url": "https://www.youtube.com/watch?v=-zI4mrF2Pb4",
+      "start": 471.759,
+      "end": 598.7199999999999,
+      "text": "plus 1 and you wrote it over here so now what will happen is you will go over here but remember this before going over here since this e matches to you your e you just store that as an answer you store that as an answer so you know that the length was 3 of the lcs so remember create an array or a string of length 3 and store e in the last index perfect now you're at 2 does this d and does this uh does this d and does this g match the answer to that is no and do not match so again where will this two come from the max of this or the max of this so you go to the max perfect remember whenever you go to the max there is no need of taking an e string perfect here's a d here's a d here's a d they match so if they match where will those two come in from this one plus two perfect take this one so this came in from here so before moving to this one a d is common [Music] you just fill that d in perfect now you have to one does the c and does this v match no so if they do not match where will this one come from either the max of this or either the max of this so what you do is you go to the max so just go to the max perfect now you are here this b and this b matches if this b and this b matches what can i say they are matching thereby i can take this and if they are matching where will this one come from from the diagonal because it's i minus one thereby you will go here remember this this was the string b d g e k you exhausted the j is now standing at the zeroth index you exhausted there is no more length of the second string remaining so it's over no need to do",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "-zI4mrF2Pb4",
+      "position": 207,
+      "title": "DP 26. Print Longest Common Subsequence | Dp on Strings",
+      "url": "https://www.youtube.com/watch?v=-zI4mrF2Pb4",
+      "start": 594.8,
+      "end": 720.639,
+      "text": "remaining so it's over no need to do anything remember if the string gets exhausted either of this string or either of the string you will stop if the string gets exhausted at any moment you're right away going to stop without traveling so what did you see you moved you moved and whenever there was a diagonal movement you took the strings and you put that into the length three string that you were looking for right so can i say in order to write the code it's going to be super simple and super straightforward i know one thing for sure i will initially have my pointers at n and j equal to m that's for sure because initially we will be starting over here and then we will decide whether we move to the max or whether we move to the diagonal right so i know one thing i will keep on doing till it gets exhausted so if this is greater than zero that means i have some length of string r like first string some length of string two so let's go on let's go on doing now what was this thing that we were checking we were like okay we are at ing let's go back to the table initially what did you check you checked is this e equivalent to this k so just go and check remember zero based indexing so you'll be like okay if if s1 of i minus 1 is not is rather equal to equal to s2 of j minus 1 that means they're equal they're equal so as of now they're not equal so let's not think on this let's not think on this condition because they're not equal let's try the else condition what if they are not equal what if they are not equal then we have to figure out where did this 3 come in from because we always take max of the previous row or the previous column so let's see where this three comes in from either it will",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "-zI4mrF2Pb4",
+      "position": 207,
+      "title": "DP 26. Print Longest Common Subsequence | Dp on Strings",
+      "url": "https://www.youtube.com/watch?v=-zI4mrF2Pb4",
+      "start": 716.72,
+      "end": 838.959,
+      "text": "this three comes in from either it will come from here or either it will come from here remember one thing it might come from any one of the places in that case you can move anywhere remember if there is a 3 over here and there's a 3 over here then you can move here or you can move here it's ok that means it might have multiple answers and you cannot print multiple answers using a dp table then you have to apply normal brute force so if there is a three both of the places you can move anywhere so you'll be like okay i know one thing for sure it it either either dp of i minus 1 j that's the previous row would be greater than the previous column or it'll be the other way because i know one thing for sure this guy is either greater than this or this guy is either greater than this like any one will be greater because i take max of both and whoever is the max like over here three was the max so i move so how's this movement if this guy is greater and move towards him if this guy's greater i move towards him so let's see i'm saying this guy is greater so i move towards i minus 1 so i'll be like i please move towards i minus 1 or j move towards j minus 1 like in this case j will happen in the in our case j would have moved right so in this way you can move the i pointers and the j pointers correct in the next eye pointers or j pointers in the next step you are over here you saw this guy matching with this guy thereby the matching case comes in and whenever there is a matching case remember this whenever there is a matching case you have to yes you have to store in the string so you know the answer was the length of the lcs was",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "-zI4mrF2Pb4",
+      "position": 207,
+      "title": "DP 26. Print Longest Common Subsequence | Dp on Strings",
+      "url": "https://www.youtube.com/watch?v=-zI4mrF2Pb4",
+      "start": 832.88,
+      "end": 953.12,
+      "text": "answer was the length of the lcs was very simple it was dp of n comma m right so probably you can create a string you can create a string s equal to probably you can as of now keep it empty and then you know the answer is i equal to zero to length so s plus equal to probably you can uh just assign some uh dummy dollar values assign a dummy dummy array dummy string of dollar dollar dollar assigned okay and probably what you can do is you can keep an index equal to length minus 1 right and if this is the case then you can say okay in our string or in our lcs string in index i will store s1 of i minus 1 and the next moment i'll shift the index so that why am i doing this so that remember whenever this e whenever this e and this e match i'll store e where there was the index then i'll move the index to the previous so that for the next step it gets stored perfect we have stored the index and we have moved the index back what about i i will move one step as well as j will move one step very important both of them will move why because because they have to move to the diagonal diagonal so thereby it'll move to i minus 1 and j minus 1 so this is the entire set of code if you write you will be able to print the answer so if you see in the code as well i've written the exact same thing taken the length signed the answer and then index and the exact the same thing and if i take other both the strings and if i just run it you will see that the string is getting printed so that's how you can print the lcs so the time complexity will be definitely n cross m uh you have to use the tabulated like you have to use the",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "-zI4mrF2Pb4",
+      "position": 207,
+      "title": "DP 26. Print Longest Common Subsequence | Dp on Strings",
+      "url": "https://www.youtube.com/watch?v=-zI4mrF2Pb4",
+      "start": 949.519,
+      "end": 1013.88,
+      "text": "the tabulated like you have to use the entire 2d array so that you can backtrack and you can simply backtrack and what will be the time complexity to backtrack as about the time complexity the worst case can be n plus m assuming in the matrix uh you are backtracking something like this and then you move straight like you started from the right corner you move like this then you move like this so you take all the columns and all the rows so n plus m at the worst case is what you will backtrack that's that's a simple uh lcs stuff and before that any two m plus n plus m is what you will be requiring so guys i hope you've understood the entire printing of lcs just in case you did please please please make sure you like this video and if you're new to this channel please do consider subscribing to us because that is the only thing that keeps me going and with this let's wrap up this video and meet in the next one where we'll be solving something new bye thank don't ever you you're golden",
+      "word_count": 196
+    }
+  ]
+}

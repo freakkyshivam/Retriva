@@ -1,0 +1,152 @@
+{
+  "video_id": "uZ0N_hZpyps",
+  "position": 60,
+  "title": "BS-16. Kth Missing Positive Number | Maths + Binary Search",
+  "url": "https://www.youtube.com/watch?v=uZ0N_hZpyps",
+  "chunk_count": 13,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "uZ0N_hZpyps",
+      "position": 60,
+      "title": "BS-16. Kth Missing Positive Number | Maths + Binary Search",
+      "url": "https://www.youtube.com/watch?v=uZ0N_hZpyps",
+      "start": 2.879,
+      "end": 107.10000000000001,
+      "text": "everyone welcome back to the channel I hope you guys are doing extremely well so we will be continuing with our binary search playlist now this is the part of the ongoing striversity and DSA course in case you haven't checked it out yet there's a link in the description make sure you check it out otherwise you're going to miss out on something extremely special so the problem that you're going to solve today will be finding out the kth missing number what does the problem state it states that it will be given an increasing array where you will be having positive integers your task is to figure out the kth missing number what does it mean you can see that the last number is still 11. so if I start writing all the positive numbers you know the positive numbers start from one so let's quickly uh write it till 11 so the moment I write it till 11 if I ask you which of the numbers are missing you can say 2 is there 3 is there 4 is there 7 is there 11 is there so apparently this is the first number that is missing this is the second number that is missing this is the third this is the fourth this is the fifth this is the Sixth and the question is specifically asking you to figure out the fifth missing number so if you carefully see that the fifth missing number is nine so this is what you have to return which is basically nine so given an array of increasing positive integers and given an integer K you have to return the kth missing positive integer that is what the problem States this problem might have a lot of brute force solutions but the one that I'm going to speak will be super easy and clean so imagine I give you an example where the array is starting from 5 and then it has 7 and then probably 10 and then 12 and I'm asking you to figure out the fourth",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "uZ0N_hZpyps",
+      "position": 60,
+      "title": "BS-16. Kth Missing Positive Number | Maths + Binary Search",
+      "url": "https://www.youtube.com/watch?v=uZ0N_hZpyps",
+      "start": 102.9,
+      "end": 227.22,
+      "text": "I'm asking you to figure out the fourth missing integer what will be the fourth missing integer your answer will be four why because the array itself starts from five thereby all the first four numbers will be missing and since the question is fourth missing integer I say that the number is 4 whatever I ask you what is the sixth missing integer you cannot see straight away 6 like you did when K was 4 you cannot see straight away six why because there is an integer five thereby the answer will be like if I have to write 1 2 3 4 5 is there six seven so if I'm looking for the sixth missing integer it's one two three four five six this is it one more so if you carefully observe what do You observe there was one integer which was lesser than six thereby you kind of added that and you got this particular number one ahead one head because the five took a place in between hence the six could not be the answer so this is what the Brute will be so let's quickly do the brute force on the given example so what I will do is I'll take the k equal to 5 and I'll start iterating I get to I say that this 2 will take one please so now I'm looking for the sixth possible number like the answer can be six then I'll move to the next and I'll say three will take one more place so seven can be my possible answer now I'll move forward I have four four will take one more place thereby I'll move to eight then I'll go to seven seven will take one more place thereby I'll move to nine the moment I move to eleven I see this as exceeded I see this has exceeded so I stop then and there and I say that this particular 9 is my answer so this is going to be my answer for The Brute Force super simple it's basically the numbers",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "uZ0N_hZpyps",
+      "position": 60,
+      "title": "BS-16. Kth Missing Positive Number | Maths + Binary Search",
+      "url": "https://www.youtube.com/watch?v=uZ0N_hZpyps",
+      "start": 220.98,
+      "end": 339.36,
+      "text": "super simple it's basically the numbers that are lesser than K will take its place thereby you have to move move move and wherever you stop that will be your answer it's going to be super simple I'll just start from 0 I'll go until the last integer and I'll say if array of I is lesser than equal to K I'll just do a K plus plus if I get any number because it is an increasing order if I get any number which is greater than K I stop I stop hence you can straight away see break and this is what the possible solution will be and what will be the time complexity we go of n won't be the space complexity B go of one now this is what the Brute Force solution will be the moment you give the solution to the interviewer he might ask you to optimize it if you have to optimize we go of n what should you use because what is better than big of n primary logarithmic of N and that does make sense over here because the array is sorted and whenever we see something as sorted we and we need something better than we go of n logarithmic of n that kind of gives us an idea that okay binary search might be a solution this is how you get the intuition of binary search that okay sorted increasing better than we go off and thereby we move towards a logarithmic cancellation so can we apply the typical binary search algorithm we cannot why because we are looking for the missing number this number is not there in the array so we cannot apply the typical binary search in a sorted array so binary search is not possible like the normal one can we apply binary search on answers we cannot because binary social answers is only applicable when you are looking for something like minimum or maximum and you know that some portion is not possible and the other portion is",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "uZ0N_hZpyps",
+      "position": 60,
+      "title": "BS-16. Kth Missing Positive Number | Maths + Binary Search",
+      "url": "https://www.youtube.com/watch?v=uZ0N_hZpyps",
+      "start": 334.74,
+      "end": 462.3,
+      "text": "is not possible and the other portion is possible so either you look for the main or either you look for the max something like that but over here that's not the case the case is very different if you carefully notice this particular answer line should have mean between 7 7 and 11. so if I somehow can figure out between which which indexes this particular answer should have been I think my problem will be solved so how do we apply binary search in this particular question can I say I'm very much sure that the answer will be between 2 and between 11 for k equal to 5. I am very much sure about that okay can I say that I'm also like for this k equal to 5 I know the answer is 9 and that always lies between 7 and 11. I'm also very much sure about this right what if K is 3 in that case the answer is 6 and that is lying between 4 and 7. I know one thing for binary search I think the entire range if somehow I can figure out like for k equal to 5 I know the answer will be between 7 and 11. if I can figure out the smaller range I'm very much sure that it will be between two indexes if I can figure out that two nearby indexes my question is solved so first Target is to figure out the two nearby indexes that's what our Target will be and then we'll figure out how to how to get the answer once I am standing here and once I'm standing here I will figure out nine I'll figure out nine as of now what do I have I have an increasing array I have k equal to 5 and what do I need I need to make sure that I stand between like I stand on those two indexes between which the answer will be so that's my first task figure out the two nearby indexes",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "uZ0N_hZpyps",
+      "position": 60,
+      "title": "BS-16. Kth Missing Positive Number | Maths + Binary Search",
+      "url": "https://www.youtube.com/watch?v=uZ0N_hZpyps",
+      "start": 458.58,
+      "end": 569.7,
+      "text": "out the two nearby indexes so the next thing that you should be thinking is hey striver you did know that the answer was nine that is why it was easy for you to say that nine was between 7 and 11 but wait we do not know what the answer is we are just given K and we have to find that number so how do I figure out that it is between 7 and 11 because I do not know the number this is where K will come in it will help us let's observe something if I write down the indexes this is how it will look like ideally on a normal scenario the numbers should have been this one two three four five in the array if nothing was missing if nothing was missing but over here we have seven and we should have had four thereby can I say till this particular index there are three numbers missing if I again write down the integers one two three four five six seven you have seven and before that you have four and before that you have three and before that you have two so you have three numbers missing and how did you figure that out it's very simple you had seven so you said seven is present ideally four should have been present there ideally four should have been present there thereby there are three numbers we say I'm like okay there are three numbers missing over here there's eleven so if I have to again say eleven is there ideally what should I have been there five if I write down the numbers so how many numbers are missing can I say 11 minus five equal to six numbers is what is missing over there you can again go ahead and write down the numbers you'll figure out that 11 is there thereby one two three four five six six numbers I must say so can I say that can I say on the basis of K",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "uZ0N_hZpyps",
+      "position": 60,
+      "title": "BS-16. Kth Missing Positive Number | Maths + Binary Search",
+      "url": "https://www.youtube.com/watch?v=uZ0N_hZpyps",
+      "start": 563.339,
+      "end": 675.899,
+      "text": "that can I say on the basis of K on this index three numbers are missing on this index six numbers are missing if I can figure out the numbers of missing what am I looking for I'm looking for the fifth number which is missing thereby can I surely say that it will lie between this it will lie between this if I again write for this one if you write for four how many numbers are missing at four ideally there should have been three so four minus three is one number is missing over here so there is just one number sorry there is just one number which is missing at four if I have to write it for this ideally there should have been two so there is again one number missing ideally for this 2 minus 1 because there should have been one so one number missing if you carefully observe till this particular index one number is missing till this particular index one number is missing till this particular index one number is missing till this particular index three number is missing in this particular index sixth number is missing and what is the what is that you're looking for you're looking for the fifth missing number thereby you can easily figure out that between this is where it will lie so what I've done is I've written down the missing numbers at every index now can I perform a binary search in order to figure out where will the fifth missing number line I can what I'll do is I'll take the low pointer to be at the zeroth index I'll take the high pointer to B and the last Index right so what will be my first wind mid will be 0 plus 4 by 2 which is second index so mid will be pointing to this place which is the second index and over here we notice that the number of missing numbers is one what am I looking for I'm looking for the fifth missing number",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "uZ0N_hZpyps",
+      "position": 60,
+      "title": "BS-16. Kth Missing Positive Number | Maths + Binary Search",
+      "url": "https://www.youtube.com/watch?v=uZ0N_hZpyps",
+      "start": 671.579,
+      "end": 795.72,
+      "text": "I'm looking for the fifth missing number so I know that this one can be eliminated because 5 is greater than this missing number I'm looking for fifth missing number and 5 is greater than one so the left portion can be eliminated so please go ahead and eliminate and move to this so this is what I'll do I'll eliminate it I'll move ahead next what is my job my job is to figure out the next mid which is index is three three plus four is low plus I by two thereby it'll be three so the mid will be pointing to three this is the moment you notice that Hey listen over here we are seeing that this is having three missing numbers and we are looking for five missing numbers so this is also not possible so can you please because this was already eliminated can you please eliminate this and at the same time take low and move to Mid plus 1 we will just move there at the next step mid will also be pointing to this and the next step mid will also be pointing to this because 4 plus 4 by 2 is 4 so the mid is already pointing to this over here we have six missing numbers we have six missing numbers but we are looking for five we're like the right has to be eliminated the right has to be eliminated and when the right is eliminated High goes as wind minus one so I'll move High to one place back of mid and this is the moment you see that hey the low and high have crossed so we carefully observe high is standing at 3 which is lesser than K lower standing at 6 which is greater than K did you notice something initially the low was at a point which was lesser where has the low gone to a higher point to higher than K opposite polarity comes in let's see where was I I was at six which",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "uZ0N_hZpyps",
+      "position": 60,
+      "title": "BS-16. Kth Missing Positive Number | Maths + Binary Search",
+      "url": "https://www.youtube.com/watch?v=uZ0N_hZpyps",
+      "start": 788.399,
+      "end": 910.68,
+      "text": "let's see where was I I was at six which was greater where is high ending at on low Earth opposite polarity So eventually you are ending up at two nearby indexes so I figured out my nearby indexes done what is my next job if my lowest pointing if my low and high are pointing to the nearby indexes the next job is find the number find the number is my next job it's going to be super simple it's going to be super simple why let's analyze so the high is pointing to like the array of I is pointing to 7 right how many numbers are missing can I say three numbers are missing I can so if three numbers are missing how many else am I looking for I need more to that's very obvious because K is 5 and you know till here the missing are three because ideally if I write down there should have been four so the missing are three how much more do I need two so what you do is is a seven can you go to your next number he says eight can you go to one more because I need two more that's nine so nine is the answer so 9 is the answer this is your answer so what do you do is you say hi Plus how many more you need how many more you need that is what you have to say I plus how many more you need and this more will come back and do it like we'll come back and find out a formula but as of now just remember hi like whatever is array of high because RFI is 7 and whatever more you need because you already have k equal to 5 and there are three missing numbers still here so more will be two so that's what you add it up that's what you add up again if I have to give an example one two three four five six seven eight nine ten eleven",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "uZ0N_hZpyps",
+      "position": 60,
+      "title": "BS-16. Kth Missing Positive Number | Maths + Binary Search",
+      "url": "https://www.youtube.com/watch?v=uZ0N_hZpyps",
+      "start": 906.0,
+      "end": 1017.12,
+      "text": "nine ten eleven this is here this is here this is here this is here and this is here so this was not here this was not here this was not here so three were not there until here you got it so the next two numbers which are not there will be eight and nine thereby just add the more numbers that are not there okay so you have got array of high plus more is what you have to do got it we'll try to figure out a formula so that we are not dependent on the value of array and we will do that afterwards but let's quickly write down the binary search code where am I starting the binary search at so at first though let's write the array and we're looking for the K missing number so let's just write it I'm starting the binary search at the zeroth index and I'll go till the last index which is n minus 1. that is very much sure let's quickly do the generic binary search which is low lesser than equal to high again the standard low less than equal to I and everything will be standard no changes in that I'm trying to keep it consistent so that you understand the concept in a much better way what's the next job finding out the mid which is low plus High by 2. right what is the next job how many are missing you have to figure out how many are missing because on that basis you either eliminate left or you either eliminate right how many are missing can I say array of that mid index minus what should be there originally because if I'm having seven originally it should have been 4 which is 1 plus index can I say 7 minus index plus 1 will be the missing number can I say this because 7 minus whatever is the index plus 1 will be the number of missing number I can thereby I'll write this as array of mid",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "uZ0N_hZpyps",
+      "position": 60,
+      "title": "BS-16. Kth Missing Positive Number | Maths + Binary Search",
+      "url": "https://www.youtube.com/watch?v=uZ0N_hZpyps",
+      "start": 1010.1,
+      "end": 1139.4,
+      "text": "thereby I'll write this as array of mid mid plus 1 that will be my missing numbers if missing is lesser than k then I'll eliminate the left half because I'm looking for the range or else I'll eliminate the right half quite simple done done now you have to return array of high plus more but I'll try to figure out a formula for this because array of Pi might not be correct why I'll tell you imagine your array is given as four seven nine and I am looking for k equal to 3 so where will the hive point to this will be your because third missing number will be somewhere bit before 4 before 4 so the high will be pointing here and the low will be pointing here so high will be pointing to negative index so array of I cannot be written just take this example try to do the binary search try to do the binary search and see where is high ending at you will see that high is ending at the minus 1 index and the low will stay at the zeroth index because this is where the third missing number will be this is where the third missing number will be so you cannot say array of high plus something so we have to figure out a formula for this we will do that now okay so let's figure out the formula at array of I because if you remember this particular example I was standing at this and lower standing at this so at area 5 we had 7 right and the missing numbers were three what is the formula for missing numbers if I ask you it's array of high minus that index plus one because that is what it is 7 minus three plus one sorry three plus one that seven minus 4 equal to 3 because ideally they should have been Fourier so we know the formula for missing is this how many more do you need that is what",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "uZ0N_hZpyps",
+      "position": 60,
+      "title": "BS-16. Kth Missing Positive Number | Maths + Binary Search",
+      "url": "https://www.youtube.com/watch?v=uZ0N_hZpyps",
+      "start": 1133.22,
+      "end": 1263.6000000000001,
+      "text": "how many more do you need that is what the thing is what is your answer array of high plus more what is more what is more can I say more is nothing but K minus missing can I say more is nothing but K minus pressing because K was 5 missing was three so more came out to be two whatever you are looking to find and wherever you are at K minus messing will be or more right so can I say this was my answer this was my answer which is answer of 5 plus more salvate array of high plus more what is more K minus missing K minus missing what is missing array of high minus High minus 1. what I've done is I've simply put values K minus missing was more in missing I have put this value this will go here and this becomes this perfect now what will happen array of I plus K minus array of high plus I plus 1 so array of I and array of I will go off and the formula turns out to be high Plus K plus 1 or I can say hi plus 1 plus K this is what the formula turns out to be this is your missing number or you can say we know one thing for sure low is also High plus one low is also High plus one if you carefully notice because low is one place ahead of I so low is also 5 plus 1 so either you can return this or you can go ahead and return low plus K as well this is the reason in a lot of Solutions you'll find low plus K being returned and in a lot of solution you'll find High plus actually you will not find in any of the solution that's being written everyone is returning low plus K and no one is explaining the reason behind it the reason is this derivation I hope you have understood this so let's quickly go back to the code and",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "uZ0N_hZpyps",
+      "position": 60,
+      "title": "BS-16. Kth Missing Positive Number | Maths + Binary Search",
+      "url": "https://www.youtube.com/watch?v=uZ0N_hZpyps",
+      "start": 1259.64,
+      "end": 1359.9599999999998,
+      "text": "so let's quickly go back to the code and over here we will return High plus 1 plus K or else you can return low plus K as well that is your choice either this or either that that's it done what is the time complexity you're doing a typical binary search in the array such a big O of n what is the space complexity a b go of one and this will also be running for this example four seven eight I am looking for the third missing number so since you know that at the end of the binary search hi will be pointing at the minus 1 index and the low will be pointing at the zeroth index so there is no array of height because it's an array of negative index so you do a high plus 1 which is minus one plus one Plus so the answer will be minus one plus one will be 0 and the answer comes out to be plus 3 which is indeed your answer this is why I converted it into a formula I I could have written an array of I plus more but that is technically not feasible for such cases where the high ends up pointing to this place got it so let's quickly get back into the code editor by the way you can find out the problem Link in the description and you can also find out the C plus plus Java Python and JavaScript code links from the description as well so this is how the code will look like you can return K plus I plus 1 or you can also return low plus K as your wish so I have submitted this code and it works and if you're still watching I hope you have understood everything and in case you have please please do consider giving us that like and if you're new to our channel do consider subscribing as well and yeah uh if you haven't followed me on Instagram Twitter and Linkedin all",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "uZ0N_hZpyps",
+      "position": 60,
+      "title": "BS-16. Kth Missing Positive Number | Maths + Binary Search",
+      "url": "https://www.youtube.com/watch?v=uZ0N_hZpyps",
+      "start": 1357.62,
+      "end": 1372.5800000000002,
+      "text": "on Instagram Twitter and Linkedin all the profile links will be in the description with this I'll be wrapping up this video let's read in some of the video till then bye take care [Music] hey you're golden I will",
+      "word_count": 40
+    }
+  ]
+}

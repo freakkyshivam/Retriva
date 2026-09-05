@@ -1,0 +1,229 @@
+{
+  "video_id": "EgG3jsGoPvQ",
+  "position": 184,
+  "title": "DP 3. Frog Jump | Dynamic Programming | Learn to write 1D DP",
+  "url": "https://www.youtube.com/watch?v=EgG3jsGoPvQ",
+  "chunk_count": 20,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "EgG3jsGoPvQ",
+      "position": 184,
+      "title": "DP 3. Frog Jump | Dynamic Programming | Learn to write 1D DP",
+      "url": "https://www.youtube.com/watch?v=EgG3jsGoPvQ",
+      "start": 0.0,
+      "end": 116.479,
+      "text": "hey everyone welcome back to the channel i hope you guys are doing extremely well so welcome to the third lecture of the dynamic programming playlist it's a wonderful question frog jump so just to make sure you have watched the previous couple of lectures before attending this one because i have a perfect flow which i will continue so if you're like if you're just watching this lecture three suddenly you might feel alienated so please watch out the previous couple of lectures so what is the problem statement so there's a frog on the first step of a n stairs long uh n stairs long staircase so the frog wants to reach the nth stair height i is the height of the i plus one stair so the that is given in terms of zero based indexing right so uh the energy lost in the jump is given by height i minus one and height j minus one so basically the frog can jump from the ith stair to the jet stair and the energy will be a height of i minus 1 minus side of j minus 1. in the frog if the frog is in the ith staircase he can jump from either he can jump either to i plus one stair or two i plus two step basically he can take a jump to the one in plus one index or to the plus two index your task is to find the minimum total energy used by the frock to reach the first air to the of stair okay so that is what the question states so for an example i'll just take the first example 10 20 30 and 10 okay and i'll try to explain you this let's see the first example which is 10 20 30 and 10. so basically there's a frog now if i consider this a 0 1 2 3 the frog wants to reach from 0 to 3 i have converted the problem into 0 based indexing so even if n is 4 it's ideally the question was",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "EgG3jsGoPvQ",
+      "position": 184,
+      "title": "DP 3. Frog Jump | Dynamic Programming | Learn to write 1D DP",
+      "url": "https://www.youtube.com/watch?v=EgG3jsGoPvQ",
+      "start": 113.119,
+      "end": 228.79899999999998,
+      "text": "was from one to four but i've converted it into zero based indexing okay so if the frog starts from here and he can only jump one or two places what is the minimum energy that you'll require okay so for example if the frog is here the frog is here and the frog says that okay i will jump from here to here then the energy that he will require is 10 okay and then he decides that he'll jump from here to here and the energy again required will be 10 it's a difference of them absolute difference of them so if after that he decides that he'll jump from here to here that's again the absolute difference which is 20. so this path will give him 40. the energy that he will take will be 40. uh let's let's try out some other parts what if i decide i will jump from here to here which will take me 10 whatever i decide i'll jump from here to here so that again takes me a plus 10 correct so this path gives me 20 which is definitely better than the previous one what if i decide i'll take this a couple jump because i cannot jump more than a couple of steps so this will be 20 and then i'll decide i'll jump one step so that will be a plus 20 again this is again 40. so if you see i've tried out one possible way two possible way three possible way and the minimum that i encounter is 20 and you have to tell me which is the minimal what is the minimal energy that you can take and that is what the question is now uh can i say this can i say this that this question again gives me an idea that you are trying always so if you remember the previous lecture i told you if you are trying all possible ways then it's a recursion right and then you can either count always or you can find the best",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "EgG3jsGoPvQ",
+      "position": 184,
+      "title": "DP 3. Frog Jump | Dynamic Programming | Learn to write 1D DP",
+      "url": "https://www.youtube.com/watch?v=EgG3jsGoPvQ",
+      "start": 224.48,
+      "end": 327.44,
+      "text": "you can find the best so can i say over here you're trying all possible ways way number one way number two way number three and you're taking the best possible and that's 20. why will a greedy solution uh not work over here that that might be a question that comes to your head so that's the first thing that i will be talking about why a greedy solution doesn't works let's understand that then after that we'll think why we we need to try all possible ways and need to take the best way out so when i say greedy that means you you are standing from 10 so you know from 10 you can go to 20 or go to 30. so you saw that if you jump till 20 that's the minimal so you jumped and from 20 uh you could have either jumped to 30 or to 10. both are taking 10 both are taking 10 so you can jump anywhere so you jump this this is greedy basically when you are moving you try to jump the minimal possible jumps possible whichever takes minimal energy you try to jump that but why a greedy solution doesn't works let's check that out now when i say a greedy solution doesn't works out let's check the stress case so if the frog was here if the frog was here greedily from here he will try to move here because in moving here it will take him 30 it'll take him 20. the greedy option will be to move to 10 so let's greedy move to 10 which will cost him a 20 okay now again from here he can move here which is 50 or you can move here which is zero so greedily he will move to zero so let's move to the zero this will take him zero energy again from here greatly he can move here which will cost him 40 or this will cost him 50. so greedy he'll take the 40 stuff so he will move from here to here",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "EgG3jsGoPvQ",
+      "position": 184,
+      "title": "DP 3. Frog Jump | Dynamic Programming | Learn to write 1D DP",
+      "url": "https://www.youtube.com/watch?v=EgG3jsGoPvQ",
+      "start": 321.52,
+      "end": 453.199,
+      "text": "stuff so he will move from here to here which will be again 40 so in total the costing will be 60 yes in total the costing will be 60. now what if i try some other way let's try that out if the frog is here and he decides he will be going till 60 that will cost him a 30 buck right and if he decides after that he will go to 60 again that will cost him zero and after that he decides he'll go 50 that will cost him 10. so a total of 40 will be the costing a total of 40 will be the costing so we did realize the greedy way did not give you the correct path because you started greedily but you lost out probably somewhere right so that's why that's why it's better if you try all possible ways because sometimes it will happen that initially you took the better way but you lost out on something significant like this 60 to 60 would have been zero you lost out in future so in such cases greedy doesn't works and you have to try recursion now when i say recursion buzz into the second lecture what is over here recursion is try all possible ways so you have to try all possible ways okay so in order to trap all possible ways you have to write recursion correct over here they're asking you which path did take the minimum energy so you have to find the path with the minimum energy correct and do you remember the previous lecture what is the step number one express the problem in terms of index do all stuffs on that index remember this to write recursion do all stuffs on that index step three over here they're asking you to find the minimum energy minimum energy that you took so take the minimal of all stops take the minimal of all stuffs this is how you write recursion okay so can i say i'm wanting to reach the index n minus one",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "EgG3jsGoPvQ",
+      "position": 184,
+      "title": "DP 3. Frog Jump | Dynamic Programming | Learn to write 1D DP",
+      "url": "https://www.youtube.com/watch?v=EgG3jsGoPvQ",
+      "start": 450.0,
+      "end": 572.399,
+      "text": "one i'm assuming zero based indexing so i'm wanting to reach the index n minus one so what do i want what does f of n minus one signify minimum energy required minimum energy required to reach n minus 1 from 0 index that is what the recursion will signify can i can i express the recursion in terms of index that's my first step i'd like yes you can how there are array indexes there are array indexes still n minus one so i'll consider every array index as an index so okay that's fine so i can be like okay that's that's absolutely fine so let's do it so can i say uh what will be f of zero like common sense what will be the costing in order to reach from zero to zero that's going to be zero because f of n minus one was stating the costing from n minus one to zero so in order to reach zero to zero the costing will be zero so i know one thing for sure that the costing for this guy will be zero no matter what you do no matter what you do now let's so we have figured out what is the index that will be the air index next thing is do all stuffs on that index yes do all stuffs on that index now what is what what i what is the frog allowed to do the frog is allowed to either jump plus one or to either jump plus two so why don't you do that do all stuffs on that index please do it so what you will do is you will say okay i will do all steps on that index so if i do a single jump like i can say it as the left recursion so the single jump will say f of index minus one i'm doing this but if i'm jumping yes the question arises if i'm jumping from an index to an index minus 1 what is the energy that is being consumed",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "EgG3jsGoPvQ",
+      "position": 184,
+      "title": "DP 3. Frog Jump | Dynamic Programming | Learn to write 1D DP",
+      "url": "https://www.youtube.com/watch?v=EgG3jsGoPvQ",
+      "start": 567.2,
+      "end": 685.12,
+      "text": "that is being consumed i know in order to jump from index to index minus 1 the energy consumed is array of index minus array of index minus 1 that is what the energy is consumed can i say this is what the energy will be consumed to jump from index to index minus 1 and then i can ask the recursion hey recursion i have reached index minus one now it's your job to tell me from index minus one to zero how much it will cost you recursion will do the job i'll ask the recursion to tell what will be the costing from index minus one to zero because i know the costing from index to index minus one i've taken that so that's what i'll do first stop done now can i say the right recursion will be very simple it will be if i take couple of jumps the costing this time will be a of index minus a of index minus 2 absolutely makes sense so i've done all the stuffs but i need to be slightly careful can i do an index minus two always the answer to that is yes you can do it if it is not the first index because if you are standing at the first index you cannot jump two because that will take you to minus 1 you cannot jump to so you need to write a case like this if index is greater than 1 then only i can take the right jump otherwise i cannot like make sense because if you add the first index you'll not be able to take the right job so that is absolutely making sense so i'm like okay fine that's fine now where's the next stuff take the minimal because the question stated minimum energy had the question stated maximum energy you would have done it had the question stated something else you have done it accord but in this the question stated find the minimum energy so there is a way in which",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "EgG3jsGoPvQ",
+      "position": 184,
+      "title": "DP 3. Frog Jump | Dynamic Programming | Learn to write 1D DP",
+      "url": "https://www.youtube.com/watch?v=EgG3jsGoPvQ",
+      "start": 680.399,
+      "end": 791.36,
+      "text": "is a way in which you jumped from index to index minus one there's a way in which you jump from index to index minus 2 and ask the recursion to find out the remaining answer so can i say you need the minimal answer so you're going to return the minimal off left comma right that's how you can write the recurrence as i told you follow three techniques you'll be able to write any recurrence relationships yes now you have written the recurrence relationship that is absolutely perfect so we have understood the recurrence relationship now it's time to see if there are overlapping sub problems and how is this recursion actually working right so we know we know we are at f of 5 because if i write down the indexes it's like 0 1 2 3 4 5. so we know we are at f of 5 now at f of 5 where can we go we know that either we can take a jump to f of 4 or either we can take a jump to f of 3 that's definitely known to us so i can be like ok if i'm at f of 5 and there's this recursion call and then the left recursion will be like okay f of 4 plus absolute of whatever height there is so what is the height 60 minus 50 this is this height of absolute 10 and then there's a recursion of right which is f of 3 plus again and height difference of these couple of guys which is 3 and 5 10 minus 50 is 40 so you can be like absolute of 40. now at first this recursion will go come back and then this will go and come back then you'll return the minimum of these right this is how the recursion is actually working so that's how i'm drawing the recursion tree so f of 4 will say f of 3 and f of 2. f of three will say f two and f of one",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "EgG3jsGoPvQ",
+      "position": 184,
+      "title": "DP 3. Frog Jump | Dynamic Programming | Learn to write 1D DP",
+      "url": "https://www.youtube.com/watch?v=EgG3jsGoPvQ",
+      "start": 785.44,
+      "end": 903.8389999999999,
+      "text": "f of three will say f two and f of one f of two will say f of one and f of zero understood right so do you observe overlapping sub problems that is i am i'm able to do it by the way f of 1 will go to f of 0 as well i'm able to do it so if i mark the overlapping sub problems there is one first one another one so i have figured out if if f of 3 answer if f of 3 is answer i'm figuring out then f of 3 is answer why will i again figure out so there are overlapping sub problems so if there are overlapping sub problems can i say the answer to those sub problems will be similar thereby i can apply memoization to this particular recursion got it so i am understanding that okay i can definitely apply memoration so you can easily apply memorization but i just in a case to complete the recursion real quickly draw it so in order to reach zero i'll take zero amount correct so f of one what would have what it would have done ideally in f of one was this recursion so f of one went and there's a left recursion call of f 0 plus the jump from 1 to 0 so absolute of something a jump from 1 to 0 so absolute of something let's see 1 to 0 will cost you 20 so you can add a 20. what about the right recursion can i say uh since we are standing at the first index there will be no right recursion because you cannot jump couple of index so i can say right is probably some bigger value now f of 0 will return you zero for sure this will return you zero so the left took 20 and the right took 20. so what will you return you return the minimum of both of them which is 20 comma let's assume this to be some into max max so it's 20",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "EgG3jsGoPvQ",
+      "position": 184,
+      "title": "DP 3. Frog Jump | Dynamic Programming | Learn to write 1D DP",
+      "url": "https://www.youtube.com/watch?v=EgG3jsGoPvQ",
+      "start": 898.8,
+      "end": 1014.9590000000001,
+      "text": "it's 20 what you return as f of 1 again makes sense because if you are standing at f of 1 what is the cost that you will take from 1 to 0 that's one way there's only one way which is 20 so that is what we have stored cool so i have drawn this particular recursion nice now we are at f of 2 so f of 2 would have called the left recursion as f of one plus a jump from two to one plus a jump from two to one which will cost him fifty so that costed him fifty and there'll be a right jump which will be directly to f of zero now there will be a jump from two to 0 which will cost him 30. so there will be a 30. now you remember f of 1 this had a value of 20 so it will return with a 20. so this guy gave him 20. so 20 plus 50 will give him 70 f of 0 will be how much 0 so 0 plus 30 gives him 30 which one will f of 2 give the minimum so it will return 30 so f 2 got 30 perfect so again make sense because if i logically explain you let me raise this if i logically give you an explanation well this makes sense yes this will make sense because if i'm standing at f of 2 yes if i'm standing at f of 2 there there are a couple of ways one is this one is this which will cost him 20 plus 50 which is 70 or the other one is this which is 30. so 30 is what you have got right now again similarly f of three when you're at f of three understand there is a left call of f of two plus the absolute difference which is from three to two so if you're going from three to two it's 50. so you can just take a plus 50.",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "EgG3jsGoPvQ",
+      "position": 184,
+      "title": "DP 3. Frog Jump | Dynamic Programming | Learn to write 1D DP",
+      "url": "https://www.youtube.com/watch?v=EgG3jsGoPvQ",
+      "start": 1010.72,
+      "end": 1142.0,
+      "text": "take a plus 50. so what is f of 2 it has returned you as 30 correct what's the right jump the right jump is about f 1 plus what now will you f of one so from one to three will be zero one two three will be zero so plus zero now will you go and do the recursion call of f of one will you go and do again f of zero f of one is already computed you see it's just overlapping sub problem you can directly take the value from the dp array as 20 this gives you 20 this gives you 80. which one will you take 20 obviously so f of 3 becomes 20 perfect so remember i'm storing the values of f of 3 f of 2 f of 1 in probably some dp array as you have seen in my lecture one next you're at f of 4 so if i'm at f of 4 what is that doing it's again calling f of 3 plus absolute of 3 to 4 will be 50. so uh 50 and it's calling f of 2 plus 4 to 2 will be 0 so i can do 0 what's f of 3 if i write what's f of 3 20 what's f 2 30 so 20 plus 50 70 this is 30 which only 30 again an overlapping sub problem ignored you did not f 2 will not go deep into recursion because the moment you call f of 2 it will directly get the value 30 and return 30. so you got the minimum as 30 so f of 4 becomes 30. perfect next step is this particular step f of 3 so when i'm at f of 5 what's happening i'm saying okay i can definitely go to ff4 plus absolute of uh jumping from four to five which is ten so let's take ten similarly if i am jumping from five to three if i'm jumping from five to three can i say it's uh 40 yes",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "EgG3jsGoPvQ",
+      "position": 184,
+      "title": "DP 3. Frog Jump | Dynamic Programming | Learn to write 1D DP",
+      "url": "https://www.youtube.com/watch?v=EgG3jsGoPvQ",
+      "start": 1137.36,
+      "end": 1265.36,
+      "text": "40 yes so plus 40 of f of 3 now carefully observe f of 4 is already 30 f of 3 is already 20 30 plus 10 gives you 40 20 plus 40 gives you 60 which one will you take 40 or 16 definitely 40. so this value is 40. thereby this recursion is also solved so did you observe something there were multiple sub problems that i ended up solving repeatedly overlapping sub problems as i said so this is how generally uh recursion tends to work it goes on goes on because if a problem has been solved if you have already like if you already know what's the what's the summation from 0 to 3 why do you want to recompute it again just reuse it that's what i've done and i've got the answer as 40 which was indeed the answer this is how the recursion tree works and how you get the minimal possible way uh generally uh if you draw this recursion tree by yourself you'll understand much more but in in general uh if you can remember these three stuffs three lines explain the problem in terms of index do all stuffs on that index take the minimum of all those stuffs and then write the recurrence now once you've written the recurrence how do you convert a recurrence into a dynamic programming solution that's the next question how do you convert a recurrence into a dp so that's when you see memo i ation okay so trick to apply memoration look at the parameters changing yes look at the parameters changing like which which parameters are changing just look at them if you like stravo there is only one parameter changing which is the one parameter let's come back it's index what is the maximum value of index let's look at the recursion tree five so you'll require a six size array because in a six size array they'll be index five so you can definitely create a dp size of six over here which is",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "EgG3jsGoPvQ",
+      "position": 184,
+      "title": "DP 3. Frog Jump | Dynamic Programming | Learn to write 1D DP",
+      "url": "https://www.youtube.com/watch?v=EgG3jsGoPvQ",
+      "start": 1259.76,
+      "end": 1385.1200000000001,
+      "text": "a dp size of six over here which is indirectly dp of n plus one remember three steps step one is this declare an array of size n plus one step two before returning add it up dp of index before returning add it up store it and return step so this is step two what's step three whenever you call an index yes whenever you call a recursion check if it has been previously computed or not if dp of index has been previously computed no need to solve it again return bp of index done line number three converts a recursion to a memoization so i've converted a dp solution in it's converted a recursion solution into a dynamic programming and if i talk about the time complexity what will be it one step two step three step four step five steps these steps are constant because these sub problems are not solved so these steps are cons five steps or n steps so i can say the time complexity to be big go of n because there are n steps i can say there is recursion stack space of big of one and an array size of b of n used this is how the recursion will look alike so it's now time to uh code it and probably submit it and after that we can optimize this into tabulation and after that probably into space optimization okay so in the code you're basically given n and a given the heights so i know i know i have to write a recursion solution so probably i have to term the in terms of index let's carry the height as well but the java people uh you can easily code it because i've explained the pseudo code while explaining so it should not be a big issue for java people as well so i'll take andy function now i know the edge cases if index reaches zero i know the answer will be zero and i know there will be electric question call and",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "EgG3jsGoPvQ",
+      "position": 184,
+      "title": "DP 3. Frog Jump | Dynamic Programming | Learn to write 1D DP",
+      "url": "https://www.youtube.com/watch?v=EgG3jsGoPvQ",
+      "start": 1381.919,
+      "end": 1506.48,
+      "text": "there will be electric question call and i know there will be a right recursion call but we know one thing the right recursion call will always not happen so probably we can initially store that as into max because this is not going to happen always if index is greater than one then we can have the right as f of index minus two and pass on the heights and then a plus of absolute of heights like you can just heights of index minus heights of index minus two there's something which you can definitely do and over here what you can do is the same stuff just make sure you copy paste and instead of index -2 do all the stuffs and that's how you do it at the end of the day what do you do you return minimum of left comma right correct now the question is uh very simple so you can probably say return f of n minus 1 because that's the last index and you can do it heights so if i run this or will this run let's check it out okay so it says okay so into max it is not taking so probably we have to use hash include bits std c plus plus dot h generally uh like generally it is added over there not sure why they have not added it but not an issue let's quickly run this off if i run it you can see so if i run it you can see the first three test cases are running fine and then there's a time limit exceeded because it's the simple recursive solution so how do you convert this into a dp convert create a dp array of size n plus one because that's the maximum initialize that with minus one now pass the dp over here just make sure you have a vector of int and you can just create a dp by reference make sure always carry the dp that's the next step done so step one of initialization and",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 13,
+      "video_id": "EgG3jsGoPvQ",
+      "position": 184,
+      "title": "DP 3. Frog Jump | Dynamic Programming | Learn to write 1D DP",
+      "url": "https://www.youtube.com/watch?v=EgG3jsGoPvQ",
+      "start": 1502.96,
+      "end": 1632.559,
+      "text": "so step one of initialization and carrying on the parameters is done what's the next step step towards storing the answer before returning for the sub problem f done what's the next step if the answer has come across just check this and return dp of index right so if i just do these changes and if i now run bingo works fine all the test cases if i submit them you will see it it's it's absolutely correct so this is how you can do the memoization stuff very very easily so in our so in the first lecture i told you after memoration it's very important to understand how do we do the tabulation one and after that we will do the space optimization what is memorization top down why let's understand so in the recursion if you observe what did you do you had a top portion but first the down answers like you went from top to down correct what is tabulation it's the exact opposite yes i repeat it's the exact opposite bottom up okay that means you'll start from the bottom and it'll go up so always look at the recursion tree always look at the recursion tree what's at the bottom yes so you'll go up and then you'll fill it you'll take zero you'll fill one then you'll fill two then you'll fill three then you'll fill four you'll fill five it'll go from the bottom to the so that's tabulation understood now what did i tell you in tabulation what's the first step step one is to see in memoration how much dpri did you use we know we used a dp array of size n plus one so just without thinking anything uh you can initialize that okay so without thinking anything you can initialize that by the way uh it will be n like even if you initialize n it will work because we have used a zero based indexing so make sure everything is initialized with minus one or you can initialize that with zero doesn't matter",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 14,
+      "video_id": "EgG3jsGoPvQ",
+      "position": 184,
+      "title": "DP 3. Frog Jump | Dynamic Programming | Learn to write 1D DP",
+      "url": "https://www.youtube.com/watch?v=EgG3jsGoPvQ",
+      "start": 1630.0,
+      "end": 1775.919,
+      "text": "initialize that with zero doesn't matter over here so first thing is done what's the next step look for the base case because in recursion it is top down over here it's down top like bottom up so what's the base case let's look at the base case states index equal to equal to zero returns you index equal to equal to zero index equal to equal to zero so whatever is that you'll write that ep of 0 is equal to 0 just write it after that just look at the recursion state these lines when will it be executed it can be like it will be executed at 1 2 3 4 and so on till n minus 1 at the index make sense because the worst worst call that i'll make will be n minus 1 so it will be executed for sure i'm like yes so please write it i equal to 1 till n minus 1 run a for loop perfect what's the next step just go and look at the recursion what am i doing what's the what's the stuff done on the index yes replace this with dp and write it so the first step is very simple i can say if i take first step it will be dp of index minus 1 plus absolute of array of index minus array of index minus 1 simple i can the second step will only implicate if i is greater than one remember super super second step will only implement if that's true so dp of index minus 2 plus absolute of a of index minus a of index minus 2 as simple as it gets and what do you store store it dp of index will be minimum of dp of index minus uh sorry uh dp of first step and second step as simple as it can get and if you write this it's definitely going to work wonders so i'll try to show you over here like i'll just erase this and over here if i just write the same",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 15,
+      "video_id": "EgG3jsGoPvQ",
+      "position": 184,
+      "title": "DP 3. Frog Jump | Dynamic Programming | Learn to write 1D DP",
+      "url": "https://www.youtube.com/watch?v=EgG3jsGoPvQ",
+      "start": 1771.279,
+      "end": 1902.0,
+      "text": "and over here if i just write the same thing like you'll see over here if i try to write the same thing like i'll write dp of 0 to be 0 for ind i equal to 1 i lesser than n i plus plus okay and i can write in the first step will be very simple dp of i minus 1 plus absolute of heights i minus heights of i minus 1 right and what about the second step i can say the second step will be very simple i can initially keep it as into max correct and what i can say is second step will only be implicated if index is greater than 1 and the second step will be nothing but dp of i minus 2 plus absolute of heights of i minus heights of i minus 2 as simple as it gets and the dp of i will be minimum of dp of i minus one sorry a minimum of first step comma second step and what do you need to return you need to return the answer will always be stored at the last index and thereby if i just take this off now and now if i try to run you see it's running and we're trying to sum it works fine so we can convert this into tabulation so easily by a record like a recursion can be converted into a tabulation now the question arises can we reduce the space because over here we are we are we are definitely reducing the uh stack space that we used over here this is reduced but there's still a big of n being used because as you can see we are still using a dp of n array and the time complexity cannot be reduced but can i omit this let's uh let's see can we omit this i did tell you one thing anytime there is something like index minus 1 index minus 2 there can always be an space optimization take this as a thumb rule there will always",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 16,
+      "video_id": "EgG3jsGoPvQ",
+      "position": 184,
+      "title": "DP 3. Frog Jump | Dynamic Programming | Learn to write 1D DP",
+      "url": "https://www.youtube.com/watch?v=EgG3jsGoPvQ",
+      "start": 1898.08,
+      "end": 2014.96,
+      "text": "this as a thumb rule there will always be a space optimization if there is something like index minus 1 and index minus 2 always these teeths can be now let me uh tell you something assume you are at index 0 1 2 3 4 and so on till n minus 1 okay initially initially as you just assumed you are over here and this is nothing but dp of i and you're saying this as dp of i minus 1 and you're saying this as dp of i minus 2 you're saying correct in the next step whenever i will increase can i say i will go over here and this will be dp of i this will be dp of i minus 1 this will be dp of i minus 2 indeed i can there's no doubt i cannot in the next step can i say this will be dp of i this will be dp of i minus 1 this will be dp of i minus 2 there's no doubt so do you observe a pattern the guy who was dp of i minus 1 for this particular i in the next step in the next step when the i increases to the next index three the guy was i minus one that means here's the previous he'll become the second previous of the next he'll become the second previous of the next make sense so he will become this so can i say dp of i minus 2 will become this right so do you need to carry a array can't i do this using couple of variables like think can't you do this using couple of variables the answer to that will be yeah i think we can because what we require at any particular instance i is the previous guy and the second previous guy i don't need anything more why the hell do i need to declare a dp array i don't need anything else thereby i can say okay sorry that makes sense let's assume i do it this way",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 17,
+      "video_id": "EgG3jsGoPvQ",
+      "position": 184,
+      "title": "DP 3. Frog Jump | Dynamic Programming | Learn to write 1D DP",
+      "url": "https://www.youtube.com/watch?v=EgG3jsGoPvQ",
+      "start": 2010.159,
+      "end": 2133.6800000000003,
+      "text": "let's assume i do it this way this is car i i say this is previous i and i say this is previous to i instead of storing them into an array in the next step i know this will become karai i know i will become previous i either the previous i will become previous to i so can i just use couple of variables where i say previous to i for the next step whenever you have done all the stuffs the previous i will become the previous two i because whoever is previous will become second previous for the next step and whoever is the current guy like whatever is the value of dp of i that will become the previous for the next step so if you just keep on doing this you will never require anything so can i say this can i say this instead of dp of zero can i carry a previous equal to zero uh makes sense i can and can i carry a previous or two equal to or probably zero as well because for the first for the first you'll require dpf index minus 1 which i can represent as previous now correct and this i can represent as previous 2 because that is what we recommend and after that can i say in the next step the previous two will be previous and the previous will be nothing but car i and this guy will be car i make sense make sense and what will be the answer at the end whenever you exceed i will go beyond n minus 1 and whenever this for loop ends the value of i will be n yes the value of i will be over here and for this guy for this guy previous will be at n minus 1 and you always require the answer of n minus 1 so you can say whatever is the answer for previous will be your answer so you can easily print the answer as previous",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 18,
+      "video_id": "EgG3jsGoPvQ",
+      "position": 184,
+      "title": "DP 3. Frog Jump | Dynamic Programming | Learn to write 1D DP",
+      "url": "https://www.youtube.com/watch?v=EgG3jsGoPvQ",
+      "start": 2129.119,
+      "end": 2252.079,
+      "text": "previous so if you do this you will be able to get your space optimized and you'll no more be requiring a dp array so if i try to write this in the code probably i'll delete this and i can keep a previous or equal to zero i can keep a previous two as well as zero and i can just omit this to previous and i can just commit this to previous two and i can be like this to be car i and i can see the previous two will become previous now and the previous guy will be for the next step will be i correct at the end of the day instead of dp of n because i will be at n minus 1 so i can definitely return something as previous so we run this here it works let's submit it is working fine so we have done a space optimization yes we have done a space optimization so this is how this problem can be easily solved so this is how i can space optimize it i hope you have understood the space optimization now there's a follow-up to this wonderful problem okay now this question stated you can jump to i plus one and you can jump to i plus two that's the maximum that you put now the follow-up states the follow-up states there can be k jobs yes the follow-up states that there can be k jumps now instead of i plus 1 you can jump to i plus 1 i plus 2 i plus 3 till i plus k that's what i'm saying so if i change the question to this can you solve this problem now i'll give you this as a homework okay so take this question as in homework uh i i want you to do k jumps if you if you are using k jumps then probably you cannot use space optimization because then there will not be a couple of stuff there will be k uh previous elements that you have to",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 19,
+      "video_id": "EgG3jsGoPvQ",
+      "position": 184,
+      "title": "DP 3. Frog Jump | Dynamic Programming | Learn to write 1D DP",
+      "url": "https://www.youtube.com/watch?v=EgG3jsGoPvQ",
+      "start": 2247.76,
+      "end": 2329.56,
+      "text": "uh previous elements that you have to carry you will not be able to use uh stuff that i told you but yeah uh the stuff that i gave you was the follow-up is very simple try to do it using k jumps i will expect the quotes in the comment section and i'll be discussing this problem right before uh starting the lecture four right before starting the lecture four i'll definitely be discussing this problem key jumps where i'll tell you how to change those problems slightly and you'll be able to do this problem for k jumps so guys if you have watched this video till now and if you've understood everything you know what to do this is what i expect even if you're very very very lazy please comment us us means understood and this is something which you should always do you're watching these videos because it takes a lot of effort to make these kind of videos and yes if you're new to this channel please please do consider subscribing and please do share this channel among your college mates friends wherever you can and if you haven't checked out our sd sheet yet oh man what are you doing there's an sd link in the description go and check it out that's the ultimate resource for placements man and yeah with this uh let's upload this video and probably meet in the next one [Music] ever tomorrow your golden",
+      "word_count": 247
+    }
+  ]
+}

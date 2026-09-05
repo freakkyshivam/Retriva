@@ -1,0 +1,75 @@
+{
+  "video_id": "Et9OCDNvJ78",
+  "position": 94,
+  "title": "L22. Top View of Binary Tree | C++ | Java",
+  "url": "https://www.youtube.com/watch?v=Et9OCDNvJ78",
+  "chunk_count": 6,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "Et9OCDNvJ78",
+      "position": 94,
+      "title": "L22. Top View of Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=Et9OCDNvJ78",
+      "start": 0.0,
+      "end": 117.84,
+      "text": "before starting this video i'd love to thank releval for sponsoring this entire tree series did you know that companies like google apple starbucks are now hiring people without any degree or experience why because they believe that skills are more important than anything else the top companies in india like the top startups have also started following this trend by hiring through a platform which is relevant which is backed up by an academy all you have to do is to give the relevant test and based on your score this flat send your candidate profiles to 50 plus companies which includes cred upgrade vedanta and you can get selected for a job role within a week another amazing thing about relevel is it's absolutely free so please make sure you check out the links in the description hey everyone welcome back to the channel i hope you guys are doing extremely well so today we will be discussing the top view of a binary tree from the freakout tree series so assume this is the banana tree that is given to you and i'm looking from the topmost level and it is in 1d shape like the tree is entirely in 1d so if i ask you what is the top view of this binary tree i can say initially i will be if i just start from left to right i'll be seeing 4 right after that i'll be seeing two right after that i'll be seeing one after that i'll be seeing three after that i'll be seeing seven so i can say that the top view of this particular binary tree will be 42137 so i want you to deduce an algorithm which basically gives you gives me the top view of any given binary tree so you know that in order to solve any binary tree question we have to follow traversal now either we follow the recursive traversal or we follow the level order traversal so over here we will be following the level order traversal and why not recursion i'll",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "Et9OCDNvJ78",
+      "position": 94,
+      "title": "L22. Top View of Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=Et9OCDNvJ78",
+      "start": 112.399,
+      "end": 226.72,
+      "text": "traversal and why not recursion i'll come to that but afterwards now in this level order traversal if you remember the vertical order traversal that we did uh using the line concept so we're going to use the line concept from vertical order traversal okay so this is a line zero this is uh like whenever we move left we will consider that as line minus one and if you're moving much further left that's one more minus one that's minus two and over here this will be plus 1 on the right and this will be another plus 1 on the right that's plus 2. so on every line on every line whichever is the first node now on this line minus 2 the first node is 4 on this line minus 1 the first node when you uh look from top to bottom that's two on this line zero that's one on this line one that's three on this line two that's seven so i can say the first node in every line will be my top view that is that is what i'll see right so we can actually uh create the line concept and solve this problem using level order traversal so in order to solve this problem we will be requiring a couple of data structures the first one is the queue which is definitely going to store uh the initial node that is the root and the initial line is zero basically i'm considering the starting line to be zero and i'll be requiring a map data structure again please make sure that it's a map data structure which stores the line as well as the node right and this is a map data structure because map stores everything in a sorted fashion of keys do not use unordered map if you're using c plus so let's get started so initially you take the first node out from the queue so that's a node of value one and a line zero so on line zero do we have anything on the",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "Et9OCDNvJ78",
+      "position": 94,
+      "title": "L22. Top View of Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=Et9OCDNvJ78",
+      "start": 221.599,
+      "end": 329.84,
+      "text": "on line zero do we have anything on the map no so it'll say 0 on line 0 the first node that i see is 1 right after that you know level order traversal is left right so on the left we have a 2 correct so i'll take 2 and since it's on the left you will minus one on the line okay and on the right that's a three so you'll do a plus one on the line perfect so the node one is completed next you take two comma minus one so the node is two the line is minus 1. so if you have 2 comma minus 1 can i see this that we have a minus 1 so we do not have that on the map so can i say the node 2 is the first uh first node that i have seen in this line perfect so on two do you have a left yes that's a four i know what will be the line if the line is minus one currently and if i'm moving left it's gonna be minus two and on the right i have a five so if the line is minus one and i'm moving right the line is gonna be zero perfect so that's what we have done next is three comma plus one being the line so if you have a three can i say plus one is the line and that's the first time i'm visiting on line one so you store whatever is there on the line next do we have anything left of three do you have anything on left of three no we do not have anything left of three so we're not gonna do anything do you have anything right of three indeed we have that's seven so we're gonna take seven and we're gonna say that we have this on the right so if the line is one if you go right that will be seven comma two so three is also done",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "Et9OCDNvJ78",
+      "position": 94,
+      "title": "L22. Top View of Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=Et9OCDNvJ78",
+      "start": 324.479,
+      "end": 431.28000000000003,
+      "text": "seven comma two so three is also done next four comma minus two do you have a minus two line no so minus two will take the four so you have a node four with a line minus two does four have anything on the left no does 4 have anything on the right no so the note 4 has completed next we have a 5 so let's take 5 and a line 0 very important point now the note 5 is on the line 0. so on line 0 we have already won that is the first scene guy so this five will not be considered in your map on five do you have a left yes that is six and what is the line number minus one so six comma minus one perfect so that's that's what we have done with five next take seven comma two so take seven comma two do you have anything on two no so that's the first time you visit someone so i visited the seven hour left on a right no so seven is also done next you will have 6 comma minus 1 6 comma minus 1 minus 1 is already there no need to consider 6 doesn't have a left doesn't have a right so complete it so once you have completed yes once you have completed you can say that your map yes your map stores your top view so in order to get the top view from left to right like the first s4 then s2 then s1 then s3 then s7 just make sure whatever is like is the first element in the map the first element in the map will definitely be minus two right so just take the value there so the first value that you get is four what's the next minus one so the first value that you will get is two next is zero the value that you'll get is one next is one the value that you'll get is three next is two the value that you'll get is",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "Et9OCDNvJ78",
+      "position": 94,
+      "title": "L22. Top View of Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=Et9OCDNvJ78",
+      "start": 427.759,
+      "end": 536.48,
+      "text": "get is seven so i can say that in this way you can easily get the top view of the binary pre so as always the c plus plus code is on the left and the java code is on the right so what we are given is basically the root of the binary tree so initially what we do is we take a vector of int and this is where we're gonna store the top view if the tree is empty we're gonna return the empty vector or else we'll declare we're gonna declare a map and a queue which is going to store a pair so in java you can create your own pair class with root n zero right after that i will enter the root and the line initially as zero after that i'll keep on traversing till the q is not empty get the topmost node and once you've got the topmost node get the line number once you've got the line number please make sure that it doesn't exist on the map if that line doesn't exist then you will initialize the node on that map because that's the first time you're visiting any node on that line after that just take whatever is on the left take whatever is on the right enter into the queue with minus one if it's left enter it into the queue with plus one if it's all right once you have done this iterate on the map right iterate on the map and make sure you enter into your answer vector which was going to store the top view and the value is what you will answer you will enter into the answer vector and right after that you can return the answer right so what will be the time complexity guys the time complexity will be b go of n and what will be the space complexity the space complexity will also be we go off n like yeah you're using a q and a map so it's twice of n but yes like in",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "Et9OCDNvJ78",
+      "position": 94,
+      "title": "L22. Top View of Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=Et9OCDNvJ78",
+      "start": 531.44,
+      "end": 631.249,
+      "text": "map so it's twice of n but yes like in generalized way we can call it as b of n and space complexity as b of n standard question uh can i use the recursive traversal in order to solve this problem the answer will be no why because just imagine if you use a inorder traversal first you'll visit this then you'll visit this then you'll visit this then you'll visit this then you'll visit this so on this line one on this line one you'll end up visiting node six the first time whereas the 3 was the first node that you should have visited that's why the recursive solution cannot work directly you have to introduce another logic of height also right whenever you are making sure that whichever node is on the line like the guy with the least height on that uh on this line will be seen from the top view so i have to introduce another logic of height that is why i do not prefer the recursive way instead i prefer the level order traversal that is much more intuitive and you do not have to implement any extra logic on that so i hope you've understood the entire explanation as well as the code just in case you did please please please make sure you like this video because it took a lot of efforts to make this entire tree series also if you wish you can definitely drop in a comment that will keep motivating me to make such further series also if you're new to the channel please do consider subscribing because i'm going to bring in such more series in the upcoming future as well with this uh let's wrap up this video let's speed in the next lecture bye take care whenever your heart is [Music]",
+      "word_count": 309
+    }
+  ]
+}

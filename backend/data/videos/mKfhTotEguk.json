@@ -1,0 +1,1778 @@
+{
+  "position": 290,
+  "video_id": "mKfhTotEguk",
+  "title": "L7. N Meeting in One Room | Greedy Algorithms Playlist",
+  "url": "https://www.youtube.com/watch?v=mKfhTotEguk",
+  "transcript": [
+    {
+      "start": 3.6,
+      "duration": 3.92,
+      "end": 7.52,
+      "text": "so let's continue with our greedy"
+    },
+    {
+      "start": 5.16,
+      "duration": 3.559,
+      "end": 8.719000000000001,
+      "text": "algorithms playlist before that he wel"
+    },
+    {
+      "start": 7.52,
+      "duration": 3.4,
+      "end": 10.92,
+      "text": "come back to the channel I hope you guys"
+    },
+    {
+      "start": 8.719,
+      "duration": 4.401,
+      "end": 13.12,
+      "text": "are doing extremely well so the problem"
+    },
+    {
+      "start": 10.92,
+      "duration": 4.919,
+      "end": 15.838999999999999,
+      "text": "that we will be solving today is in"
+    },
+    {
+      "start": 13.12,
+      "duration": 5.159,
+      "end": 18.279,
+      "text": "meetings in one room so what is the"
+    },
+    {
+      "start": 15.839,
+      "duration": 4.641,
+      "end": 20.48,
+      "text": "problem stating the stating that you'll"
+    },
+    {
+      "start": 18.279,
+      "duration": 4.76,
+      "end": 23.039,
+      "text": "be given a single meeting room which"
+    },
+    {
+      "start": 20.48,
+      "duration": 5.84,
+      "end": 26.32,
+      "text": "means you can perform one meeting at a"
+    },
+    {
+      "start": 23.039,
+      "duration": 7.281,
+      "end": 30.32,
+      "text": "time and you'll be given end meetings"
+    },
+    {
+      "start": 26.32,
+      "duration": 5.32,
+      "end": 31.64,
+      "text": "start and end time let's understand if I"
+    },
+    {
+      "start": 30.32,
+      "duration": 4.399,
+      "end": 34.719,
+      "text": "have a meeting"
+    },
+    {
+      "start": 31.64,
+      "duration": 5.84,
+      "end": 37.480000000000004,
+      "text": "room and I follow the order given if I"
+    },
+    {
+      "start": 34.719,
+      "duration": 4.281,
+      "end": 39.0,
+      "text": "follow the order given I'll I'll be"
+    },
+    {
+      "start": 37.48,
+      "duration": 3.96,
+      "end": 41.44,
+      "text": "performing the first meeting because"
+    },
+    {
+      "start": 39.0,
+      "duration": 4.16,
+      "end": 43.16,
+      "text": "initially the meeting room is empty so"
+    },
+    {
+      "start": 41.44,
+      "duration": 3.959,
+      "end": 45.399,
+      "text": "I'll be performing the first meeting"
+    },
+    {
+      "start": 43.16,
+      "duration": 5.12,
+      "end": 48.279999999999994,
+      "text": "which is starting at the time zero and"
+    },
+    {
+      "start": 45.399,
+      "duration": 5.8,
+      "end": 51.199,
+      "text": "ending at the time 5 perfect I go to the"
+    },
+    {
+      "start": 48.28,
+      "duration": 5.079,
+      "end": 53.359,
+      "text": "next meeting can I perform this meeting"
+    },
+    {
+      "start": 51.199,
+      "duration": 4.281,
+      "end": 55.48,
+      "text": "I cannot because it is starting at a"
+    },
+    {
+      "start": 53.359,
+      "duration": 6.241,
+      "end": 59.6,
+      "text": "time three and the meeting room is"
+    },
+    {
+      "start": 55.48,
+      "duration": 7.16,
+      "end": 62.64,
+      "text": "occupied it is occupied I cannot perform"
+    },
+    {
+      "start": 59.6,
+      "duration": 5.96,
+      "end": 65.56,
+      "text": "can I perform 1 comma 2 I cannot can I"
+    },
+    {
+      "start": 62.64,
+      "duration": 8.24,
+      "end": 70.88,
+      "text": "perform 5 comma 9 no I cannot why"
+    },
+    {
+      "start": 65.56,
+      "duration": 8.36,
+      "end": 73.92,
+      "text": "because it is occupied till 5 after five"
+    },
+    {
+      "start": 70.88,
+      "duration": 5.919,
+      "end": 76.79899999999999,
+      "text": "after five so I cannot can I perform 5"
+    },
+    {
+      "start": 73.92,
+      "duration": 6.559,
+      "end": 80.479,
+      "text": "comma 7 no I cannot can I perform 8"
+    },
+    {
+      "start": 76.799,
+      "duration": 5.721,
+      "end": 82.52000000000001,
+      "text": "comma 9 yes I can if I follow the given"
+    },
+    {
+      "start": 80.479,
+      "duration": 5.32,
+      "end": 85.799,
+      "text": "order the number of meetings I can"
+    },
+    {
+      "start": 82.52,
+      "duration": 6.44,
+      "end": 88.96,
+      "text": "perform is two got it but the question"
+    },
+    {
+      "start": 85.799,
+      "duration": 6.28,
+      "end": 92.07900000000001,
+      "text": "is different you can follow any order"
+    },
+    {
+      "start": 88.96,
+      "duration": 5.88,
+      "end": 94.83999999999999,
+      "text": "any order of your choice and the task is"
+    },
+    {
+      "start": 92.079,
+      "duration": 6.08,
+      "end": 98.15899999999999,
+      "text": "to maximize the number of meetings that"
+    },
+    {
+      "start": 94.84,
+      "duration": 6.319,
+      "end": 101.159,
+      "text": "you can perform using one single meeting"
+    },
+    {
+      "start": 98.159,
+      "duration": 6.881,
+      "end": 105.04,
+      "text": "room let's understand what if I start"
+    },
+    {
+      "start": 101.159,
+      "duration": 7.041,
+      "end": 108.2,
+      "text": "with this one 1 comma 2 which is the"
+    },
+    {
+      "start": 105.04,
+      "duration": 5.759,
+      "end": 110.799,
+      "text": "third meeting if I start with this"
+    },
+    {
+      "start": 108.2,
+      "duration": 5.519,
+      "end": 113.71900000000001,
+      "text": "perfectly fine after that I'm saying"
+    },
+    {
+      "start": 110.799,
+      "duration": 6.0,
+      "end": 116.799,
+      "text": "I'll be performing 3 comma 4 which is"
+    },
+    {
+      "start": 113.719,
+      "duration": 5.521,
+      "end": 119.24,
+      "text": "the second meeting can I perform I can"
+    },
+    {
+      "start": 116.799,
+      "duration": 3.6,
+      "end": 120.399,
+      "text": "because the meeting room was empty after"
+    },
+    {
+      "start": 119.24,
+      "duration": 5.04,
+      "end": 124.28,
+      "text": "two"
+    },
+    {
+      "start": 120.399,
+      "duration": 6.801,
+      "end": 127.2,
+      "text": "can I perform 0a 5 no I cannot because"
+    },
+    {
+      "start": 124.28,
+      "duration": 6.52,
+      "end": 130.8,
+      "text": "it needs 0 to 5 to be empty and it is"
+    },
+    {
+      "start": 127.2,
+      "duration": 5.72,
+      "end": 132.92000000000002,
+      "text": "not it is not so you're getting a VI why"
+    },
+    {
+      "start": 130.8,
+      "duration": 4.36,
+      "end": 135.16000000000003,
+      "text": "to perform longer meetings why to"
+    },
+    {
+      "start": 132.92,
+      "duration": 4.92,
+      "end": 137.83999999999997,
+      "text": "perform longer meetings so I'll not be"
+    },
+    {
+      "start": 135.16,
+      "duration": 3.76,
+      "end": 138.92,
+      "text": "performing this I I'll ask you a very"
+    },
+    {
+      "start": 137.84,
+      "duration": 6.399,
+      "end": 144.239,
+      "text": "simple"
+    },
+    {
+      "start": 138.92,
+      "duration": 8.12,
+      "end": 147.04,
+      "text": "question this one or these two not this"
+    },
+    {
+      "start": 144.239,
+      "duration": 6.0,
+      "end": 150.239,
+      "text": "one these two so what I'll do is I'll"
+    },
+    {
+      "start": 147.04,
+      "duration": 6.279,
+      "end": 153.319,
+      "text": "perform 5 comma 7 which is the fifth"
+    },
+    {
+      "start": 150.239,
+      "duration": 4.72,
+      "end": 154.959,
+      "text": "meeting I'll perform 8 comma 9 after"
+    },
+    {
+      "start": 153.319,
+      "duration": 4.881,
+      "end": 158.2,
+      "text": "that which is the sixth"
+    },
+    {
+      "start": 154.959,
+      "duration": 5.36,
+      "end": 160.31900000000002,
+      "text": "meeting and this will be crossed out so"
+    },
+    {
+      "start": 158.2,
+      "duration": 5.2,
+      "end": 163.39999999999998,
+      "text": "I follow this order which is the third"
+    },
+    {
+      "start": 160.319,
+      "duration": 6.161,
+      "end": 166.48,
+      "text": "meeting then the second then the fifth"
+    },
+    {
+      "start": 163.4,
+      "duration": 6.24,
+      "end": 169.64000000000001,
+      "text": "and then the my bad and then the"
+    },
+    {
+      "start": 166.48,
+      "duration": 6.119,
+      "end": 172.599,
+      "text": "sixth if I follow this the total number"
+    },
+    {
+      "start": 169.64,
+      "duration": 5.04,
+      "end": 174.67999999999998,
+      "text": "of meetings will be four and this is the"
+    },
+    {
+      "start": 172.599,
+      "duration": 4.121,
+      "end": 176.72,
+      "text": "maximum possible you can try out all"
+    },
+    {
+      "start": 174.68,
+      "duration": 4.0,
+      "end": 178.68,
+      "text": "possible configurations and this is what"
+    },
+    {
+      "start": 176.72,
+      "duration": 3.56,
+      "end": 180.28,
+      "text": "you'll get so in a problem like in an"
+    },
+    {
+      "start": 178.68,
+      "duration": 3.6,
+      "end": 182.28,
+      "text": "interview they might ask ask you to"
+    },
+    {
+      "start": 180.28,
+      "duration": 3.12,
+      "end": 183.4,
+      "text": "return this or they might ask you to"
+    },
+    {
+      "start": 182.28,
+      "duration": 3.84,
+      "end": 186.12,
+      "text": "return"
+    },
+    {
+      "start": 183.4,
+      "duration": 4.16,
+      "end": 187.56,
+      "text": "3256 can be either of it right they"
+    },
+    {
+      "start": 186.12,
+      "duration": 3.96,
+      "end": 190.08,
+      "text": "might ask you to return the order as"
+    },
+    {
+      "start": 187.56,
+      "duration": 5.599,
+      "end": 193.159,
+      "text": "well how do I solve this problem I think"
+    },
+    {
+      "start": 190.08,
+      "duration": 6.48,
+      "end": 196.56,
+      "text": "you got a hint you got a"
+    },
+    {
+      "start": 193.159,
+      "duration": 5.761,
+      "end": 198.92,
+      "text": "hint I'll be greedy yes I'll be greedy"
+    },
+    {
+      "start": 196.56,
+      "duration": 3.36,
+      "end": 199.92000000000002,
+      "text": "what I will do is I'll try to take the"
+    },
+    {
+      "start": 198.92,
+      "duration": 3.16,
+      "end": 202.07999999999998,
+      "text": "faster"
+    },
+    {
+      "start": 199.92,
+      "duration": 7.0,
+      "end": 206.92,
+      "text": "meetings what do I mean by faster"
+    },
+    {
+      "start": 202.08,
+      "duration": 9.12,
+      "end": 211.20000000000002,
+      "text": "meetings which means the ending"
+    },
+    {
+      "start": 206.92,
+      "duration": 6.2,
+      "end": 213.11999999999998,
+      "text": "time right so look what did we do we"
+    },
+    {
+      "start": 211.2,
+      "duration": 5.039,
+      "end": 216.23899999999998,
+      "text": "took this one the meeting which was"
+    },
+    {
+      "start": 213.12,
+      "duration": 6.039,
+      "end": 219.159,
+      "text": "ending faster which was ending faster so"
+    },
+    {
+      "start": 216.239,
+      "duration": 5.441,
+      "end": 221.68,
+      "text": "that I can allocate the next meeting so"
+    },
+    {
+      "start": 219.159,
+      "duration": 5.121,
+      "end": 224.28,
+      "text": "my intuition will be greedy I'll try to"
+    },
+    {
+      "start": 221.68,
+      "duration": 4.919,
+      "end": 226.59900000000002,
+      "text": "take the meetings that are ending faster"
+    },
+    {
+      "start": 224.28,
+      "duration": 4.64,
+      "end": 228.92,
+      "text": "that are ending faster can I do that I"
+    },
+    {
+      "start": 226.599,
+      "duration": 4.72,
+      "end": 231.319,
+      "text": "think I can do that I can do that so"
+    },
+    {
+      "start": 228.92,
+      "duration": 4.679,
+      "end": 233.599,
+      "text": "what does that mean I will start with"
+    },
+    {
+      "start": 231.319,
+      "duration": 3.801,
+      "end": 235.11999999999998,
+      "text": "the meeting that ends my bad I'll start"
+    },
+    {
+      "start": 233.599,
+      "duration": 3.36,
+      "end": 236.959,
+      "text": "with this one because it is ending"
+    },
+    {
+      "start": 235.12,
+      "duration": 4.16,
+      "end": 239.28,
+      "text": "faster and after that I'll go to the"
+    },
+    {
+      "start": 236.959,
+      "duration": 3.521,
+      "end": 240.48,
+      "text": "next one to the next one to the next one"
+    },
+    {
+      "start": 239.28,
+      "duration": 3.599,
+      "end": 242.879,
+      "text": "so I'll be"
+    },
+    {
+      "start": 240.48,
+      "duration": 5.08,
+      "end": 245.56,
+      "text": "greedy so what I'll do is I'll take the"
+    },
+    {
+      "start": 242.879,
+      "duration": 6.681,
+      "end": 249.56,
+      "text": "start time I'll take the end time I'll"
+    },
+    {
+      "start": 245.56,
+      "duration": 7.2,
+      "end": 252.76,
+      "text": "try to sort it using the end time got it"
+    },
+    {
+      "start": 249.56,
+      "duration": 5.28,
+      "end": 254.84,
+      "text": "so what I can do is I can assign like I"
+    },
+    {
+      "start": 252.76,
+      "duration": 4.24,
+      "end": 257.0,
+      "text": "can take a data structure I can keep the"
+    },
+    {
+      "start": 254.84,
+      "duration": 4.84,
+      "end": 259.68,
+      "text": "start I can keep the end and I can keep"
+    },
+    {
+      "start": 257.0,
+      "duration": 5.12,
+      "end": 262.12,
+      "text": "the position as well why do I need the"
+    },
+    {
+      "start": 259.68,
+      "duration": 4.36,
+      "end": 264.04,
+      "text": "position because at the end I have to"
+    },
+    {
+      "start": 262.12,
+      "duration": 3.88,
+      "end": 266.0,
+      "text": "return the order as well order of the"
+    },
+    {
+      "start": 264.04,
+      "duration": 5.36,
+      "end": 269.40000000000003,
+      "text": "meetings in case the interviewer is"
+    },
+    {
+      "start": 266.0,
+      "duration": 6.6,
+      "end": 272.6,
+      "text": "asking for it so what I'll do is um I'll"
+    },
+    {
+      "start": 269.4,
+      "duration": 6.84,
+      "end": 276.23999999999995,
+      "text": "sort according to the ending"
+    },
+    {
+      "start": 272.6,
+      "duration": 6.039,
+      "end": 278.639,
+      "text": "time so the first one will be 1 comma 2"
+    },
+    {
+      "start": 276.24,
+      "duration": 6.799,
+      "end": 283.039,
+      "text": "and the meeting number is three perfect"
+    },
+    {
+      "start": 278.639,
+      "duration": 8.161,
+      "end": 286.8,
+      "text": "the second one will be 3A 4 comma 2 the"
+    },
+    {
+      "start": 283.039,
+      "duration": 7.081,
+      "end": 290.12,
+      "text": "third one will be 0a 5 uh I'm not wrong"
+    },
+    {
+      "start": 286.8,
+      "duration": 5.36,
+      "end": 292.16,
+      "text": "yes 0a 5 and meeting number is one again"
+    },
+    {
+      "start": 290.12,
+      "duration": 4.96,
+      "end": 295.08,
+      "text": "I'm writing the position in terms of one"
+    },
+    {
+      "start": 292.16,
+      "duration": 6.0,
+      "end": 298.16,
+      "text": "based indexing after that it will be"
+    },
+    {
+      "start": 295.08,
+      "duration": 5.48,
+      "end": 300.56,
+      "text": "either 5 comma 9 sorry 5 comma 7 rather"
+    },
+    {
+      "start": 298.16,
+      "duration": 5.2,
+      "end": 303.36,
+      "text": "5 comma 7 comma 5"
+    },
+    {
+      "start": 300.56,
+      "duration": 5.16,
+      "end": 305.72,
+      "text": "after that it will be 5"
+    },
+    {
+      "start": 303.36,
+      "duration": 5.399,
+      "end": 308.759,
+      "text": "comma 9"
+    },
+    {
+      "start": 305.72,
+      "duration": 5.8,
+      "end": 311.52000000000004,
+      "text": "comma is at the fourth position yes"
+    },
+    {
+      "start": 308.759,
+      "duration": 4.801,
+      "end": 313.56,
+      "text": "after that it will be 8 comma 9 comma 6"
+    },
+    {
+      "start": 311.52,
+      "duration": 4.92,
+      "end": 316.44,
+      "text": "perfect I've written down all the"
+    },
+    {
+      "start": 313.56,
+      "duration": 4.919,
+      "end": 318.479,
+      "text": "meetings so initially when you start off"
+    },
+    {
+      "start": 316.44,
+      "duration": 4.759,
+      "end": 321.199,
+      "text": "the meeting room is empty so one thing"
+    },
+    {
+      "start": 318.479,
+      "duration": 5.28,
+      "end": 323.75899999999996,
+      "text": "you know for sure is the first meeting"
+    },
+    {
+      "start": 321.199,
+      "duration": 5.241,
+      "end": 326.44,
+      "text": "can be performed you know that thing for"
+    },
+    {
+      "start": 323.759,
+      "duration": 6.401,
+      "end": 330.16,
+      "text": "short so what you can say is okay"
+    },
+    {
+      "start": 326.44,
+      "duration": 6.879,
+      "end": 333.319,
+      "text": "initially I can perform one meting right"
+    },
+    {
+      "start": 330.16,
+      "duration": 6.08,
+      "end": 336.24,
+      "text": "and the meeting the meeeting can I say"
+    },
+    {
+      "start": 333.319,
+      "duration": 6.041,
+      "end": 339.36,
+      "text": "uh last time or something like"
+    },
+    {
+      "start": 336.24,
+      "duration": 5.76,
+      "end": 342.0,
+      "text": "this or maybe I can call it as free time"
+    },
+    {
+      "start": 339.36,
+      "duration": 6.839,
+      "end": 346.199,
+      "text": "free maybe something like yeah maybe"
+    },
+    {
+      "start": 342.0,
+      "duration": 7.08,
+      "end": 349.08,
+      "text": "like free time when does it gets free"
+    },
+    {
+      "start": 346.199,
+      "duration": 5.521,
+      "end": 351.72,
+      "text": "the free time can I say will be when it"
+    },
+    {
+      "start": 349.08,
+      "duration": 5.559,
+      "end": 354.639,
+      "text": "ends up so the free time is two so I can"
+    },
+    {
+      "start": 351.72,
+      "duration": 4.8,
+      "end": 356.52000000000004,
+      "text": "perform one meeting and the meeting room"
+    },
+    {
+      "start": 354.639,
+      "duration": 4.481,
+      "end": 359.12,
+      "text": "uh the meeting room will be empty at"
+    },
+    {
+      "start": 356.52,
+      "duration": 5.399,
+      "end": 361.919,
+      "text": "time to perfect so where can I start"
+    },
+    {
+      "start": 359.12,
+      "duration": 5.96,
+      "end": 365.08,
+      "text": "iterating from I can start iterating"
+    },
+    {
+      "start": 361.919,
+      "duration": 5.041,
+      "end": 366.96,
+      "text": "from this one but please make sure you"
+    },
+    {
+      "start": 365.08,
+      "duration": 4.32,
+      "end": 369.4,
+      "text": "carry a data structure which will be"
+    },
+    {
+      "start": 366.96,
+      "duration": 5.28,
+      "end": 372.23999999999995,
+      "text": "storing the order as well so what is the"
+    },
+    {
+      "start": 369.4,
+      "duration": 4.76,
+      "end": 374.15999999999997,
+      "text": "order uh third position correct so you"
+    },
+    {
+      "start": 372.24,
+      "duration": 4.56,
+      "end": 376.8,
+      "text": "can just pick up the third and you can"
+    },
+    {
+      "start": 374.16,
+      "duration": 4.36,
+      "end": 378.52000000000004,
+      "text": "store it or maybe you can take maybe"
+    },
+    {
+      "start": 376.8,
+      "duration": 3.32,
+      "end": 380.12,
+      "text": "we'll have a better data structure"
+    },
+    {
+      "start": 378.52,
+      "duration": 4.399,
+      "end": 382.919,
+      "text": "something like"
+    },
+    {
+      "start": 380.12,
+      "duration": 6.32,
+      "end": 386.44,
+      "text": "this first I'm performing the third one"
+    },
+    {
+      "start": 382.919,
+      "duration": 6.801,
+      "end": 389.71999999999997,
+      "text": "right okay let's see can I perform this"
+    },
+    {
+      "start": 386.44,
+      "duration": 5.68,
+      "end": 392.12,
+      "text": "this is the start time and this is"
+    },
+    {
+      "start": 389.72,
+      "duration": 5.879,
+      "end": 395.59900000000005,
+      "text": "greater than the freeing time so I can"
+    },
+    {
+      "start": 392.12,
+      "duration": 5.76,
+      "end": 397.88,
+      "text": "perform this I can so I perform this one"
+    },
+    {
+      "start": 395.599,
+      "duration": 5.201,
+      "end": 400.8,
+      "text": "count will be two I can perform the"
+    },
+    {
+      "start": 397.88,
+      "duration": 6.48,
+      "end": 404.36,
+      "text": "second meeting from the position and"
+    },
+    {
+      "start": 400.8,
+      "duration": 6.44,
+      "end": 407.24,
+      "text": "when does it end at Time 4 perfect let's"
+    },
+    {
+      "start": 404.36,
+      "duration": 6.16,
+      "end": 410.52000000000004,
+      "text": "go to the next one 0 comma 5 can I"
+    },
+    {
+      "start": 407.24,
+      "duration": 5.72,
+      "end": 412.96000000000004,
+      "text": "perform this it's starting at Time Zero"
+    },
+    {
+      "start": 410.52,
+      "duration": 5.0,
+      "end": 415.52,
+      "text": "but the meeting room will be free at"
+    },
+    {
+      "start": 412.96,
+      "duration": 6.12,
+      "end": 419.08,
+      "text": "time this so I cannot perform this I"
+    },
+    {
+      "start": 415.52,
+      "duration": 7.6,
+      "end": 423.12,
+      "text": "cannot I'll go to the next one 5 comma 7"
+    },
+    {
+      "start": 419.08,
+      "duration": 6.04,
+      "end": 425.12,
+      "text": "can I I can because 5 is when it starts"
+    },
+    {
+      "start": 423.12,
+      "duration": 4.72,
+      "end": 427.84000000000003,
+      "text": "and the free time is four so I can"
+    },
+    {
+      "start": 425.12,
+      "duration": 5.16,
+      "end": 430.28000000000003,
+      "text": "perform this if I can perform this I can"
+    },
+    {
+      "start": 427.84,
+      "duration": 5.079,
+      "end": 432.919,
+      "text": "store down the position I can store down"
+    },
+    {
+      "start": 430.28,
+      "duration": 6.8,
+      "end": 437.08,
+      "text": "the position and I can say the count is"
+    },
+    {
+      "start": 432.919,
+      "duration": 6.801,
+      "end": 439.71999999999997,
+      "text": "three and the free up time is 7 let's go"
+    },
+    {
+      "start": 437.08,
+      "duration": 5.64,
+      "end": 442.71999999999997,
+      "text": "to the next one can I perform this one 5"
+    },
+    {
+      "start": 439.72,
+      "duration": 5.879,
+      "end": 445.59900000000005,
+      "text": "comma 9 starting at 5 and the meeting"
+    },
+    {
+      "start": 442.72,
+      "duration": 5.879,
+      "end": 448.59900000000005,
+      "text": "room gets free up at seven so I cannot"
+    },
+    {
+      "start": 445.599,
+      "duration": 6.44,
+      "end": 452.039,
+      "text": "I'll go to the next one 8 comma 99 can I"
+    },
+    {
+      "start": 448.599,
+      "duration": 5.361,
+      "end": 453.96,
+      "text": "88 yes I can the count will be four the"
+    },
+    {
+      "start": 452.039,
+      "duration": 4.88,
+      "end": 456.919,
+      "text": "position will be six and the freeing of"
+    },
+    {
+      "start": 453.96,
+      "duration": 5.2,
+      "end": 459.15999999999997,
+      "text": "time will be nine and the iteration is"
+    },
+    {
+      "start": 456.919,
+      "duration": 3.801,
+      "end": 460.71999999999997,
+      "text": "so and the iteration is over So"
+    },
+    {
+      "start": 459.16,
+      "duration": 5.159,
+      "end": 464.319,
+      "text": "eventually"
+    },
+    {
+      "start": 460.72,
+      "duration": 5.4,
+      "end": 466.12,
+      "text": "uh from the count you'll get the count"
+    },
+    {
+      "start": 464.319,
+      "duration": 4.641,
+      "end": 468.96000000000004,
+      "text": "and if you follow this particular data"
+    },
+    {
+      "start": 466.12,
+      "duration": 4.12,
+      "end": 470.24,
+      "text": "structure you'll get the order as well"
+    },
+    {
+      "start": 468.96,
+      "duration": 2.72,
+      "end": 471.68,
+      "text": "so you'll be writing down the pseudo"
+    },
+    {
+      "start": 470.24,
+      "duration": 3.76,
+      "end": 474.0,
+      "text": "code in case you want your language"
+    },
+    {
+      "start": 471.68,
+      "duration": 4.88,
+      "end": 476.56,
+      "text": "specific code you can find that below so"
+    },
+    {
+      "start": 474.0,
+      "duration": 4.96,
+      "end": 478.96,
+      "text": "what I'll be writing is a function"
+    },
+    {
+      "start": 476.56,
+      "duration": 5.88,
+      "end": 482.44,
+      "text": "correct and the function will be taking"
+    },
+    {
+      "start": 478.96,
+      "duration": 5.919,
+      "end": 484.87899999999996,
+      "text": "a start time and an end time and maybe"
+    },
+    {
+      "start": 482.44,
+      "duration": 6.08,
+      "end": 488.52,
+      "text": "an N if n is not given you can compute n"
+    },
+    {
+      "start": 484.879,
+      "duration": 5.6,
+      "end": 490.47900000000004,
+      "text": "by saying start do size what do I need I"
+    },
+    {
+      "start": 488.52,
+      "duration": 4.679,
+      "end": 493.19899999999996,
+      "text": "need a data object which is going to"
+    },
+    {
+      "start": 490.479,
+      "duration": 5.361,
+      "end": 495.84,
+      "text": "store the start the end and the position"
+    },
+    {
+      "start": 493.199,
+      "duration": 5.4,
+      "end": 498.599,
+      "text": "for sure so maybe I can create a data"
+    },
+    {
+      "start": 495.84,
+      "duration": 4.639,
+      "end": 500.479,
+      "text": "object like this right again in C++ it"
+    },
+    {
+      "start": 498.599,
+      "duration": 3.961,
+      "end": 502.56,
+      "text": "can be a struct it can be a class in"
+    },
+    {
+      "start": 500.479,
+      "duration": 6.521,
+      "end": 507.0,
+      "text": "Java it can be a class we have three"
+    },
+    {
+      "start": 502.56,
+      "duration": 8.199,
+      "end": 510.759,
+      "text": "variables start end and position perfect"
+    },
+    {
+      "start": 507.0,
+      "duration": 8.2,
+      "end": 515.2,
+      "text": "what I can do is I can say okay"
+    },
+    {
+      "start": 510.759,
+      "duration": 7.321,
+      "end": 518.08,
+      "text": "data and I can call it as array of size"
+    },
+    {
+      "start": 515.2,
+      "duration": 5.04,
+      "end": 520.24,
+      "text": "n so what I've done is I've created an"
+    },
+    {
+      "start": 518.08,
+      "duration": 4.12,
+      "end": 522.2,
+      "text": "array which is storing this data object"
+    },
+    {
+      "start": 520.24,
+      "duration": 5.12,
+      "end": 525.36,
+      "text": "for n number of"
+    },
+    {
+      "start": 522.2,
+      "duration": 7.079,
+      "end": 529.279,
+      "text": "times after this I'll be iterating from"
+    },
+    {
+      "start": 525.36,
+      "duration": 7.36,
+      "end": 532.72,
+      "text": "zero till n and what I will be doing is"
+    },
+    {
+      "start": 529.279,
+      "duration": 6.201,
+      "end": 535.48,
+      "text": "I'll be saying array of"
+    },
+    {
+      "start": 532.72,
+      "duration": 4.88,
+      "end": 537.6,
+      "text": "I start value will"
+    },
+    {
+      "start": 535.48,
+      "duration": 7.72,
+      "end": 543.2,
+      "text": "be start of"
+    },
+    {
+      "start": 537.6,
+      "duration": 6.6,
+      "end": 544.2,
+      "text": "I array of I I the end value will be end"
+    },
+    {
+      "start": 543.2,
+      "duration": 3.24,
+      "end": 546.44,
+      "text": "of"
+    },
+    {
+      "start": 544.2,
+      "duration": 5.56,
+      "end": 549.76,
+      "text": "I array of"
+    },
+    {
+      "start": 546.44,
+      "duration": 6.88,
+      "end": 553.32,
+      "text": "I Position will be I'm storing one base"
+    },
+    {
+      "start": 549.76,
+      "duration": 5.519,
+      "end": 555.279,
+      "text": "so I + one done once you're done with"
+    },
+    {
+      "start": 553.32,
+      "duration": 4.959,
+      "end": 558.279,
+      "text": "this you'll have to sort it you'll have"
+    },
+    {
+      "start": 555.279,
+      "duration": 7.201,
+      "end": 562.48,
+      "text": "to sort it so can I say"
+    },
+    {
+      "start": 558.279,
+      "duration": 6.881,
+      "end": 565.16,
+      "text": "sort array comma whatever it is we'll"
+    },
+    {
+      "start": 562.48,
+      "duration": 5.799,
+      "end": 568.279,
+      "text": "have to write a comparator so that it is"
+    },
+    {
+      "start": 565.16,
+      "duration": 5.56,
+      "end": 570.7199999999999,
+      "text": "sorted on the basis of comparator and"
+    },
+    {
+      "start": 568.279,
+      "duration": 6.361,
+      "end": 574.64,
+      "text": "this comparator will be s in it on the"
+    },
+    {
+      "start": 570.72,
+      "duration": 5.04,
+      "end": 575.76,
+      "text": "basis of the end time again uh in case"
+    },
+    {
+      "start": 574.64,
+      "duration": 3.879,
+      "end": 578.519,
+      "text": "you want to know how to write a"
+    },
+    {
+      "start": 575.76,
+      "duration": 5.319,
+      "end": 581.079,
+      "text": "comparator go back and watch my C++ STL"
+    },
+    {
+      "start": 578.519,
+      "duration": 5.481,
+      "end": 584.0,
+      "text": "video I've described it in depth on the"
+    },
+    {
+      "start": 581.079,
+      "duration": 6.0,
+      "end": 587.079,
+      "text": "basis of uh end"
+    },
+    {
+      "start": 584.0,
+      "duration": 5.64,
+      "end": 589.64,
+      "text": "time perfect what after this I need to"
+    },
+    {
+      "start": 587.079,
+      "duration": 4.561,
+      "end": 591.64,
+      "text": "start itating I know one thing I need to"
+    },
+    {
+      "start": 589.64,
+      "duration": 4.48,
+      "end": 594.12,
+      "text": "count so maybe I can keep a count"
+    },
+    {
+      "start": 591.64,
+      "duration": 5.28,
+      "end": 596.92,
+      "text": "initially as one because first meeting"
+    },
+    {
+      "start": 594.12,
+      "duration": 5.839,
+      "end": 599.9590000000001,
+      "text": "can definitely be assigned can I say the"
+    },
+    {
+      "start": 596.92,
+      "duration": 8.599,
+      "end": 605.519,
+      "text": "limit or the free time we were calling"
+    },
+    {
+      "start": 599.959,
+      "duration": 9.88,
+      "end": 609.8389999999999,
+      "text": "it free time free time will be array of"
+    },
+    {
+      "start": 605.519,
+      "duration": 6.681,
+      "end": 612.2,
+      "text": "0o dot end first meeting ends and maybe"
+    },
+    {
+      "start": 609.839,
+      "duration": 4.761,
+      "end": 614.6,
+      "text": "I can take a data structure and"
+    },
+    {
+      "start": 612.2,
+      "duration": 5.16,
+      "end": 617.36,
+      "text": "initially the data structure will be"
+    },
+    {
+      "start": 614.6,
+      "duration": 6.72,
+      "end": 621.32,
+      "text": "having uh array"
+    },
+    {
+      "start": 617.36,
+      "duration": 5.76,
+      "end": 623.12,
+      "text": "of zero. position this is what the data"
+    },
+    {
+      "start": 621.32,
+      "duration": 3.6,
+      "end": 624.9200000000001,
+      "text": "structure will be having initially can"
+    },
+    {
+      "start": 623.12,
+      "duration": 4.839,
+      "end": 627.9590000000001,
+      "text": "be an ARR it can be anything according"
+    },
+    {
+      "start": 624.92,
+      "duration": 6.68,
+      "end": 631.5999999999999,
+      "text": "to your choice after this what we start"
+    },
+    {
+      "start": 627.959,
+      "duration": 5.0,
+      "end": 632.959,
+      "text": "it reading and we rate from I equal to 1"
+    },
+    {
+      "start": 631.6,
+      "duration": 4.16,
+      "end": 635.76,
+      "text": "till n"
+    },
+    {
+      "start": 632.959,
+      "duration": 5.201,
+      "end": 638.16,
+      "text": "minus1 and what I check is if this"
+    },
+    {
+      "start": 635.76,
+      "duration": 6.04,
+      "end": 641.8,
+      "text": "meeting can be performed I know one"
+    },
+    {
+      "start": 638.16,
+      "duration": 6.6,
+      "end": 644.76,
+      "text": "thing if array of I is the start time if"
+    },
+    {
+      "start": 641.8,
+      "duration": 5.64,
+      "end": 647.4399999999999,
+      "text": "the start time is greater not equal to"
+    },
+    {
+      "start": 644.76,
+      "duration": 5.639,
+      "end": 650.399,
+      "text": "greater than the free"
+    },
+    {
+      "start": 647.44,
+      "duration": 4.56,
+      "end": 652.0,
+      "text": "time if that is the case I know this can"
+    },
+    {
+      "start": 650.399,
+      "duration": 3.88,
+      "end": 654.279,
+      "text": "be performed and if this can be"
+    },
+    {
+      "start": 652.0,
+      "duration": 5.04,
+      "end": 657.04,
+      "text": "performed I can say count plus one"
+    },
+    {
+      "start": 654.279,
+      "duration": 5.24,
+      "end": 659.519,
+      "text": "perfect free time will be updated this"
+    },
+    {
+      "start": 657.04,
+      "duration": 5.12,
+      "end": 662.16,
+      "text": "is when the meeting now gets free which"
+    },
+    {
+      "start": 659.519,
+      "duration": 4.961,
+      "end": 664.48,
+      "text": "is when this ends up after that I can"
+    },
+    {
+      "start": 662.16,
+      "duration": 5.359,
+      "end": 667.519,
+      "text": "say data structure can you add up the"
+    },
+    {
+      "start": 664.48,
+      "duration": 6.88,
+      "end": 671.36,
+      "text": "position of this which is array of I do"
+    },
+    {
+      "start": 667.519,
+      "duration": 6.161,
+      "end": 673.68,
+      "text": "position perfect if is done done and"
+    },
+    {
+      "start": 671.36,
+      "duration": 3.76,
+      "end": 675.12,
+      "text": "understood and at the end of the day"
+    },
+    {
+      "start": 673.68,
+      "duration": 2.92,
+      "end": 676.5999999999999,
+      "text": "depending on the question if they are"
+    },
+    {
+      "start": 675.12,
+      "duration": 3.719,
+      "end": 678.839,
+      "text": "asking you the count you can return the"
+    },
+    {
+      "start": 676.6,
+      "duration": 4.4,
+      "end": 681.0,
+      "text": "count or you can return the data"
+    },
+    {
+      "start": 678.839,
+      "duration": 4.161,
+      "end": 683.0,
+      "text": "structure which is storing the order in"
+    },
+    {
+      "start": 681.0,
+      "duration": 4.399,
+      "end": 685.399,
+      "text": "which the meetings are performed so"
+    },
+    {
+      "start": 683.0,
+      "duration": 3.639,
+      "end": 686.639,
+      "text": "before I move on to the time complexity"
+    },
+    {
+      "start": 685.399,
+      "duration": 3.0,
+      "end": 688.399,
+      "text": "let us discuss how to write the"
+    },
+    {
+      "start": 686.639,
+      "duration": 3.561,
+      "end": 690.2,
+      "text": "comparator so what I'll do is I'll write"
+    },
+    {
+      "start": 688.399,
+      "duration": 5.961,
+      "end": 694.36,
+      "text": "the comparator"
+    },
+    {
+      "start": 690.2,
+      "duration": 6.56,
+      "end": 696.76,
+      "text": "again uh very simple bullan comparator"
+    },
+    {
+      "start": 694.36,
+      "duration": 4.96,
+      "end": 699.32,
+      "text": "you have the data it'll be given a value"
+    },
+    {
+      "start": 696.76,
+      "duration": 6.24,
+      "end": 703.0,
+      "text": "one you have a data it'll be having a"
+    },
+    {
+      "start": 699.32,
+      "duration": 9.16,
+      "end": 708.48,
+      "text": "value to you know one thing if the end"
+    },
+    {
+      "start": 703.0,
+      "duration": 7.8,
+      "end": 710.8,
+      "text": "time which means value 1. end is lesser"
+    },
+    {
+      "start": 708.48,
+      "duration": 3.96,
+      "end": 712.44,
+      "text": "than value two do end you can write"
+    },
+    {
+      "start": 710.8,
+      "duration": 3.56,
+      "end": 714.3599999999999,
+      "text": "lesser than equal to doesn't matter if"
+    },
+    {
+      "start": 712.44,
+      "duration": 4.16,
+      "end": 716.6,
+      "text": "that is the case you can return true"
+    },
+    {
+      "start": 714.36,
+      "duration": 4.479,
+      "end": 718.839,
+      "text": "apart from this you can return false for"
+    },
+    {
+      "start": 716.6,
+      "duration": 4.4,
+      "end": 721.0,
+      "text": "all of the other cases doesn't matter"
+    },
+    {
+      "start": 718.839,
+      "duration": 3.881,
+      "end": 722.72,
+      "text": "don't or over complicate this don't over"
+    },
+    {
+      "start": 721.0,
+      "duration": 4.2,
+      "end": 725.2,
+      "text": "complicate this in the comparator very"
+    },
+    {
+      "start": 722.72,
+      "duration": 5.72,
+      "end": 728.44,
+      "text": "simple perfect done understood what is"
+    },
+    {
+      "start": 725.2,
+      "duration": 7.52,
+      "end": 732.72,
+      "text": "the time complexity okay first to assign"
+    },
+    {
+      "start": 728.44,
+      "duration": 8.04,
+      "end": 736.48,
+      "text": "I'm taking bego of n okay then to sort"
+    },
+    {
+      "start": 732.72,
+      "duration": 6.919,
+      "end": 739.639,
+      "text": "I'm taking n log of n okay I'm again"
+    },
+    {
+      "start": 736.48,
+      "duration": 5.56,
+      "end": 742.04,
+      "text": "going B go of n perfect so there a b go"
+    },
+    {
+      "start": 739.639,
+      "duration": 6.841,
+      "end": 746.48,
+      "text": "of 2 N if I have to write it's a b go of"
+    },
+    {
+      "start": 742.04,
+      "duration": 6.76,
+      "end": 748.8,
+      "text": "2 N plus n log n that is the overall"
+    },
+    {
+      "start": 746.48,
+      "duration": 3.359,
+      "end": 749.839,
+      "text": "time complexity and what is the space"
+    },
+    {
+      "start": 748.8,
+      "duration": 1.839,
+      "end": 750.639,
+      "text": "complexity"
+    },
+    {
+      "start": 749.839,
+      "duration": 3.8,
+      "end": 753.639,
+      "text": "I'm"
+    },
+    {
+      "start": 750.639,
+      "duration": 6.681,
+      "end": 757.32,
+      "text": "using an extra array right which is"
+    },
+    {
+      "start": 753.639,
+      "duration": 6.081,
+      "end": 759.72,
+      "text": "storing three variables 3 into n correct"
+    },
+    {
+      "start": 757.32,
+      "duration": 4.879,
+      "end": 762.1990000000001,
+      "text": "along with this in case the question is"
+    },
+    {
+      "start": 759.72,
+      "duration": 4.919,
+      "end": 764.639,
+      "text": "asking for the order you're also using a"
+    },
+    {
+      "start": 762.199,
+      "duration": 4.041,
+      "end": 766.24,
+      "text": "data structure to store the order so"
+    },
+    {
+      "start": 764.639,
+      "duration": 4.241,
+      "end": 768.88,
+      "text": "depending on the question this will be"
+    },
+    {
+      "start": 766.24,
+      "duration": 4.0,
+      "end": 770.24,
+      "text": "vary so this will be the time complexity"
+    },
+    {
+      "start": 768.88,
+      "duration": 3.079,
+      "end": 771.959,
+      "text": "and the space complexity for this"
+    },
+    {
+      "start": 770.24,
+      "duration": 3.12,
+      "end": 773.36,
+      "text": "particular problem so if you're still"
+    },
+    {
+      "start": 771.959,
+      "duration": 3.081,
+      "end": 775.04,
+      "text": "now watching and if youve understood"
+    },
+    {
+      "start": 773.36,
+      "duration": 2.88,
+      "end": 776.24,
+      "text": "everything please please do consider"
+    },
+    {
+      "start": 775.04,
+      "duration": 3.159,
+      "end": 778.199,
+      "text": "giving us a like and if you're new to"
+    },
+    {
+      "start": 776.24,
+      "duration": 4.0,
+      "end": 780.24,
+      "text": "our channel do consider subscribing to"
+    },
+    {
+      "start": 778.199,
+      "duration": 3.241,
+      "end": 781.4399999999999,
+      "text": "us as well with this I'll be wrapping up"
+    },
+    {
+      "start": 780.24,
+      "duration": 3.64,
+      "end": 783.88,
+      "text": "this video let's meet in some other"
+    },
+    {
+      "start": 781.44,
+      "duration": 2.44,
+      "end": 783.8800000000001,
+      "text": "video till"
+    },
+    {
+      "start": 783.959,
+      "duration": 4.801,
+      "end": 788.76,
+      "text": "the"
+    },
+    {
+      "start": 786.76,
+      "duration": 6.4,
+      "end": 793.16,
+      "text": "brenet your"
+    },
+    {
+      "start": 788.76,
+      "duration": 4.4,
+      "end": 793.16,
+      "text": "golden I"
+    }
+  ]
+}

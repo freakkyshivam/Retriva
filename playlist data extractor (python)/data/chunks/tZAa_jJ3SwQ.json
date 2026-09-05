@@ -1,0 +1,75 @@
+{
+  "video_id": "tZAa_jJ3SwQ",
+  "position": 287,
+  "title": "L4. Jump Game - I | Greedy Algorithm Playlist",
+  "url": "https://www.youtube.com/watch?v=tZAa_jJ3SwQ",
+  "chunk_count": 6,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "tZAa_jJ3SwQ",
+      "position": 287,
+      "title": "L4. Jump Game - I | Greedy Algorithm Playlist",
+      "url": "https://www.youtube.com/watch?v=tZAa_jJ3SwQ",
+      "start": 3.399,
+      "end": 134.239,
+      "text": "so let's continue with our greedy algorithms playlist or before that hey every welcome back to the channel I hope you guys are doing extremely well so the problem that we will be solving today is Jump game so you'll be given an array which will have integers and the problem is stating you'll be standing at the first element and every element tells you how much maximum you can jump for an example if there is two over here it means you can jump to this place or you can jump to this place not Beyond it not Beyond two places if there is three you can jump here you can jump here you can jump here and the problem is asking you if you're starting at the first element can you reach the last element by jumping let's try it out over over here we have two right which means I can take a jump of two a maximum jump of two so if I go here there is a jump of one so I'll go here and I cannot jump further which means I cannot the question is stating maximum that you can take I I'll not jump the maximum instead I'll jump by one place and from here I'll jump three places So eventually I can reach the end hence true possible okay let's try out the other example I'm standing over here I'm standing over here okay can I reach the end let's try it out I start from here I can either reach here I can either reach here I can either reach here from two I can either reach here I can either reach here from one I can only reach here you can try out all possible ways but I'm not able to cross zero I am not able to cross zero forget about the last I cannot cross zero there by I cannot reach if I cannot reach I'll I'll be returning a cross in this example I can go here I can go here from",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "tZAa_jJ3SwQ",
+      "position": 287,
+      "title": "L4. Jump Game - I | Greedy Algorithm Playlist",
+      "url": "https://www.youtube.com/watch?v=tZAa_jJ3SwQ",
+      "start": 128.52,
+      "end": 251.4,
+      "text": "example I can go here I can go here from three I can go here from here here So eventually I can reach the last right it's important that you can cross the zero right so this is what you'll have to do given an array you have to tell me if you can reach the end or not how do I solve this problem let's take this example if I start from one where can I reach I can reach this place the maximum that I can reach is this place we start from two I can either go to this or I can either go to this one perfect if I start from three I can either go to this one or I can either go to this one or I can either go to this one perfect if I start from one I can either go to this one I can I only go to that one if I start from this this one I can go to this one from zero I cannot go to anywhere if I cannot go from zero if I cannot go anywhere I stop then and there because I'm not able to reach you I tried all possible combos you can try out all possible combos you cannot cross zero thereby it is not possible thereby it is not possible Let's uh change these examples and try out one more example I'll change this three 2 4 okay now let's try out from here I can go here from two I can go here or I can go here from four I can go here here here and here as well okay from one I can go here from one I can go here from zero I don't need to go anywhere from two I can either go here or I can either go here so what I can see is I can actually reach the end if I take this pattern sorry my bad if I take this pattern this pattern and then this and then this can actually reach",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "tZAa_jJ3SwQ",
+      "position": 287,
+      "title": "L4. Jump Game - I | Greedy Algorithm Playlist",
+      "url": "https://www.youtube.com/watch?v=tZAa_jJ3SwQ",
+      "start": 245.36,
+      "end": 370.199,
+      "text": "this and then this can actually reach the end so it is typically possible tell me one thing did You observe something what if the arrays don't have a zero what if the AR is don't have a zero for that case you'll always be able to reach the end if the array just has positive integers it'll keep jumping we'll keep jumping there is no stopping ing us right and we will be able to reach the end for every possible scenario right okay so how do I solve this particular problem it's going to be super simple the only thing I have to see is whenever I'm reaching an index whenever I'm reaching an index was did someone reach me did someone reach me for an example the one reached here two reached here at Max four reached here so when you are at two four can come here so someone did touch you someone did touch you got it that's what my intention would be and if there was a three here no one would have touched two no one would have touched two that means you cannot reach there you cannot reach there let's uh let's see how I can solve this what we will do is we'll say okay what is the max index till which we have gone till now initially at zero so we haven't gone anywhere okay perfect so we standing at here and we are at this place so over here we have one one place we can jump so the max we can go is still one not Beyond it perfect next we come to this index we come to this index and EAS out understanding I'll write down the index numbers so we are two from here where can I go two places more two places more I'm standing at one I can go to two places more which makes it to the the index 3 to the index 3 so the max I can go is to the index 3 perfect next I can",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "tZAa_jJ3SwQ",
+      "position": 287,
+      "title": "L4. Jump Game - I | Greedy Algorithm Playlist",
+      "url": "https://www.youtube.com/watch?v=tZAa_jJ3SwQ",
+      "start": 363.0,
+      "end": 494.08,
+      "text": "go is to the index 3 perfect next I can go to four four means I'm standing at the second index 2 + 4 is 6 I can go a Max of six I can go a Max of six perfect next standing at three I can go a one which is four no need to update Max because I can still reach six I can still reach six perfect next I can go to this one which is a one standing at four 4 + 1 is 5 and I can still reach six so I don't care I don't care I'm at zero 5 + 0 is 5 I can still reach six I don't care next I have a two 6 + 2 is 8 and you can stop over there you can stop over there because you have somehow crossed this and if you have crossed this that means you can definitely reach the index 7 you can definitely reach the index 7 so I'll just uh go back I'll change the example so that you understand when is it not possible okay so we stand over here my bad yeah we stand over here but and I can erase this and I can convert this to three now let's understand how this works so you're standing at one okay so the max that I can reach is the index 0 + 1 which is one okay perfect next I have a two so the max I can reach is 1 + 1 + 2 which is 3 which is 1 + 2 is three next I can go to the next which is three so I can go from 2 + 3 which is five okay the next is 1 3 + 1 is 4 I don't care next is four I can go at Max one so that's a five I don't care I've already reached five next I reach five 5 + 0 is five I don't care next I reach six and this is",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "tZAa_jJ3SwQ",
+      "position": 287,
+      "title": "L4. Jump Game - I | Greedy Algorithm Playlist",
+      "url": "https://www.youtube.com/watch?v=tZAa_jJ3SwQ",
+      "start": 487.919,
+      "end": 612.6400000000001,
+      "text": "don't care next I reach six and this is where I say hey wait wait wait wait the max you were able to reach was five how did you come here as a person you cannot arrive here you cannot n understood return false return false simple right so I have to write down the code again I'll be writing down the the pseudo code in casee you want your language specific code it's given below pseudo code not any language specific code so I'll be writing down the function so you typically given the array correct you can figure out the size of the array by array do size where do I start I start at the zeroth index correct and what I can do is I can go ahead and say I equal to zero and I can get get on till n minus one one thing I know is Hey listen if you haven't reached if if if I is greater than Max of index if you haven't reached me that means you cannot you cannot jump from here thereby you can straight away return false correct apart from it can I say Max index can always be updated to Max of Max index comma i+ array of whatever jump is given to you I can I can and if at any moment maybe you can just skip it you can write if Max index at any moment is greater than equal to n minus one you can stop and if this condition remember if this condition never happens which means you're able to reach the last index thereby you can straight away see return false oh sorry return true to optimize you can definitely insert if condition in case during the journey you are able to reach you can put an if condition over here that will be it what is the time complexity B go of n what is the space complexity B go of one that's it this is the most optimal solution again I was greedy I tried to",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "tZAa_jJ3SwQ",
+      "position": 287,
+      "title": "L4. Jump Game - I | Greedy Algorithm Playlist",
+      "url": "https://www.youtube.com/watch?v=tZAa_jJ3SwQ",
+      "start": 607.2,
+      "end": 654.2790000000001,
+      "text": "solution again I was greedy I tried to jump the maximum and see if I'm able to reach the end or not simple sorted greedy algorithm the catch over here is zero if you're able to cross zero you'll be able to reach and if there are no zeros you will always be able to reach that's the catch and please tell these edge cases to the interview you'll be more than happy so this will be it for this one so if you're still now watching and if you've understood everything please please do consider giving us a like and if you're new to our channel do consider subscribing to us as well with this I'll be wrapping up this video let's me in some other video Yeah heart is broken don't forget your golden I will find light",
+      "word_count": 140
+    }
+  ]
+}

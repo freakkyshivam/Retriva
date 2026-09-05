@@ -1,0 +1,251 @@
+{
+  "video_id": "frf7qxiN2qU",
+  "position": 20,
+  "title": "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays",
+  "url": "https://www.youtube.com/watch?v=frf7qxiN2qU",
+  "chunk_count": 22,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "frf7qxiN2qU",
+      "position": 20,
+      "title": "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays",
+      "url": "https://www.youtube.com/watch?v=frf7qxiN2qU",
+      "start": 2.94,
+      "end": 124.74,
+      "text": "Avia welcome back to the channel I hope you guys are doing extremely well so this is another video from the stripers A2Z DSA course just in case here for the first time here this is world's most in-depth course in DS algo why do I say that this course alone has four 56 modules when we end the course we would have solved over 400 plus problems you can go over the entire internet you can buy any of the paid courses none of them will be covering DS algo in such depth so one thing that I can give you as a guarantee is if you complete this course you can actually clear DS algor loans of any of the companies in any portion of the world so till now we have covered till step 3.1 this problem now in this video we will be covering the remaining two problems from Step 3.1 so to start off let's get started with the first problem that is longest sub array with given some and it just has positives in the array what does the problem state find me the longest sub array with a summation of K so the first question that might be coming up to your mind is but what is the meaning of sub array we haven't heard about this before so just keep this in your mind when I say sabare it means contiguous very very important word contagious part of the array contagious part of the array so I can say that this in itself is a array of one so that's a Savari a part of the array I can say this is one comma one comma one so it's a contiguous part inside the array so it is called a sub array I can say 423 is a sub array I can say 1 2 3 is a sub array what I cannot see is one two I cannot say when I take 1 from here when I take 2 from here I cannot search",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "frf7qxiN2qU",
+      "position": 20,
+      "title": "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays",
+      "url": "https://www.youtube.com/watch?v=frf7qxiN2qU",
+      "start": 118.38,
+      "end": 228.72,
+      "text": "when I take 2 from here I cannot search sub array but if I take 1 from here if I take 2 from here that's a sub array so a sub array has to be taken from contiguous portions otherwise it is not a savare imagine if you take like one four three yeah you have taken two people who are consecutive but then the other guy is not so this is not a summary rather this is a subsequence so I hope you have understood the definition of sub array now what they are asking you is find me the longest very important find me the longest sabare who has a sum of K so can I say if I take these two elements if I take these two elements they will have a sum of three they will and what is the length of this sub array too if I take just this one this is also somebody a summation is also three right because that is what they're looking for and the summation is also three but the length of the sub array is one and what they are asking is give me the longest Now give me the longest so if I take this the summation is 3 and the length is 3 as well the summation matches and the length is the longest you cannot have a longer length than three yeah this is also a sub array with Clan three so there are two but they're not asking you the count that problem we will do in the future but as of now they're not asking you about the count what they're asking you is give me the length of the longest so what I can say is the length of the longest over here is three and that is what they're asking you to return so this question comes up in an interview what is the first solution that you'll give to the interviewer obviously the Brute Force solution what is the first solution it's very simple",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "frf7qxiN2qU",
+      "position": 20,
+      "title": "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays",
+      "url": "https://www.youtube.com/watch?v=frf7qxiN2qU",
+      "start": 223.92,
+      "end": 343.8,
+      "text": "is the first solution it's very simple I'll say hey I'm going to generate all summaries yes whereas the most obvious thing that comes to your head generate all the summaries and I pick up one by one one by one and I find every once so I generate every sub array and I find every one sir and whoever is the longest that's my answer so that's the obvious Brute Force like the most simplest approach that can come to my mind but the question arises how do you generate all the surprise so we need to observe a pattern can I say can I say one is a sub array I can can I say one two is a sub array I can can I say one two three is just a very I can can I say one two three one is a sub array I can make do you see a pattern yes you do it's extending by one it's extending by one every time and it goes on till the last and each of them is a Savari starting from here and ending at all these indexes very obvious the next pattern can I say this is a sub array yes can I say this also somebody yes can I say this is a sub array I'll say yes can I say this is a sub array I will say yes this this this again can I say three years of array three one as a sub array three double one three three point one three four one three one one one four this this yes can I say this is a safari yes yes yes so do I see a pattern I do every time if I keep a pointer I here then I can just take a point at J and the J will always start from I and then what I can do is I can say the sub array is from I to J do you see the first time J is here I is",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "frf7qxiN2qU",
+      "position": 20,
+      "title": "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays",
+      "url": "https://www.youtube.com/watch?v=frf7qxiN2qU",
+      "start": 339.06,
+      "end": 443.63899999999995,
+      "text": "do you see the first time J is here I is here so the sub array is here then what I do is I move j can I say this about it is from I to General yes and then again I do I move j and can I say the sub array is from I to J and then again I do I move j then again I move j and I keep on moving till it reaches last till it reaches last if it reaches last the entire array is a sub array by the way an entire array is also a sub array so fine I can move j i can move j next once J has reached that what do you do you why and now can I say J This Time Again starts from exactly I because this is a value and then again you do the same thing move j move j move j move j move j move j move j move j that's what they do and eventually this is about it then this so I and J keeps on moving so something I know for sure is I'll keep I and I'll keep JS moving so let's write that so can I say I can write this as 4 I equal to 0 I lesser than y i lesser than n because first time I was here then I will be here then I will be here then I is here eventually it will vote in the end right right where does J starting from when I is here J starts from here and goes to the end so can I say seven inner loop will be very simple J starts in from I and J goes on till n j plus plus so this is this is how it will look if I have to generate all the summaries and where is the sabare from I to J where is the sub array from I to J is it because if J is here",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "frf7qxiN2qU",
+      "position": 20,
+      "title": "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays",
+      "url": "https://www.youtube.com/watch?v=frf7qxiN2qU",
+      "start": 440.4,
+      "end": 570.019,
+      "text": "here I is here can I say that some array is this how do you find the summation of the sub array it's easy if the sub array is from I to J run and look so I'll say Okay K is equal to I and it can run till J and the summation can be zero and summation plus equal to array of K at this way I can submit the entire sub array from I to J in this way I can submit the entire sub array from I to J now what was required longest equivalent okay so equivalent okay okay let's write that condition if s is equivalent to K then the length and maybe you can keep the longest length as 0 so the length will be Max of the previous lengths comma what is the length between I and J what is the length between I and J imagine I is here and J is here what's the length 2 so that's i j minus I plus 1 that's J minus I plus 1 very simple maths J minus I plus 1 and eventually wherever there is an equality we take the longest and right at the end we can print the answer as length that what is the time complexity three Loops somewhere near about B go of NQ near above not exactly why because this Loop is uh diminishing this is also will will reduce so I can say somewhere around NQ not exactly not exactly am I using any space the answer to that is no we are not using any extra space so we have kind of understood the Brute Force which is n Cube but the interviewer will say you hey wait do you actually need n Cube for the brute can you optimize your fruit I'd like maybe yes I'll say wait I'll probably remove this and try to figure out an observation can I figure out an observation and the observation is going to be very simple see when is the first sub array and then",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "frf7qxiN2qU",
+      "position": 20,
+      "title": "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays",
+      "url": "https://www.youtube.com/watch?v=frf7qxiN2qU",
+      "start": 567.48,
+      "end": 673.86,
+      "text": "and then and then and then and then and then what is happening the first time the summation of the first sub array is 2. then the summation becomes 5 then summation becomes 6 then the summation becomes one what is being done to the sum first two was added then in the next sub array we know the summation will be 2 only one new element came up so just add the one new element then again one new element comma so I add the one new element now and again one new element cover add the one new element now and the other summation seven do I need to iterate the entire sub array we do not because when the J is moving when the J is moving I just keep on keep on adding keep on adding quite simple so what I'll say is let's keep the SS 0 and every time J moves I'll just add it what will be the value for the first thing if I is here first time 2 will be added then J will move here then three will be added then J will move here one will be added and eventually everything will be in s and you can easily compare so if I do this The Brute Force boils down to somewhere near about n square with a space complexity of B Corp one so this is what you'll tell the interviewer that the brute force that I can do is B go of n square at the best case so obviously the interviewer will not be happy with the brute for solution and he'll ask you to optimize it and that's when you will come up with the better solution and the better solution is going to use hashing so what is the thought process behind hashing let's understand that so what I'll write is I'll write I'll just write dots I'll not assign them any numbers because I don't want you to just think it in terms of an",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "frf7qxiN2qU",
+      "position": 20,
+      "title": "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays",
+      "url": "https://www.youtube.com/watch?v=frf7qxiN2qU",
+      "start": 669.66,
+      "end": 811.62,
+      "text": "want you to just think it in terms of an example I wanted to think it in a very general perspective so this is an array with random numbers and what am I looking for I'm looking for any sub array with a sum K that's what I'm looking for okay so we will do some reverse mathematics imagine you are standing here just imagine you are standing here how many elements are from the front five so imagine I can call it as prefix sum what does prefix sum means from the front till that portion prefix got it so prefix sum is assume some X so what I'm saying is the complete sum is X okay now I very simple question to you is this is the last element how many sub arrays will be there who will have the last element as this dot you'll be like okay once about it is this we will have this dot as the last element the other one is this who will have the dot element as the last the other one is this we will have the dot element as the last the other one is this we'll have the dot element as the last the other one is this we'll have the dot element as last can I say this no because the dot element is not there I need the dot element to be the last I cannot even say this because the dot element is not the last only there are five sub arrays one is this the other one is this the other one is this the other one is this the other one is this there are five sub arrays with a DOT element as the last and that's what my focus will be so can I see if there exists I'll write this if there exists a sub array with summation K as dot as the last element dot is the last name so hypothetically imagine these three numbers give you the summation of K hypothetical probably there exists a summary who has",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "frf7qxiN2qU",
+      "position": 20,
+      "title": "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays",
+      "url": "https://www.youtube.com/watch?v=frf7qxiN2qU",
+      "start": 805.44,
+      "end": 928.92,
+      "text": "probably there exists a summary who has a summation of K but you you cannot have this sum of some middle sub array in between but can you do reverse engineering and can I say wait probably there is a sub array probably there is a sub array with a summation okay so if there is a summation of K what will be the summation of this reverse reverse mathematics if the entire is X if this is K can I say this will be x minus k x minus K this is what I will use can I say if I'm standing here and till here the sum is X and if anywhere previously anywhere previously I got a sum x minus K I got a sum x minus K if anywhere previously I got a sum x minus K can I say this that this will be K this will be K this will be k i can I just did reverse mathematics I cannot find the middle sum I cannot find the middle some out of nowhere so I need to reverse mathematics I said I can carry the sum till here and there will be X I would have carried the sum till here as well which is x minus K so if over here standing it is X if at previous there is someone with x minus K that means I have a mid sub array with K I got some sub array at K and I can do that with every element I can do that with every element as the last element hence proven that I can generate all the sub arrays understood probably a bit probably not probably completely doesn't matter let's get back to the dry run it'll get your head directly so let's do the dry run so that this concept gets into your head so what I'll do is I will take an hash map okay why will I take this hash map getting back to this thought process if",
+      "word_count": 341
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "frf7qxiN2qU",
+      "position": 20,
+      "title": "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays",
+      "url": "https://www.youtube.com/watch?v=frf7qxiN2qU",
+      "start": 922.139,
+      "end": 1045.079,
+      "text": "getting back to this thought process if till here it is X I just want to see if previously There Was X minus K you cannot say out of the blue you cannot see out of the blue moon so what you have to do is you have to kind of hash it till here the sum was x minus K you have to Hash this so that's the thought process we don't understand not an issue let's do the driver so we will be at the first element and we'll do a summation 0 and initially no sub arrays are found so n0 first element one increase the summation to one the summation is one and that's not equivalent to three so you take one and you say a dockered at index 0. probably I'll write the index for better understanding so one occurred at index 0. next move the pointer two summation increases to three summation increases to 3 which is equivalent to K which is equivalent to K so what you say is okay wait this entire prefix sum this entire prefix sum is equivalent to the K that means this in itself is an array or a sub array who is get giving me the sum so if the sub array is till index 1 so the length will be 2 0 base indexing so the length will be perfect and at the same time say you got three till here which is index one perfect let's move you got three you got three the summation will be six the prefix summation is six the prefix summation is 6. now Comes The Twist so three elements until now the prefix sum is six and you're looking for someone with three and that someone is this so this is three I did a reverse engineering the remaining was three I said hey wait did we get some three before and he says yes till index one you got a three so that means this sabbath there does exist a",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "frf7qxiN2qU",
+      "position": 20,
+      "title": "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays",
+      "url": "https://www.youtube.com/watch?v=frf7qxiN2qU",
+      "start": 1039.26,
+      "end": 1153.02,
+      "text": "means this sabbath there does exist a Subaru with a K reverse so what I'll do is I'll say delete a six now you need three now six minus three is three now look from the front is there a three he says still one there is three tail one there is a three so I'm getting a safari I'm getting a sabari you're standing at two till one there is a three so two minus one so the length of that sub array is one the length of that sub array is one but that's not greater than two so you'll not do anything so six comma two perfect let's go you got one seven is the new sum so what can I say I have four elements and the prefix sum of this is seven what am I looking for three for someone to be three someone from the start has to be four do we have someone from the start S4 no so did not fight take the seven and put it at index how much is that three perfect and now let's move so when you move ahead you get eight so when you're getting eight which means you're having five elements and again right you're having five elements it is having eight so so for someone to be three someone has to be five is there someone that's five no so just put eight comma four and move next okay move ahead so that's nine so there are now six elements six elements are giving a summation of nine six elements are giving you a summation so for someone to be three someone has to be six and I get a six I get a six at index two add in so this is six so these many remaining will be three so you're currently at five till two there was three so the subtraction the length is three so you are done better you want a better one so this is how you can go ahead and you can figure out if someone",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "frf7qxiN2qU",
+      "position": 20,
+      "title": "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays",
+      "url": "https://www.youtube.com/watch?v=frf7qxiN2qU",
+      "start": 1149.12,
+      "end": 1268.94,
+      "text": "ahead and you can figure out if someone was there in the back this is what I will call as a better solution so I hope you've understood the thought process and the dragon I'll be coding this up because I want your porting skills to go up because this is a very important question so given the vector and you're given the k something important to notice it uh notice is it is given as long lock first declare the map so map will be long long because that is where we will store the prefix sum so you can say pre-map three sum map or something like this perfect done now what I'll do is I'll go across the entire array which is something like a DOT size so let's go across the entire array now what I'll do is I'll declare a sum and again please please take note and over here I'll also take a length as zero at the end of the day I can say return length or this can be max length to a better naming second take max length of over here I'll say sum plus equal to a of I and remember initially always check if the array from start till the current index is giving you K if it is giving you then the max length will always be Max of max length comma I plus one it will always be like even if you do not write Max it will work because if you add I that's always the maximum okay if that's the case that's perfect what can be the other case I'm looking for remaining bring the reverse mathematics how much do I require this is what I require so if my map has this remaining which means it will not be pointing to the end so remember this is pre-sum map so please write three some map dot end if it does exist that means it does so thereby what will be the length of the summary can you see the length of",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "frf7qxiN2qU",
+      "position": 20,
+      "title": "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays",
+      "url": "https://www.youtube.com/watch?v=frf7qxiN2qU",
+      "start": 1264.02,
+      "end": 1388.22,
+      "text": "of the summary can you see the length of this will be I minus prism map of the remaining wherever it is and then you can do a C max length equal to max max length comma linch right at the end of the day whatever sum you have generated is a prism map map of this particular sum is equal to I something to ponder over here like this if I try to submit this this will run there's a slight Edge case that I want to talk about now this code that we have written is that correct that is correct but only for positives if I tell you that the array has zeros the code that you have written will be wrong why let's understand that by an example so imagine I take an array which has something like 2 comma 0 comma 0 comma three and I'm looking for a summation of three that's what I'm looking for how does it work it's very simple we take a prefix sum we give a pointer here we have a hash cam right and then we have a length as 0 initially and prefix sum as 0. let's start the encryption when we add 2 which is index 0 we do the prefix sum as two and we say this is 2 is that equivalent to this that's not and we know one element is 2 so is there any one previous no so that's fine and then we go across and say in the hash map two occurs at index 0 done next we move how much is it zero so 2 plus 0 will still be 2. so till here we have 2 again again and that's not equivalent to 3 and 2 elements are having two which is this so for this to have three someone has to have minus 1 which is not possible right so okay fine but till here it is again having two so the hash map this time replaces to two comma 1. then",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "frf7qxiN2qU",
+      "position": 20,
+      "title": "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays",
+      "url": "https://www.youtube.com/watch?v=frf7qxiN2qU",
+      "start": 1382.76,
+      "end": 1516.98,
+      "text": "then we move again zero two plus zero again two hash of this time represents to 2 comma two so the erase this will be 2 comma 2 done next when I go here it becomes 5. and it's like four elements are having five which is not three how how much am I looking for I'm looking for three so I need someone with a sum two I need someone with some two and when I look at the hash map it says till here the summation is 2 which is correct which is correct so thereby this much is the summary which is again correct but we need longest we do not need shortest we do not need short test we need longest so apparently we should have just stored we should have just stored two for index 0 and this sub array 0 comma zero comma 3 would have been the answer for longest thereby if a sum previously does exist you should not re-update you should not re-update because because if there is something like this and this one as a summation of x and you're looking for K you'll try to look as left as possible for x minus K you try to look as left as possible for x minus K did you get this I hope you did get this because you'll try to look for the leftmost guy for the sum of two because sum of 2 is here here and here but you take the left most so that you get the longest summary this is where it will fail so there is a slight change in the code that you have to do so if I go back to the code this line will be inside braces and if you're putting that into the uh putting that into the map what will you write you will say okay wait what's the map sleep this dot find was the sum previously not there if it was not there previously then I will go ahead and say okay cool",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 13,
+      "video_id": "frf7qxiN2qU",
+      "position": 20,
+      "title": "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays",
+      "url": "https://www.youtube.com/watch?v=frf7qxiN2qU",
+      "start": 1511.22,
+      "end": 1638.62,
+      "text": "then I will go ahead and say okay cool whereas not there so I'll just put it so it's a minor change uh by the way looks like okay sorry my bad okay should we good and let's just format this that's perfect now let's quickly run this and see if it is running away so what did I say if it does exist I will not and now I will go and submit this and this will be running oh it did not why also you've got to change this to long long and now you can go ahead and submit this this should be running fine yeah it does so I hope you have understood how do we cover the edge case and the same code will also run if it has negatives because in the negative we apply the same logic and it does run but if You observe this particular code is partially accepted why because this was the better solution that we were discussing we still need to optimize this but the same code will work for a problem that has positives and negatives in the array because in that case the better one for the positive and zeros is the optimal you cannot optimize this code any further if the array has negatives zeros and positives so just quickly go and submit this and you'll see that this is actually okay so just change the name now okay cool so you'll see that this is actually running for this particular problem and it will be completely accepted yes while over here it was not because this is a better solution so let's discuss the time complexity and see if we can get an optimal or not so we did code up the better solution and if you saw that that better was an optimal one if the array has positives as well as negatives but if I ask you for the better solution yes what is the time complexity I can say I'm definitely eye treating in the array",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 14,
+      "video_id": "frf7qxiN2qU",
+      "position": 20,
+      "title": "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays",
+      "url": "https://www.youtube.com/watch?v=frf7qxiN2qU",
+      "start": 1633.5,
+      "end": 1751.46,
+      "text": "I'm definitely eye treating in the array and we're using a hash map to find and initialize in the hash map so it can be logarithmic of it and if we are using ordered map in C plus plus or else it will be n into B go of 1 if you're using unordered map but again another map if the it goes to the worst case like the constraints are in such a way that it ends up having a lot of collisions then this one that big of one search time in the map ends up being we go of n hence the worst case can be n square if we use unordered map so tell that to the interview that I can use unordered map if if I do not have collisions I'll end up having n cross one which is B coven and I will have n logarithmic of n if I am using R naught I ordered map it will not have any collisions what would be the space complexity the space complexity will be by using an hashma where we are storing every prefixer so the worst case every index will have an individual prefixer so thereby a big O of n because all the prefix sum are stored so this will be the time complexity in the space complexity for the better solution and for the optimal in case the array has positives and negatives whenever you are telling the solution in an interview make sure that you tell them about the better solution and then explain the edge case about zero and the negatives and then tell them descriptively that that will only work for like that will be the optimal solution for positives and negatives but if the array just contains positives and zeros I will turn to the most optimal solution that will be using the two pointer approach it'll be like a two pointer and a greedy approach very simple let's start off so the thought process is something like this before moving on to the dragon let",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 15,
+      "video_id": "frf7qxiN2qU",
+      "position": 20,
+      "title": "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays",
+      "url": "https://www.youtube.com/watch?v=frf7qxiN2qU",
+      "start": 1747.679,
+      "end": 1877.039,
+      "text": "this before moving on to the dragon let me tell you the thought process it's something like this we have a single point we have single point then we keep increasing keep increasing keep increasing so the moment we move right in the R8 the moment we move right in the array the summation is bound to increase summation is bound to increase and there will be a point where it will go beyond the sum that I'm looking for if it will go beyond the sum I'll not move here rather I'll try to trim it down I'll try to trim trim trim and then it will just be this it's like go if it increases trim from the left go trim from the left go trim from the left go trim from the left that's what we will do that's the thought process if you did not understand the thought process not an issue look at the Dryden you'll understand it clearly let's go to the drive so what I will do is I'll have a pointer here I'll have a point here and I'll keep the summation initially so what does the pointer means it means the sub array that we are considering is just having one so the summation will be that element itself the summation will be that element itself remember we are looking for a summation of 6 and the maximum length so variable now is zero move move so t as of now the summation is 1 which is lesser than 6 doesn't matter let's move we have to so add up to we get 3. so this is the summary 3 is still less so fine move we get three again six is equal to 6 if it is equal fine from here to here is the sub array and you can easily find the length by subtracting this minus this and the length will be three quite some next moved how much is that one added up seven now the next time when you try to move before moving you",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 16,
+      "video_id": "frf7qxiN2qU",
+      "position": 20,
+      "title": "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays",
+      "url": "https://www.youtube.com/watch?v=frf7qxiN2qU",
+      "start": 1872.96,
+      "end": 2005.26,
+      "text": "when you try to move before moving you say wait wait I know I need to move but before moving the summation is 7 which is greater why will you move if you move the summation will further increase weight let me let me reduce it a bit then you will move let me reduce I'll be like take out one so if you take out one it'll be back to six if you take out one you'll come over here so this erase this so that it's cleared I'll just erase this and now I'm like okay wait what's the sum now six okay equivalent now let's do it I'm like okay one more sub array equivalent to six what's the length three right not an issue now let's move again seven in the next step when you try to be like seven I wait you have exceeded let me shrink so I'll look I'll now remove two the moment I remove two it becomes five so remove two it does become five next I will try to move now this if you try to move I'll again get six I'll again get six and now I'll be like okay full length fine update next if I try to move this to here this will be taken exceed so the next step before moving this every time before you move you'll see the sum it's more shrink summation will be reduced to 4 because 3 has been omitted 3 has been omitted perfect now let's move threes are it what's happening again seven went up that's a lot of number so cool done next and you try to move then you try to move you will not why because you still have to shrink that shrink one taken off six again now you will move we have three added up nine so when I'm at here this 3 is added the next step before you try to move you'll be like wait sum is 9 which is greater remove some from back remove from back",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 17,
+      "video_id": "frf7qxiN2qU",
+      "position": 20,
+      "title": "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays",
+      "url": "https://www.youtube.com/watch?v=frf7qxiN2qU",
+      "start": 2001.299,
+      "end": 2126.52,
+      "text": "remove some from back remove from back then you will move then you move right okay remove this one so if I remove this one I'll move out it'll be eight okay remove this one move ahead 57 okay remove this one move ahead six now okay this is equivalent one more guy but this is length two not to be considered next time you move done and dusted so apparently I got three sub arrays or four sub arrays and we got the maximum S4 and the moment it exceeds you stop got it very simple it's a two pointer move exceeds move again move exceeds move move exceed smooth quite simple okay so let's quickly go into the combiner and try to code this up if you want to write this problem the link will be in the description so we were having a left Wonder a zero and a right Point that's zero and we were having a long long sum so initially what's the sub array is the single element so sum will be array of zero perfect and we do one thing long rather not rather Max I and D will do max length is equal to zero and IND n equal to a a DOT size oh perfect what way are we doing we were moving right till it doesn't crosses the boundary quiets obvious till it doesn't crosses the boundary what else I was doing think on yourself what else I was doing I was like okay I know one thing for sure if I'm moving right I'll have to add someone I'll have to add someone but if you go back to the iPad initially you were here submission was one and you added the next track so you have to go to the next and then you have to add that to go to the next then you have to add the two so can I see first I'll move then I will add very obvious first I move to the next then add but before adding",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 18,
+      "video_id": "frf7qxiN2qU",
+      "position": 20,
+      "title": "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays",
+      "url": "https://www.youtube.com/watch?v=frf7qxiN2qU",
+      "start": 2121.54,
+      "end": 2247.359,
+      "text": "then add but before adding I need to be sure I need to be sure about one thing am I still under the boundary am I still under the water because what if I'm standing it here and I move to the next and I try to add and it's strong there so we need to be careful only if it's inside the boundary then add but can we do the solve this that's my question can we do this always it's like I don't think we can do that always we can only do that for summation is somewhere still inside the model agreed but for that can I say while summation is greater than if the sum exceeds the K that you're looking for then it's very easy just subtract what the left eye and move the left is it that tough what I'm what am I seeing if if it's more from the left keep on subtracting keep on subtracting quite easy and keep on subtracting and move the left there will be a point when summation will exceed key that's it that's what you have to do and probably you can just write one more thing till left is Right which means Till There is a sub array Till There is a sub array this means left there is a somebody if left crosses there's no point in like because if if you have taken till here you can only go till here and subtract these guys that's what I'm doing this is as easy as it gets but before adding this is the moment you have subtracted this is where you check okay I've subtracted now assume this is equal to K because I subtracted everything which is greater assume after this it's equal to K if it is I say max length is equal to Max of max length comma what thing on this I'm at left and right so it's like right minus left is it plus one yes and then over here you can go ahead and",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 19,
+      "video_id": "frf7qxiN2qU",
+      "position": 20,
+      "title": "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays",
+      "url": "https://www.youtube.com/watch?v=frf7qxiN2qU",
+      "start": 2241.54,
+      "end": 2367.5400000000004,
+      "text": "and then over here you can go ahead and return Max lit quite simple let's quickly run this and see where it's running fine it is let's quickly submit this and see if all the test cases do pass or not this time no ble and it is giving us a correct answer so what I can say is this is an optimal solution if the array contains positive and zeros what if negative then this is the optimal one you cannot optimize this okay so what is the time complexity on the naked eye it might look like two while loops might be because of n square but that is not the case the time complexity at the worst case is B go of 2 n y let's analyze so can I say the outer the outer winding is the right pointer running till n can I say I can so if the right pointer is somewhere here it runs still here which is a big go of n in itself now you might argue inside this there's a while loop inside this there's a white and this is running for bego of n but is this always running for an n n n n this y was always running for n then this would have been a big of n then it would have been a beaker of n Square can I see this wine low is actually running for maybe for the first time it ran for once for the next time for twice for next time Thrice for next time once for next time twice so overall overall in the entire iteration it will run for a week of n but that's overall so it might happen first time in the right Point removed the while did not run so it's like zero iterations of white next time will the wine uh right moved there was again zero next time when the right moved the while was Zero next time in the wild move press zero next time when it moved maybe then it took three",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 20,
+      "video_id": "frf7qxiN2qU",
+      "position": 20,
+      "title": "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays",
+      "url": "https://www.youtube.com/watch?v=frf7qxiN2qU",
+      "start": 2363.28,
+      "end": 2481.48,
+      "text": "it moved maybe then it took three iterations so it's like one nitration two three four five three means eight so it's like three got added to the number of iterations got it so you got added to the number of iteration except the right might have moved then the right might have moved and then again maybe two iterations was done so it's something like this will be n this will be we go of N and this will be in itself big of an it's like n plus n thereby the time complexity is B go of 2 N got it because this isn't happening every time it will be like zero zero zero zero or maybe it'll break one one so it's like one iteration two iteration three four five six seven eight nine ten eleven twelve thirteen maybe zero again 14 maybe 15 and then 16 17. this is how the iterations goes thereby 2N at the worst case because this pointer will go here this point or the worst case can go here that's why 2N what about the space complexity no extra space so a b go of one that is what the optimal solution will be and if you tell this entirely to the interview he will be he will be super duper impressed so coming back to the sheet I can say that these couple of problems are done with this I will be completing the step 3.1 and you can try this problem number of sub arrays this was the longest you're finding the number of sub arrays with the sum K so again hash hashing will be used in the optimal solution give it a thought we will definitely be solving this in the upcoming days but till then you can probably take this as an assignment so with this I'll be wrapping up this video I hope you have understood everything so to continue our tradition do comment I understood read the video because that is the only thing that motivates me that you guys are understanding everything",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 21,
+      "video_id": "frf7qxiN2qU",
+      "position": 20,
+      "title": "Longest Subarray with sum K | Brute - Better - Optimal | Generate Subarrays",
+      "url": "https://www.youtube.com/watch?v=frf7qxiN2qU",
+      "start": 2477.04,
+      "end": 2503.16,
+      "text": "you guys are understanding everything and yes uh uh if you haven't followed me on Instagram Twitter LinkedIn all the links will be in the description and if you are new to our Channel what are you waiting for do hit that subscribe button and yes with this let's wrap up this video let's read in some other videos and bye take care [Music] is broken don't ever forget you're golden I will find the light in",
+      "word_count": 77
+    }
+  ]
+}

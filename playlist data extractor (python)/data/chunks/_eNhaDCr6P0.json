@@ -1,0 +1,152 @@
+{
+  "video_id": "_eNhaDCr6P0",
+  "position": 279,
+  "title": "L8. Longest Repeating Character Replacement | 2 Pointers and Sliding Window Playlist",
+  "url": "https://www.youtube.com/watch?v=_eNhaDCr6P0",
+  "chunk_count": 13,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "_eNhaDCr6P0",
+      "position": 279,
+      "title": "L8. Longest Repeating Character Replacement | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=_eNhaDCr6P0",
+      "start": 3.199,
+      "end": 124.399,
+      "text": "so let's continue with this ders a toz DSA course and the problem that we are solving today will be involving the concepts of two-pointer and sliding window but before starting hey welcome back to the channel I hope you guys are doing extremely well so the problem that we will be solving today is longest repeating character replacement so what is the problem exactly stating it's stating that it'll be given a string which will have all the uppercase letters it'll be given an integer K now what does this particular integer signify it signifies that you can pick up at most K characters at most two characters from this given string assume I can pick up this particular a I can pick up the last a any two characters at most any two characters and then I can convert them to any other possible uppercase letter I can convert this a to c i can convert this a to r or anything any thing yes once you have done this you'll have to figure out the longest substring which has all the characters as equal which has all the characters as equal so let's assume I pick up this so substring is basically a consecutive portion of the string the length is two and all the characters are equal but if I pick up this one the length is four but does it have all all the characters equal it doesn't but then I'm allowed to convert at most two characters so maybe I can convert this B to a and I can have all the characters as equal so I can pick up a subring of length four but the question is to pick up the longest substring so can I say if I pick up this one this is a length five and it is a a b a b and what I can do is I can convert this B to a I can convert this B to a so yes this is length five can I pick up",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "_eNhaDCr6P0",
+      "position": 279,
+      "title": "L8. Longest Repeating Character Replacement | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=_eNhaDCr6P0",
+      "start": 120.36,
+      "end": 243.07899999999998,
+      "text": "yes this is length five can I pick up more than that if I try to pick up length six this will have a a b a b b so over here I have three characters that I have to convert and that's not possible because at most you can convert K characters two characters over here so if you try out all the substrings you'll find out that at Max the length that you'll be able to achieve is five so this is what you'll have to return five is you have to return so what is the extreme root force that you can think of like what I can think of is generate all the substrings yes that is the extreme root Force so what I will do is I'll generate all the substrings yes and what I'll try to do is I'll try to figure out how many characters I need to change that's what I need to figure out right if I pick up this one double a b a b i I figured out that this B and this B is what I need to change now you you can also say that okay a a b a b maybe I can change all the A's to B's that's also a valid one right but what will you look to do since you're allowed at Max 2 you look to minimize the conversions you look to minimize the conversions thereby this is what you'll try to do try to pick up the minimal conversions correct now how do I figure out the minimal conversions very easy can I say double a b a b this has A3 times B two times so technically I should convert all the B's instead of converting all the a whatever like whichever character appears maximum number of times I'll not touch it I'll touch all the others imagine you have a substring which is looking something like a b a b c and a is appearing three times B is appearing appearing two times C is",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "_eNhaDCr6P0",
+      "position": 279,
+      "title": "L8. Longest Repeating Character Replacement | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=_eNhaDCr6P0",
+      "start": 239.48,
+      "end": 355.16,
+      "text": "appearing appearing two times C is appearing one time so you'll try to convert B and C instead of converting a correct you'll try to convert B and C because that will take three operations understood so I know one thing the number of conversions if I have to figure out a formula double a b a b c for an example for the string if I ask you how many conversions do you require can I say Max frequency which is Max of f minus the length or can I say the opposite like length so the length is six minus Max frequency which is three hence comes out to be three three is the number of characters that you need to change length minus Max frequency is the number of characters that you need to convert okay I need I figured it out so what was my brute force my brute force was to generate all the substrings now I know that the first substring will start from this character which is a the next one will be double A able a b a a a and so on till the end the next set of substring will start from this particular a which is a a b a b a a a b and so on the next set of substrings will start from here which will be b b a b a b so what I can do is I'll be like okay I know the formula is length minus Max of f so I just need to figure out the maximum frequency and I know that we have uppercase characters so I can maintain an hash array of 26 size correct which is going to tell me how many times a particular character appears that's what it'll do let's try to pick up first I'll try to pick up a so that's my first substring right so I'll pick up a and I'll say a is appearing once next I'll pick up a a so that will make it two so I can keep on",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "_eNhaDCr6P0",
+      "position": 279,
+      "title": "L8. Longest Repeating Character Replacement | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=_eNhaDCr6P0",
+      "start": 349.44,
+      "end": 481.28000000000003,
+      "text": "that will make it two so I can keep on updating the frequency correct so let's try to write this in pseudo code so if I try to write this in pseudo code I know that I'll always start from zero and then every every possible character will be a starting point of any substring okay and after that I know that I need a hash array so maybe I can keep a hash array which is initially assigned to zero I also know that in substring question I start the J from I and I go on till n perfect can I say that the hash ofi will be updated hash of s of J because that is the character that's going to be updated I need to keep a track of the maximum frequency right so maybe I can also update I can also carry a Max of f which is initially zero and whenever I update whenever I update I can compute the max of frequency to be Max of the previous frequency hash of s of J you can write it in one statement as well I've written it in two statements to make you understand okay I've updated I've updated my maximum frequency as well what after this I need to figure out the number of changes can I say the number of changes will be the length what is the length of this particular substring J minus I + 1 very obvious minus Max of f correct now can I say this is only allowed if the changes are under K are lesser than equal to K okay then only it's allowed and in that case I'll have to keep the maximum lengths track so what I can do is I can say max length Max of max length comma G minus I + 1 if that is the case and if it doesn't satisfies if it doesn't satisfies in that case I'll go to else do I need to accumulate the other characters imagine you have accumulated this this",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "_eNhaDCr6P0",
+      "position": 279,
+      "title": "L8. Longest Repeating Character Replacement | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=_eNhaDCr6P0",
+      "start": 476.879,
+      "end": 591.04,
+      "text": "imagine you have accumulated this this this this and after this when you get this B and it doesn't satisfies your condition do you take this B Because if you take this B it's not meeting your condition of at Max K they'll not be able to take this so what you do is you straight away say Hey listen I'm going to break out and the fall Loop ends and eventually what you can do is you can head over and you can print uh the max lens that's it that is the extreme na solution that I can think of now what is the time complexity can I say initially I'm taking a b go of N I am and again I'm taking another B of n so that's an overall of beo of n squ am I using any external space yes I am beo of 26 but nothing more than that so that's what I am using that's it that's the brute force and this is where the interviewer will not be happy with you and he'll ask you to optimize it so you'll have to optimize beo of n square and if I'm looking to optimize n square that means I'm looking for an algorithm around bgo of N and the problem is involving subring or sub Aries right so which algorithm comes to your brain yes two pointer and the sliding window we've already done a lot of problems on 2.9 sliding window you haven't seen it please go back and watch it because you're going to follow the same pattern so B go of N and two pointer initially we start with the left pointer and the right poter pointer and we keep it at the zeroth index what are we looking at we're looking at a maximum frequency so maybe I can keep a variable Max frequency which keeps a track of the maximum frequency we're looking for a longest substring so maybe a max length if I have to figure out the frequency",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "_eNhaDCr6P0",
+      "position": 279,
+      "title": "L8. Longest Repeating Character Replacement | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=_eNhaDCr6P0",
+      "start": 585.88,
+      "end": 696.48,
+      "text": "if I have to figure out the frequency I'll have to keep a hashmap as well of size 26 so a hash so initially we standing at a which is the zeroth index put it into your hashmap e comma 1 so once you put it into your hashmap can I say that the max frequency will be updated to one I can now what is the next thing you check if this is a valid segment or not how do you check what is the length one what is the max frequency one what are the number of conversions required zero because this segment has all the characters same so I don't need any conversions thereby this is a valid segment and if this is a valid segment I update the lens to one because the length is greater than the max I already have what is the next thing I take this R and I move it to a I move it to a I update the frequency to two and if I update the frequency to two the max frequency gets updated what is the next thing check if this segment is a valid one or not the length is two the max frequency is two number of conversions is zero because double a no conversions needed thereby I can update the max ler two after this I'll take the r I'll move it here again a so you update this to three and if this gets updated to three max frequency gets updated to three next is the sub valid segment the length is three the max frequency is three number of conversions required is zero because all are a so can I say that the max then gets updated to three yes it does what is the next R goes over here that means I'm getting a b which is appearing once will I update the max frequency no because the max frequency is still three so I don't update the max frequency instead what I",
+      "word_count": 341
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "_eNhaDCr6P0",
+      "position": 279,
+      "title": "L8. Longest Repeating Character Replacement | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=_eNhaDCr6P0",
+      "start": 690.76,
+      "end": 803.4799999999999,
+      "text": "update the max frequency instead what I do is I check if this is a valid segment or not in order to do that the length is four of this segment the max frequency is three number of conversions required is one because I'll have to convert this B to a in order to make all the characters equal so thereby 10 can be updated to four perfect what is the next thing I'll take this R I'll move it to here b gets updated to two after that will the max frequency get updated no I'll check if this frequency this segment is valid or not 5 - 3 2 valid thereby the segment length will increase after that you'll move R now this time when you move R this is C which is appearing once the max frequency will not get but when you try to check if this is a valid segment or not the length is six and the max frequency that appears is three times number of changes required is three hence it's not possible hence it is not possible so what you will do is you'll be like fine if this is not possible I have to trim down my window because this is my window I have to trim it down if I'm trimming it down what I'll do is I'll take the cell I'll move it forward so if I move forward first thing that will happen is I'm removing 1 a so the frequency decreases so basically removed this a next if I remove this a we'll have to cross check the max frequency again what is the max frequency now in this hashmap that's two so what you'll do is you'll update it to two the max frequency now as two is this segment my bad is this segment possible what is the length the length is five the max frequency is two it's coming to be three number of conversions required is three which is not possible because I have to convert",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "_eNhaDCr6P0",
+      "position": 279,
+      "title": "L8. Longest Repeating Character Replacement | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=_eNhaDCr6P0",
+      "start": 799.199,
+      "end": 918.3199999999999,
+      "text": "not possible because I have to convert this this this to a a a hence not possible if it is not possible you'll again end up removing another a and if you remove another the a this will reduce to one and after that you'll move your Rod so you shrink down the window from the left you shrink it down again if you shrink it will the max frequency update no this time because we still have another two okay let's check if this is a valid segment the length is four the max frequency is two and this is valid so you can say this is valid but what is the length the length is coming to be F which is not allowed because I already have five so this is not the longest so I'll simply go ahead and take R over here and I can keep on doing this I can keep on doing this till this R exceeds my boundary and eventually I'll have my max length couple of points to remember whenever you are removing a make sure you update the max frequency by scanning through the entire map we can optimize that afterwards but as of now remember it so we know what we are looking forward to do right so can I write down the pseudo code may be yes so I'll have a function which takes my string and my variable K correct now what is the next thing I'll do first thing I'll do for sure is I'll take a l to be zero I'll take a r to be zero I'll take a max length to be zero I'll take a Max frequency to be zero and I'll take a hash map of 26 size because all of them all of them are all of them are initially zero so you all of them are uppercase characters so 26 will suffice now what I will do is I'll start while are lesser than the string size that's the first thing because that's that's that's the point which I",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "_eNhaDCr6P0",
+      "position": 279,
+      "title": "L8. Longest Repeating Character Replacement | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=_eNhaDCr6P0",
+      "start": 911.68,
+      "end": 1041.0790000000002,
+      "text": "that's that's that's the point which I will iterate after that I'll go to the hashmap and I'll say Hey listen s of whatever it is s of R please make sure you do a minus op it and then a Plus+ perfect after this what happens is I'll have to update the max frequency so can I say Max frequency will be Max of whatever previously I had Max frequency comma whatever the current hashes which is Hash of s of G minus a can I say this I definitely can say this okay after this I'll have to check if this is a valid one or not and if this is not a valid one I have to trim it down from the left if this is not a valid one I'll have to trim it down from the left so maybe I can write a while loop which is going to check if it is a valid one or not so can I say that can I say that the length is r - L +1 that is the length minus Max frequency if that is greater than K which means it's not a valid one and if it is not a valid one I have to trim it down and if it is a valid one the Y F Loop never gets executed super simple what do I do I go across to Hash of s of L because that is what I'm trimming minus of a and I do a minus minus once I've trimmed it down I have to update my Max frequency so what I do is I assign Max frequency to be zero and I go ahead through the entire 26 like 25 indexes all the 26 index and I say Max frequency equal to Max of Max frequency comma hash of I whatever it is so this will update my Max frequency the new Max frequency for that segment after that what I can do is I can take L equal to l + one I can move",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "_eNhaDCr6P0",
+      "position": 279,
+      "title": "L8. Longest Repeating Character Replacement | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=_eNhaDCr6P0",
+      "start": 1036.16,
+      "end": 1172.6399999999999,
+      "text": "can take L equal to l + one I can move the L pointer and then I can finish off the while loop once the while loop is finished I'm very much sure about one thing what is that one thing that if now which is Rus L +1 the length minus the max frequency remember Max frequency is a variable which is declared over here so you can access it if that's lesser than equal to K which means this is a valid segment and if this is a valid segment you can compare it to Max of max length comma G minus my bad Rus L +1 done and you can complete the while loop but please make sure you move r++ before completing the while loop and eventually you can return max length and the function will be terminated so this will be your a b go of someone near about a b of n approach but we will be Computing the time complexity now let's comput it so there's a while loop which is contributing to it and I know this is definitely going to run for B of because R starts from zero goes till the end there's another while loop which is trimming of L which is trimming of L but it have to be careful that L stands over here and it is not every time that L is going the entire distance for the first time it might go two places then three places then two places then one places overall throughout the journey it might go n places correct so can I say that the outer while loop is taking B of N and the inner while loop throughout the journey not individually is taking a b of N and inside this while loop I'm always doing a hash check for frequency for frequency correct so can I say this multiplied by 26 assuming that every time you go inside assuming that every time you go inside so I can say n + n into 26 correct what about the",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "_eNhaDCr6P0",
+      "position": 279,
+      "title": "L8. Longest Repeating Character Replacement | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=_eNhaDCr6P0",
+      "start": 1165.28,
+      "end": 1310.32,
+      "text": "say n + n into 26 correct what about the space that's a beo of 26 I cannot optimize the space because we need to store the frequency so this will be the time complexity and the space complexity now can I optimize I can because this is still taking a b go off to n so we are still taking a Time complexity of n + n into 26 let's try to optimize it so there is a beo of 26 that I'm still taking okay and that b of 26 is because I'm rescanning and updating my Max frequency value so what I'll do is I'll try to get rid of this rescanning let's understand why so I'll say hey there's no need to rescan and re-update the max frequency why so the condition was length minus Max F less than equal to K correct let's go back to the example we took in this example this was the segment which was valid correct and after that when I added C I started removing it from the back this is where I updated my Max frequency from three to two because I removed the C now what I say is do not do not down do not decrease the value of Max fre Max frequency only to decrease why do I say it let's understand stand so the length was five the max frequency was three when we were at Tri a double b this was the segment and this gave me my max length to be five so I have already I already have the longest substring of a length P I already have a long substring of length in order to get a better answer I'll be looking at a length six I'll be looking at a length seven I'll be looking at a length eight there's no point in looking for a length there's no point so what I will do is I'll try to look for a better length six if I'm looking for a better length six will three will the max frequency",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "_eNhaDCr6P0",
+      "position": 279,
+      "title": "L8. Longest Repeating Character Replacement | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=_eNhaDCr6P0",
+      "start": 1304.24,
+      "end": 1427.0,
+      "text": "three will the max frequency 3 contribute to it no because if this is the last valid condition this can never be the valid condition I will have to increase the value of three I'll have to increase is the value of three so max frequency which was three there's no point in downgrading it to two there's no point because if if I have to increase 5 to six if I have Max frequency as two that is never going to be valid that's never going to be valid that's why because ultimately you're trimming down and the only reason you trim down is because it's invalid you figured out that Beyond 5 minus 3 it's invalid that's why you're trimming down and when you're trimming down there's no point in reducing 3 to2 there's no point because that's never going to contribute to my longest answer what will contribute is 6 - 4 so I'll have to increase the value of three so what I say is there's no point in trimming down don't trim it down because when I'm removing this will only reduce this will only reduce and reduction never helps reduction never helps in increasing my answer I not do so as of now I have this Max frequency which is increasing every now and then and this is contributing to my answer perfect next answer six will be having a Max frequency B so it will contribute to it there's no point in trimming down so what I did was I removed this 26 dependency I remov the scanning it is still taking a b go of 2 can I optimize it I can if you have seen my previous videos you know one thing till this point the length was five after that you added a c and it was invalid and this was a length six I already have my answer as five I have a length six and what the while loop does is it removes two a it removes two a do I need to",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "_eNhaDCr6P0",
+      "position": 279,
+      "title": "L8. Longest Repeating Character Replacement | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=_eNhaDCr6P0",
+      "start": 1420.96,
+      "end": 1522.0,
+      "text": "two a it removes two a do I need to remove two a no because if the answer is five the next answer will definitely be six which is a valid one I straight away cannot go to seven the next answer will be six so what I do is since I added this there was an the sliding window increased by one it went to become of a size six I'll went down to five again I'll went down to five again so what I'll do is I'll just remove one and I'll keep it as size five I'll again say add this and make it a size six I'll not let it go beyond six that's why instead of removing 2 A's 3 A's what I'll do is I'll remove one because that will make sure I'm still with length six I'm not increasing it to seven L 6666 six window let the six window go and whenever six window is meeting this condition I'll upgrade it I'll not move in at that perfect so if I remove the while this trims down to a p of end time complexity and a beo of 26 space complexity and this is the most optimized solution again I've written down the pseudo code in case you want the language specific code you can find the below so if you're still now watching and if you understood everything please please do consider giving us a like and if you're new to our channel do consider subscribing to us as well with this I'll be wrapping up this video Let's Wait in some of the video till then bye-bye take careen don't forget your golden I will find light",
+      "word_count": 287
+    }
+  ]
+}

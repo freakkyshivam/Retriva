@@ -1,0 +1,141 @@
+{
+  "video_id": "LgLRTaEMRVc",
+  "position": 107,
+  "title": "L35. Construct the Binary Tree from Postorder and Inorder Traversal | C++ | Java",
+  "url": "https://www.youtube.com/watch?v=LgLRTaEMRVc",
+  "chunk_count": 12,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "LgLRTaEMRVc",
+      "position": 107,
+      "title": "L35. Construct the Binary Tree from Postorder and Inorder Traversal | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=LgLRTaEMRVc",
+      "start": 0.0,
+      "end": 102.159,
+      "text": "so before starting this video i'd love to thank relevel for sponsoring this entire video a hiring platform with no degree required no experience required mentoring sessions available feels like a dream isn't it what if i say all of this is for free well reliable by an academy is here to make your dream come true but job opportunities in front and back end and business development from india's top companies for freshers and people in the early career reliable is here to make the entire hiring process super simple and super quick all you have to do is to give the relevant test and based on your score interviews will be scheduled and you will be hard so what are you waiting for make sure you check out all the links in the description and apply for the relevant tests as soon as possible hey everyone welcome back to the channel i hope you guys are doing extremely well so today we will be solving the problem construct a unique binary tree from a given post order and then in order so why did i say unique because if you're given a in order and if you're given a pre-order or post order then you can only create a unique binary tree i've discussed about this in detail in the previous video so you can watch that video and after that you can start this video like you'll have a clear idea why do we need in order and why do we need a pre-order or a post order in order to create a binary tree that is unique now you can create a lot of binary trees if post order pre-orders are given so just uh make sure you check out that video in order to get a much detailed knowledge so over here the inorder is given to you and the post order is given to you and the task is to create the binary tree whose in order is this given one and whose poster is this given one so if i",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "LgLRTaEMRVc",
+      "position": 107,
+      "title": "L35. Construct the Binary Tree from Postorder and Inorder Traversal | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=LgLRTaEMRVc",
+      "start": 97.759,
+      "end": 216.64,
+      "text": "whose poster is this given one so if i try to create like the binary tree that uh will is the answer is this 10 20 30 and over here there's a 40 there's a 50 and there's a 60 like if you write down the pre uh right on the in order you'll get this if you write down the post order you'll definitely get this so that is what you have to do you have to return the root of this constructed like you have to construct this binary tree and to return the root of this binary that is what the question is all about so how do you solve this problem that's very easy now what do you know what is a post order it's nothing but left right and root hey that that is what a post order is what's in order in order is left root right that is what i can call as the inorder so can i say can i say that this last guy this last guy is indeed your root of the entire tree if like yes you can say that that this last guy is indeed the root of the entire tree now if you've got the root of the entire tree how do you figure out what is the left portion what is the right portion so can i say since the inorder says left root right and this is where the root of the tree is so can i say all these elements all these elements will be the part of your left subtree and all these elements will be the part of your right subtree so what you can say is on the left on the left i again have to create a tree who's in order is 40 20 50 because i know this left is itself the in order like if i just consider this this is going to be the order common sense because left root right that is the sequence that the tree follows so whatever is on the left is",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "LgLRTaEMRVc",
+      "position": 107,
+      "title": "L35. Construct the Binary Tree from Postorder and Inorder Traversal | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=LgLRTaEMRVc",
+      "start": 211.599,
+      "end": 321.35999999999996,
+      "text": "follows so whatever is on the left is the part of the left subtree and this is the in order of that subtree so i can say the uh in order is this of the left subtree similarly i can say 60 and 30 is the in order of the right subtree so if i know the inorder and if i can again predict like if i can just get the post order i think my job should be done what is the post order of the right so i can say that if this is 10 and i know first i have the left so i have three elements on the inorder like on the left subtree so can i say the first three elements first three elements are these the first three elements will be the post order traversal of the left subtree indeed and can i say the remaining elements i repeat can i say the remaining elements will be nothing but the post order of the right subtree i can so does the question boil down to similar question again like the question was given constructed a binary tree when a post order in order is given does the question again bring you back to that state where uh in order is given to you and a post order is given to you and you need to again construct a tree so if i can think of this like what is this this is kind of a recursive solution right whenever like yeah you're breaking the problem into sub problems the first time the post order was so big the inaudible was a big one you just broke it down into left and right and you created a small sample of it so it's kind of creating subtree subtree sub trees by taking in order post orders every time so that's that's the whole idea about this problem we figure out the left sub tree that is this we figure out the right sub tree and then we again",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "LgLRTaEMRVc",
+      "position": 107,
+      "title": "L35. Construct the Binary Tree from Postorder and Inorder Traversal | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=LgLRTaEMRVc",
+      "start": 317.52,
+      "end": 430.639,
+      "text": "out the right sub tree and then we again create a tree on that left sub tree and the right subtree that's how we are going to solve this problem so we have solved uh 10 okay i've got the root now we will solve taking this in order and the preorder for the left sub tree i will construct that subtree and we will attach that to the left of n okay let's construct this uh tree that will be formed using this in order and using this post order so what i can say is i currently have uh these are these guys as the inorder and i can say that i have currently this guy as the post order now i can keep these guys uh for the later use but as of now let's understand that we have this so can i say that again since the post order and then the post order is left right root so can i surely say whatever is at the last will be my root of the tree for the new tree remember for the new tree i'm creating a new tree again i can again if i figure out 20 is right at over here so the left the left in order the left in order so the left guy will be having an inorder 40 right and the right guy will be having it in order 50 so i figured out the left sub tree and the right sub tree again again i've broken down into sub problems again now can i say since it is left so if on the left subtree i have one element on the right side tree i have one element so can i say since it's a left right so the from the left the first to one element that's 40 that's 40. so that's the post order and right after that the next one element is the post order of the right subtree so i figured out again i've broken down the problem into smaller sub",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "LgLRTaEMRVc",
+      "position": 107,
+      "title": "L35. Construct the Binary Tree from Postorder and Inorder Traversal | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=LgLRTaEMRVc",
+      "start": 426.0,
+      "end": 523.519,
+      "text": "broken down the problem into smaller sub problem where i have an inorder i have a post order for the left i have in order and i have a post order for the right so i can again create this up create the tree and i can attach it to the left and similarly i can create the tree from the right and i can attach it to the right simple enough let's try to create the uh tree from the uh this 40 as in order and this 40 as the post order cool uh so as of now we have uh in order as 40 a post order is 40 so as you know post order is nothing but left right root so can i say can i say the root will be 40 itself so i'll create a node with 40 and the moment i see 40 is here on the inorder i try to figure out what's on the left i see there is nothing so when i call i do not get anything so i will say it's a null so i'll mark it to null and on the right i also do not have anything so i'll mark it to null so the last stage of recursion will be a node itself and if i create a node i'll return that and that will be attached to the left so the left call is done similarly for 50 if you again do the same thing you'll just create a node of 50 right because 50 will be the in order and 50 will be the post order so as you know the last guy is the root so 50 comes out to be the root so what you can do is you can create a 50 and again the left will be null and the right will be null correct so that's how you create 50 and you can just return it and attach it to 20s right so i can say 20 has got its left and got",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "LgLRTaEMRVc",
+      "position": 107,
+      "title": "L35. Construct the Binary Tree from Postorder and Inorder Traversal | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=LgLRTaEMRVc",
+      "start": 518.399,
+      "end": 618.8,
+      "text": "i can say 20 has got its left and got its right so 20 will return and that will be attached to tents left as simple as that so i recursively created the trees and while coming back i attached it to its left counterpart and right counterpart now if you remember this was remaining 60 30 as the inorder 60 30 as the post order so let's let's do for this so this is the in order for the right and this is the post order for the right subtree so again uh you can call the right and let's create so i can say this last guy is definitely my yes i can say this last guy is definitely my root of the tree so i can figure out that this is the root of the tree and if this is the root of the tree and if this is the root of the tree the left guy will lie on the left with an in order of 60 and i can take one element from uh the starting of post and that's definitely going to be my post order so the left guy will have it in order and a post order as something like this and the right guy will say i do not have anything because it doesn't have anything i will point to null so it points to null correct so when i move to the left i'll have the in order as 60 and the post order as 60. so i can again just create the node or 60 and this is the node that i'll create and on this left i'll find nothing on the right i'll find nothing so i'll point to null it'll point to null and once this this recursion is over i'll return it and 30 is left will be pointing to 60 that is right it will be pointing to null so 30 is complete so 30 will be returned and 10th right will be pointing to 30. so",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "LgLRTaEMRVc",
+      "position": 107,
+      "title": "L35. Construct the Binary Tree from Postorder and Inorder Traversal | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=LgLRTaEMRVc",
+      "start": 614.079,
+      "end": 728.9590000000001,
+      "text": "10th right will be pointing to 30. so this is how this is how you can create the unique binary tree from any given post order or in order right so if i discuss like how will the code look like like i will give you a brief idea and then you can probably code it and if you cannot you can definitely check out my coding explanation after this how will the code look like first step that i'm always doing is like whatever post order is given to me whatever post order is given to me i'll take the last element and i'll say that this is going to be my node okay this is going to be my node correct and after that what i'm saying is nodes left will be a left counterpart like if this is 12 and if i have been given an inorder where 12 exists somewhere here so i'll figure out where does 12 exist and i will say that this left guy this left guy will be on the left subtree in order and these right guy will be right subtrica in order and how to figure out where does 12 exist it's a very simple thing whatever elements are there on the in order just put them into some map data structure so that you can easily understand where does 12 exist in in order like in in a bigger funnel log and you can easily understand where does 12 exist in your in order so what you'll do is you will easily get 12 and you can easily figure out how many elements are on the left like if this is a starting point and this is the point you can easily figure out how many elements are on the left and how many elements are on the right by easily subtracting so once you figure out the number of elements on the left from post order the first though like assume there are x elements on the left first x elements will be the post order",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "LgLRTaEMRVc",
+      "position": 107,
+      "title": "L35. Construct the Binary Tree from Postorder and Inorder Traversal | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=LgLRTaEMRVc",
+      "start": 723.12,
+      "end": 825.36,
+      "text": "first x elements will be the post order of the left subtree and right after that the remaining elements the remaining elements will be the post order of the right subtree and again you can start recursively building this that's what the recursive idea will be it'll be given an in order it'll be given a post order figure out the route build the node and call the left call the right with the next in orders and uh post orders and at the end whenever you are your in order and post order do not have elements that is when you can say that it's empty and just point them to null so that's that's how you can think of a code so i will try to uh i'll highly recommend that you should definitely implement this by yourself and if you cannot the next part is the coding explanation so guys as usual the left part is the c solution and the right part is the java solution so basically you're given the inorder and the post order so what's the first thing uh just in case uh they do not match in size or any anything is given as null or something just make sure you return a null okay just make sure you written a null saying that there cannot be a tree like this is this is kind of a wrong solution after that you create a map and this map if you remember like whatever in order is given to you yes whatever in order is given to you like assume 10 12 11 10 just make sure 10 is at the zeroth index 12 is at the first index 11 is at the second index 10 is at the third index for that create a map so that whenever you do a post order yes whenever you do a post order whatever element is at the last that's going to be a root so you can easily figure out where does 12 exist so 12 can be easily figured out to",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "LgLRTaEMRVc",
+      "position": 107,
+      "title": "L35. Construct the Binary Tree from Postorder and Inorder Traversal | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=LgLRTaEMRVc",
+      "start": 820.88,
+      "end": 930.24,
+      "text": "exist so 12 can be easily figured out to be existing at the first index using this map data structure that's why i just make sure whatever in order you have you have a hash map after that you call this uh function bill tree with in order with the starting pointer of 0 with the ending pointer of in order size minus one uh with the post order the starting point is zero and the last size is like the start ending point over here and with the hash map if i check out the uh so basically the is the starting point of in order ie is the ending point of the inorder and ps is the post uh starting point and p is the post ending point that's what i've taken okay now just in case you run out like you run out of the in order and post order just in case the this pointer like what i'll do is if i'm taking this much errand for the left left subtree and i'm saying this is my post order instead of reducing the array i'll take pointers like i'll say that this is we'll start this is post end like i'll take pointers in order to make sure that this is uh the new array for the post order of left or right okay so if if they they are like over like we do not have a post order or in order the size is zero i can second return a null okay if the size is zero there will be no left subtree there'll be no right subtree so that is what i'll return okay and after that what i do is whatever is at the end like over here the end is 10 so i'll say 10 will be my uh node n will be by root or node of the tree that i'm creating okay and right after that i figure out where is this like where is this 10 and this is where i'll get the in root in root variable",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "LgLRTaEMRVc",
+      "position": 107,
+      "title": "L35. Construct the Binary Tree from Postorder and Inorder Traversal | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=LgLRTaEMRVc",
+      "start": 924.88,
+      "end": 1029.839,
+      "text": "i'll get the in root in root variable like it will directly tell me where is this 10 in the hash map okay directly tells me that this is at this index and if i write down the indexing it's at the third index okay it's at the third index so if i ask you how many elements is how many elements are on the left how many elements are on the left your answer might be 3 but that is that is not correct you'll be like 3 minus the starting point because as i said in the next step might happen in the next step might happen this is the inorder this is the in order and whenever you find 30 you cannot say on the left you have one element right it is a 5 minus 4 is the number of elements on the left right so that's why what you'll always say is the starting point of the inorder array the starting part of the inorder array and the in root like wherever i am currently at three minus the starting point will be the number of elements on the left like as of now we have three elements so after that once you figure out the number of elements of the left is three you call the left guy like you'll call the left guy with the same in order where you'll say that this is my new in is in order starting this is my new in order ending like in root minus one okay this is the new in order starting and in order ending for the next function call correct and what about post order let is of a post order for post order for the left sub tree it's very simple you start from uh the post order starting right that is where you start from and you end up taking three numbers that's uh tell index two is where you take up so post order starting plus three numbers minus one because if there are",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "LgLRTaEMRVc",
+      "position": 107,
+      "title": "L35. Construct the Binary Tree from Postorder and Inorder Traversal | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=LgLRTaEMRVc",
+      "start": 1026.559,
+      "end": 1130.4,
+      "text": "numbers minus one because if there are three numbers you take till index two that makes three numbers that's why minus one that is about the left subtree or the right subtree can i say the right sub trees uh in order will start from in root this is in root in root plus one in root plus one is where it starts from i will go until in root end like in order n what about what about uh the post order and i said the post order will be post order plus three that's post order plus plus nums left till till what post order end minus one this post order n minus one so post order n minus one so i have easily figured out from where like i've easily figured out ps plus nums left plus p minus 1 is where the next like this is the next post order for right this is the next in order for the right and similarly this is the next in order for the left and this is the next post order for the left that's how you send it across and whenever this returns like this will definitely return a root right it will definitely return a root or a null whatever it returns you will make the route it'll make this guy point to whatever the left returns and after that make the right make the right point to whatever it returns that's very simple and keep on doing it keep on doing it on backtracking it will automatically make sure it points to the left and right and at the end you return this 10 which will be your root of the tree and that is what is returned return this this guy returned and this guy will automatically return the root time complexity you're doing a simple traversal of the tree that's a big of n traversal and uh are you i can say login i can say login if you're considering a hashmap to take login you can say login if you're",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "LgLRTaEMRVc",
+      "position": 107,
+      "title": "L35. Construct the Binary Tree from Postorder and Inorder Traversal | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=LgLRTaEMRVc",
+      "start": 1126.72,
+      "end": 1187.18,
+      "text": "login you can say login if you're considering hashmap to take big off one you can take a big off n into one and what about the space complexity the space complexity is definitely going to be b go off n for the hash map and a b of n for the auxiliary stack space of recursion but yes okay if i can summarize that to n log n or n again n log n or n depending on what time is your hash map taking and that's the space complexity of this particular solution so i hope you've understood the entire explanation as well as the code just in case you did please please please make sure you like this video because it took a lot of efforts to make this entire tree series also if you wish you can definitely drop in a comment that will keep motivating me to make such further series also if you're new to the channel please do consider subscribing because i'm going to bring in such more series in the upcoming future as well with this uh let's wrap up this video let's speed in the next lecture bye take take [Music]",
+      "word_count": 200
+    }
+  ]
+}

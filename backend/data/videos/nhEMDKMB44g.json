@@ -1,0 +1,2522 @@
+{
+  "position": 50,
+  "video_id": "nhEMDKMB44g",
+  "title": "BS-6. Minimum in Rotated Sorted Array",
+  "url": "https://www.youtube.com/watch?v=nhEMDKMB44g",
+  "transcript": [
+    {
+      "start": 2.94,
+      "duration": 3.0,
+      "end": 5.9399999999999995,
+      "text": "hey everyone come back to the channel I"
+    },
+    {
+      "start": 4.62,
+      "duration": 3.479,
+      "end": 8.099,
+      "text": "hope you guys are doing extremely well"
+    },
+    {
+      "start": 5.94,
+      "duration": 3.84,
+      "end": 9.780000000000001,
+      "text": "so we will be continuing with our binary"
+    },
+    {
+      "start": 8.099,
+      "duration": 4.741,
+      "end": 12.84,
+      "text": "search playlist which is the part of the"
+    },
+    {
+      "start": 9.78,
+      "duration": 4.68,
+      "end": 14.459999999999999,
+      "text": "Strivers A to Z DSA course in case you"
+    },
+    {
+      "start": 12.84,
+      "duration": 2.82,
+      "end": 15.66,
+      "text": "haven't checked it out yet there's a"
+    },
+    {
+      "start": 14.46,
+      "duration": 3.78,
+      "end": 18.240000000000002,
+      "text": "link in the description please please"
+    },
+    {
+      "start": 15.66,
+      "duration": 4.379,
+      "end": 20.039,
+      "text": "make sure you check it out so uh till"
+    },
+    {
+      "start": 18.24,
+      "duration": 3.66,
+      "end": 21.9,
+      "text": "now I've covered up till this particular"
+    },
+    {
+      "start": 20.039,
+      "duration": 4.021,
+      "end": 24.060000000000002,
+      "text": "problem now in this video I will be"
+    },
+    {
+      "start": 21.9,
+      "duration": 4.68,
+      "end": 26.58,
+      "text": "covering up find the minimum in the"
+    },
+    {
+      "start": 24.06,
+      "duration": 5.459,
+      "end": 29.519,
+      "text": "rotated sorted array but please make"
+    },
+    {
+      "start": 26.58,
+      "duration": 4.859,
+      "end": 31.439,
+      "text": "sure that you should have seen these two"
+    },
+    {
+      "start": 29.519,
+      "duration": 3.661,
+      "end": 33.18,
+      "text": "videos beforehand I'll be leaving the"
+    },
+    {
+      "start": 31.439,
+      "duration": 3.721,
+      "end": 35.16,
+      "text": "video links in the description in case"
+    },
+    {
+      "start": 33.18,
+      "duration": 4.26,
+      "end": 37.44,
+      "text": "you haven't seen them please go back and"
+    },
+    {
+      "start": 35.16,
+      "duration": 4.079,
+      "end": 39.239,
+      "text": "watch it then you can uh resume with"
+    },
+    {
+      "start": 37.44,
+      "duration": 3.779,
+      "end": 41.218999999999994,
+      "text": "this particular video so what does the"
+    },
+    {
+      "start": 39.239,
+      "duration": 4.32,
+      "end": 43.559,
+      "text": "problem state so you're given a rotated"
+    },
+    {
+      "start": 41.219,
+      "duration": 4.441,
+      "end": 45.660000000000004,
+      "text": "sorted array and I've already explained"
+    },
+    {
+      "start": 43.559,
+      "duration": 4.861,
+      "end": 48.419999999999995,
+      "text": "you the definition of Rotator sorted"
+    },
+    {
+      "start": 45.66,
+      "duration": 6.36,
+      "end": 52.019999999999996,
+      "text": "array it's like ideally this should have"
+    },
+    {
+      "start": 48.42,
+      "duration": 5.88,
+      "end": 54.300000000000004,
+      "text": "been zero one two four five six seven so"
+    },
+    {
+      "start": 52.02,
+      "duration": 4.32,
+      "end": 56.34,
+      "text": "here's the pivot they have rotated it so"
+    },
+    {
+      "start": 54.3,
+      "duration": 4.739,
+      "end": 59.038999999999994,
+      "text": "this comes at the front so four five six"
+    },
+    {
+      "start": 56.34,
+      "duration": 5.76,
+      "end": 62.1,
+      "text": "seven and then this shifts so this is"
+    },
+    {
+      "start": 59.039,
+      "duration": 4.921,
+      "end": 63.96,
+      "text": "the rotated sorted array over here you"
+    },
+    {
+      "start": 62.1,
+      "duration": 4.32,
+      "end": 66.42,
+      "text": "have to tell me the minimum so the"
+    },
+    {
+      "start": 63.96,
+      "duration": 4.74,
+      "end": 68.7,
+      "text": "minimum is zero you have to return me"
+    },
+    {
+      "start": 66.42,
+      "duration": 4.92,
+      "end": 71.34,
+      "text": "the value of the minimum so if I take"
+    },
+    {
+      "start": 68.7,
+      "duration": 5.22,
+      "end": 73.92,
+      "text": "one more example over here the minimum"
+    },
+    {
+      "start": 71.34,
+      "duration": 6.3,
+      "end": 77.64,
+      "text": "value is one so you have to return this"
+    },
+    {
+      "start": 73.92,
+      "duration": 5.82,
+      "end": 79.74000000000001,
+      "text": "over here the minimum value is one so"
+    },
+    {
+      "start": 77.64,
+      "duration": 4.08,
+      "end": 81.72,
+      "text": "you have to again return this so how do"
+    },
+    {
+      "start": 79.74,
+      "duration": 3.48,
+      "end": 83.22,
+      "text": "you solve this problem so this problem"
+    },
+    {
+      "start": 81.72,
+      "duration": 3.42,
+      "end": 85.14,
+      "text": "comes up in an interview what is the"
+    },
+    {
+      "start": 83.22,
+      "duration": 4.14,
+      "end": 87.36,
+      "text": "brute force that you can think of"
+    },
+    {
+      "start": 85.14,
+      "duration": 4.86,
+      "end": 90.0,
+      "text": "find the minimum find the smallest"
+    },
+    {
+      "start": 87.36,
+      "duration": 6.06,
+      "end": 93.42,
+      "text": "number in an array yes that's a typical"
+    },
+    {
+      "start": 90.0,
+      "duration": 5.28,
+      "end": 95.28,
+      "text": "Vigo of n solution we basically do a"
+    },
+    {
+      "start": 93.42,
+      "duration": 3.96,
+      "end": 97.38,
+      "text": "single pass through the array obviously"
+    },
+    {
+      "start": 95.28,
+      "duration": 3.9,
+      "end": 99.18,
+      "text": "we go of n is something which the"
+    },
+    {
+      "start": 97.38,
+      "duration": 4.5,
+      "end": 101.88,
+      "text": "interview will not like and will ask you"
+    },
+    {
+      "start": 99.18,
+      "duration": 5.16,
+      "end": 104.34,
+      "text": "to optimize it and we see sorted we see"
+    },
+    {
+      "start": 101.88,
+      "duration": 4.199,
+      "end": 106.079,
+      "text": "filed and binary search comes to our"
+    },
+    {
+      "start": 104.34,
+      "duration": 4.319,
+      "end": 108.659,
+      "text": "head so we have to apply binary search"
+    },
+    {
+      "start": 106.079,
+      "duration": 4.5,
+      "end": 110.579,
+      "text": "but how can we apply binary search what"
+    },
+    {
+      "start": 108.659,
+      "duration": 6.121,
+      "end": 114.78,
+      "text": "is the step one of binary search"
+    },
+    {
+      "start": 110.579,
+      "duration": 8.281,
+      "end": 118.86,
+      "text": "it always eliminates either the left"
+    },
+    {
+      "start": 114.78,
+      "duration": 6.72,
+      "end": 121.5,
+      "text": "or the right because in binary search"
+    },
+    {
+      "start": 118.86,
+      "duration": 6.78,
+      "end": 125.64,
+      "text": "we move from because in binary search we"
+    },
+    {
+      "start": 121.5,
+      "duration": 7.259,
+      "end": 128.75900000000001,
+      "text": "move from n to n by 2 size array 1 by 4"
+    },
+    {
+      "start": 125.64,
+      "duration": 4.679,
+      "end": 130.319,
+      "text": "size array and so on we move on till 1"
+    },
+    {
+      "start": 128.759,
+      "duration": 4.081,
+      "end": 132.83999999999997,
+      "text": "and then"
+    },
+    {
+      "start": 130.319,
+      "duration": 5.221,
+      "end": 135.54,
+      "text": "it ends and the element is not there so"
+    },
+    {
+      "start": 132.84,
+      "duration": 5.64,
+      "end": 138.48,
+      "text": "we have to somehow eliminate the left"
+    },
+    {
+      "start": 135.54,
+      "duration": 5.1,
+      "end": 140.64,
+      "text": "half or eliminate the right half how can"
+    },
+    {
+      "start": 138.48,
+      "duration": 5.339,
+      "end": 143.819,
+      "text": "we so if you remember"
+    },
+    {
+      "start": 140.64,
+      "duration": 5.819,
+      "end": 146.45899999999997,
+      "text": "in the rotated sorted array we actually"
+    },
+    {
+      "start": 143.819,
+      "duration": 6.541,
+      "end": 150.35999999999999,
+      "text": "cannot straight away eliminate we have"
+    },
+    {
+      "start": 146.459,
+      "duration": 5.661,
+      "end": 152.12,
+      "text": "to first figure out which is the sorted"
+    },
+    {
+      "start": 150.36,
+      "duration": 6.0,
+      "end": 156.36,
+      "text": "half"
+    },
+    {
+      "start": 152.12,
+      "duration": 6.4,
+      "end": 158.52,
+      "text": "identify the sorted half"
+    },
+    {
+      "start": 156.36,
+      "duration": 3.48,
+      "end": 159.84,
+      "text": "again I've already explained this in the"
+    },
+    {
+      "start": 158.52,
+      "duration": 3.24,
+      "end": 161.76000000000002,
+      "text": "previous video please go back and watch"
+    },
+    {
+      "start": 159.84,
+      "duration": 4.02,
+      "end": 163.86,
+      "text": "it if you haven't seen it so you have to"
+    },
+    {
+      "start": 161.76,
+      "duration": 3.42,
+      "end": 165.17999999999998,
+      "text": "identify the sorted half and why I have"
+    },
+    {
+      "start": 163.86,
+      "duration": 2.58,
+      "end": 166.44000000000003,
+      "text": "told you the reasons in the previous"
+    },
+    {
+      "start": 165.18,
+      "duration": 4.02,
+      "end": 169.20000000000002,
+      "text": "video"
+    },
+    {
+      "start": 166.44,
+      "duration": 4.98,
+      "end": 171.42,
+      "text": "so over here let's let's try to think we"
+    },
+    {
+      "start": 169.2,
+      "duration": 3.66,
+      "end": 172.85999999999999,
+      "text": "have a low here we have a high here and"
+    },
+    {
+      "start": 171.42,
+      "duration": 3.959,
+      "end": 175.379,
+      "text": "when we start"
+    },
+    {
+      "start": 172.86,
+      "duration": 5.519,
+      "end": 178.37900000000002,
+      "text": "we have a mid here and we know that the"
+    },
+    {
+      "start": 175.379,
+      "duration": 4.44,
+      "end": 179.819,
+      "text": "left half is sorted why do I say that"
+    },
+    {
+      "start": 178.379,
+      "duration": 4.741,
+      "end": 183.12,
+      "text": "because"
+    },
+    {
+      "start": 179.819,
+      "duration": 6.361,
+      "end": 186.17999999999998,
+      "text": "4 is lesser than equal to 7 thereby the"
+    },
+    {
+      "start": 183.12,
+      "duration": 5.88,
+      "end": 189.0,
+      "text": "left half is sorted whereas the right"
+    },
+    {
+      "start": 186.18,
+      "duration": 5.04,
+      "end": 191.22,
+      "text": "half is not sorted why"
+    },
+    {
+      "start": 189.0,
+      "duration": 4.92,
+      "end": 193.92,
+      "text": "because seven ideally should have been"
+    },
+    {
+      "start": 191.22,
+      "duration": 6.54,
+      "end": 197.76,
+      "text": "less than 2 but that is wrong so thereby"
+    },
+    {
+      "start": 193.92,
+      "duration": 4.98,
+      "end": 198.89999999999998,
+      "text": "I know that the left half is sorted if I"
+    },
+    {
+      "start": 197.76,
+      "duration": 6.119,
+      "end": 203.879,
+      "text": "ask you"
+    },
+    {
+      "start": 198.9,
+      "duration": 7.02,
+      "end": 205.92000000000002,
+      "text": "hey why is the right half"
+    },
+    {
+      "start": 203.879,
+      "duration": 4.44,
+      "end": 208.319,
+      "text": "not sorted if I ask you this question"
+    },
+    {
+      "start": 205.92,
+      "duration": 3.84,
+      "end": 209.76,
+      "text": "what will be your answer your answer"
+    },
+    {
+      "start": 208.319,
+      "duration": 3.661,
+      "end": 211.98,
+      "text": "will be"
+    },
+    {
+      "start": 209.76,
+      "duration": 4.68,
+      "end": 214.44,
+      "text": "if the array was a straight like"
+    },
+    {
+      "start": 211.98,
+      "duration": 3.899,
+      "end": 215.879,
+      "text": "something like one two three four then"
+    },
+    {
+      "start": 214.44,
+      "duration": 3.299,
+      "end": 217.739,
+      "text": "even if you stand here the left and"
+    },
+    {
+      "start": 215.879,
+      "duration": 5.161,
+      "end": 221.04,
+      "text": "right are always sorted since you did a"
+    },
+    {
+      "start": 217.739,
+      "duration": 5.041,
+      "end": 222.78,
+      "text": "rotation on this point thereby the"
+    },
+    {
+      "start": 221.04,
+      "duration": 4.979,
+      "end": 226.019,
+      "text": "laptop was sorted and because of the"
+    },
+    {
+      "start": 222.78,
+      "duration": 4.86,
+      "end": 227.64000000000001,
+      "text": "rotation the right half is not sorted"
+    },
+    {
+      "start": 226.019,
+      "duration": 3.78,
+      "end": 229.799,
+      "text": "because of the rotation because the"
+    },
+    {
+      "start": 227.64,
+      "duration": 4.319,
+      "end": 231.95899999999997,
+      "text": "rotating point is on the right half"
+    },
+    {
+      "start": 229.799,
+      "duration": 5.281,
+      "end": 235.08,
+      "text": "because the rotating point is on the"
+    },
+    {
+      "start": 231.959,
+      "duration": 4.741,
+      "end": 236.7,
+      "text": "right half thereby it is not sorted and"
+    },
+    {
+      "start": 235.08,
+      "duration": 5.34,
+      "end": 240.42000000000002,
+      "text": "if the rotating point is on the right"
+    },
+    {
+      "start": 236.7,
+      "duration": 5.52,
+      "end": 242.22,
+      "text": "half can I say the rotating point will"
+    },
+    {
+      "start": 240.42,
+      "duration": 3.42,
+      "end": 243.83999999999997,
+      "text": "always have the minimum element will"
+    },
+    {
+      "start": 242.22,
+      "duration": 5.7,
+      "end": 247.92,
+      "text": "always have the minimum element so many"
+    },
+    {
+      "start": 243.84,
+      "duration": 6.84,
+      "end": 250.68,
+      "text": "about that yes hence the left sorted"
+    },
+    {
+      "start": 247.92,
+      "duration": 5.58,
+      "end": 253.5,
+      "text": "part will never have your answer and the"
+    },
+    {
+      "start": 250.68,
+      "duration": 4.619,
+      "end": 255.299,
+      "text": "right part might have your answer why do"
+    },
+    {
+      "start": 253.5,
+      "duration": 4.32,
+      "end": 257.82,
+      "text": "I say might let me give you some other"
+    },
+    {
+      "start": 255.299,
+      "duration": 4.56,
+      "end": 259.859,
+      "text": "examples let's take one more example and"
+    },
+    {
+      "start": 257.82,
+      "duration": 4.259,
+      "end": 262.079,
+      "text": "see if the statement that we made is"
+    },
+    {
+      "start": 259.859,
+      "duration": 5.881,
+      "end": 265.74,
+      "text": "correct or not so over here can I see"
+    },
+    {
+      "start": 262.079,
+      "duration": 5.701,
+      "end": 267.78000000000003,
+      "text": "that the right half is sorted and it"
+    },
+    {
+      "start": 265.74,
+      "duration": 4.8,
+      "end": 270.54,
+      "text": "doesn't contains the minimum it doesn't"
+    },
+    {
+      "start": 267.78,
+      "duration": 5.76,
+      "end": 273.53999999999996,
+      "text": "which is which does make sense and the"
+    },
+    {
+      "start": 270.54,
+      "duration": 6.36,
+      "end": 276.90000000000003,
+      "text": "minimum is here why is that because the"
+    },
+    {
+      "start": 273.54,
+      "duration": 5.46,
+      "end": 279.0,
+      "text": "point of rotation is this hence the left"
+    },
+    {
+      "start": 276.9,
+      "duration": 4.079,
+      "end": 280.979,
+      "text": "portion is not sorted hence the left"
+    },
+    {
+      "start": 279.0,
+      "duration": 4.02,
+      "end": 283.02,
+      "text": "portion is not sorted thereby the left"
+    },
+    {
+      "start": 280.979,
+      "duration": 4.261,
+      "end": 285.24,
+      "text": "portion contains the minimum"
+    },
+    {
+      "start": 283.02,
+      "duration": 4.5,
+      "end": 287.52,
+      "text": "but I can still prove my statement wrong"
+    },
+    {
+      "start": 285.24,
+      "duration": 4.2,
+      "end": 289.44,
+      "text": "let me give you one more example this"
+    },
+    {
+      "start": 287.52,
+      "duration": 5.52,
+      "end": 293.03999999999996,
+      "text": "one so over here"
+    },
+    {
+      "start": 289.44,
+      "duration": 6.66,
+      "end": 296.1,
+      "text": "can I say that if the mid is here"
+    },
+    {
+      "start": 293.04,
+      "duration": 5.879,
+      "end": 298.91900000000004,
+      "text": "the low is here the high is here the"
+    },
+    {
+      "start": 296.1,
+      "duration": 5.28,
+      "end": 301.38,
+      "text": "right half is actually sorted and it"
+    },
+    {
+      "start": 298.919,
+      "duration": 4.861,
+      "end": 303.78,
+      "text": "contains the element it contains the"
+    },
+    {
+      "start": 301.38,
+      "duration": 6.12,
+      "end": 307.5,
+      "text": "minimum I know the laptop is not sorted"
+    },
+    {
+      "start": 303.78,
+      "duration": 6.479,
+      "end": 310.25899999999996,
+      "text": "and this also contains the element so a"
+    },
+    {
+      "start": 307.5,
+      "duration": 4.8,
+      "end": 312.3,
+      "text": "bit of conflict the right half might"
+    },
+    {
+      "start": 310.259,
+      "duration": 3.781,
+      "end": 314.04,
+      "text": "have the element might just have the"
+    },
+    {
+      "start": 312.3,
+      "duration": 4.02,
+      "end": 316.32,
+      "text": "element so we have to be careful about"
+    },
+    {
+      "start": 314.04,
+      "duration": 4.56,
+      "end": 318.6,
+      "text": "these things we cannot straight away say"
+    },
+    {
+      "start": 316.32,
+      "duration": 5.12,
+      "end": 321.44,
+      "text": "that Hey listen because if I if I give"
+    },
+    {
+      "start": 318.6,
+      "duration": 2.84,
+      "end": 321.44,
+      "text": "you one more example"
+    },
+    {
+      "start": 321.66,
+      "duration": 4.5,
+      "end": 326.16,
+      "text": "one comma 2 in this case law will be a"
+    },
+    {
+      "start": 324.36,
+      "duration": 4.02,
+      "end": 328.38,
+      "text": "high will be a mid will be here again"
+    },
+    {
+      "start": 326.16,
+      "duration": 4.56,
+      "end": 330.72,
+      "text": "the left half is sorted and it does have"
+    },
+    {
+      "start": 328.38,
+      "duration": 4.74,
+      "end": 333.12,
+      "text": "the answer it does have the answer so we"
+    },
+    {
+      "start": 330.72,
+      "duration": 4.919,
+      "end": 335.639,
+      "text": "have to be careful we have to be careful"
+    },
+    {
+      "start": 333.12,
+      "duration": 5.22,
+      "end": 338.34000000000003,
+      "text": "because we know one thing for sure we"
+    },
+    {
+      "start": 335.639,
+      "duration": 5.581,
+      "end": 341.22,
+      "text": "can eliminate the right top and then"
+    },
+    {
+      "start": 338.34,
+      "duration": 5.22,
+      "end": 343.56,
+      "text": "probably look for it we can eliminate"
+    },
+    {
+      "start": 341.22,
+      "duration": 4.14,
+      "end": 345.36,
+      "text": "the write up and probably look for it we"
+    },
+    {
+      "start": 343.56,
+      "duration": 3.54,
+      "end": 347.1,
+      "text": "can probably eliminate the left half and"
+    },
+    {
+      "start": 345.36,
+      "duration": 5.279,
+      "end": 350.639,
+      "text": "probably look for it so we know one"
+    },
+    {
+      "start": 347.1,
+      "duration": 5.099,
+      "end": 352.199,
+      "text": "thing for sure the sorted half may or"
+    },
+    {
+      "start": 350.639,
+      "duration": 3.78,
+      "end": 354.419,
+      "text": "may not have the answer"
+    },
+    {
+      "start": 352.199,
+      "duration": 4.861,
+      "end": 357.06,
+      "text": "can I say this"
+    },
+    {
+      "start": 354.419,
+      "duration": 6.981,
+      "end": 361.4,
+      "text": "the sorted half"
+    },
+    {
+      "start": 357.06,
+      "duration": 4.34,
+      "end": 361.4,
+      "text": "may or may not have the answer"
+    },
+    {
+      "start": 366.419,
+      "duration": 4.921,
+      "end": 371.34,
+      "text": "so what I'll do is"
+    },
+    {
+      "start": 368.039,
+      "duration": 6.481,
+      "end": 374.52,
+      "text": "pick the minimum from that pick the min"
+    },
+    {
+      "start": 371.34,
+      "duration": 5.66,
+      "end": 377.0,
+      "text": "from the sorted half and eliminate and"
+    },
+    {
+      "start": 374.52,
+      "duration": 2.48,
+      "end": 377.0,
+      "text": "eliminate"
+    },
+    {
+      "start": 377.58,
+      "duration": 4.44,
+      "end": 382.02,
+      "text": "because I know"
+    },
+    {
+      "start": 380.1,
+      "duration": 3.9,
+      "end": 384.0,
+      "text": "if I eliminate this then I can look for"
+    },
+    {
+      "start": 382.02,
+      "duration": 4.08,
+      "end": 386.09999999999997,
+      "text": "this one because I can I know this is"
+    },
+    {
+      "start": 384.0,
+      "duration": 4.44,
+      "end": 388.44,
+      "text": "sorted I know this is sorted so I'll use"
+    },
+    {
+      "start": 386.1,
+      "duration": 5.039,
+      "end": 391.139,
+      "text": "the property of sorted here and how I'll"
+    },
+    {
+      "start": 388.44,
+      "duration": 5.819,
+      "end": 394.259,
+      "text": "tell you when I do the driver"
+    },
+    {
+      "start": 391.139,
+      "duration": 6.301,
+      "end": 397.44,
+      "text": "let's let's try to use the property of"
+    },
+    {
+      "start": 394.259,
+      "duration": 6.121,
+      "end": 400.38,
+      "text": "sorted so where am I I'm over here what"
+    },
+    {
+      "start": 397.44,
+      "duration": 4.92,
+      "end": 402.36,
+      "text": "do I know this left portion is sorted"
+    },
+    {
+      "start": 400.38,
+      "duration": 4.98,
+      "end": 405.36,
+      "text": "this left portion is sorted I'm looking"
+    },
+    {
+      "start": 402.36,
+      "duration": 5.459,
+      "end": 407.819,
+      "text": "for Minima let's keep an answer which"
+    },
+    {
+      "start": 405.36,
+      "duration": 5.459,
+      "end": 410.819,
+      "text": "will keep the minimum value"
+    },
+    {
+      "start": 407.819,
+      "duration": 4.5,
+      "end": 412.319,
+      "text": "so can you tell me if I take this which"
+    },
+    {
+      "start": 410.819,
+      "duration": 4.981,
+      "end": 415.8,
+      "text": "is the smallest element I know this is"
+    },
+    {
+      "start": 412.319,
+      "duration": 5.82,
+      "end": 418.139,
+      "text": "sorted please use please please take the"
+    },
+    {
+      "start": 415.8,
+      "duration": 4.5,
+      "end": 420.3,
+      "text": "advantage of this being sorted this is"
+    },
+    {
+      "start": 418.139,
+      "duration": 4.68,
+      "end": 422.819,
+      "text": "sorted which is the minimum element in"
+    },
+    {
+      "start": 420.3,
+      "duration": 4.56,
+      "end": 424.86,
+      "text": "this the low because if this entire"
+    },
+    {
+      "start": 422.819,
+      "duration": 4.621,
+      "end": 427.44,
+      "text": "thing is sorted the leftmost element"
+    },
+    {
+      "start": 424.86,
+      "duration": 3.839,
+      "end": 428.699,
+      "text": "will be the minimum so update it"
+    },
+    {
+      "start": 427.44,
+      "duration": 3.66,
+      "end": 431.1,
+      "text": "can I say"
+    },
+    {
+      "start": 428.699,
+      "duration": 4.261,
+      "end": 432.96000000000004,
+      "text": "in this entire sorted portion"
+    },
+    {
+      "start": 431.1,
+      "duration": 4.379,
+      "end": 435.47900000000004,
+      "text": "I have picked up the Minima I've picked"
+    },
+    {
+      "start": 432.96,
+      "duration": 4.859,
+      "end": 437.81899999999996,
+      "text": "up the Minima this is of no more use"
+    },
+    {
+      "start": 435.479,
+      "duration": 5.641,
+      "end": 441.12,
+      "text": "because I picked up the minimum is like"
+    },
+    {
+      "start": 437.819,
+      "duration": 4.561,
+      "end": 442.38,
+      "text": "yes thereby I will go ahead and I'll"
+    },
+    {
+      "start": 441.12,
+      "duration": 3.6,
+      "end": 444.72,
+      "text": "erase this"
+    },
+    {
+      "start": 442.38,
+      "duration": 3.96,
+      "end": 446.34,
+      "text": "so what I did was I picked up the"
+    },
+    {
+      "start": 444.72,
+      "duration": 4.259,
+      "end": 448.97900000000004,
+      "text": "minimum and I raised it because"
+    },
+    {
+      "start": 446.34,
+      "duration": 4.259,
+      "end": 450.599,
+      "text": "eliminate eliminate because there's no"
+    },
+    {
+      "start": 448.979,
+      "duration": 3.0,
+      "end": 451.979,
+      "text": "point in doing a search for five six"
+    },
+    {
+      "start": 450.599,
+      "duration": 3.961,
+      "end": 454.56,
+      "text": "seven eliminate"
+    },
+    {
+      "start": 451.979,
+      "duration": 4.981,
+      "end": 456.96,
+      "text": "next a medium is here because I"
+    },
+    {
+      "start": 454.56,
+      "duration": 5.16,
+      "end": 459.72,
+      "text": "eliminated the laptop now"
+    },
+    {
+      "start": 456.96,
+      "duration": 6.0,
+      "end": 462.96,
+      "text": "again the laptop is sorted and what is"
+    },
+    {
+      "start": 459.72,
+      "duration": 5.819,
+      "end": 465.53900000000004,
+      "text": "the minimum zero so just pick it up and"
+    },
+    {
+      "start": 462.96,
+      "duration": 4.5,
+      "end": 467.46,
+      "text": "eliminate the laptop saying hey I'm done"
+    },
+    {
+      "start": 465.539,
+      "duration": 4.681,
+      "end": 470.21999999999997,
+      "text": "with you I'm done with you the left half"
+    },
+    {
+      "start": 467.46,
+      "duration": 4.739,
+      "end": 472.19899999999996,
+      "text": "is sorted point to notice the right half"
+    },
+    {
+      "start": 470.22,
+      "duration": 3.599,
+      "end": 473.819,
+      "text": "is also sorted but it's okay"
+    },
+    {
+      "start": 472.199,
+      "duration": 3.481,
+      "end": 475.68,
+      "text": "if I figure out the left half is sorted"
+    },
+    {
+      "start": 473.819,
+      "duration": 5.1,
+      "end": 478.91900000000004,
+      "text": "let's eliminate I just need to eliminate"
+    },
+    {
+      "start": 475.68,
+      "duration": 5.1,
+      "end": 480.78000000000003,
+      "text": "one half I'll eliminate the left half"
+    },
+    {
+      "start": 478.919,
+      "duration": 3.84,
+      "end": 482.75899999999996,
+      "text": "you can eliminate eliminate the write"
+    },
+    {
+      "start": 480.78,
+      "duration": 4.259,
+      "end": 485.039,
+      "text": "half as well that is your choice let's"
+    },
+    {
+      "start": 482.759,
+      "duration": 4.56,
+      "end": 487.319,
+      "text": "Summit we have a two"
+    },
+    {
+      "start": 485.039,
+      "duration": 5.16,
+      "end": 490.199,
+      "text": "and the mid will be here"
+    },
+    {
+      "start": 487.319,
+      "duration": 5.22,
+      "end": 492.53900000000004,
+      "text": "and the left half is this which you"
+    },
+    {
+      "start": 490.199,
+      "duration": 3.961,
+      "end": 494.16,
+      "text": "compare with answer don't need it and"
+    },
+    {
+      "start": 492.539,
+      "duration": 4.081,
+      "end": 496.62,
+      "text": "then obviously the binary search ends"
+    },
+    {
+      "start": 494.16,
+      "duration": 5.46,
+      "end": 499.62,
+      "text": "when you eliminate eventually the answer"
+    },
+    {
+      "start": 496.62,
+      "duration": 5.16,
+      "end": 501.78000000000003,
+      "text": "is stored as zero let's try to do more"
+    },
+    {
+      "start": 499.62,
+      "duration": 4.5,
+      "end": 504.12,
+      "text": "and more so let's try with one more"
+    },
+    {
+      "start": 501.78,
+      "duration": 3.599,
+      "end": 505.37899999999996,
+      "text": "example we have a low we have a mid we"
+    },
+    {
+      "start": 504.12,
+      "duration": 3.5,
+      "end": 507.62,
+      "text": "have a height"
+    },
+    {
+      "start": 505.379,
+      "duration": 4.921,
+      "end": 510.3,
+      "text": "let's keep answer as"
+    },
+    {
+      "start": 507.62,
+      "duration": 5.08,
+      "end": 512.7,
+      "text": "int Max"
+    },
+    {
+      "start": 510.3,
+      "duration": 4.2,
+      "end": 514.5,
+      "text": "what is the first thing that I'll do"
+    },
+    {
+      "start": 512.7,
+      "duration": 3.959,
+      "end": 516.659,
+      "text": "I'll try to eliminate"
+    },
+    {
+      "start": 514.5,
+      "duration": 4.14,
+      "end": 518.64,
+      "text": "which hop will I eliminate can I"
+    },
+    {
+      "start": 516.659,
+      "duration": 4.021,
+      "end": 520.68,
+      "text": "eliminate this software it is not sorted"
+    },
+    {
+      "start": 518.64,
+      "duration": 3.06,
+      "end": 521.6999999999999,
+      "text": "so I cannot be sure if we have the"
+    },
+    {
+      "start": 520.68,
+      "duration": 4.26,
+      "end": 524.9399999999999,
+      "text": "minimum there"
+    },
+    {
+      "start": 521.7,
+      "duration": 5.04,
+      "end": 526.74,
+      "text": "this half is sorted so I know if that"
+    },
+    {
+      "start": 524.94,
+      "duration": 2.579,
+      "end": 527.519,
+      "text": "half assorted become the smallest"
+    },
+    {
+      "start": 526.74,
+      "duration": 2.159,
+      "end": 528.899,
+      "text": "element"
+    },
+    {
+      "start": 527.519,
+      "duration": 3.481,
+      "end": 531.0,
+      "text": "and rest"
+    },
+    {
+      "start": 528.899,
+      "duration": 4.62,
+      "end": 533.519,
+      "text": "I don't need them I'm finding minimum"
+    },
+    {
+      "start": 531.0,
+      "duration": 4.38,
+      "end": 535.38,
+      "text": "pick up the smallest and"
+    },
+    {
+      "start": 533.519,
+      "duration": 3.841,
+      "end": 537.36,
+      "text": "get rid of them"
+    },
+    {
+      "start": 535.38,
+      "duration": 4.62,
+      "end": 540.0,
+      "text": "pick up the smallest and get rid of them"
+    },
+    {
+      "start": 537.36,
+      "duration": 4.58,
+      "end": 541.94,
+      "text": "which is basically getting rid of them"
+    },
+    {
+      "start": 540.0,
+      "duration": 6.12,
+      "end": 546.12,
+      "text": "thereby the high will come"
+    },
+    {
+      "start": 541.94,
+      "duration": 7.12,
+      "end": 549.0600000000001,
+      "text": "next medium is here let's see the laptop"
+    },
+    {
+      "start": 546.12,
+      "duration": 4.92,
+      "end": 551.04,
+      "text": "is sorted the laptop is sorted which is"
+    },
+    {
+      "start": 549.06,
+      "duration": 5.82,
+      "end": 554.88,
+      "text": "the minimum in the left half the low"
+    },
+    {
+      "start": 551.04,
+      "duration": 6.54,
+      "end": 557.5799999999999,
+      "text": "pick up that compare it to no need"
+    },
+    {
+      "start": 554.88,
+      "duration": 5.639,
+      "end": 560.519,
+      "text": "now I eliminate the laptop eliminate the"
+    },
+    {
+      "start": 557.58,
+      "duration": 4.86,
+      "end": 562.44,
+      "text": "left half and move the low to this"
+    },
+    {
+      "start": 560.519,
+      "duration": 4.081,
+      "end": 564.6,
+      "text": "portion so when you move the low to that"
+    },
+    {
+      "start": 562.44,
+      "duration": 5.519,
+      "end": 567.9590000000001,
+      "text": "portion the medium will be this now what"
+    },
+    {
+      "start": 564.6,
+      "duration": 6.0,
+      "end": 570.6,
+      "text": "is your left half this thereby pick up"
+    },
+    {
+      "start": 567.959,
+      "duration": 6.361,
+      "end": 574.3199999999999,
+      "text": "the minimum which is one itself update"
+    },
+    {
+      "start": 570.6,
+      "duration": 5.7,
+      "end": 576.3000000000001,
+      "text": "and then eliminate so it's over So"
+    },
+    {
+      "start": 574.32,
+      "duration": 4.38,
+      "end": 578.7,
+      "text": "eventually you got the answer as one Wow"
+    },
+    {
+      "start": 576.3,
+      "duration": 4.62,
+      "end": 580.92,
+      "text": "Let's do one more example and see if it"
+    },
+    {
+      "start": 578.7,
+      "duration": 4.22,
+      "end": 582.9200000000001,
+      "text": "is working fine on this one as well or"
+    },
+    {
+      "start": 580.92,
+      "duration": 4.34,
+      "end": 585.26,
+      "text": "not"
+    },
+    {
+      "start": 582.92,
+      "duration": 7.66,
+      "end": 590.5799999999999,
+      "text": "is here"
+    },
+    {
+      "start": 585.26,
+      "duration": 9.04,
+      "end": 594.3,
+      "text": "ice answer equal to in Max ice answer"
+    },
+    {
+      "start": 590.58,
+      "duration": 6.78,
+      "end": 597.36,
+      "text": "equal to into max I'm like okay"
+    },
+    {
+      "start": 594.3,
+      "duration": 6.12,
+      "end": 600.42,
+      "text": "the laptop is not sorted it's not sorted"
+    },
+    {
+      "start": 597.36,
+      "duration": 5.039,
+      "end": 602.399,
+      "text": "how did you know this because 4 is"
+    },
+    {
+      "start": 600.42,
+      "duration": 4.32,
+      "end": 604.74,
+      "text": "not lesser than one the left half is not"
+    },
+    {
+      "start": 602.399,
+      "duration": 4.801,
+      "end": 607.2,
+      "text": "sorted is the right half sorted is the"
+    },
+    {
+      "start": 604.74,
+      "duration": 3.539,
+      "end": 608.279,
+      "text": "right half sorted yes pick up the"
+    },
+    {
+      "start": 607.2,
+      "duration": 5.12,
+      "end": 612.32,
+      "text": "smallest"
+    },
+    {
+      "start": 608.279,
+      "duration": 4.041,
+      "end": 612.32,
+      "text": "and eliminate and eliminate"
+    },
+    {
+      "start": 612.36,
+      "duration": 5.34,
+      "end": 617.7,
+      "text": "how much you have four five"
+    },
+    {
+      "start": 615.0,
+      "duration": 4.5,
+      "end": 619.5,
+      "text": "write the medium which is the left of 4"
+    },
+    {
+      "start": 617.7,
+      "duration": 4.38,
+      "end": 622.08,
+      "text": "which is the smallest in the left of"
+    },
+    {
+      "start": 619.5,
+      "duration": 5.7,
+      "end": 625.2,
+      "text": "four will it update no"
+    },
+    {
+      "start": 622.08,
+      "duration": 5.819,
+      "end": 627.899,
+      "text": "So eventually eliminate the left half"
+    },
+    {
+      "start": 625.2,
+      "duration": 4.02,
+      "end": 629.22,
+      "text": "so basically the low end go here and the"
+    },
+    {
+      "start": 627.899,
+      "duration": 4.321,
+      "end": 632.22,
+      "text": "medium will go here and again you can do"
+    },
+    {
+      "start": 629.22,
+      "duration": 7.14,
+      "end": 636.36,
+      "text": "it so the answer stores as one"
+    },
+    {
+      "start": 632.22,
+      "duration": 7.14,
+      "end": 639.36,
+      "text": "so yeah works so can I say if I have to"
+    },
+    {
+      "start": 636.36,
+      "duration": 6.12,
+      "end": 642.48,
+      "text": "write the pseudo code X and array X and"
+    },
+    {
+      "start": 639.36,
+      "duration": 5.4,
+      "end": 644.76,
+      "text": "n x a value of flow equal to zero takes"
+    },
+    {
+      "start": 642.48,
+      "duration": 6.419,
+      "end": 648.899,
+      "text": "a value of y equal to n minus 1 and"
+    },
+    {
+      "start": 644.76,
+      "duration": 6.72,
+      "end": 651.48,
+      "text": "takes an answer equal to 8 Max"
+    },
+    {
+      "start": 648.899,
+      "duration": 5.041,
+      "end": 653.94,
+      "text": "can I see this for sure I can"
+    },
+    {
+      "start": 651.48,
+      "duration": 5.64,
+      "end": 657.12,
+      "text": "let's write the standard binary search"
+    },
+    {
+      "start": 653.94,
+      "duration": 7.44,
+      "end": 661.3800000000001,
+      "text": "which is low lesser than equal to high"
+    },
+    {
+      "start": 657.12,
+      "duration": 9.719,
+      "end": 666.839,
+      "text": "standard what do we say a mid equal to"
+    },
+    {
+      "start": 661.38,
+      "duration": 7.62,
+      "end": 669.0,
+      "text": "low plus High by two we say that what's"
+    },
+    {
+      "start": 666.839,
+      "duration": 5.161,
+      "end": 672.0,
+      "text": "the next thing we say eliminate the left"
+    },
+    {
+      "start": 669.0,
+      "duration": 5.76,
+      "end": 674.76,
+      "text": "half on eliminate the right half so I"
+    },
+    {
+      "start": 672.0,
+      "duration": 5.279,
+      "end": 677.279,
+      "text": "know the laptop is sorted if array of"
+    },
+    {
+      "start": 674.76,
+      "duration": 4.74,
+      "end": 679.5,
+      "text": "flow is lesser than array of mid"
+    },
+    {
+      "start": 677.279,
+      "duration": 4.8,
+      "end": 682.079,
+      "text": "less than equal to rather why do I write"
+    },
+    {
+      "start": 679.5,
+      "duration": 4.74,
+      "end": 684.24,
+      "text": "equal to it might have one element what"
+    },
+    {
+      "start": 682.079,
+      "duration": 4.981,
+      "end": 687.06,
+      "text": "if what if you have an array which is"
+    },
+    {
+      "start": 684.24,
+      "duration": 4.8,
+      "end": 689.04,
+      "text": "like 2 1 the lower zero the higher zero"
+    },
+    {
+      "start": 687.06,
+      "duration": 4.019,
+      "end": 691.079,
+      "text": "the mid is also here so the left half is"
+    },
+    {
+      "start": 689.04,
+      "duration": 4.2,
+      "end": 693.24,
+      "text": "this so for single elements it's very"
+    },
+    {
+      "start": 691.079,
+      "duration": 4.38,
+      "end": 695.459,
+      "text": "important you keep this equal to same so"
+    },
+    {
+      "start": 693.24,
+      "duration": 4.44,
+      "end": 697.6800000000001,
+      "text": "this is the left half"
+    },
+    {
+      "start": 695.459,
+      "duration": 4.701,
+      "end": 700.16,
+      "text": "in case of left top which is the"
+    },
+    {
+      "start": 697.68,
+      "duration": 5.52,
+      "end": 703.1999999999999,
+      "text": "smallest if I talk about the left half"
+    },
+    {
+      "start": 700.16,
+      "duration": 5.26,
+      "end": 705.42,
+      "text": "okay this one here if you talk about the"
+    },
+    {
+      "start": 703.2,
+      "duration": 3.96,
+      "end": 707.1600000000001,
+      "text": "left half lower zero mid is here which"
+    },
+    {
+      "start": 705.42,
+      "duration": 3.72,
+      "end": 709.14,
+      "text": "is the smallest the low"
+    },
+    {
+      "start": 707.16,
+      "duration": 4.44,
+      "end": 711.6,
+      "text": "so you always pick up the low and you're"
+    },
+    {
+      "start": 709.14,
+      "duration": 3.6,
+      "end": 712.74,
+      "text": "like answer equal to answer sorry answer"
+    },
+    {
+      "start": 711.6,
+      "duration": 5.64,
+      "end": 717.24,
+      "text": "equal to"
+    },
+    {
+      "start": 712.74,
+      "duration": 7.08,
+      "end": 719.82,
+      "text": "minimum of answer comma array of flow"
+    },
+    {
+      "start": 717.24,
+      "duration": 5.4,
+      "end": 722.64,
+      "text": "see updated and"
+    },
+    {
+      "start": 719.82,
+      "duration": 5.4,
+      "end": 725.22,
+      "text": "eliminate so low will be moving to bit"
+    },
+    {
+      "start": 722.64,
+      "duration": 3.72,
+      "end": 726.36,
+      "text": "plus one first update and then move mid"
+    },
+    {
+      "start": 725.22,
+      "duration": 3.179,
+      "end": 728.399,
+      "text": "okay"
+    },
+    {
+      "start": 726.36,
+      "duration": 4.5,
+      "end": 730.86,
+      "text": "or else eliminate the right half if that"
+    },
+    {
+      "start": 728.399,
+      "duration": 4.261,
+      "end": 732.66,
+      "text": "is sorted if the left half is not sorted"
+    },
+    {
+      "start": 730.86,
+      "duration": 3.659,
+      "end": 734.519,
+      "text": "the right half will be sorted that's how"
+    },
+    {
+      "start": 732.66,
+      "duration": 5.04,
+      "end": 737.6999999999999,
+      "text": "the property of rotated sorted array"
+    },
+    {
+      "start": 734.519,
+      "duration": 6.26,
+      "end": 740.779,
+      "text": "works if the right half is there then"
+    },
+    {
+      "start": 737.7,
+      "duration": 8.22,
+      "end": 745.9200000000001,
+      "text": "you're like answer equal to"
+    },
+    {
+      "start": 740.779,
+      "duration": 6.761,
+      "end": 747.54,
+      "text": "Min of answer comma array of mid why why"
+    },
+    {
+      "start": 745.92,
+      "duration": 4.5,
+      "end": 750.42,
+      "text": "why"
+    },
+    {
+      "start": 747.54,
+      "duration": 6.12,
+      "end": 753.66,
+      "text": "hey dude very obvious let us go back to"
+    },
+    {
+      "start": 750.42,
+      "duration": 5.34,
+      "end": 755.76,
+      "text": "this example four five one two three low"
+    },
+    {
+      "start": 753.66,
+      "duration": 4.679,
+      "end": 758.3389999999999,
+      "text": "here High here mid here the right"
+    },
+    {
+      "start": 755.76,
+      "duration": 5.579,
+      "end": 761.3389999999999,
+      "text": "portion gets eliminated which is the"
+    },
+    {
+      "start": 758.339,
+      "duration": 7.381,
+      "end": 765.72,
+      "text": "smallest whatever is at Mid so take it"
+    },
+    {
+      "start": 761.339,
+      "duration": 7.201,
+      "end": 768.5400000000001,
+      "text": "take it take in eliminate the right High"
+    },
+    {
+      "start": 765.72,
+      "duration": 4.98,
+      "end": 770.7,
+      "text": "equal to Mid minus one that's it that's"
+    },
+    {
+      "start": 768.54,
+      "duration": 5.46,
+      "end": 774.0,
+      "text": "your binary search and whatever is"
+    },
+    {
+      "start": 770.7,
+      "duration": 5.4,
+      "end": 776.1,
+      "text": "stored in your answer whatever is stored"
+    },
+    {
+      "start": 774.0,
+      "duration": 4.139,
+      "end": 778.139,
+      "text": "in your answer at the end will be your"
+    },
+    {
+      "start": 776.1,
+      "duration": 3.419,
+      "end": 779.519,
+      "text": "minimum got it so in case you want to"
+    },
+    {
+      "start": 778.139,
+      "duration": 3.181,
+      "end": 781.32,
+      "text": "try out the problem you can check it out"
+    },
+    {
+      "start": 779.519,
+      "duration": 3.06,
+      "end": 782.579,
+      "text": "from the link in the description what"
+    },
+    {
+      "start": 781.32,
+      "duration": 3.0,
+      "end": 784.32,
+      "text": "I've done is I've written the same code"
+    },
+    {
+      "start": 782.579,
+      "duration": 4.081,
+      "end": 786.66,
+      "text": "in C plus plus you can find out the Java"
+    },
+    {
+      "start": 784.32,
+      "duration": 4.86,
+      "end": 789.1800000000001,
+      "text": "python JavaScript code from the notes in"
+    },
+    {
+      "start": 786.66,
+      "duration": 5.34,
+      "end": 792.0,
+      "text": "the description so if I submit this this"
+    },
+    {
+      "start": 789.18,
+      "duration": 4.8,
+      "end": 793.9799999999999,
+      "text": "actually runs because eliminate the left"
+    },
+    {
+      "start": 792.0,
+      "duration": 4.079,
+      "end": 796.079,
+      "text": "half and take the smallest on the left"
+    },
+    {
+      "start": 793.98,
+      "duration": 3.72,
+      "end": 797.7,
+      "text": "half eliminate the right half and take"
+    },
+    {
+      "start": 796.079,
+      "duration": 2.94,
+      "end": 799.019,
+      "text": "the smallest and the right half and keep"
+    },
+    {
+      "start": 797.7,
+      "duration": 3.9,
+      "end": 801.6,
+      "text": "on updating your answer that's what you"
+    },
+    {
+      "start": 799.019,
+      "duration": 5.581,
+      "end": 804.6,
+      "text": "written and I optimize this I can"
+    },
+    {
+      "start": 801.6,
+      "duration": 4.859,
+      "end": 806.4590000000001,
+      "text": "actually optimize this so let me tell"
+    },
+    {
+      "start": 804.6,
+      "duration": 3.96,
+      "end": 808.5600000000001,
+      "text": "you how can I optimize this now this"
+    },
+    {
+      "start": 806.459,
+      "duration": 3.721,
+      "end": 810.18,
+      "text": "optimization is not needed if you want"
+    },
+    {
+      "start": 808.56,
+      "duration": 4.019,
+      "end": 812.579,
+      "text": "to do it that's your choice if you don't"
+    },
+    {
+      "start": 810.18,
+      "duration": 6.18,
+      "end": 816.3599999999999,
+      "text": "want to do it that's your choice again"
+    },
+    {
+      "start": 812.579,
+      "duration": 5.76,
+      "end": 818.3389999999999,
+      "text": "so when I have low here I here and the"
+    },
+    {
+      "start": 816.36,
+      "duration": 3.84,
+      "end": 820.2,
+      "text": "mid is pointing here what do you"
+    },
+    {
+      "start": 818.339,
+      "duration": 4.261,
+      "end": 822.6,
+      "text": "eliminate you basically eliminate the"
+    },
+    {
+      "start": 820.2,
+      "duration": 5.28,
+      "end": 825.48,
+      "text": "left half because it is sorted and you"
+    },
+    {
+      "start": 822.6,
+      "duration": 4.739,
+      "end": 827.339,
+      "text": "store answer equal to 4 right so you"
+    },
+    {
+      "start": 825.48,
+      "duration": 3.84,
+      "end": 829.32,
+      "text": "eliminate the left half and it's sorted"
+    },
+    {
+      "start": 827.339,
+      "duration": 4.261,
+      "end": 831.6,
+      "text": "and then you take the low to here"
+    },
+    {
+      "start": 829.32,
+      "duration": 3.959,
+      "end": 833.279,
+      "text": "carefully observe one thing in this"
+    },
+    {
+      "start": 831.6,
+      "duration": 4.32,
+      "end": 835.9200000000001,
+      "text": "portion"
+    },
+    {
+      "start": 833.279,
+      "duration": 4.201,
+      "end": 837.48,
+      "text": "let's let's get rid of this"
+    },
+    {
+      "start": 835.92,
+      "duration": 4.14,
+      "end": 840.06,
+      "text": "in this portion"
+    },
+    {
+      "start": 837.48,
+      "duration": 4.919,
+      "end": 842.399,
+      "text": "the left half is also sorted and the"
+    },
+    {
+      "start": 840.06,
+      "duration": 5.04,
+      "end": 845.0999999999999,
+      "text": "right half is also sorted how do you"
+    },
+    {
+      "start": 842.399,
+      "duration": 5.101,
+      "end": 847.5,
+      "text": "recognize that a left half and the right"
+    },
+    {
+      "start": 845.1,
+      "duration": 5.34,
+      "end": 850.44,
+      "text": "half both are sorted and that only"
+    },
+    {
+      "start": 847.5,
+      "duration": 4.86,
+      "end": 852.36,
+      "text": "happens when you cross the point of"
+    },
+    {
+      "start": 850.44,
+      "duration": 4.74,
+      "end": 855.1800000000001,
+      "text": "rotation when you cross the point of"
+    },
+    {
+      "start": 852.36,
+      "duration": 5.219,
+      "end": 857.5790000000001,
+      "text": "rotation the entire array is sorted or"
+    },
+    {
+      "start": 855.18,
+      "duration": 5.339,
+      "end": 860.519,
+      "text": "when you are on the other side of it so"
+    },
+    {
+      "start": 857.579,
+      "duration": 5.281,
+      "end": 862.8599999999999,
+      "text": "can I say I can easily figure out that"
+    },
+    {
+      "start": 860.519,
+      "duration": 4.801,
+      "end": 865.32,
+      "text": "by saying if that's less than equal to"
+    },
+    {
+      "start": 862.86,
+      "duration": 6.18,
+      "end": 869.04,
+      "text": "Mid like array of mid"
+    },
+    {
+      "start": 865.32,
+      "duration": 5.88,
+      "end": 871.2,
+      "text": "an array of mid is less than equal to"
+    },
+    {
+      "start": 869.04,
+      "duration": 4.859,
+      "end": 873.899,
+      "text": "high can I say this if these two"
+    },
+    {
+      "start": 871.2,
+      "duration": 5.34,
+      "end": 876.5400000000001,
+      "text": "conditions are met left sorted and right"
+    },
+    {
+      "start": 873.899,
+      "duration": 6.961,
+      "end": 880.86,
+      "text": "sorted and this together can be written"
+    },
+    {
+      "start": 876.54,
+      "duration": 6.78,
+      "end": 883.3199999999999,
+      "text": "as array of low lesser than array of mid"
+    },
+    {
+      "start": 880.86,
+      "duration": 5.339,
+      "end": 886.1990000000001,
+      "text": "can I sorry array of file"
+    },
+    {
+      "start": 883.32,
+      "duration": 5.639,
+      "end": 888.9590000000001,
+      "text": "you get that can be written as this"
+    },
+    {
+      "start": 886.199,
+      "duration": 4.44,
+      "end": 890.639,
+      "text": "that means the low is lesser than equal"
+    },
+    {
+      "start": 888.959,
+      "duration": 4.021,
+      "end": 892.9799999999999,
+      "text": "to high which is this case that means"
+    },
+    {
+      "start": 890.639,
+      "duration": 4.621,
+      "end": 895.26,
+      "text": "the entire array is sorted and this case"
+    },
+    {
+      "start": 892.98,
+      "duration": 4.799,
+      "end": 897.779,
+      "text": "happens do you need to perform a binary"
+    },
+    {
+      "start": 895.26,
+      "duration": 4.319,
+      "end": 899.579,
+      "text": "search on this because the array is"
+    },
+    {
+      "start": 897.779,
+      "duration": 3.721,
+      "end": 901.5,
+      "text": "sorted and you know the smallest element"
+    },
+    {
+      "start": 899.579,
+      "duration": 3.901,
+      "end": 903.4799999999999,
+      "text": "will be the low"
+    },
+    {
+      "start": 901.5,
+      "duration": 4.74,
+      "end": 906.24,
+      "text": "you don't need to so we can actually do"
+    },
+    {
+      "start": 903.48,
+      "duration": 5.219,
+      "end": 908.6990000000001,
+      "text": "an optimization saying Hey listen if the"
+    },
+    {
+      "start": 906.24,
+      "duration": 4.8,
+      "end": 911.04,
+      "text": "search space is already sorted then"
+    },
+    {
+      "start": 908.699,
+      "duration": 4.5,
+      "end": 913.199,
+      "text": "array of flow will always be small in"
+    },
+    {
+      "start": 911.04,
+      "duration": 4.02,
+      "end": 915.06,
+      "text": "that search space in that case"
+    },
+    {
+      "start": 913.199,
+      "duration": 3.481,
+      "end": 916.68,
+      "text": "you just compare and you update answer"
+    },
+    {
+      "start": 915.06,
+      "duration": 3.48,
+      "end": 918.54,
+      "text": "and you break so this will stop the"
+    },
+    {
+      "start": 916.68,
+      "duration": 4.26,
+      "end": 920.9399999999999,
+      "text": "binary search because if a search space"
+    },
+    {
+      "start": 918.54,
+      "duration": 4.08,
+      "end": 922.62,
+      "text": "is already sorted if both the left and"
+    },
+    {
+      "start": 920.94,
+      "duration": 3.899,
+      "end": 924.839,
+      "text": "right are sorted you stop you don't do"
+    },
+    {
+      "start": 922.62,
+      "duration": 3.839,
+      "end": 926.4590000000001,
+      "text": "anything so if I submit this this will"
+    },
+    {
+      "start": 924.839,
+      "duration": 3.12,
+      "end": 927.9590000000001,
+      "text": "be running with a slightly better time"
+    },
+    {
+      "start": 926.459,
+      "duration": 3.081,
+      "end": 929.54,
+      "text": "complexity so what is the time"
+    },
+    {
+      "start": 927.959,
+      "duration": 5.101,
+      "end": 933.06,
+      "text": "complexity"
+    },
+    {
+      "start": 929.54,
+      "duration": 6.72,
+      "end": 936.26,
+      "text": "since uh we're doing with the unique"
+    },
+    {
+      "start": 933.06,
+      "duration": 8.6,
+      "end": 941.66,
+      "text": "elements it's going to be we go off"
+    },
+    {
+      "start": 936.26,
+      "duration": 5.4,
+      "end": 941.66,
+      "text": "logarithmic B is to n for duplicates"
+    },
+    {
+      "start": 942.079,
+      "duration": 5.021,
+      "end": 947.0999999999999,
+      "text": "I'll leave that as a homework if you"
+    },
+    {
+      "start": 945.12,
+      "duration": 3.899,
+      "end": 949.019,
+      "text": "have seen my I'll go back to the sheet"
+    },
+    {
+      "start": 947.1,
+      "duration": 4.2,
+      "end": 951.3000000000001,
+      "text": "with the sheet yeah if you have seen"
+    },
+    {
+      "start": 949.019,
+      "duration": 4.801,
+      "end": 953.82,
+      "text": "this particular video search in rotated"
+    },
+    {
+      "start": 951.3,
+      "duration": 4.38,
+      "end": 955.68,
+      "text": "sorted array part 2 you can actually do"
+    },
+    {
+      "start": 953.82,
+      "duration": 4.199,
+      "end": 958.019,
+      "text": "it for this one as well so leave that"
+    },
+    {
+      "start": 955.68,
+      "duration": 4.98,
+      "end": 960.66,
+      "text": "for you as a homework and I'll mark this"
+    },
+    {
+      "start": 958.019,
+      "duration": 5.521,
+      "end": 963.54,
+      "text": "as done I hope you have understood the"
+    },
+    {
+      "start": 960.66,
+      "duration": 5.46,
+      "end": 966.12,
+      "text": "entire concept uh in the discussion"
+    },
+    {
+      "start": 963.54,
+      "duration": 5.7,
+      "end": 969.24,
+      "text": "forum of a lot of websites you will see"
+    },
+    {
+      "start": 966.12,
+      "duration": 5.219,
+      "end": 971.339,
+      "text": "that people are using the concept of low"
+    },
+    {
+      "start": 969.24,
+      "duration": 4.74,
+      "end": 973.98,
+      "text": "lesser than high now I'm not a big fan"
+    },
+    {
+      "start": 971.339,
+      "duration": 5.761,
+      "end": 977.1,
+      "text": "of it I'll try to keep all the concepts"
+    },
+    {
+      "start": 973.98,
+      "duration": 5.76,
+      "end": 979.74,
+      "text": "in a similar code format where where am"
+    },
+    {
+      "start": 977.1,
+      "duration": 4.919,
+      "end": 982.019,
+      "text": "I yeah I try to keep all the concepts in"
+    },
+    {
+      "start": 979.74,
+      "duration": 4.38,
+      "end": 984.12,
+      "text": "this similar format and low equal to Mid"
+    },
+    {
+      "start": 982.019,
+      "duration": 4.38,
+      "end": 986.399,
+      "text": "plus one and high equal to Mid minus one"
+    },
+    {
+      "start": 984.12,
+      "duration": 3.779,
+      "end": 987.899,
+      "text": "I'll try to keep it in the same form so"
+    },
+    {
+      "start": 986.399,
+      "duration": 3.541,
+      "end": 989.94,
+      "text": "that you understand binary search in"
+    },
+    {
+      "start": 987.899,
+      "duration": 4.141,
+      "end": 992.04,
+      "text": "depth I'll not be doing low equal to Mid"
+    },
+    {
+      "start": 989.94,
+      "duration": 5.04,
+      "end": 994.98,
+      "text": "or high equal to Mid I'll not be doing"
+    },
+    {
+      "start": 992.04,
+      "duration": 7.02,
+      "end": 999.06,
+      "text": "that I'll try to keep every code in a"
+    },
+    {
+      "start": 994.98,
+      "duration": 5.34,
+      "end": 1000.32,
+      "text": "same format as V2 right so in case you"
+    },
+    {
+      "start": 999.06,
+      "duration": 3.12,
+      "end": 1002.18,
+      "text": "have understood everything and you're"
+    },
+    {
+      "start": 1000.32,
+      "duration": 3.3,
+      "end": 1003.62,
+      "text": "still watching please please please"
+    },
+    {
+      "start": 1002.18,
+      "duration": 3.0,
+      "end": 1005.18,
+      "text": "consider giving us that like and if"
+    },
+    {
+      "start": 1003.62,
+      "duration": 4.38,
+      "end": 1008.0,
+      "text": "you're new to our Channel what are you"
+    },
+    {
+      "start": 1005.18,
+      "duration": 4.5,
+      "end": 1009.68,
+      "text": "waiting for like please please do"
+    },
+    {
+      "start": 1008.0,
+      "duration": 3.3,
+      "end": 1011.3,
+      "text": "consider subscribing to us because it"
+    },
+    {
+      "start": 1009.68,
+      "duration": 2.94,
+      "end": 1012.62,
+      "text": "does highly motivate me and if you"
+    },
+    {
+      "start": 1011.3,
+      "duration": 3.42,
+      "end": 1014.7199999999999,
+      "text": "haven't followed me on Instagram Twitter"
+    },
+    {
+      "start": 1012.62,
+      "duration": 3.48,
+      "end": 1016.1,
+      "text": "LinkedIn all the profile links are in"
+    },
+    {
+      "start": 1014.72,
+      "duration": 2.52,
+      "end": 1017.24,
+      "text": "the description with this I'll be"
+    },
+    {
+      "start": 1016.1,
+      "duration": 3.38,
+      "end": 1019.48,
+      "text": "wrapping up this video let's fill in"
+    },
+    {
+      "start": 1017.24,
+      "duration": 6.42,
+      "end": 1023.66,
+      "text": "some other videos"
+    },
+    {
+      "start": 1019.48,
+      "duration": 7.719,
+      "end": 1027.199,
+      "text": "whenever your heart is broken don't ever"
+    },
+    {
+      "start": 1023.66,
+      "duration": 5.84,
+      "end": 1029.5,
+      "text": "forget your golden I I will find the"
+    },
+    {
+      "start": 1027.199,
+      "duration": 2.301,
+      "end": 1029.5,
+      "text": "light in"
+    }
+  ]
+}

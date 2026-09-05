@@ -1,0 +1,3404 @@
+{
+  "position": 257,
+  "video_id": "lIar1skcQYI",
+  "title": "L21. Reverse Nodes in K Group Size of LinkedList",
+  "url": "https://www.youtube.com/watch?v=lIar1skcQYI",
+  "transcript": [
+    {
+      "start": 3.04,
+      "duration": 3.0,
+      "end": 6.04,
+      "text": "so let's continue with our playlist"
+    },
+    {
+      "start": 4.68,
+      "duration": 2.44,
+      "end": 7.119999999999999,
+      "text": "before that hey welcome back to the"
+    },
+    {
+      "start": 6.04,
+      "duration": 2.92,
+      "end": 8.96,
+      "text": "channel I hope you guys are doing"
+    },
+    {
+      "start": 7.12,
+      "duration": 5.12,
+      "end": 12.24,
+      "text": "extremely well so the problem that we"
+    },
+    {
+      "start": 8.96,
+      "duration": 5.36,
+      "end": 14.32,
+      "text": "will be solving today is reversing nodes"
+    },
+    {
+      "start": 12.24,
+      "duration": 4.52,
+      "end": 16.759999999999998,
+      "text": "in k group so what is the problem"
+    },
+    {
+      "start": 14.32,
+      "duration": 4.32,
+      "end": 18.64,
+      "text": "exactly stating it is stating that you"
+    },
+    {
+      "start": 16.76,
+      "duration": 4.16,
+      "end": 20.92,
+      "text": "will be given the head of the link list"
+    },
+    {
+      "start": 18.64,
+      "duration": 6.0,
+      "end": 24.64,
+      "text": "and you'll also be given a value K now"
+    },
+    {
+      "start": 20.92,
+      "duration": 6.24,
+      "end": 27.160000000000004,
+      "text": "your task is to reverse the nodes in K"
+    },
+    {
+      "start": 24.64,
+      "duration": 4.799,
+      "end": 29.439,
+      "text": "Group what does it mean let's take this"
+    },
+    {
+      "start": 27.16,
+      "duration": 5.0,
+      "end": 32.16,
+      "text": "example where you given the head and you"
+    },
+    {
+      "start": 29.439,
+      "duration": 6.321,
+      "end": 35.76,
+      "text": "given the value K as three and your task"
+    },
+    {
+      "start": 32.16,
+      "duration": 6.16,
+      "end": 38.31999999999999,
+      "text": "is to figure out all the groups of size"
+    },
+    {
+      "start": 35.76,
+      "duration": 4.4,
+      "end": 40.16,
+      "text": "three and you have to reverse them"
+    },
+    {
+      "start": 38.32,
+      "duration": 4.399,
+      "end": 42.719,
+      "text": "individually and you'll have to reverse"
+    },
+    {
+      "start": 40.16,
+      "duration": 4.399,
+      "end": 44.559,
+      "text": "them individually if I ask you which one"
+    },
+    {
+      "start": 42.719,
+      "duration": 4.641,
+      "end": 47.36,
+      "text": "is the first group of size three you'll"
+    },
+    {
+      "start": 44.559,
+      "duration": 5.041,
+      "end": 49.599999999999994,
+      "text": "be like this one is the first group of"
+    },
+    {
+      "start": 47.36,
+      "duration": 5.32,
+      "end": 52.68,
+      "text": "size three so what you will do is you'll"
+    },
+    {
+      "start": 49.6,
+      "duration": 5.56,
+      "end": 55.160000000000004,
+      "text": "end up reversing all the nodes in it so"
+    },
+    {
+      "start": 52.68,
+      "duration": 4.16,
+      "end": 56.84,
+      "text": "three will be at first after that two"
+    },
+    {
+      "start": 55.16,
+      "duration": 4.6,
+      "end": 59.76,
+      "text": "after that one because you have reversed"
+    },
+    {
+      "start": 56.84,
+      "duration": 3.6,
+      "end": 60.440000000000005,
+      "text": "it so let's do the reversal you'll have"
+    },
+    {
+      "start": 59.76,
+      "duration": 5.439,
+      "end": 65.199,
+      "text": "three"
+    },
+    {
+      "start": 60.44,
+      "duration": 4.759,
+      "end": 65.199,
+      "text": "three then two and then"
+    },
+    {
+      "start": 65.64,
+      "duration": 5.36,
+      "end": 71.0,
+      "text": "one perfect once this is done which one"
+    },
+    {
+      "start": 68.64,
+      "duration": 4.72,
+      "end": 73.36,
+      "text": "is the next group of size three can I"
+    },
+    {
+      "start": 71.0,
+      "duration": 4.96,
+      "end": 75.96,
+      "text": "say that this one is the next group of"
+    },
+    {
+      "start": 73.36,
+      "duration": 6.92,
+      "end": 80.28,
+      "text": "size three I can so you again have to"
+    },
+    {
+      "start": 75.96,
+      "duration": 9.0,
+      "end": 84.96,
+      "text": "reverse it so if I reverse it I'll have"
+    },
+    {
+      "start": 80.28,
+      "duration": 4.68,
+      "end": 84.96000000000001,
+      "text": "six then five and then"
+    },
+    {
+      "start": 85.32,
+      "duration": 4.839,
+      "end": 90.15899999999999,
+      "text": "four and one will be connecting to six"
+    },
+    {
+      "start": 88.56,
+      "duration": 4.239,
+      "end": 92.799,
+      "text": "after that which one is the next group"
+    },
+    {
+      "start": 90.159,
+      "duration": 6.28,
+      "end": 96.43900000000001,
+      "text": "of size three this one so again I have"
+    },
+    {
+      "start": 92.799,
+      "duration": 7.921,
+      "end": 100.72000000000001,
+      "text": "to reverse it so nine will be at first"
+    },
+    {
+      "start": 96.439,
+      "duration": 4.281,
+      "end": 100.72,
+      "text": "then eight and then"
+    },
+    {
+      "start": 101.439,
+      "duration": 4.481,
+      "end": 105.91999999999999,
+      "text": "seven so is there any other group of"
+    },
+    {
+      "start": 103.759,
+      "duration": 4.801,
+      "end": 108.56,
+      "text": "size three no there is only a single"
+    },
+    {
+      "start": 105.92,
+      "duration": 4.879,
+      "end": 110.799,
+      "text": "element now this is not of size three so"
+    },
+    {
+      "start": 108.56,
+      "duration": 4.239,
+      "end": 112.799,
+      "text": "if there is no other group of size three"
+    },
+    {
+      "start": 110.799,
+      "duration": 4.241,
+      "end": 115.04,
+      "text": "it can be of size one it can be of size"
+    },
+    {
+      "start": 112.799,
+      "duration": 4.521,
+      "end": 117.32000000000001,
+      "text": "two doesn't matter it has to be exactly"
+    },
+    {
+      "start": 115.04,
+      "duration": 6.439,
+      "end": 121.47900000000001,
+      "text": "of size three then only I'll reverse"
+    },
+    {
+      "start": 117.32,
+      "duration": 7.839,
+      "end": 125.15899999999999,
+      "text": "them otherwise I'll just attach it as it"
+    },
+    {
+      "start": 121.479,
+      "duration": 6.121,
+      "end": 127.6,
+      "text": "is and this will be my updated head and"
+    },
+    {
+      "start": 125.159,
+      "duration": 3.88,
+      "end": 129.03900000000002,
+      "text": "this is what I will return as an answer"
+    },
+    {
+      "start": 127.6,
+      "duration": 2.84,
+      "end": 130.44,
+      "text": "so before I move on to the solution"
+    },
+    {
+      "start": 129.039,
+      "duration": 3.641,
+      "end": 132.67999999999998,
+      "text": "there is one video that you should"
+    },
+    {
+      "start": 130.44,
+      "duration": 4.36,
+      "end": 134.8,
+      "text": "definitely watch that is reversing the"
+    },
+    {
+      "start": 132.68,
+      "duration": 3.559,
+      "end": 136.239,
+      "text": "link list in case you haven't seen it go"
+    },
+    {
+      "start": 134.8,
+      "duration": 3.84,
+      "end": 138.64000000000001,
+      "text": "back and watch it and then you can"
+    },
+    {
+      "start": 136.239,
+      "duration": 4.921,
+      "end": 141.16,
+      "text": "restart this particular video so how do"
+    },
+    {
+      "start": 138.64,
+      "duration": 5.2,
+      "end": 143.83999999999997,
+      "text": "I approach this particular problem it is"
+    },
+    {
+      "start": 141.16,
+      "duration": 5.6,
+      "end": 146.76,
+      "text": "asking me to reverse the notes in key"
+    },
+    {
+      "start": 143.84,
+      "duration": 5.56,
+      "end": 149.4,
+      "text": "group so this is the first group that"
+    },
+    {
+      "start": 146.76,
+      "duration": 5.199,
+      "end": 151.959,
+      "text": "I'll have to reverse this is the second"
+    },
+    {
+      "start": 149.4,
+      "duration": 4.24,
+      "end": 153.64000000000001,
+      "text": "group that I'll have to reverse this is"
+    },
+    {
+      "start": 151.959,
+      "duration": 3.961,
+      "end": 155.92000000000002,
+      "text": "the third group that I'll have to"
+    },
+    {
+      "start": 153.64,
+      "duration": 5.56,
+      "end": 159.2,
+      "text": "reverse and for the last one I don't"
+    },
+    {
+      "start": 155.92,
+      "duration": 6.12,
+      "end": 162.04,
+      "text": "have to so if I carefully observe if I"
+    },
+    {
+      "start": 159.2,
+      "duration": 5.44,
+      "end": 164.64,
+      "text": "try to reverse the first group three"
+    },
+    {
+      "start": 162.04,
+      "duration": 5.119,
+      "end": 167.159,
+      "text": "will be here and that will be my updated"
+    },
+    {
+      "start": 164.64,
+      "duration": 4.959,
+      "end": 169.599,
+      "text": "head so for the first group I'll have to"
+    },
+    {
+      "start": 167.159,
+      "duration": 4.921,
+      "end": 172.07999999999998,
+      "text": "think about the updated head because the"
+    },
+    {
+      "start": 169.599,
+      "duration": 5.041,
+      "end": 174.64,
+      "text": "head will change the head will change"
+    },
+    {
+      "start": 172.08,
+      "duration": 5.799,
+      "end": 177.87900000000002,
+      "text": "correct and then it will be following to"
+    },
+    {
+      "start": 174.64,
+      "duration": 5.72,
+      "end": 180.35999999999999,
+      "text": "two and then to one so if I reverse this"
+    },
+    {
+      "start": 177.879,
+      "duration": 5.92,
+      "end": 183.79899999999998,
+      "text": "you'll have six you will have"
+    },
+    {
+      "start": 180.36,
+      "duration": 7.68,
+      "end": 188.04000000000002,
+      "text": "have five then you'll have four but you"
+    },
+    {
+      "start": 183.799,
+      "duration": 7.121,
+      "end": 190.92000000000002,
+      "text": "have to remember that this one this one"
+    },
+    {
+      "start": 188.04,
+      "duration": 5.279,
+      "end": 193.319,
+      "text": "will be pointing to six so these are the"
+    },
+    {
+      "start": 190.92,
+      "duration": 5.28,
+      "end": 196.2,
+      "text": "things that I have to take care okay so"
+    },
+    {
+      "start": 193.319,
+      "duration": 5.56,
+      "end": 198.879,
+      "text": "what I will initially do is I'll take"
+    },
+    {
+      "start": 196.2,
+      "duration": 4.72,
+      "end": 200.92,
+      "text": "the first group and I'll just do the"
+    },
+    {
+      "start": 198.879,
+      "duration": 5.201,
+      "end": 204.07999999999998,
+      "text": "reversal on it and then I'll think for"
+    },
+    {
+      "start": 200.92,
+      "duration": 4.92,
+      "end": 205.83999999999997,
+      "text": "the later half how can I do that"
+    },
+    {
+      "start": 204.08,
+      "duration": 3.32,
+      "end": 207.4,
+      "text": "obviously have to do a traversal because"
+    },
+    {
+      "start": 205.84,
+      "duration": 4.039,
+      "end": 209.879,
+      "text": "without traversal I cannot do anything"
+    },
+    {
+      "start": 207.4,
+      "duration": 4.68,
+      "end": 212.08,
+      "text": "on the link list I'll take a temporary"
+    },
+    {
+      "start": 209.879,
+      "duration": 4.201,
+      "end": 214.07999999999998,
+      "text": "I'll place it at the head I'll not alter"
+    },
+    {
+      "start": 212.08,
+      "duration": 3.92,
+      "end": 216.0,
+      "text": "the head I'll take a temporary and I'll"
+    },
+    {
+      "start": 214.08,
+      "duration": 5.159,
+      "end": 219.239,
+      "text": "place it at the head now I know one"
+    },
+    {
+      "start": 216.0,
+      "duration": 5.64,
+      "end": 221.64,
+      "text": "thing that this is my first key group"
+    },
+    {
+      "start": 219.239,
+      "duration": 4.92,
+      "end": 224.159,
+      "text": "but I'm writing the code how will I know"
+    },
+    {
+      "start": 221.64,
+      "duration": 5.28,
+      "end": 226.92,
+      "text": "it I know temporary is standing at the"
+    },
+    {
+      "start": 224.159,
+      "duration": 5.28,
+      "end": 229.439,
+      "text": "first Elm I need the last element of"
+    },
+    {
+      "start": 226.92,
+      "duration": 4.319,
+      "end": 231.23899999999998,
+      "text": "this group correct so if I say this is"
+    },
+    {
+      "start": 229.439,
+      "duration": 3.8,
+      "end": 233.239,
+      "text": "the first element this is the second"
+    },
+    {
+      "start": 231.239,
+      "duration": 4.441,
+      "end": 235.68,
+      "text": "element this is the third element or"
+    },
+    {
+      "start": 233.239,
+      "duration": 5.601,
+      "end": 238.84,
+      "text": "rather this is the kth element so I can"
+    },
+    {
+      "start": 235.68,
+      "duration": 5.36,
+      "end": 241.04000000000002,
+      "text": "simply write a iterative function which"
+    },
+    {
+      "start": 238.84,
+      "duration": 4.679,
+      "end": 243.519,
+      "text": "can find me the the K node we can easily"
+    },
+    {
+      "start": 241.04,
+      "duration": 5.88,
+      "end": 246.92,
+      "text": "write it I not get into implementation"
+    },
+    {
+      "start": 243.519,
+      "duration": 6.321,
+      "end": 249.84,
+      "text": "details get the K node so this will be"
+    },
+    {
+      "start": 246.92,
+      "duration": 5.8,
+      "end": 252.72,
+      "text": "my K node remember this this will be my"
+    },
+    {
+      "start": 249.84,
+      "duration": 5.119,
+      "end": 254.959,
+      "text": "K node now I can definitely say that I"
+    },
+    {
+      "start": 252.72,
+      "duration": 4.799,
+      "end": 257.519,
+      "text": "have the first K Group where I have the"
+    },
+    {
+      "start": 254.959,
+      "duration": 6.321,
+      "end": 261.28000000000003,
+      "text": "first element and the last element I do"
+    },
+    {
+      "start": 257.519,
+      "duration": 6.441,
+      "end": 263.96,
+      "text": "have it now what is my next task the"
+    },
+    {
+      "start": 261.28,
+      "duration": 6.479,
+      "end": 267.75899999999996,
+      "text": "next task is to reverse this particular"
+    },
+    {
+      "start": 263.96,
+      "duration": 5.72,
+      "end": 269.68,
+      "text": "first G group right how can I do it I"
+    },
+    {
+      "start": 267.759,
+      "duration": 4.841,
+      "end": 272.6,
+      "text": "don't know how to reverse a link list"
+    },
+    {
+      "start": 269.68,
+      "duration": 4.92,
+      "end": 274.6,
+      "text": "but it is a link list I cannot reverse"
+    },
+    {
+      "start": 272.6,
+      "duration": 4.439,
+      "end": 277.03900000000004,
+      "text": "any particular part of the link list I"
+    },
+    {
+      "start": 274.6,
+      "duration": 6.0,
+      "end": 280.6,
+      "text": "cannot say reverse this much in a link"
+    },
+    {
+      "start": 277.039,
+      "duration": 6.921,
+      "end": 283.96,
+      "text": "list I cannot see it but what if I send"
+    },
+    {
+      "start": 280.6,
+      "duration": 6.76,
+      "end": 287.36,
+      "text": "this as an individual link list I can I"
+    },
+    {
+      "start": 283.96,
+      "duration": 6.76,
+      "end": 290.71999999999997,
+      "text": "can what if I say"
+    },
+    {
+      "start": 287.36,
+      "duration": 4.92,
+      "end": 292.28000000000003,
+      "text": "hey let's break this link or rather"
+    },
+    {
+      "start": 290.72,
+      "duration": 4.8,
+      "end": 295.52000000000004,
+      "text": "let's break this"
+    },
+    {
+      "start": 292.28,
+      "duration": 6.639,
+      "end": 298.919,
+      "text": "link and have it point to null and have"
+    },
+    {
+      "start": 295.52,
+      "duration": 4.959,
+      "end": 300.479,
+      "text": "it point to null can I say this I can"
+    },
+    {
+      "start": 298.919,
+      "duration": 3.241,
+      "end": 302.15999999999997,
+      "text": "and if I do this this what will happen"
+    },
+    {
+      "start": 300.479,
+      "duration": 5.16,
+      "end": 305.639,
+      "text": "is this"
+    },
+    {
+      "start": 302.16,
+      "duration": 5.16,
+      "end": 307.32000000000005,
+      "text": "one will be an individual link list this"
+    },
+    {
+      "start": 305.639,
+      "duration": 5.321,
+      "end": 310.96000000000004,
+      "text": "entire thing will be an individual link"
+    },
+    {
+      "start": 307.32,
+      "duration": 6.8,
+      "end": 314.12,
+      "text": "list where temporary is the head and kth"
+    },
+    {
+      "start": 310.96,
+      "duration": 5.12,
+      "end": 316.08,
+      "text": "node is the last node so now if I call"
+    },
+    {
+      "start": 314.12,
+      "duration": 5.519,
+      "end": 319.639,
+      "text": "the reverse function I'll get the"
+    },
+    {
+      "start": 316.08,
+      "duration": 6.04,
+      "end": 322.12,
+      "text": "reverse link list I will I will so just"
+    },
+    {
+      "start": 319.639,
+      "duration": 3.921,
+      "end": 323.56,
+      "text": "call it and get the reverse link list so"
+    },
+    {
+      "start": 322.12,
+      "duration": 4.359,
+      "end": 326.479,
+      "text": "you'll call the reverse function which"
+    },
+    {
+      "start": 323.56,
+      "duration": 2.919,
+      "end": 326.479,
+      "text": "will reverse the link"
+    },
+    {
+      "start": 328.199,
+      "duration": 5.201,
+      "end": 333.40000000000003,
+      "text": "list and the will be pointing to n so if"
+    },
+    {
+      "start": 331.639,
+      "duration": 4.081,
+      "end": 335.72,
+      "text": "you remember whenever you call the"
+    },
+    {
+      "start": 333.4,
+      "duration": 4.48,
+      "end": 337.88,
+      "text": "reverse function it returns you the head"
+    },
+    {
+      "start": 335.72,
+      "duration": 4.52,
+      "end": 340.24,
+      "text": "of the updated link list head of the"
+    },
+    {
+      "start": 337.88,
+      "duration": 4.64,
+      "end": 342.52,
+      "text": "reverse link list so this will this is"
+    },
+    {
+      "start": 340.24,
+      "duration": 5.76,
+      "end": 346.0,
+      "text": "what you will get in return this is what"
+    },
+    {
+      "start": 342.52,
+      "duration": 4.84,
+      "end": 347.35999999999996,
+      "text": "you'll get in return so what you'll get"
+    },
+    {
+      "start": 346.0,
+      "duration": 2.919,
+      "end": 348.919,
+      "text": "is a new"
+    },
+    {
+      "start": 347.36,
+      "duration": 3.16,
+      "end": 350.52000000000004,
+      "text": "head"
+    },
+    {
+      "start": 348.919,
+      "duration": 4.601,
+      "end": 353.52,
+      "text": "correct"
+    },
+    {
+      "start": 350.52,
+      "duration": 5.72,
+      "end": 356.24,
+      "text": "remember the initial head is here so the"
+    },
+    {
+      "start": 353.52,
+      "duration": 6.0,
+      "end": 359.52,
+      "text": "initial head is still here at one the"
+    },
+    {
+      "start": 356.24,
+      "duration": 6.44,
+      "end": 362.68,
+      "text": "initial temp is still here remember this"
+    },
+    {
+      "start": 359.52,
+      "duration": 5.959,
+      "end": 365.479,
+      "text": "and K node is still here why because"
+    },
+    {
+      "start": 362.68,
+      "duration": 4.84,
+      "end": 367.52,
+      "text": "even after reversal K node will still be"
+    },
+    {
+      "start": 365.479,
+      "duration": 4.601,
+      "end": 370.08,
+      "text": "three temporary and head will still be"
+    },
+    {
+      "start": 367.52,
+      "duration": 3.92,
+      "end": 371.44,
+      "text": "one so I've just written it the only"
+    },
+    {
+      "start": 370.08,
+      "duration": 4.8,
+      "end": 374.88,
+      "text": "thing that the reverse function will do"
+    },
+    {
+      "start": 371.44,
+      "duration": 6.52,
+      "end": 377.96,
+      "text": "is it will reverse it it will reverse it"
+    },
+    {
+      "start": 374.88,
+      "duration": 5.719,
+      "end": 380.599,
+      "text": "and I definitely know that the K node"
+    },
+    {
+      "start": 377.96,
+      "duration": 5.239,
+      "end": 383.19899999999996,
+      "text": "will always be my new head the K node"
+    },
+    {
+      "start": 380.599,
+      "duration": 3.361,
+      "end": 383.96,
+      "text": "will always be my new head perfect I've"
+    },
+    {
+      "start": 383.199,
+      "duration": 5.201,
+      "end": 388.40000000000003,
+      "text": "done"
+    },
+    {
+      "start": 383.96,
+      "duration": 7.72,
+      "end": 391.68,
+      "text": "it now can I say can I say one thing if"
+    },
+    {
+      "start": 388.4,
+      "duration": 7.0,
+      "end": 395.4,
+      "text": "temporary is is equivalent to head this"
+    },
+    {
+      "start": 391.68,
+      "duration": 6.079,
+      "end": 397.759,
+      "text": "is my first group hence the head will"
+    },
+    {
+      "start": 395.4,
+      "duration": 5.16,
+      "end": 400.56,
+      "text": "always be updated the initial head will"
+    },
+    {
+      "start": 397.759,
+      "duration": 4.081,
+      "end": 401.84000000000003,
+      "text": "always be updated so let's update it so"
+    },
+    {
+      "start": 400.56,
+      "duration": 4.24,
+      "end": 404.8,
+      "text": "what you'll do is you'll update the"
+    },
+    {
+      "start": 401.84,
+      "duration": 6.28,
+      "end": 408.11999999999995,
+      "text": "initial head to K node you'll update the"
+    },
+    {
+      "start": 404.8,
+      "duration": 6.08,
+      "end": 410.88,
+      "text": "initial head to the K done super simple"
+    },
+    {
+      "start": 408.12,
+      "duration": 5.359,
+      "end": 413.479,
+      "text": "so what I've done is I'll repeat first I"
+    },
+    {
+      "start": 410.88,
+      "duration": 5.24,
+      "end": 416.12,
+      "text": "have placed temporary at head then I"
+    },
+    {
+      "start": 413.479,
+      "duration": 5.361,
+      "end": 418.84,
+      "text": "figured out the K node so I know this is"
+    },
+    {
+      "start": 416.12,
+      "duration": 4.84,
+      "end": 420.96,
+      "text": "my first group and I need to reverse it"
+    },
+    {
+      "start": 418.84,
+      "duration": 4.199,
+      "end": 423.039,
+      "text": "so I broke down the link and pointed it"
+    },
+    {
+      "start": 420.96,
+      "duration": 4.799,
+      "end": 425.75899999999996,
+      "text": "to null so that it's an individual link"
+    },
+    {
+      "start": 423.039,
+      "duration": 5.361,
+      "end": 428.4,
+      "text": "list I just reversed it so I've got the"
+    },
+    {
+      "start": 425.759,
+      "duration": 5.601,
+      "end": 431.36,
+      "text": "Reversed link list now once I've got the"
+    },
+    {
+      "start": 428.4,
+      "duration": 5.76,
+      "end": 434.15999999999997,
+      "text": "Reversed link list the initial head was"
+    },
+    {
+      "start": 431.36,
+      "duration": 6.8,
+      "end": 438.16,
+      "text": "at one I know the initial head will get"
+    },
+    {
+      "start": 434.16,
+      "duration": 6.28,
+      "end": 440.44,
+      "text": "updated to three so I'll just do it done"
+    },
+    {
+      "start": 438.16,
+      "duration": 4.759,
+      "end": 442.91900000000004,
+      "text": "now this is my temporary this is where"
+    },
+    {
+      "start": 440.44,
+      "duration": 4.56,
+      "end": 445.0,
+      "text": "my temporary stands but I need to go to"
+    },
+    {
+      "start": 442.919,
+      "duration": 4.4,
+      "end": 447.31899999999996,
+      "text": "the next group I need to go to the next"
+    },
+    {
+      "start": 445.0,
+      "duration": 5.319,
+      "end": 450.319,
+      "text": "Group which one is the next group this"
+    },
+    {
+      "start": 447.319,
+      "duration": 5.241,
+      "end": 452.56,
+      "text": "one this one is my next group correct"
+    },
+    {
+      "start": 450.319,
+      "duration": 5.16,
+      "end": 455.47900000000004,
+      "text": "how can I go to four I cannot goow I"
+    },
+    {
+      "start": 452.56,
+      "duration": 5.6,
+      "end": 458.16,
+      "text": "cannot go because I broken down the link"
+    },
+    {
+      "start": 455.479,
+      "duration": 4.56,
+      "end": 460.039,
+      "text": "so remember before breaking down the"
+    },
+    {
+      "start": 458.16,
+      "duration": 4.56,
+      "end": 462.72,
+      "text": "link there was a link right before"
+    },
+    {
+      "start": 460.039,
+      "duration": 5.041,
+      "end": 465.08,
+      "text": "breaking down this link preserve the"
+    },
+    {
+      "start": 462.72,
+      "duration": 5.24,
+      "end": 467.96000000000004,
+      "text": "next one preserve the next one so you"
+    },
+    {
+      "start": 465.08,
+      "duration": 5.559,
+      "end": 470.639,
+      "text": "can easily preserve the next node you"
+    },
+    {
+      "start": 467.96,
+      "duration": 5.44,
+      "end": 473.4,
+      "text": "can easily preserve the next node and"
+    },
+    {
+      "start": 470.639,
+      "duration": 5.321,
+      "end": 475.96000000000004,
+      "text": "once it is reversed what you can do is"
+    },
+    {
+      "start": 473.4,
+      "duration": 4.359,
+      "end": 477.75899999999996,
+      "text": "you can take temporary to the next node"
+    },
+    {
+      "start": 475.96,
+      "duration": 5.359,
+      "end": 481.31899999999996,
+      "text": "so this is what you'll do you'll take"
+    },
+    {
+      "start": 477.759,
+      "duration": 3.56,
+      "end": 481.319,
+      "text": "temporary to the next node"
+    },
+    {
+      "start": 481.759,
+      "duration": 4.4,
+      "end": 486.159,
+      "text": "perfect so I've done I've taken"
+    },
+    {
+      "start": 484.199,
+      "duration": 5.0,
+      "end": 489.199,
+      "text": "temporary to the next row I can again"
+    },
+    {
+      "start": 486.159,
+      "duration": 4.641,
+      "end": 490.8,
+      "text": "repeat the task what was the task now I"
+    },
+    {
+      "start": 489.199,
+      "duration": 3.801,
+      "end": 493.0,
+      "text": "know I have to figure out the next key"
+    },
+    {
+      "start": 490.8,
+      "duration": 6.32,
+      "end": 497.12,
+      "text": "group this is the next key group again"
+    },
+    {
+      "start": 493.0,
+      "duration": 7.52,
+      "end": 500.52,
+      "text": "figure out the K node so this this will"
+    },
+    {
+      "start": 497.12,
+      "duration": 4.72,
+      "end": 501.84000000000003,
+      "text": "be my K node why again run the counter"
+    },
+    {
+      "start": 500.52,
+      "duration": 3.359,
+      "end": 503.87899999999996,
+      "text": "this will be one this will be two this"
+    },
+    {
+      "start": 501.84,
+      "duration": 4.0,
+      "end": 505.84,
+      "text": "will be three which is the K node so"
+    },
+    {
+      "start": 503.879,
+      "duration": 3.801,
+      "end": 507.68,
+      "text": "I'll again figure out the K node once"
+    },
+    {
+      "start": 505.84,
+      "duration": 4.24,
+      "end": 510.08,
+      "text": "you figured out the K node what is your"
+    },
+    {
+      "start": 507.68,
+      "duration": 5.239,
+      "end": 512.919,
+      "text": "next job remember this is like this next"
+    },
+    {
+      "start": 510.08,
+      "duration": 5.399,
+      "end": 515.4789999999999,
+      "text": "Lo now can go off and this will be"
+    },
+    {
+      "start": 512.919,
+      "duration": 5.201,
+      "end": 518.12,
+      "text": "temporary what is your next job your"
+    },
+    {
+      "start": 515.479,
+      "duration": 5.12,
+      "end": 520.599,
+      "text": "next job is to make sure this particular"
+    },
+    {
+      "start": 518.12,
+      "duration": 4.44,
+      "end": 522.5600000000001,
+      "text": "key group is an individual link list"
+    },
+    {
+      "start": 520.599,
+      "duration": 5.161,
+      "end": 525.76,
+      "text": "otherwise the reverse function will not"
+    },
+    {
+      "start": 522.56,
+      "duration": 5.12,
+      "end": 527.68,
+      "text": "happen right will not form the reverse"
+    },
+    {
+      "start": 525.76,
+      "duration": 4.92,
+      "end": 530.68,
+      "text": "so what you will do is you'll break it"
+    },
+    {
+      "start": 527.68,
+      "duration": 5.159,
+      "end": 532.8389999999999,
+      "text": "down but before breaking down please"
+    },
+    {
+      "start": 530.68,
+      "duration": 3.48,
+      "end": 534.16,
+      "text": "preserve the next node so please"
+    },
+    {
+      "start": 532.839,
+      "duration": 4.0,
+      "end": 536.839,
+      "text": "preserve the next note and you can"
+    },
+    {
+      "start": 534.16,
+      "duration": 6.28,
+      "end": 540.4399999999999,
+      "text": "easily do it by saying kth node of next"
+    },
+    {
+      "start": 536.839,
+      "duration": 5.801,
+      "end": 542.6400000000001,
+      "text": "is my next node done once done this"
+    },
+    {
+      "start": 540.44,
+      "duration": 3.04,
+      "end": 543.48,
+      "text": "please break down this load and point it"
+    },
+    {
+      "start": 542.64,
+      "duration": 4.199,
+      "end": 546.8389999999999,
+      "text": "to"
+    },
+    {
+      "start": 543.48,
+      "duration": 6.24,
+      "end": 549.72,
+      "text": "null so once you've done it can I again"
+    },
+    {
+      "start": 546.839,
+      "duration": 5.801,
+      "end": 552.6400000000001,
+      "text": "pass this temporary as the head to this"
+    },
+    {
+      "start": 549.72,
+      "duration": 5.16,
+      "end": 554.88,
+      "text": "reverse function and it will reverse it"
+    },
+    {
+      "start": 552.64,
+      "duration": 5.8,
+      "end": 558.4399999999999,
+      "text": "and it will reverse it so once it is"
+    },
+    {
+      "start": 554.88,
+      "duration": 5.36,
+      "end": 560.24,
+      "text": "reversed you'll get something like"
+    },
+    {
+      "start": 558.44,
+      "duration": 5.6,
+      "end": 564.0400000000001,
+      "text": "six"
+    },
+    {
+      "start": 560.24,
+      "duration": 5.68,
+      "end": 565.92,
+      "text": "5 four six will be pointing to five five"
+    },
+    {
+      "start": 564.04,
+      "duration": 4.6,
+      "end": 568.64,
+      "text": "will be pointing to four and four will"
+    },
+    {
+      "start": 565.92,
+      "duration": 5.72,
+      "end": 571.64,
+      "text": "be pointing to null remember over here"
+    },
+    {
+      "start": 568.64,
+      "duration": 6.08,
+      "end": 574.72,
+      "text": "temporary is at four temporary is at"
+    },
+    {
+      "start": 571.64,
+      "duration": 4.52,
+      "end": 576.16,
+      "text": "four and the K node is at 6 the K node"
+    },
+    {
+      "start": 574.72,
+      "duration": 4.32,
+      "end": 579.0400000000001,
+      "text": "is still at"
+    },
+    {
+      "start": 576.16,
+      "duration": 4.72,
+      "end": 580.88,
+      "text": "six done what is the next thing that you"
+    },
+    {
+      "start": 579.04,
+      "duration": 3.96,
+      "end": 583.0,
+      "text": "have to do just think the next thing"
+    },
+    {
+      "start": 580.88,
+      "duration": 5.519,
+      "end": 586.399,
+      "text": "that you have to do is to make sure this"
+    },
+    {
+      "start": 583.0,
+      "duration": 5.399,
+      "end": 588.399,
+      "text": "one should be pointing to six the one"
+    },
+    {
+      "start": 586.399,
+      "duration": 5.12,
+      "end": 591.519,
+      "text": "should be pointing to six you'll have to"
+    },
+    {
+      "start": 588.399,
+      "duration": 5.68,
+      "end": 594.079,
+      "text": "remember which one is your last node"
+    },
+    {
+      "start": 591.519,
+      "duration": 4.401,
+      "end": 595.92,
+      "text": "which one was your last node in the"
+    },
+    {
+      "start": 594.079,
+      "duration": 3.841,
+      "end": 597.92,
+      "text": "previous group you'll have to remember"
+    },
+    {
+      "start": 595.92,
+      "duration": 3.96,
+      "end": 599.88,
+      "text": "that as well so just use one more"
+    },
+    {
+      "start": 597.92,
+      "duration": 3.88,
+      "end": 601.8,
+      "text": "variable to remember which one is the"
+    },
+    {
+      "start": 599.88,
+      "duration": 4.24,
+      "end": 604.12,
+      "text": "previous note so you'll have the"
+    },
+    {
+      "start": 601.8,
+      "duration": 4.76,
+      "end": 606.56,
+      "text": "previous note stored so just make it"
+    },
+    {
+      "start": 604.12,
+      "duration": 4.12,
+      "end": 608.24,
+      "text": "point just make it point so make the"
+    },
+    {
+      "start": 606.56,
+      "duration": 4.719,
+      "end": 611.279,
+      "text": "previous note point to"
+    },
+    {
+      "start": 608.24,
+      "duration": 5.32,
+      "end": 613.5600000000001,
+      "text": "this done now what is the next job"
+    },
+    {
+      "start": 611.279,
+      "duration": 5.521,
+      "end": 616.8,
+      "text": "before going to the next before going to"
+    },
+    {
+      "start": 613.56,
+      "duration": 6.0,
+      "end": 619.56,
+      "text": "the next Group which is this one please"
+    },
+    {
+      "start": 616.8,
+      "duration": 4.08,
+      "end": 620.88,
+      "text": "make sure you remember the previous node"
+    },
+    {
+      "start": 619.56,
+      "duration": 3.6,
+      "end": 623.16,
+      "text": "which is this one because you need to"
+    },
+    {
+      "start": 620.88,
+      "duration": 5.28,
+      "end": 626.16,
+      "text": "make the connection correct what's the"
+    },
+    {
+      "start": 623.16,
+      "duration": 5.2,
+      "end": 628.36,
+      "text": "next take the temporary to the next you"
+    },
+    {
+      "start": 626.16,
+      "duration": 5.0,
+      "end": 631.16,
+      "text": "can easily do it because you preserved"
+    },
+    {
+      "start": 628.36,
+      "duration": 7.08,
+      "end": 635.44,
+      "text": "the next node done and dusted what's the"
+    },
+    {
+      "start": 631.16,
+      "duration": 6.6,
+      "end": 637.76,
+      "text": "next job again this is my next key group"
+    },
+    {
+      "start": 635.44,
+      "duration": 4.12,
+      "end": 639.5600000000001,
+      "text": "this is my next key group so I'll do the"
+    },
+    {
+      "start": 637.76,
+      "duration": 3.68,
+      "end": 641.4399999999999,
+      "text": "job for it I'll do the job for it so"
+    },
+    {
+      "start": 639.56,
+      "duration": 5.88,
+      "end": 645.4399999999999,
+      "text": "let's do"
+    },
+    {
+      "start": 641.44,
+      "duration": 6.48,
+      "end": 647.9200000000001,
+      "text": "it so this is my next key group where"
+    },
+    {
+      "start": 645.44,
+      "duration": 5.639,
+      "end": 651.0790000000001,
+      "text": "temporary is standing at 7 again find"
+    },
+    {
+      "start": 647.92,
+      "duration": 5.359,
+      "end": 653.279,
+      "text": "the kth node so this will be my kth node"
+    },
+    {
+      "start": 651.079,
+      "duration": 4.361,
+      "end": 655.4399999999999,
+      "text": "perfect once youve got the kth node what"
+    },
+    {
+      "start": 653.279,
+      "duration": 5.601,
+      "end": 658.88,
+      "text": "is the next job get the next node so"
+    },
+    {
+      "start": 655.44,
+      "duration": 6.76,
+      "end": 662.2,
+      "text": "this will be my next node perfect after"
+    },
+    {
+      "start": 658.88,
+      "duration": 5.56,
+      "end": 664.4399999999999,
+      "text": "this this this is your key group correct"
+    },
+    {
+      "start": 662.2,
+      "duration": 4.28,
+      "end": 666.48,
+      "text": "you'll have to reverse it but you cannot"
+    },
+    {
+      "start": 664.44,
+      "duration": 4.04,
+      "end": 668.48,
+      "text": "have it you cannot reverse an individual"
+    },
+    {
+      "start": 666.48,
+      "duration": 4.56,
+      "end": 671.04,
+      "text": "section of the link list you can reverse"
+    },
+    {
+      "start": 668.48,
+      "duration": 6.28,
+      "end": 674.76,
+      "text": "the entire link list so what you will do"
+    },
+    {
+      "start": 671.04,
+      "duration": 5.4,
+      "end": 676.4399999999999,
+      "text": "is you will break this link you will"
+    },
+    {
+      "start": 674.76,
+      "duration": 4.56,
+      "end": 679.3199999999999,
+      "text": "break this"
+    },
+    {
+      "start": 676.44,
+      "duration": 5.839,
+      "end": 682.2790000000001,
+      "text": "link and he'll make it point to null"
+    },
+    {
+      "start": 679.32,
+      "duration": 5.639,
+      "end": 684.9590000000001,
+      "text": "once it is done can I ask the reverse"
+    },
+    {
+      "start": 682.279,
+      "duration": 5.201,
+      "end": 687.48,
+      "text": "function to reverse it where temporary"
+    },
+    {
+      "start": 684.959,
+      "duration": 5.0,
+      "end": 689.959,
+      "text": "is my head I can so this will be"
+    },
+    {
+      "start": 687.48,
+      "duration": 6.44,
+      "end": 693.9200000000001,
+      "text": "reversed so what will Happ happen is you"
+    },
+    {
+      "start": 689.959,
+      "duration": 6.281,
+      "end": 696.2399999999999,
+      "text": "will get seven sorry 9 following 8"
+    },
+    {
+      "start": 693.92,
+      "duration": 5.56,
+      "end": 699.4799999999999,
+      "text": "following seven and this is pointing to"
+    },
+    {
+      "start": 696.24,
+      "duration": 4.96,
+      "end": 701.2,
+      "text": "null so do you remember you preserved"
+    },
+    {
+      "start": 699.48,
+      "duration": 3.88,
+      "end": 703.36,
+      "text": "the previous node now since you"
+    },
+    {
+      "start": 701.2,
+      "duration": 5.16,
+      "end": 706.36,
+      "text": "preserved the previous node what will"
+    },
+    {
+      "start": 703.36,
+      "duration": 6.08,
+      "end": 709.44,
+      "text": "happen is this will go off and this four"
+    },
+    {
+      "start": 706.36,
+      "duration": 5.68,
+      "end": 712.04,
+      "text": "will be pointing to nine done where will"
+    },
+    {
+      "start": 709.44,
+      "duration": 5.48,
+      "end": 714.9200000000001,
+      "text": "your temporary be your temporary will be"
+    },
+    {
+      "start": 712.04,
+      "duration": 6.56,
+      "end": 718.5999999999999,
+      "text": "here your K node will be here quite"
+    },
+    {
+      "start": 714.92,
+      "duration": 6.719,
+      "end": 721.639,
+      "text": "simple quite simple what is the next job"
+    },
+    {
+      "start": 718.6,
+      "duration": 5.4,
+      "end": 724.0,
+      "text": "the next next job is to make sure you"
+    },
+    {
+      "start": 721.639,
+      "duration": 4.361,
+      "end": 726.0,
+      "text": "again preserve the previous"
+    },
+    {
+      "start": 724.0,
+      "duration": 4.48,
+      "end": 728.48,
+      "text": "node because you'll have to form the"
+    },
+    {
+      "start": 726.0,
+      "duration": 4.399,
+      "end": 730.399,
+      "text": "connection after that you take the"
+    },
+    {
+      "start": 728.48,
+      "duration": 5.159,
+      "end": 733.639,
+      "text": "temporary over here you take the"
+    },
+    {
+      "start": 730.399,
+      "duration": 6.481,
+      "end": 736.88,
+      "text": "temporary over here and this is done"
+    },
+    {
+      "start": 733.639,
+      "duration": 5.801,
+      "end": 739.44,
+      "text": "now let's go to the so let's go and find"
+    },
+    {
+      "start": 736.88,
+      "duration": 5.48,
+      "end": 742.36,
+      "text": "the next K Group the next job is to"
+    },
+    {
+      "start": 739.44,
+      "duration": 4.959,
+      "end": 744.399,
+      "text": "reverse this particular k group but do"
+    },
+    {
+      "start": 742.36,
+      "duration": 3.839,
+      "end": 746.1990000000001,
+      "text": "we have K elements we don't have K"
+    },
+    {
+      "start": 744.399,
+      "duration": 3.961,
+      "end": 748.36,
+      "text": "elements so if you do not have K"
+    },
+    {
+      "start": 746.199,
+      "duration": 4.401,
+      "end": 750.5999999999999,
+      "text": "elements I repeat if you do not have K"
+    },
+    {
+      "start": 748.36,
+      "duration": 5.4,
+      "end": 753.76,
+      "text": "elements you don't reverse so what is"
+    },
+    {
+      "start": 750.6,
+      "duration": 6.359,
+      "end": 756.9590000000001,
+      "text": "the next connection you just attach this"
+    },
+    {
+      "start": 753.76,
+      "duration": 5.68,
+      "end": 759.4399999999999,
+      "text": "one to this the remaining elements so"
+    },
+    {
+      "start": 756.959,
+      "duration": 4.921,
+      "end": 761.88,
+      "text": "can I say the previous node will be"
+    },
+    {
+      "start": 759.44,
+      "duration": 4.56,
+      "end": 764.0,
+      "text": "attached to the temporary or to the next"
+    },
+    {
+      "start": 761.88,
+      "duration": 4.72,
+      "end": 766.6,
+      "text": "node doesn't matter and once this is"
+    },
+    {
+      "start": 764.0,
+      "duration": 5.12,
+      "end": 769.12,
+      "text": "done your head is updated so you're done"
+    },
+    {
+      "start": 766.6,
+      "duration": 4.679,
+      "end": 771.279,
+      "text": "and dusted quite simple you'll just have"
+    },
+    {
+      "start": 769.12,
+      "duration": 4.079,
+      "end": 773.199,
+      "text": "to reuse the reverse function that is"
+    },
+    {
+      "start": 771.279,
+      "duration": 3.761,
+      "end": 775.04,
+      "text": "what you have to do so I'll be adding"
+    },
+    {
+      "start": 773.199,
+      "duration": 3.361,
+      "end": 776.56,
+      "text": "down the pseudo code now this won't be"
+    },
+    {
+      "start": 775.04,
+      "duration": 3.56,
+      "end": 778.5999999999999,
+      "text": "any language specific code in case you"
+    },
+    {
+      "start": 776.56,
+      "duration": 3.32,
+      "end": 779.88,
+      "text": "want the C++ Java python or JavaScript"
+    },
+    {
+      "start": 778.6,
+      "duration": 3.4,
+      "end": 782.0,
+      "text": "codes the link will be in the"
+    },
+    {
+      "start": 779.88,
+      "duration": 4.6,
+      "end": 784.48,
+      "text": "description how do I start"
+    },
+    {
+      "start": 782.0,
+      "duration": 4.48,
+      "end": 786.48,
+      "text": "off I started off by placing the"
+    },
+    {
+      "start": 784.48,
+      "duration": 4.719,
+      "end": 789.1990000000001,
+      "text": "temporary at head so I'll do the same"
+    },
+    {
+      "start": 786.48,
+      "duration": 5.4,
+      "end": 791.88,
+      "text": "over here I'll place the temporary at"
+    },
+    {
+      "start": 789.199,
+      "duration": 4.921,
+      "end": 794.12,
+      "text": "head and then we did a traversal to find"
+    },
+    {
+      "start": 791.88,
+      "duration": 3.88,
+      "end": 795.76,
+      "text": "out all the K groups let's do a"
+    },
+    {
+      "start": 794.12,
+      "duration": 4.76,
+      "end": 798.88,
+      "text": "traversal for that I have to run a while"
+    },
+    {
+      "start": 795.76,
+      "duration": 4.72,
+      "end": 800.48,
+      "text": "loop for sure so temporary is not equal"
+    },
+    {
+      "start": 798.88,
+      "duration": 4.12,
+      "end": 803.0,
+      "text": "to null for"
+    },
+    {
+      "start": 800.48,
+      "duration": 5.52,
+      "end": 806.0,
+      "text": "sure what was the next"
+    },
+    {
+      "start": 803.0,
+      "duration": 6.279,
+      "end": 809.279,
+      "text": "thing I know that this will be my first"
+    },
+    {
+      "start": 806.0,
+      "duration": 5.199,
+      "end": 811.199,
+      "text": "k group so I figured out temporary"
+    },
+    {
+      "start": 809.279,
+      "duration": 4.961,
+      "end": 814.24,
+      "text": "and I figured out the K node if you"
+    },
+    {
+      "start": 811.199,
+      "duration": 5.681,
+      "end": 816.88,
+      "text": "remember so let's find out the K node so"
+    },
+    {
+      "start": 814.24,
+      "duration": 7.039,
+      "end": 821.279,
+      "text": "I'll say hey function I'll write a"
+    },
+    {
+      "start": 816.88,
+      "duration": 7.72,
+      "end": 824.6,
+      "text": "function find KDE or get"
+    },
+    {
+      "start": 821.279,
+      "duration": 6.8,
+      "end": 828.079,
+      "text": "KDE this is your head and it'll have to"
+    },
+    {
+      "start": 824.6,
+      "duration": 7.679,
+      "end": 832.279,
+      "text": "give me the KR it will give me the KR"
+    },
+    {
+      "start": 828.079,
+      "duration": 7.401,
+      "end": 835.4799999999999,
+      "text": "which will technically be this"
+    },
+    {
+      "start": 832.279,
+      "duration": 6.24,
+      "end": 838.519,
+      "text": "one right what if it doesn't have a k"
+    },
+    {
+      "start": 835.48,
+      "duration": 6.44,
+      "end": 841.9200000000001,
+      "text": "node what if the link list was only this"
+    },
+    {
+      "start": 838.519,
+      "duration": 6.161,
+      "end": 844.68,
+      "text": "much much only with two elements will it"
+    },
+    {
+      "start": 841.92,
+      "duration": 4.88,
+      "end": 846.8,
+      "text": "have a group of size three it won't"
+    },
+    {
+      "start": 844.68,
+      "duration": 5.48,
+      "end": 850.16,
+      "text": "right so you have to keep that in mind"
+    },
+    {
+      "start": 846.8,
+      "duration": 5.92,
+      "end": 852.7199999999999,
+      "text": "what if you have a link list which is"
+    },
+    {
+      "start": 850.16,
+      "duration": 4.88,
+      "end": 855.04,
+      "text": "small so you you don't have to reverse"
+    },
+    {
+      "start": 852.72,
+      "duration": 5.919,
+      "end": 858.639,
+      "text": "anything over here so please make sure"
+    },
+    {
+      "start": 855.04,
+      "duration": 5.799,
+      "end": 860.8389999999999,
+      "text": "you check if there is no K node imagine"
+    },
+    {
+      "start": 858.639,
+      "duration": 4.521,
+      "end": 863.16,
+      "text": "if there is no K node you get a null the"
+    },
+    {
+      "start": 860.839,
+      "duration": 3.601,
+      "end": 864.44,
+      "text": "function returns you null in that case"
+    },
+    {
+      "start": 863.16,
+      "duration": 3.599,
+      "end": 866.759,
+      "text": "you'll have to do something and then"
+    },
+    {
+      "start": 864.44,
+      "duration": 4.92,
+      "end": 869.36,
+      "text": "break we'll talk about that something"
+    },
+    {
+      "start": 866.759,
+      "duration": 6.801,
+      "end": 873.5600000000001,
+      "text": "afterwards but as of now you stop so you"
+    },
+    {
+      "start": 869.36,
+      "duration": 6.159,
+      "end": 875.519,
+      "text": "break you no more Travis perfect what is"
+    },
+    {
+      "start": 873.56,
+      "duration": 4.6,
+      "end": 878.16,
+      "text": "the next thing that you will do the next"
+    },
+    {
+      "start": 875.519,
+      "duration": 6.361,
+      "end": 881.88,
+      "text": "thing that I will do"
+    },
+    {
+      "start": 878.16,
+      "duration": 6.479,
+      "end": 884.639,
+      "text": "is if if this is not happening like if"
+    },
+    {
+      "start": 881.88,
+      "duration": 4.959,
+      "end": 886.8389999999999,
+      "text": "there is a group then you'll get the K"
+    },
+    {
+      "start": 884.639,
+      "duration": 6.281,
+      "end": 890.92,
+      "text": "what is the next thing that you'll do"
+    },
+    {
+      "start": 886.839,
+      "duration": 6.601,
+      "end": 893.44,
+      "text": "you'll have to separate the SK group"
+    },
+    {
+      "start": 890.92,
+      "duration": 4.96,
+      "end": 895.88,
+      "text": "from that entire link because you cannot"
+    },
+    {
+      "start": 893.44,
+      "duration": 3.839,
+      "end": 897.2790000000001,
+      "text": "reverse a section of the link list this"
+    },
+    {
+      "start": 895.88,
+      "duration": 3.0,
+      "end": 898.88,
+      "text": "will be pointing to this you'll have to"
+    },
+    {
+      "start": 897.279,
+      "duration": 4.841,
+      "end": 902.12,
+      "text": "separate it you'll have to separate cre"
+    },
+    {
+      "start": 898.88,
+      "duration": 6.24,
+      "end": 905.12,
+      "text": "it but do you remember you need to store"
+    },
+    {
+      "start": 902.12,
+      "duration": 6.0,
+      "end": 908.12,
+      "text": "this otherwise you cannot Trav further"
+    },
+    {
+      "start": 905.12,
+      "duration": 5.32,
+      "end": 910.44,
+      "text": "so please make sure you take a next node"
+    },
+    {
+      "start": 908.12,
+      "duration": 6.24,
+      "end": 914.36,
+      "text": "and store the next one so maybe you can"
+    },
+    {
+      "start": 910.44,
+      "duration": 8.399,
+      "end": 918.839,
+      "text": "take something as next node and you can"
+    },
+    {
+      "start": 914.36,
+      "duration": 7.36,
+      "end": 921.72,
+      "text": "store it next node will be K"
+    },
+    {
+      "start": 918.839,
+      "duration": 5.601,
+      "end": 924.44,
+      "text": "node next so what I've done is I've"
+    },
+    {
+      "start": 921.72,
+      "duration": 6.119,
+      "end": 927.839,
+      "text": "remembered the next one perfect what is"
+    },
+    {
+      "start": 924.44,
+      "duration": 5.759,
+      "end": 930.1990000000001,
+      "text": "my next job my next job will be okay"
+    },
+    {
+      "start": 927.839,
+      "duration": 5.0,
+      "end": 932.839,
+      "text": "I've remembered the next not I have to"
+    },
+    {
+      "start": 930.199,
+      "duration": 4.481,
+      "end": 934.68,
+      "text": "make sure this is separated and pointing"
+    },
+    {
+      "start": 932.839,
+      "duration": 3.521,
+      "end": 936.36,
+      "text": "to null this is separated and pointing"
+    },
+    {
+      "start": 934.68,
+      "duration": 3.519,
+      "end": 938.199,
+      "text": "to null because I need to separate this"
+    },
+    {
+      "start": 936.36,
+      "duration": 4.919,
+      "end": 941.279,
+      "text": "particular link list I'll do that for"
+    },
+    {
+      "start": 938.199,
+      "duration": 9.601,
+      "end": 947.8,
+      "text": "you so I'll say"
+    },
+    {
+      "start": 941.279,
+      "duration": 6.521,
+      "end": 947.8,
+      "text": "hey K node your next is pointing to"
+    },
+    {
+      "start": 948.319,
+      "duration": 6.601,
+      "end": 954.92,
+      "text": "null so what has happened is this"
+    },
+    {
+      "start": 952.04,
+      "duration": 4.64,
+      "end": 956.68,
+      "text": "particular link list has been separated"
+    },
+    {
+      "start": 954.92,
+      "duration": 4.2,
+      "end": 959.12,
+      "text": "now you can reverse it how can you"
+    },
+    {
+      "start": 956.68,
+      "duration": 4.519,
+      "end": 961.199,
+      "text": "reverse it it's very simple"
+    },
+    {
+      "start": 959.12,
+      "duration": 4.959,
+      "end": 964.079,
+      "text": "call the reverse"
+    },
+    {
+      "start": 961.199,
+      "duration": 6.08,
+      "end": 967.279,
+      "text": "function which is the head the head is"
+    },
+    {
+      "start": 964.079,
+      "duration": 5.56,
+      "end": 969.6389999999999,
+      "text": "temporary and ask them to reverse it so"
+    },
+    {
+      "start": 967.279,
+      "duration": 5.401,
+      "end": 972.68,
+      "text": "what will happen is you will get this"
+    },
+    {
+      "start": 969.639,
+      "duration": 6.2,
+      "end": 975.839,
+      "text": "reversed link list now what is the next"
+    },
+    {
+      "start": 972.68,
+      "duration": 6.599,
+      "end": 979.279,
+      "text": "job you'll have to identify is it your"
+    },
+    {
+      "start": 975.839,
+      "duration": 5.601,
+      "end": 981.44,
+      "text": "first group or is it your later groups"
+    },
+    {
+      "start": 979.279,
+      "duration": 4.321,
+      "end": 983.6,
+      "text": "how do you identify that it is your"
+    },
+    {
+      "start": 981.44,
+      "duration": 4.56,
+      "end": 986.0,
+      "text": "first group how do you identify if"
+    },
+    {
+      "start": 983.6,
+      "duration": 4.239,
+      "end": 987.839,
+      "text": "temporary is equivalent to head then"
+    },
+    {
+      "start": 986.0,
+      "duration": 6.48,
+      "end": 992.48,
+      "text": "only it's your first group first key"
+    },
+    {
+      "start": 987.839,
+      "duration": 8.041,
+      "end": 995.8800000000001,
+      "text": "group rather so be like hey if temporary"
+    },
+    {
+      "start": 992.48,
+      "duration": 5.52,
+      "end": 998.0,
+      "text": "is equal to equal to head remember the"
+    },
+    {
+      "start": 995.88,
+      "duration": 5.04,
+      "end": 1000.92,
+      "text": "reverse will return you the head of the"
+    },
+    {
+      "start": 998.0,
+      "duration": 4.44,
+      "end": 1002.44,
+      "text": "updated head of the Reversed link list"
+    },
+    {
+      "start": 1000.92,
+      "duration": 4.0,
+      "end": 1004.92,
+      "text": "but you already know which one will be"
+    },
+    {
+      "start": 1002.44,
+      "duration": 6.04,
+      "end": 1008.48,
+      "text": "the head the head will be the K note you"
+    },
+    {
+      "start": 1004.92,
+      "duration": 7.2,
+      "end": 1012.12,
+      "text": "already know it right so can I say can I"
+    },
+    {
+      "start": 1008.48,
+      "duration": 6.159,
+      "end": 1014.639,
+      "text": "say after reversal the new head or"
+    },
+    {
+      "start": 1012.12,
+      "duration": 5.56,
+      "end": 1017.68,
+      "text": "rather the updated head will be the K"
+    },
+    {
+      "start": 1014.639,
+      "duration": 5.0,
+      "end": 1019.639,
+      "text": "note I can so for the first time I can"
+    },
+    {
+      "start": 1017.68,
+      "duration": 3.88,
+      "end": 1021.56,
+      "text": "say that the head head maybe I can use"
+    },
+    {
+      "start": 1019.639,
+      "duration": 6.121,
+      "end": 1025.76,
+      "text": "the white one so that you can remember"
+    },
+    {
+      "start": 1021.56,
+      "duration": 6.84,
+      "end": 1028.3999999999999,
+      "text": "the head will be the K Thro only if this"
+    },
+    {
+      "start": 1025.76,
+      "duration": 3.919,
+      "end": 1029.679,
+      "text": "is the first instance like first key"
+    },
+    {
+      "start": 1028.4,
+      "duration": 3.919,
+      "end": 1032.3190000000002,
+      "text": "group"
+    },
+    {
+      "start": 1029.679,
+      "duration": 5.12,
+      "end": 1034.799,
+      "text": "otherwise what do you do do you update"
+    },
+    {
+      "start": 1032.319,
+      "duration": 5.081,
+      "end": 1037.3999999999999,
+      "text": "the head you don't you don't update the"
+    },
+    {
+      "start": 1034.799,
+      "duration": 4.88,
+      "end": 1039.679,
+      "text": "head but you need to make"
+    },
+    {
+      "start": 1037.4,
+      "duration": 4.439,
+      "end": 1041.8390000000002,
+      "text": "sure but you need to make sure that you"
+    },
+    {
+      "start": 1039.679,
+      "duration": 4.4,
+      "end": 1044.0790000000002,
+      "text": "do something else and what is that"
+    },
+    {
+      "start": 1041.839,
+      "duration": 4.2,
+      "end": 1046.039,
+      "text": "something what is that something I'll"
+    },
+    {
+      "start": 1044.079,
+      "duration": 4.801,
+      "end": 1048.8799999999999,
+      "text": "come to it afterwards I'll come to it"
+    },
+    {
+      "start": 1046.039,
+      "duration": 5.961,
+      "end": 1052.0,
+      "text": "afterwards so what I've done is I made"
+    },
+    {
+      "start": 1048.88,
+      "duration": 5.24,
+      "end": 1054.1200000000001,
+      "text": "sure this is updated what is my next job"
+    },
+    {
+      "start": 1052.0,
+      "duration": 5.76,
+      "end": 1057.76,
+      "text": "the next job is to take temporary from"
+    },
+    {
+      "start": 1054.12,
+      "duration": 6.16,
+      "end": 1060.28,
+      "text": "here and place it here correct so I'll"
+    },
+    {
+      "start": 1057.76,
+      "duration": 5.68,
+      "end": 1063.44,
+      "text": "do that I'll write the else so I'll take"
+    },
+    {
+      "start": 1060.28,
+      "duration": 6.279,
+      "end": 1066.559,
+      "text": "temporary and place it at"
+    },
+    {
+      "start": 1063.44,
+      "duration": 6.479,
+      "end": 1069.919,
+      "text": "next node I'll take temporary and place"
+    },
+    {
+      "start": 1066.559,
+      "duration": 6.36,
+      "end": 1072.9189999999999,
+      "text": "it at next so what I can say is hey my"
+    },
+    {
+      "start": 1069.919,
+      "duration": 5.76,
+      "end": 1075.679,
+      "text": "job is done hey my job to reverse this"
+    },
+    {
+      "start": 1072.919,
+      "duration": 4.481,
+      "end": 1077.4,
+      "text": "portion is done but do you need to"
+    },
+    {
+      "start": 1075.679,
+      "duration": 4.041,
+      "end": 1079.72,
+      "text": "remember this you need to remember the"
+    },
+    {
+      "start": 1077.4,
+      "duration": 4.68,
+      "end": 1082.0800000000002,
+      "text": "previous LOE why because when you"
+    },
+    {
+      "start": 1079.72,
+      "duration": 6.0,
+      "end": 1085.72,
+      "text": "reverse this next K when you reverse"
+    },
+    {
+      "start": 1082.08,
+      "duration": 5.24,
+      "end": 1087.32,
+      "text": "this next K the previous has to point so"
+    },
+    {
+      "start": 1085.72,
+      "duration": 4.4,
+      "end": 1090.1200000000001,
+      "text": "please make sure before moving the"
+    },
+    {
+      "start": 1087.32,
+      "duration": 5.4,
+      "end": 1092.72,
+      "text": "temporary here you remember this so"
+    },
+    {
+      "start": 1090.12,
+      "duration": 4.439,
+      "end": 1094.559,
+      "text": "maybe I'll take another previous node"
+    },
+    {
+      "start": 1092.72,
+      "duration": 5.12,
+      "end": 1097.84,
+      "text": "maybe I'll take another previous node"
+    },
+    {
+      "start": 1094.559,
+      "duration": 7.12,
+      "end": 1101.6789999999999,
+      "text": "and I said before moving temporary"
+    },
+    {
+      "start": 1097.84,
+      "duration": 6.48,
+      "end": 1104.32,
+      "text": "please remember the previous node done"
+    },
+    {
+      "start": 1101.679,
+      "duration": 5.401,
+      "end": 1107.0800000000002,
+      "text": "done and dusted what will happen on the"
+    },
+    {
+      "start": 1104.32,
+      "duration": 4.719,
+      "end": 1109.039,
+      "text": "next stage let's Analyze This Is Where"
+    },
+    {
+      "start": 1107.08,
+      "duration": 3.719,
+      "end": 1110.799,
+      "text": "the wild Loop will end and"
+    },
+    {
+      "start": 1109.039,
+      "duration": 5.281,
+      "end": 1114.32,
+      "text": "let's analyze what happens at the next"
+    },
+    {
+      "start": 1110.799,
+      "duration": 6.681,
+      "end": 1117.48,
+      "text": "step The Next Step temporary goes here"
+    },
+    {
+      "start": 1114.32,
+      "duration": 8.12,
+      "end": 1122.4399999999998,
+      "text": "again finds the K node which is"
+    },
+    {
+      "start": 1117.48,
+      "duration": 8.4,
+      "end": 1125.88,
+      "text": "this so this is done this never executes"
+    },
+    {
+      "start": 1122.44,
+      "duration": 5.52,
+      "end": 1127.96,
+      "text": "perfect next note is K node next so the"
+    },
+    {
+      "start": 1125.88,
+      "duration": 6.36,
+      "end": 1132.24,
+      "text": "next node is"
+    },
+    {
+      "start": 1127.96,
+      "duration": 9.36,
+      "end": 1137.32,
+      "text": "stored perfect G node next is"
+    },
+    {
+      "start": 1132.24,
+      "duration": 10.12,
+      "end": 1142.36,
+      "text": "null k no next is n so it points to"
+    },
+    {
+      "start": 1137.32,
+      "duration": 9.0,
+      "end": 1146.32,
+      "text": "n nice reverse so the reversal happens"
+    },
+    {
+      "start": 1142.36,
+      "duration": 5.679,
+      "end": 1148.039,
+      "text": "is temporary head no so comes to else"
+    },
+    {
+      "start": 1146.32,
+      "duration": 4.4,
+      "end": 1150.72,
+      "text": "what will you do one else what will you"
+    },
+    {
+      "start": 1148.039,
+      "duration": 4.161,
+      "end": 1152.2,
+      "text": "do one else if you're not updating head"
+    },
+    {
+      "start": 1150.72,
+      "duration": 4.52,
+      "end": 1155.24,
+      "text": "please make sure you connect the"
+    },
+    {
+      "start": 1152.2,
+      "duration": 4.92,
+      "end": 1157.1200000000001,
+      "text": "previous notes next to this one please"
+    },
+    {
+      "start": 1155.24,
+      "duration": 6.04,
+      "end": 1161.28,
+      "text": "make sure you do this so what you do is"
+    },
+    {
+      "start": 1157.12,
+      "duration": 8.439,
+      "end": 1165.559,
+      "text": "on else you'll say previous node your"
+    },
+    {
+      "start": 1161.28,
+      "duration": 8.08,
+      "end": 1169.36,
+      "text": "next should be pointing to the current G"
+    },
+    {
+      "start": 1165.559,
+      "duration": 6.24,
+      "end": 1171.799,
+      "text": "node perfect so this this is done so I"
+    },
+    {
+      "start": 1169.36,
+      "duration": 5.12,
+      "end": 1174.4799999999998,
+      "text": "can say this is done what after this you"
+    },
+    {
+      "start": 1171.799,
+      "duration": 4.961,
+      "end": 1176.76,
+      "text": "have to remember the previous node so"
+    },
+    {
+      "start": 1174.48,
+      "duration": 4.04,
+      "end": 1178.52,
+      "text": "you remembered it here one after this"
+    },
+    {
+      "start": 1176.76,
+      "duration": 3.76,
+      "end": 1180.52,
+      "text": "you have to take the temporary you'll"
+    },
+    {
+      "start": 1178.52,
+      "duration": 4.96,
+      "end": 1183.48,
+      "text": "have to take the temporary from here and"
+    },
+    {
+      "start": 1180.52,
+      "duration": 6.279,
+      "end": 1186.799,
+      "text": "place it here so this will be done by"
+    },
+    {
+      "start": 1183.48,
+      "duration": 5.64,
+      "end": 1189.1200000000001,
+      "text": "this n and nust it but what happens"
+    },
+    {
+      "start": 1186.799,
+      "duration": 5.12,
+      "end": 1191.9189999999999,
+      "text": "during this scenario what happens when"
+    },
+    {
+      "start": 1189.12,
+      "duration": 6.039,
+      "end": 1195.1589999999999,
+      "text": "temporary is standing here let's go"
+    },
+    {
+      "start": 1191.919,
+      "duration": 5.041,
+      "end": 1196.96,
+      "text": "there what happens when your temporary"
+    },
+    {
+      "start": 1195.159,
+      "duration": 4.961,
+      "end": 1200.1200000000001,
+      "text": "is"
+    },
+    {
+      "start": 1196.96,
+      "duration": 5.48,
+      "end": 1202.44,
+      "text": "here you go and find the K node and what"
+    },
+    {
+      "start": 1200.12,
+      "duration": 5.48,
+      "end": 1205.6,
+      "text": "you get is null so you break out but"
+    },
+    {
+      "start": 1202.44,
+      "duration": 5.92,
+      "end": 1208.3600000000001,
+      "text": "you'll have to do one step which is the"
+    },
+    {
+      "start": 1205.6,
+      "duration": 5.36,
+      "end": 1210.9599999999998,
+      "text": "previous node has to point to this the"
+    },
+    {
+      "start": 1208.36,
+      "duration": 6.559,
+      "end": 1214.9189999999999,
+      "text": "previous node has to point to this so"
+    },
+    {
+      "start": 1210.96,
+      "duration": 6.24,
+      "end": 1217.2,
+      "text": "please make sure you point previous"
+    },
+    {
+      "start": 1214.919,
+      "duration": 5.921,
+      "end": 1220.8400000000001,
+      "text": "nodes next to"
+    },
+    {
+      "start": 1217.2,
+      "duration": 6.88,
+      "end": 1224.0800000000002,
+      "text": "null sorry not null to Temporary before"
+    },
+    {
+      "start": 1220.84,
+      "duration": 5.44,
+      "end": 1226.28,
+      "text": "breaking out before breaking out please"
+    },
+    {
+      "start": 1224.08,
+      "duration": 4.8,
+      "end": 1228.8799999999999,
+      "text": "make sure the previous thoughts next is"
+    },
+    {
+      "start": 1226.28,
+      "duration": 5.56,
+      "end": 1231.84,
+      "text": "pointing to Temporary got it"
+    },
+    {
+      "start": 1228.88,
+      "duration": 5.679,
+      "end": 1234.5590000000002,
+      "text": "but can you straight away do this you"
+    },
+    {
+      "start": 1231.84,
+      "duration": 4.839,
+      "end": 1236.6789999999999,
+      "text": "cannot you cannot why because when he"
+    },
+    {
+      "start": 1234.559,
+      "duration": 4.161,
+      "end": 1238.72,
+      "text": "started off there was no previous s and"
+    },
+    {
+      "start": 1236.679,
+      "duration": 4.48,
+      "end": 1241.159,
+      "text": "he started off there was no previous not"
+    },
+    {
+      "start": 1238.72,
+      "duration": 3.959,
+      "end": 1242.679,
+      "text": "what if you had a link list which was"
+    },
+    {
+      "start": 1241.159,
+      "duration": 4.361,
+      "end": 1245.5200000000002,
+      "text": "something like"
+    },
+    {
+      "start": 1242.679,
+      "duration": 5.721,
+      "end": 1248.4,
+      "text": "this one pointing to two two pointing to"
+    },
+    {
+      "start": 1245.52,
+      "duration": 6.72,
+      "end": 1252.24,
+      "text": "null and this is your head for the first"
+    },
+    {
+      "start": 1248.4,
+      "duration": 5.88,
+      "end": 1254.2800000000002,
+      "text": "time temporary was here and a k node"
+    },
+    {
+      "start": 1252.24,
+      "duration": 4.0,
+      "end": 1256.24,
+      "text": "your K node will be null you don't need"
+    },
+    {
+      "start": 1254.28,
+      "duration": 3.92,
+      "end": 1258.2,
+      "text": "to do anything you don't need to do"
+    },
+    {
+      "start": 1256.24,
+      "duration": 4.16,
+      "end": 1260.4,
+      "text": "anything because this doesn't have a k"
+    },
+    {
+      "start": 1258.2,
+      "duration": 4.24,
+      "end": 1262.44,
+      "text": "node this doesn't have a k node since it"
+    },
+    {
+      "start": 1260.4,
+      "duration": 5.08,
+      "end": 1265.48,
+      "text": "is the first one since it is the first"
+    },
+    {
+      "start": 1262.44,
+      "duration": 4.96,
+      "end": 1267.4,
+      "text": "one you will never have the previous"
+    },
+    {
+      "start": 1265.48,
+      "duration": 4.4,
+      "end": 1269.88,
+      "text": "node you'll never have the previous Noe"
+    },
+    {
+      "start": 1267.4,
+      "duration": 5.56,
+      "end": 1272.96,
+      "text": "so if there is no previous Noe you don't"
+    },
+    {
+      "start": 1269.88,
+      "duration": 5.56,
+      "end": 1275.44,
+      "text": "do it so you'll say hey if there is a"
+    },
+    {
+      "start": 1272.96,
+      "duration": 5.92,
+      "end": 1278.88,
+      "text": "previous node then only do"
+    },
+    {
+      "start": 1275.44,
+      "duration": 7.4,
+      "end": 1282.8400000000001,
+      "text": "it if there is a previous note then only"
+    },
+    {
+      "start": 1278.88,
+      "duration": 7.279,
+      "end": 1286.159,
+      "text": "do it remember one thing this will be"
+    },
+    {
+      "start": 1282.84,
+      "duration": 5.68,
+      "end": 1288.52,
+      "text": "executed only if it's a lengthier link"
+    },
+    {
+      "start": 1286.159,
+      "duration": 3.76,
+      "end": 1289.919,
+      "text": "list for smaller link list this will"
+    },
+    {
+      "start": 1288.52,
+      "duration": 4.08,
+      "end": 1292.6,
+      "text": "turn out to be false you can take"
+    },
+    {
+      "start": 1289.919,
+      "duration": 4.721,
+      "end": 1294.64,
+      "text": "smaller examples do a dry run on the"
+    },
+    {
+      "start": 1292.6,
+      "duration": 3.76,
+      "end": 1296.36,
+      "text": "code and you'll understand it in a much"
+    },
+    {
+      "start": 1294.64,
+      "duration": 3.68,
+      "end": 1298.3200000000002,
+      "text": "better way so let's quickly get back"
+    },
+    {
+      "start": 1296.36,
+      "duration": 3.84,
+      "end": 1300.1999999999998,
+      "text": "into the code editor and understand the"
+    },
+    {
+      "start": 1298.32,
+      "duration": 3.68,
+      "end": 1302.0,
+      "text": "code so what I've done is initially I've"
+    },
+    {
+      "start": 1300.2,
+      "duration": 4.4,
+      "end": 1304.6000000000001,
+      "text": "written the get K Throne it's very"
+    },
+    {
+      "start": 1302.0,
+      "duration": 4.799,
+      "end": 1306.799,
+      "text": "simple standing somewhere you have a k"
+    },
+    {
+      "start": 1304.6,
+      "duration": 5.28,
+      "end": 1309.8799999999999,
+      "text": "you do minus minus minus till you reach"
+    },
+    {
+      "start": 1306.799,
+      "duration": 5.601,
+      "end": 1312.4,
+      "text": "the K node super simple have a simple"
+    },
+    {
+      "start": 1309.88,
+      "duration": 5.0,
+      "end": 1314.88,
+      "text": "traversal by K minus minus and you"
+    },
+    {
+      "start": 1312.4,
+      "duration": 4.36,
+      "end": 1316.76,
+      "text": "return temporary in case there is no K"
+    },
+    {
+      "start": 1314.88,
+      "duration": 3.56,
+      "end": 1318.44,
+      "text": "node it will be returning null have to"
+    },
+    {
+      "start": 1316.76,
+      "duration": 3.36,
+      "end": 1320.12,
+      "text": "write the function K reverse so"
+    },
+    {
+      "start": 1318.44,
+      "duration": 3.64,
+      "end": 1322.0800000000002,
+      "text": "initially temporary will be head"
+    },
+    {
+      "start": 1320.12,
+      "duration": 4.6,
+      "end": 1324.7199999999998,
+      "text": "previous last the previous one will be"
+    },
+    {
+      "start": 1322.08,
+      "duration": 5.0,
+      "end": 1327.08,
+      "text": "null and you keep traving till it is"
+    },
+    {
+      "start": 1324.72,
+      "duration": 4.88,
+      "end": 1329.6000000000001,
+      "text": "null get the K node by calling the"
+    },
+    {
+      "start": 1327.08,
+      "duration": 5.0,
+      "end": 1332.08,
+      "text": "function if it is null just make sure"
+    },
+    {
+      "start": 1329.6,
+      "duration": 3.8,
+      "end": 1333.3999999999999,
+      "text": "you point it the previous pointing"
+    },
+    {
+      "start": 1332.08,
+      "duration": 4.04,
+      "end": 1336.12,
+      "text": "should be done and then you can break"
+    },
+    {
+      "start": 1333.4,
+      "duration": 5.159,
+      "end": 1338.5590000000002,
+      "text": "out because there will be no further K"
+    },
+    {
+      "start": 1336.12,
+      "duration": 4.96,
+      "end": 1341.08,
+      "text": "groups after that you get the next not"
+    },
+    {
+      "start": 1338.559,
+      "duration": 5.561,
+      "end": 1344.12,
+      "text": "just preserve it make sure you separate"
+    },
+    {
+      "start": 1341.08,
+      "duration": 5.4,
+      "end": 1346.48,
+      "text": "out the link list reverse it if it is"
+    },
+    {
+      "start": 1344.12,
+      "duration": 4.6,
+      "end": 1348.7199999999998,
+      "text": "head uh if it is the first K Group"
+    },
+    {
+      "start": 1346.48,
+      "duration": 4.4,
+      "end": 1350.88,
+      "text": "update the head if it is not make sure"
+    },
+    {
+      "start": 1348.72,
+      "duration": 2.92,
+      "end": 1351.64,
+      "text": "you point the previous K Group to the"
+    },
+    {
+      "start": 1350.88,
+      "duration": 4.08,
+      "end": 1354.96,
+      "text": "new"
+    },
+    {
+      "start": 1351.64,
+      "duration": 6.519,
+      "end": 1358.159,
+      "text": "ones just store the previous and after"
+    },
+    {
+      "start": 1354.96,
+      "duration": 5.36,
+      "end": 1360.32,
+      "text": "that move to the next once this is done"
+    },
+    {
+      "start": 1358.159,
+      "duration": 4.561,
+      "end": 1362.72,
+      "text": "update like return the updated head so"
+    },
+    {
+      "start": 1360.32,
+      "duration": 5.359,
+      "end": 1365.6789999999999,
+      "text": "I'll go ahead and submit this so if I"
+    },
+    {
+      "start": 1362.72,
+      "duration": 5.0,
+      "end": 1367.72,
+      "text": "ask you what is the time complexity what"
+    },
+    {
+      "start": 1365.679,
+      "duration": 4.961,
+      "end": 1370.64,
+      "text": "will be the time complexity you're"
+    },
+    {
+      "start": 1367.72,
+      "duration": 5.72,
+      "end": 1373.44,
+      "text": "seeing a simple traversy right am I"
+    },
+    {
+      "start": 1370.64,
+      "duration": 5.8,
+      "end": 1376.44,
+      "text": "doing something else I'm also doing a"
+    },
+    {
+      "start": 1373.44,
+      "duration": 5.8,
+      "end": 1379.24,
+      "text": "get G so if you carefully observe if I"
+    },
+    {
+      "start": 1376.44,
+      "duration": 5.64,
+      "end": 1382.0800000000002,
+      "text": "go back to the iPad"
+    },
+    {
+      "start": 1379.24,
+      "duration": 4.64,
+      "end": 1383.88,
+      "text": "so what I'm doing is I'm standing"
+    },
+    {
+      "start": 1382.08,
+      "duration": 4.36,
+      "end": 1386.4399999999998,
+      "text": "temporary like I'm making temporary"
+    },
+    {
+      "start": 1383.88,
+      "duration": 5.799,
+      "end": 1389.679,
+      "text": "stand here and I'm reversing this entire"
+    },
+    {
+      "start": 1386.44,
+      "duration": 5.08,
+      "end": 1391.52,
+      "text": "thing which is basically taking linear"
+    },
+    {
+      "start": 1389.679,
+      "duration": 3.641,
+      "end": 1393.3200000000002,
+      "text": "time then I'm reversing this entire"
+    },
+    {
+      "start": 1391.52,
+      "duration": 4.0,
+      "end": 1395.52,
+      "text": "thing then I'm reversing this entire"
+    },
+    {
+      "start": 1393.32,
+      "duration": 4.8,
+      "end": 1398.12,
+      "text": "thing So eventually I'm reversing"
+    },
+    {
+      "start": 1395.52,
+      "duration": 4.68,
+      "end": 1400.2,
+      "text": "section section section by linear time"
+    },
+    {
+      "start": 1398.12,
+      "duration": 4.64,
+      "end": 1402.76,
+      "text": "so that's definitely a big of n while"
+    },
+    {
+      "start": 1400.2,
+      "duration": 4.44,
+      "end": 1404.64,
+      "text": "reversing that's definitely a big of n"
+    },
+    {
+      "start": 1402.76,
+      "duration": 3.84,
+      "end": 1406.6,
+      "text": "while reversing each and everything"
+    },
+    {
+      "start": 1404.64,
+      "duration": 3.88,
+      "end": 1408.5200000000002,
+      "text": "correct at the same time I'm trying to"
+    },
+    {
+      "start": 1406.6,
+      "duration": 3.48,
+      "end": 1410.08,
+      "text": "find the K node as well like when I'm"
+    },
+    {
+      "start": 1408.52,
+      "duration": 3.44,
+      "end": 1411.96,
+      "text": "standing at temporary I'm finding the"
+    },
+    {
+      "start": 1410.08,
+      "duration": 3.8,
+      "end": 1413.8799999999999,
+      "text": "Kate node and I'm standing at temporary"
+    },
+    {
+      "start": 1411.96,
+      "duration": 3.48,
+      "end": 1415.44,
+      "text": "I'm finding the K nde that's another"
+    },
+    {
+      "start": 1413.88,
+      "duration": 3.52,
+      "end": 1417.4,
+      "text": "this much that's another this much"
+    },
+    {
+      "start": 1415.44,
+      "duration": 3.44,
+      "end": 1418.88,
+      "text": "that's another this much which is again"
+    },
+    {
+      "start": 1417.4,
+      "duration": 3.92,
+      "end": 1421.3200000000002,
+      "text": "B go off"
+    },
+    {
+      "start": 1418.88,
+      "duration": 5.799,
+      "end": 1424.679,
+      "text": "n so can I see the overall time"
+    },
+    {
+      "start": 1421.32,
+      "duration": 7.599,
+      "end": 1428.9189999999999,
+      "text": "complexity is B go off to N I can and"
+    },
+    {
+      "start": 1424.679,
+      "duration": 6.12,
+      "end": 1430.799,
+      "text": "the space complexity is beo of one"
+    },
+    {
+      "start": 1428.919,
+      "duration": 3.64,
+      "end": 1432.5590000000002,
+      "text": "because I don't think I'm using any"
+    },
+    {
+      "start": 1430.799,
+      "duration": 4.961,
+      "end": 1435.76,
+      "text": "external space because I'm just changing"
+    },
+    {
+      "start": 1432.559,
+      "duration": 5.0,
+      "end": 1437.559,
+      "text": "the links and my work is done so so I"
+    },
+    {
+      "start": 1435.76,
+      "duration": 3.88,
+      "end": 1439.64,
+      "text": "hope youve understood everything and in"
+    },
+    {
+      "start": 1437.559,
+      "duration": 3.881,
+      "end": 1441.44,
+      "text": "case you you still have doubts what I'll"
+    },
+    {
+      "start": 1439.64,
+      "duration": 4.6,
+      "end": 1444.24,
+      "text": "recommend you to do is just write down"
+    },
+    {
+      "start": 1441.44,
+      "duration": 4.839,
+      "end": 1446.279,
+      "text": "multiple examples do dry ones because"
+    },
+    {
+      "start": 1444.24,
+      "duration": 4.039,
+      "end": 1448.279,
+      "text": "that is how I did it initially it was"
+    },
+    {
+      "start": 1446.279,
+      "duration": 4.481,
+      "end": 1450.76,
+      "text": "tough for me as well but I did a dryon"
+    },
+    {
+      "start": 1448.279,
+      "duration": 4.64,
+      "end": 1452.919,
+      "text": "on a lot of examples and now it's in my"
+    },
+    {
+      "start": 1450.76,
+      "duration": 3.68,
+      "end": 1454.44,
+      "text": "head so please do it and if you're still"
+    },
+    {
+      "start": 1452.919,
+      "duration": 3.081,
+      "end": 1456.0,
+      "text": "watching please do consider giving us a"
+    },
+    {
+      "start": 1454.44,
+      "duration": 3.2,
+      "end": 1457.64,
+      "text": "like and if you're new to our Channel"
+    },
+    {
+      "start": 1456.0,
+      "duration": 3.039,
+      "end": 1459.039,
+      "text": "what are you waiting for hit that"
+    },
+    {
+      "start": 1457.64,
+      "duration": 2.6,
+      "end": 1460.24,
+      "text": "subscribe button and with this I'll be"
+    },
+    {
+      "start": 1459.039,
+      "duration": 4.081,
+      "end": 1463.12,
+      "text": "wrapping up this video Let's readence"
+    },
+    {
+      "start": 1460.24,
+      "duration": 4.48,
+      "end": 1464.72,
+      "text": "our other video till then byebye D when"
+    },
+    {
+      "start": 1463.12,
+      "duration": 5.84,
+      "end": 1468.9599999999998,
+      "text": "your heart is"
+    },
+    {
+      "start": 1464.72,
+      "duration": 7.679,
+      "end": 1472.3990000000001,
+      "text": "broken don't ever forget your golden"
+    },
+    {
+      "start": 1468.96,
+      "duration": 3.439,
+      "end": 1472.3990000000001,
+      "text": "I will find the light"
+    }
+  ]
+}

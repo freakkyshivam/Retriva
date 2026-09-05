@@ -1,0 +1,229 @@
+{
+  "video_id": "fWX9xDmIzRI",
+  "position": 195,
+  "title": "DP 14. Subset Sum Equals to Target | Identify DP on Subsequences and Ways to Solve them",
+  "url": "https://www.youtube.com/watch?v=fWX9xDmIzRI",
+  "chunk_count": 20,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "fWX9xDmIzRI",
+      "position": 195,
+      "title": "DP 14. Subset Sum Equals to Target | Identify DP on Subsequences and Ways to Solve them",
+      "url": "https://www.youtube.com/watch?v=fWX9xDmIzRI",
+      "start": 0.56,
+      "end": 134.0,
+      "text": "hey everyone welcome back to the channel i hope you guys are doing extremely well so we finished 1dp and dp on grids now the next pattern of dynamic programming will be dp on subsequences yes we will be doing dp on subsequences now a lot of times instead of subsequences you might be hearing the name subsets so either subsequences or subsets is what we are going to solve so what is subsequences let's first understand the definition of that and then we can definitely move across now any contagious or non-contagious that's very important any contiguous or non-contagious part of the array is known as subsequence like for an example if i give you an array like 1 3 2 then i can say 1 comma 2 is a subsequence because you see 1 2 is non-contiguous and it's following the order of 1 2 2 1 cannot be a subset or subsequence we need to understand this whenever i say subsequence it has to follow the order right subset might or might not follow but subsequence has to follow okay so this is a subsequence again uh is this a subsequence yes this is also a subsequence because three comma two follows the order as well as it can be called as a sub array sub array also you can call and subsequence also you can call okay so all the problems that we will be doing is based on db on subsequence or subsets and we will also be having one other stuff as target generically we will be dealing with problems where we will be said okay this is the target you have to pick elements from the array in order like they will give some conditions in order to reach that target so all the problems that relates subsequence sub sets and target will be the part of the next pattern we will be solving we'll be solving a bunch of problems and again i promise the moment we finish the last problem in this pattern you can solve",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "fWX9xDmIzRI",
+      "position": 195,
+      "title": "DP 14. Subset Sum Equals to Target | Identify DP on Subsequences and Ways to Solve them",
+      "url": "https://www.youtube.com/watch?v=fWX9xDmIzRI",
+      "start": 128.399,
+      "end": 252.64000000000001,
+      "text": "problem in this pattern you can solve any problem in this given pattern right so without wasting any time let's get started with the first problem what's the first problem it states subset sum equal to k so you're given an array uh list of n positive integers and an integer k so given an array and an integer key your task is to check if there exists a subset in an array with a sum equal to k basically does any of the elements combine to get give you the sum equal to k so if there exist you have to return a true otherwise you need to return a false like if you see in this example we have one two three four and k is four i can say if i pick up probably just the four i'll get the summation four or i can say if i pick up one and if i pick up three i'll get the summation as four so there are two subsets and the question was if there exists a single subset so the answer to this will be true so that's what you have to solve okay so first of all how do you solve this problem now obviously we can't be run writing a 3d solution because that will never make sense we have to generate like the first thing that comes to my mind is generate all the subsequences and check if any yes if any of them gives a sum of k that's the first thing that comes to my brain now how can you generate all the subsequences there are two ways one is the power set and i've already made a video on that you can definitely watch it one is the power set which uses bit manipulation or the other one is uh the recursion again the lecture six where we have discussed or the lecture eight of recursion playlists the combination sum problem where we have already discussed how to generate all the subsequences but the question arises over here what",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "fWX9xDmIzRI",
+      "position": 195,
+      "title": "DP 14. Subset Sum Equals to Target | Identify DP on Subsequences and Ways to Solve them",
+      "url": "https://www.youtube.com/watch?v=fWX9xDmIzRI",
+      "start": 249.12,
+      "end": 377.68,
+      "text": "but the question arises over here what is the question does it ask us to generate all the subsequences and the answer to that is no so what's the question the question states does there exist a single subset if i get a single subset my job is done so i don't need to generate all the subsequences that's where we think of okay so instead of generating all the subsequences we just need to keep a check if there is any subset right so thereby we decide that okay we will follow the recursion method because we don't need to print all we will just follow the recursion method and hypothetically when we just get one subsequence with the same subset target we will return and we will stop so that's my overall thinking so we know recursion can help us to generate all the subsequences and i've i've clearly told you what's the rule of writing the recurrence any recurrence can all always be written in express everything in terms of index do we have an index here every array problem in dp will always have an index and that's the array index itself so we definitely have an index do we have any other parameter on every index we need to take care of the target that we are looking for so we can say we definitely have a target that we are looking for so always remember this whatever may be the problem on dpr and subsequences and these subsets and target problems we will always try to express everything in terms of index and everything in terms of target like in grid it was inj in subsequences it is index and it is target thumb rule okay let's go to the second point the second point is explore possibilities of that index now what am i talking about let's understand explore possibilities of that index so what am i talking about i am talking about an index and what am i what the other thing subset or subsequence so what can be the",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "fWX9xDmIzRI",
+      "position": 195,
+      "title": "DP 14. Subset Sum Equals to Target | Identify DP on Subsequences and Ways to Solve them",
+      "url": "https://www.youtube.com/watch?v=fWX9xDmIzRI",
+      "start": 372.56,
+      "end": 494.639,
+      "text": "subset or subsequence so what can be the possibilities if you ask yourself for an index your brain will say striver there will be two possibilities whether that array of an index is the part of the subsequence makes sense so i can say it's the part of the subsequence like array of index is the part of the subsequence or array of index is not part of the subsequence like logically only these paths will be there not part of the subsequence so i have two choices one is it's the part of the subsequence while the other one is it's not the part of the subsequence so we have we have written all the possibilities i don't see any other possibilities for a given index right we can think of the recurrence afterwards now what am i looking for i'm looking for if any of them give a true i'll return true because the question was return true if you get so i'll be like okay if return true or false if both of the possibilities give we will understand this in deep so let's do one thing let's take the so we have understood all the three points right let's try to express now the question arises how do i start with index how do i start with target now always remember what out what am i looking for i'm looking for the entire array and if there exists a subsequence with the target whatever is given to you so i'll try to express it in terms of f of n minus one saying in the entire array till index n minus one here hear me out properly in the entire array till the index n minus one i repeat again in the entire array till the index n minus one does there exist a target that is what the recurrence will tell you in the entire array till index n minus 1 does there exist any target for an example if i am giving you 1 2 3 4 as the array",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "fWX9xDmIzRI",
+      "position": 195,
+      "title": "DP 14. Subset Sum Equals to Target | Identify DP on Subsequences and Ways to Solve them",
+      "url": "https://www.youtube.com/watch?v=fWX9xDmIzRI",
+      "start": 488.72,
+      "end": 613.44,
+      "text": "if i am giving you 1 2 3 4 as the array and i'm saying you the target as 4 if i'm writing f of 3 comma 4 that means i'm doing the indexing 0 1 2 3 and i'm asking on this portion on this entire array does there exist someone with a target for that's what i'm looking for that's the meaning of f of n minus one target and this is going to be valid throughout all the dp on subsequences pattern okay so we have understood this so thereby we write okay f of index and we have a target so that's the first thing expressing the recurrence so whenever we are expressing the recurrence what are the base cases i have to think about these these cases what are the base cases actually so my brain tells me okay striver what can be the base cases the base cases is it might happen we have achieved the target because you might be at a state where the target is no more like initially assume over here the target was four and just imagine you took this four and you came out to this index there is no further target to be achieved do you understand so what i'm saying is okay i know one base case is for sure for the index target so i'll be like if at any moment the target becomes zero i'll return a true why because we were looking for a subsequence which gives me the target as zero so i've written that so we have written the base case for target what about the other one index so where is the call starting from n minus one and we know we will go till the zeroth index because in an array it's from n minus one at index till the zeroth index so if you're standing at an index zero and you have a certain target value assume four can this target be achieved at this index 0 how can you determine you can be striver",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "fWX9xDmIzRI",
+      "position": 195,
+      "title": "DP 14. Subset Sum Equals to Target | Identify DP on Subsequences and Ways to Solve them",
+      "url": "https://www.youtube.com/watch?v=fWX9xDmIzRI",
+      "start": 609.12,
+      "end": 740.639,
+      "text": "striver if the array of 0 contains the value 4 then this target can be achieved otherwise not make sense because what does f of what does f of 0 comma target signify it signifies till 0th index can we achieve this target and if it's 0th index it's only single element so how can i achieve that target if it's the target itself so thereby if index is equal to equal to 0 which is ultimately the base case i will return true if the array of 0 is equal to equal to the target itself perfect so first step express and write the base cases is completed always if you're writing a base case first think about the target don't think about the index think about the states what can be the ultimate of states what's the next thing okay so what's the next thing explore possibilities of that index because as of now you're standing at an index so you are at an index and they are asking can i form a subsequence from 0 to that index that gives me the target can i form can i form a subsequence from zero to index that gives me a target i'll be like okay there are two ways one of the ways is i say i will not take it so can i say if i don't take it yes can i say if i don't take it then the function will be okay i'm not taking that so that guy is not taken so i'll move to one less index always move back and you'll say same target so what does this signify you were currently at this index and from zero to index they were asking can you form this target can you form this target you said hey listen i'm not gonna pick this element thereby i reduce it to this index minus 1 and i say from 0 to index minus 1 can i form the target because i'm not interested in taking this",
+      "word_count": 341
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "fWX9xDmIzRI",
+      "position": 195,
+      "title": "DP 14. Subset Sum Equals to Target | Identify DP on Subsequences and Ways to Solve them",
+      "url": "https://www.youtube.com/watch?v=fWX9xDmIzRI",
+      "start": 736.639,
+      "end": 863.12,
+      "text": "i'm not interested in taking this so i reduce it and i say okay can i form this target now in the reduced portion of the array i do a search on the reduced portion of the array that's what this means make sense it does okay what's the other case boolean let's keep the take as a true sorry initially false i'll tell you why when can you take an element into that now if you're looking for a target if you're looking for a target the target has to be greater than equal to that current index otherwise how can you take it into the subsequence like for an example if your array is something like one three six and your target is something like two you can't take six or three can you in the subsequence because you're looking for something as 2 so i'm saying the target is greater than the array index then only take it otherwise not so if i take it if i take it i will move to the previous index now let's let's understand what will happen to this particular target let's think about that so what am i saying i'm saying okay initially i had this i had this recursion call in this guy can i achieve a subsequence that gives me a particular target now what am i saying in this is there a subsequence i say okay let's say this guy is that part of the subsequence which i'm looking for let's say this guy is a part of the subsequence that i'm looking for so i take this array of index and i say you're part of a subsequence so if this guy is a part of subsequence the target that i was looking for will now shrink will not shrink because if initially the target was this big it will go smaller why because i've taken someone and now i'll look for zero to one lesser index in this shorter section of the array in the shorter section of the array and the target will go",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "fWX9xDmIzRI",
+      "position": 195,
+      "title": "DP 14. Subset Sum Equals to Target | Identify DP on Subsequences and Ways to Solve them",
+      "url": "https://www.youtube.com/watch?v=fWX9xDmIzRI",
+      "start": 858.16,
+      "end": 975.04,
+      "text": "the array and the target will go down by array of index because i've taken that into consideration now either not take or either take i'll just keep on trying and the moment it reaches zero if i can have this as the target it will return me true or return me a false or if any of the moment the target is achieved it'll return me true so there are two choices one was the take the other one was the not take so i can say i'm trying two possible ways and i'm looking is there a possibility is there a possibility so if i'm looking for is there a possibility can i say it will be or of both of them [Music] because i'll try both the possibilities if any one of them returns true i return a true because it doesn't matter if any of the possibilities give me a sum i'm okay to go because i'm looking for one subset only so if any of them give me the possibility i'm ready to go and that's how your recurrence will look like in all the subsequence problem not take and take not take and take all the subsequence problem you will be seeing that so in order to understand this recursion better let's uh do the recursion tree in the records that we have written so that you also try to see the overlapping sub problems if there are any and probably we can figure out if this recursion can be optimized or something else but before that we need to understand the recursion in depth because it's the first problem on subsequences so initially where am i i'm at this position which is index three and i'm looking for target four so i say on this entire array can i have a target four so okay let's take this guy so if i take this guy i'll go to index two with a reduced sum of three and if i say i will not take this guy",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "fWX9xDmIzRI",
+      "position": 195,
+      "title": "DP 14. Subset Sum Equals to Target | Identify DP on Subsequences and Ways to Solve them",
+      "url": "https://www.youtube.com/watch?v=fWX9xDmIzRI",
+      "start": 970.079,
+      "end": 1080.0,
+      "text": "and if i say i will not take this guy i'll go to two and i'll be having four which basically means is i was saying does this have a target for now what i said let's take this into account so this took this into account and now in this particular array i'm looking for can i have a sum of three can i have a sum of three in this shorter array and if i say i will not take this then in this array can i have a sum of 4 that's what i'm looking for so this is how i'm shrinking both of them perfect let's let's stop this and let's try to solve this f of 2 3 so again you're having 2 and three you can take this one or you cannot take this one assuming you take this and assuming you do not take this okay so if you take this you shrink it to one and if you're taking the one you are left off with one comma two and if you do not take it you are shrinking this to one and you still have three so if you take this one what happens is now you're shrinking it to this and you're saying in this in this array do you have a sum two do you have a sum two makes sense let's go across we have something as three now one two means in this can i have a target of two now comes the take vala if else can i pick this three logic will say no why because this is 2 and i'm looking for a target of 2 how can i pick someone as 3 so the take condition will never be there it will always be false the take condition will always be false i'll say nothing if i don't take i'll reach the zeroth index yes i'll reach the zeroth index and i'll be like just a minute and i will be like on the zeroth index can i have two",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "fWX9xDmIzRI",
+      "position": 195,
+      "title": "DP 14. Subset Sum Equals to Target | Identify DP on Subsequences and Ways to Solve them",
+      "url": "https://www.youtube.com/watch?v=fWX9xDmIzRI",
+      "start": 1075.28,
+      "end": 1184.24,
+      "text": "on the zeroth index can i have two so on the zeroth index can i have two can i have two and when you reach the zeroth index you're having a target two is it two yes so the zeroth index itself can give you the target two that you're looking for thereby this guy returns a true so f one two was calling take which gave him false and was calling non take which gave him true so you said okay non take gave me a true so i will return true now this f of 2 3 yes this f of 2 3 sees that this is giving him true and you can solve this f of 1 3 but the moment it gets one true it returns again you can solve this but there is no requirement of solving this since you've got a true over here this can also return a true now you might ask driver where are the overlapping sub problems so if i if i would have uh gone deep you would have seen like in this case it would have gone by taking it would have been f of one and second index was this so this would have been f of one three and if i would have not taken it it would have been f of one four so you see f of one three overlapping with f of one three so there will be overlapping sub problems for sure so you saw how the recursion did work by taking and non taking so if we talk about the recursion or time complexity whatever the recursion time complexity it will be we go off 2 to the power n because for every array element you have couple of options either you take that element into consideration or you say i'm not going to take this element so you just have couple of considerations so 2 to the power n space complexity is auxiliary stack space of b of n now we saw that there were overlapping sub",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "fWX9xDmIzRI",
+      "position": 195,
+      "title": "DP 14. Subset Sum Equals to Target | Identify DP on Subsequences and Ways to Solve them",
+      "url": "https://www.youtube.com/watch?v=fWX9xDmIzRI",
+      "start": 1178.559,
+      "end": 1306.96,
+      "text": "saw that there were overlapping sub problems yes we saw that there were overlapping sub problems and how did we saw that if you remember we started with a very big problem we've started with the entire array then we reduced it to small then we reduced it to small so the problem was broken down into sub problems sub problem sub problem and eventually solved with a single base case so thereby the sub problems if you are breaking down the problem into sub problems they are bound to repeat and thereby what can i apply memo i action yes thereby i can apply memo iration now let's think about the memory action what did i say how will you apply my mash the first trick is figure out the changing states so there is an index and there is a target that might change there is an index and there is a target that might change so assuming the constraint says target will be lesser than 10 to the power 3 assuming the constraint says this and assuming this is also something like this the constraints so index you will take as 10 to the power 3 plus 1 one more because there is something as 10 to the power 3 so in order to have this as an index you need plus 1 multiplied with a target of 10 to the power 3 plus 1 so this is the dp array that you will be requiring and you know how to memorize i have already taught you that by the way this will be a boolean dp array this can be a boolean dpi because the function is boolean so you just need to return a true or false so what i can say is okay dp of index target and if dp of index target is not equal to by the way uh boolean you can't take you have to take true and false so minus one and return dp of index target so you can't take uh you can't take",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "fWX9xDmIzRI",
+      "position": 195,
+      "title": "DP 14. Subset Sum Equals to Target | Identify DP on Subsequences and Ways to Solve them",
+      "url": "https://www.youtube.com/watch?v=fWX9xDmIzRI",
+      "start": 1302.96,
+      "end": 1420.7199999999998,
+      "text": "you can't take uh true and false in the memorization so you can't take boolean you have to take an integer formation in tabulation you can take true and false uh why because you know minus one is marked for any unvisited state so how will you determine if you mark true and false for the unvisited state so it's very important minus one is marked this is how the memoration solution will drop and the memoration solution is very simple time complexity will be n crossed target and the space complexity will be n cross the target array and an auxiliary space of b co of n which is an auxiliary space complexity which we have to reduce that can only be done by tabulation so the next step is tabulation let's quickly check that out so how do you write the tabulation i've already taught you the steps how do you write the tabulation guys first step is declare the dp array of the same size n and target so please declare the dp array of the same size once you have declared the dp array of the same size what's the next step next step was to figure out the base cases and write it so just without without thinking anything go to the recurrence and see what are the base cases the recurrence says any moment the target is zero any moment the target is zero you return true so if target is zero what can be the possible value of index ask your brain ask your brain what can be the possible values of index 0 1 2 till n minus 1 so for every 1 on 0th index you return a true so just write it don't don't think anything else just go and write tabulation you should not complicate you should keep it simple for i equal to 0 till n minus 1 you write dp of i target is 0 equal to true that's what you did right in the base case because for every index if",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "fWX9xDmIzRI",
+      "position": 195,
+      "title": "DP 14. Subset Sum Equals to Target | Identify DP on Subsequences and Ways to Solve them",
+      "url": "https://www.youtube.com/watch?v=fWX9xDmIzRI",
+      "start": 1417.12,
+      "end": 1554.32,
+      "text": "base case because for every index if target is zero you write true so just write it now what are you waiting for let's let's look at the next base case the next base case says if index is zero so index is zero for sure return true if it's equivalent to target so index is zero and target can be anything okay but when will it be true when will it be true for every target what can be the possible values of target at index zero think think ask your brain to think it'd be like it can be anything target can be zero target can be one it can't be zero but it can be one it can be two it can be till any value of target the given target so you'll be like but but which guy will be true only a of 0 will be true in dp of 0 a of 0 will only be true realize no matter what the target is no matter what the target is if it's equal to a of 0 then only it will be true everyone else will be false so initially you can mark the entire dps false so can i say only dp of 0 and a of 0 will be true i can so basically i can be like okay the next base cases if dp of 0 array of 0 is true y very obvious i am saying at index 0 can i form this target a of zero and the answer is yes because that only on the a of zero array you can form a target a of zero you can't form apart from that so this these are the base cases first step done next step form the nested loops how many states are there two states index will be one the other one will be target where does index start from go and look at the recurrence in the recurrence index was n minus 1 n minus 2 n minus 3 and so on till 0. top down",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 13,
+      "video_id": "fWX9xDmIzRI",
+      "position": 195,
+      "title": "DP 14. Subset Sum Equals to Target | Identify DP on Subsequences and Ways to Solve them",
+      "url": "https://www.youtube.com/watch?v=fWX9xDmIzRI",
+      "start": 1551.039,
+      "end": 1691.279,
+      "text": "down top down what's what up n minus one correct one till n minus one perfect what about target target went on from target you started with the eventual goal you moved moved moved till 0. over here what will happen you go opposite you go opposite yes so you go opposite one to target because because zero has been already done zero has already been done so this is what you do as nested loop so without thinking just write the nested loops see how simple it is try the tabulation i equal to one till n minus one target will be you can call it as the j loop or two in order to maintain easy let's write the target as one minus sorry one two uh whatever let's assume the target is k so 12k perfect now copy paste the recurrence no need to do anything just copy paste the recurrence so i'll show that when i code so now it's time to code and then we will talk about the space optimization as well but we just need to copy paste the reference and we will show that in the code because it becomes a lot easier but only two steps you have to remember write the base cases just think of the base cases then just think of the nested states remember the number of states is equal to the number of nested loops it goes as simple as that the number of states is equal to the nested loops and the nested loops in the opposite fashion from base case to the bottom up bottom up base case to the up so if you remember the recurrence tree the base case was zero zero to three right the base case was target was two to four bottom up so make sure you write it bottom up base case bottom up doesn't mean zero to the whatever means whatever is the base case right there from whatever was the recurrence score so i've written the tabulation concept and we just need to write the recurrence",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 14,
+      "video_id": "fWX9xDmIzRI",
+      "position": 195,
+      "title": "DP 14. Subset Sum Equals to Target | Identify DP on Subsequences and Ways to Solve them",
+      "url": "https://www.youtube.com/watch?v=fWX9xDmIzRI",
+      "start": 1687.84,
+      "end": 1801.6789999999999,
+      "text": "and we just need to write the recurrence so if you write it or the time complexity will be n into target again and the space complexity will be b go of n into target but there will be no auxiliary space so i'll show you that by writing so given the array the n and the k so we need to write the function so we'll write return the function the target initially is the index n minus 1 and the target is k and there is an array so we'll just write this off and let's write the function let's keep it the function as boolean function int index int target and we know the vector and and an array right so one of the cases if the target is uh zero return or true simple enough if the index is zero we return array of zero equal to target and there can be a nautic case so you can write boolean not tick saying i'll not take which means i'll go back with the same target and array they can be take case which is initially false and i can only take the array of index if that's lesser than target then only i can take it so let's assume i take it then in that case f of index minus 1 comma target will reduce by array of index and i'll go till the array at the end of the day i can return the take not take and that's what you do so let's quickly run this off say it does it does run fine but we need to apply dp so please please apply dp the right vector vector int and a dp and we can definitely take it as n plus 1 as i said vector and the other thing will be vector and and you can take the target as k plus 1 and minus 1 by the way uh n plus 1 is not required you can take n also because you're starting from n minus 1 but the",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 15,
+      "video_id": "fWX9xDmIzRI",
+      "position": 195,
+      "title": "DP 14. Subset Sum Equals to Target | Identify DP on Subsequences and Ways to Solve them",
+      "url": "https://www.youtube.com/watch?v=fWX9xDmIzRI",
+      "start": 1797.12,
+      "end": 1903.44,
+      "text": "you're starting from n minus 1 but the target has to be k plus 1 so i've taken this now you can just pass on the dp and over here let's copy paste this portion this will go over here and it will be the reference and just make sure you pass it over here make sure you pass it over here as well and make sure before returning you write dp of index and target to it remember uh boolean will be zero and one so it will automatically convert that into an integer so and over here if dp of index target is not e not equal to minus one you can return it to dp of index and target okay that's all that's how you can do it and now let's quickly run this off just run fine let's submit this so you can see that it is running absolutely fine and we get hundred marks but we don't need to stop here we need to make sure we write the records so the recurrence was saying let's write the first base case with the target equal to zero so you can say int by the way now we can convert this into boolean because we don't need any uh minus one now because minus one for memorization check but we don't need that over here so i can go as zero and i can be like we can go until i plus plus and i can say dp of i of all the target zeros will be true let's write this the next thing will be dp of 0 which is the next base case and an only array of 0 yes and only on array of 0 we will be having true so whenever you write that simple now what are the couple of things index and target so please make sure write it at index equal to one index goes on till n and in x plus plus but the target starts from int target will go on from",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 16,
+      "video_id": "fWX9xDmIzRI",
+      "position": 195,
+      "title": "DP 14. Subset Sum Equals to Target | Identify DP on Subsequences and Ways to Solve them",
+      "url": "https://www.youtube.com/watch?v=fWX9xDmIzRI",
+      "start": 1898.0,
+      "end": 2039.279,
+      "text": "from int target will go on from one and it will go until target and i plus plus not target uh it should be key and i plus plus perfect just copy paste the recurrence don't even think of anything just copy paste the recurrence obviously the recurrence instead of f make it dp of index minus 1 perfect target amazing so that's it and over here you can just omit this portion take is false and it will automatically make sure it only takes if it's greater and again make a dp just change the recurrence yeah just change the records no need to do anything else don't over complicate as i always say don't over complicate okay done just remove this written so if you remember what did you uh call the function as you call the function as f of n minus one so dp of n minus one and the target which is k so just uh now i'll just uh run this off and see if this is running fine okay we did miss something what did we miss okay this will be vector of boolean by the way okay another mistake we will be having target over here we will also be having a target over here so let's quickly check this off that's fine right works fine let's do the summation wow runs fine so what's the next step space optimization and i told you space optimization is possible whenever you see something like that what did you see index one the moment you see index minus one your eye is like oh man this is possible yes this is possible so we can definitely space optimize this but something we need to take care is remember this always something we need to take care if we space optimize this is i'll take the ipad and explain you so if you're space optimizing because i told you that when can we space optimize we can space optimize if we have a state as i minus 1 because because because first time",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 17,
+      "video_id": "fWX9xDmIzRI",
+      "position": 195,
+      "title": "DP 14. Subset Sum Equals to Target | Identify DP on Subsequences and Ways to Solve them",
+      "url": "https://www.youtube.com/watch?v=fWX9xDmIzRI",
+      "start": 2034.0,
+      "end": 2153.5989999999997,
+      "text": "first time we always write the index 0 right we always take the index 0 and in this index 0 some a of i will be marked as true then we go to index one then we compute this but over here if you carefully observe in the base case yes if you carefully observe in the base case for every index for every row the zeroth index is marked as true so please make sure whenever you take a row whenever you take a row whenever the rule is curve this will be previous right whenever the row is curve the zeroth index is marked as true always always every time you declare a row the zeroth index should be marked as true that's a thumb rule because in the base case if you see all the indexes are marked so you compute the this this this this this this this this once you have computed this next you will move to the next one and this guy will become previous now this guy will be cur and it just uses i minus one the previous state so whenever there is a case of previous state the concept of previous and car comes in again i'm not going into depth because i've been teaching that from the last 12 lectures so if you have not seen the previous lectures it's your fault not mine so please make sure go back and watch those lectures in or in order to understand space optimization in depth so what did i say uh i require a couple of stuffs i require two rows to be stored one is the previous which will be of size uh target uh that is k plus one zero because we just need to store the row uh so the row will be having k columns so that's what i need to store that's what i have stored and i also require a current for the current guy so that's again k plus 1 and 0 perfect",
+      "word_count": 340
+    },
+    {
+      "chunk_index": 18,
+      "video_id": "fWX9xDmIzRI",
+      "position": 195,
+      "title": "DP 14. Subset Sum Equals to Target | Identify DP on Subsequences and Ways to Solve them",
+      "url": "https://www.youtube.com/watch?v=fWX9xDmIzRI",
+      "start": 2149.2,
+      "end": 2274.16,
+      "text": "0 perfect what is this dp of i of 0 so i don't need this any further but i know one thing previous of zero the first guy will be true and the car of zero will be true because for anyone the target zero has to be true so everyone the zero will be true and over here dp of zero so instead of dp of 0 it's the previous one because it's the previous one now we come to index of 1 what did i tell you index of i minus 1 means previous index of i minus 1 means previous dp dpf index means dp of index means current whenever this is completed the previous is now current and then n minus 1 is the previous current run this off let's quickly run this off runs fine what is the time complexity now it still stays the same and into target but what is the space complexity the space complexity has now boiled into just b go of target and we are not using any index array just we go of target is helping us to solve this problem in just b of k space that's amazing we're not requiring a 2d array so remember this concept of previous and k whenever you see i minus 1 is just you need to store the previous row just see what are you computing in the previous row so if you have if you're facing a problem in computing the previous row what i'll recommend is just go back uh go back and do a dry run of these for loop and fill the table fill the table step by step step by step step by step and you will you will slowly slowly see in the table this row helps you to get this row then this row helps you to get this row then this row helps you to get this row then this row helps you to get this row then this row helps you to get this row and ultimately the answer is stored here",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 19,
+      "video_id": "fWX9xDmIzRI",
+      "position": 195,
+      "title": "DP 14. Subset Sum Equals to Target | Identify DP on Subsequences and Ways to Solve them",
+      "url": "https://www.youtube.com/watch?v=fWX9xDmIzRI",
+      "start": 2269.52,
+      "end": 2324.96,
+      "text": "and ultimately the answer is stored here fill the table run the for loops do it yourself okay i can't just i just can't spoon feed everything do it yourself and you will slowly and slowly realize space optimization is is the easiest thing in the world it's just using couple of rows and just swapping swapping every time so i hope you have understood the first problem on dp on subsequences so just in case you did please please please make sure you like this video and to continue our tradition in the comment section please make sure you write and understood so that i do get motivated that you're understanding the explanation of the problems and yeah if you're new to this channel please please please do consider subscribing to us because we do put a lot of ds algo content you can check that out on our channel and every this will be wrapping up this video let's meet in the next one till then bye bye thank [Music] your you",
+      "word_count": 174
+    }
+  ]
+}

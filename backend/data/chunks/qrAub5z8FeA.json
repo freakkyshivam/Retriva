@@ -1,0 +1,152 @@
+{
+  "video_id": "qrAub5z8FeA",
+  "position": 180,
+  "title": "G-55. Bridges in Graph - Using Tarjan's Algorithm of time in and low time",
+  "url": "https://www.youtube.com/watch?v=qrAub5z8FeA",
+  "chunk_count": 13,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "qrAub5z8FeA",
+      "position": 180,
+      "title": "G-55. Bridges in Graph - Using Tarjan's Algorithm of time in and low time",
+      "url": "https://www.youtube.com/watch?v=qrAub5z8FeA",
+      "start": 3.3,
+      "end": 128.819,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well so in this video we're going to learn about bridges in a graph now what is the definition of a bridge very simple pick up any Edge and if you remove it the component gets broken into two or more components for an example let's remove this so the moment you remove this previously it was connected now can you see this is a single Standalone component and this is a single Standalone component so they got broken down into two separate components right now imagine I say okay if I remove this they're again broken down into two separate components so it's a bridge now what if I see let's remove this if you remove this it is not broken down into two or more components it still stays as a single component so that's not a bridge imagine I remove this it's broken down one here and one here so what is the definition of a bridge very simple any Edge any Edge on Whose removal the graph is broken down into two or more components that is the definition of a bridge got it now which algorithm will we use to find a bridge in a graph it's very simple we will be using some logic in the DFS algorithm so the prerequisite is quite straightforward you must be knowing the DFS algorithm just in case you do not know the DFS algorithm I've made the I made a detailed video on this on this particular playlist scroll up you'll find the video for DFS go back and watch it and come back okay so the prerequisite is DFS algorithm so we will be taking this particular graph and we know the bridges in this graph one is this the other one is this and the other one is this so the problem is stating print all the bridges that is the problem it states print all the bridges that's the question so four and five is",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "qrAub5z8FeA",
+      "position": 180,
+      "title": "G-55. Bridges in Graph - Using Tarjan's Algorithm of time in and low time",
+      "url": "https://www.youtube.com/watch?v=qrAub5z8FeA",
+      "start": 124.32,
+      "end": 237.35999999999999,
+      "text": "that's the question so four and five is a bridge you can write it as five and four five and six is a bridge again you can write it as six and five ten and eight is a bridge to write it as 800 so there are three Bridges I want you to print all the bridges in this particular graph that is what the question States to implement the algorithm to find the bridges in a graph what we will do is we will take two separate arrays one is the time of insertion while the other one is the lowest time of insertion now what does that mean do you remember DFS trans how does DFS transfer work maybe it starts from one it goes to two goes to 3 then goes to 4. so first occurrence like first time of insertion is here second time of insertion is here third time of insertion is here fourth time of insertion so while doing the DFS traversal keep a track when are you reaching a note in which Step are you reaching a node so the Step At which you reach the node that is what we call as time of insertion got it what is the lowest time of insertion what it does is it finds the lowest of all so if I'm standing here it will look at all that Json notes and take the lowest among them but it will not consider the parent did not understand no worries I'll be doing a proper dry run you'll understand this but remember this line apart from parent apart from parent this is the key point over here okay so let's start on with the algorithm so with the algorithm how we start is we will write time of insertion and the lowest time so let's start with one so that's where we start so marketers visited in the DFS traversal the type of insertion is the first step so timer will be one and the lowest time will be one so the first is",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "qrAub5z8FeA",
+      "position": 180,
+      "title": "G-55. Bridges in Graph - Using Tarjan's Algorithm of time in and low time",
+      "url": "https://www.youtube.com/watch?v=qrAub5z8FeA",
+      "start": 233.64,
+      "end": 357.419,
+      "text": "lowest time will be one so the first is the time of insertion the second is the lowest time since initially you do not have any adjacent notes let's assume the current time is your lowest then we will check around adjacent and we'll figure it out next it will go to two so mark it as visited and the time of insertion is 2 and the lowest chemistry next is three three by three next is four four by four next is five five by five Nexus 6 6 by 6 please make sure your Market is visited okay next is seven seven by 7 next is eight eight by eight next is nine by nine now here comes a critical case that you need to understand so at nine when you're doing a DFS traversal of nine it has a time of insertion as 9 and the lowest time of 9 right can nine go to anywhere if I ask you what are the adjacent notes of nine it's eight which is where it is coming in from if you look at this so it's the parent because eight is calling the nine so it's a parent and if you remember you do not consider parrot will 9 go to 6 in DFS we did not visit notes which I visited it will not go it will not go but remember of all adjacent notes that is what low has but low will say okay I will not go there but I'll pick up yellow your lowest is six I'll pick up so I'll just pick up that and write it to myself now remember this eight called Nine so as of now can I say 9 has no more adjacent notes to go it doesn't have anything to go so it will come back it will come back let's come back so he'll come back now when it comes back can I see for sure that the nines DFS traversal is complete done and dusted it is it is so nines time of insertion is nine",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "qrAub5z8FeA",
+      "position": 180,
+      "title": "G-55. Bridges in Graph - Using Tarjan's Algorithm of time in and low time",
+      "url": "https://www.youtube.com/watch?v=qrAub5z8FeA",
+      "start": 354.539,
+      "end": 473.94,
+      "text": "nine and the lowest time is six now eight will say a you are one of my adjacent notes A9 you are one of my adjacent notes and you did complete your traversal so I'll update my Loop what is yellow six better than me so I'll update my low to six that is the definition of flow it says I will take of all adjacent nodes apart from parent eight did not look at its parent it took it from its address note six it got it took and updated the loop done now once you have updated it states okay wait you have done your job now can can we can eat a 9B Bridge can this be a bridge okay can this be a bridge how do I check it how do I check it this is where these two arrays will help now he says 9 is 9 has done is DX straps can 8 9 be a bridge so he removes that hypothetically just remove that nine says okay removing you're removing you'll ask eight what's your time of insertion he says in order to reach me it has to be the eighth step it has to be the eighth step nine says I have an adjacent guy I have an adjacent guy who can reach at the sixth step the nine says I have an adjacent guy I have an artisan guy who can reach at the sixth step so even if you remove even if you remove I can still go to the sixth step and the sixth step will take me to the seventh and seventh will take me to the eighth so I can reach you if I can reach you it's not a bridge because the definition of a bridge is splitted into two components so if I'm split into two components I can't reach you back I can't reach you back so if there's a path to reach you back it did not get splitted into two components but it's",
+      "word_count": 341
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "qrAub5z8FeA",
+      "position": 180,
+      "title": "G-55. Bridges in Graph - Using Tarjan's Algorithm of time in and low time",
+      "url": "https://www.youtube.com/watch?v=qrAub5z8FeA",
+      "start": 467.039,
+      "end": 600.0,
+      "text": "splitted into two components but it's not a bridge so I am sure that it is not a bridge now since I know eight and nine cannot be a bridge so like hypothetically I removed it so hypothetically I'll place it back twice nice so it has done for nine the DFS is done it has taken its lowest value no time to move ahead now we move to 10 so can I see it was nine at the like the last step was night step this will be at the tenth step so I'll write uh all right ten comma 10. 10 comma ten written and Mark get as visited next eleven comma eleven Market has visited next 12 comma 12 Market has visited now comes the point it's it is this and write the DFS of 12. so when I write DFS of 12. can it go somewhere it says I have an adjacent Note 10 but it's already visited it's already visited so I cannot go there I cannot go there it's already visited now if it cannot go there because it's already visited so you came via some birth and that is the reason it is so this is never a bridge for sure because if it's visited because if it's visited you would have visited in the previous path so it's it's definitely not a bridge but what's our job low will say wait I know 12 it's a artistic note so why don't you pick its lowest time it just picks it and makes it 10. nice next can I say that the DFS of 11 called 12 and now 12 says I have done I am complete so whenever it's complete what is 11's job 11 says 12 you are done industry your time in and loan is ready I'll just take a look because that's better than mine I'll take it once I've taken it eleven says can this be a hypothetical Edge it's tries to remove it so 11 can be reached at the 11th step and 12 says I",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "qrAub5z8FeA",
+      "position": 180,
+      "title": "G-55. Bridges in Graph - Using Tarjan's Algorithm of time in and low time",
+      "url": "https://www.youtube.com/watch?v=qrAub5z8FeA",
+      "start": 593.88,
+      "end": 711.48,
+      "text": "reached at the 11th step and 12 says I have an adjacent who can be at the 10 steps I'll just go to the 10th and then I'll reach you if I can reach you this cannot be a bridge this cannot be a bridge this is not a bridge okay fine so let's erase this now 11 is done who called 11 that's right 10 called 11 can I say I can now 11 is done so it will go back when it goes back to 10 10 says okay he's coming back he's coming back so what's my first job hello says okay this is an adjacent note who has done his DFS traversal so his lowest ready I will just pick up but it's already 10 here is also 10 so there's no point of picking it up now next question can this be a bridge because I'm coming back the defense is complete so I'll just check for this to be a bridge so if I try to remove this then can be reached at the 10th step and 11 if you remove this 11 says I still have an adjacent where I can reach you so not possible this is not a bridge this is not a bridge it's not a bridge again so can I say now that the eight called Ten and now tense DFS is completed tense DFS is completed so now it will go back and it'll go back to eight when it goes back to eight what is its first shot eight says 10 you are my adjacent you have done your job what's your low 10 Milo is six so there's no point in taking a look forget about it now the next step it says is okay let's wait can we be an edge can we be a bridge for that eight says what is my step my step is eight then says the lowest step that I can reach to why all my adjacent notes is 10 so I cannot reach 8 or something before",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "qrAub5z8FeA",
+      "position": 180,
+      "title": "G-55. Bridges in Graph - Using Tarjan's Algorithm of time in and low time",
+      "url": "https://www.youtube.com/watch?v=qrAub5z8FeA",
+      "start": 706.2,
+      "end": 833.4590000000001,
+      "text": "so I cannot reach 8 or something before 8. so I cannot reach you back if I cannot reach you back I am stating that this guy is a bridge I'm stating that this guy is a bridge perfect done we got our first Bridge God of first bridge now eighth says I've done with nine I'm done with ten I'm done with all that just notes so now go back this up when it goes to seven so seven ideally you would have called eight right the eighth job is done so it goes back to seven Seven's first step is a eight you are done what's your lowest six I'll just pick you I'll just pick the picks up now next step seven and eight check for bridge so when they check for bridge eight says okay my lowest is six I can still go to 6. 7 says my step is seven so if eight can reach six that means it can reach back seven so this is not a bridge this is definitely not a bridge so sevens if this is done it'll now go back to six so let's let's write for six now wait shall be right DFS of six called seven and seven is done right or six first job low will be looking for it low says okay seven you're done what's your low 6 Milo is six no need to do no need to do anything so if we remove this if I remove the seven C's I can still reach back six which is your step which is why this because that's why it says six and this is six so even if you remove this it can still reach you back no point no point not a bridge done can I say six is done I can say six is now done who who was called by six five called six so it goes back the moment it goes back I says wait imagine hello is again looking for it six it has five will not take it five",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "qrAub5z8FeA",
+      "position": 180,
+      "title": "G-55. Bridges in Graph - Using Tarjan's Algorithm of time in and low time",
+      "url": "https://www.youtube.com/watch?v=qrAub5z8FeA",
+      "start": 826.98,
+      "end": 936.899,
+      "text": "six it has five will not take it five says my time of insertion is five six says the lowest I can get is six I cannot reach you back cannot reach you back five and six is a bridge so I got one more Bridge I got one more Bridge perfect five is done what's the next step five says let's go back to four I says let's go back to four so four which called five if I will go back to it the moment it goes back to four four slow looks for it and says you're five but I have four a lot four says he I need fourth step price is the lowest I can get is fifth so o5 is a bridge again over the bridge again so I can say five is done and we have figured out four five is a bridge and do you remember how the defense call happened one came here then it Go went here but four did not check out its other adjacent node which was one so now it came back the four will try to go here but it's already visited so it will not go but since it came via here it can pick up the low and update him because he's greedy let's just look for that just note slow I'll update him now four will try to go back to three because that is where it came from the moment it tries to go back to three three is greedy three's low is greedy so we will look for okay wait let me take a look so take it slow that's the first thing next I'll try to see if 4 and 3 can be a bridge four and three can be a bridge force is okay I can reach the first step three is entry times three so I can reach this not average similarly you can track back and everything so apparently we got three Bridges one year one year that's how",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "qrAub5z8FeA",
+      "position": 180,
+      "title": "G-55. Bridges in Graph - Using Tarjan's Algorithm of time in and low time",
+      "url": "https://www.youtube.com/watch?v=qrAub5z8FeA",
+      "start": 931.32,
+      "end": 1047.059,
+      "text": "Bridges one year one year that's how easy it was so I hope you've got the intuition the intuition is pretty simple pretty simple the reason we have stored low apart from the parent is is very simple like if I just draw it this is the parent and this like the parent is usually the node and this is the ID now the reason the reason this it guy is not storing the law here is because we are removing this so if there is someone else who can take before the parent or to the parent that is what we need to look for that is why we are not storing the parents look got it that's that's a simple intuition I just look for if there is any other way I can go back to Prior like prior to that deepest traversal or to that note that is the simple intuition behind this like small I hope you've understood the entire intuition and the algorithm not same to code it up so the problem is critical Connections in a network it states the graph is zero based indexing and so and so you have to find all the critical connections so the definition of bridge is defined as critical connections over here what are we given n and the connections so they're basically given the edges so you have to form the graph yourself so as usual I'll be coding the C plus plus solution and you can figure out the exact similar Java code on the left okay so let's quickly uh start coding this up the first step is pretty simple we'll create the adjacency list of size n let's go across the connections which is this and what we will do is we'll say adjacency of i t of 0 because this is yeah this is a vector so pushback of idf1 and you can just copy paste the same line because it's underactive graph and you can say ID of 1 so outfit ideas you so the graph is created",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "qrAub5z8FeA",
+      "position": 180,
+      "title": "G-55. Bridges in Graph - Using Tarjan's Algorithm of time in and low time",
+      "url": "https://www.youtube.com/watch?v=qrAub5z8FeA",
+      "start": 1042.439,
+      "end": 1161.0,
+      "text": "outfit ideas you so the graph is created once the graph is created what do you require for the DFS traversal just think yourself you will requiring you'll be requiring a visitor directly so let's go across and Mark it it'll be requiring a TN you can Mark everything as zero and you'll be requiring in this what's the other thing that you'll be requiring you'll be requiring to store all the bridges so maybe we can create a vector of vector of int and maybe you can call this as bridges that is what you want to store and we require a timer so maybe you can declare it globally timer equal to 0 that is the step or you can keep it as one as well now let's write this as void void DFS IND node okay we need the parent and we need the visited and then we need the graph as well so go ahead and take the graph that's the adjacency list what else we required we require the time in and we require the lower time done now the moment you enter the graph what's the first thing that you will do the first thing that you do is Mark it as visited so go across and Mark it as this what's the next thing that you will do you will say time of initiation of the node and the lowest time of the node is equal to timer and then you can just increase the timer for the next step now go across and travel for its adjacent node now something I know is if it is if the adjacent node is the parent we don't need to call the DFS or we don't need to take it into consideration so if the it the adjacent node is equal to parent let's not do anything and go ahead and the other thing can be if it's not visited right or else if it's visited that's two of the cases so remember if it's not visited what's the first",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "qrAub5z8FeA",
+      "position": 180,
+      "title": "G-55. Bridges in Graph - Using Tarjan's Algorithm of time in and low time",
+      "url": "https://www.youtube.com/watch?v=qrAub5z8FeA",
+      "start": 1155.419,
+      "end": 1284.5390000000002,
+      "text": "if it's not visited what's the first thing that you'll do we will go and Travis for it so it the parent will be node the visitor the adjacent the TN and the low once the DFS of it is completed it comes back node is greedy so note says Jeff came back right okay wait wait what's your lowest step give it to me and he takes it can this node to ID be a bridge he'll ask so for that he'll say hey hey I've just said no what's your lowest time what's your lowest time this is so adjacent node will say my lowest term is low of i t if that's somewhere lesser than equal the current nodes time of insertion then he can reach but if it is not if the lowest time is greater than the time of insertion and he cannot reach the current node that means it's a bridge they go across and say it is a bridge and maybe you can just store this it is a vector or vector int and bridges perfect so you can just take this Bridges [Music] perfect and over here you can say okay this is a bridge so Bridges dot push back because if we cannot reach because if the lower stem cannot reach before or equivalent to the node that means they got split into two different components I can write as it and no this is a bridge you can write it as node and it as well perfect done what if it's visited that means while the DFS traversal was been done previously you would have visited it so you have already visited it so it's definitely in the same component even if you remove that so Bridge not possible because you're coming by visiting it you're coming by visiting it so how can it be a bridge I'll just be considered with the lowest time so he is just bothered about himself he'll be like hey I just I don't care just give me your",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "qrAub5z8FeA",
+      "position": 180,
+      "title": "G-55. Bridges in Graph - Using Tarjan's Algorithm of time in and low time",
+      "url": "https://www.youtube.com/watch?v=qrAub5z8FeA",
+      "start": 1280.88,
+      "end": 1383.0,
+      "text": "I just I don't care just give me your last time let's just take it cannot be a bridge I know so it's perfect this is how you can write it just us take the lowest time of the Addison compare it if it can reach and once you have done this call the Davis by the assuming it's a single component we start from zero we give the parent as initial as minus one we need the visitor we need the Artisan we need the time of insertion we need the low okay make sure you pass everything correctly otherwise it will be a mess and once you've done this you can return the bridges so this is how you can easily get all the bridges now let's quickly go and run this and see if it is running fine okay we have some mistake let's see if we what mistake we have okay there is a breast Breeze missing okay we've given that now let's quickly run this and see if it is running fine [Music] it is now let's submit this and see if it is getting submitted or not so now it's time to discuss the time complexity and the space complexity first let's discuss the space complexity we're using like three and over here and a V plus 2E to create the graph so V plus 2E and then 3M so you can say plus of just the space yes that's a space complexity what is the time complexity can I say I'm doing a DFS traversal and you know the DFS traversal takes V plus two e so this time complexity is V plus 2E so this is how you can easily find all the bridges in a graph so I hope you've understood everything uh before wrapping up this video I have a very quick request to make I was going through our Channel statistics nearly 50 of the users who watch our video do not hit that subscribe button so if you're new to our Channel please please please",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "qrAub5z8FeA",
+      "position": 180,
+      "title": "G-55. Bridges in Graph - Using Tarjan's Algorithm of time in and low time",
+      "url": "https://www.youtube.com/watch?v=qrAub5z8FeA",
+      "start": 1379.7,
+      "end": 1404.8600000000001,
+      "text": "new to our Channel please please please do consider subscribing to us if you've understood the intuition the algorithm and the code make sure you hit that like button and if you haven't checked out our SD sheet and the other playlist all the links will be in the description make sure you check them out as well with this I'll be up this video let's put in some other videos whenever your heart is broken don't ever forget your golden I will",
+      "word_count": 83
+    }
+  ]
+}

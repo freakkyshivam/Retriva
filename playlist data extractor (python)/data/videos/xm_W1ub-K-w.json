@@ -1,0 +1,836 @@
+{
+  "position": 114,
+  "video_id": "xm_W1ub-K-w",
+  "title": "L42. Floor in a Binary Search Tree | BST | C++ | Java",
+  "url": "https://www.youtube.com/watch?v=xm_W1ub-K-w",
+  "transcript": [
+    {
+      "start": 0.0,
+      "duration": 3.6,
+      "end": 3.6,
+      "text": "before starting this video i'd love to"
+    },
+    {
+      "start": 1.439,
+      "duration": 4.081,
+      "end": 5.5200000000000005,
+      "text": "thank relevel for sponsoring this entire"
+    },
+    {
+      "start": 3.6,
+      "duration": 3.36,
+      "end": 6.96,
+      "text": "tree series the placement season is here"
+    },
+    {
+      "start": 5.52,
+      "duration": 3.68,
+      "end": 9.2,
+      "text": "i know a lot of you are planning to sit"
+    },
+    {
+      "start": 6.96,
+      "duration": 4.0,
+      "end": 10.96,
+      "text": "for companies which come on campus in"
+    },
+    {
+      "start": 9.2,
+      "duration": 4.16,
+      "end": 13.36,
+      "text": "case you are disappointed that the top"
+    },
+    {
+      "start": 10.96,
+      "duration": 4.32,
+      "end": 15.280000000000001,
+      "text": "startups like tread upgrad razor pay are"
+    },
+    {
+      "start": 13.36,
+      "duration": 3.759,
+      "end": 17.119,
+      "text": "not hiring directly from your campus"
+    },
+    {
+      "start": 15.28,
+      "duration": 3.6,
+      "end": 18.88,
+      "text": "there is an easier way to work here just"
+    },
+    {
+      "start": 17.119,
+      "duration": 3.681,
+      "end": 20.8,
+      "text": "register for the relevant test conducted"
+    },
+    {
+      "start": 18.88,
+      "duration": 3.52,
+      "end": 22.4,
+      "text": "by reliable by an academy and you'll get"
+    },
+    {
+      "start": 20.8,
+      "duration": 3.12,
+      "end": 23.92,
+      "text": "a chance to apply for front-end backend"
+    },
+    {
+      "start": 22.4,
+      "duration": 3.36,
+      "end": 25.759999999999998,
+      "text": "and business development roles at"
+    },
+    {
+      "start": 23.92,
+      "duration": 4.08,
+      "end": 28.0,
+      "text": "india's top startups and unicorn"
+    },
+    {
+      "start": 25.76,
+      "duration": 5.519,
+      "end": 31.279000000000003,
+      "text": "companies reliable has thousand plus"
+    },
+    {
+      "start": 28.0,
+      "duration": 5.76,
+      "end": 33.76,
+      "text": "openings by 50 plus companies and the"
+    },
+    {
+      "start": 31.279,
+      "duration": 3.601,
+      "end": 34.88,
+      "text": "best thing is it's absolutely free so"
+    },
+    {
+      "start": 33.76,
+      "duration": 2.4,
+      "end": 36.16,
+      "text": "please make sure you check out all the"
+    },
+    {
+      "start": 34.88,
+      "duration": 5.359,
+      "end": 40.239000000000004,
+      "text": "links in the description and give the"
+    },
+    {
+      "start": 36.16,
+      "duration": 4.079,
+      "end": 40.239,
+      "text": "relevant test as soon as possible"
+    },
+    {
+      "start": 43.2,
+      "duration": 3.28,
+      "end": 46.480000000000004,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 44.719,
+      "duration": 3.761,
+      "end": 48.480000000000004,
+      "text": "i hope you guys are doing extremely well"
+    },
+    {
+      "start": 46.48,
+      "duration": 4.559,
+      "end": 51.038999999999994,
+      "text": "so today we will be solving the problem"
+    },
+    {
+      "start": 48.48,
+      "duration": 5.12,
+      "end": 53.599999999999994,
+      "text": "floor in a binary search tree what does"
+    },
+    {
+      "start": 51.039,
+      "duration": 6.081,
+      "end": 57.120000000000005,
+      "text": "this signify basically you will be given"
+    },
+    {
+      "start": 53.6,
+      "duration": 6.479,
+      "end": 60.079,
+      "text": "a key assume the key is given as seven"
+    },
+    {
+      "start": 57.12,
+      "duration": 5.84,
+      "end": 62.959999999999994,
+      "text": "in this entire binary search tree you"
+    },
+    {
+      "start": 60.079,
+      "duration": 4.8,
+      "end": 64.879,
+      "text": "have to figure out which value"
+    },
+    {
+      "start": 62.96,
+      "duration": 5.199,
+      "end": 68.159,
+      "text": "is the greatest value"
+    },
+    {
+      "start": 64.879,
+      "duration": 6.881,
+      "end": 71.76,
+      "text": "that's smaller than or equal to 7 i"
+    },
+    {
+      "start": 68.159,
+      "duration": 6.801,
+      "end": 74.96000000000001,
+      "text": "repeat that's smaller than or equal to"
+    },
+    {
+      "start": 71.76,
+      "duration": 5.84,
+      "end": 77.60000000000001,
+      "text": "seven so i can say the greatest value"
+    },
+    {
+      "start": 74.96,
+      "duration": 4.32,
+      "end": 79.28,
+      "text": "that is smaller than or equal to seven"
+    },
+    {
+      "start": 77.6,
+      "duration": 4.08,
+      "end": 81.67999999999999,
+      "text": "is indeed six"
+    },
+    {
+      "start": 79.28,
+      "duration": 6.24,
+      "end": 85.52,
+      "text": "so i can say the floor"
+    },
+    {
+      "start": 81.68,
+      "duration": 5.52,
+      "end": 87.2,
+      "text": "if the key is given as seven will be"
+    },
+    {
+      "start": 85.52,
+      "duration": 2.88,
+      "end": 88.39999999999999,
+      "text": "six"
+    },
+    {
+      "start": 87.2,
+      "duration": 3.919,
+      "end": 91.119,
+      "text": "similarly"
+    },
+    {
+      "start": 88.4,
+      "duration": 3.759,
+      "end": 92.159,
+      "text": "if i modify the key to be something like"
+    },
+    {
+      "start": 91.119,
+      "duration": 3.601,
+      "end": 94.72,
+      "text": "14"
+    },
+    {
+      "start": 92.159,
+      "duration": 4.561,
+      "end": 96.72,
+      "text": "which is the greatest value that's"
+    },
+    {
+      "start": 94.72,
+      "duration": 3.759,
+      "end": 98.479,
+      "text": "smaller than equal to 14 that's going to"
+    },
+    {
+      "start": 96.72,
+      "duration": 4.399,
+      "end": 101.119,
+      "text": "be 10"
+    },
+    {
+      "start": 98.479,
+      "duration": 5.68,
+      "end": 104.15899999999999,
+      "text": "so that's the definition of floor in a"
+    },
+    {
+      "start": 101.119,
+      "duration": 5.761,
+      "end": 106.88,
+      "text": "bst i need to figure out the"
+    },
+    {
+      "start": 104.159,
+      "duration": 5.92,
+      "end": 110.07900000000001,
+      "text": "greatest value that's smaller than equal"
+    },
+    {
+      "start": 106.88,
+      "duration": 5.519,
+      "end": 112.399,
+      "text": "to a given key so how do you do that"
+    },
+    {
+      "start": 110.079,
+      "duration": 4.961,
+      "end": 115.03999999999999,
+      "text": "very very simple let's"
+    },
+    {
+      "start": 112.399,
+      "duration": 5.281,
+      "end": 117.68,
+      "text": "okay uh so assuming that the key has"
+    },
+    {
+      "start": 115.04,
+      "duration": 4.24,
+      "end": 119.28,
+      "text": "been given as nine okay and i want to"
+    },
+    {
+      "start": 117.68,
+      "duration": 3.52,
+      "end": 121.2,
+      "text": "figure out which is"
+    },
+    {
+      "start": 119.28,
+      "duration": 4.159,
+      "end": 123.43900000000001,
+      "text": "the value that's which is the greatest"
+    },
+    {
+      "start": 121.2,
+      "duration": 4.16,
+      "end": 125.36,
+      "text": "value that's lesser than equal to key so"
+    },
+    {
+      "start": 123.439,
+      "duration": 4.241,
+      "end": 127.67999999999999,
+      "text": "it's very simple what you do is you"
+    },
+    {
+      "start": 125.36,
+      "duration": 3.039,
+      "end": 128.399,
+      "text": "start doing a binary search you start"
+    },
+    {
+      "start": 127.68,
+      "duration": 3.68,
+      "end": 131.36,
+      "text": "off"
+    },
+    {
+      "start": 128.399,
+      "duration": 5.041,
+      "end": 133.44,
+      "text": "at right at the root that's 10 right and"
+    },
+    {
+      "start": 131.36,
+      "duration": 4.8,
+      "end": 136.16000000000003,
+      "text": "that's definitely greater than your key"
+    },
+    {
+      "start": 133.44,
+      "duration": 4.4,
+      "end": 137.84,
+      "text": "so that cannot be your answer okay so"
+    },
+    {
+      "start": 136.16,
+      "duration": 3.92,
+      "end": 140.07999999999998,
+      "text": "you can keep our answer variable that"
+    },
+    {
+      "start": 137.84,
+      "duration": 4.56,
+      "end": 142.4,
+      "text": "cannot be your answer for sure so what"
+    },
+    {
+      "start": 140.08,
+      "duration": 5.44,
+      "end": 145.52,
+      "text": "you do is you try to move"
+    },
+    {
+      "start": 142.4,
+      "duration": 5.12,
+      "end": 147.52,
+      "text": "left because 10 is indeed greater than 9"
+    },
+    {
+      "start": 145.52,
+      "duration": 4.56,
+      "end": 150.08,
+      "text": "but you want someone lesser than so you"
+    },
+    {
+      "start": 147.52,
+      "duration": 3.84,
+      "end": 151.36,
+      "text": "have to move left so move left over here"
+    },
+    {
+      "start": 150.08,
+      "duration": 4.08,
+      "end": 154.16000000000003,
+      "text": "you have 5"
+    },
+    {
+      "start": 151.36,
+      "duration": 5.44,
+      "end": 156.8,
+      "text": "so you got someone who's lesser than 9"
+    },
+    {
+      "start": 154.16,
+      "duration": 5.2,
+      "end": 159.35999999999999,
+      "text": "so 5 is as of now you answer now what do"
+    },
+    {
+      "start": 156.8,
+      "duration": 4.88,
+      "end": 161.68,
+      "text": "you want you want this value to be as"
+    },
+    {
+      "start": 159.36,
+      "duration": 4.159,
+      "end": 163.519,
+      "text": "large as possible so if you"
+    },
+    {
+      "start": 161.68,
+      "duration": 3.839,
+      "end": 165.519,
+      "text": "so if you want to make this large will"
+    },
+    {
+      "start": 163.519,
+      "duration": 3.761,
+      "end": 167.28,
+      "text": "you move left or will you move right"
+    },
+    {
+      "start": 165.519,
+      "duration": 3.041,
+      "end": 168.56,
+      "text": "it's an obvious answer you will"
+    },
+    {
+      "start": 167.28,
+      "duration": 2.16,
+      "end": 169.44,
+      "text": "definitely"
+    },
+    {
+      "start": 168.56,
+      "duration": 4.0,
+      "end": 172.56,
+      "text": "move"
+    },
+    {
+      "start": 169.44,
+      "duration": 6.079,
+      "end": 175.519,
+      "text": "right why because if you move right this"
+    },
+    {
+      "start": 172.56,
+      "duration": 5.52,
+      "end": 178.08,
+      "text": "answer 5 will increase now you have 8"
+    },
+    {
+      "start": 175.519,
+      "duration": 5.44,
+      "end": 180.959,
+      "text": "that's lesser than 9 yes that's less"
+    },
+    {
+      "start": 178.08,
+      "duration": 4.96,
+      "end": 183.04000000000002,
+      "text": "than 9 so you can take this 8 so answer"
+    },
+    {
+      "start": 180.959,
+      "duration": 3.601,
+      "end": 184.56,
+      "text": "will be updated to 5. now"
+    },
+    {
+      "start": 183.04,
+      "duration": 2.72,
+      "end": 185.76,
+      "text": "you want to increase the state further"
+    },
+    {
+      "start": 184.56,
+      "duration": 3.2,
+      "end": 187.76,
+      "text": "you want to increase the state further"
+    },
+    {
+      "start": 185.76,
+      "duration": 4.16,
+      "end": 189.92,
+      "text": "so what will you do you will definitely"
+    },
+    {
+      "start": 187.76,
+      "duration": 4.24,
+      "end": 192.0,
+      "text": "move right and the moment you move right"
+    },
+    {
+      "start": 189.92,
+      "duration": 3.84,
+      "end": 193.76,
+      "text": "you reach null so you can stop so"
+    },
+    {
+      "start": 192.0,
+      "duration": 3.84,
+      "end": 195.84,
+      "text": "ultimately the answer is storing"
+    },
+    {
+      "start": 193.76,
+      "duration": 4.24,
+      "end": 198.0,
+      "text": "something as eight that's how you get"
+    },
+    {
+      "start": 195.84,
+      "duration": 5.52,
+      "end": 201.36,
+      "text": "the bst just keep on moving keep on"
+    },
+    {
+      "start": 198.0,
+      "duration": 5.2,
+      "end": 203.2,
+      "text": "moving in order of increasing this value"
+    },
+    {
+      "start": 201.36,
+      "duration": 4.959,
+      "end": 206.31900000000002,
+      "text": "just try to move in such a way that this"
+    },
+    {
+      "start": 203.2,
+      "duration": 5.92,
+      "end": 209.11999999999998,
+      "text": "value is always increased and whatever"
+    },
+    {
+      "start": 206.319,
+      "duration": 5.601,
+      "end": 211.92,
+      "text": "is the last answer stored is definitely"
+    },
+    {
+      "start": 209.12,
+      "duration": 4.8,
+      "end": 213.92000000000002,
+      "text": "going to be your floor in a binary"
+    },
+    {
+      "start": 211.92,
+      "duration": 4.72,
+      "end": 216.64,
+      "text": "search tree"
+    },
+    {
+      "start": 213.92,
+      "duration": 4.72,
+      "end": 218.64,
+      "text": "so if i discuss the code the c plus plus"
+    },
+    {
+      "start": 216.64,
+      "duration": 3.44,
+      "end": 220.07999999999998,
+      "text": "and the java code are almost identical"
+    },
+    {
+      "start": 218.64,
+      "duration": 3.12,
+      "end": 221.76,
+      "text": "so i'll be just i'll be just telling you"
+    },
+    {
+      "start": 220.08,
+      "duration": 4.079,
+      "end": 224.15900000000002,
+      "text": "the c plus plus code you're given the"
+    },
+    {
+      "start": 221.76,
+      "duration": 4.08,
+      "end": 225.84,
+      "text": "root you're given the key very simple"
+    },
+    {
+      "start": 224.159,
+      "duration": 3.121,
+      "end": 227.28,
+      "text": "initially stored the answer of the floor"
+    },
+    {
+      "start": 225.84,
+      "duration": 2.56,
+      "end": 228.4,
+      "text": "as minus one"
+    },
+    {
+      "start": 227.28,
+      "duration": 3.039,
+      "end": 230.319,
+      "text": "if if"
+    },
+    {
+      "start": 228.4,
+      "duration": 3.919,
+      "end": 232.31900000000002,
+      "text": "that's equivalent to key that then"
+    },
+    {
+      "start": 230.319,
+      "duration": 3.521,
+      "end": 233.83999999999997,
+      "text": "there's no need to go left and right"
+    },
+    {
+      "start": 232.319,
+      "duration": 3.521,
+      "end": 235.83999999999997,
+      "text": "you cannot you cannot"
+    },
+    {
+      "start": 233.84,
+      "duration": 3.44,
+      "end": 237.28,
+      "text": "increase this any further store in the"
+    },
+    {
+      "start": 235.84,
+      "duration": 4.16,
+      "end": 240.0,
+      "text": "floor and return the floor or you can"
+    },
+    {
+      "start": 237.28,
+      "duration": 5.28,
+      "end": 242.56,
+      "text": "directly return the root dot valve now"
+    },
+    {
+      "start": 240.0,
+      "duration": 4.4,
+      "end": 244.4,
+      "text": "what if the key that's given to you"
+    },
+    {
+      "start": 242.56,
+      "duration": 2.64,
+      "end": 245.2,
+      "text": "that's greater"
+    },
+    {
+      "start": 244.4,
+      "duration": 2.32,
+      "end": 246.72,
+      "text": "than"
+    },
+    {
+      "start": 245.2,
+      "duration": 3.52,
+      "end": 248.72,
+      "text": "the current root val that you're"
+    },
+    {
+      "start": 246.72,
+      "duration": 4.159,
+      "end": 250.879,
+      "text": "standing at if that's the case and you"
+    },
+    {
+      "start": 248.72,
+      "duration": 4.48,
+      "end": 253.2,
+      "text": "too then you need to increase it in"
+    },
+    {
+      "start": 250.879,
+      "duration": 4.161,
+      "end": 255.04,
+      "text": "order to increase it you move right just"
+    },
+    {
+      "start": 253.2,
+      "duration": 4.319,
+      "end": 257.519,
+      "text": "make sure you store the floor what if"
+    },
+    {
+      "start": 255.04,
+      "duration": 3.919,
+      "end": 258.959,
+      "text": "it's not then just go left because you"
+    },
+    {
+      "start": 257.519,
+      "duration": 3.921,
+      "end": 261.44,
+      "text": "need to increase you need to decrease"
+    },
+    {
+      "start": 258.959,
+      "duration": 4.24,
+      "end": 263.199,
+      "text": "you need to have it under key yes you"
+    },
+    {
+      "start": 261.44,
+      "duration": 4.8,
+      "end": 266.24,
+      "text": "need to have it under key so just go"
+    },
+    {
+      "start": 263.199,
+      "duration": 4.401,
+      "end": 267.6,
+      "text": "left that's how you can find floor in a"
+    },
+    {
+      "start": 266.24,
+      "duration": 3.04,
+      "end": 269.28000000000003,
+      "text": "binary so i hope you've understood the"
+    },
+    {
+      "start": 267.6,
+      "duration": 3.36,
+      "end": 270.96000000000004,
+      "text": "entire explanation as well as the code"
+    },
+    {
+      "start": 269.28,
+      "duration": 3.12,
+      "end": 272.4,
+      "text": "just in case you did please please"
+    },
+    {
+      "start": 270.96,
+      "duration": 3.679,
+      "end": 274.63899999999995,
+      "text": "please make sure you like this video"
+    },
+    {
+      "start": 272.4,
+      "duration": 4.64,
+      "end": 277.03999999999996,
+      "text": "because it took a lot of efforts to make"
+    },
+    {
+      "start": 274.639,
+      "duration": 4.0,
+      "end": 278.639,
+      "text": "this entire tree series also if you wish"
+    },
+    {
+      "start": 277.04,
+      "duration": 3.36,
+      "end": 280.40000000000003,
+      "text": "you can definitely drop in a comment"
+    },
+    {
+      "start": 278.639,
+      "duration": 4.081,
+      "end": 282.72,
+      "text": "that will keep motivating me to make"
+    },
+    {
+      "start": 280.4,
+      "duration": 3.519,
+      "end": 283.919,
+      "text": "such further series also if you're new"
+    },
+    {
+      "start": 282.72,
+      "duration": 2.56,
+      "end": 285.28000000000003,
+      "text": "to the channel please do consider"
+    },
+    {
+      "start": 283.919,
+      "duration": 3.041,
+      "end": 286.96,
+      "text": "subscribing because i'm going to bring"
+    },
+    {
+      "start": 285.28,
+      "duration": 3.76,
+      "end": 289.03999999999996,
+      "text": "in such more series in the upcoming"
+    },
+    {
+      "start": 286.96,
+      "duration": 3.12,
+      "end": 290.08,
+      "text": "future as well with this uh let's wrap"
+    },
+    {
+      "start": 289.04,
+      "duration": 1.9,
+      "end": 290.94,
+      "text": "up this video let's speed in the next"
+    },
+    {
+      "start": 290.08,
+      "duration": 5.36,
+      "end": 295.44,
+      "text": "lecture"
+    },
+    {
+      "start": 290.94,
+      "duration": 2.46,
+      "end": 293.4,
+      "text": "[Music]"
+    },
+    {
+      "start": 295.44,
+      "duration": 0.0,
+      "end": 295.44,
+      "text": "you're bye"
+    }
+  ]
+}

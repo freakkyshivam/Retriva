@@ -1,0 +1,152 @@
+{
+  "video_id": "eZr-6p0B7ME",
+  "position": 38,
+  "title": "Number of Subarrays with xor K | Brute - Better - Optimal",
+  "url": "https://www.youtube.com/watch?v=eZr-6p0B7ME",
+  "chunk_count": 13,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "eZr-6p0B7ME",
+      "position": 38,
+      "title": "Number of Subarrays with xor K | Brute - Better - Optimal",
+      "url": "https://www.youtube.com/watch?v=eZr-6p0B7ME",
+      "start": 3.74,
+      "end": 107.64,
+      "text": "hope you guys are doing extremely well so this is another lecture from the strike bus A to Z DSA course just in case you're for the first time here this is world's most in-depth course when you talk about DSL though why do I say that 455 yes this cost us 455 modules by the end of the course that I've sold more than 400 plus problems when it comes to DSL where you can go over the entire internet you can buy any of the paid courses none of them will be teaching you DS algo in such step something that I can give you as assurances once you cover up the entire post you'll be able to clear any of the DS algorithms in any of the companies in any part of the world so till now I have covered up till this particular problem now in this video I'll be solving the problem count number of sub arrays with a Givens or k but please please make sure that before attempting this particular problem you should go back and watch this problem which is counting the number of sub arrays with some cake because the concept that I've used in this particular problem will be reused in this problem as well so I'll be leaving the video Link in the description in case you haven't seen it please go back and watch it and then you can resume this particular video so what does the problem state it states that you have to count with the number of sub arrays with a given zor as K now what is the definition of sabare any contagious very important word any contagious part of the array so something like 226 is a summary something like 2 and 4 is not a Savari where you pick this two and this four why because it is not a contiguous part so a sub array is a contagious one of the arrays something like 6 is also a summary something like the entire array is also a summary",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "eZr-6p0B7ME",
+      "position": 38,
+      "title": "Number of Subarrays with xor K | Brute - Better - Optimal",
+      "url": "https://www.youtube.com/watch?v=eZr-6p0B7ME",
+      "start": 102.72,
+      "end": 210.0,
+      "text": "the entire array is also a summary because it is a contiguous part of the array so that is what you mean by sub array now you will be given a k over here you are given this particular array and you're given the value of K as 6 can you tell me how many sub arrays are there who will give you the zor as 6 so I can say there are exactly four why this one if you take 4 and 2 and you do a Zord of 4 and 2 the value that you will get is six if you do not know about the zor operator you can Google about it you will uh get to know what the zor operator does again if you take this particular one it's a single element so any single element you you do not need to resolve with anything else so the zor will be six for this twos or two so six and as you know sort of similar elements means zero so zor is six for this 4 and 4 will cut off because they are similar 2 and 2 will cut off because they are similar so it will be basically 0 and you'll be left off with 6 so you're getting this particular zone so how many sub arrays are there one two three four and that is what you have to return you have to return me the count of the sub arrays with the given zor as K that is what the problem States so this problem comes up in an interview what is the first solution that you will give to the interview that is definitely the brute force and if you're talking about sub arrays what is the extreme range solution that comes to your mind generate all the sub arrays and how can you generate all the sub arrays it is very simple you know one thing the first about it is this the second sabare is this the third sub array is this the",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "eZr-6p0B7ME",
+      "position": 38,
+      "title": "Number of Subarrays with xor K | Brute - Better - Optimal",
+      "url": "https://www.youtube.com/watch?v=eZr-6p0B7ME",
+      "start": 204.9,
+      "end": 315.59999999999997,
+      "text": "this the third sub array is this the both is this the fifth one is this and then this one is the sixth seventh eighth ninth then this this this something we know for sure is a standard pool and you keep on expanding right so what I can say is maybe I can start a loop from 0 and I can go until n again I'm not going into deep because I've already taught you how to generate sub arrays so I can probably stand here and now I can say Okay 4 is the first subarray so I can just start with four then I can take four two so something I can say is okay maybe there will be another loop G which will start from I and it will go on till n so if I have to look at the values at first I will be 0 which is this and J will be at this portion so this is the entire sub array then what happens to j i stays here J moves here because J will move with J plus plus so this is the sub array then what happens to J J will move here and I will still be here so this is the sub array next J will move here and I will stay here so this will be the sub array next J will move here and I will stay here so this is the sub array after J has completed what will happen to I I will move to 1 and the same I will be here what about J they will start from here so this will be the sub array next J will move here I will be here so this will be this about it and similarly you can go on so can I say can I see this that the Subaru is from I to J can I see this because if I is standing here and G is standing here I definitely know this is the sub array",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "eZr-6p0B7ME",
+      "position": 38,
+      "title": "Number of Subarrays with xor K | Brute - Better - Optimal",
+      "url": "https://www.youtube.com/watch?v=eZr-6p0B7ME",
+      "start": 311.34,
+      "end": 436.91900000000004,
+      "text": "definitely know this is the sub array right so probably we can keep the zor value as 0 and I can say zor equal to zor off array of key so what this will do is this will I treat through the entire sub array and give me the source stored in the zor variable after this Loop is done I can see the zone of that Savari if that is equivalent to what we are looking for we can do a counter plus plus quite simple and this is how the code will look like so if I have to analyze the time complexity can I say it's near about B go off and Q near about because we are running three Loops first to generate the sub array next to go through the sub array and compute this result so the time complexity is near about Big O of NQ what about the space we are not using any space so big of one is the space complexity obviously the interviewer will not be happy with n Cube and it'll ask you to optimize it this is when we will move to the better solution what about the better solution can we observe something do we actually need the third array we do not need it why I'll tell you so imagine I just end up removing this I'm removing this let us have some observation so imagine I was here and you will see I know the first about it will just have four so the zor will be four next year so the next sabare is having four two one more element at it what will be the result fours or two next J moves here so another two will be added to the sub array So eventually as G is moving the next sub array is including one more element is including one more element so can I say if I can keep a zor variable next time 2 gets added next time another two gets added next time fours or twos",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "eZr-6p0B7ME",
+      "position": 38,
+      "title": "Number of Subarrays with xor K | Brute - Better - Optimal",
+      "url": "https://www.youtube.com/watch?v=eZr-6p0B7ME",
+      "start": 431.1,
+      "end": 548.519,
+      "text": "two gets added next time fours or twos or twos or six will get added next time there's already this four will get added because of this one eventually I can keep on adding this is what I'll do we've already done this previously Zora can be zero and every time I move forward I just add up the new element and whatever zor I'm getting if that is equivalent to gay I keep a count so what I've done is I've boiled down the time complexity to be go of n Square by just using two Loops again I've explained this in depth in the previous video that is one not going in depth because I know you know how to generate sub arrays how to optimize it to n squares I'm not going into the depth okay so this will be the better one obviously the interviewer will not be happy with n square and it'll ask you to optimize it and this is when you'll move to the most optimal solution so what will be the most optimal solution let us have some observations now can I say one thing for sure let's take the sub array I know the sub array will be giving me a zoroth six I know that for sure if I have to ask you where is the sub array starting from it is starting from here where is it ending it is ending here so I know one thing for sure every sub array will have an ending point for sure like this one has an ending point as this this one has an ending point is this this one has an ending point as this this one has an ending point is this every sabare every sub array has an ending point because it will and it also has a starting point it also has a starting point so I will be focusing on the ending point I'll be focusing on the ending point let's see how I will do it so if I have",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "eZr-6p0B7ME",
+      "position": 38,
+      "title": "Number of Subarrays with xor K | Brute - Better - Optimal",
+      "url": "https://www.youtube.com/watch?v=eZr-6p0B7ME",
+      "start": 543.18,
+      "end": 702.779,
+      "text": "let's see how I will do it so if I have to just manually write down this particular array let me write down 4 2 2 6 4 and I'm asking you till this portion which is if I take up all the elements if I take up all the elements and I say the Zone till 6 very important till 6 is XR imagine the zor of all the elements tail 6 is x r okay now I am asking you imagine imagine View at these many elements have a Zord as gay imagine just imagine hypothetical scenario these many elements have a Zord as k can I say then this will again let's hypothetically take it as X so what I'm saying is first element first element has a Zora as X from here to here it has a zor of K and the entire thing has a zor of x r can I write something like this x zor k will be x r again makes sense because this element and all the three elements if you solve that is e k bar into the zor of all elements now I will say of K on both the sides do a zor of K on both the sides so in zor if you sort same elements it will always be zero if you saw same elements it'll always be zero so K and K is all will be zero so you'll be left off with x X will be nothing but X are zor k x will be nothing but x r zor k and remember this formula X is nothing but x r where XR is the zor of the first element still this index did any particular index where K is the Zord that you're looking for now just imagine just imagine forget about this everything forget about everything and just have this derivation so if I ask you till here it's like 4 0 2 0 2 0 6 what will be the total Zord it's like",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "eZr-6p0B7ME",
+      "position": 38,
+      "title": "Number of Subarrays with xor K | Brute - Better - Optimal",
+      "url": "https://www.youtube.com/watch?v=eZr-6p0B7ME",
+      "start": 695.88,
+      "end": 826.9799999999999,
+      "text": "6 what will be the total Zord it's like 2 and 2 will cut off it's like a fours or six so perhaps to do a fours or six it's nothing but 0 1 0 the value is two so till here the value is 2. what am I looking for I am looking for is there any sub array I repeat is there any sub array that it n that is ending at 6 and is having a zone of six is there any sub array that is ending at 6 and having a Zora of six I'll write it so that it sticks to your head is there a summary ending at 6 and having a zone of key now you'll be like maybe maybe no so I don't know anything I just know the zor of these elements which is two so what I will say is that is only possible if I have a x if I have a x whose value is X SARS or k you remember when we took this then only it's possible there can only be a sub array who will give me a k only if there is an X what is X some elements from the start some elements from the start which will give me X so over here XR will be 2 what will be k k is 6 I am saying 2 so 6 what is the value of twos or six that is 4 because 1 1 0 is 6 2 is this so if you do a solve it'll be 0 0 1 which is 4 so 4 do we have do we have do we have someone from the start which is giving me 4 I say yes from the start we have a 4 we have someone who is giving me a four Zone thereby I can surely say there exists some elements which will give me the key that's it that is the fun now what we will try to do is we will try to move we",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "eZr-6p0B7ME",
+      "position": 38,
+      "title": "Number of Subarrays with xor K | Brute - Better - Optimal",
+      "url": "https://www.youtube.com/watch?v=eZr-6p0B7ME",
+      "start": 822.3,
+      "end": 936.779,
+      "text": "will try to do is we will try to move we will try to move and we'll keep a track of The Preserve like the entire zone of all the elements and then we will see is it possible to end over here by taking some K and if I can figure out from the front if I can figure out an element so basically I will move taking an XR and then I'll say till the is this the end is this the end point so maybe someone will be k for someone to be key for someone to be K from the front from the front someone has to be X and I'll figure I'll just find out if someone X is someone X and if someone is X that's it my job is done and how many X's would we have to look for as well how many X are there is also I have to look for got it so I'll tell you as we move forward perfect I hope you have got the intuition the intuition is pretty straightforward we are kind of looking from the backward direction if anyone is there I can still erase it and now we will start doing it so what do we need what do we need let's go back I will be carrying the zor of all the nodes and I'll be looking for does there exist any sabare with queso for that to happen I will look from the product from the front is there anyone with X so it's like from the front means I have to keep a track of the zor of the front elements to keep a track of the Zohar of the front element that is what I will do let's quickly start so in order to keep a track which data structure yes hashmap hash map is what we require so you'll take a hash map we will say friend zone or something like this which will be my key friends or X as a how many times how",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "eZr-6p0B7ME",
+      "position": 38,
+      "title": "Number of Subarrays with xor K | Brute - Better - Optimal",
+      "url": "https://www.youtube.com/watch?v=eZr-6p0B7ME",
+      "start": 930.48,
+      "end": 1065.72,
+      "text": "friends or X as a how many times how many times and initially we don't have anything so maybe 0 comma 1 will be a good limit because no one means zero comma I don't have any zero command let's start x r is zero first element four first element four Cesar zeros or four is four so what I am saying is as of now x r is 4 so this entire thing is four I'm looking for k is there any K so I'll be like fours or six what's the value 2 the value is 2. did we get a two previously no we did not get it too previously that's not in Azure so nothing keep account which will keep it track of the account as well let's move before moving please make sure you remember front disorder 4 appeared once and then move 2 force or two will be nothing but 6 pose or two will be nothing but six now what you are saying is from the front it is six so what are you looking for you're looking for a k you're looking for a k equal to 6 and you're looking for a x then what will be X if you remember the formula X was x r z or k x r is six so K is 6 x is 0 so you're looking for you're looking for did you get a front X as 0 any one with zero and you know while you started you had a zero so that means this entire thing is a savannah which is your answer so thereby you say count is one next friends over six friends or because these two elements are giving you six store it with one occurs and move you move such a zor of two it's a Zora of two six or two will be four so go ahead and write four written next let me erase this and show you what will happen so you are saying I have four",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "eZr-6p0B7ME",
+      "position": 38,
+      "title": "Number of Subarrays with xor K | Brute - Better - Optimal",
+      "url": "https://www.youtube.com/watch?v=eZr-6p0B7ME",
+      "start": 1060.02,
+      "end": 1191.539,
+      "text": "have four I am looking for a k equal to 6. so how much X am I looking for how much X I did something appear before how much is it fours or six what is fours or six that is two you can just do it it's very simple one zero zero one one zero zero one zero so two do we have a two you look no there is no front S2 so this six is not possible so I cannot get there by I'll just erase it as a series it I'll keep it track of this four so when I keep a track of this 4 it will be like two remember this this will increase I have two times next let's move we move to six what will be fours or six that will be do very good this time what I've been looking for I am saying I'm having x r as two I am looking for a k equal to 6 so I'll be looking for front x what will be the value of front X it'll be xr2 because that was the formula if you remember that that was the formula so two is all six two zero six is how much it is four it is exactly four so you will go back into the hash map will say there are two elements who have a friends or a four again eminent because even if you take this this entire sub array will give you a Zora as six okay even if you take this which is your front x equal to 4 and even if you take this this will give you this so there can be 2 x there can be 2x so once X can be just this one and the other time x can be a significantly large number of elements which is the three elements which is the three elements to have to again write it just by explanation 4 2 2 6 so what happened you said okay this is",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "eZr-6p0B7ME",
+      "position": 38,
+      "title": "Number of Subarrays with xor K | Brute - Better - Optimal",
+      "url": "https://www.youtube.com/watch?v=eZr-6p0B7ME",
+      "start": 1182.9,
+      "end": 1307.3999999999999,
+      "text": "6 so what happened you said okay this is giving me a k6 and this is my x equal to 4 and similarly you can also say this is also giving me x equal to 4 and this is giving me k equal to 6 so there can be two sub arrays ending at six there can be two sub arrays ending at six one is this well the other one is this that is why in the hash map I was storing the count how many X were there it told me there were 2x one is this and the other is this thereby this 2 will get added and the count will become 3 quickly I'll erase this next I'll move before moving I have a 2 I'll I'll insert it with account one and then I'll move to 4. twos or four what is the value 6 very good six so if you're looking for six entire thing is six sorry uh XR is six you're looking for a k equal to 6 what will be x x will be 0 because 6 or 6 is what you're looking for zero do we have a zero yes what does that signify if you end up taking it the entire thing that will make sense that is why I was storing the zero So eventually x is 0 round increases and the count ends up being 4. perfect after that you can again go ahead and put the six the count will increase and the iteration is over and overall the count will be storing your total number of sub arrays which in this case is 4 and that will be your answer got it so then to code it up so you can find the problem Link in the description please please make sure that you try out the problem from the link in the description itself we are given an array we are given a k first thing I'll do is I'll take an XR and I'll say 0 and I'll take a map and",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "eZr-6p0B7ME",
+      "position": 38,
+      "title": "Number of Subarrays with xor K | Brute - Better - Optimal",
+      "url": "https://www.youtube.com/watch?v=eZr-6p0B7ME",
+      "start": 1301.1,
+      "end": 1413.3600000000001,
+      "text": "and I'll say 0 and I'll take a map and this is what I'll do so I know initially I can keep XR plus plus so if it is not in the map it will automatically take it as 0 and it will make sure that 0 comma 1 is inserted in the map so while we start let's quickly I create on the vector on the list and every time we go we have an element so we say x are zor of that element and that will be a now what do we have we have x r we are looking for K so we will look for did we have any previous occurrence of X which is x r Zol okay you remove the formal and you have to look in the map how many times does this x appear and that will be added to account if it appears zero time we cannot have it because we need X to be appearing so count plus NPP X so so if it doesn't appears in the map it will automatically be 0 and that is how Map works and if it appears it just takes how many times if you remember this phone was two times so if it appears it will take two and large it up to the count at the end of the day you can go ahead and return count four line code for such a wonderful uh concept the lines of code is hardly for okay I did a mistake that's because we have to also make sure that before going we put it into the map so put it into the map and now we will be running this off so if you see this will be running fine and now I will go ahead and submit this so what is the time complexity B go of N and we're using a map data structure you can say login if you use unordered map it will be big of one in the best case",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "eZr-6p0B7ME",
+      "position": 38,
+      "title": "Number of Subarrays with xor K | Brute - Better - Optimal",
+      "url": "https://www.youtube.com/watch?v=eZr-6p0B7ME",
+      "start": 1409.4,
+      "end": 1495.7,
+      "text": "it will be big of one in the best case but in the worst case it might be something else so you can explain that to the interviewer so n n can be the time complexity or n log n depending on the time that your map ends up taking so that will be the time complexity what about the space complexity we go of n why because you're using a map data structure and every time you are storing something in the map so if this XR that you are storing happens to be unique every day so you'll end up storing any difference in N different elements so time complexity can be big of n or n log n depending on the maps time complexity and the space complexity will be big of n at the worst case if all of them are unique elements in the map so that will be the time complexity and the space complexity so going back to the sheet I can say that this one is done as well I hope you have understood everything just in case you have please hit that like button because it won't cost you anything but trust me that is something that motivates me highly to make these kind of videos and if you're new to our Channel what are you waiting for hit that subscribe button if you haven't followed me on Instagram you're missing out on take care whenever your heart is broken don't ever forget your golden I will final lighting",
+      "word_count": 258
+    }
+  ]
+}

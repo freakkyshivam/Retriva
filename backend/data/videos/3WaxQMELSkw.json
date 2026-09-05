@@ -1,0 +1,1640 @@
+{
+  "position": 187,
+  "video_id": "3WaxQMELSkw",
+  "title": "DP 6. House Robber 2 | 1D DP | DP on Subsequences",
+  "url": "https://www.youtube.com/watch?v=3WaxQMELSkw",
+  "transcript": [
+    {
+      "start": 0.0,
+      "duration": 3.36,
+      "end": 3.36,
+      "text": "hey everyone welcome back to the channel"
+    },
+    {
+      "start": 1.439,
+      "duration": 4.481,
+      "end": 5.92,
+      "text": "i hope you guys are doing extremely well"
+    },
+    {
+      "start": 3.36,
+      "duration": 4.8,
+      "end": 8.16,
+      "text": "so today is the lecture six of the"
+    },
+    {
+      "start": 5.92,
+      "duration": 5.44,
+      "end": 11.36,
+      "text": "dynamic programming playlist and the"
+    },
+    {
+      "start": 8.16,
+      "duration": 6.16,
+      "end": 14.32,
+      "text": "problem that we will be solving is house"
+    },
+    {
+      "start": 11.36,
+      "duration": 5.36,
+      "end": 16.72,
+      "text": "robber yes now this problem is quite"
+    },
+    {
+      "start": 14.32,
+      "duration": 4.32,
+      "end": 18.64,
+      "text": "similar to the lecture five so if you"
+    },
+    {
+      "start": 16.72,
+      "duration": 3.92,
+      "end": 20.64,
+      "text": "have not seen the lecture five i'll"
+    },
+    {
+      "start": 18.64,
+      "duration": 4.08,
+      "end": 22.72,
+      "text": "recommend you to go back"
+    },
+    {
+      "start": 20.64,
+      "duration": 3.84,
+      "end": 24.48,
+      "text": "watch lecture five and then come across"
+    },
+    {
+      "start": 22.72,
+      "duration": 4.16,
+      "end": 26.88,
+      "text": "and watch this because i won't be"
+    },
+    {
+      "start": 24.48,
+      "duration": 3.6,
+      "end": 28.080000000000002,
+      "text": "explaining this problem in deep because"
+    },
+    {
+      "start": 26.88,
+      "duration": 3.44,
+      "end": 30.32,
+      "text": "this problem"
+    },
+    {
+      "start": 28.08,
+      "duration": 3.999,
+      "end": 32.079,
+      "text": "can be solved using the same technique"
+    },
+    {
+      "start": 30.32,
+      "duration": 3.759,
+      "end": 34.079,
+      "text": "that i have used in lecture five i'm"
+    },
+    {
+      "start": 32.079,
+      "duration": 3.841,
+      "end": 35.92,
+      "text": "using the same code just there is a"
+    },
+    {
+      "start": 34.079,
+      "duration": 3.921,
+      "end": 38.0,
+      "text": "slight moderation in the problem so"
+    },
+    {
+      "start": 35.92,
+      "duration": 5.6,
+      "end": 41.52,
+      "text": "let's read the problem what does the"
+    },
+    {
+      "start": 38.0,
+      "duration": 4.48,
+      "end": 42.480000000000004,
+      "text": "problem state so mr x is a professional"
+    },
+    {
+      "start": 41.52,
+      "duration": 4.48,
+      "end": 46.0,
+      "text": "robber"
+    },
+    {
+      "start": 42.48,
+      "duration": 6.48,
+      "end": 48.959999999999994,
+      "text": "planning to rob houses along a street"
+    },
+    {
+      "start": 46.0,
+      "duration": 4.0,
+      "end": 50.0,
+      "text": "each house has a certain amount of money"
+    },
+    {
+      "start": 48.96,
+      "duration": 3.919,
+      "end": 52.879,
+      "text": "hidden"
+    },
+    {
+      "start": 50.0,
+      "duration": 4.32,
+      "end": 54.32,
+      "text": "all houses along the street are arranged"
+    },
+    {
+      "start": 52.879,
+      "duration": 4.16,
+      "end": 57.039,
+      "text": "in a circle"
+    },
+    {
+      "start": 54.32,
+      "duration": 4.879,
+      "end": 59.199,
+      "text": "okay that means the first house is the"
+    },
+    {
+      "start": 57.039,
+      "duration": 3.2,
+      "end": 60.239000000000004,
+      "text": "neighbor of the last one"
+    },
+    {
+      "start": 59.199,
+      "duration": 3.441,
+      "end": 62.64,
+      "text": "make sense"
+    },
+    {
+      "start": 60.239,
+      "duration": 5.041,
+      "end": 65.28,
+      "text": "meanwhile adjacent houses have a"
+    },
+    {
+      "start": 62.64,
+      "duration": 5.04,
+      "end": 67.68,
+      "text": "security system connected that means the"
+    },
+    {
+      "start": 65.28,
+      "duration": 4.24,
+      "end": 69.52,
+      "text": "houses that are adjacent have a security"
+    },
+    {
+      "start": 67.68,
+      "duration": 3.119,
+      "end": 70.799,
+      "text": "system connected and it will"
+    },
+    {
+      "start": 69.52,
+      "duration": 3.36,
+      "end": 72.88,
+      "text": "automatically"
+    },
+    {
+      "start": 70.799,
+      "duration": 4.721,
+      "end": 75.52000000000001,
+      "text": "contact the police if two adjacent"
+    },
+    {
+      "start": 72.88,
+      "duration": 3.599,
+      "end": 76.479,
+      "text": "houses were broken into on the same"
+    },
+    {
+      "start": 75.52,
+      "duration": 3.36,
+      "end": 78.88,
+      "text": "night"
+    },
+    {
+      "start": 76.479,
+      "duration": 4.721,
+      "end": 81.2,
+      "text": "so you're given an array a list of"
+    },
+    {
+      "start": 78.88,
+      "duration": 4.8,
+      "end": 83.67999999999999,
+      "text": "non-negative very important non-negative"
+    },
+    {
+      "start": 81.2,
+      "duration": 3.76,
+      "end": 84.96000000000001,
+      "text": "integers array representing the amount"
+    },
+    {
+      "start": 83.68,
+      "duration": 3.84,
+      "end": 87.52000000000001,
+      "text": "of money"
+    },
+    {
+      "start": 84.96,
+      "duration": 4.64,
+      "end": 89.6,
+      "text": "at each house your task is to return the"
+    },
+    {
+      "start": 87.52,
+      "duration": 3.68,
+      "end": 91.2,
+      "text": "maximum amount of money"
+    },
+    {
+      "start": 89.6,
+      "duration": 4.4,
+      "end": 94.0,
+      "text": "mr x"
+    },
+    {
+      "start": 91.2,
+      "duration": 5.84,
+      "end": 97.04,
+      "text": "can rob tonight without alerting the"
+    },
+    {
+      "start": 94.0,
+      "duration": 3.92,
+      "end": 97.92,
+      "text": "police so basically it states that you"
+    },
+    {
+      "start": 97.04,
+      "duration": 1.84,
+      "end": 98.88000000000001,
+      "text": "have to"
+    },
+    {
+      "start": 97.92,
+      "duration": 3.04,
+      "end": 100.96000000000001,
+      "text": "pick up"
+    },
+    {
+      "start": 98.88,
+      "duration": 4.32,
+      "end": 103.19999999999999,
+      "text": "you have to steal from houses"
+    },
+    {
+      "start": 100.96,
+      "duration": 4.4,
+      "end": 105.36,
+      "text": "without alerting the police and how does"
+    },
+    {
+      "start": 103.2,
+      "duration": 5.199,
+      "end": 108.399,
+      "text": "the bullet uh how does the police gets"
+    },
+    {
+      "start": 105.36,
+      "duration": 5.36,
+      "end": 110.72,
+      "text": "elected if to adjacent houses like if"
+    },
+    {
+      "start": 108.399,
+      "duration": 5.601,
+      "end": 114.0,
+      "text": "you steal from two adjacent houses now"
+    },
+    {
+      "start": 110.72,
+      "duration": 5.52,
+      "end": 116.24,
+      "text": "the previous question was quite same"
+    },
+    {
+      "start": 114.0,
+      "duration": 4.88,
+      "end": 118.88,
+      "text": "your repo you're supposed to return the"
+    },
+    {
+      "start": 116.24,
+      "duration": 4.879,
+      "end": 121.119,
+      "text": "maximum sum of the subsequence with the"
+    },
+    {
+      "start": 118.88,
+      "duration": 4.48,
+      "end": 123.36,
+      "text": "constraint that no elements are adjacent"
+    },
+    {
+      "start": 121.119,
+      "duration": 3.921,
+      "end": 125.04,
+      "text": "in the given array the only difference"
+    },
+    {
+      "start": 123.36,
+      "duration": 4.24,
+      "end": 127.6,
+      "text": "in this problem is"
+    },
+    {
+      "start": 125.04,
+      "duration": 4.719,
+      "end": 129.75900000000001,
+      "text": "they're saying that the last house is"
+    },
+    {
+      "start": 127.6,
+      "duration": 4.48,
+      "end": 132.07999999999998,
+      "text": "the adjacent of the first one so it's a"
+    },
+    {
+      "start": 129.759,
+      "duration": 3.681,
+      "end": 133.44,
+      "text": "circular kind of thing"
+    },
+    {
+      "start": 132.08,
+      "duration": 5.04,
+      "end": 137.12,
+      "text": "that they have"
+    },
+    {
+      "start": 133.44,
+      "duration": 6.4,
+      "end": 139.84,
+      "text": "given to you so yeah you need to solve"
+    },
+    {
+      "start": 137.12,
+      "duration": 5.839,
+      "end": 142.959,
+      "text": "this off so how will you solve this is a"
+    },
+    {
+      "start": 139.84,
+      "duration": 6.0,
+      "end": 145.84,
+      "text": "very very uh good question now let's"
+    },
+    {
+      "start": 142.959,
+      "duration": 5.681,
+      "end": 148.64000000000001,
+      "text": "take the first example"
+    },
+    {
+      "start": 145.84,
+      "duration": 4.8,
+      "end": 150.64000000000001,
+      "text": "two three two ideally according to"
+    },
+    {
+      "start": 148.64,
+      "duration": 3.92,
+      "end": 152.55999999999997,
+      "text": "lecture five yes ideally according to"
+    },
+    {
+      "start": 150.64,
+      "duration": 3.84,
+      "end": 154.48,
+      "text": "lecture five you could have picked this"
+    },
+    {
+      "start": 152.56,
+      "duration": 4.24,
+      "end": 156.8,
+      "text": "two and this two because they are not"
+    },
+    {
+      "start": 154.48,
+      "duration": 3.52,
+      "end": 158.0,
+      "text": "adjacent correct since they're not"
+    },
+    {
+      "start": 156.8,
+      "duration": 4.4,
+      "end": 161.20000000000002,
+      "text": "descended are picked up and you'd have"
+    },
+    {
+      "start": 158.0,
+      "duration": 4.16,
+      "end": 162.16,
+      "text": "got four but in lecture six in this"
+    },
+    {
+      "start": 161.2,
+      "duration": 3.52,
+      "end": 164.72,
+      "text": "problem"
+    },
+    {
+      "start": 162.16,
+      "duration": 4.799,
+      "end": 166.959,
+      "text": "this first and last guy are adjacent so"
+    },
+    {
+      "start": 164.72,
+      "duration": 4.0,
+      "end": 168.72,
+      "text": "you cannot pick them so apparently you"
+    },
+    {
+      "start": 166.959,
+      "duration": 4.081,
+      "end": 171.04,
+      "text": "will you're only allowed to pick this so"
+    },
+    {
+      "start": 168.72,
+      "duration": 3.92,
+      "end": 172.64,
+      "text": "the maximum that you can do is"
+    },
+    {
+      "start": 171.04,
+      "duration": 4.8,
+      "end": 175.84,
+      "text": "three so"
+    },
+    {
+      "start": 172.64,
+      "duration": 5.679,
+      "end": 178.319,
+      "text": "just a shuttle changes the question like"
+    },
+    {
+      "start": 175.84,
+      "duration": 5.679,
+      "end": 181.519,
+      "text": "the lecture five had uh stated clearly"
+    },
+    {
+      "start": 178.319,
+      "duration": 6.0,
+      "end": 184.319,
+      "text": "that you will have adjacent"
+    },
+    {
+      "start": 181.519,
+      "duration": 4.561,
+      "end": 186.08,
+      "text": "but over here it states that you cannot"
+    },
+    {
+      "start": 184.319,
+      "duration": 4.161,
+      "end": 188.48,
+      "text": "have adjacent sorry you will not have"
+    },
+    {
+      "start": 186.08,
+      "duration": 4.079,
+      "end": 190.15900000000002,
+      "text": "adjacent cannot have adjacent"
+    },
+    {
+      "start": 188.48,
+      "duration": 2.96,
+      "end": 191.44,
+      "text": "and the first"
+    },
+    {
+      "start": 190.159,
+      "duration": 2.72,
+      "end": 192.879,
+      "text": "and last"
+    },
+    {
+      "start": 191.44,
+      "duration": 2.56,
+      "end": 194.0,
+      "text": "are adjacents"
+    },
+    {
+      "start": 192.879,
+      "duration": 3.121,
+      "end": 196.0,
+      "text": "that's the"
+    },
+    {
+      "start": 194.0,
+      "duration": 3.68,
+      "end": 197.68,
+      "text": "change in this question so how can you"
+    },
+    {
+      "start": 196.0,
+      "duration": 2.72,
+      "end": 198.72,
+      "text": "solve this question"
+    },
+    {
+      "start": 197.68,
+      "duration": 3.919,
+      "end": 201.59900000000002,
+      "text": "now"
+    },
+    {
+      "start": 198.72,
+      "duration": 4.56,
+      "end": 203.28,
+      "text": "you might think of a lot of logic but do"
+    },
+    {
+      "start": 201.599,
+      "duration": 3.92,
+      "end": 205.51899999999998,
+      "text": "you actually need to think of a logic"
+    },
+    {
+      "start": 203.28,
+      "duration": 3.76,
+      "end": 207.04,
+      "text": "that's the question do you actually need"
+    },
+    {
+      "start": 205.519,
+      "duration": 3.681,
+      "end": 209.20000000000002,
+      "text": "any new logic"
+    },
+    {
+      "start": 207.04,
+      "duration": 3.44,
+      "end": 210.48,
+      "text": "do you need new logic and the answer to"
+    },
+    {
+      "start": 209.2,
+      "duration": 3.759,
+      "end": 212.95899999999997,
+      "text": "that is"
+    },
+    {
+      "start": 210.48,
+      "duration": 3.52,
+      "end": 214.0,
+      "text": "i don't think i need a new logic i can"
+    },
+    {
+      "start": 212.959,
+      "duration": 3.761,
+      "end": 216.72,
+      "text": "solve"
+    },
+    {
+      "start": 214.0,
+      "duration": 5.84,
+      "end": 219.84,
+      "text": "using the previous logic uh in the"
+    },
+    {
+      "start": 216.72,
+      "duration": 5.28,
+      "end": 222.0,
+      "text": "lecture five but how how can i do that"
+    },
+    {
+      "start": 219.84,
+      "duration": 4.16,
+      "end": 224.0,
+      "text": "can i say can i say"
+    },
+    {
+      "start": 222.0,
+      "duration": 2.799,
+      "end": 224.799,
+      "text": "i am definitely sure"
+    },
+    {
+      "start": 224.0,
+      "duration": 4.0,
+      "end": 228.0,
+      "text": "that"
+    },
+    {
+      "start": 224.799,
+      "duration": 6.241,
+      "end": 231.04000000000002,
+      "text": "whatever my answer will be it cannot"
+    },
+    {
+      "start": 228.0,
+      "duration": 5.599,
+      "end": 233.599,
+      "text": "contain both of the first and the last"
+    },
+    {
+      "start": 231.04,
+      "duration": 4.96,
+      "end": 236.0,
+      "text": "whatever my answer is"
+    },
+    {
+      "start": 233.599,
+      "duration": 5.2,
+      "end": 238.79899999999998,
+      "text": "cannot contain the"
+    },
+    {
+      "start": 236.0,
+      "duration": 5.04,
+      "end": 241.04,
+      "text": "first one and the last one this is"
+    },
+    {
+      "start": 238.799,
+      "duration": 4.481,
+      "end": 243.28,
+      "text": "practically impossible because according"
+    },
+    {
+      "start": 241.04,
+      "duration": 4.96,
+      "end": 246.0,
+      "text": "to the question first and the last one"
+    },
+    {
+      "start": 243.28,
+      "duration": 3.84,
+      "end": 247.12,
+      "text": "are adjacent so you cannot contain them"
+    },
+    {
+      "start": 246.0,
+      "duration": 2.799,
+      "end": 248.799,
+      "text": "make sense"
+    },
+    {
+      "start": 247.12,
+      "duration": 4.24,
+      "end": 251.36,
+      "text": "can i say my answer"
+    },
+    {
+      "start": 248.799,
+      "duration": 4.72,
+      "end": 253.519,
+      "text": "will either contain like it might it"
+    },
+    {
+      "start": 251.36,
+      "duration": 4.239,
+      "end": 255.59900000000002,
+      "text": "might or it might not"
+    },
+    {
+      "start": 253.519,
+      "duration": 4.321,
+      "end": 257.84000000000003,
+      "text": "but this thing is for sure"
+    },
+    {
+      "start": 255.599,
+      "duration": 4.16,
+      "end": 259.759,
+      "text": "first and last will not be together so"
+    },
+    {
+      "start": 257.84,
+      "duration": 4.639,
+      "end": 262.479,
+      "text": "can i say can i say"
+    },
+    {
+      "start": 259.759,
+      "duration": 5.521,
+      "end": 265.28000000000003,
+      "text": "if i say what if i consider the array"
+    },
+    {
+      "start": 262.479,
+      "duration": 4.401,
+      "end": 266.88,
+      "text": "from like i leave out the last element"
+    },
+    {
+      "start": 265.28,
+      "duration": 3.919,
+      "end": 269.19899999999996,
+      "text": "whatever is the array leave out the last"
+    },
+    {
+      "start": 266.88,
+      "duration": 3.92,
+      "end": 270.8,
+      "text": "element let's leave out the last element"
+    },
+    {
+      "start": 269.199,
+      "duration": 2.881,
+      "end": 272.08,
+      "text": "and consider the remaining portion of"
+    },
+    {
+      "start": 270.8,
+      "duration": 2.8,
+      "end": 273.6,
+      "text": "the array"
+    },
+    {
+      "start": 272.08,
+      "duration": 4.08,
+      "end": 276.15999999999997,
+      "text": "and"
+    },
+    {
+      "start": 273.6,
+      "duration": 3.36,
+      "end": 276.96000000000004,
+      "text": "and then apply the lecture five logic in"
+    },
+    {
+      "start": 276.16,
+      "duration": 3.2,
+      "end": 279.36,
+      "text": "saying"
+    },
+    {
+      "start": 276.96,
+      "duration": 4.799,
+      "end": 281.75899999999996,
+      "text": "find the maximum sum of the subsequence"
+    },
+    {
+      "start": 279.36,
+      "duration": 5.119,
+      "end": 284.47900000000004,
+      "text": "with adjacent remember i'm leaving out"
+    },
+    {
+      "start": 281.759,
+      "duration": 4.321,
+      "end": 286.08000000000004,
+      "text": "the last possible element so i've left"
+    },
+    {
+      "start": 284.479,
+      "duration": 4.241,
+      "end": 288.71999999999997,
+      "text": "out the last possible element"
+    },
+    {
+      "start": 286.08,
+      "duration": 4.559,
+      "end": 290.639,
+      "text": "okay make sense but you might say but"
+    },
+    {
+      "start": 288.72,
+      "duration": 4.32,
+      "end": 293.04,
+      "text": "trevor what if the last possible element"
+    },
+    {
+      "start": 290.639,
+      "duration": 4.321,
+      "end": 294.96000000000004,
+      "text": "was in the answer so what i can do is"
+    },
+    {
+      "start": 293.04,
+      "duration": 4.24,
+      "end": 297.28000000000003,
+      "text": "okay this is a possible stuff that i can"
+    },
+    {
+      "start": 294.96,
+      "duration": 4.48,
+      "end": 299.44,
+      "text": "do i can leave out the last element and"
+    },
+    {
+      "start": 297.28,
+      "duration": 3.6,
+      "end": 300.88,
+      "text": "i can apply the same logic on the"
+    },
+    {
+      "start": 299.44,
+      "duration": 4.72,
+      "end": 304.16,
+      "text": "remaining array"
+    },
+    {
+      "start": 300.88,
+      "duration": 5.12,
+      "end": 306.0,
+      "text": "or i can say let's leave out the first"
+    },
+    {
+      "start": 304.16,
+      "duration": 4.8,
+      "end": 308.96000000000004,
+      "text": "element yes let's leave out the first"
+    },
+    {
+      "start": 306.0,
+      "duration": 3.759,
+      "end": 309.759,
+      "text": "element and apply the same logic"
+    },
+    {
+      "start": 308.96,
+      "duration": 3.12,
+      "end": 312.08,
+      "text": "on"
+    },
+    {
+      "start": 309.759,
+      "duration": 4.401,
+      "end": 314.16,
+      "text": "the remaining portion of the array yes"
+    },
+    {
+      "start": 312.08,
+      "duration": 5.36,
+      "end": 317.44,
+      "text": "the lecture 5 logic"
+    },
+    {
+      "start": 314.16,
+      "duration": 6.479,
+      "end": 320.639,
+      "text": "make sense now i definitely know that"
+    },
+    {
+      "start": 317.44,
+      "duration": 4.88,
+      "end": 322.32,
+      "text": "first and last cannot be together"
+    },
+    {
+      "start": 320.639,
+      "duration": 4.641,
+      "end": 325.28000000000003,
+      "text": "so either"
+    },
+    {
+      "start": 322.32,
+      "duration": 4.64,
+      "end": 326.96,
+      "text": "this array will give you the answer or"
+    },
+    {
+      "start": 325.28,
+      "duration": 2.72,
+      "end": 328.0,
+      "text": "this array will give you the answer"
+    },
+    {
+      "start": 326.96,
+      "duration": 3.12,
+      "end": 330.08,
+      "text": "because"
+    },
+    {
+      "start": 328.0,
+      "duration": 4.639,
+      "end": 332.639,
+      "text": "that's what it tells if you just think"
+    },
+    {
+      "start": 330.08,
+      "duration": 5.44,
+      "end": 335.52,
+      "text": "slowly so can i say if this is giving me"
+    },
+    {
+      "start": 332.639,
+      "duration": 4.161,
+      "end": 336.8,
+      "text": "answer 1 and if this is giving me answer"
+    },
+    {
+      "start": 335.52,
+      "duration": 3.2,
+      "end": 338.71999999999997,
+      "text": "2 like"
+    },
+    {
+      "start": 336.8,
+      "duration": 2.88,
+      "end": 339.68,
+      "text": "leaving out the last and leaving out the"
+    },
+    {
+      "start": 338.72,
+      "duration": 4.08,
+      "end": 342.8,
+      "text": "first"
+    },
+    {
+      "start": 339.68,
+      "duration": 6.64,
+      "end": 346.32,
+      "text": "can i say my answer to this question is"
+    },
+    {
+      "start": 342.8,
+      "duration": 3.52,
+      "end": 346.32,
+      "text": "max of both the answers"
+    },
+    {
+      "start": 346.4,
+      "duration": 4.4,
+      "end": 350.79999999999995,
+      "text": "it's very intuitive like it's very very"
+    },
+    {
+      "start": 349.28,
+      "duration": 4.16,
+      "end": 353.44,
+      "text": "intuitive because first and last cannot"
+    },
+    {
+      "start": 350.8,
+      "duration": 4.239,
+      "end": 355.039,
+      "text": "be together thereby i do one thing i"
+    },
+    {
+      "start": 353.44,
+      "duration": 4.319,
+      "end": 357.759,
+      "text": "remove the last and i apply the same"
+    },
+    {
+      "start": 355.039,
+      "duration": 5.201,
+      "end": 360.24,
+      "text": "logic of the previous question because"
+    },
+    {
+      "start": 357.759,
+      "duration": 4.081,
+      "end": 361.84000000000003,
+      "text": "the question was more or less similar i"
+    },
+    {
+      "start": 360.24,
+      "duration": 3.519,
+      "end": 363.759,
+      "text": "just was confused with the first and"
+    },
+    {
+      "start": 361.84,
+      "duration": 3.68,
+      "end": 365.52,
+      "text": "last i just removed that"
+    },
+    {
+      "start": 363.759,
+      "duration": 4.241,
+      "end": 368.0,
+      "text": "and now the question becomes pretty"
+    },
+    {
+      "start": 365.52,
+      "duration": 5.119,
+      "end": 370.639,
+      "text": "straightforward as the previous question"
+    },
+    {
+      "start": 368.0,
+      "duration": 3.84,
+      "end": 371.84,
+      "text": "so it's time that we will try to code"
+    },
+    {
+      "start": 370.639,
+      "duration": 3.28,
+      "end": 373.919,
+      "text": "this up"
+    },
+    {
+      "start": 371.84,
+      "duration": 3.68,
+      "end": 375.52,
+      "text": "so in the code just make sure that there"
+    },
+    {
+      "start": 373.919,
+      "duration": 3.361,
+      "end": 377.28,
+      "text": "is long long int"
+    },
+    {
+      "start": 375.52,
+      "duration": 3.04,
+      "end": 378.56,
+      "text": "because 10 to the power cube 10 to the 1"
+    },
+    {
+      "start": 377.28,
+      "duration": 3.039,
+      "end": 380.31899999999996,
+      "text": "9 i think"
+    },
+    {
+      "start": 378.56,
+      "duration": 3.84,
+      "end": 382.4,
+      "text": "long long it is not required long long"
+    },
+    {
+      "start": 380.319,
+      "duration": 4.72,
+      "end": 385.03900000000004,
+      "text": "or long would have done but it's okay so"
+    },
+    {
+      "start": 382.4,
+      "duration": 4.0,
+      "end": 386.4,
+      "text": "what i'll do is i'll just copy paste"
+    },
+    {
+      "start": 385.039,
+      "duration": 3.841,
+      "end": 388.88,
+      "text": "this one"
+    },
+    {
+      "start": 386.4,
+      "duration": 3.76,
+      "end": 390.15999999999997,
+      "text": "let's copy paste this one"
+    },
+    {
+      "start": 388.88,
+      "duration": 3.36,
+      "end": 392.24,
+      "text": "you have taken the taken from the"
+    },
+    {
+      "start": 390.16,
+      "duration": 4.159,
+      "end": 394.319,
+      "text": "previous lecture five so this is nothing"
+    },
+    {
+      "start": 392.24,
+      "duration": 3.519,
+      "end": 395.759,
+      "text": "but the lecture five space optimization"
+    },
+    {
+      "start": 394.319,
+      "duration": 2.72,
+      "end": 397.03900000000004,
+      "text": "solution okay"
+    },
+    {
+      "start": 395.759,
+      "duration": 5.681,
+      "end": 401.44,
+      "text": "so remember this this is nothing but"
+    },
+    {
+      "start": 397.039,
+      "duration": 7.28,
+      "end": 404.31899999999996,
+      "text": "lecture 5 space optimization solution"
+    },
+    {
+      "start": 401.44,
+      "duration": 4.64,
+      "end": 406.08,
+      "text": "okay the last one so we know"
+    },
+    {
+      "start": 404.319,
+      "duration": 5.921,
+      "end": 410.24,
+      "text": "it will take a numsar and it will give"
+    },
+    {
+      "start": 406.08,
+      "duration": 6.239,
+      "end": 412.31899999999996,
+      "text": "me the maximum sum so over here"
+    },
+    {
+      "start": 410.24,
+      "duration": 5.359,
+      "end": 415.599,
+      "text": "i know one thing for sure"
+    },
+    {
+      "start": 412.319,
+      "duration": 4.961,
+      "end": 417.28000000000003,
+      "text": "i will be computing the answer for the"
+    },
+    {
+      "start": 415.599,
+      "duration": 3.121,
+      "end": 418.71999999999997,
+      "text": "first half uh"
+    },
+    {
+      "start": 417.28,
+      "duration": 3.199,
+      "end": 420.479,
+      "text": "if i don't take the last one last"
+    },
+    {
+      "start": 418.72,
+      "duration": 3.12,
+      "end": 421.84000000000003,
+      "text": "element and i'll be computing for the"
+    },
+    {
+      "start": 420.479,
+      "duration": 4.961,
+      "end": 425.44,
+      "text": "rest half if i do not take the first"
+    },
+    {
+      "start": 421.84,
+      "duration": 4.88,
+      "end": 426.71999999999997,
+      "text": "element so assume i create a couple"
+    },
+    {
+      "start": 425.44,
+      "duration": 4.24,
+      "end": 429.68,
+      "text": "of"
+    },
+    {
+      "start": 426.72,
+      "duration": 5.039,
+      "end": 431.759,
+      "text": "temporary arrays okay make sense and"
+    },
+    {
+      "start": 429.68,
+      "duration": 5.359,
+      "end": 435.039,
+      "text": "what i'll do is in"
+    },
+    {
+      "start": 431.759,
+      "duration": 6.88,
+      "end": 438.639,
+      "text": "these temporary arrays"
+    },
+    {
+      "start": 435.039,
+      "duration": 6.081,
+      "end": 441.12,
+      "text": "if i is not equal to zero"
+    },
+    {
+      "start": 438.639,
+      "duration": 4.96,
+      "end": 443.599,
+      "text": "i know let's assume the temporary uh"
+    },
+    {
+      "start": 441.12,
+      "duration": 5.12,
+      "end": 446.24,
+      "text": "array is this one"
+    },
+    {
+      "start": 443.599,
+      "duration": 4.641,
+      "end": 448.24,
+      "text": "like temporary one contains everything"
+    },
+    {
+      "start": 446.24,
+      "duration": 5.2,
+      "end": 451.44,
+      "text": "apart from the first element so i can"
+    },
+    {
+      "start": 448.24,
+      "duration": 6.079,
+      "end": 454.319,
+      "text": "just keep it like this value in"
+    },
+    {
+      "start": 451.44,
+      "duration": 3.759,
+      "end": 455.199,
+      "text": "house of i okay make sense"
+    },
+    {
+      "start": 454.319,
+      "duration": 2.961,
+      "end": 457.28000000000003,
+      "text": "if"
+    },
+    {
+      "start": 455.199,
+      "duration": 3.12,
+      "end": 458.319,
+      "text": "i is"
+    },
+    {
+      "start": 457.28,
+      "duration": 3.359,
+      "end": 460.63899999999995,
+      "text": "not"
+    },
+    {
+      "start": 458.319,
+      "duration": 4.72,
+      "end": 463.03900000000004,
+      "text": "equal to last index"
+    },
+    {
+      "start": 460.639,
+      "duration": 5.521,
+      "end": 466.16,
+      "text": "by the way just make sure you declare n"
+    },
+    {
+      "start": 463.039,
+      "duration": 5.28,
+      "end": 468.31899999999996,
+      "text": "as this value in house"
+    },
+    {
+      "start": 466.16,
+      "duration": 3.68,
+      "end": 469.84000000000003,
+      "text": "dot size okay just make sure you do that"
+    },
+    {
+      "start": 468.319,
+      "duration": 3.681,
+      "end": 472.0,
+      "text": "so if this is not equal to can i say"
+    },
+    {
+      "start": 469.84,
+      "duration": 3.28,
+      "end": 473.11999999999995,
+      "text": "temporary to dot push"
+    },
+    {
+      "start": 472.0,
+      "duration": 2.479,
+      "end": 474.479,
+      "text": "back"
+    },
+    {
+      "start": 473.12,
+      "duration": 2.079,
+      "end": 475.199,
+      "text": "value"
+    },
+    {
+      "start": 474.479,
+      "duration": 3.361,
+      "end": 477.84,
+      "text": "in"
+    },
+    {
+      "start": 475.199,
+      "duration": 5.201,
+      "end": 480.40000000000003,
+      "text": "house i so what i did was"
+    },
+    {
+      "start": 477.84,
+      "duration": 4.0,
+      "end": 481.84,
+      "text": "apart from everything apart from the"
+    },
+    {
+      "start": 480.4,
+      "duration": 3.44,
+      "end": 483.84,
+      "text": "last element i pushed everything into"
+    },
+    {
+      "start": 481.84,
+      "duration": 3.759,
+      "end": 485.599,
+      "text": "the attempt to apart from the first"
+    },
+    {
+      "start": 483.84,
+      "duration": 3.68,
+      "end": 487.52,
+      "text": "element i pushed everything into the"
+    },
+    {
+      "start": 485.599,
+      "duration": 3.28,
+      "end": 488.87899999999996,
+      "text": "temp one that is what i've done so i"
+    },
+    {
+      "start": 487.52,
+      "duration": 3.6,
+      "end": 491.12,
+      "text": "have the temp one ready i have the temp"
+    },
+    {
+      "start": 488.879,
+      "duration": 5.281,
+      "end": 494.16,
+      "text": "two ready so temp one is containing now"
+    },
+    {
+      "start": 491.12,
+      "duration": 4.32,
+      "end": 495.44,
+      "text": "what i know is okay i know the answer is"
+    },
+    {
+      "start": 494.16,
+      "duration": 4.4,
+      "end": 498.56,
+      "text": "max off"
+    },
+    {
+      "start": 495.44,
+      "duration": 6.08,
+      "end": 501.52,
+      "text": "if i just call the same function let's"
+    },
+    {
+      "start": 498.56,
+      "duration": 4.88,
+      "end": 503.44,
+      "text": "call the same function with temp one"
+    },
+    {
+      "start": 501.52,
+      "duration": 4.48,
+      "end": 506.0,
+      "text": "let's call the same function with temp"
+    },
+    {
+      "start": 503.44,
+      "duration": 5.52,
+      "end": 508.96,
+      "text": "two okay make sense well does this work"
+    },
+    {
+      "start": 506.0,
+      "duration": 4.56,
+      "end": 510.56,
+      "text": "for all of these what if the array has"
+    },
+    {
+      "start": 508.96,
+      "duration": 3.84,
+      "end": 512.8,
+      "text": "only single element so that's the case"
+    },
+    {
+      "start": 510.56,
+      "duration": 3.68,
+      "end": 514.24,
+      "text": "that i have to consider just in case the"
+    },
+    {
+      "start": 512.8,
+      "duration": 2.96,
+      "end": 515.76,
+      "text": "array has single elements probably you"
+    },
+    {
+      "start": 514.24,
+      "duration": 2.96,
+      "end": 517.2,
+      "text": "can keep it over here if the array has"
+    },
+    {
+      "start": 515.76,
+      "duration": 3.04,
+      "end": 518.8,
+      "text": "single elements then you can just pick"
+    },
+    {
+      "start": 517.2,
+      "duration": 3.199,
+      "end": 520.399,
+      "text": "the that element"
+    },
+    {
+      "start": 518.8,
+      "duration": 4.4,
+      "end": 523.1999999999999,
+      "text": "itself because it cannot have any"
+    },
+    {
+      "start": 520.399,
+      "duration": 4.641,
+      "end": 525.04,
+      "text": "adjacents just pick it now if i try to"
+    },
+    {
+      "start": 523.2,
+      "duration": 4.079,
+      "end": 527.279,
+      "text": "run this code"
+    },
+    {
+      "start": 525.04,
+      "duration": 3.76,
+      "end": 528.8,
+      "text": "you see it is running let's quickly"
+    },
+    {
+      "start": 527.279,
+      "duration": 4.081,
+      "end": 531.36,
+      "text": "submit it and check"
+    },
+    {
+      "start": 528.8,
+      "duration": 4.24,
+      "end": 533.04,
+      "text": "yeah runs absolutely fine so you can see"
+    },
+    {
+      "start": 531.36,
+      "duration": 3.919,
+      "end": 535.279,
+      "text": "by the way"
+    },
+    {
+      "start": 533.04,
+      "duration": 3.52,
+      "end": 536.56,
+      "text": "summation time so if you're watching"
+    },
+    {
+      "start": 535.279,
+      "duration": 3.12,
+      "end": 538.399,
+      "text": "this video just make sure you like it"
+    },
+    {
+      "start": 536.56,
+      "duration": 4.24,
+      "end": 540.8,
+      "text": "because i do make these videos late"
+    },
+    {
+      "start": 538.399,
+      "duration": 3.761,
+      "end": 542.16,
+      "text": "night uh because i have my office hours"
+    },
+    {
+      "start": 540.8,
+      "duration": 4.96,
+      "end": 545.76,
+      "text": "in the day so yeah please make sure you"
+    },
+    {
+      "start": 542.16,
+      "duration": 5.6,
+      "end": 547.76,
+      "text": "like it so yeah uh 253 uh it works"
+    },
+    {
+      "start": 545.76,
+      "duration": 4.24,
+      "end": 550.0,
+      "text": "absolutely fine now this is how we can"
+    },
+    {
+      "start": 547.76,
+      "duration": 5.12,
+      "end": 552.88,
+      "text": "easily do it it is just a variation of"
+    },
+    {
+      "start": 550.0,
+      "duration": 5.279,
+      "end": 555.279,
+      "text": "the previous problem so always keep your"
+    },
+    {
+      "start": 552.88,
+      "duration": 4.639,
+      "end": 557.519,
+      "text": "eyes open whatever logic i'm teaching"
+    },
+    {
+      "start": 555.279,
+      "duration": 4.0,
+      "end": 559.279,
+      "text": "try to keep it and try to implicate them"
+    },
+    {
+      "start": 557.519,
+      "duration": 4.481,
+      "end": 562.0,
+      "text": "by slightly changing the logic don't"
+    },
+    {
+      "start": 559.279,
+      "duration": 4.56,
+      "end": 563.8389999999999,
+      "text": "change it wholeheartedly okay so guys"
+    },
+    {
+      "start": 562.0,
+      "duration": 3.36,
+      "end": 565.36,
+      "text": "this will be it for this video if you"
+    },
+    {
+      "start": 563.839,
+      "duration": 3.361,
+      "end": 567.2,
+      "text": "have watched the video till now please"
+    },
+    {
+      "start": 565.36,
+      "duration": 3.76,
+      "end": 569.12,
+      "text": "make sure you like it and let's follow"
+    },
+    {
+      "start": 567.2,
+      "duration": 4.16,
+      "end": 571.36,
+      "text": "our tradition please please do comment"
+    },
+    {
+      "start": 569.12,
+      "duration": 3.68,
+      "end": 572.8,
+      "text": "understood or us"
+    },
+    {
+      "start": 571.36,
+      "duration": 2.88,
+      "end": 574.24,
+      "text": "in the comment section if you've"
+    },
+    {
+      "start": 572.8,
+      "duration": 3.2,
+      "end": 576.0,
+      "text": "understood this problem and you can"
+    },
+    {
+      "start": 574.24,
+      "duration": 4.32,
+      "end": 578.5600000000001,
+      "text": "solve this problem in lead code it goes"
+    },
+    {
+      "start": 576.0,
+      "duration": 6.36,
+      "end": 582.36,
+      "text": "by the name house robert okay so with"
+    },
+    {
+      "start": 578.56,
+      "duration": 3.8,
+      "end": 582.3599999999999,
+      "text": "this let's start with this video"
+    },
+    {
+      "start": 583.43,
+      "duration": 7.869,
+      "end": 591.299,
+      "text": "[Music]"
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "video_id": "YbY8cVwWAvw",
+  "position": 167,
+  "title": "G-42. Floyd Warshall Algorithm",
+  "url": "https://www.youtube.com/watch?v=YbY8cVwWAvw",
+  "chunk_count": 16,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "YbY8cVwWAvw",
+      "position": 167,
+      "title": "G-42. Floyd Warshall Algorithm",
+      "url": "https://www.youtube.com/watch?v=YbY8cVwWAvw",
+      "start": 3.0,
+      "end": 132.18,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well so today we will be learning one more shortest path algorithm which is the Floyd virtual shortest path algorithm now this is very very different from the dixtra or the Bellman 4 that you learn because dixtra and Bellman Ford were a single Source shortest path algorithm where you are given a source and you have to find out till all the other nodes the shortest path there was only a single Source but when you talk about Floyd ocean it is different over here there are five notes so from every node be it from 0 1 2 3 4 from every node you have to tell me the shortest path to every other node over here if I'm asking you from 4 to 1 you should be knowing if I'm asking you from one to three you should be knowing so there are multiple multiple source so this is why this is known as a multi-source shortest path algorithm remember this it helps you detect negative Cycles as well helps you detect negative Cycles as well so I hope pretty much you have understood uh what you need to find now what is the shortest path very simple if I'm asking you from zero to one and I ask you what is the shortest path in order to reach from zero to one so you can take multiple paths one of the paths will take you six you can take this path which is gonna take you five you can take probably this path which is again going to take you five or you can take the shortest one which is go here go here go here it's gonna take two one one which is an addition of I think Fourier that's the shortest path so the shortest path from zero to one is zero to two two to four four to one this is the shortest part if I'm asking you that's the definition of shortest path any path",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "YbY8cVwWAvw",
+      "position": 167,
+      "title": "G-42. Floyd Warshall Algorithm",
+      "url": "https://www.youtube.com/watch?v=YbY8cVwWAvw",
+      "start": 127.56,
+      "end": 240.42,
+      "text": "definition of shortest path any path that takes the least amount of edge weights is known as the shortest path so what is the thought process behind the blood virtual algorithm now it's very simple it states go via every Edge go via every node rather or go via every Vertex or node whatever you wish to write so it's very simple it states go via every vertex and not go go and try try try and get the shortest one so for an example for an example let's take uh we want to find from 0 to 1 right so if you're trying to find from 0 to 1 assume the distance you're trying to find is from 0 to 1 okay so what are the possible ways that you can go you can be like swivel I can go from zero to one directly I'd be like yeah that does make sense right because that's the straight away path zero to one if there is an edge I go via that that's one of the ways but if I ask you go via every vertex then you can be like okay I can probably go back to so which will mean I will go to two and then from 2 I'll go to one does that make sense yes and if I go from zero to two it's gonna cost me two and from two to one it's gonna cost me three which will give me a total cost of five which is nothing but this particular path that is if I go via 2 that is if I go via 2 can I go via 3 I can so that will be something like I'll go from 0 to 3 and then I'll go from three to one correct so if I go from 0 to 3 that's going to cost me four from three to one that's gonna cost me one which will be a total cost of 5 again can I go via 4. I can go via fold",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "YbY8cVwWAvw",
+      "position": 167,
+      "title": "G-42. Floyd Warshall Algorithm",
+      "url": "https://www.youtube.com/watch?v=YbY8cVwWAvw",
+      "start": 232.92,
+      "end": 356.039,
+      "text": "again can I go via 4. I can go via fold so if I go via 4 let's let me write that and right if I go y4 it'll be zero to four and four to one right but 0 to 4 if you see it's not direct path it's a path wire too probably someone would have computed assume as of now someone has computed that and given you from 0 to 4 it's a three okay so I'll be like okay three and four to one it's a one so a total of four so apparently we notice that from 0 to 4 and 4 to 1 it's taking me a cost of 4 which is indeed the shortest one so what I did was in order to go from zero to one I tried out every different vertex can be two can be three can be four and apparently I took the minimal path and this is what it is so the logic is very simple assume all the vertex are from like the vertexes are definitely from 0 to n minus one so I can say all the vertex so if I'm trying to look can I say if some submit on the line if this is I and this is J and can I say this is nothing but I go from straight I to J which is nothing but the edge itself and can I say this this this to be K assume so can I write the path to be minimum of if you try out all the keys it'll be from I to K very obvious because you go from 0 to 2 and then from 2 to this which is nothing but the J correct so can I write this plus J of K I can that's what the path is from I to K I'll go and from G to K is what I have to go and if I take minimum of all of them five five four minimum of all of the go through vertex then answer",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "YbY8cVwWAvw",
+      "position": 167,
+      "title": "G-42. Floyd Warshall Algorithm",
+      "url": "https://www.youtube.com/watch?v=YbY8cVwWAvw",
+      "start": 351.84,
+      "end": 467.039,
+      "text": "through vertex then answer I'll have the answer so somewhere down the lineup undisturbed but I need to implement this on a wider scale what do I mean by a wider scale because over here 0 to 4 was not a direct Edge because 0 to 4 meant it went wire two so it was going wire too so somewhere down the line in the past someone would have also computed 0 to 4 and they would have implemented wire two wire to understand so 0 to 4 would have been computer and stored so this is where you get an idea okay something like a dynamic programming because we're using something which has already been computed so you get an idea that okay this is a dynamic programming solution it's not necessary that you know dynamic programming I'm just saying try to relate we are using something which is pre-computed if I write it properly I can write something which is pre-computed which was in this case this one because 0 to 4 was pre-computed you did not compute at the point someone already knew what was the value to go from 0 to 4 that is what you need as a precompetation so you pretty much got the formula now what I'll do is I'll try to give you a sense of the graph and then slowly and slowly step by step implement this algorithm so that you understand how is this algorithm implemented till now in all the problems we have been using the adjacency list in order to store the graph but in the lecture too I've also taught you one more method which is the adjacency Matrix method so I'm going to use the adjacency Matrix method in order to store this particular graph okay it's very simple in case you haven't seen the lecture too it's very very simple so something we know for sure is if 0 is the node and I want to go to 0 itself the cost will be zero",
+      "word_count": 340
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "YbY8cVwWAvw",
+      "position": 167,
+      "title": "G-42. Floyd Warshall Algorithm",
+      "url": "https://www.youtube.com/watch?v=YbY8cVwWAvw",
+      "start": 462.539,
+      "end": 579.72,
+      "text": "the cost will be zero if I want to go from 1 to 1 the cost will be still zero so From Any Given node to the node itself the cost is going to be 0 no matter what you do because you're already standing in the note something I know 0 0 so this portion will be storing the cost so I can call this as a cost Matrix so 0 to 0 will be 0 1 to 1 will be zero two to two will be 0 3 to 3 will be zero so basically I am saying this is 0 0 0 this is one one zero this is 2 2 0 this is 3 3 which is again 0 pretty much understood right now what are the other it says 0 to 1 is 2. so go to 0 to 1 and store two go to zero go to one and store two it says one two zero is one so you go to one you go to zero and you store one okay it says three to zero is three so go to three go to zero and store three do not store the opposite vertex because it's a directed graph it is a directed graph if it's an undirected graph for an example if it's an undirected graph and you wanna imply and you wanna uh apply this fluid motion just split this into something like this five five as you see our dual Direction Edge but with different values in undirected just make sure you assign them same values now remember you just store three zero S3 because there is no zero three okay nice next is three one as five so go to three and one and assign five next is one two as three go to one and two and assign as three perfect one two one two assigned as three do you have any other thing one two three four five one two three four five okay we have three to two as four",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "YbY8cVwWAvw",
+      "position": 167,
+      "title": "G-42. Floyd Warshall Algorithm",
+      "url": "https://www.youtube.com/watch?v=YbY8cVwWAvw",
+      "start": 575.279,
+      "end": 706.5,
+      "text": "five okay we have three to two as four three two two as four done so what I've done is I've assigned the cost make sure everyone else is infinity which means unreachable as of now which means unreachable as of now so this is the initial cost Matrix which you can always derive from the given graph now you must be thinking but striver this is a DG a directed graph what if it's a ug how will we implement the Floyd ocean very simple if there is an edge like this it has a cost of 5 you say okay five this way right this way so this is how you convert a ug to a DG make dual Direction Edge similar to something like this if you see over here there's a dual Direction Edge but with different weights okay so if we have to apply flood version in an undirected graph just split that edge into two edges of same weights that's how you can easily convert a ug to a directed graph so this is the initial cost now what did I say let's as of now assume that I'm gonna move via vertex zero that's my first thing I'll move via vertex 0. so if I move my vertex 0 I will have some upgraded distance something for sure so let's start off with vertex 0 and see what will be the resultant Matrix that we will get now what I'm saying you have to move via the root zero so can I say at first this is 0 to 0 stored as 0 next is 0 to 1 so which means you're moving via root zero which is 0 to 0 plus 0 to 1 can I say it's similar to saying 0 to 1 because 0 to 0 will always be 0 and 0 to 1 is what we have already stored two so you can just copy paste two next is 0 to 2 can I say it's similar 0 to 2 is nothing but",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "YbY8cVwWAvw",
+      "position": 167,
+      "title": "G-42. Floyd Warshall Algorithm",
+      "url": "https://www.youtube.com/watch?v=YbY8cVwWAvw",
+      "start": 700.2,
+      "end": 817.38,
+      "text": "say it's similar 0 to 2 is nothing but saying 0 to Via Zero by the way why is remains 0 to 0 which is again 0 plus 0 to 2 which is nothing but Infinity so similarly this will also be Infinity by 0 to 3 will mean 0 to 0 and 0 to 3. similarly this will mean 1 to 0 what does 1 to 0 mean 1 to 0 means why are zero means 1 to 0 itself and then 0 to 0. y 0 means that only right Pi zero means that because this is I this is J you're moving via zero so can I say this one this one this one will just copy paste these values just go across copy paste these values why because very simple if your destination is 0 you can't move via zero so whatever you're taking in order to reach 0 that is what you copy paste what about these places let's fill them up so I'm saying this place is one to two so I'm saying one to two via zero which means one two zero plus zero to two let's see the value of one to zero one to zero is one so I'll just write 1 plus 0 to 2 plus 0 to 2 is infinity so that means it's an Infinity which I do not need to write so what I'll do is I will keep it as of now and whatever is the value because I know in order to reach one to two I'm taking three and if I go via zero I'm taking Infinity so 3 is a better option so let's keep three no offense let's keep three next one I see is one two three you see next one is one two three okay so for one two three it will be I'll go from one sorry I'll go from one to zero plus zero to three now what is one to zero that's one let's see if what",
+      "word_count": 340
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "YbY8cVwWAvw",
+      "position": 167,
+      "title": "G-42. Floyd Warshall Algorithm",
+      "url": "https://www.youtube.com/watch?v=YbY8cVwWAvw",
+      "start": 811.56,
+      "end": 928.5600000000001,
+      "text": "one to zero that's one let's see if what is 0 to 3 so 0 to 3 is again Infinity so if you go via zero you'll again get infinity and for one two three are we reachable in one two three no infinitely so let's copy paste Infinity so similarly I can say this is done similarly what I'll do is I'll figure out the next guys which is this which is nothing but two to one now two to one wires you let's see I'll go from 2 to 0 how much is it two to zero is infinity so the path will not be considered next I'll do two to two so if I go again to do 0 it is again Infinity not to be considered next I'll go 2 to 3 which will be y as 0 which is again Infinity not to be considered so apparently everyone else is infinity in this case because it is previously Infinity now also I'm getting Infinity so infinity infinity prop next let's see the next part which is somewhere this one this one and this one okay so three to one let's see if we can get something better three two one what am I saying by a zero why are zero let's see if I go via zero which is three zero three zero is three okay perfect plus 0 to 1 because I have to reach 1 so 0 to 1 0 to 1 is 2. so that gives me a total of five which is already what I'm taking so nothing better which is copy paste the values you just copy paste the value so three to one is done let's get the next guy what is the next guy I'm saying three to 2 which means I'll go via 0 which is 3 0 right plus 0 2 let's see what's the value of 3 0 3 0 is 3 what's the value of 0 to 0 2 is infinity nothing better so you're already reaching 3 2 at 4 till keep 4",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "YbY8cVwWAvw",
+      "position": 167,
+      "title": "G-42. Floyd Warshall Algorithm",
+      "url": "https://www.youtube.com/watch?v=YbY8cVwWAvw",
+      "start": 922.44,
+      "end": 1050.059,
+      "text": "already reaching 3 2 at 4 till keep 4 perfect so this is what happens if I try to go via zero so Y is 0 by 0 I build all the paths all the parts have been built let's move to the next one so next one I'll see via one let's go via one and see what is the new because remember wire zero path has been built here bar 0 path has been built here and I'll figure out the Via One path now once I figured out the wire one I'll figure it out wire two wire three and so on we will get all the answers so again we know if even if I go via one something I know for sure is these guys will be zero node to node and anyone who goes one like if the source is one like for this guy this entire portion will be nothing but this why because if you're trying to reach one zero it actually means one two wire one means one to one plus one to zero so you're actually going to himself only if you're saying starting from one going via one it doesn't make sense so you just copy paste whatever is there this is copy paste one zero three and infinity similarly can I say if this is one the destination it still doesn't make sense via going via one and reaching one well that makes sense going via one and reaching one well that makes sense no you copy paste this row as well 2-0 Infinity 5. done copy paste it so now let's compute this this this this this and this this five values left out to be computed let's do it so first one is zero two wire one means zero one plus one two let's compute this so 0 1 means zero sorry we will take this 0 and this one which is 2 so 0 1 means two plus one two one two means three you get a three which makes it five what is the",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "YbY8cVwWAvw",
+      "position": 167,
+      "title": "G-42. Floyd Warshall Algorithm",
+      "url": "https://www.youtube.com/watch?v=YbY8cVwWAvw",
+      "start": 1044.54,
+      "end": 1162.74,
+      "text": "a three which makes it five what is the value already stored Infinity you are reaching at a better position five okay wire one you're reaching at five much better much better next 0 3 wire 1 means 0 1 is 2 plus 1 3 Let's see the value of 1 3. so if I take the value of 1 and 3 that's Infinity not to be considered so whatever is the value we'll just copy text perfect let's copy paste the value amazing next let's erase this let's go to the next row so if I go to the next row or the next row it's this one and this one two zero so if I go over 2 0 that's going via one which is 2 1 and then going from one to zero let's see the values of two one so I go to 1 infinity not to be considered so whatever is the value just copy paste still we have went figured out next is this one which is 2 3. so if I go y r 2 3 which will be 2 1 plus S Plus nothing but one three what is 2 1 let's see two one Infinity again not to be considered next this is the next one three zero so if we take three zero that's nothing but three one plus one zero correct so what's the value of three one what's the value of three one guys three one's value is very simple it's five so let's write five plus one zero What's the value of one zero guys one zero is one so plus one which is six so as of now what is the value of three zero it is three I'm already reaching 3 0 out of value three so why will I take six so I'll keep teaching directly reaching previously whatever previous ways I've taken to reach 3 that's better I need to take the new upgraded version X is three two let's compute three two so if I try to compute three two it'll",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "YbY8cVwWAvw",
+      "position": 167,
+      "title": "G-42. Floyd Warshall Algorithm",
+      "url": "https://www.youtube.com/watch?v=YbY8cVwWAvw",
+      "start": 1157.82,
+      "end": 1285.62,
+      "text": "so if I try to compute three two it'll be three one again which will be 5 right plus one 2 which is nothing but 3 this time that's 8. so if you see it's already reaching at four so why will I take the eight one so y1 I have computed it I've computed The Matrix via one as well similarly what you'll do is you will go we will do a wire 3 and you will get ultimate Matrix and whenever you get this ultimate Matrix this will be your shortest path between everyone between everyone so if someone tomorrow comes up and says you hey give me the shortest path between 3 and 0. so you go three you go zero and you say whatever is stored here that's the shortest path so you can figure out from every Node 1 to every node to the shortest path from this ultimate Matrix that has been generated so what are we doing exactly at first we are going via zero then wire one then wire two then wire three so can I say I'm going with everyone and whenever I am going via zero I'm basically taking this then I'm taking this and I'm taking this then I'm taking this then I'm taking this so it's basically for this taking this for this taking this for this I'm taking this for this I'm taking this so in every iteration can I say what I'm doing is very straightforward and very simple and that's nothing but I'm going from I equal to 0. to the last note and this is what I'm doing because I want to go from I to J so this is what I'm doing at every node can I see this yes or no I can and what am I doing I'm trying to go for example cost of i j I'll take the cost as minimum of minimum of either what I have taken to reach it that is currently what I'm taking currently if I'm taking five I'll",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "YbY8cVwWAvw",
+      "position": 167,
+      "title": "G-42. Floyd Warshall Algorithm",
+      "url": "https://www.youtube.com/watch?v=YbY8cVwWAvw",
+      "start": 1281.78,
+      "end": 1410.659,
+      "text": "currently if I'm taking five I'll consider that five and I'll consider the new one via one so the new and Via will be nothing but cost of I via whatever you're going via Plus cost of that wire of J can I say this I can and this is what I'm doing at every iteration every iteration first wire 0 wire will be 0 here next via one so via will be 1 here next wire 2 it will get two I'm trying out everyone trying out this this this everyone and automatically these will be zeros because you have initially you would have assigned 0 so this will take care that it will always be zeros when you do comparisons so what is this wire first it is zero then it is one then it is two then it is three so can I say for y i equal to zero via lesser than n because 0 1 to 3 every node till via plus plus is what this will be and once you have done this n Cube loop operation at the end of the day you will have your resultant Matrix which will be your answer so if you see we are pretty much derived this one for every iteration and then we have wrapped it under a wire because wire will always change let's get the wire 0 wire 1 wire 2 and ultimately the cost of IJ will be storing your ultimate shortest distance now couple of questions first question is how to detect a negative cycle what if the graph has a negative cycle because we know for a negative cycle imagine a cycle like this where we say okay it is minus 2 minus 3 plus 2 so the total costing is minus 2 plus 2 minus 3 minus two plus two guys go so total costing is minus three so what will happen is the cloud version will work properly and it will figure out a path via one two to reach 0 so the costing of",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "YbY8cVwWAvw",
+      "position": 167,
+      "title": "G-42. Floyd Warshall Algorithm",
+      "url": "https://www.youtube.com/watch?v=YbY8cVwWAvw",
+      "start": 1401.9,
+      "end": 1522.74,
+      "text": "via one two to reach 0 so the costing of 0 and 0 will be minus 3 and apparently the costing of Any Given node to itself should be zero because this node to node should always be zero and if it is anything lesser to zero if the costing of any node can I say this if the costing of any node from 0 to n it's very simple if the costing of I and I which is the node to node itself is lesser than zero I can always say negative cycle exist I can always see negative cycle exist very simple if we are going from uh all the notes and node to node is less than zero means third version has gone via this and has reduced the cost from zero to something lesser because of a negative cycle and you know if it has a negative cycle it doesn't make sense to find the shortest path because someone will do unlimited turns and you'll just reduce its cost every now and then so thereby it's not possible for a negative cycle so I hope you've understood the entire explanation it's time to code it up so as usual the C plus plus solution is on the right and the exact similar Java code is on the left so you have to find the shortest distance between every pair of vertices in a given Edge weight directed graph the graph is represented by an adjacent Matrix and the Matrix denotes the weight of the edges if it exits else minus one remember they are stating minus one not as Infinity if there is an edge they're stating it as minus one so you have to probably do a bit of a thing before doing it so do it in place you have to do it in place is what you have to do and I'm assuming that there the graph does not contains negative Cycles otherwise they would have stated it so we have to do it in place that means whatever the Matrix is",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 13,
+      "video_id": "YbY8cVwWAvw",
+      "position": 167,
+      "title": "G-42. Floyd Warshall Algorithm",
+      "url": "https://www.youtube.com/watch?v=YbY8cVwWAvw",
+      "start": 1518.96,
+      "end": 1637.1,
+      "text": "place that means whatever the Matrix is given you have to update it with the shortest path instead of action actually doing a cost Matrix and returning it so remember else minus one so I'll get the N at first now in in order to ease out understanding what I'll do is I will just go across the entire Matrix once just in order to ease out understanding you can avoid this step as well so you can say if if if Matrix of i j is equal to minus 1 which actually means that it's not possible to reach it so I can say 189 I'll just give it a very big value and while I return I'll just change it to -1 and one other condition I'll always keep if I is equal to equal to J which is the diagonal I know the reaching place is always zero so that's what I'll initialize and before returning just make sure you do the same thing yes before returning just make sure you do the opposite of it okay so before returning if it's 1e9 still which means it's not reachable and if it's not reachable do it a minus one before returning you do this okay now let's perform our algorithm it's very simple we know K will be 0 and K will go till less this and after that we know I will be 0 and I will also go till this and we know the other thing will be J equal to 0 and J will go lesser than this and the uh other thing we know is Matrix of i j will be minimum of Matrix of i j comma Matrix of I wire key so this and Matrix of k2j perfect and I think this should be more or less it about the algorithm it's a pretty uh straightforward one so if you see on compilation it is giving the correct output so I'll submit it and yeah it does pass so one more thing to add before I wrap",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 14,
+      "video_id": "YbY8cVwWAvw",
+      "position": 167,
+      "title": "G-42. Floyd Warshall Algorithm",
+      "url": "https://www.youtube.com/watch?v=YbY8cVwWAvw",
+      "start": 1633.08,
+      "end": 1749.48,
+      "text": "so one more thing to add before I wrap it up if in an interview someone does ask you what if there is a negative cycle so you'll say hey I'll just probably write something like this over here if it's a negative cycle I'd be like if the Matrix contains I I lesser than zero before assigning this lesser than 0 then I can probably print something or something like this I can do it over here so let's discuss the time and space complexity the time complexity of the algorithm major time complexity is n Cube definitely now a lot of you will be thinking the space complexity is bigger of 1 because you're using the given Matrix no whenever we talk about space complexity it's generically the space that I'm using to solve that problem in order to solve this problem I'm using Matrix so that is the space that I am using if I would have not been using this then I can avoid it but if I'm using that goes inside my space that I've been using I'll say the N square is the space so using a cost Matrix the cost Matrix will be your space which is n Square you can't see if someone is giving you something it does contain a space we're taking it unique please to store it right so you are using some space which is n Square over here so I hope uh it is clear I might be thinking whatsoever what if you would have implemented diagram so let's go back and analyze that as well so if you remember dixtra does not yes does not works for negative Cycles it will fall under yes a tle loop so that's why dijkstra cannot be implemented but if the graph does not have negative Cycles or something you can actually apply dijkstra for all the notes because dijkstra in itself takes e log V so what you can do is apply dijkstra on every individual node to find out the answer every individual node and there will",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 15,
+      "video_id": "YbY8cVwWAvw",
+      "position": 167,
+      "title": "G-42. Floyd Warshall Algorithm",
+      "url": "https://www.youtube.com/watch?v=YbY8cVwWAvw",
+      "start": 1743.679,
+      "end": 1812.98,
+      "text": "every individual node and there will still be n cross e log V so it'll still be less like V cross e log V it won't go till n Cube which the flood ocean is taking apply individual Dexter on every node to get every pair distance you can do that but it doesn't works for negative so now if in an interview someone does ask you about flood washing do not just tell the algorithm tell about these extra things like why does something like a dixtra will not work where how can you detect a negative cycle if you add up these extra points in an interview it's always a cherry on the cake so make sure you add these extra points if the interviewer does ask you about the Floyd dual shell algorithm so guys I hope I was able to explain you the fluid virtual algorithm and you've understood everything just in case you did please please please make sure you like this video and if you're new to our Channel what are you waiting for I think it's time that you hit that subscribe button and if you haven't checked out our DP series and the HDC the links will be in the description please make sure you check them out but this will be wrapping up this video let's read in some other video till then bye take care whenever your heart is broken don't ever forget your golden I",
+      "word_count": 246
+    }
+  ]
+}

@@ -1,0 +1,3752 @@
+{
+  "position": 261,
+  "video_id": "1zktEppsdig",
+  "title": "L25. Merge K Sorted Lists | Multiple Approaches",
+  "url": "https://www.youtube.com/watch?v=1zktEppsdig",
+  "transcript": [
+    {
+      "start": 3.04,
+      "duration": 2.92,
+      "end": 5.96,
+      "text": "so we will be continuing with our"
+    },
+    {
+      "start": 4.319,
+      "duration": 2.841,
+      "end": 7.16,
+      "text": "playlist before that hey welcome back to"
+    },
+    {
+      "start": 5.96,
+      "duration": 3.0,
+      "end": 8.96,
+      "text": "the channel I hope you guys are doing"
+    },
+    {
+      "start": 7.16,
+      "duration": 5.479,
+      "end": 12.639,
+      "text": "extremely well so the problem that we"
+    },
+    {
+      "start": 8.96,
+      "duration": 5.799,
+      "end": 14.759,
+      "text": "will be solving today is merge K sorted"
+    },
+    {
+      "start": 12.639,
+      "duration": 4.48,
+      "end": 17.119,
+      "text": "list so what is the problem exactly"
+    },
+    {
+      "start": 14.759,
+      "duration": 5.801,
+      "end": 20.560000000000002,
+      "text": "stating it is stating that you'll be"
+    },
+    {
+      "start": 17.119,
+      "duration": 6.121,
+      "end": 23.240000000000002,
+      "text": "given K sorted list and your task is to"
+    },
+    {
+      "start": 20.56,
+      "duration": 5.959,
+      "end": 26.519,
+      "text": "take all the values the values will be"
+    },
+    {
+      "start": 23.24,
+      "duration": 6.4,
+      "end": 29.64,
+      "text": "integers all the integers together sort"
+    },
+    {
+      "start": 26.519,
+      "duration": 5.201,
+      "end": 31.72,
+      "text": "them up and put them into a new list"
+    },
+    {
+      "start": 29.64,
+      "duration": 5.72,
+      "end": 35.36,
+      "text": "once you have done that you'll have to"
+    },
+    {
+      "start": 31.72,
+      "duration": 5.6,
+      "end": 37.32,
+      "text": "return the head of that new list got it"
+    },
+    {
+      "start": 35.36,
+      "duration": 4.039,
+      "end": 39.399,
+      "text": "so if this problem comes up in an"
+    },
+    {
+      "start": 37.32,
+      "duration": 4.399,
+      "end": 41.719,
+      "text": "interview what is the extreme n solation"
+    },
+    {
+      "start": 39.399,
+      "duration": 3.961,
+      "end": 43.36,
+      "text": "that you can think of I'll be thinking"
+    },
+    {
+      "start": 41.719,
+      "duration": 4.081,
+      "end": 45.800000000000004,
+      "text": "okay I'll take all the elements from the"
+    },
+    {
+      "start": 43.36,
+      "duration": 6.48,
+      "end": 49.84,
+      "text": "first list from the second list from the"
+    },
+    {
+      "start": 45.8,
+      "duration": 7.559,
+      "end": 53.358999999999995,
+      "text": "third list and so on till the kth list"
+    },
+    {
+      "start": 49.84,
+      "duration": 5.0,
+      "end": 54.84,
+      "text": "I'll put them into an array once I put"
+    },
+    {
+      "start": 53.359,
+      "duration": 4.36,
+      "end": 57.719,
+      "text": "them into an array I'll have all the"
+    },
+    {
+      "start": 54.84,
+      "duration": 6.64,
+      "end": 61.480000000000004,
+      "text": "numbers or all the integers in an array"
+    },
+    {
+      "start": 57.719,
+      "duration": 6.081,
+      "end": 63.800000000000004,
+      "text": "I will be sorting that array so I will"
+    },
+    {
+      "start": 61.48,
+      "duration": 4.959,
+      "end": 66.439,
+      "text": "now get a sorted array so all the"
+    },
+    {
+      "start": 63.8,
+      "duration": 5.8,
+      "end": 69.6,
+      "text": "numbers all the integers will be in a"
+    },
+    {
+      "start": 66.439,
+      "duration": 6.241,
+      "end": 72.67999999999999,
+      "text": "short in a sorted fashion in that array"
+    },
+    {
+      "start": 69.6,
+      "duration": 7.48,
+      "end": 77.08,
+      "text": "once I have all the numbers I can apply"
+    },
+    {
+      "start": 72.68,
+      "duration": 6.32,
+      "end": 79.0,
+      "text": "the convert array to link list that we"
+    },
+    {
+      "start": 77.08,
+      "duration": 3.999,
+      "end": 81.079,
+      "text": "have already done in our previous videos"
+    },
+    {
+      "start": 79.0,
+      "duration": 5.56,
+      "end": 84.56,
+      "text": "I'll apply that convert array to link"
+    },
+    {
+      "start": 81.079,
+      "duration": 5.4,
+      "end": 86.479,
+      "text": "list logic and I'll get the new list and"
+    },
+    {
+      "start": 84.56,
+      "duration": 5.68,
+      "end": 90.24000000000001,
+      "text": "whenever you apply the convert array to"
+    },
+    {
+      "start": 86.479,
+      "duration": 7.081,
+      "end": 93.56,
+      "text": "link list logic you get the head of that"
+    },
+    {
+      "start": 90.24,
+      "duration": 6.239,
+      "end": 96.479,
+      "text": "new link list once you have the head you"
+    },
+    {
+      "start": 93.56,
+      "duration": 5.8,
+      "end": 99.36,
+      "text": "can simply return that head quite simple"
+    },
+    {
+      "start": 96.479,
+      "duration": 4.401,
+      "end": 100.88,
+      "text": "so this will be the extreme na solution"
+    },
+    {
+      "start": 99.36,
+      "duration": 4.32,
+      "end": 103.68,
+      "text": "so I will be writing down the pseudo"
+    },
+    {
+      "start": 100.88,
+      "duration": 4.72,
+      "end": 105.6,
+      "text": "code now in case you want the C++ Java"
+    },
+    {
+      "start": 103.68,
+      "duration": 4.2,
+      "end": 107.88000000000001,
+      "text": "python or JavaScript codes it will be"
+    },
+    {
+      "start": 105.6,
+      "duration": 5.799,
+      "end": 111.399,
+      "text": "given below so I will be writing down"
+    },
+    {
+      "start": 107.88,
+      "duration": 5.839,
+      "end": 113.719,
+      "text": "the function the function will be taking"
+    },
+    {
+      "start": 111.399,
+      "duration": 7.161,
+      "end": 118.56,
+      "text": "a list of"
+    },
+    {
+      "start": 113.719,
+      "duration": 7.641,
+      "end": 121.36,
+      "text": "node so what I given is a list having"
+    },
+    {
+      "start": 118.56,
+      "duration": 5.599,
+      "end": 124.159,
+      "text": "all the heads so you have given this you"
+    },
+    {
+      "start": 121.36,
+      "duration": 5.92,
+      "end": 127.28,
+      "text": "given this you given this you given this"
+    },
+    {
+      "start": 124.159,
+      "duration": 5.481,
+      "end": 129.64000000000001,
+      "text": "head one head two head three so on till"
+    },
+    {
+      "start": 127.28,
+      "duration": 4.959,
+      "end": 132.239,
+      "text": "head K head because if you're given the"
+    },
+    {
+      "start": 129.64,
+      "duration": 4.239,
+      "end": 133.879,
+      "text": "head you can easily access the entire"
+    },
+    {
+      "start": 132.239,
+      "duration": 4.921,
+      "end": 137.16,
+      "text": "list if you're given the head you can"
+    },
+    {
+      "start": 133.879,
+      "duration": 6.601,
+      "end": 140.48,
+      "text": "easily access the entire list that's why"
+    },
+    {
+      "start": 137.16,
+      "duration": 6.28,
+      "end": 143.44,
+      "text": "a list of heads is given to you so you"
+    },
+    {
+      "start": 140.48,
+      "duration": 4.68,
+      "end": 145.16,
+      "text": "have uh all the heads of all the list"
+    },
+    {
+      "start": 143.44,
+      "duration": 3.56,
+      "end": 147.0,
+      "text": "now what is your task you have to put"
+    },
+    {
+      "start": 145.16,
+      "duration": 4.96,
+      "end": 150.12,
+      "text": "them into an array like all the integers"
+    },
+    {
+      "start": 147.0,
+      "duration": 5.28,
+      "end": 152.28,
+      "text": "into an array the first thing I'll do is"
+    },
+    {
+      "start": 150.12,
+      "duration": 4.64,
+      "end": 154.76,
+      "text": "I will take an array and it's an empty"
+    },
+    {
+      "start": 152.28,
+      "duration": 5.0,
+      "end": 157.28,
+      "text": "one after that I'll have to go through"
+    },
+    {
+      "start": 154.76,
+      "duration": 5.759,
+      "end": 160.519,
+      "text": "each and every list correct let's go"
+    },
+    {
+      "start": 157.28,
+      "duration": 5.599,
+      "end": 162.879,
+      "text": "through them first let's access every"
+    },
+    {
+      "start": 160.519,
+      "duration": 6.601,
+      "end": 167.12,
+      "text": "head so I'll be going from I equal to0"
+    },
+    {
+      "start": 162.879,
+      "duration": 4.241,
+      "end": 167.12,
+      "text": "till I list do"
+    },
+    {
+      "start": 169.0,
+      "duration": 4.04,
+      "end": 173.04,
+      "text": "size and I know the head will"
+    },
+    {
+      "start": 173.959,
+      "duration": 5.241,
+      "end": 179.2,
+      "text": "be at the index so list of I will give"
+    },
+    {
+      "start": 176.959,
+      "duration": 4.761,
+      "end": 181.72,
+      "text": "me the head so I can take a temporary"
+    },
+    {
+      "start": 179.2,
+      "duration": 4.84,
+      "end": 184.04,
+      "text": "and this will will be my node now I have"
+    },
+    {
+      "start": 181.72,
+      "duration": 5.04,
+      "end": 186.76,
+      "text": "the head I have a temporary standing at"
+    },
+    {
+      "start": 184.04,
+      "duration": 4.6,
+      "end": 188.64,
+      "text": "the head so initially when I is zero"
+    },
+    {
+      "start": 186.76,
+      "duration": 3.479,
+      "end": 190.239,
+      "text": "temporary will be here after that"
+    },
+    {
+      "start": 188.64,
+      "duration": 3.879,
+      "end": 192.51899999999998,
+      "text": "temporary will be here after that"
+    },
+    {
+      "start": 190.239,
+      "duration": 5.08,
+      "end": 195.31900000000002,
+      "text": "temporary is here after that temporary"
+    },
+    {
+      "start": 192.519,
+      "duration": 5.241,
+      "end": 197.76,
+      "text": "is here now what is your job so take"
+    },
+    {
+      "start": 195.319,
+      "duration": 4.441,
+      "end": 199.76,
+      "text": "this one this one this one right and put"
+    },
+    {
+      "start": 197.76,
+      "duration": 3.96,
+      "end": 201.72,
+      "text": "them into an array after that take this"
+    },
+    {
+      "start": 199.76,
+      "duration": 5.479,
+      "end": 205.239,
+      "text": "one this one put them into an array"
+    },
+    {
+      "start": 201.72,
+      "duration": 6.439,
+      "end": 208.159,
+      "text": "Travers right you can do a simple travel"
+    },
+    {
+      "start": 205.239,
+      "duration": 7.041,
+      "end": 212.28,
+      "text": "that's super simple I can write a while"
+    },
+    {
+      "start": 208.159,
+      "duration": 8.401,
+      "end": 216.56,
+      "text": "loop which goes on till temporary is"
+    },
+    {
+      "start": 212.28,
+      "duration": 6.44,
+      "end": 218.72,
+      "text": "not null and I can say AR can you"
+    },
+    {
+      "start": 216.56,
+      "duration": 5.239,
+      "end": 221.799,
+      "text": "add this"
+    },
+    {
+      "start": 218.72,
+      "duration": 6.36,
+      "end": 225.08,
+      "text": "temporary value data whatever it is and"
+    },
+    {
+      "start": 221.799,
+      "duration": 6.52,
+      "end": 228.31900000000002,
+      "text": "then can I say temporary"
+    },
+    {
+      "start": 225.08,
+      "duration": 6.2,
+      "end": 231.28,
+      "text": "temporary next super simple the"
+    },
+    {
+      "start": 228.319,
+      "duration": 4.721,
+      "end": 233.04,
+      "text": "traversal is completed once the"
+    },
+    {
+      "start": 231.28,
+      "duration": 4.12,
+      "end": 235.4,
+      "text": "traversal is completed you have all the"
+    },
+    {
+      "start": 233.04,
+      "duration": 5.68,
+      "end": 238.72,
+      "text": "elements in the array what is the next"
+    },
+    {
+      "start": 235.4,
+      "duration": 5.679,
+      "end": 241.079,
+      "text": "step sort them so call the sort function"
+    },
+    {
+      "start": 238.72,
+      "duration": 5.28,
+      "end": 244.0,
+      "text": "and that will be sorting the entire"
+    },
+    {
+      "start": 241.079,
+      "duration": 5.24,
+      "end": 246.31900000000002,
+      "text": "array once the entire array is sorted I"
+    },
+    {
+      "start": 244.0,
+      "duration": 5.439,
+      "end": 249.439,
+      "text": "have to convert it into a list call the"
+    },
+    {
+      "start": 246.319,
+      "duration": 6.081,
+      "end": 252.39999999999998,
+      "text": "convert function you've already done"
+    },
+    {
+      "start": 249.439,
+      "duration": 5.401,
+      "end": 254.84,
+      "text": "that so this will be calling the convert"
+    },
+    {
+      "start": 252.4,
+      "duration": 5.76,
+      "end": 258.16,
+      "text": "function and it will be returning the"
+    },
+    {
+      "start": 254.84,
+      "duration": 6.16,
+      "end": 261.0,
+      "text": "head of that new list so basically I can"
+    },
+    {
+      "start": 258.16,
+      "duration": 6.24,
+      "end": 264.40000000000003,
+      "text": "say head equal to convert of array once"
+    },
+    {
+      "start": 261.0,
+      "duration": 7.0,
+      "end": 268.0,
+      "text": "that is done I can straight away return"
+    },
+    {
+      "start": 264.4,
+      "duration": 5.68,
+      "end": 270.08,
+      "text": "the head of that new list nust it now"
+    },
+    {
+      "start": 268.0,
+      "duration": 5.36,
+      "end": 273.36,
+      "text": "what will be the time complexity can I"
+    },
+    {
+      "start": 270.08,
+      "duration": 6.04,
+      "end": 276.12,
+      "text": "say this is taking a beo of K because I"
+    },
+    {
+      "start": 273.36,
+      "duration": 4.8,
+      "end": 278.16,
+      "text": "have been given K sorted list now what"
+    },
+    {
+      "start": 276.12,
+      "duration": 4.639,
+      "end": 280.759,
+      "text": "is the next thing I need to compute for"
+    },
+    {
+      "start": 278.16,
+      "duration": 5.8,
+      "end": 283.96000000000004,
+      "text": "the traversal to ease out computations"
+    },
+    {
+      "start": 280.759,
+      "duration": 6.921,
+      "end": 287.68,
+      "text": "what I will be assuming is each and"
+    },
+    {
+      "start": 283.96,
+      "duration": 6.28,
+      "end": 290.23999999999995,
+      "text": "every list is of length n hypothetical"
+    },
+    {
+      "start": 287.68,
+      "duration": 5.32,
+      "end": 293.0,
+      "text": "observation or assumption so this"
+    },
+    {
+      "start": 290.24,
+      "duration": 5.72,
+      "end": 295.96000000000004,
+      "text": "traversal will be taking B go of n so"
+    },
+    {
+      "start": 293.0,
+      "duration": 8.36,
+      "end": 301.36,
+      "text": "the overall complexity for this portion"
+    },
+    {
+      "start": 295.96,
+      "duration": 7.72,
+      "end": 303.68,
+      "text": "is nothing but n into k correct after"
+    },
+    {
+      "start": 301.36,
+      "duration": 6.24,
+      "end": 307.6,
+      "text": "that you're sorting it so the sort"
+    },
+    {
+      "start": 303.68,
+      "duration": 6.239,
+      "end": 309.919,
+      "text": "usually takes M logarithmic of M if the"
+    },
+    {
+      "start": 307.6,
+      "duration": 4.48,
+      "end": 312.08000000000004,
+      "text": "size of the array is M now what is the"
+    },
+    {
+      "start": 309.919,
+      "duration": 5.321,
+      "end": 315.24,
+      "text": "size of the array the size of the array"
+    },
+    {
+      "start": 312.08,
+      "duration": 5.8,
+      "end": 317.88,
+      "text": "will be all the elements combined how"
+    },
+    {
+      "start": 315.24,
+      "duration": 6.28,
+      "end": 321.52,
+      "text": "many elements are there if there are K"
+    },
+    {
+      "start": 317.88,
+      "duration": 6.68,
+      "end": 324.56,
+      "text": "list and each of its size is n can I say"
+    },
+    {
+      "start": 321.52,
+      "duration": 5.56,
+      "end": 327.08,
+      "text": "the number of elements are n into K I"
+    },
+    {
+      "start": 324.56,
+      "duration": 5.44,
+      "end": 330.0,
+      "text": "can so m is nothing"
+    },
+    {
+      "start": 327.08,
+      "duration": 4.48,
+      "end": 331.56,
+      "text": "but n into k"
+    },
+    {
+      "start": 330.0,
+      "duration": 5.24,
+      "end": 335.24,
+      "text": "that's the total number of elements"
+    },
+    {
+      "start": 331.56,
+      "duration": 6.24,
+      "end": 337.8,
+      "text": "assuming each list is of length n after"
+    },
+    {
+      "start": 335.24,
+      "duration": 4.76,
+      "end": 340.0,
+      "text": "that I'm converting so in order to"
+    },
+    {
+      "start": 337.8,
+      "duration": 5.2,
+      "end": 343.0,
+      "text": "convert it will be in linear traversal"
+    },
+    {
+      "start": 340.0,
+      "duration": 6.68,
+      "end": 346.68,
+      "text": "so the complexity again will be M where"
+    },
+    {
+      "start": 343.0,
+      "duration": 5.96,
+      "end": 348.96,
+      "text": "m is n into K after that I think we're"
+    },
+    {
+      "start": 346.68,
+      "duration": 4.56,
+      "end": 351.24,
+      "text": "done so the overall time complexity will"
+    },
+    {
+      "start": 348.96,
+      "duration": 6.56,
+      "end": 355.52,
+      "text": "be n into"
+    },
+    {
+      "start": 351.24,
+      "duration": 6.239,
+      "end": 357.479,
+      "text": "k+ M logarithmic of M plus b go of M"
+    },
+    {
+      "start": 355.52,
+      "duration": 4.88,
+      "end": 360.4,
+      "text": "where m is n into"
+    },
+    {
+      "start": 357.479,
+      "duration": 5.961,
+      "end": 363.44,
+      "text": "K what will be the space comp complexity"
+    },
+    {
+      "start": 360.4,
+      "duration": 6.0,
+      "end": 366.4,
+      "text": "I'm using an array so it'll be storing"
+    },
+    {
+      "start": 363.44,
+      "duration": 5.479,
+      "end": 368.919,
+      "text": "all the elements which is B go of M"
+    },
+    {
+      "start": 366.4,
+      "duration": 5.199,
+      "end": 371.599,
+      "text": "after that I'm creating a new list in"
+    },
+    {
+      "start": 368.919,
+      "duration": 5.56,
+      "end": 374.479,
+      "text": "order to store all the elements like all"
+    },
+    {
+      "start": 371.599,
+      "duration": 5.121,
+      "end": 376.71999999999997,
+      "text": "the merged elements so that's another B"
+    },
+    {
+      "start": 374.479,
+      "duration": 4.401,
+      "end": 378.88,
+      "text": "go of M so this is the overall time"
+    },
+    {
+      "start": 376.72,
+      "duration": 3.84,
+      "end": 380.56,
+      "text": "complexity and the space complexity for"
+    },
+    {
+      "start": 378.88,
+      "duration": 3.319,
+      "end": 382.199,
+      "text": "The Brute Force obviously the"
+    },
+    {
+      "start": 380.56,
+      "duration": 3.84,
+      "end": 384.4,
+      "text": "interviewer will not be happy with this"
+    },
+    {
+      "start": 382.199,
+      "duration": 3.921,
+      "end": 386.12,
+      "text": "and he'll ask you to optimize this so in"
+    },
+    {
+      "start": 384.4,
+      "duration": 3.239,
+      "end": 387.63899999999995,
+      "text": "order to optimize our previous solution"
+    },
+    {
+      "start": 386.12,
+      "duration": 5.24,
+      "end": 391.36,
+      "text": "you should have seen my previous video"
+    },
+    {
+      "start": 387.639,
+      "duration": 5.801,
+      "end": 393.44,
+      "text": "that is on mod two sorted list if you"
+    },
+    {
+      "start": 391.36,
+      "duration": 5.119,
+      "end": 396.47900000000004,
+      "text": "have seen that and you know how to merge"
+    },
+    {
+      "start": 393.44,
+      "duration": 5.479,
+      "end": 398.919,
+      "text": "two sorted list in place this will be"
+    },
+    {
+      "start": 396.479,
+      "duration": 6.481,
+      "end": 402.96,
+      "text": "easy so what I'll do is I'll take the"
+    },
+    {
+      "start": 398.919,
+      "duration": 6.521,
+      "end": 405.44,
+      "text": "first list I'll take the second list and"
+    },
+    {
+      "start": 402.96,
+      "duration": 4.799,
+      "end": 407.75899999999996,
+      "text": "I'll try to merge them together so I"
+    },
+    {
+      "start": 405.44,
+      "duration": 4.56,
+      "end": 410.0,
+      "text": "have two lists right I can merge them"
+    },
+    {
+      "start": 407.759,
+      "duration": 4.761,
+      "end": 412.52000000000004,
+      "text": "together right I know how to do it in"
+    },
+    {
+      "start": 410.0,
+      "duration": 4.96,
+      "end": 414.96,
+      "text": "place when I say in place I'll be using"
+    },
+    {
+      "start": 412.52,
+      "duration": 4.679,
+      "end": 417.19899999999996,
+      "text": "the same nodes this will be pointing to"
+    },
+    {
+      "start": 414.96,
+      "duration": 3.88,
+      "end": 418.84,
+      "text": "this this will be pointing to this and"
+    },
+    {
+      "start": 417.199,
+      "duration": 3.12,
+      "end": 420.319,
+      "text": "this will be pointing to this and this"
+    },
+    {
+      "start": 418.84,
+      "duration": 3.799,
+      "end": 422.63899999999995,
+      "text": "will be pointing to this and this will"
+    },
+    {
+      "start": 420.319,
+      "duration": 4.521,
+      "end": 424.84000000000003,
+      "text": "be pointing to null I know how to do it"
+    },
+    {
+      "start": 422.639,
+      "duration": 6.0,
+      "end": 428.639,
+      "text": "in place so let's quickly merge them"
+    },
+    {
+      "start": 424.84,
+      "duration": 5.72,
+      "end": 430.56,
+      "text": "into a new list so after merging them I"
+    },
+    {
+      "start": 428.639,
+      "duration": 5.28,
+      "end": 433.919,
+      "text": "have something like this The Next Step"
+    },
+    {
+      "start": 430.56,
+      "duration": 6.8,
+      "end": 437.36,
+      "text": "will be do go to the third list take"
+    },
+    {
+      "start": 433.919,
+      "duration": 7.161,
+      "end": 441.08,
+      "text": "this up and take the previous list can I"
+    },
+    {
+      "start": 437.36,
+      "duration": 6.72,
+      "end": 444.08000000000004,
+      "text": "merge them together I think I can right"
+    },
+    {
+      "start": 441.08,
+      "duration": 5.2,
+      "end": 446.28,
+      "text": "same process let's do it so once the"
+    },
+    {
+      "start": 444.08,
+      "duration": 4.239,
+      "end": 448.31899999999996,
+      "text": "merge is completed I have something like"
+    },
+    {
+      "start": 446.28,
+      "duration": 4.359,
+      "end": 450.63899999999995,
+      "text": "this after this you'll move on to the"
+    },
+    {
+      "start": 448.319,
+      "duration": 5.961,
+      "end": 454.28000000000003,
+      "text": "fourth list and again you can take both"
+    },
+    {
+      "start": 450.639,
+      "duration": 6.921,
+      "end": 457.56,
+      "text": "of them and again do a merge can I do it"
+    },
+    {
+      "start": 454.28,
+      "duration": 5.88,
+      "end": 460.15999999999997,
+      "text": "I can so let's do it once the last list"
+    },
+    {
+      "start": 457.56,
+      "duration": 4.4,
+      "end": 461.96,
+      "text": "is merged I have something like this I"
+    },
+    {
+      "start": 460.16,
+      "duration": 5.479,
+      "end": 465.639,
+      "text": "don't have any further list that I need"
+    },
+    {
+      "start": 461.96,
+      "duration": 7.519,
+      "end": 469.479,
+      "text": "to merge so I can simply return the head"
+    },
+    {
+      "start": 465.639,
+      "duration": 6.441,
+      "end": 472.08,
+      "text": "of the overall merged list now remember"
+    },
+    {
+      "start": 469.479,
+      "duration": 4.961,
+      "end": 474.44,
+      "text": "all of these notes are the same notes"
+    },
+    {
+      "start": 472.08,
+      "duration": 5.959,
+      "end": 478.039,
+      "text": "that were given to us I've not used any"
+    },
+    {
+      "start": 474.44,
+      "duration": 5.12,
+      "end": 479.56,
+      "text": "extra nodes done it in place so let's"
+    },
+    {
+      "start": 478.039,
+      "duration": 3.401,
+      "end": 481.44,
+      "text": "quickly addite on the pseudo code in"
+    },
+    {
+      "start": 479.56,
+      "duration": 4.28,
+      "end": 483.84,
+      "text": "case you want the C++ Java python or"
+    },
+    {
+      "start": 481.44,
+      "duration": 5.199,
+      "end": 486.639,
+      "text": "JavaScript code it will be given below"
+    },
+    {
+      "start": 483.84,
+      "duration": 7.28,
+      "end": 491.11999999999995,
+      "text": "first of all uh you'll have a"
+    },
+    {
+      "start": 486.639,
+      "duration": 4.481,
+      "end": 491.12,
+      "text": "function which will be taking a list of"
+    },
+    {
+      "start": 491.36,
+      "duration": 6.0,
+      "end": 497.36,
+      "text": "nodes so this is nothing but all the"
+    },
+    {
+      "start": 494.24,
+      "duration": 5.44,
+      "end": 499.68,
+      "text": "heads given to you in a list after that"
+    },
+    {
+      "start": 497.36,
+      "duration": 5.92,
+      "end": 503.28000000000003,
+      "text": "you have to merge them how do you merge"
+    },
+    {
+      "start": 499.68,
+      "duration": 6.28,
+      "end": 505.96,
+      "text": "it first thing we did was we took first"
+    },
+    {
+      "start": 503.28,
+      "duration": 6.28,
+      "end": 509.55999999999995,
+      "text": "two list and we tried to merge them into"
+    },
+    {
+      "start": 505.96,
+      "duration": 8.24,
+      "end": 514.1999999999999,
+      "text": "one so I'll be smart and what I'll do is"
+    },
+    {
+      "start": 509.56,
+      "duration": 7.52,
+      "end": 517.08,
+      "text": "I'll place a head node on the Zero list"
+    },
+    {
+      "start": 514.2,
+      "duration": 4.8,
+      "end": 519.0,
+      "text": "on the zeroth list I'm talking in terms"
+    },
+    {
+      "start": 517.08,
+      "duration": 7.56,
+      "end": 524.64,
+      "text": "of zero based"
+    },
+    {
+      "start": 519.0,
+      "duration": 8.8,
+      "end": 527.8,
+      "text": "indexing I'll be like okay head is list"
+    },
+    {
+      "start": 524.64,
+      "duration": 4.84,
+      "end": 529.48,
+      "text": "of zero perfect the next thing I'll do"
+    },
+    {
+      "start": 527.8,
+      "duration": 4.36,
+      "end": 532.16,
+      "text": "is I'll start"
+    },
+    {
+      "start": 529.48,
+      "duration": 4.68,
+      "end": 534.16,
+      "text": "traversing from the first I'll start"
+    },
+    {
+      "start": 532.16,
+      "duration": 4.119,
+      "end": 536.279,
+      "text": "traversing from the first let's try to"
+    },
+    {
+      "start": 534.16,
+      "duration": 6.119,
+      "end": 540.279,
+      "text": "do"
+    },
+    {
+      "start": 536.279,
+      "duration": 7.921,
+      "end": 544.2,
+      "text": "it for I = to 1 and I'll go on to the"
+    },
+    {
+      "start": 540.279,
+      "duration": 3.921,
+      "end": 544.2,
+      "text": "last which is list do"
+    },
+    {
+      "start": 544.36,
+      "duration": 5.719,
+      "end": 550.0790000000001,
+      "text": "size perfect this is what I'm writing"
+    },
+    {
+      "start": 547.48,
+      "duration": 5.479,
+      "end": 552.9590000000001,
+      "text": "after this can I"
+    },
+    {
+      "start": 550.079,
+      "duration": 8.361,
+      "end": 558.4399999999999,
+      "text": "say list of"
+    },
+    {
+      "start": 552.959,
+      "duration": 9.481,
+      "end": 562.4399999999999,
+      "text": "I is my first list and head is my zeroth"
+    },
+    {
+      "start": 558.44,
+      "duration": 5.56,
+      "end": 564.0,
+      "text": "list can I merge them yes I can so I'll"
+    },
+    {
+      "start": 562.44,
+      "duration": 4.079,
+      "end": 566.519,
+      "text": "call"
+    },
+    {
+      "start": 564.0,
+      "duration": 6.2,
+      "end": 570.2,
+      "text": "merge to"
+    },
+    {
+      "start": 566.519,
+      "duration": 5.601,
+      "end": 572.12,
+      "text": "list I'll pass on the head and I'll pass"
+    },
+    {
+      "start": 570.2,
+      "duration": 5.48,
+      "end": 575.6800000000001,
+      "text": "on the list"
+    },
+    {
+      "start": 572.12,
+      "duration": 7.08,
+      "end": 579.2,
+      "text": "I so what will happen is head is nothing"
+    },
+    {
+      "start": 575.68,
+      "duration": 6.96,
+      "end": 582.64,
+      "text": "but the zeroth list right is a list of I"
+    },
+    {
+      "start": 579.2,
+      "duration": 8.36,
+      "end": 587.5600000000001,
+      "text": "in the first iteration that is the first"
+    },
+    {
+      "start": 582.64,
+      "duration": 7.8,
+      "end": 590.4399999999999,
+      "text": "so I'm sending first tus right it will"
+    },
+    {
+      "start": 587.56,
+      "duration": 6.04,
+      "end": 593.5999999999999,
+      "text": "get merged I'll get the new head I'll"
+    },
+    {
+      "start": 590.44,
+      "duration": 6.0,
+      "end": 596.44,
+      "text": "get the new head of the merged list so"
+    },
+    {
+      "start": 593.6,
+      "duration": 6.44,
+      "end": 600.0400000000001,
+      "text": "what I can do is that new head I can"
+    },
+    {
+      "start": 596.44,
+      "duration": 5.48,
+      "end": 601.9200000000001,
+      "text": "store it in the head itself done done so"
+    },
+    {
+      "start": 600.04,
+      "duration": 3.68,
+      "end": 603.7199999999999,
+      "text": "if I do this what will happen at the"
+    },
+    {
+      "start": 601.92,
+      "duration": 7.08,
+      "end": 609.0,
+      "text": "next step"
+    },
+    {
+      "start": 603.72,
+      "duration": 9.04,
+      "end": 612.76,
+      "text": "is this will get omitted and whatever"
+    },
+    {
+      "start": 609.0,
+      "duration": 6.959,
+      "end": 615.959,
+      "text": "merged list you will get the head will"
+    },
+    {
+      "start": 612.76,
+      "duration": 7.079,
+      "end": 619.8389999999999,
+      "text": "be here again in the next iteration when"
+    },
+    {
+      "start": 615.959,
+      "duration": 7.761,
+      "end": 623.7199999999999,
+      "text": "I is at two you can again merge"
+    },
+    {
+      "start": 619.839,
+      "duration": 6.521,
+      "end": 626.36,
+      "text": "them simple so what I've done is I've"
+    },
+    {
+      "start": 623.72,
+      "duration": 6.359,
+      "end": 630.0790000000001,
+      "text": "taken the zero then I've taken the first"
+    },
+    {
+      "start": 626.36,
+      "duration": 6.96,
+      "end": 633.32,
+      "text": "and I merged them into a new list and"
+    },
+    {
+      "start": 630.079,
+      "duration": 6.281,
+      "end": 636.3599999999999,
+      "text": "that is stored here next time in I do"
+    },
+    {
+      "start": 633.32,
+      "duration": 5.24,
+      "end": 638.5600000000001,
+      "text": "this merged the before merged list will"
+    },
+    {
+      "start": 636.36,
+      "duration": 4.64,
+      "end": 641.0,
+      "text": "go and list of two will go again you'll"
+    },
+    {
+      "start": 638.56,
+      "duration": 3.92,
+      "end": 642.4799999999999,
+      "text": "get a merged so at the end of the day"
+    },
+    {
+      "start": 641.0,
+      "duration": 6.36,
+      "end": 647.36,
+      "text": "the head will"
+    },
+    {
+      "start": 642.48,
+      "duration": 8.52,
+      "end": 651.0,
+      "text": "be the head of your merged list done and"
+    },
+    {
+      "start": 647.36,
+      "duration": 6.36,
+      "end": 653.72,
+      "text": "dusted super small code so let's analyze"
+    },
+    {
+      "start": 651.0,
+      "duration": 5.639,
+      "end": 656.639,
+      "text": "the time complexity in order to do that"
+    },
+    {
+      "start": 653.72,
+      "duration": 5.08,
+      "end": 658.8000000000001,
+      "text": "what I will do is assume the first list"
+    },
+    {
+      "start": 656.639,
+      "duration": 8.281,
+      "end": 664.92,
+      "text": "is of length N1 the second is of length"
+    },
+    {
+      "start": 658.8,
+      "duration": 9.24,
+      "end": 668.04,
+      "text": "n to N3 and N4 okay what is the first"
+    },
+    {
+      "start": 664.92,
+      "duration": 5.039,
+      "end": 669.959,
+      "text": "step of iteration doing when I is one"
+    },
+    {
+      "start": 668.04,
+      "duration": 5.599,
+      "end": 673.639,
+      "text": "what's happening you're merging the"
+    },
+    {
+      "start": 669.959,
+      "duration": 8.56,
+      "end": 678.5189999999999,
+      "text": "zeroth list with the first list in terms"
+    },
+    {
+      "start": 673.639,
+      "duration": 8.721,
+      "end": 682.36,
+      "text": "of zero based indexing agreed so first"
+    },
+    {
+      "start": 678.519,
+      "duration": 4.76,
+      "end": 683.279,
+      "text": "list is of size N1 the second list is of"
+    },
+    {
+      "start": 682.36,
+      "duration": 4.719,
+      "end": 687.0790000000001,
+      "text": "size"
+    },
+    {
+      "start": 683.279,
+      "duration": 6.68,
+      "end": 689.959,
+      "text": "N2 they are being merged merging them"
+    },
+    {
+      "start": 687.079,
+      "duration": 4.841,
+      "end": 691.92,
+      "text": "correct and what is the time"
+    },
+    {
+      "start": 689.959,
+      "duration": 6.521,
+      "end": 696.4799999999999,
+      "text": "complexity while merging to list that's"
+    },
+    {
+      "start": 691.92,
+      "duration": 8.68,
+      "end": 700.5999999999999,
+      "text": "very easy that's N1 plus"
+    },
+    {
+      "start": 696.48,
+      "duration": 6.12,
+      "end": 702.6,
+      "text": "N2 done that is for the first iteration"
+    },
+    {
+      "start": 700.6,
+      "duration": 4.239,
+      "end": 704.839,
+      "text": "that is for the first iteration done and"
+    },
+    {
+      "start": 702.6,
+      "duration": 7.28,
+      "end": 709.88,
+      "text": "dusted after"
+    },
+    {
+      "start": 704.839,
+      "duration": 9.841,
+      "end": 714.6800000000001,
+      "text": "this I will be to what will happen"
+    },
+    {
+      "start": 709.88,
+      "duration": 7.0,
+      "end": 716.88,
+      "text": "you'll have them merged into a new list"
+    },
+    {
+      "start": 714.68,
+      "duration": 5.68,
+      "end": 720.3599999999999,
+      "text": "which will be of size n"
+    },
+    {
+      "start": 716.88,
+      "duration": 7.88,
+      "end": 724.76,
+      "text": "1% that will be a single list and that"
+    },
+    {
+      "start": 720.36,
+      "duration": 5.52,
+      "end": 725.88,
+      "text": "single list will try to get merged with"
+    },
+    {
+      "start": 724.76,
+      "duration": 3.36,
+      "end": 728.12,
+      "text": "this because this is where your"
+    },
+    {
+      "start": 725.88,
+      "duration": 7.519,
+      "end": 733.399,
+      "text": "iteration is standing you try to merge"
+    },
+    {
+      "start": 728.12,
+      "duration": 7.839,
+      "end": 735.9590000000001,
+      "text": "this into this correct so can I say this"
+    },
+    {
+      "start": 733.399,
+      "duration": 6.401,
+      "end": 739.8,
+      "text": "time the list that you're trying to"
+    },
+    {
+      "start": 735.959,
+      "duration": 5.601,
+      "end": 741.56,
+      "text": "merge will be of length N1 + N2 because"
+    },
+    {
+      "start": 739.8,
+      "duration": 3.52,
+      "end": 743.3199999999999,
+      "text": "it is a combination of the zero and the"
+    },
+    {
+      "start": 741.56,
+      "duration": 3.0,
+      "end": 744.56,
+      "text": "first now you're trying to merge with"
+    },
+    {
+      "start": 743.32,
+      "duration": 4.24,
+      "end": 747.5600000000001,
+      "text": "the third"
+    },
+    {
+      "start": 744.56,
+      "duration": 5.76,
+      "end": 750.3199999999999,
+      "text": "list agreed so the overall time"
+    },
+    {
+      "start": 747.56,
+      "duration": 6.279,
+      "end": 753.8389999999999,
+      "text": "complexity to merge them will be N1 + N2"
+    },
+    {
+      "start": 750.32,
+      "duration": 3.519,
+      "end": 753.839,
+      "text": "+ N3 very"
+    },
+    {
+      "start": 755.88,
+      "duration": 5.8,
+      "end": 761.68,
+      "text": "simple done understood I can just remove"
+    },
+    {
+      "start": 759.32,
+      "duration": 5.36,
+      "end": 764.6800000000001,
+      "text": "them what is the next step The Next Step"
+    },
+    {
+      "start": 761.68,
+      "duration": 5.68,
+      "end": 767.3599999999999,
+      "text": "will be I will be three which means"
+    },
+    {
+      "start": 764.68,
+      "duration": 5.56,
+      "end": 770.2399999999999,
+      "text": "you're standing at this one so you'll"
+    },
+    {
+      "start": 767.36,
+      "duration": 6.32,
+      "end": 773.6800000000001,
+      "text": "have a single list which will be which"
+    },
+    {
+      "start": 770.24,
+      "duration": 7.76,
+      "end": 778.0,
+      "text": "will be a merge of these three so"
+    },
+    {
+      "start": 773.68,
+      "duration": 6.279,
+      "end": 779.959,
+      "text": "basically N1 + N2 + N3 in length right"
+    },
+    {
+      "start": 778.0,
+      "duration": 5.199,
+      "end": 783.199,
+      "text": "and you'll try to merge it with this one"
+    },
+    {
+      "start": 779.959,
+      "duration": 5.841,
+      "end": 785.8,
+      "text": "so this and this will try to get merged"
+    },
+    {
+      "start": 783.199,
+      "duration": 8.041,
+      "end": 791.24,
+      "text": "so can I set the next step this one will"
+    },
+    {
+      "start": 785.8,
+      "duration": 8.039,
+      "end": 793.8389999999999,
+      "text": "be N1 + N2 + N3 and this one will be N4"
+    },
+    {
+      "start": 791.24,
+      "duration": 4.0,
+      "end": 795.24,
+      "text": "I can right I can say that so what will"
+    },
+    {
+      "start": 793.839,
+      "duration": 4.841,
+      "end": 798.6800000000001,
+      "text": "happen"
+    },
+    {
+      "start": 795.24,
+      "duration": 6.0,
+      "end": 801.24,
+      "text": "again the time taken will be N2 + N3 +"
+    },
+    {
+      "start": 798.68,
+      "duration": 5.44,
+      "end": 804.12,
+      "text": "N4 and this is when the iteration will"
+    },
+    {
+      "start": 801.24,
+      "duration": 5.279,
+      "end": 806.519,
+      "text": "get completed now I cannot figure out"
+    },
+    {
+      "start": 804.12,
+      "duration": 4.88,
+      "end": 809.0,
+      "text": "the time complexity so what I will do is"
+    },
+    {
+      "start": 806.519,
+      "duration": 4.521,
+      "end": 811.04,
+      "text": "I'll assume all of them to be equal"
+    },
+    {
+      "start": 809.0,
+      "duration": 4.68,
+      "end": 813.68,
+      "text": "length assume it to be of the maximum"
+    },
+    {
+      "start": 811.04,
+      "duration": 6.2,
+      "end": 817.24,
+      "text": "length so let's assume that each of them"
+    },
+    {
+      "start": 813.68,
+      "duration": 6.92,
+      "end": 820.5999999999999,
+      "text": "is of size n the maximum"
+    },
+    {
+      "start": 817.24,
+      "duration": 6.159,
+      "end": 823.399,
+      "text": "possible I can write this as 2 N I can"
+    },
+    {
+      "start": 820.6,
+      "duration": 7.28,
+      "end": 827.88,
+      "text": "write this as 3 N I can write this as 4"
+    },
+    {
+      "start": 823.399,
+      "duration": 8.321,
+      "end": 831.72,
+      "text": "n perfect right probably if I'm adding"
+    },
+    {
+      "start": 827.88,
+      "duration": 5.759,
+      "end": 833.639,
+      "text": "so much if I add a very small n it won't"
+    },
+    {
+      "start": 831.72,
+      "duration": 5.08,
+      "end": 836.8000000000001,
+      "text": "matter that much because I'm already"
+    },
+    {
+      "start": 833.639,
+      "duration": 6.0,
+      "end": 839.639,
+      "text": "doing a lot of iterations agreed agreed"
+    },
+    {
+      "start": 836.8,
+      "duration": 8.039,
+      "end": 844.8389999999999,
+      "text": "right can I write this as"
+    },
+    {
+      "start": 839.639,
+      "duration": 8.44,
+      "end": 848.0790000000001,
+      "text": "n + 2 n + 3 n till K of n because I'll"
+    },
+    {
+      "start": 844.839,
+      "duration": 6.56,
+      "end": 851.399,
+      "text": "be doing it till K list right I'll be"
+    },
+    {
+      "start": 848.079,
+      "duration": 6.56,
+      "end": 854.6389999999999,
+      "text": "taking n common so it be 1 + 2 + 3 plus"
+    },
+    {
+      "start": 851.399,
+      "duration": 7.88,
+      "end": 859.279,
+      "text": "dot dot dot till K so in short it will"
+    },
+    {
+      "start": 854.639,
+      "duration": 6.361,
+      "end": 861.0,
+      "text": "be n into K into how much is it n into n"
+    },
+    {
+      "start": 859.279,
+      "duration": 5.841,
+      "end": 865.12,
+      "text": "+ 1 by 2"
+    },
+    {
+      "start": 861.0,
+      "duration": 6.839,
+      "end": 867.839,
+      "text": "right so I can say that this will be my"
+    },
+    {
+      "start": 865.12,
+      "duration": 4.639,
+      "end": 869.759,
+      "text": "like near about time complexity I cannot"
+    },
+    {
+      "start": 867.839,
+      "duration": 4.041,
+      "end": 871.8800000000001,
+      "text": "pinpoint the exct time complexity"
+    },
+    {
+      "start": 869.759,
+      "duration": 4.241,
+      "end": 874.0,
+      "text": "because the link list might be different"
+    },
+    {
+      "start": 871.88,
+      "duration": 5.28,
+      "end": 877.16,
+      "text": "in length what about the space"
+    },
+    {
+      "start": 874.0,
+      "duration": 4.959,
+      "end": 878.959,
+      "text": "complexity I'm not using any extra space"
+    },
+    {
+      "start": 877.16,
+      "duration": 4.119,
+      "end": 881.279,
+      "text": "I'm using everything in place I'm"
+    },
+    {
+      "start": 878.959,
+      "duration": 4.8,
+      "end": 883.7589999999999,
+      "text": "reusing the same nodes given to me I'm"
+    },
+    {
+      "start": 881.279,
+      "duration": 5.401,
+      "end": 886.68,
+      "text": "just changing the links so the space"
+    },
+    {
+      "start": 883.759,
+      "duration": 6.0,
+      "end": 889.759,
+      "text": "complexity will be big go of one if you"
+    },
+    {
+      "start": 886.68,
+      "duration": 6.48,
+      "end": 893.16,
+      "text": "look at the time complexity it has n k"
+    },
+    {
+      "start": 889.759,
+      "duration": 7.241,
+      "end": 897.0,
+      "text": "into K somewhere somewhere near about n"
+    },
+    {
+      "start": 893.16,
+      "duration": 6.08,
+      "end": 899.24,
+      "text": "Cube if just in case I assume K to be n"
+    },
+    {
+      "start": 897.0,
+      "duration": 3.759,
+      "end": 900.759,
+      "text": "it's in the power of Cubes"
+    },
+    {
+      "start": 899.24,
+      "duration": 3.0,
+      "end": 902.24,
+      "text": "obviously the interviewer will not be"
+    },
+    {
+      "start": 900.759,
+      "duration": 4.361,
+      "end": 905.12,
+      "text": "happy with this and he'll again ask you"
+    },
+    {
+      "start": 902.24,
+      "duration": 4.64,
+      "end": 906.88,
+      "text": "to optimize so in order to optimize our"
+    },
+    {
+      "start": 905.12,
+      "duration": 4.839,
+      "end": 909.9590000000001,
+      "text": "previous solution what I will be doing"
+    },
+    {
+      "start": 906.88,
+      "duration": 5.6,
+      "end": 912.48,
+      "text": "is I'll be using the concept of minimum"
+    },
+    {
+      "start": 909.959,
+      "duration": 5.32,
+      "end": 915.279,
+      "text": "Heap in case you don't know about it"
+    },
+    {
+      "start": 912.48,
+      "duration": 6.039,
+      "end": 918.519,
+      "text": "nothing to worry about just remember"
+    },
+    {
+      "start": 915.279,
+      "duration": 6.081,
+      "end": 921.36,
+      "text": "it's a data structure that returns you"
+    },
+    {
+      "start": 918.519,
+      "duration": 5.56,
+      "end": 924.079,
+      "text": "the minimum value if you are storing 10"
+    },
+    {
+      "start": 921.36,
+      "duration": 5.36,
+      "end": 926.72,
+      "text": "values it will give you the minimum"
+    },
+    {
+      "start": 924.079,
+      "duration": 6.24,
+      "end": 930.319,
+      "text": "value that is it that is all that you"
+    },
+    {
+      "start": 926.72,
+      "duration": 7.52,
+      "end": 934.24,
+      "text": "need to know about in C++ Java priority"
+    },
+    {
+      "start": 930.319,
+      "duration": 6.841,
+      "end": 937.16,
+      "text": "Q is a data structure that implements"
+    },
+    {
+      "start": 934.24,
+      "duration": 5.519,
+      "end": 939.759,
+      "text": "minimum Heap so I'll be using priority Q"
+    },
+    {
+      "start": 937.16,
+      "duration": 4.679,
+      "end": 941.8389999999999,
+      "text": "got it so let's quickly Define a"
+    },
+    {
+      "start": 939.759,
+      "duration": 4.401,
+      "end": 944.16,
+      "text": "priority Q so I'll be defining a"
+    },
+    {
+      "start": 941.839,
+      "duration": 6.521,
+      "end": 948.36,
+      "text": "priority"
+    },
+    {
+      "start": 944.16,
+      "duration": 7.88,
+      "end": 952.04,
+      "text": "q and this priy Q will be in terms of"
+    },
+    {
+      "start": 948.36,
+      "duration": 6.52,
+      "end": 954.88,
+      "text": "minimum Heap got it and I'll be storing"
+    },
+    {
+      "start": 952.04,
+      "duration": 5.76,
+      "end": 957.8,
+      "text": "two values one is the"
+    },
+    {
+      "start": 954.88,
+      "duration": 6.0,
+      "end": 960.88,
+      "text": "integer at the first and then I'll be"
+    },
+    {
+      "start": 957.8,
+      "duration": 4.64,
+      "end": 962.4399999999999,
+      "text": "storing a node so I'll be storing a pair"
+    },
+    {
+      "start": 960.88,
+      "duration": 5.68,
+      "end": 966.56,
+      "text": "I'll be storing a"
+    },
+    {
+      "start": 962.44,
+      "duration": 6.24,
+      "end": 968.6800000000001,
+      "text": "pair one is integer the other is node"
+    },
+    {
+      "start": 966.56,
+      "duration": 5.6,
+      "end": 972.16,
+      "text": "initially the priority Q will be"
+    },
+    {
+      "start": 968.68,
+      "duration": 6.399,
+      "end": 975.079,
+      "text": "containing all the nodes that are head"
+    },
+    {
+      "start": 972.16,
+      "duration": 5.159,
+      "end": 977.319,
+      "text": "all the nodes that are head I take all"
+    },
+    {
+      "start": 975.079,
+      "duration": 4.921,
+      "end": 980.0,
+      "text": "the heads and store it into the priority"
+    },
+    {
+      "start": 977.319,
+      "duration": 5.401,
+      "end": 982.7199999999999,
+      "text": "CU let's do it the first one is two so"
+    },
+    {
+      "start": 980.0,
+      "duration": 7.04,
+      "end": 987.04,
+      "text": "she'll be taking two and the"
+    },
+    {
+      "start": 982.72,
+      "duration": 7.44,
+      "end": 990.1600000000001,
+      "text": "node taken the next one is one and"
+    },
+    {
+      "start": 987.04,
+      "duration": 5.159,
+      "end": 992.199,
+      "text": "the node the next one is one and the"
+    },
+    {
+      "start": 990.16,
+      "duration": 5.32,
+      "end": 995.48,
+      "text": "node the next one is"
+    },
+    {
+      "start": 992.199,
+      "duration": 6.44,
+      "end": 998.639,
+      "text": "eight and the node so what I've done is"
+    },
+    {
+      "start": 995.48,
+      "duration": 6.039,
+      "end": 1001.519,
+      "text": "I've taken all the heads and stored them"
+    },
+    {
+      "start": 998.639,
+      "duration": 6.401,
+      "end": 1005.04,
+      "text": "into the priority Cube what is my next"
+    },
+    {
+      "start": 1001.519,
+      "duration": 6.401,
+      "end": 1007.92,
+      "text": "step I need to merge all of them and"
+    },
+    {
+      "start": 1005.04,
+      "duration": 5.68,
+      "end": 1010.7199999999999,
+      "text": "create a new list so what I will do is"
+    },
+    {
+      "start": 1007.92,
+      "duration": 6.0,
+      "end": 1013.92,
+      "text": "I'll use the concept of dummy node now"
+    },
+    {
+      "start": 1010.72,
+      "duration": 6.0,
+      "end": 1016.72,
+      "text": "and use the concept of dummy"
+    },
+    {
+      "start": 1013.92,
+      "duration": 5.359,
+      "end": 1019.279,
+      "text": "node I'll have a temporary assigned to"
+    },
+    {
+      "start": 1016.72,
+      "duration": 4.2,
+      "end": 1020.9200000000001,
+      "text": "it and initially it will be pointing to"
+    },
+    {
+      "start": 1019.279,
+      "duration": 4.48,
+      "end": 1023.759,
+      "text": "null"
+    },
+    {
+      "start": 1020.92,
+      "duration": 6.159,
+      "end": 1027.079,
+      "text": "okay now in your result like in your"
+    },
+    {
+      "start": 1023.759,
+      "duration": 6.28,
+      "end": 1030.039,
+      "text": "answer list you always had your first"
+    },
+    {
+      "start": 1027.079,
+      "duration": 5.6,
+      "end": 1032.6789999999999,
+      "text": "element as the smallest one and you know"
+    },
+    {
+      "start": 1030.039,
+      "duration": 4.961,
+      "end": 1035.0,
+      "text": "the smallest one will be one among it"
+    },
+    {
+      "start": 1032.679,
+      "duration": 4.76,
+      "end": 1037.439,
+      "text": "one among it and you have all of them in"
+    },
+    {
+      "start": 1035.0,
+      "duration": 5.4,
+      "end": 1040.4,
+      "text": "the priority CU so if you ask the"
+    },
+    {
+      "start": 1037.439,
+      "duration": 6.041,
+      "end": 1043.48,
+      "text": "minimum you'll always get either this or"
+    },
+    {
+      "start": 1040.4,
+      "duration": 5.799,
+      "end": 1046.199,
+      "text": "this right if you're storing two values"
+    },
+    {
+      "start": 1043.48,
+      "duration": 5.12,
+      "end": 1048.6,
+      "text": "it is always in terms of the like it is"
+    },
+    {
+      "start": 1046.199,
+      "duration": 5.961,
+      "end": 1052.16,
+      "text": "always sorted in terms of the first one"
+    },
+    {
+      "start": 1048.6,
+      "duration": 6.04,
+      "end": 1054.6399999999999,
+      "text": "so if you ask hey minimum Heap give me"
+    },
+    {
+      "start": 1052.16,
+      "duration": 4.68,
+      "end": 1056.8400000000001,
+      "text": "the minimum it will give you it will"
+    },
+    {
+      "start": 1054.64,
+      "duration": 4.76,
+      "end": 1059.4,
+      "text": "give you either this or this doesn't"
+    },
+    {
+      "start": 1056.84,
+      "duration": 4.52,
+      "end": 1061.36,
+      "text": "matter because both of them are one so"
+    },
+    {
+      "start": 1059.4,
+      "duration": 5.04,
+      "end": 1064.44,
+      "text": "you'll get one of them what you can do"
+    },
+    {
+      "start": 1061.36,
+      "duration": 5.4,
+      "end": 1066.76,
+      "text": "is you can take out you can take it out"
+    },
+    {
+      "start": 1064.44,
+      "duration": 4.4,
+      "end": 1068.8400000000001,
+      "text": "sorry my bad you can just take it out"
+    },
+    {
+      "start": 1066.76,
+      "duration": 6.48,
+      "end": 1073.24,
+      "text": "and once you've taken it out you can"
+    },
+    {
+      "start": 1068.84,
+      "duration": 4.4,
+      "end": 1073.24,
+      "text": "have it here here means"
+    },
+    {
+      "start": 1073.88,
+      "duration": 5.08,
+      "end": 1078.96,
+      "text": "here perfect and you can have temporary"
+    },
+    {
+      "start": 1076.64,
+      "duration": 5.48,
+      "end": 1082.1200000000001,
+      "text": "pointed to it once you have done it"
+    },
+    {
+      "start": 1078.96,
+      "duration": 6.4,
+      "end": 1085.3600000000001,
+      "text": "you can take temporary to this one done"
+    },
+    {
+      "start": 1082.12,
+      "duration": 5.2,
+      "end": 1087.32,
+      "text": "understood can I say taking one out that"
+    },
+    {
+      "start": 1085.36,
+      "duration": 5.04,
+      "end": 1090.3999999999999,
+      "text": "means this is gone this is"
+    },
+    {
+      "start": 1087.32,
+      "duration": 5.479,
+      "end": 1092.799,
+      "text": "gone so you can take the next value"
+    },
+    {
+      "start": 1090.4,
+      "duration": 2.399,
+      "end": 1092.799,
+      "text": "which is"
+    },
+    {
+      "start": 1093.36,
+      "duration": 5.72,
+      "end": 1099.08,
+      "text": "five can simply say"
+    },
+    {
+      "start": 1096.08,
+      "duration": 6.28,
+      "end": 1102.36,
+      "text": "okay give me your next so you'll give"
+    },
+    {
+      "start": 1099.08,
+      "duration": 7.079,
+      "end": 1106.1589999999999,
+      "text": "the next because one is done you need"
+    },
+    {
+      "start": 1102.36,
+      "duration": 6.08,
+      "end": 1108.4399999999998,
+      "text": "someone from it so takeen perfect what"
+    },
+    {
+      "start": 1106.159,
+      "duration": 4.801,
+      "end": 1110.96,
+      "text": "is the next step again figure out the"
+    },
+    {
+      "start": 1108.44,
+      "duration": 4.359,
+      "end": 1112.799,
+      "text": "minimum because in your resultant list"
+    },
+    {
+      "start": 1110.96,
+      "duration": 3.68,
+      "end": 1114.64,
+      "text": "you'll have the minimum after it after"
+    },
+    {
+      "start": 1112.799,
+      "duration": 4.841,
+      "end": 1117.6399999999999,
+      "text": "this you'll have the next minimum the"
+    },
+    {
+      "start": 1114.64,
+      "duration": 6.08,
+      "end": 1120.72,
+      "text": "next minimum is this agreed just take it"
+    },
+    {
+      "start": 1117.64,
+      "duration": 5.76,
+      "end": 1123.4,
+      "text": "out so just take it out and I'll again"
+    },
+    {
+      "start": 1120.72,
+      "duration": 5.16,
+      "end": 1125.88,
+      "text": "place it here I'll again have temporar"
+    },
+    {
+      "start": 1123.4,
+      "duration": 3.88,
+      "end": 1127.2800000000002,
+      "text": "pointed to it I'll move temporary here"
+    },
+    {
+      "start": 1125.88,
+      "duration": 4.76,
+      "end": 1130.64,
+      "text": "so can I say this is"
+    },
+    {
+      "start": 1127.28,
+      "duration": 5.6,
+      "end": 1132.8799999999999,
+      "text": "taken right take the next value and put"
+    },
+    {
+      "start": 1130.64,
+      "duration": 4.519,
+      "end": 1135.159,
+      "text": "it into the briq so I've done is I've"
+    },
+    {
+      "start": 1132.88,
+      "duration": 5.32,
+      "end": 1138.2,
+      "text": "taken this and put it into the"
+    },
+    {
+      "start": 1135.159,
+      "duration": 6.561,
+      "end": 1141.72,
+      "text": "Fret again get the next minimum which is"
+    },
+    {
+      "start": 1138.2,
+      "duration": 3.52,
+      "end": 1141.72,
+      "text": "the this take it"
+    },
+    {
+      "start": 1142.84,
+      "duration": 5.64,
+      "end": 1148.48,
+      "text": "out put it here make temporary Point"
+    },
+    {
+      "start": 1146.039,
+      "duration": 5.401,
+      "end": 1151.44,
+      "text": "here and go temporary here so this is"
+    },
+    {
+      "start": 1148.48,
+      "duration": 4.319,
+      "end": 1152.799,
+      "text": "also taken if this is taken you take the"
+    },
+    {
+      "start": 1151.44,
+      "duration": 3.719,
+      "end": 1155.159,
+      "text": "next"
+    },
+    {
+      "start": 1152.799,
+      "duration": 5.401,
+      "end": 1158.2,
+      "text": "value so you take this and put it over"
+    },
+    {
+      "start": 1155.159,
+      "duration": 6.88,
+      "end": 1162.0390000000002,
+      "text": "here you need the next minimum what will"
+    },
+    {
+      "start": 1158.2,
+      "duration": 6.959,
+      "end": 1165.159,
+      "text": "be the next minimum this one take"
+    },
+    {
+      "start": 1162.039,
+      "duration": 6.76,
+      "end": 1168.799,
+      "text": "it make temporary Point here temporary"
+    },
+    {
+      "start": 1165.159,
+      "duration": 7.241,
+      "end": 1172.4,
+      "text": "goes here so this two is gone now which"
+    },
+    {
+      "start": 1168.799,
+      "duration": 4.841,
+      "end": 1173.6399999999999,
+      "text": "means this is gone what is the next four"
+    },
+    {
+      "start": 1172.4,
+      "duration": 4.12,
+      "end": 1176.52,
+      "text": "place four"
+    },
+    {
+      "start": 1173.64,
+      "duration": 5.12,
+      "end": 1178.76,
+      "text": "here sorry uh this four goes here"
+    },
+    {
+      "start": 1176.52,
+      "duration": 4.6,
+      "end": 1181.12,
+      "text": "perfect what is the next minimum we'll"
+    },
+    {
+      "start": 1178.76,
+      "duration": 4.84,
+      "end": 1183.6,
+      "text": "get three keep on doing this keep on"
+    },
+    {
+      "start": 1181.12,
+      "duration": 4.919,
+      "end": 1186.039,
+      "text": "doing this till all the elements are"
+    },
+    {
+      "start": 1183.6,
+      "duration": 5.36,
+      "end": 1188.9599999999998,
+      "text": "into the prior Q like all of them are"
+    },
+    {
+      "start": 1186.039,
+      "duration": 6.201,
+      "end": 1192.24,
+      "text": "done so what is the next step you will"
+    },
+    {
+      "start": 1188.96,
+      "duration": 3.28,
+      "end": 1192.24,
+      "text": "get three let's take"
+    },
+    {
+      "start": 1193.84,
+      "duration": 5.36,
+      "end": 1199.1999999999998,
+      "text": "it so three is now done so you can just"
+    },
+    {
+      "start": 1197.08,
+      "duration": 5.52,
+      "end": 1202.6,
+      "text": "move three if three is done it will go"
+    },
+    {
+      "start": 1199.2,
+      "duration": 5.599,
+      "end": 1204.799,
+      "text": "as seven perfect what is the next step"
+    },
+    {
+      "start": 1202.6,
+      "duration": 4.36,
+      "end": 1206.9599999999998,
+      "text": "we'll get the next minimum which is four"
+    },
+    {
+      "start": 1204.799,
+      "duration": 3.76,
+      "end": 1208.559,
+      "text": "so it will have four maybe I can just"
+    },
+    {
+      "start": 1206.96,
+      "duration": 3.76,
+      "end": 1210.72,
+      "text": "point write it"
+    },
+    {
+      "start": 1208.559,
+      "duration": 5.281,
+      "end": 1213.84,
+      "text": "here and you can make sure that this is"
+    },
+    {
+      "start": 1210.72,
+      "duration": 4.92,
+      "end": 1215.64,
+      "text": "pointed and then temporary moves perfect"
+    },
+    {
+      "start": 1213.84,
+      "duration": 4.839,
+      "end": 1218.6789999999999,
+      "text": "what is the next thing you omit four"
+    },
+    {
+      "start": 1215.64,
+      "duration": 6.56,
+      "end": 1222.2,
+      "text": "from here you can just erase it and the"
+    },
+    {
+      "start": 1218.679,
+      "duration": 7.041,
+      "end": 1225.72,
+      "text": "next one will be six six perfect which"
+    },
+    {
+      "start": 1222.2,
+      "duration": 5.76,
+      "end": 1227.96,
+      "text": "is the next minimum five so take five"
+    },
+    {
+      "start": 1225.72,
+      "duration": 4.0,
+      "end": 1229.72,
+      "text": "make sure temporary points to it after"
+    },
+    {
+      "start": 1227.96,
+      "duration": 4.839,
+      "end": 1232.799,
+      "text": "this you can just remove five if you're"
+    },
+    {
+      "start": 1229.72,
+      "duration": 5.6,
+      "end": 1235.32,
+      "text": "removing five delete from here once it"
+    },
+    {
+      "start": 1232.799,
+      "duration": 4.601,
+      "end": 1237.4,
+      "text": "is deleted it doesn't have anything next"
+    },
+    {
+      "start": 1235.32,
+      "duration": 4.16,
+      "end": 1239.48,
+      "text": "it doesn't have anything in next no need"
+    },
+    {
+      "start": 1237.4,
+      "duration": 4.44,
+      "end": 1241.8400000000001,
+      "text": "to put it again no need to put it again"
+    },
+    {
+      "start": 1239.48,
+      "duration": 5.12,
+      "end": 1244.6,
+      "text": "let's do our next traversal which one is"
+    },
+    {
+      "start": 1241.84,
+      "duration": 5.199,
+      "end": 1247.039,
+      "text": "the smallest six make sure you take out"
+    },
+    {
+      "start": 1244.6,
+      "duration": 6.0,
+      "end": 1250.6,
+      "text": "six and make temporary point to it after"
+    },
+    {
+      "start": 1247.039,
+      "duration": 7.0,
+      "end": 1254.039,
+      "text": "this take out six if six is taken done"
+    },
+    {
+      "start": 1250.6,
+      "duration": 5.68,
+      "end": 1256.28,
+      "text": "does it have an x no nothing to put"
+    },
+    {
+      "start": 1254.039,
+      "duration": 4.88,
+      "end": 1258.919,
+      "text": "which is the next small seven take it"
+    },
+    {
+      "start": 1256.28,
+      "duration": 5.639,
+      "end": 1261.9189999999999,
+      "text": "out make sure this is pointing do it"
+    },
+    {
+      "start": 1258.919,
+      "duration": 5.841,
+      "end": 1264.76,
+      "text": "temporary goes take out seven as well 1"
+    },
+    {
+      "start": 1261.919,
+      "duration": 5.24,
+      "end": 1267.159,
+      "text": "seven is taken does it have an next no"
+    },
+    {
+      "start": 1264.76,
+      "duration": 5.399,
+      "end": 1270.1589999999999,
+      "text": "none industried what is the next you"
+    },
+    {
+      "start": 1267.159,
+      "duration": 5.801,
+      "end": 1272.96,
+      "text": "just take out the next eight make sure"
+    },
+    {
+      "start": 1270.159,
+      "duration": 5.281,
+      "end": 1275.44,
+      "text": "temporary points to it temporary is done"
+    },
+    {
+      "start": 1272.96,
+      "duration": 6.0,
+      "end": 1278.96,
+      "text": "and eventually this is done this is done"
+    },
+    {
+      "start": 1275.44,
+      "duration": 5.839,
+      "end": 1281.279,
+      "text": "again it's null over no need to put it"
+    },
+    {
+      "start": 1278.96,
+      "duration": 4.88,
+      "end": 1283.8400000000001,
+      "text": "so there will be a point where when you"
+    },
+    {
+      "start": 1281.279,
+      "duration": 5.28,
+      "end": 1286.559,
+      "text": "look at the priq when you look at your"
+    },
+    {
+      "start": 1283.84,
+      "duration": 5.16,
+      "end": 1289.0,
+      "text": "minimum Heap you'll see that there are"
+    },
+    {
+      "start": 1286.559,
+      "duration": 4.401,
+      "end": 1290.96,
+      "text": "no more elements in that minim heap if"
+    },
+    {
+      "start": 1289.0,
+      "duration": 4.039,
+      "end": 1293.039,
+      "text": "that is the case you stop then and there"
+    },
+    {
+      "start": 1290.96,
+      "duration": 4.719,
+      "end": 1295.679,
+      "text": "you stop then and there what I've done"
+    },
+    {
+      "start": 1293.039,
+      "duration": 5.64,
+      "end": 1298.679,
+      "text": "is I've reused the same notes I've"
+    },
+    {
+      "start": 1295.679,
+      "duration": 5.36,
+      "end": 1301.039,
+      "text": "reused the same nodes ask you what is"
+    },
+    {
+      "start": 1298.679,
+      "duration": 5.561,
+      "end": 1304.24,
+      "text": "like where is my head can I say dummy"
+    },
+    {
+      "start": 1301.039,
+      "duration": 5.24,
+      "end": 1306.279,
+      "text": "node do next is my head dummy node do"
+    },
+    {
+      "start": 1304.24,
+      "duration": 4.52,
+      "end": 1308.76,
+      "text": "next is my head correct so you'll be"
+    },
+    {
+      "start": 1306.279,
+      "duration": 4.561,
+      "end": 1310.84,
+      "text": "returning Dum node. next so let's write"
+    },
+    {
+      "start": 1308.76,
+      "duration": 5.64,
+      "end": 1314.4,
+      "text": "down the pseudo code again this is not"
+    },
+    {
+      "start": 1310.84,
+      "duration": 5.56,
+      "end": 1316.3999999999999,
+      "text": "in C++ or Java in case you want the C++"
+    },
+    {
+      "start": 1314.4,
+      "duration": 4.399,
+      "end": 1318.799,
+      "text": "Java python or JavaScript code it will"
+    },
+    {
+      "start": 1316.4,
+      "duration": 4.759,
+      "end": 1321.159,
+      "text": "be given below"
+    },
+    {
+      "start": 1318.799,
+      "duration": 6.0,
+      "end": 1324.799,
+      "text": "I'll have a function I'll have a"
+    },
+    {
+      "start": 1321.159,
+      "duration": 7.921,
+      "end": 1329.0800000000002,
+      "text": "function which is taking a list that is"
+    },
+    {
+      "start": 1324.799,
+      "duration": 6.681,
+      "end": 1331.48,
+      "text": "containing all the heads right so the"
+    },
+    {
+      "start": 1329.08,
+      "duration": 4.719,
+      "end": 1333.799,
+      "text": "first thing I need a priority Q"
+    },
+    {
+      "start": 1331.48,
+      "duration": 5.36,
+      "end": 1336.84,
+      "text": "depending on your language you can"
+    },
+    {
+      "start": 1333.799,
+      "duration": 7.521,
+      "end": 1341.32,
+      "text": "define a priority Cube let's have its"
+    },
+    {
+      "start": 1336.84,
+      "duration": 7.199,
+      "end": 1344.039,
+      "text": "variable naming as PQ what is the first"
+    },
+    {
+      "start": 1341.32,
+      "duration": 4.959,
+      "end": 1346.279,
+      "text": "thing that I did I took all the"
+    },
+    {
+      "start": 1344.039,
+      "duration": 6.281,
+      "end": 1350.32,
+      "text": "heads and I did put them into the"
+    },
+    {
+      "start": 1346.279,
+      "duration": 6.841,
+      "end": 1353.12,
+      "text": "priority Cube let's it I'll be iterating"
+    },
+    {
+      "start": 1350.32,
+      "duration": 6.88,
+      "end": 1357.2,
+      "text": "through all the heads so I can go from"
+    },
+    {
+      "start": 1353.12,
+      "duration": 8.439,
+      "end": 1361.559,
+      "text": "zero to lists do size I can just run a"
+    },
+    {
+      "start": 1357.2,
+      "duration": 8.92,
+      "end": 1366.1200000000001,
+      "text": "follow Loop and I can say PQ can you"
+    },
+    {
+      "start": 1361.559,
+      "duration": 7.6,
+      "end": 1369.1589999999999,
+      "text": "add I need to store the integer at first"
+    },
+    {
+      "start": 1366.12,
+      "duration": 8.48,
+      "end": 1374.6,
+      "text": "and then the node so I can easily say"
+    },
+    {
+      "start": 1369.159,
+      "duration": 9.961,
+      "end": 1379.1200000000001,
+      "text": "list of I do value that will give me the"
+    },
+    {
+      "start": 1374.6,
+      "duration": 7.88,
+      "end": 1382.48,
+      "text": "value and I can simply say list"
+    },
+    {
+      "start": 1379.12,
+      "duration": 6.6,
+      "end": 1385.7199999999998,
+      "text": "do I now that will be"
+    },
+    {
+      "start": 1382.48,
+      "duration": 6.84,
+      "end": 1389.32,
+      "text": "my node itself"
+    },
+    {
+      "start": 1385.72,
+      "duration": 6.72,
+      "end": 1392.44,
+      "text": "done what after that I need to create a"
+    },
+    {
+      "start": 1389.32,
+      "duration": 6.08,
+      "end": 1395.3999999999999,
+      "text": "new list so I need definitely a dummy"
+    },
+    {
+      "start": 1392.44,
+      "duration": 6.16,
+      "end": 1398.6000000000001,
+      "text": "node so you can create a dummy node and"
+    },
+    {
+      "start": 1395.4,
+      "duration": 6.279,
+      "end": 1401.679,
+      "text": "you can have that dummy node"
+    },
+    {
+      "start": 1398.6,
+      "duration": 5.52,
+      "end": 1404.12,
+      "text": "assigned to a temporary in order to"
+    },
+    {
+      "start": 1401.679,
+      "duration": 6.441,
+      "end": 1408.1200000000001,
+      "text": "Travis now I need to go through that"
+    },
+    {
+      "start": 1404.12,
+      "duration": 6.36,
+      "end": 1410.4799999999998,
+      "text": "prior Cube till it has nothing left I'll"
+    },
+    {
+      "start": 1408.12,
+      "duration": 6.84,
+      "end": 1414.9599999999998,
+      "text": "be writing a while loop and I'll say"
+    },
+    {
+      "start": 1410.48,
+      "duration": 7.52,
+      "end": 1418.0,
+      "text": "okay till PRI Q is not"
+    },
+    {
+      "start": 1414.96,
+      "duration": 7.68,
+      "end": 1422.64,
+      "text": "empty I need to get the minimum you can"
+    },
+    {
+      "start": 1418.0,
+      "duration": 6.559,
+      "end": 1424.559,
+      "text": "use something as PQ dotop again"
+    },
+    {
+      "start": 1422.64,
+      "duration": 5.2,
+      "end": 1427.8400000000001,
+      "text": "according to language you can figure out"
+    },
+    {
+      "start": 1424.559,
+      "duration": 5.48,
+      "end": 1430.039,
+      "text": "how to get minimum so it's basically"
+    },
+    {
+      "start": 1427.84,
+      "duration": 5.76,
+      "end": 1433.6,
+      "text": "getting the minimum from the priority CU"
+    },
+    {
+      "start": 1430.039,
+      "duration": 6.841,
+      "end": 1436.8799999999999,
+      "text": "got it so you can be storing this in a"
+    },
+    {
+      "start": 1433.6,
+      "duration": 6.88,
+      "end": 1440.48,
+      "text": "pair of integer and a"
+    },
+    {
+      "start": 1436.88,
+      "duration": 6.0,
+      "end": 1442.88,
+      "text": "node so you can call it as P the pair"
+    },
+    {
+      "start": 1440.48,
+      "duration": 4.559,
+      "end": 1445.039,
+      "text": "right what after that you need to make"
+    },
+    {
+      "start": 1442.88,
+      "duration": 4.919,
+      "end": 1447.7990000000002,
+      "text": "sure the"
+    },
+    {
+      "start": 1445.039,
+      "duration": 5.041,
+      "end": 1450.08,
+      "text": "temporary is pointing to the speed."
+    },
+    {
+      "start": 1447.799,
+      "duration": 5.441,
+      "end": 1453.24,
+      "text": "second y"
+    },
+    {
+      "start": 1450.08,
+      "duration": 6.32,
+      "end": 1456.3999999999999,
+      "text": "second very obvious if you're getting"
+    },
+    {
+      "start": 1453.24,
+      "duration": 6.439,
+      "end": 1459.679,
+      "text": "the top the minimum you need to make"
+    },
+    {
+      "start": 1456.4,
+      "duration": 6.96,
+      "end": 1463.3600000000001,
+      "text": "sure that the temporary is pointing to"
+    },
+    {
+      "start": 1459.679,
+      "duration": 6.6,
+      "end": 1466.279,
+      "text": "this done what after that need to remove"
+    },
+    {
+      "start": 1463.36,
+      "duration": 5.08,
+      "end": 1468.4399999999998,
+      "text": "it from the priq that's super simple you"
+    },
+    {
+      "start": 1466.279,
+      "duration": 4.081,
+      "end": 1470.36,
+      "text": "can say BQ do pop"
+    },
+    {
+      "start": 1468.44,
+      "duration": 3.92,
+      "end": 1472.3600000000001,
+      "text": "again this deletion might be different"
+    },
+    {
+      "start": 1470.36,
+      "duration": 3.679,
+      "end": 1474.039,
+      "text": "according to language you can figure out"
+    },
+    {
+      "start": 1472.36,
+      "duration": 4.799,
+      "end": 1477.1589999999999,
+      "text": "how to delete in your language if you"
+    },
+    {
+      "start": 1474.039,
+      "duration": 6.0,
+      "end": 1480.039,
+      "text": "say PQ bop it deletes it so I have"
+    },
+    {
+      "start": 1477.159,
+      "duration": 6.0,
+      "end": 1483.159,
+      "text": "deleted it now what is my next job if I"
+    },
+    {
+      "start": 1480.039,
+      "duration": 7.201,
+      "end": 1487.24,
+      "text": "have deleted if I deleted it I need the"
+    },
+    {
+      "start": 1483.159,
+      "duration": 9.721,
+      "end": 1492.88,
+      "text": "next to get into the prior right I can"
+    },
+    {
+      "start": 1487.24,
+      "duration": 9.159,
+      "end": 1496.3990000000001,
+      "text": "do that can I say if P do"
+    },
+    {
+      "start": 1492.88,
+      "duration": 6.76,
+      "end": 1499.64,
+      "text": "second its next is still there it might"
+    },
+    {
+      "start": 1496.399,
+      "duration": 6.241,
+      "end": 1502.6399999999999,
+      "text": "be null whatever if is standing here and"
+    },
+    {
+      "start": 1499.64,
+      "duration": 5.56,
+      "end": 1505.2,
+      "text": "it doesn't have so please make sure you"
+    },
+    {
+      "start": 1502.64,
+      "duration": 7.919,
+      "end": 1510.5590000000002,
+      "text": "check that there is an next if there is"
+    },
+    {
+      "start": 1505.2,
+      "duration": 6.4,
+      "end": 1511.6000000000001,
+      "text": "an next you say PQ do add can you take P"
+    },
+    {
+      "start": 1510.559,
+      "duration": 2.681,
+      "end": 1513.24,
+      "text": "do"
+    },
+    {
+      "start": 1511.6,
+      "duration": 4.959,
+      "end": 1516.559,
+      "text": "second"
+    },
+    {
+      "start": 1513.24,
+      "duration": 10.919,
+      "end": 1524.159,
+      "text": "next do Val because that is the integer"
+    },
+    {
+      "start": 1516.559,
+      "duration": 10.961,
+      "end": 1527.52,
+      "text": "part and P do second dot next as the"
+    },
+    {
+      "start": 1524.159,
+      "duration": 5.961,
+      "end": 1530.1200000000001,
+      "text": "node it will get into the priq do you"
+    },
+    {
+      "start": 1527.52,
+      "duration": 6.96,
+      "end": 1534.48,
+      "text": "have anything left you have you have to"
+    },
+    {
+      "start": 1530.12,
+      "duration": 5.88,
+      "end": 1536.0,
+      "text": "make sure temporary goes to the next as"
+    },
+    {
+      "start": 1534.48,
+      "duration": 4.88,
+      "end": 1539.3600000000001,
+      "text": "well"
+    },
+    {
+      "start": 1536.0,
+      "duration": 5.12,
+      "end": 1541.12,
+      "text": "because you made temporary point to that"
+    },
+    {
+      "start": 1539.36,
+      "duration": 4.52,
+      "end": 1543.8799999999999,
+      "text": "and you have to go to that node itself"
+    },
+    {
+      "start": 1541.12,
+      "duration": 6.08,
+      "end": 1547.1999999999998,
+      "text": "to change the link then understood at"
+    },
+    {
+      "start": 1543.88,
+      "duration": 7.12,
+      "end": 1551.0,
+      "text": "the end of the day you can"
+    },
+    {
+      "start": 1547.2,
+      "duration": 7.04,
+      "end": 1554.24,
+      "text": "return the dummy nodes next because that"
+    },
+    {
+      "start": 1551.0,
+      "duration": 6.2,
+      "end": 1557.2,
+      "text": "will be your head of the new newly"
+    },
+    {
+      "start": 1554.24,
+      "duration": 4.039,
+      "end": 1558.279,
+      "text": "created list super simple yeah that that"
+    },
+    {
+      "start": 1557.2,
+      "duration": 3.359,
+      "end": 1560.559,
+      "text": "that was the code"
+    },
+    {
+      "start": 1558.279,
+      "duration": 4.28,
+      "end": 1562.559,
+      "text": "once your priority que gets empty you"
+    },
+    {
+      "start": 1560.559,
+      "duration": 4.801,
+      "end": 1565.36,
+      "text": "would have created your new list so that"
+    },
+    {
+      "start": 1562.559,
+      "duration": 5.321,
+      "end": 1567.8799999999999,
+      "text": "will be done now let's discuss about the"
+    },
+    {
+      "start": 1565.36,
+      "duration": 5.559,
+      "end": 1570.9189999999999,
+      "text": "time complexity I have a follow loop I"
+    },
+    {
+      "start": 1567.88,
+      "duration": 6.6,
+      "end": 1574.48,
+      "text": "have an add operation the add operation"
+    },
+    {
+      "start": 1570.919,
+      "duration": 6.201,
+      "end": 1577.1200000000001,
+      "text": "technically takes logarithmic of size of"
+    },
+    {
+      "start": 1574.48,
+      "duration": 5.24,
+      "end": 1579.72,
+      "text": "the priority Q so that's logarithmic of"
+    },
+    {
+      "start": 1577.12,
+      "duration": 7.48,
+      "end": 1584.6,
+      "text": "K and I have a follow Loop running and"
+    },
+    {
+      "start": 1579.72,
+      "duration": 7.959,
+      "end": 1587.679,
+      "text": "it's running for the size that's K into"
+    },
+    {
+      "start": 1584.6,
+      "duration": 5.559,
+      "end": 1590.1589999999999,
+      "text": "logarithmic of K because the ad takes"
+    },
+    {
+      "start": 1587.679,
+      "duration": 5.281,
+      "end": 1592.96,
+      "text": "logarithmic of K that will be the time"
+    },
+    {
+      "start": 1590.159,
+      "duration": 5.24,
+      "end": 1595.3990000000001,
+      "text": "complexity for the first half so the"
+    },
+    {
+      "start": 1592.96,
+      "duration": 5.0,
+      "end": 1597.96,
+      "text": "fall Loop is done now the next one is"
+    },
+    {
+      "start": 1595.399,
+      "duration": 5.041,
+      "end": 1600.4399999999998,
+      "text": "the while loop now what is the time"
+    },
+    {
+      "start": 1597.96,
+      "duration": 3.599,
+      "end": 1601.559,
+      "text": "complexity inside the while loop first"
+    },
+    {
+      "start": 1600.44,
+      "duration": 3.52,
+      "end": 1603.96,
+      "text": "of all let's"
+    },
+    {
+      "start": 1601.559,
+      "duration": 4.041,
+      "end": 1605.6,
+      "text": "analyze for how many times is the while"
+    },
+    {
+      "start": 1603.96,
+      "duration": 5.28,
+      "end": 1609.24,
+      "text": "loop running it's running till the"
+    },
+    {
+      "start": 1605.6,
+      "duration": 6.319,
+      "end": 1611.9189999999999,
+      "text": "priority Q is empty at every iteration"
+    },
+    {
+      "start": 1609.24,
+      "duration": 5.88,
+      "end": 1615.1200000000001,
+      "text": "it is getting a new node and attaching"
+    },
+    {
+      "start": 1611.919,
+      "duration": 4.681,
+      "end": 1616.6000000000001,
+      "text": "to the new list So eventually can I say"
+    },
+    {
+      "start": 1615.12,
+      "duration": 5.32,
+      "end": 1620.4399999999998,
+      "text": "I'm getting elements from the priority"
+    },
+    {
+      "start": 1616.6,
+      "duration": 8.04,
+      "end": 1624.6399999999999,
+      "text": "Cube and what does prq have it will"
+    },
+    {
+      "start": 1620.44,
+      "duration": 8.16,
+      "end": 1628.6000000000001,
+      "text": "eventually have all the elements all the"
+    },
+    {
+      "start": 1624.64,
+      "duration": 6.96,
+      "end": 1631.6000000000001,
+      "text": "elements into it so assuming assuming"
+    },
+    {
+      "start": 1628.6,
+      "duration": 5.24,
+      "end": 1633.84,
+      "text": "each of the list is of size n an"
+    },
+    {
+      "start": 1631.6,
+      "duration": 6.319,
+      "end": 1637.9189999999999,
+      "text": "assumption can I say the total number of"
+    },
+    {
+      "start": 1633.84,
+      "duration": 9.4,
+      "end": 1643.24,
+      "text": "elements is K into N I can so can I say"
+    },
+    {
+      "start": 1637.919,
+      "duration": 8.12,
+      "end": 1646.039,
+      "text": "that the Y Loop is running for K into n"
+    },
+    {
+      "start": 1643.24,
+      "duration": 8.159,
+      "end": 1651.3990000000001,
+      "text": "correct nice how many operations am I"
+    },
+    {
+      "start": 1646.039,
+      "duration": 8.201,
+      "end": 1654.24,
+      "text": "doing inside it PQ top PQ do poop and PQ"
+    },
+    {
+      "start": 1651.399,
+      "duration": 5.561,
+      "end": 1656.9599999999998,
+      "text": "do add so there are three operations on"
+    },
+    {
+      "start": 1654.24,
+      "duration": 6.319,
+      "end": 1660.559,
+      "text": "the priority q and I have already told"
+    },
+    {
+      "start": 1656.96,
+      "duration": 5.719,
+      "end": 1662.679,
+      "text": "you priority cu's operations do take"
+    },
+    {
+      "start": 1660.559,
+      "duration": 4.24,
+      "end": 1664.799,
+      "text": "logarithmic of K where K is the size of"
+    },
+    {
+      "start": 1662.679,
+      "duration": 4.6,
+      "end": 1667.279,
+      "text": "the priority Q so can I say I have three"
+    },
+    {
+      "start": 1664.799,
+      "duration": 6.281,
+      "end": 1671.08,
+      "text": "operations that's three of logarithmic"
+    },
+    {
+      "start": 1667.279,
+      "duration": 6.28,
+      "end": 1673.559,
+      "text": "of K so the overall time complexity"
+    },
+    {
+      "start": 1671.08,
+      "duration": 6.479,
+      "end": 1677.559,
+      "text": "is somewhere near about K into"
+    },
+    {
+      "start": 1673.559,
+      "duration": 8.641,
+      "end": 1682.2,
+      "text": "logarithmic k for the fall Loop plus n"
+    },
+    {
+      "start": 1677.559,
+      "duration": 7.201,
+      "end": 1684.76,
+      "text": "into K into logarithmic of K again n is"
+    },
+    {
+      "start": 1682.2,
+      "duration": 5.479,
+      "end": 1687.679,
+      "text": "assuming that all of the lists are of"
+    },
+    {
+      "start": 1684.76,
+      "duration": 5.159,
+      "end": 1689.919,
+      "text": "size n n can be the worst possible"
+    },
+    {
+      "start": 1687.679,
+      "duration": 4.36,
+      "end": 1692.039,
+      "text": "length that can be given to you for that"
+    },
+    {
+      "start": 1689.919,
+      "duration": 5.6,
+      "end": 1695.519,
+      "text": "reason what about the space complexity"
+    },
+    {
+      "start": 1692.039,
+      "duration": 6.441,
+      "end": 1698.48,
+      "text": "can I say it is B go of K I can because"
+    },
+    {
+      "start": 1695.519,
+      "duration": 7.441,
+      "end": 1702.96,
+      "text": "I'm just using the"
+    },
+    {
+      "start": 1698.48,
+      "duration": 7.079,
+      "end": 1705.559,
+      "text": "priq and at Max it is storing K elements"
+    },
+    {
+      "start": 1702.96,
+      "duration": 5.12,
+      "end": 1708.08,
+      "text": "I'm reusing the nodes so nothing extra"
+    },
+    {
+      "start": 1705.559,
+      "duration": 4.96,
+      "end": 1710.519,
+      "text": "over there so this will be the overall"
+    },
+    {
+      "start": 1708.08,
+      "duration": 3.64,
+      "end": 1711.72,
+      "text": "time complexity and the space complexity"
+    },
+    {
+      "start": 1710.519,
+      "duration": 3.361,
+      "end": 1713.88,
+      "text": "and the previous solution the better"
+    },
+    {
+      "start": 1711.72,
+      "duration": 5.959,
+      "end": 1717.679,
+      "text": "solution was taking somewhere in terms"
+    },
+    {
+      "start": 1713.88,
+      "duration": 6.36,
+      "end": 1720.24,
+      "text": "of Q if you look over here it's"
+    },
+    {
+      "start": 1717.679,
+      "duration": 5.961,
+      "end": 1723.64,
+      "text": "somewhere in terms of square square into"
+    },
+    {
+      "start": 1720.24,
+      "duration": 5.4,
+      "end": 1725.64,
+      "text": "log right so it's this is the optimal"
+    },
+    {
+      "start": 1723.64,
+      "duration": 3.879,
+      "end": 1727.519,
+      "text": "solution got it so let's quickly get"
+    },
+    {
+      "start": 1725.64,
+      "duration": 4.279,
+      "end": 1729.919,
+      "text": "back to the code editor give the"
+    },
+    {
+      "start": 1727.519,
+      "duration": 5.321,
+      "end": 1732.84,
+      "text": "function signature this is how you can"
+    },
+    {
+      "start": 1729.919,
+      "duration": 7.12,
+      "end": 1737.039,
+      "text": "define a minimum Heap or a prity q in"
+    },
+    {
+      "start": 1732.84,
+      "duration": 7.52,
+      "end": 1740.36,
+      "text": "C++ I basically have an extra check over"
+    },
+    {
+      "start": 1737.039,
+      "duration": 5.681,
+      "end": 1742.72,
+      "text": "here just in case if the list is not"
+    },
+    {
+      "start": 1740.36,
+      "duration": 4.559,
+      "end": 1744.9189999999999,
+      "text": "null like it should not be null it"
+    },
+    {
+      "start": 1742.72,
+      "duration": 4.88,
+      "end": 1747.6000000000001,
+      "text": "should have a head then only I'm pushing"
+    },
+    {
+      "start": 1744.919,
+      "duration": 5.841,
+      "end": 1750.76,
+      "text": "it right after that I have a dummy node"
+    },
+    {
+      "start": 1747.6,
+      "duration": 6.76,
+      "end": 1754.36,
+      "text": "I have a temporary I go till VQ is not"
+    },
+    {
+      "start": 1750.76,
+      "duration": 5.2,
+      "end": 1755.96,
+      "text": "empty I get the dock I'm using the auto"
+    },
+    {
+      "start": 1754.36,
+      "duration": 3.96,
+      "end": 1758.32,
+      "text": "I'm not defining it as pair you can"
+    },
+    {
+      "start": 1755.96,
+      "duration": 6.28,
+      "end": 1762.24,
+      "text": "Define it as a pair as well after that"
+    },
+    {
+      "start": 1758.32,
+      "duration": 8.04,
+      "end": 1766.36,
+      "text": "PQ do poop if there is something after"
+    },
+    {
+      "start": 1762.24,
+      "duration": 6.559,
+      "end": 1768.799,
+      "text": "it I add it to my prq again make sure"
+    },
+    {
+      "start": 1766.36,
+      "duration": 4.64,
+      "end": 1771.0,
+      "text": "temporary is point to it once youve done"
+    },
+    {
+      "start": 1768.799,
+      "duration": 4.961,
+      "end": 1773.76,
+      "text": "this move temporary to the next and at"
+    },
+    {
+      "start": 1771.0,
+      "duration": 4.72,
+      "end": 1775.72,
+      "text": "the end of the day return Domino do next"
+    },
+    {
+      "start": 1773.76,
+      "duration": 4.36,
+      "end": 1778.12,
+      "text": "so I can go ahead and submit this and"
+    },
+    {
+      "start": 1775.72,
+      "duration": 4.24,
+      "end": 1779.96,
+      "text": "this will be running fine so if you're"
+    },
+    {
+      "start": 1778.12,
+      "duration": 3.52,
+      "end": 1781.6399999999999,
+      "text": "still watching I'm very sure that you"
+    },
+    {
+      "start": 1779.96,
+      "duration": 3.599,
+      "end": 1783.559,
+      "text": "have understood the brute the better and"
+    },
+    {
+      "start": 1781.64,
+      "duration": 3.519,
+      "end": 1785.159,
+      "text": "the optimal and if that is the case"
+    },
+    {
+      "start": 1783.559,
+      "duration": 3.161,
+      "end": 1786.72,
+      "text": "please please do consider giving us a"
+    },
+    {
+      "start": 1785.159,
+      "duration": 3.4,
+      "end": 1788.5590000000002,
+      "text": "like and if you're new to our Channel"
+    },
+    {
+      "start": 1786.72,
+      "duration": 3.439,
+      "end": 1790.159,
+      "text": "please do consider subscribing to us as"
+    },
+    {
+      "start": 1788.559,
+      "duration": 2.72,
+      "end": 1791.279,
+      "text": "well with this I'll be wrapping up this"
+    },
+    {
+      "start": 1790.159,
+      "duration": 4.441,
+      "end": 1794.6000000000001,
+      "text": "video let's meet in some other video"
+    },
+    {
+      "start": 1791.279,
+      "duration": 7.481,
+      "end": 1798.76,
+      "text": "till the I take care whenever your heart"
+    },
+    {
+      "start": 1794.6,
+      "duration": 8.6,
+      "end": 1803.1999999999998,
+      "text": "is broken don't never forget your"
+    },
+    {
+      "start": 1798.76,
+      "duration": 4.44,
+      "end": 1803.2,
+      "text": "golden I will find"
+    }
+  ]
+}

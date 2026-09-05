@@ -1,0 +1,2102 @@
+{
+  "position": 289,
+  "video_id": "QbwltemZbRg",
+  "title": "L6. Job Sequencing Problem | Greedy Algorithm Playlist",
+  "url": "https://www.youtube.com/watch?v=QbwltemZbRg",
+  "transcript": [
+    {
+      "start": 3.48,
+      "duration": 3.439,
+      "end": 6.9190000000000005,
+      "text": "so let's continue with the greedy"
+    },
+    {
+      "start": 4.839,
+      "duration": 3.561,
+      "end": 8.4,
+      "text": "algorithms playlist before starting off"
+    },
+    {
+      "start": 6.919,
+      "duration": 3.561,
+      "end": 10.48,
+      "text": "he welcome back to the channel I hope"
+    },
+    {
+      "start": 8.4,
+      "duration": 4.6,
+      "end": 13.0,
+      "text": "you guys are doing extremely well so the"
+    },
+    {
+      "start": 10.48,
+      "duration": 5.52,
+      "end": 16.0,
+      "text": "problem that we will be solving today is"
+    },
+    {
+      "start": 13.0,
+      "duration": 5.72,
+      "end": 18.72,
+      "text": "job sequencing problem what is the"
+    },
+    {
+      "start": 16.0,
+      "duration": 6.32,
+      "end": 22.32,
+      "text": "problem stating the stating that you"
+    },
+    {
+      "start": 18.72,
+      "duration": 9.16,
+      "end": 27.88,
+      "text": "will be given n number of jobs every job"
+    },
+    {
+      "start": 22.32,
+      "duration": 9.08,
+      "end": 31.4,
+      "text": "will have its job ID it's deadline it's"
+    },
+    {
+      "start": 27.88,
+      "duration": 6.92,
+      "end": 34.8,
+      "text": "profit so job ID is basically the ID to"
+    },
+    {
+      "start": 31.4,
+      "duration": 6.319,
+      "end": 37.719,
+      "text": "recognize which job it is what is"
+    },
+    {
+      "start": 34.8,
+      "duration": 6.439,
+      "end": 41.239,
+      "text": "deadline deadline basically means if the"
+    },
+    {
+      "start": 37.719,
+      "duration": 6.68,
+      "end": 44.399,
+      "text": "job id1 has a deadline of four it can be"
+    },
+    {
+      "start": 41.239,
+      "duration": 6.201,
+      "end": 47.44,
+      "text": "performed on day one day two day three"
+    },
+    {
+      "start": 44.399,
+      "duration": 6.241,
+      "end": 50.64,
+      "text": "or day four not Beyond day four not"
+    },
+    {
+      "start": 47.44,
+      "duration": 6.84,
+      "end": 54.28,
+      "text": "beyond the deadline and a single job and"
+    },
+    {
+      "start": 50.64,
+      "duration": 6.48,
+      "end": 57.120000000000005,
+      "text": "a single job requires a single day not"
+    },
+    {
+      "start": 54.28,
+      "duration": 5.959,
+      "end": 60.239000000000004,
+      "text": "more than it not less than less than it"
+    },
+    {
+      "start": 57.12,
+      "duration": 6.119,
+      "end": 63.239,
+      "text": "got it now every job has a profit"
+    },
+    {
+      "start": 60.239,
+      "duration": 7.2,
+      "end": 67.439,
+      "text": "associated with it now your task is to"
+    },
+    {
+      "start": 63.239,
+      "duration": 6.801,
+      "end": 70.03999999999999,
+      "text": "make sure that you maximize The Profit"
+    },
+    {
+      "start": 67.439,
+      "duration": 5.04,
+      "end": 72.479,
+      "text": "yes you maximize The Profit by"
+    },
+    {
+      "start": 70.04,
+      "duration": 4.719,
+      "end": 74.759,
+      "text": "performing jobs you can perform any"
+    },
+    {
+      "start": 72.479,
+      "duration": 4.561,
+      "end": 77.03999999999999,
+      "text": "number of jobs the only thing you have"
+    },
+    {
+      "start": 74.759,
+      "duration": 5.601,
+      "end": 80.36,
+      "text": "to keep in mind is it should be"
+    },
+    {
+      "start": 77.04,
+      "duration": 6.16,
+      "end": 83.2,
+      "text": "performed under a deadline and on a"
+    },
+    {
+      "start": 80.36,
+      "duration": 6.759,
+      "end": 87.119,
+      "text": "single day on a single day you can only"
+    },
+    {
+      "start": 83.2,
+      "duration": 6.16,
+      "end": 89.36,
+      "text": "perform one job not more than one jobs"
+    },
+    {
+      "start": 87.119,
+      "duration": 5.201,
+      "end": 92.32,
+      "text": "for an example there can be multiple"
+    },
+    {
+      "start": 89.36,
+      "duration": 6.0,
+      "end": 95.36,
+      "text": "scenarios with this given ex example I"
+    },
+    {
+      "start": 92.32,
+      "duration": 7.079,
+      "end": 99.39899999999999,
+      "text": "say that okay on day one I will be"
+    },
+    {
+      "start": 95.36,
+      "duration": 6.28,
+      "end": 101.64,
+      "text": "performing the job id1 if I perform this"
+    },
+    {
+      "start": 99.399,
+      "duration": 5.481,
+      "end": 104.88,
+      "text": "I'll gain a profit of 40 I'll gain a"
+    },
+    {
+      "start": 101.64,
+      "duration": 5.92,
+      "end": 107.56,
+      "text": "profit of 40 but on day two can I"
+    },
+    {
+      "start": 104.88,
+      "duration": 5.04,
+      "end": 109.92,
+      "text": "perform any other jobs because this is"
+    },
+    {
+      "start": 107.56,
+      "duration": 5.64,
+      "end": 113.2,
+      "text": "done I cannot perform job id2 because"
+    },
+    {
+      "start": 109.92,
+      "duration": 5.44,
+      "end": 115.36,
+      "text": "the deadline was one and that's gone the"
+    },
+    {
+      "start": 113.2,
+      "duration": 5.239,
+      "end": 118.43900000000001,
+      "text": "deadline was one and that's gone the"
+    },
+    {
+      "start": 115.36,
+      "duration": 5.24,
+      "end": 120.6,
+      "text": "deadline was one that's gone so if I"
+    },
+    {
+      "start": 118.439,
+      "duration": 4.801,
+      "end": 123.24,
+      "text": "decide that the job ID one will be"
+    },
+    {
+      "start": 120.6,
+      "duration": 5.76,
+      "end": 126.36,
+      "text": "performed on day one I'll be having a"
+    },
+    {
+      "start": 123.24,
+      "duration": 5.359,
+      "end": 128.599,
+      "text": "total profit of 40 now the question is"
+    },
+    {
+      "start": 126.36,
+      "duration": 5.32,
+      "end": 131.68,
+      "text": "to maximize The Profit the question is"
+    },
+    {
+      "start": 128.599,
+      "duration": 6.92,
+      "end": 135.51899999999998,
+      "text": "to maximize The Profit so what I will be"
+    },
+    {
+      "start": 131.68,
+      "duration": 8.0,
+      "end": 139.68,
+      "text": "doing is I'll be like okay what if I"
+    },
+    {
+      "start": 135.519,
+      "duration": 8.121,
+      "end": 143.64000000000001,
+      "text": "perform the id1 on day2 if I perform the"
+    },
+    {
+      "start": 139.68,
+      "duration": 7.4,
+      "end": 147.08,
+      "text": "id1 on D2 I'll have a profit of 40 right"
+    },
+    {
+      "start": 143.64,
+      "duration": 6.8,
+      "end": 150.44,
+      "text": "and on day one what I can do is I can"
+    },
+    {
+      "start": 147.08,
+      "duration": 6.04,
+      "end": 153.12,
+      "text": "decide that I'll be performing the ID3"
+    },
+    {
+      "start": 150.44,
+      "duration": 6.879,
+      "end": 157.319,
+      "text": "because it is giving me a profit of 40"
+    },
+    {
+      "start": 153.12,
+      "duration": 6.32,
+      "end": 159.44,
+      "text": "again so the overall profit will be 80"
+    },
+    {
+      "start": 157.319,
+      "duration": 4.121,
+      "end": 161.44,
+      "text": "you can try out all other combinations"
+    },
+    {
+      "start": 159.44,
+      "duration": 5.64,
+      "end": 165.07999999999998,
+      "text": "80 is the maximum profit that you will"
+    },
+    {
+      "start": 161.44,
+      "duration": 6.56,
+      "end": 168.0,
+      "text": "get so you did notice that the deadline"
+    },
+    {
+      "start": 165.08,
+      "duration": 5.96,
+      "end": 171.04000000000002,
+      "text": "was one for three of these jobs and what"
+    },
+    {
+      "start": 168.0,
+      "duration": 5.319,
+      "end": 173.319,
+      "text": "I did was I greedily performed the job"
+    },
+    {
+      "start": 171.04,
+      "duration": 4.64,
+      "end": 175.67999999999998,
+      "text": "with the maximum profit I was greedy"
+    },
+    {
+      "start": 173.319,
+      "duration": 4.92,
+      "end": 178.23899999999998,
+      "text": "because I want to maximize so you're"
+    },
+    {
+      "start": 175.68,
+      "duration": 6.839,
+      "end": 182.519,
+      "text": "getting a VI you're getting a VI right"
+    },
+    {
+      "start": 178.239,
+      "duration": 7.72,
+      "end": 185.959,
+      "text": "of the thought process is uh now first"
+    },
+    {
+      "start": 182.519,
+      "duration": 5.961,
+      "end": 188.48000000000002,
+      "text": "thing you did see was avoid performing"
+    },
+    {
+      "start": 185.959,
+      "duration": 6.0,
+      "end": 191.959,
+      "text": "the jobs on earlier days like for the"
+    },
+    {
+      "start": 188.48,
+      "duration": 5.8,
+      "end": 194.28,
+      "text": "job id1 the deadline was four and if you"
+    },
+    {
+      "start": 191.959,
+      "duration": 7.881,
+      "end": 199.84,
+      "text": "performed it on D1 you're blocking"
+    },
+    {
+      "start": 194.28,
+      "duration": 5.56,
+      "end": 199.84,
+      "text": "anyone else so it's better to delay the"
+    },
+    {
+      "start": 200.879,
+      "duration": 7.241,
+      "end": 208.12,
+      "text": "job delay the job to the end days why"
+    },
+    {
+      "start": 205.72,
+      "duration": 4.4,
+      "end": 210.12,
+      "text": "because the initial days will be empty"
+    },
+    {
+      "start": 208.12,
+      "duration": 4.039,
+      "end": 212.159,
+      "text": "the initial days will be empty and you"
+    },
+    {
+      "start": 210.12,
+      "duration": 6.199,
+      "end": 216.31900000000002,
+      "text": "can perform other jobs you can perform"
+    },
+    {
+      "start": 212.159,
+      "duration": 6.681,
+      "end": 218.84,
+      "text": "other jobs whose deadline is much closer"
+    },
+    {
+      "start": 216.319,
+      "duration": 4.48,
+      "end": 220.79899999999998,
+      "text": "right so delay the job to the end days"
+    },
+    {
+      "start": 218.84,
+      "duration": 5.28,
+      "end": 224.12,
+      "text": "what is the next thing you"
+    },
+    {
+      "start": 220.799,
+      "duration": 6.041,
+      "end": 226.84,
+      "text": "did you want to gain maximum profit so"
+    },
+    {
+      "start": 224.12,
+      "duration": 6.36,
+      "end": 230.48000000000002,
+      "text": "it's better to perform the maximum uh"
+    },
+    {
+      "start": 226.84,
+      "duration": 6.599,
+      "end": 233.439,
+      "text": "profit job it's better to perform the"
+    },
+    {
+      "start": 230.48,
+      "duration": 5.88,
+      "end": 236.35999999999999,
+      "text": "maximum profit job so if I keep these"
+    },
+    {
+      "start": 233.439,
+      "duration": 6.0,
+      "end": 239.439,
+      "text": "two uh things in mind probably I'll have"
+    },
+    {
+      "start": 236.36,
+      "duration": 4.079,
+      "end": 240.43900000000002,
+      "text": "an algorithm right so let's come to this"
+    },
+    {
+      "start": 239.439,
+      "duration": 3.121,
+      "end": 242.56,
+      "text": "example"
+    },
+    {
+      "start": 240.439,
+      "duration": 5.241,
+      "end": 245.68,
+      "text": "and try to explore how can I have an"
+    },
+    {
+      "start": 242.56,
+      "duration": 5.48,
+      "end": 248.04,
+      "text": "algorithm I'm looking to maximize profit"
+    },
+    {
+      "start": 245.68,
+      "duration": 5.199,
+      "end": 250.87900000000002,
+      "text": "so what I've done is if I've been given"
+    },
+    {
+      "start": 248.04,
+      "duration": 6.68,
+      "end": 254.72,
+      "text": "n number of jobs I"
+    },
+    {
+      "start": 250.879,
+      "duration": 6.161,
+      "end": 257.03999999999996,
+      "text": "have sorted them according to the profit"
+    },
+    {
+      "start": 254.72,
+      "duration": 4.799,
+      "end": 259.519,
+      "text": "in the descending order the highest"
+    },
+    {
+      "start": 257.04,
+      "duration": 4.84,
+      "end": 261.88,
+      "text": "profit is at the first and the lowest"
+    },
+    {
+      "start": 259.519,
+      "duration": 4.041,
+      "end": 263.56,
+      "text": "profit is at the last I sorted it"
+    },
+    {
+      "start": 261.88,
+      "duration": 3.879,
+      "end": 265.759,
+      "text": "according to the profit because I'm"
+    },
+    {
+      "start": 263.56,
+      "duration": 4.079,
+      "end": 267.639,
+      "text": "looking to maximize profit so I'll try"
+    },
+    {
+      "start": 265.759,
+      "duration": 6.041,
+      "end": 271.8,
+      "text": "to do the jobs which gives him more and"
+    },
+    {
+      "start": 267.639,
+      "duration": 5.921,
+      "end": 273.56,
+      "text": "more at the first okay now tell me uh"
+    },
+    {
+      "start": 271.8,
+      "duration": 5.52,
+      "end": 277.32,
+      "text": "like till how many days can you perform"
+    },
+    {
+      "start": 273.56,
+      "duration": 7.8,
+      "end": 281.36,
+      "text": "jobs this has a deadline of two 6 6 5 4"
+    },
+    {
+      "start": 277.32,
+      "duration": 6.52,
+      "end": 283.84,
+      "text": "2 42 so the max like the last day that"
+    },
+    {
+      "start": 281.36,
+      "duration": 5.559,
+      "end": 286.91900000000004,
+      "text": "you can perform a job will be a day six"
+    },
+    {
+      "start": 283.84,
+      "duration": 5.16,
+      "end": 289.0,
+      "text": "not a day seven because any job like if"
+    },
+    {
+      "start": 286.919,
+      "duration": 3.84,
+      "end": 290.75899999999996,
+      "text": "you take all the job IDs the maximum"
+    },
+    {
+      "start": 289.0,
+      "duration": 5.36,
+      "end": 294.36,
+      "text": "deadline you can see six so you cannot"
+    },
+    {
+      "start": 290.759,
+      "duration": 6.28,
+      "end": 297.039,
+      "text": "perform Beyond six Beyond day number six"
+    },
+    {
+      "start": 294.36,
+      "duration": 4.36,
+      "end": 298.72,
+      "text": "perfect so what I know is I have six"
+    },
+    {
+      "start": 297.039,
+      "duration": 3.121,
+      "end": 300.15999999999997,
+      "text": "days so what you can do is you can"
+    },
+    {
+      "start": 298.72,
+      "duration": 3.56,
+      "end": 302.28000000000003,
+      "text": "create uh seven"
+    },
+    {
+      "start": 300.16,
+      "duration": 3.2,
+      "end": 303.36,
+      "text": "seven size array so that you get the"
+    },
+    {
+      "start": 302.28,
+      "duration": 6.4,
+      "end": 308.67999999999995,
+      "text": "sixth"
+    },
+    {
+      "start": 303.36,
+      "duration": 9.44,
+      "end": 312.8,
+      "text": "index 0 1 2 3"
+    },
+    {
+      "start": 308.68,
+      "duration": 6.4,
+      "end": 315.08,
+      "text": "4 five and a six so what I've done is"
+    },
+    {
+      "start": 312.8,
+      "duration": 4.32,
+      "end": 317.12,
+      "text": "I've created an array can call it as an"
+    },
+    {
+      "start": 315.08,
+      "duration": 4.44,
+      "end": 319.52,
+      "text": "hash array whatever you wish to Let's"
+    },
+    {
+      "start": 317.12,
+      "duration": 4.919,
+      "end": 322.039,
+      "text": "initialize minus one so what is minus"
+    },
+    {
+      "start": 319.52,
+      "duration": 5.44,
+      "end": 324.96,
+      "text": "one minus one is basically stating that"
+    },
+    {
+      "start": 322.039,
+      "duration": 5.44,
+      "end": 327.479,
+      "text": "all of these days as of now are empty"
+    },
+    {
+      "start": 324.96,
+      "duration": 6.6,
+      "end": 331.56,
+      "text": "all of these as all of these days as of"
+    },
+    {
+      "start": 327.479,
+      "duration": 7.881,
+      "end": 335.36,
+      "text": "now is empty perfect so maybe you can"
+    },
+    {
+      "start": 331.56,
+      "duration": 3.8,
+      "end": 335.36,
+      "text": "have a count of profit as"
+    },
+    {
+      "start": 336.039,
+      "duration": 5.801,
+      "end": 341.84,
+      "text": "well and you can have a simple count as"
+    },
+    {
+      "start": 338.919,
+      "duration": 5.761,
+      "end": 344.68,
+      "text": "well initially zero initially zero"
+    },
+    {
+      "start": 341.84,
+      "duration": 5.56,
+      "end": 347.4,
+      "text": "perfect let's start with the first one"
+    },
+    {
+      "start": 344.68,
+      "duration": 5.16,
+      "end": 349.84000000000003,
+      "text": "first one is saying I have a deadline of"
+    },
+    {
+      "start": 347.4,
+      "duration": 4.079,
+      "end": 351.479,
+      "text": "two so what I will be doing is I'll be"
+    },
+    {
+      "start": 349.84,
+      "duration": 6.04,
+      "end": 355.88,
+      "text": "trying to"
+    },
+    {
+      "start": 351.479,
+      "duration": 7.121,
+      "end": 358.59999999999997,
+      "text": "perform on the end days so I'll see"
+    },
+    {
+      "start": 355.88,
+      "duration": 5.24,
+      "end": 361.12,
+      "text": "okay this is the deadline date which is"
+    },
+    {
+      "start": 358.6,
+      "duration": 3.4,
+      "end": 362.0,
+      "text": "two can I perform it on day2 I'll try to"
+    },
+    {
+      "start": 361.12,
+      "duration": 4.6,
+      "end": 365.72,
+      "text": "perform"
+    },
+    {
+      "start": 362.0,
+      "duration": 6.319,
+      "end": 368.319,
+      "text": "it at the last he says yes I don't have"
+    },
+    {
+      "start": 365.72,
+      "duration": 5.96,
+      "end": 371.68,
+      "text": "a job so I can perform the job id6 over"
+    },
+    {
+      "start": 368.319,
+      "duration": 6.361,
+      "end": 374.68,
+      "text": "here done I can perform it so done and"
+    },
+    {
+      "start": 371.68,
+      "duration": 4.76,
+      "end": 376.44,
+      "text": "dusted if I perform this I'll get a net"
+    },
+    {
+      "start": 374.68,
+      "duration": 4.56,
+      "end": 379.24,
+      "text": "profit of 80 so maybe you can add that"
+    },
+    {
+      "start": 376.44,
+      "duration": 6.199,
+      "end": 382.639,
+      "text": "80 to your answer so I'll add 80 to my"
+    },
+    {
+      "start": 379.24,
+      "duration": 5.2,
+      "end": 384.44,
+      "text": "answer and I'll say I performed one job"
+    },
+    {
+      "start": 382.639,
+      "duration": 4.321,
+      "end": 386.96000000000004,
+      "text": "let's go to the next one next one is"
+    },
+    {
+      "start": 384.44,
+      "duration": 5.319,
+      "end": 389.759,
+      "text": "saying my deadline is six so I'll go to"
+    },
+    {
+      "start": 386.96,
+      "duration": 6.04,
+      "end": 393.0,
+      "text": "the deadline six and I can perform I'll"
+    },
+    {
+      "start": 389.759,
+      "duration": 5.361,
+      "end": 395.12,
+      "text": "say Okay ID number three performed gives"
+    },
+    {
+      "start": 393.0,
+      "duration": 5.639,
+      "end": 398.639,
+      "text": "me a profit of 70 which makes a total"
+    },
+    {
+      "start": 395.12,
+      "duration": 6.199,
+      "end": 401.319,
+      "text": "profit of 150 and the count to be two"
+    },
+    {
+      "start": 398.639,
+      "duration": 4.4,
+      "end": 403.039,
+      "text": "perfect I'll go to the next one and the"
+    },
+    {
+      "start": 401.319,
+      "duration": 4.241,
+      "end": 405.56,
+      "text": "deadline is six again now this is where"
+    },
+    {
+      "start": 403.039,
+      "duration": 5.201,
+      "end": 408.24,
+      "text": "you have to understand the deadline is"
+    },
+    {
+      "start": 405.56,
+      "duration": 5.6,
+      "end": 411.16,
+      "text": "six so when you head over to six you see"
+    },
+    {
+      "start": 408.24,
+      "duration": 5.76,
+      "end": 414.0,
+      "text": "that the day is already done they try to"
+    },
+    {
+      "start": 411.16,
+      "duration": 4.599,
+      "end": 415.759,
+      "text": "take the other day is day five possible"
+    },
+    {
+      "start": 414.0,
+      "duration": 5.08,
+      "end": 419.08,
+      "text": "because I can still perform it on day"
+    },
+    {
+      "start": 415.759,
+      "duration": 6.041,
+      "end": 421.8,
+      "text": "five says yes it is so take the job id4"
+    },
+    {
+      "start": 419.08,
+      "duration": 5.48,
+      "end": 424.56,
+      "text": "and I'll for it on day five gives me a"
+    },
+    {
+      "start": 421.8,
+      "duration": 5.48,
+      "end": 427.28000000000003,
+      "text": "profit of 65 so if you add it up if a"
+    },
+    {
+      "start": 424.56,
+      "duration": 6.28,
+      "end": 430.84,
+      "text": "math is correct it's"
+    },
+    {
+      "start": 427.28,
+      "duration": 7.12,
+      "end": 434.4,
+      "text": "215 yeah uh count is three done what is"
+    },
+    {
+      "start": 430.84,
+      "duration": 5.84,
+      "end": 436.67999999999995,
+      "text": "the next one job ID two day five is the"
+    },
+    {
+      "start": 434.4,
+      "duration": 5.199,
+      "end": 439.599,
+      "text": "deadline can you do it no can you do do"
+    },
+    {
+      "start": 436.68,
+      "duration": 6.079,
+      "end": 442.759,
+      "text": "it on day four yes I'll be doing it on"
+    },
+    {
+      "start": 439.599,
+      "duration": 6.961,
+      "end": 446.56,
+      "text": "day four the job ID do which gives me a"
+    },
+    {
+      "start": 442.759,
+      "duration": 7.401,
+      "end": 450.16,
+      "text": "profit of 60 that makes it 275 if I'm"
+    },
+    {
+      "start": 446.56,
+      "duration": 6.639,
+      "end": 453.199,
+      "text": "doing addition mistakes please forgive"
+    },
+    {
+      "start": 450.16,
+      "duration": 3.8,
+      "end": 453.96000000000004,
+      "text": "me okay done and dusted which is the"
+    },
+    {
+      "start": 453.199,
+      "duration": 4.28,
+      "end": 457.479,
+      "text": "next"
+    },
+    {
+      "start": 453.96,
+      "duration": 5.919,
+      "end": 459.87899999999996,
+      "text": "one you see a job id5 can it be done on"
+    },
+    {
+      "start": 457.479,
+      "duration": 3.921,
+      "end": 461.4,
+      "text": "Deadline 4 no it's already taken so I'll"
+    },
+    {
+      "start": 459.879,
+      "duration": 6.28,
+      "end": 466.159,
+      "text": "do it on Deadline"
+    },
+    {
+      "start": 461.4,
+      "duration": 8.6,
+      "end": 470.0,
+      "text": "three done jav ID 5 add a 25 so the"
+    },
+    {
+      "start": 466.159,
+      "duration": 5.561,
+      "end": 471.71999999999997,
+      "text": "profit is 300 now the count is five"
+    },
+    {
+      "start": 470.0,
+      "duration": 5.599,
+      "end": 475.599,
+      "text": "interesting let's go to the next"
+    },
+    {
+      "start": 471.72,
+      "duration": 7.84,
+      "end": 479.56,
+      "text": "one the deadline is two is it free"
+    },
+    {
+      "start": 475.599,
+      "duration": 7.16,
+      "end": 482.759,
+      "text": "deadline 2 is not free so look at day"
+    },
+    {
+      "start": 479.56,
+      "duration": 4.88,
+      "end": 484.44,
+      "text": "one okay so day one is possible I'll"
+    },
+    {
+      "start": 482.759,
+      "duration": 4.801,
+      "end": 487.56,
+      "text": "take the day one and perform the job ID"
+    },
+    {
+      "start": 484.44,
+      "duration": 5.4,
+      "end": 489.84,
+      "text": "8 adds up at 22 so that's going to be"
+    },
+    {
+      "start": 487.56,
+      "duration": 4.84,
+      "end": 492.4,
+      "text": "322 you can add it up and the count will"
+    },
+    {
+      "start": 489.84,
+      "duration": 4.88,
+      "end": 494.71999999999997,
+      "text": "be six let's go to the next one the"
+    },
+    {
+      "start": 492.4,
+      "duration": 5.4,
+      "end": 497.79999999999995,
+      "text": "deadline here is four which is"
+    },
+    {
+      "start": 494.72,
+      "duration": 5.0,
+      "end": 499.72,
+      "text": "interesting the deadline here is four so"
+    },
+    {
+      "start": 497.8,
+      "duration": 3.6,
+      "end": 501.40000000000003,
+      "text": "you look at four taken you look at three"
+    },
+    {
+      "start": 499.72,
+      "duration": 3.479,
+      "end": 503.199,
+      "text": "taken you look at two taken you look at"
+    },
+    {
+      "start": 501.4,
+      "duration": 5.12,
+      "end": 506.52,
+      "text": "one taken you look at zero not taken so"
+    },
+    {
+      "start": 503.199,
+      "duration": 7.0,
+      "end": 510.199,
+      "text": "you perform it on d z so you perform the"
+    },
+    {
+      "start": 506.52,
+      "duration": 6.999,
+      "end": 513.519,
+      "text": "job id1 on d z which is 20 that's make"
+    },
+    {
+      "start": 510.199,
+      "duration": 5.601,
+      "end": 515.8000000000001,
+      "text": "that makes it 3:42 and seven jobs"
+    },
+    {
+      "start": 513.519,
+      "duration": 5.161,
+      "end": 518.68,
+      "text": "performed let's go to the next one the"
+    },
+    {
+      "start": 515.8,
+      "duration": 5.719,
+      "end": 521.519,
+      "text": "deadline is two so you go to day two no"
+    },
+    {
+      "start": 518.68,
+      "duration": 5.039,
+      "end": 523.7189999999999,
+      "text": "day one no day Zero no you cannot"
+    },
+    {
+      "start": 521.519,
+      "duration": 4.721,
+      "end": 526.24,
+      "text": "perform this job you cannot perform the"
+    },
+    {
+      "start": 523.719,
+      "duration": 4.641,
+      "end": 528.36,
+      "text": "last job because there are no days left"
+    },
+    {
+      "start": 526.24,
+      "duration": 4.56,
+      "end": 530.8,
+      "text": "and eventually you have the total count"
+    },
+    {
+      "start": 528.36,
+      "duration": 4.599,
+      "end": 532.9590000000001,
+      "text": "of profit you also have the total count"
+    },
+    {
+      "start": 530.8,
+      "duration": 4.8,
+      "end": 535.5999999999999,
+      "text": "of jobs that you can perform and this is"
+    },
+    {
+      "start": 532.959,
+      "duration": 4.56,
+      "end": 537.5189999999999,
+      "text": "what you'll be returning super simple I"
+    },
+    {
+      "start": 535.6,
+      "duration": 4.6,
+      "end": 540.2,
+      "text": "did it greedily I said okay who's giving"
+    },
+    {
+      "start": 537.519,
+      "duration": 5.801,
+      "end": 543.32,
+      "text": "me the maximum let's do it and let's do"
+    },
+    {
+      "start": 540.2,
+      "duration": 6.28,
+      "end": 546.48,
+      "text": "it at the end why did I do it at the"
+    },
+    {
+      "start": 543.32,
+      "duration": 4.639,
+      "end": 547.9590000000001,
+      "text": "end simple example if I do it at the end"
+    },
+    {
+      "start": 546.48,
+      "duration": 3.32,
+      "end": 549.8000000000001,
+      "text": "the initial days will be empty the"
+    },
+    {
+      "start": 547.959,
+      "duration": 5.12,
+      "end": 553.079,
+      "text": "initial days will be empty and I can"
+    },
+    {
+      "start": 549.8,
+      "duration": 5.039,
+      "end": 554.8389999999999,
+      "text": "perform other jobs in it understood"
+    },
+    {
+      "start": 553.079,
+      "duration": 5.561,
+      "end": 558.64,
+      "text": "perfect what's the next"
+    },
+    {
+      "start": 554.839,
+      "duration": 6.68,
+      "end": 561.519,
+      "text": "thing yes write the"
+    },
+    {
+      "start": 558.64,
+      "duration": 5.36,
+      "end": 564.0,
+      "text": "algorithm so write the algorithm you'll"
+    },
+    {
+      "start": 561.519,
+      "duration": 5.44,
+      "end": 566.9590000000001,
+      "text": "be given a job"
+    },
+    {
+      "start": 564.0,
+      "duration": 5.04,
+      "end": 569.04,
+      "text": "s this jobs can be a struct can be a"
+    },
+    {
+      "start": 566.959,
+      "duration": 4.401,
+      "end": 571.3599999999999,
+      "text": "class can be a pojo can be anything and"
+    },
+    {
+      "start": 569.04,
+      "duration": 2.32,
+      "end": 571.36,
+      "text": "the job"
+    },
+    {
+      "start": 571.8,
+      "duration": 4.24,
+      "end": 576.04,
+      "text": "class truck Bojo whatever we'll be"
+    },
+    {
+      "start": 573.92,
+      "duration": 4.44,
+      "end": 578.36,
+      "text": "containing an ID we'll be containing a"
+    },
+    {
+      "start": 576.04,
+      "duration": 4.039,
+      "end": 580.079,
+      "text": "profit we'll be containing a deadline"
+    },
+    {
+      "start": 578.36,
+      "duration": 2.84,
+      "end": 581.2,
+      "text": "and depending on language you can"
+    },
+    {
+      "start": 580.079,
+      "duration": 4.641,
+      "end": 584.7199999999999,
+      "text": "initialize"
+    },
+    {
+      "start": 581.2,
+      "duration": 5.96,
+      "end": 587.1600000000001,
+      "text": "it this is given to you so you need to"
+    },
+    {
+      "start": 584.72,
+      "duration": 6.88,
+      "end": 591.6,
+      "text": "sort it that's the first job you'll do"
+    },
+    {
+      "start": 587.16,
+      "duration": 4.44,
+      "end": 591.6,
+      "text": "my pad I'll be sorting the"
+    },
+    {
+      "start": 591.64,
+      "duration": 5.439,
+      "end": 597.079,
+      "text": "jobs and I'll be sorting the array"
+    },
+    {
+      "start": 594.519,
+      "duration": 4.281,
+      "end": 598.8,
+      "text": "according to a comparator in case you"
+    },
+    {
+      "start": 597.079,
+      "duration": 3.32,
+      "end": 600.399,
+      "text": "don't know how to write a comparator"
+    },
+    {
+      "start": 598.8,
+      "duration": 4.2,
+      "end": 603.0,
+      "text": "please please pleas go back and watch my"
+    },
+    {
+      "start": 600.399,
+      "duration": 4.44,
+      "end": 604.839,
+      "text": "STL video over there I explained how to"
+    },
+    {
+      "start": 603.0,
+      "duration": 4.48,
+      "end": 607.48,
+      "text": "write a comp super simple what you"
+    },
+    {
+      "start": 604.839,
+      "duration": 5.041,
+      "end": 609.8800000000001,
+      "text": "basically do is you write a bullion"
+    },
+    {
+      "start": 607.48,
+      "duration": 4.32,
+      "end": 611.8000000000001,
+      "text": "that's what the comparator returns and"
+    },
+    {
+      "start": 609.88,
+      "duration": 4.72,
+      "end": 614.6,
+      "text": "you always take two variables because"
+    },
+    {
+      "start": 611.8,
+      "duration": 4.039,
+      "end": 615.8389999999999,
+      "text": "comparison means between two and the"
+    },
+    {
+      "start": 614.6,
+      "duration": 4.08,
+      "end": 618.6800000000001,
+      "text": "type will be"
+    },
+    {
+      "start": 615.839,
+      "duration": 5.12,
+      "end": 620.9590000000001,
+      "text": "jobs because that is what is the type"
+    },
+    {
+      "start": 618.68,
+      "duration": 4.24,
+      "end": 622.92,
+      "text": "jobs you can say value one and you can"
+    },
+    {
+      "start": 620.959,
+      "duration": 4.281,
+      "end": 625.2399999999999,
+      "text": "say jobs value"
+    },
+    {
+      "start": 622.92,
+      "duration": 4.96,
+      "end": 627.88,
+      "text": "two and you're basically trying to"
+    },
+    {
+      "start": 625.24,
+      "duration": 4.76,
+      "end": 630.0,
+      "text": "compare you're trying to sort it"
+    },
+    {
+      "start": 627.88,
+      "duration": 6.04,
+      "end": 633.92,
+      "text": "according to the largest profit"
+    },
+    {
+      "start": 630.0,
+      "duration": 7.6,
+      "end": 637.6,
+      "text": "so you're saying okay if value 1. profit"
+    },
+    {
+      "start": 633.92,
+      "duration": 6.12,
+      "end": 640.04,
+      "text": "is greater than value 2. profit which"
+    },
+    {
+      "start": 637.6,
+      "duration": 5.039,
+      "end": 642.639,
+      "text": "means it is in the correct so you can"
+    },
+    {
+      "start": 640.04,
+      "duration": 2.599,
+      "end": 642.639,
+      "text": "just return a"
+    },
+    {
+      "start": 643.16,
+      "duration": 6.359,
+      "end": 649.519,
+      "text": "true this will technically mean so what"
+    },
+    {
+      "start": 646.639,
+      "duration": 6.041,
+      "end": 652.6800000000001,
+      "text": "this means is in the array the value one"
+    },
+    {
+      "start": 649.519,
+      "duration": 4.801,
+      "end": 654.32,
+      "text": "is ahead of value two shall I keep it in"
+    },
+    {
+      "start": 652.68,
+      "duration": 3.92,
+      "end": 656.5999999999999,
+      "text": "the same order shall I keep it in the C"
+    },
+    {
+      "start": 654.32,
+      "duration": 4.04,
+      "end": 658.36,
+      "text": "model and you say if value one's profit"
+    },
+    {
+      "start": 656.6,
+      "duration": 3.64,
+      "end": 660.24,
+      "text": "is greater than value two's profit keep"
+    },
+    {
+      "start": 658.36,
+      "duration": 4.76,
+      "end": 663.12,
+      "text": "it in the C model but if you return a"
+    },
+    {
+      "start": 660.24,
+      "duration": 4.399,
+      "end": 664.639,
+      "text": "false it will just change the order"
+    },
+    {
+      "start": 663.12,
+      "duration": 5.159,
+      "end": 668.279,
+      "text": "that's how the comparator works on a"
+    },
+    {
+      "start": 664.639,
+      "duration": 5.64,
+      "end": 670.279,
+      "text": "very very generic term okay I sorted it"
+    },
+    {
+      "start": 668.279,
+      "duration": 5.481,
+      "end": 673.76,
+      "text": "what is my next job I need to count the"
+    },
+    {
+      "start": 670.279,
+      "duration": 6.24,
+      "end": 676.519,
+      "text": "total profit so maybe I can keep a tot"
+    },
+    {
+      "start": 673.76,
+      "duration": 3.8,
+      "end": 677.56,
+      "text": "profit equal to Z I can keep a counter"
+    },
+    {
+      "start": 676.519,
+      "duration": 4.0,
+      "end": 680.519,
+      "text": "equal to"
+    },
+    {
+      "start": 677.56,
+      "duration": 5.12,
+      "end": 682.68,
+      "text": "zero now I know I need one thing so that"
+    },
+    {
+      "start": 680.519,
+      "duration": 4.681,
+      "end": 685.2,
+      "text": "I can create the hash array the maximum"
+    },
+    {
+      "start": 682.68,
+      "duration": 4.719,
+      "end": 687.399,
+      "text": "deadline right so what I can do is maybe"
+    },
+    {
+      "start": 685.2,
+      "duration": 5.4,
+      "end": 690.6,
+      "text": "I can quickly iterate through I can keep"
+    },
+    {
+      "start": 687.399,
+      "duration": 6.361,
+      "end": 693.76,
+      "text": "a Max deadline as well Max deadline and"
+    },
+    {
+      "start": 690.6,
+      "duration": 5.56,
+      "end": 696.16,
+      "text": "we can probably keep it as minus one"
+    },
+    {
+      "start": 693.76,
+      "duration": 6.48,
+      "end": 700.24,
+      "text": "correct and we can just scan through"
+    },
+    {
+      "start": 696.16,
+      "duration": 7.52,
+      "end": 703.68,
+      "text": "from 0 to n minus one in the comp in the"
+    },
+    {
+      "start": 700.24,
+      "duration": 7.279,
+      "end": 707.519,
+      "text": "jobs areay and I can say hey Max"
+    },
+    {
+      "start": 703.68,
+      "duration": 7.32,
+      "end": 711.0,
+      "text": "deadline whatever it is equal to Max"
+    },
+    {
+      "start": 707.519,
+      "duration": 3.481,
+      "end": 711.0,
+      "text": "of Max"
+    },
+    {
+      "start": 712.56,
+      "duration": 5.68,
+      "end": 718.2399999999999,
+      "text": "deadline"
+    },
+    {
+      "start": 714.2,
+      "duration": 6.439,
+      "end": 720.639,
+      "text": "comma array of I"
+    },
+    {
+      "start": 718.24,
+      "duration": 4.68,
+      "end": 722.92,
+      "text": "deadline perfect so this will be storing"
+    },
+    {
+      "start": 720.639,
+      "duration": 6.361,
+      "end": 727.0,
+      "text": "the max deadline once this is done what"
+    },
+    {
+      "start": 722.92,
+      "duration": 6.44,
+      "end": 729.36,
+      "text": "you can do is you can define a hash of"
+    },
+    {
+      "start": 727.0,
+      "duration": 2.36,
+      "end": 729.36,
+      "text": "Max"
+    },
+    {
+      "start": 732.8,
+      "duration": 4.44,
+      "end": 737.24,
+      "text": "deadline plus one and you can initialize"
+    },
+    {
+      "start": 735.399,
+      "duration": 3.12,
+      "end": 738.519,
+      "text": "that with minus one you can write a"
+    },
+    {
+      "start": 737.24,
+      "duration": 4.959,
+      "end": 742.199,
+      "text": "follow Loop to initialize that with"
+    },
+    {
+      "start": 738.519,
+      "duration": 6.521,
+      "end": 745.04,
+      "text": "minus one perfect now what I start"
+    },
+    {
+      "start": 742.199,
+      "duration": 4.361,
+      "end": 746.56,
+      "text": "itating okay so I'll start iterating"
+    },
+    {
+      "start": 745.04,
+      "duration": 3.12,
+      "end": 748.16,
+      "text": "right from the first job which is at"
+    },
+    {
+      "start": 746.56,
+      "duration": 4.399,
+      "end": 750.959,
+      "text": "zero and I'll go to the last job which"
+    },
+    {
+      "start": 748.16,
+      "duration": 5.44,
+      "end": 753.6,
+      "text": "is at n minus one index for the first"
+    },
+    {
+      "start": 750.959,
+      "duration": 4.721,
+      "end": 755.68,
+      "text": "job I need to see can I perform this job"
+    },
+    {
+      "start": 753.6,
+      "duration": 5.44,
+      "end": 759.0400000000001,
+      "text": "or not can I perform this job or not how"
+    },
+    {
+      "start": 755.68,
+      "duration": 5.64,
+      "end": 761.3199999999999,
+      "text": "do I see it it's super simple I know the"
+    },
+    {
+      "start": 759.04,
+      "duration": 4.76,
+      "end": 763.8,
+      "text": "deadline so I'll start with the deadline"
+    },
+    {
+      "start": 761.32,
+      "duration": 4.6,
+      "end": 765.9200000000001,
+      "text": "I can say array of I okay if your"
+    },
+    {
+      "start": 763.8,
+      "duration": 4.399,
+      "end": 768.199,
+      "text": "deadline is sixth day let's check out"
+    },
+    {
+      "start": 765.92,
+      "duration": 4.719,
+      "end": 770.639,
+      "text": "the sixth day and I can check out till"
+    },
+    {
+      "start": 768.199,
+      "duration": 4.481,
+      "end": 772.68,
+      "text": "the zero day whichever day is empty"
+    },
+    {
+      "start": 770.639,
+      "duration": 4.601,
+      "end": 775.24,
+      "text": "whichever day is empty which means hash"
+    },
+    {
+      "start": 772.68,
+      "duration": 5.68,
+      "end": 778.3599999999999,
+      "text": "of that day hash of J is equal to equal"
+    },
+    {
+      "start": 775.24,
+      "duration": 5.159,
+      "end": 780.399,
+      "text": "to minus1 that means that day is empty I"
+    },
+    {
+      "start": 778.36,
+      "duration": 4.479,
+      "end": 782.839,
+      "text": "can perform the job so I can do count"
+    },
+    {
+      "start": 780.399,
+      "duration": 5.281,
+      "end": 785.68,
+      "text": "equal to count + 1 at the same time I"
+    },
+    {
+      "start": 782.839,
+      "duration": 7.881,
+      "end": 790.72,
+      "text": "can say hash of I can you store the job"
+    },
+    {
+      "start": 785.68,
+      "duration": 8.68,
+      "end": 794.3599999999999,
+      "text": "ID which is array of sorry array of J do"
+    },
+    {
+      "start": 790.72,
+      "duration": 6.96,
+      "end": 797.6800000000001,
+      "text": "ID a bad array of I of"
+    },
+    {
+      "start": 794.36,
+      "duration": 4.96,
+      "end": 799.32,
+      "text": "ID because that is a job number what"
+    },
+    {
+      "start": 797.68,
+      "duration": 4.839,
+      "end": 802.519,
+      "text": "apart from it I need the total profit so"
+    },
+    {
+      "start": 799.32,
+      "duration": 6.4,
+      "end": 805.72,
+      "text": "I can maybe see total profit is equal to"
+    },
+    {
+      "start": 802.519,
+      "duration": 6.201,
+      "end": 808.72,
+      "text": "plus equal to array of I do profit so"
+    },
+    {
+      "start": 805.72,
+      "duration": 4.479,
+      "end": 810.1990000000001,
+      "text": "that will be counting it perfect I can"
+    },
+    {
+      "start": 808.72,
+      "duration": 3.44,
+      "end": 812.1600000000001,
+      "text": "do a break because I don't need to find"
+    },
+    {
+      "start": 810.199,
+      "duration": 4.64,
+      "end": 814.8389999999999,
+      "text": "out other these simple the followup is"
+    },
+    {
+      "start": 812.16,
+      "duration": 4.28,
+      "end": 816.4399999999999,
+      "text": "done this followup is also done and"
+    },
+    {
+      "start": 814.839,
+      "duration": 4.601,
+      "end": 819.44,
+      "text": "eventually you can return the total"
+    },
+    {
+      "start": 816.44,
+      "duration": 8.079,
+      "end": 824.519,
+      "text": "profit because they wanted a pair so you"
+    },
+    {
+      "start": 819.44,
+      "duration": 7.92,
+      "end": 827.36,
+      "text": "can say return count comma to"
+    },
+    {
+      "start": 824.519,
+      "duration": 5.88,
+      "end": 830.399,
+      "text": "Pro and the function ends and the"
+    },
+    {
+      "start": 827.36,
+      "duration": 4.76,
+      "end": 832.12,
+      "text": "function ends super simple so this"
+    },
+    {
+      "start": 830.399,
+      "duration": 4.56,
+      "end": 834.959,
+      "text": "function will typically be returning a"
+    },
+    {
+      "start": 832.12,
+      "duration": 5.519,
+      "end": 837.639,
+      "text": "pair which is count of the total jobs"
+    },
+    {
+      "start": 834.959,
+      "duration": 5.841,
+      "end": 840.8,
+      "text": "and the total profit time to analyze the"
+    },
+    {
+      "start": 837.639,
+      "duration": 8.88,
+      "end": 846.519,
+      "text": "time complexity sorting is going to take"
+    },
+    {
+      "start": 840.8,
+      "duration": 11.279,
+      "end": 852.079,
+      "text": "n logarithmic of n this is going to take"
+    },
+    {
+      "start": 846.519,
+      "duration": 8.76,
+      "end": 855.279,
+      "text": "a p of n now this is where the problem"
+    },
+    {
+      "start": 852.079,
+      "duration": 5.841,
+      "end": 857.92,
+      "text": "lies this at the worst possible scenario"
+    },
+    {
+      "start": 855.279,
+      "duration": 4.721,
+      "end": 860.0,
+      "text": "can go up to be imagine all the deadline"
+    },
+    {
+      "start": 857.92,
+      "duration": 7.24,
+      "end": 865.16,
+      "text": "days being filled up it will end up"
+    },
+    {
+      "start": 860.0,
+      "duration": 5.16,
+      "end": 865.16,
+      "text": "going the entire stuff so this is Max"
+    },
+    {
+      "start": 865.56,
+      "duration": 8.36,
+      "end": 873.92,
+      "text": "deadline so the overall complexity will"
+    },
+    {
+      "start": 868.16,
+      "duration": 7.919,
+      "end": 876.079,
+      "text": "be n login plus n into max dead n and"
+    },
+    {
+      "start": 873.92,
+      "duration": 5.76,
+      "end": 879.68,
+      "text": "what about the space complexity the"
+    },
+    {
+      "start": 876.079,
+      "duration": 6.521,
+      "end": 882.5999999999999,
+      "text": "space complexity will be a bigo of Max"
+    },
+    {
+      "start": 879.68,
+      "duration": 4.519,
+      "end": 884.199,
+      "text": "deadline why B of Max deadline because"
+    },
+    {
+      "start": 882.6,
+      "duration": 4.799,
+      "end": 887.399,
+      "text": "that is the hash array that you are"
+    },
+    {
+      "start": 884.199,
+      "duration": 4.921,
+      "end": 889.12,
+      "text": "creating correct now in an interview"
+    },
+    {
+      "start": 887.399,
+      "duration": 4.041,
+      "end": 891.44,
+      "text": "this is what they expect you because"
+    },
+    {
+      "start": 889.12,
+      "duration": 5.44,
+      "end": 894.5600000000001,
+      "text": "they expect you to tell them this one"
+    },
+    {
+      "start": 891.44,
+      "duration": 5.72,
+      "end": 897.1600000000001,
+      "text": "but in case the interview is slightly"
+    },
+    {
+      "start": 894.56,
+      "duration": 5.12,
+      "end": 899.68,
+      "text": "into competive programming he'll ask you"
+    },
+    {
+      "start": 897.16,
+      "duration": 5.679,
+      "end": 902.8389999999999,
+      "text": "to optimize this inner loop PS he'll ask"
+    },
+    {
+      "start": 899.68,
+      "duration": 7.079,
+      "end": 906.7589999999999,
+      "text": "you to optimize this in a loop and this"
+    },
+    {
+      "start": 902.839,
+      "duration": 6.881,
+      "end": 909.72,
+      "text": "can be done with disjoint set Union if"
+    },
+    {
+      "start": 906.759,
+      "duration": 4.921,
+      "end": 911.6800000000001,
+      "text": "you apply this this one because you're"
+    },
+    {
+      "start": 909.72,
+      "duration": 5.039,
+      "end": 914.759,
+      "text": "looping to figure out you're looping to"
+    },
+    {
+      "start": 911.68,
+      "duration": 4.88,
+      "end": 916.56,
+      "text": "figure out okay which is the first day"
+    },
+    {
+      "start": 914.759,
+      "duration": 3.161,
+      "end": 917.92,
+      "text": "that is empty you're looping to figure"
+    },
+    {
+      "start": 916.56,
+      "duration": 5.24,
+      "end": 921.8,
+      "text": "out that can be"
+    },
+    {
+      "start": 917.92,
+      "duration": 7.4,
+      "end": 925.3199999999999,
+      "text": "replaced with DSU in bco or one without"
+    },
+    {
+      "start": 921.8,
+      "duration": 5.68,
+      "end": 927.4799999999999,
+      "text": "looping you can straight away get it so"
+    },
+    {
+      "start": 925.32,
+      "duration": 4.16,
+      "end": 929.48,
+      "text": "you can head over and watch my graphs"
+    },
+    {
+      "start": 927.48,
+      "duration": 4.44,
+      "end": 931.9200000000001,
+      "text": "playlist I've taught the"
+    },
+    {
+      "start": 929.48,
+      "duration": 4.44,
+      "end": 933.9200000000001,
+      "text": "DSU concept over there understand the"
+    },
+    {
+      "start": 931.92,
+      "duration": 4.919,
+      "end": 936.8389999999999,
+      "text": "DSU concept and maybe you can try"
+    },
+    {
+      "start": 933.92,
+      "duration": 5.12,
+      "end": 939.04,
+      "text": "replacing this internal for loop with"
+    },
+    {
+      "start": 936.839,
+      "duration": 4.44,
+      "end": 941.2790000000001,
+      "text": "that DSU concept you can try that on"
+    },
+    {
+      "start": 939.04,
+      "duration": 3.68,
+      "end": 942.7199999999999,
+      "text": "your own but it will not be required in"
+    },
+    {
+      "start": 941.279,
+      "duration": 3.92,
+      "end": 945.199,
+      "text": "interview so I'll not be teaching it"
+    },
+    {
+      "start": 942.72,
+      "duration": 4.64,
+      "end": 947.36,
+      "text": "over here so yeah that will be it for"
+    },
+    {
+      "start": 945.199,
+      "duration": 3.521,
+      "end": 948.7199999999999,
+      "text": "this one so I hope youve understood"
+    },
+    {
+      "start": 947.36,
+      "duration": 3.08,
+      "end": 950.44,
+      "text": "everything and if you've understood"
+    },
+    {
+      "start": 948.72,
+      "duration": 3.039,
+      "end": 951.759,
+      "text": "everything please please do consider"
+    },
+    {
+      "start": 950.44,
+      "duration": 3.16,
+      "end": 953.6,
+      "text": "giving us a like and if you're new to"
+    },
+    {
+      "start": 951.759,
+      "duration": 4.0,
+      "end": 955.759,
+      "text": "our channel do consider subscribing to"
+    },
+    {
+      "start": 953.6,
+      "duration": 3.599,
+      "end": 957.1990000000001,
+      "text": "us as well with this I'll be wrapping up"
+    },
+    {
+      "start": 955.759,
+      "duration": 4.121,
+      "end": 959.88,
+      "text": "this video Let's wa in some other video"
+    },
+    {
+      "start": 957.199,
+      "duration": 3.961,
+      "end": 961.16,
+      "text": "till then byebye take care whenever your"
+    },
+    {
+      "start": 959.88,
+      "duration": 4.6,
+      "end": 964.48,
+      "text": "heart is"
+    },
+    {
+      "start": 961.16,
+      "duration": 7.72,
+      "end": 968.88,
+      "text": "broken don't ever forget your"
+    },
+    {
+      "start": 964.48,
+      "duration": 4.4,
+      "end": 968.88,
+      "text": "golden I will find the light"
+    }
+  ]
+}

@@ -1,0 +1,2192 @@
+{
+  "position": 244,
+  "video_id": "3kMKYQ2wNIU",
+  "title": "L8. Remove Nth Node from the end of the LinkedList | Multiple Approaches",
+  "url": "https://www.youtube.com/watch?v=3kMKYQ2wNIU",
+  "transcript": [
+    {
+      "start": 3.24,
+      "duration": 3.079,
+      "end": 6.319000000000001,
+      "text": "so I will be continuing with our"
+    },
+    {
+      "start": 4.56,
+      "duration": 3.0,
+      "end": 7.56,
+      "text": "playlist before that hey welcome back to"
+    },
+    {
+      "start": 6.319,
+      "duration": 3.2,
+      "end": 9.519,
+      "text": "the channel I hope you guys are doing"
+    },
+    {
+      "start": 7.56,
+      "duration": 4.92,
+      "end": 12.48,
+      "text": "extremely well so the problem that we"
+    },
+    {
+      "start": 9.519,
+      "duration": 5.841,
+      "end": 15.36,
+      "text": "will be solving today is removing the"
+    },
+    {
+      "start": 12.48,
+      "duration": 4.76,
+      "end": 17.240000000000002,
+      "text": "nth node from the end so what is the"
+    },
+    {
+      "start": 15.36,
+      "duration": 3.8,
+      "end": 19.16,
+      "text": "problem stating it is stating that it'll"
+    },
+    {
+      "start": 17.24,
+      "duration": 4.24,
+      "end": 21.479999999999997,
+      "text": "be given the head of the link list and"
+    },
+    {
+      "start": 19.16,
+      "duration": 4.6,
+      "end": 23.759999999999998,
+      "text": "it'll also be given a value n you'll"
+    },
+    {
+      "start": 21.48,
+      "duration": 5.119,
+      "end": 26.599,
+      "text": "have to count n from backwards so if I"
+    },
+    {
+      "start": 23.76,
+      "duration": 4.72,
+      "end": 28.48,
+      "text": "count it this is the second node you'll"
+    },
+    {
+      "start": 26.599,
+      "duration": 4.52,
+      "end": 31.119,
+      "text": "have to delete the second node from the"
+    },
+    {
+      "start": 28.48,
+      "duration": 4.2,
+      "end": 32.68,
+      "text": "end and once you've deleted Ed the three"
+    },
+    {
+      "start": 31.119,
+      "duration": 4.201,
+      "end": 35.32,
+      "text": "that was pointing to the second node"
+    },
+    {
+      "start": 32.68,
+      "duration": 5.52,
+      "end": 38.2,
+      "text": "from the end will be pointing to the"
+    },
+    {
+      "start": 35.32,
+      "duration": 5.0,
+      "end": 40.32,
+      "text": "last node or whatever n minus one node"
+    },
+    {
+      "start": 38.2,
+      "duration": 4.4,
+      "end": 42.6,
+      "text": "and once this is done you'll have to"
+    },
+    {
+      "start": 40.32,
+      "duration": 4.32,
+      "end": 44.64,
+      "text": "return me the head of this particular"
+    },
+    {
+      "start": 42.6,
+      "duration": 5.2,
+      "end": 47.800000000000004,
+      "text": "link list after modification after"
+    },
+    {
+      "start": 44.64,
+      "duration": 6.8,
+      "end": 51.44,
+      "text": "deletion so n can be anything what if I"
+    },
+    {
+      "start": 47.8,
+      "duration": 6.12,
+      "end": 53.919999999999995,
+      "text": "give you n as five in that case n will"
+    },
+    {
+      "start": 51.44,
+      "duration": 4.68,
+      "end": 56.12,
+      "text": "like the fifth note from the end will be"
+    },
+    {
+      "start": 53.92,
+      "duration": 4.599,
+      "end": 58.519000000000005,
+      "text": "the head of the link list right if you"
+    },
+    {
+      "start": 56.12,
+      "duration": 4.079,
+      "end": 60.199,
+      "text": "delete this this will be the new head of"
+    },
+    {
+      "start": 58.519,
+      "duration": 4.121,
+      "end": 62.64,
+      "text": "the link list so you'll have to return"
+    },
+    {
+      "start": 60.199,
+      "duration": 4.521,
+      "end": 64.72,
+      "text": "me this one so depending on the value of"
+    },
+    {
+      "start": 62.64,
+      "duration": 4.519,
+      "end": 67.159,
+      "text": "n you'll have to give me an algorithm"
+    },
+    {
+      "start": 64.72,
+      "duration": 4.439,
+      "end": 69.15899999999999,
+      "text": "that doesn't so if this problem comes up"
+    },
+    {
+      "start": 67.159,
+      "duration": 4.081,
+      "end": 71.24000000000001,
+      "text": "in an interview what is the extreme KN"
+    },
+    {
+      "start": 69.159,
+      "duration": 5.28,
+      "end": 74.43900000000001,
+      "text": "solution that you can think of like what"
+    },
+    {
+      "start": 71.24,
+      "duration": 6.32,
+      "end": 77.56,
+      "text": "I can think of is okay n is given as two"
+    },
+    {
+      "start": 74.439,
+      "duration": 5.561,
+      "end": 80.0,
+      "text": "I definitely cannot Travers backwards so"
+    },
+    {
+      "start": 77.56,
+      "duration": 5.199,
+      "end": 82.759,
+      "text": "the first step that I can do is maybe"
+    },
+    {
+      "start": 80.0,
+      "duration": 4.799,
+      "end": 84.799,
+      "text": "take a variable counter which will count"
+    },
+    {
+      "start": 82.759,
+      "duration": 5.241,
+      "end": 88.0,
+      "text": "the length of the link list right and"
+    },
+    {
+      "start": 84.799,
+      "duration": 5.32,
+      "end": 90.119,
+      "text": "let's take a temporary node or pointer"
+    },
+    {
+      "start": 88.0,
+      "duration": 5.399,
+      "end": 93.399,
+      "text": "pointing to the Head let's start"
+    },
+    {
+      "start": 90.119,
+      "duration": 6.881,
+      "end": 97.0,
+      "text": "counting counter one let's move temp"
+    },
+    {
+      "start": 93.399,
+      "duration": 8.08,
+      "end": 101.479,
+      "text": "counter two let's move temp counter"
+    },
+    {
+      "start": 97.0,
+      "duration": 9.28,
+      "end": 106.28,
+      "text": "three let's move 10 count of four let's"
+    },
+    {
+      "start": 101.479,
+      "duration": 7.881,
+      "end": 109.36,
+      "text": "move 10 count of five let's move 10 and"
+    },
+    {
+      "start": 106.28,
+      "duration": 4.64,
+      "end": 110.92,
+      "text": "it will reach here which is null stop so"
+    },
+    {
+      "start": 109.36,
+      "duration": 5.2,
+      "end": 114.56,
+      "text": "you stop and you know the value of"
+    },
+    {
+      "start": 110.92,
+      "duration": 5.32,
+      "end": 116.24000000000001,
+      "text": "counter is five so the value of count is"
+    },
+    {
+      "start": 114.56,
+      "duration": 3.36,
+      "end": 117.92,
+      "text": "five which is the length of the link"
+    },
+    {
+      "start": 116.24,
+      "duration": 5.72,
+      "end": 121.96,
+      "text": "list I've been asked to delete the"
+    },
+    {
+      "start": 117.92,
+      "duration": 6.64,
+      "end": 124.56,
+      "text": "second last note so do I need to reach"
+    },
+    {
+      "start": 121.96,
+      "duration": 6.999,
+      "end": 128.959,
+      "text": "this note just ask yourself the answer"
+    },
+    {
+      "start": 124.56,
+      "duration": 7.72,
+      "end": 132.28,
+      "text": "to that is no why because if I delete"
+    },
+    {
+      "start": 128.959,
+      "duration": 6.081,
+      "end": 135.04,
+      "text": "this deleting it is easy but the"
+    },
+    {
+      "start": 132.28,
+      "duration": 4.92,
+      "end": 137.2,
+      "text": "original task is to make sure this is"
+    },
+    {
+      "start": 135.04,
+      "duration": 5.08,
+      "end": 140.12,
+      "text": "pointing to this because I have to"
+    },
+    {
+      "start": 137.2,
+      "duration": 6.119,
+      "end": 143.319,
+      "text": "change the links otherwise it doesn't"
+    },
+    {
+      "start": 140.12,
+      "duration": 6.0,
+      "end": 146.12,
+      "text": "make sense I have to change the links so"
+    },
+    {
+      "start": 143.319,
+      "duration": 5.2,
+      "end": 148.51899999999998,
+      "text": "if I reach here if I reach here how can"
+    },
+    {
+      "start": 146.12,
+      "duration": 4.399,
+      "end": 150.519,
+      "text": "I change the link of the previous node"
+    },
+    {
+      "start": 148.519,
+      "duration": 4.44,
+      "end": 152.959,
+      "text": "so technically"
+    },
+    {
+      "start": 150.519,
+      "duration": 4.561,
+      "end": 155.08,
+      "text": "I need to reach here because if I reach"
+    },
+    {
+      "start": 152.959,
+      "duration": 4.441,
+      "end": 157.4,
+      "text": "here then I can straight away change the"
+    },
+    {
+      "start": 155.08,
+      "duration": 6.519,
+      "end": 161.59900000000002,
+      "text": "link and point it right so I need to"
+    },
+    {
+      "start": 157.4,
+      "duration": 8.919,
+      "end": 166.31900000000002,
+      "text": "reach the third node and what is this"
+    },
+    {
+      "start": 161.599,
+      "duration": 9.481,
+      "end": 171.07999999999998,
+      "text": "count minus n 5 - 2 I have reach the"
+    },
+    {
+      "start": 166.319,
+      "duration": 8.401,
+      "end": 174.72,
+      "text": "third node so so can I say I need to"
+    },
+    {
+      "start": 171.08,
+      "duration": 7.879,
+      "end": 178.959,
+      "text": "reach the third node which is Count"
+    },
+    {
+      "start": 174.72,
+      "duration": 5.76,
+      "end": 180.48,
+      "text": "minus n correct so result will be count"
+    },
+    {
+      "start": 178.959,
+      "duration": 2.881,
+      "end": 181.84,
+      "text": "minus n"
+    },
+    {
+      "start": 180.48,
+      "duration": 3.24,
+      "end": 183.72,
+      "text": "we will talk about the edge cases"
+    },
+    {
+      "start": 181.84,
+      "duration": 5.64,
+      "end": 187.48,
+      "text": "afterwards but as of now understand that"
+    },
+    {
+      "start": 183.72,
+      "duration": 6.76,
+      "end": 190.48,
+      "text": "the result is Count minus one okay so"
+    },
+    {
+      "start": 187.48,
+      "duration": 5.6,
+      "end": 193.07999999999998,
+      "text": "what I will do on the next step is I'll"
+    },
+    {
+      "start": 190.48,
+      "duration": 6.759,
+      "end": 197.23899999999998,
+      "text": "again start I treating okay let's start"
+    },
+    {
+      "start": 193.08,
+      "duration": 6.159,
+      "end": 199.239,
+      "text": "it treating so temporary is at the head"
+    },
+    {
+      "start": 197.239,
+      "duration": 6.08,
+      "end": 203.31900000000002,
+      "text": "and the first thing that I'll do is I'll"
+    },
+    {
+      "start": 199.239,
+      "duration": 6.521,
+      "end": 205.76,
+      "text": "reduce the resultant by one and I'll see"
+    },
+    {
+      "start": 203.319,
+      "duration": 5.161,
+      "end": 208.48,
+      "text": "if if I've reached that and the answer"
+    },
+    {
+      "start": 205.76,
+      "duration": 5.08,
+      "end": 210.84,
+      "text": "is no so I'll move"
+    },
+    {
+      "start": 208.48,
+      "duration": 5.56,
+      "end": 214.04,
+      "text": "temporary once once I've moved it again"
+    },
+    {
+      "start": 210.84,
+      "duration": 6.0,
+      "end": 216.84,
+      "text": "I'll reduce it have I reached the answer"
+    },
+    {
+      "start": 214.04,
+      "duration": 7.199,
+      "end": 221.239,
+      "text": "is no then I'll again move"
+    },
+    {
+      "start": 216.84,
+      "duration": 7.64,
+      "end": 224.48,
+      "text": "it reduce and the moment you reduce"
+    },
+    {
+      "start": 221.239,
+      "duration": 6.64,
+      "end": 227.879,
+      "text": "after that you will check is it zero it"
+    },
+    {
+      "start": 224.48,
+      "duration": 5.679,
+      "end": 230.159,
+      "text": "is it is and if that is zero this is"
+    },
+    {
+      "start": 227.879,
+      "duration": 4.241,
+      "end": 232.12,
+      "text": "your node where you want to stop at the"
+    },
+    {
+      "start": 230.159,
+      "duration": 5.521,
+      "end": 235.67999999999998,
+      "text": "previous node to the node that you want"
+    },
+    {
+      "start": 232.12,
+      "duration": 6.56,
+      "end": 238.68,
+      "text": "to delete stopped what is the job that I"
+    },
+    {
+      "start": 235.68,
+      "duration": 7.68,
+      "end": 243.36,
+      "text": "have to do the first job is please make"
+    },
+    {
+      "start": 238.68,
+      "duration": 7.08,
+      "end": 245.76000000000002,
+      "text": "sure you uh take any other variable and"
+    },
+    {
+      "start": 243.36,
+      "duration": 7.599,
+      "end": 250.959,
+      "text": "uh maybe delete"
+    },
+    {
+      "start": 245.76,
+      "duration": 7.88,
+      "end": 253.64,
+      "text": "node delete node and say temporary. next"
+    },
+    {
+      "start": 250.959,
+      "duration": 4.401,
+      "end": 255.36,
+      "text": "just store it just store it so what I've"
+    },
+    {
+      "start": 253.64,
+      "duration": 4.24,
+      "end": 257.88,
+      "text": "done is I've stored the delete note to"
+    },
+    {
+      "start": 255.36,
+      "duration": 5.36,
+      "end": 260.72,
+      "text": "be here just store it why I'll explain"
+    },
+    {
+      "start": 257.88,
+      "duration": 4.8,
+      "end": 262.68,
+      "text": "you done what is your next job the next"
+    },
+    {
+      "start": 260.72,
+      "duration": 4.0,
+      "end": 264.72,
+      "text": "job is"
+    },
+    {
+      "start": 262.68,
+      "duration": 5.92,
+      "end": 268.6,
+      "text": "temporary your"
+    },
+    {
+      "start": 264.72,
+      "duration": 5.96,
+      "end": 270.68,
+      "text": "next can you point to can you point"
+    },
+    {
+      "start": 268.6,
+      "duration": 6.28,
+      "end": 274.88,
+      "text": "to"
+    },
+    {
+      "start": 270.68,
+      "duration": 7.72,
+      "end": 278.40000000000003,
+      "text": "Temporaries next next so this link will"
+    },
+    {
+      "start": 274.88,
+      "duration": 6.039,
+      "end": 280.919,
+      "text": "now go and point to this now once you"
+    },
+    {
+      "start": 278.4,
+      "duration": 6.0,
+      "end": 284.4,
+      "text": "have done this if it is"
+    },
+    {
+      "start": 280.919,
+      "duration": 5.881,
+      "end": 286.79999999999995,
+      "text": "C++ you say free node free this"
+    },
+    {
+      "start": 284.4,
+      "duration": 5.28,
+      "end": 289.67999999999995,
+      "text": "particular node D"
+    },
+    {
+      "start": 286.8,
+      "duration": 6.08,
+      "end": 292.88,
+      "text": "node if it is Java you don't have to"
+    },
+    {
+      "start": 289.68,
+      "duration": 5.48,
+      "end": 295.16,
+      "text": "free it you do not have to free it what"
+    },
+    {
+      "start": 292.88,
+      "duration": 6.039,
+      "end": 298.919,
+      "text": "will happen is the moment you do this"
+    },
+    {
+      "start": 295.16,
+      "duration": 5.96,
+      "end": 301.12,
+      "text": "this will get freed so so it's deleted"
+    },
+    {
+      "start": 298.919,
+      "duration": 4.801,
+      "end": 303.71999999999997,
+      "text": "and this will will be your modified link"
+    },
+    {
+      "start": 301.12,
+      "duration": 4.639,
+      "end": 305.759,
+      "text": "list once it is modified you can return"
+    },
+    {
+      "start": 303.72,
+      "duration": 4.4,
+      "end": 308.12,
+      "text": "the head of the link list now you might"
+    },
+    {
+      "start": 305.759,
+      "duration": 6.081,
+      "end": 311.84000000000003,
+      "text": "be thinking about an edge case what if n"
+    },
+    {
+      "start": 308.12,
+      "duration": 6.359,
+      "end": 314.479,
+      "text": "was five in that case the node would"
+    },
+    {
+      "start": 311.84,
+      "duration": 4.32,
+      "end": 316.15999999999997,
+      "text": "have been the head of the link list so"
+    },
+    {
+      "start": 314.479,
+      "duration": 4.44,
+      "end": 318.919,
+      "text": "there will be a new head you'll end up"
+    },
+    {
+      "start": 316.16,
+      "duration": 5.879,
+      "end": 322.03900000000004,
+      "text": "returning head. nextt end up returning"
+    },
+    {
+      "start": 318.919,
+      "duration": 5.161,
+      "end": 324.08,
+      "text": "head. next got it so this was The Brute"
+    },
+    {
+      "start": 322.039,
+      "duration": 4.241,
+      "end": 326.28,
+      "text": "Force if I have to write down the code"
+    },
+    {
+      "start": 324.08,
+      "duration": 3.839,
+      "end": 327.919,
+      "text": "it's going to be super simple so time to"
+    },
+    {
+      "start": 326.28,
+      "duration": 4.24,
+      "end": 330.52,
+      "text": "write down the pseudo code in case you"
+    },
+    {
+      "start": 327.919,
+      "duration": 4.521,
+      "end": 332.44,
+      "text": "want the C++ Java p and JavaScript code"
+    },
+    {
+      "start": 330.52,
+      "duration": 3.44,
+      "end": 333.96,
+      "text": "for this brute force it will be given in"
+    },
+    {
+      "start": 332.44,
+      "duration": 3.0,
+      "end": 335.44,
+      "text": "the description like the link there will"
+    },
+    {
+      "start": 333.96,
+      "duration": 3.76,
+      "end": 337.71999999999997,
+      "text": "be article link you can go over there"
+    },
+    {
+      "start": 335.44,
+      "duration": 3.96,
+      "end": 339.4,
+      "text": "and find it out so what do we need we"
+    },
+    {
+      "start": 337.72,
+      "duration": 4.16,
+      "end": 341.88000000000005,
+      "text": "need a counter variable so let's take a"
+    },
+    {
+      "start": 339.4,
+      "duration": 4.96,
+      "end": 344.35999999999996,
+      "text": "counter variable which is zero this will"
+    },
+    {
+      "start": 341.88,
+      "duration": 5.0,
+      "end": 346.88,
+      "text": "keep a count of the length of the link"
+    },
+    {
+      "start": 344.36,
+      "duration": 4.959,
+      "end": 349.319,
+      "text": "list let's take temporary which is"
+    },
+    {
+      "start": 346.88,
+      "duration": 4.879,
+      "end": 351.759,
+      "text": "pointing to the head of the link list"
+    },
+    {
+      "start": 349.319,
+      "duration": 4.72,
+      "end": 354.03900000000004,
+      "text": "done what is the next job travels and"
+    },
+    {
+      "start": 351.759,
+      "duration": 4.761,
+      "end": 356.52000000000004,
+      "text": "count the number of nodes so let's"
+    },
+    {
+      "start": 354.039,
+      "duration": 6.16,
+      "end": 360.199,
+      "text": "Traverse so I'll keep traversing till"
+    },
+    {
+      "start": 356.52,
+      "duration": 6.6,
+      "end": 363.12,
+      "text": "temporary is not equal to null and I'll"
+    },
+    {
+      "start": 360.199,
+      "duration": 6.801,
+      "end": 367.0,
+      "text": "do counter Plus+ at the same time I'll"
+    },
+    {
+      "start": 363.12,
+      "duration": 6.88,
+      "end": 370.0,
+      "text": "say temporary temporary next so it'll go"
+    },
+    {
+      "start": 367.0,
+      "duration": 6.28,
+      "end": 373.28,
+      "text": "ahead and compute this comput it what is"
+    },
+    {
+      "start": 370.0,
+      "duration": 8.44,
+      "end": 378.44,
+      "text": "the next job we need to make sure"
+    },
+    {
+      "start": 373.28,
+      "duration": 7.08,
+      "end": 380.35999999999996,
+      "text": "hey if this count is equivalent to"
+    },
+    {
+      "start": 378.44,
+      "duration": 4.12,
+      "end": 382.56,
+      "text": "whatever like the N that I've been asked"
+    },
+    {
+      "start": 380.36,
+      "duration": 3.44,
+      "end": 383.8,
+      "text": "to delete that means it is the head it"
+    },
+    {
+      "start": 382.56,
+      "duration": 4.72,
+      "end": 387.28000000000003,
+      "text": "is the head that has been asked to"
+    },
+    {
+      "start": 383.8,
+      "duration": 4.6,
+      "end": 388.40000000000003,
+      "text": "delete so what I will do is I'll say the"
+    },
+    {
+      "start": 387.28,
+      "duration": 2.84,
+      "end": 390.11999999999995,
+      "text": "new head"
+    },
+    {
+      "start": 388.4,
+      "duration": 4.12,
+      "end": 392.52,
+      "text": "is"
+    },
+    {
+      "start": 390.12,
+      "duration": 2.4,
+      "end": 392.52,
+      "text": "head"
+    },
+    {
+      "start": 392.68,
+      "duration": 5.6,
+      "end": 398.28000000000003,
+      "text": "next this is my new head and I will be"
+    },
+    {
+      "start": 395.759,
+      "duration": 4.801,
+      "end": 400.56,
+      "text": "returning this I will be returning this"
+    },
+    {
+      "start": 398.28,
+      "duration": 2.28,
+      "end": 400.55999999999995,
+      "text": "new"
+    },
+    {
+      "start": 401.12,
+      "duration": 5.84,
+      "end": 406.96,
+      "text": "head if you're coding in C++ then please"
+    },
+    {
+      "start": 404.72,
+      "duration": 4.44,
+      "end": 409.16,
+      "text": "make sure to free the previous head that"
+    },
+    {
+      "start": 406.96,
+      "duration": 5.04,
+      "end": 412.0,
+      "text": "is very very important this is just for"
+    },
+    {
+      "start": 409.16,
+      "duration": 6.28,
+      "end": 415.44,
+      "text": "C++ because in Java there is a garbage"
+    },
+    {
+      "start": 412.0,
+      "duration": 6.039,
+      "end": 418.039,
+      "text": "collector which will delete it got it"
+    },
+    {
+      "start": 415.44,
+      "duration": 4.84,
+      "end": 420.28,
+      "text": "done you have freed that space and you"
+    },
+    {
+      "start": 418.039,
+      "duration": 4.641,
+      "end": 422.68,
+      "text": "have returned then new head"
+    },
+    {
+      "start": 420.28,
+      "duration": 5.56,
+      "end": 425.84,
+      "text": "what if this is not the case in that"
+    },
+    {
+      "start": 422.68,
+      "duration": 6.639,
+      "end": 429.319,
+      "text": "case you'll have to move so again Please"
+    },
+    {
+      "start": 425.84,
+      "duration": 5.479,
+      "end": 431.31899999999996,
+      "text": "assign something as"
+    },
+    {
+      "start": 429.319,
+      "duration": 5.481,
+      "end": 434.8,
+      "text": "resultant so what will be the value of"
+    },
+    {
+      "start": 431.319,
+      "duration": 7.28,
+      "end": 438.599,
+      "text": "resultant it'll be count minus n and"
+    },
+    {
+      "start": 434.8,
+      "duration": 6.239,
+      "end": 441.039,
+      "text": "please reassign temporary to head once"
+    },
+    {
+      "start": 438.599,
+      "duration": 4.361,
+      "end": 442.96,
+      "text": "this is done let's again start"
+    },
+    {
+      "start": 441.039,
+      "duration": 7.28,
+      "end": 448.31899999999996,
+      "text": "traversing so you can start traversing"
+    },
+    {
+      "start": 442.96,
+      "duration": 7.32,
+      "end": 450.28,
+      "text": "like temporary is not equal to null and"
+    },
+    {
+      "start": 448.319,
+      "duration": 4.401,
+      "end": 452.72,
+      "text": "what you can do is you can say rest"
+    },
+    {
+      "start": 450.28,
+      "duration": 5.72,
+      "end": 456.0,
+      "text": "minus minus because every time you are"
+    },
+    {
+      "start": 452.72,
+      "duration": 8.36,
+      "end": 461.08000000000004,
+      "text": "at a node you just reduce one and if you"
+    },
+    {
+      "start": 456.0,
+      "duration": 8.12,
+      "end": 464.12,
+      "text": "see the resultant is equivalent to zero"
+    },
+    {
+      "start": 461.08,
+      "duration": 6.36,
+      "end": 467.44,
+      "text": "in case you straight away break"
+    },
+    {
+      "start": 464.12,
+      "duration": 6.6,
+      "end": 470.72,
+      "text": "otherwise you say hey temporary can go"
+    },
+    {
+      "start": 467.44,
+      "duration": 5.64,
+      "end": 473.08,
+      "text": "to the next because I still it's not the"
+    },
+    {
+      "start": 470.72,
+      "duration": 4.479,
+      "end": 475.199,
+      "text": "element that I'm looking for done what"
+    },
+    {
+      "start": 473.08,
+      "duration": 4.32,
+      "end": 477.4,
+      "text": "is your next job first thing that you'll"
+    },
+    {
+      "start": 475.199,
+      "duration": 4.84,
+      "end": 480.039,
+      "text": "do is which node you want to delete"
+    },
+    {
+      "start": 477.4,
+      "duration": 5.16,
+      "end": 482.56,
+      "text": "please keep it delete node"
+    },
+    {
+      "start": 480.039,
+      "duration": 5.16,
+      "end": 485.199,
+      "text": "so you're standing at temporary at this"
+    },
+    {
+      "start": 482.56,
+      "duration": 5.0,
+      "end": 487.56,
+      "text": "point temporary would be standing here"
+    },
+    {
+      "start": 485.199,
+      "duration": 4.921,
+      "end": 490.12,
+      "text": "so just take the next just take the next"
+    },
+    {
+      "start": 487.56,
+      "duration": 3.759,
+      "end": 491.319,
+      "text": "so what I'll do is I'll take the next"
+    },
+    {
+      "start": 490.12,
+      "duration": 4.479,
+      "end": 494.599,
+      "text": "because this is the note that I want to"
+    },
+    {
+      "start": 491.319,
+      "duration": 9.761,
+      "end": 501.08000000000004,
+      "text": "delete after this I'll say temporary."
+    },
+    {
+      "start": 494.599,
+      "duration": 9.801,
+      "end": 504.4,
+      "text": "next will be temporary dot next of"
+    },
+    {
+      "start": 501.08,
+      "duration": 7.239,
+      "end": 508.31899999999996,
+      "text": "next changed the link once youve changed"
+    },
+    {
+      "start": 504.4,
+      "duration": 8.36,
+      "end": 512.76,
+      "text": "the link return the head return the head"
+    },
+    {
+      "start": 508.319,
+      "duration": 7.761,
+      "end": 516.08,
+      "text": "and please make sure you free the node"
+    },
+    {
+      "start": 512.76,
+      "duration": 5.159,
+      "end": 517.919,
+      "text": "and this is again just for C++ because"
+    },
+    {
+      "start": 516.08,
+      "duration": 3.959,
+      "end": 520.039,
+      "text": "in Java the garbage collector will do it"
+    },
+    {
+      "start": 517.919,
+      "duration": 5.081,
+      "end": 523.0,
+      "text": "job so let's talk about the time"
+    },
+    {
+      "start": 520.039,
+      "duration": 6.081,
+      "end": 526.12,
+      "text": "complexity can I say that I'm taking a"
+    },
+    {
+      "start": 523.0,
+      "duration": 5.04,
+      "end": 528.04,
+      "text": "beo of length of the link list in order"
+    },
+    {
+      "start": 526.12,
+      "duration": 5.0,
+      "end": 531.12,
+      "text": "to compute the length yes in the first"
+    },
+    {
+      "start": 528.04,
+      "duration": 5.4,
+      "end": 533.4399999999999,
+      "text": "pass and then I'm traversing length"
+    },
+    {
+      "start": 531.12,
+      "duration": 4.92,
+      "end": 536.04,
+      "text": "minus n because that is what resulted"
+    },
+    {
+      "start": 533.44,
+      "duration": 5.32,
+      "end": 538.7600000000001,
+      "text": "was if you carefully look at this length"
+    },
+    {
+      "start": 536.04,
+      "duration": 5.68,
+      "end": 541.7199999999999,
+      "text": "minus n right so it's taking another"
+    },
+    {
+      "start": 538.76,
+      "duration": 4.92,
+      "end": 543.68,
+      "text": "length - n in order to reach the"
+    },
+    {
+      "start": 541.72,
+      "duration": 4.4,
+      "end": 546.12,
+      "text": "previous node then we are changing the"
+    },
+    {
+      "start": 543.68,
+      "duration": 3.96,
+      "end": 547.64,
+      "text": "links so this will be the time"
+    },
+    {
+      "start": 546.12,
+      "duration": 3.6,
+      "end": 549.72,
+      "text": "complexity what will be the space"
+    },
+    {
+      "start": 547.64,
+      "duration": 4.96,
+      "end": 552.6,
+      "text": "complexity that's a big off one because"
+    },
+    {
+      "start": 549.72,
+      "duration": 5.119,
+      "end": 554.839,
+      "text": "we not using any external space if I ask"
+    },
+    {
+      "start": 552.6,
+      "duration": 5.64,
+      "end": 558.24,
+      "text": "you about this one what is the worst"
+    },
+    {
+      "start": 554.839,
+      "duration": 7.961,
+      "end": 562.8000000000001,
+      "text": "case that's somewhere near about B of 2"
+    },
+    {
+      "start": 558.24,
+      "duration": 6.68,
+      "end": 564.92,
+      "text": "into length Y imagine if n is given as 1"
+    },
+    {
+      "start": 562.8,
+      "duration": 4.599,
+      "end": 567.399,
+      "text": "this will be somewhere near about B"
+    },
+    {
+      "start": 564.92,
+      "duration": 5.84,
+      "end": 570.76,
+      "text": "length hence the total time complexity"
+    },
+    {
+      "start": 567.399,
+      "duration": 5.201,
+      "end": 572.6,
+      "text": "is twice of length right and this is the"
+    },
+    {
+      "start": 570.76,
+      "duration": 4.04,
+      "end": 574.8,
+      "text": "reason the interviewer will ask you to"
+    },
+    {
+      "start": 572.6,
+      "duration": 4.6,
+      "end": 577.2,
+      "text": "optimize it so the optimal algorithm's"
+    },
+    {
+      "start": 574.8,
+      "duration": 4.8,
+      "end": 579.5999999999999,
+      "text": "intution is based on the Brute Force now"
+    },
+    {
+      "start": 577.2,
+      "duration": 5.28,
+      "end": 582.48,
+      "text": "what we did during the brute force was"
+    },
+    {
+      "start": 579.6,
+      "duration": 5.28,
+      "end": 584.88,
+      "text": "we tried reaching the previous node the"
+    },
+    {
+      "start": 582.48,
+      "duration": 5.039,
+      "end": 587.519,
+      "text": "node right before the node that was to"
+    },
+    {
+      "start": 584.88,
+      "duration": 5.24,
+      "end": 590.12,
+      "text": "be deleted this node was to be deleted"
+    },
+    {
+      "start": 587.519,
+      "duration": 4.841,
+      "end": 592.36,
+      "text": "we tried reaching right before that so"
+    },
+    {
+      "start": 590.12,
+      "duration": 4.92,
+      "end": 595.04,
+      "text": "this was the previous node correct and"
+    },
+    {
+      "start": 592.36,
+      "duration": 6.84,
+      "end": 599.2,
+      "text": "if you carefully observe it is like two"
+    },
+    {
+      "start": 595.04,
+      "duration": 7.32,
+      "end": 602.36,
+      "text": "steps to the end so can I say this if if"
+    },
+    {
+      "start": 599.2,
+      "duration": 5.52,
+      "end": 604.72,
+      "text": "I Traverse and if I Traverse two steps"
+    },
+    {
+      "start": 602.36,
+      "duration": 5.4,
+      "end": 607.76,
+      "text": "lesser so technically to Traverse the"
+    },
+    {
+      "start": 604.72,
+      "duration": 4.96,
+      "end": 609.6800000000001,
+      "text": "entire link list it will take five steps"
+    },
+    {
+      "start": 607.76,
+      "duration": 5.28,
+      "end": 613.04,
+      "text": "it will take five steps because it has"
+    },
+    {
+      "start": 609.68,
+      "duration": 4.719,
+      "end": 614.399,
+      "text": "five notes if I Travers two steps lesser"
+    },
+    {
+      "start": 613.04,
+      "duration": 4.479,
+      "end": 617.519,
+      "text": "that is if I"
+    },
+    {
+      "start": 614.399,
+      "duration": 4.921,
+      "end": 619.32,
+      "text": "Travers three steps I will end up"
+    },
+    {
+      "start": 617.519,
+      "duration": 4.0,
+      "end": 621.519,
+      "text": "reaching the previous note and that is"
+    },
+    {
+      "start": 619.32,
+      "duration": 4.4,
+      "end": 623.72,
+      "text": "what what I want to do I want to reach"
+    },
+    {
+      "start": 621.519,
+      "duration": 4.641,
+      "end": 626.16,
+      "text": "the previous note now you'll be asking"
+    },
+    {
+      "start": 623.72,
+      "duration": 5.679,
+      "end": 629.399,
+      "text": "hey if I don't know five How Will I Know"
+    },
+    {
+      "start": 626.16,
+      "duration": 5.88,
+      "end": 632.04,
+      "text": "three because 5 - 2 is three without"
+    },
+    {
+      "start": 629.399,
+      "duration": 5.68,
+      "end": 635.079,
+      "text": "knowing five I cannot I can actually"
+    },
+    {
+      "start": 632.04,
+      "duration": 6.12,
+      "end": 638.16,
+      "text": "what I will do is I will take a pointer"
+    },
+    {
+      "start": 635.079,
+      "duration": 6.241,
+      "end": 641.3199999999999,
+      "text": "known as fast pointer and I'll move it"
+    },
+    {
+      "start": 638.16,
+      "duration": 7.04,
+      "end": 645.1999999999999,
+      "text": "two steps so one"
+    },
+    {
+      "start": 641.32,
+      "duration": 7.199,
+      "end": 648.519,
+      "text": "step two step so I have moved it two"
+    },
+    {
+      "start": 645.2,
+      "duration": 6.199,
+      "end": 651.399,
+      "text": "step yes I moved it two step stop there"
+    },
+    {
+      "start": 648.519,
+      "duration": 6.801,
+      "end": 655.32,
+      "text": "so I moved it two step okay the next"
+    },
+    {
+      "start": 651.399,
+      "duration": 6.321,
+      "end": 657.72,
+      "text": "point that I'll take is slow pointer"
+    },
+    {
+      "start": 655.32,
+      "duration": 5.0,
+      "end": 660.32,
+      "text": "this time I'll start moving them"
+    },
+    {
+      "start": 657.72,
+      "duration": 5.48,
+      "end": 663.2,
+      "text": "simultaneously slow slow and fast move"
+    },
+    {
+      "start": 660.32,
+      "duration": 6.16,
+      "end": 666.48,
+      "text": "them simultaneously by one one fast will"
+    },
+    {
+      "start": 663.2,
+      "duration": 5.72,
+      "end": 668.9200000000001,
+      "text": "go here slow will go here next again"
+    },
+    {
+      "start": 666.48,
+      "duration": 6.359,
+      "end": 672.839,
+      "text": "move them simultaneously fast will go"
+    },
+    {
+      "start": 668.92,
+      "duration": 8.84,
+      "end": 677.76,
+      "text": "here and slow will go here stop the"
+    },
+    {
+      "start": 672.839,
+      "duration": 6.201,
+      "end": 679.0400000000001,
+      "text": "moment you reach the last node stop stop"
+    },
+    {
+      "start": 677.76,
+      "duration": 3.96,
+      "end": 681.72,
+      "text": "and you will see that the slow is"
+    },
+    {
+      "start": 679.04,
+      "duration": 6.44,
+      "end": 685.48,
+      "text": "pointing to the previous slope yes you"
+    },
+    {
+      "start": 681.72,
+      "duration": 6.2,
+      "end": 687.9200000000001,
+      "text": "do why did that happen because initially"
+    },
+    {
+      "start": 685.48,
+      "duration": 5.159,
+      "end": 690.639,
+      "text": "you did move two steps and then you"
+    },
+    {
+      "start": 687.92,
+      "duration": 4.479,
+      "end": 692.399,
+      "text": "covered the next set of steps so you are"
+    },
+    {
+      "start": 690.639,
+      "duration": 3.401,
+      "end": 694.04,
+      "text": "technically standing at the previous"
+    },
+    {
+      "start": 692.399,
+      "duration": 4.161,
+      "end": 696.56,
+      "text": "note now if you're standing at the"
+    },
+    {
+      "start": 694.04,
+      "duration": 5.16,
+      "end": 699.1999999999999,
+      "text": "previous note what is your next job I"
+    },
+    {
+      "start": 696.56,
+      "duration": 4.719,
+      "end": 701.279,
+      "text": "think you know what to do now the same"
+    },
+    {
+      "start": 699.2,
+      "duration": 3.759,
+      "end": 702.9590000000001,
+      "text": "right so what I will do is I'll try to"
+    },
+    {
+      "start": 701.279,
+      "duration": 3.321,
+      "end": 704.6,
+      "text": "write down the pseudo code now so I'll"
+    },
+    {
+      "start": 702.959,
+      "duration": 3.601,
+      "end": 706.56,
+      "text": "be writing down the pseudo code in case"
+    },
+    {
+      "start": 704.6,
+      "duration": 3.6,
+      "end": 708.2,
+      "text": "you want the C++ Java Python and"
+    },
+    {
+      "start": 706.56,
+      "duration": 3.04,
+      "end": 709.5999999999999,
+      "text": "JavaScript codes there is an article"
+    },
+    {
+      "start": 708.2,
+      "duration": 3.48,
+      "end": 711.6800000000001,
+      "text": "Link in the description open it and"
+    },
+    {
+      "start": 709.6,
+      "duration": 3.84,
+      "end": 713.44,
+      "text": "you'll find all the codes what is the"
+    },
+    {
+      "start": 711.68,
+      "duration": 4.32,
+      "end": 716.0,
+      "text": "first thing we'll do we will take a fast"
+    },
+    {
+      "start": 713.44,
+      "duration": 5.959,
+      "end": 719.399,
+      "text": "pointer for sure and we will point it to"
+    },
+    {
+      "start": 716.0,
+      "duration": 6.0,
+      "end": 722.0,
+      "text": "the head and we'll move it and steps"
+    },
+    {
+      "start": 719.399,
+      "duration": 7.841,
+      "end": 727.24,
+      "text": "that is two steps over here so follow"
+    },
+    {
+      "start": 722.0,
+      "duration": 9.44,
+      "end": 731.44,
+      "text": "Loop of I equal to 0 till n and please"
+    },
+    {
+      "start": 727.24,
+      "duration": 6.719,
+      "end": 733.9590000000001,
+      "text": "move it fast equal to first of"
+    },
+    {
+      "start": 731.44,
+      "duration": 5.56,
+      "end": 737.0,
+      "text": "next done once you have done this what"
+    },
+    {
+      "start": 733.959,
+      "duration": 6.721,
+      "end": 740.68,
+      "text": "will happen fast will be standing here"
+    },
+    {
+      "start": 737.0,
+      "duration": 4.92,
+      "end": 741.92,
+      "text": "perfect after this take slow and point"
+    },
+    {
+      "start": 740.68,
+      "duration": 4.159,
+      "end": 744.8389999999999,
+      "text": "it to"
+    },
+    {
+      "start": 741.92,
+      "duration": 6.279,
+      "end": 748.199,
+      "text": "head and you know you'll stop when the"
+    },
+    {
+      "start": 744.839,
+      "duration": 5.841,
+      "end": 750.6800000000001,
+      "text": "first reaches the last this is when you"
+    },
+    {
+      "start": 748.199,
+      "duration": 6.921,
+      "end": 755.12,
+      "text": "stop because the slow will be here so"
+    },
+    {
+      "start": 750.68,
+      "duration": 6.839,
+      "end": 757.519,
+      "text": "let's do it you basically say hey while"
+    },
+    {
+      "start": 755.12,
+      "duration": 5.56,
+      "end": 760.68,
+      "text": "I reach the last node which is fast of"
+    },
+    {
+      "start": 757.519,
+      "duration": 6.0,
+      "end": 763.519,
+      "text": "next is not null otherwise I'll keep"
+    },
+    {
+      "start": 760.68,
+      "duration": 5.36,
+      "end": 766.04,
+      "text": "moving I'll be like hey can you move"
+    },
+    {
+      "start": 763.519,
+      "duration": 5.161,
+      "end": 768.68,
+      "text": "slow equal to slow."
+    },
+    {
+      "start": 766.04,
+      "duration": 4.72,
+      "end": 770.76,
+      "text": "nextt and can you move fast equal to"
+    },
+    {
+      "start": 768.68,
+      "duration": 3.76,
+      "end": 772.4399999999999,
+      "text": "fast."
+    },
+    {
+      "start": 770.76,
+      "duration": 4.24,
+      "end": 775.0,
+      "text": "next"
+    },
+    {
+      "start": 772.44,
+      "duration": 4.92,
+      "end": 777.36,
+      "text": "perfect once you have done this what is"
+    },
+    {
+      "start": 775.0,
+      "duration": 5.48,
+      "end": 780.48,
+      "text": "your next job the next job is to make"
+    },
+    {
+      "start": 777.36,
+      "duration": 6.159,
+      "end": 783.519,
+      "text": "sure that you take this is D node that"
+    },
+    {
+      "start": 780.48,
+      "duration": 7.44,
+      "end": 787.9200000000001,
+      "text": "you have to delete so D node just store"
+    },
+    {
+      "start": 783.519,
+      "duration": 8.041,
+      "end": 791.5600000000001,
+      "text": "it somewhere again just for C++ slow off"
+    },
+    {
+      "start": 787.92,
+      "duration": 6.4,
+      "end": 794.3199999999999,
+      "text": "next once you've done this free"
+    },
+    {
+      "start": 791.56,
+      "duration": 5.56,
+      "end": 797.1199999999999,
+      "text": "it or rather don't free it because so"
+    },
+    {
+      "start": 794.32,
+      "duration": 4.519,
+      "end": 798.839,
+      "text": "after the step Do Not Free it why"
+    },
+    {
+      "start": 797.12,
+      "duration": 4.44,
+      "end": 801.5600000000001,
+      "text": "because if you try to free it what will"
+    },
+    {
+      "start": 798.839,
+      "duration": 4.841,
+      "end": 803.6800000000001,
+      "text": "happen is this link will go off and"
+    },
+    {
+      "start": 801.56,
+      "duration": 4.8,
+      "end": 806.3599999999999,
+      "text": "you'll not be able to get this one so do"
+    },
+    {
+      "start": 803.68,
+      "duration": 4.08,
+      "end": 807.76,
+      "text": "not free it now what you'll do is you'll"
+    },
+    {
+      "start": 806.36,
+      "duration": 5.36,
+      "end": 811.72,
+      "text": "say"
+    },
+    {
+      "start": 807.76,
+      "duration": 7.8,
+      "end": 815.56,
+      "text": "slow next equal to"
+    },
+    {
+      "start": 811.72,
+      "duration": 5.88,
+      "end": 817.6,
+      "text": "slow dot next and next so what this will"
+    },
+    {
+      "start": 815.56,
+      "duration": 5.8,
+      "end": 821.3599999999999,
+      "text": "do is this will not point it once you"
+    },
+    {
+      "start": 817.6,
+      "duration": 7.239,
+      "end": 824.839,
+      "text": "have done this you are free to free it"
+    },
+    {
+      "start": 821.36,
+      "duration": 5.56,
+      "end": 826.92,
+      "text": "free delation of node this one is freed"
+    },
+    {
+      "start": 824.839,
+      "duration": 4.041,
+      "end": 828.8800000000001,
+      "text": "and then you can straight away return"
+    },
+    {
+      "start": 826.92,
+      "duration": 4.0,
+      "end": 830.92,
+      "text": "the"
+    },
+    {
+      "start": 828.88,
+      "duration": 3.84,
+      "end": 832.72,
+      "text": "head so you'll be returning this"
+    },
+    {
+      "start": 830.92,
+      "duration": 5.76,
+      "end": 836.68,
+      "text": "particular head now this will work for"
+    },
+    {
+      "start": 832.72,
+      "duration": 5.96,
+      "end": 838.6800000000001,
+      "text": "all the cases apart from whenever n is 5"
+    },
+    {
+      "start": 836.68,
+      "duration": 5.04,
+      "end": 841.7199999999999,
+      "text": "imagine I give you ns5 let's try to do"
+    },
+    {
+      "start": 838.68,
+      "duration": 6.32,
+      "end": 845.0,
+      "text": "it it so if n is 5 let's see what"
+    },
+    {
+      "start": 841.72,
+      "duration": 8.359,
+      "end": 850.0790000000001,
+      "text": "happens if n is five I'll take the first"
+    },
+    {
+      "start": 845.0,
+      "duration": 9.079,
+      "end": 854.079,
+      "text": "pointer here one step two step three"
+    },
+    {
+      "start": 850.079,
+      "duration": 6.241,
+      "end": 856.3199999999999,
+      "text": "step four step five step so if it"
+    },
+    {
+      "start": 854.079,
+      "duration": 4.281,
+      "end": 858.3599999999999,
+      "text": "reaches null if it reaches null then"
+    },
+    {
+      "start": 856.32,
+      "duration": 5.6,
+      "end": 861.9200000000001,
+      "text": "you'll have to write something else so"
+    },
+    {
+      "start": 858.36,
+      "duration": 6.599,
+      "end": 864.9590000000001,
+      "text": "make sure you enter it over here if you"
+    },
+    {
+      "start": 861.92,
+      "duration": 5.719,
+      "end": 867.639,
+      "text": "reach null that means you've been asked"
+    },
+    {
+      "start": 864.959,
+      "duration": 4.0,
+      "end": 868.959,
+      "text": "to delete head so again repeat the same"
+    },
+    {
+      "start": 867.639,
+      "duration": 4.281,
+      "end": 871.92,
+      "text": "process that we have done in the root"
+    },
+    {
+      "start": 868.959,
+      "duration": 4.361,
+      "end": 873.3199999999999,
+      "text": "Force delete the head and return head."
+    },
+    {
+      "start": 871.92,
+      "duration": 3.52,
+      "end": 875.4399999999999,
+      "text": "next so if this is the condition what"
+    },
+    {
+      "start": 873.32,
+      "duration": 5.199,
+      "end": 878.519,
+      "text": "you'll do is return the new head which"
+    },
+    {
+      "start": 875.44,
+      "duration": 5.36,
+      "end": 880.8000000000001,
+      "text": "is head. next so it basically goes as"
+    },
+    {
+      "start": 878.519,
+      "duration": 4.721,
+      "end": 883.24,
+      "text": "return head."
+    },
+    {
+      "start": 880.8,
+      "duration": 4.479,
+      "end": 885.279,
+      "text": "next I'm not freeing the note you can"
+    },
+    {
+      "start": 883.24,
+      "duration": 4.44,
+      "end": 887.6800000000001,
+      "text": "free that yourself I assume you can do"
+    },
+    {
+      "start": 885.279,
+      "duration": 4.721,
+      "end": 890.0,
+      "text": "it now so please make sure you return"
+    },
+    {
+      "start": 887.68,
+      "duration": 4.519,
+      "end": 892.199,
+      "text": "head. next in case your FAS is reaching"
+    },
+    {
+      "start": 890.0,
+      "duration": 3.68,
+      "end": 893.68,
+      "text": "now this will be the edge case so let's"
+    },
+    {
+      "start": 892.199,
+      "duration": 2.88,
+      "end": 895.079,
+      "text": "quickly get back into the code editor"
+    },
+    {
+      "start": 893.68,
+      "duration": 3.719,
+      "end": 897.399,
+      "text": "what I've done is I've written the exact"
+    },
+    {
+      "start": 895.079,
+      "duration": 5.161,
+      "end": 900.2399999999999,
+      "text": "same code I'll hit the submit button and"
+    },
+    {
+      "start": 897.399,
+      "duration": 4.601,
+      "end": 902.0,
+      "text": "it will be submitted please make sure"
+    },
+    {
+      "start": 900.24,
+      "duration": 3.56,
+      "end": 903.8,
+      "text": "that you take the deletion like this"
+    },
+    {
+      "start": 902.0,
+      "duration": 4.16,
+      "end": 906.16,
+      "text": "delete node that you have to delete and"
+    },
+    {
+      "start": 903.8,
+      "duration": 4.88,
+      "end": 908.68,
+      "text": "delete it after the pointer step not"
+    },
+    {
+      "start": 906.16,
+      "duration": 4.4,
+      "end": 910.56,
+      "text": "before not before got it so let's get"
+    },
+    {
+      "start": 908.68,
+      "duration": 4.24,
+      "end": 912.92,
+      "text": "back to the iPad and discuss the time"
+    },
+    {
+      "start": 910.56,
+      "duration": 6.36,
+      "end": 916.92,
+      "text": "complexity what will be it can I say it"
+    },
+    {
+      "start": 912.92,
+      "duration": 6.2,
+      "end": 919.12,
+      "text": "is beo of length y we have two Loops one"
+    },
+    {
+      "start": 916.92,
+      "duration": 4.719,
+      "end": 921.639,
+      "text": "is the for the other one is the Y and"
+    },
+    {
+      "start": 919.12,
+      "duration": 5.92,
+      "end": 925.04,
+      "text": "both of them have the fast pointer which"
+    },
+    {
+      "start": 921.639,
+      "duration": 5.64,
+      "end": 927.279,
+      "text": "is moving if I have to analyze can I see"
+    },
+    {
+      "start": 925.04,
+      "duration": 5.0,
+      "end": 930.04,
+      "text": "that the fast pointer was here and then"
+    },
+    {
+      "start": 927.279,
+      "duration": 5.881,
+      "end": 933.16,
+      "text": "it moved till here here for the first"
+    },
+    {
+      "start": 930.04,
+      "duration": 6.0,
+      "end": 936.04,
+      "text": "fall Loop then it took some more steps"
+    },
+    {
+      "start": 933.16,
+      "duration": 5.679,
+      "end": 938.8389999999999,
+      "text": "and moved till the last So eventually if"
+    },
+    {
+      "start": 936.04,
+      "duration": 5.359,
+      "end": 941.399,
+      "text": "I can compute how much did the Fast"
+    },
+    {
+      "start": 938.839,
+      "duration": 4.92,
+      "end": 943.759,
+      "text": "Point move overall that will be my time"
+    },
+    {
+      "start": 941.399,
+      "duration": 5.201,
+      "end": 946.6,
+      "text": "complexity can I see it moved from here"
+    },
+    {
+      "start": 943.759,
+      "duration": 5.601,
+      "end": 949.36,
+      "text": "to here which is the length of the link"
+    },
+    {
+      "start": 946.6,
+      "duration": 5.0,
+      "end": 951.6,
+      "text": "list thereby the time complexity is beo"
+    },
+    {
+      "start": 949.36,
+      "duration": 4.599,
+      "end": 953.9590000000001,
+      "text": "of length what about the space"
+    },
+    {
+      "start": 951.6,
+      "duration": 4.56,
+      "end": 956.16,
+      "text": "complexity that is bego of one yes"
+    },
+    {
+      "start": 953.959,
+      "duration": 5.201,
+      "end": 959.16,
+      "text": "because we are not using any external"
+    },
+    {
+      "start": 956.16,
+      "duration": 4.72,
+      "end": 960.88,
+      "text": "space so if you're still watching"
+    },
+    {
+      "start": 959.16,
+      "duration": 3.359,
+      "end": 962.519,
+      "text": "I'm sure you have understood everything"
+    },
+    {
+      "start": 960.88,
+      "duration": 3.6,
+      "end": 964.48,
+      "text": "and if that is the case please do"
+    },
+    {
+      "start": 962.519,
+      "duration": 3.44,
+      "end": 965.9590000000001,
+      "text": "comment understood and please do"
+    },
+    {
+      "start": 964.48,
+      "duration": 3.0,
+      "end": 967.48,
+      "text": "consider giving us a like and if you're"
+    },
+    {
+      "start": 965.959,
+      "duration": 3.68,
+      "end": 969.6389999999999,
+      "text": "new to our Channel what are you waiting"
+    },
+    {
+      "start": 967.48,
+      "duration": 3.64,
+      "end": 971.12,
+      "text": "for hit that subscribe button right away"
+    },
+    {
+      "start": 969.639,
+      "duration": 2.921,
+      "end": 972.5600000000001,
+      "text": "and with this I'll be wrapping up this"
+    },
+    {
+      "start": 971.12,
+      "duration": 4.24,
+      "end": 975.36,
+      "text": "video Let's Wait in some other video"
+    },
+    {
+      "start": 972.56,
+      "duration": 4.079,
+      "end": 976.6389999999999,
+      "text": "till then bye-bye take care when your"
+    },
+    {
+      "start": 975.36,
+      "duration": 4.56,
+      "end": 979.92,
+      "text": "heart is"
+    },
+    {
+      "start": 976.639,
+      "duration": 7.721,
+      "end": 984.36,
+      "text": "broken don't forget your"
+    },
+    {
+      "start": 979.92,
+      "duration": 4.44,
+      "end": 984.36,
+      "text": "golden I will find light"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "video_id": "3dINsjyfooY",
+  "position": 159,
+  "title": "G-34. Dijkstra's Algorithm - Why PQ and not Q, Intuition, Time Complexity Derivation - Part 3",
+  "url": "https://www.youtube.com/watch?v=3dINsjyfooY",
+  "chunk_count": 8,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "3dINsjyfooY",
+      "position": 159,
+      "title": "G-34. Dijkstra's Algorithm - Why PQ and not Q, Intuition, Time Complexity Derivation - Part 3",
+      "url": "https://www.youtube.com/watch?v=3dINsjyfooY",
+      "start": 0.0,
+      "end": 127.02,
+      "text": "hey everyone welcome back to the channel I hope you guys are doing extremely well so in the previous couple of videos we have learned about a dijkstra's algorithm if you remember and we solved it using a priority queue and I'll set data structure and there were a bunch of questions uh revolving around your head why practicum because even if you take a q data structure it does work the time complexity I stated was e log v y e log v a proper derivation of that what is the intuition behind the extras algorithm that was another question that might would have come to your head so I'll discuss all of these three points in this particular video so coming across to the first question why a priority key or a set because even if you take a q data structure we do get the answer so let's take this particular graph and this will be the corresponding adjacency list so let's try this algorithm with with a queue data structure and a distance array okay so we're given the source zero so apart from zero everything we can initialize as Infinity right so source is put as 0 and we'll put 0 comma 0 in the queue data structure let's take 0 comma 0 out so 0 at a node 0 where can node 0 go node 0 can go to Node 1 and node two remember first Node 1 then node 2 first Node 1 then node two so if you try to go to Node 1 the distance taken will be 3 and the updated distance will be three so I can update this with three and I can say 3 comma node one right and if I try to go here I'll take a distance 1 and the distance will be one so this will be 1 I'll be like 1 comma 2 is what I'll put into the Q now remember it's not a priority queue it's a queue data structure so we get the next element",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "3dINsjyfooY",
+      "position": 159,
+      "title": "G-34. Dijkstra's Algorithm - Why PQ and not Q, Intuition, Time Complexity Derivation - Part 3",
+      "url": "https://www.youtube.com/watch?v=3dINsjyfooY",
+      "start": 120.96,
+      "end": 239.57999999999998,
+      "text": "structure so we get the next element with a distance of 3 and a node of one where can one go one can go to node 0 by taking a distance of 3 which will make it a distance of 6 not to be considered one can also go to node three and that will take a distance of 4 which makes it a total distance of seven Update 7 and put seven comma 3 in the queue so this is also done now let's take the next element the next element comes out to be one node equal to 2 now I can to go 2 can go to node 0 with another one which makes it a distance of 2 not to be considered two can also go to node 3 with a distance of 2 which makes it a total distance of three so node 3 is having a better version three so three comma 3 perfect next so the point of observation observation one whenever you add three now you came by One path which took you something like three plus four seven so seven comma 3 is there and you came by other path 1 plus 2 which is 3 so 3 is also there so there are two parts which are there now if you would have used priority queue you would have actually dealt with just three like this path instead of dealing with this part now since you're dealing with a queue you'll end up dealing with 7 comma 3. which is a bit of time consuming okay and now 3 can go to one which will take it four and makes it a total distance of 11 3 can go to 2 as well which will take it a distance of 2 which will make it nine both of them will not be considered and then it can go to four which will take a distance of 2 which will make it a distance of 9 so 9 comma 4 it can also go to 5 which will take",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "3dINsjyfooY",
+      "position": 159,
+      "title": "G-34. Dijkstra's Algorithm - Why PQ and not Q, Intuition, Time Complexity Derivation - Part 3",
+      "url": "https://www.youtube.com/watch?v=3dINsjyfooY",
+      "start": 235.14,
+      "end": 360.36,
+      "text": "4 it can also go to 5 which will take him a distance of one so the total distance will be 8 5 will be eight so eight comma 5. perfect so done next we'll just omit everything and next we'll come up with the next guy three comma three so again we have node three now zero will not be there 2 will not be there because these things are not possible like you you can't go back to there because the distance will be more but when I try to go to 4 this time it takes a 2 which makes it a better distance of five so four cuts a better distance of 5 comma 4 right and you can also go to 5 which will be plus 1 which makes it a distance of 4 so 5 can also be uh done with four uh four distance so this is done did you see something unnecessary occurrence did you see something I can reach 5 using four but there is still An Occurrence of 8 comma five I can reach uh four with five but then there is still An Occurrence of nine comma four why did that happen because you also considered this path you also consider this path then you came and considered this and this had you used a practical instead of this then this 7 comma 3 would not have been considered this 7 comma 3 would not have been considered and you'd have considered just three comma 3 at the first so afterwards when seven comma 3 would have arrived it would have not found shorter distances that's why using the minimal distance is preferred so that you don't encounter a lot of paths so you're just doing a Brute Force if you use Q data structure you're going on all parts all parts all parts and then figuring out the minimal and I'm like I'll go but I'll be like greedy I'll go to the minimal first minimal first minimal first so that I can mark all the minimal",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "3dINsjyfooY",
+      "position": 159,
+      "title": "G-34. Dijkstra's Algorithm - Why PQ and not Q, Intuition, Time Complexity Derivation - Part 3",
+      "url": "https://www.youtube.com/watch?v=3dINsjyfooY",
+      "start": 356.16,
+      "end": 483.84000000000003,
+      "text": "first so that I can mark all the minimal that I can reach then I'll go to the other guys that's why a minimal is important otherwise you end up exploring too many parts it will give you the answer I'm not saying that it won't it did give you over here but you're exploring too many parts unnecessary occurrence of these guys unnecessary exploration of Parts unnecessary iterations so I hope I was able to explain you why a queue is not preferred because it takes a lot more time complexity I hope the intuition is also clear now because of priority queue we always travel to the minimal guys first and we explore minimal minimal minimal and we ultimately have reached all minimals since we are doing a traversal thing we reach minimals always cool what's the next thing the time complexity why the time complexity is e log V where e is total number of edges very very important total number of edges and V is the number of notes why is that so is this the pseudo code of practicum it is this is how the pseudo code of the priority queue looks like so I'm saying while p q dot not empty so at Max I can say that this Loop will go through all the nodes which is V at Max like twice or Thrice it won't go like a lot of times because we're following the greedy strategy of going to every node every minimal node so I can say this while loop is going to run for the total number of nodes which is V so I can say this probably will run for V right so V into the entire thing V into this entire thing correct so we into what this is going to take a logarithmic of Heap size hip size is very important logarithmic of Heap size at the worst case this is number of edges this is number of edges of every node number of edges of every node let's take the densest like the",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "3dINsjyfooY",
+      "position": 159,
+      "title": "G-34. Dijkstra's Algorithm - Why PQ and not Q, Intuition, Time Complexity Derivation - Part 3",
+      "url": "https://www.youtube.com/watch?v=3dINsjyfooY",
+      "start": 477.12,
+      "end": 612.959,
+      "text": "node let's take the densest like the dense uh the most dense graph where if there are four notes for an example this is one node this is connected to everyone and this guy is also connected to the this this and this this guy is also connected to this this and this this guy is also connected to everyone so this is the most dense node where everyone is having n minus one notes every guy is connected to all other notes possible that is the most dense graph possible if you avoid self Loops I don't want self Loops I won't this guy connected to everyone I want this guy connected to everyone I want this guy connected to everyone got it I want this guy connected to everyone that is what you call as a dense graph so I've taken dense graph and I'm saying any any is what this will iterate at the worst case what can be any if I ask you if every guy is connected to all the notes how many notes can one have so can I say it'll be V minus 1 because if you see this guy is connected to 3. in four notes Vani himself other three so V minus one so I can say this will run for at Max B minus 1 and then there is an update a conditional check which is okay and then there is another push which will go for log of keep size understood perfect till now so if I write it properly can I write it something like this V in overall into pop vertex from Min Heap number of edges on each vertex into push into the priority queue isn't it this and then any into push correct so if I go across and try to write it generate this as V into pop log of Heap size plus any interlock of Heap size I can I'll go and can I see any is nothing like can I just take logarithmic of Heap size to be common I",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "3dINsjyfooY",
+      "position": 159,
+      "title": "G-34. Dijkstra's Algorithm - Why PQ and not Q, Intuition, Time Complexity Derivation - Part 3",
+      "url": "https://www.youtube.com/watch?v=3dINsjyfooY",
+      "start": 607.68,
+      "end": 747.959,
+      "text": "logarithmic of Heap size to be common I can if I take logarithmic of these types to be common I'll have any plus one yes perfect next I figured out what was any any was V minus E because at Max everyone can have V minus 1 adjacent notes at Max so can I replace this with something like V minus one so minus 1 and plus one will go so will it be like V into V into logarithmic of Heap size it will be which is nothing but V square into logarithmic of each size indeed now what is this keep size we need to figure this out what is this keep size so when we are taking a practicum when we are taking a something like a priority QPS whenever we are taking something like a party queue at the first step if this guy goes to this this this and finds everyone to be having a smaller distance it will indeed push P nodes it'll indeed push three notes this guy will end up pushing three notes then what do you do you take out this first cat and imagine this guy is also connected to three notes again this guy is also connected to three notes again this guy again finds better better better so hypothetical like it's a worst case scenario it again will push three notes correct then we'll get this guy this guy is again connected to three guys hypothetical again it will get smaller distances and it'll again push three so otherwise like again you'll get this again you'll get this which will again be connected to three guys until again push all of these three I guess three guys to three separate notes pushing it again and again so can you see three plus three plus three which is EQ Valiant two n Square notes because everyone like it has something like n minus 1 plus n minus 1 plus n minus 1 keeps on pushing every time every time can I say somewhere near",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "3dINsjyfooY",
+      "position": 159,
+      "title": "G-34. Dijkstra's Algorithm - Why PQ and not Q, Intuition, Time Complexity Derivation - Part 3",
+      "url": "https://www.youtube.com/watch?v=3dINsjyfooY",
+      "start": 742.26,
+      "end": 858.3000000000001,
+      "text": "every time can I say somewhere near about V Square notes is the worst keep size again very hypothetical scenario will not happen but I'm taking the extremist case so can I say the Heap sizes nothing but V Square I can at the worst is everyone is pushing everyone into the Heap size okay cool now what is logarithmic of V square root generated as 2 log V I can right now what is V square is my question that's the total number of notes so can I convert this into E I might again Ask how come on assemble if one guy is connected to three and everyone is connected to three that is like one guy is connected to n minus one notes or V minus one notes right and there are V nodes there are V nodes everyone is having V minus one edges how many in total they will have V Square edges which is the total number of edges correct if one guy is having V minus one there are V nodes V minus 1 into V is V Square which is the total number of nodes I can simply convert V square into e and be like e into two log V which can be written as e log V which is the time complexity first case worst case very hypothetical worst case scenario of dijkstra's algorithm so guys I hope I was able to explain you the time complexity of dextra's algorithm it did take me a lot of research because you can just scroll through YouTube you'll just find people saying e log B people will not derive or people will not explain you so I hope I was able to so just in case I was pleased it's an honest request hit that like button and if you're new to our Channel please please please do consider subscribing to us and if you haven't checked out our DP series and the SD sheet the links are in the description please make sure you check them out",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "3dINsjyfooY",
+      "position": 159,
+      "title": "G-34. Dijkstra's Algorithm - Why PQ and not Q, Intuition, Time Complexity Derivation - Part 3",
+      "url": "https://www.youtube.com/watch?v=3dINsjyfooY",
+      "start": 855.6,
+      "end": 869.54,
+      "text": "please make sure you check them out whatever this I'll be wrapping up this video let's read in some other video till then bye take care whenever your heart is broken don't ever forget you're golden I",
+      "word_count": 37
+    }
+  ]
+}

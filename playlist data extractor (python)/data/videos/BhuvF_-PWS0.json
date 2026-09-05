@@ -1,0 +1,680 @@
+{
+  "position": 90,
+  "video_id": "BhuvF_-PWS0",
+  "title": "L18. Check it two trees are Identical or Not | C++ | Java",
+  "url": "https://www.youtube.com/watch?v=BhuvF_-PWS0",
+  "transcript": [
+    {
+      "start": 0.0,
+      "duration": 2.48,
+      "end": 2.48,
+      "text": "Hey everyone, welcome back to the"
+    },
+    {
+      "start": 1.36,
+      "duration": 3.04,
+      "end": 4.4,
+      "text": "channel. I hope you guys are doing"
+    },
+    {
+      "start": 2.48,
+      "duration": 4.08,
+      "end": 6.5600000000000005,
+      "text": "extremely well. So today we will be"
+    },
+    {
+      "start": 4.4,
+      "duration": 4.08,
+      "end": 8.48,
+      "text": "solving the problem same tree or not"
+    },
+    {
+      "start": 6.56,
+      "duration": 3.44,
+      "end": 10.0,
+      "text": "from the free cut tree series. So"
+    },
+    {
+      "start": 8.48,
+      "duration": 3.84,
+      "end": 12.32,
+      "text": "basically you'll be given a couple of"
+    },
+    {
+      "start": 10.0,
+      "duration": 5.44,
+      "end": 15.440000000000001,
+      "text": "trees. That's the tree one and the tree"
+    },
+    {
+      "start": 12.32,
+      "duration": 6.48,
+      "end": 18.8,
+      "text": "two. So in this tree one like is this"
+    },
+    {
+      "start": 15.44,
+      "duration": 6.72,
+      "end": 22.16,
+      "text": "tree one identical to this tree two? If"
+    },
+    {
+      "start": 18.8,
+      "duration": 6.08,
+      "end": 24.880000000000003,
+      "text": "it is you return a true and if it is not"
+    },
+    {
+      "start": 22.16,
+      "duration": 6.16,
+      "end": 28.32,
+      "text": "you return a false. So over here we can"
+    },
+    {
+      "start": 24.88,
+      "duration": 5.92,
+      "end": 30.799999999999997,
+      "text": "see that the tree one is identical to"
+    },
+    {
+      "start": 28.32,
+      "duration": 6.399,
+      "end": 34.719,
+      "text": "the tree two. So what we can say is both"
+    },
+    {
+      "start": 30.8,
+      "duration": 6.96,
+      "end": 37.76,
+      "text": "are similar trees but just in case I"
+    },
+    {
+      "start": 34.719,
+      "duration": 6.081,
+      "end": 40.800000000000004,
+      "text": "erase this node and I ask you the same"
+    },
+    {
+      "start": 37.76,
+      "duration": 5.92,
+      "end": 43.68,
+      "text": "question are the tree one and tree two"
+    },
+    {
+      "start": 40.8,
+      "duration": 5.04,
+      "end": 45.839999999999996,
+      "text": "same it'll be like no they are not same"
+    },
+    {
+      "start": 43.68,
+      "duration": 4.32,
+      "end": 48.0,
+      "text": "they're not identical so this is the"
+    },
+    {
+      "start": 45.84,
+      "duration": 4.08,
+      "end": 49.92,
+      "text": "question you'll be given couple of trees"
+    },
+    {
+      "start": 48.0,
+      "duration": 3.6,
+      "end": 51.6,
+      "text": "and you need to return a true if they"
+    },
+    {
+      "start": 49.92,
+      "duration": 4.4,
+      "end": 54.32,
+      "text": "are identical or else you have to return"
+    },
+    {
+      "start": 51.6,
+      "duration": 5.76,
+      "end": 57.36,
+      "text": "a false so how do you solve such"
+    },
+    {
+      "start": 54.32,
+      "duration": 5.2,
+      "end": 59.52,
+      "text": "questions very very simple you know"
+    },
+    {
+      "start": 57.36,
+      "duration": 4.32,
+      "end": 61.68,
+      "text": "traversals right you can do any"
+    },
+    {
+      "start": 59.52,
+      "duration": 4.24,
+      "end": 63.760000000000005,
+      "text": "traversal that you like to. You can do a"
+    },
+    {
+      "start": 61.68,
+      "duration": 3.839,
+      "end": 65.519,
+      "text": "pre-order traversal, you can do a in"
+    },
+    {
+      "start": 63.76,
+      "duration": 4.16,
+      "end": 67.92,
+      "text": "order traversal, you can do a post-order"
+    },
+    {
+      "start": 65.519,
+      "duration": 5.201,
+      "end": 70.72,
+      "text": "traversal, you can do any traversal that"
+    },
+    {
+      "start": 67.92,
+      "duration": 5.44,
+      "end": 73.36,
+      "text": "you know. Okay? And every traversal like"
+    },
+    {
+      "start": 70.72,
+      "duration": 5.92,
+      "end": 76.64,
+      "text": "the traversals of both the trees should"
+    },
+    {
+      "start": 73.36,
+      "duration": 4.88,
+      "end": 78.24,
+      "text": "be equal. Make sense? Because if the"
+    },
+    {
+      "start": 76.64,
+      "duration": 4.08,
+      "end": 80.72,
+      "text": "trees are same like if the trees are"
+    },
+    {
+      "start": 78.24,
+      "duration": 4.4,
+      "end": 82.64,
+      "text": "identical, the traversal has to be same."
+    },
+    {
+      "start": 80.72,
+      "duration": 3.439,
+      "end": 84.15899999999999,
+      "text": "Assume I do the pre-order traversal. So"
+    },
+    {
+      "start": 82.64,
+      "duration": 5.119,
+      "end": 87.759,
+      "text": "what's the pre-order traversal? If you"
+    },
+    {
+      "start": 84.159,
+      "duration": 5.681,
+      "end": 89.84,
+      "text": "remember that's uh root"
+    },
+    {
+      "start": 87.759,
+      "duration": 5.841,
+      "end": 93.6,
+      "text": "left"
+    },
+    {
+      "start": 89.84,
+      "duration": 6.0,
+      "end": 95.84,
+      "text": "and right. So root left right is what"
+    },
+    {
+      "start": 93.6,
+      "duration": 4.479,
+      "end": 98.079,
+      "text": "the pre-order traversal is. So what I'll"
+    },
+    {
+      "start": 95.84,
+      "duration": 3.599,
+      "end": 99.43900000000001,
+      "text": "do is I'll I'll be at the root of the"
+    },
+    {
+      "start": 98.079,
+      "duration": 4.321,
+      "end": 102.39999999999999,
+      "text": "tree. Yes, I'll be at the root of the"
+    },
+    {
+      "start": 99.439,
+      "duration": 5.121,
+      "end": 104.55999999999999,
+      "text": "tree of both the trees. And we're going"
+    },
+    {
+      "start": 102.4,
+      "duration": 4.48,
+      "end": 106.88000000000001,
+      "text": "to do the pre-order traversal. Simple."
+    },
+    {
+      "start": 104.56,
+      "duration": 4.72,
+      "end": 109.28,
+      "text": "And the first time we have a root, we"
+    },
+    {
+      "start": 106.88,
+      "duration": 4.239,
+      "end": 111.119,
+      "text": "compare. So they're same. So we will go"
+    },
+    {
+      "start": 109.28,
+      "duration": 4.0,
+      "end": 113.28,
+      "text": "across to the left. I'll go across to"
+    },
+    {
+      "start": 111.119,
+      "duration": 4.081,
+      "end": 115.2,
+      "text": "the left. The moment you go across to"
+    },
+    {
+      "start": 113.28,
+      "duration": 4.479,
+      "end": 117.759,
+      "text": "the left again it's a root left right so"
+    },
+    {
+      "start": 115.2,
+      "duration": 4.239,
+      "end": 119.43900000000001,
+      "text": "root root gets compared go to the left"
+    },
+    {
+      "start": 117.759,
+      "duration": 4.64,
+      "end": 122.399,
+      "text": "null go to the right null again"
+    },
+    {
+      "start": 119.439,
+      "duration": 5.761,
+      "end": 125.19999999999999,
+      "text": "similarly left and right come back go to"
+    },
+    {
+      "start": 122.399,
+      "duration": 6.321,
+      "end": 128.72,
+      "text": "the right go to the right similar time"
+    },
+    {
+      "start": 125.2,
+      "duration": 6.72,
+      "end": 131.92000000000002,
+      "text": "simultaneously have to move 3 same go to"
+    },
+    {
+      "start": 128.72,
+      "duration": 7.28,
+      "end": 136.0,
+      "text": "the left go to the left simultaneously 4"
+    },
+    {
+      "start": 131.92,
+      "duration": 6.24,
+      "end": 138.16,
+      "text": "same come back come back simultaneously"
+    },
+    {
+      "start": 136.0,
+      "duration": 5.76,
+      "end": 141.76,
+      "text": "go to the right go to the right"
+    },
+    {
+      "start": 138.16,
+      "duration": 6.799,
+      "end": 144.959,
+      "text": "simultaneously again 55 same come back"
+    },
+    {
+      "start": 141.76,
+      "duration": 5.92,
+      "end": 147.67999999999998,
+      "text": "Come back, come back. So if you're going"
+    },
+    {
+      "start": 144.959,
+      "duration": 4.561,
+      "end": 149.52,
+      "text": "to do a simple pre-order traversal, it"
+    },
+    {
+      "start": 147.68,
+      "duration": 4.32,
+      "end": 152.0,
+      "text": "could have been any traversal, right?"
+    },
+    {
+      "start": 149.52,
+      "duration": 4.719,
+      "end": 154.239,
+      "text": "The traversal is going to visit nodes at"
+    },
+    {
+      "start": 152.0,
+      "duration": 5.2,
+      "end": 157.2,
+      "text": "the same time. Like if this is tree 1,"
+    },
+    {
+      "start": 154.239,
+      "duration": 5.601,
+      "end": 159.84,
+      "text": "tree two, the nodes will be visited at"
+    },
+    {
+      "start": 157.2,
+      "duration": 6.399,
+      "end": 163.599,
+      "text": "the same instance. Hence you can say"
+    },
+    {
+      "start": 159.84,
+      "duration": 5.6,
+      "end": 165.44,
+      "text": "that the tree is same. So as usual, you"
+    },
+    {
+      "start": 163.599,
+      "duration": 3.601,
+      "end": 167.2,
+      "text": "have the C++ code on the left and the"
+    },
+    {
+      "start": 165.44,
+      "duration": 3.519,
+      "end": 168.959,
+      "text": "Java code on the right. So you're given"
+    },
+    {
+      "start": 167.2,
+      "duration": 4.08,
+      "end": 171.28,
+      "text": "a couple of trees. Uh the root of the"
+    },
+    {
+      "start": 168.959,
+      "duration": 5.121,
+      "end": 174.08,
+      "text": "initial like the first tree is P. The"
+    },
+    {
+      "start": 171.28,
+      "duration": 5.12,
+      "end": 176.4,
+      "text": "root of the second tree is Q. So we're"
+    },
+    {
+      "start": 174.08,
+      "duration": 3.6,
+      "end": 177.68,
+      "text": "going to do a simple traversal. First"
+    },
+    {
+      "start": 176.4,
+      "duration": 3.919,
+      "end": 180.31900000000002,
+      "text": "we're going to take uh we're going to"
+    },
+    {
+      "start": 177.68,
+      "duration": 4.479,
+      "end": 182.15900000000002,
+      "text": "check for the values of P and Q. And"
+    },
+    {
+      "start": 180.319,
+      "duration": 3.84,
+      "end": 184.159,
+      "text": "once that is done, we'll move to the"
+    },
+    {
+      "start": 182.159,
+      "duration": 3.44,
+      "end": 185.599,
+      "text": "left like both the guys to the left and"
+    },
+    {
+      "start": 184.159,
+      "duration": 3.681,
+      "end": 187.84,
+      "text": "right after that both the guys to the"
+    },
+    {
+      "start": 185.599,
+      "duration": 5.041,
+      "end": 190.64,
+      "text": "right. And if all the all the guys are"
+    },
+    {
+      "start": 187.84,
+      "duration": 4.72,
+      "end": 192.56,
+      "text": "returning true, then it's okay. Or else"
+    },
+    {
+      "start": 190.64,
+      "duration": 4.239,
+      "end": 194.879,
+      "text": "we are going to stop. And this case is"
+    },
+    {
+      "start": 192.56,
+      "duration": 4.319,
+      "end": 196.879,
+      "text": "going to be very simple. if either of"
+    },
+    {
+      "start": 194.879,
+      "duration": 3.28,
+      "end": 198.159,
+      "text": "them are null or both of them are null."
+    },
+    {
+      "start": 196.879,
+      "duration": 3.201,
+      "end": 200.07999999999998,
+      "text": "We're going to check if both of them are"
+    },
+    {
+      "start": 198.159,
+      "duration": 3.921,
+      "end": 202.07999999999998,
+      "text": "null or like in that case we're going to"
+    },
+    {
+      "start": 200.08,
+      "duration": 4.239,
+      "end": 204.31900000000002,
+      "text": "return a true or false. Very simple"
+    },
+    {
+      "start": 202.08,
+      "duration": 4.159,
+      "end": 206.239,
+      "text": "self-explanatory function like there's"
+    },
+    {
+      "start": 204.319,
+      "duration": 5.681,
+      "end": 210.0,
+      "text": "no need to explain this. So the time"
+    },
+    {
+      "start": 206.239,
+      "duration": 6.72,
+      "end": 212.959,
+      "text": "complexity is B go of N. The space"
+    },
+    {
+      "start": 210.0,
+      "duration": 4.879,
+      "end": 214.879,
+      "text": "complexity is B go of N. I hope you"
+    },
+    {
+      "start": 212.959,
+      "duration": 3.36,
+      "end": 216.31900000000002,
+      "text": "understand this right. It's a boolean"
+    },
+    {
+      "start": 214.879,
+      "duration": 2.881,
+      "end": 217.76,
+      "text": "function. You just need to know"
+    },
+    {
+      "start": 216.319,
+      "duration": 3.121,
+      "end": 219.44,
+      "text": "recussion and I think you should be able"
+    },
+    {
+      "start": 217.76,
+      "duration": 3.44,
+      "end": 221.2,
+      "text": "to do this. Again I'm repeating you can"
+    },
+    {
+      "start": 219.44,
+      "duration": 4.079,
+      "end": 223.519,
+      "text": "do this with the level order traversal"
+    },
+    {
+      "start": 221.2,
+      "duration": 4.08,
+      "end": 225.28,
+      "text": "with any traversal you wish and in"
+    },
+    {
+      "start": 223.519,
+      "duration": 2.881,
+      "end": 226.4,
+      "text": "interviews you can tell any of them. So"
+    },
+    {
+      "start": 225.28,
+      "duration": 2.959,
+      "end": 228.239,
+      "text": "I hope you have understood the entire"
+    },
+    {
+      "start": 226.4,
+      "duration": 3.6,
+      "end": 230.0,
+      "text": "explanation as well as the code just in"
+    },
+    {
+      "start": 228.239,
+      "duration": 3.36,
+      "end": 231.59900000000002,
+      "text": "case you did please please please make"
+    },
+    {
+      "start": 230.0,
+      "duration": 3.92,
+      "end": 233.92,
+      "text": "sure you like this video because it took"
+    },
+    {
+      "start": 231.599,
+      "duration": 4.321,
+      "end": 235.92,
+      "text": "a lot of efforts to make this entire"
+    },
+    {
+      "start": 233.92,
+      "duration": 3.679,
+      "end": 237.599,
+      "text": "tree series. Also if you wish you can"
+    },
+    {
+      "start": 235.92,
+      "duration": 3.92,
+      "end": 239.83999999999997,
+      "text": "definitely drop in a comment that will"
+    },
+    {
+      "start": 237.599,
+      "duration": 4.0,
+      "end": 241.599,
+      "text": "keep motivating me to make such further"
+    },
+    {
+      "start": 239.84,
+      "duration": 3.119,
+      "end": 242.959,
+      "text": "series. Also if you're new to this"
+    },
+    {
+      "start": 241.599,
+      "duration": 2.961,
+      "end": 244.56,
+      "text": "channel please do consider subscribing"
+    },
+    {
+      "start": 242.959,
+      "duration": 3.681,
+      "end": 246.64000000000001,
+      "text": "because I'm going to bring in such more"
+    },
+    {
+      "start": 244.56,
+      "duration": 3.52,
+      "end": 248.08,
+      "text": "series in the upcoming future as well."
+    },
+    {
+      "start": 246.64,
+      "duration": 2.72,
+      "end": 249.35999999999999,
+      "text": "With this uh let's wrap up this video."
+    },
+    {
+      "start": 248.08,
+      "duration": 2.799,
+      "end": 250.87900000000002,
+      "text": "Let's meet in the next lecture. Bye-bye."
+    },
+    {
+      "start": 249.36,
+      "duration": 3.439,
+      "end": 252.799,
+      "text": "Take care. Whenever your heart [music]"
+    },
+    {
+      "start": 250.879,
+      "duration": 6.593,
+      "end": 257.472,
+      "text": "is broken,"
+    },
+    {
+      "start": 252.799,
+      "duration": 4.673,
+      "end": 257.472,
+      "text": "don't ever forget you're golden. [music]"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "video_id": "QbwltemZbRg",
+  "position": 289,
+  "title": "L6. Job Sequencing Problem | Greedy Algorithm Playlist",
+  "url": "https://www.youtube.com/watch?v=QbwltemZbRg",
+  "chunk_count": 8,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "QbwltemZbRg",
+      "position": 289,
+      "title": "L6. Job Sequencing Problem | Greedy Algorithm Playlist",
+      "url": "https://www.youtube.com/watch?v=QbwltemZbRg",
+      "start": 3.48,
+      "end": 139.68,
+      "text": "so let's continue with the greedy algorithms playlist before starting off he welcome back to the channel I hope you guys are doing extremely well so the problem that we will be solving today is job sequencing problem what is the problem stating the stating that you will be given n number of jobs every job will have its job ID it's deadline it's profit so job ID is basically the ID to recognize which job it is what is deadline deadline basically means if the job id1 has a deadline of four it can be performed on day one day two day three or day four not Beyond day four not beyond the deadline and a single job and a single job requires a single day not more than it not less than less than it got it now every job has a profit associated with it now your task is to make sure that you maximize The Profit yes you maximize The Profit by performing jobs you can perform any number of jobs the only thing you have to keep in mind is it should be performed under a deadline and on a single day on a single day you can only perform one job not more than one jobs for an example there can be multiple scenarios with this given ex example I say that okay on day one I will be performing the job id1 if I perform this I'll gain a profit of 40 I'll gain a profit of 40 but on day two can I perform any other jobs because this is done I cannot perform job id2 because the deadline was one and that's gone the deadline was one and that's gone the deadline was one that's gone so if I decide that the job ID one will be performed on day one I'll be having a total profit of 40 now the question is to maximize The Profit the question is to maximize The Profit so what I will be doing is I'll be like okay what if I",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "QbwltemZbRg",
+      "position": 289,
+      "title": "L6. Job Sequencing Problem | Greedy Algorithm Playlist",
+      "url": "https://www.youtube.com/watch?v=QbwltemZbRg",
+      "start": 131.68,
+      "end": 267.639,
+      "text": "doing is I'll be like okay what if I perform the id1 on day2 if I perform the id1 on D2 I'll have a profit of 40 right and on day one what I can do is I can decide that I'll be performing the ID3 because it is giving me a profit of 40 again so the overall profit will be 80 you can try out all other combinations 80 is the maximum profit that you will get so you did notice that the deadline was one for three of these jobs and what I did was I greedily performed the job with the maximum profit I was greedy because I want to maximize so you're getting a VI you're getting a VI right of the thought process is uh now first thing you did see was avoid performing the jobs on earlier days like for the job id1 the deadline was four and if you performed it on D1 you're blocking anyone else so it's better to delay the job delay the job to the end days why because the initial days will be empty the initial days will be empty and you can perform other jobs you can perform other jobs whose deadline is much closer right so delay the job to the end days what is the next thing you did you want to gain maximum profit so it's better to perform the maximum uh profit job it's better to perform the maximum profit job so if I keep these two uh things in mind probably I'll have an algorithm right so let's come to this example and try to explore how can I have an algorithm I'm looking to maximize profit so what I've done is if I've been given n number of jobs I have sorted them according to the profit in the descending order the highest profit is at the first and the lowest profit is at the last I sorted it according to the profit because I'm looking to maximize profit so I'll try",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "QbwltemZbRg",
+      "position": 289,
+      "title": "L6. Job Sequencing Problem | Greedy Algorithm Playlist",
+      "url": "https://www.youtube.com/watch?v=QbwltemZbRg",
+      "start": 263.56,
+      "end": 386.96000000000004,
+      "text": "looking to maximize profit so I'll try to do the jobs which gives him more and more at the first okay now tell me uh like till how many days can you perform jobs this has a deadline of two 6 6 5 4 2 42 so the max like the last day that you can perform a job will be a day six not a day seven because any job like if you take all the job IDs the maximum deadline you can see six so you cannot perform Beyond six Beyond day number six perfect so what I know is I have six days so what you can do is you can create uh seven seven size array so that you get the sixth index 0 1 2 3 4 five and a six so what I've done is I've created an array can call it as an hash array whatever you wish to Let's initialize minus one so what is minus one minus one is basically stating that all of these days as of now are empty all of these as all of these days as of now is empty perfect so maybe you can have a count of profit as well and you can have a simple count as well initially zero initially zero perfect let's start with the first one first one is saying I have a deadline of two so what I will be doing is I'll be trying to perform on the end days so I'll see okay this is the deadline date which is two can I perform it on day2 I'll try to perform it at the last he says yes I don't have a job so I can perform the job id6 over here done I can perform it so done and dusted if I perform this I'll get a net profit of 80 so maybe you can add that 80 to your answer so I'll add 80 to my answer and I'll say I performed one job let's go to the next one next one is",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "QbwltemZbRg",
+      "position": 289,
+      "title": "L6. Job Sequencing Problem | Greedy Algorithm Playlist",
+      "url": "https://www.youtube.com/watch?v=QbwltemZbRg",
+      "start": 382.639,
+      "end": 501.40000000000003,
+      "text": "let's go to the next one next one is saying my deadline is six so I'll go to the deadline six and I can perform I'll say Okay ID number three performed gives me a profit of 70 which makes a total profit of 150 and the count to be two perfect I'll go to the next one and the deadline is six again now this is where you have to understand the deadline is six so when you head over to six you see that the day is already done they try to take the other day is day five possible because I can still perform it on day five says yes it is so take the job id4 and I'll for it on day five gives me a profit of 65 so if you add it up if a math is correct it's 215 yeah uh count is three done what is the next one job ID two day five is the deadline can you do it no can you do do it on day four yes I'll be doing it on day four the job ID do which gives me a profit of 60 that makes it 275 if I'm doing addition mistakes please forgive me okay done and dusted which is the next one you see a job id5 can it be done on Deadline 4 no it's already taken so I'll do it on Deadline three done jav ID 5 add a 25 so the profit is 300 now the count is five interesting let's go to the next one the deadline is two is it free deadline 2 is not free so look at day one okay so day one is possible I'll take the day one and perform the job ID 8 adds up at 22 so that's going to be 322 you can add it up and the count will be six let's go to the next one the deadline here is four which is interesting the deadline here is four so you look at four taken you look at three",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "QbwltemZbRg",
+      "position": 289,
+      "title": "L6. Job Sequencing Problem | Greedy Algorithm Playlist",
+      "url": "https://www.youtube.com/watch?v=QbwltemZbRg",
+      "start": 497.8,
+      "end": 618.6800000000001,
+      "text": "you look at four taken you look at three taken you look at two taken you look at one taken you look at zero not taken so you perform it on d z so you perform the job id1 on d z which is 20 that's make that makes it 3:42 and seven jobs performed let's go to the next one the deadline is two so you go to day two no day one no day Zero no you cannot perform this job you cannot perform the last job because there are no days left and eventually you have the total count of profit you also have the total count of jobs that you can perform and this is what you'll be returning super simple I did it greedily I said okay who's giving me the maximum let's do it and let's do it at the end why did I do it at the end simple example if I do it at the end the initial days will be empty the initial days will be empty and I can perform other jobs in it understood perfect what's the next thing yes write the algorithm so write the algorithm you'll be given a job s this jobs can be a struct can be a class can be a pojo can be anything and the job class truck Bojo whatever we'll be containing an ID we'll be containing a profit we'll be containing a deadline and depending on language you can initialize it this is given to you so you need to sort it that's the first job you'll do my pad I'll be sorting the jobs and I'll be sorting the array according to a comparator in case you don't know how to write a comparator please please pleas go back and watch my STL video over there I explained how to write a comp super simple what you basically do is you write a bullion that's what the comparator returns and you always take two variables because comparison means between two and the type will be",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "QbwltemZbRg",
+      "position": 289,
+      "title": "L6. Job Sequencing Problem | Greedy Algorithm Playlist",
+      "url": "https://www.youtube.com/watch?v=QbwltemZbRg",
+      "start": 614.6,
+      "end": 750.959,
+      "text": "type will be jobs because that is what is the type jobs you can say value one and you can say jobs value two and you're basically trying to compare you're trying to sort it according to the largest profit so you're saying okay if value 1. profit is greater than value 2. profit which means it is in the correct so you can just return a true this will technically mean so what this means is in the array the value one is ahead of value two shall I keep it in the same order shall I keep it in the C model and you say if value one's profit is greater than value two's profit keep it in the C model but if you return a false it will just change the order that's how the comparator works on a very very generic term okay I sorted it what is my next job I need to count the total profit so maybe I can keep a tot profit equal to Z I can keep a counter equal to zero now I know I need one thing so that I can create the hash array the maximum deadline right so what I can do is maybe I can quickly iterate through I can keep a Max deadline as well Max deadline and we can probably keep it as minus one correct and we can just scan through from 0 to n minus one in the comp in the jobs areay and I can say hey Max deadline whatever it is equal to Max of Max deadline comma array of I deadline perfect so this will be storing the max deadline once this is done what you can do is you can define a hash of Max deadline plus one and you can initialize that with minus one you can write a follow Loop to initialize that with minus one perfect now what I start itating okay so I'll start iterating right from the first job which is at zero and I'll go to the last job which",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "QbwltemZbRg",
+      "position": 289,
+      "title": "L6. Job Sequencing Problem | Greedy Algorithm Playlist",
+      "url": "https://www.youtube.com/watch?v=QbwltemZbRg",
+      "start": 746.56,
+      "end": 873.92,
+      "text": "zero and I'll go to the last job which is at n minus one index for the first job I need to see can I perform this job or not can I perform this job or not how do I see it it's super simple I know the deadline so I'll start with the deadline I can say array of I okay if your deadline is sixth day let's check out the sixth day and I can check out till the zero day whichever day is empty whichever day is empty which means hash of that day hash of J is equal to equal to minus1 that means that day is empty I can perform the job so I can do count equal to count + 1 at the same time I can say hash of I can you store the job ID which is array of sorry array of J do ID a bad array of I of ID because that is a job number what apart from it I need the total profit so I can maybe see total profit is equal to plus equal to array of I do profit so that will be counting it perfect I can do a break because I don't need to find out other these simple the followup is done this followup is also done and eventually you can return the total profit because they wanted a pair so you can say return count comma to Pro and the function ends and the function ends super simple so this function will typically be returning a pair which is count of the total jobs and the total profit time to analyze the time complexity sorting is going to take n logarithmic of n this is going to take a p of n now this is where the problem lies this at the worst possible scenario can go up to be imagine all the deadline days being filled up it will end up going the entire stuff so this is Max deadline so the overall complexity will",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "QbwltemZbRg",
+      "position": 289,
+      "title": "L6. Job Sequencing Problem | Greedy Algorithm Playlist",
+      "url": "https://www.youtube.com/watch?v=QbwltemZbRg",
+      "start": 865.56,
+      "end": 968.88,
+      "text": "deadline so the overall complexity will be n login plus n into max dead n and what about the space complexity the space complexity will be a bigo of Max deadline why B of Max deadline because that is the hash array that you are creating correct now in an interview this is what they expect you because they expect you to tell them this one but in case the interview is slightly into competive programming he'll ask you to optimize this inner loop PS he'll ask you to optimize this in a loop and this can be done with disjoint set Union if you apply this this one because you're looping to figure out you're looping to figure out okay which is the first day that is empty you're looping to figure out that can be replaced with DSU in bco or one without looping you can straight away get it so you can head over and watch my graphs playlist I've taught the DSU concept over there understand the DSU concept and maybe you can try replacing this internal for loop with that DSU concept you can try that on your own but it will not be required in interview so I'll not be teaching it over here so yeah that will be it for this one so I hope youve understood everything and if you've understood everything please please do consider giving us a like and if you're new to our channel do consider subscribing to us as well with this I'll be wrapping up this video Let's wa in some other video till then byebye take care whenever your heart is broken don't ever forget your golden I will find the light",
+      "word_count": 286
+    }
+  ]
+}

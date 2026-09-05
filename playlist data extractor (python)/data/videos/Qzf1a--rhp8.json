@@ -1,0 +1,3206 @@
+{
+  "position": 131,
+  "video_id": "Qzf1a--rhp8",
+  "title": "G-6. Depth-First Search (DFS) | C++ and Java | Traversal Technique in Graphs",
+  "url": "https://www.youtube.com/watch?v=Qzf1a--rhp8",
+  "transcript": [
+    {
+      "start": 3.199,
+      "duration": 3.12,
+      "end": 6.319,
+      "text": "so in this video we are going to learn"
+    },
+    {
+      "start": 4.56,
+      "duration": 4.48,
+      "end": 9.04,
+      "text": "about the second traversal technique"
+    },
+    {
+      "start": 6.319,
+      "duration": 4.481,
+      "end": 10.8,
+      "text": "that is the dfs traversal in a graph now"
+    },
+    {
+      "start": 9.04,
+      "duration": 4.479,
+      "end": 13.518999999999998,
+      "text": "in the previous video you did learn"
+    },
+    {
+      "start": 10.8,
+      "duration": 5.52,
+      "end": 16.32,
+      "text": "about something which was bfs"
+    },
+    {
+      "start": 13.519,
+      "duration": 6.001,
+      "end": 19.52,
+      "text": "breadth first search which was based on"
+    },
+    {
+      "start": 16.32,
+      "duration": 4.24,
+      "end": 20.560000000000002,
+      "text": "level now we will be learning as dfs"
+    },
+    {
+      "start": 19.52,
+      "duration": 2.0,
+      "end": 21.52,
+      "text": "which is"
+    },
+    {
+      "start": 20.56,
+      "duration": 2.08,
+      "end": 22.64,
+      "text": "depth"
+    },
+    {
+      "start": 21.52,
+      "duration": 4.56,
+      "end": 26.08,
+      "text": "first"
+    },
+    {
+      "start": 22.64,
+      "duration": 5.44,
+      "end": 28.080000000000002,
+      "text": "search now this will be based on depth"
+    },
+    {
+      "start": 26.08,
+      "duration": 2.8,
+      "end": 28.88,
+      "text": "depth depth yes"
+    },
+    {
+      "start": 28.08,
+      "duration": 2.959,
+      "end": 31.038999999999998,
+      "text": "so"
+    },
+    {
+      "start": 28.88,
+      "duration": 5.44,
+      "end": 34.32,
+      "text": "why did i emphasize so much on depth"
+    },
+    {
+      "start": 31.039,
+      "duration": 5.2,
+      "end": 36.239000000000004,
+      "text": "you'll understand again similarly"
+    },
+    {
+      "start": 34.32,
+      "duration": 4.0,
+      "end": 38.32,
+      "text": "you'll be given a graph"
+    },
+    {
+      "start": 36.239,
+      "duration": 3.921,
+      "end": 40.16,
+      "text": "and you'll be given a starting node"
+    },
+    {
+      "start": 38.32,
+      "duration": 4.96,
+      "end": 43.28,
+      "text": "assume the starting node to be one over"
+    },
+    {
+      "start": 40.16,
+      "duration": 6.079,
+      "end": 46.239,
+      "text": "here okay the starting node is one"
+    },
+    {
+      "start": 43.28,
+      "duration": 5.439,
+      "end": 48.719,
+      "text": "this is one okay now"
+    },
+    {
+      "start": 46.239,
+      "duration": 5.761,
+      "end": 52.0,
+      "text": "you go to any one of the neighboring"
+    },
+    {
+      "start": 48.719,
+      "duration": 7.281,
+      "end": 56.0,
+      "text": "notes two three four any one you can go"
+    },
+    {
+      "start": 52.0,
+      "duration": 6.239,
+      "end": 58.239,
+      "text": "so for example i decide i will go from"
+    },
+    {
+      "start": 56.0,
+      "duration": 4.559,
+      "end": 60.559,
+      "text": "one to the left neighboring node which"
+    },
+    {
+      "start": 58.239,
+      "duration": 4.96,
+      "end": 63.199,
+      "text": "is two so if you go to two"
+    },
+    {
+      "start": 60.559,
+      "duration": 4.88,
+      "end": 65.439,
+      "text": "you don't stop there very important you"
+    },
+    {
+      "start": 63.199,
+      "duration": 4.001,
+      "end": 67.2,
+      "text": "start it from here you go here"
+    },
+    {
+      "start": 65.439,
+      "duration": 4.401,
+      "end": 69.83999999999999,
+      "text": "and then you don't stop stop you go"
+    },
+    {
+      "start": 67.2,
+      "duration": 4.72,
+      "end": 71.92,
+      "text": "depth depth so you go to depth which is"
+    },
+    {
+      "start": 69.84,
+      "duration": 4.16,
+      "end": 74.0,
+      "text": "five again you can either go to here or"
+    },
+    {
+      "start": 71.92,
+      "duration": 4.559,
+      "end": 76.479,
+      "text": "here that is your choice but generically"
+    },
+    {
+      "start": 74.0,
+      "duration": 4.72,
+      "end": 78.72,
+      "text": "we go to the guy who is"
+    },
+    {
+      "start": 76.479,
+      "duration": 4.32,
+      "end": 80.799,
+      "text": "right uh at the first of the adjacency"
+    },
+    {
+      "start": 78.72,
+      "duration": 5.039,
+      "end": 83.759,
+      "text": "list or from left to right so five will"
+    },
+    {
+      "start": 80.799,
+      "duration": 6.721,
+      "end": 87.52000000000001,
+      "text": "be there so you basically go like this"
+    },
+    {
+      "start": 83.759,
+      "duration": 6.081,
+      "end": 89.84,
+      "text": "so it's like one two five done now"
+    },
+    {
+      "start": 87.52,
+      "duration": 5.04,
+      "end": 92.56,
+      "text": "you've gone like one two five there is"
+    },
+    {
+      "start": 89.84,
+      "duration": 6.08,
+      "end": 95.92,
+      "text": "no further depth in it so what you do is"
+    },
+    {
+      "start": 92.56,
+      "duration": 6.08,
+      "end": 98.64,
+      "text": "you come back and now you go to here"
+    },
+    {
+      "start": 95.92,
+      "duration": 4.48,
+      "end": 100.4,
+      "text": "which is the six which is the six so you"
+    },
+    {
+      "start": 98.64,
+      "duration": 4.56,
+      "end": 103.2,
+      "text": "go to six"
+    },
+    {
+      "start": 100.4,
+      "duration": 3.759,
+      "end": 104.159,
+      "text": "right now you went like one"
+    },
+    {
+      "start": 103.2,
+      "duration": 3.84,
+      "end": 107.04,
+      "text": "two"
+    },
+    {
+      "start": 104.159,
+      "duration": 5.121,
+      "end": 109.28,
+      "text": "five you came back you went to six"
+    },
+    {
+      "start": 107.04,
+      "duration": 4.96,
+      "end": 112.0,
+      "text": "now there is no depth of six so you come"
+    },
+    {
+      "start": 109.28,
+      "duration": 5.6,
+      "end": 114.88,
+      "text": "back now there is no further"
+    },
+    {
+      "start": 112.0,
+      "duration": 6.0,
+      "end": 118.0,
+      "text": "children of two so you go back now once"
+    },
+    {
+      "start": 114.88,
+      "duration": 5.519,
+      "end": 120.399,
+      "text": "this portion depth is completed right"
+    },
+    {
+      "start": 118.0,
+      "duration": 5.52,
+      "end": 123.52,
+      "text": "starts going to the next portion which"
+    },
+    {
+      "start": 120.399,
+      "duration": 5.76,
+      "end": 126.159,
+      "text": "is three so you go to three"
+    },
+    {
+      "start": 123.52,
+      "duration": 5.04,
+      "end": 128.56,
+      "text": "done now when you've gone to three now"
+    },
+    {
+      "start": 126.159,
+      "duration": 4.24,
+      "end": 130.399,
+      "text": "again either you can go this way"
+    },
+    {
+      "start": 128.56,
+      "duration": 4.64,
+      "end": 133.2,
+      "text": "or you can go this way that is your"
+    },
+    {
+      "start": 130.399,
+      "duration": 4.801,
+      "end": 135.2,
+      "text": "choice so i decide i'll go this way so"
+    },
+    {
+      "start": 133.2,
+      "duration": 3.84,
+      "end": 137.04,
+      "text": "i'll go like seven i'll go like seven"
+    },
+    {
+      "start": 135.2,
+      "duration": 2.56,
+      "end": 137.76,
+      "text": "okay so i go seven"
+    },
+    {
+      "start": 137.04,
+      "duration": 3.6,
+      "end": 140.64,
+      "text": "no"
+    },
+    {
+      "start": 137.76,
+      "duration": 6.24,
+      "end": 144.0,
+      "text": "like one three seven now seven's depth"
+    },
+    {
+      "start": 140.64,
+      "duration": 5.76,
+      "end": 146.39999999999998,
+      "text": "is eight does not needs to be down"
+    },
+    {
+      "start": 144.0,
+      "duration": 4.64,
+      "end": 148.64,
+      "text": "neighbor seven seven's depth is eight so"
+    },
+    {
+      "start": 146.4,
+      "duration": 4.559,
+      "end": 150.959,
+      "text": "you go to eight"
+    },
+    {
+      "start": 148.64,
+      "duration": 4.08,
+      "end": 152.72,
+      "text": "eighths depth is four"
+    },
+    {
+      "start": 150.959,
+      "duration": 4.321,
+      "end": 155.28,
+      "text": "so you go to four"
+    },
+    {
+      "start": 152.72,
+      "duration": 3.68,
+      "end": 156.4,
+      "text": "so apparently you started from one you"
+    },
+    {
+      "start": 155.28,
+      "duration": 4.0,
+      "end": 159.28,
+      "text": "came to three"
+    },
+    {
+      "start": 156.4,
+      "duration": 4.32,
+      "end": 160.72,
+      "text": "you went to seven you went to eight you"
+    },
+    {
+      "start": 159.28,
+      "duration": 3.52,
+      "end": 162.8,
+      "text": "went to four"
+    },
+    {
+      "start": 160.72,
+      "duration": 4.64,
+      "end": 165.35999999999999,
+      "text": "and after that you can't go because this"
+    },
+    {
+      "start": 162.8,
+      "duration": 5.68,
+      "end": 168.48000000000002,
+      "text": "is already done so you go back there is"
+    },
+    {
+      "start": 165.36,
+      "duration": 5.44,
+      "end": 170.8,
+      "text": "no further go back no further go back no"
+    },
+    {
+      "start": 168.48,
+      "duration": 3.119,
+      "end": 171.599,
+      "text": "further go back suddenly this portion is"
+    },
+    {
+      "start": 170.8,
+      "duration": 2.159,
+      "end": 172.959,
+      "text": "done"
+    },
+    {
+      "start": 171.599,
+      "duration": 3.761,
+      "end": 175.35999999999999,
+      "text": "had there been"
+    },
+    {
+      "start": 172.959,
+      "duration": 4.961,
+      "end": 177.92000000000002,
+      "text": "assume had there been someone else"
+    },
+    {
+      "start": 175.36,
+      "duration": 3.36,
+      "end": 178.72000000000003,
+      "text": "something like three four nine"
+    },
+    {
+      "start": 177.92,
+      "duration": 2.88,
+      "end": 180.79999999999998,
+      "text": "ten"
+    },
+    {
+      "start": 178.72,
+      "duration": 4.239,
+      "end": 182.959,
+      "text": "then coming back you'd have gone to nine"
+    },
+    {
+      "start": 180.8,
+      "duration": 5.519,
+      "end": 186.31900000000002,
+      "text": "ten so you go to depth you go to depth"
+    },
+    {
+      "start": 182.959,
+      "duration": 6.081,
+      "end": 189.04,
+      "text": "at first i hope that makes sense so this"
+    },
+    {
+      "start": 186.319,
+      "duration": 4.64,
+      "end": 190.95899999999997,
+      "text": "will be the dfs this will be the dfs"
+    },
+    {
+      "start": 189.04,
+      "duration": 3.52,
+      "end": 192.56,
+      "text": "again it's not necessary that you go"
+    },
+    {
+      "start": 190.959,
+      "duration": 2.64,
+      "end": 193.599,
+      "text": "like this this"
+    },
+    {
+      "start": 192.56,
+      "duration": 3.12,
+      "end": 195.68,
+      "text": "then this"
+    },
+    {
+      "start": 193.599,
+      "duration": 3.841,
+      "end": 197.44,
+      "text": "you could have done the other way like"
+    },
+    {
+      "start": 195.68,
+      "duration": 4.16,
+      "end": 199.84,
+      "text": "one three then you could have gone like"
+    },
+    {
+      "start": 197.44,
+      "duration": 4.48,
+      "end": 201.92,
+      "text": "this four eight seven then you could"
+    },
+    {
+      "start": 199.84,
+      "duration": 4.16,
+      "end": 204.0,
+      "text": "have gone to two then to six then to"
+    },
+    {
+      "start": 201.92,
+      "duration": 2.8,
+      "end": 204.72,
+      "text": "five you could have done that way that"
+    },
+    {
+      "start": 204.0,
+      "duration": 3.36,
+      "end": 207.36,
+      "text": "is"
+    },
+    {
+      "start": 204.72,
+      "duration": 5.04,
+      "end": 209.76,
+      "text": "as long as you're traversing in depth"
+    },
+    {
+      "start": 207.36,
+      "duration": 5.519,
+      "end": 212.87900000000002,
+      "text": "any traversal type will work but it"
+    },
+    {
+      "start": 209.76,
+      "duration": 5.199,
+      "end": 214.959,
+      "text": "should be depth depth okay so let's uh"
+    },
+    {
+      "start": 212.879,
+      "duration": 4.801,
+      "end": 217.67999999999998,
+      "text": "change the starting node in order to"
+    },
+    {
+      "start": 214.959,
+      "duration": 5.761,
+      "end": 220.72,
+      "text": "understand the dfs traversal more okay"
+    },
+    {
+      "start": 217.68,
+      "duration": 4.639,
+      "end": 222.31900000000002,
+      "text": "so assume i change the starting node"
+    },
+    {
+      "start": 220.72,
+      "duration": 3.439,
+      "end": 224.159,
+      "text": "to be"
+    },
+    {
+      "start": 222.319,
+      "duration": 4.321,
+      "end": 226.64,
+      "text": "somewhere around three"
+    },
+    {
+      "start": 224.159,
+      "duration": 4.561,
+      "end": 228.72,
+      "text": "now assume this is the starting so again"
+    },
+    {
+      "start": 226.64,
+      "duration": 3.92,
+      "end": 230.55999999999997,
+      "text": "this will be the first point for sure"
+    },
+    {
+      "start": 228.72,
+      "duration": 3.92,
+      "end": 232.64,
+      "text": "this will be the first point now from"
+    },
+    {
+      "start": 230.56,
+      "duration": 4.16,
+      "end": 234.72,
+      "text": "three you can either go here you can"
+    },
+    {
+      "start": 232.64,
+      "duration": 5.2,
+      "end": 237.83999999999997,
+      "text": "either go here you can either go here"
+    },
+    {
+      "start": 234.72,
+      "duration": 5.04,
+      "end": 239.76,
+      "text": "your choice so i decide i'll go to four"
+    },
+    {
+      "start": 237.84,
+      "duration": 3.92,
+      "end": 241.76,
+      "text": "from three i decide i'll go to four so"
+    },
+    {
+      "start": 239.76,
+      "duration": 4.64,
+      "end": 244.39999999999998,
+      "text": "it'll be like four then you'll go to"
+    },
+    {
+      "start": 241.76,
+      "duration": 4.24,
+      "end": 246.0,
+      "text": "eight then you'll go to seven so be like"
+    },
+    {
+      "start": 244.4,
+      "duration": 4.16,
+      "end": 248.56,
+      "text": "three four eight seven"
+    },
+    {
+      "start": 246.0,
+      "duration": 4.08,
+      "end": 250.08,
+      "text": "so three four eight seven so three"
+    },
+    {
+      "start": 248.56,
+      "duration": 4.0,
+      "end": 252.56,
+      "text": "twenty four four one two eight eight"
+    },
+    {
+      "start": 250.08,
+      "duration": 4.64,
+      "end": 254.72,
+      "text": "twenty seven cannot go further comes"
+    },
+    {
+      "start": 252.56,
+      "duration": 4.399,
+      "end": 256.959,
+      "text": "back comes back comes back so this"
+    },
+    {
+      "start": 254.72,
+      "duration": 5.039,
+      "end": 259.759,
+      "text": "portion depth is completed depth is"
+    },
+    {
+      "start": 256.959,
+      "duration": 3.601,
+      "end": 260.56,
+      "text": "completed now go the other way which is"
+    },
+    {
+      "start": 259.759,
+      "duration": 3.44,
+      "end": 263.199,
+      "text": "one"
+    },
+    {
+      "start": 260.56,
+      "duration": 5.12,
+      "end": 265.68,
+      "text": "so you go to one you go to two again do"
+    },
+    {
+      "start": 263.199,
+      "duration": 4.401,
+      "end": 267.6,
+      "text": "the same thing five and then six are the"
+    },
+    {
+      "start": 265.68,
+      "duration": 2.799,
+      "end": 268.479,
+      "text": "opposite it's like"
+    },
+    {
+      "start": 267.6,
+      "duration": 1.76,
+      "end": 269.36,
+      "text": "one"
+    },
+    {
+      "start": 268.479,
+      "duration": 3.681,
+      "end": 272.15999999999997,
+      "text": "two"
+    },
+    {
+      "start": 269.36,
+      "duration": 5.119,
+      "end": 274.47900000000004,
+      "text": "five six now come back again now three"
+    },
+    {
+      "start": 272.16,
+      "duration": 4.0,
+      "end": 276.16,
+      "text": "will it go to seven no because seven has"
+    },
+    {
+      "start": 274.479,
+      "duration": 3.841,
+      "end": 278.32,
+      "text": "already been covered so if you start"
+    },
+    {
+      "start": 276.16,
+      "duration": 4.64,
+      "end": 280.8,
+      "text": "from three and you go in this then you"
+    },
+    {
+      "start": 278.32,
+      "duration": 6.08,
+      "end": 284.4,
+      "text": "go in this this will be the dfs there"
+    },
+    {
+      "start": 280.8,
+      "duration": 6.0,
+      "end": 286.8,
+      "text": "can be plenty of dfs depending on the"
+    },
+    {
+      "start": 284.4,
+      "duration": 4.88,
+      "end": 289.28,
+      "text": "starting node yes depending on the"
+    },
+    {
+      "start": 286.8,
+      "duration": 4.959,
+      "end": 291.759,
+      "text": "starting node and"
+    },
+    {
+      "start": 289.28,
+      "duration": 3.6,
+      "end": 292.88,
+      "text": "which algorithm if i ask you which"
+    },
+    {
+      "start": 291.759,
+      "duration": 3.841,
+      "end": 295.6,
+      "text": "algorithm"
+    },
+    {
+      "start": 292.88,
+      "duration": 4.8,
+      "end": 297.68,
+      "text": "usually goes to the depth solves it"
+    },
+    {
+      "start": 295.6,
+      "duration": 3.12,
+      "end": 298.72,
+      "text": "comes back yes"
+    },
+    {
+      "start": 297.68,
+      "duration": 3.2,
+      "end": 300.88,
+      "text": "use"
+    },
+    {
+      "start": 298.72,
+      "duration": 4.0,
+      "end": 302.72,
+      "text": "said that correctly recursion"
+    },
+    {
+      "start": 300.88,
+      "duration": 4.319,
+      "end": 305.199,
+      "text": "that is absolutely correct"
+    },
+    {
+      "start": 302.72,
+      "duration": 4.24,
+      "end": 306.96000000000004,
+      "text": "the algorithm that always goes in depth"
+    },
+    {
+      "start": 305.199,
+      "duration": 4.241,
+      "end": 309.44,
+      "text": "like if you remember"
+    },
+    {
+      "start": 306.96,
+      "duration": 4.88,
+      "end": 311.84,
+      "text": "this kind of algorithm is"
+    },
+    {
+      "start": 309.44,
+      "duration": 2.4,
+      "end": 311.84,
+      "text": "do you remember"
+    },
+    {
+      "start": 311.919,
+      "duration": 4.801,
+      "end": 316.71999999999997,
+      "text": "this kind of algorithm is nothing but"
+    },
+    {
+      "start": 314.72,
+      "duration": 4.0,
+      "end": 318.72,
+      "text": "recursion and if you have not seen the"
+    },
+    {
+      "start": 316.72,
+      "duration": 3.919,
+      "end": 320.639,
+      "text": "recursion playlist i will highly"
+    },
+    {
+      "start": 318.72,
+      "duration": 4.319,
+      "end": 323.03900000000004,
+      "text": "recommend you go back and watch my"
+    },
+    {
+      "start": 320.639,
+      "duration": 5.601,
+      "end": 326.24,
+      "text": "recursion playlist at least till video"
+    },
+    {
+      "start": 323.039,
+      "duration": 5.921,
+      "end": 328.96,
+      "text": "seven at least from video one to video"
+    },
+    {
+      "start": 326.24,
+      "duration": 5.12,
+      "end": 331.36,
+      "text": "seven because entire graph without"
+    },
+    {
+      "start": 328.96,
+      "duration": 5.12,
+      "end": 334.08,
+      "text": "recursion will be nightmare you need to"
+    },
+    {
+      "start": 331.36,
+      "duration": 5.04,
+      "end": 336.40000000000003,
+      "text": "understand how graph works in dfs"
+    },
+    {
+      "start": 334.08,
+      "duration": 3.36,
+      "end": 337.44,
+      "text": "traversal otherwise it will be a big big"
+    },
+    {
+      "start": 336.4,
+      "duration": 2.16,
+      "end": 338.56,
+      "text": "mess"
+    },
+    {
+      "start": 337.44,
+      "duration": 3.52,
+      "end": 340.96,
+      "text": "so"
+    },
+    {
+      "start": 338.56,
+      "duration": 4.079,
+      "end": 342.639,
+      "text": "again for this graph where do you store"
+    },
+    {
+      "start": 340.96,
+      "duration": 3.519,
+      "end": 344.479,
+      "text": "that you store this graph in an"
+    },
+    {
+      "start": 342.639,
+      "duration": 3.84,
+      "end": 346.479,
+      "text": "adjacency list that is something which"
+    },
+    {
+      "start": 344.479,
+      "duration": 4.801,
+      "end": 349.28,
+      "text": "you will do so please please go and"
+    },
+    {
+      "start": 346.479,
+      "duration": 4.72,
+      "end": 351.199,
+      "text": "store this graph in an adjacency list"
+    },
+    {
+      "start": 349.28,
+      "duration": 4.08,
+      "end": 353.35999999999996,
+      "text": "so this is how the adjacency list for"
+    },
+    {
+      "start": 351.199,
+      "duration": 4.241,
+      "end": 355.44,
+      "text": "this particular graph will look like now"
+    },
+    {
+      "start": 353.36,
+      "duration": 4.72,
+      "end": 358.08000000000004,
+      "text": "assuming uh the starting node is given"
+    },
+    {
+      "start": 355.44,
+      "duration": 3.84,
+      "end": 359.28,
+      "text": "as one okay assume the starting node is"
+    },
+    {
+      "start": 358.08,
+      "duration": 2.8,
+      "end": 360.88,
+      "text": "one"
+    },
+    {
+      "start": 359.28,
+      "duration": 3.919,
+      "end": 363.19899999999996,
+      "text": "what will be the initial configuration"
+    },
+    {
+      "start": 360.88,
+      "duration": 6.24,
+      "end": 367.12,
+      "text": "again similar to bfs travis you will"
+    },
+    {
+      "start": 363.199,
+      "duration": 6.641,
+      "end": 369.84000000000003,
+      "text": "first create a bfs so uh first create a"
+    },
+    {
+      "start": 367.12,
+      "duration": 4.799,
+      "end": 371.919,
+      "text": "visited array again please go and check"
+    },
+    {
+      "start": 369.84,
+      "duration": 4.56,
+      "end": 374.4,
+      "text": "if it is a one b's indexing so if you"
+    },
+    {
+      "start": 371.919,
+      "duration": 4.881,
+      "end": 376.79999999999995,
+      "text": "see a one based one to eight so please"
+    },
+    {
+      "start": 374.4,
+      "duration": 7.44,
+      "end": 381.84,
+      "text": "create like a nine size array zero one"
+    },
+    {
+      "start": 376.8,
+      "duration": 5.04,
+      "end": 381.84000000000003,
+      "text": "two three four five six seven eight"
+    },
+    {
+      "start": 384.16,
+      "duration": 3.84,
+      "end": 388.0,
+      "text": "so a visited array is what initially you"
+    },
+    {
+      "start": 386.24,
+      "duration": 3.84,
+      "end": 390.08,
+      "text": "will start off with and whatever is the"
+    },
+    {
+      "start": 388.0,
+      "duration": 4.4,
+      "end": 392.4,
+      "text": "starting node just mark it as visited"
+    },
+    {
+      "start": 390.08,
+      "duration": 6.08,
+      "end": 396.15999999999997,
+      "text": "and everything else will be staying as"
+    },
+    {
+      "start": 392.4,
+      "duration": 5.84,
+      "end": 398.23999999999995,
+      "text": "zero similar to what we did in bfs done"
+    },
+    {
+      "start": 396.16,
+      "duration": 4.479,
+      "end": 400.639,
+      "text": "what will be the next step remember this"
+    },
+    {
+      "start": 398.24,
+      "duration": 3.84,
+      "end": 402.08,
+      "text": "the next step is going to be whatever is"
+    },
+    {
+      "start": 400.639,
+      "duration": 4.0,
+      "end": 404.639,
+      "text": "your starting"
+    },
+    {
+      "start": 402.08,
+      "duration": 6.0,
+      "end": 408.08,
+      "text": "you call a recursive function remember"
+    },
+    {
+      "start": 404.639,
+      "duration": 4.801,
+      "end": 409.44,
+      "text": "this you call a recursive dfs function"
+    },
+    {
+      "start": 408.08,
+      "duration": 3.76,
+      "end": 411.84,
+      "text": "from that"
+    },
+    {
+      "start": 409.44,
+      "duration": 4.879,
+      "end": 414.319,
+      "text": "okay now what you will do is"
+    },
+    {
+      "start": 411.84,
+      "duration": 5.199,
+      "end": 417.039,
+      "text": "this dfs of one i like the code"
+    },
+    {
+      "start": 414.319,
+      "duration": 5.841,
+      "end": 420.16,
+      "text": "somewhere df is up node"
+    },
+    {
+      "start": 417.039,
+      "duration": 5.841,
+      "end": 422.88,
+      "text": "what this will do is the moment it gets"
+    },
+    {
+      "start": 420.16,
+      "duration": 5.52,
+      "end": 425.68,
+      "text": "into the function it states hey dude"
+    },
+    {
+      "start": 422.88,
+      "duration": 6.08,
+      "end": 428.96,
+      "text": "listen this guy is"
+    },
+    {
+      "start": 425.68,
+      "duration": 5.68,
+      "end": 431.36,
+      "text": "done and this is a part of my dfs well"
+    },
+    {
+      "start": 428.96,
+      "duration": 5.12,
+      "end": 434.08,
+      "text": "you can just add a list"
+    },
+    {
+      "start": 431.36,
+      "duration": 5.04,
+      "end": 436.40000000000003,
+      "text": "and you can say this is a part of my dfs"
+    },
+    {
+      "start": 434.08,
+      "duration": 4.32,
+      "end": 438.4,
+      "text": "okay so this is the line"
+    },
+    {
+      "start": 436.4,
+      "duration": 4.16,
+      "end": 440.56,
+      "text": "where you will do the dfs traversal"
+    },
+    {
+      "start": 438.4,
+      "duration": 4.72,
+      "end": 443.12,
+      "text": "because you are visiting a note so"
+    },
+    {
+      "start": 440.56,
+      "duration": 4.24,
+      "end": 444.8,
+      "text": "stored now what you do is remember this"
+    },
+    {
+      "start": 443.12,
+      "duration": 4.0,
+      "end": 447.12,
+      "text": "what you do is"
+    },
+    {
+      "start": 444.8,
+      "duration": 4.399,
+      "end": 449.199,
+      "text": "you went to one now either you can go to"
+    },
+    {
+      "start": 447.12,
+      "duration": 4.96,
+      "end": 452.08,
+      "text": "two either you can go to three"
+    },
+    {
+      "start": 449.199,
+      "duration": 6.161,
+      "end": 455.36,
+      "text": "you go this depth or you go this depth"
+    },
+    {
+      "start": 452.08,
+      "duration": 5.28,
+      "end": 457.35999999999996,
+      "text": "so you travel the neighbors either you"
+    },
+    {
+      "start": 455.36,
+      "duration": 3.44,
+      "end": 458.8,
+      "text": "travel two first or three first that is"
+    },
+    {
+      "start": 457.36,
+      "duration": 3.839,
+      "end": 461.199,
+      "text": "your headache but you travel the"
+    },
+    {
+      "start": 458.8,
+      "duration": 4.799,
+      "end": 463.599,
+      "text": "neighbors at first so how do you travel"
+    },
+    {
+      "start": 461.199,
+      "duration": 3.84,
+      "end": 465.039,
+      "text": "the neighbors of one very simple they"
+    },
+    {
+      "start": 463.599,
+      "duration": 2.801,
+      "end": 466.4,
+      "text": "store in the adjacency list if you"
+    },
+    {
+      "start": 465.039,
+      "duration": 4.321,
+      "end": 469.36,
+      "text": "carefully see they stored in the"
+    },
+    {
+      "start": 466.4,
+      "duration": 5.28,
+      "end": 471.67999999999995,
+      "text": "adjacency list so for any node you go to"
+    },
+    {
+      "start": 469.36,
+      "duration": 5.6,
+      "end": 474.96000000000004,
+      "text": "their adjacency list you go to their"
+    },
+    {
+      "start": 471.68,
+      "duration": 7.6,
+      "end": 479.28000000000003,
+      "text": "adjacency list right so this is nothing"
+    },
+    {
+      "start": 474.96,
+      "duration": 6.799,
+      "end": 481.75899999999996,
+      "text": "but adjacency of one"
+    },
+    {
+      "start": 479.28,
+      "duration": 4.16,
+      "end": 483.44,
+      "text": "so this is the vector this is the list"
+    },
+    {
+      "start": 481.759,
+      "duration": 4.081,
+      "end": 485.84000000000003,
+      "text": "so that is what you'll pick up that is"
+    },
+    {
+      "start": 483.44,
+      "duration": 4.479,
+      "end": 487.919,
+      "text": "what you'll pick up so pick up the list"
+    },
+    {
+      "start": 485.84,
+      "duration": 4.24,
+      "end": 490.08,
+      "text": "and run a for each loop in it"
+    },
+    {
+      "start": 487.919,
+      "duration": 5.601,
+      "end": 493.52,
+      "text": "so this these are the neighbors"
+    },
+    {
+      "start": 490.08,
+      "duration": 4.88,
+      "end": 494.96,
+      "text": "run a for each loop in it adjacency of"
+    },
+    {
+      "start": 493.52,
+      "duration": 3.04,
+      "end": 496.56,
+      "text": "node"
+    },
+    {
+      "start": 494.96,
+      "duration": 3.04,
+      "end": 498.0,
+      "text": "so this is"
+    },
+    {
+      "start": 496.56,
+      "duration": 4.24,
+      "end": 500.8,
+      "text": "the list"
+    },
+    {
+      "start": 498.0,
+      "duration": 3.599,
+      "end": 501.599,
+      "text": "of neighbors and you're running it and"
+    },
+    {
+      "start": 500.8,
+      "duration": 4.88,
+      "end": 505.68,
+      "text": "now"
+    },
+    {
+      "start": 501.599,
+      "duration": 6.0,
+      "end": 507.599,
+      "text": "you go depth by each node so first"
+    },
+    {
+      "start": 505.68,
+      "duration": 3.519,
+      "end": 509.199,
+      "text": "you go to the depth of two"
+    },
+    {
+      "start": 507.599,
+      "duration": 3.361,
+      "end": 510.96,
+      "text": "then you go to the depth of three so"
+    },
+    {
+      "start": 509.199,
+      "duration": 4.641,
+      "end": 513.84,
+      "text": "first"
+    },
+    {
+      "start": 510.96,
+      "duration": 2.88,
+      "end": 513.84,
+      "text": "go to the depth of"
+    },
+    {
+      "start": 514.8,
+      "duration": 6.32,
+      "end": 521.12,
+      "text": "one i t which is one neighbor and in the"
+    },
+    {
+      "start": 517.919,
+      "duration": 5.12,
+      "end": 523.039,
+      "text": "next iteration the next it will go so"
+    },
+    {
+      "start": 521.12,
+      "duration": 2.96,
+      "end": 524.08,
+      "text": "imagine this to have two comma three"
+    },
+    {
+      "start": 523.039,
+      "duration": 3.441,
+      "end": 526.48,
+      "text": "what will happen"
+    },
+    {
+      "start": 524.08,
+      "duration": 5.199,
+      "end": 529.279,
+      "text": "first a call of two will be made"
+    },
+    {
+      "start": 526.48,
+      "duration": 4.799,
+      "end": 531.279,
+      "text": "so it'll be like dfs of two is made"
+    },
+    {
+      "start": 529.279,
+      "duration": 4.161,
+      "end": 533.4399999999999,
+      "text": "then when this completes the call"
+    },
+    {
+      "start": 531.279,
+      "duration": 5.12,
+      "end": 536.399,
+      "text": "completes because it is a recursive call"
+    },
+    {
+      "start": 533.44,
+      "duration": 4.8,
+      "end": 538.24,
+      "text": "it's a recursive call when it completes"
+    },
+    {
+      "start": 536.399,
+      "duration": 3.841,
+      "end": 540.24,
+      "text": "then it goes through the dfs of three"
+    },
+    {
+      "start": 538.24,
+      "duration": 4.24,
+      "end": 542.48,
+      "text": "you need to understand this okay so it's"
+    },
+    {
+      "start": 540.24,
+      "duration": 4.64,
+      "end": 544.88,
+      "text": "basically something like okay uh let's"
+    },
+    {
+      "start": 542.48,
+      "duration": 5.28,
+      "end": 547.76,
+      "text": "get back is something like okay first we"
+    },
+    {
+      "start": 544.88,
+      "duration": 4.959,
+      "end": 549.8389999999999,
+      "text": "have to let's call the dfs for two it"
+    },
+    {
+      "start": 547.76,
+      "duration": 4.4,
+      "end": 552.16,
+      "text": "will go and it'll complete like go to"
+    },
+    {
+      "start": 549.839,
+      "duration": 4.241,
+      "end": 554.08,
+      "text": "the depth depth depth depth"
+    },
+    {
+      "start": 552.16,
+      "duration": 4.08,
+      "end": 556.24,
+      "text": "and then come back then the next guy"
+    },
+    {
+      "start": 554.08,
+      "duration": 4.96,
+      "end": 559.0400000000001,
+      "text": "will be three then it will go to the dfs"
+    },
+    {
+      "start": 556.24,
+      "duration": 5.12,
+      "end": 561.36,
+      "text": "of three and then come back so it's like"
+    },
+    {
+      "start": 559.04,
+      "duration": 5.12,
+      "end": 564.16,
+      "text": "dfs of two will be performed in depth"
+    },
+    {
+      "start": 561.36,
+      "duration": 4.56,
+      "end": 565.92,
+      "text": "then dfs of three but you don't visit"
+    },
+    {
+      "start": 564.16,
+      "duration": 5.04,
+      "end": 569.1999999999999,
+      "text": "every time"
+    },
+    {
+      "start": 565.92,
+      "duration": 6.0,
+      "end": 571.92,
+      "text": "all the notes because when you go to two"
+    },
+    {
+      "start": 569.2,
+      "duration": 4.96,
+      "end": 574.1600000000001,
+      "text": "it will have the neighboring as one five"
+    },
+    {
+      "start": 571.92,
+      "duration": 4.56,
+      "end": 576.4799999999999,
+      "text": "six but from two you will not go back to"
+    },
+    {
+      "start": 574.16,
+      "duration": 5.04,
+      "end": 579.1999999999999,
+      "text": "one from two you will not go back to one"
+    },
+    {
+      "start": 576.48,
+      "duration": 4.72,
+      "end": 581.2,
+      "text": "so it's very important a node which has"
+    },
+    {
+      "start": 579.2,
+      "duration": 4.4,
+      "end": 583.6,
+      "text": "been visited in its traversal you don't"
+    },
+    {
+      "start": 581.2,
+      "duration": 4.319,
+      "end": 585.519,
+      "text": "visit it again so what you do is"
+    },
+    {
+      "start": 583.6,
+      "duration": 4.64,
+      "end": 588.24,
+      "text": "you say okay listen"
+    },
+    {
+      "start": 585.519,
+      "duration": 4.88,
+      "end": 590.399,
+      "text": "this node has to be unvisited for me to"
+    },
+    {
+      "start": 588.24,
+      "duration": 5.36,
+      "end": 593.6,
+      "text": "go into the depth of it"
+    },
+    {
+      "start": 590.399,
+      "duration": 5.521,
+      "end": 595.92,
+      "text": "this node has to be unvisited for me to"
+    },
+    {
+      "start": 593.6,
+      "duration": 4.32,
+      "end": 597.9200000000001,
+      "text": "go into the depth of it simple so this"
+    },
+    {
+      "start": 595.92,
+      "duration": 4.56,
+      "end": 600.4799999999999,
+      "text": "will be the simple"
+    },
+    {
+      "start": 597.92,
+      "duration": 4.479,
+      "end": 602.399,
+      "text": "lines of code that you need to execute"
+    },
+    {
+      "start": 600.48,
+      "duration": 4.24,
+      "end": 604.72,
+      "text": "so what will happen is"
+    },
+    {
+      "start": 602.399,
+      "duration": 5.12,
+      "end": 607.519,
+      "text": "dfs of one will come i will mark it as"
+    },
+    {
+      "start": 604.72,
+      "duration": 4.799,
+      "end": 609.519,
+      "text": "visited now it has two neighbors two and"
+    },
+    {
+      "start": 607.519,
+      "duration": 5.121,
+      "end": 612.64,
+      "text": "three so we'll go to the depth of them"
+    },
+    {
+      "start": 609.519,
+      "duration": 5.521,
+      "end": 615.04,
+      "text": "right so for two it again goes and"
+    },
+    {
+      "start": 612.64,
+      "duration": 4.72,
+      "end": 617.36,
+      "text": "checks there is one but that is already"
+    },
+    {
+      "start": 615.04,
+      "duration": 6.0,
+      "end": 621.04,
+      "text": "visited then there is five and then"
+    },
+    {
+      "start": 617.36,
+      "duration": 5.52,
+      "end": 622.88,
+      "text": "there is six so it will go for both"
+    },
+    {
+      "start": 621.04,
+      "duration": 3.52,
+      "end": 624.56,
+      "text": "dfs for five"
+    },
+    {
+      "start": 622.88,
+      "duration": 5.12,
+      "end": 628.0,
+      "text": "and then dfs for"
+    },
+    {
+      "start": 624.56,
+      "duration": 5.2,
+      "end": 629.76,
+      "text": "six so how is the call coming up"
+    },
+    {
+      "start": 628.0,
+      "duration": 4.72,
+      "end": 632.72,
+      "text": "first the call was for one"
+    },
+    {
+      "start": 629.76,
+      "duration": 5.759,
+      "end": 635.519,
+      "text": "right so you can write one next the call"
+    },
+    {
+      "start": 632.72,
+      "duration": 6.4,
+      "end": 639.12,
+      "text": "went to two right next the call went for"
+    },
+    {
+      "start": 635.519,
+      "duration": 4.961,
+      "end": 640.48,
+      "text": "five so number five when you go to five"
+    },
+    {
+      "start": 639.12,
+      "duration": 3.2,
+      "end": 642.32,
+      "text": "remember this by the way when you go to"
+    },
+    {
+      "start": 640.48,
+      "duration": 4.479,
+      "end": 644.9590000000001,
+      "text": "two you'll mark it as one now you go to"
+    },
+    {
+      "start": 642.32,
+      "duration": 4.16,
+      "end": 646.48,
+      "text": "five mark it as one number five what"
+    },
+    {
+      "start": 644.959,
+      "duration": 4.401,
+      "end": 649.3599999999999,
+      "text": "happens is"
+    },
+    {
+      "start": 646.48,
+      "duration": 3.919,
+      "end": 650.399,
+      "text": "see here for five the neighbor is two"
+    },
+    {
+      "start": 649.36,
+      "duration": 3.28,
+      "end": 652.64,
+      "text": "which is"
+    },
+    {
+      "start": 650.399,
+      "duration": 4.161,
+      "end": 654.56,
+      "text": "already marked there will be no further"
+    },
+    {
+      "start": 652.64,
+      "duration": 4.48,
+      "end": 657.12,
+      "text": "calls so if i will say there are no"
+    },
+    {
+      "start": 654.56,
+      "duration": 6.24,
+      "end": 660.8,
+      "text": "further calls there are no neighbors so"
+    },
+    {
+      "start": 657.12,
+      "duration": 6.959,
+      "end": 664.079,
+      "text": "i don't call anyone so i will come back"
+    },
+    {
+      "start": 660.8,
+      "duration": 6.479,
+      "end": 667.279,
+      "text": "i came back right now dfs of 2"
+    },
+    {
+      "start": 664.079,
+      "duration": 3.2,
+      "end": 667.279,
+      "text": "goes to dfs of 6"
+    },
+    {
+      "start": 668.72,
+      "duration": 5.2,
+      "end": 673.9200000000001,
+      "text": "6 says do i have neighbors"
+    },
+    {
+      "start": 671.6,
+      "duration": 3.76,
+      "end": 675.36,
+      "text": "i do 2 which is already visited no"
+    },
+    {
+      "start": 673.92,
+      "duration": 2.64,
+      "end": 676.56,
+      "text": "further calls"
+    },
+    {
+      "start": 675.36,
+      "duration": 3.28,
+      "end": 678.64,
+      "text": "comes back"
+    },
+    {
+      "start": 676.56,
+      "duration": 4.88,
+      "end": 681.4399999999999,
+      "text": "now two says do i have any other"
+    },
+    {
+      "start": 678.64,
+      "duration": 3.92,
+      "end": 682.56,
+      "text": "neighbors apart from five and six no i"
+    },
+    {
+      "start": 681.44,
+      "duration": 2.24,
+      "end": 683.6800000000001,
+      "text": "go back"
+    },
+    {
+      "start": 682.56,
+      "duration": 3.76,
+      "end": 686.3199999999999,
+      "text": "one"
+    },
+    {
+      "start": 683.68,
+      "duration": 4.96,
+      "end": 688.64,
+      "text": "so two is completed so initially when"
+    },
+    {
+      "start": 686.32,
+      "duration": 4.639,
+      "end": 690.9590000000001,
+      "text": "you started with two"
+    },
+    {
+      "start": 688.64,
+      "duration": 3.68,
+      "end": 692.3199999999999,
+      "text": "it is completed now the next guy three"
+    },
+    {
+      "start": 690.959,
+      "duration": 3.521,
+      "end": 694.4799999999999,
+      "text": "will be occurring"
+    },
+    {
+      "start": 692.32,
+      "duration": 3.519,
+      "end": 695.839,
+      "text": "next guy three will be occurring so you"
+    },
+    {
+      "start": 694.48,
+      "duration": 3.359,
+      "end": 697.839,
+      "text": "go to three now"
+    },
+    {
+      "start": 695.839,
+      "duration": 3.601,
+      "end": 699.44,
+      "text": "three is marked as visited and now"
+    },
+    {
+      "start": 697.839,
+      "duration": 4.0,
+      "end": 701.839,
+      "text": "you're traversing three"
+    },
+    {
+      "start": 699.44,
+      "duration": 5.04,
+      "end": 704.48,
+      "text": "so the next we go to dfs of three so"
+    },
+    {
+      "start": 701.839,
+      "duration": 4.56,
+      "end": 706.399,
+      "text": "let's check out who are the neighbors of"
+    },
+    {
+      "start": 704.48,
+      "duration": 2.88,
+      "end": 707.36,
+      "text": "three so the neighbor of three appears"
+    },
+    {
+      "start": 706.399,
+      "duration": 2.321,
+      "end": 708.72,
+      "text": "to be"
+    },
+    {
+      "start": 707.36,
+      "duration": 3.599,
+      "end": 710.9590000000001,
+      "text": "four and seven"
+    },
+    {
+      "start": 708.72,
+      "duration": 4.239,
+      "end": 712.9590000000001,
+      "text": "so first we will go to four then we'll"
+    },
+    {
+      "start": 710.959,
+      "duration": 4.481,
+      "end": 715.4399999999999,
+      "text": "go to seven but apparently what will"
+    },
+    {
+      "start": 712.959,
+      "duration": 4.241,
+      "end": 717.1999999999999,
+      "text": "happen is when you go to four four in"
+    },
+    {
+      "start": 715.44,
+      "duration": 4.0,
+      "end": 719.44,
+      "text": "turn will go to eight eight will go and"
+    },
+    {
+      "start": 717.2,
+      "duration": 5.28,
+      "end": 722.48,
+      "text": "turn to seven so"
+    },
+    {
+      "start": 719.44,
+      "duration": 6.32,
+      "end": 725.7600000000001,
+      "text": "four when it goes to depth it will visit"
+    },
+    {
+      "start": 722.48,
+      "duration": 5.12,
+      "end": 727.6,
+      "text": "seven so thereby this call was made"
+    },
+    {
+      "start": 725.76,
+      "duration": 3.759,
+      "end": 729.519,
+      "text": "depending on where"
+    },
+    {
+      "start": 727.6,
+      "duration": 2.799,
+      "end": 730.399,
+      "text": "four lies on the adjacency list we made"
+    },
+    {
+      "start": 729.519,
+      "duration": 2.88,
+      "end": 732.399,
+      "text": "this call"
+    },
+    {
+      "start": 730.399,
+      "duration": 4.24,
+      "end": 734.639,
+      "text": "if there was something like 7 4 you"
+    },
+    {
+      "start": 732.399,
+      "duration": 4.0,
+      "end": 736.399,
+      "text": "would have gone like this so it depends"
+    },
+    {
+      "start": 734.639,
+      "duration": 4.081,
+      "end": 738.72,
+      "text": "on the adjacency list"
+    },
+    {
+      "start": 736.399,
+      "duration": 4.88,
+      "end": 741.279,
+      "text": "which format like which traversal you"
+    },
+    {
+      "start": 738.72,
+      "duration": 3.6,
+      "end": 742.32,
+      "text": "will traverse okay so for three who are"
+    },
+    {
+      "start": 741.279,
+      "duration": 4.0,
+      "end": 745.279,
+      "text": "the neighbors"
+    },
+    {
+      "start": 742.32,
+      "duration": 5.44,
+      "end": 747.7600000000001,
+      "text": "one no four and seven four and seven"
+    },
+    {
+      "start": 745.279,
+      "duration": 4.401,
+      "end": 749.68,
+      "text": "first we go to four perfect let's go to"
+    },
+    {
+      "start": 747.76,
+      "duration": 4.079,
+      "end": 751.8389999999999,
+      "text": "four"
+    },
+    {
+      "start": 749.68,
+      "duration": 4.32,
+      "end": 754.0,
+      "text": "then we will think shall we go to seven"
+    },
+    {
+      "start": 751.839,
+      "duration": 4.081,
+      "end": 755.9200000000001,
+      "text": "or not then we will think shall we go to"
+    },
+    {
+      "start": 754.0,
+      "duration": 4.32,
+      "end": 758.32,
+      "text": "seven or not we are not sure as of now"
+    },
+    {
+      "start": 755.92,
+      "duration": 4.8,
+      "end": 760.7199999999999,
+      "text": "but give us a full shot let's go to four"
+    },
+    {
+      "start": 758.32,
+      "duration": 4.56,
+      "end": 762.88,
+      "text": "market is visited and four is there"
+    },
+    {
+      "start": 760.72,
+      "duration": 3.44,
+      "end": 764.1600000000001,
+      "text": "perfect now let's go to four who are"
+    },
+    {
+      "start": 762.88,
+      "duration": 3.28,
+      "end": 766.16,
+      "text": "four sleeple"
+    },
+    {
+      "start": 764.16,
+      "duration": 4.16,
+      "end": 768.3199999999999,
+      "text": "there should be three and eight"
+    },
+    {
+      "start": 766.16,
+      "duration": 4.0,
+      "end": 770.16,
+      "text": "three is already visited but eight is"
+    },
+    {
+      "start": 768.32,
+      "duration": 4.0,
+      "end": 772.32,
+      "text": "not so let's go to eight"
+    },
+    {
+      "start": 770.16,
+      "duration": 4.08,
+      "end": 774.24,
+      "text": "very simple"
+    },
+    {
+      "start": 772.32,
+      "duration": 4.48,
+      "end": 776.8000000000001,
+      "text": "again if you're going to wait"
+    },
+    {
+      "start": 774.24,
+      "duration": 4.32,
+      "end": 778.5600000000001,
+      "text": "market is visited"
+    },
+    {
+      "start": 776.8,
+      "duration": 3.12,
+      "end": 779.92,
+      "text": "at the moment you go to eight who are"
+    },
+    {
+      "start": 778.56,
+      "duration": 4.48,
+      "end": 783.04,
+      "text": "eight neighbors"
+    },
+    {
+      "start": 779.92,
+      "duration": 7.56,
+      "end": 787.4799999999999,
+      "text": "four no need to go seven okay"
+    },
+    {
+      "start": 783.04,
+      "duration": 4.44,
+      "end": 787.48,
+      "text": "interesting let's go to seven"
+    },
+    {
+      "start": 788.8,
+      "duration": 4.4,
+      "end": 793.1999999999999,
+      "text": "and seven is visited"
+    },
+    {
+      "start": 792.079,
+      "duration": 3.281,
+      "end": 795.3599999999999,
+      "text": "now"
+    },
+    {
+      "start": 793.2,
+      "duration": 3.04,
+      "end": 796.24,
+      "text": "who are seven stable"
+    },
+    {
+      "start": 795.36,
+      "duration": 1.84,
+      "end": 797.2,
+      "text": "three"
+    },
+    {
+      "start": 796.24,
+      "duration": 3.039,
+      "end": 799.279,
+      "text": "and eight"
+    },
+    {
+      "start": 797.2,
+      "duration": 4.639,
+      "end": 801.839,
+      "text": "those guys are already visited you've"
+    },
+    {
+      "start": 799.279,
+      "duration": 5.12,
+      "end": 804.399,
+      "text": "already traversed them so you do not go"
+    },
+    {
+      "start": 801.839,
+      "duration": 4.961,
+      "end": 806.8000000000001,
+      "text": "you do not go yes you do not go"
+    },
+    {
+      "start": 804.399,
+      "duration": 4.481,
+      "end": 808.88,
+      "text": "so apparently seven is done"
+    },
+    {
+      "start": 806.8,
+      "duration": 4.32,
+      "end": 811.12,
+      "text": "seven says i don't have anything"
+    },
+    {
+      "start": 808.88,
+      "duration": 4.48,
+      "end": 813.36,
+      "text": "my recursion is done can he just go back"
+    },
+    {
+      "start": 811.12,
+      "duration": 4.64,
+      "end": 815.76,
+      "text": "he's like okay let's go back"
+    },
+    {
+      "start": 813.36,
+      "duration": 4.479,
+      "end": 817.839,
+      "text": "it says i don't have any neighbors can"
+    },
+    {
+      "start": 815.76,
+      "duration": 3.36,
+      "end": 819.12,
+      "text": "you please go back says okay who says i"
+    },
+    {
+      "start": 817.839,
+      "duration": 3.761,
+      "end": 821.6,
+      "text": "don't have any neighbors can you please"
+    },
+    {
+      "start": 819.12,
+      "duration": 3.68,
+      "end": 822.8,
+      "text": "go back yes so this three"
+    },
+    {
+      "start": 821.6,
+      "duration": 4.0,
+      "end": 825.6,
+      "text": "this three"
+    },
+    {
+      "start": 822.8,
+      "duration": 4.96,
+      "end": 827.76,
+      "text": "went into one of its neighbor four"
+    },
+    {
+      "start": 825.6,
+      "duration": 3.599,
+      "end": 829.1990000000001,
+      "text": "will it go to the next neighbor seven no"
+    },
+    {
+      "start": 827.76,
+      "duration": 3.68,
+      "end": 831.4399999999999,
+      "text": "because seven"
+    },
+    {
+      "start": 829.199,
+      "duration": 4.88,
+      "end": 834.079,
+      "text": "was visited by this part there is no"
+    },
+    {
+      "start": 831.44,
+      "duration": 4.399,
+      "end": 835.839,
+      "text": "need to again go and visit seven so this"
+    },
+    {
+      "start": 834.079,
+      "duration": 4.56,
+      "end": 838.6389999999999,
+      "text": "supposed"
+    },
+    {
+      "start": 835.839,
+      "duration": 6.721,
+      "end": 842.5600000000001,
+      "text": "neighbor is no more visited"
+    },
+    {
+      "start": 838.639,
+      "duration": 5.841,
+      "end": 844.48,
+      "text": "thereby the tfs is this portion"
+    },
+    {
+      "start": 842.56,
+      "duration": 4.24,
+      "end": 846.8,
+      "text": "this is your dfs call"
+    },
+    {
+      "start": 844.48,
+      "duration": 4.56,
+      "end": 849.04,
+      "text": "so if you carefully observed"
+    },
+    {
+      "start": 846.8,
+      "duration": 3.76,
+      "end": 850.56,
+      "text": "from here whether you went like this or"
+    },
+    {
+      "start": 849.04,
+      "duration": 4.0,
+      "end": 853.04,
+      "text": "whether you went like this"
+    },
+    {
+      "start": 850.56,
+      "duration": 4.88,
+      "end": 855.4399999999999,
+      "text": "dependent or was dependent on the"
+    },
+    {
+      "start": 853.04,
+      "duration": 4.56,
+      "end": 857.5999999999999,
+      "text": "adjacency list so i hope you've"
+    },
+    {
+      "start": 855.44,
+      "duration": 5.199,
+      "end": 860.639,
+      "text": "understood the technique that's time to"
+    },
+    {
+      "start": 857.6,
+      "duration": 3.919,
+      "end": 861.519,
+      "text": "check out the code so as usual in the"
+    },
+    {
+      "start": 860.639,
+      "duration": 3.121,
+      "end": 863.76,
+      "text": "code"
+    },
+    {
+      "start": 861.519,
+      "duration": 4.081,
+      "end": 865.6,
+      "text": "so the c plus plus code is what i'll be"
+    },
+    {
+      "start": 863.76,
+      "duration": 4.079,
+      "end": 867.8389999999999,
+      "text": "typing and on the left you can see the"
+    },
+    {
+      "start": 865.6,
+      "duration": 4.08,
+      "end": 869.6800000000001,
+      "text": "entire java code in the similar format"
+    },
+    {
+      "start": 867.839,
+      "duration": 3.841,
+      "end": 871.6800000000001,
+      "text": "so you can just follow the java code and"
+    },
+    {
+      "start": 869.68,
+      "duration": 4.48,
+      "end": 874.16,
+      "text": "you can understand every line while i"
+    },
+    {
+      "start": 871.68,
+      "duration": 5.12,
+      "end": 876.8,
+      "text": "type the c plus code the syntax is"
+    },
+    {
+      "start": 874.16,
+      "duration": 4.16,
+      "end": 878.3199999999999,
+      "text": "almost identical so what do we have we"
+    },
+    {
+      "start": 876.8,
+      "duration": 3.52,
+      "end": 880.3199999999999,
+      "text": "have the number of nodes and the"
+    },
+    {
+      "start": 878.32,
+      "duration": 4.0,
+      "end": 882.32,
+      "text": "adjacency list you don't need to create"
+    },
+    {
+      "start": 880.32,
+      "duration": 5.04,
+      "end": 885.36,
+      "text": "the graph because that is always given"
+    },
+    {
+      "start": 882.32,
+      "duration": 6.0,
+      "end": 888.32,
+      "text": "to you so if you carefully observe it's"
+    },
+    {
+      "start": 885.36,
+      "duration": 5.2,
+      "end": 890.5600000000001,
+      "text": "a connected undirected graph and it says"
+    },
+    {
+      "start": 888.32,
+      "duration": 4.16,
+      "end": 892.48,
+      "text": "the starting index is zeroth vertex"
+    },
+    {
+      "start": 890.56,
+      "duration": 3.76,
+      "end": 894.3199999999999,
+      "text": "so something to observe"
+    },
+    {
+      "start": 892.48,
+      "duration": 3.28,
+      "end": 895.76,
+      "text": "it's a zero based indexing graph so this"
+    },
+    {
+      "start": 894.32,
+      "duration": 4.079,
+      "end": 898.399,
+      "text": "will do right"
+    },
+    {
+      "start": 895.76,
+      "duration": 5.519,
+      "end": 901.279,
+      "text": "perfect so starting index is zero so you"
+    },
+    {
+      "start": 898.399,
+      "duration": 5.44,
+      "end": 903.839,
+      "text": "can say the start is zero"
+    },
+    {
+      "start": 901.279,
+      "duration": 5.12,
+      "end": 906.399,
+      "text": "i need to store the"
+    },
+    {
+      "start": 903.839,
+      "duration": 5.521,
+      "end": 909.36,
+      "text": "so you can create a list"
+    },
+    {
+      "start": 906.399,
+      "duration": 4.321,
+      "end": 910.72,
+      "text": "in order to uh store the dfs"
+    },
+    {
+      "start": 909.36,
+      "duration": 4.4,
+      "end": 913.76,
+      "text": "ls okay"
+    },
+    {
+      "start": 910.72,
+      "duration": 4.559,
+      "end": 915.279,
+      "text": "so over here you can go back"
+    },
+    {
+      "start": 913.76,
+      "duration": 3.199,
+      "end": 916.959,
+      "text": "and say cool"
+    },
+    {
+      "start": 915.279,
+      "duration": 3.92,
+      "end": 919.199,
+      "text": "private"
+    },
+    {
+      "start": 916.959,
+      "duration": 4.88,
+      "end": 921.8389999999999,
+      "text": "and right here what you can write is"
+    },
+    {
+      "start": 919.199,
+      "duration": 2.64,
+      "end": 921.8389999999999,
+      "text": "void dfs"
+    },
+    {
+      "start": 921.92,
+      "duration": 3.76,
+      "end": 925.68,
+      "text": "this will be the note"
+    },
+    {
+      "start": 923.36,
+      "duration": 4.159,
+      "end": 927.519,
+      "text": "correct you need uh this particular"
+    },
+    {
+      "start": 925.68,
+      "duration": 3.76,
+      "end": 929.4399999999999,
+      "text": "adjacency list so please carry the"
+    },
+    {
+      "start": 927.519,
+      "duration": 3.44,
+      "end": 930.9590000000001,
+      "text": "adjacency list as well"
+    },
+    {
+      "start": 929.44,
+      "duration": 3.519,
+      "end": 932.9590000000001,
+      "text": "and what is the next thing that you need"
+    },
+    {
+      "start": 930.959,
+      "duration": 4.88,
+      "end": 935.8389999999999,
+      "text": "you need to visit it so please carry the"
+    },
+    {
+      "start": 932.959,
+      "duration": 5.281,
+      "end": 938.2399999999999,
+      "text": "visited and you need the list which"
+    },
+    {
+      "start": 935.839,
+      "duration": 4.56,
+      "end": 940.399,
+      "text": "stores the particular dfs so please"
+    },
+    {
+      "start": 938.24,
+      "duration": 3.76,
+      "end": 942.0,
+      "text": "carry the list as well now"
+    },
+    {
+      "start": 940.399,
+      "duration": 3.44,
+      "end": 943.839,
+      "text": "what will you do when you enter so the"
+    },
+    {
+      "start": 942.0,
+      "duration": 2.8,
+      "end": 944.8,
+      "text": "moment you enter you remember"
+    },
+    {
+      "start": 943.839,
+      "duration": 5.36,
+      "end": 949.1990000000001,
+      "text": "this is"
+    },
+    {
+      "start": 944.8,
+      "duration": 7.12,
+      "end": 951.92,
+      "text": "mandatory and you add it in the"
+    },
+    {
+      "start": 949.199,
+      "duration": 4.161,
+      "end": 953.3599999999999,
+      "text": "you add the node into the"
+    },
+    {
+      "start": 951.92,
+      "duration": 3.039,
+      "end": 954.959,
+      "text": "vector or the list"
+    },
+    {
+      "start": 953.36,
+      "duration": 4.64,
+      "end": 958.0,
+      "text": "what's the next step the next step that"
+    },
+    {
+      "start": 954.959,
+      "duration": 4.88,
+      "end": 959.8389999999999,
+      "text": "you do is you travel for all its"
+    },
+    {
+      "start": 958.0,
+      "duration": 3.92,
+      "end": 961.92,
+      "text": "neighbors this is how you traverse for"
+    },
+    {
+      "start": 959.839,
+      "duration": 4.56,
+      "end": 964.399,
+      "text": "all its neighbors whatever this this is"
+    },
+    {
+      "start": 961.92,
+      "duration": 4.88,
+      "end": 966.8,
+      "text": "the way in which you traverse"
+    },
+    {
+      "start": 964.399,
+      "duration": 4.8,
+      "end": 969.199,
+      "text": "all its neighbors"
+    },
+    {
+      "start": 966.8,
+      "duration": 4.32,
+      "end": 971.12,
+      "text": "okay"
+    },
+    {
+      "start": 969.199,
+      "duration": 5.601,
+      "end": 974.8,
+      "text": "so now what is the first thing that you"
+    },
+    {
+      "start": 971.12,
+      "duration": 6.24,
+      "end": 977.36,
+      "text": "do if this neighbor is non-visited very"
+    },
+    {
+      "start": 974.8,
+      "duration": 6.8,
+      "end": 981.5999999999999,
+      "text": "very important if this neighbor is"
+    },
+    {
+      "start": 977.36,
+      "duration": 6.88,
+      "end": 984.24,
+      "text": "non-visited you call dfs it adjacency"
+    },
+    {
+      "start": 981.6,
+      "duration": 4.88,
+      "end": 986.48,
+      "text": "visit and just pass on the parameters"
+    },
+    {
+      "start": 984.24,
+      "duration": 3.92,
+      "end": 988.16,
+      "text": "and this is how the dfs will be and over"
+    },
+    {
+      "start": 986.48,
+      "duration": 3.2,
+      "end": 989.6800000000001,
+      "text": "here what you do is you call the dfs the"
+    },
+    {
+      "start": 988.16,
+      "duration": 3.52,
+      "end": 991.68,
+      "text": "starting node"
+    },
+    {
+      "start": 989.68,
+      "duration": 3.68,
+      "end": 993.3599999999999,
+      "text": "the starting node can be anything"
+    },
+    {
+      "start": 991.68,
+      "duration": 4.079,
+      "end": 995.7589999999999,
+      "text": "pass on the adjacency pass on the"
+    },
+    {
+      "start": 993.36,
+      "duration": 5.44,
+      "end": 998.8000000000001,
+      "text": "visited pass on the ls once the entire"
+    },
+    {
+      "start": 995.759,
+      "duration": 4.961,
+      "end": 1000.72,
+      "text": "dfs has been completed you return the ls"
+    },
+    {
+      "start": 998.8,
+      "duration": 4.8,
+      "end": 1003.5999999999999,
+      "text": "and now you can just go and compile"
+    },
+    {
+      "start": 1000.72,
+      "duration": 2.88,
+      "end": 1003.6,
+      "text": "hopefully it runs"
+    },
+    {
+      "start": 1006.639,
+      "duration": 5.681,
+      "end": 1012.32,
+      "text": "so if you see visited of n okay as usual"
+    },
+    {
+      "start": 1009.44,
+      "duration": 4.88,
+      "end": 1014.32,
+      "text": "our common mistake"
+    },
+    {
+      "start": 1012.32,
+      "duration": 3.92,
+      "end": 1016.24,
+      "text": "this will be"
+    },
+    {
+      "start": 1014.32,
+      "duration": 3.759,
+      "end": 1018.0790000000001,
+      "text": "if you see the output is correct uh"
+    },
+    {
+      "start": 1016.24,
+      "duration": 2.719,
+      "end": 1018.9590000000001,
+      "text": "let's quickly submit this"
+    },
+    {
+      "start": 1018.079,
+      "duration": 2.32,
+      "end": 1020.399,
+      "text": "so"
+    },
+    {
+      "start": 1018.959,
+      "duration": 3.68,
+      "end": 1022.6389999999999,
+      "text": "internally the code has also been"
+    },
+    {
+      "start": 1020.399,
+      "duration": 4.16,
+      "end": 1024.559,
+      "text": "written in such a way that it follows"
+    },
+    {
+      "start": 1022.639,
+      "duration": 4.241,
+      "end": 1026.88,
+      "text": "the adjacency list so you don't need to"
+    },
+    {
+      "start": 1024.559,
+      "duration": 3.36,
+      "end": 1027.9189999999999,
+      "text": "worry the code will be working fine but"
+    },
+    {
+      "start": 1026.88,
+      "duration": 5.12,
+      "end": 1032.0,
+      "text": "this is"
+    },
+    {
+      "start": 1027.919,
+      "duration": 6.961,
+      "end": 1034.88,
+      "text": "what is the dfs traversal of a graph"
+    },
+    {
+      "start": 1032.0,
+      "duration": 4.88,
+      "end": 1036.88,
+      "text": "so let's talk about the space complexity"
+    },
+    {
+      "start": 1034.88,
+      "duration": 4.48,
+      "end": 1039.3600000000001,
+      "text": "so what will be the space complexity how"
+    },
+    {
+      "start": 1036.88,
+      "duration": 5.52,
+      "end": 1042.4,
+      "text": "many nodes are we visiting at max we are"
+    },
+    {
+      "start": 1039.36,
+      "duration": 6.319,
+      "end": 1045.6789999999999,
+      "text": "visiting n nodes in our traversal so we"
+    },
+    {
+      "start": 1042.4,
+      "duration": 5.76,
+      "end": 1048.16,
+      "text": "can say that we are storing n nodes in"
+    },
+    {
+      "start": 1045.679,
+      "duration": 5.36,
+      "end": 1051.039,
+      "text": "those dfs transit we are using big o of"
+    },
+    {
+      "start": 1048.16,
+      "duration": 5.68,
+      "end": 1053.8400000000001,
+      "text": "n for visited and the recursion stack"
+    },
+    {
+      "start": 1051.039,
+      "duration": 5.361,
+      "end": 1056.4,
+      "text": "space are the worst case because what is"
+    },
+    {
+      "start": 1053.84,
+      "duration": 4.56,
+      "end": 1058.3999999999999,
+      "text": "stack space if you remember recursion"
+    },
+    {
+      "start": 1056.4,
+      "duration": 4.48,
+      "end": 1060.88,
+      "text": "this is the stack space so the worst"
+    },
+    {
+      "start": 1058.4,
+      "duration": 3.6,
+      "end": 1062.0,
+      "text": "case if i give you a graph like a skewed"
+    },
+    {
+      "start": 1060.88,
+      "duration": 3.039,
+      "end": 1063.919,
+      "text": "graph"
+    },
+    {
+      "start": 1062.0,
+      "duration": 3.039,
+      "end": 1065.039,
+      "text": "you will end up going like one two three"
+    },
+    {
+      "start": 1063.919,
+      "duration": 3.601,
+      "end": 1067.5200000000002,
+      "text": "four so"
+    },
+    {
+      "start": 1065.039,
+      "duration": 5.441,
+      "end": 1070.48,
+      "text": "the recursion stack space at the worst"
+    },
+    {
+      "start": 1067.52,
+      "duration": 5.519,
+      "end": 1073.039,
+      "text": "case can be of n so i can call it near"
+    },
+    {
+      "start": 1070.48,
+      "duration": 5.199,
+      "end": 1075.679,
+      "text": "about we go often if you do not include"
+    },
+    {
+      "start": 1073.039,
+      "duration": 3.52,
+      "end": 1076.559,
+      "text": "the adjacency list what about the dfs"
+    },
+    {
+      "start": 1075.679,
+      "duration": 3.921,
+      "end": 1079.6000000000001,
+      "text": "travis"
+    },
+    {
+      "start": 1076.559,
+      "duration": 6.161,
+      "end": 1082.72,
+      "text": "so how's the dfs traffic it's a function"
+    },
+    {
+      "start": 1079.6,
+      "duration": 6.16,
+      "end": 1085.76,
+      "text": "and then it iterates on the neighbors"
+    },
+    {
+      "start": 1082.72,
+      "duration": 4.8,
+      "end": 1087.52,
+      "text": "right i trades on the nipples"
+    },
+    {
+      "start": 1085.76,
+      "duration": 2.64,
+      "end": 1088.4,
+      "text": "and for every neighbor it calls the"
+    },
+    {
+      "start": 1087.52,
+      "duration": 4.32,
+      "end": 1091.84,
+      "text": "function"
+    },
+    {
+      "start": 1088.4,
+      "duration": 6.24,
+      "end": 1094.64,
+      "text": "this is how it is right so this function"
+    },
+    {
+      "start": 1091.84,
+      "duration": 4.88,
+      "end": 1096.72,
+      "text": "will always be called for a single node"
+    },
+    {
+      "start": 1094.64,
+      "duration": 4.48,
+      "end": 1099.1200000000001,
+      "text": "this function will always be called for"
+    },
+    {
+      "start": 1096.72,
+      "duration": 4.48,
+      "end": 1101.2,
+      "text": "a single node right and"
+    },
+    {
+      "start": 1099.12,
+      "duration": 4.0,
+      "end": 1103.12,
+      "text": "any node for any node it will just be"
+    },
+    {
+      "start": 1101.2,
+      "duration": 4.4,
+      "end": 1105.6000000000001,
+      "text": "called once because"
+    },
+    {
+      "start": 1103.12,
+      "duration": 4.4,
+      "end": 1107.52,
+      "text": "you traverse a node single time"
+    },
+    {
+      "start": 1105.6,
+      "duration": 5.84,
+      "end": 1111.4399999999998,
+      "text": "for node one it will come once for node"
+    },
+    {
+      "start": 1107.52,
+      "duration": 5.36,
+      "end": 1112.8799999999999,
+      "text": "two it will come once and for every node"
+    },
+    {
+      "start": 1111.44,
+      "duration": 3.84,
+      "end": 1115.28,
+      "text": "we will have a certain number of"
+    },
+    {
+      "start": 1112.88,
+      "duration": 5.2,
+      "end": 1118.0800000000002,
+      "text": "neighbors that it is iterating it is i"
+    },
+    {
+      "start": 1115.28,
+      "duration": 5.2,
+      "end": 1120.48,
+      "text": "trading so can i say for an undirected"
+    },
+    {
+      "start": 1118.08,
+      "duration": 3.68,
+      "end": 1121.76,
+      "text": "graph can i say for an undirected graph"
+    },
+    {
+      "start": 1120.48,
+      "duration": 1.92,
+      "end": 1122.4,
+      "text": "these neighbors"
+    },
+    {
+      "start": 1121.76,
+      "duration": 4.0,
+      "end": 1125.76,
+      "text": "for"
+    },
+    {
+      "start": 1122.4,
+      "duration": 5.2,
+      "end": 1127.6000000000001,
+      "text": "3 the neighbors are 1 7 and 4 which is"
+    },
+    {
+      "start": 1125.76,
+      "duration": 3.52,
+      "end": 1129.28,
+      "text": "the degree of the graph which is the"
+    },
+    {
+      "start": 1127.6,
+      "duration": 3.199,
+      "end": 1130.799,
+      "text": "degree of the graph can i say it is the"
+    },
+    {
+      "start": 1129.28,
+      "duration": 4.08,
+      "end": 1133.36,
+      "text": "degree of the graph"
+    },
+    {
+      "start": 1130.799,
+      "duration": 4.801,
+      "end": 1135.6,
+      "text": "like sorry degree of 3 yes"
+    },
+    {
+      "start": 1133.36,
+      "duration": 4.319,
+      "end": 1137.6789999999999,
+      "text": "and for every node can i say it will be"
+    },
+    {
+      "start": 1135.6,
+      "duration": 4.4,
+      "end": 1140.0,
+      "text": "the summation of degrees"
+    },
+    {
+      "start": 1137.679,
+      "duration": 4.721,
+      "end": 1142.4,
+      "text": "so can i say it will be the summation of"
+    },
+    {
+      "start": 1140.0,
+      "duration": 4.72,
+      "end": 1144.72,
+      "text": "neighbors or the summation of degrees"
+    },
+    {
+      "start": 1142.4,
+      "duration": 5.2,
+      "end": 1147.6000000000001,
+      "text": "i can say summation of degrees because"
+    },
+    {
+      "start": 1144.72,
+      "duration": 4.319,
+      "end": 1149.039,
+      "text": "for every node it will be"
+    },
+    {
+      "start": 1147.6,
+      "duration": 3.04,
+      "end": 1150.6399999999999,
+      "text": "the number of neighbors plus number of"
+    },
+    {
+      "start": 1149.039,
+      "duration": 3.52,
+      "end": 1152.559,
+      "text": "neighbors plus number of neighbors which"
+    },
+    {
+      "start": 1150.64,
+      "duration": 3.6,
+      "end": 1154.24,
+      "text": "is equivalent to degree of a node plus"
+    },
+    {
+      "start": 1152.559,
+      "duration": 3.36,
+      "end": 1155.9189999999999,
+      "text": "degree of a node plus degree of a node"
+    },
+    {
+      "start": 1154.24,
+      "duration": 4.559,
+      "end": 1158.799,
+      "text": "which is equivalent to summation of"
+    },
+    {
+      "start": 1155.919,
+      "duration": 4.721,
+      "end": 1160.64,
+      "text": "degree right so what is the summation of"
+    },
+    {
+      "start": 1158.799,
+      "duration": 4.641,
+      "end": 1163.44,
+      "text": "degree if you remember the first lecture"
+    },
+    {
+      "start": 1160.64,
+      "duration": 4.24,
+      "end": 1164.88,
+      "text": "that is 2 into number of edges"
+    },
+    {
+      "start": 1163.44,
+      "duration": 4.0,
+      "end": 1167.44,
+      "text": "and then for every node you're calling"
+    },
+    {
+      "start": 1164.88,
+      "duration": 3.679,
+      "end": 1168.5590000000002,
+      "text": "the function once so we go of n for"
+    },
+    {
+      "start": 1167.44,
+      "duration": 2.479,
+      "end": 1169.919,
+      "text": "calling the"
+    },
+    {
+      "start": 1168.559,
+      "duration": 3.521,
+      "end": 1172.08,
+      "text": "recursion once"
+    },
+    {
+      "start": 1169.919,
+      "duration": 5.12,
+      "end": 1175.039,
+      "text": "so this is the time complexity for an"
+    },
+    {
+      "start": 1172.08,
+      "duration": 5.04,
+      "end": 1177.12,
+      "text": "undirected graph for a directed graph it"
+    },
+    {
+      "start": 1175.039,
+      "duration": 4.241,
+      "end": 1179.28,
+      "text": "will depend on the number of edges so"
+    },
+    {
+      "start": 1177.12,
+      "duration": 4.32,
+      "end": 1181.4399999999998,
+      "text": "this two will go off and the number of"
+    },
+    {
+      "start": 1179.28,
+      "duration": 4.24,
+      "end": 1183.52,
+      "text": "edges is what it will"
+    },
+    {
+      "start": 1181.44,
+      "duration": 4.08,
+      "end": 1185.52,
+      "text": "boil down to so guys i hope you have"
+    },
+    {
+      "start": 1183.52,
+      "duration": 3.76,
+      "end": 1187.28,
+      "text": "understood the entire explanation as"
+    },
+    {
+      "start": 1185.52,
+      "duration": 3.76,
+      "end": 1189.28,
+      "text": "well as the code and the time complexity"
+    },
+    {
+      "start": 1187.28,
+      "duration": 3.84,
+      "end": 1191.12,
+      "text": "in the space complexity just in case you"
+    },
+    {
+      "start": 1189.28,
+      "duration": 3.519,
+      "end": 1192.799,
+      "text": "did please hit that like button and if"
+    },
+    {
+      "start": 1191.12,
+      "duration": 3.6,
+      "end": 1194.7199999999998,
+      "text": "you're new to our channel what are you"
+    },
+    {
+      "start": 1192.799,
+      "duration": 3.841,
+      "end": 1196.6399999999999,
+      "text": "waiting for hit that subscribe button"
+    },
+    {
+      "start": 1194.72,
+      "duration": 4.64,
+      "end": 1199.3600000000001,
+      "text": "right away with this i'll be wrapping up"
+    },
+    {
+      "start": 1196.64,
+      "duration": 4.56,
+      "end": 1201.2,
+      "text": "this video and yeah for the dp series"
+    },
+    {
+      "start": 1199.36,
+      "duration": 3.04,
+      "end": 1202.3999999999999,
+      "text": "and the sd sheet you can find the link"
+    },
+    {
+      "start": 1201.2,
+      "duration": 2.88,
+      "end": 1204.0800000000002,
+      "text": "in the description make sure you check"
+    },
+    {
+      "start": 1202.4,
+      "duration": 4.8,
+      "end": 1207.2,
+      "text": "it out and let's wrap up this video"
+    },
+    {
+      "start": 1204.08,
+      "duration": 3.12,
+      "end": 1207.1999999999998,
+      "text": "let's meet in some other video"
+    },
+    {
+      "start": 1210.72,
+      "duration": 3.64,
+      "end": 1214.3600000000001,
+      "text": "don't ever forget"
+    }
+  ]
+}

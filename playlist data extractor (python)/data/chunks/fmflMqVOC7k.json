@@ -1,0 +1,86 @@
+{
+  "video_id": "fmflMqVOC7k",
+  "position": 98,
+  "title": "L26. Print Root to Node Path in Binary Tree | C++ | Java",
+  "url": "https://www.youtube.com/watch?v=fmflMqVOC7k",
+  "chunk_count": 7,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "fmflMqVOC7k",
+      "position": 98,
+      "title": "L26. Print Root to Node Path in Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=fmflMqVOC7k",
+      "start": 0.0,
+      "end": 101.67999999999999,
+      "text": "so before starting this video i would love to thank reliable for sponsoring this entire tree series so do you wish to work with companies like cred upgrad urban company razor pay but you are not able to apply because of your lack of experience and of lack of opportunities so here's the solution to this problem relevant by an academy is a hiring platform that helps freshers and experienced people to get jobs in india's top companies all you need is skills so what you need to do is you just need to give the relevant test that is completely based on your skills depending on your performance your interview will be scheduled and you will be hired from the relevant platform and the best thing about this is it's absolutely free so what are you waiting for please make sure you check out the links in the description hey everyone welcome back to the channel i hope you guys are doing extremely well so today we will be solving the problem root to node path or you might find a question like root to leaf path that's why i will be solving root to node path and then you can easily solve any question like root to leaf path also so what does the problem stay the problem states you'll be given a node okay a node value will be given to you so either the node value will be given to you or the node will be given to you you need to figure that out okay uh so assuming the node is given to you seven so from this root that's one you have to tell me the path to that so it's basically one comma two comma five comma seven okay that's the path had this three pointer uh been having the parent pointers like just in case if it had the parent pointers then the question would have been super easy like you start from seven go to the parent five go to the parent two go to the",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "fmflMqVOC7k",
+      "position": 98,
+      "title": "L26. Print Root to Node Path in Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=fmflMqVOC7k",
+      "start": 97.6,
+      "end": 213.28,
+      "text": "five go to the parent two go to the parent one and the moment you reach know the moment you reach the node you stop but we we don't have the parent node so how do you solve this problem now now in order to solve this problem we will be using the in order traversal why not some other traversal yes you can use pre-order you can use the post order as well but that will be a bit complicated so generally we try to use the traversal which is very simple because in an interview you have to explain the solution also so if you complicate the solution the tougher it will be for you to implement as well as to explain it so always try to use the traversal which gives you a simpler solution and a simpler uh code okay so that's why i'll be using the inorder traversal nothing special so what i will do is i'll try to use recursion okay so initially i'll start with the uh root now when i reach the new when i reach the uh this route i'll be having a data structure okay and that data structure will be empty the moment i reach the node 1 i will say this guy is not null so i will take this guy and also just make sure this guy is not equivalent to this okay so just take this now where can i go i know that i can either go to the left and i can either go to the right so at first remember this at first the call for the left will go then it will come back then the call for right will go and then the right call will come so first the left recursion has to has to appear so the left recursion happens and you come back uh come to the node two with an array having one so you see that this node two is not equivalent to a node seven so you take this node two and you insert that",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "fmflMqVOC7k",
+      "position": 98,
+      "title": "L26. Print Root to Node Path in Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=fmflMqVOC7k",
+      "start": 208.56,
+      "end": 314.15999999999997,
+      "text": "take this node two and you insert that into your array it's very important that you insert that into your array now note 2 will say i can go to the left i can go to the right but first as the as i said as i said you have to go to the left okay so you will go to the left at the moment you go to the left you have a node four okay you have a node four that's not equivalent to same seven so you will again take the node and you'll insert that into four now over here you again go to the left the moment you go to the left you will find null okay and remember this remember this the moment you find null you're going to return a false please remember you're going to return a false so the left call got a false remember this the left call got a false now you will go to the right so the right went and the right also returned a false so the right call also got a false so which apparently meant that neither on the left neither on the right did you have this note 7 you did not have so if you did not have if both of them both of them say that on the left on the right we do not have the notes of it and do you remember while we came we checked for four so what i can say is on this path or on the sub tree we do not have seven so it's time to go back so remember remember since you're using a single array so since you've added 4 to that array while going back remove this 4 remove this 4 and go back so if you remove and go back you will again come back with an array as 1 comma 2 if you will not remove then this will come back with one to four as the array the array that we are using is being passed",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "fmflMqVOC7k",
+      "position": 98,
+      "title": "L26. Print Root to Node Path in Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=fmflMqVOC7k",
+      "start": 310.479,
+      "end": 425.759,
+      "text": "array that we are using is being passed by reference so whatever changes you're making just make sure you redo them if you've added four you re remove it now over here then again so you'll return false so this two guy which went to the left came back with again a false oh goodness he came back with the false so what he'll do is he'll go to the right again when he goes to the right please note you're coming to five so you'll add 1 comma 2 comma 5 you will add 5 to it because and you will check is 5 equivalent to 7 and you'll find 5 is not equivalent to 7 no no no it is not so what you will do is again take the same journey of left moment you come to the left again you will add one two five six to your array same thing you'll do again go to the left and you'll say no man no not seven here you'll again go to the right he'll say no man no savannah come back both sides left and right came back as false if they are coming back as false can i say i'll just take it out and go back and again written false five when when to left return the false okay now five will go to the right the moment it gets to right i have a one two five seven i'll insert seven into my array and and and i see that this 7 is ultimately equivalent to my node and if that's the case and if that's the case there's no need to go for left and right you will directly return a true remember this without removing seven you'll directly return it true so can i say this five which called for left got a false but the moment it called for right it got a true so if any of the left calls or right calls give you a true any of any of that means on that path you figured",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "fmflMqVOC7k",
+      "position": 98,
+      "title": "L26. Print Root to Node Path in Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=fmflMqVOC7k",
+      "start": 421.199,
+      "end": 520.56,
+      "text": "of that means on that path you figured that out so again without removing one to five you will go back by passing it through so this guy will be actually five now because it was passed by reference so it inserted five and it came back as true again this two guy called left it got a false but called right it got a true so the moment it gets true it will go back this time the reference variable would have made the array one to five now on one you made a left call that gave you true will you go to the right will it will it make sense will it no man no so what you will do is not go to the left so remember if any of the left or any of the right call gives you are true that means you've got your path go back man go return coppers so at the end you'll go back with the true so you've got that guy and i can say the array that you are carrying that's one two five by the way i forgot to add seven i forgot to add seven so please make sure you add seven the area that you're carrying the area that you're carrying one two five seven at the end is ultimately your path i hope you have understood the at least thought process i try to go every direction and if i do not get it i return false and i just remove that guy from my array and if i get it i don't remove and i pass on true true true so that that true will signify don't remove you've got the part take this array and carry it as the answer got it it's not not an issue let's check out the code you'll definitely get it over there so guys as usual the c plus plus code is on the left and the java code is on the right and they're extremely identical so",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "fmflMqVOC7k",
+      "position": 98,
+      "title": "L26. Print Root to Node Path in Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=fmflMqVOC7k",
+      "start": 517.68,
+      "end": 616.64,
+      "text": "right and they're extremely identical so i'll just be telling you about the c plus plus code so i've given the i've been given the uh node a and i've been given the node b which i have to find uh or rather the value and remember this can be the value this can be the node address or this can be anything okay so initially i declare a vector and then if if the root is null i just say there's no path possible and then i then i call the get path and the question mentions the question mentions that does be always exist that is why i'm not putting any structure if the question says you have to check whether b exists or not then you have to then you have to check like you have to call this function and you have to check whether i got it true or not whether i got it true or not you have to put an external check perfect i've been passing the route the array and the value that i have been looking for if it is null then i'll return false if you remember if we reach any left right where we did not get it we will return false and we will always add that guy to my array okay and after that it was very simple if if that guy is equivalent to what i'm looking for i've got my path there's no need to go for left and right i'll return true if it is not then i'll go left then i'll go right and if any of them is returning true if any of them is returning true i'll return true and go back and if they are not then i have to do the tedious task of removing i'll remove my pop back right and then i'll return a false because i did not get it as simple as that guys if either of left and right gives true true or else you'll return false saying",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "fmflMqVOC7k",
+      "position": 98,
+      "title": "L26. Print Root to Node Path in Binary Tree | C++ | Java",
+      "url": "https://www.youtube.com/watch?v=fmflMqVOC7k",
+      "start": 610.8,
+      "end": 661.0799999999999,
+      "text": "true or else you'll return false saying ah no path here perfect time complexity definitely we go off and as you're doing a in order traversal space complexity definitely a big off height of the tree as you're doing in order you'll be using a recursive stack space so i hope you've understood the entire explanation as well as the code just in case you did please please please make sure you like this video because it took a lot of efforts to make this entire tree series also if you wish you can definitely drop in a comment that will keep motivating me to make such further series also if you're new to the channel please do consider subscribing because i'm going to bring in such more series in the upcoming future as well with this uh let's wrap up this video let's read in the next lecture bye [Music]",
+      "word_count": 151
+    }
+  ]
+}

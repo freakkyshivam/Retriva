@@ -1,0 +1,119 @@
+{
+  "video_id": "e7XQLtOQM3I",
+  "position": 301,
+  "title": "L5. Next Greater Element | Stack and Queue Playlist",
+  "url": "https://www.youtube.com/watch?v=e7XQLtOQM3I",
+  "chunk_count": 10,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "e7XQLtOQM3I",
+      "position": 301,
+      "title": "L5. Next Greater Element | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=e7XQLtOQM3I",
+      "start": 3.199,
+      "end": 128.64000000000001,
+      "text": "so let's continue with the stack and Cube playlist today for starting off he everyone welcome back to the channel I hope you guys are doing extremely well so the problem that we will be solving today is next greater element so from this problem onwards we'll be starting off with monotonic stack so what is monotonic stack till now I've been using stack to store elements but the moment we use stack to store elements in a specific order in a specific order that is when we call it as a monotonic stack so maybe I can store elements in an increasing order in the stack or maybe in a decreasing order or maybe in some other order so whenever we are following a specific order that's when we call it as a monotonic stack got it so this problem is next greater element or commonly known as NG so what is the problem statement it's stating that you given an array for every element for every element in the array you have to tell me which one is the next greater element as the name is telling you what it is all about so you basically stand at six and then you look at the next elements is 0 greater than 6 no it is not is 8 greater than 6 yes it is the first element that is greater than the element so you see that 8 is the NG of six so what I can do is I can write eight if you stand at zero and if you look at the right if you look at the right eight is the next greater element so again I can write eight if I stand at eight and if I look on the right I do not have an element that is greater than 8 in such scenario I'll print minus1 if I stand at one if I look at the right I have a three which is greater than one so I'll write three if I stand at three",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "e7XQLtOQM3I",
+      "position": 301,
+      "title": "L5. Next Greater Element | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=e7XQLtOQM3I",
+      "start": 124.68,
+      "end": 255.319,
+      "text": "so I'll write three if I stand at three and if I look at right there's nothing so I'll have minus one so this is what you'll have to return this array is what you will have to return straightforward isn't it what is the first approach that comes to my mind for every element go to the right and find the next greater element okay fine so in order to Trav for every element I know one thing for sure I need a loop 0 to n minus one so I'll iterate on the array I'll go to every element now for every element I need the next greater element so one thing I know for sure the next greater element will be on the right thereby I'll start from the next index which is I + 1 I'll go until n minus one again straightforward if at any moment I say array of J is greater than array of I can I surely say that this is my next greater element I can maybe I need an array NG which initially can be of size uh it will be of size n and then you can say that NG of the index I will be array of J and at the same time you can say can you just break off and once you're done with this follow Loop ends the external fall Loop ends and I could end up returning the NG AR that understood again you cannot use this ngr and maybe you can modify the given array itself in an interview it is not encouraged to modify the given input don't do it okay it's not a good practice what about the time complexity can I say I'm running couple of Loops yes I am so B go of n Square near about near about b n Square what about the space complexity can I say that the amount of space that I'm taking is around B of n again this space is not used in order to solve the problem",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "e7XQLtOQM3I",
+      "position": 301,
+      "title": "L5. Next Greater Element | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=e7XQLtOQM3I",
+      "start": 250.72,
+      "end": 375.039,
+      "text": "used in order to solve the problem rather it is used to return the answer so it is something that you cannot avoid at this moment the interviewer will not be happy with the B of n square and he'll ask you to optimize it so we need to optimize beo of n² that clearly gives us an indication that we looking something around something around V of n or V of 2 and or V of 3 n or n login right fine so imagine you're standing at this element three and I'm asking you what is the NG of three now in order to know the next greater element of three you will look towards the right so you should be knowing the right elements you should be knowing the right elements beforehand but the generic way of traversal is starting from the left you start from here then you go here then you go here so there is no way that when you reach three that when you reach three you would be knowing what are the elements on the right there is no way when you reach three you'll be knowing what are the elements on the right so will it not be better if you Traverse from the back if you Traverse from the back and if you reach three at that moment you'll be knowing what are the elements on the right hand that is what you need the first optimization or first thought process that I can think of is maybe I'll start from the back so that at any particular index I would be knowing what are the elements on the right and then I can think of a solution then I can think of a solution okay now I know where to start from that is a back traverser so what I will do is I'll be taking a stack and this tack will be storing elements in a specific order why you'll understand as I explained the first element is six so",
+      "word_count": 342
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "e7XQLtOQM3I",
+      "position": 301,
+      "title": "L5. Next Greater Element | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=e7XQLtOQM3I",
+      "start": 368.599,
+      "end": 486.84,
+      "text": "explained the first element is six so what you do is you look in the stack and you don't have anything and if you do not have anything that means there are no right elements so what you can do is you can simply say minus one to8 you can simply say minus1 to8 got it what after that after that you take the element six and you put it into the stack and then you move back so now when you move back to four you look in the stack and you see that there is a six there is a six so you can say that that can be my next great element because six is greater than four so you say okay I have my next greater element and you take four and you put it into the stack after that you move back now you have something as two again you look into the stack and you have a four which can be your next greater element or which is your next greater element so you take four and you place it over here again you take two put it into the stack and you move back this time you are at one and you look into the stack and the topmost element is two so you say that okay this is my next great element I'll take one and put it back and I'll move across three I'll move across three now this is something where you need to understand what is stack storing as of now it is storing some something of a length like a six size just imagine light poles you know light poles of a length six after that it is storing something of a length four after that something of a length uh two and after that something of a length one now suddenly you are at three suddenly you are at three which is typically you can say somewhere around this correct now tell me one thing for this three which will be your next greater element",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "e7XQLtOQM3I",
+      "position": 301,
+      "title": "L5. Next Greater Element | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=e7XQLtOQM3I",
+      "start": 480.52,
+      "end": 599.48,
+      "text": "which will be your next greater element it will be four for that you'll have to take them out now you might say if I take them out for the future elements I will lose out on some of the right elements no you'll not lose out let me explain you why imagine I come up with something like one over here after three just imagine just imagine after three there is an element which is of length one tell me one thing even if you lose out on one and two in order to get four because in order to get four you'll have to take out one two you'll have to take out one two so that's gone just imagine this is gone for this one if this three is your answer will one and two contribute to your answer the answer is no it will never contribute because for an element like one if three is the answer one and two can never contribute because this is a light pole which sees this and Beyond this it can never see this Beyond this it can only see a larger element Beyond this it can only see a larger element and Beyond this a larger element so will it not be will it not be sensible to store the elements in this decreasing order in the decreasing order which is like 6 4 2 1 and now when three came up you don't need to store one and two you don't need to store one and two because if three is the answer of someone one and two can never be one and two can never be got it perfect so what I'll do is I'm at three right I'm at three I'm saying one can never be my answer because that is lesser like okay remove can two be your answer no remove can four be your answer yes so what do you say is four is my answer take up three and put it into your stack after that",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "e7XQLtOQM3I",
+      "position": 301,
+      "title": "L5. Next Greater Element | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=e7XQLtOQM3I",
+      "start": 593.36,
+      "end": 710.279,
+      "text": "and put it into your stack after that move across to five now when you at five you're again looking at three no you're looking at four no so what you do is you basically take both of them out and six can be your answer so you write six and you put back five after that you move to two now when you move to two the top of the stack is your answer so you just take it across after that you take two put it back and you move back one the top of the stack is your answer two again you take one and put it back and you move back this time when you at three can one be your answer no can two be your answer no so you take both of them out you take all the elements which are lesser than that element and after that five can be your answer so you write five and you put back three and you move back you at five when you are at five can three be your answer no can five be your answer no you're looking for greater greater so I'll end up deleting both of them can six be your answer yes so I'll write six after this I'll insert five and I'll move back when I'm at 12 when I am at 12 I look onto the stack no no so both of them can go off both of them can go off and the stack will be empty the stack is empty you say that the answer is minus one and you put back 12 and now you go back four the top of the stack is 12 that can be your answer put back four and then go off you're done and this is is your next greater element this is your answer yes so what did I do over here I did use a monotonic stack why because I was storing the elements in a specific order and that specific order was the decreasing order yes the",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "e7XQLtOQM3I",
+      "position": 301,
+      "title": "L5. Next Greater Element | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=e7XQLtOQM3I",
+      "start": 703.92,
+      "end": 833.279,
+      "text": "was the decreasing order yes the decreasing order if you carefully notice I stored six which is typically let's say here and I stored five let's say typically here then I stored two let's say typically uh two is here and I stored one which is typically here so that was a decreasing order right that was a decreasing order and then when Whenever there was a three three would have been somewhere here that order would have been distorted that is why what I did was I removed two and one so that the decreasing order is still maintained so that the decreasing order is still maintained because I'm decreasing it I'm decreasing it got it so I hope you got next next like you got the concept of next greater element the intuition the intuition comes from the light poles if you are if you're a human being and you're looking on the rightward direction it's obvious that you'll only see increasing stuff nothing in between them nothing in between them you'll just see the increasing uh curve correct so the intuition comes from there perfect so time to write down the pseudo code so we will be returning a list or a vector according to the language that you're writing in so I'll be returning a list of integer and I have to find the next greater element so what will I be given I'll be given an array for sure okay so what do I need I need an array which stores all the next greater elements so maybe an NG of size N2 perfect I need to Travers backwards and I also need a stack so maybe I can define a stack St I'm not writing the syntax at a pseudo code so let's quickly Traverse from the back so that is going to start from n minus1 till zero backward traversal so I know one thing if there are elements in the stack and there is something which is smaller I just take take them off so I say Hey listen if the",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "e7XQLtOQM3I",
+      "position": 301,
+      "title": "L5. Next Greater Element | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=e7XQLtOQM3I",
+      "start": 827.519,
+      "end": 968.519,
+      "text": "take them off so I say Hey listen if the stack has elements that is very if the stack is not empty and and the stack do top is something which is lesser than equal to very important you have to remove the Lesser and the equal elements as well lesser than equal to array of I so can you please do me a favor just do a stack. pop and keep on doing till the stack is either empty or you have removed all the smaller elements once this is done that means you removed the smaller elements for sure correct after this what you say is okay listen if the stack is empty now because after removing if the stack doesn't have anything which means all the elements in the stack were smaller which clearly tells me that NG of I should be minus one or else the NG of I should be aray or rather a stack. top isn't it because that is the element that was not removed why because it was greater okay done what after this I say stack dot push what the current element and the followup is completed and once that is completed you end up returning the NG list perfect am I done I think I'm done so time to analyze the time complexity what do you think a lot of people will say that's still bego of n square a bego of n here and then you're iterating on the stacks another bego of n over here no it is not instead it is a beo of 2 N at the worst possible case b off to an at the worst possible case why so imagine like understand this is for sure running for B Goen but if I ask you how many times is the while loop running what will be that is it running for n every time is it running for n every time no it is not it is not running for n every time correct you need to understand this okay then how",
+      "word_count": 348
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "e7XQLtOQM3I",
+      "position": 301,
+      "title": "L5. Next Greater Element | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=e7XQLtOQM3I",
+      "start": 962.88,
+      "end": 1084.919,
+      "text": "need to understand this okay then how many times is it running so if you look at the example what is the stack containing stack is containing nothing but these elements but these elements so whenever you are at three what the stack contained was four elements so at the worst possible scenario at the worst possible scenario you will end up removing four elements you'll end up removing four elements for this element right so throughout throughout the journey you might remove this this this this this this this this this this this this this from the stack throughout the journey this is what at Max you can remove from the stack so can I say this stack. pop at Max can be performed for B Goen not Beyond it because I'll only remove the elements that I've inserted into the stack and I've only inserted at Max of n elements so I'll remove at Max of beo of n elements itself maybe sometimes I remove three elements maybe sometimes they remove two maybe sometimes they remove one but the addition of it will sum up to BB go of n got it okay so that is why the time complexity at the worst possible case will be B go of n for this one and throughout it might end up taking a beo of n which ends up making it a beo of 2 N okay what about the space complexity I'm using a stack so that's a b of N and I'm using another B of n in order to store the answer again this is something which I'll have to use in order to return the answer I don't want to modify the given input we don't do that in an interview usually use a different array in order to store all my answers so that will be the time complexity and the space complexity I hope you understood the thought process of traversing from the back I hope you understood the intuition of storing in a decreasing order the light pool concept",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "e7XQLtOQM3I",
+      "position": 301,
+      "title": "L5. Next Greater Element | Stack and Queue Playlist",
+      "url": "https://www.youtube.com/watch?v=e7XQLtOQM3I",
+      "start": 1079.919,
+      "end": 1106.32,
+      "text": "decreasing order the light pool concept got it that will be it for this one so if you're still now watching and if you've understood everything please please do consider giving us a like and if you're new to our channel do consider subscribing to us as well with this I'll be wrapping up this video let's me in some other video tell them by take careen golden I will",
+      "word_count": 70
+    }
+  ]
+}

@@ -1,0 +1,1970 @@
+{
+  "position": 88,
+  "video_id": "Rezetez59Nk",
+  "title": "L16. Diameter of Binary Tree | C++ | Java",
+  "url": "https://www.youtube.com/watch?v=Rezetez59Nk",
+  "transcript": [
+    {
+      "start": 0.0,
+      "duration": 2.399,
+      "end": 2.399,
+      "text": "Hey everyone, welcome back to the"
+    },
+    {
+      "start": 1.28,
+      "duration": 2.8,
+      "end": 4.08,
+      "text": "channel. I hope you guys are doing"
+    },
+    {
+      "start": 2.399,
+      "duration": 3.36,
+      "end": 5.759,
+      "text": "extremely well. So today we will be"
+    },
+    {
+      "start": 4.08,
+      "duration": 3.92,
+      "end": 8.0,
+      "text": "solving the problem finding the diameter"
+    },
+    {
+      "start": 5.759,
+      "duration": 3.84,
+      "end": 9.599,
+      "text": "of a binary tree from the free cut tree"
+    },
+    {
+      "start": 8.0,
+      "duration": 3.759,
+      "end": 11.759,
+      "text": "series. So let's assume this is the"
+    },
+    {
+      "start": 9.599,
+      "duration": 4.881,
+      "end": 14.48,
+      "text": "first binary tree, right? And if I ask"
+    },
+    {
+      "start": 11.759,
+      "duration": 6.881,
+      "end": 18.64,
+      "text": "you what is the definition of diameter?"
+    },
+    {
+      "start": 14.48,
+      "duration": 7.36,
+      "end": 21.84,
+      "text": "Now this can be called as the longest"
+    },
+    {
+      "start": 18.64,
+      "duration": 8.719,
+      "end": 27.359,
+      "text": "path. Yes, I can call the diameter as"
+    },
+    {
+      "start": 21.84,
+      "duration": 7.519,
+      "end": 29.359,
+      "text": "the longest path between any two nodes."
+    },
+    {
+      "start": 27.359,
+      "duration": 6.001,
+      "end": 33.36,
+      "text": "Right? That's the definition of"
+    },
+    {
+      "start": 29.359,
+      "duration": 6.401,
+      "end": 35.760000000000005,
+      "text": "diameter. And also this path"
+    },
+    {
+      "start": 33.36,
+      "duration": 5.12,
+      "end": 38.48,
+      "text": "does not"
+    },
+    {
+      "start": 35.76,
+      "duration": 6.56,
+      "end": 42.32,
+      "text": "need to pass like it can pass through"
+    },
+    {
+      "start": 38.48,
+      "duration": 7.44,
+      "end": 45.919999999999995,
+      "text": "the root or it cannot does not need to"
+    },
+    {
+      "start": 42.32,
+      "duration": 6.399,
+      "end": 48.719,
+      "text": "pass via root. So if you can understand"
+    },
+    {
+      "start": 45.92,
+      "duration": 4.88,
+      "end": 50.800000000000004,
+      "text": "these two points, you can understand the"
+    },
+    {
+      "start": 48.719,
+      "duration": 5.041,
+      "end": 53.760000000000005,
+      "text": "definition of diameter of a binary tree."
+    },
+    {
+      "start": 50.8,
+      "duration": 5.04,
+      "end": 55.839999999999996,
+      "text": "Like for this uh tree one, if I ask you"
+    },
+    {
+      "start": 53.76,
+      "duration": 3.92,
+      "end": 57.68,
+      "text": "what's the diameter of binary tree? I'll"
+    },
+    {
+      "start": 55.84,
+      "duration": 4.559,
+      "end": 60.399,
+      "text": "say the diameter of binary tree uh this"
+    },
+    {
+      "start": 57.68,
+      "duration": 4.8,
+      "end": 62.48,
+      "text": "binary tree is three and I can say that"
+    },
+    {
+      "start": 60.399,
+      "duration": 4.321,
+      "end": 64.72,
+      "text": "if you start from the node four and node"
+    },
+    {
+      "start": 62.48,
+      "duration": 4.4,
+      "end": 66.88,
+      "text": "five uh you can take any one that's the"
+    },
+    {
+      "start": 64.72,
+      "duration": 5.28,
+      "end": 70.0,
+      "text": "path that's the length one that's the"
+    },
+    {
+      "start": 66.88,
+      "duration": 5.36,
+      "end": 72.24,
+      "text": "length two that's the length uh three so"
+    },
+    {
+      "start": 70.0,
+      "duration": 4.799,
+      "end": 74.799,
+      "text": "basically if I consider this node four"
+    },
+    {
+      "start": 72.24,
+      "duration": 5.28,
+      "end": 77.52,
+      "text": "and node three I can get a diameter of"
+    },
+    {
+      "start": 74.799,
+      "duration": 5.121,
+      "end": 79.92,
+      "text": "diameter three so over here you can see"
+    },
+    {
+      "start": 77.52,
+      "duration": 5.2,
+      "end": 82.72,
+      "text": "that the path is passing through the"
+    },
+    {
+      "start": 79.92,
+      "duration": 6.0,
+      "end": 85.92,
+      "text": "node one but uh we have been said that"
+    },
+    {
+      "start": 82.72,
+      "duration": 5.6,
+      "end": 88.32,
+      "text": "the path does not need to pass by root"
+    },
+    {
+      "start": 85.92,
+      "duration": 4.4,
+      "end": 90.32000000000001,
+      "text": "like it can pass or it cannot like it's"
+    },
+    {
+      "start": 88.32,
+      "duration": 5.36,
+      "end": 93.67999999999999,
+      "text": "not a mandatory that it should pass via"
+    },
+    {
+      "start": 90.32,
+      "duration": 6.32,
+      "end": 96.63999999999999,
+      "text": "node. So if I take this uh binary two"
+    },
+    {
+      "start": 93.68,
+      "duration": 6.479,
+      "end": 100.159,
+      "text": "for an example in that case if I take"
+    },
+    {
+      "start": 96.64,
+      "duration": 7.28,
+      "end": 103.92,
+      "text": "this node six if I take this node 9 then"
+    },
+    {
+      "start": 100.159,
+      "duration": 8.161,
+      "end": 108.32000000000001,
+      "text": "this is path one path two path three"
+    },
+    {
+      "start": 103.92,
+      "duration": 7.68,
+      "end": 111.6,
+      "text": "path four 5 6. So I can say for this uh"
+    },
+    {
+      "start": 108.32,
+      "duration": 4.88,
+      "end": 113.19999999999999,
+      "text": "second binary tree the distance yes the"
+    },
+    {
+      "start": 111.6,
+      "duration": 5.12,
+      "end": 116.72,
+      "text": "distance from this node to the other"
+    },
+    {
+      "start": 113.2,
+      "duration": 5.519,
+      "end": 118.71900000000001,
+      "text": "node is nothing but six. I hope you have"
+    },
+    {
+      "start": 116.72,
+      "duration": 4.88,
+      "end": 121.6,
+      "text": "understood this and this is not"
+    },
+    {
+      "start": 118.719,
+      "duration": 5.841,
+      "end": 124.55999999999999,
+      "text": "necessarily passing via root. So this is"
+    },
+    {
+      "start": 121.6,
+      "duration": 6.159,
+      "end": 127.759,
+      "text": "the question that we need to solve. So"
+    },
+    {
+      "start": 124.56,
+      "duration": 6.08,
+      "end": 130.64000000000001,
+      "text": "the naive way is very simple. I can say"
+    },
+    {
+      "start": 127.759,
+      "duration": 5.681,
+      "end": 133.44,
+      "text": "I can traverse in the entire tree and if"
+    },
+    {
+      "start": 130.64,
+      "duration": 6.8,
+      "end": 137.44,
+      "text": "I'm standing at this node what I can do"
+    },
+    {
+      "start": 133.44,
+      "duration": 6.24,
+      "end": 139.68,
+      "text": "is I can simply find the longest path"
+    },
+    {
+      "start": 137.44,
+      "duration": 4.32,
+      "end": 141.76,
+      "text": "passing via this node one can be called"
+    },
+    {
+      "start": 139.68,
+      "duration": 4.4,
+      "end": 144.08,
+      "text": "as the left height of the tree like"
+    },
+    {
+      "start": 141.76,
+      "duration": 4.08,
+      "end": 145.84,
+      "text": "whatever is the left height plus the"
+    },
+    {
+      "start": 144.08,
+      "duration": 4.879,
+      "end": 148.959,
+      "text": "right height of the tree. So for this"
+    },
+    {
+      "start": 145.84,
+      "duration": 6.96,
+      "end": 152.8,
+      "text": "the left height is 1. So that's one. For"
+    },
+    {
+      "start": 148.959,
+      "duration": 6.881,
+      "end": 155.84,
+      "text": "this the right height is 1 + 1 2 3 4. So"
+    },
+    {
+      "start": 152.8,
+      "duration": 6.4,
+      "end": 159.20000000000002,
+      "text": "that's four. So I can say that for this"
+    },
+    {
+      "start": 155.84,
+      "duration": 6.96,
+      "end": 162.8,
+      "text": "the maximum like if if the path passes"
+    },
+    {
+      "start": 159.2,
+      "duration": 5.759,
+      "end": 164.959,
+      "text": "by 1. The maximum is five. Right? So if"
+    },
+    {
+      "start": 162.8,
+      "duration": 3.6,
+      "end": 166.4,
+      "text": "I go over here I can see that we don't"
+    },
+    {
+      "start": 164.959,
+      "duration": 3.601,
+      "end": 168.56,
+      "text": "have anything here. We don't have"
+    },
+    {
+      "start": 166.4,
+      "duration": 4.4,
+      "end": 170.8,
+      "text": "anything here. For this guy the maximum"
+    },
+    {
+      "start": 168.56,
+      "duration": 4.959,
+      "end": 173.519,
+      "text": "I can say is zero because I don't have"
+    },
+    {
+      "start": 170.8,
+      "duration": 5.76,
+      "end": 176.56,
+      "text": "any path. If I stand at three, if I"
+    },
+    {
+      "start": 173.519,
+      "duration": 4.881,
+      "end": 178.4,
+      "text": "stand at three, I can say it's 1 2 3."
+    },
+    {
+      "start": 176.56,
+      "duration": 4.959,
+      "end": 181.519,
+      "text": "That's the left height. And if I talk"
+    },
+    {
+      "start": 178.4,
+      "duration": 6.16,
+      "end": 184.56,
+      "text": "about the right height, that's 1 2 3. So"
+    },
+    {
+      "start": 181.519,
+      "duration": 5.36,
+      "end": 186.87900000000002,
+      "text": "again 3 + 3 and that makes it 6."
+    },
+    {
+      "start": 184.56,
+      "duration": 4.64,
+      "end": 189.2,
+      "text": "Similarly, if I stand over here, I can"
+    },
+    {
+      "start": 186.879,
+      "duration": 6.161,
+      "end": 193.04,
+      "text": "say that the maximum height like in this"
+    },
+    {
+      "start": 189.2,
+      "duration": 6.8,
+      "end": 196.0,
+      "text": "case will be 2 + 0 that's 2. In this"
+    },
+    {
+      "start": 193.04,
+      "duration": 5.44,
+      "end": 198.48,
+      "text": "case will be 1 + 0 that's one in this"
+    },
+    {
+      "start": 196.0,
+      "duration": 5.12,
+      "end": 201.12,
+      "text": "case will be 0. over here like the"
+    },
+    {
+      "start": 198.48,
+      "duration": 4.96,
+      "end": 203.44,
+      "text": "maximum path if I call then it will be 0"
+    },
+    {
+      "start": 201.12,
+      "duration": 5.68,
+      "end": 206.8,
+      "text": "+ 2 so that's going to be two over here"
+    },
+    {
+      "start": 203.44,
+      "duration": 5.439,
+      "end": 208.879,
+      "text": "it's it's going to be 0 + 1 that's one"
+    },
+    {
+      "start": 206.8,
+      "duration": 4.4,
+      "end": 211.20000000000002,
+      "text": "over here it's going to be 0 + 0 that's"
+    },
+    {
+      "start": 208.879,
+      "duration": 5.44,
+      "end": 214.319,
+      "text": "going to be zero so what I can say is"
+    },
+    {
+      "start": 211.2,
+      "duration": 5.599,
+      "end": 216.79899999999998,
+      "text": "for any given node if I can figure out"
+    },
+    {
+      "start": 214.319,
+      "duration": 5.041,
+      "end": 219.35999999999999,
+      "text": "what's the left height what's the right"
+    },
+    {
+      "start": 216.799,
+      "duration": 4.8,
+      "end": 221.59900000000002,
+      "text": "height and if I can add them up to get"
+    },
+    {
+      "start": 219.36,
+      "duration": 4.56,
+      "end": 223.92000000000002,
+      "text": "left height plus right height that's"
+    },
+    {
+      "start": 221.599,
+      "duration": 6.081,
+      "end": 227.67999999999998,
+      "text": "going to be the length of the longest"
+    },
+    {
+      "start": 223.92,
+      "duration": 8.16,
+      "end": 232.07999999999998,
+      "text": "path passing via the given node And if"
+    },
+    {
+      "start": 227.68,
+      "duration": 8.72,
+      "end": 236.4,
+      "text": "we are given nodes, so if we can find LH"
+    },
+    {
+      "start": 232.08,
+      "duration": 7.519,
+      "end": 239.59900000000002,
+      "text": "+ RH across every given node, can I say"
+    },
+    {
+      "start": 236.4,
+      "duration": 6.16,
+      "end": 242.56,
+      "text": "the maximum of left height plus right"
+    },
+    {
+      "start": 239.599,
+      "duration": 6.321,
+      "end": 245.92,
+      "text": "height is what is going to be my"
+    },
+    {
+      "start": 242.56,
+      "duration": 5.679,
+      "end": 248.239,
+      "text": "diameter of any given binary tree?"
+    },
+    {
+      "start": 245.92,
+      "duration": 4.239,
+      "end": 250.159,
+      "text": "Indeed, we can. So if I talk about the"
+    },
+    {
+      "start": 248.239,
+      "duration": 3.92,
+      "end": 252.159,
+      "text": "brute force, it's very simple. We're"
+    },
+    {
+      "start": 250.159,
+      "duration": 4.961,
+      "end": 255.12,
+      "text": "going to do a traversal uh recursive"
+    },
+    {
+      "start": 252.159,
+      "duration": 4.881,
+      "end": 257.03999999999996,
+      "text": "traversal, right? And what I can say is"
+    },
+    {
+      "start": 255.12,
+      "duration": 4.239,
+      "end": 259.359,
+      "text": "if I'm doing a recursive traversal"
+    },
+    {
+      "start": 257.04,
+      "duration": 4.56,
+      "end": 261.6,
+      "text": "starting from the node which is going to"
+    },
+    {
+      "start": 259.359,
+      "duration": 4.4,
+      "end": 263.75899999999996,
+      "text": "be the root of the tree what I can do is"
+    },
+    {
+      "start": 261.6,
+      "duration": 4.24,
+      "end": 265.84000000000003,
+      "text": "uh we can definitely go to the left and"
+    },
+    {
+      "start": 263.759,
+      "duration": 3.841,
+      "end": 267.6,
+      "text": "that's a simple recursive traversal."
+    },
+    {
+      "start": 265.84,
+      "duration": 3.2,
+      "end": 269.03999999999996,
+      "text": "Every time just go to the left and go to"
+    },
+    {
+      "start": 267.6,
+      "duration": 3.92,
+      "end": 271.52000000000004,
+      "text": "the right. So that's how you generally"
+    },
+    {
+      "start": 269.04,
+      "duration": 5.28,
+      "end": 274.32,
+      "text": "traverse the entire tree. So every time"
+    },
+    {
+      "start": 271.52,
+      "duration": 4.56,
+      "end": 276.08,
+      "text": "you are at any given node just make sure"
+    },
+    {
+      "start": 274.32,
+      "duration": 3.439,
+      "end": 277.759,
+      "text": "you get the left height. Again very"
+    },
+    {
+      "start": 276.08,
+      "duration": 4.0,
+      "end": 280.08,
+      "text": "simple if you're standing over here go"
+    },
+    {
+      "start": 277.759,
+      "duration": 4.241,
+      "end": 282.0,
+      "text": "to left go to left go to left and count"
+    },
+    {
+      "start": 280.08,
+      "duration": 4.0,
+      "end": 284.08,
+      "text": "like till the leaf node go till the leaf"
+    },
+    {
+      "start": 282.0,
+      "duration": 4.88,
+      "end": 286.88,
+      "text": "node. So in that way you can easily find"
+    },
+    {
+      "start": 284.08,
+      "duration": 4.48,
+      "end": 288.56,
+      "text": "the left height of the binary tree."
+    },
+    {
+      "start": 286.88,
+      "duration": 3.84,
+      "end": 290.71999999999997,
+      "text": "Similarly uh in order to find the right"
+    },
+    {
+      "start": 288.56,
+      "duration": 4.32,
+      "end": 292.88,
+      "text": "height go right go right. If there is no"
+    },
+    {
+      "start": 290.72,
+      "duration": 4.64,
+      "end": 295.36,
+      "text": "right then go left then go right. Go to"
+    },
+    {
+      "start": 292.88,
+      "duration": 4.72,
+      "end": 297.6,
+      "text": "the leaf node. Right. Once you've gone"
+    },
+    {
+      "start": 295.36,
+      "duration": 4.16,
+      "end": 299.52000000000004,
+      "text": "to the leaf node you can easily find the"
+    },
+    {
+      "start": 297.6,
+      "duration": 4.319,
+      "end": 301.91900000000004,
+      "text": "right height also. Over here you can"
+    },
+    {
+      "start": 299.52,
+      "duration": 4.239,
+      "end": 303.75899999999996,
+      "text": "also find the left height. And if you"
+    },
+    {
+      "start": 301.919,
+      "duration": 3.441,
+      "end": 305.35999999999996,
+      "text": "don't know this I've already done this"
+    },
+    {
+      "start": 303.759,
+      "duration": 4.321,
+      "end": 308.08000000000004,
+      "text": "in one of the previous questions. You"
+    },
+    {
+      "start": 305.36,
+      "duration": 4.0,
+      "end": 309.36,
+      "text": "can definitely watch out that video. So"
+    },
+    {
+      "start": 308.08,
+      "duration": 2.88,
+      "end": 310.96,
+      "text": "you can find the left height and right"
+    },
+    {
+      "start": 309.36,
+      "duration": 4.0,
+      "end": 313.36,
+      "text": "height. So once you have figured that"
+    },
+    {
+      "start": 310.96,
+      "duration": 4.64,
+      "end": 315.59999999999997,
+      "text": "out, you know, you can have a variable"
+    },
+    {
+      "start": 313.36,
+      "duration": 3.679,
+      "end": 317.039,
+      "text": "like maxi and you can use that maxi"
+    },
+    {
+      "start": 315.6,
+      "duration": 3.92,
+      "end": 319.52000000000004,
+      "text": "variable like that can be globally"
+    },
+    {
+      "start": 317.039,
+      "duration": 4.481,
+      "end": 321.52,
+      "text": "declared or you can pass a reference or"
+    },
+    {
+      "start": 319.52,
+      "duration": 3.519,
+      "end": 323.039,
+      "text": "a pointer to it like that's that's your"
+    },
+    {
+      "start": 321.52,
+      "duration": 3.84,
+      "end": 325.35999999999996,
+      "text": "choice. You can have this globally"
+    },
+    {
+      "start": 323.039,
+      "duration": 3.921,
+      "end": 326.96,
+      "text": "declared and what you can do is every"
+    },
+    {
+      "start": 325.36,
+      "duration": 3.92,
+      "end": 329.28000000000003,
+      "text": "time you have a left height and a right"
+    },
+    {
+      "start": 326.96,
+      "duration": 5.12,
+      "end": 332.08,
+      "text": "height just add them up because for"
+    },
+    {
+      "start": 329.28,
+      "duration": 5.52,
+      "end": 334.79999999999995,
+      "text": "every node you have LH and RH just add"
+    },
+    {
+      "start": 332.08,
+      "duration": 5.44,
+      "end": 337.52,
+      "text": "them up and for every node compare that"
+    },
+    {
+      "start": 334.8,
+      "duration": 4.72,
+      "end": 339.52000000000004,
+      "text": "with maximum. So ultimately at the end"
+    },
+    {
+      "start": 337.52,
+      "duration": 4.32,
+      "end": 341.84,
+      "text": "when you have traversed left right that"
+    },
+    {
+      "start": 339.52,
+      "duration": 5.119,
+      "end": 344.639,
+      "text": "means you have traversed the entire tree"
+    },
+    {
+      "start": 341.84,
+      "duration": 6.16,
+      "end": 348.0,
+      "text": "your maximum yes your maximum is going"
+    },
+    {
+      "start": 344.639,
+      "duration": 6.961,
+      "end": 351.6,
+      "text": "to store the height of the given binary"
+    },
+    {
+      "start": 348.0,
+      "duration": 6.479,
+      "end": 354.479,
+      "text": "tree. Now you might be thinking but st"
+    },
+    {
+      "start": 351.6,
+      "duration": 4.96,
+      "end": 356.56,
+      "text": "is big of n² I'll be like yes this is"
+    },
+    {
+      "start": 354.479,
+      "duration": 4.401,
+      "end": 358.88,
+      "text": "this is indeed big of n square. Why?"
+    },
+    {
+      "start": 356.56,
+      "duration": 4.32,
+      "end": 360.88,
+      "text": "Because you know whenever you do uh a"
+    },
+    {
+      "start": 358.88,
+      "duration": 4.48,
+      "end": 363.36,
+      "text": "traversal like this of left and right"
+    },
+    {
+      "start": 360.88,
+      "duration": 5.2,
+      "end": 366.08,
+      "text": "the complexity in order to traverse the"
+    },
+    {
+      "start": 363.36,
+      "duration": 5.04,
+      "end": 368.40000000000003,
+      "text": "entire tree is already big of n and then"
+    },
+    {
+      "start": 366.08,
+      "duration": 4.48,
+      "end": 370.56,
+      "text": "you're using a function to figure out uh"
+    },
+    {
+      "start": 368.4,
+      "duration": 5.84,
+      "end": 374.23999999999995,
+      "text": "left height which is definitely going to"
+    },
+    {
+      "start": 370.56,
+      "duration": 5.359,
+      "end": 375.919,
+      "text": "traverse this entire distance of uh the"
+    },
+    {
+      "start": 374.24,
+      "duration": 3.44,
+      "end": 377.68,
+      "text": "entire left height and again you're"
+    },
+    {
+      "start": 375.919,
+      "duration": 4.641,
+      "end": 380.56,
+      "text": "using a right height which is again"
+    },
+    {
+      "start": 377.68,
+      "duration": 5.76,
+      "end": 383.44,
+      "text": "going to traverse just imagine you have"
+    },
+    {
+      "start": 380.56,
+      "duration": 4.56,
+      "end": 385.12,
+      "text": "a tree like this a skew tree. So if it's"
+    },
+    {
+      "start": 383.44,
+      "duration": 5.28,
+      "end": 388.71999999999997,
+      "text": "a skew tree, you're going to traverse"
+    },
+    {
+      "start": 385.12,
+      "duration": 5.6,
+      "end": 390.72,
+      "text": "right from the uh start till the end. So"
+    },
+    {
+      "start": 388.72,
+      "duration": 4.96,
+      "end": 393.68,
+      "text": "in order to compute the find height,"
+    },
+    {
+      "start": 390.72,
+      "duration": 5.199,
+      "end": 395.91900000000004,
+      "text": "you'll end up taking a big go of n time"
+    },
+    {
+      "start": 393.68,
+      "duration": 5.04,
+      "end": 398.72,
+      "text": "which will make this brute force to be"
+    },
+    {
+      "start": 395.919,
+      "duration": 5.84,
+      "end": 401.75899999999996,
+      "text": "ble of n² which is definitely not"
+    },
+    {
+      "start": 398.72,
+      "duration": 6.0,
+      "end": 404.72,
+      "text": "acceptable. So what we will do is we"
+    },
+    {
+      "start": 401.759,
+      "duration": 4.961,
+      "end": 406.72,
+      "text": "will try to optimize this into a big of"
+    },
+    {
+      "start": 404.72,
+      "duration": 4.08,
+      "end": 408.8,
+      "text": "n solution. So let's check that out. So"
+    },
+    {
+      "start": 406.72,
+      "duration": 5.12,
+      "end": 411.84000000000003,
+      "text": "in order to understand the bogo of n"
+    },
+    {
+      "start": 408.8,
+      "duration": 5.92,
+      "end": 414.72,
+      "text": "traversal. Okay. So you need to know how"
+    },
+    {
+      "start": 411.84,
+      "duration": 4.32,
+      "end": 416.15999999999997,
+      "text": "to find the height of the tree. Yes, you"
+    },
+    {
+      "start": 414.72,
+      "duration": 3.12,
+      "end": 417.84000000000003,
+      "text": "need to understand this like how to find"
+    },
+    {
+      "start": 416.16,
+      "duration": 3.68,
+      "end": 419.84000000000003,
+      "text": "the height of the tree and I've already"
+    },
+    {
+      "start": 417.84,
+      "duration": 3.759,
+      "end": 421.599,
+      "text": "made a video on that. So I'll highly"
+    },
+    {
+      "start": 419.84,
+      "duration": 4.4,
+      "end": 424.23999999999995,
+      "text": "recommend you that you should definitely"
+    },
+    {
+      "start": 421.599,
+      "duration": 5.681,
+      "end": 427.28,
+      "text": "watch out how to find height of a tree"
+    },
+    {
+      "start": 424.24,
+      "duration": 5.04,
+      "end": 429.28000000000003,
+      "text": "in bo of n complexity. So if you haven't"
+    },
+    {
+      "start": 427.28,
+      "duration": 4.0,
+      "end": 431.28,
+      "text": "watched that out please pause this video"
+    },
+    {
+      "start": 429.28,
+      "duration": 4.88,
+      "end": 434.15999999999997,
+      "text": "watch that and after that come back"
+    },
+    {
+      "start": 431.28,
+      "duration": 5.28,
+      "end": 436.55999999999995,
+      "text": "over. So this is this is the exact code"
+    },
+    {
+      "start": 434.16,
+      "duration": 4.0,
+      "end": 438.16,
+      "text": "like if I if I just remove this maxi"
+    },
+    {
+      "start": 436.56,
+      "duration": 5.039,
+      "end": 441.599,
+      "text": "like if I just remove this extra"
+    },
+    {
+      "start": 438.16,
+      "duration": 5.039,
+      "end": 443.199,
+      "text": "variable maxi this is the exact code in"
+    },
+    {
+      "start": 441.599,
+      "duration": 5.121,
+      "end": 446.71999999999997,
+      "text": "order to find the height of the tree"
+    },
+    {
+      "start": 443.199,
+      "duration": 5.041,
+      "end": 448.24,
+      "text": "where we use the formula as 1 + maximum"
+    },
+    {
+      "start": 446.72,
+      "duration": 4.4,
+      "end": 451.12,
+      "text": "of either the left height or right"
+    },
+    {
+      "start": 448.24,
+      "duration": 6.079,
+      "end": 454.319,
+      "text": "height again makes uh very sense. So can"
+    },
+    {
+      "start": 451.12,
+      "duration": 7.199,
+      "end": 458.319,
+      "text": "I say can I say at every junction of"
+    },
+    {
+      "start": 454.319,
+      "duration": 8.0,
+      "end": 462.319,
+      "text": "node? Yes at every junction of node if I"
+    },
+    {
+      "start": 458.319,
+      "duration": 6.401,
+      "end": 464.72,
+      "text": "implicate the find height va code I"
+    },
+    {
+      "start": 462.319,
+      "duration": 5.121,
+      "end": 467.44,
+      "text": "always have the left height I always"
+    },
+    {
+      "start": 464.72,
+      "duration": 4.72,
+      "end": 469.44000000000005,
+      "text": "have the right height. So if I have the"
+    },
+    {
+      "start": 467.44,
+      "duration": 4.0,
+      "end": 471.44,
+      "text": "left height and right height during"
+    },
+    {
+      "start": 469.44,
+      "duration": 3.92,
+      "end": 473.36,
+      "text": "finding the height of the tree do we"
+    },
+    {
+      "start": 471.44,
+      "duration": 3.759,
+      "end": 475.199,
+      "text": "need to separately find it and the"
+    },
+    {
+      "start": 473.36,
+      "duration": 4.239,
+      "end": 477.599,
+      "text": "answer to that will be no we don't need"
+    },
+    {
+      "start": 475.199,
+      "duration": 4.321,
+      "end": 479.52000000000004,
+      "text": "to. So what we will do is we'll use the"
+    },
+    {
+      "start": 477.599,
+      "duration": 4.961,
+      "end": 482.56,
+      "text": "same code from find height of the tree"
+    },
+    {
+      "start": 479.52,
+      "duration": 8.56,
+      "end": 488.08,
+      "text": "and we will take LH and RH and we will"
+    },
+    {
+      "start": 482.56,
+      "duration": 9.039,
+      "end": 491.599,
+      "text": "say maxi to be max of either maxi comma"
+    },
+    {
+      "start": 488.08,
+      "duration": 6.72,
+      "end": 494.8,
+      "text": "LH plus RH. So what we did was instead"
+    },
+    {
+      "start": 491.599,
+      "duration": 5.521,
+      "end": 497.12,
+      "text": "of having LH and RH like differently we"
+    },
+    {
+      "start": 494.8,
+      "duration": 4.56,
+      "end": 499.36,
+      "text": "use the LH and RH that was always"
+    },
+    {
+      "start": 497.12,
+      "duration": 5.04,
+      "end": 502.16,
+      "text": "computed while finding the height of the"
+    },
+    {
+      "start": 499.36,
+      "duration": 4.959,
+      "end": 504.319,
+      "text": "binary tree. Simple enough isn't it?"
+    },
+    {
+      "start": 502.16,
+      "duration": 5.2,
+      "end": 507.36,
+      "text": "I'll show you a dry run for this. So at"
+    },
+    {
+      "start": 504.319,
+      "duration": 5.841,
+      "end": 510.16,
+      "text": "first the node is root. So we come"
+    },
+    {
+      "start": 507.36,
+      "duration": 5.84,
+      "end": 513.2,
+      "text": "across to root. Right after that uh this"
+    },
+    {
+      "start": 510.16,
+      "duration": 5.6,
+      "end": 515.76,
+      "text": "is not null. So we'll go to the node. So"
+    },
+    {
+      "start": 513.2,
+      "duration": 5.519,
+      "end": 518.719,
+      "text": "we go to node.left. And yeah remember"
+    },
+    {
+      "start": 515.76,
+      "duration": 4.719,
+      "end": 520.479,
+      "text": "this maximum is zero initially. So we go"
+    },
+    {
+      "start": 518.719,
+      "duration": 4.0,
+      "end": 522.719,
+      "text": "to the left. The moment we go to the"
+    },
+    {
+      "start": 520.479,
+      "duration": 4.081,
+      "end": 524.5600000000001,
+      "text": "left again we go to the left. So this"
+    },
+    {
+      "start": 522.719,
+      "duration": 3.521,
+      "end": 526.24,
+      "text": "time when we go to the left it's a null."
+    },
+    {
+      "start": 524.56,
+      "duration": 3.44,
+      "end": 528.0,
+      "text": "It's a null on the left. So if it's a"
+    },
+    {
+      "start": 526.24,
+      "duration": 3.76,
+      "end": 530.0,
+      "text": "null we're going to return a zero. Yes"
+    },
+    {
+      "start": 528.0,
+      "duration": 5.04,
+      "end": 533.04,
+      "text": "we're going to return a zero. So this"
+    },
+    {
+      "start": 530.0,
+      "duration": 5.6,
+      "end": 535.6,
+      "text": "guy returns a zero. So from left the"
+    },
+    {
+      "start": 533.04,
+      "duration": 4.64,
+      "end": 537.68,
+      "text": "left height returned is zero. Now we"
+    },
+    {
+      "start": 535.6,
+      "duration": 3.679,
+      "end": 539.279,
+      "text": "come to the right again we get a null."
+    },
+    {
+      "start": 537.68,
+      "duration": 3.68,
+      "end": 541.3599999999999,
+      "text": "So basically come to the right we get a"
+    },
+    {
+      "start": 539.279,
+      "duration": 5.441,
+      "end": 544.72,
+      "text": "null. So this guy is going to return a"
+    },
+    {
+      "start": 541.36,
+      "duration": 6.72,
+      "end": 548.08,
+      "text": "zero. So can I say RH becomes zero. So"
+    },
+    {
+      "start": 544.72,
+      "duration": 5.6,
+      "end": 550.32,
+      "text": "ultimately LH is zero. R is zero for"
+    },
+    {
+      "start": 548.08,
+      "duration": 6.56,
+      "end": 554.64,
+      "text": "this particular node 2. So what will we"
+    },
+    {
+      "start": 550.32,
+      "duration": 6.639,
+      "end": 556.9590000000001,
+      "text": "return? 1 plus maximum of LH and RH."
+    },
+    {
+      "start": 554.64,
+      "duration": 5.759,
+      "end": 560.399,
+      "text": "Before that we have to do this for this"
+    },
+    {
+      "start": 556.959,
+      "duration": 6.801,
+      "end": 563.76,
+      "text": "node. LH is zero. R is zero. So maximum"
+    },
+    {
+      "start": 560.399,
+      "duration": 8.641,
+      "end": 569.04,
+      "text": "still stays as zero. Now the LH is 0. RH"
+    },
+    {
+      "start": 563.76,
+      "duration": 7.92,
+      "end": 571.68,
+      "text": "is 0. So 0 comma 0 max is 0. 1 + 0 is 1."
+    },
+    {
+      "start": 569.04,
+      "duration": 5.359,
+      "end": 574.399,
+      "text": "So what we will return is"
+    },
+    {
+      "start": 571.68,
+      "duration": 5.36,
+      "end": 577.04,
+      "text": "one. So the LH returns 1. So the left"
+    },
+    {
+      "start": 574.399,
+      "duration": 4.081,
+      "end": 578.48,
+      "text": "height now returns 1. Right? Now it's"
+    },
+    {
+      "start": 577.04,
+      "duration": 3.68,
+      "end": 580.7199999999999,
+      "text": "time to go to the right height. So let's"
+    },
+    {
+      "start": 578.48,
+      "duration": 4.32,
+      "end": 582.8000000000001,
+      "text": "go to the right. Again we have a three."
+    },
+    {
+      "start": 580.72,
+      "duration": 4.48,
+      "end": 585.2,
+      "text": "We will go to the left. Again we have a"
+    },
+    {
+      "start": 582.8,
+      "duration": 4.64,
+      "end": 587.4399999999999,
+      "text": "four. Again we will go to the left. We"
+    },
+    {
+      "start": 585.2,
+      "duration": 4.319,
+      "end": 589.519,
+      "text": "have a five. Again we'll go to the left."
+    },
+    {
+      "start": 587.44,
+      "duration": 4.48,
+      "end": 591.9200000000001,
+      "text": "We have a nine. So this time we have a"
+    },
+    {
+      "start": 589.519,
+      "duration": 4.561,
+      "end": 594.08,
+      "text": "nine. So we go to the left we get"
+    },
+    {
+      "start": 591.92,
+      "duration": 4.64,
+      "end": 596.56,
+      "text": "returned as zero. We go to the right we"
+    },
+    {
+      "start": 594.08,
+      "duration": 6.24,
+      "end": 600.32,
+      "text": "get returned as zero. So ultimately"
+    },
+    {
+      "start": 596.56,
+      "duration": 7.839,
+      "end": 604.399,
+      "text": "again we get 0 and zero. So this is 9 as"
+    },
+    {
+      "start": 600.32,
+      "duration": 6.32,
+      "end": 606.6400000000001,
+      "text": "of now. Now this 9 says 0 0. So 1 + max"
+    },
+    {
+      "start": 604.399,
+      "duration": 6.641,
+      "end": 611.04,
+      "text": "of 0 0. This is going to return"
+    },
+    {
+      "start": 606.64,
+      "duration": 6.96,
+      "end": 613.6,
+      "text": "something as the height as definitely"
+    },
+    {
+      "start": 611.04,
+      "duration": 4.479,
+      "end": 615.519,
+      "text": "one. So LH becomes one. When it goes to"
+    },
+    {
+      "start": 613.6,
+      "duration": 4.72,
+      "end": 618.32,
+      "text": "write it finds null. So this is going to"
+    },
+    {
+      "start": 615.519,
+      "duration": 5.361,
+      "end": 620.88,
+      "text": "return zero. So the LH is zero. The RH"
+    },
+    {
+      "start": 618.32,
+      "duration": 5.68,
+      "end": 624.0,
+      "text": "is zero. Which one is max? Like LH and R"
+    },
+    {
+      "start": 620.88,
+      "duration": 7.36,
+      "end": 628.24,
+      "text": "is zero. So can I say maximum becomes LH"
+    },
+    {
+      "start": 624.0,
+      "duration": 7.68,
+      "end": 631.68,
+      "text": "plus R. So L is Z. LH is 1. RH is zero."
+    },
+    {
+      "start": 628.24,
+      "duration": 5.92,
+      "end": 634.16,
+      "text": "So maximum becomes 1. Right? Over here"
+    },
+    {
+      "start": 631.68,
+      "duration": 4.56,
+      "end": 636.2399999999999,
+      "text": "we add five. So we have to go back. So"
+    },
+    {
+      "start": 634.16,
+      "duration": 3.679,
+      "end": 637.8389999999999,
+      "text": "we will go back with the height. Right?"
+    },
+    {
+      "start": 636.24,
+      "duration": 5.92,
+      "end": 642.16,
+      "text": "We will go back with the height. So"
+    },
+    {
+      "start": 637.839,
+      "duration": 8.401,
+      "end": 646.24,
+      "text": "height is LH is 1. RH is 0. So 1 +"
+    },
+    {
+      "start": 642.16,
+      "duration": 7.76,
+      "end": 649.92,
+      "text": "maximum of LH is 1, RH is 0. So it will"
+    },
+    {
+      "start": 646.24,
+      "duration": 5.039,
+      "end": 651.279,
+      "text": "become 1 + 1 2 right again we'll come to"
+    },
+    {
+      "start": 649.92,
+      "duration": 5.28,
+      "end": 655.1999999999999,
+      "text": "the right and this is going to return"
+    },
+    {
+      "start": 651.279,
+      "duration": 7.12,
+      "end": 658.399,
+      "text": "zero. So this time LH is zero RH is"
+    },
+    {
+      "start": 655.2,
+      "duration": 5.68,
+      "end": 660.88,
+      "text": "zero. So LH + RH will give you two. So"
+    },
+    {
+      "start": 658.399,
+      "duration": 4.241,
+      "end": 662.64,
+      "text": "maximum will change its value to two."
+    },
+    {
+      "start": 660.88,
+      "duration": 3.68,
+      "end": 664.56,
+      "text": "Perfect. But what will be the height"
+    },
+    {
+      "start": 662.64,
+      "duration": 4.72,
+      "end": 667.36,
+      "text": "written from here? It's going to be 1 +"
+    },
+    {
+      "start": 664.56,
+      "duration": 4.64,
+      "end": 669.1999999999999,
+      "text": "max of these two. So 1 + max is two."
+    },
+    {
+      "start": 667.36,
+      "duration": 4.08,
+      "end": 671.44,
+      "text": "Height will be three. So this returns"
+    },
+    {
+      "start": 669.2,
+      "duration": 3.92,
+      "end": 673.12,
+      "text": "three. We'll come to the right. We'll"
+    },
+    {
+      "start": 671.44,
+      "duration": 4.079,
+      "end": 675.519,
+      "text": "come to the right. We'll come to the"
+    },
+    {
+      "start": 673.12,
+      "duration": 4.64,
+      "end": 677.76,
+      "text": "right again. And this guy will go here."
+    },
+    {
+      "start": 675.519,
+      "duration": 4.961,
+      "end": 680.48,
+      "text": "It'll return zero. Go here. It'll return"
+    },
+    {
+      "start": 677.76,
+      "duration": 7.6,
+      "end": 685.36,
+      "text": "0. So 0 + 0, it's going to return 1"
+    },
+    {
+      "start": 680.48,
+      "duration": 9.68,
+      "end": 690.16,
+      "text": "because 1 + 0. Right here, RH is 0. LH"
+    },
+    {
+      "start": 685.36,
+      "duration": 6.719,
+      "end": 692.0790000000001,
+      "text": "was 0. So 1 + 0. This guy returns two."
+    },
+    {
+      "start": 690.16,
+      "duration": 3.6,
+      "end": 693.76,
+      "text": "Again, this guy will return three. Like"
+    },
+    {
+      "start": 692.079,
+      "duration": 3.921,
+      "end": 696.0,
+      "text": "you can keep on doing. So ultimately"
+    },
+    {
+      "start": 693.76,
+      "duration": 4.72,
+      "end": 698.48,
+      "text": "this is a three. This is a three. From"
+    },
+    {
+      "start": 696.0,
+      "duration": 5.36,
+      "end": 701.36,
+      "text": "LH is 3, RH is 3. So the maximum will"
+    },
+    {
+      "start": 698.48,
+      "duration": 6.4,
+      "end": 704.88,
+      "text": "become 3 + 3 6. And this guy will return"
+    },
+    {
+      "start": 701.36,
+      "duration": 7.12,
+      "end": 708.48,
+      "text": "the height as 1 + max of LH that's"
+    },
+    {
+      "start": 704.88,
+      "duration": 5.44,
+      "end": 710.32,
+      "text": "three. RH is three. So 1 + max of LH RH"
+    },
+    {
+      "start": 708.48,
+      "duration": 4.72,
+      "end": 713.2,
+      "text": "that's going to be four. So ultimately"
+    },
+    {
+      "start": 710.32,
+      "duration": 4.959,
+      "end": 715.279,
+      "text": "you got RH as four, L is one. So this"
+    },
+    {
+      "start": 713.2,
+      "duration": 4.079,
+      "end": 717.279,
+      "text": "guy will give you five which is not"
+    },
+    {
+      "start": 715.279,
+      "duration": 3.841,
+      "end": 719.12,
+      "text": "greater than maximum. So ultimately the"
+    },
+    {
+      "start": 717.279,
+      "duration": 3.201,
+      "end": 720.48,
+      "text": "greatest maximum you get is six. And"
+    },
+    {
+      "start": 719.12,
+      "duration": 3.12,
+      "end": 722.24,
+      "text": "over here you can definitely return the"
+    },
+    {
+      "start": 720.48,
+      "duration": 3.76,
+      "end": 724.24,
+      "text": "height. That's going to be 1 plus max of"
+    },
+    {
+      "start": 722.24,
+      "duration": 5.36,
+      "end": 727.6,
+      "text": "these two. That's five height. Height is"
+    },
+    {
+      "start": 724.24,
+      "duration": 6.88,
+      "end": 731.12,
+      "text": "five. Again makes sense. 1 2 3 4 like"
+    },
+    {
+      "start": 727.6,
+      "duration": 5.52,
+      "end": 733.12,
+      "text": "height if you count 1 2 3 4 5 height as"
+    },
+    {
+      "start": 731.12,
+      "duration": 4.88,
+      "end": 736.0,
+      "text": "the nodes number of nodes right so the"
+    },
+    {
+      "start": 733.12,
+      "duration": 6.0,
+      "end": 739.12,
+      "text": "maximum you got was six that's because"
+    },
+    {
+      "start": 736.0,
+      "duration": 5.92,
+      "end": 741.92,
+      "text": "at every step you had an LH and RH"
+    },
+    {
+      "start": 739.12,
+      "duration": 4.719,
+      "end": 743.839,
+      "text": "generated so as usual guys the left side"
+    },
+    {
+      "start": 741.92,
+      "duration": 4.159,
+      "end": 746.079,
+      "text": "is the C++ code and the right side is"
+    },
+    {
+      "start": 743.839,
+      "duration": 4.721,
+      "end": 748.5600000000001,
+      "text": "the Java code so this this time I'll be"
+    },
+    {
+      "start": 746.079,
+      "duration": 5.281,
+      "end": 751.3599999999999,
+      "text": "talking about the Java code finally so"
+    },
+    {
+      "start": 748.56,
+      "duration": 4.8,
+      "end": 753.3599999999999,
+      "text": "we take the root okay now since in Java"
+    },
+    {
+      "start": 751.36,
+      "duration": 4.08,
+      "end": 755.44,
+      "text": "the variables are not passed by like"
+    },
+    {
+      "start": 753.36,
+      "duration": 4.8,
+      "end": 758.16,
+      "text": "they do not work as reference So what"
+    },
+    {
+      "start": 755.44,
+      "duration": 5.36,
+      "end": 760.8000000000001,
+      "text": "what I did was I created a array okay of"
+    },
+    {
+      "start": 758.16,
+      "duration": 4.96,
+      "end": 763.12,
+      "text": "size one and I passed uh I called the"
+    },
+    {
+      "start": 760.8,
+      "duration": 3.599,
+      "end": 764.399,
+      "text": "height function and right after that uh"
+    },
+    {
+      "start": 763.12,
+      "duration": 3.6,
+      "end": 766.72,
+      "text": "it's a similar code that was written"
+    },
+    {
+      "start": 764.399,
+      "duration": 5.041,
+      "end": 769.44,
+      "text": "over here and instant like over here if"
+    },
+    {
+      "start": 766.72,
+      "duration": 4.72,
+      "end": 771.44,
+      "text": "you seen the C++ code I have passed via"
+    },
+    {
+      "start": 769.44,
+      "duration": 4.16,
+      "end": 773.6,
+      "text": "via and okay but that's not possible in"
+    },
+    {
+      "start": 771.44,
+      "duration": 4.48,
+      "end": 775.9200000000001,
+      "text": "Java that's why I passed an array which"
+    },
+    {
+      "start": 773.6,
+      "duration": 4.16,
+      "end": 777.76,
+      "text": "is passed by reference and after that I"
+    },
+    {
+      "start": 775.92,
+      "duration": 3.84,
+      "end": 779.76,
+      "text": "have done it similarly so that's the"
+    },
+    {
+      "start": 777.76,
+      "duration": 4.48,
+      "end": 782.24,
+      "text": "just smart trick that I've used apart"
+    },
+    {
+      "start": 779.76,
+      "duration": 4.72,
+      "end": 784.48,
+      "text": "from that the code remains same as I've"
+    },
+    {
+      "start": 782.24,
+      "duration": 3.92,
+      "end": 786.16,
+      "text": "discussed so the time complexity is we"
+    },
+    {
+      "start": 784.48,
+      "duration": 3.599,
+      "end": 788.0790000000001,
+      "text": "go of n and the space complexity is"
+    },
+    {
+      "start": 786.16,
+      "duration": 5.359,
+      "end": 791.519,
+      "text": "bigger of n and the space is used for"
+    },
+    {
+      "start": 788.079,
+      "duration": 6.241,
+      "end": 794.3199999999999,
+      "text": "auxiliary stack space assuming the worst"
+    },
+    {
+      "start": 791.519,
+      "duration": 3.841,
+      "end": 795.36,
+      "text": "tree given to you is skew tree. So I"
+    },
+    {
+      "start": 794.32,
+      "duration": 2.88,
+      "end": 797.2,
+      "text": "hope you have understood the entire"
+    },
+    {
+      "start": 795.36,
+      "duration": 3.599,
+      "end": 798.9590000000001,
+      "text": "explanation as well as the code. Just in"
+    },
+    {
+      "start": 797.2,
+      "duration": 3.36,
+      "end": 800.5600000000001,
+      "text": "case you did please please please make"
+    },
+    {
+      "start": 798.959,
+      "duration": 3.841,
+      "end": 802.8,
+      "text": "sure you like this video because it took"
+    },
+    {
+      "start": 800.56,
+      "duration": 4.32,
+      "end": 804.88,
+      "text": "a lot of efforts to make this entire"
+    },
+    {
+      "start": 802.8,
+      "duration": 3.76,
+      "end": 806.56,
+      "text": "tree series. Also if you wish you can"
+    },
+    {
+      "start": 804.88,
+      "duration": 3.84,
+      "end": 808.72,
+      "text": "definitely drop in a comment that will"
+    },
+    {
+      "start": 806.56,
+      "duration": 3.92,
+      "end": 810.4799999999999,
+      "text": "keep motivating me to make such further"
+    },
+    {
+      "start": 808.72,
+      "duration": 3.119,
+      "end": 811.839,
+      "text": "series. Also, if you're new to this"
+    },
+    {
+      "start": 810.48,
+      "duration": 2.96,
+      "end": 813.44,
+      "text": "channel, please do consider subscribing"
+    },
+    {
+      "start": 811.839,
+      "duration": 3.68,
+      "end": 815.519,
+      "text": "because I'm going to bring in such more"
+    },
+    {
+      "start": 813.44,
+      "duration": 3.519,
+      "end": 816.9590000000001,
+      "text": "series in the upcoming future as well."
+    },
+    {
+      "start": 815.519,
+      "duration": 2.721,
+      "end": 818.24,
+      "text": "With this, uh, let's wrap up this video."
+    },
+    {
+      "start": 816.959,
+      "duration": 3.11,
+      "end": 820.069,
+      "text": "Let's meet in the next lecture. Bye-bye."
+    },
+    {
+      "start": 818.24,
+      "duration": 3.849,
+      "end": 822.089,
+      "text": "Take care."
+    },
+    {
+      "start": 820.069,
+      "duration": 2.02,
+      "end": 822.0889999999999,
+      "text": "[music]"
+    },
+    {
+      "start": 822.639,
+      "duration": 4.035,
+      "end": 826.674,
+      "text": "Yeah, you're golden."
+    },
+    {
+      "start": 824.654,
+      "duration": 2.02,
+      "end": 826.674,
+      "text": "[music]"
+    }
+  ]
+}

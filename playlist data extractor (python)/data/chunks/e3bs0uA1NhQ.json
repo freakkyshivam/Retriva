@@ -1,0 +1,174 @@
+{
+  "video_id": "e3bs0uA1NhQ",
+  "position": 276,
+  "title": "L5. Fruit Into Baskets | 2 Pointers and Sliding Window Playlist",
+  "url": "https://www.youtube.com/watch?v=e3bs0uA1NhQ",
+  "chunk_count": 15,
+  "chunks": [
+    {
+      "chunk_index": 0,
+      "video_id": "e3bs0uA1NhQ",
+      "position": 276,
+      "title": "L5. Fruit Into Baskets | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=e3bs0uA1NhQ",
+      "start": 3.6,
+      "end": 135.76000000000002,
+      "text": "so let's continue with these drivers a toz DSA course and the problem that we will be solving today will be involving the concepts of two-pointer and sliding window but starting hey welcome back to the channel I hope you guys are doing extremely well so the problem that we will be solving today is fruit into baskets that's a huge problem statement you can go through it I'll be explaining the problem statement in short so you go to a farm and you're given two baskets okay and in the farm there are trees and these are the fruits that they produce okay tree zero produces this uh tree 1 produces this tree 2 produces this and so on now every tree is producing a fruit so tree zero is producing a fruit of type three of type three so it's a individual type this particular tree is producing a fruit of type two now you're allowed to collect fruits you're allowed to collect fruits but there is a condition you have two baskets okay now each individual basket can hold only unique types sorry only a single type that means if you're putting the type three fruit here it can only store apples for an example it cannot store apples plus oranges it can only store apples like one type of fruit fruit 3 3 3 you can put as many apples as you want the other one can store any other type like 222 a lot of oranges got it now your task is to make sure that you pick up the maximum fruits using these two baskets got it but there's a catch if you're picking this you're picking this you're picking this after this you cannot decide that you'll pick up this and this and this that is not allowed you cannot skip you cannot skip if you once started picking up you'll have to pick up pick up pick up for an example if you pick up these four that is absolutely okay because what you can",
+      "word_count": 343
+    },
+    {
+      "chunk_index": 1,
+      "video_id": "e3bs0uA1NhQ",
+      "position": 276,
+      "title": "L5. Fruit Into Baskets | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=e3bs0uA1NhQ",
+      "start": 130.52,
+      "end": 263.40000000000003,
+      "text": "is absolutely okay because what you can do is you can take three three three in one basket and one in another basket at the same time you cannot pick up this why because you can take three three three you can take one but how will you take two because you have just two baskets got it so what so the question is stating what is the maximum fruits that you can pick so can I say that maybe this one I can pick and that will be four fruits okay maybe uh I can pick uh this one that is four fruits or maybe I can pick up this one and that's going to be five fruits why because I'll put two two over here and one one one over here so I can pick up five five fruits from this particular example so can I trim down the question to finding the max length sub aray with at most two types of fruits can I say this two types of numbers in short I can why am I saying at most even if the array contains all threes you can still take up all of them put it into one basket and keep the other basket empty that is also allowed so can I trim down the question to max length subar because subar is a consecutive portion of the array with at most two type of two type of numbers like one comma two two unique numbers rather makes sense so if this problem comes up in an interview like what is the extreme na solution that you can think of there is subarray and wherever there is subar the extreme na solution that I can think of is generate all the sub ARS how can I do it I know that the first subarray starts from three so I can stand at three and take that first subarray the next subarray keeping this three as the starting point will be this one the next will be this one the next",
+      "word_count": 345
+    },
+    {
+      "chunk_index": 2,
+      "video_id": "e3bs0uA1NhQ",
+      "position": 276,
+      "title": "L5. Fruit Into Baskets | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=e3bs0uA1NhQ",
+      "start": 259.639,
+      "end": 377.639,
+      "text": "one the next will be this one the next will be this one the next will be this one and so on and after that the next set of sub arrays will be starting from this element thereby this this this this this and so on agreed maybe I can do this so what I can say is Hey listen maybe I can keep a very simple uh data structure as set and I can start from this three okay that's one number I can put it over here perfectly fine that means I can take this subar I can take this because I have one type of flu okay what is the next I'll be taking this much which means I'll again pick up this three put it over here same time doesn't matter so I can also take up this particular subar perfect let's take the next three I can take the next three put it into the subarray doesn't matter because I can still take it perfect next I'll take this one can I still take this subar I can why because I have two type of frots I have two unique numbers so thereby I can take this perfect let's move ahead the moment I put this two over here what happens to the set data structure is this is three in size so if it is three in size I cannot because the max I'm allowed is two types of numbers can I go beyond even if I go beyond and check for all the other subar they'll at least have three types in it they will at least have three types in it so I cannot take Beyond it so can I say starting like keeping the starting point as three I can only take subar till this portion not Beyond it I can stop I can break no need to hydrate further and for the next thing what you can do is you can trim down the subar sorry trim down the set and you can start from here that is the three",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 3,
+      "video_id": "e3bs0uA1NhQ",
+      "position": 276,
+      "title": "L5. Fruit Into Baskets | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=e3bs0uA1NhQ",
+      "start": 372.88,
+      "end": 485.0,
+      "text": "can start from here that is the three and again do the same right so that will be my Brute Force so what I'll do is I know that I always start from this element then this then this and so on till the end so I'll use a fall Loop and the fall Loop will be I equal to 0 and it goes till n correct I'll keep a set data structure which is going to store all my numbers so that I know how many types of roots or how many unique numbers do I have and after that what I can do is I can take a fall Loop and I can start from J and it will go from I to n why from I to n because I'm starting from here there's the first number I'm starting from here there's the first number then this then this then this so always starts from the number itself or the starting position itself so what I can do is I can say okay set do add or insert according to the programming language you're using array of J so I've added it so once I've added it how do I know that I can take this subar from I till J how do I know it I'll be like okay hey set what is your size if your size is lesser than two that means you have two unique numbers if you have two unique numbers maybe I can take that length and I can compare with the max length I had and this length will be J minus I + 1 and what I can do initially is I can assign a max length to be zero pretty simple but what if the set size is greater than equal to two in that scenario I'll have to break and I'll to stop and the inner follow Lo will end and then the outer follow Lo will end and that will be it what will be the time complexity of this",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 4,
+      "video_id": "e3bs0uA1NhQ",
+      "position": 276,
+      "title": "L5. Fruit Into Baskets | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=e3bs0uA1NhQ",
+      "start": 478.84,
+      "end": 603.24,
+      "text": "what will be the time complexity of this brute force a b go of n somewhere near about B go of N and now you might be thinking there's a set that we are using and we are trying to do set do add set do size there's one thing that you have to keep in mind set. add definitely takes logarithmic of I do agree but what is this n n is the size of the set and if you remember the size of the set size of set at maximum was three size not Beyond it so logarithmic of three is as good as a constant time so thereby you can say that the overall time complexity is Bigg of n because the set is a very very small set with only two numbers so the time in set is can be ignored what about the space complexity am I using an external space again you'll say there is a sent data structure okay I'm storing three elements not more than that so this will be your Brute Force now obviously the interview will not be happy with this because you're taking a b go of n square and he'll ask you to optimize so you'll have to optimize n square into something better that means somewhere near about 10 and the problem is involving subarrays so whenever the problem involves subar which means find a window which algorithm yes sliding window and I'll have to use two pointer in order to solve it so let's try to use two pointer it's going to be very simple you know initially we take L and R to be at the starting which is the zeroth index and then what we take is let's take a map data structure why am I taking a map data structure because I have to keep a check on the number of unique counts something like a set something like a map okay so I'll take a map I'll keep the number along with that I'll keep a",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 5,
+      "video_id": "e3bs0uA1NhQ",
+      "position": 276,
+      "title": "L5. Fruit Into Baskets | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=e3bs0uA1NhQ",
+      "start": 599.2,
+      "end": 712.519,
+      "text": "the number along with that I'll keep a frequency what do I need I need the length so what I can do is I can take a max length as well perfect so initially what is the value of max length it's going to be zero so let's keep it as zero so let's start we'll start the window this is the initial window so at first this three has to go into the map let's take it into the map 3 comma 1 now you'll be asking yourself a question hey is this window a valid window or a valid subarray how do I know it's a valid subarray at most it should have two types of numbers so I'll go to the map and I'll say hey how many unique numbers do you have the map says I just have one unique number if I have one unique number that means it is possible because at most I can have two types so this segment is possible what is the length of the segment one so you update the max length to one so let's quickly update the max Len to one perfect let's move out to the next so when I move out to the next this time I'm seeing this three correct so I have to put it into the map so the frequency will increase now you'll ask yourself a question hey since the three is in the map can this be a possible answer so I'll go to the map and I'll say hey how many unique elements do you have still says I have one hereby it is possible because at most two are allowed so what I'll do is I'll increase the length to be two because this possible thing is allowed perfect let's move the r to the next the moment I move uh the r to the next I have a new element so the new element gets into the map data structure and the frequency increases to three again I'll ask the same question hey can this be a",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 6,
+      "video_id": "e3bs0uA1NhQ",
+      "position": 276,
+      "title": "L5. Fruit Into Baskets | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=e3bs0uA1NhQ",
+      "start": 707.639,
+      "end": 820.8,
+      "text": "ask the same question hey can this be a possible answer look into the map and it says yes thereby I'll increase the length to be three I'll again move this R to here I'll have a a new element put it 1 comma 1 number and the frequency now ask yourself a question can this be a possible segment ask the map map says the length is one and the length is one sorry length is two and if the length is two it's possible because you have two unique elements that is allowed so thereby this is possible hence what I can do is I can update the length to four and I can take this R and I can move it to over here where am I I'm at two okay I'll have to put it into the map 2 comma 1 and I'll ask myself a question hey is this possible I'm like okay let's check map map says three no not possible cannot update so this window is not possible this window is not possible what you'll try to do is in sliding Windows you trim it down from the left you trim it down from the left so let's try to trim it down from the left so this will go off from your window so when it goes off from your window that means it goes from the map that's what you will do you just take it out from the map and you'll reduce the number to 3A 2 and you'll take R to here sry L2 here now this is your window I'll ask again is this possible I says no because I still have three unique elements like fine I'll have to take this out as well so please go ahead and take this out which is 3A 1 and move L to here again ask yourself a question is this possible again again go to the map map says size three h not possible take this out again so if you take it",
+      "word_count": 344
+    },
+    {
+      "chunk_index": 7,
+      "video_id": "e3bs0uA1NhQ",
+      "position": 276,
+      "title": "L5. Fruit Into Baskets | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=e3bs0uA1NhQ",
+      "start": 813.399,
+      "end": 942.68,
+      "text": "this out again so if you take it out 3 comma 0 and after that the L moves ahead ask yourself a question is this possible it says yes this is possible why please remember whenever someone turns as zero please remove it's not it's no more in the map please remove it so when you go over here and ask it says my size is two which is possible but this length length of the segment is two and I already have a max length of four no need I'll elongate I'll again move so when I move this time R will be here so I move here I have a one take it in take it in so 1 comma 2 is the segment possible ask the length is two possible but this particular length of the segment is three I already have a segment of length four perfect let's move our again go to one increase increase increase the frequency to three and ask yourself the same question is this possible it says yes why because the map contains only two unique elements if this is possible can I update the Max L I cannot because the length is four it's no point next move on to the next what do you have you have two take the two put it in the frequency will increase ask yourself if this is valid it says is yes I'm valid because the max the number of unique are two length is five of the segment reduce or increase it to five perfect next move to three so when you're at three what happens you're asking is this segment possible but before that please put the three into the map now you're asking is this segment possible it says no not possible why because the map is saying I have three unique elements not possible what do you need to do you trim trim trim trim till you can let's start trimming start trimming the one so one will get trimmed to two and what will",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 8,
+      "video_id": "e3bs0uA1NhQ",
+      "position": 276,
+      "title": "L5. Fruit Into Baskets | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=e3bs0uA1NhQ",
+      "start": 937.16,
+      "end": 1058.679,
+      "text": "will get trimmed to two and what will happen to l l will move what do you have you have a two correct again go ahead and trim to so it will trim down to one move well what do you have you have one again go ahead and trim one so that will become like one correct and then again go here and this IML will be here again it's a one so go back and trim my bad trim this one make it zero moment it is zero you it goes off the moment it is zero it goes off and the L goes ahead so this time this possible segment you can keep on going the moment R exceeds you stop then and there and the max length you'll find out is five this is the sliding window very simple very obvious so what we will do is we'll try to write down the pseudo code and in case you want your language specific code you can find them below so what will you be given you'll be given the function correct we'll be given the array just the array nothing else we'll keep the L to be zero we'll keep the r to be zero we'll keep the max length to be zero and you can keep a map data structure depending on your language so let's start sliding window is like okay I will go till the array do size not Beyond it because that's the maximum I can go on the right and I'm like okay let's put this because it's a new element addition into my window so let's put this into my map something like Plus+ so in in Java you can just get the value and if it is zero you can add a one if it is not there you can put it as one you can do it after this one I've added into the map I have to check if this segment is possible or not so I go ahead and ask the map hey map is it",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 9,
+      "video_id": "e3bs0uA1NhQ",
+      "position": 276,
+      "title": "L5. Fruit Into Baskets | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=e3bs0uA1NhQ",
+      "start": 1053.0,
+      "end": 1191.84,
+      "text": "ahead and ask the map hey map is it possible to have you is it possible to have you and I'm asking is the size lesser than equal to k i says yes it is that means it is possible so I'm saying okay if it is possible if it is possible then I'll have to take it as max length but what if it is not possible I'll have to make it possible so thereby first you'll write the other case if it is not possible make it possible and then count okay perfect and if it is not possible what do I do to trim down L I have to trim down L I'm like okay let's maybe write it as hey while MPP do size is greater than K which means not possible if it is not possible MPP of array of L minus minus and I can check hey if mppp of array of L is zero we can ask the map to erase or delete whatever you call it mppp of array of L just ask to delete it or maybe I can write it below you can ask the map to delete it MPP do arrays of array of L so what I'm doing is I'm deleting it correct what after this I'll have to move it I'll keep on moving this that's how my while loop will look like once this condition is satisfied you can finish up the a loop after that you can have a simple check Hey listen if at any moment like now I know the segment is valid I know the segment is valid but still put a check and you say okay let's take this valid segment and compare the length with the max length which is like Max max length comma J minus or rather r- L + 1 that is the length and once you're done with this you can move the right Plus+ for the next iteration you can complete the while loop and then you can return the max length and that's",
+      "word_count": 349
+    },
+    {
+      "chunk_index": 10,
+      "video_id": "e3bs0uA1NhQ",
+      "position": 276,
+      "title": "L5. Fruit Into Baskets | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=e3bs0uA1NhQ",
+      "start": 1182.799,
+      "end": 1314.159,
+      "text": "you can return the max length and that's how the function ends that will be the code you might be thinking okay what is the time complexity of this one so for the time complex D let's analyze what is contributing to it so first of all there is a r that is moving the r starts from here and goes absolutely till the end so I know there is a beo of n for sure because right is right is moving at every step what apart from that there's another while loop that is contributing but you'll have to keep in mind that this while loop is always not running like is not running for n all Loop ways why do I see it if you see El was starting from here for some occurrence it might run from here to here then from here to here then from here to here so overall overall when R moves from here to here at the worst possible scenario L might move from here to here not Beyond it not Beyond it it won't move every time and overall it will move n so can I say the r moves for n and the internal L also moves for n at the worst possible case and what is the worst possible case you have three 3 3 3 and then a one two so what happens is when the r reaches here L is still here and the L has to move move move move move till it reaches here so L moves the entire way but that is the worst possible scenario got it so the time complexity is B go of to n what about the space complexity the space complexity again at the worst possible scenario can be B go of three it's is storing three elements because every time there's an increment I am erasing elements from the map I am ending up erasing elements from the map you have to keep that in mind C it and there is one more thing I'm",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 11,
+      "video_id": "e3bs0uA1NhQ",
+      "position": 276,
+      "title": "L5. Fruit Into Baskets | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=e3bs0uA1NhQ",
+      "start": 1308.919,
+      "end": 1424.7199999999998,
+      "text": "it and there is one more thing I'm accessing the map I'm erasing from the map and I'm not adding a logarithmic why because the size of the map is ex extremely small so the time taken will be extremely small somewhere near about we of one or P of two constant thereby do not consider it so n 2N is the solution for this one again a lot of interviewers will be okay with it some only some one out of 10 might not be happy with bco of 2 N they might ask you to optimize it to bco of n so let's check out the vgo of n solution so we need to optimize bgo of 2N into B go of n but for that we need to understand what was taking beo of 2 N so if you remember there was a point when L was here R was here and the max length was four and the map was having 3 2 and one three of the elements and then I checked if this segment could be a possible answer and the map said no I have three unique elements thereby this cannot be a possible answer after that what I did was I took off this three I moved L I took off this three I moved L I took off this three I moved L and then I got this segment and I said this is a valid segment and then we moved R then we moved R then we moved R and eventually this was the longest right so what we did was Whenever there was a invalidity I moved L straight away till it was valid till it was valid and that was taking that extra beo of end time so what I'll try to do is I'll try to Omit that thing so in in order to do that I'll be using the same concept that I've used in my previous lecture in case you haven't seen my previous video which is Max consecutive 1es part three",
+      "word_count": 347
+    },
+    {
+      "chunk_index": 12,
+      "video_id": "e3bs0uA1NhQ",
+      "position": 276,
+      "title": "L5. Fruit Into Baskets | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=e3bs0uA1NhQ",
+      "start": 1420.6,
+      "end": 1550.799,
+      "text": "which is Max consecutive 1es part three please go back and watch it I've explained the intuition in depth over there so what I will do is I'll take L I'll take R over here uh maybe uh in order to just uh simplify things I'll take lnr Tov over here here I'll skip the initial steps and I know I'll take a map data structure three will be having three times one is once L2 is on and max length will be how much four now this is the moment I have a segment and I'm asking hey can this be a possible answer the map says I have three elements so this cannot be a possible answer and if this cannot be a possible answer we have to move in but over here I'll say hey listen four was my max length and you tried to increase that length to five so what I do is I'll not allow you to go beyond five I'll ask you to stay at five so what I'll do is I'll just remove 1 three so if I remove 1 3 this will become two and the L will go over here now I'll check for the same length four is it a possible answer it says no perfect move on I am not allowing the length to get increased more than four again at five I'm not going to six the length is still five and again it says not possible but please make sure whenever you go to this you insert this now I'm checking this one is it possible it says no not possible if it is not possible I'll again reduce one so when I reduce one this becomes as one and the L goes over over here correct Next Step will be to take this R and move one step ahead which is one so you can increase uh this one which is typically three and this is one okay now again you'll ask hey can this be a possible answer and it",
+      "word_count": 346
+    },
+    {
+      "chunk_index": 13,
+      "video_id": "e3bs0uA1NhQ",
+      "position": 276,
+      "title": "L5. Fruit Into Baskets | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=e3bs0uA1NhQ",
+      "start": 1545.399,
+      "end": 1671.48,
+      "text": "answer and it says no because at the map still has three unique elements perfect again reduce this so you'll go over here this will be zero so it goes off and now when you check for this length this is possible why because it has two elements the length is forward the length is forward it is possible after that you move R after that you move R now the moment you move R this is having two so please insert it and now when you want to check if this is possible it says yes this is possible yes this is possible and the length is five the length didn't jump from 4 to six why because I didn't allow it I didn't allow it I said okay this is not possible you move you move I'm not going to let you increase I will move along with you I'll move along with you till you are a valid proposition got it and after this I'll take this R I'll move here which is a three what will happen is I'll again insert three again not possible again the same algorithm happens so instead of moving the L completely using a while loop like complete from here to here at one step you just move it by one step so that's the optimization in order to understand it better please go back and watch the max consecutive 1es part three I've explained it in depth I've taken time over there I'm sure you've understood it over here as well just in case you haven't please go back over there okay we have to write down the pseudo code it's going to be super simple function array it'll require an L it'll require R it'll require a max length and it'll require a map data structure you're going to do the exact same thing while R greater than n which is n is the array size map of array of r++ you increase and now instead of the while loop if uh the L and R is not a",
+      "word_count": 350
+    },
+    {
+      "chunk_index": 14,
+      "video_id": "e3bs0uA1NhQ",
+      "position": 276,
+      "title": "L5. Fruit Into Baskets | 2 Pointers and Sliding Window Playlist",
+      "url": "https://www.youtube.com/watch?v=e3bs0uA1NhQ",
+      "start": 1664.44,
+      "end": 1803.399,
+      "text": "while loop if uh the L and R is not a valid segment what you do is you say Hey listen if MPP do size is greater than k remove it remove and if MPP of array of L is now zero which means you can just trim it off from the map as well map doas mppp of array of L perfect and right after this you can move the left to Plus+ over here there will be no while you just trim it off once in the previous we kept on doing it we kept on doing it once you have done this you can have a simple check Hey listen after doing this if mppp of size is lesser than equal to K maybe the max length can be updated to Max of max length comma r - L + 1 done and you can move the r++ and that will be end of the while loop and then you can straight return the max length and then you can end the function so what will be the time complexity very simple there's one while loop which is a b go of n it's not going to take any other time what about the Stace complexity again you're putting elements into the map but you're making sure that it is not more than two so I can say that is as good as a constant so this will be the time complexity and this complexity for this particular solution and if you say this in an interview the interviewer will be super super impressed only if you're able to explain your thought process that is the key over here so if you're still now watching I'm very sure you've understood everything if that is the case please please do consider giving us a like and if you're new to our channel do consider subscribing to us as well with this I'll be wrapping up this video let's me in some other video by take care when your heart is broken don't forget your golden I will find",
+      "word_count": 350
+    }
+  ]
+}
