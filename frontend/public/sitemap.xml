@@ -1,65 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <url>
+    <loc>https://retriva.netlify.app/</loc>
+  </url>
 
-    <meta
-      name="description"
-      content="Retriva is an AI-powered DSA learning assistant built around Striver's A2Z DSA Course. Search concepts, explore relevant videos, and ask questions with context-aware AI answers."
-    />
+  <url>
+    <loc>https://retriva.netlify.app/search</loc>
+  </url>
 
-    <meta
-      name="keywords"
-      content="Retriva, DSA, Data Structures and Algorithms, Striver A2Z DSA, DSA learning, AI DSA assistant, algorithms, competitive programming"
-    />
+  <url>
+    <loc>https://retriva.netlify.app/ask</loc>
+  </url>
 
-    <meta name="author" content="Retriva" />
-
-    <link rel="canonical" href="https://retriva.netlify.app/" />
-
-    <link rel="icon" href="/favicon.svg" />
-
-    <title>Retriva | AI-Powered DSA Learning Assistant</title>
-  </head>
-
-  <body>
-    <div id="root"></div>
-
-    <noscript>
-      <main>
-        <h1>Retriva - AI-Powered DSA Learning Assistant</h1>
-
-        <p>
-          Retriva is an AI-powered learning assistant for
-          Striver's A2Z DSA Course.
-        </p>
-
-        <p>
-          Search Data Structures and Algorithms topics, find relevant
-          learning resources, and ask questions to get context-aware
-          explanations.
-        </p>
-
-        <h2>Learn DSA with Retriva</h2>
-
-        <p>
-          Explore topics such as Arrays, Binary Search, Linked Lists,
-          Trees, Graphs, Dynamic Programming, and more.
-        </p>
-
-        <h2>What can you do with Retriva?</h2>
-
-        <ul>
-          <li>Search DSA topics semantically.</li>
-          <li>Find relevant videos from the Striver A2Z DSA course.</li>
-          <li>Ask questions about DSA concepts.</li>
-          <li>Get AI-generated answers grounded in relevant content.</li>
-        </ul>
-      </main>
-    </noscript>
-
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+</urlset>
