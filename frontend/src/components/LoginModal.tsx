@@ -50,7 +50,7 @@ export const LoginModal: React.FC<LoginModalProps> = ({ onSuccess }) => {
             Restricted Access
           </h2>
           <p className="text-xs text-gray-400 leading-relaxed max-w-xs mx-auto">
-            This deployment is passcode-protected to safeguard Groq LLM & Qdrant vector database limits.
+            Retriva is passcode-protected to safeguard Groq LLM & Qdrant vector database limits.
           </p>
         </div>
 

@@ -162,10 +162,10 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 py-3.5 flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 to-purple-600 flex items-center justify-center font-black text-white text-base shadow-md shadow-indigo-500/20">
-              D
+              R
             </div>
             <div>
-              <h1 className="text-base font-bold text-white leading-none">DSA Course Intelligence</h1>
+              <h1 className="text-base font-bold text-white leading-none">Retriva</h1>
               <p className="text-[11px] text-gray-400 mt-0.5">Striver's A2Z DSA · 304 Videos · 3,599 Timestamp Chunks</p>
             </div>
           </div>
@@ -361,7 +361,7 @@ function App() {
       <footer className="py-6 border-t border-white/5 text-xs text-gray-400 bg-[#090912]">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
-            <span className="text-gray-300 font-semibold">DSA Course Intelligence</span>
+            <span className="text-gray-300 font-semibold">Retriva</span>
             <span className="text-gray-600 mx-2">·</span>
             <span className="text-gray-500">Educational Assistant for DSA Learning</span>
           </div>
