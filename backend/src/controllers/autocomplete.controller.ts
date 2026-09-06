@@ -1,11 +1,21 @@
 import type { Request, Response } from 'express';
 import { getAutocompleteSuggestions } from '../services/autocomplete.service.js';
+import { LIMITS } from '../config/limits.js';
 
 export const getAutocomplete = async (req: Request, res: Response): Promise<void> => {
     try {
-        const query = req.query.q as string;
-        if (!query || query.length < 1) {
-            res.status(400).json({ error: 'Query parameter "q" is required and must be at least 1 character long.' });
+        const rawQ = req.query.q;
+
+        if (typeof rawQ !== 'string') {
+            res.status(400).json({ error: 'Query parameter "q" must be a single string' });
+            return;
+        }
+
+        const query = rawQ.trim();
+        if (query.length < LIMITS.AUTOCOMPLETE_MIN || query.length > LIMITS.AUTOCOMPLETE_MAX) {
+            res.status(400).json({
+                error: `Query parameter "q" must be between ${LIMITS.AUTOCOMPLETE_MIN} and ${LIMITS.AUTOCOMPLETE_MAX} characters`
+            });
             return;
         }
 
@@ -16,3 +26,4 @@ export const getAutocomplete = async (req: Request, res: Response): Promise<void
         res.status(500).json({ error: 'Internal server error' });
     }
 };
+

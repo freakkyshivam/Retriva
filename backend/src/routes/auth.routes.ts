@@ -20,8 +20,12 @@ router.post('/verify', (req: Request, res: Response): void => {
     }
 
     const { password } = req.body || {};
+    if (typeof password !== 'string') {
+        res.status(400).json({ valid: false, error: 'Password must be a string' });
+        return;
+    }
 
-    if (password && String(password).trim() === accessPassword) {
+    if (password.trim() === accessPassword) {
         res.json({ valid: true });
     } else {
         res.status(401).json({ valid: false, error: 'Incorrect access passcode' });

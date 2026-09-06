@@ -1,11 +1,21 @@
 import type { Request, Response } from 'express';
 import { searchCourse } from '../services/search.service.js';
+import { LIMITS } from '../config/limits.js';
 
 export const searchHandler = async (req: Request, res: Response): Promise<void> => {
     try {
-        const q = req.query.q as string;
-        if (!q || q.length < 2 || q.length > 500) {
-            res.status(400).json({ error: 'Query must be between 2 and 500 characters' });
+        const rawQ = req.query.q;
+
+        if (typeof rawQ !== 'string') {
+            res.status(400).json({ error: 'Query parameter "q" must be a single string' });
+            return;
+        }
+
+        const q = rawQ.trim();
+        if (q.length < LIMITS.SEARCH_QUERY_MIN || q.length > LIMITS.SEARCH_QUERY_MAX) {
+            res.status(400).json({
+                error: `Query must be between ${LIMITS.SEARCH_QUERY_MIN} and ${LIMITS.SEARCH_QUERY_MAX} characters`
+            });
             return;
         }
 
@@ -16,3 +26,4 @@ export const searchHandler = async (req: Request, res: Response): Promise<void> 
         res.status(500).json({ error: 'Internal server error' });
     }
 };
+

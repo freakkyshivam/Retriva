@@ -11,6 +11,6 @@ export const initEmbeddingModel = async () => {
 
 export const getQueryEmbedding = async (query: string): Promise<number[]> => {
     await initEmbeddingModel();
-    const output = await extractor(query, { pooling: 'mean', normalize: true });
+    const output = await extractor(query, { pooling: 'mean', normalize: true, truncation: true });
     return Array.from(output.data);
 };

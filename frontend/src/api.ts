@@ -83,11 +83,19 @@ export async function searchCourse(query: string): Promise<SearchResponse> {
   const res = await fetch(`${API_BASE}/search?q=${encodeURIComponent(query)}`, {
     headers: getRequestHeaders(),
   });
+  if (res.status === 429) {
+    const errData = await res.json().catch(() => ({}));
+    throw new Error(errData.error || 'Search rate limit exceeded. Please wait a moment before searching again.');
+  }
+  if (res.status === 400) {
+    const errData = await res.json().catch(() => ({}));
+    throw new Error(errData.error || 'Invalid search query. Query must be between 2 and 500 characters.');
+  }
   if (res.status === 401) {
     clearAuthToken();
     throw new Error('UNAUTHORIZED');
   }
-  if (!res.ok) throw new Error('Search failed');
+  if (!res.ok) throw new Error('Search failed. Please ensure the backend server is running.');
   return safeJson<SearchResponse>(res, 'Failed to parse search results');
 }
 
@@ -97,11 +105,19 @@ export async function askQuestion(question: string): Promise<AskResponse> {
     headers: getRequestHeaders(),
     body: JSON.stringify({ question }),
   });
+  if (res.status === 429) {
+    const errData = await res.json().catch(() => ({}));
+    throw new Error(errData.error || 'AI question rate limit exceeded. Please wait a moment before asking another question.');
+  }
+  if (res.status === 400) {
+    const errData = await res.json().catch(() => ({}));
+    throw new Error(errData.error || 'Invalid question. Question must be between 5 and 1000 characters.');
+  }
   if (res.status === 401) {
     clearAuthToken();
     throw new Error('UNAUTHORIZED');
   }
-  if (!res.ok) throw new Error('Ask failed');
+  if (!res.ok) throw new Error('AI answer failed. Please ensure the backend server is running.');
   return safeJson<AskResponse>(res, 'Failed to parse AI response');
 }
 

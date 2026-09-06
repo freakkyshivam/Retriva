@@ -1,26 +1,34 @@
 import { useState, useEffect } from 'react';
-import { SearchBar } from './components/SearchBar';
-import { AskSection } from './components/AskSection';
+import { HomePage } from './components/HomePage';
+import { SearchBar, SEARCH_EXAMPLE_QUERIES } from './components/SearchBar';
+import { SearchResults } from './components/SearchResults';
+import { AskSection, ASK_EXAMPLE_QUERIES } from './components/AskSection';
 import { AnswerDisplay } from './components/AnswerDisplay';
-import { VideoPlayerPanel } from './components/VideoPlayerPanel';
+import { AskLectureReferencePanel } from './components/AskLectureReferencePanel';
 import { TopicFilter } from './components/TopicFilter';
 import { DisclaimerModal } from './components/DisclaimerModal';
-import { LoginModal } from './components/LoginModal';
 import { 
   searchCourse, 
   askQuestion, 
-  checkAuthStatus, 
-  verifyPasscode, 
-  clearAuthToken, 
-  getAuthToken, 
   VideoResult, 
   AskResponse 
 } from './api';
 
-type Mode = 'search' | 'ask';
+export type AppRoute = '/' | '/search' | '/ask' | '/about';
+
+const getRouteFromPathname = (pathname: string): AppRoute => {
+  const clean = pathname.replace(/\/+$/, '') || '/';
+  if (clean === '/search') return '/search';
+  if (clean === '/ask') return '/ask';
+  if (clean === '/about') return '/about';
+  return '/';
+};
 
 function App() {
-  const [mode, setMode] = useState<Mode>('search');
+  const [currentRoute, setCurrentRoute] = useState<AppRoute>(() =>
+    getRouteFromPathname(window.location.pathname)
+  );
+
   const [isSearching, setIsSearching] = useState(false);
   const [isAiLoading, setIsAiLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -29,104 +37,98 @@ function App() {
   const [searchResults, setSearchResults] = useState<VideoResult[]>([]);
   const [askResponse, setAskResponse] = useState<AskResponse | null>(null);
   const [hasSearched, setHasSearched] = useState(false);
-  const [isDisclaimerOpen, setIsDisclaimerOpen] = useState(false);
 
-  // Authentication states
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(true);
-  const [isProtectedInstance, setIsProtectedInstance] = useState<boolean>(false);
-  const [isAuthCheckDone, setIsAuthCheckDone] = useState<boolean>(false);
-  const [copiedLink, setCopiedLink] = useState(false);
+  // Sync state with browser Back / Forward actions
+  useEffect(() => {
+    const handlePopState = () => {
+      const route = getRouteFromPathname(window.location.pathname);
+      setCurrentRoute(route);
+      setError(null);
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
 
-  const handleCopyMagicLink = () => {
-    const token = getAuthToken();
-    if (token) {
-      const magicUrl = `${window.location.origin}${window.location.pathname}?key=${encodeURIComponent(token)}`;
-      navigator.clipboard.writeText(magicUrl);
-      setCopiedLink(true);
-      setTimeout(() => setCopiedLink(false), 2500);
+  // Programmatic navigation updating URL and history without full page reload
+  const navigate = (to: AppRoute, queryParam?: string) => {
+    let url: string = to;
+    if (queryParam) {
+      url += `?q=${encodeURIComponent(queryParam)}`;
+    }
+    if (window.location.pathname !== to || (queryParam && !window.location.search.includes(encodeURIComponent(queryParam)))) {
+      window.history.pushState(null, '', url);
+    }
+    setCurrentRoute(to);
+    setError(null);
+    if (to === '/') {
+      setHasSearched(false);
+      setSearchResults([]);
+      setAskResponse(null);
     }
   };
 
-  useEffect(() => {
-    const initAuth = async () => {
-      try {
-        const { isProtected } = await checkAuthStatus();
-        setIsProtectedInstance(isProtected);
-        if (isProtected) {
-          // Check for URL parameter (e.g. ?key=your_passcode or ?passcode=... or ?token=...)
-          const params = new URLSearchParams(window.location.search);
-          const urlKey = params.get('key') || params.get('passcode') || params.get('token') || params.get('p');
-
-          if (urlKey && urlKey.trim()) {
-            const { valid } = await verifyPasscode(urlKey.trim());
-            if (valid) {
-              setIsAuthenticated(true);
-              // Clean URL to hide passcode from browser history and address bar
-              const cleanUrl = window.location.pathname;
-              window.history.replaceState({}, document.title, cleanUrl);
-              return;
-            }
-          }
-
-          // Check stored token in localStorage
-          const storedToken = getAuthToken();
-          if (!storedToken) {
-            setIsAuthenticated(false);
-          } else {
-            const { valid } = await verifyPasscode(storedToken);
-            setIsAuthenticated(valid);
-          }
-        } else {
-          setIsAuthenticated(true);
-        }
-      } catch (err) {
-        console.warn('Auth status check failed:', err);
-      } finally {
-        setIsAuthCheckDone(true);
-      }
-    };
-    initAuth();
-  }, []);
-
-  // Unified executor: loads BOTH the AI explanation (left) and matching videos (right)
-  const executeQuery = async (query: string) => {
+  // Pure semantic search handler: calls ONLY searchCourse, NEVER calls askQuestion/LLM
+  const handleSearch = async (query: string) => {
     if (!query.trim()) return;
     setError(null);
     setCurrentQuery(query);
+    setHasSearched(true);
+    setIsSearching(true);
+    setSearchResults([]);
+    setAskResponse(null);
+
+    const searchUrl = `/search?q=${encodeURIComponent(query)}`;
+    if (window.location.pathname !== '/search' || window.location.search !== `?q=${encodeURIComponent(query)}`) {
+      window.history.pushState(null, '', searchUrl);
+      setCurrentRoute('/search');
+    }
+
+    try {
+      const res = await searchCourse(query);
+      setSearchResults(res.results);
+    } catch (err: any) {
+      setError(err?.message || 'Video search failed.');
+      console.error("Search error:", err);
+    } finally {
+      setIsSearching(false);
+    }
+  };
+
+  // Conceptual RAG handler: calls askQuestion (LLM) and retrieves supporting video lectures
+  const handleAsk = async (question: string) => {
+    if (!question.trim()) return;
+    setError(null);
+    setCurrentQuery(question);
     setHasSearched(true);
     setIsSearching(true);
     setIsAiLoading(true);
     setAskResponse(null);
     setSearchResults([]);
 
-    // Concurrently fetch video results and AI answer
-    const videoPromise = searchCourse(query)
+    const askUrl = `/ask?q=${encodeURIComponent(question)}`;
+    if (window.location.pathname !== '/ask' || window.location.search !== `?q=${encodeURIComponent(question)}`) {
+      window.history.pushState(null, '', askUrl);
+      setCurrentRoute('/ask');
+    }
+
+    const videoPromise = searchCourse(question)
       .then(res => {
         setSearchResults(res.results);
       })
       .catch(err => {
-        if (err?.message === 'UNAUTHORIZED') {
-          setIsAuthenticated(false);
-          setError('Access passcode expired or invalid. Please re-enter.');
-        } else {
-          console.error("Video search error:", err);
-        }
+        console.error("Supporting lectures retrieval error:", err);
       })
       .finally(() => {
         setIsSearching(false);
       });
 
-    const aiPromise = askQuestion(query)
+    const aiPromise = askQuestion(question)
       .then(res => {
         setAskResponse(res);
       })
       .catch(err => {
-        if (err?.message === 'UNAUTHORIZED') {
-          setIsAuthenticated(false);
-          setError('Access passcode expired or invalid. Please re-enter.');
-        } else {
-          console.error("AI answer error:", err);
-        }
+        setError(err?.message || 'AI answer generation failed.');
+        console.error("AI answer error:", err);
       })
       .finally(() => {
         setIsAiLoading(false);
@@ -139,45 +141,72 @@ function App() {
     }
   };
 
-  if (!isAuthCheckDone) {
-    return (
-      <div className="min-h-screen bg-[#09090f] flex items-center justify-center">
-        <div className="w-8 h-8 border-2 border-indigo-500/30 border-t-indigo-500 rounded-full animate-spin" />
-      </div>
-    );
-  }
+  // Handle direct navigation with query parameters on load
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get('q');
+    if (q) {
+      if (currentRoute === '/search') {
+        handleSearch(q);
+      } else if (currentRoute === '/ask') {
+        handleAsk(q);
+      }
+    }
+  }, []);
 
   return (
-    <div className="min-h-screen bg-[#09090f] text-gray-200 flex flex-col selection:bg-indigo-600 selection:text-white">
-      {/* Error Toast */}
+    <div className="min-h-screen bg-[#09090f] text-gray-200 flex flex-col selection:bg-indigo-600 selection:text-white font-sans">
+      {/* Error / Rate Limit Toast */}
       {error && (
-        <div className="fixed top-4 left-1/2 -translate-x-1/2 z-50 bg-red-600/90 backdrop-blur-md text-white px-5 py-2.5 rounded-xl shadow-2xl flex items-center gap-3 border border-red-400/30 text-sm">
+        <div className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 px-5 py-2.5 rounded-xl shadow-2xl flex items-center gap-3 border backdrop-blur-md text-sm ${
+          error.toLowerCase().includes('rate limit') || error.toLowerCase().includes('too many requests')
+            ? 'bg-amber-600/90 text-white border-amber-400/40 shadow-amber-900/30'
+            : 'bg-red-600/90 text-white border-red-400/30 shadow-red-900/30'
+        }`}>
+          <span>{error.toLowerCase().includes('rate limit') ? '⏳' : '⚠️'}</span>
           <span>{error}</span>
-          <button onClick={() => setError(null)} className="text-white/80 hover:text-white font-bold">×</button>
+          <button onClick={() => setError(null)} className="text-white/80 hover:text-white font-bold ml-1 cursor-pointer">×</button>
         </div>
       )}
 
       {/* Top Navbar / Header */}
-      <header className="border-b border-white/5 bg-[#0e0e17]/70 backdrop-blur-xl sticky top-0 z-30">
-        <div className="max-w-7xl mx-auto px-4 py-3.5 flex flex-wrap items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 to-purple-600 flex items-center justify-center font-black text-white text-base shadow-md shadow-indigo-500/20">
+      <header className="border-b border-white/5 bg-[#0e0e17]/80 backdrop-blur-xl sticky top-0 z-30">
+        <div className="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-4">
+          {/* Logo & Title */}
+          <div 
+            onClick={() => navigate('/')}
+            className="flex items-center gap-3 cursor-pointer group"
+          >
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 to-purple-600 flex items-center justify-center font-black text-white text-base shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform">
               R
             </div>
             <div>
-              <h1 className="text-base font-bold text-white leading-none">Retriva</h1>
-              <p className="text-[11px] text-gray-400 mt-0.5">Striver's A2Z DSA · 304 Videos · 3,599 Timestamp Chunks</p>
+              <h1 className="text-base font-bold text-white leading-none group-hover:text-indigo-300 transition-colors">
+                Retriva
+              </h1>
+              <p className="text-[11px] text-gray-400 mt-0.5">
+                Striver's A2Z DSA · 304 Videos · 3,599 Timestamp Chunks
+              </p>
             </div>
           </div>
 
-          {/* Right Action Group */}
-          <div className="flex items-center gap-3">
-            {/* Mode Switcher Pills */}
-            <div className="flex bg-[#161624] p-1 rounded-xl border border-white/10">
+          {/* Center Navigation Links & Mode Pills */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            <div className="flex bg-[#141422] p-1 rounded-xl border border-white/10">
               <button
-                onClick={() => setMode('search')}
-                className={`px-4 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-                  mode === 'search'
+                onClick={() => navigate('/')}
+                className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                  currentRoute === '/'
+                    ? 'bg-indigo-600 text-white shadow-sm'
+                    : 'text-gray-400 hover:text-gray-200'
+                }`}
+              >
+                Home
+              </button>
+              <button
+                onClick={() => navigate('/search')}
+                className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                  currentRoute === '/search'
                     ? 'bg-indigo-600 text-white shadow-sm'
                     : 'text-gray-400 hover:text-gray-200'
                 }`}
@@ -185,9 +214,9 @@ function App() {
                 🔍 Search
               </button>
               <button
-                onClick={() => setMode('ask')}
-                className={`px-4 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-                  mode === 'ask'
+                onClick={() => navigate('/ask')}
+                className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                  currentRoute === '/ask'
                     ? 'bg-indigo-600 text-white shadow-sm'
                     : 'text-gray-400 hover:text-gray-200'
                 }`}
@@ -198,172 +227,289 @@ function App() {
 
             {/* Disclaimer & Info Button */}
             <button
-              onClick={() => setIsDisclaimerOpen(true)}
-              className="px-3 py-2 rounded-xl text-xs font-medium bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white border border-white/10 transition-colors flex items-center gap-1.5"
+              onClick={() => navigate('/about')}
+              className={`px-3 py-1.5 rounded-xl text-xs font-medium border transition-colors flex items-center gap-1.5 cursor-pointer ${
+                currentRoute === '/about'
+                  ? 'bg-indigo-600/20 text-indigo-300 border-indigo-500/40'
+                  : 'bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white border border-white/10'
+              }`}
               title="About Project & Developer"
             >
               <span>⚖️</span>
               <span className="hidden sm:inline">About & Disclaimer</span>
             </button>
 
-            {/* Magic Link Button (if protected instance and authenticated) */}
-            {isProtectedInstance && isAuthenticated && (
+            {/* Quick Action: Get Started Button */}
+            {currentRoute === '/' && (
               <button
-                onClick={handleCopyMagicLink}
-                className="px-3 py-2 rounded-xl text-xs font-medium bg-white/5 hover:bg-white/10 text-indigo-300 hover:text-white border border-white/10 transition-colors flex items-center gap-1.5"
-                title="Copy instant access URL with your passcode embedded"
+                onClick={() => navigate('/search')}
+                className="hidden md:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white shadow-md shadow-indigo-600/30 transition-all cursor-pointer"
               >
-                <span>{copiedLink ? '✓' : '🔗'}</span>
-                <span className="hidden sm:inline">{copiedLink ? 'Link Copied!' : 'Magic Link'}</span>
-              </button>
-            )}
-
-            {/* Lock Button (if protected instance) */}
-            {isProtectedInstance && (
-              <button
-                onClick={() => {
-                  clearAuthToken();
-                  setIsAuthenticated(false);
-                }}
-                className="p-2 rounded-xl text-xs bg-white/5 hover:bg-red-500/20 text-gray-400 hover:text-red-300 border border-white/10 transition-colors flex items-center justify-center"
-                title="Lock Application"
-              >
-                <span>🔒</span>
+                <span>Get Started</span>
+                <span>→</span>
               </button>
             )}
           </div>
         </div>
       </header>
 
-      {/* Query Bar Section */}
-      <section className="pt-6 pb-4 px-4 bg-gradient-to-b from-[#0e0e17]/50 to-transparent">
-        <div className="max-w-4xl mx-auto space-y-3">
-          {mode === 'search' ? (
-            <div>
-              <SearchBar 
-                onSearch={executeQuery} 
-                isLoading={isSearching || isAiLoading} 
-                placeholder="Search DSA topics... (e.g. 'Dijkstra', 'Kadane', 'Linked List Cycle')" 
-              />
-              <TopicFilter onTopicSearch={executeQuery} />
-            </div>
-          ) : (
-            <AskSection 
-              onAsk={executeQuery} 
-              isLoading={isSearching || isAiLoading} 
-            />
-          )}
-        </div>
-      </section>
+      {/* Route Views */}
+      <div className="flex-1 flex flex-col">
+        {(currentRoute === '/' || currentRoute === '/about') && (
+          /* ================= 1. HOME PAGE VIEW ================= */
+          <HomePage
+            onNavigateToSearch={(query) => {
+              navigate('/search', query);
+              if (query) {
+                handleSearch(query);
+              }
+            }}
+            onNavigateToAsk={(question) => {
+              navigate('/ask', question);
+              if (question) {
+                handleAsk(question);
+              }
+            }}
+          />
+        )}
 
-      {/* Main Content Area: Split-Screen Layout */}
-      <main className="flex-1 w-full max-w-7xl mx-auto px-4 py-6">
-        {hasSearched ? (
-          <div className="space-y-4">
-            {/* Search Query Pill */}
-            <div className="flex items-center justify-between px-1 text-xs text-gray-400">
-              <div className="flex items-center gap-2">
-                <span>Showing intelligence for:</span>
-                <span className="font-semibold text-indigo-300 bg-indigo-950/40 px-2.5 py-1 rounded-lg border border-indigo-500/20">
-                  "{currentQuery}"
-                </span>
+        {currentRoute === '/search' && (
+          /* ================= 2. SEARCH PAGE VIEW ================= */
+          <div className="flex-1 flex flex-col">
+            {/* Search Header Banner */}
+            <section className="pt-8 pb-4 px-4 text-center">
+              <div className="max-w-3xl mx-auto space-y-2">
+                <div className="inline-flex items-center gap-2 text-indigo-400 text-sm font-semibold mb-1">
+                  <span className="text-base">🔍</span>
+                  <span>Find the right DSA lecture</span>
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                  Search Striver's A2Z Course
+                </h2>
+                <p className="text-xs sm:text-sm text-gray-400 max-w-xl mx-auto leading-relaxed">
+                  Search by topic, problem, or algorithm. Get the most relevant videos and transcript segments.
+                </p>
               </div>
-              {(isSearching || isAiLoading) && (
-                <div className="flex items-center gap-2 text-indigo-400 font-medium">
-                  <div className="w-3.5 h-3.5 border-2 border-indigo-400/30 border-t-indigo-400 rounded-full animate-spin" />
-                  <span>Analyzing course materials...</span>
+            </section>
+
+            {/* Search Input and Filters */}
+            <section className="pb-6 px-4">
+              <div className="max-w-4xl mx-auto space-y-3">
+                <SearchBar 
+                  onSearch={handleSearch} 
+                  isLoading={isSearching} 
+                  placeholder="Search DSA topics... (e.g. 'Dijkstra', 'Bellman Ford', 'Sliding Window')" 
+                  initialQuery={currentQuery}
+                />
+                <TopicFilter onTopicSearch={handleSearch} />
+              </div>
+            </section>
+
+            {/* Search Results / Idle Content */}
+            <main className="flex-1 w-full max-w-5xl mx-auto px-4 pb-12">
+              {hasSearched ? (
+                <SearchResults
+                  results={searchResults}
+                  query={currentQuery}
+                  isLoading={isSearching}
+                  onSwitchToAsk={(q) => {
+                    navigate('/ask', q);
+                    if (q) handleAsk(q);
+                  }}
+                />
+              ) : (
+                /* Search Mode Idle State */
+                <div className="max-w-2xl mx-auto py-12 text-center space-y-6">
+                  <div className="w-16 h-16 mx-auto rounded-2xl bg-indigo-600/10 border border-indigo-500/20 flex items-center justify-center text-2xl shadow-inner">
+                    🔍
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white mb-1.5">
+                      Ready to find your next lecture
+                    </h3>
+                    <p className="text-xs text-gray-400 leading-relaxed max-w-md mx-auto">
+                      Search any concept or algorithm name above to discover the exact video and timestamp segment in Striver's playlist.
+                    </p>
+                  </div>
+
+                  <div className="pt-2 max-w-lg mx-auto">
+                    <p className="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">
+                      🔍 Try searching:
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                      {SEARCH_EXAMPLE_QUERIES.map((example) => (
+                        <button
+                          key={example}
+                          onClick={() => handleSearch(example)}
+                          className="p-3 bg-[#11111c] hover:bg-[#18182a] border border-white/5 hover:border-indigo-500/40 rounded-xl text-left transition-all duration-200 group flex items-center justify-between cursor-pointer"
+                        >
+                          <span className="text-xs text-gray-300 group-hover:text-white font-medium">
+                            {example}
+                          </span>
+                          <span className="text-gray-600 group-hover:text-indigo-400 text-xs">→</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               )}
-            </div>
-
-            {/* Side-by-Side Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-              {/* Left Column: AI Grounded Answer */}
-              <div className="lg:col-span-7">
-                {isAiLoading ? (
-                  <div className="bg-[#11111a] border border-white/10 rounded-2xl overflow-hidden shadow-2xl shadow-black/40">
-                    {/* Header shimmer bar */}
-                    <div className="px-6 py-4 bg-[#161622] border-b border-white/10 flex items-center justify-between">
-                      <div className="flex items-center gap-2.5">
-                        <div className="w-3.5 h-3.5 border-2 border-indigo-400/30 border-t-indigo-400 rounded-full animate-spin" />
-                        <span className="text-xs font-semibold text-indigo-300 animate-pulse">
-                          Synthesizing Explanation from Transcripts...
-                        </span>
-                      </div>
-                      <span className="text-[10px] font-mono text-gray-500 bg-white/5 px-2 py-0.5 rounded border border-white/5">
-                        Analyzing DSA Materials
-                      </span>
-                    </div>
-
-                    {/* Shimmer skeleton lines */}
-                    <div className="p-6 md:p-8 space-y-4 animate-pulse">
-                      <div className="h-5 bg-white/10 rounded-lg w-2/5" />
-                      <div className="space-y-2.5 pt-2">
-                        <div className="h-3.5 bg-white/5 rounded-md w-full" />
-                        <div className="h-3.5 bg-white/5 rounded-md w-11/12" />
-                        <div className="h-3.5 bg-white/5 rounded-md w-4/5" />
-                      </div>
-
-                      {/* Mock Table / Step Skeleton */}
-                      <div className="pt-3">
-                        <div className="h-4 bg-white/10 rounded w-1/4 mb-3" />
-                        <div className="rounded-xl border border-white/5 bg-[#0e0e16] p-4 space-y-2.5">
-                          <div className="h-3 bg-white/10 rounded w-full" />
-                          <div className="h-3 bg-white/5 rounded w-5/6" />
-                          <div className="h-3 bg-white/5 rounded w-3/4" />
-                        </div>
-                      </div>
-
-                      <div className="space-y-2 pt-2">
-                        <div className="h-3.5 bg-white/5 rounded-md w-9/12" />
-                        <div className="h-3.5 bg-white/5 rounded-md w-10/12" />
-                      </div>
-                    </div>
-                  </div>
-                ) : askResponse ? (
-                  <AnswerDisplay 
-                    answer={askResponse.answer} 
-                    sources={askResponse.sources} 
-                  />
-                ) : (
-                  <div className="bg-[#11111a] border border-white/5 rounded-2xl p-8 text-center text-gray-500 text-sm">
-                    No answer synthesized yet. Try entering a query above.
-                  </div>
-                )}
-              </div>
-
-              {/* Right Column: In-Browser Video Player & Matching Clips */}
-              <div className="lg:col-span-5">
-                <VideoPlayerPanel 
-                  videos={searchResults} 
-                  isLoading={isSearching} 
-                />
-              </div>
-            </div>
-          </div>
-        ) : (
-          /* Empty / Welcome State */
-          <div className="max-w-2xl mx-auto py-16 text-center space-y-4">
-            <div className="w-16 h-16 mx-auto rounded-2xl bg-indigo-600/10 border border-indigo-500/20 flex items-center justify-center text-2xl shadow-inner">
-              ⚡
-            </div>
-            <h2 className="text-xl font-bold text-white">
-              Instant DSA Explanations with Direct Video Jump
-            </h2>
-            <p className="text-sm text-gray-400 leading-relaxed max-w-lg mx-auto">
-              Search any problem or concept. On the <strong>left</strong>, get a structured conceptual explanation. On the <strong>right</strong>, watch the exact video segment embedded in your browser.
-            </p>
+            </main>
           </div>
         )}
-      </main>
 
-      {/* Footer */}
+        {currentRoute === '/ask' && (
+          /* ================= 3. ASK PAGE VIEW ================= */
+          <div className="flex-1 flex flex-col">
+            {/* Ask Header Banner */}
+            <section className="pt-8 pb-4 px-4 text-center">
+              <div className="max-w-3xl mx-auto space-y-2">
+                <div className="inline-flex items-center gap-2 text-indigo-400 text-sm font-semibold mb-1">
+                  <span className="text-base">💡</span>
+                  <span>Ask the course</span>
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                  Grounded Conceptual Explanations
+                </h2>
+                <p className="text-xs sm:text-sm text-gray-400 max-w-xl mx-auto leading-relaxed">
+                  Get AI-powered explanations grounded in Striver's A2Z DSA course transcripts. Ask any conceptual question.
+                </p>
+              </div>
+            </section>
+
+            {/* Question Input Section */}
+            <section className="pb-6 px-4">
+              <div className="max-w-4xl mx-auto">
+                <AskSection 
+                  onAsk={handleAsk} 
+                  isLoading={isAiLoading || isSearching} 
+                />
+              </div>
+            </section>
+
+            {/* Ask Results / Split-Screen Content */}
+            <main className="flex-1 w-full max-w-7xl mx-auto px-4 pb-12">
+              {hasSearched ? (
+                <div className="space-y-4">
+                  {/* Query Indicator Pill */}
+                  <div className="flex items-center justify-between px-1 text-xs text-gray-400">
+                    <div className="flex items-center gap-2">
+                      <span>Synthesized for:</span>
+                      <span className="font-semibold text-indigo-300 bg-indigo-950/40 px-2.5 py-1 rounded-lg border border-indigo-500/20 truncate max-w-md">
+                        "{currentQuery}"
+                      </span>
+                    </div>
+                    {(isSearching || isAiLoading) && (
+                      <div className="flex items-center gap-2 text-indigo-400 font-medium">
+                        <div className="w-3.5 h-3.5 border-2 border-indigo-400/30 border-t-indigo-400 rounded-full animate-spin" />
+                        <span>Synthesizing answer from course transcripts...</span>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Split Screen Grid (Left: Grounded Explanation | Right: Supporting Lectures) */}
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                    {/* Left: Grounded Explanation */}
+                    <div className="lg:col-span-7">
+                      {isAiLoading ? (
+                        <div className="bg-[#11111a] border border-white/10 rounded-2xl overflow-hidden shadow-2xl shadow-black/40">
+                          <div className="px-6 py-4 bg-[#161622] border-b border-white/10 flex items-center justify-between">
+                            <div className="flex items-center gap-2.5">
+                              <div className="w-3.5 h-3.5 border-2 border-indigo-400/30 border-t-indigo-400 rounded-full animate-spin" />
+                              <span className="text-xs font-semibold text-indigo-300 animate-pulse">
+                                Synthesizing Explanation from Transcripts...
+                              </span>
+                            </div>
+                            <span className="text-[10px] font-mono text-gray-500 bg-white/5 px-2 py-0.5 rounded border border-white/5">
+                              Grounded RAG
+                            </span>
+                          </div>
+
+                          <div className="p-6 md:p-8 space-y-4 animate-pulse">
+                            <div className="h-5 bg-white/10 rounded-lg w-2/5" />
+                            <div className="space-y-2.5 pt-2">
+                              <div className="h-3.5 bg-white/5 rounded-md w-full" />
+                              <div className="h-3.5 bg-white/5 rounded-md w-11/12" />
+                              <div className="h-3.5 bg-white/5 rounded-md w-4/5" />
+                            </div>
+                            <div className="pt-3 space-y-2">
+                              <div className="h-4 bg-white/10 rounded w-1/4 mb-3" />
+                              <div className="h-12 bg-white/5 rounded-xl w-full" />
+                              <div className="h-12 bg-white/5 rounded-xl w-full" />
+                            </div>
+                          </div>
+                        </div>
+                      ) : askResponse ? (
+                        <AnswerDisplay 
+                          answer={askResponse.answer} 
+                          sources={askResponse.sources} 
+                        />
+                      ) : (
+                        <div className="bg-[#11111a] border border-white/5 rounded-2xl p-8 text-center text-gray-500 text-sm">
+                          No answer synthesized yet. Try asking a question above.
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Right: Video References, Lectures & Segments */}
+                    <div className="lg:col-span-5">
+                      <AskLectureReferencePanel 
+                        videos={searchResults} 
+                        sources={askResponse?.sources || []} 
+                        isLoading={isSearching} 
+                      />
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                /* Ask Mode Idle State */
+                <div className="max-w-2xl mx-auto py-12 text-center space-y-6">
+                  <div className="w-16 h-16 mx-auto rounded-2xl bg-indigo-600/10 border border-indigo-500/20 flex items-center justify-center text-2xl shadow-inner">
+                    💡
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-white mb-1.5">
+                      Ask Conceptual DSA Questions
+                    </h3>
+                    <p className="text-xs text-gray-400 leading-relaxed max-w-md mx-auto">
+                      Get grounded, step-by-step explanations synthesized from Striver's course transcripts with supporting video timestamps.
+                    </p>
+                  </div>
+
+                  <div className="pt-2 max-w-lg mx-auto">
+                    <p className="text-xs uppercase tracking-wider text-gray-500 font-semibold mb-3">
+                      💡 Or try asking:
+                    </p>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                      {ASK_EXAMPLE_QUERIES.map((example) => (
+                        <button
+                          key={example}
+                          onClick={() => handleAsk(example)}
+                          className="p-3 bg-[#11111c] hover:bg-[#18182a] border border-white/5 hover:border-indigo-500/40 rounded-xl text-left transition-all duration-200 group flex items-center justify-between cursor-pointer"
+                        >
+                          <span className="text-xs text-gray-300 group-hover:text-white font-medium">
+                            {example}
+                          </span>
+                          <span className="text-gray-600 group-hover:text-indigo-400 text-xs">→</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </main>
+          </div>
+        )}
+      </div>
+
+      {/* Consistent Global Footer */}
       <footer className="py-6 border-t border-white/5 text-xs text-gray-400 bg-[#090912]">
         <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div>
+          <div className="flex items-center gap-2">
             <span className="text-gray-300 font-semibold">Retriva</span>
-            <span className="text-gray-600 mx-2">·</span>
-            <span className="text-gray-500">Educational Assistant for DSA Learning</span>
+            <span className="text-gray-600">·</span>
+            <span className="text-gray-400">Learn DSA Smarter</span>
+            <span className="text-gray-600">·</span>
+            <span className="text-gray-500">Powered by Striver's A2Z Course</span>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-3.5 text-xs">
@@ -394,7 +540,7 @@ function App() {
             </a>
             <span className="text-gray-700">|</span>
             <button
-              onClick={() => setIsDisclaimerOpen(true)}
+              onClick={() => navigate('/about')}
               className="text-gray-400 hover:text-indigo-300 underline underline-offset-2 transition-colors cursor-pointer"
             >
               ⚖️ Disclaimer
@@ -405,14 +551,15 @@ function App() {
 
       {/* Disclaimer & Dev Info Modal */}
       <DisclaimerModal
-        isOpen={isDisclaimerOpen}
-        onClose={() => setIsDisclaimerOpen(false)}
+        isOpen={currentRoute === '/about'}
+        onClose={() => {
+          if (window.history.length > 1) {
+            window.history.back();
+          } else {
+            navigate('/');
+          }
+        }}
       />
-
-      {/* Login / Passcode Gate */}
-      {isProtectedInstance && !isAuthenticated && (
-        <LoginModal onSuccess={() => setIsAuthenticated(true)} />
-      )}
     </div>
   );
 }

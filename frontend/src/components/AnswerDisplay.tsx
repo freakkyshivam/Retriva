@@ -18,21 +18,19 @@ export const AnswerDisplay: React.FC<AnswerDisplayProps> = ({ answer, sources })
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto mt-8 space-y-6">
-      {/* Answer Container */}
+    <div className="w-full space-y-4">
+      {/* Grounded Explanation Card */}
       <div className="bg-[#11111a] rounded-2xl border border-white/10 shadow-2xl shadow-black/40 overflow-hidden">
-        {/* Header Bar */}
-        <div className="px-6 py-4 bg-[#161622] border-b border-white/10 flex items-center justify-between">
-          <div className="flex items-center gap-3">
+        {/* Top Header Bar */}
+        <div className="px-5 py-3.5 bg-[#161622] border-b border-white/10 flex items-center justify-between">
+          <div className="flex items-center gap-2.5">
             <span className="flex h-2.5 w-2.5 relative">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
             </span>
-            <span className="text-sm font-semibold tracking-wide text-white flex items-center gap-2">
-              <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent font-bold">
-                Grounded Explanation
-              </span>
-              <span className="text-xs text-gray-400 bg-white/5 px-2 py-0.5 rounded-full border border-white/10">
+            <span className="text-xs sm:text-sm font-bold tracking-wide text-white flex items-center gap-2">
+              <span>Grounded Explanation</span>
+              <span className="text-[10px] font-mono text-gray-400 bg-white/5 px-2 py-0.5 rounded border border-white/5">
                 Striver's Course Transcripts
               </span>
             </span>
@@ -40,14 +38,14 @@ export const AnswerDisplay: React.FC<AnswerDisplayProps> = ({ answer, sources })
 
           <button
             onClick={handleCopy}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white border border-white/10 transition-colors"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white border border-white/10 transition-colors cursor-pointer"
           >
             {copied ? (
               <>
                 <svg className="w-3.5 h-3.5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                <span className="text-emerald-400">Copied!</span>
+                <span className="text-emerald-400 font-semibold">Copied!</span>
               </>
             ) : (
               <>
@@ -60,61 +58,86 @@ export const AnswerDisplay: React.FC<AnswerDisplayProps> = ({ answer, sources })
           </button>
         </div>
 
-        {/* Markdown Rendered Content */}
-        <div className="p-6 md:p-8 text-gray-200">
+        {/* Formatted Content */}
+        <div className="p-5 sm:p-7 text-gray-200 space-y-4">
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             components={{
               h1: ({ children }) => (
-                <h1 className="text-2xl font-bold text-white mb-4 mt-6 pb-2 border-b border-white/10">
-                  {children}
-                </h1>
+                <div className="pt-2 pb-1 border-b border-white/10 mb-3">
+                  <h3 className="text-base sm:text-lg font-bold text-white flex items-center gap-2">
+                    <span className="w-1.5 h-4 bg-indigo-500 rounded-full inline-block" />
+                    {children}
+                  </h3>
+                </div>
               ),
-              h2: ({ children }) => (
-                <h2 className="text-xl font-bold text-indigo-300 mb-3 mt-6 pb-1 border-b border-white/5 flex items-center gap-2">
-                  <span className="inline-block w-1.5 h-5 bg-indigo-500 rounded-full"></span>
-                  {children}
-                </h2>
-              ),
+              h2: ({ children }) => {
+                const text = String(children).toLowerCase();
+                const isShortAnswer = text.includes('short') || text.includes('summary');
+                const isKeyTakeaway = text.includes('takeaway') || text.includes('key');
+
+                return (
+                  <div className="pt-3 pb-1 mb-2">
+                    <h4 className="text-xs uppercase tracking-wider font-bold text-gray-400 flex items-center gap-2">
+                      <span>{isShortAnswer ? '⚡' : isKeyTakeaway ? '📌' : '📖'}</span>
+                      <span className={isShortAnswer ? 'text-indigo-300' : isKeyTakeaway ? 'text-emerald-300' : 'text-gray-300'}>
+                        {children}
+                      </span>
+                    </h4>
+                  </div>
+                );
+              },
               h3: ({ children }) => (
-                <h3 className="text-lg font-semibold text-purple-300 mb-2 mt-4">
+                <h5 className="text-sm font-semibold text-indigo-300 mt-3 mb-1.5">
                   {children}
-                </h3>
+                </h5>
               ),
               p: ({ children }) => (
-                <p className="text-gray-300 leading-relaxed text-sm md:text-base mb-4">
+                <p className="text-gray-300 leading-relaxed text-sm mb-3.5">
                   {children}
                 </p>
               ),
-              ul: ({ children }) => (
-                <ul className="list-disc list-inside space-y-2 mb-4 text-gray-300 text-sm md:text-base ml-2">
-                  {children}
-                </ul>
-              ),
               ol: ({ children }) => (
-                <ol className="list-decimal list-inside space-y-2 mb-4 text-gray-300 text-sm md:text-base ml-2">
+                <div className="space-y-2.5 my-3">
                   {children}
-                </ol>
+                </div>
               ),
-              li: ({ children }) => (
-                <li className="leading-relaxed">
-                  <span className="text-gray-300">{children}</span>
-                </li>
+              ul: ({ children }) => (
+                <div className="space-y-2 my-3">
+                  {children}
+                </div>
               ),
+              li: ({ children, ...props }: any) => {
+                const isOrdered = props.index !== undefined;
+                if (isOrdered) {
+                  return (
+                    <div className="p-3 rounded-xl bg-[#141422] border border-white/5 flex items-start gap-3 text-xs sm:text-sm">
+                      <span className="w-6 h-6 rounded-lg bg-indigo-600/20 text-indigo-300 font-mono font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                        {props.index + 1}
+                      </span>
+                      <div className="flex-1 text-gray-300 leading-relaxed">
+                        {children}
+                      </div>
+                    </div>
+                  );
+                }
+
+                return (
+                  <div className="p-2.5 rounded-xl bg-[#141422]/70 border border-white/5 flex items-start gap-2.5 text-xs sm:text-sm">
+                    <span className="text-emerald-400 font-bold flex-shrink-0 mt-0.5">✓</span>
+                    <div className="text-gray-300 leading-relaxed">{children}</div>
+                  </div>
+                );
+              },
               strong: ({ children }) => (
                 <strong className="font-semibold text-white">
                   {children}
                 </strong>
               ),
-              em: ({ children }) => (
-                <em className="text-indigo-200 not-italic font-medium">
-                  {children}
-                </em>
-              ),
               blockquote: ({ children }) => (
-                <blockquote className="border-l-4 border-indigo-500/50 bg-indigo-950/20 px-4 py-2 my-4 rounded-r-xl text-indigo-200/90 italic text-sm">
+                <div className="border-l-3 border-indigo-500 bg-indigo-950/20 px-4 py-3 my-3 rounded-r-xl text-indigo-200 text-xs sm:text-sm leading-relaxed">
                   {children}
-                </blockquote>
+                </div>
               ),
               code: ({ className, children, ...props }) => {
                 const isInline = !className && typeof children === 'string' && !children.includes('\n');
@@ -126,73 +149,43 @@ export const AnswerDisplay: React.FC<AnswerDisplayProps> = ({ answer, sources })
                   );
                 }
                 return (
-                  <div className="my-4 rounded-xl overflow-hidden border border-white/10 bg-[#0d0d15]">
-                    <pre className="p-4 overflow-x-auto text-xs md:text-sm font-mono text-indigo-200">
+                  <div className="my-3 rounded-xl overflow-hidden border border-white/10 bg-[#0d0d15]">
+                    <pre className="p-3.5 overflow-x-auto text-xs font-mono text-indigo-200">
                       <code {...props}>{children}</code>
                     </pre>
                   </div>
                 );
               },
-              table: ({ children }) => (
-                <div className="my-6 overflow-x-auto rounded-xl border border-white/10 shadow-lg shadow-black/20">
-                  <table className="w-full text-left text-sm border-collapse">
-                    {children}
-                  </table>
-                </div>
-              ),
-              thead: ({ children }) => (
-                <thead className="bg-[#1b1b2a] text-xs uppercase tracking-wider text-indigo-300 border-b border-white/10">
-                  {children}
-                </thead>
-              ),
-              tbody: ({ children }) => (
-                <tbody className="divide-y divide-white/5 bg-[#12121c]">
-                  {children}
-                </tbody>
-              ),
-              tr: ({ children }) => (
-                <tr className="hover:bg-white/[0.03] transition-colors">
-                  {children}
-                </tr>
-              ),
-              th: ({ children }) => (
-                <th className="px-4 py-3.5 font-semibold">
-                  {children}
-                </th>
-              ),
-              td: ({ children }) => (
-                <td className="px-4 py-3.5 text-gray-300 leading-relaxed align-top">
-                  {children}
-                </td>
-              ),
-              hr: () => (
-                <hr className="my-6 border-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent" />
-              )
             }}
           >
             {answer}
           </ReactMarkdown>
         </div>
-      </div>
 
-      {/* Compact Citations Bar */}
-      {sources && sources.length > 0 && (
-        <div className="bg-[#11111a] border border-white/5 rounded-xl p-3.5 flex flex-wrap items-center gap-2 text-xs">
-          <span className="text-gray-400 font-medium mr-1 flex items-center gap-1.5">
-            <span>📚</span>
-            <span>Citations:</span>
-          </span>
-          {sources.map((s, idx) => (
-            <span
-              key={idx}
-              className="bg-white/5 border border-white/10 px-2.5 py-1 rounded-lg text-gray-300 font-medium truncate max-w-xs"
-              title={s.title}
-            >
-              {s.title}
+        {/* Referenced Course Sources */}
+        {sources && sources.length > 0 && (
+          <div className="px-5 py-3 bg-[#0d0d15] border-t border-white/5 flex flex-wrap items-center gap-2 text-xs">
+            <span className="text-gray-500 font-medium flex items-center gap-1 text-[11px]">
+              <span>🔗</span>
+              <span>Cited Sources:</span>
             </span>
-          ))}
-        </div>
-      )}
+            <div className="flex flex-wrap items-center gap-1.5">
+              {sources.map((src, idx) => (
+                <a
+                  key={idx}
+                  href={src.timestampUrl || src.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-2 py-0.5 rounded-md bg-white/5 hover:bg-white/10 text-indigo-300 hover:text-indigo-200 border border-white/5 transition-colors font-mono text-[11px] truncate max-w-[200px]"
+                  title={src.title}
+                >
+                  {src.title}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

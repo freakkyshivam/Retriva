@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
 
+export const ASK_EXAMPLE_QUERIES = [
+  "Why does Dijkstra fail with negative weights?",
+  "When should I use BFS instead of DFS?",
+  "Why does sliding window work here?",
+  "Explain LCA intuitively"
+];
+
 interface AskSectionProps {
   onAsk: (question: string) => void;
   isLoading: boolean;
@@ -16,10 +23,10 @@ export const AskSection: React.FC<AskSectionProps> = ({ onAsk, isLoading }) => {
   };
 
   const suggestions = [
-    { label: "Why priority queue in Dijkstra?", topic: "Graphs" },
-    { label: "Difference between BFS and DFS?", topic: "Traversals" },
-    { label: "How does the sliding window technique work?", topic: "Arrays" },
-    { label: "When to use dynamic programming?", topic: "DP" }
+    { label: "Why does Dijkstra fail with negative weights?", topic: "Graphs" },
+    { label: "When should I use BFS instead of DFS?", topic: "Traversals" },
+    { label: "Why does sliding window work here?", topic: "Arrays" },
+    { label: "Explain LCA intuitively", topic: "Trees" }
   ];
 
   return (
@@ -38,7 +45,7 @@ export const AskSection: React.FC<AskSectionProps> = ({ onAsk, isLoading }) => {
                 handleSubmit();
               }
             }}
-            placeholder="Ask any DSA concept... (e.g. 'Why does Dijkstra fail with negative weights?')"
+            placeholder="Ask any conceptual question... (e.g. 'Why does Dijkstra fail with negative weights?')"
             rows={3}
             className="w-full bg-transparent text-white placeholder-gray-500 outline-none resize-none text-base leading-relaxed"
           />

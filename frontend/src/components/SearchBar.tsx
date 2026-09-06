@@ -1,14 +1,32 @@
 import { useState, useEffect, useRef } from 'react';
 import { getAutocomplete, AutocompleteSuggestion } from '../api';
 
+export const SEARCH_EXAMPLE_QUERIES = [
+  "Dijkstra's Algorithm",
+  "Bellman Ford",
+  "Sliding Window",
+  "Binary Tree LCA",
+  "Two Sum"
+];
+export const EXAMPLE_QUERIES = SEARCH_EXAMPLE_QUERIES;
+
+
 interface SearchBarProps {
   onSearch: (query: string) => void;
   isLoading: boolean;
   placeholder?: string;
+  initialQuery?: string;
 }
 
-export const SearchBar: React.FC<SearchBarProps> = ({ onSearch, isLoading, placeholder }) => {
-  const [value, setValue] = useState('');
+export const SearchBar: React.FC<SearchBarProps> = ({ onSearch, isLoading, placeholder, initialQuery }) => {
+  const [value, setValue] = useState(initialQuery || '');
+
+  // Synchronize internal input value when an external search is triggered
+  useEffect(() => {
+    if (initialQuery !== undefined) {
+      setValue(initialQuery);
+    }
+  }, [initialQuery]);
   const [suggestions, setSuggestions] = useState<AutocompleteSuggestion[]>([]);
   const [showDropdown, setShowDropdown] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -54,6 +72,12 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearch, isLoading, place
   const handleSuggestionClick = (suggestion: AutocompleteSuggestion) => {
     setValue(suggestion.title);
     onSearch(suggestion.title);
+    setShowDropdown(false);
+  };
+
+  const handleExampleClick = (query: string) => {
+    setValue(query);
+    onSearch(query);
     setShowDropdown(false);
   };
 
@@ -105,6 +129,26 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearch, isLoading, place
           </div>
         </div>
       </form>
+
+      {/* Try searching chips */}
+      <div className="flex flex-wrap items-center justify-center gap-2 mt-3 px-1">
+        <span className="text-xs text-gray-500 font-medium flex items-center gap-1.5">
+          <span>🔍</span>
+          <span>Try searching:</span>
+        </span>
+        <div className="flex flex-wrap items-center justify-center gap-1.5">
+          {SEARCH_EXAMPLE_QUERIES.map((example) => (
+            <button
+              key={example}
+              type="button"
+              onClick={() => handleExampleClick(example)}
+              className="text-xs px-2.5 py-1 rounded-lg bg-[#141420] hover:bg-indigo-600/20 text-gray-400 hover:text-indigo-300 border border-white/5 hover:border-indigo-500/30 transition-all cursor-pointer font-medium"
+            >
+              {example}
+            </button>
+          ))}
+        </div>
+      </div>
 
       {/* Autocomplete Dropdown */}
       {showDropdown && suggestions.length > 0 && (
