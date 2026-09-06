@@ -1,14 +1,6 @@
 import { Redis } from 'ioredis';
 import 'dotenv/config';
 
-/**
- * Redis Client Singleton Configuration
- *
- * Configurable via REDIS_URL in .env (e.g. redis://username:password@host:port or redis://localhost:6379)
- * Designed with fail-safe connection handling:
- * - Does not crash the backend process if Redis is unavailable or disconnected
- * - Reconnect strategy with limited retries to prevent tight reconnect loops
- */
 
 const REDIS_URL = process.env.REDIS_URL || 'redis://127.0.0.1:6379';
 
@@ -55,4 +47,11 @@ export const getRedisClient = (): Redis => {
 };
 
 export const redis = getRedisClient();
+
+export const connectRedis = async (): Promise<void> => {
+    const client = getRedisClient();
+
+    await client.connect();
+};
+
 export const isRedisReady = (): boolean => isConnected;

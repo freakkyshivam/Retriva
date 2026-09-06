@@ -1,5 +1,5 @@
 import 'dotenv/config';
-// Server entry point
+ import { connectRedis } from './config/redis.js';
 import app from './app.js';
 import { initEmbeddingModel } from './services/embedding.service.js';
 
@@ -9,6 +9,8 @@ const startServer = async () => {
     try {
         console.log('Initializing embedding model...');
         await initEmbeddingModel();
+        
+        await connectRedis();
         
         app.listen(PORT, () => {
             console.log(`Server is running on port ${PORT}`);
