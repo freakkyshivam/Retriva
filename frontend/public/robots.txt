@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://retriva.netlify.app/sitemap.xml
