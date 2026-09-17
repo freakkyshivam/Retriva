@@ -17,6 +17,19 @@ export function clearAuthToken(): void {
   localStorage.removeItem(TOKEN_KEY);
 }
 
+// Cloudflare Turnstile token management
+// The token is set by the Turnstile widget in SearchBar / AskSection components
+// and included automatically in requests to protected endpoints.
+let _turnstileToken: string | null = null;
+
+export function setTurnstileToken(token: string | null): void {
+  _turnstileToken = token;
+}
+
+export function getTurnstileToken(): string | null {
+  return _turnstileToken;
+}
+
 function getRequestHeaders(): Record<string, string> {
   const headers: Record<string, string> = {
     'Content-Type': 'application/json',
@@ -24,6 +37,10 @@ function getRequestHeaders(): Record<string, string> {
   const token = getAuthToken();
   if (token) {
     headers['x-access-token'] = token;
+  }
+  // Include Turnstile token for bot verification on protected endpoints
+  if (_turnstileToken) {
+    headers['x-turnstile-token'] = _turnstileToken;
   }
   return headers;
 }
@@ -95,6 +112,10 @@ export async function searchCourse(query: string): Promise<SearchResponse> {
     clearAuthToken();
     throw new Error('UNAUTHORIZED');
   }
+  if (res.status === 403) {
+    const errData = await res.json().catch(() => ({}));
+    throw new Error(errData.error || 'Verification failed. Please complete the CAPTCHA challenge.');
+  }
   if (!res.ok) throw new Error('Search failed. Please ensure the backend server is running.');
   return safeJson<SearchResponse>(res, 'Failed to parse search results');
 }
@@ -116,6 +137,10 @@ export async function askQuestion(question: string): Promise<AskResponse> {
   if (res.status === 401) {
     clearAuthToken();
     throw new Error('UNAUTHORIZED');
+  }
+  if (res.status === 403) {
+    const errData = await res.json().catch(() => ({}));
+    throw new Error(errData.error || 'Verification failed. Please complete the CAPTCHA challenge.');
   }
   if (!res.ok) throw new Error('AI answer failed. Please ensure the backend server is running.');
   return safeJson<AskResponse>(res, 'Failed to parse AI response');

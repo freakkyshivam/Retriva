@@ -11,6 +11,7 @@ import {
     autocompleteRateLimiter
 } from './middleware/rateLimiter.middleware.js';
 import { requestTimeout } from './middleware/timeout.middleware.js';
+import { verifyTurnstile } from './middleware/turnstile.middleware.js';
 import { LIMITS } from './config/limits.js';
 
 const app = express();
@@ -67,9 +68,9 @@ app.use('/api', globalApiLimiter);
 // Optional auth endpoints (preserved)
 app.use('/api/auth', authRoutes);
 
-// Publicly usable core endpoints protected by dedicated rate limiters
-app.use('/api/search', searchRateLimiter, searchRoutes);
-app.use('/api/ask', askRateLimiter, askRoutes);
+// Publicly usable core endpoints protected by dedicated rate limiters + Turnstile bot verification
+app.use('/api/search', searchRateLimiter, verifyTurnstile, searchRoutes);
+app.use('/api/ask', askRateLimiter, verifyTurnstile, askRoutes);
 app.use('/api/autocomplete', autocompleteRateLimiter, autocompleteRoutes);
 
 // Catch 404 for undefined routes and respond with JSON (never raw HTML)

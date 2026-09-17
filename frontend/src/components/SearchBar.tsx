@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import { getAutocomplete, AutocompleteSuggestion } from '../api';
+import { getAutocomplete, AutocompleteSuggestion, setTurnstileToken as syncTurnstileToken } from '../api';
+import { Turnstile } from '@marsidev/react-turnstile';
 
 export const SEARCH_EXAMPLE_QUERIES = [
   "Dijkstra's Algorithm",
@@ -20,6 +21,7 @@ interface SearchBarProps {
 
 export const SearchBar: React.FC<SearchBarProps> = ({ onSearch, isLoading, placeholder, initialQuery }) => {
   const [value, setValue] = useState(initialQuery || '');
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
   // Synchronize internal input value when an external search is triggered
   useEffect(() => {
@@ -63,6 +65,12 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearch, isLoading, place
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!turnstileToken) {
+      alert("Please complete verification");
+      return;
+    }
+
     if (value.trim()) {
       onSearch(value.trim());
       setShowDropdown(false);
@@ -128,6 +136,26 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearch, isLoading, place
             </button>
           </div>
         </div>
+
+        {/* Turnstile bot verification — rendered below the search bar to avoid breaking the input layout */}
+        <div className="flex justify-center mt-3">
+          <Turnstile
+            siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
+            options={{ size: 'normal' }}
+            onSuccess={(token) => {
+              setTurnstileToken(token);
+              syncTurnstileToken(token);
+            }}
+            onExpire={() => {
+              setTurnstileToken(null);
+              syncTurnstileToken(null);
+            }}
+            onError={() => {
+              setTurnstileToken(null);
+              syncTurnstileToken(null);
+            }}
+          />
+        </div>
       </form>
 
       {/* Try searching chips */}
@@ -157,11 +185,10 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearch, isLoading, place
             <button
               key={suggestion.videoId}
               onClick={() => handleSuggestionClick(suggestion)}
-              className={`w-full px-4 py-3 flex items-center gap-3 text-left transition-colors ${
-                idx === selectedIndex
+              className={`w-full px-4 py-3 flex items-center gap-3 text-left transition-colors ${idx === selectedIndex
                   ? 'bg-indigo-600/20 text-white'
                   : 'text-gray-400 hover:bg-white/5 hover:text-gray-200'
-              }`}
+                }`}
             >
               <span className="flex-shrink-0 w-7 h-7 rounded-lg bg-white/5 flex items-center justify-center text-xs text-gray-500 font-mono">
                 {suggestion.position}

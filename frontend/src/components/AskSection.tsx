@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-
+import { Turnstile } from '@marsidev/react-turnstile';
+import { setTurnstileToken as syncTurnstileToken } from '../api';
 export const ASK_EXAMPLE_QUERIES = [
   "Why does Dijkstra fail with negative weights?",
   "When should I use BFS instead of DFS?",
@@ -14,9 +15,16 @@ interface AskSectionProps {
 
 export const AskSection: React.FC<AskSectionProps> = ({ onAsk, isLoading }) => {
   const [question, setQuestion] = useState('');
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
 
   const handleSubmit = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
+
+    if (!turnstileToken) {
+      alert("Please complete verification");
+      return;
+    }
+
     if (question.trim().length >= 5 && !isLoading) {
       onAsk(question.trim());
     }
@@ -34,7 +42,7 @@ export const AskSection: React.FC<AskSectionProps> = ({ onAsk, isLoading }) => {
       {/* Input Card with subtle glow */}
       <div className="relative group">
         <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500/30 via-purple-500/30 to-pink-500/30 rounded-2xl opacity-50 group-focus-within:opacity-100 transition-opacity duration-500 blur-md" />
-        
+
         <div className="relative bg-[#12121c] border border-white/10 rounded-2xl p-5 shadow-2xl shadow-black/40">
           <textarea
             value={question}
@@ -77,6 +85,26 @@ export const AskSection: React.FC<AskSectionProps> = ({ onAsk, isLoading }) => {
                 </>
               )}
             </button>
+          </div>
+
+          {/* Turnstile bot verification — separate row to avoid breaking the toolbar layout */}
+          <div className="flex justify-center mt-3">
+            <Turnstile
+              siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
+              options={{ size: 'normal' }}
+              onSuccess={(token) => {
+                setTurnstileToken(token);
+                syncTurnstileToken(token);
+              }}
+              onExpire={() => {
+                setTurnstileToken(null);
+                syncTurnstileToken(null);
+              }}
+              onError={() => {
+                setTurnstileToken(null);
+                syncTurnstileToken(null);
+              }}
+            />
           </div>
         </div>
       </div>
