@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
-import { Turnstile } from '@marsidev/react-turnstile';
+import React, { useState, useRef } from 'react';
+import { Turnstile, type TurnstileInstance } from '@marsidev/react-turnstile';
 import { setTurnstileToken as syncTurnstileToken } from '../api';
+
 export const ASK_EXAMPLE_QUERIES = [
   "Why does Dijkstra fail with negative weights?",
   "When should I use BFS instead of DFS?",
   "Why does sliding window work here?",
   "Explain LCA intuitively"
 ];
+
+const TURNSTILE_SITE_KEY = '0x4AAAAAAE6LRsCkIUAgfCtG';
 
 interface AskSectionProps {
   onAsk: (question: string) => void;
@@ -16,6 +19,7 @@ interface AskSectionProps {
 export const AskSection: React.FC<AskSectionProps> = ({ onAsk, isLoading }) => {
   const [question, setQuestion] = useState('');
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const turnstileRef = useRef<TurnstileInstance | null>(null);
 
   const handleSubmit = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
@@ -27,6 +31,10 @@ export const AskSection: React.FC<AskSectionProps> = ({ onAsk, isLoading }) => {
 
     if (question.trim().length >= 5 && !isLoading) {
       onAsk(question.trim());
+      // Tokens are single-use — reset the widget for the next submission
+      turnstileRef.current?.reset();
+      setTurnstileToken(null);
+      syncTurnstileToken(null);
     }
   };
 
@@ -90,8 +98,9 @@ export const AskSection: React.FC<AskSectionProps> = ({ onAsk, isLoading }) => {
           {/* Turnstile bot verification — separate row to avoid breaking the toolbar layout */}
           <div className="flex justify-center mt-3">
             <Turnstile
-              siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
-              options={{ size: 'normal' }}
+              ref={turnstileRef}
+              siteKey={TURNSTILE_SITE_KEY}
+              options={{ size: 'normal', action: 'ask' }}
               onSuccess={(token) => {
                 setTurnstileToken(token);
                 syncTurnstileToken(token);

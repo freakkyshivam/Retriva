@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { getAutocomplete, AutocompleteSuggestion, setTurnstileToken as syncTurnstileToken } from '../api';
-import { Turnstile } from '@marsidev/react-turnstile';
+import { Turnstile, type TurnstileInstance } from '@marsidev/react-turnstile';
 
 export const SEARCH_EXAMPLE_QUERIES = [
   "Dijkstra's Algorithm",
@@ -11,6 +11,7 @@ export const SEARCH_EXAMPLE_QUERIES = [
 ];
 export const EXAMPLE_QUERIES = SEARCH_EXAMPLE_QUERIES;
 
+const TURNSTILE_SITE_KEY = '0x4AAAAAAE6LRsCkIUAgfCtG';
 
 interface SearchBarProps {
   onSearch: (query: string) => void;
@@ -22,6 +23,7 @@ interface SearchBarProps {
 export const SearchBar: React.FC<SearchBarProps> = ({ onSearch, isLoading, placeholder, initialQuery }) => {
   const [value, setValue] = useState(initialQuery || '');
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const turnstileRef = useRef<TurnstileInstance | null>(null);
 
   // Synchronize internal input value when an external search is triggered
   useEffect(() => {
@@ -74,6 +76,10 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearch, isLoading, place
     if (value.trim()) {
       onSearch(value.trim());
       setShowDropdown(false);
+      // Tokens are single-use — reset the widget for the next submission
+      turnstileRef.current?.reset();
+      setTurnstileToken(null);
+      syncTurnstileToken(null);
     }
   };
 
@@ -137,11 +143,12 @@ export const SearchBar: React.FC<SearchBarProps> = ({ onSearch, isLoading, place
           </div>
         </div>
 
-        {/* Turnstile bot verification — rendered below the search bar to avoid breaking the input layout */}
+        {/* Turnstile bot verification — rendered below the search bar */}
         <div className="flex justify-center mt-3">
           <Turnstile
-            siteKey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
-            options={{ size: 'normal' }}
+            ref={turnstileRef}
+            siteKey={TURNSTILE_SITE_KEY}
+            options={{ size: 'normal', action: 'search' }}
             onSuccess={(token) => {
               setTurnstileToken(token);
               syncTurnstileToken(token);

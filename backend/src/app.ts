@@ -49,7 +49,7 @@ app.use((req: Request, res: Response, next: NextFunction) => {
         res.header('Access-Control-Allow-Origin', '*');
     }
 
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, x-access-token');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, x-access-token, x-turnstile-token');
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
     if (req.method === 'OPTIONS') {
         res.sendStatus(200);
@@ -69,8 +69,8 @@ app.use('/api', globalApiLimiter);
 app.use('/api/auth', authRoutes);
 
 // Publicly usable core endpoints protected by dedicated rate limiters + Turnstile bot verification
-app.use('/api/search', searchRateLimiter, verifyTurnstile, searchRoutes);
-app.use('/api/ask', askRateLimiter, verifyTurnstile, askRoutes);
+app.use('/api/search', searchRateLimiter, verifyTurnstile('search'), searchRoutes);
+app.use('/api/ask', askRateLimiter, verifyTurnstile('ask'), askRoutes);
 app.use('/api/autocomplete', autocompleteRateLimiter, autocompleteRoutes);
 
 // Catch 404 for undefined routes and respond with JSON (never raw HTML)
