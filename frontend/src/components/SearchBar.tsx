@@ -11,7 +11,7 @@ export const SEARCH_EXAMPLE_QUERIES = [
 ];
 export const EXAMPLE_QUERIES = SEARCH_EXAMPLE_QUERIES;
 
-const TURNSTILE_SITE_KEY = '0x4AAAAAAE6LRsCkIUAgfCtG';
+const TURNSTILE_SITE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY || '0x4AAAAAAE6LRsCkIUAgfCtG';
 
 interface SearchBarProps {
   onSearch: (query: string) => void;

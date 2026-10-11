@@ -9,7 +9,7 @@ export const ASK_EXAMPLE_QUERIES = [
   "Explain LCA intuitively"
 ];
 
-const TURNSTILE_SITE_KEY = '0x4AAAAAAE6LRsCkIUAgfCtG';
+const TURNSTILE_SITE_KEY = import.meta.env.VITE_TURNSTILE_SITE_KEY || '0x4AAAAAAE6LRsCkIUAgfCtG';
 
 interface AskSectionProps {
   onAsk: (question: string) => void;
